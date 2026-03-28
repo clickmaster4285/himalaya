@@ -3,6 +3,7 @@
 import Link from "next/link";
 import { useState, useEffect } from "react";
 import { Menu, X } from "lucide-react";
+import NavAuth from "@/components/NavAuth";
 
 const logo = "/assets/himalaya-logo.png";
 
@@ -78,8 +79,11 @@ const Navbar = () => {
         </div>
       </div>
 
-      {/* Book Now */}
-      <div className="ml-auto">
+      {/* Sign in + Book */}
+      <div className="ml-auto flex items-center gap-2 md:gap-3">
+        <div className="hidden md:block">
+          <NavAuth variant="hero" />
+        </div>
         <a
           href="https://wa.me/923045679000"
           target="_blank"
@@ -107,7 +111,7 @@ const Navbar = () => {
               <Link
                 key={item}
                 href={href}
-                className="text-xl font-display font-medium tracking-[0.2em] uppercase transition-opacity hover:opacity-70"
+                className="font-sans text-lg font-semibold tracking-[0.12em] text-white/95 uppercase transition-opacity hover:opacity-80"
                 style={{ color: "hsl(var(--hero-text))" }}
                 onClick={() => setMobileOpen(false)}
               >
@@ -115,6 +119,9 @@ const Navbar = () => {
               </Link>
             );
           })}
+          <div className="mt-2" onClick={() => setMobileOpen(false)}>
+            <NavAuth variant="hero" />
+          </div>
           <a
             href="https://wa.me/923045679000"
             target="_blank"

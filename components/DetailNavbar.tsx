@@ -1,6 +1,7 @@
 "use client";
 
 import Link from "next/link";
+import NavAuth from "@/components/NavAuth";
 
 const logo = "/assets/himalaya-logo.png";
 
@@ -32,7 +33,8 @@ export default function DetailNavbar() {
           <img src={logo} alt="Himalaya Villas" className="h-12 w-12 object-contain" />
         </div>
 
-        <div className="ml-auto">
+        <div className="ml-auto flex items-center gap-3 md:gap-4">
+          <NavAuth variant="cream" />
           <Link
             href="/book"
             className="px-5 py-2 text-[11px] tracking-[0.28em] uppercase border border-neutral-500/60 text-neutral-800 hover:bg-neutral-900 hover:text-white hover:border-neutral-900 transition-colors"

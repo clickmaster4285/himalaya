@@ -1,10 +1,10 @@
 "use client";
 
 import Link from "next/link";
-import { useMemo, useState } from "react";
+import { useEffect, useMemo, useState } from "react";
 import DetailNavbar from "@/components/DetailNavbar";
 import Footer from "@/components/Footer";
-import { findVillaBySlug, villas } from "@/lib/villas";
+import type { Villa } from "@/lib/villa-types";
 import { Calendar } from "@/components/ui/calendar";
 import type { DateRange } from "react-day-picker";
 import {
@@ -64,9 +64,22 @@ export default function BookStayPage({ searchParams }: { searchParams?: { step?:
   );
 
   const selectedVillaSlug = (searchParams?.villa ?? "").toString();
-  const selectedVilla = selectedVillaSlug ? findVillaBySlug(selectedVillaSlug) : undefined;
+  const [villaCatalog, setVillaCatalog] = useState<Villa[]>([]);
 
-  const villaOptions = useMemo(() => villas, []);
+  useEffect(() => {
+    fetch("/api/villas")
+      .then((r) => r.json())
+      .then((d) => setVillaCatalog(Array.isArray(d.villas) ? d.villas : []))
+      .catch(() => setVillaCatalog([]));
+  }, []);
+
+  const selectedVilla = useMemo(() => {
+    if (!selectedVillaSlug) return undefined;
+    const n = decodeURIComponent(selectedVillaSlug).trim().toLowerCase();
+    return villaCatalog.find((v) => v.slug === n);
+  }, [selectedVillaSlug, villaCatalog]);
+
+  const villaOptions = useMemo(() => villaCatalog, [villaCatalog]);
 
   const [range, setRange] = useState<DateRange | undefined>({
     from: new Date(),

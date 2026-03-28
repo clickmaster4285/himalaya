@@ -6,9 +6,16 @@
     "dev": "next dev",
     "build": "next build",
     "start": "next start",
-    "lint": "eslint"
+    "lint": "eslint",
+    "db:generate": "prisma generate",
+    "db:push": "prisma db push",
+    "db:seed": "prisma db seed",
+    "db:setup": "npm run db:generate && npm run db:push && npm run db:seed"
   },
   "dependencies": {
+    "@prisma/client": "6.19.0",
+    "@radix-ui/react-dialog": "^1.1.15",
+    "bcryptjs": "^3.0.3",
     "class-variance-authority": "^0.7.1",
     "clsx": "^2.1.1",
     "cmdk": "^1.1.1",
@@ -16,9 +23,12 @@
     "embla-carousel-react": "^8.6.0",
     "framer-motion": "^12.36.0",
     "input-otp": "^1.4.2",
+    "jose": "^6.2.2",
     "lucide-react": "^0.577.0",
+    "mongodb": "^7.1.1",
     "next": "16.1.6",
     "next-themes": "^0.4.6",
+    "prisma": "6.19.0",
     "radix-ui": "^1.4.3",
     "react": "19.2.3",
     "react-day-picker": "^9.14.0",
@@ -40,6 +50,10 @@
     "eslint": "^9",
     "eslint-config-next": "16.1.6",
     "tailwindcss": "^4",
+    "tsx": "^4.21.0",
     "typescript": "^5"
+  },
+  "prisma": {
+    "seed": "tsx prisma/seed.ts"
   }
 }

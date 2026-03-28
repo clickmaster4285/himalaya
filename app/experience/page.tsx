@@ -1,7 +1,7 @@
 import Link from "next/link";
 import Navbar from "@/components/Navbar";
 import Footer from "@/components/Footer";
-import { villas } from "@/lib/villas";
+import { getPublishedVillas } from "@/lib/villas-server";
 
 const heroBg = "/assets/why-villa-view.jpg";
 const symphonyImg = "/assets/philosophy-interior.jpg";
@@ -18,7 +18,8 @@ const amenityTabs = [
   "Gourmet Kitchen",
 ];
 
-export default function ExperiencePage() {
+export default async function ExperiencePage() {
+  const villas = await getPublishedVillas();
   const villaCards = villas.slice(0, 6);
 
   return (

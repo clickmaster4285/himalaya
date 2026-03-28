@@ -1,13 +1,21 @@
 import type { Metadata } from "next";
-import { Geist, Geist_Mono, Inter } from "next/font/google";
+import { Cormorant_Garamond, DM_Sans, Geist_Mono } from "next/font/google";
 import "./globals.css";
 import { cn } from "@/lib/utils";
 
-const inter = Inter({subsets:['latin'],variable:'--font-sans'});
-
-const geistSans = Geist({
-  variable: "--font-geist-sans",
+/** Clean UI type for body, forms, and nav */
+const dmSans = DM_Sans({
   subsets: ["latin"],
+  variable: "--font-sans",
+  display: "swap",
+});
+
+/** Editorial headings — luxury villas tone */
+const cormorant = Cormorant_Garamond({
+  subsets: ["latin"],
+  variable: "--font-display",
+  weight: ["400", "500", "600", "700"],
+  display: "swap",
 });
 
 const geistMono = Geist_Mono({
@@ -26,10 +34,8 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <html lang="en" className={cn("font-sans", inter.variable)}>
-      <body
-        className={`${geistSans.variable} ${geistMono.variable} antialiased`}
-      >
+    <html lang="en" className={cn("font-sans antialiased", dmSans.variable, cormorant.variable)}>
+      <body className={`${geistMono.variable} min-h-dvh`}>
         {children}
       </body>
     </html>

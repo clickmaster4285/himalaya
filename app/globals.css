@@ -81,8 +81,7 @@
   --sidebar-accent-foreground: hsl(0 0% 100%);
   --sidebar-border: hsl(214 10% 80%);
   --sidebar-ring: hsl(35 40% 58%);
-  --font-sans: ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
-  --font-display: "Playfair Display", Georgia, Cambria, "Times New Roman", Times, serif;
+  /* --font-sans / --font-display: set on <html> via next/font (DM Sans + Cormorant Garamond) */
   --hero-text: 0 0% 100%;
   --hero-overlay: 0 0% 0%;
 }
@@ -133,7 +132,17 @@
   }
 
   .font-display {
-    font-family: var(--font-display);
+    font-family: var(--font-display), ui-serif, "Cormorant Garamond", Georgia, serif;
+    font-feature-settings: "kern" 1, "liga" 1;
+  }
+
+  /* Typed + autofill text stays dark on light inputs */
+  input:-webkit-autofill,
+  input:-webkit-autofill:hover,
+  input:-webkit-autofill:focus {
+    -webkit-text-fill-color: rgb(23 23 23);
+    box-shadow: inset 0 0 0 1000px rgb(255 255 255);
+    transition: background-color 99999s ease-out;
   }
 }
 
@@ -149,7 +158,7 @@
   }
 
   .nav-link {
-    @apply text-sm font-medium tracking-widest uppercase;
+    @apply font-sans text-sm font-semibold tracking-[0.18em] uppercase antialiased;
     color: hsl(var(--nav-text));
     transition: opacity 0.3s ease;
   }

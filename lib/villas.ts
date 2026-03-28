@@ -1,3 +1,119 @@
-/** @deprecated import from @/lib/villa-types */
-export type { Villa, VillaCategory } from "./villa-types";
-export { STATIC_VILLAS } from "./villas-static-data";
+export type Villa = {
+  slug: string;
+  title: string;
+  category: "Presidential" | "Family" | "Suite";
+  description: string;
+  price: string;
+  image: string;
+  gallery?: string[];
+  bedrooms: number;
+  guests: number;
+  size: string;
+  highlights: string[];
+  amenities: string[];
+  content: string;
+};
+
+export const villas: Villa[] = [
+  {
+    slug: "alpine-family-lodge",
+    title: "Alpine Family Lodge",
+    category: "Family",
+    description: "Spacious 3-bedroom villa perfect for family gatherings.",
+    price: "PKR 38,000",
+    image: "/assets/villa-alpine-real.jpg",
+    gallery: ["/assets/gallery-interior.jpg", "/assets/gallery-dining-night.jpg", "/assets/gallery-balcony.jpg"],
+    bedrooms: 4,
+    guests: 10,
+    size: "450m²",
+    highlights: ["Valley view terrace", "Private garden", "Wood-burner fireplace"],
+    amenities: ["Private Pool", "Butler Service", "Premium Toiletries", "Mountain Views", "Fireplace", "Gourmet Kitchen"],
+    content:
+      "The Alpine Family Lodge offers a warm retreat with elegant interiors, handcrafted furnishings, and large picture windows framing the Himalayan panorama. With family-centered amenities and separate living spaces, it creates unforgettable memories.",
+  },
+  {
+    slug: "presidential-suite",
+    title: "The Presidential Suite",
+    category: "Presidential",
+    description: "Panoramic mountain views with a private terrace and jacuzzi.",
+    price: "PKR 65,000",
+    image: "/assets/villa-presidential-real.jpg",
+    gallery: ["/assets/gallery-interior.jpg", "/assets/gallery-dining-night.jpg", "/assets/gallery-exterior.jpg"],
+    bedrooms: 5,
+    guests: 8,
+    size: "530m²",
+    highlights: ["Private terrace and jacuzzi", "Panoramic glass living room", "Master lounge"],
+    amenities: ["Private Pool", "Butler Service", "Premium Toiletries", "Mountain Views", "Fireplace", "Gourmet Kitchen"],
+    content:
+      "Exquisite and spacious, The Presidential Suite envelops you in the highest level of comfort and privacy. Enjoy unmatched vistas, bespoke service, and a cinematic sunset from your own personal terrace.",
+  },
+  {
+    slug: "himalayan-penthouse",
+    title: "Himalayan Penthouse",
+    category: "Presidential",
+    description: "Luxury penthouse with an expansive balcony and skyline view.",
+    price: "PKR 70,000",
+    image: "/assets/villa-exterior.jpg",
+    gallery: ["/assets/gallery-balcony.jpg", "/assets/gallery-sunlight.jpg", "/assets/gallery-interior.jpg"],
+    bedrooms: 4,
+    guests: 6,
+    size: "420m²",
+    highlights: ["Skyline rooftop", "Open-plan lounge", "Private pool"],
+    amenities: ["Private Pool", "Butler Service", "Premium Toiletries", "Mountain Views", "Fireplace", "Gourmet Kitchen"],
+    content:
+      "The Himalayan Penthouse is the pinnacle of mountain living, featuring expansive outdoor spaces, custom interiors, and the kind of discreet luxury crafted for a selective few.",
+  },
+  {
+    slug: "garden-villa-retreat",
+    title: "Garden Villa Retreat",
+    category: "Family",
+    description: "Spacious 3-bedroom villa perfect for family gatherings.",
+    price: "PKR 39,000",
+    image: "/assets/villa-alpine.jpg",
+    gallery: ["/assets/gallery-garden.jpg", "/assets/gallery-interior.jpg", "/assets/gallery-balcony.jpg"],
+    bedrooms: 3,
+    guests: 8,
+    size: "410m²",
+    highlights: ["Private garden", "Indoor fireplace", "Spacious kitchenette"],
+    amenities: ["Private Pool", "Butler Service", "Premium Toiletries", "Mountain Views", "Fireplace", "Gourmet Kitchen"],
+    content:
+      "Set in tranquil garden surroundings, Garden Villa Retreat blends privacy and comfort with family-friendly spaces and a scenic outdoor seating area.",
+  },
+  {
+    slug: "sunset-suite",
+    title: "Sunset Suite",
+    category: "Suite",
+    description: "Serene suite with sunset-facing windows and cozy interiors.",
+    price: "PKR 49,000",
+    image: "/assets/villa-penthouse.jpg",
+    gallery: ["/assets/gallery-sunlight.jpg", "/assets/gallery-interior.jpg", "/assets/gallery-balcony.jpg"],
+    bedrooms: 2,
+    guests: 4,
+    size: "350m²",
+    highlights: ["Sunset views", "Cozy atmosphere", "Private balcony"],
+    amenities: ["Private Pool", "Butler Service", "Premium Toiletries", "Mountain Views", "Fireplace", "Gourmet Kitchen"],
+    content:
+      "Sunset Suite invites you to relax with a curated blend of warmth, refined textures, and muntane glow from sunset light.",
+  },
+  {
+    slug: "serene-valley-cabin",
+    title: "Serene Valley Cabin",
+    category: "Suite",
+    description: "A peaceful cabin with floor-to-ceiling windows and private terrace.",
+    price: "PKR 45,000",
+    image: "/assets/villa-honeymoon-real.jpg",
+    gallery: ["/assets/gallery-interior.jpg", "/assets/gallery-reflection.jpg", "/assets/gallery-exterior.jpg"],
+    bedrooms: 2,
+    guests: 4,
+    size: "320m²",
+    highlights: ["Scenic valley view", "Private terrace", "Fireplace"],
+    amenities: ["Private Pool", "Butler Service", "Premium Toiletries", "Mountain Views", "Fireplace", "Gourmet Kitchen"],
+    content:
+      "Serene Valley Cabin is designed for quiet reflection, with panoramic windows and intimate living spaces that bring the outside in.",
+  },
+];
+
+export const findVillaBySlug = (slug: string) => {
+  const normalizedSlug = decodeURIComponent(slug || "").trim().toLowerCase();
+  return villas.find((villa) => villa.slug.trim().toLowerCase() === normalizedSlug);
+};

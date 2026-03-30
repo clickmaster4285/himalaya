@@ -5,7 +5,7 @@ import { Check, Loader2, XCircle } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { cn } from "@/lib/utils";
 import { DashboardStatCard } from "@/components/dashboard/DashboardStatCard";
-import { useDashboardBookings } from "@/components/dashboard/use-dashboard-bookings";
+import { useDashboardBookings, type DashboardBooking } from "@/components/dashboard/use-dashboard-bookings";
 import type { SafeUser } from "@/lib/user-public";
 
 const BOOKING_STATUSES = ["PENDING", "CONFIRMED", "CANCELLED", "COMPLETED"] as const;
@@ -39,6 +39,32 @@ export default function ManagerDashboardPage() {
   }
 
   const name = me?.fullName?.split(/\s+/)[0] ?? "Manager";
+
+  function stayDetailLines(b: DashboardBooking) {
+    if (b.experienceType !== "Book Your Stay") return null;
+    const lines: string[] = [];
+    if (b.adults != null) {
+      lines.push(
+        `Guests: ${b.adults} adult${b.adults === 1 ? "" : "s"}${b.children != null ? `, ${b.children} child${b.children === 1 ? "" : "ren"}` : ""}`,
+      );
+    }
+    if (b.villaSlug) lines.push(`Villa slug: ${b.villaSlug}`);
+    if (b.guestFirstName || b.guestLastName) {
+      lines.push(`Lead guest: ${[b.guestFirstName, b.guestLastName].filter(Boolean).join(" ")}`);
+    }
+    if (b.guestPhone) lines.push(`Phone: ${b.guestPhone}`);
+    if (b.guestContactEmail) lines.push(`Contact email: ${b.guestContactEmail}`);
+    if (b.paymentMethod) lines.push(`Payment: ${b.paymentMethod}`);
+    if (b.notes) lines.push(`Guest notes: ${b.notes}`);
+    if (lines.length === 0) return null;
+    return (
+      <ul className="mt-3 space-y-1.5 font-sans text-[12px] leading-relaxed text-[#5c564c]">
+        {lines.map((line) => (
+          <li key={line}>{line}</li>
+        ))}
+      </ul>
+    );
+  }
 
   return (
     <div className="mx-auto max-w-6xl space-y-8">
@@ -107,7 +133,21 @@ export default function ManagerDashboardPage() {
                           year: "numeric",
                         })}
                       </time>
+                      {b.checkOutDate ? (
+                        <>
+                          {" "}
+                          →{" "}
+                          <time dateTime={b.checkOutDate}>
+                            {new Date(b.checkOutDate).toLocaleDateString(undefined, {
+                              month: "short",
+                              day: "numeric",
+                              year: "numeric",
+                            })}
+                          </time>
+                        </>
+                      ) : null}
                     </p>
+                    {stayDetailLines(b)}
                   </div>
                   <div className="flex flex-col items-stretch gap-3 sm:flex-row sm:items-center lg:flex-col lg:items-end">
                     <p className="font-sans text-lg font-semibold tabular-nums text-[#1a1816]">PKR {b.totalAmount.toLocaleString()}</p>

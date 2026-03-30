@@ -11,6 +11,16 @@ export type DashboardBooking = {
   totalAmount: number;
   status: string;
   user: { fullName: string; email: string; id?: string };
+  notes?: string | null;
+  villaSlug?: string | null;
+  checkOutDate?: string | null;
+  adults?: number | null;
+  children?: number | null;
+  guestPhone?: string | null;
+  guestFirstName?: string | null;
+  guestLastName?: string | null;
+  guestContactEmail?: string | null;
+  paymentMethod?: string | null;
 };
 
 export type BookingStats = {

@@ -286,12 +286,24 @@ export default function SuperadminDashboardPage() {
                       <td className="max-w-[200px] truncate px-4 py-3.5 text-[#5c564c] md:px-5" title={b.packageName}>
                         {b.packageName}
                       </td>
-                      <td className="whitespace-nowrap px-4 py-3.5 text-[#5c564c] md:px-5">
-                        {new Date(b.bookingDate).toLocaleDateString(undefined, {
-                          year: "numeric",
-                          month: "short",
-                          day: "numeric",
-                        })}
+                      <td className="min-w-[120px] px-4 py-3.5 text-[#5c564c] md:px-5">
+                        <span className="whitespace-nowrap">
+                          {new Date(b.bookingDate).toLocaleDateString(undefined, {
+                            year: "numeric",
+                            month: "short",
+                            day: "numeric",
+                          })}
+                        </span>
+                        {b.checkOutDate ? (
+                          <span className="mt-1 block text-[11px] text-[#8a8278]">
+                            →{" "}
+                            {new Date(b.checkOutDate).toLocaleDateString(undefined, {
+                              month: "short",
+                              day: "numeric",
+                              year: "numeric",
+                            })}
+                          </span>
+                        ) : null}
                       </td>
                       <td className="whitespace-nowrap px-4 py-3.5 font-medium tabular-nums text-[#1a1816] md:px-5">
                         PKR {b.totalAmount.toLocaleString()}

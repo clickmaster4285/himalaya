@@ -8,6 +8,7 @@ const logo = "/assets/himalaya-logo.png";
 const items = [
   { label: "Villas", href: "/villas" },
   { label: "Experience", href: "/experience" },
+  { label: "Blogs", href: "/blogs" },
   { label: "Gallery", href: "/#gallery" },
   { label: "Contact", href: "/contact" },
 ];

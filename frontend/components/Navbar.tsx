@@ -7,7 +7,7 @@ import NavAuth from "@/components/NavAuth";
 
 const logo = "/assets/himalaya-logo.png";
 
-const navItems = ["Villas", "Experience", "Virtual Tour", "Journal", "Contact"];
+const navItems = ["Villas", "Experience", "Virtual Tour", "Journal", "Blogs", "Contact"];
 
 const Navbar = () => {
   const [scrolled, setScrolled] = useState(false);
@@ -44,9 +44,13 @@ const Navbar = () => {
               ? "/villas"
               : item === "Experience"
                 ? "/experience"
-                : item === "Contact"
-                  ? "/contact"
-              : `/#${item.toLowerCase().replace(" ", "-")}`;
+                : item === "Virtual Tour"
+                  ? "/experience"
+                : item === "Blogs"
+                  ? "/blogs"
+                  : item === "Contact"
+                    ? "/contact"
+                    : `/#${item.toLowerCase().replace(" ", "-")}`;
 
           return (
             <li key={item}>
@@ -103,9 +107,13 @@ const Navbar = () => {
                 ? "/villas"
                 : item === "Experience"
                   ? "/experience"
-                  : item === "Contact"
-                    ? "/contact"
-                : `/#${item.toLowerCase().replace(" ", "-")}`;
+                  : item === "Virtual Tour"
+                    ? "/experience"
+                  : item === "Blogs"
+                    ? "/blogs"
+                    : item === "Contact"
+                      ? "/contact"
+                      : `/#${item.toLowerCase().replace(" ", "-")}`;
 
             return (
               <Link

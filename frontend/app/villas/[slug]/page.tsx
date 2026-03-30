@@ -133,7 +133,7 @@ const VillaDetail = async ({ params }: VillasDetailPageProps) => {
             <p className="mt-1 text-[11px] uppercase tracking-widest text-neutral-500">per night</p>
 
             <Link
-              href={`/book?villa=${encodeURIComponent(villa.slug)}`}
+              href={`/book/stay?villa=${encodeURIComponent(villa.slug)}`}
               className="mt-6 inline-flex w-full items-center justify-center bg-neutral-900 py-3 text-[12px] font-semibold uppercase tracking-widest text-white transition hover:bg-neutral-800"
             >
               Book Now

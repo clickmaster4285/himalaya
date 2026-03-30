@@ -115,7 +115,7 @@ export default function UserDashboardPage() {
                       <p className="font-mono text-[11px] font-medium text-[#8a8278]">{b.reference}</p>
                       <h3 className="font-display mt-1 text-xl font-semibold text-[#1a1816]">{b.experienceType}</h3>
                       <p className="font-sans text-[14px] text-[#5c564c]">{b.packageName}</p>
-                      <p className="mt-2 flex items-center gap-2 font-sans text-[13px] text-[#6b655c]">
+                      <p className="mt-2 flex flex-wrap items-center gap-2 font-sans text-[13px] text-[#6b655c]">
                         <Clock className="h-4 w-4 shrink-0 opacity-70" aria-hidden />
                         <time dateTime={b.bookingDate}>
                           {new Date(b.bookingDate).toLocaleDateString(undefined, {
@@ -125,7 +125,27 @@ export default function UserDashboardPage() {
                             year: "numeric",
                           })}
                         </time>
+                        {b.checkOutDate ? (
+                          <>
+                            <span aria-hidden>→</span>
+                            <time dateTime={b.checkOutDate}>
+                              {new Date(b.checkOutDate).toLocaleDateString(undefined, {
+                                month: "short",
+                                day: "numeric",
+                                year: "numeric",
+                              })}
+                            </time>
+                          </>
+                        ) : null}
                       </p>
+                      {b.guestPhone ? (
+                        <p className="mt-1 font-sans text-[12px] text-[#6b655c]">Phone on file: {b.guestPhone}</p>
+                      ) : null}
+                      {b.notes ? (
+                        <p className="mt-2 rounded-lg bg-[#faf8f5] px-3 py-2 font-sans text-[12px] text-[#4a453d] ring-1 ring-[#ebe4dc]">
+                          {b.notes}
+                        </p>
+                      ) : null}
                       {b.status === "PENDING" && (
                         <p className="mt-3 rounded-lg bg-amber-50/90 px-3 py-2 font-sans text-[12px] leading-relaxed text-amber-950 ring-1 ring-amber-100">
                           Waiting for the booking manager to confirm.

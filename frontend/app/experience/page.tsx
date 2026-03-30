@@ -11,15 +11,6 @@ const poolImg = "/assets/why-villa-private.jpg";
 const amenitiesImg = "/assets/journal-bonfire.jpg";
 const journeyBg = "/assets/why-villa-garden.jpg";
 
-const amenityTabs = [
-  "Private Pool",
-  "Butler Service",
-  "Premium Toiletries",
-  "Mountain Views",
-  "Fireplace",
-  "Gourmet Kitchen",
-];
-
 export default async function ExperiencePage() {
   const villas = await getPublishedVillas();
   const villaCards = villas.slice(0, 6);
@@ -131,29 +122,6 @@ export default async function ExperiencePage() {
             >
               Load More
             </Link>
-          </div>
-        </div>
-      </section>
-
-      {/* Amenities (dark) */}
-      <section className="bg-[#0f1412] py-20 md:py-28">
-        <div className="max-w-[1200px] mx-auto px-6 md:px-12 grid grid-cols-1 lg:grid-cols-12 gap-10 items-center">
-          <div className="lg:col-span-5">
-            <h2 className="font-display text-3xl md:text-4xl text-white">Amenities</h2>
-            <div className="mt-10 space-y-5">
-              {amenityTabs.map((t) => (
-                <div key={t} className="flex items-center justify-between border-b border-white/10 pb-4">
-                  <p className="text-[12px] md:text-[13px] text-white/80">{t}</p>
-                  <span className="text-white/25">›</span>
-                </div>
-              ))}
-            </div>
-          </div>
-          <div className="lg:col-span-7">
-            <div className="border border-white/10 bg-black/20 p-4">
-              {/* eslint-disable-next-line @next/next/no-img-element */}
-              <img src={amenitiesImg} alt="Amenities" className="w-full h-[320px] md:h-[380px] object-cover" />
-            </div>
           </div>
         </div>
       </section>

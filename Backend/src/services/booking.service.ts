@@ -24,24 +24,41 @@ export type BookingApi = {
   updatedAt: string;
   userId: string;
   user: UserBrief;
+  villaSlug: string | null;
+  checkOutDate: string | null;
+  adults: number | null;
+  children: number | null;
+  guestPhone: string | null;
+  guestFirstName: string | null;
+  guestLastName: string | null;
+  guestContactEmail: string | null;
+  paymentMethod: string | null;
 };
 
-function mapBooking(
-  b: {
-    _id: string;
-    reference: string;
-    experienceType: string;
-    packageName: string;
-    bookingDate: Date;
-    totalAmount: number;
-    status: BookingStatus;
-    notes: string | null;
-    createdAt: Date;
-    updatedAt: Date;
-    userId: string;
-  },
-  user: UserBrief,
-): BookingApi {
+type LeanBooking = {
+  _id: string;
+  reference: string;
+  experienceType: string;
+  packageName: string;
+  bookingDate: Date;
+  totalAmount: number;
+  status: BookingStatus;
+  notes: string | null;
+  createdAt: Date;
+  updatedAt: Date;
+  userId: string;
+  villaSlug?: string | null;
+  checkOutDate?: Date | null;
+  adults?: number | null;
+  children?: number | null;
+  guestPhone?: string | null;
+  guestFirstName?: string | null;
+  guestLastName?: string | null;
+  guestContactEmail?: string | null;
+  paymentMethod?: string | null;
+};
+
+function mapBooking(b: LeanBooking, user: UserBrief): BookingApi {
   return {
     id: b._id,
     reference: b.reference,
@@ -55,6 +72,15 @@ function mapBooking(
     updatedAt: b.updatedAt.toISOString(),
     userId: b.userId,
     user,
+    villaSlug: b.villaSlug ?? null,
+    checkOutDate: b.checkOutDate ? b.checkOutDate.toISOString() : null,
+    adults: b.adults ?? null,
+    children: b.children ?? null,
+    guestPhone: b.guestPhone ?? null,
+    guestFirstName: b.guestFirstName ?? null,
+    guestLastName: b.guestLastName ?? null,
+    guestContactEmail: b.guestContactEmail ?? null,
+    paymentMethod: b.paymentMethod ?? null,
   };
 }
 
@@ -70,7 +96,7 @@ async function attachUsers(bookings: Array<Record<string, unknown>>): Promise<Bo
     ]),
   );
   return bookings.map((raw) => {
-    const b = raw as Parameters<typeof mapBooking>[0];
+    const b = raw as LeanBooking;
     const u = map[b.userId];
     if (!u) {
       return mapBooking(b, { id: b.userId, fullName: "?", email: "?", role: "USER" });
@@ -96,14 +122,87 @@ export async function findBookingById(id: string) {
   return withUser;
 }
 
-export async function createBookingForUser(params: {
+/** Stay occupies [checkIn, checkOut) — checkOut is morning departure (exclusive). */
+export function stayRangesOverlap(
+  checkInA: Date,
+  checkOutA: Date,
+  checkInB: Date,
+  checkOutB: Date,
+): boolean {
+  const a = checkInA.getTime();
+  const ae = checkOutA.getTime();
+  const b = checkInB.getTime();
+  const be = checkOutB.getTime();
+  return a < be && b < ae;
+}
+
+export async function listStayOccupiedRangesForVilla(villaSlug: string) {
+  const slug = villaSlug.trim().toLowerCase();
+  const rows = await BookingM.find({
+    experienceType: "Book Your Stay",
+    villaSlug: slug,
+    status: { $in: ["PENDING", "CONFIRMED"] },
+    checkOutDate: { $exists: true, $ne: null },
+  })
+    .select("bookingDate checkOutDate")
+    .lean();
+
+  return rows.map((raw) => {
+    const r = raw as unknown as { bookingDate: Date; checkOutDate: Date };
+    return {
+      checkIn: r.bookingDate.toISOString(),
+      checkOut: r.checkOutDate.toISOString(),
+    };
+  });
+}
+
+/** True if new stay overlaps any existing PENDING/CONFIRMED stay for this villa. */
+export async function hasStayOverlapForVilla(
+  villaSlug: string,
+  checkIn: Date,
+  checkOut: Date,
+  excludeBookingId?: string,
+): Promise<boolean> {
+  const slug = villaSlug.trim().toLowerCase();
+  const q: Record<string, unknown> = {
+    experienceType: "Book Your Stay",
+    villaSlug: slug,
+    status: { $in: ["PENDING", "CONFIRMED"] },
+    checkOutDate: { $exists: true, $ne: null },
+  };
+  if (excludeBookingId) {
+    q._id = { $ne: excludeBookingId };
+  }
+  const rows = await BookingM.find(q).select("bookingDate checkOutDate").lean();
+
+  for (const raw of rows) {
+    const r = raw as unknown as { bookingDate: Date; checkOutDate: Date };
+    const exIn = new Date(r.bookingDate);
+    const exOut = new Date(r.checkOutDate);
+    if (stayRangesOverlap(checkIn, checkOut, exIn, exOut)) return true;
+  }
+  return false;
+}
+
+export type CreateBookingParams = {
   userId: string;
   experienceType: string;
   packageName: string;
   bookingDate: Date;
   totalAmount: number;
   notes: string | null;
-}) {
+  villaSlug?: string | null;
+  checkOutDate?: Date | null;
+  adults?: number | null;
+  children?: number | null;
+  guestPhone?: string | null;
+  guestFirstName?: string | null;
+  guestLastName?: string | null;
+  guestContactEmail?: string | null;
+  paymentMethod?: string | null;
+};
+
+export async function createBookingForUser(params: CreateBookingParams) {
   const doc = await BookingM.create({
     reference: generateBookingReference(),
     experienceType: params.experienceType,
@@ -113,6 +212,15 @@ export async function createBookingForUser(params: {
     notes: params.notes,
     status: "PENDING",
     userId: params.userId,
+    villaSlug: params.villaSlug ?? null,
+    checkOutDate: params.checkOutDate ?? null,
+    adults: params.adults ?? null,
+    children: params.children ?? null,
+    guestPhone: params.guestPhone ?? null,
+    guestFirstName: params.guestFirstName ?? null,
+    guestLastName: params.guestLastName ?? null,
+    guestContactEmail: params.guestContactEmail ?? null,
+    paymentMethod: params.paymentMethod ?? null,
   });
   const full = await findBookingById(doc._id);
   if (!full) throw new Error("CREATE_FAILED");

@@ -32,6 +32,16 @@ const BookingSchema = new mongoose.Schema(
     },
     notes: { type: String, default: null },
     userId: { type: String, required: true, index: true },
+    /** Villa stay flow — optional for legacy / non-stay bookings */
+    villaSlug: { type: String, default: null },
+    checkOutDate: { type: Date, default: null },
+    adults: { type: Number, default: null },
+    children: { type: Number, default: null },
+    guestPhone: { type: String, default: null },
+    guestFirstName: { type: String, default: null },
+    guestLastName: { type: String, default: null },
+    guestContactEmail: { type: String, default: null },
+    paymentMethod: { type: String, default: null },
   },
   { timestamps: true, collection: "Booking" },
 );

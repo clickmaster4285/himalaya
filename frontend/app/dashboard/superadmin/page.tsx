@@ -261,6 +261,7 @@ export default function SuperadminDashboardPage() {
                     <th className="px-4 py-3.5 font-medium md:px-5">Guest</th>
                     <th className="px-4 py-3.5 font-medium md:px-5">Experience</th>
                     <th className="px-4 py-3.5 font-medium md:px-5">Package</th>
+                    <th className="px-4 py-3.5 font-medium md:px-5">Extras</th>
                     <th className="px-4 py-3.5 font-medium md:px-5">Date</th>
                     <th className="px-4 py-3.5 font-medium md:px-5">Amount</th>
                     <th className="px-4 py-3.5 font-medium md:px-5">Status</th>
@@ -285,6 +286,13 @@ export default function SuperadminDashboardPage() {
                       <td className="px-4 py-3.5 text-[#3d3830] md:px-5">{b.experienceType}</td>
                       <td className="max-w-[200px] truncate px-4 py-3.5 text-[#5c564c] md:px-5" title={b.packageName}>
                         {b.packageName}
+                      </td>
+                      <td className="max-w-[220px] truncate px-4 py-3.5 text-[#5c564c] md:px-5" title={b.extrasNote ?? undefined}>
+                        {b.extrasNote
+                          ? b.extrasNote
+                          : Array.isArray(b.extras) && b.extras.length > 0
+                            ? `${b.extras.length} item${b.extras.length === 1 ? "" : "s"}`
+                            : "—"}
                       </td>
                       <td className="min-w-[120px] px-4 py-3.5 text-[#5c564c] md:px-5">
                         <span className="whitespace-nowrap">

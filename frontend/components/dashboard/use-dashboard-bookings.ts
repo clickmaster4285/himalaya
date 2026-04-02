@@ -21,6 +21,8 @@ export type DashboardBooking = {
   guestLastName?: string | null;
   guestContactEmail?: string | null;
   paymentMethod?: string | null;
+  extras?: Array<{ title: string; quantity: number; amount: number; notes: string | null }>;
+  extrasNote?: string | null;
 };
 
 export type BookingStats = {

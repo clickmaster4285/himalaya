@@ -2,7 +2,7 @@
 
 import { useState, useRef, useEffect } from "react";
 import { motion, useInView, AnimatePresence } from "framer-motion";
-import { Heart, UtensilsCrossed, Music, PartyPopper, Mountain, Briefcase } from "lucide-react";
+import { Heart, UtensilsCrossed, Sparkles, PartyPopper, Mountain, Briefcase } from "lucide-react";
 
 const servicesImg = "/assets/services-events-real.jpg";
 const galleryDiningNight = "/assets/gallery-dining-night.jpg";
@@ -10,31 +10,35 @@ const galleryBbq = "/assets/gallery-bbq.jpg";
 const galleryGarden = "/assets/gallery-garden.jpg";
 const gallerySunlight = "/assets/gallery-sunlight.jpg";
 const galleryInterior = "/assets/gallery-interior.jpg";
+const galleryBalcony = "/assets/gallery-balcony.jpg";
 
 const services = [
   {
     number: "01",
     title: "Destination Weddings",
-    headline: "Your Wedding. The Himalayas Bearing Witness.",
-    description: "Imagine your ceremony set against cedar forests and mountain air, with every detail handled by a team that treats your wedding as the only one that has ever mattered.",
+    headline: "Weddings in a setting built for luxury outdoor celebrations.",
+    description:
+      "Create timeless memories in a setting designed for luxury outdoor celebrations — cedar forests, mountain air, and a team that treats your day as the only one that matters.",
     icon: Heart,
     images: [servicesImg, galleryGarden, gallerySunlight],
   },
   {
     number: "02",
     title: "Dining",
-    headline: "A Table With No Equal in Pakistan.",
-    description: "Whether it's a private candlelit dinner on your villa terrace or a long family lunch with the Murree hills stretching out before you — dining as it should always have been.",
+    headline: "Curated dining experiences",
+    description:
+      "Private chefs and customized menus tailored for your event or stay — from terrace dinners to long lunches with the Murree hills before you.",
     icon: UtensilsCrossed,
     images: [galleryDiningNight, galleryBbq, galleryInterior],
   },
   {
     number: "03",
-    title: "Musical Evenings",
-    headline: "An Evening You Will Not Find Advertised.",
-    description: "Curated musical evenings bring Pakistan's most respected artists to an audience of few — intimate, unhurried, and entirely unlike anything a concert hall can offer.",
-    icon: Music,
-    images: [galleryInterior, gallerySunlight, servicesImg],
+    title: "Private Getaways",
+    headline: "Escape into a serene, high-end retreat.",
+    description:
+      "Reserved only for a select few — a private estate where stillness, space, and the mountain replace the noise of the city.",
+    icon: Sparkles,
+    images: [galleryInterior, gallerySunlight, galleryBalcony],
   },
   {
     number: "04",
@@ -55,8 +59,9 @@ const services = [
   {
     number: "06",
     title: "Corporate Retreats",
-    headline: "The Best Decisions Are Made Away From the Office.",
-    description: "When your leadership team needs to think clearly — Himalaya Villas provides a setting where focus comes naturally. Because the altitude shifts perspective.",
+    headline: "A private executive environment away from the city.",
+    description:
+      "Impress your clients and team with a private executive environment away from the city — where focus comes naturally and the altitude shifts perspective.",
     icon: Briefcase,
     images: [galleryInterior, galleryDiningNight, gallerySunlight],
   },

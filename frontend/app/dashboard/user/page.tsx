@@ -89,7 +89,7 @@ export default function UserDashboardPage() {
               <div>
                 <p className="font-sans text-[15px] font-semibold text-emerald-950">You have confirmed bookings</p>
                 <p className="mt-1 font-sans text-[13px] leading-relaxed text-emerald-900/85">
-                  Our team approved at least one request. Details are on each card below.
+                  Our team approved at least one request. Details are in the table below.
                 </p>
               </div>
             </div>
@@ -104,80 +104,99 @@ export default function UserDashboardPage() {
           <div>
             <h2 className="font-display text-xl font-semibold text-[#1a1816]">All your bookings</h2>
             <p className="mt-1 font-sans text-sm text-[#6b655c]">Newest first — same data your manager sees for your rows only.</p>
-            <div className="mt-4 space-y-4">
-              {bookings.map((b) => (
-                <article
-                  key={b.id}
-                  className="rounded-2xl border border-[#ebe4dc] bg-white p-5 shadow-sm shadow-black/[0.04] md:p-6"
-                >
-                  <div className="flex flex-col gap-4 sm:flex-row sm:items-start sm:justify-between">
-                    <div className="min-w-0">
-                      <p className="font-mono text-[11px] font-medium text-[#8a8278]">{b.reference}</p>
-                      <h3 className="font-display mt-1 text-xl font-semibold text-[#1a1816]">{b.experienceType}</h3>
-                      <p className="font-sans text-[14px] text-[#5c564c]">{b.packageName}</p>
-                      <p className="mt-2 flex flex-wrap items-center gap-2 font-sans text-[13px] text-[#6b655c]">
-                        <Clock className="h-4 w-4 shrink-0 opacity-70" aria-hidden />
-                        <time dateTime={b.bookingDate}>
-                          {new Date(b.bookingDate).toLocaleDateString(undefined, {
-                            weekday: "short",
-                            month: "short",
-                            day: "numeric",
-                            year: "numeric",
-                          })}
-                        </time>
-                        {b.checkOutDate ? (
-                          <>
-                            <span aria-hidden>→</span>
-                            <time dateTime={b.checkOutDate}>
-                              {new Date(b.checkOutDate).toLocaleDateString(undefined, {
-                                month: "short",
-                                day: "numeric",
-                                year: "numeric",
-                              })}
-                            </time>
-                          </>
-                        ) : null}
-                      </p>
-                      {b.guestPhone ? (
-                        <p className="mt-1 font-sans text-[12px] text-[#6b655c]">Phone on file: {b.guestPhone}</p>
-                      ) : null}
-                      {b.notes ? (
-                        <p className="mt-2 rounded-lg bg-[#faf8f5] px-3 py-2 font-sans text-[12px] text-[#4a453d] ring-1 ring-[#ebe4dc]">
-                          {b.notes}
-                        </p>
-                      ) : null}
-                      {b.status === "PENDING" && (
-                        <p className="mt-3 rounded-lg bg-amber-50/90 px-3 py-2 font-sans text-[12px] leading-relaxed text-amber-950 ring-1 ring-amber-100">
-                          Waiting for the booking manager to confirm.
-                        </p>
-                      )}
-                      {b.status === "CONFIRMED" && (
-                        <p className="mt-3 rounded-lg bg-emerald-50/90 px-3 py-2 font-sans text-[12px] leading-relaxed text-emerald-950 ring-1 ring-emerald-100">
-                          <strong>Booking confirmed.</strong> Concierge will follow up.
-                        </p>
-                      )}
+            <section className="mt-4 rounded-3xl border border-[#e0d5c8] bg-gradient-to-b from-white to-[#faf7f2] p-1 shadow-[0_20px_50px_-28px_rgba(28,22,16,0.22)]">
+              <div className="overflow-hidden rounded-[1.35rem] border border-[#efe8de] bg-white">
+                <div className="overflow-x-auto">
+                  <table className="w-full min-w-[880px] text-left text-sm">
+                    <thead className="bg-[#1c1916] font-sans text-[10px] font-semibold uppercase tracking-[0.16em] text-[#c9bfb0]">
+                      <tr>
+                        <th className="px-4 py-3.5 font-medium md:px-5">Ref</th>
+                        <th className="px-4 py-3.5 font-medium md:px-5">Experience</th>
+                        <th className="px-4 py-3.5 font-medium md:px-5">Villa / package</th>
+                        <th className="px-4 py-3.5 font-medium md:px-5">Dates</th>
+                        <th className="px-4 py-3.5 font-medium md:px-5">Amount</th>
+                        <th className="px-4 py-3.5 font-medium md:px-5">Status</th>
+                      </tr>
+                    </thead>
+                    <tbody className="font-sans">
+                      {bookings.map((b, i) => (
+                        <tr
+                          key={b.id}
+                          className={cn(
+                            "border-t border-[#f2ebe3] transition-colors hover:bg-[#fdfaf6]",
+                            i % 2 === 1 && "bg-[#fdfcfa]/80",
+                          )}
+                        >
+                          <td className="whitespace-nowrap px-4 py-3.5 font-mono text-[11px] text-[#5c564c] md:px-5">
+                            {b.reference}
+                          </td>
+                          <td className="px-4 py-3.5 text-[#3d3830] md:px-5">{b.experienceType}</td>
+                          <td className="max-w-[300px] px-4 py-3.5 text-[#5c564c] md:px-5">
+                            <div className="truncate" title={b.packageName}>
+                              {b.packageName}
+                            </div>
+                            {b.villaSlug ? (
+                              <div className="mt-1 text-[11px] text-[#8a8278]">Villa: {b.villaSlug}</div>
+                            ) : null}
+                          </td>
+                          <td className="min-w-[170px] px-4 py-3.5 text-[#5c564c] md:px-5">
+                            <span className="inline-flex items-center gap-2">
+                              <Clock className="h-4 w-4 shrink-0 opacity-70" aria-hidden />
+                              <span className="whitespace-nowrap">
+                                {new Date(b.bookingDate).toLocaleDateString(undefined, {
+                                  year: "numeric",
+                                  month: "short",
+                                  day: "numeric",
+                                })}
+                              </span>
+                            </span>
+                            {b.checkOutDate ? (
+                              <span className="mt-1 block text-[11px] text-[#8a8278]">
+                                →{" "}
+                                {new Date(b.checkOutDate).toLocaleDateString(undefined, {
+                                  month: "short",
+                                  day: "numeric",
+                                  year: "numeric",
+                                })}
+                              </span>
+                            ) : null}
+                          </td>
+                          <td className="whitespace-nowrap px-4 py-3.5 font-medium tabular-nums text-[#1a1816] md:px-5">
+                            PKR {b.totalAmount.toLocaleString()}
+                          </td>
+                          <td className="px-4 py-3.5 md:px-5">
+                            <div className="flex flex-col gap-2">
+                              <StatusBadge status={b.status} />
+                              {b.status === "PENDING" ? (
+                                <p className="text-[11px] leading-relaxed text-[#8a8278]">
+                                  Waiting for manager confirmation.
+                                </p>
+                              ) : b.status === "CONFIRMED" ? (
+                                <p className="text-[11px] leading-relaxed text-[#8a8278]">
+                                  Booking confirmed. Concierge will follow up.
+                                </p>
+                              ) : null}
+                            </div>
+                          </td>
+                        </tr>
+                      ))}
+                    </tbody>
+                  </table>
+
+                  {bookings.length === 0 && (
+                    <div className="px-6 py-12 text-center">
+                      <p className="font-sans text-[15px] text-[#5c564c]">No bookings yet — start your first request.</p>
+                      <Link
+                        href="/dashboard/user/new"
+                        className="mt-4 inline-flex rounded-xl bg-[#9a7b3a] px-5 py-2.5 font-sans text-[14px] font-semibold text-white hover:bg-[#856a32]"
+                      >
+                        New booking request
+                      </Link>
                     </div>
-                    <div className="flex shrink-0 flex-col items-start gap-2 sm:items-end">
-                      <StatusBadge status={b.status} />
-                      <p className="font-sans text-lg font-semibold tabular-nums text-[#1a1816]">
-                        PKR {b.totalAmount.toLocaleString()}
-                      </p>
-                    </div>
-                  </div>
-                </article>
-              ))}
-              {bookings.length === 0 && (
-                <div className="rounded-2xl border border-dashed border-[#d4cdc2] bg-white/80 px-6 py-12 text-center">
-                  <p className="font-sans text-[15px] text-[#5c564c]">No bookings yet — start your first request.</p>
-                  <Link
-                    href="/dashboard/user/new"
-                    className="mt-4 inline-flex rounded-xl bg-[#9a7b3a] px-5 py-2.5 font-sans text-[14px] font-semibold text-white hover:bg-[#856a32]"
-                  >
-                    New booking request
-                  </Link>
+                  )}
                 </div>
-              )}
-            </div>
+              </div>
+            </section>
           </div>
         </>
       )}

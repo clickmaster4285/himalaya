@@ -24,8 +24,23 @@ const geistMono = Geist_Mono({
 });
 
 export const metadata: Metadata = {
-  title: "Himalaya Villas",
-  description: "Himalaya Villas – Luxury hillside villas in the Himalayas.",
+  title: "Himalaya Premium Villas | Private Luxury Estate Bhurban",
+  description:
+    "Himalaya Premium Villas is not a hotel. It is a private luxury estate in Bhurban crafted for those who demand exclusivity, privacy, and elevated experiences in the Himalayan foothills. Ultra-private villas, limited bookings, destination weddings, corporate retreats, and curated stays.",
+  keywords: [
+    "Himalaya Premium Villas",
+    "Bhurban luxury estate",
+    "private villa Pakistan",
+    "Murree hills retreat",
+    "exclusive mountain villas",
+    "destination wedding Bhurban",
+    "corporate retreat Pakistan",
+  ],
+  openGraph: {
+    title: "Himalaya Premium Villas — Private Luxury Estate, Bhurban",
+    description:
+      "Not a hotel — a private luxury estate for elite gatherings, with panoramic Himalayan views, curated dining, and limited monthly bookings.",
+  },
 };
 
 export default function RootLayout({

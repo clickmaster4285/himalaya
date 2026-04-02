@@ -4,6 +4,8 @@ import { requireDashboardRole } from "@/lib/dashboard-auth";
 const links = [
   { href: "/dashboard/superadmin", label: "Overview", icon: "layout" as const },
   { href: "/dashboard/superadmin/villas", label: "Villas", icon: "building" as const },
+  { href: "/dashboard/superadmin/packages", label: "Packages", icon: "box" as const },
+  { href: "/dashboard/superadmin/expenses", label: "Expenses", icon: "money" as const },
   { href: "/dashboard/superadmin/users", label: "Users & roles", icon: "users" as const },
 ];
 

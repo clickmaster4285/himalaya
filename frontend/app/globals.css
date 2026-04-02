@@ -147,14 +147,22 @@
 }
 
 @layer components {
+  /* Stronger scrim so white type stays legible on bright snow / sky in the video */
   .hero-overlay {
-    background: linear-gradient(
-      to bottom,
-      hsl(var(--hero-overlay) / 0.2) 0%,
-      hsl(var(--hero-overlay) / 0.1) 40%,
-      hsl(var(--hero-overlay) / 0.5) 80%,
-      hsl(var(--hero-overlay) / 0.7) 100%
-    );
+    background:
+      linear-gradient(
+        165deg,
+        hsl(var(--hero-overlay) / 0.55) 0%,
+        hsl(var(--hero-overlay) / 0.22) 38%,
+        hsl(var(--hero-overlay) / 0.35) 62%,
+        hsl(var(--hero-overlay) / 0.72) 100%
+      ),
+      linear-gradient(
+        to right,
+        hsl(var(--hero-overlay) / 0.25) 0%,
+        hsl(var(--hero-overlay) / 0.05) 45%,
+        hsl(var(--hero-overlay) / 0.45) 100%
+      );
   }
 
   .nav-link {

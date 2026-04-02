@@ -95,6 +95,32 @@ const PhilosophySection = () => {
           >
             We don't offer packages. We learn what you need and build your stay around it.
           </motion.p>
+
+          <motion.div
+            initial={{ opacity: 0, y: 24 }}
+            animate={isInView ? { opacity: 1, y: 0 } : {}}
+            transition={{ duration: 0.8, delay: 0.85 }}
+            className="grid gap-8 pt-4 sm:grid-cols-1 md:grid-cols-3 md:gap-6"
+          >
+            <div className="space-y-2 border-t border-primary/20 pt-6">
+              <h3 className="font-display text-xl font-normal text-foreground">Wake up above the clouds</h3>
+              <p className="text-sm leading-relaxed text-muted-foreground">
+                Enjoy uninterrupted panoramic views of the Himalayan foothills from your private terrace.
+              </p>
+            </div>
+            <div className="space-y-2 border-t border-primary/20 pt-6">
+              <h3 className="font-display text-xl font-normal text-foreground">Luxury that speaks quietly</h3>
+              <p className="text-sm leading-relaxed text-muted-foreground">
+                From premium furnishings to refined interiors, every detail is designed for understated elegance.
+              </p>
+            </div>
+            <div className="space-y-2 border-t border-primary/20 pt-6">
+              <h3 className="font-display text-xl font-normal text-foreground">Curated dining experiences</h3>
+              <p className="text-sm leading-relaxed text-muted-foreground">
+                Private chefs and customized menus tailored for your event or stay.
+              </p>
+            </div>
+          </motion.div>
         </div>
 
         {/* Right: Rotating Images */}

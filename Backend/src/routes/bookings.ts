@@ -67,6 +67,27 @@ bookingsRouter.post("/", async (req, res) => {
     const notes =
       notesRaw === null || notesRaw === undefined ? null : String(notesRaw).trim() || null;
 
+    const extrasRaw = req.body?.extras;
+    const extrasNoteRaw = req.body?.extrasNote;
+    const extrasNote =
+      extrasNoteRaw === null || extrasNoteRaw === undefined ? null : String(extrasNoteRaw).trim() || null;
+    const extras = Array.isArray(extrasRaw)
+      ? extrasRaw
+          .map((x) => ({
+            title: String(x?.title ?? "").trim(),
+            quantity: Number(x?.quantity ?? 1),
+            amount: Number(x?.amount ?? 0),
+            notes: x?.notes == null ? null : String(x.notes).trim() || null,
+          }))
+          .filter((x) => x.title)
+          .map((x) => ({
+            title: x.title,
+            quantity: Number.isFinite(x.quantity) && x.quantity > 0 ? x.quantity : 1,
+            amount: Number.isFinite(x.amount) && x.amount >= 0 ? x.amount : 0,
+            notes: x.notes,
+          }))
+      : [];
+
     if (!experienceType || !packageName || !bookingDateRaw || Number.isNaN(totalAmount) || totalAmount < 0) {
       return res.status(400).json({ error: "Missing required fields." });
     }
@@ -149,6 +170,8 @@ bookingsRouter.post("/", async (req, res) => {
       guestLastName,
       guestContactEmail,
       paymentMethod,
+      extras,
+      extrasNote,
     });
 
     return res.status(201).json({ booking });
@@ -201,6 +224,31 @@ bookingsRouter.patch("/:id", async (req, res) => {
     const status = req.body?.status as BookingStatus | undefined;
     const notes =
       req.body?.notes !== undefined ? (req.body.notes === null ? null : String(req.body.notes)) : undefined;
+    const extrasNote =
+      req.body?.extrasNote !== undefined
+        ? req.body.extrasNote === null
+          ? null
+          : String(req.body.extrasNote)
+        : undefined;
+    const extras =
+      req.body?.extras !== undefined
+        ? Array.isArray(req.body.extras)
+          ? req.body.extras
+              .map((x: any) => ({
+                title: String(x?.title ?? "").trim(),
+                quantity: Number(x?.quantity ?? 1),
+                amount: Number(x?.amount ?? 0),
+                notes: x?.notes == null ? null : String(x.notes).trim() || null,
+              }))
+              .filter((x: { title: string }) => x.title)
+              .map((x: { title: string; quantity: number; amount: number; notes: string | null }) => ({
+                title: x.title,
+                quantity: Number.isFinite(x.quantity) && x.quantity > 0 ? x.quantity : 1,
+                amount: Number.isFinite(x.amount) && x.amount >= 0 ? x.amount : 0,
+                notes: x.notes,
+              }))
+          : []
+        : undefined;
 
     if (status && !BOOKING_STATUSES.includes(status)) {
       return res.status(400).json({ error: "Invalid status." });
@@ -209,6 +257,8 @@ bookingsRouter.patch("/:id", async (req, res) => {
     const booking = await updateBookingById(req.params.id, {
       status: status ?? existing.status,
       notes: notes !== undefined ? notes : existing.notes,
+      extrasNote: extrasNote !== undefined ? extrasNote : existing.extrasNote,
+      extras: extras !== undefined ? extras : existing.extras,
     });
 
     return res.json({ booking });

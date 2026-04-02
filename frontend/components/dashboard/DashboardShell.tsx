@@ -12,6 +12,8 @@ import {
   ClipboardList,
   LayoutDashboard,
   Menu,
+  ReceiptText,
+  Package,
   Users,
   X,
 } from "lucide-react";
@@ -24,6 +26,8 @@ const ICON_MAP = {
   layout: LayoutDashboard,
   users: Users,
   building: Building2,
+  box: Package,
+  money: ReceiptText,
 } as const;
 
 export type DashIcon = keyof typeof ICON_MAP;

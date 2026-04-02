@@ -4,6 +4,7 @@ import Link from "next/link";
 import { useEffect, useMemo, useRef, useState } from "react";
 import { motion, useInView } from "framer-motion";
 import type { Villa } from "@/lib/villa-types";
+import { villaCardDescriptionOverride } from "@/lib/villa-hero-copy";
 
 const categories = ["All", "Presidential", "Family", "Suite"] as const;
 
@@ -30,7 +31,9 @@ const VillaCard = ({ villa, index, isInView }: { villa: Villa; index: number; is
         </div>
 
         <div className="px-6 py-5">
-          <p className="text-sm leading-relaxed text-muted-foreground">{villa.description}</p>
+          <p className="text-sm leading-relaxed text-muted-foreground">
+            {villaCardDescriptionOverride(villa.slug) ?? villa.description}
+          </p>
 
           <div className="mt-5 flex items-center justify-between border-t border-border pt-4">
             <span className="font-display text-lg italic text-foreground">{villa.price}</span>
@@ -82,9 +85,10 @@ const VillasSection = () => {
               initial={{ opacity: 0, y: 20 }}
               animate={isInView ? { opacity: 1, y: 0 } : {}}
               transition={{ duration: 0.6, delay: 0.15 }}
-              className="mt-3 font-body text-sm text-muted-foreground md:text-base"
+              className="mt-3 max-w-2xl font-body text-sm text-muted-foreground md:text-base"
             >
-              Each villa tells its own story — curated from the estate catalog
+              Presidential Suite and Family Residence — flagship privacy and space for those who expect the mountain at
+              its best.
             </motion.p>
           </div>
 

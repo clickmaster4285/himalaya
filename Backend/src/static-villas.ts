@@ -6,7 +6,8 @@ export const STATIC_VILLAS: VillaPublic[] = [
     slug: "alpine-family-lodge",
     title: "Alpine Family Lodge",
     category: "Family",
-    description: "Spacious 3-bedroom villa perfect for family gatherings.",
+    description:
+      "Three bedrooms. One family. Enough space for everyone to breathe — and enough mountain outside to fill three days without repeating yourself.",
     price: "PKR 39,000",
     image: "/assets/villa-alpine-real.jpg",
     gallery: ["/assets/gallery-interior.jpg", "/assets/gallery-dining-night.jpg", "/assets/gallery-balcony.jpg"],
@@ -22,7 +23,8 @@ export const STATIC_VILLAS: VillaPublic[] = [
     slug: "presidential-suite",
     title: "The Presidential Suite",
     category: "Presidential",
-    description: "Panoramic mountain views with a private terrace and jacuzzi.",
+    description:
+      "The flagship. A private terrace, jacuzzi with mountain views, and the kind of stillness Islamabad cannot offer. For guests who want the best of what the mountain has.",
     price: "PKR 65,000",
     image: "/assets/villa-presidential-real.jpg",
     gallery: ["/assets/gallery-interior.jpg", "/assets/gallery-dining-night.jpg", "/assets/gallery-exterior.jpg"],
@@ -54,7 +56,8 @@ export const STATIC_VILLAS: VillaPublic[] = [
     slug: "garden-villa-retreat",
     title: "Garden Villa Retreat",
     category: "Family",
-    description: "Spacious 3-bedroom villa perfect for family gatherings.",
+    description:
+      "Three bedrooms. One family. Enough space for everyone to breathe — and enough mountain outside to fill three days without repeating yourself.",
     price: "PKR 39,000",
     image: "/assets/villa-alpine.jpg",
     gallery: ["/assets/gallery-garden.jpg", "/assets/gallery-interior.jpg", "/assets/gallery-balcony.jpg"],

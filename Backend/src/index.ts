@@ -5,6 +5,8 @@ import { getMongoUri } from "./env";
 import { ensureMongoBootstrap } from "./bootstrap";
 import { authRouter } from "./routes/auth";
 import { bookingsRouter } from "./routes/bookings";
+import { packagesRouter } from "./routes/packages";
+import { expensesRouter } from "./routes/expenses";
 import { adminUsersRouter } from "./routes/admin-users";
 import { publicVillasRouter, adminVillasRouter } from "./routes/villas";
 
@@ -13,6 +15,8 @@ app.use(express.json({ limit: "2mb" }));
 
 app.use("/api/auth", authRouter);
 app.use("/api/bookings", bookingsRouter);
+app.use("/api/packages", packagesRouter);
+app.use("/api/expenses", expensesRouter);
 app.use("/api/admin/users", adminUsersRouter);
 app.use("/api/villas", publicVillasRouter);
 app.use("/api/admin/villas", adminVillasRouter);

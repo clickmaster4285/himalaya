@@ -33,6 +33,8 @@ export type BookingApi = {
   guestLastName: string | null;
   guestContactEmail: string | null;
   paymentMethod: string | null;
+  extras: Array<{ title: string; quantity: number; amount: number; notes: string | null }>;
+  extrasNote: string | null;
 };
 
 type LeanBooking = {
@@ -56,6 +58,8 @@ type LeanBooking = {
   guestLastName?: string | null;
   guestContactEmail?: string | null;
   paymentMethod?: string | null;
+  extras?: Array<{ title: string; quantity: number; amount: number; notes: string | null }>;
+  extrasNote?: string | null;
 };
 
 function mapBooking(b: LeanBooking, user: UserBrief): BookingApi {
@@ -81,6 +85,8 @@ function mapBooking(b: LeanBooking, user: UserBrief): BookingApi {
     guestLastName: b.guestLastName ?? null,
     guestContactEmail: b.guestContactEmail ?? null,
     paymentMethod: b.paymentMethod ?? null,
+    extras: Array.isArray(b.extras) ? b.extras : [],
+    extrasNote: b.extrasNote ?? null,
   };
 }
 
@@ -200,6 +206,8 @@ export type CreateBookingParams = {
   guestLastName?: string | null;
   guestContactEmail?: string | null;
   paymentMethod?: string | null;
+  extras?: Array<{ title: string; quantity: number; amount: number; notes: string | null }>;
+  extrasNote?: string | null;
 };
 
 export async function createBookingForUser(params: CreateBookingParams) {
@@ -221,6 +229,8 @@ export async function createBookingForUser(params: CreateBookingParams) {
     guestLastName: params.guestLastName ?? null,
     guestContactEmail: params.guestContactEmail ?? null,
     paymentMethod: params.paymentMethod ?? null,
+    extras: Array.isArray(params.extras) ? params.extras : [],
+    extrasNote: params.extrasNote ?? null,
   });
   const full = await findBookingById(doc._id);
   if (!full) throw new Error("CREATE_FAILED");
@@ -229,13 +239,28 @@ export async function createBookingForUser(params: CreateBookingParams) {
 
 export async function updateBookingById(
   id: string,
-  data: { status?: BookingStatus; notes?: string | null },
+  data: {
+    status?: BookingStatus;
+    notes?: string | null;
+    extras?: Array<{ title: string; quantity: number; amount: number; notes: string | null }>;
+    extrasNote?: string | null;
+  },
 ) {
   const existing = await BookingM.findById(id).lean();
   if (!existing) return null;
-  const ex = existing as unknown as { status: BookingStatus; notes: string | null };
+  const ex = existing as unknown as {
+    status: BookingStatus;
+    notes: string | null;
+    extras?: Array<{ title: string; quantity: number; amount: number; notes: string | null }>;
+    extrasNote?: string | null;
+  };
   const nextStatus = data.status ?? ex.status;
   const nextNotes = data.notes !== undefined ? data.notes : ex.notes;
-  await BookingM.updateOne({ _id: id }, { $set: { status: nextStatus, notes: nextNotes } });
+  const nextExtras = data.extras !== undefined ? data.extras : (Array.isArray(ex.extras) ? ex.extras : []);
+  const nextExtrasNote = data.extrasNote !== undefined ? data.extrasNote : (ex.extrasNote ?? null);
+  await BookingM.updateOne(
+    { _id: id },
+    { $set: { status: nextStatus, notes: nextNotes, extras: nextExtras, extrasNote: nextExtrasNote } },
+  );
   return findBookingById(id);
 }

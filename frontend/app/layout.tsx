@@ -41,6 +41,9 @@ export const metadata: Metadata = {
     description:
       "Not a hotel — a private luxury estate for elite gatherings, with panoramic Himalayan views, curated dining, and limited monthly bookings.",
   },
+  verification: {
+    google: "_QECsDvX53vPNLld00dRcy0Ay9dA2bvaAZxmiz-DAkw",
+  },
 };
 
 export default function RootLayout({

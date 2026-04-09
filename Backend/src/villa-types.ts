@@ -1,4 +1,4 @@
-export type VillaCategory = "Presidential" | "Family" | "Suite";
+export type VillaCategory = "Presidential" | "Family" | "Suite" | "Suite 1" | "Suite 2" | "Complete Villa";
 
 export type VillaPublic = {
   slug: string;
@@ -16,4 +16,4 @@ export type VillaPublic = {
   content: string;
 };
 
-export const VILLA_CATEGORIES: VillaCategory[] = ["Presidential", "Family", "Suite"];
+export const VILLA_CATEGORIES: VillaCategory[] = ["Presidential", "Family", "Suite", "Suite 1", "Suite 2", "Complete Villa"];

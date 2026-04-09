@@ -74,6 +74,9 @@ export default function VillaEditorForm({ mode, villaId, initial, className }: P
   const [error, setError] = useState<string | null>(null);
   const [loading, setLoading] = useState(false);
   const [deleting, setDeleting] = useState(false);
+  
+  const [uploadingHero, setUploadingHero] = useState(false);
+  const [uploadingGallery, setUploadingGallery] = useState(false);
 
   const dur = reduceMotion ? 0 : 0.28;
   const ease = [0.22, 1, 0.36, 1] as const;
@@ -87,7 +90,7 @@ export default function VillaEditorForm({ mode, villaId, initial, className }: P
 
   function buildBody() {
     return {
-      slug,
+      slug: slug || slugifyTitle(title),
       title,
       category,
       description,
@@ -108,23 +111,12 @@ export default function VillaEditorForm({ mode, villaId, initial, className }: P
     switch (i) {
       case 0:
         if (!title.trim()) return "Add a villa title.";
-        if (!slug.trim() || !SLUG_RE.test(slug.trim())) return "Use a URL slug with lowercase letters, numbers, and hyphens only.";
-        if (!description.trim()) return "Add a short description.";
         return null;
-      case 1: {
-        if (!price.trim()) return "Add a display price (e.g. PKR 55,000).";
-        if (!size.trim()) return "Add size (e.g. 420m²).";
-        const b = Number(bedrooms);
-        const g = Number(guests);
-        if (!Number.isFinite(b) || b < 0) return "Bedrooms must be a valid number.";
-        if (!Number.isFinite(g) || g < 0) return "Max guests must be a valid number.";
+      case 1: 
         return null;
-      }
       case 2:
-        if (!image.trim()) return "Add a hero image URL.";
         return null;
       case 3:
-        if (!content.trim()) return "Add the full villa story for the detail page.";
         return null;
       default:
         return null;
@@ -198,6 +190,50 @@ export default function VillaEditorForm({ mode, villaId, initial, className }: P
       setError("Could not delete.");
     } finally {
       setDeleting(false);
+    }
+  }
+
+  async function handleHeroUpload(e: React.ChangeEvent<HTMLInputElement>) {
+    const file = e.target.files?.[0];
+    if (!file) return;
+    setUploadingHero(true);
+    const formData = new FormData();
+    formData.append("file", file);
+    try {
+      const res = await fetch("/api/upload", { method: "POST", body: formData });
+      const data = await res.json();
+      if (data.url) setImage(data.url);
+    } catch (err) {
+      console.error(err);
+      setError("Failed to upload hero image.");
+    } finally {
+      setUploadingHero(false);
+    }
+  }
+
+  async function handleGalleryUpload(e: React.ChangeEvent<HTMLInputElement>) {
+    const files = e.target.files;
+    if (!files || files.length === 0) return;
+    setUploadingGallery(true);
+    setError(null);
+    try {
+      const uploadedUrls: string[] = [];
+      for (let i = 0; i < files.length; i++) {
+        const formData = new FormData();
+        formData.append("file", files[i]);
+        const res = await fetch("/api/upload", { method: "POST", body: formData });
+        const data = await res.json();
+        if (data.url) uploadedUrls.push(data.url);
+      }
+      if (uploadedUrls.length > 0) {
+        const currentUrls = splitLines(galleryText);
+        setGalleryText([...currentUrls, ...uploadedUrls].join("\n"));
+      }
+    } catch (err) {
+      console.error(err);
+      setError("Failed to upload gallery images.");
+    } finally {
+      setUploadingGallery(false);
     }
   }
 
@@ -323,25 +359,7 @@ export default function VillaEditorForm({ mode, villaId, initial, className }: P
                     <Label className="font-sans text-sm font-semibold text-[#2c2824]">Title</Label>
                     <Input value={title} onChange={(e) => setTitle(e.target.value)} className={inputClass} />
                   </div>
-                  <div className="space-y-2">
-                    <div className="flex flex-wrap items-end justify-between gap-2">
-                      <Label className="font-sans text-sm font-semibold text-[#2c2824]">URL slug</Label>
-                      <button
-                        type="button"
-                        className="font-sans text-[11px] font-semibold uppercase tracking-wide text-[#9a7b3a] hover:underline"
-                        onClick={() => title && setSlug(slugifyTitle(title))}
-                      >
-                        From title
-                      </button>
-                    </div>
-                    <Input
-                      value={slug}
-                      onChange={(e) => setSlug(e.target.value.toLowerCase().replace(/\s+/g, "-"))}
-                      placeholder="emerald-ridge-villa"
-                      className={inputClass}
-                    />
-                  </div>
-                  <div className="space-y-2">
+                  <div className="space-y-2 md:col-span-2">
                     <Label className="font-sans text-sm font-semibold text-[#2c2824]">Category</Label>
                     <select
                       value={category}
@@ -394,22 +412,57 @@ export default function VillaEditorForm({ mode, villaId, initial, className }: P
               <>
                 <div>
                   <h2 className="font-display text-xl font-semibold text-[#1a1816] md:text-2xl">Images</h2>
-                  <p className="mt-1 font-sans text-sm font-medium text-[#4a4238]">One hero plus optional gallery URLs.</p>
+                  <p className="mt-1 font-sans text-sm font-medium text-[#4a4238]">Upload a hero image plus optional gallery images.</p>
                 </div>
-                <div className="space-y-2">
-                  <Label className="font-sans text-sm font-semibold text-[#2c2824]">Hero image URL</Label>
-                  <Input value={image} onChange={(e) => setImage(e.target.value)} className={inputClass} />
-                </div>
-                <div className="space-y-2">
-                  <Label className="font-sans text-sm font-semibold text-[#2c2824]">Gallery URLs</Label>
-                  <Textarea
-                    value={galleryText}
-                    onChange={(e) => setGalleryText(e.target.value)}
-                    rows={6}
-                    placeholder="One URL per line"
-                    className={textareaClass}
-                  />
-                  <p className="font-sans text-[12px] text-[#8a8278]">{galleryCount} image{galleryCount === 1 ? "" : "s"} in gallery</p>
+                <div className="space-y-4">
+                  <div className="space-y-2">
+                    <Label className="font-sans text-sm font-semibold text-[#2c2824]">Hero Image</Label>
+                    <div className="flex items-center gap-4">
+                      {image && (
+                        <div className="relative h-20 w-32 shrink-0 overflow-hidden rounded-md border border-[#d4c9b8] bg-[#ebe4da]">
+                          {/* eslint-disable-next-line @next/next/no-img-element */}
+                          <img src={image} alt="Hero" className="h-full w-full object-cover" />
+                        </div>
+                      )}
+                      <div className="flex-1 space-y-2">
+                        <Input
+                          type="file"
+                          accept="image/*"
+                          onChange={handleHeroUpload}
+                          disabled={uploadingHero}
+                          className={cn(inputClass, "pt-2")}
+                        />
+                        {uploadingHero && <p className="text-xs text-[#9a7b3a] animate-pulse">Uploading...</p>}
+                        <div className="flex items-center gap-2">
+                          <span className="text-xs text-[#8a8278]">or provide URL:</span>
+                          <Input value={image} onChange={(e) => setImage(e.target.value)} className={inputClass} placeholder="https://..." />
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                  <hr className="border-[#efe8de]" />
+                  <div className="space-y-2">
+                    <Label className="font-sans text-sm font-semibold text-[#2c2824]">Gallery Images</Label>
+                    <div className="space-y-2">
+                      <Input
+                        type="file"
+                        accept="image/*"
+                        multiple
+                        onChange={handleGalleryUpload}
+                        disabled={uploadingGallery}
+                        className={cn(inputClass, "pt-2")}
+                      />
+                      {uploadingGallery && <p className="text-xs text-[#9a7b3a] animate-pulse">Uploading gallery images...</p>}
+                    </div>
+                    <Textarea
+                      value={galleryText}
+                      onChange={(e) => setGalleryText(e.target.value)}
+                      rows={6}
+                      placeholder="One URL per line"
+                      className={textareaClass}
+                    />
+                    <p className="font-sans text-[12px] text-[#8a8278]">{galleryCount} image{galleryCount === 1 ? "" : "s"} in gallery</p>
+                  </div>
                 </div>
               </>
             )}

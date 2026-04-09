@@ -1,4 +1,4 @@
-export type VillaCategory = "Presidential" | "Family" | "Suite";
+export type VillaCategory = "Presidential" | "Family" | "Suite" | "Suite 1" | "Suite 2" | "Complete Villa";
 
 /** Public / UI shape (matches former static catalog). */
 export type Villa = {
@@ -22,4 +22,4 @@ export type VillaListItem = Pick<
   "slug" | "title" | "category" | "description" | "price" | "image" | "bedrooms" | "guests"
 >;
 
-export const VILLA_CATEGORIES: VillaCategory[] = ["Presidential", "Family", "Suite"];
+export const VILLA_CATEGORIES: VillaCategory[] = ["Presidential", "Family", "Suite", "Suite 1", "Suite 2", "Complete Villa"];

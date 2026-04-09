@@ -6,7 +6,7 @@ import { motion, useInView } from "framer-motion";
 import type { Villa } from "@/lib/villa-types";
 import { villaCardDescriptionOverride } from "@/lib/villa-hero-copy";
 
-const categories = ["All", "Presidential", "Family", "Suite"] as const;
+const categories = ["All", "Presidential", "Family", "Suite", "Suite 1", "Suite 2", "Complete Villa"] as const;
 
 const VillaCard = ({ villa, index, isInView }: { villa: Villa; index: number; isInView: boolean }) => {
   return (

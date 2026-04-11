@@ -1,5 +1,6 @@
 "use client";
 
+import Image from "next/image";
 import { useEffect, useState } from "react";
 import { motion, AnimatePresence } from "framer-motion";
 import Navbar from "./Navbar";
@@ -33,7 +34,14 @@ const VillasHero = () => {
           exit={{ opacity: 0, scale: 0.98 }}
           transition={{ duration: 1.2, ease: "easeInOut" }}
         >
-          <img src={images[index]} alt="Villa background" className="h-full w-full object-cover" />
+          <Image
+            src={images[index]}
+            alt="Villa background"
+            fill
+            sizes="100vw"
+            priority={index === 0}
+            className="object-cover"
+          />
           <div className="absolute inset-0 bg-black/10" />
         </motion.div>
       </AnimatePresence>

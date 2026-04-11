@@ -1,5 +1,6 @@
-'use client';
+"use client";
 
+import Image from "next/image";
 import { useRef } from "react";
 import { motion, useInView } from "framer-motion";
 
@@ -34,12 +35,14 @@ const JournalSection = () => {
               initial={{ opacity: 0, scale: 0.95 }}
               animate={isInView ? { opacity: 1, scale: 1 } : {}}
               transition={{ duration: 0.6, delay: i * 0.15 }}
-              className={`${img.className} overflow-hidden rounded-sm group`}
+              className={`${img.className} relative overflow-hidden rounded-sm group`}
             >
-              <img
+              <Image
                 src={img.src}
                 alt={img.alt}
-                className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105"
+                fill
+                sizes="(max-width: 768px) 34vw, 28vw"
+                className="object-cover transition-transform duration-700 group-hover:scale-105"
               />
             </motion.div>
           ))}

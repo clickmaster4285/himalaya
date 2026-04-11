@@ -1,7 +1,9 @@
+import Image from "next/image";
 import Link from "next/link";
 import Navbar from "@/components/Navbar";
 import Footer from "@/components/Footer";
 import { getPublishedVillas } from "@/lib/villas-fetch";
+import { shouldUnoptimizeImageSrc } from "@/lib/image-utils";
 
 export const dynamic = "force-dynamic";
 
@@ -19,10 +21,14 @@ export default async function ExperiencePage() {
     <div className="min-h-screen bg-[#F6F1EA]">
       {/* Hero */}
       <section className="relative h-[520px] md:h-[640px] w-full overflow-hidden">
-        <div
-          className="absolute inset-0 bg-center bg-cover"
-          style={{ backgroundImage: `url(${heroBg})` }}
-          aria-hidden="true"
+        <Image
+          src={heroBg}
+          alt=""
+          fill
+          priority
+          sizes="100vw"
+          className="object-cover"
+          aria-hidden
         />
         <div className="absolute inset-0 bg-black/35" aria-hidden="true" />
 
@@ -49,8 +55,15 @@ export default async function ExperiencePage() {
         <div className="max-w-[1200px] mx-auto px-6 md:px-12 grid grid-cols-1 lg:grid-cols-2 gap-10 lg:gap-16 items-center">
           <div className="flex justify-center lg:justify-start">
             <div className="bg-white border border-[#eadfce] p-4">
-              {/* eslint-disable-next-line @next/next/no-img-element */}
-              <img src={symphonyImg} alt="Himalaya Villas" className="w-full max-w-[520px] h-[340px] object-cover" />
+              <div className="relative mx-auto h-[340px] w-full max-w-[520px]">
+                <Image
+                  src={symphonyImg}
+                  alt="Himalaya Villas"
+                  fill
+                  sizes="(max-width: 1024px) 100vw, 520px"
+                  className="object-cover"
+                />
+              </div>
             </div>
           </div>
           <div>
@@ -74,8 +87,7 @@ export default async function ExperiencePage() {
 
       {/* Pool / rating */}
       <section className="relative h-[420px] md:h-[560px] overflow-hidden">
-        {/* eslint-disable-next-line @next/next/no-img-element */}
-        <img src={poolImg} alt="Experience" className="absolute inset-0 w-full h-full object-cover" />
+        <Image src={poolImg} alt="Experience" fill sizes="100vw" className="object-cover" loading="lazy" />
         <div className="absolute inset-0 bg-black/20" aria-hidden="true" />
 
         <div className="relative z-10 max-w-[1200px] mx-auto px-6 md:px-12 h-full flex items-end pb-10">
@@ -104,8 +116,16 @@ export default async function ExperiencePage() {
                 href={`/villas/${v.slug}`}
                 className="bg-white border border-[#eadfce] hover:bg-[#fbf8f2] transition-colors"
               >
-                {/* eslint-disable-next-line @next/next/no-img-element */}
-                <img src={v.image} alt={v.title} className="w-full h-[170px] object-cover" />
+                <div className="relative h-[170px] w-full">
+                  <Image
+                    src={v.image}
+                    alt={v.title}
+                    fill
+                    sizes="(max-width: 768px) 100vw, 33vw"
+                    className="object-cover"
+                    unoptimized={shouldUnoptimizeImageSrc(v.image)}
+                  />
+                </div>
                 <div className="p-5">
                   <p className="font-display text-[16px] text-neutral-900">{v.title}</p>
                   <p className="mt-2 text-[11px] text-neutral-500">{v.description}</p>
@@ -128,8 +148,14 @@ export default async function ExperiencePage() {
 
       {/* Begin Journey */}
       <section className="relative h-[420px] md:h-[520px] overflow-hidden">
-        {/* eslint-disable-next-line @next/next/no-img-element */}
-        <img src={journeyBg} alt="Begin your journey" className="absolute inset-0 w-full h-full object-cover" />
+        <Image
+          src={journeyBg}
+          alt="Begin your journey"
+          fill
+          sizes="100vw"
+          className="object-cover"
+          loading="lazy"
+        />
         <div className="absolute inset-0 bg-black/30" aria-hidden="true" />
 
         <div className="relative z-10 max-w-[1200px] mx-auto px-6 md:px-12 h-full flex items-center">

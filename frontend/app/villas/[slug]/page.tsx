@@ -1,6 +1,8 @@
+import Image from "next/image";
 import Link from "next/link";
 import { notFound } from "next/navigation";
 import { getVillaBySlugPublic } from "@/lib/villas-fetch";
+import { shouldUnoptimizeImageSrc } from "@/lib/image-utils";
 import VillaAmenitiesSection from "@/components/VillaAmenitiesSection";
 import VirtualExperienceSection from "@/components/VirtualExperienceSection";
 import Footer from "@/components/Footer";
@@ -41,22 +43,48 @@ const VillaDetail = async ({ params }: VillasDetailPageProps) => {
 
         <div className="mt-6 grid grid-cols-1 items-start gap-6 lg:grid-cols-12">
           <div className="border border-[#eadfce] bg-white/0 p-3 lg:col-span-9">
-            <div className="relative overflow-hidden">
-              <img src={villa.image} alt={villa.title} className="h-[320px] w-full object-cover md:h-[420px]" />
+            <div className="relative h-[320px] w-full overflow-hidden md:h-[420px]">
+              <Image
+                src={villa.image}
+                alt={villa.title}
+                fill
+                sizes="(max-width: 1024px) 100vw, 75vw"
+                className="object-cover"
+                priority
+                unoptimized={shouldUnoptimizeImageSrc(villa.image)}
+              />
             </div>
           </div>
 
           <div className="grid grid-rows-2 gap-6 lg:col-span-3">
             <div className="border border-[#eadfce] p-3">
-              <img src={thumb0} alt={`${villa.title} room`} className="h-[190px] w-full object-cover md:h-[200px]" />
+              <div className="relative h-[190px] w-full md:h-[200px]">
+                <Image
+                  src={thumb0}
+                  alt={`${villa.title} room`}
+                  fill
+                  sizes="(max-width: 1024px) 100vw, 25vw"
+                  className="object-cover"
+                  unoptimized={shouldUnoptimizeImageSrc(thumb0)}
+                />
+              </div>
             </div>
-            <div className="relative border border-[#eadfce] p-3">
-              <img src={thumb1} alt={`${villa.title} more`} className="h-[190px] w-full object-cover md:h-[200px]" />
-              {extraGallery > 0 && (
-                <div className="absolute inset-3 flex items-center justify-center bg-black/35">
-                  <span className="text-sm tracking-wide text-white">+{extraGallery} more</span>
-                </div>
-              )}
+            <div className="border border-[#eadfce] p-3">
+              <div className="relative h-[190px] w-full md:h-[200px]">
+                <Image
+                  src={thumb1}
+                  alt={`${villa.title} more`}
+                  fill
+                  sizes="(max-width: 1024px) 100vw, 25vw"
+                  className="object-cover"
+                  unoptimized={shouldUnoptimizeImageSrc(thumb1)}
+                />
+                {extraGallery > 0 && (
+                  <div className="absolute inset-0 flex items-center justify-center bg-black/35">
+                    <span className="text-sm tracking-wide text-white">+{extraGallery} more</span>
+                  </div>
+                )}
+              </div>
             </div>
           </div>
         </div>

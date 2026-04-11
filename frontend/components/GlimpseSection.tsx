@@ -1,5 +1,6 @@
-'use client';
+"use client";
 
+import Image from "next/image";
 import { useRef, useState } from "react";
 import { motion, useInView, AnimatePresence } from "framer-motion";
 
@@ -52,7 +53,7 @@ const GlimpseSection = () => {
             return (
               <motion.div
                 key={i}
-                className="relative rounded-xl overflow-hidden cursor-pointer"
+                className="relative rounded-xl overflow-hidden cursor-pointer min-w-0"
                 animate={{
                   flex: isActive ? 4 : 0.6,
                 }}
@@ -60,10 +61,12 @@ const GlimpseSection = () => {
                 onClick={() => setActiveIndex(i)}
                 onMouseEnter={() => setActiveIndex(i)}
               >
-                <img
+                <Image
                   src={item.src}
                   alt={item.label}
-                  className="absolute inset-0 w-full h-full object-cover"
+                  fill
+                  sizes="(max-width: 768px) 100vw, 25vw"
+                  className="object-cover"
                 />
                 {/* Overlay */}
                 <div

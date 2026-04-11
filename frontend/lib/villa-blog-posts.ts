@@ -6,11 +6,43 @@ export type VillaBlogPost = {
   date: string;
   readMinutes: number;
   coverImage: string;
+  /** Optional direct article URL, e.g. /villas-in-bhurban-murree */
+  href?: string;
   /** When set, primary CTA links to this villa detail page */
   relatedVillaSlug?: string;
 };
 
 export const VILLA_BLOG_POSTS: VillaBlogPost[] = [
+  {
+    slug: "thing-to-do-bhurban-murree2",
+    href: "/thing-to-do-bhurban-murree2",
+    title: "Things to Do Near Bhurban Murree — A Complete Activity Guide",
+    excerpt:
+      "Patriata, Ayubia, Mall Road, hiking trails, and scenic viewpoints — the essential travel guide for families and guests staying at Himalaya Villas.",
+    date: "2026-04-11",
+    readMinutes: 10,
+    coverImage: "/assets/blog-bhurban-things-to-do-featured-v2.png",
+  },
+  {
+    slug: "villas-in-bhurban-murree",
+    href: "/villas-in-bhurban-murree",
+    title: "Why Villas Are the Ultimate Luxury Stay in Bhurban & Murree",
+    excerpt:
+      "Discover why private villas in Bhurban Murree deliver unmatched privacy, space, and exclusivity compared to hotels.",
+    date: "2026-04-02",
+    readMinutes: 12,
+    coverImage: "/assets/blog-bhurban-murree-activity-guide.png",
+  },
+  {
+    slug: "family-tour-murree-himalaya-villas",
+    href: "/family-tour-murree-himalaya-villas",
+    title: "Why Himalaya Villas & Resorts in Murree Are Best for a Family Tour",
+    excerpt:
+      "Planning a family tour to Murree or Bhurban? Private, safe, spacious stays with activities for every age — at Himalaya Premium Villas.",
+    date: "2026-04-10",
+    readMinutes: 11,
+    coverImage: "/assets/blog-family-tour-featured-banner.png",
+  },
   {
     slug: "bhurban-mountain-escape",
     title: "Why Bhurban is Pakistan’s most sought-after mountain escape",

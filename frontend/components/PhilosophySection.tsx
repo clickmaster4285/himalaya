@@ -1,5 +1,6 @@
-'use client';
+"use client";
 
+import Image from "next/image";
 import { useRef, useState, useEffect } from "react";
 import { motion, useInView, AnimatePresence } from "framer-motion";
 
@@ -132,16 +133,22 @@ const PhilosophySection = () => {
         >
           <div className="overflow-hidden rounded-sm shadow-2xl relative h-[500px] md:h-[600px] lg:h-[650px]">
             <AnimatePresence mode="popLayout">
-              <motion.img
+              <motion.div
                 key={imgIndex}
-                src={philosophyImages[imgIndex]}
-                alt="Himalaya Villas luxury experience"
-                className="absolute inset-0 w-full h-full object-cover"
+                className="absolute inset-0"
                 initial={{ opacity: 0, scale: 1.08 }}
                 animate={{ opacity: 1, scale: 1 }}
                 exit={{ opacity: 0, scale: 0.97 }}
                 transition={{ duration: 1.2, ease: "easeInOut" }}
-              />
+              >
+                <Image
+                  src={philosophyImages[imgIndex]}
+                  alt="Himalaya Villas luxury experience"
+                  fill
+                  sizes="(max-width: 1024px) 100vw, 50vw"
+                  className="object-cover"
+                />
+              </motion.div>
             </AnimatePresence>
           </div>
           {/* Decorative accent */}

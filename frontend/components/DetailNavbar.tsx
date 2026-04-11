@@ -1,5 +1,6 @@
 "use client";
 
+import Image from "next/image";
 import Link from "next/link";
 import NavAuth from "@/components/NavAuth";
 
@@ -31,7 +32,7 @@ export default function DetailNavbar() {
         </ul>
 
         <div className="absolute left-1/2 -translate-x-1/2">
-          <img src={logo} alt="Himalaya Villas" className="h-12 w-12 object-contain" />
+          <Image src={logo} alt="Himalaya Villas" width={48} height={48} className="h-12 w-12 object-contain" />
         </div>
 
         <div className="ml-auto flex items-center gap-3 md:gap-4">

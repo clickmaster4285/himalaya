@@ -9,6 +9,7 @@ import GlimpseSection from "@/components/GlimpseSection";
 import JournalSection from "@/components/JournalSection";
 import WhyChooseSection from "@/components/WhyChooseSection";
 import ReserveSection from "@/components/ReserveSection";
+import FAQSection from "@/components/FAQSection";
 import Footer from "@/components/Footer";
 
 const Index = () => {
@@ -24,6 +25,7 @@ const Index = () => {
       <JournalSection />
       <WhyChooseSection />
       <TestimonialsSection />
+      <FAQSection />
       <ReserveSection />
       <Footer />
     </div>

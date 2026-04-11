@@ -1,5 +1,6 @@
-'use client';
+"use client";
 
+import Image from "next/image";
 import Link from "next/link";
 import { useState, useEffect } from "react";
 import { Menu, X } from "lucide-react";
@@ -65,9 +66,12 @@ const Navbar = () => {
       {/* Logo center */}
       <div className="absolute left-1/2 -translate-x-1/2 top-1 md:top-2">
         <div className="relative flex flex-col items-center">
-          <img
+          <Image
             src={logo}
             alt="Himalaya Villas"
+            width={160}
+            height={160}
+            priority
             className={`object-contain drop-shadow-[0_2px_8px_rgba(0,0,0,0.4)] transition-all duration-500 ${
               scrolled ? "h-10 w-10 md:h-12 md:w-12" : "h-14 w-14 md:h-20 md:w-20"
             }`}

@@ -1,6 +1,7 @@
 "use client";
 
-import { AnimatePresence, motion } from "framer-motion";
+import Image from "next/image";
+import { AnimatePresence, motion, useInView } from "framer-motion";
 import { useEffect, useMemo, useRef, useState } from "react";
 
 export default function VirtualExperienceSection() {
@@ -11,6 +12,8 @@ export default function VirtualExperienceSection() {
   const [videoOk, setVideoOk] = useState(true);
   const [playing, setPlaying] = useState(false);
   const videoRef = useRef<HTMLVideoElement | null>(null);
+  const sectionRef = useRef<HTMLElement | null>(null);
+  const videoInView = useInView(sectionRef, { once: true, margin: "200px" });
 
   const images = useMemo(
     () => [
@@ -30,23 +33,35 @@ export default function VirtualExperienceSection() {
   }, [images.length, videoOk]);
 
   return (
-    <section className="relative h-[65vh] md:h-[80vh] w-full overflow-hidden">
+    <section ref={sectionRef} className="relative h-[65vh] md:h-[80vh] w-full overflow-hidden">
       {videoOk ? (
         <>
-          <video
-            ref={videoRef}
-            className="absolute inset-0 h-full w-full object-cover"
-            src={tourVideoSrc}
-            poster={tourPoster}
-            autoPlay
-            muted
-            loop
-            playsInline
-            preload="metadata"
-            onPlay={() => setPlaying(true)}
-            onPause={() => setPlaying(false)}
-            onError={() => setVideoOk(false)}
-          />
+          {videoInView ? (
+            <video
+              ref={videoRef}
+              className="absolute inset-0 h-full w-full object-cover"
+              src={tourVideoSrc}
+              poster={tourPoster}
+              autoPlay
+              muted
+              loop
+              playsInline
+              preload="metadata"
+              onPlay={() => setPlaying(true)}
+              onPause={() => setPlaying(false)}
+              onError={() => setVideoOk(false)}
+            />
+          ) : (
+            <Image
+              src={tourPoster}
+              alt=""
+              fill
+              sizes="100vw"
+              className="object-cover"
+              loading="lazy"
+              decoding="async"
+            />
+          )}
           <div className="absolute inset-0 bg-black/35" />
 
           {!playing && (
@@ -84,10 +99,12 @@ export default function VirtualExperienceSection() {
             exit={{ opacity: 0, scale: 0.98 }}
             transition={{ duration: 1.1, ease: "easeInOut" }}
           >
-            <img
+            <Image
               src={images[index]}
               alt="Virtual experience room"
-              className="absolute inset-0 h-full w-full object-cover"
+              fill
+              sizes="100vw"
+              className="object-cover"
             />
             <div className="absolute inset-0 bg-black/35" />
           </motion.div>

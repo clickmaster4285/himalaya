@@ -1,6 +1,8 @@
 "use client";
 
+import Image from "next/image";
 import { useMemo, useState } from "react";
+import { shouldUnoptimizeImageSrc } from "@/lib/image-utils";
 
 type Props = {
   title?: string;
@@ -91,11 +93,14 @@ export default function VillaAmenitiesSection({
 
             <div className="lg:col-span-7 border border-white/15 p-3 md:p-4">
               <div className="relative w-full h-[320px] md:h-[420px] overflow-hidden">
-                <img
+                <Image
                   key={activeImage}
                   src={activeImage}
                   alt={active ? `${active} image` : "Amenity image"}
-                  className="absolute inset-0 w-full h-full object-cover"
+                  fill
+                  sizes="(max-width: 1024px) 100vw, 58vw"
+                  className="object-cover"
+                  unoptimized={shouldUnoptimizeImageSrc(activeImage)}
                 />
                 <div className="absolute inset-0 bg-gradient-to-r from-black/25 via-transparent to-black/10 pointer-events-none" />
               </div>

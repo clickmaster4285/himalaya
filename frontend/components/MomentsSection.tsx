@@ -1,26 +1,42 @@
-'use client';
+"use client";
 
+import Image from "next/image";
 import { useRef } from "react";
 import { motion, useInView } from "framer-motion";
 
 const momentsVideo = "/assets/moments-video.mp4";
+const momentsPoster = "/assets/journal-bonfire.jpg";
 
 const MomentsSection = () => {
   const ref = useRef(null);
   const isInView = useInView(ref, { once: true, margin: "-100px" });
+  const loadVideo = useInView(ref, { once: true, margin: "180px" });
 
   return (
     <section ref={ref} className="relative h-[70vh] md:h-[80vh] w-full overflow-hidden">
-      {/* Video Background */}
-      <video
-        autoPlay
-        muted
-        loop
-        playsInline
-        className="absolute inset-0 h-full w-full object-cover"
-      >
-        <source src={momentsVideo} type="video/mp4" />
-      </video>
+      {loadVideo ? (
+        <video
+          autoPlay
+          muted
+          loop
+          playsInline
+          preload="metadata"
+          poster={momentsPoster}
+          className="absolute inset-0 h-full w-full object-cover"
+        >
+          <source src={momentsVideo} type="video/mp4" />
+        </video>
+      ) : (
+        <Image
+          src={momentsPoster}
+          alt=""
+          fill
+          sizes="100vw"
+          className="object-cover"
+          loading="lazy"
+          decoding="async"
+        />
+      )}
 
       {/* Overlay */}
       <div

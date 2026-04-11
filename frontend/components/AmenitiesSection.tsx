@@ -1,5 +1,6 @@
-'use client';
+"use client";
 
+import Image from "next/image";
 import { useRef, useState, useEffect } from "react";
 import { motion, useInView, AnimatePresence } from "framer-motion";
 
@@ -55,16 +56,22 @@ const AmenitiesSection = () => {
           >
             <div className="overflow-hidden relative h-[350px] md:h-[450px]">
               <AnimatePresence mode="popLayout">
-                <motion.img
+                <motion.div
                   key={imgIndex}
-                  src={amenityImages[imgIndex]}
-                  alt="Luxury amenities"
-                  className="absolute inset-0 w-full h-full object-cover"
+                  className="absolute inset-0"
                   initial={{ opacity: 0, scale: 1.06 }}
                   animate={{ opacity: 1, scale: 1 }}
                   exit={{ opacity: 0, scale: 0.97 }}
                   transition={{ duration: 1, ease: "easeInOut" }}
-                />
+                >
+                  <Image
+                    src={amenityImages[imgIndex]}
+                    alt="Luxury amenities"
+                    fill
+                    sizes="(max-width: 1024px) 100vw, 60vw"
+                    className="object-cover"
+                  />
+                </motion.div>
               </AnimatePresence>
             </div>
           </motion.div>

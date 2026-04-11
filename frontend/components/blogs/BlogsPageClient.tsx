@@ -1,7 +1,9 @@
 "use client";
 
+import Image from "next/image";
 import Link from "next/link";
 import { useRef } from "react";
+import { shouldUnoptimizeImageSrc } from "@/lib/image-utils";
 import { motion, useInView, useReducedMotion } from "framer-motion";
 import type { Villa } from "@/lib/villa-types";
 import { VILLA_BLOG_POSTS } from "@/lib/villa-blog-posts";
@@ -27,6 +29,8 @@ export default function BlogsPageClient({ villas }: { villas: Villa[] }) {
 
   const [featured, ...rest] = VILLA_BLOG_POSTS;
   const dur = reduceMotion ? 0 : 0.55;
+  const getPostHref = (post: (typeof VILLA_BLOG_POSTS)[number]) =>
+    post.href ?? (post.relatedVillaSlug ? `/villas/${encodeURIComponent(post.relatedVillaSlug)}` : "/villas");
 
   return (
     <>
@@ -126,42 +130,45 @@ export default function BlogsPageClient({ villas }: { villas: Villa[] }) {
               transition={{ duration: 0.65, ease }}
             >
             <Link
-              href={
-                featured.relatedVillaSlug
-                  ? `/villas/${encodeURIComponent(featured.relatedVillaSlug)}`
-                  : "/villas"
-              }
+              href={getPostHref(featured)}
               className="group mt-4 block overflow-hidden rounded-2xl border border-[#e5d9c4] bg-white shadow-[0_24px_80px_-24px_rgba(26,22,18,0.35)] transition-shadow duration-500 hover:shadow-[0_32px_100px_-28px_rgba(201,165,91,0.25)]"
             >
-              <div className="relative aspect-[21/10] overflow-hidden md:aspect-[2.2/1]">
-                <motion.img
-                  src={featured.coverImage}
-                  alt=""
-                  className="h-full w-full object-cover"
-                  whileHover={reduceMotion ? {} : { scale: 1.04 }}
+              <div className="relative aspect-[21/10] overflow-hidden bg-neutral-100 md:aspect-[2.2/1]">
+                <motion.div
+                  className="relative h-full w-full"
+                  whileHover={reduceMotion ? {} : { scale: 1.03 }}
                   transition={{ duration: 0.7, ease }}
-                />
-                <div className="absolute inset-0 bg-gradient-to-t from-black/75 via-black/25 to-transparent" />
-                <div className="absolute bottom-0 left-0 right-0 p-6 md:p-10">
-                  <p className="text-[11px] font-semibold uppercase tracking-wider text-white/75">
-                    {new Date(featured.date).toLocaleDateString(undefined, {
-                      month: "long",
-                      day: "numeric",
-                      year: "numeric",
-                    })}{" "}
-                    · {featured.readMinutes} min
-                  </p>
-                  <h2 className="mt-3 font-display text-2xl font-medium leading-tight text-white md:text-4xl md:leading-[1.15]">
-                    {featured.title}
-                  </h2>
-                  <p className="mt-3 max-w-2xl text-sm leading-relaxed text-white/85 md:text-base">{featured.excerpt}</p>
-                  <span className="mt-6 inline-flex items-center gap-2 text-[11px] font-semibold uppercase tracking-[0.22em] text-[#c9a55b] transition group-hover:gap-3">
-                    {featured.relatedVillaSlug ? "Open villa" : "Explore villas"}
-                    <span aria-hidden className="inline-block transition-transform group-hover:translate-x-1">
-                      →
-                    </span>
+                >
+                  <Image
+                    src={featured.coverImage}
+                    alt={featured.title}
+                    fill
+                    sizes="(max-width: 1024px) 100vw, 66vw"
+                    className="object-cover"
+                    priority
+                    unoptimized={shouldUnoptimizeImageSrc(featured.coverImage)}
+                  />
+                </motion.div>
+              </div>
+              <div className="border-t border-[#ebe4dc] bg-white px-6 py-6 md:px-10 md:py-8">
+                <p className="text-[11px] font-semibold uppercase tracking-[0.18em] text-neutral-500">
+                  {new Date(featured.date).toLocaleDateString(undefined, {
+                    month: "long",
+                    day: "numeric",
+                    year: "numeric",
+                  })}{" "}
+                  · {featured.readMinutes} min
+                </p>
+                <h2 className="mt-3 font-display text-2xl font-semibold leading-snug tracking-tight text-neutral-900 md:text-3xl md:leading-tight">
+                  {featured.title}
+                </h2>
+                <p className="mt-3 max-w-2xl text-sm leading-relaxed text-neutral-600 md:text-[15px]">{featured.excerpt}</p>
+                <span className="mt-5 inline-flex items-center gap-2 text-[11px] font-semibold uppercase tracking-[0.22em] text-[#8b6914] transition group-hover:gap-3">
+                  {featured.href ? "Read article" : featured.relatedVillaSlug ? "Open villa" : "Explore villas"}
+                  <span aria-hidden className="inline-block transition-transform group-hover:translate-x-1">
+                    →
                   </span>
-                </div>
+                </span>
               </div>
             </Link>
             </motion.div>
@@ -169,9 +176,7 @@ export default function BlogsPageClient({ villas }: { villas: Villa[] }) {
             {/* Grid */}
             <div className="mt-14 grid gap-6 sm:grid-cols-2">
               {rest.map((post, i) => {
-                const href = post.relatedVillaSlug
-                  ? `/villas/${encodeURIComponent(post.relatedVillaSlug)}`
-                  : "/villas";
+                const href = getPostHref(post);
                 return (
                   <motion.div
                     key={post.slug}
@@ -185,13 +190,21 @@ export default function BlogsPageClient({ villas }: { villas: Villa[] }) {
                       className="group flex h-full flex-col overflow-hidden rounded-xl border border-[#e5d9c4] bg-[#faf8f4] shadow-sm transition-all duration-300 hover:-translate-y-1 hover:border-[#c9a55b]/50 hover:shadow-lg"
                     >
                       <div className="relative aspect-[16/10] overflow-hidden">
-                        <motion.img
-                          src={post.coverImage}
-                          alt=""
-                          className="h-full w-full object-cover"
+                        <motion.div
+                          className="relative h-full w-full"
                           whileHover={reduceMotion ? {} : { scale: 1.06 }}
                           transition={{ duration: 0.55, ease }}
-                        />
+                        >
+                          <Image
+                            src={post.coverImage}
+                            alt=""
+                            fill
+                            sizes="(max-width: 640px) 100vw, 50vw"
+                            className="object-cover"
+                            loading="lazy"
+                            unoptimized={shouldUnoptimizeImageSrc(post.coverImage)}
+                          />
+                        </motion.div>
                         <div className="absolute inset-0 bg-gradient-to-t from-black/50 to-transparent opacity-60 transition-opacity group-hover:opacity-80" />
                       </div>
                       <div className="flex flex-1 flex-col p-5">
@@ -260,7 +273,14 @@ export default function BlogsPageClient({ villas }: { villas: Villa[] }) {
                           className="group flex gap-3 rounded-xl p-2 transition-colors hover:bg-white/90"
                         >
                           <div className="relative h-16 w-20 shrink-0 overflow-hidden rounded-lg border border-[#eadfce] shadow-sm">
-                            <img src={v.image} alt="" className="h-full w-full object-cover transition-transform duration-300 group-hover:scale-105" />
+                            <Image
+                              src={v.image}
+                              alt=""
+                              fill
+                              sizes="80px"
+                              className="object-cover transition-transform duration-300 group-hover:scale-105"
+                              unoptimized={shouldUnoptimizeImageSrc(v.image)}
+                            />
                             <div className="pointer-events-none absolute inset-0 bg-[#c9a55b]/0 transition-colors group-hover:bg-[#c9a55b]/10" />
                           </div>
                           <div className="min-w-0 flex-1 py-0.5">

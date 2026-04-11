@@ -1,5 +1,6 @@
-'use client';
+"use client";
 
+import Image from "next/image";
 import { useState, useRef, useEffect } from "react";
 import { motion, useInView, AnimatePresence } from "framer-motion";
 import { Heart, UtensilsCrossed, Sparkles, PartyPopper, Mountain, Briefcase } from "lucide-react";
@@ -89,16 +90,22 @@ const ServiceCard = ({ service, index, isInView }: { service: typeof services[0]
       {/* Rotating Image */}
       <div className="relative h-52 md:h-56 overflow-hidden">
         <AnimatePresence mode="popLayout">
-          <motion.img
+          <motion.div
             key={imgIndex}
-            src={service.images[imgIndex]}
-            alt={service.title}
-            className="absolute inset-0 w-full h-full object-cover"
+            className="absolute inset-0"
             initial={{ opacity: 0, scale: 1.1 }}
             animate={{ opacity: 1, scale: 1 }}
             exit={{ opacity: 0 }}
             transition={{ duration: 1, ease: "easeInOut" }}
-          />
+          >
+            <Image
+              src={service.images[imgIndex]}
+              alt={service.title}
+              fill
+              sizes="(max-width: 768px) 100vw, 50vw"
+              className="object-cover"
+            />
+          </motion.div>
         </AnimatePresence>
         <div
           className="absolute inset-0"

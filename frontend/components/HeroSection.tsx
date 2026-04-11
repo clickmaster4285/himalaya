@@ -1,6 +1,6 @@
-const heroVideo = "/assets/hero-video.mp4";
 import Navbar from "./Navbar";
 import BookingWidget from "./BookingWidget";
+import HeroMedia from "./HeroMedia";
 import { ArrowRight } from "lucide-react";
 
 const heroPills = [
@@ -12,9 +12,9 @@ const heroPills = [
 const HeroSection = () => {
   return (
     <section className="relative h-screen w-full overflow-hidden">
-      <video autoPlay muted loop playsInline className="absolute inset-0 h-full w-full object-cover">
-        <source src={heroVideo} type="video/mp4" />
-      </video>
+      <div className="absolute inset-0">
+        <HeroMedia />
+      </div>
 
       <div className="hero-overlay pointer-events-none absolute inset-0 z-10" />
       {/* Extra bottom weight so copy + booking bar sit on a consistently dark band */}

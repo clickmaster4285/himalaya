@@ -1,5 +1,6 @@
-'use client';
+"use client";
 
+import Image from "next/image";
 import { useRef, useState, useEffect } from "react";
 import { motion, useInView, AnimatePresence } from "framer-motion";
 import { Mountain, Building2, PartyPopper, ShieldCheck, BedDouble, Heart, Settings } from "lucide-react";
@@ -60,16 +61,22 @@ const WhyChooseSection = () => {
     <section ref={ref} className="relative py-28 md:py-36 overflow-hidden">
       {/* Animated background images */}
       <AnimatePresence mode="popLayout">
-        <motion.img
+        <motion.div
           key={bgIndex}
-          src={bgImages[bgIndex]}
-          alt=""
+          className="absolute inset-0"
           initial={{ opacity: 0, scale: 1.1 }}
           animate={{ opacity: 1, scale: 1 }}
           exit={{ opacity: 0 }}
           transition={{ duration: 1.5, ease: "easeInOut" }}
-          className="absolute inset-0 w-full h-full object-cover"
-        />
+        >
+          <Image
+            src={bgImages[bgIndex]}
+            alt=""
+            fill
+            sizes="100vw"
+            className="object-cover"
+          />
+        </motion.div>
       </AnimatePresence>
 
       {/* Dark overlay */}

@@ -70,6 +70,7 @@ export default function VirtualTourSection({ tourUrl }: Props) {
                     allow="fullscreen; xr-spatial-tracking; accelerometer; gyroscope; autoplay; clipboard-write"
                     allowFullScreen
                     referrerPolicy="no-referrer"
+                    loading="lazy"
                   />
                 ) : (
                   <div className="absolute inset-0 grid place-items-center px-6 text-center">

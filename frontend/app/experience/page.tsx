@@ -3,7 +3,7 @@ import Link from "next/link";
 import Navbar from "@/components/Navbar";
 import Footer from "@/components/Footer";
 import { getPublishedVillas } from "@/lib/villas-fetch";
-import { shouldUnoptimizeImageSrc } from "@/lib/image-utils";
+import { shouldUnoptimizeImageSrc, getValidImageSrc } from "@/lib/image-utils";
 
 export const dynamic = "force-dynamic";
 
@@ -118,12 +118,12 @@ export default async function ExperiencePage() {
               >
                 <div className="relative h-[170px] w-full">
                   <Image
-                    src={v.image}
+                    src={getValidImageSrc(v.image)}
                     alt={v.title}
                     fill
                     sizes="(max-width: 768px) 100vw, 33vw"
                     className="object-cover"
-                    unoptimized={shouldUnoptimizeImageSrc(v.image)}
+                    unoptimized={shouldUnoptimizeImageSrc(getValidImageSrc(v.image))}
                   />
                 </div>
                 <div className="p-5">

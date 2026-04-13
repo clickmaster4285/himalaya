@@ -2,7 +2,7 @@
 
 import Image from "next/image";
 import { useMemo, useState } from "react";
-import { shouldUnoptimizeImageSrc } from "@/lib/image-utils";
+import { shouldUnoptimizeImageSrc, getValidImageSrc } from "@/lib/image-utils";
 
 type Props = {
   title?: string;
@@ -95,12 +95,12 @@ export default function VillaAmenitiesSection({
               <div className="relative w-full h-[320px] md:h-[420px] overflow-hidden">
                 <Image
                   key={activeImage}
-                  src={activeImage}
+                  src={getValidImageSrc(activeImage)}
                   alt={active ? `${active} image` : "Amenity image"}
                   fill
                   sizes="(max-width: 1024px) 100vw, 58vw"
                   className="object-cover"
-                  unoptimized={shouldUnoptimizeImageSrc(activeImage)}
+                  unoptimized={shouldUnoptimizeImageSrc(getValidImageSrc(activeImage))}
                 />
                 <div className="absolute inset-0 bg-gradient-to-r from-black/25 via-transparent to-black/10 pointer-events-none" />
               </div>

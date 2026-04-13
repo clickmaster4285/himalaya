@@ -3,7 +3,7 @@
 import Image from "next/image";
 import Link from "next/link";
 import { useEffect, useMemo, useRef, useState } from "react";
-import { shouldUnoptimizeImageSrc } from "@/lib/image-utils";
+import { shouldUnoptimizeImageSrc, getValidImageSrc } from "@/lib/image-utils";
 import { motion, useInView } from "framer-motion";
 import type { Villa } from "@/lib/villa-types";
 import { villaCardDescriptionOverride } from "@/lib/villa-hero-copy";
@@ -21,12 +21,12 @@ const VillaCard = ({ villa, index, isInView }: { villa: Villa; index: number; is
       <Link href={`/villas/${villa.slug}`} className="block">
         <div className="relative h-64 overflow-hidden md:h-72">
           <Image
-            src={villa.image}
-            alt={villa.title}
+            src={getValidImageSrc(villa.image)}
+            alt={villa.title || "Villa"}
             fill
             sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
             className="object-cover transition-transform duration-500 group-hover:scale-105"
-            unoptimized={shouldUnoptimizeImageSrc(villa.image)}
+            unoptimized={shouldUnoptimizeImageSrc(getValidImageSrc(villa.image))}
           />
           <div className="absolute inset-0 bg-gradient-to-t from-black/45 via-black/10 to-transparent" />
           <div className="absolute bottom-4 left-4 text-white">

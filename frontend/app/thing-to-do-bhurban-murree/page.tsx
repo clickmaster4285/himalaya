@@ -9,6 +9,15 @@ export const metadata: Metadata = {
   description: 'Discover the best things to do near Bhurban Murree, including Patriata, Ayubia, Mall Road, hiking trails, and scenic viewpoints. Perfect travel guide for families and tourists staying at Himalaya Villas.',
 };
 
+function InlineImage({ src, alt }: { src: string; alt: string }) {
+  return (
+    <div className="my-8 overflow-hidden rounded-xl bg-slate-100 ring-1 ring-slate-900/5">
+      {/* eslint-disable-next-line @next/next/no-img-element */}
+      <img src={src} alt={alt} className="h-auto w-full object-cover" loading="lazy" />
+    </div>
+  );
+}
+
 export default function ThingToDoBhurbanMurreePage() {
   const faqs = [
     {
@@ -65,6 +74,10 @@ export default function ThingToDoBhurbanMurreePage() {
                 As one of the main attractions near Bhurban, Patriata (New Murree) offers incredible views of the forested hills. 
                 Riding the world-class chairlift and cable car provides a birds-eye view of the majestic mountains, making it an essential activity for families and tourists alike.
               </p>
+              <InlineImage
+                src="/assets/blog-bhurban-patriata-chairlift.png"
+                alt="Scenic view of Patriata chairlift moving over lush green mountains in Bhurban Murree"
+              />
             </section>
 
             <section>
@@ -79,6 +92,10 @@ export default function ThingToDoBhurbanMurreePage() {
                 <li>Birdwatching opportunities</li>
               </ul>
               <p className="text-slate-700 mt-4 italic">Perfect for morning walks or evening strolls in a calm, luxury setting.</p>
+              <InlineImage
+                src="/assets/blog-bhurban-forest-nature-walk.png"
+                alt="Peaceful nature walk trail surrounded by dense pine trees in Bhurban Murree"
+              />
             </section>
 
             <section>
@@ -91,6 +108,10 @@ export default function ThingToDoBhurbanMurreePage() {
                 <li>Shopping for handicrafts and souvenirs</li>
                 <li>Lively evening atmosphere</li>
               </ul>
+              <InlineImage
+                src="/assets/blog-bhurban-mall-road-night.png"
+                alt="Vibrant evening at Mall Road Murree with lit shops and tourists"
+              />
             </section>
 
             <section>
@@ -116,6 +137,10 @@ export default function ThingToDoBhurbanMurreePage() {
                 <li>Beautifully maintained surroundings</li>
               </ul>
               <p className="text-slate-700 mt-4 italic">It’s ideal for those seeking a refined and upscale dining experience.</p>
+              <InlineImage
+                src="/assets/blog-bhurban-pc-fine-dining-interior.png"
+                alt="Upscale fine dining restaurant with panoramic mountain views at Pearl Continental Bhurban"
+              />
             </section>
 
             <section>
@@ -166,6 +191,10 @@ export default function ThingToDoBhurbanMurreePage() {
                 <li>Scenic hill viewpoints</li>
                 <li>Open natural clearings</li>
               </ul>
+              <InlineImage
+                src="/assets/blog-bhurban-sunset-mountains.png"
+                alt="Sunset over the mountain ranges of Bhurban Murree with a luxury resort on the hillside"
+              />
             </section>
 
             <section>
@@ -180,6 +209,10 @@ export default function ThingToDoBhurbanMurreePage() {
                 <li>Experience premium comfort and privacy</li>
               </ul>
               <p className="text-slate-700 mt-4 italic">It’s the perfect base for exploring Bhurban while enjoying a high-end, tranquil retreat.</p>
+              <InlineImage
+                src="/assets/blog-bhurban-terrace-dining-dusk.png"
+                alt="Luxury outdoor dining on a terrace overlooking the scenic mountain valley of Bhurban Murree at dusk"
+              />
             </section>
 
             <section className="bg-slate-50 p-8 rounded-xl border border-slate-200 mt-12">

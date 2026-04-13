@@ -14,8 +14,8 @@ export type VillaBlogPost = {
 
 export const VILLA_BLOG_POSTS: VillaBlogPost[] = [
   {
-    slug: "thing-to-do-bhurban-murree2",
-    href: "/thing-to-do-bhurban-murree2",
+    slug: "thing-to-do-bhurban-murree",
+    href: "/thing-to-do-bhurban-murree",
     title: "Things to Do Near Bhurban Murree — A Complete Activity Guide",
     excerpt:
       "Patriata, Ayubia, Mall Road, hiking trails, and scenic viewpoints — the essential travel guide for families and guests staying at Himalaya Villas.",

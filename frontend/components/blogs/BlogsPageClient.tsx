@@ -3,7 +3,7 @@
 import Image from "next/image";
 import Link from "next/link";
 import { useRef } from "react";
-import { shouldUnoptimizeImageSrc } from "@/lib/image-utils";
+import { shouldUnoptimizeImageSrc, getValidImageSrc } from "@/lib/image-utils";
 import { motion, useInView, useReducedMotion } from "framer-motion";
 import type { Villa } from "@/lib/villa-types";
 import { VILLA_BLOG_POSTS } from "@/lib/villa-blog-posts";
@@ -140,13 +140,13 @@ export default function BlogsPageClient({ villas }: { villas: Villa[] }) {
                   transition={{ duration: 0.7, ease }}
                 >
                   <Image
-                    src={featured.coverImage}
+                    src={getValidImageSrc(featured.coverImage)}
                     alt={featured.title}
                     fill
                     sizes="(max-width: 1024px) 100vw, 66vw"
                     className="object-cover"
                     priority
-                    unoptimized={shouldUnoptimizeImageSrc(featured.coverImage)}
+                    unoptimized={shouldUnoptimizeImageSrc(getValidImageSrc(featured.coverImage))}
                   />
                 </motion.div>
               </div>
@@ -196,13 +196,13 @@ export default function BlogsPageClient({ villas }: { villas: Villa[] }) {
                           transition={{ duration: 0.55, ease }}
                         >
                           <Image
-                            src={post.coverImage}
+                            src={getValidImageSrc(post.coverImage)}
                             alt=""
                             fill
                             sizes="(max-width: 640px) 100vw, 50vw"
                             className="object-cover"
                             loading="lazy"
-                            unoptimized={shouldUnoptimizeImageSrc(post.coverImage)}
+                            unoptimized={shouldUnoptimizeImageSrc(getValidImageSrc(post.coverImage))}
                           />
                         </motion.div>
                         <div className="absolute inset-0 bg-gradient-to-t from-black/50 to-transparent opacity-60 transition-opacity group-hover:opacity-80" />
@@ -274,12 +274,12 @@ export default function BlogsPageClient({ villas }: { villas: Villa[] }) {
                         >
                           <div className="relative h-16 w-20 shrink-0 overflow-hidden rounded-lg border border-[#eadfce] shadow-sm">
                             <Image
-                              src={v.image}
+                              src={getValidImageSrc(v.image)}
                               alt=""
                               fill
                               sizes="80px"
                               className="object-cover transition-transform duration-300 group-hover:scale-105"
-                              unoptimized={shouldUnoptimizeImageSrc(v.image)}
+                              unoptimized={shouldUnoptimizeImageSrc(getValidImageSrc(v.image))}
                             />
                             <div className="pointer-events-none absolute inset-0 bg-[#c9a55b]/0 transition-colors group-hover:bg-[#c9a55b]/10" />
                           </div>

@@ -2,7 +2,7 @@ import Image from "next/image";
 import Link from "next/link";
 import { notFound } from "next/navigation";
 import { getVillaBySlugPublic } from "@/lib/villas-fetch";
-import { shouldUnoptimizeImageSrc } from "@/lib/image-utils";
+import { shouldUnoptimizeImageSrc, getValidImageSrc } from "@/lib/image-utils";
 import VillaAmenitiesSection from "@/components/VillaAmenitiesSection";
 import VirtualExperienceSection from "@/components/VirtualExperienceSection";
 import Footer from "@/components/Footer";
@@ -25,8 +25,8 @@ const VillaDetail = async ({ params }: VillasDetailPageProps) => {
   }
 
   const gallery = villa.gallery ?? [];
-  const thumb0 = gallery[0] ?? "/assets/gallery-interior.jpg";
-  const thumb1 = gallery[1] ?? "/assets/gallery-dining-night.jpg";
+  const thumb0 = getValidImageSrc(gallery[0], "/assets/gallery-interior.jpg");
+  const thumb1 = getValidImageSrc(gallery[1], "/assets/gallery-dining-night.jpg");
   const extraGallery = Math.max(0, gallery.length - 2);
 
   return (
@@ -45,13 +45,13 @@ const VillaDetail = async ({ params }: VillasDetailPageProps) => {
           <div className="border border-[#eadfce] bg-white/0 p-3 lg:col-span-9">
             <div className="relative h-[320px] w-full overflow-hidden md:h-[420px]">
               <Image
-                src={villa.image}
-                alt={villa.title}
+                src={getValidImageSrc(villa.image)}
+                alt={villa.title || "Villa"}
                 fill
                 sizes="(max-width: 1024px) 100vw, 75vw"
                 className="object-cover"
                 priority
-                unoptimized={shouldUnoptimizeImageSrc(villa.image)}
+                unoptimized={shouldUnoptimizeImageSrc(getValidImageSrc(villa.image))}
               />
             </div>
           </div>

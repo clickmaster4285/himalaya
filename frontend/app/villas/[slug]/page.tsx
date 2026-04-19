@@ -1,3 +1,4 @@
+import type { Metadata } from "next";
 import Image from "next/image";
 import Link from "next/link";
 import { notFound } from "next/navigation";
@@ -7,6 +8,9 @@ import VillaAmenitiesSection from "@/components/VillaAmenitiesSection";
 import VirtualExperienceSection from "@/components/VirtualExperienceSection";
 import Footer from "@/components/Footer";
 import DetailNavbar from "@/components/DetailNavbar";
+import { JsonLd } from "@/components/seo/JsonLd";
+import { createPageMetadata } from "@/lib/seo/build-metadata";
+import { buildVillaVacationRentalJsonLd } from "@/lib/seo/villa-jsonld";
 
 export const dynamic = "force-dynamic";
 
@@ -14,6 +18,19 @@ type MaybePromise<T> = T | Promise<T>;
 
 interface VillasDetailPageProps {
   params: MaybePromise<{ slug: string }>;
+}
+
+export async function generateMetadata({ params }: VillasDetailPageProps): Promise<Metadata> {
+  const { slug } = await params;
+  const villa = await getVillaBySlugPublic(slug);
+  if (!villa) return {};
+  return createPageMetadata({
+    title: `${villa.title} — Private villa, Bhurban`,
+    description: villa.description,
+    path: `/villas/${slug}`,
+    keywords: [...villa.amenities.slice(0, 12), "Himalaya Villas", "Bhurban", "Murree"],
+    ogImage: getValidImageSrc(villa.image),
+  });
 }
 
 const VillaDetail = async ({ params }: VillasDetailPageProps) => {
@@ -31,6 +48,7 @@ const VillaDetail = async ({ params }: VillasDetailPageProps) => {
 
   return (
     <div className="min-h-screen bg-[#F6F1EA]">
+      <JsonLd items={[buildVillaVacationRentalJsonLd(villa)]} />
       <DetailNavbar />
 
       <section className="mx-auto max-w-[1400px] px-6 pb-10 md:px-12 lg:px-20">

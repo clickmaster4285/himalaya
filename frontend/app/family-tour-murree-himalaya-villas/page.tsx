@@ -1,101 +1,82 @@
 import type { Metadata } from "next";
-import Image from "next/image";
-import Link from "next/link";
-import { ArrowLeft } from "lucide-react";
 import DetailNavbar from "@/components/DetailNavbar";
 import Footer from "@/components/Footer";
-import { cn } from "@/lib/utils";
+import Link from "next/link";
+import { ArrowLeft } from "lucide-react";
+import { blogCanonicalPath, findBlogSlugByLegacyHref, getBlogPostBySlug } from "@/lib/blog-posts";
+import { createPageMetadata } from "@/lib/seo/build-metadata";
 
-export const metadata: Metadata = {
-  title: "Why Himalaya Villas & Resorts in Murree Are Best for a Family Tour | Himalaya Villas",
-  description:
-    "Planning a family tour to Murree or Bhurban? Discover why Himalaya Premium Villas & Resorts is the perfect family stay — private, safe, spacious & full of activities for all ages.",
-  keywords: [
-    "family tour Bhurban Murree",
-    "family stay Murree",
-    "Himalaya Premium Villas family",
-    "luxury villa Bhurban children",
-  ],
-  alternates: {
-    canonical: "/family-tour-murree-himalaya-villas",
-  },
-  openGraph: {
+export async function generateMetadata(): Promise<Metadata> {
+  const slug = findBlogSlugByLegacyHref("/family-tour-murree-himalaya-villas");
+  const post = slug ? getBlogPostBySlug(slug) : undefined;
+  if (!slug || !post) {
+    return createPageMetadata({
+      title: "Why Himalaya Villas & Resorts in Murree Are Best for a Family Tour | Himalaya Villas",
+      description:
+        "Planning a family tour to Murree or Bhurban? Discover why Himalaya Premium Villas & Resorts is the perfect family stay—private, safe, spacious & full of activities for all ages.",
+      path: "/family-tour-murree-himalaya-villas",
+      keywords: ["family tour Bhurban Murree", "family stay Murree", "Himalaya Premium Villas family"],
+      ogImage: "/assets/blog-family-tour-featured-banner.png",
+      appendSiteBrand: false,
+    });
+  }
+  return createPageMetadata({
     title: "Why Himalaya Villas & Resorts in Murree Are Best for a Family Tour | Himalaya Villas",
     description:
-      "Private gated estate, multi-bedroom suites, personalised dining, and activities for all ages — ideal for your Murree family tour.",
-    url: "/family-tour-murree-himalaya-villas",
-    type: "article",
-    images: ["/assets/blog-family-tour-featured-banner.png"],
-  },
-};
+      "Planning a family tour to Murree or Bhurban? Discover why Himalaya Premium Villas & Resorts is the perfect family stay—private, safe, spacious & full of activities for all ages.",
+    path: "/family-tour-murree-himalaya-villas",
+    canonicalPath: blogCanonicalPath(slug),
+    keywords: [
+      "family tour Bhurban Murree",
+      "family stay Murree",
+      "Himalaya Premium Villas family",
+      "luxury villa Bhurban children",
+    ],
+    ogImage: post.coverImage,
+    ogType: "article",
+    publishedTime: `${post.date}T12:00:00+05:00`,
+    appendSiteBrand: false,
+  });
+}
 
-const articleSizes = "(max-width: 896px) 100vw, 896px";
-
-function HeroBanner({ src, alt }: { src: string; alt: string }) {
+function FeaturedImage({ src, alt }: { src: string; alt: string }) {
   return (
-    <div className="not-prose mb-10 overflow-hidden rounded-2xl border border-[#e7ddcf] bg-neutral-900 shadow-lg md:rounded-3xl">
-      <Image
-        src={src}
-        alt={alt}
-        width={1600}
-        height={900}
-        className="h-auto w-full object-cover"
-        sizes={articleSizes}
-        priority
-      />
+    <div className="mb-12 overflow-hidden rounded-xl bg-slate-100 ring-1 ring-slate-900/5 shadow-sm">
+      {/* eslint-disable-next-line @next/next/no-img-element */}
+      <img src={src} alt={alt} className="h-auto w-full object-cover" fetchPriority="high" />
     </div>
   );
 }
 
-function ArticleImage({ src, alt }: { src: string; alt: string }) {
+function InlineImage({ src, alt }: { src: string; alt: string }) {
   return (
-    <div className="not-prose my-10 overflow-hidden rounded-xl border border-[#e7ddcf] bg-white shadow-sm">
-      <Image
-        src={src}
-        alt={alt}
-        width={1600}
-        height={900}
-        className="h-auto w-full object-cover"
-        sizes={articleSizes}
-        loading="lazy"
-      />
+    <div className="not-prose my-8 overflow-hidden rounded-xl bg-slate-100 ring-1 ring-slate-900/5 shadow-sm">
+      {/* eslint-disable-next-line @next/next/no-img-element */}
+      <img src={src} alt={alt} className="h-auto w-full object-cover" loading="lazy" />
     </div>
   );
 }
 
-function SectionTitle({ children, first }: { children: React.ReactNode; first?: boolean }) {
-  return (
-    <h2
-      className={cn(
-        "not-prose scroll-mt-24 border-b-2 border-[#1c1916]/15 pb-4 font-display text-2xl font-bold leading-snug tracking-tight text-[#1A1A1A] md:text-[1.95rem]",
-        first ? "mt-8" : "mt-16",
-      )}
-    >
-      {children}
-    </h2>
-  );
-}
+export default function FamilyTourMurreeHimalayaVillasPage() {
+  const faqs = [
+    {
+      q: "Is Himalaya Premium Villas suitable for families with young children?",
+      a: "Yes, the estate is fully gated and secure, allowing children to move freely and safely. Dedicated play areas and outdoor activities ensure kids stay engaged throughout the trip.",
+    },
+    {
+      q: "Can the villa accommodate large family groups?",
+      a: "Absolutely. The villas are designed for large families, offering multiple bedrooms, spacious living areas, and complete privacy under one roof.",
+    },
+    {
+      q: "What activities are available for children?",
+      a: "Children can enjoy ziplining, rock climbing, outdoor play areas, open lawns, nature walks, and bonfire evenings — all within a safe environment.",
+    },
+    {
+      q: "What is the best time for a family tour to Bhurban Murree?",
+      a: "Summer is ideal for escaping heat, winter offers snowfall, while spring and autumn are perfect for peaceful and scenic family trips.",
+    },
+  ];
 
-const faqs = [
-  {
-    q: "Is Himalaya Premium Villas suitable for families with young children?",
-    a: "Yes. The estate is fully gated and secure, so children can move freely in a controlled environment. Dedicated play areas and outdoor activities keep kids engaged throughout your stay.",
-  },
-  {
-    q: "Can the villa accommodate large family groups?",
-    a: "Absolutely. Our residences are designed for larger families, with multiple bedrooms, spacious living and dining areas, and complete privacy under one roof.",
-  },
-  {
-    q: "What activities are available for children?",
-    a: "Children can enjoy ziplining, rock climbing, outdoor play areas, open lawns, nature walks, and bonfire evenings — all within a safe, private setting.",
-  },
-  {
-    q: "What is the best time for a family tour to Bhurban Murree?",
-    a: "Summer is ideal for escaping heat; winter offers snowfall and cosy evenings; spring and autumn are perfect for quieter, scenic family trips.",
-  },
-];
-
-export default function FamilyTourMurreePage() {
   return (
     <div className="min-h-screen bg-[#F6F1EA]">
       <DetailNavbar />
@@ -109,222 +90,260 @@ export default function FamilyTourMurreePage() {
         </Link>
 
         <article className="prose prose-lg prose-slate max-w-none">
-          <h1 className="not-prose mb-8 scroll-mt-24 font-display text-3xl font-bold leading-tight tracking-tight text-[#1A1A1A] md:text-4xl">
+          <h1 className="not-prose mb-8 font-display text-4xl font-medium leading-tight tracking-tight text-[#1A1A1A] md:text-5xl">
             Why Himalaya Villas &amp; Resorts in Murree Are Best for a Family Tour
           </h1>
 
-          <HeroBanner
-            src="/assets/blog-family-tour-featured-banner.png"
-            alt="Why Himalaya Villas and Resorts in Murree are best for a family tour — private villa balcony with mountain views"
-          />
-
-          <p>
-            Every Pakistani family has one dream trip on their list — Murree. The cool air, lush green hills, the refreshing scent of
-            pine trees, children playing freely in open spaces, and peaceful evenings away from city noise — it is a destination that
-            never loses its charm, no matter how many times you visit.
-          </p>
-          <p>
-            But here is what most families eventually realize: the destination is always beautiful — it is the accommodation that
-            defines the experience. Cramped hotel rooms, limited space for children, crowded lobbies, and fixed meal schedules. That is
-            exactly why more families are now choosing Himalaya Premium Villas & Resorts in Bhurban — and once they experience it, they
-            rarely return to traditional hotels.
-          </p>
-
-          <SectionTitle first>1. A private luxury estate — not just a room</SectionTitle>
-          <p>When traveling with family, space and privacy are essential.</p>
-          <p>
-            At Himalaya Premium Villas, you do not just book a room — you reserve a private luxury estate designed for premium family
-            living.
-          </p>
-          <ul>
-            <li>Spacious multi-bedroom suites</li>
-            <li>Exclusive Presidential Estate</li>
-            <li>En-suite bathrooms in every bedroom</li>
-            <li>Elegant living and dining areas</li>
-            <li>Private terraces with panoramic views</li>
-            <li>Beautifully landscaped lawns</li>
-          </ul>
-          <p>This is refined, high-end mountain living — ideal for families who value comfort, privacy, and exclusivity.</p>
-
-          <ArticleImage
-            src="/assets/blog-family-tour-estate-collage.png"
-            alt="Luxury private estate with pool, gated entrance, private dining, and outdoor activities at Himalaya Villas"
-          />
-
-          <SectionTitle>2. Safe, open spaces for children</SectionTitle>
-          <p>Family travel should be relaxing — not stressful.</p>
-          <p>
-            The fully gated estate ensures children can move freely in a secure and private environment, while parents unwind with peace
-            of mind.
-          </p>
-          <p>Features include:</p>
-          <ul>
-            <li>Dedicated outdoor play areas</li>
-            <li>Large private lawns</li>
-            <li>Zipline adventure</li>
-            <li>Rock climbing activities</li>
-            <li>Guided nature walks</li>
-            <li>Bonfire evenings</li>
-          </ul>
-          <p>It is a perfect balance of safety, fun, and luxury.</p>
-
-          <ArticleImage
-            src="/assets/journal-group-new.jpg"
-            alt="Family enjoying outdoor space and mountain views at a private villa"
-          />
-
-          <SectionTitle>3. Bhurban — the most peaceful location in Murree</SectionTitle>
-          <p>While Murree can get crowded, Bhurban offers a more premium and tranquil experience.</p>
-          <p>Surrounded by forests and mountains, Bhurban provides scenic views, peaceful surroundings, and easy access to attractions.</p>
-          <p>Nearby family-friendly destinations include:</p>
-          <ul>
-            <li>Patriata (New Murree)</li>
-            <li>Kashmir Point &amp; Pindi Point</li>
-            <li>Ayubia National Park</li>
-            <li>Nathia Gali</li>
-            <li>Mall Road Murree</li>
-          </ul>
-          <p>You enjoy luxury, privacy, and accessibility — all in one place.</p>
-
-          <ArticleImage
-            src="/assets/blog-family-tour-bhurban-guide.png"
-            alt="Things to do near Bhurban Murree — activities and scenic highlights for families"
-          />
-
-          <SectionTitle>4. Private chef &amp; customised dining</SectionTitle>
-          <p>Dining is one of the highlights of any family trip — and here, it is completely personalised.</p>
-          <p>Enjoy:</p>
-          <ul>
-            <li>Fresh desi breakfasts on your private terrace</li>
-            <li>Customised lunch and dinner menus</li>
-            <li>Premium BBQ nights</li>
-            <li>Meals tailored for children and elders</li>
-            <li>Flexible dining times</li>
-          </ul>
-          <p>This is bespoke dining, designed exclusively for your family.</p>
-
-          <ArticleImage
-            src="/assets/gallery-dining-night.jpg"
-            alt="Private dining and evening hospitality at Himalaya Premium Villas"
-          />
-
-          <SectionTitle>5. Complete privacy — no shared spaces</SectionTitle>
-          <p>Unlike hotels, there are:</p>
-          <ul>
-            <li>No shared lobbies</li>
-            <li>No crowded dining areas</li>
-            <li>No noise from other guests</li>
-            <li>No waiting lines</li>
-          </ul>
-          <p>The entire estate is exclusively yours, offering unmatched privacy and comfort.</p>
-          <p>Perfect for:</p>
-          <ul>
-            <li>Family gatherings</li>
-            <li>Eid celebrations</li>
-            <li>Birthdays</li>
-            <li>Private retreats</li>
-          </ul>
-
-          <ArticleImage
-            src="/assets/why-villa-private.jpg"
-            alt="Private gated luxury estate surrounded by cedar forest in Bhurban"
-          />
-
-          <SectionTitle>6. Ideal for multi-generational families</SectionTitle>
-          <p>Himalaya Villas is thoughtfully designed for every age group:</p>
-          <ul>
-            <li>Elders enjoy peaceful terraces</li>
-            <li>Parents relax in private luxury spaces</li>
-            <li>Teenagers engage in outdoor activities</li>
-            <li>Children play safely in open areas</li>
-          </ul>
-          <p>It is a complete family-friendly luxury experience.</p>
-
-          <SectionTitle>7. A premium experience in every season</SectionTitle>
-          <p>Bhurban is beautiful all year round:</p>
-          <ul>
-            <li>
-              <strong>Summer:</strong> cool weather and greenery
-            </li>
-            <li>
-              <strong>Winter:</strong> snowfall and cosy luxury
-            </li>
-            <li>
-              <strong>Spring:</strong> fresh air and blooming landscapes
-            </li>
-            <li>
-              <strong>Autumn:</strong> quiet, scenic, and peaceful
-            </li>
-          </ul>
-          <p>Each season offers a unique and premium mountain experience.</p>
-
-          <ArticleImage
-            src="/assets/why-villa-garden.jpg"
-            alt="Landscaped gardens and outdoor space at Himalaya Premium Villas"
-          />
-
-          <SectionTitle>8. A family experience that truly matters</SectionTitle>
-          <p>A family trip is about more than just travel — it is about connection.</p>
-          <p>At Himalaya Villas, you enjoy:</p>
-          <ul>
-            <li>Quality time without distractions</li>
-            <li>A peaceful private environment</li>
-            <li>Meaningful shared moments</li>
-          </ul>
-          <p>This is what turns a vacation into a lasting memory.</p>
-
-          <h2 className="not-prose mt-16 border-b-2 border-[#1c1916]/15 pb-4 font-display text-2xl font-bold tracking-tight text-[#1A1A1A] md:text-[1.85rem]">
-            The verdict
-          </h2>
-          <p>
-            Murree and Bhurban will always be among Pakistan&apos;s most loved family destinations. But the experience you truly
-            remember is the one where you had space, privacy, and luxury.
-          </p>
-          <p>
-            Himalaya Premium Villas &amp; Resorts delivers exactly that — a private, premium mountain retreat designed for families.
-          </p>
-
-          <section className="not-prose my-12 rounded-xl border border-[#d9ccbb] bg-white p-7 shadow-sm">
-            <h3 className="mt-0 font-display text-2xl text-[#1A1A1A]">Plan your family tour to Murree</h3>
-            <p className="mb-4 font-sans text-base text-slate-700">
-              Give your family an experience they will cherish for years.
+          <div className="mb-10 rounded-xl border border-[hsl(var(--primary)/0.2)] bg-white/50 p-8 shadow-sm">
+            <p className="mb-4 text-lg leading-relaxed text-slate-700">
+              Every Pakistani family has one dream trip on their list — Murree. The cool air, lush green hills, the refreshing scent of
+              pine trees, children playing freely in open spaces, and peaceful evenings away from the noise of the city — it&apos;s a
+              destination that never loses its charm, no matter how many times you visit.
             </p>
-            <ul className="mb-6 list-none space-y-2 pl-0 font-sans text-sm text-slate-700">
-              <li>✅ Private gated luxury estate</li>
-              <li>✅ Multi-bedroom family suites</li>
-              <li>✅ Personal chef &amp; customised dining</li>
-              <li>✅ Outdoor activities &amp; experiences</li>
-              <li>✅ Limited bookings for exclusivity</li>
-            </ul>
-            <div className="flex flex-wrap gap-3">
-              <Link
-                href="/book/stay"
-                className="inline-flex rounded-xl bg-[#1c1916] px-5 py-2.5 font-sans text-sm font-semibold text-white transition hover:bg-[#2a241c]"
-              >
-                Check availability &amp; book now
-              </Link>
-              <a
-                href="https://wa.me/923045679000"
-                target="_blank"
-                rel="noopener noreferrer"
-                className="inline-flex rounded-xl border border-[#c9a55b] px-5 py-2.5 font-sans text-sm font-semibold text-[#6b5428] transition hover:bg-[#f5efe4]"
-              >
-                WhatsApp: +92 304 567 9000
-              </a>
-            </div>
-          </section>
+            <p className="mb-4 text-lg font-medium leading-relaxed text-slate-800">But here&apos;s what most families eventually realize:</p>
+            <p className="mb-4 text-lg leading-relaxed text-slate-700">
+              The destination is always beautiful — it&apos;s the accommodation that defines the experience.
+            </p>
+            <p className="mb-0 text-lg leading-relaxed text-slate-700">
+              Cramped hotel rooms. Limited space for children. Crowded lobbies. Fixed meal schedules. That&apos;s exactly why more
+              families are now choosing Himalaya Premium Villas &amp; Resorts in Bhurban — and once they experience it, they rarely
+              return to traditional hotels.
+            </p>
+          </div>
 
-          <section className="not-prose mt-16 border-t border-slate-200 pt-12">
-            <h2 className="mb-8 font-display text-3xl font-medium text-[#1A1A1A]">Frequently asked questions</h2>
-            <div className="space-y-6">
-              {faqs.map((faq) => (
-                <div key={faq.q} className="rounded-lg border border-slate-100 bg-white p-6 shadow-sm">
-                  <h3 className="mb-2 text-lg font-medium text-slate-900">{faq.q}</h3>
-                  <p className="m-0 leading-relaxed text-slate-600">{faq.a}</p>
-                </div>
-              ))}
-            </div>
-          </section>
+          <FeaturedImage
+            src="/assets/blog-family-tour-featured-banner.png"
+            alt="Family-friendly luxury villa balcony with panoramic mountain views in Bhurban Murree"
+          />
+
+          <div className="space-y-12">
+            <section>
+              <h2 className="mb-4 font-display text-2xl font-semibold text-[#1A1A1A]">1. A Private Luxury Estate — Not Just a Room</h2>
+              <p className="leading-relaxed text-slate-700">When traveling with family, space and privacy are essential.</p>
+              <p className="leading-relaxed text-slate-700">
+                At Himalaya Premium Villas, you don&apos;t just book a room — you reserve a private luxury estate designed for premium
+                family living.
+              </p>
+              <ul className="mt-4 list-disc space-y-2 pl-6 text-slate-700">
+                <li>Spacious multi-bedroom suites</li>
+                <li>Exclusive Presidential Estate</li>
+                <li>En-suite bathrooms in every bedroom</li>
+                <li>Elegant living and dining areas</li>
+                <li>Private terraces with panoramic views</li>
+                <li>Beautifully landscaped lawns</li>
+              </ul>
+              <p className="leading-relaxed text-slate-700">
+                This is refined, high-end mountain living — ideal for families who value comfort, privacy, and exclusivity.
+              </p>
+              <InlineImage
+                src="/assets/villa-alpine-real.jpg"
+                alt="Alpine-style luxury villa exterior and mountain setting at Himalaya Premium Villas Bhurban"
+              />
+            </section>
+
+            <section>
+              <h2 className="mb-4 font-display text-2xl font-semibold text-[#1A1A1A]">2. Safe, Open Spaces for Children</h2>
+              <p className="leading-relaxed text-slate-700">Family travel should be relaxing — not stressful.</p>
+              <p className="leading-relaxed text-slate-700">
+                The fully gated estate ensures children can move freely in a secure and private environment, while parents unwind with
+                peace of mind.
+              </p>
+              <p className="leading-relaxed text-slate-700">Features include:</p>
+              <ul className="mt-4 list-disc space-y-2 pl-6 text-slate-700">
+                <li>Dedicated outdoor play areas</li>
+                <li>Large private lawns</li>
+                <li>Zipline adventure</li>
+                <li>Rock climbing activities</li>
+                <li>Guided nature walks</li>
+                <li>Bonfire evenings</li>
+              </ul>
+              <p className="leading-relaxed text-slate-700">It&apos;s a perfect balance of safety, fun, and luxury.</p>
+              <InlineImage
+                src="/assets/gallery-sunlight.jpg"
+                alt="Bright open outdoor spaces and lawns for children to play safely at the private estate"
+              />
+            </section>
+
+            <section>
+              <h2 className="mb-4 font-display text-2xl font-semibold text-[#1A1A1A]">3. Bhurban — The Most Peaceful Location in Murree</h2>
+              <p className="leading-relaxed text-slate-700">
+                While Murree can get crowded, Bhurban offers a more premium and tranquil experience.
+              </p>
+              <p className="leading-relaxed text-slate-700">Surrounded by forests and mountains, Bhurban provides:</p>
+              <ul className="mt-4 list-disc space-y-2 pl-6 text-slate-700">
+                <li>Scenic views</li>
+                <li>Peaceful surroundings</li>
+                <li>Easy access to attractions</li>
+              </ul>
+              <p className="leading-relaxed text-slate-700">Nearby family-friendly destinations include:</p>
+              <ul className="mt-4 list-disc space-y-2 pl-6 text-slate-700">
+                <li>Patriata (New Murree)</li>
+                <li>Kashmir Point &amp; Pindi Point</li>
+                <li>Ayubia National Park</li>
+                <li>Nathia Gali</li>
+                <li>Mall Road Murree</li>
+              </ul>
+              <p className="leading-relaxed text-slate-700">You enjoy luxury, privacy, and accessibility — all in one place.</p>
+              <InlineImage
+                src="/assets/journal-1.jpg"
+                alt="Serene mountain landscape and forested hills near Bhurban for peaceful family getaways"
+              />
+            </section>
+
+            <section>
+              <h2 className="mb-4 font-display text-2xl font-semibold text-[#1A1A1A]">4. Private Chef &amp; Customised Dining</h2>
+              <p className="leading-relaxed text-slate-700">
+                Dining is one of the highlights of any family trip — and here, it&apos;s completely personalized.
+              </p>
+              <p className="leading-relaxed text-slate-700">Enjoy:</p>
+              <ul className="mt-4 list-disc space-y-2 pl-6 text-slate-700">
+                <li>Fresh desi breakfasts on your private terrace</li>
+                <li>Customized lunch and dinner menus</li>
+                <li>Premium BBQ nights</li>
+                <li>Meals tailored for children and elders</li>
+                <li>Flexible dining times</li>
+              </ul>
+              <p className="leading-relaxed text-slate-700">This is bespoke dining, designed exclusively for your family.</p>
+              <InlineImage
+                src="/assets/gallery-dining-night.jpg"
+                alt="Evening dining and warm hospitality in a private luxury villa setting"
+              />
+            </section>
+
+            <section>
+              <h2 className="mb-4 font-display text-2xl font-semibold text-[#1A1A1A]">5. Complete Privacy — No Shared Spaces</h2>
+              <p className="leading-relaxed text-slate-700">Unlike hotels, there are:</p>
+              <ul className="mt-4 list-disc space-y-2 pl-6 text-slate-700">
+                <li>No shared lobbies</li>
+                <li>No crowded dining areas</li>
+                <li>No noise from other guests</li>
+                <li>No waiting lines</li>
+              </ul>
+              <p className="leading-relaxed text-slate-700">
+                The entire estate is exclusively yours, offering unmatched privacy and comfort.
+              </p>
+              <p className="leading-relaxed text-slate-700">Perfect for:</p>
+              <ul className="mt-4 list-disc space-y-2 pl-6 text-slate-700">
+                <li>Family gatherings</li>
+                <li>Eid celebrations</li>
+                <li>Birthdays</li>
+                <li>Private retreats</li>
+              </ul>
+              <InlineImage
+                src="/assets/services-events-real.jpg"
+                alt="Private estate venue suited for exclusive family gatherings and celebrations in the hills"
+              />
+            </section>
+
+            <section>
+              <h2 className="mb-4 font-display text-2xl font-semibold text-[#1A1A1A]">6. Ideal for Multi-Generational Families</h2>
+              <p className="leading-relaxed text-slate-700">Himalaya Villas is thoughtfully designed for every age group:</p>
+              <ul className="mt-4 list-disc space-y-2 pl-6 text-slate-700">
+                <li>Elders enjoy peaceful terraces</li>
+                <li>Parents relax in private luxury spaces</li>
+                <li>Teenagers engage in outdoor activities</li>
+                <li>Children play safely in open areas</li>
+              </ul>
+              <p className="leading-relaxed text-slate-700">It&apos;s a complete family-friendly luxury experience.</p>
+            </section>
+
+            <section>
+              <h2 className="mb-4 font-display text-2xl font-semibold text-[#1A1A1A]">7. A Premium Experience in Every Season</h2>
+              <p className="leading-relaxed text-slate-700">Bhurban is beautiful all year round:</p>
+              <ul className="mt-4 list-disc space-y-2 pl-6 text-slate-700">
+                <li>
+                  <strong className="text-slate-900">Summer:</strong> Cool weather and greenery
+                </li>
+                <li>
+                  <strong className="text-slate-900">Winter:</strong> Snowfall and cozy luxury
+                </li>
+                <li>
+                  <strong className="text-slate-900">Spring:</strong> Fresh air and blooming landscapes
+                </li>
+                <li>
+                  <strong className="text-slate-900">Autumn:</strong> Quiet, scenic, and peaceful
+                </li>
+              </ul>
+              <p className="leading-relaxed text-slate-700">Each season offers a unique and premium mountain experience.</p>
+              <InlineImage
+                src="/assets/journal-4.jpg"
+                alt="Mountain views and seasonal beauty around Bhurban and Murree for family holidays"
+              />
+            </section>
+
+            <section>
+              <h2 className="mb-4 font-display text-2xl font-semibold text-[#1A1A1A]">8. A Family Experience That Truly Matters</h2>
+              <p className="leading-relaxed text-slate-700">A family trip is about more than just travel — it&apos;s about connection.</p>
+              <p className="leading-relaxed text-slate-700">At Himalaya Villas, you enjoy:</p>
+              <ul className="mt-4 list-disc space-y-2 pl-6 text-slate-700">
+                <li>Quality time without distractions</li>
+                <li>A peaceful private environment</li>
+                <li>Meaningful shared moments</li>
+              </ul>
+              <p className="leading-relaxed text-slate-700">This is what turns a vacation into a lasting memory.</p>
+            </section>
+
+            <section className="rounded-xl border border-slate-200 bg-slate-50 p-8">
+              <h2 className="mb-4 font-display text-2xl font-semibold text-[#1A1A1A]">The Verdict</h2>
+              <p className="leading-relaxed text-slate-700">
+                Murree and Bhurban will always be among Pakistan&apos;s most loved family destinations.
+              </p>
+              <p className="leading-relaxed text-slate-700">
+                But the experience you truly remember is the one where you had space, privacy, luxury.
+              </p>
+              <p className="mb-0 leading-relaxed text-slate-700">
+                Himalaya Premium Villas &amp; Resorts delivers exactly that — a private, premium mountain retreat designed for families.
+              </p>
+            </section>
+
+            <section className="rounded-xl border border-[#d9ccbb] bg-white p-8 shadow-sm">
+              <h2 className="mb-4 mt-0 font-display text-2xl font-semibold text-[#1A1A1A]">Plan Your Family Tour to Murree</h2>
+              <p className="leading-relaxed text-slate-700">Give your family an experience they&apos;ll cherish for years.</p>
+              <ul className="mb-6 mt-4 list-none space-y-2 pl-0 text-slate-700">
+                <li>✅ Private gated luxury estate</li>
+                <li>✅ Multi-bedroom family suites</li>
+                <li>✅ Personal chef &amp; customised dining</li>
+                <li>✅ Outdoor activities &amp; experiences</li>
+                <li>✅ Limited bookings for exclusivity</li>
+              </ul>
+              <div className="flex flex-col gap-3 sm:flex-row sm:flex-wrap">
+                <Link
+                  href="/book/stay"
+                  className="inline-flex items-center justify-center rounded-xl bg-[#1c1916] px-5 py-2.5 font-sans text-sm font-semibold text-white transition hover:bg-[#2a241c]"
+                >
+                  👉 Check Availability &amp; Book Now
+                </Link>
+                <a
+                  href="https://wa.me/923045679000"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="inline-flex items-center justify-center rounded-xl border border-[#c9a55b] px-5 py-2.5 font-sans text-sm font-semibold text-[#6b5428] transition hover:bg-[#f5efe4]"
+                >
+                  📲 WhatsApp: +92 304 567 9000
+                </a>
+                <a
+                  href="https://www.himalayavillas.com"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="inline-flex items-center justify-center rounded-xl border border-slate-200 px-5 py-2.5 font-sans text-sm font-semibold text-slate-800 transition hover:bg-slate-50"
+                >
+                  🌐 www.himalayavillas.com
+                </a>
+              </div>
+            </section>
+
+            <section className="mt-16 border-t border-slate-200 pt-12">
+              <h2 className="mb-8 font-display text-3xl font-medium text-[#1A1A1A]">Frequently Asked Questions</h2>
+              <div className="space-y-6">
+                {faqs.map((faq) => (
+                  <div key={faq.q} className="rounded-lg border border-slate-100 bg-white p-6 shadow-sm">
+                    <h3 className="mb-2 text-lg font-medium text-slate-900">{faq.q}</h3>
+                    <p className="m-0 leading-relaxed text-slate-600">{faq.a}</p>
+                  </div>
+                ))}
+              </div>
+            </section>
+          </div>
         </article>
       </main>
 

@@ -30,7 +30,7 @@ export default function BlogsPageClient({ villas }: { villas: Villa[] }) {
   const [featured, ...rest] = VILLA_BLOG_POSTS;
   const dur = reduceMotion ? 0 : 0.55;
   const getPostHref = (post: (typeof VILLA_BLOG_POSTS)[number]) =>
-    post.href ?? (post.relatedVillaSlug ? `/villas/${encodeURIComponent(post.relatedVillaSlug)}` : "/villas");
+    `/blog/${encodeURIComponent(post.slug)}`;
 
   return (
     <>
@@ -164,7 +164,7 @@ export default function BlogsPageClient({ villas }: { villas: Villa[] }) {
                 </h2>
                 <p className="mt-3 max-w-2xl text-sm leading-relaxed text-neutral-600 md:text-[15px]">{featured.excerpt}</p>
                 <span className="mt-5 inline-flex items-center gap-2 text-[11px] font-semibold uppercase tracking-[0.22em] text-[#8b6914] transition group-hover:gap-3">
-                  {featured.href ? "Read article" : featured.relatedVillaSlug ? "Open villa" : "Explore villas"}
+                  Read article
                   <span aria-hidden className="inline-block transition-transform group-hover:translate-x-1">
                     →
                   </span>

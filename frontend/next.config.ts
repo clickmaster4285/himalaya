@@ -28,6 +28,20 @@ const nextConfig: NextConfig = {
       },
     ];
   },
+  async redirects() {
+    return [
+      {
+        source: "/villas-in-bhurban-murree",
+        destination: "/Why-Villas-are-the-ultimate-luxury-stays-in-Bhurban",
+        permanent: true,
+      },
+      // Legacy public URLs from sitemap → current App Router paths
+      { source: "/booking", destination: "/book", permanent: true },
+      { source: "/about", destination: "/", permanent: true },
+      { source: "/services", destination: "/", permanent: true },
+      { source: "/gallery", destination: "/", permanent: true },
+    ];
+  },
 };
 
 export default nextConfig;

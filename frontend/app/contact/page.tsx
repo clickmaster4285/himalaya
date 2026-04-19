@@ -1,3 +1,4 @@
+import { ContactStructuredData } from "@/components/seo/StructuredData";
 import Navbar from "@/components/Navbar";
 import Footer from "@/components/Footer";
 import { Mail, MapPin, Phone } from "lucide-react";
@@ -7,6 +8,7 @@ const heroImage = "/assets/journal-group-new.jpg";
 export default function ContactPage() {
   return (
     <div className="min-h-screen bg-[#F3EEE4]">
+      <ContactStructuredData />
       <section className="relative h-[380px] md:h-[460px] overflow-hidden">
         {/* eslint-disable-next-line @next/next/no-img-element */}
         <img

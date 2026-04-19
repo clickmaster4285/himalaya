@@ -1,13 +1,36 @@
-import type { Metadata } from 'next';
+import type { Metadata } from "next";
 import DetailNavbar from "@/components/DetailNavbar";
 import Footer from "@/components/Footer";
-import Link from 'next/link';
-import { ArrowLeft } from 'lucide-react';
+import Link from "next/link";
+import { ArrowLeft } from "lucide-react";
+import { blogCanonicalPath, findBlogSlugByLegacyHref, getBlogPostBySlug } from "@/lib/blog-posts";
+import { createPageMetadata } from "@/lib/seo/build-metadata";
 
-export const metadata: Metadata = {
-  title: 'Things to Do Near Bhurban Murree | Complete Travel & Activity Guide | Himalaya Villas',
-  description: 'Discover the best things to do near Bhurban Murree, including Patriata, Ayubia, Mall Road, hiking trails, and scenic viewpoints. Perfect travel guide for families and tourists staying at Himalaya Villas.',
-};
+export async function generateMetadata(): Promise<Metadata> {
+  const slug = findBlogSlugByLegacyHref("/thing-to-do-bhurban-murree");
+  const post = slug ? getBlogPostBySlug(slug) : undefined;
+  if (!slug || !post) {
+    return createPageMetadata({
+      title: "Things to Do Near Bhurban Murree | Complete Travel & Activity Guide | Himalaya Villas",
+      description:
+        "Discover the best things to do near Bhurban Murree, including Patriata, Ayubia, Mall Road, hiking trails, and scenic viewpoints. Perfect travel guide for families and tourists staying at Himalaya Villas.",
+      path: "/thing-to-do-bhurban-murree",
+      appendSiteBrand: false,
+    });
+  }
+  return createPageMetadata({
+    title: "Things to Do Near Bhurban Murree | Complete Travel & Activity Guide | Himalaya Villas",
+    description:
+      "Discover the best things to do near Bhurban Murree, including Patriata, Ayubia, Mall Road, hiking trails, and scenic viewpoints. Perfect travel guide for families and tourists staying at Himalaya Villas.",
+    path: "/thing-to-do-bhurban-murree",
+    canonicalPath: blogCanonicalPath(slug),
+    keywords: ["Bhurban", "Murree", "things to do", "Patriata", "Ayubia", "Himalaya Villas"],
+    ogImage: post.coverImage,
+    ogType: "article",
+    publishedTime: `${post.date}T12:00:00+05:00`,
+    appendSiteBrand: false,
+  });
+}
 
 function InlineImage({ src, alt }: { src: string; alt: string }) {
   return (

@@ -1,3 +1,4 @@
+import { HomeStructuredData } from "@/components/seo/StructuredData";
 import HeroSection from "@/components/HeroSection";
 import PhilosophySection from "@/components/PhilosophySection";
 import VillasSection from "@/components/VillasSection";
@@ -15,6 +16,7 @@ import Footer from "@/components/Footer";
 const Index = () => {
   return (
     <div className="min-h-screen">
+      <HomeStructuredData />
       <HeroSection />
       <PhilosophySection />
       <VillasSection />

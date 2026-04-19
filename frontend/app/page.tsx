@@ -1,6 +1,7 @@
 import { HomeStructuredData } from "@/components/seo/StructuredData";
 import HeroSection from "@/components/HeroSection";
 import PhilosophySection from "@/components/PhilosophySection";
+import LiveWeatherMurree from "@/components/LiveWeatherMurree";
 import VillasSection from "@/components/VillasSection";
 import ServicesSection from "@/components/ServicesSection";
 import AmenitiesSection from "@/components/AmenitiesSection";
@@ -19,6 +20,7 @@ const Index = () => {
       <HomeStructuredData />
       <HeroSection />
       <PhilosophySection />
+      <LiveWeatherMurree />
       <VillasSection />
       <ServicesSection />
       <AmenitiesSection />

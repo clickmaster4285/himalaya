@@ -1,7 +1,8 @@
 import { ContactStructuredData } from "@/components/seo/StructuredData";
 import Navbar from "@/components/Navbar";
 import Footer from "@/components/Footer";
-import { Mail, MapPin, Phone } from "lucide-react";
+import { ExternalLink, Mail, MapPin, Phone } from "lucide-react";
+import { SITE_CONTACT, mailtoHref, telHref } from "@/lib/site-contact";
 
 const heroImage = "/assets/journal-group-new.jpg";
 
@@ -41,14 +42,24 @@ export default function ContactPage() {
                   <div>
                     <p className="font-display text-3xl text-neutral-900">Visit Us</p>
                     <p className="mt-3 text-[13px] leading-7 text-neutral-600">
-                      Himalaya Villas Resort
+                      {SITE_CONTACT.businessName}
                       <br />
-                      Mountain View Road, Nathia gali
-                      <br />
-                      Abbottabad, KPK 22200
-                      <br />
-                      Pakistan
+                      {SITE_CONTACT.addressLines.map((line) => (
+                        <span key={line}>
+                          {line}
+                          <br />
+                        </span>
+                      ))}
                     </p>
+                    <a
+                      href={SITE_CONTACT.googleMapsUrl}
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      className="mt-4 inline-flex items-center gap-2 text-[12px] font-semibold uppercase tracking-[0.14em] text-[#8b6914] hover:text-[#6d5210]"
+                    >
+                      <ExternalLink className="h-4 w-4" />
+                      Open in Google Maps
+                    </a>
                   </div>
                 </div>
               </div>
@@ -59,13 +70,20 @@ export default function ContactPage() {
                     <Phone className="h-4 w-4" />
                   </div>
                   <div>
-                    <p className="font-display text-3xl text-neutral-900">Call Us</p>
+                    <p className="font-display text-3xl text-neutral-900">Call / WhatsApp</p>
                     <p className="mt-3 text-[13px] leading-7 text-neutral-600">
-                      +92 300 123 4567
+                      <a href={telHref()} className="hover:text-[#8b6914]">
+                        {SITE_CONTACT.phoneDisplay}
+                      </a>
                       <br />
-                      +92 992 123 456
-                      <br />
-                      WhatsApp: +92 300 123 4567
+                      <a
+                        href={SITE_CONTACT.whatsappUrl}
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        className="hover:text-[#8b6914]"
+                      >
+                        WhatsApp: {SITE_CONTACT.phoneDisplay}
+                      </a>
                     </p>
                   </div>
                 </div>
@@ -79,13 +97,39 @@ export default function ContactPage() {
                   <div>
                     <p className="font-display text-3xl text-neutral-900">Email Us</p>
                     <p className="mt-3 text-[13px] leading-7 text-neutral-600">
-                      info@himalayavillas.com
+                      <a href={mailtoHref("info")} className="hover:text-[#8b6914]">
+                        {SITE_CONTACT.emails.info}
+                      </a>
                       <br />
-                      bookings@himalayavillas.com
-                      <br />
-                      support@himalayavillas.com
+                      <a href={mailtoHref("bookings")} className="hover:text-[#8b6914]">
+                        {SITE_CONTACT.emails.bookings}
+                      </a>
                     </p>
                   </div>
+                </div>
+              </div>
+
+              <div className="overflow-hidden rounded-sm border border-[#efe7d9] bg-white">
+                <p className="border-b border-[#efe7d9] px-4 py-3 font-display text-lg text-neutral-900">Location</p>
+                <div className="aspect-video w-full bg-[#e8e4dc]">
+                  <iframe
+                    title="Himalaya Premium Villas on Google Maps"
+                    src="https://www.google.com/maps?q=33.9562%2C73.3850&z=15&output=embed"
+                    className="h-full w-full border-0"
+                    loading="lazy"
+                    referrerPolicy="no-referrer-when-downgrade"
+                    allowFullScreen
+                  />
+                </div>
+                <div className="px-4 py-3 text-center">
+                  <a
+                    href={SITE_CONTACT.googleMapsUrl}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="text-[11px] font-semibold uppercase tracking-[0.18em] text-[#8b6914] hover:underline"
+                  >
+                    Google Maps — directions & reviews
+                  </a>
                 </div>
               </div>
             </div>
@@ -102,7 +146,7 @@ export default function ContactPage() {
                     Full Name <span className="text-[#c9a55b]">*</span>
                   </p>
                   <input
-                    defaultValue="John"
+                    placeholder="Your name"
                     className="mt-2 w-full h-12 px-4 border border-[#eadfce] bg-[#f3efe7] text-[13px] text-neutral-800 focus:outline-none"
                   />
                 </div>
@@ -115,7 +159,8 @@ export default function ContactPage() {
                     <div className="mt-2 h-12 px-4 border border-[#eadfce] bg-[#f3efe7] flex items-center gap-2">
                       <Mail className="h-4 w-4 text-[#c9a55b]" />
                       <input
-                        defaultValue="john.doe@example.com"
+                        type="email"
+                        placeholder={SITE_CONTACT.emails.bookings}
                         className="w-full bg-transparent text-[13px] text-neutral-700 focus:outline-none"
                       />
                     </div>
@@ -127,7 +172,8 @@ export default function ContactPage() {
                     <div className="mt-2 h-12 px-4 border border-[#eadfce] bg-[#f3efe7] flex items-center gap-2">
                       <Phone className="h-4 w-4 text-[#c9a55b]" />
                       <input
-                        defaultValue="+92 300 1234567"
+                        type="tel"
+                        placeholder={SITE_CONTACT.phoneDisplay}
                         className="w-full bg-transparent text-[13px] text-neutral-700 focus:outline-none"
                       />
                     </div>
@@ -139,7 +185,7 @@ export default function ContactPage() {
                     Subject <span className="text-[#c9a55b]">*</span>
                   </p>
                   <input
-                    defaultValue="How can we help you?"
+                    placeholder="How can we help?"
                     className="mt-2 w-full h-12 px-4 border border-[#eadfce] bg-[#f3efe7] text-[13px] text-neutral-800 focus:outline-none"
                   />
                 </div>
@@ -149,13 +195,16 @@ export default function ContactPage() {
                     Message <span className="text-[#c9a55b]">*</span>
                   </p>
                   <textarea
-                    defaultValue="Tell us more about your inquiry..."
+                    placeholder="Tell us more about your inquiry..."
                     className="mt-2 w-full h-[180px] px-4 py-4 border border-[#eadfce] bg-[#f3efe7] text-[13px] text-neutral-800 resize-none focus:outline-none"
                   />
                 </div>
 
                 <div className="flex justify-end">
-                  <button className="px-10 py-3 bg-[#1a201d] text-white text-[11px] tracking-[0.2em] uppercase hover:bg-black transition-colors">
+                  <button
+                    type="button"
+                    className="px-10 py-3 bg-[#1a201d] text-white text-[11px] tracking-[0.2em] uppercase hover:bg-black transition-colors"
+                  >
                     Send Message
                   </button>
                 </div>
@@ -188,4 +237,3 @@ export default function ContactPage() {
     </div>
   );
 }
-

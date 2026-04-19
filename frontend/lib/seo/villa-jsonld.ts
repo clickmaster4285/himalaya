@@ -1,4 +1,5 @@
 import type { Villa } from "@/lib/villa-types";
+import { SITE_CONTACT } from "@/lib/site-contact";
 import { absoluteUrl, getSiteOrigin } from "@/lib/seo/site-config";
 import type { JsonLdScript } from "@/lib/seo/himalaya-schema";
 import { getValidImageSrc } from "@/lib/image-utils";
@@ -26,10 +27,13 @@ export function buildVillaVacationRentalJsonLd(villa: Villa): JsonLdScript {
       ],
       address: {
         "@type": "PostalAddress",
+        streetAddress: SITE_CONTACT.addressLines[0],
         addressLocality: "Bhurban",
         addressRegion: "Murree",
+        postalCode: "47190",
         addressCountry: "PK",
       },
+      hasMap: SITE_CONTACT.googleMapsUrl,
       containedInPlace: {
         "@type": "Place",
         name: "Himalaya Premium Villas",

@@ -732,7 +732,7 @@ export default function FunActivitiesFlow() {
                         </p>
                         <p className="flex items-center gap-3">
                           <Phone className="h-4 w-4 text-white/80 shrink-0" />
-                          +92 123 456 789
+                          +92 304 567 9000
                         </p>
                       </div>
                     </div>

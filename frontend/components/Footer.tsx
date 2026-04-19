@@ -1,4 +1,6 @@
+import Link from "next/link";
 import { motion } from "framer-motion";
+import { SITE_CONTACT } from "@/lib/site-contact";
 
 
 const Footer = () => {
@@ -71,17 +73,37 @@ const Footer = () => {
               Connect
             </h4>
             <ul className="space-y-3">
-              {["Contact Us", "Instagram", "Facebook", "WhatsApp"].map((item) => (
-                <li key={item}>
-                  <a
-                    href="#"
-                    className="text-sm font-body transition-opacity hover:opacity-100"
-                    style={{ color: "hsl(0 0% 100% / 0.55)" }}
-                  >
-                    {item}
-                  </a>
-                </li>
-              ))}
+              <li>
+                <Link
+                  href="/contact"
+                  className="text-sm font-body transition-opacity hover:opacity-100"
+                  style={{ color: "hsl(0 0% 100% / 0.55)" }}
+                >
+                  Contact Us
+                </Link>
+              </li>
+              <li>
+                <a
+                  href={SITE_CONTACT.googleMapsUrl}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="text-sm font-body transition-opacity hover:opacity-100"
+                  style={{ color: "hsl(0 0% 100% / 0.55)" }}
+                >
+                  Google Maps
+                </a>
+              </li>
+              <li>
+                <a
+                  href={SITE_CONTACT.whatsappUrl}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="text-sm font-body transition-opacity hover:opacity-100"
+                  style={{ color: "hsl(0 0% 100% / 0.55)" }}
+                >
+                  WhatsApp
+                </a>
+              </li>
             </ul>
           </div>
 
@@ -142,16 +164,27 @@ const Footer = () => {
             </a>
           </div>
           <div className="flex gap-6">
-            {["Privacy Policy", "Terms of Service", "Sitemap"].map((item) => (
-              <a
-                key={item}
-                href="#"
-                className="text-xs font-body transition-opacity hover:opacity-100"
-                style={{ color: "hsl(0 0% 100% / 0.35)" }}
-              >
-                {item}
-              </a>
-            ))}
+            <a
+              href="#"
+              className="text-xs font-body transition-opacity hover:opacity-100"
+              style={{ color: "hsl(0 0% 100% / 0.35)" }}
+            >
+              Privacy Policy
+            </a>
+            <a
+              href="#"
+              className="text-xs font-body transition-opacity hover:opacity-100"
+              style={{ color: "hsl(0 0% 100% / 0.35)" }}
+            >
+              Terms of Service
+            </a>
+            <Link
+              href="/sitemap.xml"
+              className="text-xs font-body transition-opacity hover:opacity-100"
+              style={{ color: "hsl(0 0% 100% / 0.35)" }}
+            >
+              Sitemap
+            </Link>
           </div>
         </div>
       </div>

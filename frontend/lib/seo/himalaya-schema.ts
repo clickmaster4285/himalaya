@@ -1,4 +1,5 @@
 import { faqData, type FaqPair } from "@/lib/faq-data";
+import { SITE_CONTACT } from "@/lib/site-contact";
 import { absoluteUrl, getSiteOrigin, orgSameAsFromEnv } from "@/lib/seo/site-config";
 
 export type LodgingSchemaType = "Hotel" | "LodgingBusiness";
@@ -83,7 +84,7 @@ function defaults(): Required<
   return {
     organizationName: "Himalaya Premium Villas",
     siteName: "Himalaya Villas",
-    telephone: "+92 304 567 9000",
+    telephone: SITE_CONTACT.phoneDisplay,
     bookingPath: "/book",
     contactPath: "/contact",
     logoPath: "/assets/himalaya-logo.png",
@@ -174,6 +175,8 @@ export function buildOrganizationJsonLd(cfg?: HimalayaJsonLdConfig): JsonLdScrip
     data.sameAs = sameAs;
   }
 
+  data.hasMap = SITE_CONTACT.googleMapsUrl;
+
   return { id: SCRIPT_IDS.organization, data };
 }
 
@@ -209,7 +212,7 @@ export function buildLodgingJsonLd(cfg?: HimalayaJsonLdConfig): JsonLdScript {
       latitude: c.latitude,
       longitude: c.longitude,
     },
-    hasMap: `https://www.google.com/maps?q=${c.latitude},${c.longitude}`,
+    hasMap: SITE_CONTACT.googleMapsUrl,
     checkinTime: c.checkinTime,
     checkoutTime: c.checkoutTime,
     amenityFeature: [
@@ -314,6 +317,21 @@ export function buildContactPageJsonLd(cfg?: HimalayaJsonLdConfig): JsonLdScript
         "@type": "WebSite",
         name: c.siteName,
         url: `${getSiteOrigin()}/`,
+      },
+      mainEntity: {
+        "@type": "LodgingBusiness",
+        name: c.organizationName,
+        telephone: SITE_CONTACT.phoneDisplay,
+        email: SITE_CONTACT.emails.bookings,
+        address: {
+          "@type": "PostalAddress",
+          streetAddress: c.streetAddress,
+          addressLocality: c.addressLocality,
+          addressRegion: c.addressRegion,
+          postalCode: c.postalCode,
+          addressCountry: c.addressCountry,
+        },
+        hasMap: SITE_CONTACT.googleMapsUrl,
       },
     },
   };

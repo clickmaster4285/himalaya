@@ -5,6 +5,8 @@ import Link from "next/link";
 import { useState, useEffect } from "react";
 import { Menu, X } from "lucide-react";
 import NavAuth from "@/components/NavAuth";
+import { buildWhatsAppBookingUrl } from "@/lib/whatsapp";
+import LiveWeatherBadge from "@/components/LiveWeatherBadge";
 
 const logo = "/assets/himalaya-logo.png";
 
@@ -89,11 +91,14 @@ const Navbar = () => {
 
       {/* Sign in + Book */}
       <div className="ml-auto flex items-center gap-2 md:gap-3">
+        <div className="hidden sm:block">
+          <LiveWeatherBadge variant="light" />
+        </div>
         <div className="hidden md:block">
           <NavAuth variant="hero" />
         </div>
         <a
-          href="https://wa.me/923045679000"
+          href={buildWhatsAppBookingUrl("a private villa tour")}
           target="_blank"
           rel="noopener noreferrer"
           className="px-4 py-2 md:px-6 md:py-2.5 text-[10px] md:text-xs font-medium tracking-wider uppercase bg-primary text-primary-foreground hover:bg-primary/90 transition-all duration-300 inline-block whitespace-nowrap"
@@ -135,7 +140,7 @@ const Navbar = () => {
             <NavAuth variant="hero" />
           </div>
           <a
-            href="https://wa.me/923045679000"
+            href={buildWhatsAppBookingUrl("a private villa tour")}
             target="_blank"
             rel="noopener noreferrer"
             className="mt-4 px-8 py-3 text-sm font-medium tracking-wider uppercase bg-primary text-primary-foreground hover:bg-primary/90 transition-all duration-300"

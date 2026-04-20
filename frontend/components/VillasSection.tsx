@@ -2,7 +2,7 @@
 
 import Image from "next/image";
 import Link from "next/link";
-import { useEffect, useMemo, useRef, useState } from "react";
+import { useMemo, useRef, useState } from "react";
 import { shouldUnoptimizeImageSrc, getValidImageSrc } from "@/lib/image-utils";
 import { motion, useInView } from "framer-motion";
 import type { Villa } from "@/lib/villa-types";
@@ -61,19 +61,16 @@ const VillaCard = ({ villa, index, isInView }: { villa: Villa; index: number; is
   );
 };
 
-const VillasSection = () => {
+type VillasSectionProps = {
+  initialVillas?: Villa[];
+};
+
+const VillasSection = ({ initialVillas = [] }: VillasSectionProps) => {
   const sectionRef = useRef(null);
   const isInView = useInView(sectionRef, { once: true, margin: "-80px" });
   const [activeCategory, setActiveCategory] = useState<(typeof categories)[number]>("All");
   const [visibleCount, setVisibleCount] = useState(6);
-  const [villas, setVillas] = useState<Villa[]>([]);
-
-  useEffect(() => {
-    fetch("/api/villas")
-      .then((r) => r.json())
-      .then((d) => setVillas(Array.isArray(d.villas) ? d.villas : []))
-      .catch(() => setVillas([]));
-  }, []);
+  const villas = useMemo(() => initialVillas, [initialVillas]);
 
   const filteredVillas = useMemo(() => {
     if (activeCategory === "All") return villas;
@@ -130,7 +127,19 @@ const VillasSection = () => {
         <div className="mb-12 h-px w-full bg-border" />
 
         {villas.length === 0 ? (
-          <p className="text-center font-sans text-sm text-muted-foreground">Loading villas…</p>
+          <div className="mx-auto max-w-2xl rounded-lg border border-[#dccfb8] bg-white p-6 text-center">
+            <p className="font-sans text-sm text-neutral-700">
+              Villas are temporarily unavailable. Having trouble booking? Contact us on WhatsApp.
+            </p>
+            <a
+              href={buildWhatsAppBookingUrl()}
+              target="_blank"
+              rel="noopener noreferrer"
+              className="mt-4 inline-flex items-center justify-center rounded-md bg-neutral-900 px-5 py-2.5 text-[11px] font-semibold uppercase tracking-[0.16em] text-white hover:bg-neutral-800"
+            >
+              Book on WhatsApp
+            </a>
+          </div>
         ) : (
           <>
             <div className="grid grid-cols-1 gap-6 md:grid-cols-2 xl:grid-cols-3">

@@ -2,6 +2,7 @@
 
 import { useRef } from "react";
 import { motion, useInView } from "framer-motion";
+import { buildWhatsAppBookingUrl } from "@/lib/whatsapp";
 
 const ReserveSection = () => {
   const ref = useRef(null);
@@ -44,7 +45,7 @@ const ReserveSection = () => {
           className="mt-10"
         >
           <a
-            href="https://wa.me/923045679000"
+            href={buildWhatsAppBookingUrl()}
             target="_blank"
             rel="noopener noreferrer"
             className="inline-flex items-center justify-center rounded-sm border border-border bg-transparent px-6 py-3 text-sm font-medium tracking-wide text-foreground transition-colors duration-300 hover:bg-foreground hover:text-background"

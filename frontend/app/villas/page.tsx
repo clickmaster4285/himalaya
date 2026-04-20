@@ -9,6 +9,7 @@ import Footer from "@/components/Footer";
 import { JsonLd } from "@/components/seo/JsonLd";
 import { createPageMetadata } from "@/lib/seo/build-metadata";
 import { absoluteUrl } from "@/lib/seo/site-config";
+import { getPublishedVillas } from "@/lib/villas-fetch";
 
 export const metadata: Metadata = createPageMetadata({
   title: "Private Luxury Villas in Bhurban | Book Murree Stays",
@@ -24,7 +25,10 @@ export const metadata: Metadata = createPageMetadata({
   ogImage: "/assets/gallery-exterior.jpg",
 });
 
-const VillasPage = () => {
+export const dynamic = "force-dynamic";
+
+const VillasPage = async () => {
+  const villas = await getPublishedVillas();
   const itemListJsonLd = {
     "@context": "https://schema.org",
     "@type": "ItemList",
@@ -82,7 +86,7 @@ const VillasPage = () => {
         </p>
       </section>
       <VillaConfigurations />
-      <VillasSection />
+      <VillasSection initialVillas={villas} />
       <MomentsSection />
       <ReserveSection />
       <Footer />

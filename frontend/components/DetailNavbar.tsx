@@ -4,6 +4,7 @@ import Image from "next/image";
 import Link from "next/link";
 import NavAuth from "@/components/NavAuth";
 import { buildWhatsAppBookingUrl } from "@/lib/whatsapp";
+import LiveWeatherBadge from "@/components/LiveWeatherBadge";
 
 const logo = "/assets/himalaya-logo.png";
 
@@ -37,6 +38,9 @@ export default function DetailNavbar() {
         </div>
 
         <div className="ml-auto flex items-center gap-3 md:gap-4">
+          <div className="hidden sm:block">
+            <LiveWeatherBadge variant="dark" />
+          </div>
           <NavAuth variant="cream" />
           <a
             href={buildWhatsAppBookingUrl()}

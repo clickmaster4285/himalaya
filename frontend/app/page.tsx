@@ -16,6 +16,7 @@ import FAQSection from "@/components/FAQSection";
 import Footer from "@/components/Footer";
 import { createPageMetadata } from "@/lib/seo/build-metadata";
 import { faqData } from "@/lib/faq-data";
+import { getPublishedVillas } from "@/lib/villas-fetch";
 
 export const metadata: Metadata = createPageMetadata({
   title: "Himalaya Premium Villas | Private Luxury Estate Bhurban",
@@ -25,7 +26,10 @@ export const metadata: Metadata = createPageMetadata({
   ogImage: "/assets/gallery-exterior.jpg",
 });
 
-const Index = () => {
+export const dynamic = "force-dynamic";
+
+const Index = async () => {
+  const villas = await getPublishedVillas();
   const visibleFaqs = faqData.flatMap((group) => group.questions).slice(0, 6);
 
   return (
@@ -35,7 +39,7 @@ const Index = () => {
       <HeroSection />
       <PhilosophySection />
       <LiveWeatherMurree />
-      <VillasSection />
+      <VillasSection initialVillas={villas} />
       <ServicesSection />
       <AmenitiesSection />
       <MomentsSection />

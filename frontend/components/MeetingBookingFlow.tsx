@@ -750,7 +750,7 @@ export default function MeetingBookingFlow() {
                         </p>
                         <p className="flex items-center gap-3">
                           <Phone className="h-4 w-4 text-white/80 shrink-0" />
-                          +92 304 567 9000
+                          +92 304 567 9080
                         </p>
                       </div>
                     </div>

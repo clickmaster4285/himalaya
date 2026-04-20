@@ -54,3 +54,21 @@ export const UNIVERSAL_FAQS: UniversalFaq[] = [
   },
 ];
 
+export function getValidatedUniversalFaqs(limit = 12): UniversalFaq[] {
+  const seen = new Set<string>();
+  const out: UniversalFaq[] = [];
+
+  for (const item of UNIVERSAL_FAQS) {
+    const q = item.q.trim();
+    const a = item.a.trim();
+    if (!q || !a) continue;
+    const key = q.toLowerCase();
+    if (seen.has(key)) continue;
+    seen.add(key);
+    out.push({ q, a });
+    if (out.length >= limit) break;
+  }
+
+  return out;
+}
+

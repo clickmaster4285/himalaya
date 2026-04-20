@@ -348,7 +348,6 @@ export function homePageJsonLdScripts(cfg?: HimalayaJsonLdConfig): JsonLdScript[
     buildLodgingJsonLd(cfg),
     buildServiceJsonLd(cfg),
     buildReservationJsonLd(cfg),
-    buildFaqPageJsonLd(cfg),
   ];
 }
 

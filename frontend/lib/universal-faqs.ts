@@ -52,13 +52,41 @@ export const UNIVERSAL_FAQS: UniversalFaq[] = [
     q: "Are there family-friendly luxury resorts in Bhurban?",
     a: "Yes. Family-friendly luxury stays in Bhurban usually offer larger room configurations, safer movement spaces, and flexible dining and support flow. Private villa formats are especially suitable for families of different age groups because they combine comfort with control. For family package planning and availability checks, contact: +92 304 567 9080.",
   },
+  {
+    q: "How do I book a luxury stay in Bhurban online?",
+    a: "You can book directly via WhatsApp or through the website contact flow. Direct booking is recommended because it allows date coordination, dietary requests, and pre-arrival planning in one conversation. For fastest response, send your dates and guest count on WhatsApp: +92 304 567 9080.",
+  },
+  {
+    q: "What room types are available at premium Bhurban resorts?",
+    a: "Premium Bhurban stays usually offer multiple configurations including couple suites, family villas, and larger private group options. The best room type depends on guest count, stay purpose, and privacy requirements. If you share your travel plan, the team can suggest the right fit quickly.",
+  },
+  {
+    q: "Are all meal options halal and can dietary requests be handled?",
+    a: "Yes, meal planning follows halal standards, and vegetarian or custom dietary preferences can be handled with prior notice. Sharing dietary needs before arrival helps the culinary team prepare smoothly and avoid service delays during your stay.",
+  },
+  {
+    q: "Can I arrange airport transfer from Islamabad to Bhurban?",
+    a: "Yes. Private transfer support can be arranged from Islamabad Airport and city pickup points. Travel time is usually around 45 to 90 minutes depending on weather and traffic. Confirm transfer details when finalizing your booking.",
+  },
+  {
+    q: "Are corporate retreats available in Bhurban?",
+    a: "Yes. Bhurban is a strong destination for executive offsites and strategy retreats because it combines privacy with practical accessibility. Teams usually book 2 to 4 day formats with meeting blocks, dining, and stay services in one plan.",
+  },
+  {
+    q: "Can I host weddings or private events in Bhurban?",
+    a: "Yes. Destination weddings, family celebrations, and private milestone events can be hosted with planning support for setup, hospitality, and guest flow. Early booking is recommended for prime seasonal dates.",
+  },
+  {
+    q: "What amenities should I compare before selecting a resort?",
+    a: "Compare privacy level, room configuration, mountain-view quality, support responsiveness, dining flexibility, and activity access. These factors impact trip quality more than marketing headlines and help avoid booking mismatches.",
+  },
 ];
 
-export function getValidatedUniversalFaqs(limit = 12): UniversalFaq[] {
+function sanitizeFaqs(list: UniversalFaq[]): UniversalFaq[] {
   const seen = new Set<string>();
   const out: UniversalFaq[] = [];
 
-  for (const item of UNIVERSAL_FAQS) {
+  for (const item of list) {
     const q = item.q.trim();
     const a = item.a.trim();
     if (!q || !a) continue;
@@ -66,9 +94,77 @@ export function getValidatedUniversalFaqs(limit = 12): UniversalFaq[] {
     if (seen.has(key)) continue;
     seen.add(key);
     out.push({ q, a });
-    if (out.length >= limit) break;
   }
 
   return out;
+}
+
+const FAQ_SET_BY_PATH: Record<string, string[]> = {
+  home: [
+    "What is special in Bhurban?",
+    "What is Bhurban known for?",
+    "What is the best time to visit Bhurban?",
+    "Which is the most beautiful place in Murree?",
+    "Is Bhurban safe for families and guests?",
+  ],
+  villas: [
+    "Are there family-friendly luxury resorts in Bhurban?",
+    "What room types are available at premium Bhurban resorts?",
+    "What is the average cost of a weekend stay at a premium Bhurban resort?",
+    "What amenities should I compare before selecting a resort?",
+    "What dining options are available at luxury Bhurban resorts?",
+  ],
+  blog: [
+    "What is the ideal month to visit Murree?",
+    "Which city is Bhurban near?",
+    "How do I book a luxury stay in Bhurban online?",
+    "Can I arrange airport transfer from Islamabad to Bhurban?",
+    "Are all meal options halal and can dietary requests be handled?",
+  ],
+  booking: [
+    "How do I book a luxury stay in Bhurban online?",
+    "What room types are available at premium Bhurban resorts?",
+    "Are all meal options halal and can dietary requests be handled?",
+    "Can I arrange airport transfer from Islamabad to Bhurban?",
+    "What is the average cost of a weekend stay at a premium Bhurban resort?",
+  ],
+  experience: [
+    "What is Bhurban known for?",
+    "What is the best time to visit Bhurban?",
+    "Are corporate retreats available in Bhurban?",
+    "Can I host weddings or private events in Bhurban?",
+    "What dining options are available at luxury Bhurban resorts?",
+  ],
+};
+
+function detectFaqGroup(pathname: string): keyof typeof FAQ_SET_BY_PATH {
+  if (pathname === "/") return "home";
+  if (pathname.startsWith("/villas")) return "villas";
+  if (pathname.startsWith("/blog") || pathname.startsWith("/blogs")) return "blog";
+  if (pathname.startsWith("/book")) return "booking";
+  return "experience";
+}
+
+export function getValidatedUniversalFaqsForPath(pathname: string, limit = 5): UniversalFaq[] {
+  const all = sanitizeFaqs(UNIVERSAL_FAQS);
+  const group = detectFaqGroup(pathname);
+  const selectedQuestions = FAQ_SET_BY_PATH[group];
+
+  const selected = selectedQuestions
+    .map((q) => all.find((faq) => faq.q === q))
+    .filter((faq): faq is UniversalFaq => Boolean(faq))
+    .slice(0, limit);
+
+  if (selected.length >= limit) return selected;
+
+  const selectedSet = new Set(selected.map((x) => x.q));
+  for (const faq of all) {
+    if (selectedSet.has(faq.q)) continue;
+    selected.push(faq);
+    selectedSet.add(faq.q);
+    if (selected.length >= limit) break;
+  }
+
+  return selected;
 }
 

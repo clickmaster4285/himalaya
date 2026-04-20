@@ -184,7 +184,9 @@ export function buildLodgingJsonLd(cfg?: HimalayaJsonLdConfig): JsonLdScript {
   const c = mergeConfig(cfg);
   const origin = getSiteOrigin();
   const types: string[] =
-    c.lodgingType === "Hotel" ? ["Hotel", "LocalBusiness"] : ["LodgingBusiness", "LocalBusiness"];
+    c.lodgingType === "Hotel"
+      ? ["Hotel", "LodgingBusiness", "LocalBusiness"]
+      : ["LodgingBusiness", "Hotel", "LocalBusiness"];
 
   const images = c.lodgingImagePaths.map((p) => absoluteUrl(p));
 
@@ -198,6 +200,16 @@ export function buildLodgingJsonLd(cfg?: HimalayaJsonLdConfig): JsonLdScript {
     image: images,
     telephone: c.telephone,
     priceRange: c.priceRange,
+    currenciesAccepted: "PKR",
+    paymentAccepted: "Cash, Credit Card, Bank Transfer, JazzCash, Easypaisa",
+    petsAllowed: false,
+    numberOfRooms: 12,
+    starRating: {
+      "@type": "Rating",
+      ratingValue: "5",
+      bestRating: "5",
+      worstRating: "1",
+    },
     description: c.lodgingDescription,
     address: {
       "@type": "PostalAddress",

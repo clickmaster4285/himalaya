@@ -2,6 +2,7 @@ import Navbar from "./Navbar";
 import BookingWidget from "./BookingWidget";
 import HeroMedia from "./HeroMedia";
 import { ArrowRight } from "lucide-react";
+import { buildWhatsAppBookingUrl } from "@/lib/whatsapp";
 
 const heroPills = [
   "Designed for elite gatherings",
@@ -62,14 +63,16 @@ const HeroSection = () => {
 
             <div className="mt-8 flex flex-col gap-3 animate-fade-up-delay-2 sm:flex-row sm:flex-wrap sm:items-center sm:gap-4">
               <a
-                href="/book/stay"
+                href={buildWhatsAppBookingUrl()}
+                target="_blank"
+                rel="noopener noreferrer"
                 className="group inline-flex items-center justify-center gap-2 rounded-md bg-neutral-950 px-7 py-3.5 text-xs font-semibold uppercase tracking-[0.2em] text-white shadow-lg transition hover:bg-neutral-900"
               >
                 Check availability
                 <ArrowRight className="h-4 w-4 transition-transform text-white group-hover:translate-x-0.5" aria-hidden />
               </a>
               <a
-                href="https://wa.me/923045679000?text=I%20would%20like%20to%20request%20a%20private%20tour"
+                href={buildWhatsAppBookingUrl("a private villa tour")}
                 target="_blank"
                 rel="noopener noreferrer"
                 className="inline-flex items-center justify-center rounded-md border-2 border-white/85 bg-white/5 px-7 py-3.5 text-xs font-semibold uppercase tracking-[0.2em] text-white shadow-md backdrop-blur-sm transition hover:bg-white/15"

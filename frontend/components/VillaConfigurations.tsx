@@ -1,10 +1,12 @@
 import { CheckCircle2 } from "lucide-react";
 import { motion } from "framer-motion";
+import { buildWhatsAppBookingUrl } from "@/lib/whatsapp";
 
 export default function VillaConfigurations() {
   const plans = [
     {
       title: "SUITE - 1",
+      bookingName: "Suite 1",
       price: "50,000/- Rs",
       features: [
         "2 LUXURY BEDROOMS (ATTACHED BATHROOMS)",
@@ -15,6 +17,7 @@ export default function VillaConfigurations() {
     },
     {
       title: "SUITE - 2",
+      bookingName: "Suite 2",
       price: "50,000/- Rs",
       features: [
         "1 EXECUTIVE BEDROOM",
@@ -26,6 +29,7 @@ export default function VillaConfigurations() {
     },
     {
       title: "COMPLETE VILLA",
+      bookingName: "Complete Villa",
       price: "100,000/- Rs",
       features: [
         "1 EXECUTIVE BEDROOM",
@@ -82,8 +86,10 @@ export default function VillaConfigurations() {
                 </ul>
                 
                 <div className="mt-8 pt-8 border-t border-[#f0eadf]/60">
-                   <a 
-                     href="/villas" 
+                   <a
+                     href={buildWhatsAppBookingUrl(plan.bookingName)}
+                     target="_blank"
+                     rel="noopener noreferrer"
                      className="block text-center w-full bg-[#fdfaf6] text-[#3d362e] border border-[#d4c9b8] py-3.5 rounded-xl font-sans text-sm font-bold tracking-widest uppercase hover:bg-[#1c1916] hover:text-white hover:border-[#1c1916] transition-all duration-300 shadow-sm hover:shadow-md"
                    >
                       Book Now

@@ -8,6 +8,7 @@ import { JsonLd } from "@/components/seo/JsonLd";
 import { blogCanonicalPath, getAllBlogSlugs, getBlogPostBySlug } from "@/lib/blog-posts";
 import { createPageMetadata } from "@/lib/seo/build-metadata";
 import { buildBlogPostingJsonLd } from "@/lib/seo/blog-jsonld";
+import { getBlogContent } from "@/lib/blog-content";
 import { shouldUnoptimizeImageSrc, getValidImageSrc } from "@/lib/image-utils";
 export const dynamicParams = false;
 
@@ -40,10 +41,26 @@ export default async function BlogArticlePage({ params }: Props) {
 
   const cover = getValidImageSrc(post.coverImage);
   const jsonLd = buildBlogPostingJsonLd(post);
+  const content = getBlogContent(post);
+  const faqJsonLd = {
+    id: `hv-jsonld-blog-faq-${post.slug}`,
+    data: {
+      "@context": "https://schema.org",
+      "@type": "FAQPage",
+      mainEntity: content.faqs.map((faq) => ({
+        "@type": "Question",
+        name: faq.q,
+        acceptedAnswer: {
+          "@type": "Answer",
+          text: faq.a,
+        },
+      })),
+    },
+  };
 
   return (
     <div className="min-h-screen bg-[#F6F1EA]">
-      <JsonLd items={[jsonLd]} />
+      <JsonLd items={[jsonLd, faqJsonLd]} />
       <DetailNavbar />
 
       <article className="mx-auto max-w-[900px] px-6 pb-20 pt-8 md:px-10 md:pt-12">
@@ -78,9 +95,29 @@ export default async function BlogArticlePage({ params }: Props) {
         </div>
 
         <div className="prose prose-neutral mt-12 max-w-none prose-p:text-[15px] prose-p:leading-7 prose-p:text-neutral-600">
+          {content.intro.map((paragraph) => (
+            <p key={paragraph}>{paragraph}</p>
+          ))}
+          {content.sections.map((section) => (
+            <section key={section.heading} className="mt-10">
+              <h2>{section.heading}</h2>
+              {section.paragraphs.map((paragraph) => (
+                <p key={paragraph}>{paragraph}</p>
+              ))}
+            </section>
+          ))}
+          <h2 className="mt-10">Plan your stay next</h2>
           <p>
-            This guide is part of the Himalaya Villas journal. For availability, private tours, and bespoke mountain
-            stays in Bhurban, continue to our booking desk or explore villas below.
+            For travelers finalizing dates, the next best step is to compare villa options and secure availability early.
+            Explore our{" "}
+            <Link href="/villas" className="font-medium text-[#8b6914] underline underline-offset-4">
+              luxury villas in Bhurban
+            </Link>{" "}
+            and continue to{" "}
+            <Link href="/book/stay" className="font-medium text-[#8b6914] underline underline-offset-4">
+              direct booking support
+            </Link>
+            .
           </p>
           {post.href && post.href !== blogCanonicalPath(post.slug) ? (
             <p>
@@ -103,6 +140,18 @@ export default async function BlogArticlePage({ params }: Props) {
             </p>
           ) : null}
         </div>
+
+        <section className="mt-14 rounded-lg border border-[#eadfce] bg-white p-6 md:p-8">
+          <h2 className="font-display text-2xl text-neutral-900">Frequently Asked Questions</h2>
+          <div className="mt-6 space-y-4">
+            {content.faqs.map((faq) => (
+              <article key={faq.q} className="rounded-md border border-[#efe3d2] bg-[#fbf8f2] p-4">
+                <h3 className="text-base font-semibold text-neutral-900">{faq.q}</h3>
+                <p className="mt-2 text-sm leading-relaxed text-neutral-700">{faq.a}</p>
+              </article>
+            ))}
+          </div>
+        </section>
 
         <div className="mt-14 flex flex-wrap gap-4 border-t border-[#eadfce] pt-10">
           <Link

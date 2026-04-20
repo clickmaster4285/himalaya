@@ -7,6 +7,7 @@ import { shouldUnoptimizeImageSrc, getValidImageSrc } from "@/lib/image-utils";
 import { motion, useInView } from "framer-motion";
 import type { Villa } from "@/lib/villa-types";
 import { villaCardDescriptionOverride } from "@/lib/villa-hero-copy";
+import { buildWhatsAppBookingUrl } from "@/lib/whatsapp";
 
 const categories = ["All", "Presidential", "Family", "Suite", "Suite 1", "Suite 2", "Complete Villa"] as const;
 
@@ -42,12 +43,20 @@ const VillaCard = ({ villa, index, isInView }: { villa: Villa; index: number; is
 
           <div className="mt-5 flex items-center justify-between border-t border-border pt-4">
             <span className="font-display text-lg italic text-foreground">{villa.price}</span>
-            <span className="text-neutral-500 transition-colors duration-300 group-hover:text-foreground">
-              View details →
-            </span>
+            <span className="text-neutral-500 transition-colors duration-300 group-hover:text-foreground">View details →</span>
           </div>
         </div>
       </Link>
+      <div className="px-6 pb-6">
+        <a
+          href={buildWhatsAppBookingUrl(villa.title)}
+          target="_blank"
+          rel="noopener noreferrer"
+          className="inline-flex w-full items-center justify-center rounded-lg border border-[#d4c9b8] bg-[#fdfaf6] px-4 py-2.5 text-xs font-semibold uppercase tracking-[0.16em] text-neutral-900 transition hover:bg-neutral-900 hover:text-white"
+        >
+          Book Now
+        </a>
+      </div>
     </motion.article>
   );
 };

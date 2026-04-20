@@ -1,12 +1,11 @@
 "use client";
-
-import Link from "next/link";
 import { useState } from "react";
 import { Calendar as CalendarIcon, Users } from "lucide-react";
 import { format } from "date-fns";
 import { Calendar } from "@/components/ui/calendar";
 import { Popover, PopoverContent, PopoverTrigger } from "@/components/ui/popover";
 import { Select, SelectContent, SelectItem, SelectTrigger, SelectValue } from "@/components/ui/select";
+import { buildWhatsAppBookingUrl } from "@/lib/whatsapp";
 
 const BookingWidget = () => {
   const [checkIn, setCheckIn] = useState<Date>();
@@ -119,12 +118,14 @@ const BookingWidget = () => {
 
       {/* Inset CTA so it never bleeds past rounded corners; flex min-w-0 prevents horizontal overflow */}
       <div className="box-border flex w-full min-w-0 shrink-0 p-2 sm:w-auto sm:max-w-[min(100%,12.5rem)] sm:flex-none sm:self-stretch sm:p-2">
-        <Link
-          href="/book/stay"
+        <a
+          href={buildWhatsAppBookingUrl()}
+          target="_blank"
+          rel="noopener noreferrer"
           className="flex min-h-11 w-full max-w-full items-center justify-center rounded-lg bg-neutral-950 px-2 py-2.5 text-center text-[10px] font-semibold uppercase leading-snug tracking-[0.14em] text-white transition-colors hover:bg-neutral-900 sm:h-full sm:min-h-0 sm:flex-1 sm:px-3 sm:py-2 sm:text-[11px] sm:tracking-[0.16em]"
         >
           Check availability
-        </Link>
+        </a>
       </div>
     </div>
   );

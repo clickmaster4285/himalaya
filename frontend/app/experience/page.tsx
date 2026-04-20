@@ -1,11 +1,29 @@
+import type { Metadata } from "next";
 import Image from "next/image";
 import Link from "next/link";
 import Navbar from "@/components/Navbar";
 import Footer from "@/components/Footer";
 import { getPublishedVillas } from "@/lib/villas-fetch";
 import { shouldUnoptimizeImageSrc, getValidImageSrc } from "@/lib/image-utils";
+import { JsonLd } from "@/components/seo/JsonLd";
+import { createPageMetadata } from "@/lib/seo/build-metadata";
+import { absoluteUrl } from "@/lib/seo/site-config";
 
 export const dynamic = "force-dynamic";
+
+export const metadata: Metadata = createPageMetadata({
+  title: "Things to Do in Bhurban Murree | Luxury Experience Guide",
+  description:
+    "Discover top things to do in Bhurban Murree including hiking, viewpoints, dining, family activities, and curated villa experiences near Himalaya Villas.",
+  path: "/experience",
+  keywords: [
+    "things to do in Bhurban Murree",
+    "Bhurban travel experiences",
+    "Murree activities guide",
+    "luxury mountain getaway Pakistan",
+  ],
+  ogImage: "/assets/why-villa-view.jpg",
+});
 
 const heroBg = "/assets/why-villa-view.jpg";
 const symphonyImg = "/assets/philosophy-interior.jpg";
@@ -16,19 +34,29 @@ const journeyBg = "/assets/why-villa-garden.jpg";
 export default async function ExperiencePage() {
   const villas = await getPublishedVillas();
   const villaCards = villas.slice(0, 6);
+  const experiencesJsonLd = {
+    "@context": "https://schema.org",
+    "@type": "ItemList",
+    name: "Things to do in Bhurban Murree",
+    itemListElement: [
+      { "@type": "ListItem", position: 1, name: "Nature walks and trails", url: absoluteUrl("/experience") },
+      { "@type": "ListItem", position: 2, name: "Villa dining and relaxation", url: absoluteUrl("/book/dining") },
+      { "@type": "ListItem", position: 3, name: "Scenic viewpoints and local tours", url: absoluteUrl("/blogs") },
+    ],
+  };
 
   return (
     <div className="min-h-screen bg-[#F6F1EA]">
+      <JsonLd items={[{ id: "hv-jsonld-experience-itemlist", data: experiencesJsonLd }]} />
       {/* Hero */}
       <section className="relative h-[520px] md:h-[640px] w-full overflow-hidden">
         <Image
           src={heroBg}
-          alt=""
+          alt="Mountain experiences in Bhurban Murree"
           fill
           priority
           sizes="100vw"
           className="object-cover"
-          aria-hidden
         />
         <div className="absolute inset-0 bg-black/35" aria-hidden="true" />
 
@@ -82,6 +110,42 @@ export default async function ExperiencePage() {
               pure, and where every sunrise brings new possibilities for adventure, relaxation, and rejuvenation.
             </p>
           </div>
+        </div>
+      </section>
+
+      <section className="bg-white py-16 md:py-20">
+        <div className="mx-auto max-w-[1200px] px-6 md:px-12">
+          <h2 className="font-display text-3xl text-neutral-900 md:text-4xl">Your complete Bhurban experience plan</h2>
+          <p className="mt-6 max-w-5xl text-[15px] leading-8 text-neutral-700">
+            Bhurban and nearby Murree offer a balanced mix of calm nature, panoramic drives, local food culture, and
+            outdoor activities for all travel types. Start your day with fresh mountain air and short scenic walks
+            around the estate before heading to local viewpoints and forest routes. During afternoons, families often
+            prefer light sightseeing and relaxed dining, while couples may choose quieter nature spots and private villa
+            downtime. In the evening, the region is ideal for slow-paced conversations, tea sessions, and weather-led
+            experiences that are difficult to recreate in urban destinations.
+          </p>
+          <h3 className="mt-8 text-xl font-semibold text-neutral-900">Recommended itinerary blocks</h3>
+          <ul className="mt-4 list-disc space-y-2 pl-6 text-[15px] leading-8 text-neutral-700">
+            <li>Morning: short trails, sunrise viewpoints, and local breakfast stops.</li>
+            <li>Afternoon: family-friendly outings, light exploration, and estate relaxation.</li>
+            <li>Evening: curated dining, private villa leisure time, and mountain sunset sessions.</li>
+            <li>Day-two options: nearby attractions, guided local routes, and photography spots.</li>
+          </ul>
+          <p className="mt-6 max-w-5xl text-[15px] leading-8 text-neutral-700">
+            If you are planning your stay around activities first, compare available residences in{" "}
+            <Link href="/villas" className="font-medium text-[#8b6914] underline underline-offset-4">
+              our villa collection
+            </Link>
+            , then lock in dates via{" "}
+            <Link href="/book/stay" className="font-medium text-[#8b6914] underline underline-offset-4">
+              Book Your Stay
+            </Link>
+            . For deeper destination planning and insider recommendations, explore our latest{" "}
+            <Link href="/blogs" className="font-medium text-[#8b6914] underline underline-offset-4">
+              Bhurban travel blogs
+            </Link>
+            .
+          </p>
         </div>
       </section>
 

@@ -4,6 +4,7 @@ import Script from "next/script";
 import "./globals.css";
 import { cn } from "@/lib/utils";
 import { SiteStructuredData } from "@/components/seo/StructuredData";
+import { BreadcrumbJsonLd } from "@/components/seo/BreadcrumbJsonLd";
 import { getSiteOrigin } from "@/lib/seo/site-config";
 
 /** Clean UI type for body, forms, and nav */
@@ -28,7 +29,10 @@ const geistMono = Geist_Mono({
 
 export const metadata: Metadata = {
   metadataBase: new URL(getSiteOrigin()),
-  title: "Himalaya Premium Villas | Private Luxury Estate Bhurban",
+  title: {
+    default: "Himalaya Premium Villas | Private Luxury Estate Bhurban",
+    template: "%s | Himalaya Villas",
+  },
   description:
     "Himalaya Premium Villas is not a hotel. It is a private luxury estate in Bhurban crafted for those who demand exclusivity, privacy, and elevated experiences in the Himalayan foothills. Ultra-private villas, limited bookings, destination weddings, corporate retreats, and curated stays.",
   keywords: [
@@ -44,6 +48,21 @@ export const metadata: Metadata = {
     title: "Himalaya Premium Villas — Private Luxury Estate, Bhurban",
     description:
       "Not a hotel — a private luxury estate for elite gatherings, with panoramic Himalayan views, curated dining, and limited monthly bookings.",
+    url: "/",
+    type: "website",
+    images: [
+      {
+        url: "/assets/gallery-exterior.jpg",
+        alt: "Himalaya Premium Villas in Bhurban",
+      },
+    ],
+  },
+  twitter: {
+    card: "summary_large_image",
+    title: "Himalaya Premium Villas — Private Luxury Estate, Bhurban",
+    description:
+      "Not a hotel — a private luxury estate for elite gatherings, with panoramic Himalayan views, curated dining, and limited monthly bookings.",
+    images: ["/assets/gallery-exterior.jpg"],
   },
   verification: {
     google: "_QECsDvX53vPNLld00dRcy0Ay9dA2bvaAZxmiz-DAkw",
@@ -70,6 +89,7 @@ export default function RootLayout({
         </Script>
         {/* End Google Tag Manager */}
         <SiteStructuredData />
+        <BreadcrumbJsonLd />
       </head>
       <body className={`${geistMono.variable} min-h-dvh`} suppressHydrationWarning>
         {/* Google Tag Manager (noscript) */}

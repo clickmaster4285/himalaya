@@ -33,6 +33,7 @@ import {
   startOfLocalDay,
   type OccupiedRange,
 } from "@/lib/stay-calendar-utils";
+import { buildWhatsAppBookingUrl } from "@/lib/whatsapp";
 
 const STAY_EXPERIENCE = "Book Your Stay";
 
@@ -110,6 +111,7 @@ function BookStayContent() {
 
   const selectedVillaSlug = (searchParams.get("villa") ?? "").toString();
   const [villaCatalog, setVillaCatalog] = useState<Villa[]>([]);
+  const [bookingLoadError, setBookingLoadError] = useState<string | null>(null);
   const [range, setRange] = useState<DateRange | undefined>(undefined);
   const [occupiedRanges, setOccupiedRanges] = useState<OccupiedRange[]>([]);
   const [dateError, setDateError] = useState<string | null>(null);
@@ -117,9 +119,23 @@ function BookStayContent() {
 
   useEffect(() => {
     fetch("/api/villas")
-      .then((r) => r.json())
-      .then((d) => setVillaCatalog(Array.isArray(d.villas) ? d.villas : []))
-      .catch(() => setVillaCatalog([]));
+      .then((r) => {
+        if (!r.ok) throw new Error("Failed to load villas");
+        return r.json();
+      })
+      .then((d) => {
+        const next = Array.isArray(d.villas) ? d.villas : [];
+        setVillaCatalog(next);
+        if (next.length === 0) {
+          setBookingLoadError("Villa availability is temporarily unavailable.");
+          return;
+        }
+        setBookingLoadError(null);
+      })
+      .catch(() => {
+        setVillaCatalog([]);
+        setBookingLoadError("Something went wrong while loading booking. Contact us on WhatsApp.");
+      });
   }, []);
 
   useEffect(() => {
@@ -344,6 +360,19 @@ function BookStayContent() {
             <p className="mt-3 text-sm md:text-[15px] text-neutral-600 max-w-2xl leading-relaxed">
               Choose the perfect experience and let us create unforgettable memories for you
             </p>
+            {bookingLoadError ? (
+              <div className="mt-5 rounded-lg border border-amber-300 bg-amber-50 px-4 py-3 text-sm text-amber-950">
+                <p className="font-semibold">{bookingLoadError}</p>
+                <a
+                  href={buildWhatsAppBookingUrl(selectedVilla?.title)}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="mt-2 inline-block text-[12px] font-semibold uppercase tracking-[0.15em] underline underline-offset-4"
+                >
+                  Continue on WhatsApp
+                </a>
+              </div>
+            ) : null}
           </>
         )}
 
@@ -1414,9 +1443,39 @@ function BookStayContent() {
 
 function BookStayFallback() {
   return (
-    <div className="flex min-h-screen flex-col items-center justify-center gap-3 bg-[#F6F1EA] text-neutral-600">
-      <Loader2 className="h-8 w-8 animate-spin text-[#9a7b3a]" aria-hidden />
-      <p className="text-sm">Loading booking…</p>
+    <div className="min-h-screen bg-[#F6F1EA] px-6 py-12 md:px-12">
+      <div className="mx-auto max-w-5xl">
+        <h1 className="font-display text-4xl text-neutral-900 md:text-5xl">Book Your Stay</h1>
+        <p className="mt-3 max-w-3xl text-neutral-700">
+          Plan your stay at Himalaya Villas. Choose your villa, select dates, and complete your reservation details.
+        </p>
+        <div className="mt-8 rounded-lg border border-[#eadfce] bg-white p-6">
+          <h2 className="text-xl font-semibold text-neutral-900">Available villas</h2>
+          <ul className="mt-4 grid gap-3 sm:grid-cols-2">
+            <li className="rounded border border-[#dccfb8] bg-[#faf8f4] p-4">
+              <p className="font-semibold text-neutral-900">Presidential Suite</p>
+              <p className="mt-1 text-sm text-neutral-600">Ultra-private mountain-view suite for premium stays.</p>
+            </li>
+            <li className="rounded border border-[#dccfb8] bg-[#faf8f4] p-4">
+              <p className="font-semibold text-neutral-900">Alpine Family Lodge</p>
+              <p className="mt-1 text-sm text-neutral-600">Spacious villa ideal for families and group stays.</p>
+            </li>
+            <li className="rounded border border-[#dccfb8] bg-[#faf8f4] p-4">
+              <p className="font-semibold text-neutral-900">Honeymoon Chalet</p>
+              <p className="mt-1 text-sm text-neutral-600">Private, romantic retreat with scenic Himalayan views.</p>
+            </li>
+          </ul>
+          <p className="mt-5 text-sm text-neutral-600">
+            The interactive booking form loads automatically. If JavaScript is disabled, browse all villas on the villas page.
+          </p>
+          <Link
+            href="/villas"
+            className="mt-4 inline-block border border-neutral-300 px-5 py-2 text-[11px] font-semibold uppercase tracking-[0.2em] text-neutral-900 hover:bg-neutral-50"
+          >
+            View all villas
+          </Link>
+        </div>
+      </div>
     </div>
   );
 }

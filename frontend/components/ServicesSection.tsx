@@ -1,6 +1,7 @@
 "use client";
 
 import Image from "next/image";
+import Link from "next/link";
 import { useState, useRef, useEffect } from "react";
 import { motion, useInView, AnimatePresence } from "framer-motion";
 import { Heart, UtensilsCrossed, Sparkles, PartyPopper, Mountain, Briefcase } from "lucide-react";
@@ -145,15 +146,14 @@ const ServiceCard = ({ service, index, isInView }: { service: typeof services[0]
         >
           {service.description}
         </p>
-        <motion.a
-          href="#reserve"
+        <motion.div
           className="inline-flex items-center gap-2 text-sm font-medium tracking-wide pt-2"
           style={{ color: "hsl(var(--primary))" }}
           whileHover={{ x: 6 }}
           transition={{ type: "spring", stiffness: 300 }}
         >
-          Learn More →
-        </motion.a>
+          <Link href="/contact">Learn More →</Link>
+        </motion.div>
       </div>
     </motion.div>
   );

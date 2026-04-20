@@ -11,7 +11,7 @@ export function buildBlogPostingJsonLd(post: VillaBlogPost): JsonLdScript {
     id: `hv-jsonld-blog-${post.slug}`,
     data: {
       "@context": "https://schema.org",
-      "@type": "BlogPosting",
+      "@type": ["Article", "BlogPosting"],
       headline: post.title,
       description: post.excerpt,
       datePublished: post.date,

@@ -11,6 +11,7 @@ import DetailNavbar from "@/components/DetailNavbar";
 import { JsonLd } from "@/components/seo/JsonLd";
 import { createPageMetadata } from "@/lib/seo/build-metadata";
 import { buildVillaVacationRentalJsonLd } from "@/lib/seo/villa-jsonld";
+import { buildWhatsAppBookingUrl } from "@/lib/whatsapp";
 
 export const dynamic = "force-dynamic";
 
@@ -45,10 +46,43 @@ const VillaDetail = async ({ params }: VillasDetailPageProps) => {
   const thumb0 = getValidImageSrc(gallery[0], "/assets/gallery-interior.jpg");
   const thumb1 = getValidImageSrc(gallery[1], "/assets/gallery-dining-night.jpg");
   const extraGallery = Math.max(0, gallery.length - 2);
+  const villaFaqs = [
+    {
+      q: `What type of guests is ${villa.title} ideal for?`,
+      a: `${villa.title} is ideal for couples, families, and small private groups seeking a luxury villa stay in Bhurban with scenic views, privacy, and curated hospitality.`,
+    },
+    {
+      q: `What amenities are included in ${villa.title}?`,
+      a: `Guests enjoy curated essentials such as high-comfort bedrooms, premium interiors, dedicated living space, mountain-facing ambiance, and key conveniences like WiFi and in-villa support services.`,
+    },
+    {
+      q: "How close is this villa to top Bhurban and Murree attractions?",
+      a: "The villa is well-positioned for easy access to local viewpoints, nature routes, and popular Murree-area attractions while still offering a calm and private estate experience.",
+    },
+    {
+      q: "Can I book this villa directly online or through WhatsApp?",
+      a: "Yes. You can continue through direct booking support or contact on WhatsApp for quick availability checks and personalized stay planning.",
+    },
+  ];
+  const villaFaqJsonLd = {
+    id: `hv-jsonld-villa-faq-${villa.slug}`,
+    data: {
+      "@context": "https://schema.org",
+      "@type": "FAQPage",
+      mainEntity: villaFaqs.map((faq) => ({
+        "@type": "Question",
+        name: faq.q,
+        acceptedAnswer: {
+          "@type": "Answer",
+          text: faq.a,
+        },
+      })),
+    },
+  };
 
   return (
     <div className="min-h-screen bg-[#F6F1EA]">
-      <JsonLd items={[buildVillaVacationRentalJsonLd(villa)]} />
+      <JsonLd items={[buildVillaVacationRentalJsonLd(villa), villaFaqJsonLd]} />
       <DetailNavbar />
 
       <section className="mx-auto max-w-[1400px] px-6 pb-10 md:px-12 lg:px-20">
@@ -144,6 +178,18 @@ const VillaDetail = async ({ params }: VillasDetailPageProps) => {
             <div className="mt-8">
               <h2 className="font-display text-xl text-neutral-900">About This Villa</h2>
               <p className="mt-4 max-w-3xl text-[13px] italic leading-6 text-neutral-500">{villa.content}</p>
+              <p className="mt-5 max-w-3xl text-[14px] leading-7 text-neutral-700">
+                This residence is designed for travelers who want more than a standard room. Instead of compressed hotel
+                movement, you get a private luxury stay flow: unhurried mornings, open living zones, and space to
+                connect with family or guests at your own pace. The interior experience balances comfort and refinement,
+                while the location gives you access to the best parts of Bhurban without losing privacy.
+              </p>
+              <p className="mt-4 max-w-3xl text-[14px] leading-7 text-neutral-700">
+                For weekend escapes, this villa supports restorative downtime and scenic reset. For longer stays, the
+                layout allows practical day-to-day ease with dedicated zones for rest, conversation, and light work.
+                This makes it especially suitable for couples, multi-generational families, and small groups planning a
+                private Murree mountain retreat.
+              </p>
             </div>
 
             <div className="mt-10">
@@ -172,24 +218,61 @@ const VillaDetail = async ({ params }: VillasDetailPageProps) => {
                 ))}
               </div>
             </div>
+
+            <div className="mt-12 rounded-sm border border-[#e9dfd0] bg-white p-6 md:p-8">
+              <h3 className="font-display text-xl text-neutral-900">Room and stay experience details</h3>
+              <p className="mt-4 text-[14px] leading-7 text-neutral-700">
+                Each bedroom is configured for high-comfort sleep quality with practical circulation and calm lighting.
+                Shared spaces are intentionally sized to support group movement, private conversations, and relaxed
+                family time. The design language prioritizes warmth and functionality so the villa feels premium while
+                still livable for real travel rhythms.
+              </p>
+              <p className="mt-4 text-[14px] leading-7 text-neutral-700">
+                The terrace and surrounding environment create one of the most valuable aspects of the stay: visual
+                breathing room. Guests can enjoy morning tea, reading sessions, or evening downtime with uninterrupted
+                hillside character. For planners organizing celebrations or milestone stays, this setting also provides
+                a strong lifestyle backdrop for photos, dining moments, and small private gatherings.
+              </p>
+              <h4 className="mt-8 text-lg font-semibold text-neutral-900">Nearby attractions and local access</h4>
+              <p className="mt-3 text-[14px] leading-7 text-neutral-700">
+                From this villa, guests can plan easy access to key Bhurban-Murree experiences including scenic
+                viewpoints, short nature routes, and popular family stops. The advantage is flexibility: you can choose
+                active half-days outside and still return to a private quiet base by evening. This balance is a major
+                reason why travelers prefer private villas in Bhurban for quality-driven trips.
+              </p>
+            </div>
+
+            <section className="mt-12 rounded-sm border border-[#e9dfd0] bg-[#fbf8f2] p-6 md:p-8">
+              <h3 className="font-display text-xl text-neutral-900">Frequently Asked Questions</h3>
+              <div className="mt-5 space-y-4">
+                {villaFaqs.map((faq) => (
+                  <article key={faq.q} className="rounded-md border border-[#eadfce] bg-white p-4">
+                    <h4 className="text-base font-semibold text-neutral-900">{faq.q}</h4>
+                    <p className="mt-2 text-sm leading-relaxed text-neutral-700">{faq.a}</p>
+                  </article>
+                ))}
+              </div>
+            </section>
           </section>
 
           <aside className="rounded-sm border border-[#efe6d8] bg-white p-7">
             <p className="font-display text-2xl text-neutral-900">{villa.price}</p>
             <p className="mt-1 text-[11px] uppercase tracking-widest text-neutral-500">per night</p>
 
-            <Link
-              href={`/book/stay?villa=${encodeURIComponent(villa.slug)}`}
+            <a
+              href={buildWhatsAppBookingUrl(villa.title)}
+              target="_blank"
+              rel="noopener noreferrer"
               className="mt-6 inline-flex w-full items-center justify-center bg-neutral-900 py-3 text-[12px] font-semibold uppercase tracking-widest text-white transition hover:bg-neutral-800"
             >
               Book Now
-            </Link>
-            <button
-              type="button"
+            </a>
+            <Link
+              href="/contact"
               className="mt-3 w-full border border-neutral-300 py-3 text-[12px] font-semibold uppercase tracking-widest text-neutral-900 transition hover:bg-neutral-50"
             >
               Contact Us
-            </button>
+            </Link>
 
             <div className="mt-8">
               <p className="text-[10px] uppercase tracking-widest text-neutral-500">What is included</p>

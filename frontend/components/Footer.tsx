@@ -1,14 +1,17 @@
 import Link from "next/link";
 import { motion } from "framer-motion";
 import { SITE_CONTACT } from "@/lib/site-contact";
+import { UniversalFaqBlock } from "@/components/seo/UniversalFaqBlock";
 
 
 const Footer = () => {
   return (
-    <footer
-      className="relative py-16 md:py-20 px-8 md:px-16 overflow-hidden"
-      style={{ background: "hsl(160 15% 14%)" }}
-    >
+    <>
+      <UniversalFaqBlock />
+      <footer
+        className="relative py-16 md:py-20 px-8 md:px-16 overflow-hidden"
+        style={{ background: "hsl(160 15% 14%)" }}
+      >
       {/* Large background text */}
       <div
         className="absolute inset-0 flex items-end justify-center pointer-events-none select-none overflow-hidden"
@@ -25,12 +28,13 @@ const Footer = () => {
         <div className="grid grid-cols-1 md:grid-cols-4 gap-12 md:gap-8">
           {/* Logo & Tagline */}
           <div className="md:col-span-1">
-            <h3
-              className="font-display text-lg tracking-[0.15em] uppercase mb-4"
+            <Link
+              href="/"
+              className="inline-block font-display text-lg tracking-[0.15em] uppercase mb-4 hover:opacity-90"
               style={{ color: "hsl(36 45% 55%)" }}
             >
               Himalaya Villas
-            </h3>
+            </Link>
             <p
               className="text-sm leading-relaxed font-body"
               style={{ color: "hsl(0 0% 100% / 0.5)" }}
@@ -50,15 +54,21 @@ const Footer = () => {
               Discover
             </h4>
             <ul className="space-y-3">
-              {["Our Villas", "Amenities", "Dining", "Experiences"].map((item) => (
-                <li key={item}>
-                  <a
-                    href="#"
+              {[
+                { label: "Home", href: "/" },
+                { label: "Our Villas", href: "/villas" },
+                { label: "Experiences", href: "/experience" },
+                { label: "Dining", href: "/book/dining" },
+                { label: "Blog", href: "/blogs" },
+              ].map((item) => (
+                <li key={item.label}>
+                  <Link
+                    href={item.href}
                     className="text-sm font-body transition-opacity hover:opacity-100"
                     style={{ color: "hsl(0 0% 100% / 0.55)" }}
                   >
-                    {item}
-                  </a>
+                    {item.label}
+                  </Link>
                 </li>
               ))}
             </ul>
@@ -155,29 +165,35 @@ const Footer = () => {
           >
             Himalaya Villas 2026. All rights reserved.
           </p>
-          <div className="flex gap-4">
-            <a href="#" className="text-xs font-body" style={{ color: "hsl(0 0% 100% / 0.35)" }}>
-              II
-            </a>
-            <a href="#" className="text-xs font-body" style={{ color: "hsl(0 0% 100% / 0.35)" }}>
-              ✦
-            </a>
+          <div className="flex gap-4 items-center">
+            <Link href="/" aria-label="Go to homepage" className="text-xs font-body" style={{ color: "hsl(0 0% 100% / 0.35)" }}>
+              ⌂
+            </Link>
+            <Link href="/" className="text-xs font-body" style={{ color: "hsl(0 0% 100% / 0.35)" }}>
+              Home
+            </Link>
+            <Link href="/villas" className="text-xs font-body" style={{ color: "hsl(0 0% 100% / 0.35)" }}>
+              Villas
+            </Link>
+            <Link href="/contact" className="text-xs font-body" style={{ color: "hsl(0 0% 100% / 0.35)" }}>
+              Contact
+            </Link>
           </div>
           <div className="flex gap-6">
-            <a
-              href="#"
+            <Link
+              href="/contact"
               className="text-xs font-body transition-opacity hover:opacity-100"
               style={{ color: "hsl(0 0% 100% / 0.35)" }}
             >
               Privacy Policy
-            </a>
-            <a
-              href="#"
+            </Link>
+            <Link
+              href="/contact"
               className="text-xs font-body transition-opacity hover:opacity-100"
               style={{ color: "hsl(0 0% 100% / 0.35)" }}
             >
               Terms of Service
-            </a>
+            </Link>
             <Link
               href="/sitemap.xml"
               className="text-xs font-body transition-opacity hover:opacity-100"
@@ -188,7 +204,8 @@ const Footer = () => {
           </div>
         </div>
       </div>
-    </footer>
+      </footer>
+    </>
   );
 };
 

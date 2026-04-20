@@ -1,10 +1,22 @@
+import type { Metadata } from "next";
+import Link from "next/link";
 import { ContactStructuredData } from "@/components/seo/StructuredData";
 import Navbar from "@/components/Navbar";
 import Footer from "@/components/Footer";
 import { ExternalLink, Mail, MapPin, Phone } from "lucide-react";
 import { SITE_CONTACT, mailtoHref, telHref } from "@/lib/site-contact";
+import { createPageMetadata } from "@/lib/seo/build-metadata";
 
 const heroImage = "/assets/journal-group-new.jpg";
+
+export const metadata: Metadata = createPageMetadata({
+  title: "Contact Himalaya Villas Bhurban | Booking & Support",
+  description:
+    "Contact Himalaya Premium Villas for bookings, WhatsApp support, directions, and stay inquiries in Bhurban Murree. Fast response from our team.",
+  path: "/contact",
+  keywords: ["contact Himalaya Villas", "Bhurban villa booking", "Murree stay support"],
+  ogImage: "/assets/journal-group-new.jpg",
+});
 
 export default function ContactPage() {
   return (
@@ -230,6 +242,34 @@ export default function ContactPage() {
             <span className="h-2 w-2 rounded-full bg-[#d7d7d7]" />
             <span className="h-2 w-2 rounded-full bg-[#d7d7d7]" />
           </div>
+        </div>
+      </section>
+
+      <section className="bg-white py-16 md:py-20">
+        <div className="mx-auto max-w-[1100px] px-6 md:px-12">
+          <h2 className="font-display text-3xl text-neutral-900 md:text-4xl">Booking help and stay support</h2>
+          <p className="mt-6 max-w-4xl text-[15px] leading-8 text-neutral-700">
+            Our team supports direct villa bookings, availability checks, guest preference requests, and pre-arrival
+            planning for Bhurban stays. If you are comparing villa options, share your group size, travel dates, and
+            trip purpose, and we will guide you to the most suitable residence. For faster response, WhatsApp is ideal
+            for quick booking questions, while email is best for itinerary details, corporate requirements, and event
+            coordination. You can also browse{" "}
+            <Link href="/villas" className="font-medium text-[#8b6914] underline underline-offset-4">
+              available villas
+            </Link>{" "}
+            and proceed to{" "}
+            <Link href="/book/stay" className="font-medium text-[#8b6914] underline underline-offset-4">
+              secure stay booking
+            </Link>{" "}
+            once dates are finalized.
+          </p>
+          <h3 className="mt-8 text-xl font-semibold text-neutral-900">Frequently asked contact topics</h3>
+          <ul className="mt-4 list-disc space-y-2 pl-6 text-[15px] leading-8 text-neutral-700">
+            <li>Villa availability and pricing for weekdays, weekends, and seasonal travel dates.</li>
+            <li>Check-in and check-out details, guest policies, and private request handling.</li>
+            <li>Family stays, special occasions, and group booking assistance.</li>
+            <li>Location support, directions, and arrival coordination for Bhurban Murree.</li>
+          </ul>
         </div>
       </section>
 

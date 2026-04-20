@@ -40,6 +40,10 @@ const nextConfig: NextConfig = {
       { source: "/about", destination: "/", permanent: true },
       { source: "/services", destination: "/", permanent: true },
       { source: "/gallery", destination: "/", permanent: true },
+      { source: "/Why-Villas-are-the-ultimate-luxury-stays-in-Bhurban", destination: "/blog/Why-Villas-are-the-ultimate-luxury-stays-in-Bhurban", permanent: true },
+      { source: "/family-tour-murree-himalaya-villas", destination: "/blog/family-tour-murree-himalaya-villas", permanent: true },
+      { source: "/thing-to-do-bhurban-murree", destination: "/blog/thing-to-do-bhurban-murree", permanent: true },
+      { source: "/thing-to-do-bhurban-murree2", destination: "/blog/thing-to-do-bhurban-murree", permanent: true },
     ];
   },
 };

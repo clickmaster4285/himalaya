@@ -10,7 +10,7 @@ import LiveWeatherBadge from "@/components/LiveWeatherBadge";
 
 const logo = "/assets/himalaya-logo.png";
 
-const navItems = ["Villas", "Experience", "Virtual Tour", "Journal", "Blogs", "Contact"];
+const navItems = ["Villas", "Experience", "Virtual Tour", "Journal", "Signature Events", "Blogs", "Contact"];
 
 const Navbar = () => {
   const [scrolled, setScrolled] = useState(false);
@@ -21,6 +21,18 @@ const Navbar = () => {
     window.addEventListener("scroll", onScroll);
     return () => window.removeEventListener("scroll", onScroll);
   }, []);
+
+  const getHref = (item: string) => {
+    if (item === "Villas") return "/villas";
+    if (item === "Experience") return "/experience";
+    if (item === "Virtual Tour") return "/experience";
+    if (item === "Journal") return "/journal";
+    if (item === "Weddings") return "/weddings";
+    if (item === "Signature Events") return "/weddings";
+    if (item === "Blogs") return "/blogs";
+    if (item === "Contact") return "/contact";
+    return `/#${item.toLowerCase().replace(" ", "-")}`;
+  };
 
   return (
     <nav
@@ -41,35 +53,18 @@ const Navbar = () => {
 
       {/* Desktop nav */}
       <ul className="hidden md:flex items-center gap-8 text-white">
-        {navItems.map((item) => {
-          const href =
-            item === "Villas"
-              ? "/villas"
-              : item === "Experience"
-                ? "/experience"
-                : item === "Virtual Tour"
-                  ? "/experience"
-                : item === "Journal"
-                  ? "/journal"
-                : item === "Blogs"
-                  ? "/blogs"
-                  : item === "Contact"
-                    ? "/contact"
-                    : `/#${item.toLowerCase().replace(" ", "-")}`;
-
-          return (
-            <li key={item}>
-              <Link href={href} className="nav-link" style={scrolled ? { color: "white" } : undefined}>
-                {item}
-              </Link>
-            </li>
-          );
-        })}
+        {navItems.map((item) => (
+          <li key={item}>
+            <Link href={getHref(item)} className="nav-link" style={scrolled ? { color: "white" } : undefined}>
+              {item}
+            </Link>
+          </li>
+        ))}
       </ul>
 
       {/* Logo center */}
       <div className="absolute left-1/2 -translate-x-1/2 top-1 md:top-2">
-        <div className="relative flex flex-col items-center">
+        <Link href="/" className="relative flex flex-col items-center">
           <Image
             src={logo}
             alt="Himalaya Villas"
@@ -80,15 +75,7 @@ const Navbar = () => {
               scrolled ? "h-10 w-10 md:h-12 md:w-12" : "h-14 w-14 md:h-20 md:w-20"
             }`}
           />
-          {/* <span
-            className={`font-display tracking-[0.25em] uppercase mt-0.5 drop-shadow-[0_1px_4px_rgba(0,0,0,0.5)] transition-all duration-500 ${
-              scrolled ? "text-[8px] md:text-[10px]" : "text-[10px] md:text-xs"
-            }`}
-            style={{ color: "hsl(var(--hero-text) / 0.9)" }}
-          >
-            Himalaya Villas
-          </span> */}
-        </div>
+        </Link>
       </div>
 
       {/* Sign in + Book */}
@@ -112,34 +99,17 @@ const Navbar = () => {
       {/* Mobile menu overlay */}
       {mobileOpen && (
         <div className="fixed inset-0 z-40 bg-foreground/80 backdrop-blur-xl flex flex-col items-center justify-center gap-6 md:hidden">
-          {navItems.map((item) => {
-            const href =
-              item === "Villas"
-                ? "/villas"
-                : item === "Experience"
-                  ? "/experience"
-                  : item === "Virtual Tour"
-                    ? "/experience"
-                  : item === "Journal"
-                    ? "/journal"
-                  : item === "Blogs"
-                    ? "/blogs"
-                    : item === "Contact"
-                      ? "/contact"
-                      : `/#${item.toLowerCase().replace(" ", "-")}`;
-
-            return (
-              <Link
-                key={item}
-                href={href}
-                className="font-sans text-lg font-semibold tracking-[0.12em] text-white/95 uppercase transition-opacity hover:opacity-80"
-                style={{ color: "hsl(var(--hero-text))" }}
-                onClick={() => setMobileOpen(false)}
-              >
-                {item}
-              </Link>
-            );
-          })}
+          {navItems.map((item) => (
+            <Link
+              key={item}
+              href={getHref(item)}
+              className="font-sans text-lg font-semibold tracking-[0.12em] text-white/95 uppercase transition-opacity hover:opacity-80"
+              style={{ color: "hsl(var(--hero-text))" }}
+              onClick={() => setMobileOpen(false)}
+            >
+              {item}
+            </Link>
+          ))}
           <div className="mt-2" onClick={() => setMobileOpen(false)}>
             <NavAuth variant="hero" />
           </div>

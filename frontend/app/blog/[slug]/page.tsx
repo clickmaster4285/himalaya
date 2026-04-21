@@ -47,7 +47,7 @@ export default async function BlogArticlePage({ params }: Props) {
     data: {
       "@context": "https://schema.org",
       "@type": "FAQPage",
-      mainEntity: content.faqs.map((faq) => ({
+      mainEntity: (content.faqs ?? []).map((faq) => ({
         "@type": "Question",
         name: faq.q,
         acceptedAnswer: {
@@ -100,51 +100,30 @@ export default async function BlogArticlePage({ params }: Props) {
           ))}
           {content.sections.map((section) => (
             <section key={section.heading} className="mt-10">
-              <h2>{section.heading}</h2>
+              <h2 className="font-bold text-neutral-900">{section.heading}</h2>
+              {section.image && (
+                <div className="relative mt-4 aspect-[16/9] w-full overflow-hidden rounded-sm border border-[#eadfce] bg-neutral-100">
+                  <Image
+                    src={getValidImageSrc(section.image)}
+                    alt={section.heading}
+                    fill
+                    className="object-cover"
+                    sizes="(max-width: 900px) 100vw, 900px"
+                    unoptimized={shouldUnoptimizeImageSrc(section.image)}
+                  />
+                </div>
+              )}
               {section.paragraphs.map((paragraph) => (
                 <p key={paragraph}>{paragraph}</p>
               ))}
             </section>
           ))}
-          <h2 className="mt-10">Plan your stay next</h2>
-          <p>
-            For travelers finalizing dates, the next best step is to compare villa options and secure availability early.
-            Explore our{" "}
-            <Link href="/villas" className="font-medium text-[#8b6914] underline underline-offset-4">
-              luxury villas in Bhurban
-            </Link>{" "}
-            and continue to{" "}
-            <Link href="/book/stay" className="font-medium text-[#8b6914] underline underline-offset-4">
-              direct booking support
-            </Link>
-            .
-          </p>
-          {post.href && post.href !== blogCanonicalPath(post.slug) ? (
-            <p>
-              <Link href={post.href} className="font-medium text-[#8b6914] underline underline-offset-4">
-                Open the full editorial layout for this story
-              </Link>
-              {" — same topic, expanded on-page design."}
-            </p>
-          ) : null}
-          {post.relatedVillaSlug ? (
-            <p>
-              Related residence:{" "}
-              <Link
-                href={`/villas/${encodeURIComponent(post.relatedVillaSlug)}`}
-                className="font-medium text-[#8b6914] underline underline-offset-4"
-              >
-                View villa
-              </Link>
-              .
-            </p>
-          ) : null}
         </div>
 
         <section className="mt-14 rounded-lg border border-[#eadfce] bg-white p-6 md:p-8">
           <h2 className="font-display text-2xl text-neutral-900">Frequently Asked Questions</h2>
           <div className="mt-6 space-y-4">
-            {content.faqs.map((faq) => (
+            {content.faqs?.map((faq) => (
               <article key={faq.q} className="rounded-md border border-[#efe3d2] bg-[#fbf8f2] p-4">
                 <h3 className="text-base font-semibold text-neutral-900">{faq.q}</h3>
                 <p className="mt-2 text-sm leading-relaxed text-neutral-700">{faq.a}</p>

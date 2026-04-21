@@ -1,13 +1,11 @@
 import Link from "next/link";
 import { motion } from "framer-motion";
 import { SITE_CONTACT } from "@/lib/site-contact";
-import { UniversalFaqBlock } from "@/components/seo/UniversalFaqBlock";
 
 
 const Footer = () => {
   return (
     <>
-      <UniversalFaqBlock />
       <footer
         className="relative py-16 md:py-20 px-8 md:px-16 overflow-hidden"
         style={{ background: "hsl(160 15% 14%)" }}

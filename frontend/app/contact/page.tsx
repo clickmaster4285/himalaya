@@ -229,9 +229,9 @@ export default function ContactPage() {
       <section className="py-16 md:py-24 bg-[#F3EEE4]">
         <div className="max-w-[1000px] mx-auto px-6 text-center">
           <p className="font-display text-4xl md:text-5xl text-neutral-800 leading-relaxed">
-            &quot;The perfect escape from the city. The private villas offer
+            &quot;The perfect escape from the city.
             <br className="hidden md:block" />
-            unmatched tranquility.&quot;
+            Private villas. Unmatched tranquility.&quot;
           </p>
           <p className="mt-6 text-[10px] uppercase tracking-[0.35em] text-neutral-700">Sarah Jenkins</p>
           <p className="mt-2 text-[12px] italic text-neutral-500">Islamabad</p>

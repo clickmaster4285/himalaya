@@ -14,6 +14,33 @@ export type VillaBlogPost = {
 
 export const VILLA_BLOG_POSTS: VillaBlogPost[] = [
   {
+    slug: "luxury-hotels-and-villas-in-murree-2026-guide",
+    title: "Luxury Hotels & Villas in Murree: The Definitive Guide for 2026",
+    excerpt:
+      "Discover the finest luxury hotels and villas in Murree — from private mountain villas in Bhurban to premium resorts. Rates, amenities, and booking guide inside.",
+    date: "2026-04-21",
+    readMinutes: 12,
+    coverImage: "/assets/why-villa-private.jpg",
+  },
+  {
+    slug: "hotels-in-bhurban-murree-why-bhurban-is-best",
+    title: "Hotels in Bhurban Murree: Why Bhurban is Murree's Best-Kept Secret",
+    excerpt:
+      "Discover why travellers are choosing Bhurban over Mall Road for their Murree stay. Luxury villas, pine forests, panoramic views — the definitive guide to hotels and villas in Bhurban, Murree.",
+    date: "2026-04-21",
+    readMinutes: 11,
+    coverImage: "/assets/gallery-reflection.jpg",
+  },
+  {
+    slug: "best-hotels-in-murree-pakistan-2026-guide",
+    title: "Best Hotels in Murree, Pakistan: The Complete 2026 Guide",
+    excerpt:
+      "Discover the best hotels in Murree, Pakistan — from 5-star luxury villas in Bhurban to family-friendly options near Mall Road. Rates, tips & booking guide inside.",
+    date: "2026-04-21",
+    readMinutes: 12,
+    coverImage: "/assets/blog-bhurban-sunset-mountains.png",
+  },
+  {
     slug: "thing-to-do-bhurban-murree",
     href: "/thing-to-do-bhurban-murree",
     title: "Things to Do Near Bhurban Murree — A Complete Activity Guide",

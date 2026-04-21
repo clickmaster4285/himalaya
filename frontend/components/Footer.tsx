@@ -114,6 +114,38 @@ const Footer = () => {
                   WhatsApp
                 </a>
               </li>
+              <li className="pt-2">
+                <p
+                  className="text-[10px] tracking-[0.2em] uppercase mb-3 font-body font-semibold"
+                  style={{ color: "hsl(36 45% 55%)" }}
+                >
+                  Social
+                </p>
+                <div className="flex items-center gap-3">
+                  <a
+                    href="https://www.youtube.com/@HimalayaVillasBhurban"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    aria-label="Himalaya Villas YouTube"
+                    className="inline-flex h-9 w-9 items-center justify-center rounded-full border border-white/25 text-white/80 transition hover:border-white/60 hover:text-white"
+                  >
+                    <svg viewBox="0 0 24 24" className="h-4 w-4 fill-current" aria-hidden="true">
+                      <path d="M23.5 6.2a3 3 0 0 0-2.1-2.1C19.5 3.5 12 3.5 12 3.5s-7.5 0-9.4.6A3 3 0 0 0 .5 6.2 31.2 31.2 0 0 0 0 12c0 1.9.2 3.9.5 5.8a3 3 0 0 0 2.1 2.1c1.9.6 9.4.6 9.4.6s7.5 0 9.4-.6a3 3 0 0 0 2.1-2.1c.3-1.9.5-3.9.5-5.8s-.2-3.9-.5-5.8ZM9.8 15.5v-7l6.2 3.5-6.2 3.5Z" />
+                    </svg>
+                  </a>
+                  <a
+                    href="https://www.instagram.com/himalayavillas/"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    aria-label="Himalaya Villas Instagram"
+                    className="inline-flex h-9 w-9 items-center justify-center rounded-full border border-white/25 text-white/80 transition hover:border-white/60 hover:text-white"
+                  >
+                    <svg viewBox="0 0 24 24" className="h-4 w-4 fill-current" aria-hidden="true">
+                      <path d="M7.5 2h9A5.5 5.5 0 0 1 22 7.5v9a5.5 5.5 0 0 1-5.5 5.5h-9A5.5 5.5 0 0 1 2 16.5v-9A5.5 5.5 0 0 1 7.5 2Zm0 1.8A3.7 3.7 0 0 0 3.8 7.5v9a3.7 3.7 0 0 0 3.7 3.7h9a3.7 3.7 0 0 0 3.7-3.7v-9a3.7 3.7 0 0 0-3.7-3.7h-9Zm9.6 1.4a1.1 1.1 0 1 1 0 2.2 1.1 1.1 0 0 1 0-2.2ZM12 7a5 5 0 1 1 0 10 5 5 0 0 1 0-10Zm0 1.8a3.2 3.2 0 1 0 0 6.4 3.2 3.2 0 0 0 0-6.4Z" />
+                    </svg>
+                  </a>
+                </div>
+              </li>
             </ul>
           </div>
 

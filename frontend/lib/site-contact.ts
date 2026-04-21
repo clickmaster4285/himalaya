@@ -3,9 +3,9 @@ export const SITE_CONTACT = {
   businessName: "Himalaya Premium Villas",
   /** Google Maps listing / directions */
   googleMapsUrl: "https://maps.app.goo.gl/SzyHVXrCLic2CuvH8",
-  phoneDisplay: "+92 304 567 9080",
-  phoneE164: "+923045679080",
-  whatsappUrl: "https://wa.me/923045679080",
+  phoneDisplay: "+92 304 567 9000",
+  phoneE164: "+923045679000",
+  whatsappUrl: "https://wa.me/923045679000",
   emails: {
     bookings: "bookings@himalayavillas.com",
     info: "info@himalayavillas.com",

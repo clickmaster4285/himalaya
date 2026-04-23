@@ -1,6 +1,6 @@
 import type { Metadata } from "next";
 import Link from "next/link";
-import DetailNavbar from "@/components/DetailNavbar";
+import Navbar from "@/components/Navbar";
 import Footer from "@/components/Footer";
 import { JsonLd } from "@/components/seo/JsonLd";
 import { createPageMetadata } from "@/lib/seo/build-metadata";
@@ -32,7 +32,7 @@ export default function CorporateRetreatsPage() {
           },
         ]}
       />
-      <DetailNavbar />
+      <Navbar />
       <main className="mx-auto max-w-[1000px] px-6 py-12 md:px-10 md:py-16">
         <h1 className="font-display text-4xl text-neutral-900 md:text-5xl">Corporate Retreats in Bhurban</h1>
         <p className="mt-5 text-[15px] leading-8 text-neutral-700">

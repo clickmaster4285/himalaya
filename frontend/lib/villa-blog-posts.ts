@@ -13,6 +13,25 @@ export type VillaBlogPost = {
 };
 
 export const VILLA_BLOG_POSTS: VillaBlogPost[] = [
+   {
+  slug: "best-places-to-visit-in-murree",
+  title: "Best places to visit in Murree",
+  excerpt:
+    "From lush green hills to scenic viewpoints and charming bazaars — discover the most beautiful spots in Murree for a perfect mountain getaway.",
+  date: "2025-12-20",
+  readMinutes: 6,
+  coverImage: "/assets/best-murree-places.png",
+  },
+{
+  slug: "best-hotels-in-murree-pakistan",
+  title: "Best hotels in Murree, Pakistan",
+  excerpt:
+    "From luxury mountain resorts to cozy family guesthouses — explore the best hotels in Murree for a comfortable and scenic stay in Pakistan’s hill station.",
+  date: "2025-12-20",
+  readMinutes: 6,
+  coverImage: "/assets/murree-hotels.jpeg",
+},
+
   {
     slug: "luxury-hotels-and-villas-in-murree-2026-guide",
     title: "Luxury Hotels & Villas in Murree: The Definitive Guide for 2026",
@@ -124,4 +143,8 @@ export const VILLA_BLOG_POSTS: VillaBlogPost[] = [
     readMinutes: 6,
     coverImage: "/assets/journal-bonfire.jpg",
   },
+
+
+    
+    
 ];

@@ -1,5 +1,5 @@
 import type { Metadata } from "next";
-import DetailNavbar from "@/components/DetailNavbar";
+import Navbar from "@/components/Navbar";
 import Footer from "@/components/Footer";
 import BlogsPageClient from "@/components/blogs/BlogsPageClient";
 import { getPublishedVillas } from "@/lib/villas-fetch";
@@ -21,7 +21,7 @@ export default async function BlogsPage() {
 
   return (
     <div className="min-h-screen bg-[#F6F1EA]">
-      <DetailNavbar />
+      <Navbar />
       <BlogsPageClient villas={villas} />
       <Footer />
     </div>

@@ -189,16 +189,7 @@ const Navbar = () => {
             </Link>
           ))}
           
-          {/* Show logo in mobile menu */}
-          <div className="my-3 sm:my-4">
-            <Image
-              src={logo}
-              alt="Himalaya Villas"
-              width={50}
-              height={50}
-              className="opacity-80 sm:w-[60px] sm:h-[60px]"
-            />
-          </div>
+        
           
           {/* Divider */}
           <div className="w-10 sm:w-12 h-px bg-white/20 my-1 sm:my-2" />

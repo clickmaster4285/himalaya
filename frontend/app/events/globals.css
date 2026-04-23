@@ -1,0 +1,62 @@
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translateY(30px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.animate-fade-in {
+  animation: fadeInUp 0.6s ease-out forwards;
+}
+
+@keyframes cardFloatIn {
+  from {
+    opacity: 0;
+    transform: translateY(24px) scale(0.98);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0) scale(1);
+  }
+}
+
+.event-card {
+  position: relative;
+  overflow: hidden;
+  animation: cardFloatIn 0.55s ease-out forwards;
+  opacity: 0;
+}
+
+.event-card::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: radial-gradient(circle at top right, rgba(201, 165, 91, 0.16), transparent 45%);
+  opacity: 0;
+  transition: opacity 0.35s ease;
+  pointer-events: none;
+}
+
+.event-card::after {
+  content: "";
+  position: absolute;
+  left: -130%;
+  top: 0;
+  width: 70%;
+  height: 100%;
+  background: linear-gradient(110deg, transparent, rgba(255, 255, 255, 0.42), transparent);
+  transition: left 0.65s ease;
+  pointer-events: none;
+}
+
+.event-card:hover::before {
+  opacity: 1;
+}
+
+.event-card:hover::after {
+  left: 130%;
+}

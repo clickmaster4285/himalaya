@@ -102,42 +102,42 @@ const eventSections = [
         title: "Sufi & Qawwali Evenings",
         description: "Live spiritual music nights with warm traditional atmosphere.",
         badge: "Live",
-        href: "/events",
+        href: "/music/qawwali",
       },
       {
         id: 8,
         title: "Private Musical Concerts",
         description: "Exclusive classical and acoustic performances for private guests.",
         badge: "Featured",
-        href: "/events",
+        href: "/music/concert",
       },
       {
         id: 9,
         title: "Mushaira & Poetry Evenings",
         description: "Curated poetry gatherings in peaceful mountain ambiance.",
         badge: "Literary",
-        href: "/events",
+        href: "/music/poetry-evenings",
       },
       {
         id: 10,
         title: "DJ Nights & Music Parties",
         description: "Energetic dance nights with stage lighting and premium sound.",
         badge: "Party",
-        href: "/events",
+        href: "/music/dj-nights",
       },
       {
         id: 11,
         title: "Live Band Performances",
         description: "Modern or fusion live band options for high-energy events.",
         badge: "Concert",
-        href: "/events",
+        href: "/music/band-performances",
       },
       {
         id: 12,
         title: "Cultural Shows & Acts",
         description: "Traditional performances to enrich your celebration vibe.",
         badge: "Heritage",
-        href: "/events",
+        href: "/music/cultural-shows",
       },
     ],
   },
@@ -376,77 +376,88 @@ export default function EventsPage() {
     <div className="min-h-screen bg-white">
       <JsonLd items={[{ id: "hv-jsonld-events-page", data: eventsJsonLd }]} />
 
-      <section className="relative min-h-[780px] w-full overflow-hidden">
-        <EventsHeroSlider alt="Luxury events at Himalaya Villas" priority />
-        <div className="absolute inset-0 bg-black/50" aria-hidden="true" />
+     {/* Hero Section - Left Aligned with Card Width */}
+{/* Hero Section - Left aligned content with form on right */}
+<section className="relative min-h-[780px] w-full overflow-hidden">
+  <EventsHeroSlider alt="Luxury events at Himalaya Villas" priority />
+  <div className="absolute inset-0 bg-black/50" aria-hidden="true" />
 
-        <Navbar />
+  <Navbar />
 
-        <div className="relative z-10 w-full px-4 md:px-8 lg:px-10 pt-36 pb-14 md:pt-40 md:pb-20">
-          <div className="grid grid-cols-1 gap-10 lg:grid-cols-[1.15fr_0.85fr] lg:gap-12 items-start">
-            <div className="lg:max-w-2xl">
-              <p className="inline-flex items-center gap-2 rounded-full border border-white/30 px-4 py-1 text-xs uppercase tracking-[0.2em] text-white/90">
-                <Heart className="h-4 w-4" />
-                Curated Destination Events
-              </p>
+  <div className="relative z-10 w-full px-4 md:px-8 lg:px-10 pt-36 pb-14 md:pt-40 md:pb-20">
+    {/* Same max-w-7xl as your card sections */}
+    <div className="mx-auto max-w-7xl">
+      {/* Grid layout preserved - left content + right form */}
+      <div className="grid grid-cols-1 gap-10 lg:grid-cols-[1.15fr_0.85fr] lg:gap-12 items-start">
+        
+        {/* Left side - Content aligned left within its column */}
+        <div>
+          <p className="inline-flex items-center gap-2 rounded-full border border-white/30 px-4 py-1 text-xs uppercase tracking-[0.2em] text-white/90">
+            <Heart className="h-4 w-4" />
+            Curated Destination Events
+          </p>
 
-              <h1 className="mt-5 font-display text-white text-4xl md:text-6xl leading-tight">
-                <span className="block">Events That Look Premium,</span>
-                <span className="block">Feel Effortless</span>
-              </h1>
+          <h1 className="mt-5 font-display text-white text-4xl md:text-6xl leading-tight">
+            <span className="block">Events That Look Premium,</span>
+            <span className="block">Feel Effortless</span>
+          </h1>
 
-              <p className="mt-5 max-w-xl text-white/90 text-sm md:text-base leading-relaxed">
-                Plan your wedding, nikah, corporate retreat, or private celebration with end-to-end support in the heart of the Himalayas.
-              </p>
+          <p className="mt-5 max-w-xl text-white/90 text-sm md:text-base leading-relaxed">
+            Plan your wedding, nikah, corporate retreat, or private celebration with end-to-end support in the heart of the Himalayas.
+          </p>
 
-              <div className="mt-8 grid gap-3 sm:grid-cols-2">
-                <Link
-                  href="/weddings/nikah"
-                  className="rounded-md bg-[#c9a55b] px-6 py-3 text-center text-xs font-semibold uppercase tracking-wider text-white transition hover:bg-[#ae8d4a]"
-                >
-                  Explore Nikah Events
-                </Link>
-                <a
-                  href="#inquiry"
-                  className="rounded-md border border-white px-6 py-3 text-center text-xs font-semibold uppercase tracking-wider text-white transition hover:bg-white hover:text-neutral-900"
-                >
-                  Quick Inquiry
-                </a>
-              </div>
-            </div>
-
-            <div id="inquiry" className="w-full max-w-md rounded-2xl bg-white p-6 md:p-8 shadow-2xl lg:mr-8">
-              <h2 className="font-display text-2xl text-neutral-900">Get Event Quote</h2>
-              <p className="mt-2 text-sm text-neutral-600">Form ab clear aur visible hai - details share karein, team jaldi contact karegi.</p>
-
-              <form className="mt-6 space-y-4">
-                <div className="grid grid-cols-1 gap-4 sm:grid-cols-2">
-                  <input type="text" placeholder="Full Name" className="w-full rounded-lg border border-neutral-300 px-4 py-3 text-sm text-neutral-900 outline-none transition focus:border-[#c9a55b]" />
-                  <input type="tel" placeholder="Phone Number" className="w-full rounded-lg border border-neutral-300 px-4 py-3 text-sm text-neutral-900 outline-none transition focus:border-[#c9a55b]" />
-                </div>
-
-                <input type="email" placeholder="Email Address" className="w-full rounded-lg border border-neutral-300 px-4 py-3 text-sm text-neutral-900 outline-none transition focus:border-[#c9a55b]" />
-
-                <div className="grid grid-cols-1 gap-4 sm:grid-cols-2">
-                  <input type="date" className="w-full rounded-lg border border-neutral-300 px-4 py-3 text-sm text-neutral-900 outline-none transition focus:border-[#c9a55b]" />
-                  <select className="w-full rounded-lg border border-neutral-300 px-4 py-3 text-sm text-neutral-900 outline-none transition focus:border-[#c9a55b]">
-                    <option value="">Select Event Type</option>
-                    <option value="nikah">Nikah / Wedding</option>
-                    <option value="corporate">Corporate Event</option>
-                    <option value="social">Social Celebration</option>
-                  </select>
-                </div>
-
-                <textarea placeholder="Tell us your vision..." rows={4} className="w-full rounded-lg border border-neutral-300 px-4 py-3 text-sm text-neutral-900 outline-none transition focus:border-[#c9a55b]" />
-
-                <button type="submit" className="w-full rounded-lg bg-neutral-900 px-5 py-3 text-xs font-semibold uppercase tracking-wider text-white transition hover:bg-neutral-700">
-                  Send Inquiry
-                </button>
-              </form>
-            </div>
+          <div className="mt-8 flex gap-3">
+            <a
+              href="#inquiry"
+              className="rounded-md bg-white px-6 py-3 text-center text-xs font-semibold uppercase tracking-wider text-neutral-900 transition hover:bg-white/90"
+            >
+              Get Event Quote
+            </a>
+            <a
+              href="#explore"
+              className="rounded-md border border-white px-6 py-3 text-center text-xs font-semibold uppercase tracking-wider text-white transition hover:bg-white hover:text-neutral-900"
+            >
+              Explore Events
+            </a>
           </div>
         </div>
-      </section>
+
+        {/* Right side - Form (keeping original position) */}
+        <div id="inquiry" className="w-full max-w-md rounded-2xl bg-white p-6 md:p-8 shadow-2xl lg:mr-0">
+          <h2 className="font-display text-2xl text-neutral-900">Get Event Quote</h2>
+          <p className="mt-2 text-sm text-neutral-600">Form ab clear aur visible hai - details share karein, team jaldi contact karegi.</p>
+
+          <form className="mt-6 space-y-4">
+            <div className="grid grid-cols-1 gap-4 sm:grid-cols-2">
+              <input type="text" placeholder="Full Name" className="w-full rounded-lg border border-neutral-300 px-4 py-3 text-sm text-neutral-900 outline-none transition focus:border-[#c9a55b]" />
+              <input type="tel" placeholder="Phone Number" className="w-full rounded-lg border border-neutral-300 px-4 py-3 text-sm text-neutral-900 outline-none transition focus:border-[#c9a55b]" />
+            </div>
+
+            <input type="email" placeholder="Email Address" className="w-full rounded-lg border border-neutral-300 px-4 py-3 text-sm text-neutral-900 outline-none transition focus:border-[#c9a55b]" />
+
+            <div className="grid grid-cols-1 gap-4 sm:grid-cols-2">
+              <input type="date" className="w-full rounded-lg border border-neutral-300 px-4 py-3 text-sm text-neutral-900 outline-none transition focus:border-[#c9a55b]" />
+              <select className="w-full rounded-lg border border-neutral-300 px-4 py-3 text-sm text-neutral-900 outline-none transition focus:border-[#c9a55b]">
+                <option value="">Select Event Type</option>
+                <option value="nikah">Nikah / Wedding</option>
+                <option value="corporate">Corporate Event</option>
+                <option value="social">Social Celebration</option>
+              </select>
+            </div>
+
+            <textarea placeholder="Tell us your vision..." rows={4} className="w-full rounded-lg border border-neutral-300 px-4 py-3 text-sm text-neutral-900 outline-none transition focus:border-[#c9a55b]" />
+
+            <button type="submit" className="w-full rounded-lg bg-neutral-900 px-5 py-3 text-xs font-semibold uppercase tracking-wider text-white transition hover:bg-neutral-700">
+              Send Inquiry
+            </button>
+          </form>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+
 
       <section className="bg-[#faf7f1] py-16 md:py-20">
         <div className="mx-auto grid max-w-7xl gap-6 px-6 md:grid-cols-3">

@@ -7,7 +7,7 @@ import { shouldUnoptimizeImageSrc, getValidImageSrc } from "@/lib/image-utils";
 import VillaAmenitiesSection from "@/components/VillaAmenitiesSection";
 import VirtualExperienceSection from "@/components/VirtualExperienceSection";
 import Footer from "@/components/Footer";
-import DetailNavbar from "@/components/DetailNavbar";
+import Navbar from "@/components/Navbar";
 import { JsonLd } from "@/components/seo/JsonLd";
 import { createPageMetadata } from "@/lib/seo/build-metadata";
 import { buildVillaVacationRentalJsonLd } from "@/lib/seo/villa-jsonld";
@@ -83,7 +83,7 @@ const VillaDetail = async ({ params }: VillasDetailPageProps) => {
   return (
     <div className="min-h-screen bg-[#F6F1EA]">
       <JsonLd items={[buildVillaVacationRentalJsonLd(villa), villaFaqJsonLd]} />
-      <DetailNavbar />
+      <Navbar />
 
       <section className="mx-auto max-w-[1400px] px-6 pb-10 md:px-12 lg:px-20">
         <div className="flex items-center gap-3 pt-3 text-neutral-700">

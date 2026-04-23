@@ -2,7 +2,7 @@
 
 import Link from "next/link";
 import { useState } from "react";
-import DetailNavbar from "@/components/DetailNavbar";
+import Navbar from "@/components/Navbar";
 import Footer from "@/components/Footer";
 import type { DateRange } from "react-day-picker";
 import LuxuryBookingCalendar, {
@@ -123,7 +123,7 @@ export default function DestinationWeddingFlow() {
 
   return (
     <div className="min-h-screen bg-[#F5F2EA]">
-      <DetailNavbar />
+      <Navbar />
 
       <section className="max-w-[1400px] mx-auto px-6 md:px-12 lg:px-20 py-10 md:py-14">
         <div className="flex items-center gap-3 text-neutral-700">

@@ -1,5 +1,5 @@
 import Link from "next/link";
-import DetailNavbar from "@/components/DetailNavbar";
+import Navbar from "@/components/Navbar";
 import { Heart, Home, Mountain, PartyPopper, Users, Utensils } from "lucide-react";
 
 type SearchParams = { villa?: string };
@@ -19,7 +19,7 @@ export default async function BookPage({ searchParams }: { searchParams: Promise
 
   return (
     <div className="min-h-screen bg-[#F6F1EA]">
-      <DetailNavbar />
+      <Navbar />
 
       <section className="max-w-[1400px] mx-auto px-6 md:px-12 lg:px-20 py-10 md:py-14">
         <div className="flex items-center gap-3 text-neutral-700">

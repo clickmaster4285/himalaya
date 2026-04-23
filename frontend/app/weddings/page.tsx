@@ -2,7 +2,7 @@
 
 import { useEffect, useState } from "react";
 import Image from "next/image";
-import DetailNavbar from "@/components/DetailNavbar";
+import Navbar from "@/components/Navbar";
 import Footer from "@/components/Footer";
 import { buildWhatsAppBookingUrl } from "@/lib/whatsapp";
 
@@ -182,7 +182,7 @@ export default function WeddingsPage() {
 
   return (
     <div className="min-h-screen bg-[#F6F1EA]">
-      <DetailNavbar />
+      <Navbar />
 
       {/* HERO SLIDER */}
       <section className="relative h-[85vh] min-h-[600px] overflow-hidden">

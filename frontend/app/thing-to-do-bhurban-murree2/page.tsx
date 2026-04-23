@@ -1,6 +1,6 @@
 import type { Metadata } from "next";
 import Image from "next/image";
-import DetailNavbar from "@/components/DetailNavbar";
+import Navbar from "@/components/Navbar";
 import Footer from "@/components/Footer";
 import Link from "next/link";
 import { ArrowLeft } from "lucide-react";
@@ -94,7 +94,7 @@ export default function ThingToDoBhurbanMurree2Page() {
 
   return (
     <div className="min-h-screen bg-[#F6F1EA]">
-      <DetailNavbar />
+      <Navbar />
 
       <main className="mx-auto max-w-4xl px-6 py-32 md:py-40">
         <Link

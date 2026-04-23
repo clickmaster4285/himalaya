@@ -2,7 +2,7 @@ import type { Metadata } from "next";
 import Image from "next/image";
 import Link from "next/link";
 import { notFound } from "next/navigation";
-import DetailNavbar from "@/components/DetailNavbar";
+import Navbar from "@/components/Navbar";
 import Footer from "@/components/Footer";
 import { JsonLd } from "@/components/seo/JsonLd";
 import { blogCanonicalPath, getAllBlogSlugs, getBlogPostBySlug } from "@/lib/blog-posts";
@@ -78,7 +78,7 @@ export default async function BlogArticlePage({ params }: Props) {
   return (
     <div className="min-h-screen bg-[#F6F1EA]">
       <JsonLd items={[jsonLd, faqJsonLd]} />
-      <DetailNavbar />
+      <Navbar />
 
       <div className="mx-auto max-w-[1200px] px-6 pb-20 pt-8 md:px-10 md:pt-12">
         <div className="flex gap-12">

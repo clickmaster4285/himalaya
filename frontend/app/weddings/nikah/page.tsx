@@ -101,7 +101,7 @@ export default function NikahPage() {
               href="#book"
               className="rounded-md border border-white px-6 py-3 text-xs font-semibold uppercase tracking-wider text-white transition hover:bg-white hover:text-neutral-900"
             >
-              Book Nikah Date
+              Book Nikah Venue
             </a>
           </div>
         </div>

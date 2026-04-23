@@ -7,188 +7,190 @@ import { useEffect, useState } from "react";
 import {
     CheckCircle2, Crown, HelpCircle, Users, Music, Mic,
     Sparkles, Star, Heart, Calendar, Clock, MapPin,
-    Guitar, Piano, Headphones, Volume2, ListMusic, Award
+    Guitar, Piano, Headphones, Volume2, ListMusic, Award,
+    Wifi, Coffee, ParkingCircle, Speaker, LampCeiling
 } from "lucide-react";
 
 const heroSlides = [
-    "/assets/concert1.jpg",
-    "/assets/concert2.jpg",
+    "/assets/concert1.webp",
+    "/assets/concert2.webp",
     "/assets/concert3.jpg",
-    
 ];
 
-const concertTypes = [
+const venueSpaces = [
     {
-        title: "Classical Recital",
-        text: "Solo piano, violin, or cello performances featuring classical masterpieces from Mozart, Beethoven, Chopin, and more.",
+        title: "Intimate Recital Hall",
+        text: "Our acoustic-optimized hall seats up to 80 guests with tiered seating, perfect for classical recitals and solo performances.",
         icon: Piano,
     },
     {
-        title: "Acoustic Ensemble",
-        text: "Intimate acoustic sets with guitar, vocals, violin, and flute — perfect for cocktail hours and dinner parties.",
-        icon: Guitar,
+        title: "Jazz Lounge",
+        text: "Cozy, sophisticated space with booth seating, mood lighting, and a dedicated stage for jazz trios and quartets.",
+        icon: Headphones,
     },
     {
-        title: "Jazz Evening",
-        text: "Smooth jazz trio or quartet performances creating a sophisticated, relaxed ambiance.",
-        icon: Headphones,
+        title: "Outdoor Amphitheater",
+        text: "Open-air venue with natural acoustics, ideal for sunset concerts and garden parties (seasonal).",
+        icon: Guitar,
     },
 ];
 
-const services = [
+const venueAmenities = [
     {
-        title: "Artist Booking",
-        text: "Professional classical and acoustic musicians with extensive performance experience.",
-        icon: Mic,
-    },
-    {
-        title: "Sound & Acoustics",
-        text: "High-quality sound system, acoustic treatment, and professional sound engineering.",
+        title: "Professional Sound System",
+        text: "High-end speakers, mixing console, and wireless microphones included",
         icon: Volume2,
     },
     {
-        title: "Stage & Ambiance",
-        text: "Elegant stage setup with mood lighting, floral arrangements, and intimate seating arrangements.",
-        icon: Sparkles,
+        title: "Stage & Lighting",
+        text: "Professional stage with theatrical lighting and spotlights",
+        icon: LampCeiling,
     },
     {
-        title: "Setlist Curation",
-        text: "Customized musical program tailored to your event theme and guest preferences.",
-        icon: ListMusic,
+        title: "Backstage Area",
+        text: "Green room with seating, mirrors, and refreshments for artists",
+        icon: Coffee,
+    },
+    {
+        title: "Guest Amenities",
+        text: "Complimentary WiFi, coat check, and parking for up to 50 vehicles",
+        icon: Wifi,
     },
 ];
 
-const packages = [
+const venuePackages = [
     {
-        name: "Intimate Hour",
-        duration: "1 Hour",
+        name: "Recital Rental",
+        duration: "3 Hours",
         price: "Upon Request",
         features: [
-            "Solo artist performance",
-            "12-15 pieces",
-            "Basic sound setup",
-            "Perfect for private dinners"
+            "Intimate Hall (up to 80 guests)",
+            "Basic sound system",
+            "Stage lighting",
+            "Green room access",
+            "Event coordinator on-site"
         ],
         icon: Heart,
     },
     {
         name: "Evening Concert",
-        duration: "2 Hours",
+        duration: "5 Hours",
         price: "Upon Request",
         features: [
-            "Duo or trio ensemble",
-            "25-30 pieces",
-            "Full sound system",
-            "Stage lighting",
-            "Break interval with refreshments"
+            "Jazz Lounge or Recital Hall",
+            "Premium sound & lighting",
+            "Full stage setup",
+            "Green room & hospitality",
+            "Parking for 50+ guests",
+            "Catering coordination available"
         ],
         icon: Star,
         popular: true,
     },
     {
-        name: "Gala Performance",
-        duration: "3+ Hours",
+        name: "Full Venue Buyout",
+        duration: "Full Day",
         price: "Upon Request",
         features: [
-            "Full ensemble (4-6 artists)",
-            "Custom setlist",
-            "Premium sound & lighting",
-            "Professional MC",
-            "Meet & greet with artists",
-            "Recording option available"
+            "All venue spaces",
+            "Premium AV & lighting package",
+            "Dedicated sound engineer",
+            "Full staff support",
+            "Catering kitchen access",
+            "Marketing & ticketing support"
         ],
         icon: Crown,
     },
 ];
 
-const benefits = [
-    "Professional classically trained musicians",
-    "Custom setlist for your event theme",
-    "High-quality sound reinforcement",
-    "Elegant stage and ambiance design",
-    "Flexible indoor or outdoor setup",
-    "Option for live recording",
-    "Meet and greet with artists available",
-    "Perfect for corporate events, weddings, and private parties",
+const venueBenefits = [
+    "Acoustically treated performance spaces",
+    "Professional sound and lighting equipment",
+    "Flexible indoor and outdoor venues",
+    "Dedicated event coordinator",
+    "Green room for artists",
+    "Ample on-site parking",
+    "Catering-friendly spaces",
+    "Perfect for recitals, jazz nights, and private concerts",
 ];
 
-const repertoire = [
-    { category: "Classical", pieces: "Beethoven, Mozart, Chopin, Bach, Vivaldi, Debussy" },
-    { category: "Jazz", pieces: "Standards, Smooth Jazz, Bossa Nova, Latin Jazz" },
-    { category: "Acoustic Pop", pieces: "Contemporary hits, Unplugged versions, Soft rock" },
-    { category: "Film & Broadway", pieces: "Movie soundtracks, Musical theater classics" },
-    { category: "World Music", pieces: "Folk, Traditional, Ambient, Fusion" },
+const technicalSpecs = [
+    { category: "Sound", specs: "JBL Professional speakers, 16-channel mixer, 8 wireless mics" },
+    { category: "Lighting", specs: "LED theatrical lights, spotlights, mood lighting system" },
+    { category: "Stage", specs: "20' x 16' professional stage with dance floor" },
+    { category: "Backline", specs: "Yamaha grand piano, guitar amps, drum kit available" },
+    { category: "Recording", specs: "Multi-track recording option available" },
 ];
 
-const schedule = [
-    { time: "Pre-Event", event: "Sound Check & Setup", desc: "Artists arrive for sound check and stage preparation" },
-    { time: "0:00 - 0:15", event: "Opening Set", desc: "Welcome music as guests arrive and settle in" },
-    { time: "0:15 - 0:45", event: "First Performance Set", desc: "Main performance program begins" },
-    { time: "0:45 - 1:00", event: "Intermission", desc: "Break with refreshments (for longer concerts)" },
-    { time: "1:00 - 1:45", event: "Second Performance Set", desc: "Continued program with varied repertoire" },
-    { time: "1:45 - 2:00", event: "Closing & Encore", desc: "Finale pieces and optional artist interaction" },
+const sampleSchedule = [
+    { time: "Pre-Event", event: "Venue Access for Setup", desc: "Early access for organizers and sound check" },
+    { time: "Hour 1", event: "Guest Arrival & Prelude", desc: "Welcome music as guests arrive" },
+    { time: "Hour 2", event: "Main Performance", desc: "Featured concert program" },
+    { time: "Hour 3", event: "Intermission", desc: "Break with refreshment service" },
+    { time: "Hour 4", event: "Second Set / Encore", desc: "Continued performance" },
+    { time: "Hour 5", event: "Event End & Cleanup", desc: "Venue breakdown" },
 ];
 
 const gallery = [
-    "/assets/concert-gallery-1.jpg",
-    "/assets/concert-gallery-2.jpg",
-    "/assets/concert-gallery-3.jpg",
-    "/assets/concert-gallery-4.jpg",
+    "/assets/band1.jpg",
+    "/assets/band2.jpg",
+    "/assets/concert3.jpg",
+    "/assets/concert2.webp",
 ];
 
 const faqs = [
-    { q: "What types of music can be arranged?", a: "We offer classical, jazz, acoustic pop, film scores, world music, and custom repertoire based on your preferences." },
-    { q: "How many musicians will perform?", a: "Options range from solo artists to full ensembles of 6+ musicians, depending on your event size and budget." },
-    { q: "Can we request specific songs?", a: "Absolutely! We work with you to create a custom setlist that matches your event theme and guest preferences." },
-    { q: "Do you provide sound equipment?", a: "Yes, professional sound system, microphones, and speakers are included. For larger venues, we can arrange additional equipment." },
-    { q: "Is this suitable for outdoor events?", a: "Yes, we can perform outdoors weather permitting. We'll discuss setup requirements based on your venue." },
-    { q: "How far in advance should we book?", a: "We recommend booking 4-6 weeks in advance to secure preferred artists and dates." },
-    { q: "Can we combine this with dinner service?", a: "Yes, we can coordinate with catering for seamless dinner and music flow." },
-    { q: "Do you provide recorded music for breaks?", a: "Yes, curated background music can be provided during breaks or pre-event." },
+    { q: "What is the venue capacity?", a: "Our Intimate Recital Hall holds up to 80 guests. The Jazz Lounge holds 60, and the Outdoor Amphitheater can accommodate up to 120 guests." },
+    { q: "Is sound equipment included?", a: "Yes, professional sound system, microphones, and speakers are included in all venue packages. Premium upgrades available." },
+    { q: "Can we bring our own caterer?", a: "Yes, you may bring your own caterer. We have a prep kitchen available and preferred vendor recommendations." },
+    { q: "Is parking available?", a: "Yes, we offer complimentary on-site parking for up to 50 vehicles with additional street parking nearby." },
+    { q: "What are the rental hours?", a: "Standard rentals are 3-5 hours. Full day buyout (10 AM - 10 PM) is available for larger events." },
+    { q: "Do you provide artists?", a: "We can recommend professional musicians from our roster, or you're welcome to book your own." },
+    { q: "Can we host a ticketed event?", a: "Absolutely! We have box office and ticket scanning support available for public concerts." },
+    { q: "Is the venue accessible?", a: "Yes, wheelchair accessible with reserved seating areas and accessible restrooms." },
 ];
 
 const testimonials = [
     {
         name: "Sarah & David Khan",
         event: "Wedding Reception",
-        text: "The string quartet was absolutely breathtaking. Our guests couldn't stop raving about the music. It made our evening truly magical.",
+        text: "The Recital Hall was absolutely stunning. The acoustics were perfect and the staff was incredibly helpful. Our guests loved the intimate setting.",
         rating: 5,
     },
     {
         name: "Imran Ali",
         event: "Corporate Gala",
-        text: "Professional from start to finish. The jazz trio created the perfect atmosphere for our high-profile client dinner.",
+        text: "Professional venue from start to finish. The Jazz Lounge created the perfect sophisticated atmosphere for our client dinner.",
         rating: 5,
     },
     {
         name: "Ayesha Malik",
-        event: "Private Birthday Celebration",
-        text: "The classical pianist was incredible. Such a unique and elegant touch to our celebration. Highly recommend!",
+        event: "Private Concert",
+        text: "The venue exceeded our expectations. Beautiful space, excellent sound, and seamless coordination. Will definitely book again!",
         rating: 5,
     },
 ];
 
-export default function ConcertPage() {
+export default function ConcertVenuePage() {
     const [activeSlide, setActiveSlide] = useState(0);
 
     useEffect(() => {
         const timer = setInterval(() => {
             setActiveSlide((prev) => (prev + 1) % heroSlides.length);
-        }, 4000);
+        }, 3000);
 
         return () => clearInterval(timer);
     }, []);
 
     return (
         <div className="min-h-screen bg-white">
-            {/* Hero Section with Slider */}
+            {/* Hero Section */}
             <section className="relative min-h-[720px] overflow-hidden">
                 <div className="absolute inset-0">
                     {heroSlides.map((slide, idx) => (
                         <Image
                             key={slide}
                             src={slide}
-                            alt="Private concert setup"
+                            alt="Concert venue interior"
                             fill
                             priority={idx === 0}
                             sizes="100vw"
@@ -197,65 +199,54 @@ export default function ConcertPage() {
                     ))}
                 </div>
 
-                <div className="absolute inset-0 bg-black/55" aria-hidden="true" />
+                <div className="absolute inset-0 bg-black/50" aria-hidden="true" />
                 <Navbar />
 
-                <div className="relative z-10 mx-auto max-w-7xl px-4 sm:px-6 pt-32 sm:pt-36 pb-16 sm:pb-20 md:pt-44">
-                    <div className="max-w-3xl">
-                        <div className="inline-flex items-center gap-2 rounded-full bg-[#c9a55b]/20 backdrop-blur-sm px-3 sm:px-4 py-1.5 mb-4 sm:mb-5">
-                            <Music className="h-3.5 w-3.5 text-[#c9a55b]" />
-                            <span className="text-[10px] sm:text-xs uppercase tracking-wider text-[#c9a55b] font-semibold">Live Music Experiences</span>
-                        </div>
-                        <h1 className="font-display text-4xl sm:text-5xl md:text-6xl lg:text-7xl text-white leading-tight">
-                            Private Musical
-                            <br />
-                            Concerts
-                        </h1>
-                        <p className="mt-4 sm:mt-5 max-w-2xl text-white/90 text-sm sm:text-base md:text-lg leading-relaxed">
-                            Exclusive classical and acoustic performances for private guests.
-                            Create an unforgettable evening with world-class musicians in an intimate setting.
-                        </p>
-                        <div className="mt-6 sm:mt-8 flex flex-col sm:flex-row gap-3 sm:gap-4">
-                            <a href="#book" className="inline-flex items-center justify-center gap-2 rounded-md bg-[#c9a55b] px-5 sm:px-6 py-2.5 sm:py-3 text-[10px] sm:text-xs font-semibold uppercase tracking-wider text-white hover:bg-[#a98741] transition">
-                                <Calendar className="h-3.5 w-3.5 sm:h-4 sm:w-4" />
-                                Book a Concert
-                            </a>
-                            <a href="#packages" className="inline-flex items-center justify-center gap-2 rounded-md border border-white/30 bg-white/10 px-5 sm:px-6 py-2.5 sm:py-3 text-[10px] sm:text-xs font-semibold uppercase tracking-wider text-white hover:bg-white/20 transition backdrop-blur-sm">
-                                <Award className="h-3.5 w-3.5 sm:h-4 sm:w-4" />
-                                View Packages
-                            </a>
-                        </div>
+                <div className="relative z-10 mx-auto max-w-7xl px-6 pt-36 pb-20 md:pt-44">
+                    <div className="inline-flex items-center gap-2 rounded-full bg-[#c9a55b]/20 backdrop-blur-sm px-4 py-1.5 mb-5">
+                        <Music className="h-3.5 w-3.5 text-[#c9a55b]" />
+                        <span className="text-[10px] sm:text-xs uppercase tracking-wider text-[#c9a55b] font-semibold">Venue for Private Concerts</span>
                     </div>
-                </div>
-
-                {/* Scroll Indicator */}
-                <div className="absolute bottom-6 left-1/2 transform -translate-x-1/2 animate-bounce hidden sm:block">
-                    <div className="w-6 h-10 rounded-full border-2 border-white/50 flex justify-center">
-                        <div className="w-1 h-2 bg-white/50 rounded-full mt-2 animate-pulse" />
+                    <h1 className="font-display text-4xl md:text-6xl text-white leading-tight max-w-3xl">
+                        Reserve Our
+                        <br />
+                        Concert Venue
+                    </h1>
+                    <p className="mt-5 max-w-2xl text-white/90 text-sm md:text-base leading-relaxed">
+                        Host your private concert, recital, or jazz evening in our acoustically-optimized venue.
+                        We provide the perfect space, professional sound, and elegant ambiance for unforgettable musical events.
+                    </p>
+                    <div className="mt-8 flex flex-col sm:flex-row gap-4">
+                        <a href="#book" className="inline-block rounded-md bg-[#c9a55b] px-6 py-3 text-xs font-semibold uppercase tracking-wider text-white hover:bg-[#a98741] transition text-center">
+                            Check Availability
+                        </a>
+                        <a href="#venue-spaces" className="inline-block rounded-md border border-white/30 bg-white/10 px-6 py-3 text-xs font-semibold uppercase tracking-wider text-white hover:bg-white/20 transition backdrop-blur-sm text-center">
+                            View Venue Spaces
+                        </a>
                     </div>
                 </div>
             </section>
 
-            {/* Concert Types Section */}
-            <section className="py-12 sm:py-16 md:py-20 bg-[#faf7f0]">
-                <div className="mx-auto max-w-7xl px-4 sm:px-6">
-                    <div className="mb-8 sm:mb-10 text-center">
-                        <p className="text-[10px] sm:text-xs uppercase tracking-[0.28em] text-[#c9a55b] font-semibold">Choose Your Style</p>
-                        <h2 className="font-display text-3xl sm:text-4xl md:text-5xl text-neutral-900 mt-2">Concert Experiences</h2>
-                        <p className="mt-3 text-sm sm:text-base text-neutral-600 max-w-2xl mx-auto">
-                            Select from a variety of musical genres and ensemble sizes
+            {/* Venue Spaces Section */}
+            <section id="venue-spaces" className="py-16 md:py-20 bg-[#fbf7ee]">
+                <div className="mx-auto max-w-7xl px-6">
+                    <div className="mb-10 text-center">
+                        <p className="text-[10px] uppercase tracking-[0.28em] text-[#c9a55b] font-semibold">Our Venue</p>
+                        <h2 className="font-display text-3xl md:text-4xl text-neutral-900 mt-2">Performance Spaces</h2>
+                        <p className="mt-3 text-sm md:text-base text-neutral-600 max-w-2xl mx-auto">
+                            Choose the perfect setting for your musical event
                         </p>
                     </div>
-                    <div className="grid gap-5 sm:gap-6 md:grid-cols-3">
-                        {concertTypes.map((type) => {
-                            const Icon = type.icon;
+                    <div className="grid gap-6 md:grid-cols-3">
+                        {venueSpaces.map((space) => {
+                            const Icon = space.icon;
                             return (
-                                <article key={type.title} className="rounded-2xl border border-[#e8dfcf] bg-white p-5 sm:p-6 shadow-sm hover:shadow-md transition group">
+                                <article key={space.title} className="rounded-2xl border border-[#e8dfcf] bg-white p-6 shadow-sm hover:shadow-md transition group">
                                     <div className="mb-4 inline-flex rounded-full bg-[#f5ead7] p-2.5 text-[#9a7b3a] group-hover:bg-[#c9a55b] group-hover:text-white transition">
                                         <Icon className="h-5 w-5" />
                                     </div>
-                                    <h3 className="text-lg sm:text-xl font-semibold text-neutral-900">{type.title}</h3>
-                                    <p className="mt-2 sm:mt-3 text-xs sm:text-sm text-neutral-600 leading-relaxed">{type.text}</p>
+                                    <h3 className="text-xl font-semibold text-neutral-900">{space.title}</h3>
+                                    <p className="mt-3 text-sm text-neutral-600 leading-relaxed">{space.text}</p>
                                 </article>
                             );
                         })}
@@ -263,23 +254,23 @@ export default function ConcertPage() {
                 </div>
             </section>
 
-            {/* Services Section */}
-            <section className="py-12 sm:py-16 md:py-20 bg-white">
-                <div className="mx-auto max-w-7xl px-4 sm:px-6">
-                    <div className="text-center mb-8 sm:mb-10">
-                        <h2 className="font-display text-3xl sm:text-4xl md:text-5xl text-neutral-900">What We Provide</h2>
-                        <p className="mt-3 text-sm sm:text-base text-neutral-600">End-to-end concert production</p>
+            {/* Venue Amenities Section */}
+            <section className="py-16 md:py-20 bg-white">
+                <div className="mx-auto max-w-7xl px-6">
+                    <div className="text-center mb-10">
+                        <h2 className="font-display text-3xl md:text-4xl text-neutral-900">Venue Amenities</h2>
+                        <p className="mt-3 text-sm md:text-base text-neutral-600">Everything included with your venue rental</p>
                     </div>
-                    <div className="grid gap-5 sm:gap-6 md:grid-cols-2 lg:grid-cols-4">
-                        {services.map((service) => {
-                            const Icon = service.icon;
+                    <div className="grid gap-6 md:grid-cols-2 lg:grid-cols-4">
+                        {venueAmenities.map((amenity) => {
+                            const Icon = amenity.icon;
                             return (
-                                <div key={service.title} className="rounded-2xl border border-[#e8dfcf] bg-[#fefcf8] p-5 text-center hover:shadow-md transition">
+                                <div key={amenity.title} className="rounded-2xl border border-[#e8dfcf] bg-[#fefcf8] p-6 text-center hover:shadow-md transition">
                                     <div className="mb-4 inline-flex rounded-full bg-[#c9a55b]/10 p-3 text-[#c9a55b] mx-auto">
                                         <Icon className="h-5 w-5" />
                                     </div>
-                                    <h3 className="text-base sm:text-lg font-semibold text-neutral-900">{service.title}</h3>
-                                    <p className="mt-2 text-xs sm:text-sm text-neutral-600">{service.text}</p>
+                                    <h3 className="text-lg font-semibold text-neutral-900">{amenity.title}</h3>
+                                    <p className="mt-2 text-sm text-neutral-600">{amenity.text}</p>
                                 </div>
                             );
                         })}
@@ -287,21 +278,21 @@ export default function ConcertPage() {
                 </div>
             </section>
 
-            {/* Packages Section */}
-            <section id="packages" className="py-12 sm:py-16 md:py-20 bg-[#0f172a] text-white">
-                <div className="mx-auto max-w-7xl px-4 sm:px-6">
-                    <div className="text-center mb-8 sm:mb-10">
-                        <h2 className="font-display text-3xl sm:text-4xl md:text-5xl">Concert Packages</h2>
-                        <p className="mt-3 text-sm sm:text-base text-white/80">Choose the perfect musical experience for your event</p>
+            {/* Venue Packages Section */}
+            <section id="packages" className="py-16 md:py-20 bg-[#0f172a] text-white">
+                <div className="mx-auto max-w-7xl px-6">
+                    <div className="text-center mb-10">
+                        <h2 className="font-display text-3xl md:text-4xl">Venue Rental Packages</h2>
+                        <p className="mt-3 text-sm md:text-base text-white/80">Choose the perfect rental option for your event</p>
                     </div>
-                    <div className="grid gap-5 sm:gap-6 md:grid-cols-3">
-                        {packages.map((pkg) => {
+                    <div className="grid gap-6 md:grid-cols-3">
+                        {venuePackages.map((pkg) => {
                             const Icon = pkg.icon;
                             return (
-                                <div key={pkg.name} className={`rounded-2xl border p-5 sm:p-6 transition relative ${pkg.popular ? 'border-[#c9a55b] bg-white/10' : 'border-white/15 bg-white/5'} hover:bg-white/10`}>
+                                <div key={pkg.name} className={`rounded-2xl border p-6 transition relative ${pkg.popular ? 'border-[#c9a55b] bg-white/10' : 'border-white/15 bg-white/5'} hover:bg-white/10`}>
                                     {pkg.popular && (
                                         <div className="absolute -top-3 left-1/2 transform -translate-x-1/2">
-                                            <span className="bg-[#c9a55b] text-white text-[9px] sm:text-xs px-3 py-1 rounded-full font-semibold uppercase tracking-wider">
+                                            <span className="bg-[#c9a55b] text-white text-[10px] px-3 py-1 rounded-full font-semibold uppercase tracking-wider">
                                                 Most Popular
                                             </span>
                                         </div>
@@ -309,13 +300,13 @@ export default function ConcertPage() {
                                     <div className="mb-4 inline-flex rounded-full bg-white/10 p-2.5">
                                         <Icon className="h-5 w-5 text-[#c9a55b]" />
                                     </div>
-                                    <h3 className="text-xl sm:text-2xl font-semibold">{pkg.name}</h3>
-                                    <p className="text-xs sm:text-sm text-white/70 mt-1">{pkg.duration}</p>
-                                    <p className="text-lg sm:text-xl font-bold text-[#c9a55b] mt-3">{pkg.price}</p>
+                                    <h3 className="text-xl font-semibold">{pkg.name}</h3>
+                                    <p className="text-sm text-white/70 mt-1">{pkg.duration}</p>
+                                    <p className="text-xl font-bold text-[#c9a55b] mt-3">{pkg.price}</p>
                                     <ul className="mt-4 space-y-2">
                                         {pkg.features.map((feature) => (
-                                            <li key={feature} className="flex items-start gap-2 text-xs sm:text-sm text-white/80">
-                                                <CheckCircle2 className="h-3.5 w-3.5 text-[#c9a55b] mt-0.5 flex-shrink-0" />
+                                            <li key={feature} className="flex items-start gap-2 text-sm text-white/80">
+                                                <CheckCircle2 className="h-4 w-4 text-[#c9a55b] mt-0.5 flex-shrink-0" />
                                                 <span>{feature}</span>
                                             </li>
                                         ))}
@@ -327,20 +318,20 @@ export default function ConcertPage() {
                 </div>
             </section>
 
-            {/* Benefits & Repertoire Section */}
-            <section className="py-12 sm:py-16 md:py-20 bg-white">
-                <div className="mx-auto max-w-7xl px-4 sm:px-6">
-                    <div className="grid lg:grid-cols-2 gap-8 sm:gap-10 items-start">
+            {/* Benefits & Technical Specs Section */}
+            <section className="py-16 md:py-20 bg-white">
+                <div className="mx-auto max-w-7xl px-6">
+                    <div className="grid lg:grid-cols-2 gap-10 items-start">
                         {/* Benefits */}
                         <div>
-                            <div className="inline-flex items-center gap-2 rounded-full bg-[#c9a55b]/10 px-3 sm:px-4 py-1.5 mb-4">
+                            <div className="inline-flex items-center gap-2 rounded-full bg-[#c9a55b]/10 px-4 py-1.5 mb-4">
                                 <Star className="h-3.5 w-3.5 text-[#c9a55b]" />
-                                <span className="text-[10px] sm:text-xs uppercase tracking-wider text-[#c9a55b] font-semibold">Why Choose Us</span>
+                                <span className="text-[10px] uppercase tracking-wider text-[#c9a55b] font-semibold">Why Choose Our Venue</span>
                             </div>
-                            <h2 className="font-display text-3xl sm:text-4xl text-neutral-900">Premium Concert Experience</h2>
-                            <p className="mt-3 text-sm sm:text-base text-neutral-600">Everything included for a flawless performance</p>
+                            <h2 className="font-display text-3xl md:text-4xl text-neutral-900">Premium Concert Venue</h2>
+                            <p className="mt-3 text-sm md:text-base text-neutral-600">Everything you need for a flawless performance</p>
                             <ul className="mt-6 space-y-3">
-                                {benefits.map((item) => (
+                                {venueBenefits.map((item) => (
                                     <li key={item} className="flex items-start gap-3 text-sm text-neutral-700">
                                         <CheckCircle2 className="mt-0.5 h-4 w-4 text-[#c9a55b] flex-shrink-0" />
                                         <span>{item}</span>
@@ -349,61 +340,41 @@ export default function ConcertPage() {
                             </ul>
                         </div>
 
-                        {/* Repertoire */}
-                        <div className="bg-[#faf7f0] rounded-2xl p-5 sm:p-6 border border-[#e8dfcf]">
-                            <div className="inline-flex items-center gap-2 rounded-full bg-[#c9a55b]/10 px-3 sm:px-4 py-1.5 mb-4">
-                                <ListMusic className="h-3.5 w-3.5 text-[#c9a55b]" />
-                                <span className="text-[10px] sm:text-xs uppercase tracking-wider text-[#c9a55b] font-semibold">Sample Repertoire</span>
+                        {/* Technical Specs */}
+                        <div className="bg-[#fbf7ee] rounded-2xl p-6 border border-[#e8dfcf]">
+                            <div className="inline-flex items-center gap-2 rounded-full bg-[#c9a55b]/10 px-4 py-1.5 mb-4">
+                                <Speaker className="h-3.5 w-3.5 text-[#c9a55b]" />
+                                <span className="text-[10px] uppercase tracking-wider text-[#c9a55b] font-semibold">Tech Specs</span>
                             </div>
-                            <h3 className="text-xl sm:text-2xl font-semibold text-neutral-900 mb-4">Musical Selections</h3>
-                            {repertoire.map((cat) => (
-                                <div key={cat.category} className="mb-4 last:mb-0">
-                                    <p className="font-semibold text-[#c9a55b] text-sm sm:text-base">{cat.category}</p>
-                                    <p className="text-xs sm:text-sm text-neutral-600 mt-1">{cat.pieces}</p>
+                            <h3 className="text-2xl font-semibold text-neutral-900 mb-4">Technical Specifications</h3>
+                            {technicalSpecs.map((spec) => (
+                                <div key={spec.category} className="mb-4 last:mb-0">
+                                    <p className="font-semibold text-[#c9a55b] text-base">{spec.category}</p>
+                                    <p className="text-sm text-neutral-600 mt-1">{spec.specs}</p>
                                 </div>
                             ))}
-                            <p className="mt-4 text-xs text-neutral-500 italic">*Custom setlists available upon request</p>
+                            <p className="mt-4 text-xs text-neutral-500 italic">*Additional equipment available upon request</p>
                         </div>
                     </div>
                 </div>
             </section>
 
-            {/* Event Schedule Section */}
-            <section id="schedule" className="py-12 sm:py-16 md:py-20 bg-[#faf7f0]">
-                <div className="mx-auto max-w-7xl px-4 sm:px-6">
-                    <div className="text-center mb-8 sm:mb-10">
-                        <h2 className="font-display text-3xl sm:text-4xl md:text-5xl text-neutral-900">Event Flow</h2>
-                        <p className="mt-3 text-sm sm:text-base text-neutral-600">Typical timeline for a private concert</p>
-                    </div>
-                    <div className="max-w-3xl mx-auto">
-                        {schedule.map((item, idx) => (
-                            <div key={idx} className="flex flex-col sm:flex-row gap-3 sm:gap-4 py-4 border-b border-[#e8dfcf] last:border-0">
-                                <div className="sm:w-32">
-                                    <span className="inline-block bg-[#c9a55b]/10 text-[#c9a55b] font-semibold px-3 py-1 rounded-full text-xs sm:text-sm text-center">
-                                        {item.time}
-                                    </span>
-                                </div>
-                                <div className="flex-1">
-                                    <h3 className="font-semibold text-base sm:text-lg text-neutral-900">{item.event}</h3>
-                                    <p className="text-xs sm:text-sm text-neutral-600 mt-1">{item.desc}</p>
-                                </div>
-                            </div>
-                        ))}
-                    </div>
-                </div>
-            </section>
 
             {/* Gallery Section */}
-            <section className="py-12 sm:py-16 md:py-20 bg-white">
-                <div className="mx-auto max-w-7xl px-4 sm:px-6">
-                    <div className="text-center mb-8 sm:mb-10">
-                        <h2 className="font-display text-3xl sm:text-4xl md:text-5xl text-neutral-900">Concert Gallery</h2>
-                        <p className="mt-3 text-sm sm:text-base text-neutral-600">Memorable performances from past events</p>
+            <section className="py-16 md:py-20 bg-white">
+                <div className="mx-auto max-w-7xl px-6">
+                    <div className="text-center mb-10">
+                        <h2 className="font-display text-3xl md:text-4xl text-neutral-900">Venue Gallery</h2>
+                        <p className="mt-3 text-sm md:text-base text-neutral-600">Experience the ambiance of our concert spaces</p>
                     </div>
-                    <div className="grid gap-3 sm:gap-4 grid-cols-2 lg:grid-cols-4">
+                    <div className="grid gap-4 sm:grid-cols-2 lg:grid-cols-4">
                         {gallery.map((img, idx) => (
-                            <div key={idx} className="relative h-40 sm:h-48 md:h-52 overflow-hidden rounded-xl border border-neutral-200 shadow-sm group">
-                                <Image src={img} alt="Concert gallery" fill sizes="(max-width: 1024px) 50vw, 25vw" className="object-cover transition-transform duration-500 group-hover:scale-105" />
+                            <div key={idx} className="relative h-52 overflow-hidden rounded-2xl border border-neutral-200 shadow-sm group">
+                                <img
+                                    src={img}
+                                    alt="Concert venue gallery"
+                                    className="w-full h-full object-cover transition-transform duration-500 group-hover:scale-105"
+                                />
                             </div>
                         ))}
                     </div>
@@ -411,21 +382,21 @@ export default function ConcertPage() {
             </section>
 
             {/* Testimonials Section */}
-            <section className="py-12 sm:py-16 md:py-20 bg-[#faf7f0]">
-                <div className="mx-auto max-w-7xl px-4 sm:px-6">
-                    <div className="text-center mb-8 sm:mb-10">
-                        <h2 className="font-display text-3xl sm:text-4xl md:text-5xl text-neutral-900">Guest Testimonials</h2>
-                        <p className="mt-3 text-sm sm:text-base text-neutral-600">What our clients say about their concert experience</p>
+            <section className="py-16 md:py-20 bg-[#fbf7ee]">
+                <div className="mx-auto max-w-7xl px-6">
+                    <div className="text-center mb-10">
+                        <h2 className="font-display text-3xl md:text-4xl text-neutral-900">What Our Clients Say</h2>
+                        <p className="mt-3 text-sm md:text-base text-neutral-600">Feedback from events at our venue</p>
                     </div>
-                    <div className="grid gap-5 sm:gap-6 md:grid-cols-3">
+                    <div className="grid gap-6 md:grid-cols-3">
                         {testimonials.map((t, idx) => (
-                            <div key={idx} className="rounded-2xl border border-[#e8dfcf] bg-white p-5 sm:p-6">
+                            <div key={idx} className="rounded-2xl border border-[#e8dfcf] bg-white p-6">
                                 <div className="flex gap-1 mb-3">
                                     {[...Array(t.rating)].map((_, i) => (
                                         <Star key={i} className="h-4 w-4 fill-[#c9a55b] text-[#c9a55b]" />
                                     ))}
                                 </div>
-                                <p className="text-sm sm:text-base text-neutral-700 italic">"{t.text}"</p>
+                                <p className="text-sm text-neutral-700 italic">"{t.text}"</p>
                                 <div className="mt-4">
                                     <p className="font-semibold text-neutral-900">{t.name}</p>
                                     <p className="text-xs text-neutral-500">{t.event}</p>
@@ -437,20 +408,20 @@ export default function ConcertPage() {
             </section>
 
             {/* FAQ Section */}
-            <section className="py-12 sm:py-16 md:py-20 bg-[#0f172a] text-white">
-                <div className="mx-auto max-w-5xl px-4 sm:px-6">
-                    <div className="text-center mb-8 sm:mb-10">
-                        <h2 className="font-display text-3xl sm:text-4xl md:text-5xl">Frequently Asked Questions</h2>
-                        <p className="mt-3 text-sm sm:text-base text-white/80">Everything you need to know about private concerts</p>
+            <section className="py-16 md:py-20 bg-[#0f172a] text-white">
+                <div className="mx-auto max-w-5xl px-6">
+                    <div className="text-center mb-10">
+                        <h2 className="font-display text-3xl md:text-4xl">Venue FAQs</h2>
+                        <p className="mt-3 text-sm md:text-base text-white/80">Everything you need to know about booking our concert venue</p>
                     </div>
-                    <div className="grid gap-4 sm:gap-5 md:grid-cols-2">
+                    <div className="grid gap-4 md:grid-cols-2">
                         {faqs.map((f, idx) => (
-                            <div key={idx} className="rounded-2xl border border-white/15 bg-white/5 p-5 sm:p-6 hover:bg-white/10 transition">
+                            <div key={idx} className="rounded-2xl border border-white/15 bg-white/5 p-6 hover:bg-white/10 transition">
                                 <div className="mb-3 inline-flex rounded-full bg-white/10 p-2">
-                                    <HelpCircle className="h-4 w-4 sm:h-5 sm:w-5" />
+                                    <HelpCircle className="h-5 w-5" />
                                 </div>
-                                <h3 className="text-base sm:text-lg font-semibold">{f.q}</h3>
-                                <p className="mt-2 text-xs sm:text-sm leading-relaxed text-white/80">{f.a}</p>
+                                <h3 className="text-lg font-semibold">{f.q}</h3>
+                                <p className="mt-2 text-sm leading-relaxed text-white/80">{f.a}</p>
                             </div>
                         ))}
                     </div>
@@ -460,42 +431,64 @@ export default function ConcertPage() {
             {/* Booking Section */}
             <section id="book" className="py-12 sm:py-16 md:py-20 bg-neutral-900 text-white">
                 <div className="mx-auto max-w-5xl px-4 sm:px-6">
-                    <div className="rounded-2xl border border-white/20 bg-white/5 p-5 sm:p-6 md:p-10">
-                        <div className="text-center mb-6 sm:mb-8">
-                            <h2 className="font-display text-3xl sm:text-4xl md:text-5xl">Book Your Concert</h2>
-                            <p className="mt-2 sm:mt-3 text-sm sm:text-base text-white/80">Fill out the form and we'll create your perfect musical evening</p>
-                        </div>
-                        <form className="mt-6 grid gap-4 md:grid-cols-2">
-                            <input className="rounded-lg border border-white/30 bg-white/10 px-4 py-3 text-sm outline-none focus:border-[#c9a55b] transition placeholder:text-white/60" placeholder="Full Name" />
-                            <input className="rounded-lg border border-white/30 bg-white/10 px-4 py-3 text-sm outline-none focus:border-[#c9a55b] transition placeholder:text-white/60" placeholder="Phone Number" />
-                            <input type="email" className="rounded-lg border border-white/30 bg-white/10 px-4 py-3 text-sm outline-none focus:border-[#c9a55b] transition placeholder:text-white/60" placeholder="Email Address" />
-                            <input type="date" className="rounded-lg border border-white/30 bg-white/10 px-4 py-3 text-sm outline-none focus:border-[#c9a55b] transition" />
-                            <select className="rounded-lg border border-white/30 bg-white/10 px-4 py-3 text-sm outline-none focus:border-[#c9a55b] transition md:col-span-2">
-                                <option value="">Select Concert Type</option>
-                                <option>Classical Recital (Solo)</option>
-                                <option>Acoustic Ensemble (Duo/Trio)</option>
-                                <option>Jazz Evening (Trio/Quartet)</option>
-                                <option>Custom Program</option>
+                    <div className="rounded-xl sm:rounded-2xl border border-white/20 bg-white/5 p-4 sm:p-6 md:p-8 lg:p-10">
+                        <h2 className="font-display text-2xl sm:text-3xl md:text-4xl text-center sm:text-left">Reserve the Venue</h2>
+                        <p className="mt-2 text-xs sm:text-sm text-white/80 text-center sm:text-left">Check availability for your preferred date</p>
+
+                        <form className="mt-5 sm:mt-6 md:mt-8 grid gap-3 sm:gap-4 grid-cols-1 sm:grid-cols-2">
+                            <input
+                                className="col-span-1 rounded-lg border border-white/30 bg-white/10 px-3 sm:px-4 py-2.5 sm:py-3 text-xs sm:text-sm outline-none focus:border-[#c9a55b] transition placeholder:text-white/60 focus:bg-white/15"
+                                placeholder="Full Name"
+                            />
+                            <input
+                                className="col-span-1 rounded-lg border border-white/30 bg-white/10 px-3 sm:px-4 py-2.5 sm:py-3 text-xs sm:text-sm outline-none focus:border-[#c9a55b] transition placeholder:text-white/60 focus:bg-white/15"
+                                placeholder="Phone Number"
+                            />
+                            <input
+                                type="email"
+                                className="col-span-1 rounded-lg border border-white/30 bg-white/10 px-3 sm:px-4 py-2.5 sm:py-3 text-xs sm:text-sm outline-none focus:border-[#c9a55b] transition placeholder:text-white/60 focus:bg-white/15"
+                                placeholder="Email Address"
+                            />
+                            <input
+                                type="date"
+                                className="col-span-1 rounded-lg border border-white/30 bg-white/10 px-3 sm:px-4 py-2.5 sm:py-3 text-xs sm:text-sm outline-none focus:border-[#c9a55b] transition focus:bg-white/15 [color-scheme:dark]"
+                            />
+                            <select className="col-span-1 sm:col-span-2 rounded-lg border border-white/30 bg-white/10 px-3 sm:px-4 py-2.5 sm:py-3 text-xs sm:text-sm outline-none focus:border-[#c9a55b] transition focus:bg-white/15">
+                                <option value="" className="bg-neutral-900">Select Venue Space</option>
+                                <option className="bg-neutral-900">Intimate Recital Hall (up to 80 guests)</option>
+                                <option className="bg-neutral-900">Jazz Lounge (up to 60 guests)</option>
+                                <option className="bg-neutral-900">Outdoor Amphitheater (up to 120 guests)</option>
+                                <option className="bg-neutral-900">Full Venue Buyout</option>
                             </select>
-                            <select className="rounded-lg border border-white/30 bg-white/10 px-4 py-3 text-sm outline-none focus:border-[#c9a55b] transition md:col-span-2">
-                                <option value="">Expected Guest Count</option>
-                                <option>10-30 guests (Intimate)</option>
-                                <option>30-60 guests</option>
-                                <option>60-100 guests</option>
-                                <option>100-200 guests</option>
-                                <option>200+ guests</option>
+                            <select className="col-span-1 sm:col-span-2 rounded-lg border border-white/30 bg-white/10 px-3 sm:px-4 py-2.5 sm:py-3 text-xs sm:text-sm outline-none focus:border-[#c9a55b] transition focus:bg-white/15">
+                                <option value="" className="bg-neutral-900">Select Rental Package</option>
+                                <option className="bg-neutral-900">Recital Rental (3 hours)</option>
+                                <option className="bg-neutral-900">Evening Concert (5 hours)</option>
+                                <option className="bg-neutral-900">Full Venue Buyout (Full day)</option>
                             </select>
-                            <select className="rounded-lg border border-white/30 bg-white/10 px-4 py-3 text-sm outline-none focus:border-[#c9a55b] transition md:col-span-2">
-                                <option value="">Preferred Duration</option>
-                                <option>1 Hour (Intimate Hour)</option>
-                                <option>2 Hours (Evening Concert)</option>
-                                <option>3+ Hours (Gala Performance)</option>
+                            <select className="col-span-1 sm:col-span-2 rounded-lg border border-white/30 bg-white/10 px-3 sm:px-4 py-2.5 sm:py-3 text-xs sm:text-sm outline-none focus:border-[#c9a55b] transition focus:bg-white/15">
+                                <option value="" className="bg-neutral-900">Expected Guest Count</option>
+                                <option className="bg-neutral-900">10-30 guests (Intimate)</option>
+                                <option className="bg-neutral-900">30-60 guests</option>
+                                <option className="bg-neutral-900">60-80 guests</option>
+                                <option className="bg-neutral-900">80-120 guests</option>
+                                <option className="bg-neutral-900">120+ guests (Full buyout)</option>
                             </select>
-                            <textarea rows={4} className="md:col-span-2 rounded-lg border border-white/30 bg-white/10 px-4 py-3 text-sm outline-none focus:border-[#c9a55b] transition placeholder:text-white/60" placeholder="Tell us about your event, preferred musical style, any specific pieces you'd like to request, and special requirements..." />
-                            <button type="submit" className="md:col-span-2 rounded-lg bg-[#c9a55b] px-5 py-3 text-xs sm:text-sm font-semibold uppercase tracking-wider text-white transition hover:bg-[#a98741]">
-                                Submit Inquiry
+                            <textarea
+                                rows={4}
+                                className="col-span-1 sm:col-span-2 rounded-lg border border-white/30 bg-white/10 px-3 sm:px-4 py-2.5 sm:py-3 text-xs sm:text-sm outline-none focus:border-[#c9a55b] transition placeholder:text-white/60 focus:bg-white/15 resize-vertical"
+                                placeholder="Tell us about your event, preferred date flexibility, any special requirements (catering, artist needs, etc.)..."
+                            />
+                            <button
+                                type="submit"
+                                className="col-span-1 sm:col-span-2 rounded-lg bg-[#c9a55b] px-4 sm:px-5 py-2.5 sm:py-3 text-[10px] sm:text-xs md:text-sm font-semibold uppercase tracking-wider text-white transition hover:bg-[#a98741] active:scale-95 w-full sm:w-auto sm:min-w-[200px] mx-auto"
+                            >
+                                Send Venue Inquiry
                             </button>
                         </form>
+                        <p className="mt-4 text-[10px] sm:text-xs text-white/50 text-center">
+                            We'll respond within 24 hours
+                        </p>
                     </div>
                 </div>
             </section>

@@ -17,10 +17,11 @@ const ease = [0.22, 1, 0.36, 1] as const;
 
 type Props = {
   onSuccess?: (user: SafeUser, redirectTo: string) => void;
+  onSwitchToLogin?: () => void;
   className?: string;
 };
 
-export default function SignupForm({ onSuccess, className }: Props) {
+export default function SignupForm({ onSuccess, onSwitchToLogin, className }: Props) {
   const reduce = useReducedMotion();
   const [fullName, setFullName] = useState("");
   const [email, setEmail] = useState("");
@@ -169,9 +170,19 @@ export default function SignupForm({ onSuccess, className }: Props) {
           transition={{ delay: reduce ? 0 : 0.34, duration: d }}
         >
           Already registered?{" "}
-          <Link href="/login" className="font-semibold text-[#9a7b3a] underline decoration-[#c9a55b]/50 underline-offset-[3px] hover:text-[#7a6129]">
-            Sign in
-          </Link>
+          {onSwitchToLogin ? (
+            <button
+              type="button"
+              onClick={onSwitchToLogin}
+              className="font-semibold text-[#9a7b3a] underline decoration-[#c9a55b]/50 underline-offset-[3px] hover:text-[#7a6129]"
+            >
+              Sign in
+            </button>
+          ) : (
+            <Link href="/login" className="font-semibold text-[#9a7b3a] underline decoration-[#c9a55b]/50 underline-offset-[3px] hover:text-[#7a6129]">
+              Sign in
+            </Link>
+          )}
         </motion.p>
       </div>
     </form>

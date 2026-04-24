@@ -14,10 +14,11 @@ import { dashboardPathForRole } from "@/lib/dashboard-nav";
 
 type Props = {
   onSuccess?: (user: SafeUser, redirectTo: string) => void;
+  onSwitchToSignup?: () => void;
   className?: string;
 };
 
-export default function LoginForm({ onSuccess, className }: Props) {
+export default function LoginForm({ onSuccess, onSwitchToSignup, className }: Props) {
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
   const [showPassword, setShowPassword] = useState(false);
@@ -113,9 +114,19 @@ export default function LoginForm({ onSuccess, className }: Props) {
         </Button>
         <p className="text-center font-sans text-[14px] text-[#5c564c]">
           New here?{" "}
-          <Link href="/signup" className="font-semibold text-[#9a7b3a] underline decoration-[#c9a55b]/50 underline-offset-[3px] hover:text-[#7a6129]">
-            Create an account
-          </Link>
+          {onSwitchToSignup ? (
+            <button
+              type="button"
+              onClick={onSwitchToSignup}
+              className="font-semibold text-[#9a7b3a] underline decoration-[#c9a55b]/50 underline-offset-[3px] hover:text-[#7a6129]"
+            >
+              Create an account
+            </button>
+          ) : (
+            <Link href="/signup" className="font-semibold text-[#9a7b3a] underline decoration-[#c9a55b]/50 underline-offset-[3px] hover:text-[#7a6129]">
+              Create an account
+            </Link>
+          )}
         </p>
       </div>
     </form>

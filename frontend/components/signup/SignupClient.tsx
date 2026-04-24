@@ -7,7 +7,11 @@ import { AuthGlassCard } from "@/components/AuthGlassCard";
 
 const ease = [0.22, 1, 0.36, 1] as const;
 
-export default function SignupClient() {
+type Props = {
+  onSwitchToLogin?: () => void;
+};
+
+export default function SignupClient({ onSwitchToLogin }: Props) {
   const reduce = useReducedMotion();
   const dur = reduce ? 0 : 0.45;
 
@@ -49,7 +53,7 @@ export default function SignupClient() {
           </motion.p>
           <div className="mt-5 h-px w-14 rounded-full bg-[#c9a55b]/70" aria-hidden />
 
-          <SignupForm className="mt-7" />
+          <SignupForm onSwitchToLogin={onSwitchToLogin} className="mt-7" />
 
           <motion.p
             className="mt-6 text-center font-sans text-[12px] text-[#6b655c]"

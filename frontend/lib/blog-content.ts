@@ -329,6 +329,597 @@ const CONTENT_BY_SLUG: Record<string, BlogContent> = {
       },
     ],
   },
+
+  "best-places-to-visit-in-murree": {
+  intro: [
+    "Murree remains Pakistan’s most accessible and beloved mountain destination, offering a mix of natural beauty, scenic viewpoints, and lively tourist spots. Whether you are visiting for a weekend escape or a longer retreat, knowing where to go can significantly improve your experience.",
+    "From iconic viewpoints like Pindi Point and Kashmir Point to quieter forest regions like Patriata and nearby Galyat areas, this guide covers the best places to visit in Murree so you can plan your trip with clarity and avoid missing the real highlights.",
+  ],
+  sections: [
+    {
+      heading: "Mall Road — The Heart of Murree",
+      paragraphs: [
+        "Mall Road is Murree’s most famous and busiest attraction, serving as the central hub for shopping, dining, and evening walks. Visitors come here for local handicrafts, street food, and the lively atmosphere that defines Murree tourism.",
+        "While it can get crowded during peak season, Mall Road is still worth visiting at least once, especially in the evening when the weather cools down and the street comes alive with lights and activity.",
+      ],
+      image: "/assets/blog-bhurban-mall-road-night.png",
+    },
+    {
+      heading: "Kashmir Point — Peaceful Scenic Views",
+      paragraphs: [
+        "Kashmir Point offers one of the most peaceful and scenic experiences in Murree. Located at a higher elevation than Mall Road, it provides panoramic views of the surrounding valleys and, on clear days, distant mountain ranges.",
+        "It is ideal for morning walks, photography, and travelers who prefer a quieter environment away from heavy crowds.",
+      ],
+      image: "/assets/blog-bhurban-forest-nature-walk.png",
+    },
+    {
+      heading: "Pindi Point — Chairlift & Valley Views",
+      paragraphs: [
+        "Pindi Point is famous for its chairlift ride, which gives visitors a unique aerial view of Murree’s forest-covered hills. It is one of the most popular attractions for families and first-time visitors.",
+        "The viewpoint itself offers wide valley views, making it a great spot for photos and short relaxation breaks.",
+      ],
+      image: "/assets/blog-bhurban-patriata-chairlift.png",
+    },
+    {
+      heading: "Patriata (New Murree) — Nature & Adventure",
+      paragraphs: [
+        "Patriata, also known as New Murree, is one of the most scenic and activity-focused areas in the region. It is best known for its chairlift and cable car system that takes visitors above dense pine forests.",
+        "Compared to central Murree, Patriata is less crowded and offers a more nature-focused experience. Visiting early in the day is recommended to avoid long queues.",
+      ],
+      image: "/assets/blog-bhurban-patriata-chairlift.png",
+    },
+    {
+      heading: "Bhurban — Luxury & Quiet Mountain Living",
+      paragraphs: [
+        "Bhurban is the premium side of Murree, known for its peaceful environment, dense forests, and high-end accommodations. It is ideal for travelers who want relaxation rather than crowds.",
+        "The area offers beautiful walking paths, cool weather, and some of the best panoramic views in the Murree region. It is especially popular among families and couples seeking privacy.",
+      ],
+      image: "/assets/why-villa-view.jpg",
+    },
+    {
+      heading: "Ayubia & Nathia Gali — Day Trip Destinations",
+      paragraphs: [
+        "Located within a 30–45 minute drive from Murree, Ayubia and Nathia Gali are part of the Galyat region and offer even cooler temperatures and denser forests.",
+        "These areas are perfect for hiking, nature walks, and escaping the more commercial side of Murree. Ayubia National Park, in particular, is known for its walking trails and scenic beauty.",
+      ],
+      image: "/assets/gallery-sunlight.jpg",
+    },
+  ],
+  faqs: [
+    {
+      q: "What are the top places to visit in Murree for first-time travelers?",
+      a: "Mall Road, Kashmir Point, Pindi Point, and Patriata are must-visit locations for first-time visitors as they cover both scenic views and local culture.",
+    },
+    {
+      q: "Which place in Murree is best for families?",
+      a: "Patriata and Pindi Point are great for families due to their activities, while Bhurban is ideal for a relaxed family stay.",
+    },
+    {
+      q: "Are there quiet places in Murree away from crowds?",
+      a: "Yes, Kashmir Point and Bhurban offer much quieter environments compared to Mall Road.",
+    },
+    {
+      q: "How many days are enough to explore Murree?",
+      a: "A 2 to 3 day trip is usually enough to cover the main attractions, while 4 days allows a more relaxed experience.",
+    },
+  ],
+  },
+  
+  "best-hotels-in-murree-pakistan": {
+  intro: [
+    "Murree offers a wide range of accommodation options — from luxury resorts in Bhurban to budget hotels near Mall Road. Choosing the right hotel can make a significant difference in your overall travel experience.",
+    "This guide breaks down the best hotels in Murree, Pakistan based on location, budget, and travel style so you can book confidently and avoid common mistakes.",
+  ],
+  sections: [
+    {
+      heading: "Luxury Hotels in Murree & Bhurban",
+      paragraphs: [
+        "For travelers looking for premium comfort, Bhurban is the top choice. It offers quieter surroundings, better views, and high-end properties.",
+        "Luxury stays focus on space, privacy, and service quality — making them ideal for families, couples, and corporate travelers who want a refined experience rather than just a place to sleep.",
+      ],
+      image: "/assets/villa-honeymoon-real.jpg",
+    },
+    {
+      heading: "Mid-Range Hotels on Mall Road",
+      paragraphs: [
+        "Mall Road is the most convenient location for travelers who want easy access to shops, restaurants, and attractions. Mid-range hotels here provide a balance between comfort and affordability.",
+        "However, noise and crowd levels can be high during peak season, so choosing the right property and room type is important.",
+      ],
+      image: "/assets/blog-bhurban-mall-road-night.png",
+    },
+    {
+      heading: "Budget Hotels in Murree",
+      paragraphs: [
+        "Budget hotels are widely available around GPO Chowk and lower Mall Road areas. These options are suitable for short stays and travelers focused on saving costs.",
+        "Keep in mind that during peak months, even budget hotels can become expensive and availability drops quickly.",
+      ],
+      image: "/assets/blog-bhurban-forest-nature-walk.png",
+    },
+    {
+      heading: "Bhurban vs Mall Road — Where Should You Stay?",
+      paragraphs: [
+        "Mall Road is ideal for convenience and quick access to attractions, but it comes with crowds and limited space.",
+        "Bhurban offers a more premium experience with better views, cleaner environment, and a quieter atmosphere — making it a preferred choice for longer and more comfortable stays.",
+      ],
+      image: "/assets/why-villa-garden.jpg",
+    },
+    {
+      heading: "Hotel Prices in Murree (2026 Guide)",
+      paragraphs: [
+        "Hotel prices vary significantly depending on season and location. During peak months (June to August and Eid holidays), rates can increase by 30–50%.",
+        "Luxury hotels range from PKR 40,000 to 90,000 per night, mid-range hotels from PKR 10,000 to 30,000, and budget options from PKR 4,000 to 12,000.",
+        "Booking at least 2–3 weeks in advance is recommended for better availability and pricing.",
+      ],
+      image: "/assets/amenities-interior-real.jpg",
+    },
+  ],
+  faqs: [
+    {
+      q: "What are the best areas to stay in Murree?",
+      a: "Mall Road is best for convenience, while Bhurban is ideal for luxury, privacy, and scenic views.",
+    },
+    {
+      q: "Are hotels in Murree expensive?",
+      a: "Prices vary by season. Peak season can be expensive, while off-season offers significant discounts.",
+    },
+    {
+      q: "Which hotels in Murree are best for families?",
+      a: "Family travelers usually prefer Bhurban properties due to space, safety, and quieter surroundings.",
+    },
+    {
+      q: "When should I book hotels in Murree?",
+      a: "It is best to book 2–4 weeks in advance, especially during summer and holidays.",
+    },
+  ],
+  },
+
+
+
+  
+"banquet-hall-in-murree-bhurban": {
+  intro: [
+    "Murree and Bhurban have rapidly grown into some of the most sought-after destinations in Pakistan not only for leisure tourism but also for high-end weddings, corporate gatherings, and private celebrations. Their cool climate, lush green surroundings, and panoramic mountain views create a naturally luxurious atmosphere that city venues often cannot match.",
+    "This guide provides a detailed overview of the best banquet halls in Murree and Bhurban, helping you select the right venue based on ambiance, guest capacity, service quality, and overall event experience. Whether you are planning an intimate function or a large-scale wedding, these locations offer flexible and premium options.",
+  ],
+  sections: [
+    {
+      heading: "Why Murree & Bhurban Are Popular for Events",
+      paragraphs: [
+        "Murree and Bhurban offer an unmatched natural setting that significantly enhances the beauty and emotional impact of weddings and events. Surrounded by pine-covered hills, fresh mountain air, and breathtaking views, these locations naturally elevate any celebration into a memorable experience.",
+        "Unlike traditional city banquet halls that often feel enclosed and crowded, these hill stations provide a sense of openness, privacy, and exclusivity. The resort-style environment allows guests to relax and enjoy events in a peaceful atmosphere, making them ideal for both intimate family gatherings and large-scale celebrations.",
+      ],
+      image: "/assets/why-villa-view.jpg",
+    },
+    {
+      heading: "Banquet Halls in Bhurban — Premium Event Experience",
+      paragraphs: [
+        "Bhurban is widely recognized for its luxury resorts and villa-inspired event spaces that are specifically designed to host high-end weddings, corporate retreats, and private functions. These venues combine elegance with nature, offering guests a refined yet relaxed atmosphere.",
+        "Most banquet facilities in Bhurban feature a blend of indoor halls and spacious outdoor lawns, allowing event planners to design both traditional and contemporary setups. This flexibility makes them suitable for daytime ceremonies, evening receptions, and multi-day wedding events.",
+      ],
+      image: "/assets/villa-honeymoon-real.jpg",
+    },
+    {
+      heading: "Himalaya Villas — Private Wedding & Event Venue",
+      paragraphs: [
+        "Himalaya Villas in Bhurban stands out as a premium destination for private weddings and exclusive celebrations. It is thoughtfully designed to provide complete privacy for families who want a personalized and uninterrupted event experience surrounded by natural beauty.",
+        "The venue offers villa-style accommodation along with dedicated event spaces, making it especially suitable for destination weddings where guests stay on-site. This creates a seamless experience where accommodation, dining, and celebrations all take place in one integrated location.",
+        "In addition to space and accommodation, the venue also provides essential event services including catering arrangements, décor support, seating customization, and full coordination assistance. This ensures that both small and large events are managed smoothly from start to finish.",
+      ],
+    },
+    {
+      heading: "Banquet Hall Features to Expect in Murree",
+      paragraphs: [
+        "Most banquet halls in Murree and Bhurban are designed to provide a complete event experience by combining indoor halls with outdoor scenic areas. These venues typically include mountain-facing views, well-maintained lawns, and flexible seating arrangements for different event types.",
+        "Premium venues also go beyond basic facilities by offering guest accommodation, ample parking space, heating systems for winter events, and customized décor setups. These features ensure comfort and convenience for guests throughout the event regardless of season or weather conditions.",
+      ],
+      image: "/assets/amenities-interior-real.jpg",
+    },
+    {
+      heading: "Best Events to Host in Murree & Bhurban",
+      paragraphs: [
+        "Murree and Bhurban are ideal destinations for a wide variety of events including weddings, engagements, corporate retreats, birthday celebrations, and family reunions. The scenic environment naturally enhances the mood and creates lasting memories for guests.",
+        "Destination weddings are especially popular in Bhurban because families can host multiple functions such as mehndi, baraat, and reception in one location. The availability of accommodation and event spaces in close proximity makes planning easier and more enjoyable for both hosts and guests.",
+      ],
+      image: "/assets/gallery-dining-night.jpg",
+    },
+    {
+      heading: "Banquet Hall Pricing in Murree (2026 Guide)",
+      paragraphs: [
+        "The cost of booking banquet halls in Murree and Bhurban varies depending on venue size, guest count, season, and the level of services required. Basic packages may include hall rental and seating, while premium packages often include full event management.",
+        "Smaller private gatherings can start from PKR 150,000 to 300,000, while mid-range and luxury wedding setups in Bhurban may range significantly higher based on customization, décor, and catering requirements. Prices tend to increase during peak tourist and wedding seasons.",
+        "It is highly recommended to book venues well in advance, especially for spring and summer months when demand is at its highest. Early booking not only ensures availability but can also help secure better pricing and preferred setup options.",
+      ],
+      image: "/assets/why-villa-garden.jpg",
+    },
+  ],
+  faqs: [
+    {
+      q: "What is the best banquet hall in Bhurban Murree?",
+      a: "Himalaya Villas is widely considered one of the top premium choices in Bhurban due to its private villa-style setup, scenic mountain surroundings, and complete event management support. It is especially popular for destination weddings and exclusive family events.",
+    },
+    {
+      q: "Can I host a wedding in Murree or Bhurban?",
+      a: "Yes, Murree and Bhurban are among the most popular wedding destinations in Pakistan. They offer a wide range of options including banquet halls, luxury resorts, and private villa venues suitable for both small and large wedding events.",
+    },
+    {
+      q: "How much does a wedding in Bhurban cost?",
+      a: "Wedding costs in Bhurban vary based on guest count, venue selection, décor, and services included. On average, luxury destination weddings typically start from PKR 300,000 and can increase significantly depending on customization and duration of events.",
+    },
+    {
+      q: "Do Murree banquet halls provide accommodation?",
+      a: "Yes, many premium banquet halls and resorts in Bhurban offer on-site accommodation for guests. This makes them ideal for multi-day destination weddings where guests can stay, attend events, and enjoy the surroundings in one location.",
+    },
+  ],
+},
+
+
+
+"wedding-reception-venues-near-me-bhurban-murree": {
+  intro: [
+    "If you are searching for wedding reception venues near Murree and Bhurban, you are likely looking for more than just a hall — you want a memorable setting, mountain views, privacy, and a premium atmosphere that elevates your celebration into a complete experience.",
+    "Bhurban has quickly become one of Pakistan’s top destination wedding locations, offering luxury resorts, private villas, and scenic outdoor spaces that are perfectly suited for unforgettable wedding receptions and multi-day celebrations.",
+    "Unlike conventional city venues, Bhurban provides a naturally beautiful environment where weddings feel more intimate, cinematic, and emotionally impactful due to its pine forests, cool weather, and panoramic mountain landscapes."
+  ],
+
+  sections: [
+    {
+      heading: "Why Bhurban is Ideal for Wedding Receptions",
+      paragraphs: [
+        "Bhurban offers a rare combination of natural beauty, privacy, and luxury hospitality, making it one of the most sought-after destinations for wedding receptions in Pakistan.",
+        "Unlike city venues that often feel crowded and time-restricted, Bhurban provides open green landscapes, pine forest surroundings, and a calm climate that enhances both daytime and evening wedding events.",
+        "The overall environment allows families to host celebrations in a relaxed, premium setting where guests can enjoy the event without urban noise, traffic, or logistical stress.",
+        "This makes Bhurban especially suitable for destination weddings where the focus is on experience, comfort, and long-lasting memories rather than just event execution."
+      ],
+      image: "/assets/why-villa-view.jpg",
+    },
+    {
+      heading: "Luxury Wedding Reception Venues in Bhurban",
+      paragraphs: [
+        "Bhurban is home to several premium resorts and villa-style properties that specialize in hosting wedding receptions, private gatherings, and high-end celebrations.",
+        "These venues typically include elegant indoor banquet spaces, landscaped outdoor lawns, and elevated viewpoints that provide panoramic mountain backdrops for photography and stage setups.",
+        "Luxury venues in this region often focus on exclusivity, offering limited guest density to ensure privacy, personalized service, and a more refined event experience.",
+        "Many properties also support multi-day wedding arrangements where Mehndi, Barat, and reception events can be hosted in the same location for maximum convenience."
+      ],
+      image: "/assets/villa-honeymoon-real.jpg",
+    },
+    {
+      heading: "Himalaya Villas — Private Wedding Reception Setup",
+      paragraphs: [
+        "Himalaya Villas in Bhurban offers a fully private and highly customizable wedding reception experience designed for families who prioritize exclusivity, elegance, and seamless event management.",
+        "The venue provides villa-based accommodation alongside reception setups, allowing guests to stay on-site and enjoy a complete destination wedding experience without travel between venues.",
+        "Unlike traditional banquet halls, this setup gives families control over timing, space usage, and guest flow, making it easier to manage multi-day events and diverse cultural requirements.",
+        "Services include professional event planning support, premium catering arrangements, décor customization, seating layouts, lighting setups, and full on-ground coordination for smooth execution from start to finish."
+      ],
+    },
+    {
+      heading: "Types of Wedding Reception Venues Near Murree",
+      paragraphs: [
+        "Wedding venues in Murree and Bhurban are diverse and range from luxury resorts and boutique hotels to private villas and scenic open garden setups.",
+        "Each type of venue serves a different purpose — indoor banquet halls are ideal for formal receptions, while outdoor lawn setups are preferred for scenic, photography-focused mountain weddings.",
+        "Budget flexibility also plays a key role in selection, with premium venues offering personalized services and budget-friendly options focusing on essential event setups.",
+        "Choosing the right venue depends on guest count, event duration, weather expectations, and the level of privacy required for the celebration."
+      ],
+      image: "/assets/amenities-interior-real.jpg",
+    },
+    {
+      heading: "Destination Wedding Experience in Bhurban",
+      paragraphs: [
+        "Bhurban is increasingly recognized as a leading destination for multi-day weddings where families host Mehndi, Barat, and reception events across 2–3 days in a single location.",
+        "This setup significantly reduces travel stress for guests and allows families to focus on celebration rather than logistics and coordination between different venues.",
+        "The combination of accommodation, scenic surroundings, and private event spaces creates a complete wedding ecosystem that enhances both convenience and guest experience.",
+        "Many couples choose Bhurban specifically for this reason, as it allows them to create a cohesive wedding journey rather than fragmented single-day events."
+      ],
+      image: "/assets/gallery-dining-night.jpg",
+    },
+    {
+      heading: "Wedding Reception Costs in Murree (2026 Guide)",
+      paragraphs: [
+        "The cost of wedding receptions in Murree and Bhurban depends on multiple factors including venue type, guest count, décor complexity, catering selection, and duration of the event.",
+        "Small to mid-sized receptions typically start from PKR 200,000–500,000 depending on the level of customization and services included.",
+        "Luxury destination weddings in Bhurban can range significantly higher, especially when accommodation, multi-day arrangements, and premium décor setups are included.",
+        "Due to high seasonal demand, particularly in spring and summer wedding months, early booking is strongly recommended to secure preferred dates and better pricing options."
+      ],
+      image: "/assets/why-villa-garden.jpg",
+    },
+  ],
+
+  faqs: [
+    {
+      q: "What are the best wedding reception venues in Bhurban?",
+      a: "Himalaya Villas is among the top choices for private wedding receptions in Bhurban due to its villa-style setup, privacy-focused environment, and scenic mountain views that enhance the overall celebration experience."
+    },
+    {
+      q: "Can I host a destination wedding in Murree or Bhurban?",
+      a: "Yes, Bhurban is one of Pakistan’s most popular destination wedding locations, offering luxury resorts and private villas that support full multi-day wedding setups including Mehndi, Barat, and reception events."
+    },
+    {
+      q: "How much does a wedding reception cost in Bhurban?",
+      a: "Costs vary based on guest count, venue type, and services, but typically range from PKR 200,000 to several lakhs for premium and fully customized luxury wedding setups."
+    },
+    {
+      q: "Do Bhurban venues provide accommodation for guests?",
+      a: "Yes, most premium venues in Bhurban offer on-site or nearby accommodation, making them ideal for destination weddings where guests stay and celebrate in one location."
+    },
+  ],
+},
+  
+
+
+ "resorts-in-murree-pakistan-2026-guide": {
+  intro: [
+    "Murree is home to some of Pakistan’s most popular mountain resorts, offering everything from luxury stays in Bhurban to family-friendly accommodations near Mall Road. It has become a year-round destination for travelers from Islamabad, Lahore, and across the country.",
+    "This guide highlights the best resorts in Murree for 2026, helping you choose the right stay based on comfort, location, budget, and overall travel experience so you can avoid overcrowded or poorly matched properties.",
+    "Whether you are planning a short weekend escape or a longer mountain retreat, understanding the difference between Bhurban luxury resorts and Murree town properties is key to making the right booking decision."
+  ],
+
+  sections: [
+    {
+      heading: "Why Murree Resorts Are So Popular",
+      paragraphs: [
+        "Murree resorts are popular because they combine natural mountain scenery, cool weather, and easy accessibility from major cities like Islamabad and Lahore, making them one of the most convenient hill station escapes in Pakistan.",
+        "They offer a complete hospitality experience that includes accommodation, dining, and recreational facilities in a single location, which is especially valuable for families and groups who prefer convenience and comfort.",
+        "Unlike standard hotels, resorts in Murree are often designed to provide a more immersive environment where guests can relax, enjoy nature, and spend quality time without needing to travel between multiple locations for basic services."
+      ],
+    },
+    {
+      heading: "Luxury Resorts in Bhurban",
+      paragraphs: [
+        "Bhurban is the premium zone of Murree and is widely regarded as the most exclusive area for luxury resorts and private villa-style stays in the entire region.",
+        "These resorts focus heavily on privacy, scenic mountain views, and high-end hospitality standards, making them ideal for luxury travelers, honeymoon couples, and families seeking a quiet and refined environment.",
+        "Many premium properties in Bhurban also offer personalized services, including private dining, concierge support, and customized stay experiences that elevate the overall comfort level beyond standard hotel offerings."
+      ],
+      image: "/assets/why-villa-view.jpg",
+    },
+    {
+      heading: "Family-Friendly Resorts in Murree",
+      paragraphs: [
+        "Many resorts in Murree are specifically designed for families, offering larger rooms, safe environments, and open spaces where children can move freely and enjoy outdoor activities.",
+        "These properties often include landscaped gardens, indoor dining areas, and recreational facilities that make group stays more comfortable and enjoyable for all age groups.",
+        "Family-oriented resorts also focus on convenience, providing easy access to nearby attractions while ensuring a secure and peaceful environment within the property itself."
+      ],
+      image: "/assets/blog-bhurban-forest-nature-walk.png",
+    },
+    {
+      heading: "What to Expect from Murree Resorts",
+      paragraphs: [
+        "Most resorts in Murree offer scenic mountain views, central heating systems, in-house dining, and convenient access to nearby tourist attractions such as Mall Road, Patriata, and Kashmir Point.",
+        "Premium resorts in Bhurban go a step further by offering concierge services, private dining options, and event hosting facilities for weddings, corporate retreats, and private gatherings.",
+        "Guests should expect variations in service quality depending on location and pricing, with Bhurban generally offering a more premium and peaceful experience compared to central Murree properties."
+      ],
+      image: "/assets/amenities-interior-real.jpg",
+    },
+    {
+      heading: "Resort Prices in Murree (2026 Guide)",
+      paragraphs: [
+        "Resort pricing in Murree varies significantly depending on location, season, property type, and included services, with Bhurban typically representing the higher-end segment of the market.",
+        "Luxury resorts in Bhurban generally range from PKR 40,000–100,000 per night, offering premium amenities, privacy, and enhanced service quality.",
+        "Mid-range resorts in Murree typically fall between PKR 12,000–30,000 per night, while budget stays can range from PKR 5,000–12,000 depending on availability and season.",
+        "During peak travel periods such as summer holidays and long weekends, prices can increase significantly, and early booking is strongly recommended to secure better options."
+      ],
+      image: "/assets/why-villa-garden.jpg",
+    },
+  ],
+
+  faqs: [
+    {
+      q: "What are the best resorts in Murree?",
+      a: "The best resorts in Murree include luxury properties in Bhurban along with premium villa-style stays such as Himalaya Villas, which offer privacy, scenic views, and high-end services."
+    },
+    {
+      q: "Are Murree resorts good for families?",
+      a: "Yes, most resorts in Murree are family-friendly, offering spacious rooms, safe environments, and facilities designed for group comfort and relaxation."
+    },
+    {
+      q: "Which area is best for resorts in Murree?",
+      a: "Bhurban is considered the best area for luxury resorts due to its peaceful environment, better views, and premium hospitality options compared to central Murree."
+    },
+    {
+      q: "How much do resorts in Murree cost?",
+      a: "Resort prices in Murree range from PKR 5,000 to over PKR 100,000 depending on location, luxury level, season, and included amenities."
+    },
+  ],
+},
+  
+
+
+
+"himalaya-villas-function-hall-bhurban-murree": {
+  intro: [
+    "Himalaya Villas Function Hall in Bhurban Murree is a premium event space designed for weddings, corporate gatherings, and private celebrations. It is built for clients who want a luxury, private, and fully managed event experience in the mountains.",
+    "Set in a scenic mountain environment surrounded by pine forests and natural landscapes, it offers a combination of indoor elegance and outdoor beauty that enhances every type of celebration.",
+    "Unlike traditional city venues, this function hall provides a destination-style experience where guests enjoy privacy, cooler weather, and a calm environment that makes events more memorable and visually stunning."
+  ],
+
+  sections: [
+    {
+      heading: "A Premium Function Hall in Bhurban",
+      paragraphs: [
+        "The function hall at Himalaya Villas is designed for high-end events with a strong focus on privacy, comfort, and scenic surroundings. It provides a controlled environment where every detail of the event can be managed professionally.",
+        "It is suitable for small, medium, and semi-large gatherings including weddings, receptions, engagement ceremonies, and corporate events, making it a versatile venue for different client needs.",
+        "The layout is flexible and can be adjusted based on event type, allowing planners to create both formal seating arrangements and more creative, theme-based setups depending on requirements."
+      ],
+    },
+    {
+      heading: "Perfect for Weddings and Celebrations",
+      paragraphs: [
+        "The venue is widely used for weddings, mehndi functions, receptions, and engagement ceremonies due to its combination of elegance, privacy, and scenic mountain views.",
+        "Its natural backdrop enhances photography, stage decoration, and guest experience, making every event visually richer without requiring excessive external decoration.",
+        "Many families choose this venue for multi-day wedding celebrations because it allows them to host different functions in one location while maintaining consistency in experience and convenience for guests."
+      ],
+    },
+    {
+      heading: "Facilities at Himalaya Function Hall",
+      paragraphs: [
+        "The venue includes complete event infrastructure such as seating arrangements, lighting setups, sound support, catering coordination, and professional event execution assistance.",
+        "Each event can be customized based on guest count, theme, and cultural requirements, allowing full flexibility for both traditional and modern event styles.",
+        "Dedicated on-site coordination ensures smooth execution from start to finish, helping families and organizers manage their events without operational stress or logistical issues."
+      ],
+      image: "/assets/amenities-interior-real.jpg",
+    },
+    {
+      heading: "Why Choose Bhurban for Events",
+      paragraphs: [
+        "Bhurban is one of Pakistan’s most sought-after event destinations due to its peaceful environment, cool mountain climate, and natural scenic beauty that enhances every celebration.",
+        "Its location away from city congestion provides privacy and exclusivity, making it ideal for luxury weddings and high-end private gatherings.",
+        "Guests also benefit from nearby accommodation options within Himalaya Villas, allowing them to stay close to the event venue and enjoy a complete destination experience without travel inconvenience."
+      ],
+      image: "/assets/why-villa-view.jpg",
+    },
+  ],
+
+  faqs: [
+    {
+      q: "What is Himalaya Villas Function Hall used for?",
+      a: "It is used for weddings, receptions, mehndi events, corporate gatherings, engagement ceremonies, and private celebrations in a premium mountain setting."
+    },
+    {
+      q: "Is accommodation available at the venue?",
+      a: "Yes, guests can stay at Himalaya Villas along with attending events, making it ideal for destination weddings and multi-day functions."
+    },
+    {
+      q: "How many guests can the function hall accommodate?",
+      a: "The capacity depends on the event layout and setup, but it is suitable for small to medium-sized gatherings with flexible seating arrangements."
+    },
+    {
+      q: "Is catering available at the venue?",
+      a: "Yes, full catering services are available including customized menus, event-based dining setups, and on-demand food arrangements."
+    },
+  ],
+},
+
+
+
+ "himalaya-banquet-hall-bhurban-murree": {
+  intro: [
+    "Himalaya Banquet Hall in Bhurban Murree is a luxury event venue offering elegant indoor spaces with scenic mountain views. It is designed to deliver a refined hospitality experience where celebrations feel both private and premium.",
+    "It is ideal for weddings, receptions, corporate gatherings, and high-end private events in a peaceful mountain environment that enhances the overall guest experience.",
+    "Unlike standard city banquet halls, this venue provides a destination-style setting where guests enjoy cool weather, natural surroundings, and a calm atmosphere that adds value to every occasion."
+  ],
+
+  sections: [
+    {
+      heading: "Luxury Banquet Hall in Bhurban",
+      paragraphs: [
+        "The banquet hall provides a refined indoor setting suitable for formal events, weddings, receptions, and large family gatherings. The interior is designed to support both traditional and modern event themes with equal flexibility.",
+        "Its design focuses on comfort, elegance, and functionality, ensuring that guests experience a premium environment throughout the event duration regardless of event size or style.",
+        "The hall layout can be adjusted to accommodate different seating arrangements, stage setups, and décor styles, making it suitable for customized event planning and cultural requirements."
+      ],
+    },
+    {
+      heading: "Ideal for Weddings & Receptions",
+      paragraphs: [
+        "The venue is widely used for weddings, receptions, engagement ceremonies, and multi-day family events in Bhurban due to its scenic location and flexible event structure.",
+        "Its combination of indoor elegance and surrounding natural beauty enhances the event experience, making photography, stage décor, and guest engagement more visually impactful.",
+        "Many families prefer this venue for destination weddings because it allows them to host all major ceremonies in one location while offering accommodation options nearby for convenience."
+      ],
+    },
+    {
+      heading: "Event Services & Support",
+      paragraphs: [
+        "The hall offers complete event support including decoration services, seating arrangements, catering coordination, lighting setups, and stage management depending on the event type.",
+        "Clients can fully customize their event layout, theme, and dining arrangements based on guest count, cultural preferences, and budget requirements.",
+        "On-site coordination ensures smooth execution of events from start to finish, helping families and organizers focus on their celebration without operational stress or management challenges."
+      ],
+      image: "/assets/amenities-interior-real.jpg",
+    },
+    {
+      heading: "Why Bhurban is a Top Event Destination",
+      paragraphs: [
+        "Bhurban has become one of Pakistan’s most preferred destinations for luxury events due to its peaceful environment, pine forest scenery, and naturally cooler climate compared to urban cities.",
+        "The region offers a unique combination of accessibility and exclusivity, making it suitable for both intimate gatherings and large-scale destination weddings that require privacy and comfort.",
+        "Its growing popularity for high-end events is driven by the availability of resorts, villas, and banquet facilities that collectively create a complete hospitality ecosystem for celebrations."
+      ],
+      image: "/assets/why-villa-garden.jpg",
+    },
+  ],
+
+  faqs: [
+    {
+      q: "What events can be held at Himalaya Banquet Hall?",
+      a: "Weddings, receptions, engagement ceremonies, corporate events, private parties, and family gatherings can all be hosted at Himalaya Banquet Hall in Bhurban."
+    },
+    {
+      q: "Is it suitable for large weddings?",
+      a: "Yes, the venue can accommodate medium to large-scale weddings depending on the seating layout, stage setup, and overall event configuration."
+    },
+    {
+      q: "Does the venue provide decoration services?",
+      a: "Yes, complete decoration services are available including theme-based setups, floral arrangements, stage design, and lighting customization."
+    },
+    {
+      q: "Is parking available at the venue?",
+      a: "Yes, dedicated parking facilities are available for guests to ensure smooth arrival and departure during events."
+    },
+  ],
+},
+  
+
+
+
+"events-venue-himalaya-villas-murree-bhurban": {
+  intro: [
+    "Himalaya Villas Events Venue in Murree & Bhurban is a premium destination for weddings, corporate events, and private celebrations. It is designed for clients who want a luxury mountain setting combined with privacy, exclusivity, and professionally managed event execution.",
+    "Surrounded by pine forests and panoramic mountain views, the venue offers a rare combination of natural beauty and high-end hospitality. It is suitable for both intimate gatherings and large-scale celebrations, making it one of the most flexible event spaces in the Bhurban region.",
+    "Unlike conventional city banquet halls, this venue provides a complete destination experience where guests can stay on-site, celebrate events, and enjoy the peaceful environment of Bhurban without interruptions or logistical stress."
+  ],
+
+  sections: [
+    {
+      heading: "Premium Event Venue in Bhurban",
+      paragraphs: [
+        "The events venue at Himalaya Villas is designed with versatility in mind, allowing it to host a wide range of gatherings including weddings, receptions, corporate retreats, and private celebrations. The layout can be adapted for both formal seating arrangements and open-style event setups depending on the occasion.",
+        "Its location in Bhurban provides a naturally elevated and private environment, away from the congestion of Murree town. This makes it especially suitable for guests who value exclusivity and a distraction-free celebration experience.",
+        "The venue is structured to support both indoor and semi-outdoor configurations, allowing event planners to design experiences that match seasonal conditions, guest size, and cultural requirements while maintaining comfort and elegance throughout the event."
+      ],
+    },
+    {
+      heading: "Perfect for Weddings & Corporate Events",
+      paragraphs: [
+        "The venue supports weddings, receptions, corporate retreats, engagement ceremonies, and private parties with equal efficiency. It is especially popular for destination weddings where families prefer to host multiple functions in one location.",
+        "Its peaceful mountain environment enhances both daytime and evening events, creating a visually stunning backdrop for photography, stage setups, and guest experiences. The natural surroundings add a premium feel without requiring excessive décor.",
+        "For corporate clients, the venue offers a calm and focused environment ideal for meetings, team-building sessions, strategy retreats, and executive gatherings, away from the distractions of urban conference halls."
+      ],
+      image: "/assets/gallery-dining-night.jpg",
+    },
+    {
+      heading: "Complete Event Management Support",
+      paragraphs: [
+        "The venue provides full-scale event management support including catering coordination, themed decoration setups, seating planning, lighting arrangements, and stage design. Each event can be customized according to client requirements and cultural preferences.",
+        "Professional coordination ensures that every detail is handled smoothly, from guest arrival and seating logistics to food service timing and event flow management. This reduces stress for families and organizers during important occasions.",
+        "Clients also benefit from flexible planning options, allowing them to choose between simple elegant setups or fully customized luxury wedding themes with complete production support."
+      ],
+      image: "/assets/amenities-interior-real.jpg",
+    },
+    {
+      heading: "Why Choose Himalaya Villas for Events",
+      paragraphs: [
+        "Himalaya Villas stands out because it combines luxury accommodation with a fully equipped event venue, allowing guests to stay on-site and participate in multi-day celebrations without travel inconvenience.",
+        "This integrated setup is especially valuable for destination weddings where Mehndi, Barat, and reception events are spread across multiple days. Guests can remain within the same property throughout the entire celebration.",
+        "In addition to convenience, the venue offers privacy, scenic views, and personalized service, making it one of the most complete event solutions in Bhurban for both families and corporate clients."
+      ],
+      image: "/assets/why-villa-view.jpg",
+    },
+  ],
+
+  faqs: [
+    {
+      q: "What types of events can be hosted here?",
+      a: "Weddings, corporate events, private parties, engagements, receptions, and multi-day destination celebrations can all be hosted at Himalaya Villas Events Venue."
+    },
+    {
+      q: "Is accommodation available with the event venue?",
+      a: "Yes, guests can stay at Himalaya Villas while attending events, making it ideal for destination weddings and multi-day functions without the need for external hotel arrangements."
+    },
+    {
+      q: "Can the venue handle corporate retreats?",
+      a: "Yes, the venue is well-suited for corporate meetings, leadership retreats, workshops, and team-building events in a peaceful mountain environment."
+    },
+    {
+      q: "Is full event planning support available?",
+      a: "Yes, complete event planning and coordination services are available including catering, décor, seating layout, lighting, and on-site event management support."
+    },
+  ],
+},
 };
 
 export function getBlogContent(post: VillaBlogPost): BlogContent {

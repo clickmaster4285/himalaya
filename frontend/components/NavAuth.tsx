@@ -4,6 +4,7 @@ import { useEffect, useState } from "react";
 import Link from "next/link";
 import { useRouter } from "next/navigation";
 import LoginDialog from "@/components/LoginDialog";
+import SignupDialog from "@/components/SignupDialog";
 import type { SafeUser } from "@/lib/user-public";
 import { dashboardPathForRole } from "@/lib/dashboard-nav";
 import { cn } from "@/lib/utils";
@@ -20,6 +21,8 @@ const heroAuthBar =
 export default function NavAuth({ variant = "cream" }: Props) {
   const router = useRouter();
   const [user, setUser] = useState<SafeUser | null | undefined>(undefined);
+  const [loginOpen, setLoginOpen] = useState(false);
+  const [signupOpen, setSignupOpen] = useState(false);
 
   useEffect(() => {
     let cancelled = false;
@@ -104,23 +107,49 @@ export default function NavAuth({ variant = "cream" }: Props) {
   const signUpClassCream =
     "text-[11px] tracking-[0.28em] uppercase text-neutral-700 hover:text-neutral-900";
 
+  const handleSwitchToSignup = () => {
+    setLoginOpen(false);
+    setSignupOpen(true);
+  };
+
+  const handleSwitchToLogin = () => {
+    setSignupOpen(false);
+    setLoginOpen(true);
+  };
+
   if (variant === "hero") {
     return (
       <div className={heroAuthBar}>
-        <Link href="/signup" className={signUpClassHero}>
-          Sign up
-        </Link>
-        <LoginDialog triggerClassName={signInTriggerClass} />
+        <SignupDialog
+          triggerClassName={signUpClassHero}
+          open={signupOpen}
+          onOpenChange={setSignupOpen}
+          onSwitchToLogin={handleSwitchToLogin}
+        />
+        <LoginDialog
+          triggerClassName={signInTriggerClass}
+          open={loginOpen}
+          onOpenChange={setLoginOpen}
+          onSwitchToSignup={handleSwitchToSignup}
+        />
       </div>
     );
   }
 
   return (
     <div className="flex items-center gap-2 md:gap-3">
-      <Link href="/signup" className={signUpClassCream}>
-        Sign up
-      </Link>
-      <LoginDialog triggerClassName={signInTriggerClass} />
+      <SignupDialog
+        triggerClassName={signUpClassCream}
+        open={signupOpen}
+        onOpenChange={setSignupOpen}
+        onSwitchToLogin={handleSwitchToLogin}
+      />
+      <LoginDialog
+        triggerClassName={signInTriggerClass}
+        open={loginOpen}
+        onOpenChange={setLoginOpen}
+        onSwitchToSignup={handleSwitchToSignup}
+      />
     </div>
   );
 }

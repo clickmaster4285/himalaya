@@ -9,19 +9,19 @@ import {
   DialogTitle,
   DialogTrigger,
 } from "@/components/ui/dialog";
-import LoginForm from "@/components/LoginForm";
+import SignupForm from "@/components/SignupForm";
 import { hardNavigateAfterAuth } from "@/lib/auth-redirect";
 import type { SafeUser } from "@/lib/user-public";
 
 type Props = {
   triggerClassName?: string;
   children?: React.ReactNode;
-  onSwitchToSignup?: () => void;
+  onSwitchToLogin?: () => void;
   open?: boolean;
   onOpenChange?: (open: boolean) => void;
 };
 
-export default function LoginDialog({ triggerClassName, children, onSwitchToSignup, open: openProp, onOpenChange }: Props) {
+export default function SignupDialog({ triggerClassName, children, onSwitchToLogin, open: openProp, onOpenChange }: Props) {
   const [internalOpen, setInternalOpen] = useState(false);
   const open = openProp !== undefined ? openProp : internalOpen;
   const setOpen = onOpenChange ?? setInternalOpen;
@@ -42,32 +42,33 @@ export default function LoginDialog({ triggerClassName, children, onSwitchToSign
               "px-4 py-2 text-[10px] md:text-xs font-medium tracking-wider uppercase border border-white/70 text-white hover:bg-white/10 transition-colors"
             }
           >
-            Sign in
+            Sign up
           </button>
         )}
       </DialogTrigger>
       <DialogContent className="sm:max-w-md border-[#eadfce] bg-[#fbf8f2]">
         <DialogHeader>
-          <DialogTitle className="font-display text-xl">Sign in</DialogTitle>
+          <DialogTitle className="font-display text-xl">Sign up</DialogTitle>
         </DialogHeader>
         <p className="text-xs text-neutral-500">
-          Guest account or staff login. Need an account?{" "}
-          {onSwitchToSignup ? (
+          Create a guest account to book stays and experiences. Already registered?{" "}
+          {onSwitchToLogin ? (
             <button
               type="button"
-              onClick={onSwitchToSignup}
+              onClick={onSwitchToLogin}
               className="text-[#c9a55b] underline underline-offset-2"
             >
-              Sign up
+              Sign in
             </button>
           ) : (
-            <Link href="/signup" className="text-[#c9a55b] underline underline-offset-2" onClick={() => setOpen(false)}>
-              Sign up
+            <Link href="/login" className="text-[#c9a55b] underline underline-offset-2" onClick={() => setOpen(false)}>
+              Sign in
             </Link>
           )}
         </p>
-        <LoginForm onSuccess={handleSuccess} onSwitchToSignup={onSwitchToSignup} className="pt-2" />
+        <SignupForm onSuccess={handleSuccess} onSwitchToLogin={onSwitchToLogin} className="pt-2" />
       </DialogContent>
     </Dialog>
   );
 }
+

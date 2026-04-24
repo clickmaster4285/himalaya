@@ -95,7 +95,7 @@ export default async function BlogArticlePage({ params }: Props) {
               <p className="text-[11px] uppercase tracking-[0.28em] text-[#8b6914]">
                 {post.date} · {post.readMinutes} min read
               </p>
-              <h1 className="mt-3 font-display text-4xl font-normal leading-tight text-neutral-900 md:text-5xl">
+              <h1 className="mt-3 font-display text-4xl font-bold leading-tight text-neutral-900 md:text-5xl">
                 {post.title}
               </h1>
               <p className="mt-5 text-lg leading-relaxed text-neutral-600">{post.excerpt}</p>

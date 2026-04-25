@@ -104,7 +104,7 @@ const Navbar = () => {
           <Link href="/" className="flex items-center justify-center ml-2 xl:ml-4 flex-shrink-0">
             <Image
               src={logo}
-              alt="Himalaya Villas"
+              alt="Himalaya Villas & Resorts"
               width={160}
               height={160}
               priority
@@ -122,7 +122,7 @@ const Navbar = () => {
           <Link href="/" className="flex items-center justify-center">
             <Image
               src={logo}
-              alt="Himalaya Villas"
+              alt="Himalaya Villas & Resorts"
               width={160}
               height={160}
               priority

@@ -76,7 +76,7 @@ const PhilosophySection = () => {
             transition={{ duration: 0.8, delay: 0.5 }}
             className="text-base md:text-lg leading-relaxed text-muted-foreground max-w-lg"
           >
-            Himalaya Villas exists for guests who no longer need to be impressed — they need to be restored.
+            Himalaya Villas & Resorts exists for guests who no longer need to be impressed — they need to be restored.
           </motion.p>
 
           <motion.p
@@ -143,7 +143,7 @@ const PhilosophySection = () => {
               >
                 <Image
                   src={philosophyImages[imgIndex]}
-                  alt="Himalaya Villas luxury experience"
+                  alt="Himalaya Villas & Resorts luxury experience"
                   fill
                   sizes="(max-width: 1024px) 100vw, 50vw"
                   className="object-cover"

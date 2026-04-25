@@ -456,7 +456,7 @@ export default function DestinationWeddingFlow() {
                         <p className="text-[12px] font-medium text-neutral-800 mb-3">Bank Details:</p>
                         {[
                           ["Bank Name", "Himalaya Hotel Ltd"],
-                          ["Account Title", "Himalaya Villas"],
+                          ["Account Title", "Himalaya Villas & Resorts"],
                           ["Account Number", "1234567890"],
                           ["IBAN", "PK123HIMA0001234567890"],
                         ].map(([k, v]) => (
@@ -521,7 +521,7 @@ export default function DestinationWeddingFlow() {
                       <h2 className="mt-8 font-display text-4xl md:text-[44px] italic text-neutral-800">
                         Booking Request Received!
                       </h2>
-                      <p className="mt-3 text-[13px] text-neutral-600">Thank you for choosing Himalaya Villas</p>
+                      <p className="mt-3 text-[13px] text-neutral-600">Thank you for choosing Himalaya Villas & Resorts</p>
                       <div className="mt-6 inline-block rounded-md bg-[#1a1d1a] px-6 py-2.5">
                         <span className="text-[11px] text-white tracking-wide">
                           Booking Reference: {bookingRef}

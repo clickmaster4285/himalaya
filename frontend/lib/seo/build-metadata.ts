@@ -20,7 +20,7 @@ export type PageSeoInput = {
   noindex?: boolean;
   /**
    * When false, title is emitted as-is (already branded).
-   * Default true appends `| Himalaya Villas` when title has no Himalaya token.
+   * Default true appends `| Himalaya Villas & Resorts` when title has no Himalaya token.
    */
   appendSiteBrand?: boolean;
 };
@@ -33,7 +33,7 @@ function resolveImageUrl(src: string): string {
 function formatTitle(title: string, appendSiteBrand: boolean): string {
   if (!appendSiteBrand) return title;
   if (/himalaya/i.test(title)) return title;
-  return `${title} | Himalaya Villas`;
+  return `${title} | Himalaya Villas & Resorts`;
 }
 
 /**
@@ -54,7 +54,7 @@ export function createPageMetadata(input: PageSeoInput): Metadata {
     title: input.title,
     description: input.description,
     url: canonical,
-    siteName: "Himalaya Villas",
+    siteName: "Himalaya Villas & Resorts",
     locale: "en_PK",
     type: input.ogType === "article" ? "article" : "website",
     images: ogImages,

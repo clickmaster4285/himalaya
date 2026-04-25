@@ -64,7 +64,7 @@ export const VILLA_BLOG_POSTS: VillaBlogPost[] = [
     href: "/thing-to-do-bhurban-murree",
     title: "Things to Do Near Bhurban Murree — A Complete Activity Guide",
     excerpt:
-      "Patriata, Ayubia, Mall Road, hiking trails, and scenic viewpoints — the essential travel guide for families and guests staying at Himalaya Villas.",
+      "Patriata, Ayubia, Mall Road, hiking trails, and scenic viewpoints — the essential travel guide for families and guests staying at Himalaya Villas & Resorts.",
     date: "2026-04-11",
     readMinutes: 10,
     coverImage: "/assets/blog-bhurban-things-to-do-featured-v2.png",
@@ -82,7 +82,7 @@ export const VILLA_BLOG_POSTS: VillaBlogPost[] = [
   {
     slug: "family-tour-murree-himalaya-villas",
     href: "/family-tour-murree-himalaya-villas",
-    title: "Why Himalaya Villas & Resorts in Murree Are Best for a Family Tour",
+    title: "Why Himalaya Villas & Resorts & Resorts in Murree Are Best for a Family Tour",
     excerpt:
       "Planning a family tour to Murree or Bhurban? Discover why Himalaya Premium Villas is the perfect family stay — private, safe, spacious & activities for all ages.",
     date: "2026-04-18",
@@ -174,9 +174,9 @@ export const VILLA_BLOG_POSTS: VillaBlogPost[] = [
 },
 {
   slug: "himalaya-villas-function-hall-bhurban-murree",
-  title: "Himalaya Villas Function Hall in Bhurban Murree",
+  title: "Himalaya Villas & Resorts Function Hall in Bhurban Murree",
   excerpt:
-    "A premium event space at Himalaya Villas Bhurban — ideal for weddings, corporate events, private gatherings, and luxury mountain celebrations.",
+    "A premium event space at Himalaya Villas & Resorts Bhurban — ideal for weddings, corporate events, private gatherings, and luxury mountain celebrations.",
   date: "2026-04-24",
   readMinutes: 10,
   coverImage: "/assets/himalaya-villas-function-hall.png",
@@ -192,9 +192,9 @@ export const VILLA_BLOG_POSTS: VillaBlogPost[] = [
 },
 {
   slug: "events-venue-himalaya-villas-murree-bhurban",
-  title: "Events Venue at Himalaya Villas Murree & Bhurban",
+  title: "Events Venue at Himalaya Villas & Resorts Murree & Bhurban",
   excerpt:
-    "Premium event venue at Himalaya Villas offering wedding, corporate, and private event hosting in the heart of Bhurban Murree.",
+    "Premium event venue at Himalaya Villas & Resorts offering wedding, corporate, and private event hosting in the heart of Bhurban Murree.",
   date: "2026-04-24",
   readMinutes: 10,
   coverImage: "/assets/himalaya-events-venue.png",

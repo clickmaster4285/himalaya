@@ -4,6 +4,8 @@ import Image from "next/image";
 import { useRef, useState, useEffect } from "react";
 import { motion, useInView, AnimatePresence } from "framer-motion";
 import { Mountain, Building2, PartyPopper, ShieldCheck, BedDouble, Heart, Settings } from "lucide-react";
+import { useRouter } from "next/navigation";
+
 
 const bgImages = [
   "/assets/why-villa-private.jpg",
@@ -37,6 +39,7 @@ const features = [
     icon: Heart,
     title: "Ideal for Destination Weddings",
     description: "A magical mountain backdrop for your dream wedding celebration.",
+     link: "/wedding-venue-near-islamabad",
   },
   {
     icon: Settings,
@@ -46,6 +49,10 @@ const features = [
 ];
 
 const WhyChooseSection = () => {
+
+  const router = useRouter();
+
+
   const ref = useRef(null);
   const isInView = useInView(ref, { once: true, margin: "-80px" });
   const [bgIndex, setBgIndex] = useState(0);
@@ -96,7 +103,7 @@ const WhyChooseSection = () => {
           <h2 className="font-display text-4xl md:text-5xl lg:text-6xl font-normal italic text-primary-foreground">
             Why Guests Choose
             <br />
-            Himalaya Villas
+            Himalaya Villas & Resorts
           </h2>
         </motion.div>
 
@@ -110,6 +117,7 @@ const WhyChooseSection = () => {
                 initial={{ opacity: 0, y: 40 }}
                 animate={isInView ? { opacity: 1, y: 0 } : {}}
                 transition={{ duration: 0.7, delay: 0.2 + i * 0.1 }}
+                 onClick={() => feature.link && router.push(feature.link)}
                 className="group text-center px-4"
               >
                 {/* Icon */}

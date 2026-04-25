@@ -29,7 +29,7 @@ export default function SignupClient({ onSwitchToLogin }: Props) {
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: dur * 0.85, delay: reduce ? 0 : 0.05, ease }}
           >
-            Himalaya Villas
+            Himalaya Villas & Resorts
           </motion.p>
           <motion.h1
             className="font-display mt-2 text-[2rem] font-bold leading-tight tracking-tight text-[#1a1816] md:text-[2.35rem]"

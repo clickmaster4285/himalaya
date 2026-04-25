@@ -1,5 +1,5 @@
 export default function Head() {
-  const title = "Book Luxury Villa Stay in Bhurban | Himalaya Villas";
+  const title = "Book Luxury Villa Stay in Bhurban | Himalaya Villas & Resorts";
   const description =
     "Reserve your luxury villa stay in Bhurban Murree with secure booking, date selection, guest details, and premium private accommodation options.";
   const url = "https://himalayavillas.com/book/stay";

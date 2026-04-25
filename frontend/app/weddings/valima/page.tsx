@@ -110,7 +110,7 @@ export default function ValimaPage() {
       <section className="py-16 md:py-20 bg-white">
         <div className="mx-auto max-w-7xl px-6 grid lg:grid-cols-2 gap-10 items-center">
           <div>
-            <h2 className="font-display text-3xl md:text-4xl text-neutral-900">Why Valima at Himalaya Villas</h2>
+            <h2 className="font-display text-3xl md:text-4xl text-neutral-900">Why Valima at Himalaya Villas & Resorts</h2>
             <ul className="mt-6 space-y-3">
               {benefits.map((item) => (
                 <li key={item} className="flex items-start gap-3 text-sm text-neutral-700">

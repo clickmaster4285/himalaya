@@ -83,7 +83,7 @@ function defaults(): Required<
   Pick<HimalayaJsonLdConfig, "searchUrlTemplate"> {
   return {
     organizationName: "Himalaya Premium Villas",
-    siteName: "Himalaya Villas",
+    siteName: "Himalaya Villas & Resorts",
     telephone: SITE_CONTACT.phoneDisplay,
     bookingPath: "/book",
     contactPath: "/contact",

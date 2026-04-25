@@ -19,7 +19,7 @@ const Footer = () => {
           className="font-display text-[30px] md:text-[60px] lg:text-[90px] tracking-[0.2em] uppercase whitespace-nowrap translate-y-6 md:translate-y-10"
           style={{ color: "hsl(0 0% 100% / 0.04)" }}
         >
-          HIMALAYA VILLAS
+          Himalaya Villas & Resorts
         </span>
       </div>
       <div className="relative max-w-6xl mx-auto">
@@ -31,7 +31,7 @@ const Footer = () => {
               className="inline-block font-display text-lg tracking-[0.15em] uppercase mb-4 hover:opacity-90"
               style={{ color: "hsl(36 45% 55%)" }}
             >
-              Himalaya Villas
+              Himalaya Villas & Resorts
             </Link>
             <p
               className="text-sm leading-relaxed font-body"
@@ -57,7 +57,8 @@ const Footer = () => {
                 { label: "Our Villas", href: "/villas" },
                 { label: "Experiences", href: "/experience" },
                 { label: "Dining", href: "/book/dining" },
-                { label: "Blog", href: "/blogs" },
+                  { label: "Blog", href: "/blogs" },
+                    { label: "Best Hotels in Murree", href: "/best-hotels-murree-pakistan" },
               ].map((item) => (
                 <li key={item.label}>
                   <Link
@@ -124,7 +125,7 @@ const Footer = () => {
                     href="https://www.youtube.com/@HimalayaVillasBhurban"
                     target="_blank"
                     rel="noopener noreferrer"
-                    aria-label="Himalaya Villas YouTube"
+                    aria-label="Himalaya Villas & Resorts YouTube"
                     className="inline-flex h-9 w-9 items-center justify-center rounded-full border border-white/25 text-white/80 transition hover:border-white/60 hover:text-white"
                   >
                     <svg viewBox="0 0 24 24" className="h-4 w-4 fill-current" aria-hidden="true">
@@ -135,7 +136,7 @@ const Footer = () => {
                     href="https://www.instagram.com/himalayavillas/"
                     target="_blank"
                     rel="noopener noreferrer"
-                    aria-label="Himalaya Villas Instagram"
+                    aria-label="Himalaya Villas & Resorts Instagram"
                     className="inline-flex h-9 w-9 items-center justify-center rounded-full border border-white/25 text-white/80 transition hover:border-white/60 hover:text-white"
                   >
                     <svg viewBox="0 0 24 24" className="h-4 w-4 fill-current" aria-hidden="true">
@@ -193,7 +194,7 @@ const Footer = () => {
             className="text-xs font-body"
             style={{ color: "hsl(0 0% 100% / 0.35)" }}
           >
-            Himalaya Villas 2026. All rights reserved.
+            Himalaya Villas & Resorts 2026. All rights reserved.
           </p>
           <div className="flex gap-4 items-center">
             <Link href="/" aria-label="Go to homepage" className="text-xs font-body" style={{ color: "hsl(0 0% 100% / 0.35)" }}>

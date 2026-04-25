@@ -6,11 +6,11 @@ export type UniversalFaq = {
 export const UNIVERSAL_FAQS: UniversalFaq[] = [
   {
     q: "What is special in Bhurban?",
-    a: "Bhurban sits high in the Murree Hills with pine forests, cool climate, and panoramic mountain views. Its biggest advantage is premium privacy close to Islamabad. Himalaya Villas offers a private villa-style experience instead of crowded hotel-floor travel. For bookings and personalized arrangements, contact us on WhatsApp: +92 304 567 9000.",
+    a: "Bhurban sits high in the Murree Hills with pine forests, cool climate, and panoramic mountain views. Its biggest advantage is premium privacy close to Islamabad. Himalaya Villas & Resorts offers a private villa-style experience instead of crowded hotel-floor travel. For bookings and personalized arrangements, contact us on WhatsApp: +92 304 567 9000.",
   },
   {
     q: "What is Bhurban known for?",
-    a: "Bhurban is known for scenic hill landscapes, cooler weather, and premium mountain stays in the Murree region. Travelers choose it for family trips, couple escapes, and curated private retreats away from city pressure. Himalaya Villas is known for private accommodation and tailored guest support. Enquire on WhatsApp: +92 304 567 9000.",
+    a: "Bhurban is known for scenic hill landscapes, cooler weather, and premium mountain stays in the Murree region. Travelers choose it for family trips, couple escapes, and curated private retreats away from city pressure. Himalaya Villas & Resorts is known for private accommodation and tailored guest support. Enquire on WhatsApp: +92 304 567 9000.",
   },
   {
     q: "What is the best time to visit Bhurban?",
@@ -26,7 +26,7 @@ export const UNIVERSAL_FAQS: UniversalFaq[] = [
   },
   {
     q: "Is Bhurban safe for families and guests?",
-    a: "Yes, Bhurban is generally considered safe for family travel and premium leisure stays. The area supports regular tourism and hospitality infrastructure, and private villa environments add another layer of comfort and control. At Himalaya Villas, on-property staff and support remain available throughout stay periods. Safety support: +92 304 567 9000.",
+    a: "Yes, Bhurban is generally considered safe for family travel and premium leisure stays. The area supports regular tourism and hospitality infrastructure, and private villa environments add another layer of comfort and control. At Himalaya Villas & Resorts, on-property staff and support remain available throughout stay periods. Safety support: +92 304 567 9000.",
   },
   {
     q: "Which city is Bhurban near?",
@@ -34,7 +34,7 @@ export const UNIVERSAL_FAQS: UniversalFaq[] = [
   },
   {
     q: "What dining options are available at luxury Bhurban resorts?",
-    a: "Premium Bhurban stays usually offer private-style dining options including breakfast, lunch, and curated dinner experiences. At Himalaya Villas, guests can request mountain-view meals and customized planning based on stay profile. All menus are halal-oriented and can be adjusted for guest preferences. Dining enquiries: +92 304 567 9000.",
+    a: "Premium Bhurban stays usually offer private-style dining options including breakfast, lunch, and curated dinner experiences. At Himalaya Villas & Resorts, guests can request mountain-view meals and customized planning based on stay profile. All menus are halal-oriented and can be adjusted for guest preferences. Dining enquiries: +92 304 567 9000.",
   },
   {
     q: "What are the top-rated resorts in Bhurban?",
@@ -153,7 +153,7 @@ export const UNIVERSAL_FAQS: UniversalFaq[] = [
     a: "OTA platforms help with discovery, but direct booking often gives better coordination for preferences, dietary needs, and date flexibility. Compare both, then finalize through the most practical channel.",
   },
   {
-    q: "Where can I find contact and reservation details for Himalaya Villas?",
+    q: "Where can I find contact and reservation details for Himalaya Villas & Resorts?",
     a: "For reservations and support, use WhatsApp +92 304 567 9000, contact form channels, or direct booking communication. Sharing dates and guest count first improves response speed and accuracy.",
   },
 ];
@@ -226,7 +226,7 @@ const FAQ_SET_BY_PATH: Record<string, string[]> = {
     "Are there resorts in Bhurban with adventure sports support?",
   ],
   contact: [
-    "Where can I find contact and reservation details for Himalaya Villas?",
+    "Where can I find contact and reservation details for Himalaya Villas & Resorts?",
     "Can I arrange airport transfer to Bhurban resorts?",
     "What transport options are available from Lahore to Bhurban?",
     "How do I reach Bhurban from Islamabad?",

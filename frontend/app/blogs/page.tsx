@@ -10,9 +10,9 @@ export const dynamic = "force-dynamic";
 export const metadata: Metadata = createPageMetadata({
   title: "Journal — villa stories & Bhurban guides",
   description:
-    "Guides and stories from Himalaya Villas: Bhurban travel, luxury villa life, Murree hills, family stays, and estate notes for discerning guests.",
+    "Guides and stories from Himalaya Villas & Resorts: Bhurban travel, luxury villa life, Murree hills, family stays, and estate notes for discerning guests.",
   path: "/blogs",
-  keywords: ["Himalaya Villas blog", "Bhurban Murree guide", "luxury villa Pakistan", "mountain journal"],
+  keywords: ["Himalaya Villas & Resorts blog", "Bhurban Murree guide", "luxury villa Pakistan", "mountain journal"],
   ogImage: "/assets/journal-group-new.jpg",
 });
 

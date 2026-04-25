@@ -10,7 +10,7 @@ export const dynamic = "force-dynamic";
 export const metadata: Metadata = createPageMetadata({
   title: "Journal | Mountain Stories & Retreat Insights",
   description:
-    "Read curated journal entries from Himalaya Villas featuring mountain lifestyle notes, retreat inspiration, and premium Bhurban stay insights.",
+    "Read curated journal entries from Himalaya Villas & Resorts featuring mountain lifestyle notes, retreat inspiration, and premium Bhurban stay insights.",
   path: "/journal",
   keywords: ["Himalaya Journal", "Bhurban mountain stories", "retreat insights", "luxury villa journal"],
   ogImage: "/assets/journal-group-new.jpg",

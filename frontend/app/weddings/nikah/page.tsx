@@ -62,7 +62,7 @@ export default function NikahPage() {
             <Image
               key={slide}
               src={slide}
-              alt="Nikah setup at Himalaya Villas"
+              alt="Nikah setup at Himalaya Villas & Resorts"
               fill
               priority={idx === 0}
               sizes="100vw"

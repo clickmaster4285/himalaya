@@ -19,7 +19,7 @@ export default function FAQSection() {
               Frequently Asked Questions
             </p>
             <h2 className="font-display text-4xl md:text-5xl font-normal leading-tight mb-8">
-              What to Expect at <span className="italic text-[hsl(var(--primary))]">Himalaya Villas</span>
+              What to Expect at <span className="italic text-[hsl(var(--primary))]">Himalaya Villas & Resorts</span>
             </h2>
             <div className="space-y-2 hidden lg:block">
               {faqData.map((section, index) => (

@@ -143,7 +143,7 @@ export default function DashboardShell({ title, links, children }: Props) {
         {/* Mobile top bar */}
         <header className="flex items-center justify-between border-b border-[#1f1a15] bg-gradient-to-r from-[#1c1814] via-[#252018] to-[#1c1814] px-4 py-3.5 shadow-[0_4px_24px_-4px_rgba(0,0,0,0.35)] md:hidden">
           <div>
-            <p className="font-display text-[10px] font-semibold uppercase tracking-[0.28em] text-[#d4b87a]">Himalaya Villas</p>
+            <p className="font-display text-[10px] font-semibold uppercase tracking-[0.28em] text-[#d4b87a]">Himalaya Villas & Resorts</p>
             <p className="font-display text-lg font-semibold leading-tight text-[#faf6f0]">{title}</p>
           </div>
           <motion.button
@@ -193,7 +193,7 @@ export default function DashboardShell({ title, links, children }: Props) {
           <div className="relative z-10 flex flex-1 flex-col border-r border-[#3d342c]/80">
             <div className="px-7 pb-4 pt-10">
               <motion.div initial={reduceMotion ? false : { opacity: 0, y: -8 }} animate={{ opacity: 1, y: 0 }} transition={{ duration: 0.45, ease: [0.22, 1, 0.36, 1] }}>
-                <p className="font-display text-[10px] font-semibold uppercase tracking-[0.32em] text-[#d4b87a]">Himalaya Villas</p>
+                <p className="font-display text-[10px] font-semibold uppercase tracking-[0.32em] text-[#d4b87a]">Himalaya Villas & Resorts</p>
                 <h1 className="font-display mt-2.5 text-[1.4rem] font-semibold leading-snug tracking-tight text-[#fdf9f3]">{title}</h1>
                 <p className="mt-2 font-sans text-[12px] font-medium leading-relaxed text-[#9a8b7c]">Estate dashboard</p>
               </motion.div>

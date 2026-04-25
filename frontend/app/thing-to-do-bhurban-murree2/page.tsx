@@ -6,22 +6,22 @@ import Link from "next/link";
 import { ArrowLeft } from "lucide-react";
 
 export const metadata: Metadata = {
-  title: "Things to Do Near Bhurban Murree | Complete Travel & Activity Guide | Himalaya Villas",
+  title: "Things to Do Near Bhurban Murree | Complete Travel & Activity Guide | Himalaya Villas & Resorts",
   description:
-    "Discover the best things to do near Bhurban Murree, including Patriata, Ayubia, Mall Road, hiking trails, and scenic viewpoints. Perfect travel guide for families and tourists staying at Himalaya Villas.",
+    "Discover the best things to do near Bhurban Murree, including Patriata, Ayubia, Mall Road, hiking trails, and scenic viewpoints. Perfect travel guide for families and tourists staying at Himalaya Villas & Resorts.",
   keywords: [
     "Things to do in Bhurban Murree",
     "Bhurban Murree activities",
     "Patriata chairlift",
     "Ayubia National Park",
     "Mall Road Murree",
-    "Himalaya Villas Bhurban",
+    "Himalaya Villas & Resorts Bhurban",
   ],
   alternates: {
     canonical: "/thing-to-do-bhurban-murree2",
   },
   openGraph: {
-    title: "Things to Do Near Bhurban Murree | Complete Travel & Activity Guide | Himalaya Villas",
+    title: "Things to Do Near Bhurban Murree | Complete Travel & Activity Guide | Himalaya Villas & Resorts",
     description:
       "Discover the best things to do near Bhurban Murree, including Patriata, Ayubia, Mall Road, hiking trails, and scenic viewpoints.",
     url: "/thing-to-do-bhurban-murree2",
@@ -269,9 +269,9 @@ export default function ThingToDoBhurbanMurree2Page() {
             </section>
 
             <section>
-              <h2 className="mb-4 font-display text-2xl font-semibold text-[#1A1A1A]">10. Relax in Luxury at Himalaya Villas</h2>
+              <h2 className="mb-4 font-display text-2xl font-semibold text-[#1A1A1A]">10. Relax in Luxury at Himalaya Villas & Resorts</h2>
               <p className="leading-relaxed text-slate-700">
-                Sometimes, the best experience is simply to unwind in a private, luxury setting. At Himalaya Villas, you can:
+                Sometimes, the best experience is simply to unwind in a private, luxury setting. At Himalaya Villas & Resorts, you can:
               </p>
               <ul className="mt-4 list-disc space-y-2 pl-6 text-slate-700">
                 <li>Enjoy peaceful, exclusive surroundings</li>
@@ -295,7 +295,7 @@ export default function ThingToDoBhurbanMurree2Page() {
                 and exploration to relaxation and luxury, there’s something for every traveler.
               </p>
               <p className="mt-4 leading-relaxed text-slate-700 m-0">
-                Plan your stay at Himalaya Villas and discover Bhurban in a way that is comfortable, memorable, and truly premium.
+                Plan your stay at Himalaya Villas & Resorts and discover Bhurban in a way that is comfortable, memorable, and truly premium.
               </p>
             </section>
 

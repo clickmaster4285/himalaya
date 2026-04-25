@@ -13,12 +13,12 @@ import "./globals.css";
 export const dynamic = "force-dynamic";
 
 export const metadata: Metadata = createPageMetadata({
-  title: "Events & Experiences | Himalaya Villas",
+  title: "Events & Experiences | Himalaya Villas & Resorts",
   description:
-    "Host weddings, corporate retreats, and social celebrations at Himalaya Villas with curated decor, premium hospitality, and mountain views.",
+    "Host weddings, corporate retreats, and social celebrations at Himalaya Villas & Resorts with curated decor, premium hospitality, and mountain views.",
   path: "/events",
   keywords: [
-    "events Himalaya Villas",
+    "events Himalaya Villas & Resorts",
     "wedding venues Bhurban",
     "nikah venue Murree",
     "destination events Pakistan",
@@ -198,42 +198,42 @@ const eventSections = [
         title: "Milestone Birthdays",
         description: "Theme-based birthday celebrations for all age groups.",
         badge: "Popular",
-        href: "/events",
+        href: "/family-celebrations/milestone",
       },
       {
         id: 20,
         title: "Eid Gatherings & Family Reunions",
         description: "Large family experiences with full-villa coordination.",
         badge: "Festive",
-        href: "/events",
+        href: "/family-celebrations/eid-gathering",
       },
       {
         id: 21,
         title: "Baby Showers & Gender Reveal",
         description: "Soft floral themes and delightful family-focused arrangements.",
         badge: "Family",
-        href: "/events",
+        href: "/family-celebrations/baby-shower",
       },
       {
         id: 22,
         title: "Graduation Parties",
         description: "Celebrate big achievements with stylish event staging.",
         badge: "Youth",
-        href: "/events",
+        href: "/family-celebrations/graduation",
       },
       {
         id: 23,
         title: "Retirement Celebrations",
         description: "Dignified events for honoring long professional journeys.",
         badge: "Respect",
-        href: "/events",
+        href: "/family-celebrations/retirment",
       },
       {
         id: 24,
         title: "Farewells & Send-offs",
         description: "Warm and memorable setups for meaningful goodbyes.",
         badge: "Moments",
-        href: "/events",
+        href: "/family-celebrations/farewells",
       },
     ],
   },
@@ -366,7 +366,7 @@ const process = [
 const eventsJsonLd = {
   "@context": "https://schema.org",
   "@type": "WebPage",
-  name: "Events and Experiences at Himalaya Villas",
+  name: "Events and Experiences at Himalaya Villas & Resorts",
   description: "Luxury destination events and wedding experiences in Bhurban",
   url: absoluteUrl("/events"),
 };
@@ -379,7 +379,7 @@ export default function EventsPage() {
      {/* Hero Section - Left Aligned with Card Width */}
 {/* Hero Section - Left aligned content with form on right */}
 <section className="relative min-h-[780px] w-full overflow-hidden">
-  <EventsHeroSlider alt="Luxury events at Himalaya Villas" priority />
+  <EventsHeroSlider alt="Luxury events at Himalaya Villas & Resorts" priority />
   <div className="absolute inset-0 bg-black/50" aria-hidden="true" />
 
   <Navbar />

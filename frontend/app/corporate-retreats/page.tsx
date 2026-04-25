@@ -94,7 +94,7 @@ export default function CorporateRetreatsPage() {
             service recommendations.
           </p>
           <a
-            href={buildWhatsAppBookingUrl("a corporate retreat at Himalaya Villas")}
+            href={buildWhatsAppBookingUrl("a corporate retreat at Himalaya Villas & Resorts")}
             target="_blank"
             rel="noopener noreferrer"
             className="mt-5 inline-flex items-center justify-center bg-neutral-900 px-6 py-3 text-[11px] font-semibold uppercase tracking-[0.2em] text-white hover:bg-neutral-800"

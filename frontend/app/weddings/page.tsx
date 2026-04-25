@@ -497,7 +497,7 @@ export default function WeddingsPage() {
           </p>
           <div className="mt-8 flex flex-wrap gap-4 justify-center">
             <a
-              href={buildWhatsAppBookingUrl("a destination wedding at Himalaya Villas")}
+              href={buildWhatsAppBookingUrl("a destination wedding at Himalaya Villas & Resorts")}
               target="_blank"
               rel="noopener noreferrer"
               className="px-8 py-4 rounded-full bg-white text-neutral-900 font-semibold hover:bg-neutral-100 transition shadow-xl"

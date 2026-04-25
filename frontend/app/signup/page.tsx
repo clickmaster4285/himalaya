@@ -10,7 +10,7 @@ export default function SignupPage() {
           href="/"
           className="font-sans text-[12px] font-semibold uppercase tracking-[0.2em] text-[#e8dfd0] transition-colors hover:text-white"
         >
-          ← Himalaya Villas
+          ← Himalaya Villas & Resorts
         </Link>
       }
       headerEnd={

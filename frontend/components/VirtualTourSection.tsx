@@ -64,7 +64,7 @@ export default function VirtualTourSection({ tourUrl }: Props) {
               <div className="relative aspect-[16/9] w-full overflow-hidden rounded-2xl border border-white/10 bg-[#0b0f0d]">
                 {src ? (
                   <iframe
-                    title="Himalaya Villas 3D tour"
+                    title="Himalaya Villas & Resorts 3D tour"
                     src={src}
                     className="absolute inset-0 h-full w-full"
                     allow="fullscreen; xr-spatial-tracking; accelerometer; gyroscope; autoplay; clipboard-write"

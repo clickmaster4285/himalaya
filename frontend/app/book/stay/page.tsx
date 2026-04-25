@@ -1034,7 +1034,7 @@ function BookStayContent() {
                       <div className="mt-6 space-y-3 rounded-xl border-2 border-[#dccfb8] bg-[#faf8f4] px-5 py-5 sm:px-6">
                         {[
                           ["Bank name", "Himalaya Bank Ltd"],
-                          ["Account title", "Himalaya Villas"],
+                          ["Account title", "Himalaya Villas & Resorts"],
                           ["Account number", "1234567890"],
                           ["IBAN", "PK12HIMA0001234567890"],
                         ].map(([k, v]) => (
@@ -1123,7 +1123,7 @@ function BookStayContent() {
                         Request received
                       </h2>
                       <p className="mt-3 text-[13px] text-neutral-600">
-                        Thank you for choosing Himalaya Villas. Your booking is{" "}
+                        Thank you for choosing Himalaya Villas & Resorts. Your booking is{" "}
                         <strong>{createdBooking?.status === "CONFIRMED" ? "confirmed" : "pending review"}</strong>.
                         {createdBooking?.status !== "CONFIRMED" ? (
                           <>
@@ -1447,7 +1447,7 @@ function BookStayFallback() {
       <div className="mx-auto max-w-5xl">
         <h1 className="font-display text-4xl text-neutral-900 md:text-5xl">Book Your Stay</h1>
         <p className="mt-3 max-w-3xl text-neutral-700">
-          Plan your stay at Himalaya Villas. Choose your villa, select dates, and complete your reservation details.
+          Plan your stay at Himalaya Villas & Resorts. Choose your villa, select dates, and complete your reservation details.
         </p>
         <div className="mt-8 rounded-lg border border-[#eadfce] bg-white p-6">
           <h2 className="text-xl font-semibold text-neutral-900">Available villas</h2>

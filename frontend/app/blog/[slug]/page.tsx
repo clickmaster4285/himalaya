@@ -38,7 +38,7 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
     title: post.title,
     description: post.excerpt,
     path,
-    keywords: ["Himalaya Villas", "Bhurban", "Murree", "luxury villa", post.slug.replace(/-/g, " ")],
+    keywords: ["Himalaya Villas & Resorts", "Bhurban", "Murree", "luxury villa", post.slug.replace(/-/g, " ")],
     ogImage: post.coverImage,
     ogType: "article",
     publishedTime: `${post.date}T12:00:00+05:00`,

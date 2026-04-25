@@ -421,7 +421,7 @@ export default function DiningExperienceFlow() {
                       <div className="mt-6 border border-[#eadfce] bg-[#f5f0e6] px-6 py-5 space-y-2">
                         {[
                           ["Bank Name", "Himalaya Bank Ltd"],
-                          ["Account Title", "Himalaya Villas"],
+                          ["Account Title", "Himalaya Villas & Resorts"],
                           ["Account Number", "1234567890"],
                           ["IBAN", "PK12HIMA0001234567890"],
                         ].map(([k, v]) => (
@@ -486,7 +486,7 @@ export default function DiningExperienceFlow() {
                       <h2 className="mt-8 font-display text-4xl md:text-[44px] italic text-neutral-800">
                         Booking Request Received!
                       </h2>
-                      <p className="mt-3 text-[13px] text-neutral-600">Thank you for choosing Himalaya Villas</p>
+                      <p className="mt-3 text-[13px] text-neutral-600">Thank you for choosing Himalaya Villas & Resorts</p>
                       <div className="mt-6 inline-block rounded-sm bg-[#1a1d1b] px-6 py-2.5">
                         <span className="text-[11px] text-white tracking-wide">Booking Reference: {bookingRef}</span>
                       </div>

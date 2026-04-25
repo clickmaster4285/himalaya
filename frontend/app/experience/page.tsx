@@ -14,7 +14,7 @@ export const dynamic = "force-dynamic";
 export const metadata: Metadata = createPageMetadata({
   title: "Things to Do in Bhurban Murree | Luxury Experience Guide",
   description:
-    "Discover top things to do in Bhurban Murree including hiking, viewpoints, dining, family activities, and curated villa experiences near Himalaya Villas.",
+    "Discover top things to do in Bhurban Murree including hiking, viewpoints, dining, family activities, and curated villa experiences near Himalaya Villas & Resorts.",
   path: "/experience",
   keywords: [
     "things to do in Bhurban Murree",
@@ -88,7 +88,7 @@ export default async function ExperiencePage() {
                 <div className="relative aspect-[4/3] w-full">
                   <Image
                     src={symphonyImg}
-                    alt="Himalaya Villas philosophy interior design"
+                    alt="Himalaya Villas & Resorts philosophy interior design"
                     fill
                     sizes="(max-width: 640px) 90vw, (max-width: 1024px) 80vw, 520px"
                     className="object-cover"
@@ -101,7 +101,7 @@ export default async function ExperiencePage() {
             {/* Text Content */}
             <div className="order-1 lg:order-2 text-center lg:text-left">
               <p className="text-[9px] sm:text-[10px] uppercase tracking-[0.28em] text-neutral-500">
-                Himalaya Villas
+                Himalaya Villas & Resorts
               </p>
               <h2 className="mt-3 sm:mt-4 md:mt-5 font-display text-2xl sm:text-3xl md:text-4xl text-neutral-900 leading-tight">
                 A Symphony of <span className="italic text-[#c9a55b]">Nature</span> &amp;{" "}
@@ -248,7 +248,7 @@ export default async function ExperiencePage() {
       <section className="relative h-[350px] sm:h-[400px] md:h-[460px] lg:h-[520px] overflow-hidden">
         <Image
           src={journeyBg}
-          alt="Begin your journey at Himalaya Villas"
+          alt="Begin your journey at Himalaya Villas & Resorts"
           fill
           sizes="100vw"
           className="object-cover object-center"

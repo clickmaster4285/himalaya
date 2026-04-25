@@ -29,7 +29,7 @@ export async function generateMetadata({ params }: VillasDetailPageProps): Promi
     title: `${villa.title} — Private villa, Bhurban`,
     description: villa.description,
     path: `/villas/${slug}`,
-    keywords: [...villa.amenities.slice(0, 12), "Himalaya Villas", "Bhurban", "Murree"],
+    keywords: [...villa.amenities.slice(0, 12), "Himalaya Villas & Resorts", "Bhurban", "Murree"],
     ogImage: getValidImageSrc(villa.image),
   });
 }

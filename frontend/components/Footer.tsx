@@ -26,13 +26,13 @@ const Footer = () => {
         <div className="grid grid-cols-1 md:grid-cols-4 gap-12 md:gap-8">
           {/* Logo & Tagline */}
           <div className="md:col-span-1">
-            <Link
-              href="/"
-              className="inline-block font-display text-lg tracking-[0.15em] uppercase mb-4 hover:opacity-90"
-              style={{ color: "hsl(36 45% 55%)" }}
-            >
-              Himalaya Villas & Resorts
-            </Link>
+           <Link
+    href="/"
+    className="inline-block font-display font-bold text-[13px] md:text-[14px] tracking-[0.15em] uppercase mb-4 hover:opacity-90 whitespace-nowrap"
+    style={{ color: "hsl(36 45% 55%)" }}
+>
+    Himalaya Villas & Resorts
+</Link>
             <p
               className="text-sm leading-relaxed font-body"
               style={{ color: "hsl(0 0% 100% / 0.5)" }}

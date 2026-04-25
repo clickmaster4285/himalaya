@@ -540,9 +540,7 @@ export default function DiningExperienceFlow() {
                     </div>
 
                     <div className="mt-10 flex justify-center">
-                      <Link href="/book" className="text-[11px] uppercase tracking-widest text-neutral-600 hover:underline">
-                        Back to Book Now
-                      </Link>
+                      <Link href="/book-now">Back to Book Now</Link>
                     </div>
                   </div>
                 )}

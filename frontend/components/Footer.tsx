@@ -212,18 +212,25 @@ const Footer = () => {
           </div>
           <div className="flex gap-6">
             <Link
-              href="/contact"
+              href="/privacy-policy"
               className="text-xs font-body transition-opacity hover:opacity-100"
               style={{ color: "hsl(0 0% 100% / 0.35)" }}
             >
               Privacy Policy
             </Link>
             <Link
-              href="/contact"
+              href="/refund-policy"
               className="text-xs font-body transition-opacity hover:opacity-100"
               style={{ color: "hsl(0 0% 100% / 0.35)" }}
             >
-              Terms of Service
+              Refund Policy
+            </Link>
+            <Link
+              href="/terms-and-conditions"
+              className="text-xs font-body transition-opacity hover:opacity-100"
+              style={{ color: "hsl(0 0% 100% / 0.35)" }}
+            >
+              Terms & Conditions
             </Link>
             <Link
               href="/sitemap.xml"

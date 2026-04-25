@@ -87,6 +87,7 @@ const HeroSection = () => {
               >
                 Request private tour
               </a>
+              <a href="/book-now">Book Now</a>
             </div>
           </div>
 

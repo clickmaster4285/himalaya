@@ -1,66 +1,44 @@
-import Link from "next/link";
+import type { Metadata } from "next";
 import Navbar from "@/components/Navbar";
-import { Heart, Home, Mountain, PartyPopper, Users, Utensils } from "lucide-react";
+import Footer from "@/components/Footer";
+import BookingHero from "@/components/book-page/BookingHero";
+import BookingFeatures from "@/components/book-page/BookingFeatures";
+import BookingPackages from "@/components/book-page/BookingPackages";
+import BookingReviews from "@/components/book-page/BookingReviews";
+import BookingAbout from "@/components/book-page/BookingAbout";
+import BookingFAQ from "@/components/book-page/BookingFAQ";
+import BookingLocation from "@/components/book-page/BookingLocation";
+import BookingCTA from "@/components/book-page/BookingCTA";
 
-type SearchParams = { villa?: string };
+export const metadata: Metadata = {
+  title: "Hotel Booking in Murree | Himalaya Villas",
+  description: "Book your luxury hotel in Murree at Himalaya Villas. Enjoy guaranteed lowest rates, flexible cancellation, and 5-star mountain luxury in Bhurban.",
+};
 
-const cards = [
-  { title: "Book Your Stay", subtitle: "Your home in the mountains", href: "/book/stay", Icon: Home },
-  { title: "Destination Weddings", subtitle: "Where dreams come true", href: "/book/wedding", Icon: Heart },
-  { title: "Dining", subtitle: "Savor the finest flavors", href: "/book/dining", Icon: Utensils },
-  { title: "Events", subtitle: "Perfect venue for every occasion", href: "/book/event", Icon: PartyPopper },
-  { title: "Fun Activities", subtitle: "Unforgettable experiences await", href: "/book/activities", Icon: Mountain },
-  { title: "Meetings", subtitle: "Where business meets tranquility", href: "/book/meetings", Icon: Users },
-];
-
-export default async function BookPage({ searchParams }: { searchParams: Promise<SearchParams> | SearchParams }) {
-  const sp = await searchParams;
-  const villa = (sp?.villa ?? "").toString();
-
+export default function BookNowLandingPage() {
   return (
-    <div className="min-h-screen bg-[#F6F1EA]">
-      <Navbar />
-
-      <section className="max-w-[1400px] mx-auto px-6 md:px-12 lg:px-20 py-10 md:py-14">
-        <div className="flex items-center gap-3 text-neutral-700">
-          <span className="text-base">↩</span>
-          <Link href={villa ? `/villas/${villa}` : "/villas"} className="text-[12px] tracking-wide hover:underline">
-            Back To Home
-          </Link>
-        </div>
-
-        <h1 className="mt-6 font-display text-[44px] leading-[1.05] md:text-[56px] text-neutral-900">
-          Book Your Experience
-        </h1>
-        <p className="mt-3 text-[12px] md:text-[13px] text-neutral-500/90 max-w-2xl">
-          Choose the perfect experience and let us create unforgettable memories for you
+    <div className="min-h-screen bg-[#fcfbf8] flex flex-col">
+      {/* Top Announcement Bar */}
+      <div className="bg-[#c9a55b] w-full py-2 px-4 text-center z-50 relative">
+        <p className="text-[#1b261b] text-[9px] md:text-[10px] font-bold uppercase tracking-widest">
+          LIMITED SUMMER AVAILABILITY — EID & PEAK WEEKEND VILLAS BOOKING FAST | BOOK DIRECT FOR BEST RATE
         </p>
+      </div>
 
-        <div className="mt-12 grid grid-cols-1 md:grid-cols-3 gap-6">
-          {cards.map((c) => (
-            <Link
-              key={c.title}
-              href={villa ? `${c.href}?villa=${encodeURIComponent(villa)}` : c.href}
-              className="group bg-[#fbf8f2] border border-[#eadfce] p-6 hover:bg-white transition-colors"
-            >
-              <div className="flex items-center gap-4">
-                <div className="h-11 w-11 rounded-full border border-[#eadfce] bg-white flex items-center justify-center transition-colors">
-                  <c.Icon
-                    className="h-5 w-5"
-                    aria-hidden="true"
-                    style={{ color: "#c9a55b" }}
-                  />
-                </div>
-                <div>
-                  <p className="text-[13px] md:text-[14px] text-neutral-900">{c.title}</p>
-                  <p className="text-[11px] md:text-[12px] text-neutral-500/90 mt-1">{c.subtitle}</p>
-                </div>
-              </div>
-            </Link>
-          ))}
-        </div>
-      </section>
+      <Navbar />
+      
+      <main className="flex-grow">
+        <BookingHero />
+        <BookingFeatures />
+        <BookingPackages />
+        <BookingReviews />
+        <BookingAbout />
+        <BookingFAQ />
+        <BookingLocation />
+        <BookingCTA />
+      </main>
+
+      <Footer />
     </div>
   );
 }
-

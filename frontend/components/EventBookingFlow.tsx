@@ -216,9 +216,7 @@ export default function EventBookingFlow() {
       <section className="max-w-[1400px] mx-auto px-6 md:px-12 lg:px-20 py-10 md:py-14">
         <div className="flex items-center gap-3 text-neutral-700">
           <span className="text-base">↩</span>
-          <Link href="/book" className="text-[11px] md:text-[12px] tracking-[0.15em] uppercase hover:underline">
-            Back to Book Now
-          </Link>
+          <Link href="/book-now">Back to Book Now</Link>
         </div>
 
         {step !== 6 && (

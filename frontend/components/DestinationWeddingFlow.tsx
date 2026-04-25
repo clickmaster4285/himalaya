@@ -578,7 +578,7 @@ export default function DestinationWeddingFlow() {
 
                     <div className="mt-10 flex justify-center">
                       <Link
-                        href="/book"
+                        href="/book-now"
                         className="text-[11px] uppercase tracking-widest text-neutral-600 hover:underline"
                       >
                         Back to Book Now

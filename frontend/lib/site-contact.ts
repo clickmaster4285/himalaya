@@ -1,6 +1,6 @@
 /** Single source of truth for NAP + maps (use everywhere in UI + JSON-LD). */
 export const SITE_CONTACT = {
-  businessName: "Himalaya Premium Villas",
+  businessName: "Himalaya Villas and Resort",
   /** Google Maps listing / directions */
   googleMapsUrl: "https://maps.app.goo.gl/SzyHVXrCLic2CuvH8",
   phoneDisplay: "+92 304 567 9000",

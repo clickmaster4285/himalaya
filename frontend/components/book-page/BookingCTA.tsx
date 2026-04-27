@@ -25,10 +25,10 @@ export default function BookingCTA() {
             CHECK AVAILABILITY NOW
           </Link>
           <a
-            href="tel:+923000000000"
+            href="tel:+923045679000"
             className="w-full sm:w-auto px-10 py-4 border border-white/20 text-white text-[10px] font-bold uppercase tracking-widest hover:border-white transition-colors"
           >
-            CALL: +92 300 000 0000
+            CALL: +92 304 567 9000
           </a>
         </div>
       </div>

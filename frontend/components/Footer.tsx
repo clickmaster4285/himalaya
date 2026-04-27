@@ -57,8 +57,9 @@ const Footer = () => {
                 { label: "Our Villas", href: "/villas" },
                 { label: "Experiences", href: "/experience" },
                 { label: "Dining", href: "/book/dining" },
-                  { label: "Blog", href: "/blogs" },
-                    { label: "Best Hotels in Murree", href: "/best-hotels-murree-pakistan" },
+                { label: "FAQs", href: "/faqs" },
+                { label: "Blog", href: "/blogs" },
+                { label: "Best Hotels in Murree", href: "/best-hotels-murree-pakistan" },
               ].map((item) => (
                 <li key={item.label}>
                   <Link
@@ -183,6 +184,42 @@ const Footer = () => {
               </button>
             </div>
           </div>
+        </div>
+
+        {/* Frequently Visited Questions Accordion */}
+        <div className="mt-12 pt-8" style={{ borderTop: "1px solid hsl(0 0% 100% / 0.1)" }}>
+          <details className="group cursor-pointer">
+            <summary 
+              className="text-[11px] tracking-[0.25em] uppercase font-body font-semibold list-none outline-none flex items-center gap-2"
+              style={{ color: "hsl(36 45% 55%)" }}
+            >
+              Frequently Visited Pages
+              <span className="transition-transform group-open:rotate-180 opacity-70">▼</span>
+            </summary>
+            <div className="mt-6 grid grid-cols-1 md:grid-cols-3 gap-4">
+              <Link 
+                href="/luxury-hotels-in-muree" 
+                className="block p-6 rounded-xl transition-all duration-300 hover:-translate-y-1 group/card"
+                style={{ 
+                  background: "hsl(0 0% 100% / 0.03)",
+                  border: "1px solid hsl(0 0% 100% / 0.1)"
+                }}
+              >
+                <h5 className="text-sm font-semibold text-white transition-colors" style={{ color: "hsl(0 0% 100% / 0.9)" }}>
+                  Luxury Hotel in Murree
+                </h5>
+                <p className="text-xs mt-2 leading-relaxed" style={{ color: "hsl(0 0% 100% / 0.5)" }}>
+                  Experience premium hospitality, scenic mountain views, and world-class amenities in the heart of Murree.
+                </p>
+                <span 
+                  className="inline-block mt-4 text-[10px] uppercase tracking-widest transition-colors group-hover/card:text-white"
+                  style={{ color: "hsl(36 45% 55%)" }}
+                >
+                  Explore →
+                </span>
+              </Link>
+            </div>
+          </details>
         </div>
 
         {/* Bottom Bar */}

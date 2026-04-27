@@ -25,7 +25,7 @@ export default function CorporateRetreatsPage() {
             data: {
               "@context": "https://schema.org",
               "@type": "Service",
-              name: "Corporate retreats at Himalaya Premium Villas",
+              name: "Corporate retreats at Himalaya Villas and Resort",
               serviceType: "Executive offsite and retreat hosting",
               areaServed: "Bhurban, Murree, Pakistan",
             },
@@ -37,7 +37,7 @@ export default function CorporateRetreatsPage() {
         <h1 className="font-display text-4xl text-neutral-900 md:text-5xl">Corporate Retreats in Bhurban</h1>
         <p className="mt-5 text-[15px] leading-8 text-neutral-700">
           High-performing teams need environments that improve focus, trust, and clarity. Corporate retreats at
-          Himalaya Premium Villas are designed for organizations that want strategic output without city-level
+          Himalaya Villas and Resort are designed for organizations that want strategic output without city-level
           distraction. The Bhurban setting creates a practical advantage: cooler weather, private movement, and a calm
           operational context where leadership discussions and team sessions become more effective.
         </p>

@@ -17,7 +17,7 @@ import { createPageMetadata } from "@/lib/seo/build-metadata";
 import { getPublishedVillas } from "@/lib/villas-fetch";
 
 export const metadata: Metadata = createPageMetadata({
-  title: "Himalaya Premium Villas | Private Luxury Estate Bhurban",
+  title: "Himalaya Villas and Resort | Private Luxury Estate Bhurban",
   description:
     "Private luxury estate in Bhurban for exclusive stays, destination weddings, and curated mountain experiences.",
   path: "/",
@@ -32,7 +32,7 @@ const Index = async () => {
   return (
     <div className="min-h-screen">
       <HomeStructuredData />
-      <h1 className="sr-only">Himalaya Premium Villas in Bhurban</h1>
+      <h1 className="sr-only">Himalaya Villas and Resort in Bhurban</h1>
       <HeroSection />
       <PhilosophySection />
       <LiveWeatherMurree />

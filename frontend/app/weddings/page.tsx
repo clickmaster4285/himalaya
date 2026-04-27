@@ -505,7 +505,7 @@ export default function WeddingsPage() {
               Chat on WhatsApp
             </a>
             <a
-              href="tel:+923000000000"
+              href="tel:+923045679000"
               className="px-8 py-4 rounded-full border-2 border-white text-white font-semibold hover:bg-white hover:text-neutral-900 transition"
             >
               Call Us Now

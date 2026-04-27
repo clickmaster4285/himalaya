@@ -20,7 +20,7 @@ export const metadata: Metadata = {
   }
 };
 
-const whatsappNumber = "+923000000000"; // Replace with actual
+const whatsappNumber = "+923045679000"; // Replace with actual
 const buildWhatsAppBookingUrl = (message: string) => `https://wa.me/${whatsappNumber.replace(/[^0-9]/g, "")}?text=${encodeURIComponent(message)}`;
 
 const lodgingSchema = {
@@ -29,7 +29,7 @@ const lodgingSchema = {
   "name": "Himalaya Villas",
   "description": "Luxury private villa accommodation in Bhurban, Murree Hills, Pakistan. Mountain views, in-villa dining, personalised concierge service.",
   "url": "https://himalayavillas.com",
-  "telephone": "+92-XXX-XXXXXXX",
+  "telephone": "+92 304 567 9000",
   "address": {
     "@type": "PostalAddress",
     "streetAddress": "Bhurban",

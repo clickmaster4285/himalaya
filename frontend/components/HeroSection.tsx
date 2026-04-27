@@ -54,7 +54,7 @@ const HeroSection = () => {
                 textShadow: "0 2px 3px rgb(0 0 0 / 0.35), 0 12px 40px rgb(0 0 0 / 0.45)",
               }}
             >
-              Himalaya Premium Villas
+              Himalaya Villas and Resort
             </h1>
 
             {/* Description - Responsive text size */}
@@ -64,7 +64,7 @@ const HeroSection = () => {
                 textShadow: "0 1px 2px rgb(0 0 0 / 0.5), 0 8px 24px rgb(0 0 0 / 0.35)",
               }}
             >
-              Himalaya Premium Villas is not a hotel. It is a private luxury estate crafted for those who demand
+              Himalaya Villas and Resort is not a hotel. It is a private luxury estate crafted for those who demand
               exclusivity, privacy, and elevated experiences in the hills of Bhurban.
             </p>
 

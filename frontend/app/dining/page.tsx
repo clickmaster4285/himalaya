@@ -25,7 +25,7 @@ export default function DiningPage() {
             data: {
               "@context": "https://schema.org",
               "@type": "Service",
-              name: "Private dining at Himalaya Premium Villas",
+              name: "Private dining at Himalaya Villas and Resort",
               serviceType: "Curated in-villa dining and event catering",
               areaServed: "Bhurban, Murree, Pakistan",
             },
@@ -36,7 +36,7 @@ export default function DiningPage() {
       <main className="mx-auto max-w-[1000px] px-6 py-12 md:px-10 md:py-16">
         <h1 className="font-display text-4xl text-neutral-900 md:text-5xl">Luxury Dining in Bhurban</h1>
         <p className="mt-5 text-[15px] leading-8 text-neutral-700">
-          Dining is often the emotional center of a mountain stay. At Himalaya Premium Villas, we treat meals as
+          Dining is often the emotional center of a mountain stay. At Himalaya Villas and Resort, we treat meals as
           curated experiences, not routine service slots. The objective is simple: deliver food, atmosphere, and timing
           that match the purpose of your trip. Whether you are here for family leisure, couple downtime, or a hosted
           gathering, the dining flow is built around your schedule and preferences.

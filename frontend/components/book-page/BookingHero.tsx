@@ -149,7 +149,7 @@ export default function BookingHero() {
                 </label>
                 <input
                   type="tel"
-                  placeholder="+92 3XX XXXXXXX"
+                  placeholder="+92 304 567 9000"
                   className="w-full h-11 px-4 border border-[#dfd5c5] bg-white text-[13px] text-neutral-800 placeholder:text-neutral-400 focus:outline-none focus:border-[#c9a55b] transition-colors"
                 />
               </div>

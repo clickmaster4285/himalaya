@@ -123,17 +123,17 @@ export default function ContactPage() {
                   <div>
                     <p className="font-display text-2xl sm:text-3xl text-neutral-900">Call / WhatsApp</p>
                     <p className="mt-2 sm:mt-3 text-xs sm:text-[13px] leading-6 sm:leading-7 text-neutral-600">
-                      <a href={telHref()} className="hover:text-[#8b6914] block sm:inline">
-                        {SITE_CONTACT.phoneDisplay}
+                      <a href={telHref()} className="hover:text-[#8b6914]">
+                        {SITE_CONTACT.phoneDisplay} <span className="ml-2">Call now</span>
                       </a>
-                      <br className="hidden sm:block" />
+                      <span className="mx-2">|</span>
                       <a
                         href={SITE_CONTACT.whatsappUrl}
                         target="_blank"
                         rel="noopener noreferrer"
-                        className="hover:text-[#8b6914] block sm:inline"
+                        className="hover:text-[#8b6914]"
                       >
-                        WhatsApp: {SITE_CONTACT.phoneDisplay}
+                        WhatsApp
                       </a>
                     </p>
                   </div>
@@ -168,7 +168,7 @@ export default function ContactPage() {
                 </p>
                 <div className="aspect-video w-full bg-[#e8e4dc]">
                   <iframe
-                    title="Himalaya Premium Villas on Google Maps"
+                    title="Himalaya Villas and Resort on Google Maps"
                     src="https://www.google.com/maps?q=33.9562%2C73.3850&z=15&output=embed"
                     className="h-full w-full border-0"
                     loading="lazy"
@@ -177,6 +177,7 @@ export default function ContactPage() {
                   />
                 </div>
                 <div className="px-3 sm:px-4 py-2.5 sm:py-3 text-center">
+                  <span>Himalaya Villas and Resort</span>
                   <a
                     href={SITE_CONTACT.googleMapsUrl}
                     target="_blank"

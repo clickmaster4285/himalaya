@@ -37,6 +37,8 @@ const nextConfig: NextConfig = {
       },
       // Legacy public URLs from sitemap → current App Router paths
       { source: "/booking", destination: "/book", permanent: true },
+      { source: "/book-now", destination: "/book", permanent: true },
+      { source: "/journal", destination: "/blogs", permanent: true },
       { source: "/about", destination: "/", permanent: true },
       { source: "/services", destination: "/", permanent: true },
       { source: "/gallery", destination: "/", permanent: true },

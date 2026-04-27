@@ -14,7 +14,7 @@ export const metadata: Metadata = {
     },
 };
 
-const whatsappNumber = "+923000000000"; // Replace with actual
+const whatsappNumber = "+923045679000"; // Replace with actual
 const buildWhatsAppBookingUrl = (message: string) => `https://wa.me/${whatsappNumber.replace(/[^0-9]/g, "")}?text=${encodeURIComponent(message)}`;
 
 const faqSchema = {
@@ -54,7 +54,7 @@ const eventVenueSchema = {
     "name": "Himalaya Villas Wedding Venue",
     "description": "Private mountain wedding venue in Bhurban, Murree Hills. Exclusive pine forest estate for nikkah ceremonies, walima receptions, and destination weddings. 60 minutes from Islamabad.",
     "url": "https://himalayavillas.com/wedding-venue-near-islamabad",
-    "telephone": "+92-XXX-XXXXXXX",
+    "telephone": "+92 304 567 9000",
     "address": {
         "@type": "PostalAddress",
         "streetAddress": "Bhurban",

@@ -6,7 +6,6 @@ import BookingFeatures from "@/components/book-page/BookingFeatures";
 import BookingPackages from "@/components/book-page/BookingPackages";
 import BookingReviews from "@/components/book-page/BookingReviews";
 import BookingAbout from "@/components/book-page/BookingAbout";
-import BookingFAQ from "@/components/book-page/BookingFAQ";
 import BookingLocation from "@/components/book-page/BookingLocation";
 import BookingCTA from "@/components/book-page/BookingCTA";
 
@@ -33,7 +32,6 @@ export default function BookNowLandingPage() {
         <BookingPackages />
         <BookingReviews />
         <BookingAbout />
-        <BookingFAQ />
         <BookingLocation />
         <BookingCTA />
       </main>

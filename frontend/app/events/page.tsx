@@ -1,4 +1,5 @@
 import type { Metadata } from "next";
+
 import Image from "next/image";
 import Link from "next/link";
 import Navbar from "@/components/Navbar";
@@ -8,6 +9,7 @@ import { JsonLd } from "@/components/seo/JsonLd";
 import { createPageMetadata } from "@/lib/seo/build-metadata";
 import { absoluteUrl } from "@/lib/seo/site-config";
 import EventsHeroSlider from "@/components/EventsHeroSlider";
+import EventQuoteForm from "@/components/EventQuoteForm";
 import "./globals.css";
 
 export const dynamic = "force-dynamic";
@@ -372,6 +374,7 @@ const eventsJsonLd = {
 };
 
 export default function EventsPage() {
+
   return (
     <div className="min-h-screen bg-white">
       <JsonLd items={[{ id: "hv-jsonld-events-page", data: eventsJsonLd }]} />
@@ -386,7 +389,7 @@ export default function EventsPage() {
 
   <div className="relative z-10 w-full px-4 md:px-8 lg:px-10 pt-36 pb-14 md:pt-40 md:pb-20">
     {/* Same max-w-7xl as your card sections */}
-    <div className="mx-auto max-w-7xl">
+    <div className="max-w-7xl">
       {/* Grid layout preserved - left content + right form */}
       <div className="grid grid-cols-1 gap-10 lg:grid-cols-[1.15fr_0.85fr] lg:gap-12 items-start">
         
@@ -397,9 +400,8 @@ export default function EventsPage() {
             Curated Destination Events
           </p>
 
-          <h1 className="mt-5 font-display text-white text-4xl md:text-6xl leading-tight">
-            <span className="block">Events That Look Premium,</span>
-            <span className="block">Feel Effortless</span>
+          <h1 className="mt-5 font-display text-white text-4xl md:text-6xl leading-tight whitespace-nowrap">
+            Events That Look Premium, Feel Effortless
           </h1>
 
           <p className="mt-5 max-w-xl text-white/90 text-sm md:text-base leading-relaxed">
@@ -423,35 +425,7 @@ export default function EventsPage() {
         </div>
 
         {/* Right side - Form (keeping original position) */}
-        <div id="inquiry" className="w-full max-w-md rounded-2xl bg-white p-6 md:p-8 shadow-2xl lg:mr-0">
-          <h2 className="font-display text-2xl text-neutral-900">Get Event Quote</h2>
-          <p className="mt-2 text-sm text-neutral-600">Form ab clear aur visible hai - details share karein, team jaldi contact karegi.</p>
-
-          <form className="mt-6 space-y-4">
-            <div className="grid grid-cols-1 gap-4 sm:grid-cols-2">
-              <input type="text" placeholder="Full Name" className="w-full rounded-lg border border-neutral-300 px-4 py-3 text-sm text-neutral-900 outline-none transition focus:border-[#c9a55b]" />
-              <input type="tel" placeholder="Phone Number" className="w-full rounded-lg border border-neutral-300 px-4 py-3 text-sm text-neutral-900 outline-none transition focus:border-[#c9a55b]" />
-            </div>
-
-            <input type="email" placeholder="Email Address" className="w-full rounded-lg border border-neutral-300 px-4 py-3 text-sm text-neutral-900 outline-none transition focus:border-[#c9a55b]" />
-
-            <div className="grid grid-cols-1 gap-4 sm:grid-cols-2">
-              <input type="date" className="w-full rounded-lg border border-neutral-300 px-4 py-3 text-sm text-neutral-900 outline-none transition focus:border-[#c9a55b]" />
-              <select className="w-full rounded-lg border border-neutral-300 px-4 py-3 text-sm text-neutral-900 outline-none transition focus:border-[#c9a55b]">
-                <option value="">Select Event Type</option>
-                <option value="nikah">Nikah / Wedding</option>
-                <option value="corporate">Corporate Event</option>
-                <option value="social">Social Celebration</option>
-              </select>
-            </div>
-
-            <textarea placeholder="Tell us your vision..." rows={4} className="w-full rounded-lg border border-neutral-300 px-4 py-3 text-sm text-neutral-900 outline-none transition focus:border-[#c9a55b]" />
-
-            <button type="submit" className="w-full rounded-lg bg-neutral-900 px-5 py-3 text-xs font-semibold uppercase tracking-wider text-white transition hover:bg-neutral-700">
-              Send Inquiry
-            </button>
-          </form>
-        </div>
+        <EventQuoteForm />
       </div>
     </div>
   </div>

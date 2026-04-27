@@ -480,6 +480,85 @@ export default function FaqsPage() {
         </div>
       </section>
 
+      {/* CTA Section */}
+      <section className="px-6 py-16 bg-gradient-to-br from-[#1b261b] to-[#2a342a] relative overflow-hidden">
+        <div className="absolute inset-0 opacity-5">
+          <svg className="w-full h-full" viewBox="0 0 100 100" preserveAspectRatio="none">
+            <path d="M0,50 C25,30 75,70 100,50 L100,100 L0,100 Z" fill="#c9a55b" />
+          </svg>
+        </div>
+        <div className="max-w-[1200px] mx-auto relative z-10">
+          <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
+            {/* Left Content */}
+            <div>
+              <div className="flex items-center gap-3 text-[#c9a55b] text-[10px] md:text-[11px] font-bold uppercase tracking-[0.2em] mb-6">
+                <span className="h-[1px] w-8 bg-[#c9a55b]"></span>
+                <span>Still Have Questions?</span>
+                <span className="h-[1px] w-8 bg-[#c9a55b]"></span>
+              </div>
+              <h2 className="font-display text-3xl md:text-4xl text-white leading-[1.1] mb-6">
+                Can't Find What You're Looking For?
+              </h2>
+              <p className="text-[15px] text-white/70 font-light leading-relaxed mb-8">
+                Our team is here to help. Send us your question and we'll get back to you within 15 minutes during business hours (9 AM - 10 PM).
+              </p>
+              <div className="space-y-4">
+                <div className="flex items-center gap-3 text-white/80">
+                  <PhoneCall className="w-5 h-5 text-[#c9a55b]" />
+                  <span className="text-sm">WhatsApp: +92 304 567 9000</span>
+                </div>
+                <div className="flex items-center gap-3 text-white/80">
+                  <div className="w-2 h-2 rounded-full bg-green-500 animate-pulse"></div>
+                  <span className="text-sm">Average response time: 15 minutes</span>
+                </div>
+              </div>
+            </div>
+
+            {/* Right Form */}
+            <div className="bg-white/10 backdrop-blur-sm border border-white/20 rounded-2xl p-8">
+              <form className="space-y-4">
+                <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
+                  <input
+                    type="text"
+                    placeholder="Full Name"
+                    className="w-full px-4 py-3 bg-white/10 border border-white/20 rounded-lg text-white placeholder-white/50 focus:outline-none focus:border-[#c9a55b] focus:bg-white/15 transition"
+                  />
+                  <input
+                    type="tel"
+                    placeholder="Phone Number"
+                    className="w-full px-4 py-3 bg-white/10 border border-white/20 rounded-lg text-white placeholder-white/50 focus:outline-none focus:border-[#c9a55b] focus:bg-white/15 transition"
+                  />
+                </div>
+                <input
+                  type="email"
+                  placeholder="Email Address"
+                  className="w-full px-4 py-3 bg-white/10 border border-white/20 rounded-lg text-white placeholder-white/50 focus:outline-none focus:border-[#c9a55b] focus:bg-white/15 transition"
+                />
+                <select className="w-full px-4 py-3 bg-white/10 border border-white/20 rounded-lg text-white placeholder-white/50 focus:outline-none focus:border-[#c9a55b] focus:bg-white/15 transition">
+                  <option value="" className="bg-[#1b261b]">Select Topic</option>
+                  <option value="booking" className="bg-[#1b261b]">Booking Inquiry</option>
+                  <option value="villa" className="bg-[#1b261b]">Villa Information</option>
+                  <option value="wedding" className="bg-[#1b261b]">Wedding/Event</option>
+                  <option value="corporate" className="bg-[#1b261b]">Corporate Retreat</option>
+                  <option value="other" className="bg-[#1b261b]">Other Question</option>
+                </select>
+                <textarea
+                  placeholder="Type your question here..."
+                  rows={4}
+                  className="w-full px-4 py-3 bg-white/10 border border-white/20 rounded-lg text-white placeholder-white/50 focus:outline-none focus:border-[#c9a55b] focus:bg-white/15 transition resize-none"
+                />
+                <button
+                  type="submit"
+                  className="w-full bg-[#c9a55b] hover:bg-[#a98741] text-white font-bold uppercase tracking-wider text-sm py-4 rounded-lg transition duration-300 shadow-lg hover:shadow-xl"
+                >
+                  Send Your Question
+                </button>
+              </form>
+            </div>
+          </div>
+        </div>
+      </section>
+
       {/* Active Category FAQs */}
       <section id="faqs-container" className="px-6 pb-24 flex-grow">
         <div className="max-w-[900px] mx-auto">
@@ -532,14 +611,7 @@ export default function FaqsPage() {
                 ))}
               </div>
             </div>
-          ) : (
-            <div className="text-center py-20 bg-white/50 border border-dashed border-[#eae3d5] rounded-xl">
-              <HelpCircle className="w-12 h-12 text-neutral-300 mx-auto mb-4" />
-              <p className="text-[15px] text-neutral-500 font-light">
-                Please select a category above to view related FAQs.
-              </p>
-            </div>
-          )}
+          ) : null}
         </div>
       </section>
 

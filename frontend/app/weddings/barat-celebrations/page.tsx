@@ -88,10 +88,10 @@ export default function BaraatPage() {
 
         <div className="relative z-10 mx-auto max-w-7xl px-6 pt-36 pb-20 md:pt-44">
           <h1 className="font-display text-4xl md:text-6xl text-white leading-tight max-w-3xl">
-            Barat Celebrations
+            Baraat Celebrations
           </h1>
           <p className="mt-5 max-w-2xl text-white/90 text-sm md:text-base leading-relaxed">
-            Host grand barat celebrations in the hills. We manage premium barat celebrations with stunning stage decor and VIP hospitality flows.
+            Host grand baraat celebrations in the hills. We manage premium baraat celebrations with stunning stage decor and VIP hospitality flows.
           </p>
           <a href="#book" className="mt-8 inline-block rounded-md bg-[#c9a55b] px-6 py-3 text-xs font-semibold uppercase tracking-wider text-white hover:bg-[#a98741] transition">
             Book Baraat Date

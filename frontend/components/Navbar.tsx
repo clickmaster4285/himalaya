@@ -177,7 +177,7 @@ const Navbar = () => {
         </button>
 
         {/* Navigation items */}
-        <div className="flex flex-col items-center gap-4 sm:gap-5 w-full px-4">
+        <div className="flex flex-col items-start gap-4 sm:gap-5 w-full px-4">
           {navItems.map((item) => (
             <Link
               key={item}

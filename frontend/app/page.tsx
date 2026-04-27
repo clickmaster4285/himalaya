@@ -11,6 +11,7 @@ import TestimonialsSection from "@/components/TestimonialsSection";
 import GlimpseSection from "@/components/GlimpseSection";
 import JournalSection from "@/components/JournalSection";
 import WhyChooseSection from "@/components/WhyChooseSection";
+import FrequentlyVisitedPages from "@/components/FrequentlyVisitedPages";
 import ReserveSection from "@/components/ReserveSection";
 import Footer from "@/components/Footer";
 import { createPageMetadata } from "@/lib/seo/build-metadata";
@@ -44,6 +45,7 @@ const Index = async () => {
       <JournalSection />
       <WhyChooseSection />
       <TestimonialsSection />
+      <FrequentlyVisitedPages />
       <ReserveSection />
       <Footer />
     </div>

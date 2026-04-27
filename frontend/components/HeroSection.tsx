@@ -1,6 +1,7 @@
 import Navbar from "./Navbar";
 import BookingWidget from "./BookingWidget";
 import HeroMedia from "./HeroMedia";
+import ScrollIndicator from "./ScrollIndicator";
 import { ArrowRight } from "lucide-react";
 import { buildWhatsAppBookingUrl } from "@/lib/whatsapp";
 
@@ -32,10 +33,10 @@ const HeroSection = () => {
         <div className="flex w-full max-w-[1400px] flex-col gap-8 sm:gap-10 md:flex-row md:items-end md:justify-between md:gap-12 xl:mx-auto">
           
           {/* Left Content */}
-          <div className="max-w-xl lg:max-w-2xl">
+          <div className="max-w-xl lg:max-w-3xl xl:max-w-4xl">
             {/* Pills - Responsive grid */}
             <ul
-              className="hero-pills mb-5 sm:mb-6 md:mb-8 grid list-none gap-2 animate-fade-up sm:grid-cols-3 sm:gap-3"
+              className="hero-pills mb-5 sm:mb-6 md:mb-8 hidden sm:grid list-none gap-2 animate-fade-up sm:grid-cols-3 sm:gap-3"
               role="list"
             >
               {heroPills.map((label) => (
@@ -49,7 +50,7 @@ const HeroSection = () => {
 
             {/* Heading - Responsive font sizes */}
             <h1
-              className="hero-headline font-display animate-fade-up text-3xl sm:text-4xl md:text-5xl lg:text-6xl xl:text-[4.25rem] font-normal leading-[1.15] sm:leading-[1.1] md:leading-[1.08] text-white"
+              className="hero-headline font-display animate-fade-up text-3xl sm:text-4xl md:text-5xl lg:text-6xl xl:text-[4.25rem] font-normal leading-[1.15] sm:leading-[1.1] md:leading-[1.08] text-white whitespace-nowrap"
               style={{
                 textShadow: "0 2px 3px rgb(0 0 0 / 0.35), 0 12px 40px rgb(0 0 0 / 0.45)",
               }}
@@ -97,6 +98,9 @@ const HeroSection = () => {
           </div>
         </div>
       </div>
+      
+      {/* Scroll Indicator */}
+      <ScrollIndicator />
     </section>
   );
 };

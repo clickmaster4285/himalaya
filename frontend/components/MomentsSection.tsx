@@ -54,12 +54,10 @@ const MomentsSection = () => {
             initial={{ opacity: 0, y: 40, scale: 0.95 }}
             animate={isInView ? { opacity: 1, y: 0, scale: 1 } : {}}
             transition={{ duration: 1.2, ease: "easeOut" }}
-            className="font-display text-4xl md:text-6xl lg:text-8xl font-normal italic leading-tight"
+            className="font-display text-4xl md:text-6xl lg:text-8xl font-normal italic leading-tight whitespace-nowrap"
             style={{ color: "hsl(0 0% 100% / 0.95)" }}
           >
-            Moments Elevated
-            <br />
-            by Nature
+            Moments Elevated by Nature
           </motion.h2>
           <motion.div
             initial={{ opacity: 0, y: 20 }}

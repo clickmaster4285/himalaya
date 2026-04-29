@@ -7,6 +7,74 @@ import Navbar from "@/components/Navbar";
 import Footer from "@/components/Footer";
 import { ChevronDown, Star, Plus, Minus, Check, MapPin } from "lucide-react";
 
+const luxuryHotelsSchema = {
+  "@context": "https://schema.org",
+  "@type": "LodgingBusiness",
+  "name": "Himalaya Villas - Luxury Hotels in Murree",
+  "description": "Premium private villa accommodation in Bhurban, Murree Hills. Luxury alternative to hotels with private villas, panoramic Himalayan views, in-villa spa treatments, and personalized service.",
+  "url": "https://himalayavillas.com/luxury-hotels-in-muree",
+  "telephone": "+92 304 567 9000",
+  "address": {
+    "@type": "PostalAddress",
+    "streetAddress": "Bhurban",
+    "addressLocality": "Murree",
+    "addressRegion": "Punjab",
+    "addressCountry": "PK"
+  },
+  "geo": {
+    "@type": "GeoCoordinates",
+    "latitude": "33.9346",
+    "longitude": "73.4592"
+  },
+  "starRating": { "@type": "Rating", "ratingValue": "5" },
+  "priceRange": "PKR 40,000 - PKR 95,000",
+  "amenityFeature": [
+    {"@type": "LocationFeatureSpecification", "name": "Private Villa", "value": true},
+    {"@type": "LocationFeatureSpecification", "name": "In-Villa Spa", "value": true},
+    {"@type": "LocationFeatureSpecification", "name": "Panoramic Himalayan Views", "value": true},
+    {"@type": "LocationFeatureSpecification", "name": "Private Chef", "value": true},
+    {"@type": "LocationFeatureSpecification", "name": "24/7 Concierge", "value": true}
+  ],
+  "servesCuisine": ["Pakistani", "Continental", "Halal"],
+  "aggregateRating": {
+    "@type": "AggregateRating",
+    "ratingValue": "4.8",
+    "reviewCount": "127",
+    "bestRating": "5"
+  }
+};
+
+const faqSchema = {
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  "mainEntity": [
+    {
+      "@type": "Question",
+      "name": "How do I book Himalaya Villas directly for the best rate?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Contact us via WhatsApp with your preferred dates, number of guests, and requirements. Our team responds within 15 minutes during business hours (9 AM – 10 PM). Direct bookings receive best rate guarantee and complimentary inclusions."
+      }
+    },
+    {
+      "@type": "Question", 
+      "name": "What makes Himalaya Villas different from other luxury hotels in Murree?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "We offer private villa estates instead of hotel rooms, complete privacy with no shared corridors, in-villa personalized spa treatments, private gourmet dining, and dedicated villa attendants throughout your stay."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Are meals included at Himalaya Villas?",
+      "acceptedAnswer": {
+        "@type": "Answer", 
+        "text": "All packages include daily halal gourmet breakfast. Most packages include additional meals like private dinners. In-villa dining service is available 24/7 with personalized chef service."
+      }
+    }
+  ]
+};
+
 export default function LuxuryHotelsMurreePage() {
   const [openFaqIndex, setOpenFaqIndex] = useState<string | null>(null);
 
@@ -28,6 +96,8 @@ export default function LuxuryHotelsMurreePage() {
 
   return (
     <div className="min-h-screen bg-[#fcfbf8] flex flex-col font-sans">
+      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(luxuryHotelsSchema) }} />
+      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(faqSchema) }} />
       <Navbar />
       
       <main className="flex-grow">

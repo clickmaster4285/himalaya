@@ -3,9 +3,32 @@ import LoginForm from "@/components/LoginForm";
 import { AuthGlassCard } from "@/components/AuthGlassCard";
 import { AuthPageShell } from "@/components/AuthPageShell";
 
+const loginPageSchema = {
+  "@context": "https://schema.org",
+  "@type": "WebPage",
+  "name": "Sign In | Himalaya Villas & Resorts",
+  "description": "Sign in to your Himalaya Villas account to manage bookings, view reservations, and access exclusive member benefits.",
+  "url": "https://himalayavillas.com/login",
+  "provider": {
+    "@type": "Organization",
+    "name": "Himalaya Villas and Resort",
+    "telephone": "+92 304 567 9000",
+    "address": {
+      "@type": "PostalAddress",
+      "streetAddress": "Bhurban",
+      "addressLocality": "Murree",
+      "addressRegion": "Punjab",
+      "addressCountry": "PK"
+    }
+  },
+  "dateModified": "2024-01-01"
+};
+
 export default function LoginPage() {
   return (
-    <AuthPageShell
+    <div>
+      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(loginPageSchema) }} />
+      <AuthPageShell
       headerStart={
         <Link
           href="/"

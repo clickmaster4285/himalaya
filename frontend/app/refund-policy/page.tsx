@@ -2,6 +2,27 @@ import type { Metadata } from "next";
 import Navbar from "@/components/Navbar";
 import Footer from "@/components/Footer";
 
+const refundSchema = {
+  "@context": "https://schema.org",
+  "@type": "WebPage",
+  "name": "Refund Policy | Himalaya Villas & Resorts",
+  "description": "Refund Policy for Himalaya Villas & Resorts - Learn about our cancellation and refund terms.",
+  "url": "https://himalayavillas.com/refund-policy",
+  "provider": {
+    "@type": "Organization",
+    "name": "Himalaya Villas and Resort",
+    "telephone": "+92 304 567 9000",
+    "address": {
+      "@type": "PostalAddress",
+      "streetAddress": "Bhurban",
+      "addressLocality": "Murree",
+      "addressRegion": "Punjab",
+      "addressCountry": "PK"
+    }
+  },
+  "dateModified": "2024-01-01"
+};
+
 export const metadata: Metadata = {
   title: "Refund Policy | Himalaya Villas & Resorts",
   description: "Refund Policy for Himalaya Villas & Resorts - Learn about our cancellation and refund terms.",
@@ -10,6 +31,7 @@ export const metadata: Metadata = {
 export default function RefundPolicyPage() {
   return (
     <>
+      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(refundSchema) }} />
       <Navbar />
       <main className="min-h-screen py-20 px-8 md:px-16" style={{ background: "hsl(160 15% 14%)" }}>
         <div className="max-w-4xl mx-auto">

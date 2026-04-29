@@ -27,6 +27,59 @@ import {
 } from "lucide-react";
 import type { LucideIcon } from "lucide-react";
 import { computeStayTotalPkr, countStayNights, parseNightlyPkr } from "@/lib/stay-booking-compute";
+
+const stayBookingSchema = {
+  "@context": "https://schema.org",
+  "@type": "ReservationPackage",
+  "name": "Villa Stay Booking at Himalaya Villas",
+  "description": "Book luxury villa stays in Bhurban, Murree Hills with private accommodation, mountain views, and premium amenities.",
+  "provider": {
+    "@type": "Organization",
+    "name": "Himalaya Villas and Resort",
+    "telephone": "+92 304 567 9000",
+    "address": {
+      "@type": "PostalAddress",
+      "streetAddress": "Bhurban",
+      "addressLocality": "Murree",
+      "addressRegion": "Punjab",
+      "addressCountry": "PK"
+    }
+  },
+  "offers": {
+    "@type": "Offer",
+    "price": "40000",
+    "priceCurrency": "PKR",
+    "description": "Luxury villa accommodation per night",
+    "availability": "https://schema.org/InStock"
+  },
+  "bookingAgent": {
+    "@type": "Organization",
+    "name": "Himalaya Villas and Resort"
+  }
+};
+
+const faqSchema = {
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  "mainEntity": [
+    {
+      "@type": "Question",
+      "name": "How do I book a villa stay at Himalaya Villas?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Select your villa, choose dates, enter guest details, and complete the secure booking process. We offer instant confirmation and flexible payment options."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "What amenities are included in villa stays?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "All villa stays include private accommodation, mountain views, daily housekeeping, 24/7 concierge service, and access to estate facilities."
+      }
+    }
+  ]
+};
 import {
   isDayReserved,
   selectionOverlapsOccupied,
@@ -339,6 +392,8 @@ function BookStayContent() {
 
   return (
     <div className="min-h-screen bg-[#F6F1EA]">
+      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(stayBookingSchema) }} />
+      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(faqSchema) }} />
       <Navbar />
 
       <section className="max-w-[1400px] mx-auto px-6 md:px-12 lg:px-20 py-10 md:py-14">

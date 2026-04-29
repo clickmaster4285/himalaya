@@ -6,6 +6,61 @@ import Footer from "@/components/Footer";
 import { useEffect, useState } from "react";
 import { CheckCircle2, Crown, HelpCircle, Users } from "lucide-react";
 
+const baratEventSchema = {
+  "@context": "https://schema.org",
+  "@type": "Event",
+  "name": "Barat Celebrations at Himalaya Villas",
+  "description": "Grand barat celebrations with regal entry setup, large-format stage design, sofa setup, floral wall, coordinated lighting, and smooth guest hospitality flow in Bhurban, Murree Hills.",
+  "url": "https://himalayavillas.com/weddings/barat-celebrations",
+  "startDate": "2024-01-01",
+  "endDate": "2024-12-31",
+  "location": {
+    "@type": "Place",
+    "name": "Himalaya Villas and Resort",
+    "address": {
+      "@type": "PostalAddress",
+      "streetAddress": "Bhurban",
+      "addressLocality": "Murree",
+      "addressRegion": "Punjab",
+      "addressCountry": "PK"
+    }
+  },
+  "organizer": {
+    "@type": "Organization",
+    "name": "Himalaya Villas and Resort",
+    "telephone": "+92 304 567 9000"
+  },
+  "offers": {
+    "@type": "Offer",
+    "price": "200000",
+    "priceCurrency": "PKR",
+    "description": "Grand barat celebration package with regal entry and main stage setup"
+  }
+};
+
+const faqSchema = {
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  "mainEntity": [
+    {
+      "@type": "Question",
+      "name": "What is included in your barat celebration package?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Our barat celebration package includes grand barat entry with lights and pathway styling, large-format stage design, sofa setup, floral wall, coordinated lighting, and smooth guest hospitality flow."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Can you accommodate large guest counts for barat celebrations?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Yes, we can accommodate large crowds with managed seating, dinner flow, and smooth event operations for grand barat celebrations."
+      }
+    }
+  ]
+};
+
 const heroSlides = [
   "/assets/barat-hero-1.png",
   "/assets/barat-hero-2.png",
@@ -68,6 +123,8 @@ export default function BaraatPage() {
 
   return (
     <div className="min-h-screen bg-white">
+      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(baratEventSchema) }} />
+      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(faqSchema) }} />
       <section className="relative min-h-[720px] overflow-hidden">
         <div className="absolute inset-0">
           {heroSlides.map((slide, idx) => (

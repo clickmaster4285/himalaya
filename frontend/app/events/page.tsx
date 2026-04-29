@@ -10,6 +10,7 @@ import { createPageMetadata } from "@/lib/seo/build-metadata";
 import { absoluteUrl } from "@/lib/seo/site-config";
 import EventsHeroSlider from "@/components/EventsHeroSlider";
 import EventQuoteForm from "@/components/EventQuoteForm";
+import { createEventSlug } from "@/lib/slugify";
 import "./globals.css";
 
 export const dynamic = "force-dynamic";
@@ -56,42 +57,42 @@ const eventSections = [
         title: "Nikah & Wedding Reception",
         description: "Complete setup from sacred ceremony to elegant reception.",
         badge: "Popular",
-        href: "/weddings/nikkah-and-wedding-celebrations-in-the-hills",
+        slug: "nikah-wedding-reception",
       },
       {
         id: 2,
         title: "Mehndi",
         description: "Colorful mehndi celebrations with music, dance, and floral stage design.",
         badge: "Culture",
-        href: "/weddings/mehndi-celebrations",
+        slug: "mehndi",
       },
       {
         id: 3,
         title: "Baraat",
         description: "Grand baraat entry and reception-style setup with premium event flow.",
         badge: "Grand",
-        href: "/weddings/barat-celebrations",
+        slug: "baraat",
       },
       {
         id: 37,
         title: "Dholki & Bridal Shower",
         description: "Intimate pre-wedding celebrations tailored to your family style.",
         badge: "Elegant",
-        href: "/weddings/dholki-and-bridal-shower",
+        slug: "dholki-bridal-shower",
       },
       {
         id: 4,
         title: "Valima & Wedding Dinner",
         description: "Refined dining and stage styling for post-nikah celebration.",
         badge: "Premium",
-        href: "/weddings/walima-and-wedding-dinner",
+        slug: "valima-wedding-dinner",
       },
       {
         id: 5,
         title: "Engagement Ceremonies",
         description: "Ring ceremony with floral stage, lights, and guest hospitality.",
         badge: "Family",
-        href: "/weddings/engagement-ceremonies",
+        slug: "engagement-ceremonies",
       },
     ],
   },
@@ -104,42 +105,42 @@ const eventSections = [
         title: "Sufi & Qawwali Evenings",
         description: "Live spiritual music nights with warm traditional atmosphere.",
         badge: "Live",
-        href: "/music/reserve-our-sufi-qawwali-venue",
+        slug: "sufi-qawwali-evenings",
       },
       {
         id: 8,
         title: "Private Musical Concerts",
         description: "Exclusive classical and acoustic performances for private guests.",
         badge: "Featured",
-        href: "/music/reserve-our-concert-venue",
+        slug: "private-musical-concerts",
       },
       {
         id: 9,
         title: "Mushaira & Poetry Evenings",
         description: "Curated poetry gatherings in peaceful mountain ambiance.",
         badge: "Literary",
-        href: "/music/reserve-our-literary-venue",
+        slug: "mushaira-poetry-evenings",
       },
       {
         id: 10,
         title: "DJ Nights & Music Parties",
         description: "Energetic dance nights with stage lighting and premium sound.",
         badge: "Party",
-        href: "/music/reserve-our-dj-party-venue",
+        slug: "dj-nights-music-parties",
       },
       {
         id: 11,
         title: "Live Band Performances",
         description: "Modern or fusion live band options for high-energy events.",
         badge: "Concert",
-        href: "/music/reserve-our-live-music-venue",
+        slug: "live-band-performances",
       },
       {
         id: 12,
         title: "Cultural Shows & Acts",
         description: "Traditional performances to enrich your celebration vibe.",
         badge: "Heritage",
-        href: "/music/reserve-our-cultural-venue",
+        slug: "cultural-shows-acts",
       },
     ],
   },
@@ -152,42 +153,42 @@ const eventSections = [
         title: "Corporate Retreat Packages",
         description: "Strategic offsite planning with accommodation and activities.",
         badge: "Business",
-        href: "/corporate/plan-your-next-corporate-retreat",
+        slug: "corporate-retreat-packages",
       },
       {
         id: 14,
         title: "Product Launches & Brand Events",
         description: "Premium venue for memorable product unveilings and showcases.",
         badge: "Branding",
-        href: "/corporate/make-a-statement-with-your-launch",
+        slug: "product-launches-brand-events",
       },
       {
         id: 15,
         title: "Award Dinners & Gala Nights",
         description: "Elegant formal evenings with stage, dining, and protocol flow.",
         badge: "Luxury",
-        href: "/corporate/an-evening-of-elegance-excellence",
+        slug: "award-dinners-gala-nights",
       },
       {
         id: 16,
         title: "Conferences & Seminars",
         description: "Professional setup with presentation zones and hospitality.",
         badge: "MICE",
-        href: "/corporate/professional-conference-venue",
+        slug: "conferences-seminars",
       },
       {
         id: 17,
         title: "Team Building Retreats",
         description: "Outdoor + indoor team activities for stronger collaboration.",
         badge: "Teams",
-        href: "/corporate/build-stronger-teams-together",
+        slug: "team-building-retreats",
       },
       {
         id: 18,
         title: "Exhibitions & Trade Meets",
         description: "Structured event space with guided attendee movement.",
         badge: "Expo",
-        href: "/corporate/connect-showcase-at-our-expo-venue",
+        slug: "exhibitions-trade-meets",
       },
     ],
   },
@@ -200,42 +201,42 @@ const eventSections = [
         title: "Milestone Birthdays",
         description: "Theme-based birthday celebrations for all age groups.",
         badge: "Popular",
-        href: "/family-celebrations/celebrate-your-milestone-moment",
+        slug: "milestone-birthdays",
       },
       {
         id: 20,
         title: "Eid Gatherings & Family Reunions",
         description: "Large family experiences with full-villa coordination.",
         badge: "Festive",
-        href: "/family-celebrations/celebrate-eid-with-your-whole-family",
+        slug: "eid-gatherings-family-reunions",
       },
       {
         id: 21,
         title: "Baby Showers & Gender Reveal",
         description: "Soft floral themes and delightful family-focused arrangements.",
         badge: "Family",
-        href: "/family-celebrations/welcome-your-little-miracle",
+        slug: "baby-showers-gender-reveal",
       },
       {
         id: 22,
         title: "Graduation Parties",
         description: "Celebrate big achievements with stylish event staging.",
         badge: "Youth",
-        href: "/family-celebrations/celebrate-your-big-achievement",
+        slug: "graduation-parties",
       },
       {
         id: 23,
         title: "Retirement Celebrations",
         description: "Dignified events for honoring long professional journeys.",
         badge: "Respect",
-        href: "/family-celebrations/dignified-events-honoring-professional-journeys",
+        slug: "retirement-celebrations",
       },
       {
         id: 24,
         title: "Farewells & Send-offs",
         description: "Warm and memorable setups for meaningful goodbyes.",
         badge: "Moments",
-        href: "/family-celebrations/warm-memorable-farewell-celebrations",
+        slug: "farewells-send-offs",
       },
     ],
   },
@@ -248,42 +249,42 @@ const eventSections = [
         title: "Bonfire & Stargazing Nights",
         description: "High-demand evening add-on for guests and families.",
         badge: "Signature",
-        href: "/events",
+        slug: "bonfire-stargazing-nights",
       },
       {
         id: 26,
         title: "Guided Trails & Forest Walks",
         description: "Scenic nature experiences for groups and couples.",
         badge: "Nature",
-        href: "/events",
+        slug: "guided-trails-forest-walks",
       },
       {
         id: 27,
         title: "Private Chef & Dining Experiences",
         description: "Personalized dining themes and curated food journeys.",
         badge: "Dining",
-        href: "/events",
+        slug: "private-chef-dining-experiences",
       },
       {
         id: 28,
         title: "Adventure & Outdoor Activities",
         description: "Thrilling mountain activities designed for safe fun.",
         badge: "Adventure",
-        href: "/events",
+        slug: "adventure-outdoor-activities",
       },
       {
         id: 29,
         title: "Workshops & Creative Sessions",
         description: "Hands-on workshops for teams, families, and creators.",
         badge: "Creative",
-        href: "/events",
+        slug: "workshops-creative-sessions",
       },
       {
         id: 30,
         title: "Photography & Content Packages",
         description: "Professional coverage for weddings and brand campaigns.",
         badge: "Media",
-        href: "/events",
+        slug: "photography-content-packages",
       },
     ],
   },
@@ -296,42 +297,42 @@ const eventSections = [
         title: "Yoga & Meditation Retreats",
         description: "Mindful sessions with serene mountain environments.",
         badge: "Wellness",
-        href: "/events",
+        slug: "yoga-meditation-retreats",
       },
       {
         id: 32,
         title: "Digital Detox Experiences",
         description: "Low-screen peaceful stays with curated routines.",
         badge: "Detox",
-        href: "/events",
+        slug: "digital-detox-experiences",
       },
       {
         id: 33,
         title: "Spa & Relaxation Escapes",
         description: "Rejuvenating body and mind with holistic comfort.",
         badge: "Relax",
-        href: "/events",
+        slug: "spa-relaxation-escapes",
       },
       {
         id: 34,
         title: "Health & Fitness Camps",
         description: "Active wellness programs with guided outdoor workouts.",
         badge: "Fitness",
-        href: "/events",
+        slug: "health-fitness-camps",
       },
       {
         id: 35,
         title: "Holistic Healing Programs",
         description: "Balanced healing experiences for stress-free recovery.",
         badge: "Healing",
-        href: "/events",
+        slug: "holistic-healing-programs",
       },
       {
         id: 36,
         title: "Luxury Honeymoon Packages",
         description: "Private and romantic stays with premium amenities.",
         badge: "Romance",
-        href: "/events",
+        slug: "luxury-honeymoon-packages",
       },
     ],
   },
@@ -390,10 +391,10 @@ export default function EventsPage() {
   <div className="relative z-10 w-full px-4 md:px-8 lg:px-10 pt-36 pb-14 md:pt-40 md:pb-20">
     {/* Same max-w-7xl as your card sections */}
     <div className="max-w-7xl">
-      {/* Grid layout preserved - left content + right form */}
-      <div className="grid grid-cols-1 gap-10 lg:grid-cols-[1.15fr_0.85fr] lg:gap-12 items-start">
+      {/* Full width content after removing form */}
+      <div className="max-w-3xl">
         
-        {/* Left side - Content aligned left within its column */}
+        {/* Content aligned left */}
         <div>
           <p className="inline-flex items-center gap-2 rounded-full border border-white/30 px-4 py-1 text-xs uppercase tracking-[0.2em] text-white/90">
             <Heart className="h-4 w-4" />
@@ -423,9 +424,6 @@ export default function EventsPage() {
             </a>
           </div>
         </div>
-
-        {/* Right side - Form (keeping original position) */}
-        <EventQuoteForm />
       </div>
     </div>
   </div>
@@ -461,7 +459,7 @@ export default function EventsPage() {
                 {section.cards.map((card, cardIndex) => (
                   <Link
                     key={card.id}
-                    href={card.href}
+                    href={`/events/${card.slug}`}
                     className="event-card group rounded-xl border border-neutral-200/90 bg-white p-4 shadow-sm transition duration-300 hover:-translate-y-1.5 hover:border-[#d8c093] hover:shadow-[0_14px_34px_rgba(18,18,18,0.12)]"
                     style={{ animationDelay: `${cardIndex * 70}ms` }}
                   >

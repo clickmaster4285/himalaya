@@ -2,6 +2,27 @@ import type { Metadata } from "next";
 import Navbar from "@/components/Navbar";
 import Footer from "@/components/Footer";
 
+const privacySchema = {
+  "@context": "https://schema.org",
+  "@type": "WebPage",
+  "name": "Privacy Policy | Himalaya Villas & Resorts",
+  "description": "Privacy Policy for Himalaya Villas & Resorts - Learn how we protect your personal information.",
+  "url": "https://himalayavillas.com/privacy-policy",
+  "provider": {
+    "@type": "Organization",
+    "name": "Himalaya Villas and Resort",
+    "telephone": "+92 304 567 9000",
+    "address": {
+      "@type": "PostalAddress",
+      "streetAddress": "Bhurban",
+      "addressLocality": "Murree",
+      "addressRegion": "Punjab",
+      "addressCountry": "PK"
+    }
+  },
+  "dateModified": "2024-01-01"
+};
+
 export const metadata: Metadata = {
   title: "Privacy Policy | Himalaya Villas & Resorts",
   description: "Privacy Policy for Himalaya Villas & Resorts - Learn how we protect your personal information.",
@@ -10,6 +31,7 @@ export const metadata: Metadata = {
 export default function PrivacyPolicyPage() {
   return (
     <>
+      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(privacySchema) }} />
       <Navbar />
       <main className="min-h-screen py-20 px-8 md:px-16" style={{ background: "hsl(160 15% 14%)" }}>
         <div className="max-w-4xl mx-auto">

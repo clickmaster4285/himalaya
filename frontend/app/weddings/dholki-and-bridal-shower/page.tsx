@@ -6,6 +6,61 @@ import Footer from "@/components/Footer";
 import { useEffect, useState } from "react";
 import { CheckCircle2, HelpCircle, Sparkles } from "lucide-react";
 
+const dholkiEventSchema = {
+  "@context": "https://schema.org",
+  "@type": "Event",
+  "name": "Dholki and Bridal Shower at Himalaya Villas",
+  "description": "Traditional dholki celebrations and bridal showers with themed styling, dhol arrangements, music setup, and family flow management in Bhurban, Murree Hills.",
+  "url": "https://himalayavillas.com/weddings/dholki-and-bridal-shower",
+  "startDate": "2024-01-01",
+  "endDate": "2024-12-31",
+  "location": {
+    "@type": "Place",
+    "name": "Himalaya Villas and Resort",
+    "address": {
+      "@type": "PostalAddress",
+      "streetAddress": "Bhurban",
+      "addressLocality": "Murree",
+      "addressRegion": "Punjab",
+      "addressCountry": "PK"
+    }
+  },
+  "organizer": {
+    "@type": "Organization",
+    "name": "Himalaya Villas and Resort",
+    "telephone": "+92 304 567 9000"
+  },
+  "offers": {
+    "@type": "Offer",
+    "price": "50000",
+    "priceCurrency": "PKR",
+    "description": "Dholki and bridal shower package with traditional styling and music arrangements"
+  }
+};
+
+const faqSchema = {
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  "mainEntity": [
+    {
+      "@type": "Question",
+      "name": "What is included in dholki and bridal shower setup?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Our dholki and bridal shower package includes traditional seating, themed cushions, stage styling, warm lighting, dhol arrangements, sound setup, and family flow management."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Can you customize the theme for dholki celebrations?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Yes, we can customize colors, stage designs, lighting, and seating layouts to match your preferred theme for dholki and bridal shower celebrations."
+      }
+    }
+  ]
+};
+
 const heroSlides = [
   "/assets/dholki-hero-1.jpg",
   "/assets/dholki-hero-2.jpg",
@@ -49,6 +104,8 @@ export default function DholkiPage() {
 
   return (
     <div className="min-h-screen bg-white">
+      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(dholkiEventSchema) }} />
+      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(faqSchema) }} />
       <section className="relative min-h-[720px] overflow-hidden">
         <div className="absolute inset-0">
           {heroSlides.map((slide, idx) => (

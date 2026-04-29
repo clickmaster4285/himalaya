@@ -55,5 +55,6 @@ export default function LoginPage() {
         <LoginForm className="mt-7" />
       </AuthGlassCard>
     </AuthPageShell>
+    </div>
   );
 }

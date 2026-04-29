@@ -47,5 +47,6 @@ export default function SignupPage() {
     >
       <SignupClient />
     </AuthPageShell>
+    </div>
   );
 }

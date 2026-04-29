@@ -2,6 +2,27 @@ import type { Metadata } from "next";
 import Navbar from "@/components/Navbar";
 import Footer from "@/components/Footer";
 
+const termsSchema = {
+  "@context": "https://schema.org",
+  "@type": "WebPage",
+  "name": "Terms & Conditions | Himalaya Villas & Resorts",
+  "description": "Terms and Conditions for Himalaya Villas & Resorts - Understand our booking terms and guest policies.",
+  "url": "https://himalayavillas.com/terms-and-conditions",
+  "provider": {
+    "@type": "Organization",
+    "name": "Himalaya Villas and Resort",
+    "telephone": "+92 304 567 9000",
+    "address": {
+      "@type": "PostalAddress",
+      "streetAddress": "Bhurban",
+      "addressLocality": "Murree",
+      "addressRegion": "Punjab",
+      "addressCountry": "PK"
+    }
+  },
+  "dateModified": "2024-01-01"
+};
+
 export const metadata: Metadata = {
   title: "Terms & Conditions | Himalaya Villas & Resorts",
   description: "Terms and Conditions for Himalaya Villas & Resorts - Understand our booking terms and guest policies.",
@@ -10,6 +31,7 @@ export const metadata: Metadata = {
 export default function TermsAndConditionsPage() {
   return (
     <>
+      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(termsSchema) }} />
       <Navbar />
       <main className="min-h-screen py-20 px-8 md:px-16" style={{ background: "hsl(160 15% 14%)" }}>
         <div className="max-w-4xl mx-auto">

@@ -88,7 +88,12 @@ const HeroSection = () => {
               >
                 Request private tour
               </a>
-              <a href="/book-now">Book Now</a>
+              <a
+                href="/book-now"
+                className="inline-flex items-center justify-center rounded-md border-2 border-white/85 bg-white/5 px-5 sm:px-6 md:px-7 py-3 sm:py-3.5 text-[11px] sm:text-xs font-semibold uppercase tracking-[0.18em] sm:tracking-[0.2em] text-white shadow-md backdrop-blur-sm transition hover:bg-white/15 w-full sm:w-auto"
+              >
+                Book Now
+              </a>
             </div>
           </div>
 

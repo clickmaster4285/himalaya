@@ -7,6 +7,56 @@ import { CheckCircle2, Heart, Sparkles, Users } from "lucide-react";
 import Navbar from "@/components/Navbar";
 import Footer from "@/components/Footer";
 
+const nikkahEventSchema = {
+  "@context": "https://schema.org",
+  "@type": "Event",
+  "name": "Nikkah and Wedding Celebrations in the Hills at Himalaya Villas",
+  "description": "Traditional nikkah ceremonies and wedding celebrations in the beautiful hills of Bhurban, Murree with elegant floral design, family-friendly private venue, and professional event management.",
+  "url": "https://himalayavillas.com/weddings/nikkah-and-wedding-celebrations-in-the-hills",
+  "startDate": "2024-01-01",
+  "endDate": "2024-12-31",
+  "location": {
+    "@type": "Place",
+    "name": "Himalaya Villas and Resort",
+    "address": {
+      "@type": "PostalAddress",
+      "streetAddress": "Bhurban",
+      "addressLocality": "Murree",
+      "addressRegion": "Punjab",
+      "addressCountry": "PK"
+    }
+  },
+  "organizer": {
+    "@type": "Organization",
+    "name": "Himalaya Villas and Resort",
+    "telephone": "+92 304 567 9000"
+  },
+  "offers": {
+    "@type": "Offer",
+    "price": "100000",
+    "priceCurrency": "PKR",
+    "description": "Traditional nikkah ceremony package with imam coordination and stage decoration"
+  }
+};
+
+const nikkahServiceSchema = {
+  "@context": "https://schema.org",
+  "@type": "Service",
+  "name": "Nikkah Ceremony Services at Himalaya Villas",
+  "description": "Complete nikkah ceremony services including imam coordination, witness setup, sacred seating plan, smooth flow management, and photography coverage.",
+  "provider": {
+    "@type": "Organization",
+    "name": "Himalaya Villas and Resort"
+  },
+  "serviceType": "Wedding Ceremony Services",
+  "offers": {
+    "@type": "Offer",
+    "price": "100000",
+    "priceCurrency": "PKR",
+    "description": "Nikkah ceremony with complete setup and management"
+  }
+};
+
 const heroSlides = [
   "/assets/nikah-hero-1.png",
   "/assets/nikah-hero-2.png",
@@ -56,6 +106,8 @@ export default function NikahPage() {
 
   return (
     <div className="min-h-screen bg-white">
+      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(nikkahEventSchema) }} />
+      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(nikkahServiceSchema) }} />
       <section className="relative min-h-[720px] overflow-hidden">
         <div className="absolute inset-0">
           {heroSlides.map((slide, idx) => (

@@ -6,6 +6,109 @@ import Navbar from "@/components/Navbar";
 import Footer from "@/components/Footer";
 import { buildWhatsAppBookingUrl } from "@/lib/whatsapp";
 
+const weddingVenueSchema = {
+  "@context": "https://schema.org",
+  "@type": "EventVenue",
+  "name": "Himalaya Villas Wedding Venue",
+  "description": "Luxury wedding venue in Bhurban, Murree Hills. Perfect destination for nikkah ceremonies, mehndi celebrations, barat processions, and walima receptions with royal halls and panoramic mountain views.",
+  "url": "https://himalayavillas.com/weddings",
+  "telephone": "+92 304 567 9000",
+  "address": {
+    "@type": "PostalAddress",
+    "streetAddress": "Bhurban",
+    "addressLocality": "Murree",
+    "addressRegion": "Punjab",
+    "addressCountry": "PK"
+  },
+  "geo": {
+    "@type": "GeoCoordinates",
+    "latitude": "33.9346",
+    "longitude": "73.4592"
+  },
+  "maximumAttendeeCapacity": "500",
+  "amenityFeature": [
+    {"@type": "LocationFeatureSpecification", "name": "Grand Wedding Hall", "value": true},
+    {"@type": "LocationFeatureSpecification", "name": "Outdoor Garden Lawn", "value": true},
+    {"@type": "LocationFeatureSpecification", "name": "Royal Ballroom", "value": true},
+    {"@type": "LocationFeatureSpecification", "name": "Bridal Suite", "value": true},
+    {"@type": "LocationFeatureSpecification", "name": "VIP Lounges", "value": true}
+  ],
+  "priceRange": "PKR 450,000 - PKR 2,500,000"
+};
+
+const weddingServicesSchema = {
+  "@context": "https://schema.org",
+  "@type": "Service",
+  "name": "Wedding Planning Services at Himalaya Villas",
+  "description": "Complete wedding services including nikkah ceremonies, mehndi nights, barat celebrations, walima receptions, engagement ceremonies, and professional photography.",
+  "provider": {
+    "@type": "Organization",
+    "name": "Himalaya Villas and Resort"
+  },
+  "serviceType": "Wedding Planning",
+  "offers": [
+    {
+      "@type": "Offer",
+      "name": "Intimate Wedding Package",
+      "price": "450000",
+      "priceCurrency": "PKR",
+      "description": "Perfect for 50-100 guests with basic floral décor and tea catering"
+    },
+    {
+      "@type": "Offer",
+      "name": "Classic Wedding Package", 
+      "price": "850000",
+      "priceCurrency": "PKR",
+      "description": "Ideal for 100-200 guests with professional stage décor and 3-course dinner"
+    },
+    {
+      "@type": "Offer",
+      "name": "Premium Wedding Package",
+      "price": "1500000",
+      "priceCurrency": "PKR", 
+      "description": "Luxury package for 200-300 guests with LED décor and live music"
+    },
+    {
+      "@type": "Offer",
+      "name": "Royal Wedding Package",
+      "price": "2500000",
+      "priceCurrency": "PKR",
+      "description": "Ultimate luxury for 300-500 guests with full estate access and celebrity host"
+    }
+  ]
+};
+
+const faqSchema = {
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  "mainEntity": [
+    {
+      "@type": "Question",
+      "name": "What wedding services do you offer at Himalaya Villas?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "We offer complete wedding services including nikkah ceremonies, mehndi nights, barat celebrations, walima receptions, engagement ceremonies, professional photography, and full wedding planning with dedicated coordinators."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "How many guests can you accommodate for weddings?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Our venues can accommodate 50-500 guests depending on the package. We have intimate spaces for small ceremonies and grand halls for large celebrations with full estate access available."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "What is included in your wedding packages?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Packages include venue access, floral décor, catering services, photography, bridal suite access, VIP lounges, dedicated wedding planner, and various amenities depending on the selected package tier."
+      }
+    }
+  ]
+};
+
 const slides = [
   {
     img: "/assets/wedding1.jpg",
@@ -182,6 +285,9 @@ export default function WeddingsPage() {
 
   return (
     <div className="min-h-screen bg-[#F6F1EA]">
+      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(weddingVenueSchema) }} />
+      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(weddingServicesSchema) }} />
+      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(faqSchema) }} />
       <Navbar />
 
       {/* HERO SLIDER */}

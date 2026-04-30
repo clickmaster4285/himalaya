@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 import { HomeStructuredData } from "@/components/seo/StructuredData";
 import Script from "next/script";
 import localBusinessSchema from '@/public/himalayavillas-localbusiness-schema.json';
+import faqSchema from '@/public/himalayavillas-faq-schema.json';
 import HeroSection from "@/components/HeroSection";
 import PhilosophySection from "@/components/PhilosophySection";
 import LiveWeatherMurree from "@/components/LiveWeatherMurree";
@@ -39,6 +40,11 @@ const Index = async () => {
         id="local-business-schema"
         type="application/ld+json"
         dangerouslySetInnerHTML={{ __html: JSON.stringify(localBusinessSchema) }}
+      />
+      <Script
+        id="faq-schema"
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(faqSchema) }}
       />
       <h1 className="sr-only">Himalaya Villas and Resort in Bhurban</h1>
       <HeroSection />

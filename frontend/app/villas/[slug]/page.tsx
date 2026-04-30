@@ -25,9 +25,48 @@ export async function generateMetadata({ params }: VillasDetailPageProps): Promi
   const { slug } = await params;
   const villa = await getVillaBySlugPublic(slug);
   if (!villa) return {};
+
+  const metaTitle = (() => {
+    switch (slug) {
+      case 'alpine-family-lodge':
+        return 'Alpine Family Lodge | Luxury Villa Bhurban Murree | Himalaya Villas';
+      case 'serene-valley-cabin':
+        return 'Serene Valley Cabin | Luxury Villa Bhurban Murree | Himalaya Villas';
+      case 'presidential-suite':
+        return 'Presidential Suite | Luxury Villa Bhurban Murree | Himalaya Villas';
+      case 'himalayan-penthouse':
+        return 'Himalayan Penthouse | Luxury Villa Bhurban Murree | Himalaya Villas';
+      case 'garden-villa-retreat':
+        return 'Garden Villa Retreat | Luxury Villa Bhurban Murree | Himalaya Villas';
+      case 'sunset-suite':
+        return 'Sunset Suite | Luxury Villa Bhurban Murree | Himalaya Villas';
+      default:
+        return `${villa.title} | Luxury Villa Bhurban Murree | Himalaya Villas`;
+    }
+  })();
+
+  const metaDescription = (() => {
+    switch (slug) {
+      case 'alpine-family-lodge':
+        return 'Alpine Family Lodge offers 3 bedrooms with stunning cedar forest views in Bhurban. Perfect for families seeking modern luxury villa stays. Book Now';
+      case 'serene-valley-cabin':
+        return 'Serene Valley Cabin provides private luxury suite accommodations in Murree with premium amenities and mountain views. Book Now';
+      case 'presidential-suite':
+        return 'Presidential Suite features jacuzzi and panoramic mountain views in Bhurban. Ultimate luxury villa experience. Book Now';
+      case 'himalayan-penthouse':
+        return 'Himalayan Penthouse offers premium stay experience in Bhurban Murree with luxury amenities and mountain views. Book Now';
+      case 'garden-villa-retreat':
+        return 'Garden Villa Retreat provides spacious family villa in Murree with garden access and peaceful atmosphere. Book Now';
+      case 'sunset-suite':
+        return 'Sunset Suite offers mountain view luxury suite in Bhurban with premium amenities and stunning sunset views. Book Now';
+      default:
+        return villa.description;
+    }
+  })();
+
   return createPageMetadata({
-    title: `${villa.title} — Private villa, Bhurban`,
-    description: villa.description,
+    title: metaTitle,
+    description: metaDescription,
     path: `/villas/${slug}`,
     keywords: [...villa.amenities.slice(0, 12), "Himalaya Villas & Resorts", "Bhurban", "Murree"],
     ogImage: getValidImageSrc(villa.image),
@@ -176,7 +215,26 @@ const VillaDetail = async ({ params }: VillasDetailPageProps) => {
             </div>
 
             <div className="mt-8">
-              <h2 className="font-display text-xl text-neutral-900">About This Villa</h2>
+              <h2 className="font-display text-xl text-neutral-900">
+                {(() => {
+                  switch (villa.slug) {
+                    case 'alpine-family-lodge':
+                      return 'Alpine Family Lodge - 3-Bedroom Family Villa in Bhurban';
+                    case 'serene-valley-cabin':
+                      return 'Serene Valley Cabin - Private Luxury Suite in Murree';
+                    case 'presidential-suite':
+                      return 'Presidential Suite - Jacuzzi & Panoramic Mountain Views';
+                    case 'himalayan-penthouse':
+                      return 'Himalayan Penthouse - Premium Stay in Bhurban Murree';
+                    case 'garden-villa-retreat':
+                      return 'Garden Villa Retreat - Spacious Family Villa Murree';
+                    case 'sunset-suite':
+                      return 'Sunset Suite - Mountain View Luxury Suite Bhurban';
+                    default:
+                      return `About ${villa.title}`;
+                  }
+                })()}
+              </h2>
               <p className="mt-4 max-w-3xl text-[13px] italic leading-6 text-neutral-500">{villa.content}</p>
               <p className="mt-5 max-w-3xl text-[14px] leading-7 text-neutral-700">
                 This residence is designed for travelers who want more than a standard room. Instead of compressed hotel

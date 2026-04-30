@@ -1,0 +1,258 @@
+[
+  {
+    "@context": "https://schema.org",
+    "@type": "FAQPage",
+    "name": "Popular Questions — Himalaya Villas & Resorts",
+    "url": "https://himalayavillas.com/faqs",
+    "mainEntity": [
+      {
+        "@type": "Question",
+        "name": "What is Himalaya Villas & Resorts?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Himalaya Villas & Resorts is a private luxury estate located in Bhurban, not a hotel. It is crafted for guests who demand exclusivity, privacy, and elevated experiences in hills of Bhurban among the cedar forests of Murree hills."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "Where is Himalaya Villas & Resorts located?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Himalaya Villas & Resorts is located in Bhurban, in the Murree hills of Pakistan. It is set among cedar forests with panoramic views of the Himalayan foothills."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "How do I book a stay at Himalaya Villas & Resorts?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "You can book a stay by contacting our team via WhatsApp at +92 304 567 9000, or by visiting our Book Now page at https://himalayavillas.com/book-now. Our concierge team is available 24/7 to help you select the perfect villa."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "Is Himalaya Villas & Resorts suitable for families?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Yes, we offer family villas including Garden Villa Retreat and Alpine Family Lodge, both featuring three bedrooms with ample space for families. These are designed to offer comfort, privacy, and a beautiful mountain setting for family getaways."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "Can I host a wedding at Himalaya Villas & Resorts?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Yes, Himalaya Villas & Resorts is an ideal wedding venue near Islamabad. We offer expansive outdoor celebration spaces, cedar forest backdrops, end-to-end event management including decor, catering, and coordination. Contact us at +92 304 567 9000 to plan your dream wedding."
+        }
+      }
+    ]
+  },
+  {
+    "@context": "https://schema.org",
+    "@type": "FAQPage",
+    "name": "Resort Information — Himalaya Villas & Resorts",
+    "url": "https://himalayavillas.com/faqs",
+    "mainEntity": [
+      {
+        "@type": "Question",
+        "name": "What amenities are available at Himalaya Villas & Resorts?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Himalaya Villas & Resorts offers panoramic Himalayan views, luxury designer interiors, gourmet dining with private chefs, outdoor celebration spaces, corporate retreat facilities, forest walks, guided trails, stargazing sessions, and a private gated estate for full privacy and security."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "Is dining available at resort?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Yes, we offer curated dining experiences with private chefs and customized menus tailored for your event or stay — from terrace dinners to long lunches with the Murree hills in view. You can also book dining separately at https://himalayavillas.com/book/dining."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "Is property private and secure?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Yes, Himalaya Villas & Resorts is a gated, fully private estate. We accept limited bookings per month to ensure every guest gets an exclusive, undisturbed experience."
+        }
+      }
+    ]
+  },
+  {
+    "@context": "https://schema.org",
+    "@type": "FAQPage",
+    "name": "Villa Booking & Reservations — Himalaya Villas & Resorts",
+    "url": "https://himalayavillas.com/faqs",
+    "mainEntity": [
+      {
+        "@type": "Question",
+        "name": "What villas are available at Himalaya Villas & Resorts?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "We offer six villas: Serene Valley Cabin (PKR 45,000/night), Sunset Suite (PKR 49,000/night), Garden Villa Retreat (PKR 39,000/night), Himalayan Penthouse (PKR 70,000/night), The Presidential Suite (PKR 65,000/night), and Alpine Family Lodge (PKR 39,000/night)."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "Can I request a private tour before booking?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Yes, you can request a private tour by contacting us via WhatsApp at +92 304 567 9000 or by clicking the 'Request Private Tour' button on our website at https://himalayavillas.com."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "How many guests can be accommodated?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Guest capacity varies by villa. Family villas like Garden Villa Retreat and Alpine Family Lodge have three bedrooms suitable for larger groups, while suites like the Presidential Suite and Himalayan Penthouse are ideal for couples or smaller parties. Contact us to confirm capacity for your specific needs."
+        }
+      }
+    ]
+  },
+  {
+    "@context": "https://schema.org",
+    "@type": "FAQPage",
+    "name": "Directions & Contact — Himalaya Villas & Resorts",
+    "url": "https://himalayavillas.com/faqs",
+    "mainEntity": [
+      {
+        "@type": "Question",
+        "name": "How do I get to Himalaya Villas & Resorts?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Himalaya Villas & Resorts is located in Bhurban in the Murree hills. You can find directions via Google Maps at https://maps.app.goo.gl/SzyHVXrCLic2CuvH8. Our team can also assist with travel arrangements and transfers."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "How can I contact Himalaya Villas & Resorts?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "You can reach us via WhatsApp at +92 304 567 9000. Our team is available from 9 AM to 10 PM with an average response time of 15 minutes. You can also visit our contact page at https://himalayavillas.com/contact."
+        }
+      }
+    ]
+  },
+  {
+    "@context": "https://schema.org",
+    "@type": "FAQPage",
+    "name": "Pricing & Packages — Himalaya Villas & Resorts",
+    "url": "https://himalayavillas.com/faqs",
+    "mainEntity": [
+      {
+        "@type": "Question",
+        "name": "What are villa rates at Himalaya Villas & Resorts?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Villa rates start from PKR 39,000 per night for Garden Villa Retreat and Alpine Family Lodge, going up to PKR 70,000 per night for the Himalayan Penthouse. Rates may vary by season. Contact us at +92 304 567 9000 for seasonal offers and package details."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "Are meal plans included in villa price?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Meal plans and dining experiences can be customized and added to your stay. We offer private chefs and curated menus tailored to your event or stay. Contact our concierge team to discuss dining options and packages."
+        }
+      }
+    ]
+  },
+  {
+    "@context": "https://schema.org",
+    "@type": "FAQPage",
+    "name": "Weddings — Himalaya Villas & Resorts",
+    "url": "https://himalayavillas.com/faqs",
+    "mainEntity": [
+      {
+        "@type": "Question",
+        "name": "Is Himalaya Villas & Resorts available for destination weddings?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Yes, Himalaya Villas & Resorts is one of the premier wedding venues near Islamabad. Set in the cedar forests of Bhurban with expansive lawns, terraces, and mountain backdrops, it is ideal for outdoor luxury weddings. We provide end-to-end event management including decor, catering, and coordination."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "Can we exclusively book the entire estate for a wedding?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Yes, the entire private estate can be exclusively booked for weddings and special celebrations. Contact our team at +92 304 567 9000 to discuss exclusive bookings, custom packages, and availability."
+        }
+      }
+    ]
+  },
+  {
+    "@context": "https://schema.org",
+    "@type": "FAQPage",
+    "name": "Events — Himalaya Villas & Resorts",
+    "url": "https://himalayavillas.com/faqs",
+    "mainEntity": [
+      {
+        "@type": "Question",
+        "name": "What types of events can be hosted at Himalaya Villas & Resorts?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Himalaya Villas & Resorts hosts a variety of events including destination weddings, birthday celebrations, anniversary parties, private gatherings, family reunions, and milestone celebrations. Every event is customized to the client's vision."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "Do you provide event management services?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Yes, we offer professional event setup with end-to-end event management including decor, catering, coordination, and venue setup. Our team works closely with you to build a personalized experience from setting to the last detail."
+        }
+      }
+    ]
+  },
+  {
+    "@context": "https://schema.org",
+    "@type": "FAQPage",
+    "name": "Corporate Bookings — Himalaya Villas & Resorts",
+    "url": "https://himalayavillas.com/faqs",
+    "mainEntity": [
+      {
+        "@type": "Question",
+        "name": "Is Himalaya Villas & Resorts suitable for corporate retreats?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Yes, we offer a private executive environment away from the city, ideal for corporate retreats, board meetings, team-building activities, and client entertainment. The mountain setting naturally enhances focus and perspective."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "Are boardroom and business facilities available?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Yes, we provide corporate retreat facilities suitable for executive meetings and boardroom sessions. Contact our team at +92 304 567 9000 to discuss your specific corporate requirements and available setups."
+        }
+      }
+    ]
+  },
+  {
+    "@context": "https://schema.org",
+    "@type": "FAQPage",
+    "name": "Policies & Refunds — Himalaya Villas & Resorts",
+    "url": "https://himalayavillas.com/faqs",
+    "mainEntity": [
+      {
+        "@type": "Question",
+        "name": "What is the cancellation and refund policy?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "For full details on cancellation and refund policies, please visit https://himalayavillas.com/refund-policy. You can also contact our team via WhatsApp at +92 304 567 9000 for specific booking modification queries."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "What are the property rules and terms of stay?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Full terms and conditions governing your stay at Himalaya Villas & Resorts are available at https://himalayavillas.com/terms-and-conditions. We encourage all guests to review these before confirming a booking."
+        }
+      }
+    ]
+  }
+]

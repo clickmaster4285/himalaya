@@ -10,6 +10,11 @@ const FrequentlyVisitedPages = () => {
 
   const pages = [
     {
+      title: "Himalaya Villas Bhurban Murree Rest House",
+      description: "Pakistan's premier luxury rest house - private mountain villas with panoramic Himalayan views and personalized butler service.",
+      href: "/himalaya-villas-bhurban-murree-rest-house"
+    },
+    {
       title: "Luxury Hotel in Murree",
       description: "Experience premium hospitality, scenic mountain views, and world-class amenities in the heart of Murree.",
       href: "/luxury-hotels-in-muree"
@@ -48,7 +53,7 @@ const FrequentlyVisitedPages = () => {
           </h2>
         </motion.div>
 
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-5 gap-6">
           {pages.map((page, index) => (
             <motion.div
               key={page.href}

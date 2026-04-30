@@ -10,38 +10,6 @@ import Footer from "@/components/Footer";
 import Script from "next/script";
 import faqSchema from '@/public/himalayavillas-faq-schema.json';
 
-const faqPageSchema = {
-  "@context": "https://schema.org",
-  "@type": "FAQPage",
-  "name": "Frequently Asked Questions about Himalaya Villas",
-  "description": "Comprehensive FAQ page covering all aspects of Himalaya Villas including booking, amenities, location, services, and policies.",
-  "mainEntity": [
-    {
-      "@type": "Question",
-      "name": "What is special in Bhurban?",
-      "acceptedAnswer": {
-        "@type": "Answer",
-        "text": "Bhurban is Pakistan's most elevated luxury destination, perched at 5,000+ feet in the Murree Hills with dense pine forests and panoramic Himalayan views — just 45 minutes from Islamabad. What sets Bhurban apart is the rare combination of mountain cool, natural grandeur, and world-class hospitality infrastructure."
-      }
-    },
-    {
-      "@type": "Question",
-      "name": "What is Bhurban known for?",
-      "acceptedAnswer": {
-        "@type": "Answer",
-        "text": "Bhurban, Murree is known for its pine-forested hills, cool mountain climate, and status as Pakistan's premier hill station for luxury travel. Home to the country's most prestigious mountain retreats, Bhurban attracts Islamabad and Lahore's elite families, corporate leaders, and discerning travellers seeking a genuine escape from city heat."
-      }
-    },
-    {
-      "@type": "Question",
-      "name": "How do I book at Himalaya Villas?",
-      "acceptedAnswer": {
-        "@type": "Answer",
-        "text": "You can book directly through our website, via WhatsApp at +92 304 567 9000, or by calling our reservations team. We offer guaranteed best rates on direct bookings."
-      }
-    }
-  ]
-};
 
 export default function FaqsPage() {
   const [activeCategory, setActiveCategory] = useState<string | null>(null);
@@ -462,7 +430,6 @@ export default function FaqsPage() {
 
   return (
     <div className="min-h-screen bg-[#fcfbf8] flex flex-col">
-      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(faqPageSchema) }} />
       <Script
         id="faq-schema"
         type="application/ld+json"

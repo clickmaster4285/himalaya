@@ -58,9 +58,9 @@ const PhilosophySection = () => {
             transition={{ duration: 0.8, delay: 0.15 }}
             className="font-display text-4xl md:text-5xl lg:text-6xl font-normal leading-[1.15] text-foreground"
           >
-            We Built This For People
+            Luxury Private Villas in Bhurban Murree
             <br />
-            Who Have <span className="italic text-primary">Stayed Everywhere Else</span>
+            <span className="italic text-primary">Himalaya Villas & Resorts</span>
           </motion.h2>
 
           <motion.div

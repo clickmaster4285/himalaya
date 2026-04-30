@@ -94,21 +94,20 @@ export default function BlogsPageClient({ villas }: { villas: Villa[] }) {
             transition={{ duration: dur + 0.1, delay: 0.08, ease }}
             className="mt-8 max-w-4xl font-display text-4xl font-normal leading-[1.08] tracking-tight text-white md:text-6xl lg:text-[4.25rem]"
           >
-            Stories from the
+            Bhurban & Murree Travel Blog
             <span className="block bg-gradient-to-r from-[#f0e6d4] via-[#c9a55b] to-[#e8d4a8] bg-clip-text text-transparent">
-              estate &amp; the peaks
+              Himalaya Villas & Resorts
             </span>
           </motion.h1>
 
-          <motion.p
+          <motion.h2
             initial={false}
             animate={heroInView ? { opacity: 1, y: 0 } : {}}
             transition={{ duration: dur, delay: 0.18, ease }}
-            className="mt-6 max-w-xl text-base leading-relaxed text-white/65 md:text-lg"
+            className="mt-6 max-w-xl text-xl font-medium leading-relaxed text-white/80 md:text-2xl"
           >
-            Guides, inspiration, and quiet notes on villa life — written for guests who care about space, light, and the
-            Bhurban air.
-          </motion.p>
+            Guides, villa tips, and mountain travel inspiration
+          </motion.h2>
 
           <motion.div
             initial={false}

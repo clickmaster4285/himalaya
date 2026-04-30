@@ -192,7 +192,7 @@ export default function ContactPage() {
 
             {/* Right Column - Contact Form */}
             <div className="lg:col-span-7 bg-white border border-[#efe7d9] px-5 sm:px-6 md:px-7 lg:px-9 py-6 sm:py-7 md:py-8">
-              <h2 className="font-display text-3xl sm:text-4xl md:text-5xl text-neutral-900">Send Us a Message</h2>
+              <h2 className="font-display text-3xl sm:text-4xl md:text-5xl text-neutral-900">Contact Himalaya Villas & Resorts - Bhurban Bookings</h2>
               <p className="mt-3 sm:mt-4 text-[11px] sm:text-[12px] tracking-[0.06em] text-neutral-500">
                 Fill out the form below and our team will get back to you within 24 hours
               </p>

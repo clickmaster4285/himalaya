@@ -10,7 +10,7 @@ import LiveWeatherBadge from "@/components/LiveWeatherBadge";
 
 const logo = "/assets/himalaya-logo.png";
 
-const navItems = ["Villas", "Experience", "Virtual Tour", "Journal", "Events", "Blogs", "Contact"];
+const navItems = ["Villas", "Experience", "Virtual Tour", "Events", "Blogs", "Contact"];
 
 const Navbar = () => {
   const [scrolled, setScrolled] = useState(false);
@@ -51,8 +51,6 @@ const Navbar = () => {
     if (item === "Villas") return "/villas";
     if (item === "Experience") return "/experience";
     if (item === "Virtual Tour") return "/experience#virtual-tour";
-    if (item === "Journal") return "/journal";
-     if (item === "Weddings") return "/weddings";
     if (item === "Events") return "/events";
     if (item === "Blogs") return "/blogs";
     if (item === "Contact") return "/contact";

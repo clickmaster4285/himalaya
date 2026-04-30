@@ -7,6 +7,8 @@ import {
 } from "lucide-react";
 import Navbar from "@/components/Navbar";
 import Footer from "@/components/Footer";
+import Script from "next/script";
+import faqSchema from '@/public/himalayavillas-faq-schema.json';
 
 const faqPageSchema = {
   "@context": "https://schema.org",
@@ -461,6 +463,11 @@ export default function FaqsPage() {
   return (
     <div className="min-h-screen bg-[#fcfbf8] flex flex-col">
       <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(faqPageSchema) }} />
+      <Script
+        id="faq-schema"
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(faqSchema) }}
+      />
       <Navbar />
 
       {/* Hero Section */}

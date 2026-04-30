@@ -250,10 +250,9 @@ const FAQ_SET_BY_PATH: Record<string, string[]> = {
 
 function detectFaqGroup(pathname: string): keyof typeof FAQ_SET_BY_PATH {
   if (pathname === "/") return "home";
-  if (pathname.startsWith("/journal")) return "journal";
+  if (pathname.startsWith("/blog") || pathname.startsWith("/blogs")) return "blog";
   if (pathname.startsWith("/villas/")) return "villaDetail";
   if (pathname.startsWith("/villas")) return "villas";
-  if (pathname.startsWith("/blog") || pathname.startsWith("/blogs")) return "blog";
   if (pathname.startsWith("/book")) return "booking";
   if (pathname.startsWith("/contact")) return "contact";
   if (pathname.startsWith("/dining")) return "dining";

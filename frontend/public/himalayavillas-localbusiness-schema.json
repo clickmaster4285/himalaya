@@ -1,0 +1,135 @@
+{
+  "@context": "https://schema.org",
+  "@type": ["LocalBusiness", "LodgingBusiness"],
+  "name": "Himalaya Villas & Resorts",
+  "description": "A private luxury estate in Bhurban crafted for guests who demand exclusivity, privacy, and elevated experiences in the cedar forests of the Murree hills.",
+  "url": "https://himalayavillas.com",
+  "telephone": "+923045679000",
+  "email": "",
+  "priceRange": "PKR 39,000 - PKR 70,000",
+  "currenciesAccepted": "PKR",
+  "paymentAccepted": "Cash, Bank Transfer",
+  "address": {
+    "@type": "PostalAddress",
+    "streetAddress": "Bhurban",
+    "addressLocality": "Bhurban",
+    "addressRegion": "Murree",
+    "addressCountry": "PK"
+  },
+  "geo": {
+    "@type": "GeoCoordinates",
+    "latitude": "33.91",
+    "longitude": "73.39"
+  },
+  "hasMap": "https://maps.app.goo.gl/SzyHVXrCLic2CuvH8",
+  "openingHoursSpecification": {
+    "@type": "OpeningHoursSpecification",
+    "dayOfWeek": [
+      "Monday", "Tuesday", "Wednesday", "Thursday",
+      "Friday", "Saturday", "Sunday"
+    ],
+    "opens": "09:00",
+    "closes": "22:00"
+  },
+  "image": [
+    "https://himalayavillas.com/assets/villa-exterior.jpg",
+    "https://himalayavillas.com/assets/villa-presidential-real.jpg",
+    "https://himalayavillas.com/assets/villa-alpine-real.jpg"
+  ],
+  "logo": "https://himalayavillas.com/assets/himalaya-logo.png",
+  "sameAs": [
+    "https://wa.me/923045679000"
+  ],
+  "contactPoint": {
+    "@type": "ContactPoint",
+    "telephone": "+923045679000",
+    "contactType": "reservations",
+    "availableLanguage": ["English", "Urdu"],
+    "hoursAvailable": {
+      "@type": "OpeningHoursSpecification",
+      "opens": "00:00",
+      "closes": "23:59",
+      "dayOfWeek": [
+        "Monday", "Tuesday", "Wednesday", "Thursday",
+        "Friday", "Saturday", "Sunday"
+      ]
+    }
+  },
+  "amenityFeature": [
+    { "@type": "LocationFeatureSpecification", "name": "Panoramic Himalayan Views", "value": true },
+    { "@type": "LocationFeatureSpecification", "name": "Luxury Designer Interiors", "value": true },
+    { "@type": "LocationFeatureSpecification", "name": "Private Chef & Gourmet Dining", "value": true },
+    { "@type": "LocationFeatureSpecification", "name": "Outdoor Event & Wedding Space", "value": true },
+    { "@type": "LocationFeatureSpecification", "name": "Corporate Retreat Facilities", "value": true },
+    { "@type": "LocationFeatureSpecification", "name": "Jacuzzi", "value": true },
+    { "@type": "LocationFeatureSpecification", "name": "Private Terrace", "value": true },
+    { "@type": "LocationFeatureSpecification", "name": "Forest Walks & Guided Trails", "value": true },
+    { "@type": "LocationFeatureSpecification", "name": "Stargazing Sessions", "value": true },
+    { "@type": "LocationFeatureSpecification", "name": "Gated Private Estate", "value": true },
+    { "@type": "LocationFeatureSpecification", "name": "24/7 Concierge", "value": true }
+  ],
+  "makesOffer": [
+    {
+      "@type": "Offer",
+      "name": "Serene Valley Cabin",
+      "description": "A peaceful cabin with floor-to-ceiling windows and private terrace.",
+      "price": "45000",
+      "priceCurrency": "PKR",
+      "url": "https://himalayavillas.com/villas/serene-valley-cabin"
+    },
+    {
+      "@type": "Offer",
+      "name": "Sunset Suite",
+      "description": "Serene suite with sunset-facing windows and cozy interiors.",
+      "price": "49000",
+      "priceCurrency": "PKR",
+      "url": "https://himalayavillas.com/villas/sunset-suite"
+    },
+    {
+      "@type": "Offer",
+      "name": "Garden Villa Retreat",
+      "description": "Three bedrooms family villa with mountain views and private garden.",
+      "price": "39000",
+      "priceCurrency": "PKR",
+      "url": "https://himalayavillas.com/villas/garden-villa-retreat"
+    },
+    {
+      "@type": "Offer",
+      "name": "Himalayan Penthouse",
+      "description": "Luxury penthouse with an expansive balcony and skyline view.",
+      "price": "70000",
+      "priceCurrency": "PKR",
+      "url": "https://himalayavillas.com/villas/himalayan-penthouse"
+    },
+    {
+      "@type": "Offer",
+      "name": "The Presidential Suite",
+      "description": "The flagship villa with a private terrace, jacuzzi with mountain views.",
+      "price": "65000",
+      "priceCurrency": "PKR",
+      "url": "https://himalayavillas.com/villas/presidential-suite"
+    },
+    {
+      "@type": "Offer",
+      "name": "Alpine Family Lodge",
+      "description": "Three bedrooms family lodge surrounded by cedar forests.",
+      "price": "39000",
+      "priceCurrency": "PKR",
+      "url": "https://himalayavillas.com/villas/alpine-family-lodge"
+    }
+  ],
+  "review": {
+    "@type": "Review",
+    "reviewBody": "The perfect escape from the city. The private villas offer unmatched tranquility.",
+    "author": {
+      "@type": "Person",
+      "name": "Ali Raza"
+    },
+    "reviewRating": {
+      "@type": "Rating",
+      "ratingValue": "5",
+      "bestRating": "5"
+    }
+  },
+  "keywords": "luxury villas Bhurban, private estate Murree, wedding venue Islamabad, corporate retreat Pakistan, luxury hotel Murree"
+}

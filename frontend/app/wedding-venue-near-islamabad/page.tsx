@@ -6,9 +6,15 @@ import Footer from "@/components/Footer";
 import { Check, X, MapPin, Users, Camera, Shield, Heart, Clock, Utensils, BedDouble, Mountain } from "lucide-react";
 
 export const metadata: Metadata = {
-    title: "Wedding Venue Nears Islamabad | Himalaya Villas, Bhurban",
-    description:
-        "Looking for a wedding venues near Islamabad? Himalaya Villas in Bhurban offers exclusive mountain weddings — private pine forest setting, full catering, on-site accommodation. 60 min from Islamabad.",
+    title: "Wedding Venue Near Islamabad | Mountain Wedding | Bhurban | Himalaya Villas",
+    description: "Wedding venue near Islamabad at Himalaya Villas Bhurban. Mountain wedding venue with pine forest setting, full catering, on-site accommodation. Perfect destination wedding 60 minutes from Islamabad. Book your dream wedding!",
+    keywords: "wedding venue near Islamabad, mountain wedding Bhurban, destination wedding Murree Hills, outdoor wedding venue Pakistan, wedding resort Himalaya Villas, wedding ceremony Bhurban, wedding reception near Islamabad",
+    openGraph: {
+        title: "Wedding Venue Near Islamabad - Mountain Wedding at Himalaya Villas",
+        description: "Exclusive mountain wedding venue near Islamabad with pine forest setting, full catering, and accommodation at Himalaya Villas Bhurban.",
+        type: "website",
+        url: "https://himalayavillas.com/wedding-venue-near-islamabad",
+    },
     alternates: {
         canonical: "https://himalayavillas.com/wedding-venue-near-islamabad",
     },

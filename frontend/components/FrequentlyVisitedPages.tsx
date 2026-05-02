@@ -33,6 +33,11 @@ const FrequentlyVisitedPages = () => {
       title: "Wedding Venue Near Islamabad",
       description: "Host your dream wedding in the mountains with breathtaking venues and luxury accommodations.",
       href: "/wedding-venue-near-islamabad"
+    },
+    {
+      title: "Snowfall in Murree",
+      description: "Complete snowfall guide with calendar, weather forecast, and winter stay packages.",
+      href: "/snowfall-in-murree"
     }
   ];
 
@@ -53,7 +58,7 @@ const FrequentlyVisitedPages = () => {
           </h2>
         </motion.div>
 
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-5 gap-6">
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
           {pages.map((page, index) => (
             <motion.div
               key={page.href}

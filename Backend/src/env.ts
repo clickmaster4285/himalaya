@@ -1,8 +1,5 @@
 export function getMongoUri(): string {
-  const u = process.env.DATABASE_URL ?? process.env.MONGODB_URI;
-  if (!u?.trim()) {
-    throw new Error("Set DATABASE_URL or MONGODB_URI in backend/.env");
-  }
+  const u = process.env.DATABASE_URL ?? process.env.MONGODB_URI ?? "mongodb://localhost:27017/himalaya";
   return u.trim();
 }
 

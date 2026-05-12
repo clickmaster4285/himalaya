@@ -102,65 +102,41 @@ const HERO_SLIDES = [
 
 const MURREE_HOTELS = [
   { 
-    name: "Pearl Continental Hotel Murree", 
-    tag: "5 STAR LUXURY", 
-    price: "₨80,000+",
-    desc: "Premier luxury hotel with panoramic mountain views and world-class amenities in the heart of Murree",
+    name: "Himalaya Villas Resort", 
+    tag: "PREMIUM LUXURY RESORT", 
+    price: "₨75,000+",
+    desc: "Experience unparalleled luxury at Himalaya Villas Resort, the premier destination in Murree with breathtaking mountain views and world-class amenities",
     img: "https://images.unsplash.com/photo-1566073771259-6a8506099945?w=900&q=80",
-    perks: ["Mountain Views", "Fine Dining", "Spa & Wellness", "Conference Facilities"] 
+    perks: ["Mountain Views", "Fine Dining", "Spa & Wellness", "Conference Facilities", "Luxury Villas", "Private Gardens"] 
   },
   { 
-    name: "Shangrila Resort Hotel Murree", 
-    tag: "PREMIUM RESORT", 
-    price: "₨70,000+",
-    desc: "Elegant resort offering luxury accommodations with breathtaking valley views",
-    img: "https://images.unsplash.com/photo-1455587734955-081b22074882?w=900&q=80",
-    perks: ["Garden Views", "Multi-Cuisine Restaurant", "Indoor Pool", "Event Spaces"] 
-  },
-  { 
-    name: "Lockwood Hotel Murree", 
-    tag: "HERITAGE CHARM", 
+    name: "Himalaya Premium Suites", 
+    tag: "EXECUTIVE LUXURY", 
     price: "₨60,000+",
-    desc: "Historic luxury hotel combining colonial charm with modern comforts",
-    img: "https://images.unsplash.com/photo-1582719508461-9c81e5d91b9c?w=900&q=80",
-    perks: ["Colonial Architecture", "Heritage Rooms", "British Bar", "Library Lounge"] 
+    desc: "Spacious premium suites with panoramic mountain views and exclusive amenities for discerning guests",
+    img: "https://images.unsplash.com/photo-1582719478250-c89cae4dc85b?w=900&q=80",
+    perks: ["Panoramic Views", "Butler Service", "Private Terrace", "Premium Amenities", "Executive Lounge", "Concierge Service"] 
   },
   { 
-    name: "Pine Boutique Hotel", 
-    tag: "BOUTIQUE LUXURY", 
+    name: "Himalaya Mountain Retreat", 
+    tag: "NATURE LUXURY", 
     price: "₨50,000+",
-    desc: "Intimate boutique hotel with personalized service and elegant design",
-    img: "https://images.unsplash.com/photo-1564013799919-ab600027ffc6?w=900&q=80",
-    perks: ["Boutique Design", "Personalized Service", "Rooftop Restaurant", "Mountain Terrace"] 
-  },
-  { 
-    name: "Grand Taj Hotel Murree", 
-    tag: "FAMILY COMFORT", 
-    price: "₨45,000+",
-    desc: "Modern luxury hotel with exceptional comfort and hospitality for families",
-    img: "https://images.unsplash.com/photo-1611892440504-42a792e24a32?w=900&q=80",
-    perks: ["Modern Rooms", "Business Center", "Family Suites", "Kids Play Area"] 
-  },
-  { 
-    name: "Metropolitan Hotel Murree", 
-    tag: "MALL ROAD LOCATION", 
-    price: "₨40,000+",
-    desc: "Contemporary luxury hotel in the center of Murree Mall Road",
-    img: "https://images.unsplash.com/photo-1551882239-ba6f5b0d8aa0?w=900&q=80",
-    perks: ["Mall Road Location", "City Views", "Shopping Access", "Nightlife"] 
+    desc: "Secluded mountain retreat surrounded by pristine nature with eco-luxury accommodations and wellness facilities",
+    img: "https://images.unsplash.com/photo-1455587734955-081b22074882?w=900&q=80",
+    perks: ["Nature Views", "Eco-Luxury", "Wellness Spa", "Hiking Trails", "Organic Dining", "Yoga Pavilion"] 
   }
 ];
 
 const MALL_ROAD_HOTELS = [
-  { name: "Metropolitan Hotel Murree", price: "₨40,000+", desc: "Prime location on Mall Road with city views" },
-  { name: "Hotel One Mall Road", price: "₨25,000+", desc: "Modern comfort in the heart of shopping district" },
-  { name: "Green Retreat Hotel", price: "₨20,000+", desc: "Cozy hotel with easy access to shopping" },
+  { name: "Himalaya Villas Resort", price: "₨75,000+", desc: "Premium luxury resort near Mall Road with panoramic mountain views" },
+  { name: "Himalaya Mall Road Suites", price: "₨55,000+", desc: "Modern luxury suites with easy access to Mall Road shopping and dining" },
+  { name: "Himalaya Downtown Residence", price: "₨40,000+", desc: "Contemporary accommodation in the heart of Murree's commercial district" },
 ];
 
 const NATHIA_GALI_HOTELS = [
-  { name: "Elites Hotel Nathia Gali", price: "₨35,000+", desc: "Luxury resort with mountain views" },
-  { name: "Hills End Hotel", price: "₨30,000+", desc: "Premium accommodation in Nathia Gali" },
-  { name: "Pine Hills Nathia Gali", price: "₨25,000+", desc: "Comfortable stay with scenic beauty" },
+  { name: "Himalaya Villas Resort", price: "₨75,000+", desc: "Luxury mountain resort with spectacular views and premium amenities" },
+  { name: "Himalaya Nathia Extension", price: "₨60,000+", desc: "Premium extension with access to Nathia Gali trails and scenic beauty" },
+  { name: "Himalaya Hillside Cottages", price: "₨45,000+", desc: "Cozy luxury cottages nestled in the hills near Nathia Gali" },
 ];
 
 const ROOM_TYPES = [
@@ -220,61 +196,127 @@ function HeroSlider() {
       </div>
 
       {/* Content */}
-      <div className="relative z-10 flex h-full flex-col items-center justify-center px-6 text-center" style={{ color: "hsl(40 38% 97%)" }}>
-        <Reveal>
-          <span className="mb-4 inline-block rounded-full px-5 py-2 text-sm font-medium uppercase tracking-widest backdrop-blur-md"
-            style={{ border: "1px solid hsl(38 88% 55% / .4)", background: "hsl(38 88% 55% / .1)", color: "hsl(42 95% 65%)" }}>
-            Murree · Pakistan · Queen of Hills
-          </span>
-        </Reveal>
-        <Reveal delay={150}>
-          <h1 className="text-5xl font-bold leading-tight md:text-8xl">
-            Hotels in <span className="murree-hotels-text-gold">Murree Pakistan</span>
-          </h1>
-        </Reveal>
-        <Reveal delay={300}>
-          <p className="mt-4 text-2xl font-light italic md:text-3xl" style={{ color: "hsl(42 95% 75%)" }}>
-            Discover the Best Resort in Murree
-          </p>
-        </Reveal>
-        <Reveal delay={450}>
-          <p className="mx-auto mt-6 max-w-2xl text-lg md:text-xl" style={{ color: "hsl(40 38% 97% / .85)" }}>
-            Find perfect hotel rooms in Murree with luxury amenities, breathtaking mountain views, and exceptional hospitality. Your gateway to Murree resorts and mountain paradise.
-          </p>
-        </Reveal>
+      <div className="relative z-10 flex h-full items-center px-6" style={{ color: "hsl(40 38% 97%)" }}>
+        <div className="w-full lg:w-1/2">
+          <Reveal>
+            <span className="mb-4 inline-block rounded-full px-5 py-2 text-sm font-medium uppercase tracking-widest backdrop-blur-md"
+              style={{ border: "1px solid hsl(38 88% 55% / .4)", background: "hsl(38 88% 55% / .1)", color: "hsl(42 95% 65%)" }}>
+              Murree · Pakistan · Queen of Hills
+            </span>
+          </Reveal>
+          <Reveal delay={150}>
+            <h1 className="text-5xl font-bold leading-tight md:text-8xl">
+              <span className="murree-hotels-text-gold">Hotels in Murree Pakistan</span> — <span className="text-4xl md:text-6xl">Discover Himalaya Premium Villas</span>
+            </h1>
+          </Reveal>
+          <Reveal delay={300}>
+            <p className="mt-4 text-2xl font-light italic md:text-3xl" style={{ color: "hsl(42 95% 75%)" }}>
+              Pakistan's most exclusive private luxury estate — perched high in the Murree Hills, crafted for those who demand more than a hotel can ever offer.
+            </p>
+          </Reveal>
+          <Reveal delay={450}>
+            <p className="mt-4 text-xl font-semibold md:text-2xl" style={{ color: "hsl(42 95% 75%)" }}>
+              Panoramic Himalayan views. Absolute privacy. A stay unlike anything else in Murree.
+            </p>
+          </Reveal>
 
-        <Reveal delay={600}>
-          <div className="mt-10 flex flex-wrap items-center justify-center gap-4">
-            <a href="#hotels" className="murree-hotels-grad-gold murree-hotels-shadow-gold rounded-full px-8 py-4 text-base font-semibold transition-transform hover:scale-105"
-              style={{ color: "hsl(165 60% 18%)" }}>
-              Explore Hotels
-            </a>
-            <a href="#booking" className="rounded-full px-8 py-4 text-base font-semibold backdrop-blur-md transition"
-              style={{ border: "2px solid hsl(40 38% 97% / .4)", background: "hsl(40 38% 97% / .1)" }}>
-              Book Rooms
-            </a>
-          </div>
-        </Reveal>
-
-        {/* Feature cards */}
-        <Reveal delay={800}>
-          <div className="mt-14 grid w-full max-w-4xl grid-cols-1 gap-5 md:grid-cols-3">
-            {[
-              { icon: Star, title: "Luxury Hotels", sub: "5-star accommodations" },
-              { icon: Mountain, title: "Mountain Views", sub: "Breathtaking scenery" },
-              { icon: Home, title: "Comfortable Rooms", sub: "Premium hotel rooms" },
-            ].map((f, k) => (
-              <div key={k} className="rounded-2xl p-6 backdrop-blur-xl transition hover:-translate-y-2"
-                style={{ border: "1px solid hsl(40 38% 97% / .15)", background: "hsl(40 38% 97% / .1)" }}>
-                <div className="murree-hotels-grad-gold murree-hotels-shadow-gold mx-auto mb-3 flex h-12 w-12 items-center justify-center rounded-xl" style={{ color: "hsl(165 60% 18%)" }}>
-                  <f.icon className="h-6 w-6" />
+          <Reveal delay={600}>
+            <div className="mt-10 flex flex-wrap items-center gap-4">
+              <a href="#contact" className="murree-hotels-grad-gold murree-hotels-shadow-gold rounded-full px-8 py-4 text-base font-semibold transition-transform hover:scale-105"
+                style={{ color: "hsl(165 60% 18%)" }}>
+                Reserve Your Private Estate
+              </a>
+              <a href="#estate" className="rounded-full px-8 py-4 text-base font-semibold backdrop-blur-md transition"
+                style={{ border: "2px solid hsl(40 38% 97% / .4)", background: "hsl(40 38% 97% / .1)" }}>
+                Explore the Villas
+              </a>
+            </div>
+          </Reveal>
+        </div>
+        
+        {/* CTA Form on Right Side */}
+        <div className="hidden lg:block lg:w-1/3">
+          <Reveal delay={800}>
+            <div className="bg-white/95 backdrop-blur-lg rounded-lg shadow-lg p-12">
+              <h3 className="mb-6 text-2xl font-bold text-gray-800">Send us a Message</h3>
+              <form className="space-y-4">
+                <div>
+                  <label htmlFor="fullName" className="block text-gray-700 text-sm font-bold mb-2">Full Name *</label>
+                  <input
+                    type="text"
+                    id="fullName"
+                    placeholder="Your full name"
+                    className="w-full px-4 py-6 rounded-lg border border-gray-300 text-gray-800 placeholder-gray-500 focus:outline-none focus:ring-2 focus:ring-emerald-500"
+                  />
                 </div>
-                <h3 className="text-lg font-bold">{f.title}</h3>
-                <p className="text-sm" style={{ color: "hsl(40 38% 97% / .7)" }}>{f.sub}</p>
-              </div>
-            ))}
-          </div>
-        </Reveal>
+                <div>
+                  <label htmlFor="email" className="block text-gray-700 text-sm font-bold mb-2">Email *</label>
+                  <input
+                    type="email"
+                    id="email"
+                    placeholder="your.email@example.com"
+                    className="w-full px-4 py-6 rounded-lg border border-gray-300 text-gray-800 placeholder-gray-500 focus:outline-none focus:ring-2 focus:ring-emerald-500"
+                  />
+                </div>
+                <div>
+                  <label htmlFor="phoneNumber" className="block text-gray-700 text-sm font-bold mb-2">Phone Number</label>
+                  <input
+                    type="tel"
+                    id="phoneNumber"
+                    placeholder="+92 300 0000000"
+                    className="w-full px-4 py-6 rounded-lg border border-gray-300 text-gray-800 placeholder-gray-500 focus:outline-none focus:ring-2 focus:ring-emerald-500"
+                  />
+                </div>
+                <div className="grid grid-cols-2 gap-4">
+                  <div>
+                    <label htmlFor="checkInDate" className="block text-gray-700 text-sm font-bold mb-2">Check-in Date</label>
+                    <input
+                      type="date"
+                      id="checkInDate"
+                      className="px-4 py-6 rounded-lg border border-gray-300 text-gray-800 focus:outline-none focus:ring-2 focus:ring-emerald-500"
+                    />
+                  </div>
+                  <div>
+                    <label htmlFor="checkOutDate" className="block text-gray-700 text-sm font-bold mb-2">Check-out Date</label>
+                    <input
+                      type="date"
+                      id="checkOutDate"
+                      className="w-full px-4 py-6 rounded-lg border border-gray-300 text-gray-800 focus:outline-none focus:ring-2 focus:ring-emerald-500"
+                    />
+                  </div>
+                </div>
+                <div>
+                  <label htmlFor="numberOfGuests" className="block text-gray-700 text-sm font-bold mb-2">Number of Guests</label>
+                  <select
+                    id="numberOfGuests"
+                    className="w-full px-4 py-6 rounded-lg border border-gray-300 text-gray-800 focus:outline-none focus:ring-2 focus:ring-emerald-500"
+                  >
+                    <option value="1">1 Guest</option>
+                    <option value="2">2 Guests</option>
+                    <option value="3">3 Guests</option>
+                    <option value="4">4 Guests</option>
+                    <option value="5+">5+ Guests</option>
+                  </select>
+                </div>
+                <div>
+                  <label htmlFor="message" className="block text-gray-700 text-sm font-bold mb-2">Message</label>
+                  <textarea
+                    id="message"
+                    rows={4}
+                    placeholder="Tell us about your requirements..."
+                    className="w-full px-4 py-6 rounded-lg border border-gray-300 text-gray-800 placeholder-gray-500 focus:outline-none focus:ring-2 focus:ring-emerald-500"
+                  />
+                </div>
+                <button
+                  type="submit"
+                  className="bg-emerald-600 text-white w-full rounded-lg px-4 py-6 text-lg font-semibold transition-transform hover:scale-105 shadow-md"
+                >
+                  Send Inquiry
+                </button>
+              </form>
+            </div>
+          </Reveal>
+        </div>
       </div>
 
       {/* Arrows */}
@@ -325,12 +367,12 @@ function SectionHeader({ kicker, title, sub, light = false }: { kicker?: string;
       <div className="mx-auto mb-16 max-w-3xl text-center">
         {kicker && (
           <span className="mb-3 inline-block rounded-full px-4 py-1 text-xs font-semibold uppercase tracking-widest"
-            style={{ background: light ? "hsl(38 88% 55% / .2)" : "hsl(38 88% 55% / .15)", color: light ? "hsl(42 95% 75%)" : "hsl(165 60% 18%)" }}>
+            style={{ background: light ? "rgba(251, 191, 36, 0.2)" : "rgba(251, 191, 36, 0.15)", color: light ? "#fbbf24" : "#14532d" }}>
             {kicker}
           </span>
         )}
-        <h2 className="text-4xl font-bold md:text-5xl" style={{ color: light ? "hsl(40 38% 97%)" : "hsl(165 60% 18%)" }}>{title}</h2>
-        <p className="mt-4 text-lg" style={{ color: light ? "hsl(40 38% 97% / .8)" : "hsl(165 12% 38%)" }}>{sub}</p>
+        <h2 className="text-4xl font-bold md:text-5xl" style={{ color: light ? "#f5f5f4" : "#14532d" }}>{title}</h2>
+        <p className="mt-4 text-lg" style={{ color: light ? "rgba(245, 245, 244, 0.8)" : "#166534" }}>{sub}</p>
       </div>
     </Reveal>
   );
@@ -344,123 +386,40 @@ function ParallaxBg({ src, speed = 0.3, opacity = 0.15 }: { src: string; speed?:
     );
 }
 
-/* ----------------------------- 1. Featured Hotels ----------------------------- */
-function FeaturedHotels() {
+/* ----------------------------- 1. Introduction ----------------------------- */
+function Introduction() {
   return (
-    <Section id="hotels">
-      <Container>
-        <SectionHeader kicker="Premium Stays" title="Hotels in Murree Pakistan" sub="Discover the finest accommodations in the Queen of Hills" />
-        <div className="grid gap-8 md:grid-cols-2 lg:grid-cols-3">
-          {MURREE_HOTELS.map((h, k) => (
-            <Reveal key={k} delay={k * 150}>
-              <div className="murree-hotels-card murree-hotels-shadow-lux group h-full overflow-hidden transition hover:-translate-y-2">
-                <div className="relative h-56 overflow-hidden">
-                  <img src={h.img} alt={h.name} className="h-full w-full object-cover transition duration-700 group-hover:scale-110" />
-                  <div className="absolute top-4 right-4">
-                    <span className="murree-hotels-grad-gold rounded-full px-3 py-1 text-xs font-bold" style={{ color: "hsl(165 60% 18%)" }}>{h.tag}</span>
-                  </div>
-                </div>
-                <div className="p-7">
-                  <div className="mb-3 flex items-center justify-between">
-                    <span className="text-xl font-bold" style={{ color: "hsl(38 88% 35%)" }}>{h.price}</span>
-                  </div>
-                  <h3 className="mb-2 text-2xl font-bold" style={{ color: "hsl(165 60% 18%)" }}>{h.name}</h3>
-                  <p className="murree-hotels-muted mb-4">{h.desc}</p>
-                  <ul className="mb-6 space-y-2">
-                    {h.perks.map((p) => (
-                      <li key={p} className="flex items-center gap-2 text-sm">
-                        <Check className="h-4 w-4" style={{ color: "hsl(165 55% 32%)" }} /> {p}
-                      </li>
-                    ))}
-                  </ul>
-                  <button className="murree-hotels-grad-emerald w-full rounded-full py-3 font-semibold transition hover:opacity-90" style={{ color: "hsl(40 38% 97%)" }}>
-                    Book Now
-                  </button>
-                </div>
-              </div>
-            </Reveal>
-          ))}
-        </div>
-      </Container>
-    </Section>
-  );
-}
-
-/* ----------------------------- 2. Hotel Rooms ----------------------------- */
-function HotelRooms() {
-  return (
-    <Section style={{ background: "hsl(40 40% 92%)" }}>
-      <Container>
-        <SectionHeader kicker="Accommodations" title="Hotel Rooms in Murree" sub="Find the perfect room type for your stay in Murree" />
-        <div className="grid gap-8 md:grid-cols-2 lg:grid-cols-4">
-          {ROOM_TYPES.map((room, k) => (
-            <Reveal key={k} delay={k * 150}>
-              <div className="murree-hotels-card murree-hotels-shadow-lux group h-full p-8 text-center transition hover:-translate-y-2">
-                <div className="murree-hotels-grad-emerald mx-auto mb-5 flex h-16 w-16 items-center justify-center rounded-2xl transition group-hover:rotate-6" style={{ color: "hsl(40 38% 97%)" }}>
-                  <room.icon className="h-8 w-8" />
-                </div>
-                <h3 className="mb-3 text-xl font-bold" style={{ color: "hsl(165 60% 18%)" }}>{room.title}</h3>
-                <p className="murree-hotels-muted mb-4">{room.desc}</p>
-                <p className="font-semibold" style={{ color: "hsl(38 88% 35%)" }}>{room.price}</p>
-              </div>
-            </Reveal>
-          ))}
-        </div>
-      </Container>
-    </Section>
-  );
-}
-
-/* ----------------------------- 3. Best Resort ----------------------------- */
-function BestResort() {
-  return (
-    <Section className="murree-hotels-grad-emerald" style={{ color: "hsl(40 38% 97%)" }}>
-      <ParallaxBg src="https://images.unsplash.com/photo-1582719508461-9c81e5d91b9c?w=1920&q=80" speed={0.25} opacity={0.15} />
+    <Section id="introduction" style={{ background: "hsl(40 40% 92%)" }}>
+      <ParallaxBg src="https://images.unsplash.com/photo-1571003123894-1f05e4d68b79?w=1920&q=80" speed={0.2} opacity={0.08} />
       <div className="relative" style={{ zIndex: 1 }}>
         <Container>
-          <SectionHeader kicker="Excellence" title={<>Best Resort in <span className="murree-hotels-text-gold">Murree</span></>}
-            sub="Experience luxury at its finest with premium resort facilities" light />
-          <div className="grid gap-8 md:grid-cols-2">
+          <div className="max-w-4xl mx-auto">
             <Reveal>
-              <div className="rounded-2xl p-8 backdrop-blur-md"
-                style={{ border: "1px solid hsl(40 38% 97% / .15)", background: "hsl(40 38% 97% / .1)" }}>
-                <h3 className="mb-6 text-3xl font-bold">Shangrila Resort Hotel Murree</h3>
-                <p className="mb-6 text-lg" style={{ color: "hsl(40 38% 97% / .9)" }}>
-                  Experience the ultimate luxury at Shangrila Resort, the best resort in Murree. Nestled in the hills with breathtaking valley views, world-class amenities, and exceptional service.
-                </p>
-                <div className="space-y-4">
-                  {[
-                    "Infinity pool with mountain views",
-                    "Multi-cuisine fine dining restaurant",
-                    "Luxury spa and wellness center",
-                    "Conference and event facilities",
-                    "24/7 room service and concierge"
-                  ].map((feature, i) => (
-                    <div key={i} className="flex items-center gap-3">
-                      <Check className="h-5 w-5" style={{ color: "hsl(42 95% 75%)" }} />
-                      <span>{feature}</span>
-                    </div>
-                  ))}
-                </div>
-                <div className="mt-8">
-                  <p className="text-2xl font-bold" style={{ color: "hsl(42 95% 75%)" }}>From ₨70,000/night</p>
-                  <button className="mt-4 murree-hotels-grad-gold murree-hotels-shadow-gold rounded-full px-8 py-3 font-semibold transition hover:scale-105" style={{ color: "hsl(165 60% 18%)" }}>
-                    Book Resort
-                  </button>
-                </div>
-              </div>
+              <h2 className="text-4xl font-bold md:text-5xl mb-6 text-center" style={{ color: "hsl(165 60% 18%)" }}>
+                The Best Hotels in Murree, Pakistan — <span className="murree-hotels-text-emerald">And Why One Estate Stands Above Them All</span>
+              </h2>
             </Reveal>
             <Reveal delay={200}>
-              <div className="relative h-96 rounded-2xl overflow-hidden">
-                <img src="https://images.unsplash.com/photo-1582719478250-c89cae4dc85b?w=900&q=80" alt="Shangrila Resort" className="h-full w-full object-cover" />
-                <div className="absolute inset-0 murree-hotels-grad-hero" />
-                <div className="absolute inset-0 flex items-center justify-center">
-                  <div className="text-center">
-                    <div className="mb-4 flex justify-center gap-2">
-                      {[...Array(5)].map((_, i) => <Star key={i} className="h-6 w-6 fill-current" style={{ color: "hsl(42 95% 75%)" }} />)}
-                    </div>
-                    <p className="text-xl font-bold">Award-Winning Luxury Resort</p>
-                  </div>
+              <div className="prose prose-lg max-w-none" style={{ color: "hsl(165 12% 38%)" }}>
+                <p className="mb-6 text-lg leading-relaxed">
+                  Murree has been the crown jewel of Pakistan's mountain tourism for over a century. Nestled in the sub-Himalayan ranges at an elevation of over 7,500 feet, it draws millions of visitors every year — families, honeymooners, corporate travellers, and anyone who feels the pull of cool mountain air, pine-scented forests, and some of the most dramatic natural scenery in South Asia.
+                </p>
+                <p className="mb-6 text-lg leading-relaxed">
+                  The demand for quality hotels in Murree, Pakistan has never been greater. And yet, for travellers who truly understand luxury, the question is not which hotel to book — it is whether a hotel is the right choice at all.
+                </p>
+                <p className="mb-6 text-lg leading-relaxed">
+                  Standard hotels in Murree, no matter how decorated, share a fundamental limitation: they are built for volume. Hundreds of guests. Shared facilities. Corridors full of strangers. Fixed menus. Rigid schedules. The moment you step outside your room, the escape you came for begins to dissolve.
+                </p>
+                <p className="mb-6 text-lg leading-relaxed font-semibold">
+                  Himalaya Premium Villas was built on a completely different premise.
+                </p>
+                <div className="bg-white/80 backdrop-blur-sm rounded-2xl p-8 my-8 murree-hotels-shadow-lux">
+                  <p className="text-xl font-semibold text-center mb-4" style={{ color: "hsl(165 60% 18%)" }}>
+                    This is not a hotel. It is a fully private luxury estate located in Bhurban — the most prestigious enclave within the greater Murree Hills region — where the entire property is reserved exclusively for you. No shared lobbies. No other guests. No compromises. Just a world-class private estate set against the backdrop of the Himalayas, designed to deliver the kind of experience that simply cannot be replicated in any hotel in Murree, Pakistan.
+                  </p>
+                  <p className="text-lg text-center font-semibold" style={{ color: "hsl(165 60% 18%)" }}>
+                    If you are searching for the finest accommodation the Murree region has to offer, your search ends here.
+                  </p>
                 </div>
               </div>
             </Reveal>
@@ -471,150 +430,189 @@ function BestResort() {
   );
 }
 
-/* ----------------------------- 4. Murree Resorts ----------------------------- */
-function MurreeResorts() {
-  const resorts = [
-    { name: "Shangrila Resort", tag: "Luxury", price: "₨70,000+", rating: 5 },
-    { name: "Pine Hills Resort", tag: "Premium", price: "₨45,000+", rating: 4 },
-    { name: "Green Valley Resort", tag: "Comfort", price: "₨30,000+", rating: 4 },
-    { name: "Mountain View Resort", tag: "Budget", price: "₨20,000+", rating: 3 },
+/* ----------------------------- 2. What Makes It Different ----------------------------- */
+function WhyPerfectForFamilies() {
+  const features = [
+    { 
+      icon: Home, 
+      title: "Entire Estate — Exclusively Yours", 
+      desc: "Unlike any hotel in Murree Pakistan, Himalaya Premium Villas accepts strictly limited bookings each month. When you arrive, the entire estate belongs to you and your guests — every room, every terrace, every outdoor space. No strangers. No shared amenities. Pure exclusivity."
+    },
+    { 
+      icon: Mountain, 
+      title: "Unobstructed Himalayan Views", 
+      desc: "Positioned at elevation in Bhurban, the estate commands sweeping, unobstructed panoramic views of the Himalayan range. Every sunrise here is a moment you will carry with you. Every evening, the mountains put on a display no hotel room window can frame quite the same way."
+    },
+    { 
+      icon: Utensils, 
+      title: "Bespoke In-Villa Dining", 
+      desc: "Forget crowded hotel restaurants and fixed breakfast hours. At Himalaya Premium Villas, every meal is an experience crafted entirely around your preferences — from private candlelit dinners to open-air barbecue evenings under a sky full of stars above the Murree Hills."
+    },
+    { 
+      icon: Star, 
+      title: "Destination Weddings & Elite Events", 
+      desc: "The estate is one of the most sought-after venues for destination weddings and corporate retreats in the Murree Pakistan region. A majestic natural backdrop, world-class event infrastructure, and a dedicated planning team ensure every occasion exceeds expectations."
+    },
+    { 
+      icon: Shield, 
+      title: "Privacy as a Standard — Not an Upgrade", 
+      desc: "At Himalaya Premium Villas, privacy is not a premium add-on — it is the foundation of every stay. From the secured estate entrance to the private outdoor terraces, every inch of the property is designed to keep your world exactly where you want it: completely your own."
+    },
+    { 
+      icon: Phone, 
+      title: "24/7 Dedicated Concierge Team", 
+      desc: "Our team is available around the clock — not to manage hundreds of guests, but to focus entirely on you. Whether it is a special dining arrangement, a last-minute event detail, or simply ensuring your day flows perfectly, we are here for everything."
+    }
   ];
+
   return (
-    <Section style={{ background: "hsl(40 40% 92%)" }}>
+    <Section id="why-perfect-for-families">
       <Container>
-        <SectionHeader kicker="Collection" title="Murree Resorts" sub="Explore the finest resorts in Murree with world-class amenities" />
-        <div className="grid gap-6 md:grid-cols-2">
-          {resorts.map((resort, k) => (
+        <SectionHeader 
+          kicker="What Makes It Different" 
+          title={<>Why Himalaya Premium Villas <span className="murree-hotels-text-emerald">Redefines Luxury Hotels</span> in Murree Pakistan</>}
+          sub="When every detail of your stay matters — when you want more than four walls and a view — Himalaya Premium Villas delivers an experience that sets a new standard for accommodation in the Murree Hills." 
+        />
+        <div className="grid gap-8 md:grid-cols-2 lg:grid-cols-3">
+          {features.map((feature, k) => (
             <Reveal key={k} delay={k * 150}>
-              <div className="murree-hotels-card murree-hotels-shadow-lux p-6">
-                <div className="flex items-center justify-between mb-4">
-                  <div>
-                    <h3 className="text-xl font-bold" style={{ color: "hsl(165 60% 18%)" }}>{resort.name}</h3>
-                    <div className="flex items-center gap-2 mt-1">
-                      {[...Array(resort.rating)].map((_, i) => <Star key={i} className="h-4 w-4 fill-current" style={{ color: "hsl(38 88% 55%)" }} />)}
+              <div className="murree-hotels-card murree-hotels-shadow-lux group h-full p-8 transition hover:-translate-y-2">
+                <div className="murree-hotels-grad-emerald mb-6 flex h-16 w-16 items-center justify-center rounded-2xl transition group-hover:rotate-6" style={{ color: "hsl(40 38% 97%)" }}>
+                  <feature.icon className="h-8 w-8" />
+                </div>
+                <h3 className="mb-4 text-2xl font-bold" style={{ color: "hsl(165 60% 18%)" }}>{feature.title}</h3>
+                <p className="murree-hotels-muted leading-relaxed">{feature.desc}</p>
+              </div>
+            </Reveal>
+          ))}
+        </div>
+      </Container>
+    </Section>
+  );
+}
+
+/* ----------------------------- 3. Estate Detail for Families ----------------------------- */
+function EstateDetail() {
+  const estateFeatures = [
+    "Multiple luxuriously furnished bedrooms — spacious enough for grandparents, parents, and children alike, all under one roof with room to breathe",
+    "Grand family living and dining areas — spacious enough for large families, intimate enough for couples",
+    "Fully equipped private kitchen — cook family meals or arrange custom in-villa catering for special family occasions",
+    "Expansive private outdoor grounds — safe, open, and beautifully landscaped for children to enjoy freely",
+    "Panoramic terraces with unobstructed Himalayan and Murree Hills views — perfect for family gatherings and evening relaxation",
+    "Secured private parking within the estate — no parking hassles in busy Murree",
+    "High-speed Wi-Fi throughout the property — because even on holiday, families need to stay connected and entertained",
+    "24/7 on-site concierge and dedicated support team — always available to cater to your family's needs",
+    "Full event setup capability for family celebrations, milestones, and gatherings — from birthdays to Eid celebrations"
+  ];
+
+  return (
+    <section id="estate" className="murree-hotels-grad-emerald" style={{ color: "#f5f5f4" }}>
+      <div className="relative" style={{ zIndex: 1 }}>
+        <div className="mx-auto w-full max-w-6xl px-6">
+          <Container>
+            <Reveal>
+              <h2 className="text-4xl font-bold md:text-5xl mb-6 text-center" style={{ color: "hsl(40 38% 97%)" }}>
+                Inside the Estate — <span className="text-yellow-300">Everything a Luxury Stay Should Be</span>
+              </h2>
+              <p className="text-xl text-center mb-12 max-w-4xl mx-auto" style={{ color: "hsl(40 38% 85%)" }}>
+                Himalaya Premium Villas is not just a place to sleep. It is a complete private world — every element curated to the highest standard, every space designed to make the most of its extraordinary natural setting in the Murree Hills of Pakistan.
+              </p>
+            </Reveal>
+            
+            <div className="grid gap-8 md:grid-cols-2 lg:grid-cols-3 max-w-6xl mx-auto">
+              {[
+                "Multiple premium bedrooms with luxurious linens, thoughtful interiors, and mountain-facing windows",
+                "Grand living and dining areas — spacious enough for large families, intimate enough for couples",
+                "Fully equipped private kitchen and in-house catering capability for bespoke dining experiences",
+                "Expansive landscaped outdoor terraces with panoramic Himalayan and Murree Hills views",
+                "Dedicated event and banquet setup for weddings, ceremonies, and corporate functions",
+                "Secured private parking within the estate grounds",
+                "High-speed Wi-Fi throughout the property",
+                "24/7 on-site concierge and dedicated support team"
+              ].map((feature, index) => (
+                <Reveal key={index} delay={index * 100}>
+                  <div className="bg-white/10 backdrop-blur-sm rounded-lg p-6 border border-white/20">
+                    <div className="flex items-start space-x-3">
+                      <div className="flex-shrink-0 w-6 h-6 rounded-full bg-yellow-400 flex items-center justify-center mt-1">
+                        <Check className="w-4 h-4 text-gray-900" />
+                      </div>
+                      <p className="text-lg leading-relaxed" style={{ color: "hsl(40 38% 95%)" }}>
+                        {feature}
+                      </p>
                     </div>
                   </div>
-                  <div className="text-right">
-                    <span className="murree-hotels-grad-emerald rounded-full px-3 py-1 text-xs font-bold" style={{ color: "hsl(40 38% 97%)" }}>{resort.tag}</span>
-                    <p className="mt-2 font-bold" style={{ color: "hsl(38 88% 35%)" }}>{resort.price}</p>
-                  </div>
-                </div>
-                <p className="murree-hotels-muted">Experience luxury and comfort at {resort.name} with premium amenities and exceptional service.</p>
+                </Reveal>
+              ))}
+            </div>
+            
+            <Reveal delay={800}>
+              <div className="mt-12 bg-yellow-400/20 backdrop-blur-sm rounded-2xl p-8 border border-yellow-400/30">
+                <p className="text-xl font-semibold text-center" style={{ color: "hsl(40 38% 97%)" }}>
+                  Every detail — from the quality of the linens to the placement of the outdoor seating — has been considered with one goal in mind: to give you an experience that no standard hotel in Murree, Pakistan can come close to matching.
+                </p>
               </div>
             </Reveal>
-          ))}
+          </Container>
         </div>
-      </Container>
-    </Section>
+      </div>
+    </section>
   );
 }
 
-/* ----------------------------- 5. Mall Road Hotels ----------------------------- */
-function MallRoadHotels() {
-  return (
-    <Section>
-      <Container>
-        <SectionHeader kicker="Prime Location" title="5 Star Hotels in Murree Mall Road" sub="Stay in the heart of Murree's shopping and entertainment district" />
-        <div className="grid gap-8 md:grid-cols-2 lg:grid-cols-3">
-          {MALL_ROAD_HOTELS.map((hotel, k) => (
-            <Reveal key={k} delay={k * 150}>
-              <div className="murree-hotels-card murree-hotels-shadow-lux h-full p-6 transition hover:-translate-y-2">
-                <div className="flex items-center justify-between mb-4">
-                  <h3 className="text-xl font-bold" style={{ color: "hsl(165 60% 18%)" }}>{hotel.name}</h3>
-                  <span className="text-lg font-bold" style={{ color: "hsl(38 88% 35%)" }}>{hotel.price}</span>
-                </div>
-                <p className="murree-hotels-muted mb-4">{hotel.desc}</p>
-                <div className="flex items-center gap-2 text-sm">
-                  <MapPin className="h-4 w-4" style={{ color: "hsl(165 55% 32%)" }} />
-                  <span className="murree-hotels-muted">Mall Road, Murree</span>
-                </div>
-                <button className="mt-4 murree-hotels-grad-emerald w-full rounded-full py-2 font-semibold transition hover:opacity-90" style={{ color: "hsl(40 38% 97%)" }}>
-                  View Details
-                </button>
-              </div>
-            </Reveal>
-          ))}
-        </div>
-        <Reveal delay={400}>
-          <div className="mt-12 rounded-2xl p-6 text-center"
-            style={{ border: "1px solid hsl(38 88% 55% / .3)", background: "hsl(38 88% 55% / .1)" }}>
-            <p className="text-lg" style={{ color: "hsl(165 60% 18%)" }}>
-              <strong>Mall Road Advantage:</strong> Stay in the center of Murree with easy access to shopping, dining, and entertainment venues.
-            </p>
-          </div>
-        </Reveal>
-      </Container>
-    </Section>
-  );
-}
-
-/* ----------------------------- 6. Nathia Gali Hotels ----------------------------- */
-function NathiaGaliHotels() {
-  return (
-    <Section style={{ background: "hsl(40 40% 92%)" }}>
-      <Container>
-        <SectionHeader kicker="Nearby Destination" title="Nathia Gali Hotels" sub="Explore luxury accommodations in the nearby beautiful hill station" />
-        <div className="grid gap-6 md:grid-cols-2 lg:grid-cols-3">
-          {NATHIA_GALI_HOTELS.map((hotel, k) => (
-            <Reveal key={k} delay={k * 150}>
-              <div className="murree-hotels-card murree-hotels-shadow-lux h-full p-6 transition hover:-translate-y-2">
-                <div className="flex items-center justify-between mb-4">
-                  <h3 className="text-xl font-bold" style={{ color: "hsl(165 60% 18%)" }}>{hotel.name}</h3>
-                  <span className="text-lg font-bold" style={{ color: "hsl(38 88% 35%)" }}>{hotel.price}</span>
-                </div>
-                <p className="murree-hotels-muted mb-4">{hotel.desc}</p>
-                <div className="flex items-center gap-2 text-sm">
-                  <MapPin className="h-4 w-4" style={{ color: "hsl(165 55% 32%)" }} />
-                  <span className="murree-hotels-muted">Nathia Gali (15km from Murree)</span>
-                </div>
-                <button className="mt-4 murree-hotels-grad-emerald w-full rounded-full py-2 font-semibold transition hover:opacity-90" style={{ color: "hsl(40 38% 97%)" }}>
-                  Book Now
-                </button>
-              </div>
-            </Reveal>
-          ))}
-        </div>
-        <Reveal delay={400}>
-          <div className="mt-12 rounded-2xl p-6 text-center"
-            style={{ border: "1px solid hsl(38 88% 55% / .3)", background: "hsl(38 88% 55% / .1)" }}>
-            <p className="text-lg" style={{ color: "hsl(165 60% 18%)" }}>
-              <strong>Nathia Gali Experience:</strong> Just 15km from Murree, offering pristine natural beauty and serene mountain environment.
-            </p>
-          </div>
-        </Reveal>
-      </Container>
-    </Section>
-  );
-}
-
-/* ----------------------------- 7. Amenities ----------------------------- */
-function Amenities() {
-  const items = [
-    { icon: Wifi, title: "High-Speed WiFi", desc: "Complimentary internet access" },
-    { icon: Utensils, title: "Fine Dining", desc: "Multi-cuisine restaurants" },
-    { icon: Dumbbell, title: "Fitness Center", desc: "Modern gym facilities" },
-    { icon: Car, title: "Valet Parking", desc: "Complimentary parking service" },
-    { icon: Coffee, title: "Coffee Lounge", desc: "Elegant coffee shops" },
-    { icon: Heart, title: "Concierge Service", desc: "24/7 personalized assistance" },
-    { icon: Tv, title: "Entertainment", desc: "Smart TVs with streaming" },
-    { icon: Shield, title: "Security", desc: "24/7 security service" },
+/* ----------------------------- 4. Ideal Guests ----------------------------- */
+function IdealGuests() {
+  const guestTypes = [
+    { 
+      icon: Users, 
+      title: "Families", 
+      desc: "who want meaningful time together in a private, luxurious mountain setting — away from crowded hotels and tourist rush"
+    },
+    { 
+      icon: Heart, 
+      title: "Couples", 
+      desc: "planning honeymoons, anniversaries, or a romantic escape in the Murree Hills with total privacy"
+    },
+    { 
+      icon: Briefcase, 
+      title: "Corporate Leaders & Teams", 
+      desc: "seeking an elite off-site retreat, strategy session, or executive gathering in an inspiring natural environment"
+    },
+    { 
+      icon: Sparkles, 
+      title: "Wedding Parties", 
+      desc: "looking for a grand destination wedding venue in Murree Pakistan — with a Himalayan backdrop that no hotel ballroom can replicate"
+    },
+    { 
+      icon: Home, 
+      title: "Friend Groups", 
+      desc: "who want an entire estate to themselves — shared with the people they choose, and no one else"
+    },
+    { 
+      icon: Star, 
+      title: "High-Profile Guests", 
+      desc: "requiring discretion, complete privacy, and a level of service that standard hotels in Murree simply cannot provide"
+    }
   ];
+
   return (
-    <Section className="murree-hotels-grad-emerald" style={{ color: "hsl(40 38% 97%)" }}>
-      <ParallaxBg src="https://images.unsplash.com/photo-1519904981063-b0cf448d479e?w=1920&q=80" speed={0.25} opacity={0.15} />
+    <Section id="ideal-guests" style={{ background: "hsl(40 40% 92%)" }}>
+      <ParallaxBg src="https://images.unsplash.com/photo-1542314831-068cd1dbfeeb?w=1920&q=80" speed={0.25} opacity={0.08} />
       <div className="relative" style={{ zIndex: 1 }}>
         <Container>
-          <SectionHeader kicker="Facilities" title="Luxury Amenities" sub="World-class facilities and services at Murree hotels" light />
-          <div className="grid gap-6 md:grid-cols-2 lg:grid-cols-4">
-            {items.map((it, k) => (
-              <Reveal key={k} delay={k * 100}>
-                <div className="group h-full rounded-2xl p-6 text-center backdrop-blur-md transition hover:-translate-y-2"
-                  style={{ border: "1px solid hsl(40 38% 97% / .15)", background: "hsl(40 38% 97% / .05)" }}>
-                  <div className="murree-hotels-grad-gold mx-auto mb-4 flex h-14 w-14 items-center justify-center rounded-xl transition group-hover:scale-110" style={{ color: "hsl(165 60% 18%)" }}>
-                    <it.icon className="h-7 w-7" />
+          <SectionHeader 
+            kicker="Who Chooses Himalaya Premium Villas" 
+            title={<>Who Chooses Himalaya Premium Villas <span className="murree-hotels-text-emerald">Over a Hotel in Murree?</span></>}
+            sub="Travellers who value quality over quantity. Those who understand the difference between a stay and an experience. Guests who know exactly what they want — and will not settle for less." 
+          />
+          <div className="grid gap-8 md:grid-cols-2 lg:grid-cols-3">
+            {guestTypes.map((type, k) => (
+              <Reveal key={k} delay={k * 150}>
+                <div className="murree-hotels-card murree-hotels-shadow-lux group h-full p-8 transition hover:-translate-y-2">
+                  <div className="murree-hotels-grad-emerald mb-6 flex h-16 w-16 items-center justify-center rounded-2xl transition group-hover:rotate-6" style={{ color: "hsl(40 38% 97%)" }}>
+                    <type.icon className="h-8 w-8" />
                   </div>
-                  <h3 className="mb-1 text-lg font-bold">{it.title}</h3>
-                  <p className="text-sm" style={{ color: "hsl(40 38% 97% / .75)" }}>{it.desc}</p>
+                  <h3 className="mb-4 text-2xl font-bold" style={{ color: "hsl(165 60% 18%)" }}>{type.title}</h3>
+                  <p className="murree-hotels-muted leading-relaxed">{type.desc}</p>
                 </div>
               </Reveal>
             ))}
@@ -625,7 +623,142 @@ function Amenities() {
   );
 }
 
-/* ----------------------------- 8. Pricing ----------------------------- */
+/* ----------------------------- 5. Murree & Bhurban Location ----------------------------- */
+function MurreeBhurbanLocation() {
+  const seasons = [
+    { 
+      icon: Sun, 
+      title: "Summer", 
+      when: "May – August", 
+      desc: "Cool, refreshing weather — perfect for outdoor gatherings and extended private estate stays",
+      grad: "linear-gradient(135deg,hsl(38 95% 55%),hsl(20 90% 55%))"
+    },
+    { 
+      icon: Flower2, 
+      title: "Autumn", 
+      when: "September – November", 
+      desc: "Golden foliage across the Murree Hills. Peaceful, crowd-free, and ideal for intimate retreats and corporate off-sites.",
+      grad: "linear-gradient(135deg,hsl(330 80% 65%),hsl(350 75% 55%))"
+    },
+    { 
+      icon: Snowflake, 
+      title: "Winter", 
+      when: "December – February", 
+      desc: "Snowfall transforms the estate into a magical winter landscape. A truly unforgettable setting for cosy private stays.",
+      grad: "linear-gradient(135deg,hsl(200 90% 60%),hsl(220 80% 50%))"
+    },
+    { 
+      icon: Flower2, 
+      title: "Spring", 
+      when: "March – April", 
+      desc: "Blooming wildflowers and crisp mountain air. One of the most beautiful times to experience the Murree Hills at their finest.",
+      grad: "linear-gradient(135deg,hsl(120 70% 55%),hsl(140 65% 45%))"
+    }
+  ];
+
+  return (
+    <Section id="murree-bhurban-location" style={{ background: "hsl(40 40% 92%)" }}>
+      <ParallaxBg src="https://images.unsplash.com/photo-1542314831-068cd1dbfeeb?w=1920&q=80" speed={0.3} opacity={0.08} />
+      <div className="relative" style={{ zIndex: 1 }}>
+        <Container>
+          <SectionHeader 
+                kicker="Location" 
+                title={<>Murree Pakistan — A Destination of <span className="murree-hotels-text-emerald">Unmatched Natural Beauty</span></>}
+                sub="The Murree Hills region of Pakistan is one of South Asia's most iconic mountain destinations. Located just 50 kilometres from Islamabad, Murree rises through dense cedar and pine forests to an elevation of over 7,500 feet — offering a year-round escape from the heat and pace of the plains below." 
+              />
+          <div className="max-w-4xl mx-auto">
+            <Reveal>
+              <div className="bg-white/80 backdrop-blur-sm rounded-2xl p-8 my-8 murree-hotels-shadow-lux">
+                <p className="text-lg font-semibold leading-relaxed mb-4" style={{ color: "hsl(165 60% 18%)" }}>
+                  Within the wider Murree region, Bhurban stands out as its most prestigious enclave — quieter, more elevated, and more exclusive than Murree's busy main ridge. It is here, in Bhurban, that Himalaya Premium Villas is located — placing you at the very best address the Murree Pakistan region has to offer.
+                </p>
+              </div>
+            </Reveal>
+            <Reveal delay={200}>
+              <div className="grid gap-8 md:grid-cols-2 lg:grid-cols-4">
+                {seasons.map((season, k) => (
+                  <Reveal key={k} delay={k * 150}>
+                    <div className="murree-hotels-card murree-hotels-shadow-lux group h-full p-8 text-center transition hover:-translate-y-2">
+                      <div className="murree-hotels-shadow-lux mx-auto mb-5 flex h-20 w-20 items-center justify-center rounded-full transition group-hover:scale-110"
+                        style={{ background: season.grad, color: "white" }}>
+                        <season.icon className="h-10 w-10" />
+                      </div>
+                      <h3 className="text-2xl font-bold" style={{ color: "hsl(165 60% 18%)" }}>{season.title}</h3>
+                      <p className="mt-2 font-semibold" style={{ color: "hsl(38 88% 35%)" }}>{season.when}</p>
+                      <p className="murree-hotels-muted mt-3">{season.desc}</p>
+                    </div>
+                  </Reveal>
+                ))}
+              </div>
+            </Reveal>
+          </div>
+        </Container>
+      </div>
+    </Section>
+  );
+}
+
+/* ----------------------------- 6. FAQ (SEO Rich Snippets) ----------------------------- */
+function FAQ() {
+  const faqs = [
+    {
+      q: "What makes Himalaya Premium Villas different from other hotels in Murree Pakistan?",
+      a: "Himalaya Premium Villas is not a hotel — it is a fully private luxury estate in Bhurban, the most prestigious enclave of the Murree Hills. Unlike any hotel in Murree Pakistan, the entire estate is reserved exclusively for one booking at a time, ensuring complete privacy, bespoke service, and a level of luxury that shared hotel environments simply cannot offer."
+    },
+    {
+      q: "Where exactly is Himalaya Premium Villas located?",
+      a: "The estate is located in Bhurban, Murree, Pakistan — approximately 50 kilometres from Islamabad. Bhurban is widely regarded as the most exclusive and scenic enclave within the greater Murree Hills region."
+    },
+    {
+      q: "Is Himalaya Premium Villas suitable for destination weddings?",
+      a: "Absolutely. The estate is one of the most sought-after destination wedding venues in the Murree Pakistan region. With panoramic Himalayan views, dedicated event infrastructure, and a full planning and concierge team, it is designed to host extraordinary weddings and celebrations."
+    },
+    {
+      q: "What is the best time to visit Murree Pakistan?",
+      a: "The Murree Hills region is beautiful year-round. Summer (May–August) offers cool weather and lush greenery; winter (December–February) brings snowfall and magical landscapes; autumn and spring offer quieter, equally stunning experiences. Himalaya Premium Villas is available for exclusive bookings across all seasons."
+    },
+    {
+      q: "Can corporate groups book Himalaya Premium Villas for retreats?",
+      a: "Yes. The estate is fully equipped to host executive corporate retreats, strategy sessions, and leadership off-sites. With high-speed connectivity, private meeting spaces, bespoke catering, and an inspiring natural environment, it offers a setting that no hotel conference room in Murree can match."
+    }
+  ];
+
+  return (
+    <Section id="faq" style={{ background: "hsl(40 40% 92%)" }}>
+      <Container>
+        <SectionHeader 
+                kicker="Frequently Asked Questions" 
+                title={<>Hotels in Murree Pakistan — <span className="murree-hotels-text-emerald">SEO Rich Snippets</span></>}
+                sub="Get answers to common questions about Himalaya Premium Villas and luxury accommodation in Murree" 
+              />
+          <div className="max-w-4xl mx-auto">
+            <div className="space-y-8">
+              {faqs.map((faq, k) => (
+                <Reveal key={k} delay={k * 150}>
+                  <div className="murree-hotels-card murree-hotels-shadow-lux p-8">
+                    <div className="flex items-start gap-4 mb-4">
+                      <div className="flex h-8 w-8 items-center justify-center rounded-full bg-emerald-600 text-white font-bold flex-shrink-0">
+                        <span className="text-sm font-bold">Q</span>
+                      </div>
+                      <h3 className="text-xl font-bold leading-relaxed" style={{ color: "hsl(165 60% 18%)" }}>{faq.q}</h3>
+                    </div>
+                    <div className="pl-12">
+                      <div className="flex h-8 w-8 items-center justify-center rounded-full bg-gold-500 text-white font-bold flex-shrink-0">
+                        <span className="text-sm font-bold">A</span>
+                      </div>
+                      <p className="text-lg leading-relaxed" style={{ color: "hsl(165 12% 38%)" }}>{faq.a}</p>
+                    </div>
+                  </div>
+                </Reveal>
+              ))}
+            </div>
+          </div>
+        </Container>
+    </Section>
+  );
+}
+
+/* ----------------------------- 7. Pricing ----------------------------- */
 function Pricing() {
   const rows = [
     { tag: "BUDGET", name: "Budget Hotels", price: "10,000 – 20,000", best: "Backpackers, solo travelers", bg: "hsl(160 60% 92%)", fg: "hsl(160 60% 25%)" },
@@ -634,7 +767,7 @@ function Pricing() {
     { tag: "PREMIUM", name: "5-Star Hotels", price: "80,000 – 150,000+", best: "VIP guests, honeymoon", bg: "hsl(340 80% 94%)", fg: "hsl(340 70% 40%)" },
   ];
   return (
-    <Section id="booking">
+    <Section id="pricing">
       <ParallaxBg src="https://images.unsplash.com/photo-1506905925346-21bda4d32df4?w=1920&q=80" speed={0.3} opacity={0.1} />
       <div className="relative" style={{ zIndex: 1 }}>
         <Container>
@@ -674,24 +807,200 @@ function Pricing() {
   );
 }
 
-/* ----------------------------- 9. Contact ----------------------------- */
-function Contact() {
-  const contacts = [
-    { icon: Phone, label: "Phone", value: "+92 304 567 9000" },
-    { icon: Mail, label: "Email", value: "info@himalayavillas.com" },
-    { icon: MapPin, label: "Location", value: "Murree, Punjab, Pakistan" },
-  ];
-  const links = ["About Murree Hotels", "Travel Guide", "Special Packages", "Cancellation Policy", "Terms & Conditions", "Privacy Policy"];
+/* ----------------------------- 8. Final CTA ----------------------------- */
+function FinalCTA() {
   return (
-    <Section>
+    <Section id="final-cta" className="murree-hotels-grad-emerald" style={{ color: "hsl(40 38% 97%)" }}>
+      <ParallaxBg src="https://images.unsplash.com/photo-1469474968028-56623f02e42e?w=1920&q=80" speed={0.35} opacity={0.18} />
+      <div className="relative" style={{ zIndex: 1 }}>
+        <Container>
+          <div className="text-center">
+            <Reveal>
+              <h2 className="text-4xl font-bold md:text-6xl">
+                Ready to Experience the <span className="murree-hotels-text-gold">Finest Stay in Murree, Pakistan?</span>
+              </h2>
+            </Reveal>
+            <Reveal delay={150}>
+              <p className="mx-auto mt-5 max-w-3xl text-lg" style={{ color: "hsl(40 38% 97% / .85)" }}>
+                Stop searching for hotels in Murree Pakistan. Himalaya Premium Villas offers something the Murree Hills have never seen before — a fully private luxury estate where every detail, every space, and every moment is designed exclusively around you.
+              </p>
+            </Reveal>
+            <Reveal delay={300}>
+              <p className="mx-auto mt-5 max-w-3xl text-lg" style={{ color: "hsl(40 38% 97% / .85)" }}>
+                Bookings are strictly limited each month to preserve the exclusivity of your experience. Secure your private estate before availability is gone.
+              </p>
+            </Reveal>
+            <Reveal delay={450}>
+              <div className="mt-10 flex flex-wrap items-center justify-center gap-4">
+                <a href="#contact" className="murree-hotels-grad-gold murree-hotels-shadow-gold rounded-full px-8 py-4 font-semibold transition hover:scale-105" style={{ color: "hsl(165 60% 18%)" }}>
+                  Reserve Your Stay Now
+                </a>
+                <a href="#contact" className="rounded-full px-8 py-4 font-semibold backdrop-blur-md transition"
+                  style={{ border: "2px solid hsl(40 38% 97% / .4)", background: "hsl(40 38% 97% / .1)", color: "hsl(40 38% 97%)" }}>
+                  Contact Us
+                </a>
+              </div>
+            </Reveal>
+            <Reveal delay={600}>
+              <div className="mx-auto mt-16 max-w-2xl rounded-2xl p-8 text-center backdrop-blur-md"
+                style={{ border: "1px solid hsl(40 38% 97% / .15)", background: "hsl(40 38% 97% / .1)" }}>
+                <div className="flex flex-wrap items-center justify-center gap-6 text-lg">
+                  <div className="flex items-center gap-2">
+                    <Phone className="h-5 w-5" style={{ color: "hsl(42 95% 75%)" }} />
+                    <span>+92 304 567 9000</span>
+                  </div>
+                  <div className="flex items-center gap-2">
+                    <Mail className="h-5 w-5" style={{ color: "hsl(42 95% 75%)" }} />
+                    <span>info@himalayavillas.com</span>
+                  </div>
+                  <div className="flex items-center gap-2">
+                    <MapPin className="h-5 w-5" style={{ color: "hsl(42 95% 75%)" }} />
+                    <span>Bhurban, Murree, Pakistan</span>
+                  </div>
+                </div>
+              </div>
+            </Reveal>
+          </div>
+        </Container>
+      </div>
+    </Section>
+  );
+}
+
+
+/* ----------------------------- 9. Contact Form ----------------------------- */
+function ContactForm() {
+  const [formData, setFormData] = useState({
+    name: '',
+    email: '',
+    phone: '',
+    checkIn: '',
+    checkOut: '',
+    guests: '1',
+    message: ''
+  });
+
+  const handleChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement | HTMLSelectElement>) => {
+    setFormData({ ...formData, [e.target.name]: e.target.value });
+  };
+
+  const handleSubmit = (e: React.FormEvent) => {
+    e.preventDefault();
+    // Handle form submission here
+    console.log('Form submitted:', formData);
+    alert('Thank you for your inquiry! We will contact you soon.');
+  };
+
+  return (
+    <Section style={{ background: "hsl(40 40% 92%)" }}>
       <Container>
-        <SectionHeader kicker="Reach us" title="Contact for Hotel Bookings" sub="Have questions? We're here to help you plan your perfect stay in Murree" />
+        <SectionHeader kicker="Get in Touch" title="Contact Himalaya Villas Resort" sub="Book your luxury stay or inquire about our services" />
         <div className="grid gap-10 md:grid-cols-2">
           <Reveal>
             <div className="murree-hotels-card murree-hotels-shadow-lux h-full p-8">
+              <h3 className="mb-6 text-2xl font-bold" style={{ color: "hsl(165 60% 18%)" }}>Send us a Message</h3>
+              <form onSubmit={handleSubmit} className="space-y-4">
+                <div>
+                  <label className="block mb-2 text-sm font-medium" style={{ color: "hsl(165 60% 18%)" }}>Full Name *</label>
+                  <input
+                    type="text"
+                    name="name"
+                    value={formData.name}
+                    onChange={handleChange}
+                    required
+                    className="w-full px-4 py-3 rounded-lg border border-gray-300 focus:outline-none focus:ring-2 focus:ring-emerald-500"
+                    placeholder="Your full name"
+                  />
+                </div>
+                <div>
+                  <label className="block mb-2 text-sm font-medium" style={{ color: "hsl(165 60% 18%)" }}>Email *</label>
+                  <input
+                    type="email"
+                    name="email"
+                    value={formData.email}
+                    onChange={handleChange}
+                    required
+                    className="w-full px-4 py-3 rounded-lg border border-gray-300 focus:outline-none focus:ring-2 focus:ring-emerald-500"
+                    placeholder="your.email@example.com"
+                  />
+                </div>
+                <div>
+                  <label className="block mb-2 text-sm font-medium" style={{ color: "hsl(165 60% 18%)" }}>Phone Number</label>
+                  <input
+                    type="tel"
+                    name="phone"
+                    value={formData.phone}
+                    onChange={handleChange}
+                    className="w-full px-4 py-3 rounded-lg border border-gray-300 focus:outline-none focus:ring-2 focus:ring-emerald-500"
+                    placeholder="+92 300 0000000"
+                  />
+                </div>
+                <div className="grid grid-cols-2 gap-4">
+                  <div>
+                    <label className="block mb-2 text-sm font-medium" style={{ color: "hsl(165 60% 18%)" }}>Check-in Date</label>
+                    <input
+                      type="date"
+                      name="checkIn"
+                      value={formData.checkIn}
+                      onChange={handleChange}
+                      className="w-full px-4 py-3 rounded-lg border border-gray-300 focus:outline-none focus:ring-2 focus:ring-emerald-500"
+                    />
+                  </div>
+                  <div>
+                    <label className="block mb-2 text-sm font-medium" style={{ color: "hsl(165 60% 18%)" }}>Check-out Date</label>
+                    <input
+                      type="date"
+                      name="checkOut"
+                      value={formData.checkOut}
+                      onChange={handleChange}
+                      className="w-full px-4 py-3 rounded-lg border border-gray-300 focus:outline-none focus:ring-2 focus:ring-emerald-500"
+                    />
+                  </div>
+                </div>
+                <div>
+                  <label className="block mb-2 text-sm font-medium" style={{ color: "hsl(165 60% 18%)" }}>Number of Guests</label>
+                  <select
+                    name="guests"
+                    value={formData.guests}
+                    onChange={handleChange}
+                    className="w-full px-4 py-3 rounded-lg border border-gray-300 focus:outline-none focus:ring-2 focus:ring-emerald-500"
+                  >
+                    <option value="1">1 Guest</option>
+                    <option value="2">2 Guests</option>
+                    <option value="3">3 Guests</option>
+                    <option value="4">4 Guests</option>
+                    <option value="5+">5+ Guests</option>
+                  </select>
+                </div>
+                <div>
+                  <label className="block mb-2 text-sm font-medium" style={{ color: "hsl(165 60% 18%)" }}>Message</label>
+                  <textarea
+                    name="message"
+                    value={formData.message}
+                    onChange={handleChange}
+                    rows={4}
+                    className="w-full px-4 py-3 rounded-lg border border-gray-300 focus:outline-none focus:ring-2 focus:ring-emerald-500"
+                    placeholder="Tell us about your requirements..."
+                  />
+                </div>
+                <button
+                  type="submit"
+                  className="bg-emerald-600 text-white w-full rounded-lg px-4 py-4 text-lg font-semibold transition-transform hover:scale-105 shadow-md"
+                >
+                  Send Inquiry
+                </button>
+              </form>
+            </div>
+          </Reveal>
+          <Reveal delay={200}>
+            <div className="murree-hotels-card murree-hotels-shadow-lux h-full p-8">
               <h3 className="mb-6 text-2xl font-bold" style={{ color: "hsl(165 60% 18%)" }}>Contact Information</h3>
               <div className="space-y-5">
-                {contacts.map((c) => (
+                {[
+                  { icon: Phone, label: "Phone", value: "+92 304 567 9000" },
+                  { icon: Mail, label: "Email", value: "info@himalayavillas.com" },
+                  { icon: MapPin, label: "Location", value: "Murree, Punjab, Pakistan" },
+                ].map((c) => (
                   <div key={c.label} className="flex items-center gap-4">
                     <div className="murree-hotels-grad-emerald flex h-12 w-12 items-center justify-center rounded-xl" style={{ color: "hsl(40 38% 97%)" }}>
                       <c.icon className="h-5 w-5" />
@@ -703,21 +1012,19 @@ function Contact() {
                   </div>
                 ))}
               </div>
-            </div>
-          </Reveal>
-          <Reveal delay={200}>
-            <div className="murree-hotels-card murree-hotels-shadow-lux h-full p-8">
-              <h3 className="mb-6 text-2xl font-bold" style={{ color: "hsl(165 60% 18%)" }}>Quick Links</h3>
-              <ul className="grid grid-cols-1 gap-3 sm:grid-cols-2">
-                {links.map((l) => (
-                  <li key={l}>
-                    <a href="#" className="flex items-center gap-2 rounded-lg p-2 transition hover:bg-black/5">
-                      <Check className="h-4 w-4" style={{ color: "hsl(165 55% 32%)" }} />
-                      <span>{l}</span>
-                    </a>
-                  </li>
-                ))}
-              </ul>
+              <div className="mt-8">
+                <h4 className="mb-4 text-lg font-bold" style={{ color: "hsl(165 60% 18%)" }}>Operating Hours</h4>
+                <div className="space-y-2 text-sm">
+                  <div className="flex justify-between">
+                    <span style={{ color: "hsl(165 12% 38%)" }}>Monday - Friday</span>
+                    <span style={{ color: "hsl(165 60% 18%)" }}>9:00 AM - 8:00 PM</span>
+                  </div>
+                  <div className="flex justify-between">
+                    <span style={{ color: "hsl(165 12% 38%)" }}>Saturday - Sunday</span>
+                    <span style={{ color: "hsl(165 60% 18%)" }}>10:00 AM - 6:00 PM</span>
+                  </div>
+                </div>
+              </div>
             </div>
           </Reveal>
         </div>
@@ -726,21 +1033,108 @@ function Contact() {
   );
 }
 
-/* ----------------------------- Footer ----------------------------- */
+/* ----------------------------- Gallery Section ----------------------------- */
+function Gallery() {
+  const galleryImages = [
+    { src: "/assets/gallery-exterior.jpg", alt: "Resort Exterior" },
+    { src: "/assets/gallery-interior.jpg", alt: "Luxury Interior" },
+    { src: "/assets/gallery-garden.jpg", alt: "Beautiful Gardens" },
+    { src: "/assets/gallery-balcony.jpg", alt: "Mountain View Balcony" },
+    { src: "/assets/gallery-dining-night.jpg", alt: "Fine Dining" },
+    { src: "/assets/gallery-bbq.jpg", alt: "BBQ Area" },
+    { src: "/assets/gallery-sunlight.jpg", alt: "Sunlight View" },
+    { src: "/assets/gallery-reflection.jpg", alt: "Pool Reflection" },
+  ];
+
+  return (
+    <Section>
+      <Container>
+        <SectionHeader kicker="Visual Tour" title="Resort Gallery" sub="Explore the beauty and luxury of Himalaya Villas Resort" />
+        <div className="grid gap-4 md:grid-cols-2 lg:grid-cols-4">
+          {galleryImages.map((img, index) => (
+            <Reveal key={index} delay={index * 100}>
+              <div className="group relative overflow-hidden rounded-2xl murree-hotels-shadow-lux transition hover:-translate-y-2">
+                <img 
+                  src={img.src} 
+                  alt={img.alt} 
+                  className="h-64 w-full object-cover transition duration-700 group-hover:scale-110"
+                />
+                <div className="absolute inset-0 bg-gradient-to-t from-black/60 to-transparent opacity-0 transition-opacity group-hover:opacity-100" />
+                <div className="absolute bottom-4 left-4 right-4 text-white transform translate-y-full transition-transform group-hover:translate-y-0">
+                  <p className="text-sm font-medium">{img.alt}</p>
+                </div>
+              </div>
+            </Reveal>
+          ))}
+        </div>
+      </Container>
+    </Section>
+  );
+}
+
+/* ----------------------------- 11. Call to Action ----------------------------- */
+function CallToAction() {
+  return (
+    <Section className="murree-hotels-grad-emerald" style={{ color: "hsl(40 38% 97%)" }}>
+      <ParallaxBg src="https://images.unsplash.com/photo-1506905925346-21bda4d32df4?w=1920&q=80" speed={0.25} opacity={0.15} />
+      <div className="relative" style={{ zIndex: 1 }}>
+        <Container>
+          <div className="text-center">
+            <Reveal>
+              <h2 className="text-4xl font-bold md:text-6xl mb-6">
+                Ready to Experience <span className="murree-hotels-text-gold">Luxury</span>?
+              </h2>
+              <p className="text-xl md:text-2xl mb-8" style={{ color: "hsl(40 38% 97% / .9)" }}>
+                Book your stay at Himalaya Villas Resort and create unforgettable memories in the mountains of Murree
+              </p>
+              <div className="flex flex-col sm:flex-row gap-4 justify-center items-center">
+                <a href="#contact" className="murree-hotels-grad-gold murree-hotels-shadow-gold rounded-full px-8 py-4 text-lg font-semibold transition-transform hover:scale-105"
+                  style={{ color: "hsl(165 60% 18%)" }}>
+                  Book Now
+                </a>
+                <a href="tel:+923045679000" className="rounded-full px-8 py-4 text-lg font-semibold backdrop-blur-md transition"
+                  style={{ border: "2px solid hsl(40 38% 97% / .4)", background: "hsl(40 38% 97% / .1)" }}>
+                  Call +92 304 567 9000
+                </a>
+              </div>
+              <div className="mt-12 grid grid-cols-1 md:grid-cols-3 gap-8">
+                {[
+                  { icon: Star, title: "5-Star Luxury", desc: "Experience world-class amenities" },
+                  { icon: Mountain, title: "Mountain Views", desc: "Breathtaking scenic beauty" },
+                  { icon: Heart, title: "Exceptional Service", desc: "Personalized hospitality" },
+                ].map((feature, index) => (
+                  <Reveal key={index} delay={index * 150}>
+                    <div className="text-center">
+                      <div className="murree-hotels-grad-gold murree-hotels-shadow-gold mx-auto mb-4 flex h-16 w-16 items-center justify-center rounded-2xl" style={{ color: "hsl(165 60% 18%)" }}>
+                        <feature.icon className="h-8 w-8" />
+                      </div>
+                      <h3 className="text-xl font-bold mb-2">{feature.title}</h3>
+                      <p style={{ color: "hsl(40 38% 97% / .8)" }}>{feature.desc}</p>
+                    </div>
+                  </Reveal>
+                ))}
+              </div>
+            </Reveal>
+          </div>
+        </Container>
+      </div>
+    </Section>
+  );
+}
 function Footer() {
   return (
     <footer style={{ background: "hsl(165 60% 12%)", color: "hsl(40 38% 97%)" }}>
       <Container>
         <div className="grid gap-10 py-16 md:grid-cols-4">
           <div>
-            <h3 className="murree-hotels-text-gold text-2xl font-bold">Hotels in Murree Pakistan</h3>
+            <h3 className="murree-hotels-text-gold text-2xl font-bold">Himalaya Villas Resort</h3>
             <p className="mt-3 text-sm" style={{ color: "hsl(40 38% 97% / .7)" }}>
-              Your complete guide to finding the perfect hotel rooms in Murree with luxury amenities and mountain views.
+              Experience unparalleled luxury at Himalaya Villas Resort, the premier destination in Murree with breathtaking mountain views and world-class amenities.
             </p>
           </div>
           {[
-            { h: "Quick Links", items: ["Hotels in Murree", "Murree Resorts", "Mall Road Hotels", "Best Resort"] },
-            { h: "Services", items: ["Hotel Booking", "Room Reservations", "Travel Guide", "Customer Support"] },
+            { h: "Quick Links", items: ["Himalaya Villas Resort", "Luxury Villas", "Mountain Views", "Contact Us"] },
+            { h: "Services", items: ["Villa Booking", "Luxury Stays", "Travel Guide", "Customer Support"] },
           ].map((c) => (
             <div key={c.h}>
               <h4 className="mb-4 text-lg font-bold">{c.h}</h4>
@@ -766,7 +1160,7 @@ function Footer() {
           </div>
         </div>
         <div className="py-6 text-center text-sm" style={{ borderTop: "1px solid hsl(40 38% 97% / .15)", color: "hsl(40 38% 97% / .6)" }}>
-          © {new Date().getFullYear()} Hotels in Murree Pakistan. All rights reserved. | Hotel Rooms in Murree | Best Resort in Murree
+          © {new Date().getFullYear()} Himalaya Villas Resort. All rights reserved. | Luxury Villas in Murree | Premium Resort Experience
         </div>
       </Container>
     </footer>
@@ -776,22 +1170,21 @@ function Footer() {
 /* ----------------------------- Page ----------------------------- */
 export default function Index() {
   useEffect(() => {
-    document.title = "Hotels in Murree Pakistan | Hotel Rooms in Murree | Best Resort in Murree | Murree Resorts";
+    document.title = "Family Hotels in Murree — Himalaya Premium Villas, Where Families Belong";
   }, []);
   return (
     <>
       <style>{PAGE_STYLES}</style>
       <main className="murree-hotels-page">
         <HeroSlider />
-        <FeaturedHotels />
-        <HotelRooms />
-        <BestResort />
-        <MurreeResorts />
-        <MallRoadHotels />
-        <NathiaGaliHotels />
-        <Amenities />
+        <Introduction />
+        <WhyPerfectForFamilies />
+        <EstateDetail />
+        <IdealGuests />
+        <MurreeBhurbanLocation />
+        <FAQ />
         <Pricing />
-        <Contact />
+        <FinalCTA />
         <Footer />
       </main>
     </>

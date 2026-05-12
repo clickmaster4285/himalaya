@@ -148,7 +148,7 @@ function HeroSlider() {
       </div>
 
       {/* Content */}
-      <div className="relative z-10 flex h-full items-center px-6" style={{ color: "hsl(40 38% 97%)" }}>
+      <div className="relative z-10 flex h-full items-center px-6 py-8 lg:py-10" style={{ color: "hsl(40 38% 97%)" }}>
         <div className="w-full lg:w-1/2">
           <Reveal>
             <span className="mb-4 inline-block rounded-full px-5 py-2 text-sm font-medium uppercase tracking-widest backdrop-blur-md"
@@ -157,10 +157,10 @@ function HeroSlider() {
             </span>
           </Reveal>
           <Reveal delay={150}>
-            <h1 className="text-6xl font-bold leading-tight md:text-8xl">
+            <h1 className="text-4xl font-bold leading-tight sm:text-5xl md:text-8xl">
               <span className="bh-text-gold">Hotels in Bhurban</span>
               <br />
-              <span className="text-5xl md:text-7xl">Discover Himalaya Premium Villas</span>
+              <span className="text-3xl sm:text-4xl md:text-7xl">Discover Himalaya Premium Villas</span>
             </h1>
           </Reveal>
           <Reveal delay={300}>
@@ -191,7 +191,7 @@ function HeroSlider() {
         {/* CTA Form on Right Side */}
         <div className="hidden lg:block lg:w-1/3">
           <Reveal delay={800}>
-            <div className="bg-white/95 backdrop-blur-lg rounded-lg shadow-lg p-12">
+            <div className="mt-2 max-h-[calc(100vh-5rem)] overflow-y-auto bg-white/95 backdrop-blur-lg rounded-lg shadow-lg p-10">
               <h3 className="mb-6 text-2xl font-bold text-gray-800">Send us a Message</h3>
               <form className="space-y-4">
                 <div>

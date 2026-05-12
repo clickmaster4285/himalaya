@@ -1,9 +1,5 @@
 /** @type {import('next').NextConfig} */
 const nextConfig = {
-  experimental: {
-    // Enable server actions for sitemap generation
-    serverActions: true,
-  },
   async rewrites() {
     return [
       {

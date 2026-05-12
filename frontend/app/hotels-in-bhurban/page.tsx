@@ -1,10 +1,11 @@
 "use client";
 
 import { useEffect, useRef, useState, ReactNode } from "react";
+import Head from "next/head";
 import {
   Mountain, Sparkles, Home, Star, Utensils, Briefcase, Clock,
   Phone, Mail, MapPin, ChevronLeft, ChevronRight, Check,
-  Sun, Snowflake, Flower2, Facebook, Twitter, Linkedin, ArrowDown, Wifi,
+  Sun, Snowflake, Flower2, Facebook, Twitter, Linkedin, ArrowDown, Wifi, Users, Heart, Calendar,
 } from "lucide-react";
 
 /* ============================================================
@@ -96,20 +97,6 @@ const HERO_SLIDES = [
   "https://images.unsplash.com/photo-1520637836862-4d197d17c55a?w=1920&q=80",
 ];
 
-const HOTELS = [
-  { name: "Pearl Continental", tag: "5 STAR", price: "₨60,000+",
-    desc: "Ultimate luxury with golf course, spa, and fine dining",
-    img: "https://images.unsplash.com/photo-1566073771259-6a8506099945?w=900&q=80",
-    perks: ["Golf Course", "Spa & Wellness", "Valley Views"] },
-  { name: "Hotel One Bhurban", tag: "3 STAR", price: "₨10,000",
-    desc: "Modern comfort at affordable prices",
-    img: "https://images.unsplash.com/photo-1455587734955-081b22074882?w=900&q=80",
-    perks: ["Free WiFi", "Restaurant", "Family Friendly"] },
-  { name: "Luxury Villas", tag: "LUXURY", price: "₨80,000+",
-    desc: "Private villas with complete privacy",
-    img: "https://images.unsplash.com/photo-1582719478250-c89cae4dc85b?w=900&q=80",
-    perks: ["Multiple Bedrooms", "Kitchen Facilities", "Private Parking"] },
-];
 
 /* ----------------------------- Hero Slider ----------------------------- */
 function HeroSlider() {
@@ -161,61 +148,129 @@ function HeroSlider() {
       </div>
 
       {/* Content */}
-      <div className="relative z-10 flex h-full flex-col items-center justify-center px-6 text-center" style={{ color: "hsl(40 38% 97%)" }}>
-        <Reveal>
-          <span className="mb-4 inline-block rounded-full px-5 py-2 text-sm font-medium uppercase tracking-widest backdrop-blur-md"
-            style={{ border: "1px solid hsl(38 88% 55% / .4)", background: "hsl(38 88% 55% / .1)", color: "hsl(42 95% 65%)" }}>
-            Bhurban · Murree · Pakistan
-          </span>
-        </Reveal>
-        <Reveal delay={150}>
-          <h1 className="text-6xl font-bold leading-tight md:text-8xl">
-            Hotels in <span className="bh-text-gold">Bhurban</span>
-          </h1>
-        </Reveal>
-        <Reveal delay={300}>
-          <p className="mt-4 text-2xl font-light italic md:text-3xl" style={{ color: "hsl(42 95% 75%)" }}>
-            Ultimate Luxury & Mountain Paradise
-          </p>
-        </Reveal>
-        <Reveal delay={450}>
-          <p className="mx-auto mt-6 max-w-2xl text-lg md:text-xl" style={{ color: "hsl(40 38% 97% / .85)" }}>
-            Discover the most luxurious hotels, resorts, and villas in Bhurban Pakistan. Your perfect mountain getaway awaits.
-          </p>
-        </Reveal>
+      <div className="relative z-10 flex h-full items-center px-6" style={{ color: "hsl(40 38% 97%)" }}>
+        <div className="w-full lg:w-1/2">
+          <Reveal>
+            <span className="mb-4 inline-block rounded-full px-5 py-2 text-sm font-medium uppercase tracking-widest backdrop-blur-md"
+              style={{ border: "1px solid hsl(38 88% 55% / .4)", background: "hsl(38 88% 55% / .1)", color: "hsl(42 95% 65%)" }}>
+              Bhurban · Murree · Pakistan
+            </span>
+          </Reveal>
+          <Reveal delay={150}>
+            <h1 className="text-6xl font-bold leading-tight md:text-8xl">
+              <span className="bh-text-gold">Hotels in Bhurban</span>
+              <br />
+              <span className="text-5xl md:text-7xl">Discover Himalaya Premium Villas</span>
+            </h1>
+          </Reveal>
+          <Reveal delay={300}>
+            <p className="mt-4 text-2xl font-light italic md:text-3xl" style={{ color: "hsl(42 95% 75%)" }}>
+              Not just a stay — a private luxury estate nestled in the heart of the Himalayan foothills. Welcome to Bhurban's most exclusive retreat.
+            </p>
+          </Reveal>
+          <Reveal delay={450}>
+            <p className="mt-6 max-w-2xl text-lg md:text-xl" style={{ color: "hsl(40 38% 97% / .85)" }}>
+              Forget ordinary hotels. Himalaya Premium Villas offers something Bhurban has never seen before — a fully private luxury estate where every detail is designed around you.
+            </p>
+          </Reveal>
 
-        <Reveal delay={600}>
-          <div className="mt-10 flex flex-wrap items-center justify-center gap-4">
-            <a href="#hotels" className="bh-grad-gold bh-shadow-gold rounded-full px-8 py-4 text-base font-semibold transition-transform hover:scale-105"
-              style={{ color: "hsl(165 60% 18%)" }}>
-              Explore Luxury Hotels
-            </a>
-            <a href="#pricing" className="rounded-full px-8 py-4 text-base font-semibold backdrop-blur-md transition"
-              style={{ border: "2px solid hsl(40 38% 97% / .4)", background: "hsl(40 38% 97% / .1)" }}>
-              View Special Offers
-            </a>
-          </div>
-        </Reveal>
-
-        {/* Feature cards */}
-        <Reveal delay={800}>
-          <div className="mt-14 grid w-full max-w-4xl grid-cols-1 gap-5 md:grid-cols-3">
-            {[
-              { icon: Star, title: "5-Star Luxury", sub: "Premium resorts & spas" },
-              { icon: Sparkles, title: "Modern Comfort", sub: "Contemporary hotels" },
-              { icon: Home, title: "Private Villas", sub: "Exclusive stays" },
-            ].map((f, k) => (
-              <div key={k} className="rounded-2xl p-6 backdrop-blur-xl transition hover:-translate-y-2"
-                style={{ border: "1px solid hsl(40 38% 97% / .15)", background: "hsl(40 38% 97% / .1)" }}>
-                <div className="bh-grad-gold bh-shadow-gold mx-auto mb-3 flex h-12 w-12 items-center justify-center rounded-xl" style={{ color: "hsl(165 60% 18%)" }}>
-                  <f.icon className="h-6 w-6" />
+          <Reveal delay={600}>
+            <div className="mt-10 flex flex-wrap items-center gap-4">
+              <a href="#contact" className="bh-grad-gold bh-shadow-gold rounded-full px-8 py-4 text-base font-semibold transition-transform hover:scale-105"
+                style={{ color: "hsl(165 60% 18%)" }}>
+                Reserve Your Private Estate
+              </a>
+              <a href="#estate" className="rounded-full px-8 py-4 text-base font-semibold backdrop-blur-md transition"
+                style={{ border: "2px solid hsl(40 38% 97% / .4)", background: "hsl(40 38% 97% / .1)" }}>
+                Explore the Villas
+              </a>
+            </div>
+          </Reveal>
+        </div>
+        
+        {/* CTA Form on Right Side */}
+        <div className="hidden lg:block lg:w-1/3">
+          <Reveal delay={800}>
+            <div className="bg-white/95 backdrop-blur-lg rounded-lg shadow-lg p-12">
+              <h3 className="mb-6 text-2xl font-bold text-gray-800">Send us a Message</h3>
+              <form className="space-y-4">
+                <div>
+                  <label htmlFor="fullName" className="block text-gray-700 text-sm font-bold mb-2">Full Name *</label>
+                  <input
+                    type="text"
+                    id="fullName"
+                    placeholder="Your full name"
+                    className="w-full px-4 py-6 rounded-lg border border-gray-300 text-gray-800 placeholder-gray-500 focus:outline-none focus:ring-2 focus:ring-emerald-500"
+                  />
                 </div>
-                <h3 className="text-lg font-bold">{f.title}</h3>
-                <p className="text-sm" style={{ color: "hsl(40 38% 97% / .7)" }}>{f.sub}</p>
-              </div>
-            ))}
-          </div>
-        </Reveal>
+                <div>
+                  <label htmlFor="email" className="block text-gray-700 text-sm font-bold mb-2">Email *</label>
+                  <input
+                    type="email"
+                    id="email"
+                    placeholder="your.email@example.com"
+                    className="w-full px-4 py-6 rounded-lg border border-gray-300 text-gray-800 placeholder-gray-500 focus:outline-none focus:ring-2 focus:ring-emerald-500"
+                  />
+                </div>
+                <div>
+                  <label htmlFor="phoneNumber" className="block text-gray-700 text-sm font-bold mb-2">Phone Number</label>
+                  <input
+                    type="tel"
+                    id="phoneNumber"
+                    placeholder="+92 300 0000000"
+                    className="w-full px-4 py-6 rounded-lg border border-gray-300 text-gray-800 placeholder-gray-500 focus:outline-none focus:ring-2 focus:ring-emerald-500"
+                  />
+                </div>
+                <div className="grid grid-cols-2 gap-4">
+                  <div>
+                    <label htmlFor="checkInDate" className="block text-gray-700 text-sm font-bold mb-2">Check-in Date</label>
+                    <input
+                      type="date"
+                      id="checkInDate"
+                      className="px-4 py-6 rounded-lg border border-gray-300 text-gray-800 focus:outline-none focus:ring-2 focus:ring-emerald-500"
+                    />
+                  </div>
+                  <div>
+                    <label htmlFor="checkOutDate" className="block text-gray-700 text-sm font-bold mb-2">Check-out Date</label>
+                    <input
+                      type="date"
+                      id="checkOutDate"
+                      className="w-full px-4 py-6 rounded-lg border border-gray-300 text-gray-800 focus:outline-none focus:ring-2 focus:ring-emerald-500"
+                    />
+                  </div>
+                </div>
+                <div>
+                  <label htmlFor="numberOfGuests" className="block text-gray-700 text-sm font-bold mb-2">Number of Guests</label>
+                  <select
+                    id="numberOfGuests"
+                    className="w-full px-4 py-6 rounded-lg border border-gray-300 text-gray-800 focus:outline-none focus:ring-2 focus:ring-emerald-500"
+                  >
+                    <option value="1">1 Guest</option>
+                    <option value="2">2 Guests</option>
+                    <option value="3">3 Guests</option>
+                    <option value="4">4 Guests</option>
+                    <option value="5+">5+ Guests</option>
+                  </select>
+                </div>
+                <div>
+                  <label htmlFor="message" className="block text-gray-700 text-sm font-bold mb-2">Message</label>
+                  <textarea
+                    id="message"
+                    rows={4}
+                    placeholder="Tell us about your requirements..."
+                    className="w-full px-4 py-6 rounded-lg border border-gray-300 text-gray-800 placeholder-gray-500 focus:outline-none focus:ring-2 focus:ring-emerald-500"
+                  />
+                </div>
+                <button
+                  type="submit"
+                  className="bg-emerald-600 text-white w-full rounded-lg px-4 py-6 text-lg font-semibold transition-transform hover:scale-105 shadow-md"
+                >
+                  Send Inquiry
+                </button>
+              </form>
+            </div>
+          </Reveal>
+        </div>
       </div>
 
       {/* Arrows */}
@@ -285,29 +340,160 @@ function ParallaxBg({ src, speed = 0.3, opacity = 0.15 }: { src: string; speed?:
     );
 }
 
-/* ----------------------------- 1. Why Choose ----------------------------- */
-function WhyChoose() {
-  const items = [
-    { icon: Mountain, title: "Stunning Views", desc: "Breathtaking mountain landscapes and pristine natural beauty" },
-    { icon: Sparkles, title: "Luxury Living", desc: "Premium accommodations with world-class amenities" },
-    { icon: Home, title: "Peaceful Environment", desc: "Escape the crowds and find your perfect retreat" },
-  ];
+/* ----------------------------- 1. Introduction ----------------------------- */
+function Introduction() {
   return (
-    <Section style={{ background: "hsl(40 40% 92%)" }}>
+    <Section id="introduction" style={{ background: "hsl(40 40% 92%)" }}>
       <ParallaxBg src="https://images.unsplash.com/photo-1464822759023-fed622ff2c3b?w=1920&q=80" speed={0.2} opacity={0.08} />
       <div className="relative" style={{ zIndex: 1 }}>
         <Container>
-          <SectionHeader kicker="Discover" title={<>Why Choose <span className="bh-text-emerald">Bhurban?</span></>}
-            sub="Experience the perfect blend of luxury and nature in Pakistan's premier mountain destination" />
-          <div className="grid gap-8 md:grid-cols-3">
-            {items.map((it, k) => (
+          <div className="max-w-4xl mx-auto">
+            <Reveal>
+              <h2 className="text-4xl font-bold md:text-5xl mb-6 text-center" style={{ color: "hsl(165 60% 18%)" }}>
+                Looking for the Best Hotels in Bhurban? <span className="bh-text-emerald">Think Beyond a Hotel.</span>
+              </h2>
+            </Reveal>
+            <Reveal delay={200}>
+              <div className="prose prose-lg max-w-none" style={{ color: "hsl(165 12% 38%)" }}>
+                <p className="mb-6 text-lg leading-relaxed">
+                  Bhurban has long been one of Pakistan's most beloved mountain escapes — a place where the air is crisp, the pine forests stretch endlessly, and the Himalayan peaks seem close enough to touch. Every year, thousands of travellers arrive searching for the perfect stay: somewhere beautiful, somewhere peaceful, somewhere that actually matches the grandeur of the landscape around it.
+                </p>
+                <p className="mb-6 text-lg leading-relaxed">
+                  But here's the truth that most hotels in Bhurban won't tell you: a standard hotel room — no matter how nicely decorated — was never designed to give you the Bhurban experience you actually came for. Shared lobbies fill up. Corridors echo with strangers. Dining rooms operate on fixed schedules. And the moment you step out of your room, the privacy you were hoping for disappears.
+                </p>
+                <p className="mb-6 text-lg leading-relaxed">
+                  This is exactly why Himalaya Premium Villas was created.
+                </p>
+                <div className="bg-white/80 backdrop-blur-sm rounded-2xl p-8 my-8 bh-shadow-lux">
+                  <p className="text-xl font-semibold text-center mb-4" style={{ color: "hsl(165 60% 18%)" }}>
+                    Not a hotel. Not a resort. A fully private luxury estate — set high in the Himalayan foothills of Bhurban, Murree — built for guests who know what they want and refuse to compromise on it.
+                  </p>
+                  <p className="text-lg text-center" style={{ color: "hsl(165 12% 38%)" }}>
+                    Here, the entire estate is yours. From the moment you arrive to the moment you leave, every space, every amenity, and every service exists for you and your guests alone. No check-in queues. No shared facilities. No strangers. Just pure, uninterrupted luxury in one of Pakistan's most breathtaking natural settings.
+                  </p>
+                </div>
+                <p className="text-lg leading-relaxed">
+                  Whether you are planning a family retreat, a romantic escape, a destination wedding, or a high-level corporate gathering, Himalaya Premium Villas redefines what a stay in Bhurban can truly feel like.
+                </p>
+              </div>
+            </Reveal>
+          </div>
+        </Container>
+      </div>
+    </Section>
+  );
+}
+
+/* ----------------------------- 2. Why We Stand Apart ----------------------------- */
+function WhyStandApart() {
+  const features = [
+    { 
+      icon: Home, 
+      title: "A Private Estate — Not a Hotel", 
+      desc: "We operate with limited monthly bookings so that every guest receives the full estate exclusively. No shared spaces, no strangers, no noise from adjacent rooms. When you book, the entire estate is yours."
+    },
+    { 
+      icon: Mountain, 
+      title: "Panoramic Himalayan Views", 
+      desc: "Every window, terrace, and outdoor space at Himalaya Premium Villas has been positioned to frame the most spectacular Himalayan vistas. Wake up every morning to a view that reminds you why you came to Bhurban in the first place."
+    },
+    { 
+      icon: Utensils, 
+      title: "Curated In-Villa Dining", 
+      desc: "Forget fixed menus and restaurant queues. Dining at Himalaya Premium Villas is a bespoke experience — from intimate candlelit in-villa meals to open-air barbecue evenings under the mountain sky, every meal is crafted around your preferences and schedule."
+    },
+    { 
+      icon: Heart, 
+      title: "Destination Weddings & Corporate Retreats", 
+      desc: "Dreaming of a royal destination wedding in Bhurban? Planning an executive retreat away from the city? Himalaya Premium Villas provides a breathtaking backdrop, world-class event infrastructure, and a dedicated team committed to making every occasion flawless and unforgettable."
+    },
+    { 
+      icon: Sparkles, 
+      title: "Absolute Privacy, Always", 
+      desc: "Privacy is not an upgrade at Himalaya Premium Villas — it is the foundation. No lobbies. No shared pools. No random guests wandering past. From arrival to departure, the entire estate belongs to you and those you choose to bring."
+    },
+    { 
+      icon: Clock, 
+      title: "24/7 Dedicated Concierge", 
+      desc: "Our team is available around the clock to handle every detail — whether that means arranging a special dining setup, coordinating event logistics, or simply ensuring your stay flows exactly as you imagined it."
+    }
+  ];
+
+  return (
+    <Section id="stand-apart">
+      <Container>
+        <SectionHeader 
+          kicker="What Makes Us Different" 
+          title={<>Why Himalaya Premium Villas <span className="bh-text-emerald">Stands Above</span> Every Hotel in Bhurban</>}
+          sub="There are places to stay in Bhurban, and then there is Himalaya Premium Villas. The difference is not just in the quality of the rooms — it is in the entire philosophy of how a stay should feel." 
+        />
+        <div className="grid gap-8 md:grid-cols-2 lg:grid-cols-3">
+          {features.map((feature, k) => (
+            <Reveal key={k} delay={k * 100}>
+              <div className="bh-card bh-shadow-lux group h-full p-8 transition hover:-translate-y-3">
+                <div className="bh-grad-emerald mb-6 flex h-16 w-16 items-center justify-center rounded-2xl transition group-hover:rotate-6" style={{ color: "hsl(40 38% 97%)" }}>
+                  <feature.icon className="h-8 w-8" />
+                </div>
+                <h3 className="mb-4 text-2xl font-bold" style={{ color: "hsl(165 60% 18%)" }}>{feature.title}</h3>
+                <p className="bh-muted leading-relaxed">{feature.desc}</p>
+              </div>
+            </Reveal>
+          ))}
+        </div>
+      </Container>
+    </Section>
+  );
+}
+
+/* ----------------------------- 3. Ideal For ----------------------------- */
+function IdealFor() {
+  const guestTypes = [
+    { 
+      icon: Users, 
+      title: "Families", 
+      desc: "seeking meaningful time together in a luxurious, private mountain setting without distractions"
+    },
+    { 
+      icon: Heart, 
+      title: "Couples", 
+      desc: "celebrating honeymoons, anniversaries, or simply a romantic escape in the Himalayan foothills"
+    },
+    { 
+      icon: Briefcase, 
+      title: "Corporate Groups", 
+      desc: "looking for an exclusive off-site retreat and high-level strategy sessions in a stunning natural environment"
+    },
+    { 
+      icon: Sparkles, 
+      title: "Wedding Parties", 
+      desc: "planning a grand, unforgettable destination wedding in Bhurban with a world-class backdrop"
+    },
+    { 
+      icon: Home, 
+      title: "Friend Groups", 
+      desc: "who want an entire luxury estate to themselves — no sharing, no compromises, just pure enjoyment"
+    }
+  ];
+
+  return (
+    <Section id="ideal-for" style={{ background: "hsl(40 40% 92%)" }}>
+      <ParallaxBg src="https://images.unsplash.com/photo-1571896349842-33c89424de2d?w=1920&q=80" speed={0.25} opacity={0.08} />
+      <div className="relative" style={{ zIndex: 1 }}>
+        <Container>
+          <SectionHeader 
+            kicker="Perfect For" 
+            title={<>Who Is Himalaya Premium Villas <span className="bh-text-emerald">Perfect For?</span></>}
+            sub="Himalaya Premium Villas is crafted for guests who value quality over quantity — those who know the difference between a stay and an experience." 
+          />
+          <div className="grid gap-8 md:grid-cols-2 lg:grid-cols-3">
+            {guestTypes.map((type, k) => (
               <Reveal key={k} delay={k * 150}>
                 <div className="bh-card bh-shadow-lux group h-full p-8 text-center transition hover:-translate-y-3">
-                  <div className="bh-grad-emerald mx-auto mb-5 flex h-16 w-16 items-center justify-center rounded-2xl transition group-hover:rotate-6" style={{ color: "hsl(40 38% 97%)" }}>
-                    <it.icon className="h-8 w-8" />
+                  <div className="bh-grad-emerald mx-auto mb-6 flex h-16 w-16 items-center justify-center rounded-2xl transition group-hover:rotate-6" style={{ color: "hsl(40 38% 97%)" }}>
+                    <type.icon className="h-8 w-8" />
                   </div>
-                  <h3 className="mb-3 text-2xl font-bold" style={{ color: "hsl(165 60% 18%)" }}>{it.title}</h3>
-                  <p className="bh-muted">{it.desc}</p>
+                  <h3 className="mb-4 text-2xl font-bold" style={{ color: "hsl(165 60% 18%)" }}>{type.title}</h3>
+                  <p className="bh-muted leading-relaxed">{type.desc}</p>
                 </div>
               </Reveal>
             ))}
@@ -318,71 +504,110 @@ function WhyChoose() {
   );
 }
 
-/* ----------------------------- 2. Hotels ----------------------------- */
-function Hotels() {
-  return (
-    <Section id="hotels">
-      <Container>
-        <SectionHeader kicker="Stay" title="Featured Hotels & Resorts" sub="Discover the best accommodations Bhurban has to offer" />
-        <div className="grid gap-8 md:grid-cols-3">
-          {HOTELS.map((h, k) => (
-            <Reveal key={k} delay={k * 150}>
-              <div className="bh-card bh-shadow-lux group h-full overflow-hidden transition hover:-translate-y-2">
-                <div className="relative h-56 overflow-hidden">
-                  <img src={h.img} alt={h.name} className="h-full w-full object-cover transition duration-700 group-hover:scale-110" />
-                </div>
-                <div className="p-7">
-                  <div className="mb-3 flex items-center justify-between">
-                    <span className="bh-grad-emerald rounded-full px-3 py-1 text-xs font-bold" style={{ color: "hsl(40 38% 97%)" }}>{h.tag}</span>
-                    <span className="text-xl font-bold" style={{ color: "hsl(38 88% 35%)" }}>{h.price}</span>
-                  </div>
-                  <h3 className="mb-2 text-2xl font-bold" style={{ color: "hsl(165 60% 18%)" }}>{h.name}</h3>
-                  <p className="bh-muted mb-4">{h.desc}</p>
-                  <ul className="mb-6 space-y-2">
-                    {h.perks.map((p) => (
-                      <li key={p} className="flex items-center gap-2 text-sm">
-                        <Check className="h-4 w-4" style={{ color: "hsl(165 55% 32%)" }} /> {p}
-                      </li>
-                    ))}
-                  </ul>
-                  <button className="bh-grad-emerald w-full rounded-full py-3 font-semibold transition hover:opacity-90" style={{ color: "hsl(40 38% 97%)" }}>
-                    Book Now
-                  </button>
-                </div>
-              </div>
-            </Reveal>
-          ))}
-        </div>
-      </Container>
-    </Section>
-  );
-}
-
-/* ----------------------------- 3. Amenities ----------------------------- */
-function Amenities() {
-  const items = [
-    { icon: Sparkles, title: "Spa & Wellness", desc: "Relax and rejuvenate" },
-    { icon: Utensils, title: "Fine Dining", desc: "Exquisite culinary experiences" },
-    { icon: Briefcase, title: "Conference Rooms", desc: "Business meeting facilities" },
-    { icon: Clock, title: "24/7 Service", desc: "Round the clock assistance" },
+/* ----------------------------- 4. The Estate ----------------------------- */
+function TheEstate() {
+  const estateFeatures = [
+    "Multiple elegantly furnished bedrooms with premium linens and mountain views",
+    "Expansive living and dining areas designed for large gatherings and intimate moments alike",
+    "Fully equipped private kitchen for in-house dining and custom catering",
+    "Landscaped outdoor spaces with panoramic Himalayan views",
+    "Private parking within the secured estate grounds",
+    "24/7 dedicated concierge and on-site support team",
+    "Full event and banquet setup capability for weddings and corporate functions",
+    "High-speed connectivity throughout the property"
   ];
+
   return (
-    <Section className="bh-grad-emerald" style={{ color: "hsl(40 38% 97%)" }}>
-      <ParallaxBg src="https://images.unsplash.com/photo-1571896349842-33c89424de2d?w=1920&q=80" speed={0.25} opacity={0.15} />
+    <Section id="estate" className="bh-grad-emerald" style={{ color: "hsl(40 38% 97%)" }}>
+      <ParallaxBg src="https://images.unsplash.com/photo-1469474968028-56623f02e42e?w=1920&q=80" speed={0.3} opacity={0.15} />
       <div className="relative" style={{ zIndex: 1 }}>
         <Container>
-          <SectionHeader kicker="Facilities" title={<>Premium <span className="bh-text-gold">Amenities</span></>}
-            sub="Experience world-class facilities and services" light />
-          <div className="grid gap-6 md:grid-cols-4">
-            {items.map((it, k) => (
-              <Reveal key={k} delay={k * 100}>
-                <div className="group h-full rounded-2xl p-6 text-center backdrop-blur-md transition hover:-translate-y-2"
-                  style={{ border: "1px solid hsl(40 38% 97% / .15)", background: "hsl(40 38% 97% / .05)" }}>
-                  <div className="bh-grad-gold mx-auto mb-4 flex h-14 w-14 items-center justify-center rounded-xl transition group-hover:scale-110" style={{ color: "hsl(165 60% 18%)" }}>
-                    <it.icon className="h-7 w-7" />
+          <SectionHeader 
+            kicker="Estate Features" 
+            title={<>Inside <span className="bh-text-gold">Himalaya Premium Villas</span></>}
+            sub="Every detail of this estate has been thoughtfully curated to deliver an experience that no hotel in Bhurban can match." 
+            light 
+          />
+          <Reveal>
+            <div className="max-w-4xl mx-auto">
+              <div className="bh-card bh-shadow-lux backdrop-blur-md p-10" 
+                style={{ border: "1px solid hsl(40 38% 97% / .15)", background: "hsl(40 38% 97% / .1)" }}>
+                <ul className="space-y-4">
+                  {estateFeatures.map((feature, k) => (
+                    <Reveal key={k} delay={k * 100}>
+                      <li className="flex items-start gap-4">
+                        <div className="bh-grad-gold flex h-6 w-6 items-center justify-center rounded-full flex-shrink-0 mt-1" 
+                          style={{ color: "hsl(165 60% 18%)" }}>
+                          <Check className="h-3 w-3" />
+                        </div>
+                        <span className="text-lg">{feature}</span>
+                      </li>
+                    </Reveal>
+                  ))}
+                </ul>
+              </div>
+            </div>
+          </Reveal>
+        </Container>
+      </div>
+    </Section>
+  );
+}
+
+/* ----------------------------- 5. Bhurban Destination ----------------------------- */
+function BhurbanDestination() {
+  const seasons = [
+    { 
+      icon: Sun, 
+      title: "Summer", 
+      when: "May – August", 
+      desc: "Cool, refreshing weather — perfect for outdoor gatherings and long estate stays",
+      grad: "linear-gradient(135deg,hsl(38 95% 55%),hsl(20 90% 55%))"
+    },
+    { 
+      icon: Flower2, 
+      title: "Autumn", 
+      when: "September – November", 
+      desc: "Golden foliage and peaceful, crowd-free ambiance",
+      grad: "linear-gradient(135deg,hsl(330 80% 65%),hsl(350 75% 55%))"
+    },
+    { 
+      icon: Snowflake, 
+      title: "Winter", 
+      when: "December – February", 
+      desc: "Snowfall transforms Bhurban into a magical winter escape",
+      grad: "linear-gradient(135deg,hsl(200 90% 60%),hsl(220 80% 50%))"
+    },
+    { 
+      icon: Flower2, 
+      title: "Spring", 
+      when: "March – April", 
+      desc: "Blooming landscapes and crisp mountain air",
+      grad: "linear-gradient(135deg,hsl(120 70% 55%),hsl(140 65% 45%))"
+    }
+  ];
+
+  return (
+    <Section id="bhurban-destination" style={{ background: "hsl(40 40% 92%)" }}>
+      <ParallaxBg src="https://images.unsplash.com/photo-1542314831-068cd1dbfeeb?w=1920&q=80" speed={0.3} opacity={0.08} />
+      <div className="relative" style={{ zIndex: 1 }}>
+        <Container>
+          <SectionHeader 
+            kicker="Location" 
+            title={<>Why Bhurban Is Pakistan's <span className="bh-text-emerald">Premier Mountain Destination</span></>}
+            sub="Bhurban, nestled in the Murree Hills at over 7,000 feet, is one of Pakistan's most cherished mountain retreats — known for its lush pine forests, cool climate, and stunning Himalayan vistas. Whatever the season, Bhurban offers an unmatched natural setting, and Himalaya Premium Villas puts you right at the heart of it." 
+          />
+          <div className="grid gap-8 md:grid-cols-2 lg:grid-cols-4">
+            {seasons.map((season, k) => (
+              <Reveal key={k} delay={k * 150}>
+                <div className="bh-card bh-shadow-lux group h-full p-8 text-center transition hover:-translate-y-2">
+                  <div className="bh-shadow-lux mx-auto mb-5 flex h-20 w-20 items-center justify-center rounded-full transition group-hover:scale-110"
+                    style={{ background: season.grad, color: "white" }}>
+                    <season.icon className="h-10 w-10" />
                   </div>
-                  <h3 className="mb-1 text-lg font-bold">{it.title}</h3>
-                  <p className="text-sm" style={{ color: "hsl(40 38% 97% / .75)" }}>{it.desc}</p>
+                  <h3 className="text-2xl font-bold" style={{ color: "hsl(165 60% 18%)" }}>{season.title}</h3>
+                  <p className="mt-2 font-semibold" style={{ color: "hsl(38 88% 35%)" }}>{season.when}</p>
+                  <p className="bh-muted mt-3">{season.desc}</p>
                 </div>
               </Reveal>
             ))}
@@ -393,63 +618,83 @@ function Amenities() {
   );
 }
 
-/* ----------------------------- 4. Testimonials ----------------------------- */
-function Testimonials() {
-  const items = [
-    { initials: "AK", name: "Ahmed Khan", quote: "Amazing experience at Pearl Continental! The views were breathtaking and the service was exceptional." },
-    { initials: "SM", name: "Sara Malik", quote: "Hotel One Bhurban exceeded our expectations. Perfect for families and very affordable!" },
-    { initials: "FA", name: "Fahad Ali", quote: "The luxury villa we rented was perfect for our group. Privacy, comfort, and stunning views!" },
-  ];
+/* ----------------------------- 6. Final CTA ----------------------------- */
+function FinalCTA() {
   return (
-    <Section style={{ background: "hsl(40 40% 92%)" }}>
-      <Container>
-        <SectionHeader kicker="Reviews" title="What Our Guests Say" sub="Real experiences from real travelers" />
-        <div className="grid gap-8 md:grid-cols-3">
-          {items.map((t, k) => (
-            <Reveal key={k} delay={k * 150}>
-              <div className="bh-card bh-shadow-lux h-full p-8">
-                <div className="mb-5 flex items-center gap-4">
-                  <div className="bh-grad-emerald flex h-14 w-14 items-center justify-center rounded-full text-xl font-bold" style={{ color: "hsl(40 38% 97%)" }}>
-                    {t.initials}
-                  </div>
-                  <div>
-                    <p className="text-lg font-bold" style={{ color: "hsl(165 60% 18%)" }}>{t.name}</p>
-                    <div className="flex gap-1" style={{ color: "hsl(38 88% 55%)" }}>
-                      {[...Array(5)].map((_, i) => <Star key={i} className="h-4 w-4 fill-current" />)}
-                    </div>
-                  </div>
-                </div>
-                <p className="bh-muted italic">"{t.quote}"</p>
+    <Section id="final-cta" className="bh-grad-emerald" style={{ color: "hsl(40 38% 97%)" }}>
+      <ParallaxBg src="https://images.unsplash.com/photo-1469474968028-56623f02e42e?w=1920&q=80" speed={0.35} opacity={0.18} />
+      <div className="relative" style={{ zIndex: 1 }}>
+        <Container>
+          <div className="text-center">
+            <Reveal>
+              <h2 className="text-4xl font-bold md:text-6xl">
+                Ready to Experience the <span className="bh-text-gold">Finest Stay in Bhurban?</span>
+              </h2>
+            </Reveal>
+            <Reveal delay={150}>
+              <p className="mx-auto mt-5 max-w-3xl text-lg" style={{ color: "hsl(40 38% 97% / .85)" }}>
+                Forget ordinary hotels. Himalaya Premium Villas offers something Bhurban has never seen before — a fully private luxury estate where every detail is designed around you. Limited bookings are available each month. Secure your exclusive stay before it's gone.
+              </p>
+            </Reveal>
+            <Reveal delay={300}>
+              <div className="mt-10 flex flex-wrap items-center justify-center gap-4">
+                <a href="#contact" className="bh-grad-gold bh-shadow-gold rounded-full px-8 py-4 font-semibold transition hover:scale-105" style={{ color: "hsl(165 60% 18%)" }}>
+                  Reserve Your Stay Now
+                </a>
+                <a href="#contact" className="rounded-full px-8 py-4 font-semibold backdrop-blur-md transition"
+                  style={{ border: "2px solid hsl(40 38% 97% / .4)", background: "hsl(40 38% 97% / .1)", color: "hsl(40 38% 97%)" }}>
+                  Contact Us
+                </a>
               </div>
             </Reveal>
-          ))}
-        </div>
-      </Container>
+            <Reveal delay={450}>
+              <div className="mx-auto mt-16 max-w-2xl rounded-2xl p-8 text-center backdrop-blur-md"
+                style={{ border: "1px solid hsl(40 38% 97% / .15)", background: "hsl(40 38% 97% / .1)" }}>
+                <div className="flex flex-wrap items-center justify-center gap-6 text-lg">
+                  <div className="flex items-center gap-2">
+                    <Phone className="h-5 w-5" />
+                    <span>+92 304 567 9000</span>
+                  </div>
+                  <div className="flex items-center gap-2">
+                    <Mail className="h-5 w-5" />
+                    <span>info@himalayavillas.com</span>
+                  </div>
+                  <div className="flex items-center gap-2">
+                    <MapPin className="h-5 w-5" />
+                    <span>Bhurban, Murree, Pakistan</span>
+                  </div>
+                </div>
+              </div>
+            </Reveal>
+          </div>
+        </Container>
+      </div>
     </Section>
   );
 }
 
-/* ----------------------------- 5. Pricing ----------------------------- */
+
+
+/* ----------------------------- 6. Pricing ----------------------------- */
 function Pricing() {
   const rows = [
-    { tag: "BUDGET", name: "Budget Hotels", price: "5,000 – 10,000", best: "Solo travelers, backpackers", bg: "hsl(160 60% 92%)", fg: "hsl(160 60% 25%)" },
-    { tag: "VALUE", name: "Mid-range Hotels", price: "10,000 – 20,000", best: "Families, couples", bg: "hsl(200 80% 92%)", fg: "hsl(200 80% 30%)" },
-    { tag: "LUXURY", name: "Luxury Hotels", price: "25,000 – 60,000+", best: "Honeymoon, business", bg: "hsl(40 90% 90%)", fg: "hsl(38 88% 35%)" },
-    { tag: "PREMIUM", name: "Villas", price: "15,000 – 80,000+", best: "Groups, long stays", bg: "hsl(340 80% 94%)", fg: "hsl(340 70% 40%)" },
+    { tag: "BUDGET", name: "Budget Hotels", price: "10,000 – 20,000", best: "Backpackers, solo travelers", bg: "hsl(160 60% 92%)", fg: "hsl(160 60% 25%)" },
+    { tag: "MID-RANGE", name: "Mid-Range Hotels", price: "20,000 – 40,000", best: "Families, couples", bg: "hsl(200 80% 92%)", fg: "hsl(200 80% 30%)" },
+    { tag: "LUXURY", name: "Luxury Hotels", price: "40,000 – 80,000", best: "Business, luxury seekers", bg: "hsl(40 90% 90%)", fg: "hsl(38 88% 35%)" },
+    { tag: "PREMIUM", name: "5-Star Hotels", price: "80,000 – 150,000+", best: "VIP guests, honeymoon", bg: "hsl(340 80% 94%)", fg: "hsl(340 70% 40%)" },
   ];
   return (
-    <Section id="pricing">
-      <ParallaxBg src="https://images.unsplash.com/photo-1542314831-068cd1dbfeeb?w=1920&q=80" speed={0.3} opacity={0.1} />
+    <Section id="booking">
+      <ParallaxBg src="https://images.unsplash.com/photo-1506905925346-21bda4d32df4?w=1920&q=80" speed={0.3} opacity={0.1} />
       <div className="relative" style={{ zIndex: 1 }}>
         <Container>
-          <SectionHeader kicker="Budget" title={<>Transparent <span className="bh-text-gold">Pricing</span></>}
-            sub="Find the perfect accommodation within your budget" />
+          <SectionHeader kicker="Rates" title="Hotel Pricing in Bhurban" sub="Transparent pricing for all categories of hotels" />
           <Reveal>
             <div className="bh-card bh-border bh-shadow-lux overflow-hidden">
               <table className="w-full">
                 <thead className="bh-grad-emerald" style={{ color: "hsl(40 38% 97%)" }}>
                   <tr>
-                    <th className="p-5 text-left text-lg">Category</th>
+                    <th className="p-5 text-left text-lg">Hotel Category</th>
                     <th className="p-5 text-left text-lg">Price (PKR/night)</th>
                     <th className="hidden p-5 text-left text-lg md:table-cell">Best For</th>
                   </tr>
@@ -471,7 +716,7 @@ function Pricing() {
             </div>
           </Reveal>
           <p className="bh-muted mt-6 text-center text-sm italic">
-            *Prices vary depending on season, weekends, and holidays
+            *Prices vary depending on season, weekends, and holidays. Contact hotels for special packages and discounts.
           </p>
         </Container>
       </div>
@@ -479,138 +724,62 @@ function Pricing() {
   );
 }
 
-/* ----------------------------- 6. Best Time ----------------------------- */
-function BestTime() {
-  const items = [
-    { icon: Sun, title: "Summer", when: "May – August", desc: "Cool weather, peak tourist season", grad: "linear-gradient(135deg,hsl(38 95% 55%),hsl(20 90% 55%))" },
-    { icon: Snowflake, title: "Winter", when: "December – February", desc: "Snowfall and romantic vibes", grad: "linear-gradient(135deg,hsl(200 90% 60%),hsl(220 80% 50%))" },
-    { icon: Flower2, title: "Spring & Autumn", when: "Mar–Apr · Sep–Nov", desc: "Ideal for peaceful stays", grad: "linear-gradient(135deg,hsl(330 80% 65%),hsl(350 75% 55%))" },
+/* ----------------------------- 7. FAQ ----------------------------- */
+function FAQ() {
+  const faqs = [
+    {
+      q: "What makes Himalaya Premium Villas different from other hotels in Bhurban?",
+      a: "Himalaya Premium Villas is not a hotel — it is a fully private luxury estate in Bhurban, the most prestigious enclave of the Murree Hills. Unlike any hotel in Bhurban, the entire estate is reserved exclusively for one booking at a time, ensuring complete privacy, bespoke service, and a level of luxury that shared hotel environments simply cannot offer."
+    },
+    {
+      q: "Where exactly is Himalaya Premium Villas located?",
+      a: "The estate is located in Bhurban, Murree, Pakistan — approximately 50 kilometres from Islamabad. Bhurban is widely regarded as the most exclusive and scenic enclave within the greater Murree Hills region."
+    },
+    {
+      q: "Is Himalaya Premium Villas suitable for destination weddings?",
+      a: "Absolutely. The estate is one of the most sought-after destination wedding venues in the Bhurban region. With panoramic Himalayan views, dedicated event infrastructure, and a full planning and concierge team, it is designed to host extraordinary weddings and celebrations."
+    },
+    {
+      q: "What is the best time to visit Bhurban?",
+      a: "The Bhurban region is beautiful year-round. Summer (May–August) offers cool weather and lush greenery; winter (December–February) brings snowfall and magical landscapes; autumn and spring offer quieter, equally stunning experiences. Himalaya Premium Villas is available for exclusive bookings across all seasons."
+    },
+    {
+      q: "Can corporate groups book Himalaya Premium Villas for retreats?",
+      a: "Yes. The estate is fully equipped to host executive corporate retreats, strategy sessions, and leadership off-sites. With high-speed connectivity, private meeting spaces, bespoke catering, and an inspiring natural environment, it offers a setting that no hotel conference room in Bhurban can match."
+    }
   ];
-  return (
-    <Section style={{ background: "hsl(40 40% 92%)" }}>
-      <Container>
-        <SectionHeader kicker="Plan" title="Best Time to Visit" sub="Plan your perfect getaway according to seasons" />
-        <div className="grid gap-8 md:grid-cols-3">
-          {items.map((it, k) => (
-            <Reveal key={k} delay={k * 150}>
-              <div className="bh-card bh-shadow-lux group h-full p-8 text-center transition hover:-translate-y-2">
-                <div className="bh-shadow-lux mx-auto mb-5 flex h-20 w-20 items-center justify-center rounded-full transition group-hover:scale-110"
-                  style={{ background: it.grad, color: "white" }}>
-                  <it.icon className="h-10 w-10" />
-                </div>
-                <h3 className="text-2xl font-bold" style={{ color: "hsl(165 60% 18%)" }}>{it.title}</h3>
-                <p className="mt-2 font-semibold" style={{ color: "hsl(38 88% 35%)" }}>{it.when}</p>
-                <p className="bh-muted mt-3">{it.desc}</p>
-              </div>
-            </Reveal>
-          ))}
-        </div>
-        <Reveal delay={400}>
-          <div className="mx-auto mt-12 max-w-3xl rounded-2xl p-6 text-center"
-            style={{ border: "1px solid hsl(38 88% 55% / .3)", background: "hsl(38 88% 55% / .1)" }}>
-            <strong style={{ color: "hsl(38 88% 35%)" }}>💡 Pro Tip:</strong> For the best deals on Bhurban hotels, avoid peak weekends and holidays.
-          </div>
-        </Reveal>
-      </Container>
-    </Section>
-  );
-}
 
-/* ----------------------------- 7. Booking CTA ----------------------------- */
-function BookingCTA() {
   return (
-    <Section className="bh-grad-emerald" style={{ color: "hsl(40 38% 97%)" }}>
-      <ParallaxBg src="https://images.unsplash.com/photo-1469474968028-56623f02e42e?w=1920&q=80" speed={0.35} opacity={0.18} />
-      <div className="relative" style={{ zIndex: 1 }}>
-        <Container>
-          <div className="text-center">
-            <Reveal>
-              <h2 className="text-4xl font-bold md:text-6xl">
-                Ready for Your <span className="bh-text-gold">Bhurban Adventure?</span>
-              </h2>
-            </Reveal>
-            <Reveal delay={150}>
-              <p className="mx-auto mt-5 max-w-2xl text-lg" style={{ color: "hsl(40 38% 97% / .85)" }}>
-                Book your perfect stay today and experience the luxury and beauty of Bhurban
-              </p>
-            </Reveal>
-            <Reveal delay={300}>
-              <div className="mt-10 flex flex-wrap items-center justify-center gap-4">
-                <button className="bh-grad-gold bh-shadow-gold rounded-full px-8 py-4 font-semibold transition hover:scale-105" style={{ color: "hsl(165 60% 18%)" }}>
-                  Book Luxury Hotel
-                </button>
-                <button className="rounded-full px-8 py-4 font-semibold backdrop-blur-md transition"
-                  style={{ border: "2px solid hsl(40 38% 97% / .4)", background: "hsl(40 38% 97% / .1)", color: "hsl(40 38% 97%)" }}>
-                  Reserve Villa
-                </button>
-              </div>
-            </Reveal>
-            <Reveal delay={450}>
-              <div className="mx-auto mt-16 grid max-w-3xl grid-cols-3 gap-6">
-                {[{ v: "24/7", l: "Support" }, { v: "100+", l: "Properties" }, { v: "50K+", l: "Happy Guests" }].map((s) => (
-                  <div key={s.l} className="rounded-2xl p-6 backdrop-blur-md"
-                    style={{ border: "1px solid hsl(40 38% 97% / .15)", background: "hsl(40 38% 97% / .1)" }}>
-                    <p className="text-4xl font-bold md:text-5xl" style={{ color: "hsl(42 95% 75%)" }}>{s.v}</p>
-                    <p className="mt-1 text-sm uppercase tracking-widest" style={{ color: "hsl(40 38% 97% / .75)" }}>{s.l}</p>
+    <Section id="faq" style={{ background: "hsl(40 40% 92%)" }}>
+      <Container>
+        <SectionHeader 
+                kicker="Frequently Asked Questions" 
+                title={<>Hotels in Bhurban — <span className="bh-text-emerald">FAQ</span></>}
+                sub="Get answers to common questions about Himalaya Premium Villas and luxury accommodation in Bhurban" 
+              />
+          <div className="max-w-4xl mx-auto">
+            <div className="space-y-8">
+              {faqs.map((faq, k) => (
+                <Reveal key={k} delay={k * 150}>
+                  <div className="bh-card bh-shadow-lux p-8">
+                    <div className="flex items-start gap-4 mb-4">
+                      <div className="flex h-8 w-8 items-center justify-center rounded-full bg-emerald-600 text-white font-bold flex-shrink-0">
+                        <span className="text-sm font-bold">Q</span>
+                      </div>
+                      <h3 className="text-xl font-bold leading-relaxed" style={{ color: "hsl(165 60% 18%)" }}>{faq.q}</h3>
+                    </div>
+                    <div className="pl-12">
+                      <div className="flex h-8 w-8 items-center justify-center rounded-full bg-gold-500 text-white font-bold flex-shrink-0">
+                        <span className="text-sm font-bold">A</span>
+                      </div>
+                      <p className="mt-2 text-lg leading-relaxed bh-muted">{faq.a}</p>
+                    </div>
                   </div>
-                ))}
-              </div>
-            </Reveal>
+                </Reveal>
+              ))}
+            </div>
           </div>
         </Container>
-      </div>
-    </Section>
-  );
-}
-
-/* ----------------------------- 8. Contact ----------------------------- */
-function Contact() {
-  const contacts = [
-    { icon: Phone, label: "Phone", value: "+92 304 567 9000" },
-    { icon: Mail, label: "Email", value: "info@himalayavillas.com" },
-    { icon: MapPin, label: "Location", value: "Bhurban, Murree, Pakistan" },
-  ];
-  const links = ["About Bhurban", "Travel Guide", "Special Offers", "Cancellation Policy", "Terms & Conditions", "Privacy Policy"];
-  return (
-    <Section>
-      <Container>
-        <SectionHeader kicker="Reach us" title="Get in Touch" sub="Have questions? We're here to help you plan your perfect stay" />
-        <div className="grid gap-10 md:grid-cols-2">
-          <Reveal>
-            <div className="bh-card bh-shadow-lux h-full p-8">
-              <h3 className="mb-6 text-2xl font-bold" style={{ color: "hsl(165 60% 18%)" }}>Contact Information</h3>
-              <div className="space-y-5">
-                {contacts.map((c) => (
-                  <div key={c.label} className="flex items-center gap-4">
-                    <div className="bh-grad-emerald flex h-12 w-12 items-center justify-center rounded-xl" style={{ color: "hsl(40 38% 97%)" }}>
-                      <c.icon className="h-5 w-5" />
-                    </div>
-                    <div>
-                      <p className="bh-muted text-sm uppercase tracking-widest">{c.label}</p>
-                      <p className="font-semibold" style={{ color: "hsl(165 60% 18%)" }}>{c.value}</p>
-                    </div>
-                  </div>
-                ))}
-              </div>
-            </div>
-          </Reveal>
-          <Reveal delay={200}>
-            <div className="bh-card bh-shadow-lux h-full p-8">
-              <h3 className="mb-6 text-2xl font-bold" style={{ color: "hsl(165 60% 18%)" }}>Quick Links</h3>
-              <ul className="grid grid-cols-1 gap-3 sm:grid-cols-2">
-                {links.map((l) => (
-                  <li key={l}>
-                    <a href="#" className="flex items-center gap-2 rounded-lg p-2 transition hover:bg-black/5">
-                      <Check className="h-4 w-4" style={{ color: "hsl(165 55% 32%)" }} />
-                      <span>{l}</span>
-                    </a>
-                  </li>
-                ))}
-              </ul>
-            </div>
-          </Reveal>
-        </div>
-      </Container>
     </Section>
   );
 }
@@ -622,14 +791,14 @@ function Footer() {
       <Container>
         <div className="grid gap-10 py-16 md:grid-cols-4">
           <div>
-            <h3 className="bh-text-gold text-2xl font-bold">Hotels Bhurban</h3>
+            <h3 className="bh-text-gold text-2xl font-bold">Himalaya Premium Villas</h3>
             <p className="mt-3 text-sm" style={{ color: "hsl(40 38% 97% / .7)" }}>
-              Your trusted partner for luxury accommodations in Bhurban, Pakistan
+              Not just a stay — a private luxury estate nestled in the heart of the Himalayan foothills. Experience Bhurban's most exclusive retreat.
             </p>
           </div>
           {[
-            { h: "Quick Links", items: ["About Us", "Hotels", "Villas", "Special Offers"] },
-            { h: "Support", items: ["Contact Us", "FAQ", "Booking Policy", "Terms & Conditions"] },
+            { h: "Quick Links", items: ["About Himalaya Premium Villas", "Private Estate Experience", "Destination Weddings", "Corporate Retreats"] },
+            { h: "Support", items: ["Reserve Your Estate", "Contact Concierge", "Travel Guide", "Privacy Policy"] },
           ].map((c) => (
             <div key={c.h}>
               <h4 className="mb-4 text-lg font-bold">{c.h}</h4>
@@ -639,8 +808,13 @@ function Footer() {
             </div>
           ))}
           <div>
-            <h4 className="mb-4 text-lg font-bold">Follow Us</h4>
-            <div className="flex gap-3">
+            <h4 className="mb-4 text-lg font-bold">Contact Information</h4>
+            <div className="space-y-3 text-sm" style={{ color: "hsl(40 38% 97% / .7)" }}>
+              <p>📞 +92 304 567 9000</p>
+              <p>📧 info@himalayavillas.com</p>
+              <p>📍 Bhurban, Murree, Pakistan</p>
+            </div>
+            <div className="mt-6 flex gap-3">
               {[Facebook, Twitter, Linkedin].map((Icon, k) => (
                 <a key={k} href="#" aria-label="Social link"
                   className="flex h-11 w-11 items-center justify-center rounded-full transition"
@@ -649,13 +823,10 @@ function Footer() {
                 </a>
               ))}
             </div>
-            <div className="mt-6 flex items-center gap-2 text-sm" style={{ color: "hsl(40 38% 97% / .7)" }}>
-              <Wifi className="h-4 w-4" /> Free WiFi at all properties
-            </div>
           </div>
         </div>
         <div className="py-6 text-center text-sm" style={{ borderTop: "1px solid hsl(40 38% 97% / .15)", color: "hsl(40 38% 97% / .6)" }}>
-          © {new Date().getFullYear()} Hotels Bhurban. All rights reserved.
+          © {new Date().getFullYear()} Himalaya Premium Villas. All rights reserved. | Private Luxury Estate in Bhurban | Hotels in Bhurban
         </div>
       </Container>
     </footer>
@@ -664,22 +835,27 @@ function Footer() {
 
 /* ----------------------------- Page ----------------------------- */
 export default function Index() {
-  useEffect(() => {
-    document.title = "Hotels in Bhurban – Luxury Resorts & Villas in Bhurban Pakistan";
-  }, []);
   return (
     <>
+      <Head>
+        <title>Hotels in Bhurban — Himalaya Premium Villas | Private Luxury Estate</title>
+        <meta name="description" content="Looking for the best hotels in Bhurban? Discover Himalaya Premium Villas — a private luxury estate offering exclusive stays, destination weddings, and corporate retreats in the Himalayan foothills of Murree." />
+        <meta name="keywords" content="Hotels in Bhurban" />
+        <meta property="og:title" content="Hotels in Bhurban — Himalaya Premium Villas | Private Luxury Estate" />
+        <meta property="og:description" content="Looking for the best hotels in Bhurban? Discover Himalaya Premium Villas — a private luxury estate offering exclusive stays, destination weddings, and corporate retreats in the Himalayan foothills of Murree." />
+        <meta property="og:url" content="/hotels-in-bhurban" />
+      </Head>
       <style>{PAGE_STYLES}</style>
       <main className="bh-page">
         <HeroSlider />
-        <WhyChoose />
-        <Hotels />
-        <Amenities />
-        <Testimonials />
+        <Introduction />
+        <WhyStandApart />
+        <IdealFor />
+        <TheEstate />
+        <BhurbanDestination />
         <Pricing />
-        <BestTime />
-        <BookingCTA />
-        <Contact />
+        <FAQ />
+        <FinalCTA />
         <Footer />
       </main>
     </>

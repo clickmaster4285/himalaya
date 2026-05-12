@@ -196,7 +196,7 @@ function HeroSlider() {
       </div>
 
       {/* Content */}
-      <div className="relative z-10 flex h-full items-center px-6" style={{ color: "hsl(40 38% 97%)" }}>
+      <div className="relative z-10 flex h-full items-center px-6 py-8 lg:py-10" style={{ color: "hsl(40 38% 97%)" }}>
         <div className="w-full lg:w-1/2">
           <Reveal>
             <span className="mb-4 inline-block rounded-full px-5 py-2 text-sm font-medium uppercase tracking-widest backdrop-blur-md"
@@ -205,8 +205,8 @@ function HeroSlider() {
             </span>
           </Reveal>
           <Reveal delay={150}>
-            <h1 className="text-5xl font-bold leading-tight md:text-8xl">
-              <span className="murree-hotels-text-gold">Hotels in Murree Pakistan</span> — <span className="text-4xl md:text-6xl">Discover Himalaya Premium Villas</span>
+            <h1 className="text-4xl font-bold leading-tight sm:text-5xl md:text-8xl">
+              <span className="murree-hotels-text-gold">Hotels in Murree Pakistan</span> — <span className="text-3xl sm:text-4xl md:text-6xl">Discover Himalaya Premium Villas</span>
             </h1>
           </Reveal>
           <Reveal delay={300}>
@@ -237,7 +237,7 @@ function HeroSlider() {
         {/* CTA Form on Right Side */}
         <div className="hidden lg:block lg:w-1/3">
           <Reveal delay={800}>
-            <div className="bg-white/95 backdrop-blur-lg rounded-lg shadow-lg p-12">
+            <div className="mt-2 max-h-[calc(100vh-5rem)] overflow-y-auto bg-white/95 backdrop-blur-lg rounded-lg shadow-lg p-10">
               <h3 className="mb-6 text-2xl font-bold text-gray-800">Send us a Message</h3>
               <form className="space-y-4">
                 <div>
@@ -881,13 +881,26 @@ function ContactForm() {
   });
 
   const handleChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement | HTMLSelectElement>) => {
-    setFormData({ ...formData, [e.target.name]: e.target.value });
+    const { name, value } = e.target;
+    setFormData(prev => ({ ...prev, [name]: value }));
   };
 
-  const handleSubmit = (e: React.FormEvent) => {
+  const handleSubmit = (e: React.FormEvent<HTMLFormElement>) => {
     e.preventDefault();
     // Handle form submission here
     console.log('Form submitted:', formData);
+    
+    // Reset form after submission
+    setFormData({
+      name: '',
+      email: '',
+      phone: '',
+      checkIn: '',
+      checkOut: '',
+      guests: '1',
+      message: ''
+    });
+    
     alert('Thank you for your inquiry! We will contact you soon.');
   };
 
@@ -895,9 +908,9 @@ function ContactForm() {
     <Section style={{ background: "hsl(40 40% 92%)" }}>
       <Container>
         <SectionHeader kicker="Get in Touch" title="Contact Himalaya Villas Resort" sub="Book your luxury stay or inquire about our services" />
-        <div className="grid gap-10 md:grid-cols-2">
-          <Reveal>
-            <div className="murree-hotels-card murree-hotels-shadow-lux h-full p-8">
+        <div className="flex flex-col lg:flex-row gap-8 lg:gap-12">
+          <Reveal className="flex-1">
+            <div className="murree-hotels-card murree-hotels-shadow-lux h-full p-6 lg:p-8">
               <h3 className="mb-6 text-2xl font-bold" style={{ color: "hsl(165 60% 18%)" }}>Send us a Message</h3>
               <form onSubmit={handleSubmit} className="space-y-4">
                 <div>
@@ -908,8 +921,9 @@ function ContactForm() {
                     value={formData.name}
                     onChange={handleChange}
                     required
-                    className="w-full px-4 py-3 rounded-lg border border-gray-300 focus:outline-none focus:ring-2 focus:ring-emerald-500"
+                    className="w-full px-4 py-3 rounded-lg border border-gray-300 focus:outline-none focus:ring-2 focus:ring-emerald-500 min-h-[48px] touch-manipulation"
                     placeholder="Your full name"
+                    autoComplete="name"
                   />
                 </div>
                 <div>
@@ -920,8 +934,9 @@ function ContactForm() {
                     value={formData.email}
                     onChange={handleChange}
                     required
-                    className="w-full px-4 py-3 rounded-lg border border-gray-300 focus:outline-none focus:ring-2 focus:ring-emerald-500"
+                    className="w-full px-4 py-3 rounded-lg border border-gray-300 focus:outline-none focus:ring-2 focus:ring-emerald-500 min-h-[48px] touch-manipulation"
                     placeholder="your.email@example.com"
+                    autoComplete="email"
                   />
                 </div>
                 <div>
@@ -931,11 +946,12 @@ function ContactForm() {
                     name="phone"
                     value={formData.phone}
                     onChange={handleChange}
-                    className="w-full px-4 py-3 rounded-lg border border-gray-300 focus:outline-none focus:ring-2 focus:ring-emerald-500"
+                    className="w-full px-4 py-3 rounded-lg border border-gray-300 focus:outline-none focus:ring-2 focus:ring-emerald-500 min-h-[48px] touch-manipulation"
                     placeholder="+92 300 0000000"
+                    autoComplete="tel"
                   />
                 </div>
-                <div className="grid grid-cols-2 gap-4">
+                <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
                   <div>
                     <label className="block mb-2 text-sm font-medium" style={{ color: "hsl(165 60% 18%)" }}>Check-in Date</label>
                     <input
@@ -943,7 +959,7 @@ function ContactForm() {
                       name="checkIn"
                       value={formData.checkIn}
                       onChange={handleChange}
-                      className="w-full px-4 py-3 rounded-lg border border-gray-300 focus:outline-none focus:ring-2 focus:ring-emerald-500"
+                      className="w-full px-4 py-3 rounded-lg border border-gray-300 focus:outline-none focus:ring-2 focus:ring-emerald-500 min-h-[48px] touch-manipulation"
                     />
                   </div>
                   <div>
@@ -953,7 +969,7 @@ function ContactForm() {
                       name="checkOut"
                       value={formData.checkOut}
                       onChange={handleChange}
-                      className="w-full px-4 py-3 rounded-lg border border-gray-300 focus:outline-none focus:ring-2 focus:ring-emerald-500"
+                      className="w-full px-4 py-3 rounded-lg border border-gray-300 focus:outline-none focus:ring-2 focus:ring-emerald-500 min-h-[48px] touch-manipulation"
                     />
                   </div>
                 </div>
@@ -963,7 +979,7 @@ function ContactForm() {
                     name="guests"
                     value={formData.guests}
                     onChange={handleChange}
-                    className="w-full px-4 py-3 rounded-lg border border-gray-300 focus:outline-none focus:ring-2 focus:ring-emerald-500"
+                    className="w-full px-4 py-3 rounded-lg border border-gray-300 focus:outline-none focus:ring-2 focus:ring-emerald-500 min-h-[48px] touch-manipulation"
                   >
                     <option value="1">1 Guest</option>
                     <option value="2">2 Guests</option>
@@ -979,21 +995,22 @@ function ContactForm() {
                     value={formData.message}
                     onChange={handleChange}
                     rows={4}
-                    className="w-full px-4 py-3 rounded-lg border border-gray-300 focus:outline-none focus:ring-2 focus:ring-emerald-500"
+                    className="w-full px-4 py-3 rounded-lg border border-gray-300 focus:outline-none focus:ring-2 focus:ring-emerald-500 resize-none touch-manipulation"
                     placeholder="Tell us about your requirements..."
                   />
                 </div>
                 <button
                   type="submit"
-                  className="bg-emerald-600 text-white w-full rounded-lg px-4 py-4 text-lg font-semibold transition-transform hover:scale-105 shadow-md"
+                  className="bg-emerald-600 text-white w-full rounded-lg px-4 py-4 text-lg font-semibold transition-transform hover:scale-105 shadow-md min-h-[56px] hover:bg-emerald-700 active:scale-95 touch-manipulation"
+                  disabled={!formData.name || !formData.email}
                 >
                   Send Inquiry
                 </button>
               </form>
             </div>
           </Reveal>
-          <Reveal delay={200}>
-            <div className="murree-hotels-card murree-hotels-shadow-lux h-full p-8">
+          <Reveal delay={200} className="flex-1 lg:max-w-md">
+            <div className="murree-hotels-card murree-hotels-shadow-lux h-full p-6 lg:p-8">
               <h3 className="mb-6 text-2xl font-bold" style={{ color: "hsl(165 60% 18%)" }}>Contact Information</h3>
               <div className="space-y-5">
                 {[
@@ -1002,12 +1019,12 @@ function ContactForm() {
                   { icon: MapPin, label: "Location", value: "Murree, Punjab, Pakistan" },
                 ].map((c) => (
                   <div key={c.label} className="flex items-center gap-4">
-                    <div className="murree-hotels-grad-emerald flex h-12 w-12 items-center justify-center rounded-xl" style={{ color: "hsl(40 38% 97%)" }}>
+                    <div className="murree-hotels-grad-emerald flex h-12 w-12 items-center justify-center rounded-xl flex-shrink-0" style={{ color: "hsl(40 38% 97%)" }}>
                       <c.icon className="h-5 w-5" />
                     </div>
-                    <div>
+                    <div className="min-w-0 flex-1">
                       <p className="murree-hotels-muted text-sm uppercase tracking-widest">{c.label}</p>
-                      <p className="font-semibold" style={{ color: "hsl(165 60% 18%)" }}>{c.value}</p>
+                      <p className="font-semibold break-words" style={{ color: "hsl(165 60% 18%)" }}>{c.value}</p>
                     </div>
                   </div>
                 ))}
@@ -1016,12 +1033,12 @@ function ContactForm() {
                 <h4 className="mb-4 text-lg font-bold" style={{ color: "hsl(165 60% 18%)" }}>Operating Hours</h4>
                 <div className="space-y-2 text-sm">
                   <div className="flex justify-between">
-                    <span style={{ color: "hsl(165 12% 38%)" }}>Monday - Friday</span>
-                    <span style={{ color: "hsl(165 60% 18%)" }}>9:00 AM - 8:00 PM</span>
+                    <span>Monday - Friday</span>
+                    <span>9:00 AM - 8:00 PM</span>
                   </div>
                   <div className="flex justify-between">
-                    <span style={{ color: "hsl(165 12% 38%)" }}>Saturday - Sunday</span>
-                    <span style={{ color: "hsl(165 60% 18%)" }}>10:00 AM - 6:00 PM</span>
+                    <span>Saturday - Sunday</span>
+                    <span>10:00 AM - 6:00 PM</span>
                   </div>
                 </div>
               </div>

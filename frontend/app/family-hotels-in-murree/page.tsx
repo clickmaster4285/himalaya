@@ -106,10 +106,10 @@ function Hero() {
         <div className="absolute inset-0 family-murree-grad-hero" />
       </div>
 
-      <div className="relative z-10 flex h-full items-center px-6" style={{ color: "hsl(40 38% 97%)" }}>
+      <div className="relative z-10 flex h-full items-center px-6 py-8 lg:py-10" style={{ color: "hsl(40 38% 97%)" }}>
         <div className="w-full lg:w-1/2">
           <Reveal>
-            <h1 className="text-5xl font-bold leading-tight md:text-8xl mb-6">
+            <h1 className="text-4xl font-bold leading-tight sm:text-5xl md:text-8xl mb-6">
               Family Hotels in <span className="family-murree-text-gold">Murree</span>
             </h1>
             <h2 className="text-3xl font-light italic md:text-4xl mb-4" style={{ color: "hsl(42 95% 75%)" }}>
@@ -144,9 +144,9 @@ function Hero() {
         </div>
         
         {/* CTA Form on Right Side */}
-        <div className="hidden lg:block lg:w-1/3">
+        <div className="hidden lg:block lg:w-1/3 lg:ml-2">
           <Reveal delay={800}>
-            <div className="bg-white/95 backdrop-blur-lg rounded-lg shadow-lg p-12">
+            <div className="mt-2 max-h-[calc(100vh-5rem)] overflow-y-auto bg-white/95 backdrop-blur-lg rounded-lg shadow-lg p-10">
               <h3 className="mb-6 text-2xl font-bold text-gray-800">Send us a Message</h3>
               <form className="space-y-4">
                 <div>

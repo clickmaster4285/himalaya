@@ -1,7 +1,10 @@
 {
   "name": "himalaya-next",
   "private": true,
-  "workspaces": ["frontend", "backend"],
+  "workspaces": [
+    "frontend",
+    "backend"
+  ],
   "scripts": {
     "dev": "concurrently -k \"npm run dev -w backend\" \"npm run dev -w frontend\"",
     "dev:frontend": "npm run dev -w frontend",
@@ -12,5 +15,8 @@
   },
   "devDependencies": {
     "concurrently": "^9.1.2"
+  },
+  "dependencies": {
+    "react-calendar": "^6.0.1"
   }
 }

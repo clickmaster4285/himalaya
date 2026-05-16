@@ -95,7 +95,7 @@ function Hero() {
   const scrollY = useScrollY();
   
   return (
-    <section className="relative h-screen w-full overflow-hidden">
+    <section className="relative min-h-[100dvh] w-full overflow-x-hidden lg:h-screen lg:overflow-hidden">
       <div className="absolute inset-0">
         <img 
           src="https://images.unsplash.com/photo-1571003123894-1f05e4d68b79?w=1920&q=80" 
@@ -106,8 +106,8 @@ function Hero() {
         <div className="absolute inset-0 family-murree-grad-hero" />
       </div>
 
-      <div className="relative z-10 flex h-full items-center px-6 py-8 lg:py-10" style={{ color: "hsl(40 38% 97%)" }}>
-        <div className="w-full lg:w-1/2">
+      <div className="relative z-10 flex w-full flex-col gap-8 px-2 py-8 pb-24 lg:h-full lg:flex-row lg:items-center lg:justify-between lg:gap-8 lg:px-6 lg:pb-10 lg:py-10" style={{ color: "hsl(40 38% 97%)" }}>
+        <div className="w-full shrink-0 lg:w-1/2">
           <Reveal>
             <h1 className="text-4xl font-bold leading-tight sm:text-5xl md:text-8xl mb-6">
               Family Hotels in <span className="family-murree-text-gold">Murree</span>
@@ -143,62 +143,62 @@ function Hero() {
           </Reveal>
         </div>
         
-        {/* CTA Form on Right Side */}
-        <div className="hidden lg:block lg:w-1/3 lg:ml-2">
+        {/* CTA Form — full width on mobile, right column on lg */}
+        <div className="mt-2 w-full shrink-0 lg:mt-0 lg:ml-2 lg:w-1/3">
           <Reveal delay={800}>
-            <div className="mt-2 max-h-[calc(100vh-5rem)] overflow-y-auto bg-white/95 backdrop-blur-lg rounded-lg shadow-lg p-10">
-              <h3 className="mb-6 text-2xl font-bold text-gray-800">Send us a Message</h3>
-              <form className="space-y-4">
+            <div className="max-h-none overflow-visible bg-white/95 backdrop-blur-lg rounded-lg shadow-lg px-2 py-3 lg:mt-2 lg:max-h-[calc(100vh-5rem)] lg:overflow-y-auto lg:px-6 lg:py-6">
+              <h3 className="mb-3 text-lg font-bold text-gray-800 lg:mb-6 lg:text-2xl">Send us a Message</h3>
+              <form className="space-y-2.5 lg:space-y-4">
                 <div>
-                  <label htmlFor="fullName" className="block text-gray-700 text-sm font-bold mb-2">Full Name *</label>
+                  <label htmlFor="fullName" className="block text-gray-700 text-xs font-bold mb-1 lg:text-sm lg:mb-2">Full Name *</label>
                   <input
                     type="text"
                     id="fullName"
                     placeholder="Your full name"
-                    className="w-full px-4 py-6 rounded-lg border border-gray-300 text-gray-800 placeholder-gray-500 focus:outline-none focus:ring-2 focus:ring-emerald-500"
+                    className="w-full rounded-lg border border-gray-300 px-3 py-2.5 text-sm text-gray-800 placeholder-gray-500 focus:outline-none focus:ring-2 focus:ring-emerald-500 lg:px-4 lg:py-4 lg:text-base"
                   />
                 </div>
                 <div>
-                  <label htmlFor="email" className="block text-gray-700 text-sm font-bold mb-2">Email *</label>
+                  <label htmlFor="email" className="block text-gray-700 text-xs font-bold mb-1 lg:text-sm lg:mb-2">Email *</label>
                   <input
                     type="email"
                     id="email"
                     placeholder="your.email@example.com"
-                    className="w-full px-4 py-6 rounded-lg border border-gray-300 text-gray-800 placeholder-gray-500 focus:outline-none focus:ring-2 focus:ring-emerald-500"
+                    className="w-full rounded-lg border border-gray-300 px-3 py-2.5 text-sm text-gray-800 placeholder-gray-500 focus:outline-none focus:ring-2 focus:ring-emerald-500 lg:px-4 lg:py-4 lg:text-base"
                   />
                 </div>
                 <div>
-                  <label htmlFor="phoneNumber" className="block text-gray-700 text-sm font-bold mb-2">Phone Number</label>
+                  <label htmlFor="phoneNumber" className="block text-gray-700 text-xs font-bold mb-1 lg:text-sm lg:mb-2">Phone Number</label>
                   <input
                     type="tel"
                     id="phoneNumber"
                     placeholder="+92 300 0000000"
-                    className="w-full px-4 py-6 rounded-lg border border-gray-300 text-gray-800 placeholder-gray-500 focus:outline-none focus:ring-2 focus:ring-emerald-500"
+                    className="w-full rounded-lg border border-gray-300 px-3 py-2.5 text-sm text-gray-800 placeholder-gray-500 focus:outline-none focus:ring-2 focus:ring-emerald-500 lg:px-4 lg:py-4 lg:text-base"
                   />
                 </div>
-                <div className="grid grid-cols-2 gap-4">
+                <div className="grid grid-cols-1 gap-4 sm:grid-cols-2">
                   <div>
-                    <label htmlFor="checkInDate" className="block text-gray-700 text-sm font-bold mb-2">Check-in Date</label>
+                    <label htmlFor="checkInDate" className="block text-gray-700 text-xs font-bold mb-1 lg:text-sm lg:mb-2">Check-in Date</label>
                     <input
                       type="date"
                       id="checkInDate"
-                      className="px-4 py-6 rounded-lg border border-gray-300 text-gray-800 focus:outline-none focus:ring-2 focus:ring-emerald-500"
+                      className="w-full rounded-lg border border-gray-300 px-3 py-2.5 text-sm text-gray-800 focus:outline-none focus:ring-2 focus:ring-emerald-500 lg:px-4 lg:py-4 lg:text-base"
                     />
                   </div>
                   <div>
-                    <label htmlFor="checkOutDate" className="block text-gray-700 text-sm font-bold mb-2">Check-out Date</label>
+                    <label htmlFor="checkOutDate" className="block text-gray-700 text-xs font-bold mb-1 lg:text-sm lg:mb-2">Check-out Date</label>
                     <input
                       type="date"
                       id="checkOutDate"
-                      className="w-full px-4 py-6 rounded-lg border border-gray-300 text-gray-800 focus:outline-none focus:ring-2 focus:ring-emerald-500"
+                      className="w-full rounded-lg border border-gray-300 px-3 py-2.5 text-sm text-gray-800 focus:outline-none focus:ring-2 focus:ring-emerald-500 lg:px-4 lg:py-4 lg:text-base"
                     />
                   </div>
                 </div>
                 <div>
-                  <label htmlFor="numberOfGuests" className="block text-gray-700 text-sm font-bold mb-2">Number of Guests</label>
+                  <label htmlFor="numberOfGuests" className="block text-gray-700 text-xs font-bold mb-1 lg:text-sm lg:mb-2">Number of Guests</label>
                   <select
                     id="numberOfGuests"
-                    className="w-full px-4 py-6 rounded-lg border border-gray-300 text-gray-800 focus:outline-none focus:ring-2 focus:ring-emerald-500"
+                    className="w-full rounded-lg border border-gray-300 px-3 py-2.5 text-sm text-gray-800 focus:outline-none focus:ring-2 focus:ring-emerald-500 lg:px-4 lg:py-4 lg:text-base"
                   >
                     <option value="1">1 Guest</option>
                     <option value="2">2 Guests</option>
@@ -208,17 +208,17 @@ function Hero() {
                   </select>
                 </div>
                 <div>
-                  <label htmlFor="message" className="block text-gray-700 text-sm font-bold mb-2">Message</label>
+                  <label htmlFor="message" className="block text-gray-700 text-xs font-bold mb-1 lg:text-sm lg:mb-2">Message</label>
                   <textarea
                     id="message"
-                    rows={4}
+                    rows={3}
                     placeholder="Tell us about your requirements..."
-                    className="w-full px-4 py-6 rounded-lg border border-gray-300 text-gray-800 placeholder-gray-500 focus:outline-none focus:ring-2 focus:ring-emerald-500"
+                    className="w-full rounded-lg border border-gray-300 px-3 py-2.5 text-sm text-gray-800 placeholder-gray-500 focus:outline-none focus:ring-2 focus:ring-emerald-500 lg:px-4 lg:py-4 lg:text-base"
                   />
                 </div>
                 <button
                   type="submit"
-                  className="bg-emerald-600 text-white w-full rounded-lg px-4 py-6 text-lg font-semibold transition-transform hover:scale-105 shadow-md"
+                  className="w-full rounded-lg bg-emerald-600 px-4 py-2.5 text-sm font-semibold text-white shadow-md transition-transform hover:scale-105 lg:py-4 lg:text-lg"
                 >
                   Send Inquiry
                 </button>

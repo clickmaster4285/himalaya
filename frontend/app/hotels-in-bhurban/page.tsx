@@ -7,6 +7,11 @@ import {
   Phone, Mail, MapPin, ChevronLeft, ChevronRight, Check,
   Sun, Snowflake, Flower2, Facebook, Twitter, Linkedin, ArrowDown, Wifi, Users, Heart, Calendar,
 } from "lucide-react";
+import { buildWhatsAppBookingUrl } from "@/lib/whatsapp";
+
+const BHBURBAN_WHATSAPP_URL = buildWhatsAppBookingUrl(
+  "a private stay at Himalaya Premium Villas in Bhurban"
+);
 
 /* ============================================================
    ALL-IN-ONE PAGE — fonts, design tokens, gradients, animations,
@@ -114,7 +119,7 @@ function HeroSlider() {
 
   return (
     <section
-      className="relative h-screen w-full overflow-hidden"
+      className="relative min-h-[100dvh] w-full overflow-x-hidden lg:h-screen lg:overflow-hidden"
       onMouseEnter={() => setPaused(true)}
       onMouseLeave={() => setPaused(false)}
     >
@@ -148,8 +153,8 @@ function HeroSlider() {
       </div>
 
       {/* Content */}
-      <div className="relative z-10 flex h-full items-center px-6 py-8 lg:py-10" style={{ color: "hsl(40 38% 97%)" }}>
-        <div className="w-full lg:w-1/2">
+      <div className="relative z-10 flex w-full flex-col gap-8 px-2 py-8 pb-24 lg:h-full lg:flex-row lg:items-center lg:justify-between lg:gap-8 lg:px-6 lg:pb-10 lg:py-10" style={{ color: "hsl(40 38% 97%)" }}>
+        <div className="w-full shrink-0 lg:w-1/2">
           <Reveal>
             <span className="mb-4 inline-block rounded-full px-5 py-2 text-sm font-medium uppercase tracking-widest backdrop-blur-md"
               style={{ border: "1px solid hsl(38 88% 55% / .4)", background: "hsl(38 88% 55% / .1)", color: "hsl(42 95% 65%)" }}>
@@ -176,9 +181,14 @@ function HeroSlider() {
 
           <Reveal delay={600}>
             <div className="mt-10 flex flex-wrap items-center gap-4">
-              <a href="#contact" className="bh-grad-gold bh-shadow-gold rounded-full px-8 py-4 text-base font-semibold transition-transform hover:scale-105"
-                style={{ color: "hsl(165 60% 18%)" }}>
-                Reserve Your Private Estate
+              <a
+                href={BHBURBAN_WHATSAPP_URL}
+                target="_blank"
+                rel="noopener noreferrer"
+                className="bh-grad-gold bh-shadow-gold rounded-full px-8 py-4 text-base font-semibold transition-transform hover:scale-105"
+                style={{ color: "hsl(165 60% 18%)" }}
+              >
+                Book Now
               </a>
               <a href="#estate" className="rounded-full px-8 py-4 text-base font-semibold backdrop-blur-md transition"
                 style={{ border: "2px solid hsl(40 38% 97% / .4)", background: "hsl(40 38% 97% / .1)" }}>
@@ -188,62 +198,62 @@ function HeroSlider() {
           </Reveal>
         </div>
         
-        {/* CTA Form on Right Side */}
-        <div className="hidden lg:block lg:w-1/3">
+        {/* CTA Form — full width on mobile, right column on lg */}
+        <div className="mt-2 w-full shrink-0 lg:mt-0 lg:w-1/3">
           <Reveal delay={800}>
-            <div className="mt-2 max-h-[calc(100vh-5rem)] overflow-y-auto bg-white/95 backdrop-blur-lg rounded-lg shadow-lg p-10">
-              <h3 className="mb-6 text-2xl font-bold text-gray-800">Send us a Message</h3>
-              <form className="space-y-4">
+            <div className="max-h-none overflow-visible bg-white/95 backdrop-blur-lg rounded-lg shadow-lg px-2 py-3 lg:mt-2 lg:max-h-[calc(100vh-5rem)] lg:overflow-y-auto lg:px-6 lg:py-6">
+              <h3 className="mb-3 text-lg font-bold text-gray-800 lg:mb-6 lg:text-2xl">Send us a Message</h3>
+              <form className="space-y-2.5 lg:space-y-4">
                 <div>
-                  <label htmlFor="fullName" className="block text-gray-700 text-sm font-bold mb-2">Full Name *</label>
+                  <label htmlFor="fullName" className="block text-gray-700 text-xs font-bold mb-1 lg:text-sm lg:mb-2">Full Name *</label>
                   <input
                     type="text"
                     id="fullName"
                     placeholder="Your full name"
-                    className="w-full px-4 py-6 rounded-lg border border-gray-300 text-gray-800 placeholder-gray-500 focus:outline-none focus:ring-2 focus:ring-emerald-500"
+                    className="w-full rounded-lg border border-gray-300 px-3 py-2.5 text-sm text-gray-800 placeholder-gray-500 focus:outline-none focus:ring-2 focus:ring-emerald-500 lg:px-4 lg:py-4 lg:text-base"
                   />
                 </div>
                 <div>
-                  <label htmlFor="email" className="block text-gray-700 text-sm font-bold mb-2">Email *</label>
+                  <label htmlFor="email" className="block text-gray-700 text-xs font-bold mb-1 lg:text-sm lg:mb-2">Email *</label>
                   <input
                     type="email"
                     id="email"
                     placeholder="your.email@example.com"
-                    className="w-full px-4 py-6 rounded-lg border border-gray-300 text-gray-800 placeholder-gray-500 focus:outline-none focus:ring-2 focus:ring-emerald-500"
+                    className="w-full rounded-lg border border-gray-300 px-3 py-2.5 text-sm text-gray-800 placeholder-gray-500 focus:outline-none focus:ring-2 focus:ring-emerald-500 lg:px-4 lg:py-4 lg:text-base"
                   />
                 </div>
                 <div>
-                  <label htmlFor="phoneNumber" className="block text-gray-700 text-sm font-bold mb-2">Phone Number</label>
+                  <label htmlFor="phoneNumber" className="block text-gray-700 text-xs font-bold mb-1 lg:text-sm lg:mb-2">Phone Number</label>
                   <input
                     type="tel"
                     id="phoneNumber"
                     placeholder="+92 300 0000000"
-                    className="w-full px-4 py-6 rounded-lg border border-gray-300 text-gray-800 placeholder-gray-500 focus:outline-none focus:ring-2 focus:ring-emerald-500"
+                    className="w-full rounded-lg border border-gray-300 px-3 py-2.5 text-sm text-gray-800 placeholder-gray-500 focus:outline-none focus:ring-2 focus:ring-emerald-500 lg:px-4 lg:py-4 lg:text-base"
                   />
                 </div>
-                <div className="grid grid-cols-2 gap-4">
+                <div className="grid grid-cols-1 gap-4 sm:grid-cols-2">
                   <div>
-                    <label htmlFor="checkInDate" className="block text-gray-700 text-sm font-bold mb-2">Check-in Date</label>
+                    <label htmlFor="checkInDate" className="block text-gray-700 text-xs font-bold mb-1 lg:text-sm lg:mb-2">Check-in Date</label>
                     <input
                       type="date"
                       id="checkInDate"
-                      className="px-4 py-6 rounded-lg border border-gray-300 text-gray-800 focus:outline-none focus:ring-2 focus:ring-emerald-500"
+                      className="w-full rounded-lg border border-gray-300 px-3 py-2.5 text-sm text-gray-800 focus:outline-none focus:ring-2 focus:ring-emerald-500 lg:px-4 lg:py-4 lg:text-base"
                     />
                   </div>
                   <div>
-                    <label htmlFor="checkOutDate" className="block text-gray-700 text-sm font-bold mb-2">Check-out Date</label>
+                    <label htmlFor="checkOutDate" className="block text-gray-700 text-xs font-bold mb-1 lg:text-sm lg:mb-2">Check-out Date</label>
                     <input
                       type="date"
                       id="checkOutDate"
-                      className="w-full px-4 py-6 rounded-lg border border-gray-300 text-gray-800 focus:outline-none focus:ring-2 focus:ring-emerald-500"
+                      className="w-full rounded-lg border border-gray-300 px-3 py-2.5 text-sm text-gray-800 focus:outline-none focus:ring-2 focus:ring-emerald-500 lg:px-4 lg:py-4 lg:text-base"
                     />
                   </div>
                 </div>
                 <div>
-                  <label htmlFor="numberOfGuests" className="block text-gray-700 text-sm font-bold mb-2">Number of Guests</label>
+                  <label htmlFor="numberOfGuests" className="block text-gray-700 text-xs font-bold mb-1 lg:text-sm lg:mb-2">Number of Guests</label>
                   <select
                     id="numberOfGuests"
-                    className="w-full px-4 py-6 rounded-lg border border-gray-300 text-gray-800 focus:outline-none focus:ring-2 focus:ring-emerald-500"
+                    className="w-full rounded-lg border border-gray-300 px-3 py-2.5 text-sm text-gray-800 focus:outline-none focus:ring-2 focus:ring-emerald-500 lg:px-4 lg:py-4 lg:text-base"
                   >
                     <option value="1">1 Guest</option>
                     <option value="2">2 Guests</option>
@@ -253,17 +263,17 @@ function HeroSlider() {
                   </select>
                 </div>
                 <div>
-                  <label htmlFor="message" className="block text-gray-700 text-sm font-bold mb-2">Message</label>
+                  <label htmlFor="message" className="block text-gray-700 text-xs font-bold mb-1 lg:text-sm lg:mb-2">Message</label>
                   <textarea
                     id="message"
-                    rows={4}
+                    rows={3}
                     placeholder="Tell us about your requirements..."
-                    className="w-full px-4 py-6 rounded-lg border border-gray-300 text-gray-800 placeholder-gray-500 focus:outline-none focus:ring-2 focus:ring-emerald-500"
+                    className="w-full rounded-lg border border-gray-300 px-3 py-2.5 text-sm text-gray-800 placeholder-gray-500 focus:outline-none focus:ring-2 focus:ring-emerald-500 lg:px-4 lg:py-4 lg:text-base"
                   />
                 </div>
                 <button
                   type="submit"
-                  className="bg-emerald-600 text-white w-full rounded-lg px-4 py-6 text-lg font-semibold transition-transform hover:scale-105 shadow-md"
+                  className="w-full rounded-lg bg-emerald-600 px-4 py-2.5 text-sm font-semibold text-white shadow-md transition-transform hover:scale-105 lg:py-4 lg:text-lg"
                 >
                   Send Inquiry
                 </button>
@@ -357,6 +367,9 @@ function Introduction() {
               <div className="prose prose-lg max-w-none" style={{ color: "hsl(165 12% 38%)" }}>
                 <p className="mb-6 text-lg leading-relaxed">
                   Bhurban has long been one of Pakistan's most beloved mountain escapes — a place where the air is crisp, the pine forests stretch endlessly, and the Himalayan peaks seem close enough to touch. Every year, thousands of travellers arrive searching for the perfect stay: somewhere beautiful, somewhere peaceful, somewhere that actually matches the grandeur of the landscape around it.
+                </p>
+                <p className="mb-6 text-lg leading-relaxed">
+                  Whether you are comparing hotels in Bhurban, hunting for the best hotel in Bhurban, or weighing familiar names such as Hotel One Bhurban against a typical bhurban hotel murree stay, the hills reward guests who look past crowded corridors. Many still browse every resort in bhurban listing and scroll through standard bhurban hotels pages hoping to find the best hotels in bhurban murree — yet even the bhurban best hotels and most villas in bhurban murree keep you sharing lobbies with strangers. From every guide to hotels in bhurban pakistan on the main ridge to Himalaya Premium Villas in the region&apos;s most exclusive enclave, one address stands apart: a fully private luxury estate where the entire property is yours, not just a room in another hotel lineup.
                 </p>
                 <p className="mb-6 text-lg leading-relaxed">
                   But here's the truth that most hotels in Bhurban won't tell you: a standard hotel room — no matter how nicely decorated — was never designed to give you the Bhurban experience you actually came for. Shared lobbies fill up. Corridors echo with strangers. Dining rooms operate on fixed schedules. And the moment you step out of your room, the privacy you were hoping for disappears.
@@ -638,12 +651,23 @@ function FinalCTA() {
             </Reveal>
             <Reveal delay={300}>
               <div className="mt-10 flex flex-wrap items-center justify-center gap-4">
-                <a href="#contact" className="bh-grad-gold bh-shadow-gold rounded-full px-8 py-4 font-semibold transition hover:scale-105" style={{ color: "hsl(165 60% 18%)" }}>
-                  Reserve Your Stay Now
+                <a
+                  href={BHBURBAN_WHATSAPP_URL}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="bh-grad-gold bh-shadow-gold rounded-full px-8 py-4 font-semibold transition hover:scale-105"
+                  style={{ color: "hsl(165 60% 18%)" }}
+                >
+                  Book Now
                 </a>
-                <a href="#contact" className="rounded-full px-8 py-4 font-semibold backdrop-blur-md transition"
-                  style={{ border: "2px solid hsl(40 38% 97% / .4)", background: "hsl(40 38% 97% / .1)", color: "hsl(40 38% 97%)" }}>
-                  Contact Us
+                <a
+                  href={BHBURBAN_WHATSAPP_URL}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="rounded-full px-8 py-4 font-semibold backdrop-blur-md transition"
+                  style={{ border: "2px solid hsl(40 38% 97% / .4)", background: "hsl(40 38% 97% / .1)", color: "hsl(40 38% 97%)" }}
+                >
+                  WhatsApp Us
                 </a>
               </div>
             </Reveal>

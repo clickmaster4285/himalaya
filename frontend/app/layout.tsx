@@ -88,6 +88,19 @@ export default function RootLayout({
           `}
         </Script>
         {/* End Google Tag Manager */}
+        {/* Google tag (gtag.js) — Google Ads AW-18162243267 */}
+        <Script
+          src="https://www.googletagmanager.com/gtag/js?id=AW-18162243267"
+          strategy="afterInteractive"
+        />
+        <Script id="google-ads-aw-gtag" strategy="afterInteractive">
+          {`
+            window.dataLayer = window.dataLayer || [];
+            function gtag(){dataLayer.push(arguments);}
+            gtag('js', new Date());
+            gtag('config', 'AW-18162243267');
+          `}
+        </Script>
         <SiteStructuredData />
         <BreadcrumbJsonLd />
       </head>

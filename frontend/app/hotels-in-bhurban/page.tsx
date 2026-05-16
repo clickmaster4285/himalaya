@@ -7,6 +7,7 @@ import {
   Phone, Mail, MapPin, ChevronLeft, ChevronRight, Check,
   Sun, Snowflake, Flower2, Facebook, Twitter, Linkedin, ArrowDown, Wifi, Users, Heart, Calendar, MessageCircle,
 } from "lucide-react";
+import { Coffee, Car, Accessibility, Ban, Shirt, ConciergeBell, Baby, ChefHat, Bus, CigaretteOff, Waves, PawPrint, Dumbbell } from "lucide-react";
 import { buildWhatsAppBookingUrl } from "@/lib/whatsapp";
 
 const BHBURBAN_WHATSAPP_URL = buildWhatsAppBookingUrl(
@@ -364,36 +365,52 @@ function Introduction() {
                 Looking for the Best Hotels in Bhurban? <span className="bh-text-emerald">Think Beyond a Hotel.</span>
               </h2>
             </Reveal>
-            <Reveal delay={200}>
-              <div className="prose prose-lg max-w-none" style={{ color: "hsl(165 12% 38%)" }}>
-                <p className="mb-6 text-lg leading-relaxed">
-                  Bhurban has long been one of Pakistan's most beloved mountain escapes — a place where the air is crisp, the pine forests stretch endlessly, and the Himalayan peaks seem close enough to touch. Every year, thousands of travellers arrive searching for the perfect stay: somewhere beautiful, somewhere peaceful, somewhere that actually matches the grandeur of the landscape around it.
-                </p>
-                <p className="mb-6 text-lg leading-relaxed">
-                  Whether you are comparing hotels in Bhurban, hunting for the best hotel in Bhurban, or weighing familiar names such as Hotel One Bhurban against a typical bhurban hotel murree stay, the hills reward guests who look past crowded corridors. Many still browse every resort in bhurban listing and scroll through standard bhurban hotels pages hoping to find the best hotels in bhurban murree — yet even the bhurban best hotels and most villas in bhurban murree keep you sharing lobbies with strangers. From every guide to hotels in bhurban pakistan on the main ridge to Himalaya Premium Villas in the region&apos;s most exclusive enclave, one address stands apart: a fully private luxury estate where the entire property is yours, not just a room in another hotel lineup.
-                </p>
-                <p className="mb-6 text-lg leading-relaxed">
-                  But here's the truth that most hotels in Bhurban won't tell you: a standard hotel room — no matter how nicely decorated — was never designed to give you the Bhurban experience you actually came for. Shared lobbies fill up. Corridors echo with strangers. Dining rooms operate on fixed schedules. And the moment you step out of your room, the privacy you were hoping for disappears.
-                </p>
-                <p className="mb-6 text-lg leading-relaxed">
-                  This is exactly why Himalaya Premium Villas was created.
-                </p>
-                <div className="bg-white/80 backdrop-blur-sm rounded-2xl p-8 my-8 bh-shadow-lux">
-                  <p className="text-xl font-semibold text-center mb-4" style={{ color: "hsl(165 60% 18%)" }}>
-                    Not a hotel. Not a resort. A fully private luxury estate — set high in the Himalayan foothills of Bhurban, Murree — built for guests who know what they want and refuse to compromise on it.
-                  </p>
-                  <p className="text-lg text-center" style={{ color: "hsl(165 12% 38%)" }}>
-                    Here, the entire estate is yours. From the moment you arrive to the moment you leave, every space, every amenity, and every service exists for you and your guests alone. No check-in queues. No shared facilities. No strangers. Just pure, uninterrupted luxury in one of Pakistan's most breathtaking natural settings.
-                  </p>
-                </div>
-                <p className="text-lg leading-relaxed">
-                  Whether you are planning a family retreat, a romantic escape, a destination wedding, or a high-level corporate gathering, Himalaya Premium Villas redefines what a stay in Bhurban can truly feel like.
-                </p>
-              </div>
-            </Reveal>
           </div>
         </Container>
       </div>
+    </Section>
+  );
+}
+
+/* ----------------------------- Amenities ----------------------------- */
+function Amenities() {
+  const amenitiesList = [
+    { name: "Free Wi-Fi", icon: Wifi, available: true },
+    { name: "Free breakfast", icon: Coffee, available: true },
+    { name: "Free parking", icon: Car, available: true },
+    { name: "Accessible", icon: Accessibility, available: true },
+    { name: "Pool", icon: Waves, available: false },
+    { name: "Air-conditioned", icon: Snowflake, available: true },
+    { name: "Laundry service", icon: Shirt, available: true },
+    { name: "Business center", icon: Briefcase, available: false },
+    { name: "Pet-friendly", icon: PawPrint, available: false },
+    { name: "Room service", icon: ConciergeBell, available: true },
+    { name: "Kid-friendly", icon: Baby, available: true },
+    { name: "Restaurant", icon: Utensils, available: true },
+    { name: "Kitchen in all rooms", icon: ChefHat, available: true },
+    { name: "Airport shuttle", icon: Bus, available: true },
+    { name: "Fitness center", icon: Dumbbell, available: false },
+    { name: "Smoke-free", icon: CigaretteOff, available: true },
+  ];
+
+  return (
+    <Section id="amenities" style={{ background: "hsl(40 40% 92%)", paddingTop: "0" }}>
+      <Container>
+        <div className="grid grid-cols-2 gap-4 md:grid-cols-3 lg:grid-cols-4 mt-8">
+          {amenitiesList.map((item, k) => (
+            <Reveal key={k} delay={k * 50}>
+              <div className={`bh-card bh-border p-4 flex items-center gap-4 transition-transform hover:-translate-y-1 ${!item.available ? "opacity-60" : "bh-shadow-lux bg-white"}`}>
+                <div className={`flex h-10 w-10 md:h-12 md:w-12 items-center justify-center rounded-xl flex-shrink-0 ${item.available ? "bh-grad-emerald text-white" : "bg-gray-200 text-gray-500"}`}>
+                  <item.icon className="h-5 w-5 md:h-6 md:w-6" />
+                </div>
+                <span className={`font-semibold text-sm md:text-base ${item.available ? "text-gray-800" : "text-gray-500 line-through"}`}>
+                  {item.name}
+                </span>
+              </div>
+            </Reveal>
+          ))}
+        </div>
+      </Container>
     </Section>
   );
 }
@@ -568,7 +585,81 @@ function TheEstate() {
   );
 }
 
-/* ----------------------------- 5. Bhurban Destination ----------------------------- */
+/* ----------------------------- 5. Animated Gallery (Jiffz) ----------------------------- */
+function AnimatedGallery() {
+  const localImages = [
+    "/assets/gallery-exterior.jpg",
+    "/assets/gallery-interior.jpg",
+    "/assets/gallery-garden.jpg",
+    "/assets/gallery-reflection.jpg",
+    "/assets/gallery-sunlight.jpg",
+    "/assets/gallery-bbq.jpg",
+    "/assets/gallery-balcony.jpg",
+    "/assets/gallery-dining-night.jpg"
+  ];
+  const topRow = [...localImages.slice(0, 4), ...localImages.slice(0, 4)];
+  const bottomRow = [...localImages.slice(4, 8), ...localImages.slice(4, 8)];
+
+  return (
+    <Section id="gallery" style={{ overflow: "hidden", background: "hsl(40 40% 92%)" }}>
+      <Container>
+        <SectionHeader 
+          kicker="Visual Journey" 
+          title={<>Moments at <span className="bh-text-emerald">Himalaya Villas</span></>}
+          sub="Experience the dynamic beauty of our private estate before you arrive." 
+        />
+      </Container>
+      
+      <div className="relative mt-10 flex w-full flex-col gap-6 overflow-hidden pb-10">
+        <style dangerouslySetInnerHTML={{__html: `
+          @keyframes bhScrollLeft {
+            0% { transform: translateX(0); }
+            100% { transform: translateX(-50%); }
+          }
+          @keyframes bhScrollRight {
+            0% { transform: translateX(-50%); }
+            100% { transform: translateX(0); }
+          }
+          .bh-scroller-left {
+            display: flex;
+            width: max-content;
+            animation: bhScrollLeft 40s linear infinite;
+          }
+          .bh-scroller-right {
+            display: flex;
+            width: max-content;
+            animation: bhScrollRight 40s linear infinite;
+          }
+          .bh-scroller-left:hover, .bh-scroller-right:hover {
+            animation-play-state: paused;
+          }
+        `}} />
+        
+        {/* Top Row - Scrolls Left */}
+        <div className="bh-scroller-left gap-6 px-3">
+          {topRow.map((src, k) => (
+            <div key={k} className="group relative h-[250px] w-[350px] shrink-0 overflow-hidden rounded-3xl md:h-[320px] md:w-[450px] bh-shadow-lux">
+              <img src={src} alt="Estate View" className="h-full w-full object-cover transition-transform duration-1000 group-hover:scale-110" />
+              <div className="absolute inset-0 bg-gradient-to-t from-black/50 to-transparent opacity-0 transition-opacity duration-500 group-hover:opacity-100" />
+            </div>
+          ))}
+        </div>
+
+        {/* Bottom Row - Scrolls Right */}
+        <div className="bh-scroller-right gap-6 px-3">
+          {bottomRow.map((src, k) => (
+            <div key={k} className="group relative h-[250px] w-[350px] shrink-0 overflow-hidden rounded-3xl md:h-[320px] md:w-[450px] bh-shadow-lux">
+              <img src={src} alt="Estate View" className="h-full w-full object-cover transition-transform duration-1000 group-hover:scale-110" />
+              <div className="absolute inset-0 bg-gradient-to-t from-black/50 to-transparent opacity-0 transition-opacity duration-500 group-hover:opacity-100" />
+            </div>
+          ))}
+        </div>
+      </div>
+    </Section>
+  );
+}
+
+/* ----------------------------- 6. Bhurban Destination ----------------------------- */
 function BhurbanDestination() {
   const seasons = [
     { 
@@ -963,12 +1054,15 @@ export default function Index() {
       <main className="bh-page">
         <HeroSlider />
         <Introduction />
+        <Amenities />
         <SectionCTA />
         <WhyStandApart />
         <SectionCTA />
         <IdealFor />
         <SectionCTA />
         <TheEstate />
+        <SectionCTA />
+        <AnimatedGallery />
         <SectionCTA />
         <BhurbanDestination />
         <SectionCTA />

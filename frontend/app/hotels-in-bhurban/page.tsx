@@ -5,7 +5,7 @@ import Head from "next/head";
 import {
   Mountain, Sparkles, Home, Star, Utensils, Briefcase, Clock,
   Phone, Mail, MapPin, ChevronLeft, ChevronRight, Check,
-  Sun, Snowflake, Flower2, Facebook, Twitter, Linkedin, ArrowDown, Wifi, Users, Heart, Calendar,
+  Sun, Snowflake, Flower2, Facebook, Twitter, Linkedin, ArrowDown, Wifi, Users, Heart, Calendar, MessageCircle,
 } from "lucide-react";
 import { buildWhatsAppBookingUrl } from "@/lib/whatsapp";
 
@@ -47,10 +47,10 @@ const PAGE_STYLES = `
 .bh-border{border:1px solid hsl(var(--border));}
 .bh-muted{color:hsl(var(--muted));}
 
-.bh-reveal{opacity:0;transform:translateY(40px);transition:opacity .9s ease-out,transform .9s ease-out;}
-.bh-reveal.in{opacity:1;transform:translateY(0);}
+.bh-reveal{opacity:0;transform:translateY(40px) translateZ(0);transition:opacity .9s ease-out,transform .9s ease-out;}
+.bh-reveal.in{opacity:1;transform:translateY(0) translateZ(0);}
 
-@keyframes bhKenBurns{0%{transform:scale(1)}100%{transform:scale(1.15)}}
+@keyframes bhKenBurns{0%{transform:scale(1) translateZ(0)}100%{transform:scale(1.15) translateZ(0)}}
 @keyframes bhFloat{0%,100%{transform:translateY(0)}50%{transform:translateY(-20px)}}
 @keyframes bhScrollDown{0%{transform:translateY(0);opacity:1}100%{transform:translateY(12px);opacity:0}}
 .bh-ken{animation:bhKenBurns 8s ease-out both;}
@@ -64,8 +64,19 @@ html{scroll-behavior:smooth;}
 function useScrollY() {
   const [y, setY] = useState(0);
   useEffect(() => {
-    const onScroll = () => setY(window.scrollY);
+    if (typeof window !== "undefined" && window.innerWidth <= 768) return;
+    let ticking = false;
+    const onScroll = () => {
+      if (!ticking) {
+        window.requestAnimationFrame(() => {
+          setY(window.scrollY);
+          ticking = false;
+        });
+        ticking = true;
+      }
+    };
     window.addEventListener("scroll", onScroll, { passive: true });
+    onScroll();
     return () => window.removeEventListener("scroll", onScroll);
   }, []);
   return y;
@@ -119,7 +130,7 @@ function HeroSlider() {
 
   return (
     <section
-      className="relative min-h-[100dvh] w-full overflow-x-hidden lg:h-screen lg:overflow-hidden"
+      className="relative min-h-[100dvh] w-full lg:h-screen lg:overflow-hidden"
       onMouseEnter={() => setPaused(true)}
       onMouseLeave={() => setPaused(false)}
     >
@@ -127,7 +138,7 @@ function HeroSlider() {
         <div
           key={idx}
           className={`absolute inset-0 transition-opacity duration-1000 ${idx === i ? "opacity-100" : "opacity-0"}`}
-          style={{ transform: `translateY(${scrollY * 0.4}px)` }}
+          style={scrollY > 0 ? { transform: `translateY(${scrollY * 0.4}px)` } : undefined}
         >
           <img src={src} alt="" className={`h-full w-full object-cover ${idx === i ? "bh-ken" : ""}`} />
           <div className="absolute inset-0 bh-grad-hero" />
@@ -135,7 +146,7 @@ function HeroSlider() {
       ))}
 
       {/* Floating background cards */}
-      <div className="pointer-events-none absolute inset-0 overflow-hidden">
+      <div className="pointer-events-none absolute inset-0 overflow-hidden hidden md:block">
         {[...Array(6)].map((_, k) => (
           <div
             key={k}
@@ -346,7 +357,7 @@ function ParallaxBg({ src, speed = 0.3, opacity = 0.15 }: { src: string; speed?:
   const y = useScrollY();
   return (
     <div aria-hidden className="pointer-events-none absolute inset-0 bg-cover bg-center"
-      style={{ backgroundImage: `url(${src})`, transform: `translateY(${y * speed}px)`, opacity, zIndex: 0 }} />
+      style={{ backgroundImage: `url(${src})`, transform: y > 0 ? `translateY(${y * speed}px)` : undefined, opacity, zIndex: 0 }} />
     );
 }
 
@@ -857,6 +868,52 @@ function Footer() {
   );
 }
 
+/* ----------------------------- Section CTA ----------------------------- */
+function SectionCTA() {
+  return (
+    <div className="py-8 md:py-12 px-6">
+      <div className="mx-auto w-full max-w-6xl">
+        <Reveal>
+          <div className="relative overflow-hidden rounded-3xl bh-shadow-lux" style={{ background: "hsl(165 60% 18%)", color: "hsl(40 38% 97%)" }}>
+            <div className="absolute -right-20 -top-20 h-64 w-64 rounded-full" style={{ background: "hsl(165 55% 25%)", opacity: 0.5, filter: "blur(40px)" }} />
+            <div className="absolute -bottom-20 -left-20 h-64 w-64 rounded-full" style={{ background: "hsl(38 88% 55%)", opacity: 0.15, filter: "blur(40px)" }} />
+            
+            <div className="relative z-10 flex flex-col items-center justify-between gap-6 p-6 md:flex-row md:p-10 lg:p-12">
+              <div className="text-center md:text-left max-w-xl">
+                <h3 className="mb-2 text-2xl font-bold md:text-3xl">Ready to secure your stay?</h3>
+                <p className="text-base" style={{ color: "hsl(40 38% 97% / 0.85)" }}>
+                  Speak directly with our concierge team to customize your private estate experience in Bhurban.
+                </p>
+              </div>
+              
+              <div className="flex shrink-0 flex-col gap-3 w-full sm:flex-row sm:w-auto">
+                <a
+                  href={BHBURBAN_WHATSAPP_URL}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="flex items-center justify-center gap-2 rounded-full bh-grad-gold px-6 py-3 font-bold text-base transition-transform hover:scale-105 bh-shadow-gold w-full sm:w-auto"
+                  style={{ color: "hsl(165 60% 18%)" }}
+                >
+                  <MessageCircle className="h-5 w-5" />
+                  WhatsApp Us
+                </a>
+                <a
+                  href="tel:+923045679000"
+                  className="flex items-center justify-center gap-2 rounded-full px-6 py-3 font-bold text-base backdrop-blur-md transition-colors hover:bg-white/20 w-full sm:w-auto"
+                  style={{ border: "2px solid hsl(40 38% 97% / 0.4)", background: "hsl(40 38% 97% / 0.1)" }}
+                >
+                  <Phone className="h-5 w-5" />
+                  Call Us
+                </a>
+              </div>
+            </div>
+          </div>
+        </Reveal>
+      </div>
+    </div>
+  );
+}
+
 /* ----------------------------- Page ----------------------------- */
 export default function Index() {
   return (
@@ -873,11 +930,17 @@ export default function Index() {
       <main className="bh-page">
         <HeroSlider />
         <Introduction />
+        <SectionCTA />
         <WhyStandApart />
+        <SectionCTA />
         <IdealFor />
+        <SectionCTA />
         <TheEstate />
+        <SectionCTA />
         <BhurbanDestination />
+        <SectionCTA />
         <Pricing />
+        <SectionCTA />
         <FAQ />
         <FinalCTA />
         <Footer />

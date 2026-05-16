@@ -6,8 +6,13 @@ import {
   Phone, Mail, MapPin, ChevronLeft, ChevronRight, Check,
   Sun, Snowflake, Flower2, Facebook, Twitter, Linkedin, ArrowDown, Wifi,
   Car, Coffee, Dumbbell, Heart, TreePine, Wind, Cloud, Bed, Bath,
-  Tv, Shield, Users, Calendar, Map, Baby, Gamepad2, Gift, Sparkles as HeartIcon
+  Tv, Shield, Users, Calendar, Map, Baby, Gamepad2, Gift, Sparkles as HeartIcon, MessageCircle
 } from "lucide-react";
+import { buildWhatsAppBookingUrl } from "@/lib/whatsapp";
+
+const MURREE_FAMILY_WHATSAPP_URL = buildWhatsAppBookingUrl(
+  "a private family stay at Himalaya Premium Villas in Murree"
+);
 
 /* ============================================================
    FAMILY HOTELS IN MURREE - Himalaya Premium Villas
@@ -45,10 +50,10 @@ const PAGE_STYLES = `
 .family-murree-border{border:1px solid hsl(var(--border));}
 .family-murree-muted{color:hsl(var(--muted));}
 
-.family-murree-reveal{opacity:0;transform:translateY(40px);transition:opacity .9s ease-out,transform .9s ease-out;}
-.family-murree-reveal.in{opacity:1;transform:translateY(0);}
+.family-murree-reveal{opacity:0;transform:translateY(40px) translateZ(0);transition:opacity .9s ease-out,transform .9s ease-out;}
+.family-murree-reveal.in{opacity:1;transform:translateY(0) translateZ(0);}
 
-@keyframes family-murreeKenBurns{0%{transform:scale(1)}100%{transform:scale(1.15)}}
+@keyframes family-murreeKenBurns{0%{transform:scale(1) translateZ(0)}100%{transform:scale(1.15) translateZ(0)}}
 @keyframes family-murreeFloat{0%,100%{transform:translateY(0)}50%{transform:translateY(-20px)}}
 @keyframes family-murreeScrollDown{0%{transform:translateY(0);opacity:1}100%{transform:translateY(12px);opacity:0}}
 @keyframes family-murreeHeartbeat{0%,100%{transform:scale(1)}50%{transform:scale(1.1)}}
@@ -64,8 +69,19 @@ html{scroll-behavior:smooth;}
 function useScrollY() {
   const [y, setY] = useState(0);
   useEffect(() => {
-    const onScroll = () => setY(window.scrollY);
+    if (typeof window !== "undefined" && window.innerWidth <= 768) return;
+    let ticking = false;
+    const onScroll = () => {
+      if (!ticking) {
+        window.requestAnimationFrame(() => {
+          setY(window.scrollY);
+          ticking = false;
+        });
+        ticking = true;
+      }
+    };
     window.addEventListener("scroll", onScroll, { passive: true });
+    onScroll();
     return () => window.removeEventListener("scroll", onScroll);
   }, []);
   return y;
@@ -95,13 +111,12 @@ function Hero() {
   const scrollY = useScrollY();
   
   return (
-    <section className="relative min-h-[100dvh] w-full overflow-x-hidden lg:h-screen lg:overflow-hidden">
-      <div className="absolute inset-0">
+    <section className="relative min-h-[100dvh] w-full lg:h-screen lg:overflow-hidden">
+      <div className="absolute inset-0" style={scrollY > 0 ? { transform: `translateY(${scrollY * 0.4}px)` } : undefined}>
         <img 
           src="https://images.unsplash.com/photo-1571003123894-1f05e4d68b79?w=1920&q=80" 
           alt="" 
           className="h-full w-full object-cover family-murree-ken"
-          style={{ transform: `translateY(${scrollY * 0.4}px)` }}
         />
         <div className="absolute inset-0 family-murree-grad-hero" />
       </div>
@@ -240,7 +255,7 @@ function ParallaxBg({ src, speed = 0.3, opacity = 0.15 }: { src: string; speed?:
   const y = useScrollY();
   return (
     <div aria-hidden className="pointer-events-none absolute inset-0 bg-cover bg-center"
-      style={{ backgroundImage: `url(${src})`, transform: `translateY(${y * speed}px)`, opacity, zIndex: 0 }} />
+      style={{ backgroundImage: `url(${src})`, transform: y > 0 ? `translateY(${y * speed}px)` : undefined, opacity, zIndex: 0 }} />
   );
 }
 
@@ -774,6 +789,52 @@ function FinalCTA() {
   );
 }
 
+/* ----------------------------- Section CTA ----------------------------- */
+function SectionCTA() {
+  return (
+    <div className="py-8 md:py-12 px-6">
+      <div className="mx-auto w-full max-w-6xl">
+        <Reveal>
+          <div className="relative overflow-hidden rounded-3xl family-murree-shadow-lux" style={{ background: "hsl(165 60% 18%)", color: "hsl(40 38% 97%)" }}>
+            <div className="absolute -right-20 -top-20 h-64 w-64 rounded-full" style={{ background: "hsl(165 55% 25%)", opacity: 0.5, filter: "blur(40px)" }} />
+            <div className="absolute -bottom-20 -left-20 h-64 w-64 rounded-full" style={{ background: "hsl(38 88% 55%)", opacity: 0.15, filter: "blur(40px)" }} />
+            
+            <div className="relative z-10 flex flex-col items-center justify-between gap-6 p-6 md:flex-row md:p-10 lg:p-12">
+              <div className="text-center md:text-left max-w-xl">
+                <h3 className="mb-2 text-2xl font-bold md:text-3xl">Ready to secure your family's stay?</h3>
+                <p className="text-base" style={{ color: "hsl(40 38% 97% / 0.85)" }}>
+                  Speak directly with our concierge team to customize your private family estate experience.
+                </p>
+              </div>
+              
+              <div className="flex shrink-0 flex-col gap-3 w-full sm:flex-row sm:w-auto">
+                <a
+                  href={MURREE_FAMILY_WHATSAPP_URL}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="flex items-center justify-center gap-2 rounded-full family-murree-grad-gold px-6 py-3 font-bold text-base transition-transform hover:scale-105 family-murree-shadow-gold w-full sm:w-auto"
+                  style={{ color: "hsl(165 60% 18%)" }}
+                >
+                  <MessageCircle className="h-5 w-5" />
+                  WhatsApp Us
+                </a>
+                <a
+                  href="tel:+923045679000"
+                  className="flex items-center justify-center gap-2 rounded-full px-6 py-3 font-bold text-base transition hover:bg-white/10 w-full sm:w-auto"
+                  style={{ border: "2px solid hsl(38 88% 55%)", color: "hsl(38 88% 55%)" }}
+                >
+                  <Phone className="h-5 w-5" />
+                  Call Now
+                </a>
+              </div>
+            </div>
+          </div>
+        </Reveal>
+      </div>
+    </div>
+  );
+}
+
 /* ----------------------------- Page ----------------------------- */
 export default function Index() {
   useEffect(() => {
@@ -785,13 +846,21 @@ export default function Index() {
       <main className="family-murree-page">
         <Hero />
         <Introduction />
+        <SectionCTA />
         <WhyPerfectForFamilies />
+        <SectionCTA />
         <FamilyMoments />
+        <SectionCTA />
         <EstateFacilities />
+        <SectionCTA />
         <CouplesSection />
+        <SectionCTA />
         <LocationSection />
+        <SectionCTA />
         <FAQSection />
+        <SectionCTA />
         <PricingSection />
+        <SectionCTA />
         <FinalCTA />
       </main>
     </>

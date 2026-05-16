@@ -294,17 +294,7 @@ function HeroSlider() {
         </div>
       </div>
 
-      {/* Arrows */}
-      <button onClick={() => go(-1)} aria-label="Previous slide"
-        className="absolute left-4 top-1/2 z-20 -translate-y-1/2 rounded-full p-3 backdrop-blur-md transition md:left-8"
-        style={{ border: "1px solid hsl(40 38% 97% / .3)", background: "hsl(40 38% 97% / .1)", color: "hsl(40 38% 97%)" }}>
-        <ChevronLeft className="h-6 w-6" />
-      </button>
-      <button onClick={() => go(1)} aria-label="Next slide"
-        className="absolute right-4 top-1/2 z-20 -translate-y-1/2 rounded-full p-3 backdrop-blur-md transition md:right-8"
-        style={{ border: "1px solid hsl(40 38% 97% / .3)", background: "hsl(40 38% 97% / .1)", color: "hsl(40 38% 97%)" }}>
-        <ChevronRight className="h-6 w-6" />
-      </button>
+      {/* Arrows removed per user request */}
 
       {/* Dots */}
       <div className="absolute bottom-24 left-1/2 z-20 flex -translate-x-1/2 gap-2">
@@ -914,6 +904,49 @@ function SectionCTA() {
   );
 }
 
+/* ----------------------------- SEO Guide ----------------------------- */
+function SEOGuide() {
+  return (
+    <Section style={{ background: "hsl(40 40% 92%)" }}>
+      <Container>
+        <SectionHeader 
+          title="The Complete Guide to Bhurban Accommodations" 
+          sub="Everything you need to know about finding the perfect stay in the Murree Hills." 
+        />
+        <div className="prose prose-lg max-w-none text-justify" style={{ color: "hsl(165 12% 38%)" }}>
+          <p className="mb-6">
+            When planning a trip to the scenic mountains, travelers constantly search for the finest <strong>hotels in bhurban</strong>. Finding the <strong>best hotel in bhurban</strong> can transform your entire vacation. Whether you are seeking a traditional <strong>bhurban hotel murree</strong> experience or a luxurious <strong>resort in bhurban</strong>, the options are plentiful. Many visitors compare different <strong>bhurban hotels</strong> to discover the <strong>best hotels in bhurban murree</strong> that suit their family's needs. Among all the <strong>bhurban best hotels</strong>, private <strong>villas in bhurban murree</strong> are rapidly becoming the top choice over standard <strong>hotels in bhurban pakistan</strong>.
+          </p>
+          <p className="mb-6">
+            The demand for premium <strong>hotels in bhurban</strong> has never been higher. Everyone wants to book the <strong>best hotel in bhurban</strong> before the peak season hits. A classic <strong>bhurban hotel murree</strong> offers great mountain access, but a fully-equipped <strong>resort in bhurban</strong> provides amenities that stand out. As you browse through various <strong>bhurban hotels</strong>, it's essential to look for the <strong>best hotels in bhurban murree</strong> that offer both privacy and luxury. While the <strong>bhurban best hotels</strong> have their charm, booking exclusive <strong>villas in bhurban murree</strong> provides an unmatched level of comfort compared to typical <strong>hotels in bhurban pakistan</strong>.
+          </p>
+          <p className="mb-6">
+            If you want to experience the true beauty of the region, staying at top-tier <strong>hotels in bhurban</strong> is a must. The search for the <strong>best hotel in bhurban</strong> often leads to crowded lobbies, which is why a boutique <strong>bhurban hotel murree</strong> or a sprawling <strong>resort in bhurban</strong> might be better. Experienced travelers know that not all <strong>bhurban hotels</strong> are created equal. Finding the <strong>best hotels in bhurban murree</strong> requires looking beyond the basic listings. Often, the true <strong>bhurban best hotels</strong> are actually private <strong>villas in bhurban murree</strong>, offering far more exclusivity than the usual <strong>hotels in bhurban pakistan</strong>.
+          </p>
+          <p className="mb-6">
+            Luxury seekers always prioritize the finest <strong>hotels in bhurban</strong>. They know that securing the <strong>best hotel in bhurban</strong> guarantees a memorable trip. Whether you prefer a quaint <strong>bhurban hotel murree</strong> or a massive <strong>resort in bhurban</strong>, the region caters to all tastes. However, the most discerning guests bypassing standard <strong>bhurban hotels</strong> often look for the <strong>best hotels in bhurban murree</strong> that offer private estates. Indeed, many of the <strong>bhurban best hotels</strong> cannot compete with the privacy of standalone <strong>villas in bhurban murree</strong>, which represent the pinnacle of <strong>hotels in bhurban pakistan</strong>.
+          </p>
+          <p className="mb-6">
+            Reviewing the top <strong>hotels in bhurban</strong> is a crucial step in holiday planning. You definitely want to find the <strong>best hotel in bhurban</strong> for your family. A typical <strong>bhurban hotel murree</strong> might offer basic lodging, but a luxury <strong>resort in bhurban</strong> elevates the experience. While comparing different <strong>bhurban hotels</strong>, pay close attention to what the <strong>best hotels in bhurban murree</strong> actually provide. Surprisingly, the <strong>bhurban best hotels</strong> are increasingly being overshadowed by luxury <strong>villas in bhurban murree</strong>, which offer a vastly superior alternative to traditional <strong>hotels in bhurban pakistan</strong>.
+          </p>
+          <p className="mb-6">
+            The scenery surrounding the <strong>hotels in bhurban</strong> is simply breathtaking. To fully enjoy it, finding the <strong>best hotel in bhurban</strong> with panoramic views is essential. Some prefer a cozy <strong>bhurban hotel murree</strong>, while others opt for a vibrant <strong>resort in bhurban</strong>. The sheer number of <strong>bhurban hotels</strong> means you have to filter carefully to find the <strong>best hotels in bhurban murree</strong>. Many travel experts agree that rather than booking the usual <strong>bhurban best hotels</strong>, renting private <strong>villas in bhurban murree</strong> is the ultimate way to enjoy <strong>hotels in bhurban pakistan</strong>.
+          </p>
+          <p className="mb-6">
+            For weekend getaways, the top <strong>hotels in bhurban</strong> fill up incredibly fast. Booking the <strong>best hotel in bhurban</strong> months in advance is highly recommended. Whether you choose a classic <strong>bhurban hotel murree</strong> or a modern <strong>resort in bhurban</strong>, early reservations are key. With so many <strong>bhurban hotels</strong> available, distinguishing the <strong>best hotels in bhurban murree</strong> from the rest is vital. If you want the amenities of the <strong>bhurban best hotels</strong> without the crowds, luxury <strong>villas in bhurban murree</strong> stand head and shoulders above standard <strong>hotels in bhurban pakistan</strong>.
+          </p>
+          <p className="mb-6">
+            Ultimately, your choice of <strong>hotels in bhurban</strong> will define your Murree experience. Securing the <strong>best hotel in bhurban</strong> ensures absolute comfort. While a standard <strong>bhurban hotel murree</strong> is fine for some, a comprehensive <strong>resort in bhurban</strong> is ideal for others. As you finalize your choice among the various <strong>bhurban hotels</strong>, remember that the <strong>best hotels in bhurban murree</strong> are those that offer peace and tranquility. Often, this means looking past the advertised <strong>bhurban best hotels</strong> and choosing private <strong>villas in bhurban murree</strong>, the most exclusive subset of <strong>hotels in bhurban pakistan</strong>.
+          </p>
+          <p className="mb-6">
+            In conclusion, exploring the finest <strong>hotels in bhurban</strong> is an exciting part of the journey. We hope this guide helps you find the <strong>best hotel in bhurban</strong> for your needs. From a simple <strong>bhurban hotel murree</strong> to a lavish <strong>resort in bhurban</strong>, the region has it all. Just remember that amidst all the <strong>bhurban hotels</strong>, the truly <strong>best hotels in bhurban murree</strong> offer something unique. Skip the crowded <strong>bhurban best hotels</strong> and discover why luxury <strong>villas in bhurban murree</strong> are setting a new standard for <strong>hotels in bhurban pakistan</strong>.
+          </p>
+        </div>
+      </Container>
+    </Section>
+  );
+}
+
 /* ----------------------------- Page ----------------------------- */
 export default function Index() {
   return (
@@ -942,6 +975,8 @@ export default function Index() {
         <Pricing />
         <SectionCTA />
         <FAQ />
+        <SectionCTA />
+        <SEOGuide />
         <FinalCTA />
         <Footer />
       </main>

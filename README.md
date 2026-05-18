@@ -1,36 +1,68 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# Himalaya Villas — monorepo
 
-## Getting Started
+This project is split into two workspaces:
 
-First, run the development server:
+| Folder | Stack | Purpose |
+|--------|--------|---------|
+| `frontend/` | Next.js 16 | Public site, dashboards, API proxy to backend |
+| `backend/` | Express + MongoDB | REST API, auth, bookings, villas, inquiries |
+
+## Quick start
+
+1. **MongoDB** — running locally (or set `DATABASE_URL` in `backend/.env`).
+
+2. **Backend env** — copy and edit:
+
+   ```bash
+   cp backend/.env.example backend/.env
+   ```
+
+3. **Frontend env** — copy and edit:
+
+   ```bash
+   cp frontend/.env.example frontend/.env.local
+   ```
+
+4. **Install and run both** (from repo root):
+
+   ```bash
+   npm install
+   npm run dev
+   ```
+
+   - Frontend: http://localhost:3000  
+   - Backend API: http://127.0.0.1:5000  
+
+Run individually:
 
 ```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
+npm run dev:backend
+npm run dev:frontend
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+## Folder structure
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+### `backend/src/`
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+```
+server.ts          # App entry
+config/            # env, bootstrap
+controllers/       # Route handlers
+routes/            # Express routers
+models/            # Mongoose schemas
+services/          # Business logic
+middleware/        # Auth session parsing
+utils/             # Password, JWT, DTOs
+data/              # Static villa catalog
+```
 
-## Learn More
+### `frontend/`
 
-To learn more about Next.js, take a look at the following resources:
+```
+app/               # Next.js pages & API routes
+components/        # React UI
+lib/               # Shared utilities, SEO, API helpers
+public/            # Static assets
+```
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
-
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
-
-## Deploy on Vercel
-
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
-
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+Frontend `/api/*` requests are rewritten to the backend (see `frontend/next.config.ts`).

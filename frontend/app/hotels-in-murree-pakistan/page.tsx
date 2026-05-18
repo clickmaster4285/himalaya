@@ -105,16 +105,18 @@ function Reveal({ children, delay = 0, className = "" }: { children: ReactNode; 
 }
 
 /* ----------------------------- Data ----------------------------- */
-const HERO_SLIDES = [
-  "https://images.unsplash.com/photo-1571003123894-1f05e4d68b79?w=1920&q=80",
-  "https://images.unsplash.com/photo-1582719478250-c89cae4dc85b?w=1920&q=80",
-  "https://images.unsplash.com/photo-1519904981063-b0cf448d479e?w=1920&q=80",
-  "https://images.unsplash.com/photo-1601918774946-25832a4be0d6?w=1920&q=80",
-  "https://images.unsplash.com/photo-1542314831-068cd1dbfeeb?w=1920&q=80",
-  "https://images.unsplash.com/photo-1571896349842-33c89424de2d?w=1920&q=80",
-  "https://images.unsplash.com/photo-1469474968028-56623f02e42e?w=1920&q=80",
-  "https://images.unsplash.com/photo-1506905925346-21bda4d32df4?w=1920&q=80",
-];
+const RESORT_GALLERY_IMAGES = [
+  "/assets/gallery-exterior.jpg",
+  "/assets/gallery-interior.jpg",
+  "/assets/gallery-garden.jpg",
+  "/assets/gallery-balcony.jpg",
+  "/assets/gallery-dining-night.jpg",
+  "/assets/gallery-bbq.jpg",
+  "/assets/gallery-sunlight.jpg",
+  "/assets/gallery-reflection.jpg",
+] as const;
+
+const HERO_SLIDES = [...RESORT_GALLERY_IMAGES];
 
 const MURREE_HOTELS = [
   { 
@@ -122,7 +124,7 @@ const MURREE_HOTELS = [
     tag: "PREMIUM LUXURY RESORT", 
     price: "₨75,000+",
     desc: "Experience unparalleled luxury at Himalaya Villas Resort, the premier destination in Murree with breathtaking mountain views and world-class amenities",
-    img: "https://images.unsplash.com/photo-1566073771259-6a8506099945?w=900&q=80",
+    img: "/assets/murree-luxury-resort.jpg",
     perks: ["Mountain Views", "Fine Dining", "Spa & Wellness", "Conference Facilities", "Luxury Villas", "Private Gardens"] 
   },
   { 
@@ -130,7 +132,7 @@ const MURREE_HOTELS = [
     tag: "EXECUTIVE LUXURY", 
     price: "₨60,000+",
     desc: "Spacious premium suites with panoramic mountain views and exclusive amenities for discerning guests",
-    img: "https://images.unsplash.com/photo-1582719478250-c89cae4dc85b?w=900&q=80",
+    img: "/assets/villa-presidential-real.jpg",
     perks: ["Panoramic Views", "Butler Service", "Private Terrace", "Premium Amenities", "Executive Lounge", "Concierge Service"] 
   },
   { 
@@ -138,7 +140,7 @@ const MURREE_HOTELS = [
     tag: "NATURE LUXURY", 
     price: "₨50,000+",
     desc: "Secluded mountain retreat surrounded by pristine nature with eco-luxury accommodations and wellness facilities",
-    img: "https://images.unsplash.com/photo-1455587734955-081b22074882?w=900&q=80",
+    img: "/assets/villa-alpine-real.jpg",
     perks: ["Nature Views", "Eco-Luxury", "Wellness Spa", "Hiking Trails", "Organic Dining", "Yoga Pavilion"] 
   }
 ];
@@ -188,7 +190,7 @@ function HeroSlider() {
           className={`absolute inset-0 transition-opacity duration-1000 ${idx === i ? "opacity-100" : "opacity-0"}`}
           style={scrollY > 0 ? { transform: `translateY(${scrollY * 0.4}px)` } : undefined}
         >
-          <img src={src} alt="" className={`h-full w-full object-cover ${idx === i ? "murree-hotels-ken" : ""}`} />
+          <img src={src} alt="Himalaya Villas Resort, Murree Bhurban" className={`h-full w-full object-cover ${idx === i ? "murree-hotels-ken" : ""}`} />
           <div className="absolute inset-0 murree-hotels-grad-hero" />
         </div>
       ))}
@@ -406,7 +408,7 @@ function ParallaxBg({ src, speed = 0.3, opacity = 0.15 }: { src: string; speed?:
 function Introduction() {
   return (
     <Section id="introduction" style={{ background: "hsl(40 40% 92%)" }}>
-      <ParallaxBg src="https://images.unsplash.com/photo-1571003123894-1f05e4d68b79?w=1920&q=80" speed={0.2} opacity={0.08} />
+      <ParallaxBg src="/assets/gallery-exterior.jpg" speed={0.2} opacity={0.08} />
       <div className="relative" style={{ zIndex: 1 }}>
         <Container>
           <div className="max-w-4xl mx-auto">
@@ -612,7 +614,7 @@ function IdealGuests() {
 
   return (
     <Section id="ideal-guests" style={{ background: "hsl(40 40% 92%)" }}>
-      <ParallaxBg src="https://images.unsplash.com/photo-1542314831-068cd1dbfeeb?w=1920&q=80" speed={0.25} opacity={0.08} />
+      <ParallaxBg src="/assets/gallery-dining-night.jpg" speed={0.25} opacity={0.08} />
       <div className="relative" style={{ zIndex: 1 }}>
         <Container>
           <SectionHeader 
@@ -674,7 +676,7 @@ function MurreeBhurbanLocation() {
 
   return (
     <Section id="murree-bhurban-location" style={{ background: "hsl(40 40% 92%)" }}>
-      <ParallaxBg src="https://images.unsplash.com/photo-1542314831-068cd1dbfeeb?w=1920&q=80" speed={0.3} opacity={0.08} />
+      <ParallaxBg src="/assets/gallery-interior.jpg" speed={0.3} opacity={0.08} />
       <div className="relative" style={{ zIndex: 1 }}>
         <Container>
           <SectionHeader 
@@ -784,7 +786,7 @@ function Pricing() {
   ];
   return (
     <Section id="pricing">
-      <ParallaxBg src="https://images.unsplash.com/photo-1506905925346-21bda4d32df4?w=1920&q=80" speed={0.3} opacity={0.1} />
+      <ParallaxBg src="/assets/murree-sunrise-mountains.jpg" speed={0.3} opacity={0.1} />
       <div className="relative" style={{ zIndex: 1 }}>
         <Container>
           <SectionHeader kicker="Rates" title="Hotel Pricing in Murree" sub="Transparent pricing for all categories of hotels" />
@@ -827,7 +829,7 @@ function Pricing() {
 function FinalCTA() {
   return (
     <Section id="final-cta" className="murree-hotels-grad-emerald" style={{ color: "hsl(40 38% 97%)" }}>
-      <ParallaxBg src="https://images.unsplash.com/photo-1469474968028-56623f02e42e?w=1920&q=80" speed={0.35} opacity={0.18} />
+      <ParallaxBg src="/assets/murree-forest-pines.jpg" speed={0.35} opacity={0.18} />
       <div className="relative" style={{ zIndex: 1 }}>
         <Container>
           <div className="text-center">
@@ -1068,16 +1070,18 @@ function ContactForm() {
 
 /* ----------------------------- Gallery Section ----------------------------- */
 function Gallery() {
-  const galleryImages = [
-    { src: "/assets/gallery-exterior.jpg", alt: "Resort Exterior" },
-    { src: "/assets/gallery-interior.jpg", alt: "Luxury Interior" },
-    { src: "/assets/gallery-garden.jpg", alt: "Beautiful Gardens" },
-    { src: "/assets/gallery-balcony.jpg", alt: "Mountain View Balcony" },
-    { src: "/assets/gallery-dining-night.jpg", alt: "Fine Dining" },
-    { src: "/assets/gallery-bbq.jpg", alt: "BBQ Area" },
-    { src: "/assets/gallery-sunlight.jpg", alt: "Sunlight View" },
-    { src: "/assets/gallery-reflection.jpg", alt: "Pool Reflection" },
-  ];
+  const galleryImages = RESORT_GALLERY_IMAGES.map((src) => ({
+    src,
+    alt:
+      src === "/assets/gallery-exterior.jpg" ? "Himalaya Villas Resort Exterior" :
+      src === "/assets/gallery-interior.jpg" ? "Luxury Villa Interior" :
+      src === "/assets/gallery-garden.jpg" ? "Resort Gardens" :
+      src === "/assets/gallery-balcony.jpg" ? "Mountain View Terrace" :
+      src === "/assets/gallery-dining-night.jpg" ? "Fine Dining at Himalaya Villas" :
+      src === "/assets/gallery-bbq.jpg" ? "Outdoor BBQ Area" :
+      src === "/assets/gallery-sunlight.jpg" ? "Morning Sunlight over the Hills" :
+      "Pool and Mountain Reflection",
+  }));
 
   return (
     <Section>
@@ -1109,7 +1113,7 @@ function Gallery() {
 function CallToAction() {
   return (
     <Section className="murree-hotels-grad-emerald" style={{ color: "hsl(40 38% 97%)" }}>
-      <ParallaxBg src="https://images.unsplash.com/photo-1506905925346-21bda4d32df4?w=1920&q=80" speed={0.25} opacity={0.15} />
+      <ParallaxBg src="/assets/gallery-exterior.jpg" speed={0.25} opacity={0.15} />
       <div className="relative" style={{ zIndex: 1 }}>
         <Container>
           <div className="text-center">

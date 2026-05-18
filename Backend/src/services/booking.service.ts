@@ -1,4 +1,4 @@
-import type { BookingStatus } from "../types";
+import type { BookingStatus } from "../utils/types";
 import { BookingM, UserM } from "../models/schemas";
 
 export function generateBookingReference() {

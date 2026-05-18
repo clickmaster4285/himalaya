@@ -1,33 +1,28 @@
-export type Villa = {
-  slug: string;
-  title: string;
-  category: "Presidential" | "Family" | "Suite";
-  description: string;
-  price: string;
-  image: string;
-  gallery?: string[];
-  bedrooms: number;
-  guests: number;
-  size: string;
-  highlights: string[];
-  amenities: string[];
-  content: string;
-};
+import type { VillaPublic } from "./villa-types";
 
-export const villas: Villa[] = [
+/** Default catalog — synced into Mongo on server start / login. */
+export const STATIC_VILLAS: VillaPublic[] = [
   {
     slug: "alpine-family-lodge",
     title: "Alpine Family Lodge",
     category: "Family",
-    description: "Spacious 3-bedroom villa perfect for family gatherings.",
-    price: "PKR 38,000",
+    description:
+      "Three bedrooms. One family. Enough space for everyone to breathe — and enough mountain outside to fill three days without repeating yourself.",
+    price: "PKR 39,000",
     image: "/assets/villa-alpine-real.jpg",
     gallery: ["/assets/gallery-interior.jpg", "/assets/gallery-dining-night.jpg", "/assets/gallery-balcony.jpg"],
     bedrooms: 4,
     guests: 10,
     size: "450m²",
     highlights: ["Valley view terrace", "Private garden", "Wood-burner fireplace"],
-    amenities: ["Private Pool", "Butler Service", "Premium Toiletries", "Mountain Views", "Fireplace", "Gourmet Kitchen"],
+    amenities: [
+      "Private Pool",
+      "Butler Service",
+      "Premium Toiletries",
+      "Mountain Views",
+      "Fireplace",
+      "Gourmet Kitchen",
+    ],
     content:
       "The Alpine Family Lodge offers a warm retreat with elegant interiors, handcrafted furnishings, and large picture windows framing the Himalayan panorama. With family-centered amenities and separate living spaces, it creates unforgettable memories.",
   },
@@ -35,7 +30,8 @@ export const villas: Villa[] = [
     slug: "presidential-suite",
     title: "The Presidential Suite",
     category: "Presidential",
-    description: "Panoramic mountain views with a private terrace and jacuzzi.",
+    description:
+      "The flagship. A private terrace, jacuzzi with mountain views, and the kind of stillness Islamabad cannot offer. For guests who want the best of what the mountain has.",
     price: "PKR 65,000",
     image: "/assets/villa-presidential-real.jpg",
     gallery: ["/assets/gallery-interior.jpg", "/assets/gallery-dining-night.jpg", "/assets/gallery-exterior.jpg"],
@@ -43,7 +39,14 @@ export const villas: Villa[] = [
     guests: 8,
     size: "530m²",
     highlights: ["Private terrace and jacuzzi", "Panoramic glass living room", "Master lounge"],
-    amenities: ["Private Pool", "Butler Service", "Premium Toiletries", "Mountain Views", "Fireplace", "Gourmet Kitchen"],
+    amenities: [
+      "Private Pool",
+      "Butler Service",
+      "Premium Toiletries",
+      "Mountain Views",
+      "Fireplace",
+      "Gourmet Kitchen",
+    ],
     content:
       "Exquisite and spacious, The Presidential Suite envelops you in the highest level of comfort and privacy. Enjoy unmatched vistas, bespoke service, and a cinematic sunset from your own personal terrace.",
   },
@@ -59,7 +62,14 @@ export const villas: Villa[] = [
     guests: 6,
     size: "420m²",
     highlights: ["Skyline rooftop", "Open-plan lounge", "Private pool"],
-    amenities: ["Private Pool", "Butler Service", "Premium Toiletries", "Mountain Views", "Fireplace", "Gourmet Kitchen"],
+    amenities: [
+      "Private Pool",
+      "Butler Service",
+      "Premium Toiletries",
+      "Mountain Views",
+      "Fireplace",
+      "Gourmet Kitchen",
+    ],
     content:
       "The Himalayan Penthouse is the pinnacle of mountain living, featuring expansive outdoor spaces, custom interiors, and the kind of discreet luxury crafted for a selective few.",
   },
@@ -67,7 +77,8 @@ export const villas: Villa[] = [
     slug: "garden-villa-retreat",
     title: "Garden Villa Retreat",
     category: "Family",
-    description: "Spacious 3-bedroom villa perfect for family gatherings.",
+    description:
+      "Three bedrooms. One family. Enough space for everyone to breathe — and enough mountain outside to fill three days without repeating yourself.",
     price: "PKR 39,000",
     image: "/assets/villa-alpine.jpg",
     gallery: ["/assets/gallery-garden.jpg", "/assets/gallery-interior.jpg", "/assets/gallery-balcony.jpg"],
@@ -75,7 +86,14 @@ export const villas: Villa[] = [
     guests: 8,
     size: "410m²",
     highlights: ["Private garden", "Indoor fireplace", "Spacious kitchenette"],
-    amenities: ["Private Pool", "Butler Service", "Premium Toiletries", "Mountain Views", "Fireplace", "Gourmet Kitchen"],
+    amenities: [
+      "Private Pool",
+      "Butler Service",
+      "Premium Toiletries",
+      "Mountain Views",
+      "Fireplace",
+      "Gourmet Kitchen",
+    ],
     content:
       "Set in tranquil garden surroundings, Garden Villa Retreat blends privacy and comfort with family-friendly spaces and a scenic outdoor seating area.",
   },
@@ -91,7 +109,14 @@ export const villas: Villa[] = [
     guests: 4,
     size: "350m²",
     highlights: ["Sunset views", "Cozy atmosphere", "Private balcony"],
-    amenities: ["Private Pool", "Butler Service", "Premium Toiletries", "Mountain Views", "Fireplace", "Gourmet Kitchen"],
+    amenities: [
+      "Private Pool",
+      "Butler Service",
+      "Premium Toiletries",
+      "Mountain Views",
+      "Fireplace",
+      "Gourmet Kitchen",
+    ],
     content:
       "Sunset Suite invites you to relax with a curated blend of warmth, refined textures, and muntane glow from sunset light.",
   },
@@ -107,13 +132,15 @@ export const villas: Villa[] = [
     guests: 4,
     size: "320m²",
     highlights: ["Scenic valley view", "Private terrace", "Fireplace"],
-    amenities: ["Private Pool", "Butler Service", "Premium Toiletries", "Mountain Views", "Fireplace", "Gourmet Kitchen"],
+    amenities: [
+      "Private Pool",
+      "Butler Service",
+      "Premium Toiletries",
+      "Mountain Views",
+      "Fireplace",
+      "Gourmet Kitchen",
+    ],
     content:
       "Serene Valley Cabin is designed for quiet reflection, with panoramic windows and intimate living spaces that bring the outside in.",
   },
 ];
-
-export const findVillaBySlug = (slug: string) => {
-  const normalizedSlug = decodeURIComponent(slug || "").trim().toLowerCase();
-  return villas.find((villa) => villa.slug.trim().toLowerCase() === normalizedSlug);
-};

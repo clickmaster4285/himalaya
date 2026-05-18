@@ -1,5 +1,5 @@
-import type { VillaCategory, VillaPublic } from "../villa-types";
-import { VILLA_CATEGORIES } from "../villa-types";
+import type { VillaCategory, VillaPublic } from "../data/villa-types";
+import { VILLA_CATEGORIES } from "../data/villa-types";
 import { VillaM } from "../models/schemas";
 
 export type VillaWriteInput = {

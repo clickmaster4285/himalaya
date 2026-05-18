@@ -1,5 +1,5 @@
-import type { Role } from "../types";
-import type { UserDoc } from "../user-dto";
+import type { Role } from "../utils/types";
+import type { UserDoc } from "../utils/user-dto";
 import { UserM } from "../models/schemas";
 
 function mapUser(u: {

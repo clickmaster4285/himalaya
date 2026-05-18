@@ -120,8 +120,27 @@ const ExpenseSchema = new mongoose.Schema(
 
 ExpenseSchema.index({ createdAt: -1 });
 
+const InquirySchema = new mongoose.Schema(
+  {
+    _id: { type: String, default: () => createId() },
+    fullName: { type: String, required: true, trim: true },
+    email: { type: String, required: true, lowercase: true, trim: true },
+    phone: { type: String, default: null },
+    checkInDate: { type: String, default: null },
+    checkOutDate: { type: String, default: null },
+    numberOfGuests: { type: String, default: null },
+    message: { type: String, default: null },
+    source: { type: String, default: "hotels-in-bhurban" },
+  },
+  { timestamps: true, collection: "Inquiry" },
+);
+
+InquirySchema.index({ createdAt: -1 });
+InquirySchema.index({ email: 1 });
+
 export const UserM = mongoose.models.User || mongoose.model("User", UserSchema);
 export const BookingM = mongoose.models.Booking || mongoose.model("Booking", BookingSchema);
 export const VillaM = mongoose.models.Villa || mongoose.model("Villa", VillaSchema);
 export const PackageM = mongoose.models.Package || mongoose.model("Package", PackageSchema);
 export const ExpenseM = mongoose.models.Expense || mongoose.model("Expense", ExpenseSchema);
+export const InquiryM = mongoose.models.Inquiry || mongoose.model("Inquiry", InquirySchema);

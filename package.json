@@ -10,13 +10,10 @@
     "dev:frontend": "npm run dev -w frontend",
     "dev:backend": "npm run dev -w backend",
     "build": "npm run build -w backend && npm run build -w frontend",
-    "start": "npm run start -w frontend",
+    "start": "concurrently -k \"npm run start -w backend\" \"npm run start -w frontend\"",
     "lint": "npm run lint -w frontend"
   },
   "devDependencies": {
     "concurrently": "^9.1.2"
-  },
-  "dependencies": {
-    "react-calendar": "^6.0.1"
   }
 }

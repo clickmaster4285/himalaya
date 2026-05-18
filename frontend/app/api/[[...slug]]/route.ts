@@ -1,18 +1,6 @@
 import { NextRequest, NextResponse } from "next/server";
-
-const BACKEND = (process.env.BACKEND_INTERNAL_URL ?? "http://127.0.0.1:5000").replace(/\/$/, "");
-
-function forwardSetCookie(from: Response, to: NextResponse) {
-  const headers = from.headers as Headers & { getSetCookie?: () => string[] };
-  if (typeof headers.getSetCookie === "function") {
-    for (const c of headers.getSetCookie()) {
-      to.headers.append("Set-Cookie", c);
-    }
-    return;
-  }
-  const single = from.headers.get("set-cookie");
-  if (single) to.headers.append("Set-Cookie", single);
-}
+import { getBackendInternalUrl } from "@/lib/api/backend-url";
+import { forwardSetCookie } from "@/lib/api/proxy";
 
 type Ctx = { params: Promise<{ slug?: string[] }> };
 
@@ -25,7 +13,7 @@ async function proxy(req: NextRequest, ctx: Ctx) {
 
   const path = parts.map((p) => encodeURIComponent(p)).join("/");
   const search = req.nextUrl.search;
-  const url = `${BACKEND}/api/${path}${search}`;
+  const url = `${getBackendInternalUrl()}/api/${path}${search}`;
 
   const cookie = req.headers.get("cookie") ?? "";
   const headers: Record<string, string> = { cookie };

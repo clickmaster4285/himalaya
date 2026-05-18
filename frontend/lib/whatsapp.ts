@@ -21,3 +21,28 @@ Guests: ${guests || "Not selected"}
 
   return `${SITE_CONTACT.whatsappUrl}?text=${encodeURIComponent(message)}`;
 }
+
+export function buildBhurbanInquiryWhatsAppUrl(fields: {
+  fullName: string;
+  email: string;
+  phone?: string;
+  checkInDate?: string;
+  checkOutDate?: string;
+  numberOfGuests?: string;
+  message?: string;
+}) {
+  const text = [
+    "New inquiry from Hotels in Bhurban page:",
+    "",
+    `Name: ${fields.fullName}`,
+    `Email: ${fields.email}`,
+    `Phone: ${fields.phone || "—"}`,
+    `Check-in: ${fields.checkInDate || "—"}`,
+    `Check-out: ${fields.checkOutDate || "—"}`,
+    `Guests: ${fields.numberOfGuests || "—"}`,
+    "",
+    fields.message || "(no message)",
+  ].join("\n");
+
+  return `${SITE_CONTACT.whatsappUrl}?text=${encodeURIComponent(text)}`;
+}

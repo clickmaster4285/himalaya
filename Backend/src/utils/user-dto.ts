@@ -4,13 +4,20 @@ export type UserDoc = {
   id: string;
   fullName: string;
   email: string;
+  passwordHash: string;
   role: Role;
   isActive: boolean;
   createdAt: Date;
-  passwordHash?: string;
 };
 
-export type SafeUser = Pick<UserDoc, "id" | "fullName" | "email" | "role" | "isActive" | "createdAt">;
+export type SafeUser = {
+  id: string;
+  fullName: string;
+  email: string;
+  role: Role;
+  isActive: boolean;
+  createdAt: Date;
+};
 
 export function toSafeUser(user: UserDoc): SafeUser {
   return {
@@ -23,10 +30,10 @@ export function toSafeUser(user: UserDoc): SafeUser {
   };
 }
 
-export function canManageBookings(role: Role) {
+export function canManageBookings(role: Role): boolean {
   return role === "SUPERADMIN" || role === "BOOKING_MANAGER";
 }
 
-export function isSuperAdmin(role: Role) {
+export function isSuperAdmin(role: Role): boolean {
   return role === "SUPERADMIN";
 }

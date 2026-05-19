@@ -1,12 +1,15 @@
 ﻿"use client";
 
+import { HOTELS_IN_BHURBAN_FAQS } from "@/lib/seo/hotels-in-bhurban-faqs";
 import { useEffect, useRef, useState, ReactNode } from "react";
 import {
   Mountain, Sparkles, Home, Star, Utensils, Briefcase, Clock,
   Phone, Mail, MapPin, ChevronLeft, ChevronRight, Check,
   Sun, Snowflake, Flower2, Facebook, Twitter, Linkedin, ArrowDown, Wifi, Users, Heart, Calendar, MessageCircle,
+  LogIn, LogOut, ShieldCheck, RotateCcw, Navigation, Quote, ExternalLink, BedDouble,
 } from "lucide-react";
-import { Coffee, Car, Accessibility, Ban, Shirt, ConciergeBell, Baby, ChefHat, Bus, CigaretteOff, Waves, PawPrint, Dumbbell } from "lucide-react";
+import { SITE_CONTACT, telHref, mailtoHref } from "@/lib/site-contact";
+import { Coffee, Car, Accessibility, Shirt, ConciergeBell, Baby, ChefHat, Bus, CigaretteOff } from "lucide-react";
 import { buildBhurbanInquiryWhatsAppUrl, buildWhatsAppBookingUrl } from "@/lib/whatsapp";
 
 const BHBURBAN_WHATSAPP_URL = buildWhatsAppBookingUrl(
@@ -169,6 +172,7 @@ function HeroSlider() {
       error?: string;
       emailSent?: boolean;
       saved?: boolean;
+      emailPending?: boolean;
       guestEmailSent?: boolean;
       staffEmailSent?: boolean;
     };
@@ -183,9 +187,10 @@ function HeroSlider() {
     }
 
     setSubmitStatus("success");
-    if (data.guestEmailSent) {
+    const email = form.email.trim();
+    if (data.saved && (data.guestEmailSent || data.emailPending || data.emailSent)) {
       setSuccessNote(
-        `Thank you! Your inquiry is saved in our system. A confirmation email was sent to ${form.email.trim()}. We will reply shortly.`
+        `Thank you! Your inquiry is saved. A confirmation email was sent to ${email}. We will reply shortly.`
       );
     } else if (data.saved) {
       setSuccessNote(
@@ -262,12 +267,12 @@ function HeroSlider() {
           </Reveal>
           <Reveal delay={300}>
             <p className="mt-4 text-2xl font-light italic md:text-3xl" style={{ color: "hsl(42 95% 75%)" }}>
-              Not just another hotel in Bhurban — a fully private luxury bhurban hotel villa in the heart of the Murree Hills, reserved exclusively for you.
+              The best hotel in Bhurban Murree for groups who want the full estate — luxury villa hospitality in the heart of the Murree Hills, reserved exclusively for you.
             </p>
           </Reveal>
           <Reveal delay={450}>
             <p className="mt-6 max-w-2xl text-lg md:text-xl" style={{ color: "hsl(40 38% 97% / .85)" }}>
-              The <strong>best hotel in Bhurban</strong> for your group may not be a hotel at all — a <strong>bhurban hotel murree</strong> villa estate gives you the full property. Forget shared lobbies; every detail here is designed around you alone.
+              The <strong>best hotel in Bhurban Murree</strong> for your group — a <strong>luxury bhurban hotel</strong> estate where you book the full property. Forget crowded lobbies; every detail here is designed around you alone.
             </p>
           </Reveal>
 
@@ -529,17 +534,13 @@ function Amenities() {
     { name: "Free breakfast", icon: Coffee, available: true },
     { name: "Free parking", icon: Car, available: true },
     { name: "Accessible", icon: Accessibility, available: true },
-    { name: "Pool", icon: Waves, available: false },
     { name: "Air-conditioned", icon: Snowflake, available: true },
     { name: "Laundry service", icon: Shirt, available: true },
-    { name: "Business center", icon: Briefcase, available: false },
-    { name: "Pet-friendly", icon: PawPrint, available: false },
     { name: "Room service", icon: ConciergeBell, available: true },
     { name: "Kid-friendly", icon: Baby, available: true },
     { name: "Restaurant", icon: Utensils, available: true },
     { name: "Kitchen in all rooms", icon: ChefHat, available: true },
     { name: "Airport shuttle", icon: Bus, available: true },
-    { name: "Fitness center", icon: Dumbbell, available: false },
     { name: "Smoke-free", icon: CigaretteOff, available: true },
   ];
 
@@ -575,8 +576,8 @@ function WhyStandApart() {
   const features = [
     { 
       icon: Home, 
-      title: "A Private Estate — Not a Hotel", 
-      desc: "We operate with limited monthly bookings so that every guest receives the full estate exclusively. No shared spaces, no strangers, no noise from adjacent rooms. When you book, the entire estate is yours."
+      title: "The Best Hotel in Bhurban Murree", 
+      desc: "We operate with limited monthly bookings so that every guest receives the full estate exclusively — the best hotel experience in Bhurban Murree without shared spaces, strangers, or noise from adjacent rooms. When you book, the entire estate is yours."
     },
     { 
       icon: Mountain, 
@@ -611,7 +612,7 @@ function WhyStandApart() {
         <SectionHeader 
           kicker="What Makes Us Different" 
           title={<>Why Bhurban Murree Is Pakistan&apos;s <span className="bh-text-emerald">Premier Mountain Destination</span></>}
-          sub="Among the bhurban best hotels travellers research, Himalaya Premium Villas stands apart — not because of star ratings, but because the entire estate is yours. The difference is not just room quality; it is how a stay should feel when nothing is shared with strangers." 
+          sub="Among the best hotels in Bhurban Murree travellers research, Himalaya Premium Villas leads with exclusive full-estate stays — the entire property is yours, with hotel-grade service and villa-level privacy." 
         />
         <div className="grid gap-8 md:grid-cols-2 lg:grid-cols-3">
           {features.map((feature, k) => (
@@ -658,7 +659,12 @@ function IdealFor() {
       icon: Home, 
       title: "Friend Groups", 
       desc: "who want an entire luxury estate to themselves — no sharing, no compromises, just pure enjoyment"
-    }
+    },
+    {
+      icon: Mountain,
+      title: "Nature Lovers",
+      desc: "who come for pine forests, fresh mountain air, and Himalayan views — with five-star comfort waiting at the villa"
+    },
   ];
 
   return (
@@ -972,6 +978,278 @@ function Pricing() {
   );
 }
 
+/* ----------------------------- Plan your stay (essentials + directions + reviews) ----------------------------- */
+const STAY_ESSENTIALS = [
+  {
+    icon: LogIn,
+    title: "Check-in",
+    detail: "From 2:00 PM",
+    note: "Early arrival? Message us on WhatsApp — we will try to accommodate.",
+  },
+  {
+    icon: LogOut,
+    title: "Check-out",
+    detail: "By 11:00 AM",
+    note: "Late check-out on request, subject to availability.",
+  },
+  {
+    icon: Users,
+    title: "Room capacity",
+    detail: "2–12+ guests",
+    note: "Suites, family villas & full estate — capacity confirmed at booking.",
+  },
+  {
+    icon: Wifi,
+    title: "Amenities",
+    detail: "Wi-Fi · breakfast · parking",
+    note: "Kitchen, room service, kid-friendly & smoke-free estate.",
+  },
+  {
+    icon: ShieldCheck,
+    title: "Booking confidence",
+    detail: "Book direct · best rate",
+    note: "WhatsApp confirmation, no hidden fees, dedicated concierge.",
+  },
+  {
+    icon: RotateCcw,
+    title: "Cancellation",
+    detail: "Flexible policy",
+    note: "Free reschedule on most dates; peak-season terms shared before you pay.",
+  },
+] as const;
+
+const DIRECTION_ROUTES = [
+  {
+    from: "Islamabad",
+    time: "~1 hr 45 min",
+    via: "Murree Expressway → Bhurban Road",
+    maps: "https://www.google.com/maps/dir/Islamabad/Himalaya+Villas+Bhurban",
+  },
+  {
+    from: "Rawalpindi / Saddar",
+    time: "~2 hrs",
+    via: "Murree Rd → Expressway → Bhurban",
+    maps: "https://www.google.com/maps/dir/Rawalpindi/Himalaya+Villas+Bhurban",
+  },
+  {
+    from: "Murree Mall Road",
+    time: "~25 min",
+    via: "Kashmir Rd → Bhurban",
+    maps: "https://www.google.com/maps/dir/Murree/Himalaya+Villas+Bhurban",
+  },
+  {
+    from: "PC Bhurban / Chinar Golf",
+    time: "~8 min",
+    via: "Bhurban main road",
+    maps: SITE_CONTACT.googleMapsUrl,
+  },
+  {
+    from: "Patriata / New Murree",
+    time: "~40 min",
+    via: "Murree Hills scenic route",
+    maps: "https://www.google.com/maps/dir/Patriata+Chair+Lift/Himalaya+Villas+Bhurban",
+  },
+  {
+    from: "Kashmir Point",
+    time: "~30 min",
+    via: "Murree → Bhurban",
+    maps: "https://www.google.com/maps/dir/Kashmir+Point+Murree/Himalaya+Villas+Bhurban",
+  },
+] as const;
+
+const GUEST_REVIEWS = [
+  { quote: "Beautiful scenic views", tag: "Mountain views" },
+  { quote: "Luxury interiors", tag: "Villa stay" },
+  { quote: "Peaceful environment", tag: "Weekend escape" },
+  { quote: "Family friendly", tag: "Family trip" },
+  { quote: "Excellent hospitality", tag: "Direct booking" },
+] as const;
+
+function PlanYourStaySection() {
+  return (
+    <Section id="plan-your-stay" style={{ background: "hsl(0 0% 100%)" }}>
+      <ParallaxBg src="/assets/gallery-balcony.jpg" speed={0.15} opacity={0.06} />
+      <div className="relative" style={{ zIndex: 1 }}>
+        <Container>
+          <SectionHeader
+            kicker="Plan your stay"
+            title={
+              <>
+                Everything before you <span className="bh-text-emerald">arrive in Bhurban</span>
+              </>
+            }
+            sub="Check-in, capacity, amenities, booking peace of mind — plus directions from Islamabad and nearby Murree spots."
+          />
+
+          <div className="grid gap-4 sm:grid-cols-2 lg:grid-cols-3">
+            {STAY_ESSENTIALS.map((item, k) => (
+              <Reveal key={item.title} delay={k * 60}>
+                <div className="bh-card bh-border bh-shadow-lux h-full p-6">
+                  <div
+                    className="mb-4 flex h-12 w-12 items-center justify-center rounded-xl bh-grad-emerald text-white"
+                  >
+                    <item.icon className="h-6 w-6" />
+                  </div>
+                  <h3 className="text-lg font-bold" style={{ color: "hsl(165 60% 18%)" }}>
+                    {item.title}
+                  </h3>
+                  <p className="mt-1 text-base font-semibold bh-text-emerald">{item.detail}</p>
+                  <p className="mt-2 text-sm leading-relaxed bh-muted">{item.note}</p>
+                </div>
+              </Reveal>
+            ))}
+          </div>
+
+          <Reveal delay={100}>
+            <div
+              className="mt-10 bh-card bh-border bh-shadow-lux overflow-hidden"
+              id="contact-visibility"
+            >
+              <div className="grid md:grid-cols-2">
+                <div className="p-8 md:p-10" style={{ background: "hsl(165 60% 18%)", color: "hsl(40 38% 97%)" }}>
+                  <h3 className="text-2xl font-bold">Contact visibility</h3>
+                  <p className="mt-2 text-sm" style={{ color: "hsl(40 38% 97% / .8)" }}>
+                    Reach us anytime before or during your stay — same details on WhatsApp, phone, and email.
+                  </p>
+                  <ul className="mt-6 space-y-4 text-sm">
+                    <li className="flex items-center gap-3">
+                      <Phone className="h-5 w-5 shrink-0" style={{ color: "hsl(42 95% 65%)" }} />
+                      <a href={telHref()} className="font-semibold hover:underline">
+                        {SITE_CONTACT.phoneDisplay}
+                      </a>
+                    </li>
+                    <li className="flex items-center gap-3">
+                      <Mail className="h-5 w-5 shrink-0" style={{ color: "hsl(42 95% 65%)" }} />
+                      <a href={mailtoHref("bookings")} className="hover:underline">
+                        {SITE_CONTACT.emails.bookings}
+                      </a>
+                    </li>
+                    <li className="flex items-start gap-3">
+                      <MapPin className="mt-0.5 h-5 w-5 shrink-0" style={{ color: "hsl(42 95% 65%)" }} />
+                      <span>{SITE_CONTACT.addressLines.join(", ")}</span>
+                    </li>
+                  </ul>
+                  <a
+                    href={BHBURBAN_WHATSAPP_URL}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="mt-6 inline-flex items-center gap-2 rounded-full bh-grad-gold px-5 py-2.5 text-sm font-bold bh-shadow-gold"
+                    style={{ color: "hsl(165 60% 18%)" }}
+                  >
+                    <MessageCircle className="h-4 w-4" />
+                    WhatsApp concierge
+                  </a>
+                </div>
+                <div className="p-8 md:p-10">
+                  <div className="flex items-center gap-2">
+                    <Navigation className="h-6 w-6" style={{ color: "hsl(165 60% 18%)" }} />
+                    <h3 className="text-2xl font-bold" style={{ color: "hsl(165 60% 18%)" }}>
+                      Directions to Himalaya Villas
+                    </h3>
+                  </div>
+                  <p className="mt-2 text-sm bh-muted">
+                    From Islamabad, take the Murree Expressway toward Bhurban. Open Google Maps for live traffic.
+                  </p>
+                  <ul className="mt-5 space-y-3">
+                    {DIRECTION_ROUTES.map((route, k) => (
+                      <li
+                        key={route.from}
+                        className="flex flex-wrap items-center justify-between gap-2 rounded-xl px-4 py-3 bh-border"
+                        style={{ background: k === 0 ? "hsl(38 88% 55% / .08)" : "hsl(40 40% 97%)" }}
+                      >
+                        <div>
+                          <span className="font-semibold" style={{ color: "hsl(165 60% 18%)" }}>
+                            {route.from}
+                          </span>
+                          <span className="ml-2 text-xs bh-muted">· {route.via}</span>
+                        </div>
+                        <div className="flex items-center gap-3">
+                          <span className="text-sm font-bold bh-text-emerald">{route.time}</span>
+                          <a
+                            href={route.maps}
+                            target="_blank"
+                            rel="noopener noreferrer"
+                            className="inline-flex items-center gap-1 text-xs font-semibold uppercase tracking-wide"
+                            style={{ color: "hsl(165 60% 18%)" }}
+                          >
+                            Maps
+                            <ExternalLink className="h-3 w-3" />
+                          </a>
+                        </div>
+                      </li>
+                    ))}
+                  </ul>
+                  <a
+                    href={SITE_CONTACT.googleMapsUrl}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="mt-5 inline-flex items-center gap-2 text-sm font-semibold underline"
+                    style={{ color: "hsl(165 60% 18%)" }}
+                  >
+                    <MapPin className="h-4 w-4" />
+                    Open Himalaya Villas on Google Maps
+                  </a>
+                </div>
+              </div>
+            </div>
+          </Reveal>
+
+          <Reveal delay={150}>
+            <div className="mt-12" id="guest-reviews">
+              <div className="mb-8 text-center">
+                <span
+                  className="mb-3 inline-block rounded-full px-4 py-1 text-xs font-semibold uppercase tracking-widest"
+                  style={{ background: "hsl(38 88% 55% / .15)", color: "hsl(165 60% 18%)" }}
+                >
+                  Guest voices
+                </span>
+                <h3 className="text-3xl font-bold md:text-4xl" style={{ color: "hsl(165 60% 18%)" }}>
+                  Reviews by people who stayed
+                </h3>
+                <p className="mx-auto mt-3 max-w-xl text-base bh-muted">
+                  Short notes from recent guests — what they loved about the estate.
+                </p>
+              </div>
+              <div className="grid gap-4 sm:grid-cols-2 lg:grid-cols-5">
+                {GUEST_REVIEWS.map((review, k) => (
+                  <Reveal key={review.quote} delay={k * 80}>
+                    <div className="bh-card bh-border bh-shadow-lux flex h-full flex-col p-5 text-center">
+                      <Quote className="mx-auto h-6 w-6 opacity-40" style={{ color: "hsl(38 88% 55%)" }} />
+                      <div className="my-3 flex justify-center gap-0.5">
+                        {Array.from({ length: 5 }).map((_, i) => (
+                          <Star
+                            key={i}
+                            className="h-4 w-4 fill-current"
+                            style={{ color: "hsl(38 88% 55%)" }}
+                          />
+                        ))}
+                      </div>
+                      <p className="text-base font-semibold leading-snug" style={{ color: "hsl(165 60% 18%)" }}>
+                        &ldquo;{review.quote}&rdquo;
+                      </p>
+                      <p className="mt-3 text-xs font-medium uppercase tracking-wider bh-muted">{review.tag}</p>
+                    </div>
+                  </Reveal>
+                ))}
+              </div>
+              <p className="mt-6 text-center">
+                <a
+                  href="#amenities"
+                  className="inline-flex items-center gap-2 text-sm font-semibold"
+                  style={{ color: "hsl(165 60% 18%)" }}
+                >
+                  <BedDouble className="h-4 w-4" />
+                  View full amenities list
+                </a>
+              </p>
+            </div>
+          </Reveal>
+        </Container>
+      </div>
+    </Section>
+  );
+}
+
 /* ----------------------------- Keyword guide (distributed SEO) ----------------------------- */
 const KEYWORD_GUIDE_TOPICS = [
   {
@@ -1065,48 +1343,7 @@ function BhurbanKeywordGuide() {
 
 /* ----------------------------- 7. FAQ ----------------------------- */
 function FAQ() {
-  const faqs = [
-    {
-      q: "What makes Himalaya Premium Villas the best hotel in Bhurban?",
-      a: "Himalaya Premium Villas is not ranked among the best hotels in Bhurban — it sits above that category entirely. As a private luxury estate rather than a hotel, you get exclusive use of the entire property, personalised butler service, and curated dining — none of which any hotel in Bhurban offers. For guests who want the best, this is the only address.",
-    },
-    {
-      q: "Are there luxury villas in Bhurban Murree?",
-      a: "Yes. Himalaya Premium Villas is the only dedicated private luxury villa estate in Bhurban Murree. Unlike serviced apartments or guesthouses marketed as villas, this is a fully staffed, purpose-built private estate with panoramic Himalayan views, in-villa dining, and complete exclusivity.",
-    },
-    {
-      q: "What makes Himalaya Premium Villas different from other hotels in Bhurban?",
-      a: "Himalaya Premium Villas is not a hotel — it is a fully private luxury estate in Bhurban, the most prestigious enclave of the Murree Hills. Unlike any hotel in Bhurban, the entire estate is reserved exclusively for one booking at a time, ensuring complete privacy, bespoke service, and a level of luxury that shared hotel environments simply cannot offer."
-    },
-    {
-      q: "Where exactly is Himalaya Premium Villas located?",
-      a: "The estate is located in Bhurban, Murree, Pakistan — approximately 50 kilometres from Islamabad. Bhurban is widely regarded as the most exclusive and scenic enclave within the greater Murree Hills region."
-    },
-    {
-      q: "Is Himalaya Premium Villas suitable for destination weddings?",
-      a: "Absolutely. The estate is one of the most sought-after destination wedding venues in the Bhurban region. With panoramic Himalayan views, dedicated event infrastructure, and a full planning and concierge team, it is designed to host extraordinary weddings and celebrations."
-    },
-    {
-      q: "What is the best time to visit Bhurban?",
-      a: "The Bhurban region is beautiful year-round. Summer (May–August) offers cool weather and lush greenery; winter (December–February) brings snowfall and magical landscapes; autumn and spring offer quieter, equally stunning experiences. Himalaya Premium Villas is available for exclusive bookings across all seasons."
-    },
-    {
-      q: "Can corporate groups book Himalaya Premium Villas for retreats?",
-      a: "Yes. The estate is fully equipped to host executive corporate retreats, strategy sessions, and leadership off-sites. With high-speed connectivity, private meeting spaces, bespoke catering, and an inspiring natural environment, it offers a setting that no hotel conference room in Bhurban can match."
-    },
-    {
-      q: "How does a private estate compare to chain hotels in Bhurban?",
-      a: "Chain hotels in Bhurban offer shared lobbies and standard room categories. Himalaya Premium Villas is a private estate — the entire property, terraces, and dining are reserved for your booking party only, with personalised service from enquiry to checkout.",
-    },
-    {
-      q: "What are the best hotels in Bhurban Murree for families who need space?",
-      a: "Families comparing the best hotels in Bhurban Murree often outgrow multi-room hotel bookings. Private villas in Bhurban Murree at Himalaya Premium Villas give children room to move, in-villa meals on your schedule, and no shared corridors — the format most families prefer after one stay.",
-    },
-    {
-      q: "Is a private villa better than booking multiple rooms at bhurban hotels?",
-      a: "For groups of four or more, yes. Standard bhurban hotels charge per room and still share restaurants, lifts, and public areas. One booking at Himalaya Premium Villas covers the full estate — often at a lower per-person cost than three or four hotel rooms at the same standard.",
-    },
-  ];
+  const faqs = HOTELS_IN_BHURBAN_FAQS;
 
   return (
     <Section id="faq" style={{ background: "hsl(40 40% 92%)" }}>
@@ -1114,7 +1351,7 @@ function FAQ() {
         <SectionHeader 
                 kicker="Frequently Asked Questions" 
                 title={<>Hotels in Bhurban — <span className="bh-text-emerald">FAQ</span></>}
-                sub="Answers for guests researching hotels in Bhurban, private villas, and the best hotel in Bhurban for their dates" 
+                sub="Answers for guests researching hotels in Bhurban Murree, luxury villas, and the best hotel in Bhurban Murree for their dates" 
               />
           <div className="max-w-4xl mx-auto">
             <div className="space-y-8">
@@ -1260,6 +1497,7 @@ export default function HotelsInBhurbanClient() {
         <BhurbanDestination />
         <SectionCTA variant={5} />
         <Pricing />
+        <PlanYourStaySection />
         <BhurbanKeywordGuide />
         <SectionCTA variant={6} />
         <FAQ />

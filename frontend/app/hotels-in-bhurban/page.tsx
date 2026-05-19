@@ -1,17 +1,20 @@
 import type { Metadata } from "next";
 import HotelsInBhurbanClient from "./HotelsInBhurbanClient";
+import { JsonLd } from "@/components/seo/JsonLd";
+import { HOTELS_IN_BHURBAN_FAQS } from "@/lib/seo/hotels-in-bhurban-faqs";
+import { hotelsInBhurbanJsonLdScripts } from "@/lib/seo/himalaya-schema";
 
 const PAGE_TITLE =
-  "Hotels in Bhurban | Himalaya Premium Villas — Private Luxury Hotel Bhurban Murree";
+  "Hotels in Bhurban Murree | Himalaya Premium Villas — Best Hotel Bhurban Murree";
 
 const PAGE_DESCRIPTION =
-  "Looking for hotels in Bhurban? Himalaya Premium Villas is one of the best hotel in Bhurban murree, only private luxury estate — panoramic Himalayan views, dedicated concierge, complete privacy. Book direct via WhatsApp.";
+  "Looking for the best hotel in Bhurban Murree? Himalaya Premium Villas offers luxury estate stays with panoramic Himalayan views, in-villa dining, dedicated concierge, and exclusive privacy. Book direct via WhatsApp.";
 
 export const metadata: Metadata = {
   title: { absolute: PAGE_TITLE },
   description: PAGE_DESCRIPTION,
   keywords:
-    "Hotels in Bhurban, luxury hotel Bhurban Murree, Himalaya Premium Villas, private villa Bhurban",
+    "hotels in Bhurban Murree, best hotel Bhurban Murree, luxury hotel Bhurban, Himalaya Premium Villas, bhurban hotels",
   openGraph: {
     title: PAGE_TITLE,
     description: PAGE_DESCRIPTION,
@@ -24,5 +27,12 @@ export const metadata: Metadata = {
 };
 
 export default function HotelsInBhurbanPage() {
-  return <HotelsInBhurbanClient />;
+  const jsonLd = hotelsInBhurbanJsonLdScripts(HOTELS_IN_BHURBAN_FAQS);
+
+  return (
+    <>
+      <JsonLd items={jsonLd} />
+      <HotelsInBhurbanClient />
+    </>
+  );
 }

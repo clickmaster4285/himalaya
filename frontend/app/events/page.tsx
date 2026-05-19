@@ -254,7 +254,7 @@ const eventSections = [
       {
         id: 26,
         title: "Guided Trails & Forest Walks",
-        description: "Scenic nature experiences for groups and couples.",
+        description: "Pine-forest walks in Bhurban Murree Hills — guided routes for couples, families & groups.",
         badge: "Nature",
         slug: "guided-trails-forest-walks",
       },
@@ -268,7 +268,7 @@ const eventSections = [
       {
         id: 28,
         title: "Adventure & Outdoor Activities",
-        description: "Thrilling mountain activities designed for safe fun.",
+        description: "Bhurban Murree adventures — hikes, team challenges & safe mountain fun for groups.",
         badge: "Adventure",
         slug: "adventure-outdoor-activities",
       },

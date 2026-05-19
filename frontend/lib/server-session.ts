@@ -1,6 +1,11 @@
-import { cookies, headers } from "next/headers";
+import "server-only";
+
+import { cookies } from "next/headers";
 import { SESSION_COOKIE, verifySessionToken, type SessionPayload } from "@/lib/session";
 import type { SafeUser } from "@/lib/user-public";
+import { connectDb } from "@/lib/server/db";
+import { findUserById } from "@/lib/server/services/user.service";
+import { toSafeUser as toServerSafeUser } from "@/lib/server/utils/user-dto";
 
 export async function getSessionFromCookies(): Promise<SessionPayload | null> {
   const jar = await cookies();
@@ -9,16 +14,23 @@ export async function getSessionFromCookies(): Promise<SessionPayload | null> {
   return verifySessionToken(token);
 }
 
+/** Current user from session cookie + MongoDB (no self-fetch). */
 export async function getCurrentUser(): Promise<SafeUser | null> {
-  const h = await headers();
-  const host = h.get("x-forwarded-host") ?? h.get("host") ?? "localhost:3000";
-  const proto = h.get("x-forwarded-proto") ?? "http";
-  const cookie = h.get("cookie") ?? "";
-  const res = await fetch(`${proto}://${host}/api/auth/me`, {
-    headers: { cookie },
-    cache: "no-store",
-  });
-  if (!res.ok) return null;
-  const data = (await res.json()) as { user: SafeUser | null };
-  return data.user ?? null;
+  const session = await getSessionFromCookies();
+  if (!session) return null;
+
+  try {
+    await connectDb();
+    const user = await findUserById(session.userId);
+    if (!user?.isActive) return null;
+    const safe = toServerSafeUser(user);
+    return {
+      ...safe,
+      createdAt:
+        safe.createdAt instanceof Date ? safe.createdAt.toISOString() : String(safe.createdAt),
+    };
+  } catch (err) {
+    console.error("[server-session] getCurrentUser:", err);
+    return null;
+  }
 }

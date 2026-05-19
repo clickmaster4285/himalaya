@@ -1,21 +1,18 @@
-import { STATIC_VILLAS } from "@/lib/villas-static-data";
+import "server-only";
 
-function backendOrigin(): string {
-  return (process.env.BACKEND_INTERNAL_URL ?? "http://127.0.0.1:5000").replace(/\/$/, "");
-}
+import { STATIC_VILLAS } from "@/lib/villas-static-data";
+import { connectDb } from "@/lib/server/db";
+import { getPublishedVillasMerged } from "@/lib/server/data/villas-catalog";
 
 /**
- * Villa slugs for sitemap: static catalog plus published villas from API (build / ISR).
+ * Villa slugs for sitemap: static catalog plus published villas from MongoDB (build / ISR).
  */
 export async function getAllVillaSlugsForSitemap(): Promise<string[]> {
   const fromStatic = STATIC_VILLAS.map((v) => v.slug);
   try {
-    const res = await fetch(`${backendOrigin()}/api/villas`, {
-      next: { revalidate: 300 },
-    });
-    if (!res.ok) return [...new Set(fromStatic)];
-    const data = (await res.json()) as { villas?: { slug?: string }[] };
-    const api = (data.villas ?? []).map((v) => v.slug).filter((s): s is string => Boolean(s));
+    await connectDb();
+    const villas = await getPublishedVillasMerged();
+    const api = villas.map((v) => v.slug).filter(Boolean);
     return [...new Set([...fromStatic, ...api])];
   } catch {
     return [...new Set(fromStatic)];

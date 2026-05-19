@@ -6,7 +6,7 @@ export default function BookingLocation() {
   const distances = [
     { label: "Islamabad (F-7 / Blue Area)", distance: "60 km - ~1.5 hrs" },
     { label: "Rawalpindi (Saddar)", distance: "58 km - ~1.5 hrs" },
-    { label: "Murree Town Centre", distance: "8 km - ~15 min" },
+    { label: "Bhurban Murree Town Centre", distance: "8 km - ~15 min" },
     { label: "Lahore (via Motorway)", distance: "~390 km - ~4 hrs" },
     { label: "Islamabad International Airport", distance: "78 km - ~90 min" },
     { label: "Pearl Continental Bhurban", distance: "3.5 km - ~8 min" }
@@ -23,14 +23,14 @@ export default function BookingLocation() {
             <span>LOCATION & DIRECTIONS</span>
           </div>
           <h2 className="font-display text-4xl md:text-5xl text-white leading-[1.1] tracking-tight mb-2">
-            Bhurban, Murree Hills
+            Bhurban Murree Hills
           </h2>
           <p className="font-display text-2xl md:text-3xl text-[#c9a55b] italic font-light mb-8">
             60 km from Islamabad
           </p>
           
           <p className="text-[14px] md:text-[15px] text-white/70 leading-relaxed font-light mb-12 max-w-lg">
-            Himalaya Villas sits at 1,850 metres elevation in Bhurban — a private forested ridge above the town of Murree, yet connected by a well-maintained road to Islamabad via Expressway.
+            Himalaya Villas sits at 1,850 metres elevation in Bhurban Murree — a private forested ridge in the Murree Hills, yet connected by a well-maintained road to Islamabad via Murree Expressway.
           </p>
 
           <div className="space-y-4">
@@ -54,7 +54,7 @@ export default function BookingLocation() {
             <h3 className="font-display text-2xl text-white mb-4">Himalaya Villas, Bhurban</h3>
             <p className="text-[12px] text-white/50 tracking-widest uppercase leading-loose mb-10">
               Bhurban Road, Bhurban,<br />
-              Murree Hills - 47160, Pakistan
+              Bhurban Murree Hills - 47160, Pakistan
             </p>
 
             <div className="w-full max-w-xs space-y-4">

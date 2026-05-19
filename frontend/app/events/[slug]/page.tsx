@@ -849,35 +849,51 @@ const eventDetails: Record<string, {
     ]
   },
   "guided-trails-forest-walks": {
-    title: "Guided Trails & Forest Walks",
-    description: "Scenic nature experiences for groups and couples.",
-    longDescription: "Explore the beauty of nature with our guided trails and forest walks. Perfect for groups and couples seeking scenic mountain experiences with expert guidance.",
+    title: "Guided Trails & Forest Walks in Bhurban Murree",
+    description:
+      "Pine-forest guided walks in Bhurban Murree Hills — for couples, families & groups at Himalaya Villas.",
+    longDescription:
+      "Explore Bhurban Murree on foot with expert guides who know every pine ridge and forest path around Himalaya Villas. Our guided trails and forest walks are designed for guests staying in the Murree Hills who want fresh mountain air without long drives — gentle morning loops, moderate climbs to viewpoints, or longer hikes with rest stops. Routes start minutes from the estate, so you spend more time in nature and less time in traffic. Perfect as a couple's sunrise walk, a family nature outing, or a team-building add-on during a Bhurban Murree retreat.",
     features: [
-      "Expert trail guides",
-      "Nature education sessions",
-      "Photography opportunities",
-      "Safety equipment provided",
-      "Refreshments during walks",
-      "Flexible difficulty levels"
+      "Local guides on Bhurban Murree pine-forest trails",
+      "Routes from easy family loops to moderate Murree Hills climbs",
+      "Himalaya ridge & valley viewpoints for photography",
+      "Safety briefing, first-aid kit & walkie coordination",
+      "Trail refreshments & bottled water included",
+      "Morning, afternoon & sunset departures from the estate"
     ],
     image: "https://picsum.photos/seed/trails26/800/600.jpg",
-    category: "Experiences & Activities",
+    category: "Experiences & Activities · Bhurban Murree",
     faqs: [
       {
+        question: "Where do guided forest walks start in Bhurban Murree?",
+        answer:
+          "Walks depart from Himalaya Villas in Bhurban Murree Hills — no need to drive into crowded Murree town. Your guide meets you at the estate and selects trails in the surrounding pine forest based on weather and your group's fitness."
+      },
+      {
         question: "What difficulty levels are available for forest walks?",
-        answer: "We offer easy, moderate, and challenging trails suitable for all fitness levels. Our guides assess group abilities and select appropriate routes."
+        answer:
+          "We offer easy, moderate, and challenging options across Bhurban Murree trails. Easy routes suit children and seniors; moderate paths reach scenic ridges; longer hikes are available for active groups."
       },
       {
         question: "How long are the guided trail walks?",
-        answer: "Our trails range from 1-3 hour walks to full-day hikes. We customize duration based on group preferences and fitness levels."
+        answer:
+          "Most guests choose 1–2 hour walks; half-day and full-day Bhurban Murree hikes can be arranged. Duration is tailored to your villa check-in schedule and Murree Hills weather."
       },
       {
         question: "What should participants wear for forest walks?",
-        answer: "We recommend comfortable hiking shoes, weather-appropriate clothing, and small backpacks. We provide a detailed packing list upon booking."
+        answer:
+          "Wear comfortable hiking shoes, layers for Murree Hills weather, and a light backpack. We send a short packing list when you book your Bhurban Murree walk."
       },
       {
         question: "Are the trails suitable for children and elderly participants?",
-        answer: "Yes, we have family-friendly trails with gentle slopes and rest areas. Our guides adjust pace to accommodate all participants."
+        answer:
+          "Yes. We maintain gentle Bhurban forest loops with flat sections and benches. Guides adjust pace so families and mixed-age groups enjoy the walk safely."
+      },
+      {
+        question: "Can we combine a forest walk with a stay at Himalaya Villas?",
+        answer:
+          "Absolutely — most guests book guided trails as an add-on to a Bhurban Murree villa stay. Ask our concierge on WhatsApp to pair your walk with breakfast on the terrace or a bonfire evening."
       }
     ]
   },
@@ -915,35 +931,51 @@ const eventDetails: Record<string, {
     ]
   },
   "adventure-outdoor-activities": {
-    title: "Adventure & Outdoor Activities",
-    description: "Thrilling mountain activities designed for safe fun.",
-    longDescription: "Get your adrenaline pumping with our thrilling mountain activities. All adventures are designed with safety as the top priority while maximizing excitement and fun.",
+    title: "Adventure & Outdoor Activities in Bhurban Murree",
+    description:
+      "Thrilling Bhurban Murree adventures — hiking, zip-line style rides, team challenges & mountain fun at Himalaya Villas.",
+    longDescription:
+      "Turn your Bhurban Murree stay into an adventure. Himalaya Villas coordinates outdoor activities across the Murree Hills — from ridge hikes and nature challenges to group team-building games on the estate lawns. Every session is led by trained guides with helmets, harness checks where needed, and clear safety briefings in English and Urdu. Whether you are a family on holiday, friends on a weekend from Islamabad, or a corporate group, we match intensity to your group: soft adventure for first-timers or higher-energy options for thrill-seekers — all without leaving the Bhurban Murree corridor.",
     features: [
-      "Professional adventure guides",
-      "Safety equipment provided",
-      "Multiple activity options",
-      "Group coordination",
-      "First aid support",
-      "Weather contingency plans"
+      "Certified adventure guides for Bhurban Murree & Murree Hills",
+      "Helmets, harnesses & safety kit included where required",
+      "Hiking, obstacle courses & estate team-challenge games",
+      "Beginner-friendly briefings plus advanced group options",
+      "On-site first aid & weather backup plans",
+      "Half-day & full-day adventure add-ons to your villa stay"
     ],
     image: "https://picsum.photos/seed/adventure28/800/600.jpg",
-    category: "Experiences & Activities",
+    category: "Experiences & Activities · Bhurban Murree",
     faqs: [
       {
-        question: "What adventure activities are available?",
-        answer: "We offer rock climbing, zip-lining, hiking, mountain biking, and water sports. All activities are supervised by certified instructors."
+        question: "What adventure activities are available in Bhurban Murree?",
+        answer:
+          "Popular options include guided Murree Hills hikes, estate-based obstacle and team challenges, mountain biking on approved routes, and seasonal add-ons such as zip-line style experiences when conditions allow. All are booked through Himalaya Villas concierge."
       },
       {
         question: "Are adventure activities suitable for beginners?",
-        answer: "Yes, we provide beginner-friendly options with comprehensive safety briefings and gradual progression to more challenging activities."
+        answer:
+          "Yes. Most Bhurban Murree guests are first-time mountain visitors — we start with safety training, easy terrain, and shorter sessions before any harder activities."
       },
       {
-        question: "What safety measures are in place for adventure activities?",
-        answer: "We provide professional instructors, safety equipment, emergency protocols, and first aid stations. All activities meet international safety standards."
+        question: "What safety measures are in place?",
+        answer:
+          "Certified instructors, inspected equipment, buddy-system rules, first aid on site, and activity pauses during rain or high wind. We follow conservative Murree Hills weather protocols."
       },
       {
         question: "What is the minimum age for adventure activities?",
-        answer: "Age requirements vary by activity - typically 8+ for easier activities and 12+ for more challenging ones. Parental consent is required for minors."
+        answer:
+          "Typically 8+ for gentle activities and 12+ for higher-energy options. Parental consent is required for minors; families receive dedicated Bhurban-friendly routes."
+      },
+      {
+        question: "Can we book adventure activities with our Himalaya Villas stay?",
+        answer:
+          "Yes — adventure is most often added to a Bhurban Murree villa booking. Message us on WhatsApp with your dates, group size, and fitness level for a custom plan."
+      },
+      {
+        question: "How far are activities from Islamabad or Murree town?",
+        answer:
+          "Himalaya Villas is about 60 km from Islamabad via Murree Expressway and minutes from Bhurban attractions — so you spend time adventuring, not stuck in traffic."
       }
     ]
   },
@@ -1225,11 +1257,48 @@ export async function generateMetadata({ params }: { params: Promise<{ slug: str
     });
   }
 
+  const eventSeo: Record<string, { keywords: string[]; description: string }> = {
+    "guided-trails-forest-walks": {
+      keywords: [
+        "guided trails Bhurban Murree",
+        "forest walks Bhurban",
+        "Murree Hills hiking",
+        "nature walks Himalaya Villas",
+        "Bhurban Murree activities",
+        "pine forest trails Murree",
+        "things to do Bhurban Murree",
+      ],
+      description:
+        "Book guided pine-forest walks in Bhurban Murree Hills at Himalaya Villas. Easy to moderate trails for couples, families & groups — expert guides, safety kit & refreshments.",
+    },
+    "adventure-outdoor-activities": {
+      keywords: [
+        "adventure activities Bhurban Murree",
+        "outdoor activities Murree Hills",
+        "Bhurban Murree adventure",
+        "things to do Bhurban Murree",
+        "mountain activities Himalaya Villas",
+        "team building Bhurban",
+        "hiking Murree Hills",
+        "family adventure Bhurban",
+      ],
+      description:
+        "Book adventure & outdoor activities in Bhurban Murree at Himalaya Villas. Guided hikes, team challenges & safe mountain fun for families, groups & corporate retreats.",
+    },
+  };
+
+  const seo = eventSeo[slug];
+  const keywords = seo
+    ? [...seo.keywords, event.title, event.category, "Himalaya Villas"]
+    : [event.title, event.category, "Himalaya Villas", "Bhurban Murree"];
+
+  const metaDescription = seo?.description ?? event.longDescription;
+
   return createPageMetadata({
     title: `${event.title} | Himalaya Villas & Resorts`,
-    description: event.longDescription,
+    description: metaDescription,
     path: `/events/${slug}`,
-    keywords: [event.title, event.category, "Himalaya Villas", "Bhurban", "Murree"],
+    keywords,
     ogImage: event.image,
   });
 }
@@ -1266,7 +1335,7 @@ export default async function EventPage({ params }: { params: Promise<{ slug: st
     location: {
       "@type": "Place",
       name: "Himalaya Villas & Resorts",
-      address: "Bhurban, Murree, Pakistan"
+      address: "Bhurban Murree Hills, Pakistan"
     },
     offers: {
       "@type": "Offer",

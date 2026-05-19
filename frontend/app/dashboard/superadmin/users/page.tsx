@@ -208,7 +208,7 @@ export default function SuperadminUsersPage() {
                 <div className="px-6 py-14 text-center">
                   <p className="font-display text-lg text-[#5c564c]">No accounts</p>
                   <p className="mt-2 text-sm text-[#8a8278]">
-                    Check that the API server is running and MongoDB is up — staff users are created from <code className="rounded bg-[#f0ebe4] px-1">backend/.env</code> on first login.
+                    Check that MongoDB is running — staff users are created from <code className="rounded bg-[#f0ebe4] px-1">.env.local</code> on first login.
                   </p>
                 </div>
               )}

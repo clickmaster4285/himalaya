@@ -8,7 +8,7 @@ export default function BookingAbout() {
     {
       icon: <Award className="w-5 h-5 text-[#c9a55b]" />,
       title: "TripAdvisor Travellers' Choice",
-      desc: "Recognized among the top luxury properties in Murree Hills by verified guest review volume and quality score."
+      desc: "Recognized among the top luxury properties in Bhurban Murree Hills by verified guest review volume and quality score."
     },
     {
       icon: <CheckCircle className="w-5 h-5 text-[#c9a55b]" />,
@@ -62,7 +62,7 @@ export default function BookingAbout() {
               Himalaya Villas is Bhurban's original luxury private villa estate — conceived and built to fill a gap that Pakistan's mountain hospitality market had long ignored: truly private, truly personal, truly luxurious accommodation away from the noise of conventional hotels.
             </p>
             <p>
-              Located at 1,850 metres above sea level in Bhurban, Murree Hills, the estate comprises twelve individually appointed private villas ranging from intimate suites for two to grand family villas accommodating up to eight guests. Every villa commands unobstructed panoramic views across the Himalayan foothills.
+              Located at 1,850 metres above sea level in Bhurban Murree Hills, the estate comprises twelve individually appointed private villas ranging from intimate suites for two to grand family villas accommodating up to eight guests. Every villa commands unobstructed panoramic views across the Himalayan foothills.
             </p>
             <p>
               Our hospitality team — many drawn from Pakistan's finest hotel brands — operates on a single philosophy: anticipate before being asked, personalise without being intrusive, and deliver consistently at the highest standard.

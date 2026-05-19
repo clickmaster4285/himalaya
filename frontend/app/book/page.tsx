@@ -13,7 +13,7 @@ const bookingServiceSchema = {
   "@context": "https://schema.org",
   "@type": "Service",
   "name": "Hotel Booking Service at Himalaya Villas",
-  "description": "Book luxury hotel accommodation in Murree at Himalaya Villas. Guaranteed lowest rates, flexible cancellation, and 5-star mountain luxury in Bhurban.",
+  "description": "Book luxury hotel accommodation in Bhurban Murree at Himalaya Villas. Guaranteed lowest rates, flexible cancellation, and 5-star mountain luxury.",
   "provider": {
     "@type": "Organization",
     "name": "Himalaya Villas and Resort",
@@ -21,7 +21,7 @@ const bookingServiceSchema = {
     "address": {
       "@type": "PostalAddress",
       "streetAddress": "Bhurban",
-      "addressLocality": "Murree",
+      "addressLocality": "Bhurban Murree",
       "addressRegion": "Punjab",
       "addressCountry": "PK"
     }
@@ -36,7 +36,7 @@ const bookingServiceSchema = {
   },
   "areaServed": {
     "@type": "Place",
-    "name": "Murree Hills, Bhurban"
+    "name": "Bhurban Murree Hills"
   }
 };
 
@@ -64,8 +64,8 @@ const faqSchema = {
 };
 
 export const metadata: Metadata = {
-  title: "Hotel Booking in Murree | Himalaya Villas",
-  description: "Book your luxury hotel in Murree at Himalaya Villas. Enjoy guaranteed lowest rates, flexible cancellation, and 5-star mountain luxury in Bhurban.",
+  title: "Hotel Booking in Bhurban Murree | Himalaya Villas",
+  description: "Book your luxury hotel in Bhurban Murree at Himalaya Villas. Enjoy guaranteed lowest rates, flexible cancellation, and 5-star mountain luxury.",
 };
 
 export default function BookNowLandingPage() {

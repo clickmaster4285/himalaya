@@ -37,6 +37,8 @@ export type HimalayaJsonLdConfig = {
   longitude?: number;
   checkinTime?: string;
   checkoutTime?: string;
+  /** Page URL path for lodging/hotel schema (default `/`). */
+  lodgingPagePath?: string;
 };
 
 const SCRIPT_IDS = {
@@ -183,6 +185,9 @@ export function buildOrganizationJsonLd(cfg?: HimalayaJsonLdConfig): JsonLdScrip
 export function buildLodgingJsonLd(cfg?: HimalayaJsonLdConfig): JsonLdScript {
   const c = mergeConfig(cfg);
   const origin = getSiteOrigin();
+  const pagePath = c.lodgingPagePath ?? "/";
+  const pageUrl = absoluteUrl(pagePath);
+  const lodgingId = pagePath === "/" ? `${origin}/#lodging` : `${pageUrl}#hotel`;
   const types: string[] =
     c.lodgingType === "Hotel"
       ? ["Hotel", "LodgingBusiness", "LocalBusiness"]
@@ -193,10 +198,10 @@ export function buildLodgingJsonLd(cfg?: HimalayaJsonLdConfig): JsonLdScript {
   const data: Record<string, unknown> = {
     "@context": "https://schema.org",
     "@type": types,
-    "@id": `${origin}/#lodging`,
+    "@id": lodgingId,
     name: c.organizationName,
     alternateName: c.siteName,
-    url: `${origin}/`,
+    url: pageUrl,
     image: images,
     telephone: c.telephone,
     priceRange: c.priceRange,
@@ -298,12 +303,28 @@ export function buildFaqPageJsonLd(cfg?: HimalayaJsonLdConfig): JsonLdScript {
   const origin = getSiteOrigin();
   const pairs = flattenFaqs(c.faqQuestionLimit);
 
+  return buildFaqPageJsonLdFromPairs(pairs, {
+    pagePath: "/",
+    scriptId: SCRIPT_IDS.faq,
+    pageId: `${origin}/#faq`,
+  });
+}
+
+export function buildFaqPageJsonLdFromPairs(
+  pairs: FaqPair[],
+  options?: { pagePath?: string; scriptId?: string; pageId?: string },
+): JsonLdScript {
+  const pagePath = options?.pagePath ?? "/";
+  const pageUrl = absoluteUrl(pagePath);
+  const faqId = options?.pageId ?? `${pageUrl}#faq`;
+
   return {
-    id: SCRIPT_IDS.faq,
+    id: options?.scriptId ?? `${SCRIPT_IDS.faq}-${pagePath.replace(/\//g, "-")}`,
     data: {
       "@context": "https://schema.org",
       "@type": "FAQPage",
-      "@id": `${origin}/#faq`,
+      "@id": faqId,
+      url: pageUrl,
       mainEntity: pairs.map((pair) => ({
         "@type": "Question",
         name: pair.q,
@@ -314,6 +335,25 @@ export function buildFaqPageJsonLd(cfg?: HimalayaJsonLdConfig): JsonLdScript {
       })),
     },
   };
+}
+
+/** Hotel + FAQ structured data for /hotels-in-bhurban */
+export function hotelsInBhurbanJsonLdScripts(faqs: FaqPair[]): JsonLdScript[] {
+  return [
+    buildLodgingJsonLd({
+      lodgingType: "Hotel",
+      lodgingPagePath: "/hotels-in-bhurban",
+      lodgingDescription:
+        "Himalaya Premium Villas — one of the best hotels in Bhurban Murree. Luxury estate-style stays with private villas, in-villa dining, Himalayan views, weddings, and corporate retreats.",
+      addressLocality: "Bhurban Murree",
+      addressRegion: "Murree Hills",
+      bookingPath: "/book",
+    }),
+    buildFaqPageJsonLdFromPairs(faqs, {
+      pagePath: "/hotels-in-bhurban",
+      scriptId: "hv-jsonld-bhurban-faq",
+    }),
+  ];
 }
 
 export function buildContactPageJsonLd(cfg?: HimalayaJsonLdConfig): JsonLdScript {

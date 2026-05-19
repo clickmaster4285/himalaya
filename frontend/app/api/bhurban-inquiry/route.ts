@@ -43,10 +43,11 @@ export async function POST(req: Request) {
 
     return NextResponse.json({
       ok: true,
-      emailSent: result.emailSent,
+      emailSent: result.emailSent || result.emailPending === true,
       saved: result.saved,
+      emailPending: result.emailPending,
       staffEmailSent: result.staffEmailSent,
-      guestEmailSent: result.guestEmailSent,
+      guestEmailSent: result.guestEmailSent ?? result.emailPending === true,
       method: result.method,
       emailDetail: result.emailDetail,
     });
@@ -54,18 +55,11 @@ export async function POST(req: Request) {
     const message = err instanceof Error ? err.message : "UNKNOWN";
     console.error("[bhurban-inquiry]", message);
 
-    const isBackendDown =
-      message.includes("unavailable") ||
-      message.includes("fetch failed") ||
-      message.includes("ECONNREFUSED");
-
     return NextResponse.json(
       {
-        error: isBackendDown
-          ? "API server is offline. Run npm run dev from the project folder (starts frontend + backend), then try again."
-          : message || "Could not submit inquiry. Use WhatsApp below.",
+        error: message || "Could not submit inquiry. Use WhatsApp below.",
       },
-      { status: isBackendDown ? 503 : 500 }
+      { status: 500 }
     );
   }
 }

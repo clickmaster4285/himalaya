@@ -35,11 +35,11 @@ export default function BookingFeatures() {
             <span>WHY BOOK DIRECTLY WITH US</span>
           </div>
           <h2 className="font-display text-4xl md:text-5xl text-[#1b261b] leading-[1.1] tracking-tight">
-            Murree Hotel Booking
+            Bhurban Murree Hotel Booking
             <span className="block italic text-[#c9a55b] font-light mt-1">Done Right.</span>
           </h2>
           <p className="mt-6 text-[14px] md:text-[15px] text-neutral-600 leading-relaxed font-light max-w-3xl">
-            Booking Murree hotels through OTAs costs you more and gives you less. When you book directly with Himalaya Villas, you receive priority treatment, our lowest available rate, and a human reservations team — not an algorithm.
+            Booking Bhurban Murree hotels through OTAs costs you more and gives you less. When you book directly with Himalaya Villas, you receive priority treatment, our lowest available rate, and a human reservations team — not an algorithm.
           </p>
         </div>
 

@@ -16,14 +16,14 @@ export default function BookingHero() {
           </div>
 
           <h1 className="font-display text-4xl md:text-5xl lg:text-[56px] text-white leading-[1.05] tracking-tight">
-            Hotel Booking in Murree
+            Hotel Booking in Bhurban Murree
             <span className="block italic text-[#c9a55b] font-light mt-2">Begins Here.</span>
           </h1>
 
           <p className="mt-8 text-[14px] md:text-[15px] text-white/80 leading-relaxed font-light">
             Pakistan's most exclusive private mountain estate. Twelve luxury villas perched
             above the pine forests of Bhurban — 60 kilometres from Islamabad, a world
-            apart from everything else. Book hotels in Murree the way they were meant to
+            apart from everything else. Book hotels in Bhurban Murree the way they were meant to
             be experienced.
           </p>
 
@@ -71,7 +71,7 @@ export default function BookingHero() {
           <div className="text-center mb-8">
             <h2 className="font-display text-[26px] text-[#1b261b]">Check Availability</h2>
             <p className="text-[10px] text-neutral-500 uppercase tracking-[0.15em] font-semibold mt-2">
-              MURREE HOTEL BOOKING • INSTANT RESPONSE
+              BHURBAN MURREE HOTEL BOOKING • INSTANT RESPONSE
             </p>
           </div>
 

@@ -5,14 +5,14 @@ import React from "react";
 export default function BookingReviews() {
   const reviews = [
     {
-      text: "The finest mountain stay in Pakistan, without question. The villa was immaculate — down to crisp sheets so clean I thought they had replaced the windows with paintings. Staff anticipated every need before we expressed it. Himalaya Villas has no peer in Murree.",
+      text: "The finest mountain stay in Pakistan, without question. The villa was immaculate — down to crisp sheets so clean I thought they had replaced the windows with paintings. Staff anticipated every need before we expressed it. Himalaya Villas has no peer in Bhurban Murree.",
       author: "Tariq Mahmood",
       details: "Islamabad - Stayed Feb 2024 - Family",
       platform: "TRIPADVISOR",
       stars: "★★★★★"
     },
     {
-      text: "We booked for our anniversary and arrived expecting a nice stay. We left transformed. The private terrace, the mountain air at 5 AM, the breakfast delivered exactly when we asked — nothing else in Murree operates at this level. We have already rebooked for Eid.",
+      text: "We booked for our anniversary and arrived expecting a nice stay. We left transformed. The private terrace, the mountain air at 5 AM, the breakfast delivered exactly when we asked — nothing else in Bhurban Murree operates at this level. We have already rebooked for Eid.",
       author: "Sana Rizvi",
       details: "Lahore - Stayed Jan 2024 - Couple",
       platform: "BOOKING.COM",
@@ -37,7 +37,7 @@ export default function BookingReviews() {
           </div>
           <h2 className="font-display text-4xl md:text-5xl text-white leading-[1.1] tracking-tight">
             What Our Guests Say About
-            <span className="block italic text-[#c9a55b] font-light mt-1">Booking Murree Hotels With Us</span>
+            <span className="block italic text-[#c9a55b] font-light mt-1">Booking Bhurban Murree Hotels With Us</span>
           </h2>
           <p className="mt-6 text-[14px] md:text-[15px] text-white/70 leading-relaxed font-light max-w-2xl">
             Every review below is from a verified guest who stayed at Himalaya Villas. We have not curated these — we have simply earned them through consistent service.

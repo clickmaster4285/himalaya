@@ -8,7 +8,7 @@ export default function BookingFAQ() {
 
   const faqs = [
     {
-      question: "How do I book a hotel in Murree at Himalaya Villas?",
+      question: "How do I book a hotel in Bhurban Murree at Himalaya Villas?",
       answer: "You can book directly through our website by selecting your dates and villa type in the availability form, or by contacting our reservations team via WhatsApp for instant assistance and personalized booking."
     },
     {
@@ -57,10 +57,10 @@ export default function BookingFAQ() {
           </div>
           <h2 className="font-display text-4xl md:text-5xl text-[#1b261b] leading-[1.1] tracking-tight mb-6">
             Everything About
-            <span className="block italic text-[#c9a55b] font-light mt-1">Booking Murree Hotels</span>
+            <span className="block italic text-[#c9a55b] font-light mt-1">Booking Bhurban Murree Hotels</span>
           </h2>
           <p className="text-[14px] md:text-[15px] text-neutral-600 leading-relaxed font-light max-w-2xl mx-auto">
-            Common questions from guests planning hotel bookings in Murree and Bhurban at Himalaya Villas.
+            Common questions from guests planning hotel bookings in Bhurban Murree at Himalaya Villas.
           </p>
         </div>
 

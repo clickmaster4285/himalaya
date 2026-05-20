@@ -1,6 +1,7 @@
 import path from "path";
 import type { NextConfig } from "next";
 import { loadEnvConfig } from "@next/env";
+import { securityHeaders } from "./lib/security-headers";
 
 const cwd = process.cwd();
 const repoRoot =
@@ -17,6 +18,14 @@ const nextConfig: NextConfig = {
     imageSizes: [16, 32, 48, 64, 96, 128, 256, 384],
     minimumCacheTTL: 60 * 60 * 24 * 30,
     domains: ["picsum.photos"],
+  },
+  async headers() {
+    return [
+      {
+        source: "/:path*",
+        headers: securityHeaders,
+      },
+    ];
   },
   async redirects() {
     return [

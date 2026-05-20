@@ -344,7 +344,7 @@ export function hotelsInBhurbanJsonLdScripts(faqs: FaqPair[]): JsonLdScript[] {
       lodgingType: "Hotel",
       lodgingPagePath: "/hotels-in-bhurban",
       lodgingDescription:
-        "Himalaya Premium Villas — one of the best hotels in Bhurban Murree. Luxury estate-style stays with private villas, in-villa dining, Himalayan views, weddings, and corporate retreats.",
+        "Himalaya Premium Villas and Resort — one of the best hotels in Bhurban Murree. Luxury estate-style stays with private villas, in-villa dining, Himalayan views, weddings, and corporate retreats.",
       addressLocality: "Bhurban Murree",
       addressRegion: "Murree Hills",
       bookingPath: "/book",

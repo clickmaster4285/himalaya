@@ -5,16 +5,16 @@ import { HOTELS_IN_BHURBAN_FAQS } from "@/lib/seo/hotels-in-bhurban-faqs";
 import { hotelsInBhurbanJsonLdScripts } from "@/lib/seo/himalaya-schema";
 
 const PAGE_TITLE =
-  "Hotels in Bhurban Murree | Himalaya Premium Villas — Best Hotel Bhurban Murree";
+  "Hotels in Bhurban Murree | Himalaya Premium Villas and Resort — Best Hotel Bhurban Murree";
 
 const PAGE_DESCRIPTION =
-  "Looking for the best hotel in Bhurban Murree? Himalaya Premium Villas offers luxury estate stays with panoramic Himalayan views, in-villa dining, dedicated concierge, and exclusive privacy. Book direct via WhatsApp.";
+  "Looking for the best hotel in Bhurban Murree? Himalaya Premium Villas and Resort offers luxury estate stays with panoramic Himalayan views, in-villa dining, dedicated concierge, and exclusive privacy. Book direct via WhatsApp.";
 
 export const metadata: Metadata = {
   title: { absolute: PAGE_TITLE },
   description: PAGE_DESCRIPTION,
   keywords:
-    "hotels in Bhurban Murree, best hotel Bhurban Murree, luxury hotel Bhurban, Himalaya Premium Villas, bhurban hotels",
+    "hotels in Bhurban Murree, best hotel Bhurban Murree, luxury hotel Bhurban Murree, Himalaya Premium Villas and Resort, bhurban murree hotels",
   openGraph: {
     title: PAGE_TITLE,
     description: PAGE_DESCRIPTION,

@@ -13,13 +13,13 @@ import { Coffee, Car, Accessibility, Shirt, ConciergeBell, Baby, ChefHat, Bus, C
 import { buildBhurbanInquiryWhatsAppUrl, buildWhatsAppBookingUrl } from "@/lib/whatsapp";
 
 const BHBURBAN_WHATSAPP_URL = buildWhatsAppBookingUrl(
-  "a private stay at Himalaya Premium Villas in Bhurban"
+  "a private stay at Himalaya Premium Villas and Resort in Bhurban Murree"
 );
 const HERO_STATIC_IMAGE = "/assets/hero-bhurban-static.png";
 
 /** Deep link for pricing CTA (pre-filled message). */
 const PRICING_WHATSAPP_BOOK_URL =
-  "https://wa.me/923045679000?text=I%20want%20to%20book%20a%20private%20stay%20at%20Himalaya%20Premium%20Villas%20in%20Bhurban";
+  "https://wa.me/923045679000?text=I%20want%20to%20book%20a%20private%20stay%20at%20Himalaya%20Premium%20Villas%20and%20Resort%20in%20Bhurban%20Murree";
 
 /* ============================================================
    ALL-IN-ONE PAGE — fonts, design tokens, gradients, animations,
@@ -121,21 +121,21 @@ const RESORT_GALLERY_IMAGES = [
 
 /** SEO alt text per gallery image (not shown on page — img alt only). */
 const GALLERY_IMAGE_ALTS: Record<(typeof RESORT_GALLERY_IMAGES)[number], string> = {
-  "/assets/gallery-exterior.jpg": "hotels in bhurban",
-  "/assets/gallery-interior.jpg": "best hotel in bhurban",
-  "/assets/gallery-garden.jpg": "hotel one bhurban",
+  "/assets/gallery-exterior.jpg": "hotels in bhurban murree",
+  "/assets/gallery-interior.jpg": "best hotel in bhurban murree",
+  "/assets/gallery-garden.jpg": "hotel in bhurban murree",
   "/assets/gallery-balcony.jpg": "bhurban hotel murree",
-  "/assets/gallery-dining-night.jpg": "resort in bhurban",
-  "/assets/gallery-bbq.jpg": "bhurban hotels",
+  "/assets/gallery-dining-night.jpg": "resort in bhurban murree",
+  "/assets/gallery-bbq.jpg": "bhurban murree hotels",
   "/assets/gallery-sunlight.jpg": "best hotels in bhurban murree",
-  "/assets/gallery-reflection.jpg": "bhurban best hotels",
+  "/assets/gallery-reflection.jpg": "bhurban murree best hotels",
 };
 
 /** Hero alt covers keywords 9–10 (not visible on page). */
 const HERO_IMAGE_ALT = "villas in bhurban murree, hotels in bhurban pakistan";
 
 function galleryImageAlt(src: string): string {
-  return GALLERY_IMAGE_ALTS[src as (typeof RESORT_GALLERY_IMAGES)[number]] ?? "hotels in bhurban";
+  return GALLERY_IMAGE_ALTS[src as (typeof RESORT_GALLERY_IMAGES)[number]] ?? "hotels in bhurban murree";
 }
 
 /* ----------------------------- Hero Slider ----------------------------- */
@@ -241,12 +241,8 @@ function HeroSlider() {
         <div className="w-full shrink-0 lg:w-1/2">
           <Reveal>
             <h1 className="text-3xl font-bold leading-snug sm:text-4xl md:text-5xl lg:text-6xl">
-              <span className="bh-text-gold">Hotels in Bhurban</span>
-              <span className="text-white"> | Himalaya Premium Villas</span>
-              <br />
-              <span className="mt-2 block text-2xl font-semibold text-white/95 sm:text-3xl md:text-4xl lg:text-5xl">
-                — Private Luxury Hotel Bhurban Murree
-              </span>
+              <span className="bh-text-gold">Hotels in Bhurban Murree</span>
+              <span className="text-white"> | Himalaya Premium Villas and Resort</span>
             </h1>
           </Reveal>
           <Reveal delay={300}>
@@ -256,7 +252,7 @@ function HeroSlider() {
           </Reveal>
           <Reveal delay={450}>
             <p className="mt-6 max-w-2xl text-lg md:text-xl" style={{ color: "hsl(40 38% 97% / .85)" }}>
-              The <strong>best hotel in Bhurban Murree</strong> for your group — a <strong>luxury bhurban hotel</strong> estate where you book the full property. Forget crowded lobbies; every detail here is designed around you alone.
+              The <strong>best hotel in Bhurban Murree</strong> for your group — a <strong>luxury bhurban murree hotel</strong> estate where you book the full property. Forget crowded lobbies; every detail here is designed around you alone.
             </p>
           </Reveal>
 
@@ -283,7 +279,7 @@ function HeroSlider() {
         <div className="mt-2 w-full shrink-0 lg:mt-0 lg:w-1/3">
           <Reveal delay={800}>
             <div className="max-h-none overflow-visible bg-white/95 backdrop-blur-lg rounded-lg shadow-lg px-2 py-3 lg:mt-2 lg:max-h-[calc(100vh-5rem)] lg:overflow-y-auto lg:px-6 lg:py-6">
-              <h3 className="mb-3 text-lg font-bold text-gray-800 lg:mb-6 lg:text-2xl">Send Us a Message & Book Your Bhurban Hotel</h3>
+              <h3 className="mb-3 text-lg font-bold text-gray-800 lg:mb-6 lg:text-2xl">Send Us a Message & Book Your Bhurban Murree Hotel</h3>
               {submitStatus === "success" ? (
                 <div className="rounded-lg border border-emerald-200 bg-emerald-50 p-4 text-center text-sm text-emerald-800 lg:p-6 lg:text-base">
                   <p className="font-semibold">Thank you — inquiry received!</p>
@@ -420,7 +416,7 @@ function HeroSlider() {
                   disabled={submitting}
                   className="w-full rounded-lg bg-emerald-600 px-4 py-2.5 text-sm font-semibold text-white shadow-md transition-transform hover:scale-105 disabled:cursor-not-allowed disabled:opacity-60 lg:py-4 lg:text-lg"
                 >
-                  {submitting ? "Sending…" : "Book Your Luxury Stay in Bhurban"}
+                  {submitting ? "Sending…" : "Book Your Luxury Stay in Bhurban Murree"}
                 </button>
               </form>
               )}
@@ -482,12 +478,12 @@ function Introduction() {
           <div className="max-w-4xl mx-auto">
             <Reveal>
               <h2 className="text-4xl font-bold md:text-5xl mb-6 text-center" style={{ color: "hsl(165 60% 18%)" }}>
-                Looking for the Best Hotel in Bhurban? <span className="bh-text-emerald">Bhurban Hotels Don&apos;t Compare to This</span>
+                Looking for the Best Hotel in Bhurban Murree? <span className="bh-text-emerald">Bhurban Murree Hotels Don&apos;t Compare to This</span>
               </h2>
             </Reveal>
             <Reveal delay={100}>
               <p className="text-center text-lg leading-relaxed bh-muted max-w-3xl mx-auto">
-                Travellers comparing <strong>hotels in Bhurban</strong> and <strong>bhurban hotels</strong> quickly discover that a private estate delivers what shared properties cannot — complete privacy, mountain views on every terrace, and service built around your group alone.
+                Travellers comparing <strong>hotels in Bhurban Murree</strong> and <strong>bhurban murree hotels</strong> quickly discover that a private estate delivers what shared properties cannot — complete privacy, mountain views on every terrace, and service built around your group alone.
               </p>
             </Reveal>
           </div>
@@ -519,7 +515,7 @@ function Amenities() {
       <Container>
         <Reveal>
           <p className="mb-8 text-center text-base bh-muted max-w-3xl mx-auto">
-            Whether you are weighing a chain <strong>resort in Bhurban</strong> or a private stay, these are the amenities guests expect from a top <strong>bhurban hotel murree</strong> experience — delivered here as standard across the entire estate.
+            Whether you are weighing a chain <strong>resort in Bhurban Murree</strong> or a private stay, these are the amenities guests expect from a top <strong>bhurban hotel murree</strong> experience — delivered here as standard across the entire estate.
           </p>
         </Reveal>
         <div className="mt-8 grid grid-cols-1 gap-3 sm:grid-cols-2 sm:gap-4 md:grid-cols-3 lg:grid-cols-4">
@@ -552,22 +548,22 @@ function WhyStandApart() {
     { 
       icon: Mountain, 
       title: "Panoramic Himalayan Views", 
-      desc: "Every window, terrace, and outdoor space at Himalaya Premium Villas has been positioned to frame the most spectacular Himalayan vistas. Wake up every morning to a view that reminds you why you came to Bhurban in the first place."
+      desc: "Every window, terrace, and outdoor space at Himalaya Premium Villas and Resort has been positioned to frame the most spectacular Himalayan vistas. Wake up every morning to a view that reminds you why you came to Bhurban Murree in the first place."
     },
     { 
       icon: Utensils, 
       title: "Curated In-Villa Dining", 
-      desc: "Forget fixed menus and restaurant queues. Dining at Himalaya Premium Villas is a bespoke experience — from intimate candlelit in-villa meals to open-air barbecue evenings under the mountain sky, every meal is crafted around your preferences and schedule."
+      desc: "Forget fixed menus and restaurant queues. Dining at Himalaya Premium Villas and Resort is a bespoke experience — from intimate candlelit in-villa meals to open-air barbecue evenings under the mountain sky, every meal is crafted around your preferences and schedule."
     },
     { 
       icon: Heart, 
       title: "Destination Weddings & Corporate Retreats", 
-      desc: "Dreaming of a royal destination wedding in Bhurban? Planning an executive retreat away from the city? Himalaya Premium Villas provides a breathtaking backdrop, world-class event infrastructure, and a dedicated team committed to making every occasion flawless and unforgettable."
+      desc: "Dreaming of a royal destination wedding in Bhurban Murree? Planning an executive retreat away from the city? Himalaya Premium Villas and Resort provides a breathtaking backdrop, world-class event infrastructure, and a dedicated team committed to making every occasion flawless and unforgettable."
     },
     { 
       icon: Sparkles, 
       title: "Absolute Privacy, Always", 
-      desc: "Privacy is not an upgrade at Himalaya Premium Villas — it is the foundation. No lobbies. No shared pools. No random guests wandering past. From arrival to departure, the entire estate belongs to you and those you choose to bring."
+      desc: "Privacy is not an upgrade at Himalaya Premium Villas and Resort — it is the foundation. No lobbies. No shared pools. No random guests wandering past. From arrival to departure, the entire estate belongs to you and those you choose to bring."
     },
     { 
       icon: Clock, 
@@ -581,8 +577,8 @@ function WhyStandApart() {
       <Container>
         <SectionHeader 
           kicker="What Makes Us Different" 
-          title={<>Why Bhurban Murree Is Pakistan&apos;s <span className="bh-text-emerald">Premier Mountain Destination</span></>}
-          sub="Among the best hotels in Bhurban Murree travellers research, Himalaya Premium Villas leads with exclusive full-estate stays — the entire property is yours, with hotel-grade service and villa-level privacy." 
+          title={<>What Makes the Best Hotels in Bhurban Murree <span className="bh-text-emerald">Truly Different</span></>}
+          sub="Among the best hotels in Bhurban Murree travellers research, Himalaya Premium Villas and Resort leads with exclusive full-estate stays — the entire property is yours, with hotel-grade service and villa-level privacy." 
         />
         <div className="grid gap-8 md:grid-cols-2 lg:grid-cols-3">
           {features.map((feature, k) => (
@@ -644,8 +640,8 @@ function IdealFor() {
         <Container>
           <SectionHeader 
             kicker="Perfect For" 
-            title={<>Who Is Himalaya Premium Villas <span className="bh-text-emerald">Perfect For?</span></>}
-            sub="Himalaya Premium Villas is crafted for guests who value quality over quantity — those who know the difference between a stay and an experience." 
+            title={<>Who Is Himalaya Premium Villas and Resort <span className="bh-text-emerald">Perfect For?</span></>}
+            sub="Himalaya Premium Villas and Resort is crafted for guests who value quality over quantity — those who know the difference between a stay and an experience." 
           />
           <div className="grid gap-8 md:grid-cols-2 lg:grid-cols-3">
             {guestTypes.map((type, k) => (
@@ -686,7 +682,7 @@ function TheEstate() {
         <Container>
           <SectionHeader 
             kicker="Estate Features" 
-            title={<>Inside <span className="bh-text-gold">Himalaya Premium Villas</span></>}
+            title={<>Inside <span className="bh-text-gold">Himalaya Premium Villas and Resort</span></>}
             sub="Every detail exceeds what guests expect from typical bhurban hotels and chain stays — a private estate where the mountain, not the lobby, defines your experience." 
             light 
           />
@@ -728,7 +724,7 @@ function AnimatedGallery() {
         <SectionHeader 
           kicker="Visual Journey" 
           title={<>Moments at <span className="bh-text-emerald">Himalaya Villas</span></>}
-          sub="See why families searching for the best hotels in Bhurban Murree choose a private estate over crowded lobbies — every corner of Himalaya Premium Villas is yours to explore." 
+          sub="See why families searching for the best hotels in Bhurban Murree choose a private estate over crowded lobbies — every corner of Himalaya Premium Villas and Resort is yours to explore." 
         />
       </Container>
       
@@ -821,8 +817,8 @@ function BhurbanDestination() {
         <Container>
           <SectionHeader 
             kicker="Location" 
-            title={<>Why Bhurban Is Pakistan's <span className="bh-text-emerald">Premier Mountain Destination</span></>}
-            sub="Bhurban sits among the most sought-after hotels in Bhurban Pakistan destinations — pine forest, cool air, and Himalayan views year-round. Whatever the season, Himalaya Premium Villas places you at the centre of it, minutes above Murree town." 
+            title={<>Experience Bhurban Murree Through <span className="bh-text-emerald">Every Season</span></>}
+            sub="Bhurban Murree sits among the most sought-after hotels in Bhurban Murree Pakistan destinations — pine forest, cool air, and Himalayan views year-round. Whatever the season, Himalaya Premium Villas and Resort places you at the centre of it, minutes above Murree town." 
           />
           <div className="grid gap-8 md:grid-cols-2 lg:grid-cols-4">
             {seasons.map((season, k) => (
@@ -855,12 +851,12 @@ function FinalCTA() {
           <div className="text-center">
             <Reveal>
               <h2 className="text-4xl font-bold md:text-6xl">
-                Ready to Experience the <span className="bh-text-gold">Finest Stay in Bhurban?</span>
+                Ready to Experience the <span className="bh-text-gold">Finest Stay in Bhurban Murree?</span>
               </h2>
             </Reveal>
             <Reveal delay={150}>
               <p className="mx-auto mt-5 max-w-3xl text-lg" style={{ color: "hsl(40 38% 97% / .85)" }}>
-                Compared with typical bhurban best hotels and shared resorts, Himalaya Premium Villas is a fully private luxury estate — every detail designed around your group. Limited monthly bookings; secure your exclusive stay before peak season fills.
+                Compared with typical bhurban murree best hotels and shared resorts, Himalaya Premium Villas and Resort is a fully private luxury estate — every detail designed around your group. Limited monthly bookings; secure your exclusive stay before peak season fills.
               </p>
             </Reveal>
             <Reveal delay={300}>
@@ -1081,7 +1077,7 @@ function PlanYourStaySection() {
             kicker="Plan your stay"
             title={
               <>
-                Everything before you <span className="bh-text-emerald">arrive in Bhurban</span>
+                Everything before you <span className="bh-text-emerald">arrive in Bhurban Murree</span>
               </>
             }
             sub="Check-in, capacity, amenities, booking peace of mind — plus directions from Islamabad and nearby Murree spots."
@@ -1154,7 +1150,7 @@ function PlanYourStaySection() {
                     </h3>
                   </div>
                   <p className="mt-2 text-sm bh-muted">
-                    From Islamabad, take the Murree Expressway toward Bhurban. Open Google Maps for live traffic.
+                    From Islamabad, take the Murree Expressway toward Bhurban Murree. Open Google Maps for live traffic.
                   </p>
                   <ul className="mt-5 space-y-3">
                     {DIRECTION_ROUTES.map((route, k) => (
@@ -1259,14 +1255,14 @@ function PlanYourStaySection() {
 /* ----------------------------- Keyword guide (distributed SEO) ----------------------------- */
 const KEYWORD_GUIDE_TOPICS = [
   {
-    phrase: "hotels in bhurban",
+    phrase: "hotels in bhurban murree",
     copy:
-      "Most hotels in bhurban sell rooms; few sell exclusivity. When you compare hotels in bhurban online, filter for entire-property bookings — that is where Himalaya Premium Villas sits.",
+      "Most hotels in bhurban murree sell rooms; few sell exclusivity. When you compare hotels in bhurban murree online, filter for entire-property bookings — that is where Himalaya Premium Villas and Resort sits.",
   },
   {
-    phrase: "best hotel in bhurban",
+    phrase: "best hotel in bhurban murree",
     copy:
-      "The best hotel in bhurban for families is often a private estate, not a tower block. Guests who want the best hotel in bhurban experience book direct for the full villa and in-villa dining.",
+      "The best hotel in bhurban murree for families is often a private estate, not a tower block. Guests who want the best hotel in bhurban murree experience book direct for the full villa and in-villa dining.",
   },
   {
     phrase: "luxury villa bhurban murree",
@@ -1279,14 +1275,14 @@ const KEYWORD_GUIDE_TOPICS = [
       "A bhurban hotel murree stay should mean mountain air and privacy. This bhurban hotel murree estate places you in pine forest with terraces facing the ridge — not a town-view room.",
   },
   {
-    phrase: "resort in bhurban",
+    phrase: "resort in bhurban murree",
     copy:
-      "Any resort in bhurban on a shared campus still has other guests at breakfast. This resort in bhurban model reserves the estate for your party only, with meals served in-villa.",
+      "Any resort in bhurban murree on a shared campus still has other guests at breakfast. This resort in bhurban murree model reserves the estate for your party only, with meals served in-villa.",
   },
   {
-    phrase: "bhurban hotels",
+    phrase: "bhurban murree hotels",
     copy:
-      "Standard bhurban hotels charge per room and share facilities. Among bhurban hotels, private-villa estates give groups one bill, one space, and one concierge for the whole stay.",
+      "Standard bhurban murree hotels charge per room and share facilities. Among bhurban murree hotels, private-villa estates give groups one bill, one space, and one concierge for the whole stay.",
   },
   {
     phrase: "best hotels in bhurban murree",
@@ -1294,9 +1290,9 @@ const KEYWORD_GUIDE_TOPICS = [
       "Lists of the best hotels in bhurban murree rarely mention full-property hire. The best hotels in bhurban murree for space-seeking families are private villas with staff included.",
   },
   {
-    phrase: "bhurban best hotels",
+    phrase: "bhurban murree best hotels",
     copy:
-      "Travel blogs ranking bhurban best hotels focus on star ratings. True bhurban best hotels for privacy are estates where your group alone occupies every room and terrace.",
+      "Travel blogs ranking bhurban murree best hotels focus on star ratings. True bhurban murree best hotels for privacy are estates where your group alone occupies every room and terrace.",
   },
   {
     phrase: "villas in bhurban murree",
@@ -1311,13 +1307,13 @@ const KEYWORD_GUIDE_TOPICS = [
 ] as const;
 
 const CTA_KEYWORD_SNIPPETS = [
-  "Comparing the best hotel in Bhurban with bhurban hotels? Book the estate direct on WhatsApp.",
-  "Need a bhurban hotel murree stay with full privacy? Skip shared resort in Bhurban lobbies — reserve the villa.",
-  "Comparing the best hotels in Bhurban Murree with bhurban hotels? See why groups choose the private estate.",
-  "Tired of bhurban best hotels with crowded dining? Entire property in Bhurban Murree is yours.",
+  "Comparing the best hotel in Bhurban Murree with bhurban murree hotels? Book the estate direct on WhatsApp.",
+  "Need a bhurban hotel murree stay with full privacy? Skip shared resort in Bhurban Murree lobbies — reserve the villa.",
+  "Comparing the best hotels in Bhurban Murree with bhurban murree hotels? See why groups choose the private estate.",
+  "Tired of bhurban murree best hotels with crowded dining? Entire property in Bhurban Murree is yours.",
   "Looking at villas in Bhurban Murree or hotels in bhurban pakistan listings? One booking covers everyone.",
-  "Still browsing hotels in bhurban? The best hotel in bhurban for groups is often a private villa estate.",
-  "Weighing a resort in Bhurban against bhurban hotels? Get in-villa dining and zero shared corridors.",
+  "Still browsing hotels in bhurban murree? The best hotel in bhurban murree for groups is often a private villa estate.",
+  "Weighing a resort in Bhurban Murree against bhurban murree hotels? Get in-villa dining and zero shared corridors.",
   "Planning villas in bhurban murree or hotels in bhurban pakistan? WhatsApp us for dates and a custom quote.",
 ] as const;
 
@@ -1327,7 +1323,7 @@ function BhurbanKeywordGuide() {
       <Container>
         <SectionHeader
           kicker="Stay planning"
-          title={<>Your Bhurban accommodation <span className="bh-text-emerald">questions answered</span></>}
+          title={<>Your Bhurban Murree accommodation <span className="bh-text-emerald">questions answered</span></>}
           sub="Straight answers for the searches travellers run before they book — hotels, resorts, and private villas in the Murree Hills."
         />
         <div className="grid gap-6 md:grid-cols-2">
@@ -1393,13 +1389,13 @@ function Footer() {
       <Container>
         <div className="grid gap-10 py-16 md:grid-cols-4">
           <div>
-            <h3 className="bh-text-gold text-2xl font-bold">Himalaya Premium Villas</h3>
+            <h3 className="bh-text-gold text-2xl font-bold">Himalaya Premium Villas and Resort</h3>
             <p className="mt-3 text-sm" style={{ color: "hsl(40 38% 97% / .7)" }}>
-              Not just a stay — a private luxury estate nestled in the heart of the Himalayan foothills. Experience Bhurban's most exclusive retreat.
+              Not just a stay — a private luxury estate nestled in the heart of the Himalayan foothills. Experience Bhurban Murree&apos;s most exclusive retreat.
             </p>
           </div>
           {[
-            { h: "Quick Links", items: ["About Himalaya Premium Villas", "Private Estate Experience", "Destination Weddings", "Corporate Retreats"] },
+            { h: "Quick Links", items: ["About Himalaya Premium Villas and Resort", "Private Estate Experience", "Destination Weddings", "Corporate Retreats"] },
             { h: "Support", items: ["Reserve Your Estate", "Contact Concierge", "Travel Guide", "Privacy Policy"] },
           ].map((c) => (
             <div key={c.h}>
@@ -1441,7 +1437,7 @@ function Footer() {
           </div>
         </div>
         <div className="py-6 text-center text-sm" style={{ borderTop: "1px solid hsl(40 38% 97% / .15)", color: "hsl(40 38% 97% / .6)" }}>
-          &copy; {new Date().getFullYear()} Himalaya Premium Villas. All rights reserved. | Private Luxury Estate in Bhurban | Hotels in Bhurban
+          &copy; {new Date().getFullYear()} Himalaya Premium Villas and Resort. All rights reserved. | Private Luxury Estate in Bhurban Murree | Hotels in Bhurban Murree
         </div>
       </Container>
     </footer>
@@ -1461,7 +1457,7 @@ function SectionCTA({ variant = 0 }: { variant?: number }) {
             
             <div className="relative z-10 flex flex-col items-center justify-between gap-6 p-6 md:flex-row md:p-10 lg:p-12">
               <div className="text-center md:text-left max-w-xl">
-                <h3 className="mb-2 text-2xl font-bold md:text-3xl">Ready to Book the Best Private Villa hotel in Bhurban?</h3>
+                <h3 className="mb-2 text-2xl font-bold md:text-3xl">Ready to Book the Best Private Villa Hotel in Bhurban Murree?</h3>
                 <p className="text-base" style={{ color: "hsl(40 38% 97% / 0.85)" }}>
                   {snippet}
                 </p>

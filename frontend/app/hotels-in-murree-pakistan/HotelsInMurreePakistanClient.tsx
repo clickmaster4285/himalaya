@@ -5,37 +5,17 @@ import { ArrowRight, MessageCircle } from "lucide-react";
 import { buildBhurbanInquiryWhatsAppUrl } from "@/lib/whatsapp";
 
 const HERO_IMAGE = "/assets/gallery-exterior.jpg";
+const INQUIRY_SOURCE = "hotels-in-murree-pakistan-hero";
 
 const EMPTY_INQUIRY_FORM = {
-  familyName: "",
+  fullName: "",
   email: "",
   phone: "",
   checkIn: "",
   checkOut: "",
-  guests: "5-8",
+  guests: "2",
   message: "",
 };
-
-function useScrollY() {
-  const [y, setY] = useState(0);
-  useEffect(() => {
-    if (typeof window !== "undefined" && window.innerWidth <= 768) return;
-    let ticking = false;
-    const onScroll = () => {
-      if (!ticking) {
-        window.requestAnimationFrame(() => {
-          setY(window.scrollY);
-          ticking = false;
-        });
-        ticking = true;
-      }
-    };
-    window.addEventListener("scroll", onScroll, { passive: true });
-    onScroll();
-    return () => window.removeEventListener("scroll", onScroll);
-  }, []);
-  return y;
-}
 
 export function Reveal({ children, delay = 0, className = "" }: { children: ReactNode; delay?: number; className?: string }) {
   const ref = useRef<HTMLDivElement>(null);
@@ -50,7 +30,7 @@ export function Reveal({ children, delay = 0, className = "" }: { children: Reac
     return () => io.disconnect();
   }, []);
   return (
-    <div ref={ref} className={`family-murree-reveal ${className}`} style={{ transitionDelay: `${delay}ms` }}>
+    <div ref={ref} className={`murree-hotels-reveal ${className}`} style={{ transitionDelay: `${delay}ms` }}>
       {children}
     </div>
   );
@@ -78,15 +58,15 @@ function HeroBookingForm({
   onReset: () => void;
 }) {
   const whatsappFallbackUrl = buildBhurbanInquiryWhatsAppUrl({
-    fullName: form.familyName,
+    fullName: form.fullName,
     email: form.email,
     phone: form.phone,
     checkInDate: form.checkIn,
     checkOutDate: form.checkOut,
     numberOfGuests: form.guests,
     message: form.message
-      ? `Family estate inquiry (Murree page). Special requests: ${form.message}`
-      : "Family estate inquiry — Himalaya Villas Murree",
+      ? `Hotels in Murree Pakistan inquiry. Message: ${form.message}`
+      : "Hotels in Murree Pakistan — Himalaya Villas inquiry",
   });
 
   return (
@@ -110,16 +90,16 @@ function HeroBookingForm({
       ) : (
         <form onSubmit={onSubmit} noValidate={false}>
           <div className="family-murree-hero__field">
-            <label className="family-murree-hero__label" htmlFor="hero-family-name">
-              Family Name *
+            <label className="family-murree-hero__label" htmlFor="hero-full-name">
+              Full Name *
             </label>
             <input
-              id="hero-family-name"
-              name="familyName"
-              value={form.familyName}
+              id="hero-full-name"
+              name="fullName"
+              value={form.fullName}
               onChange={onChange}
               required
-              placeholder="Khan Family"
+              placeholder="Your full name"
               className="family-murree-hero__input"
             />
           </div>
@@ -189,34 +169,35 @@ function HeroBookingForm({
           </div>
 
           <div className="family-murree-hero__field">
-            <label className="family-murree-hero__label" htmlFor="hero-family-size">
-              Family Size
+            <label className="family-murree-hero__label" htmlFor="hero-guests">
+              Number of Guests
             </label>
             <select
-              id="hero-family-size"
+              id="hero-guests"
               name="guests"
               value={form.guests}
               onChange={onChange}
               className="family-murree-hero__select"
             >
-              <option value="2-4">2–4 People</option>
-              <option value="5-8">5–8 People</option>
-              <option value="9-12">9–12 People</option>
-              <option value="12+">12+ People</option>
+              <option value="1">1 Guest</option>
+              <option value="2">2 Guests</option>
+              <option value="3">3 Guests</option>
+              <option value="4">4 Guests</option>
+              <option value="5+">5+ Guests</option>
             </select>
           </div>
 
           <div className="family-murree-hero__field">
-            <label className="family-murree-hero__label" htmlFor="hero-requests">
-              Special Requests
+            <label className="family-murree-hero__label" htmlFor="hero-message">
+              Message
             </label>
             <textarea
-              id="hero-requests"
+              id="hero-message"
               name="message"
               value={form.message}
               onChange={onChange}
               rows={3}
-              placeholder="e.g. Baby cot, BBQ evening, birthday setup..."
+              placeholder="Tell us about your requirements..."
               className="family-murree-hero__textarea"
             />
           </div>
@@ -252,7 +233,7 @@ function HeroBookingForm({
   );
 }
 
-export function HeroSlider({ whatsappUrl }: { whatsappUrl: string }) {
+export function MurreePakistanHero({ whatsappUrl }: { whatsappUrl: string }) {
   const [form, setForm] = useState(EMPTY_INQUIRY_FORM);
   const [submitting, setSubmitting] = useState(false);
   const [submitStatus, setSubmitStatus] = useState<"idle" | "success" | "error">("idle");
@@ -272,21 +253,21 @@ export function HeroSlider({ whatsappUrl }: { whatsappUrl: string }) {
     setSuccessNote("");
 
     const inquiryMessage = form.message.trim()
-      ? `Family estate inquiry (Murree). Special requests: ${form.message.trim()}`
-      : "Family estate inquiry — Himalaya Villas Murree";
+      ? `Hotels in Murree Pakistan inquiry. ${form.message.trim()}`
+      : "Hotels in Murree Pakistan — Himalaya Villas inquiry";
 
     const res = await fetch("/api/bhurban-inquiry", {
       method: "POST",
       headers: { "Content-Type": "application/json" },
       body: JSON.stringify({
-        fullName: form.familyName,
+        fullName: form.fullName,
         email: form.email,
         phone: form.phone,
         checkInDate: form.checkIn,
         checkOutDate: form.checkOut,
         numberOfGuests: form.guests,
         message: inquiryMessage,
-        source: "family-hotels-in-murree-hero",
+        source: INQUIRY_SOURCE,
       }),
     });
 
@@ -358,34 +339,34 @@ export function HeroSlider({ whatsappUrl }: { whatsappUrl: string }) {
         <div className="family-murree-hero__grid">
           <div className="family-murree-hero__left">
             <p className="family-murree-hero__kicker mb-4 text-[11px] font-semibold uppercase tracking-[0.28em]">
-              A Private Bhurban Estate
+              Murree · Pakistan · Queen of Hills
             </p>
 
             <h1 className="family-murree-hero__headline max-w-[520px] font-serif text-[1.85rem] font-semibold leading-[1.14] sm:text-[2.15rem] lg:text-[2.45rem] xl:text-[2.65rem]">
-              Best Family Hotel in Murree —{" "}
+              Hotels in Murree Pakistan —{" "}
               <span className="family-murree-text-accent italic font-normal">
-                A Private Estate That Belongs Only to You
+                Discover Himalaya Premium Villas
               </span>
             </h1>
 
             <p className="family-murree-hero__sub mt-5 max-w-[440px] text-[15px] leading-[1.65]">
-              Tired of crowded hotels in Murree? Himalaya Villas is a fully private luxury estate in Bhurban — reserved
-              exclusively for one family at a time. No shared spaces. No strangers. Just your family and the Himalayas.
+              Pakistan&apos;s most exclusive private luxury estate — perched high in the Murree Hills, crafted for
+              those who demand more than a hotel can ever offer. Panoramic Himalayan views. Absolute privacy.
             </p>
 
             <div className="mt-8 flex flex-col gap-3 sm:flex-row sm:flex-wrap">
               <a href={whatsappUrl} target="_blank" rel="noopener noreferrer" className="family-murree-hero__cta-primary">
                 <span className="text-[9px] leading-none">●</span>
-                Book Family Stay in Murree — WhatsApp
+                Reserve Your Private Estate — WhatsApp
               </a>
-              <a href="tel:+923045679000" className="family-murree-hero__cta-secondary">
-                Call to Book Family Villa
+              <a href="#estate" className="family-murree-hero__cta-secondary">
+                Explore the Villas
               </a>
             </div>
           </div>
 
           <div className="family-murree-hero__right">
-            <img src={HERO_IMAGE} alt="Himalaya Villas private estate in Bhurban pine forest" />
+            <img src={HERO_IMAGE} alt="Himalaya Villas private estate in Bhurban, Murree Hills" />
           </div>
         </div>
 
@@ -408,21 +389,5 @@ export function HeroSlider({ whatsappUrl }: { whatsappUrl: string }) {
         </div>
       </div>
     </section>
-  );
-}
-
-export function ParallaxBg({ src, speed = 0.3, opacity = 0.15 }: { src: string; speed?: number; opacity?: number }) {
-  const y = useScrollY();
-  return (
-    <div
-      aria-hidden
-      className="pointer-events-none absolute inset-0 bg-cover bg-center"
-      style={{
-        backgroundImage: `url(${src})`,
-        transform: y > 0 ? `translateY(${y * speed}px)` : undefined,
-        opacity,
-        zIndex: 0,
-      }}
-    />
   );
 }

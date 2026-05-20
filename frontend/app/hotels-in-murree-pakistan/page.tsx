@@ -3,12 +3,14 @@
 import { useEffect, useRef, useState, ReactNode } from "react";
 import {
   Mountain, Sparkles, Home, Star, Utensils, Briefcase, Clock,
-  Phone, Mail, MapPin, ChevronLeft, ChevronRight, Check,
-  Sun, Snowflake, Flower2, Facebook, Twitter, Linkedin, ArrowDown, Wifi,
+  Phone, Mail, MapPin, Check,
+  Sun, Snowflake, Flower2, Facebook, Twitter, Linkedin, Wifi,
   Car, Coffee, Dumbbell, Heart, TreePine, Wind, Cloud, Bed, Bath,
   Tv, Shield, Users, Calendar, Map, MessageCircle
 } from "lucide-react";
 import { buildWhatsAppBookingUrl } from "@/lib/whatsapp";
+import { MURREE_ESTATE_HERO_STYLES } from "@/lib/murree-estate-hero-styles";
+import { MurreePakistanHero } from "./HotelsInMurreePakistanClient";
 
 const MURREE_WHATSAPP_URL = buildWhatsAppBookingUrl(
   "a premium stay at Himalaya Villas in Murree"
@@ -27,7 +29,7 @@ const PAGE_STYLES = `
   --bg:40 38% 97%; --fg:165 35% 12%;
   --card:0 0% 100%; --muted:165 12% 38%;
   --primary:165 60% 18%; --primary-fg:40 38% 97%; --primary-glow:165 55% 32%;
-  --accent:38 88% 55%; --accent-glow:42 95% 65%;
+  --accent:162 34% 37%; --accent-glow:162 38% 48%;
   --border:165 15% 86%;
   font-family:'Inter',system-ui,sans-serif;
   color:hsl(var(--fg));
@@ -61,6 +63,7 @@ const PAGE_STYLES = `
 .murree-hotels-scroll-ind{animation:murree-hotelsScrollDown 1.5s ease-in-out infinite;}
 
 html{scroll-behavior:smooth;}
+${MURREE_ESTATE_HERO_STYLES}
 `;
 
 /* ----------------------------- Hooks ----------------------------- */
@@ -116,8 +119,6 @@ const RESORT_GALLERY_IMAGES = [
   "/assets/gallery-reflection.jpg",
 ] as const;
 
-const HERO_SLIDES = [...RESORT_GALLERY_IMAGES];
-
 const MURREE_HOTELS = [
   { 
     name: "Himalaya Villas Resort", 
@@ -164,211 +165,6 @@ const ROOM_TYPES = [
   { icon: Users, title: "Family Rooms", desc: "Large rooms for families and groups", price: "₨20,000-50,000" },
 ];
 
-/* ----------------------------- Hero Slider ----------------------------- */
-function HeroSlider() {
-  const [i, setI] = useState(0);
-  const [paused, setPaused] = useState(false);
-  const scrollY = useScrollY();
-
-  useEffect(() => {
-    if (paused) return;
-    const id = setInterval(() => setI((p) => (p + 1) % HERO_SLIDES.length), 5000);
-    return () => clearInterval(id);
-  }, [paused]);
-
-  const go = (d: number) => setI((p) => (p + d + HERO_SLIDES.length) % HERO_SLIDES.length);
-
-  return (
-    <section
-      className="relative min-h-[100dvh] w-full lg:h-screen lg:overflow-hidden"
-      onMouseEnter={() => setPaused(true)}
-      onMouseLeave={() => setPaused(false)}
-    >
-      {HERO_SLIDES.map((src, idx) => (
-        <div
-          key={idx}
-          className={`absolute inset-0 transition-opacity duration-1000 ${idx === i ? "opacity-100" : "opacity-0"}`}
-          style={scrollY > 0 ? { transform: `translateY(${scrollY * 0.4}px)` } : undefined}
-        >
-          <img src={src} alt="Himalaya Villas Resort, Murree Bhurban" className={`h-full w-full object-cover ${idx === i ? "murree-hotels-ken" : ""}`} />
-          <div className="absolute inset-0 murree-hotels-grad-hero" />
-        </div>
-      ))}
-
-      {/* Floating background elements */}
-      <div className="pointer-events-none absolute inset-0 overflow-hidden hidden md:block">
-        {[...Array(6)].map((_, k) => (
-          <div
-            key={k}
-            className="absolute rounded-3xl murree-hotels-float"
-            style={{
-              width: 120 + k * 30, height: 120 + k * 30,
-              top: `${10 + k * 12}%`, left: `${5 + k * 14}%`,
-              background: "hsl(38 88% 55% / 0.06)",
-              border: "1px solid hsl(38 88% 55% / 0.2)",
-              backdropFilter: "blur(4px)",
-              animationDelay: `${k * 0.6}s`,
-            }}
-          />
-        ))}
-      </div>
-
-      {/* Content */}
-      <div className="relative z-10 flex w-full flex-col gap-8 px-2 py-8 pb-24 lg:h-full lg:flex-row lg:items-center lg:justify-between lg:gap-8 lg:px-6 lg:pb-10 lg:py-10" style={{ color: "hsl(40 38% 97%)" }}>
-        <div className="w-full shrink-0 lg:w-1/2">
-          <Reveal>
-            <span className="mb-4 inline-block rounded-full px-5 py-2 text-sm font-medium uppercase tracking-widest backdrop-blur-md"
-              style={{ border: "1px solid hsl(38 88% 55% / .4)", background: "hsl(38 88% 55% / .1)", color: "hsl(42 95% 65%)" }}>
-              Murree · Pakistan · Queen of Hills
-            </span>
-          </Reveal>
-          <Reveal delay={150}>
-            <h1 className="text-4xl font-bold leading-tight sm:text-5xl md:text-8xl">
-              <span className="murree-hotels-text-gold">Hotels in Murree Pakistan</span> — <span className="text-3xl sm:text-4xl md:text-6xl">Discover Himalaya Premium Villas</span>
-            </h1>
-          </Reveal>
-          <Reveal delay={300}>
-            <p className="mt-4 text-2xl font-light italic md:text-3xl" style={{ color: "hsl(42 95% 75%)" }}>
-              Pakistan's most exclusive private luxury estate — perched high in the Murree Hills, crafted for those who demand more than a hotel can ever offer.
-            </p>
-          </Reveal>
-          <Reveal delay={450}>
-            <p className="mt-4 text-xl font-semibold md:text-2xl" style={{ color: "hsl(42 95% 75%)" }}>
-              Panoramic Himalayan views. Absolute privacy. A stay unlike anything else in Murree.
-            </p>
-          </Reveal>
-
-          <Reveal delay={600}>
-            <div className="mt-10 flex flex-wrap items-center gap-4">
-              <a href="#contact" className="murree-hotels-grad-gold murree-hotels-shadow-gold rounded-full px-8 py-4 text-base font-semibold transition-transform hover:scale-105"
-                style={{ color: "hsl(165 60% 18%)" }}>
-                Reserve Your Private Estate
-              </a>
-              <a href="#estate" className="rounded-full px-8 py-4 text-base font-semibold backdrop-blur-md transition"
-                style={{ border: "2px solid hsl(40 38% 97% / .4)", background: "hsl(40 38% 97% / .1)" }}>
-                Explore the Villas
-              </a>
-            </div>
-          </Reveal>
-        </div>
-        
-        {/* CTA Form — full width on mobile, right column on lg */}
-        <div className="mt-2 w-full shrink-0 lg:mt-0 lg:w-1/3">
-          <Reveal delay={800}>
-            <div className="max-h-none overflow-visible bg-white/95 backdrop-blur-lg rounded-lg shadow-lg px-2 py-3 lg:mt-2 lg:max-h-[calc(100vh-5rem)] lg:overflow-y-auto lg:px-6 lg:py-6">
-              <h3 className="mb-3 text-lg font-bold text-gray-800 lg:mb-6 lg:text-2xl">Send us a Message</h3>
-              <form className="space-y-2.5 lg:space-y-4">
-                <div>
-                  <label htmlFor="fullName" className="block text-gray-700 text-xs font-bold mb-1 lg:text-sm lg:mb-2">Full Name *</label>
-                  <input
-                    type="text"
-                    id="fullName"
-                    placeholder="Your full name"
-                    className="w-full rounded-lg border border-gray-300 px-3 py-2.5 text-sm text-gray-800 placeholder-gray-500 focus:outline-none focus:ring-2 focus:ring-emerald-500 lg:px-4 lg:py-4 lg:text-base"
-                  />
-                </div>
-                <div>
-                  <label htmlFor="email" className="block text-gray-700 text-xs font-bold mb-1 lg:text-sm lg:mb-2">Email *</label>
-                  <input
-                    type="email"
-                    id="email"
-                    placeholder="your.email@example.com"
-                    className="w-full rounded-lg border border-gray-300 px-3 py-2.5 text-sm text-gray-800 placeholder-gray-500 focus:outline-none focus:ring-2 focus:ring-emerald-500 lg:px-4 lg:py-4 lg:text-base"
-                  />
-                </div>
-                <div>
-                  <label htmlFor="phoneNumber" className="block text-gray-700 text-xs font-bold mb-1 lg:text-sm lg:mb-2">Phone Number</label>
-                  <input
-                    type="tel"
-                    id="phoneNumber"
-                    placeholder="+92 300 0000000"
-                    className="w-full rounded-lg border border-gray-300 px-3 py-2.5 text-sm text-gray-800 placeholder-gray-500 focus:outline-none focus:ring-2 focus:ring-emerald-500 lg:px-4 lg:py-4 lg:text-base"
-                  />
-                </div>
-                <div className="grid grid-cols-1 gap-4 sm:grid-cols-2">
-                  <div>
-                    <label htmlFor="checkInDate" className="block text-gray-700 text-xs font-bold mb-1 lg:text-sm lg:mb-2">Check-in Date</label>
-                    <input
-                      type="date"
-                      id="checkInDate"
-                      className="w-full rounded-lg border border-gray-300 px-3 py-2.5 text-sm text-gray-800 focus:outline-none focus:ring-2 focus:ring-emerald-500 lg:px-4 lg:py-4 lg:text-base"
-                    />
-                  </div>
-                  <div>
-                    <label htmlFor="checkOutDate" className="block text-gray-700 text-xs font-bold mb-1 lg:text-sm lg:mb-2">Check-out Date</label>
-                    <input
-                      type="date"
-                      id="checkOutDate"
-                      className="w-full rounded-lg border border-gray-300 px-3 py-2.5 text-sm text-gray-800 focus:outline-none focus:ring-2 focus:ring-emerald-500 lg:px-4 lg:py-4 lg:text-base"
-                    />
-                  </div>
-                </div>
-                <div>
-                  <label htmlFor="numberOfGuests" className="block text-gray-700 text-xs font-bold mb-1 lg:text-sm lg:mb-2">Number of Guests</label>
-                  <select
-                    id="numberOfGuests"
-                    className="w-full rounded-lg border border-gray-300 px-3 py-2.5 text-sm text-gray-800 focus:outline-none focus:ring-2 focus:ring-emerald-500 lg:px-4 lg:py-4 lg:text-base"
-                  >
-                    <option value="1">1 Guest</option>
-                    <option value="2">2 Guests</option>
-                    <option value="3">3 Guests</option>
-                    <option value="4">4 Guests</option>
-                    <option value="5+">5+ Guests</option>
-                  </select>
-                </div>
-                <div>
-                  <label htmlFor="message" className="block text-gray-700 text-xs font-bold mb-1 lg:text-sm lg:mb-2">Message</label>
-                  <textarea
-                    id="message"
-                    rows={3}
-                    placeholder="Tell us about your requirements..."
-                    className="w-full rounded-lg border border-gray-300 px-3 py-2.5 text-sm text-gray-800 placeholder-gray-500 focus:outline-none focus:ring-2 focus:ring-emerald-500 lg:px-4 lg:py-4 lg:text-base"
-                  />
-                </div>
-                <button
-                  type="submit"
-                  className="w-full rounded-lg bg-emerald-600 px-4 py-2.5 text-sm font-semibold text-white shadow-md transition-transform hover:scale-105 lg:py-4 lg:text-lg"
-                >
-                  Send Inquiry
-                </button>
-              </form>
-            </div>
-          </Reveal>
-        </div>
-      </div>
-
-      {/* Arrows */}
-      <button onClick={() => go(-1)} aria-label="Previous slide"
-        className="absolute left-4 top-1/2 z-20 -translate-y-1/2 rounded-full p-3 backdrop-blur-md transition md:left-8"
-        style={{ border: "1px solid hsl(40 38% 97% / .3)", background: "hsl(40 38% 97% / .1)", color: "hsl(40 38% 97%)" }}>
-        <ChevronLeft className="h-6 w-6" />
-      </button>
-      <button onClick={() => go(1)} aria-label="Next slide"
-        className="absolute right-4 top-1/2 z-20 -translate-y-1/2 rounded-full p-3 backdrop-blur-md transition md:right-8"
-        style={{ border: "1px solid hsl(40 38% 97% / .3)", background: "hsl(40 38% 97% / .1)", color: "hsl(40 38% 97%)" }}>
-        <ChevronRight className="h-6 w-6" />
-      </button>
-
-      {/* Dots */}
-      <div className="absolute bottom-24 left-1/2 z-20 flex -translate-x-1/2 gap-2">
-        {HERO_SLIDES.map((_, k) => (
-          <button key={k} onClick={() => setI(k)} aria-label={`Slide ${k + 1}`}
-            className="h-2 rounded-full transition-all"
-            style={{
-              width: k === i ? 40 : 8,
-              background: k === i ? "hsl(38 88% 55%)" : "hsl(40 38% 97% / .4)",
-            }} />
-        ))}
-      </div>
-
-      {/* Scroll indicator */}
-      <div className="absolute bottom-6 left-1/2 z-20 flex -translate-x-1/2 flex-col items-center gap-1" style={{ color: "hsl(40 38% 97% / .7)" }}>
-        <span className="text-xs uppercase tracking-widest">Scroll</span>
-        <ArrowDown className="h-4 w-4 murree-hotels-scroll-ind" />
-      </div>
-    </section>
-  );
-}
 
 /* ----------------------------- Helpers ----------------------------- */
 function Section({ id, children, className = "", style }: { id?: string; children: ReactNode; className?: string; style?: React.CSSProperties }) {
@@ -1259,7 +1055,7 @@ export default function Index() {
     <>
       <style>{PAGE_STYLES}</style>
       <main className="murree-hotels-page">
-        <HeroSlider />
+        <MurreePakistanHero whatsappUrl={MURREE_WHATSAPP_URL} />
         <Introduction />
         <SectionCTA />
         <WhyPerfectForFamilies />

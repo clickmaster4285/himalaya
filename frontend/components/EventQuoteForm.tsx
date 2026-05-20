@@ -3,7 +3,13 @@
 import { useState } from "react";
 import { CheckCircle, AlertCircle } from "lucide-react";
 
-const EventQuoteForm = () => {
+type EventQuoteFormProps = {
+  eventTitle?: string;
+  className?: string;
+  id?: string;
+};
+
+const EventQuoteForm = ({ eventTitle, className = "", id = "inquiry" }: EventQuoteFormProps) => {
   const [formData, setFormData] = useState({
     fullName: '',
     phoneNumber: '',
@@ -96,9 +102,16 @@ const EventQuoteForm = () => {
   };
 
   return (
-    <div id="inquiry" className="w-full max-w-2xl rounded-2xl bg-white p-6 md:p-8 shadow-2xl lg:mr-0">
-      <h2 className="font-display text-2xl text-neutral-900">Get Event Quote</h2>
-      <p className="mt-2 text-sm text-neutral-600">Form ab clear aur visible hai - details share karein, team jaldi contact karegi.</p>
+    <div
+      id={id}
+      className={`w-full max-w-md rounded-2xl bg-white p-6 md:p-8 shadow-2xl ${className}`.trim()}
+    >
+      <h2 className="font-display text-xl md:text-2xl text-neutral-900">Get Event Quote</h2>
+      <p className="mt-2 text-sm text-neutral-600">
+        {eventTitle
+          ? `Plan ${eventTitle} at Himalaya Villas — share details and our team replies within 15 minutes.`
+          : "Share your event details — our team contacts you within 15 minutes."}
+      </p>
 
       <form onSubmit={handleSubmit} className="mt-6 space-y-4">
         {/* Success Message */}

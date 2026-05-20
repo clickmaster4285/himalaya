@@ -11,6 +11,7 @@ import { absoluteUrl } from "@/lib/seo/site-config";
 import EventsHeroSlider from "@/components/EventsHeroSlider";
 import EventQuoteForm from "@/components/EventQuoteForm";
 import { createEventSlug } from "@/lib/slugify";
+import { resolveEventImage } from "@/lib/events/event-images";
 import "./globals.css";
 
 export const dynamic = "force-dynamic";
@@ -26,7 +27,7 @@ export const metadata: Metadata = createPageMetadata({
     "nikah venue Murree",
     "destination events Pakistan",
   ],
-  ogImage: "/assets/event-hero-1.png",
+  ogImage: "/assets/hero-bhurban-static.png",
 });
 
 const highlights = [
@@ -254,7 +255,8 @@ const eventSections = [
       {
         id: 26,
         title: "Guided Trails & Forest Walks",
-        description: "Pine-forest walks in Bhurban Murree Hills — guided routes for couples, families & groups.",
+        description:
+          "Pine-forest walks from the estate — for guests at villas in bhurban murree or anyone comparing bhurban hotels who wants Murree Hills trails without traffic.",
         badge: "Nature",
         slug: "guided-trails-forest-walks",
       },
@@ -268,7 +270,8 @@ const eventSections = [
       {
         id: 28,
         title: "Adventure & Outdoor Activities",
-        description: "Bhurban Murree adventures — hikes, team challenges & safe mountain fun for groups.",
+        description:
+          "Estate adventure in Bhurban Murree — for villas in bhurban murree guests and teams comparing bhurban hotels who want hikes & challenges on-site.",
         badge: "Adventure",
         slug: "adventure-outdoor-activities",
       },
@@ -342,20 +345,20 @@ const packages = [
   {
     title: "Nikah & Wedding Events",
     text: "Traditional and modern wedding ceremonies with full-stage decor and hospitality.",
-    image: "/assets/event-hero-3.png",
+    image: "/assets/nikah-hero-1.png",
     href: "/weddings/nikkah-and-wedding-celebrations-in-the-hills",
   },
   {
     title: "Corporate Retreats",
     text: "Offsite planning for teams with meeting spaces, catering, and stay options.",
-    image: "/assets/event-hero-4.png",
-    href: "/events",
+    image: "/assets/team.webp",
+    href: "/events/corporate-retreat-packages",
   },
   {
     title: "Social Celebrations",
     text: "Birthdays, anniversaries, and family events with curated themes and support.",
-    image: "/assets/event-hero-2.png",
-    href: "/events",
+    image: "/assets/villa-celebration.webp",
+    href: "/events/eid-gatherings-family-reunions",
   },
 ];
 
@@ -389,19 +392,15 @@ export default function EventsPage() {
   <Navbar />
 
   <div className="relative z-10 w-full px-4 md:px-8 lg:px-10 pt-36 pb-14 md:pt-40 md:pb-20">
-    {/* Same max-w-7xl as your card sections */}
-    <div className="max-w-7xl">
-      {/* Full width content after removing form */}
-      <div className="max-w-3xl">
-        
-        {/* Content aligned left */}
-        <div>
+    <div className="max-w-7xl mx-auto">
+      <div className="grid grid-cols-1 lg:grid-cols-2 gap-10 lg:gap-14 items-start lg:items-center">
+        <div className="max-w-xl">
           <p className="inline-flex items-center gap-2 rounded-full border border-white/30 px-4 py-1 text-xs uppercase tracking-[0.2em] text-white/90">
             <Heart className="h-4 w-4" />
             Curated Destination Events
           </p>
 
-          <h1 className="mt-5 font-display text-white text-4xl md:text-6xl leading-tight whitespace-nowrap">
+          <h1 className="mt-5 font-display text-white text-4xl md:text-5xl lg:text-6xl leading-tight">
             Events That Look Premium, Feel Effortless
           </h1>
 
@@ -409,9 +408,9 @@ export default function EventsPage() {
             Plan your wedding, nikah, corporate retreat, or private celebration with end-to-end support in the heart of the Himalayas.
           </p>
 
-          <div className="mt-8 flex gap-3">
+          <div className="mt-8 flex flex-wrap gap-3">
             <a
-              href="#inquiry"
+              href="#hero-inquiry"
               className="rounded-md bg-white px-6 py-3 text-center text-xs font-semibold uppercase tracking-wider text-neutral-900 transition hover:bg-white/90"
             >
               Get Event Quote
@@ -423,6 +422,10 @@ export default function EventsPage() {
               Explore Events
             </a>
           </div>
+        </div>
+
+        <div className="w-full max-w-md mx-auto lg:ml-auto lg:mr-0">
+          <EventQuoteForm id="hero-inquiry" />
         </div>
       </div>
     </div>
@@ -443,7 +446,7 @@ export default function EventsPage() {
         </div>
       </section>
 
-      <section className="py-16 md:py-20 bg-white">
+      <section id="explore" className="py-16 md:py-20 bg-white">
         <div className="mx-auto max-w-7xl px-6">
           <div className="text-center mb-10">
             <h2 className="font-display text-3xl md:text-4xl text-neutral-900">Explore Our Event Categories</h2>
@@ -460,22 +463,33 @@ export default function EventsPage() {
                   <Link
                     key={card.id}
                     href={`/events/${card.slug}`}
-                    className="event-card group rounded-xl border border-neutral-200/90 bg-white p-4 shadow-sm transition duration-300 hover:-translate-y-1.5 hover:border-[#d8c093] hover:shadow-[0_14px_34px_rgba(18,18,18,0.12)]"
+                    className="event-card group overflow-hidden rounded-xl border border-neutral-200/90 bg-white shadow-sm transition duration-300 hover:-translate-y-1.5 hover:border-[#d8c093] hover:shadow-[0_14px_34px_rgba(18,18,18,0.12)]"
                     style={{ animationDelay: `${cardIndex * 70}ms` }}
                   >
-                    <span className="mb-3 inline-block rounded-full border border-[#d6e8d7] bg-gradient-to-r from-[#eef9ef] to-[#def5e1] px-2.5 py-1 text-[10px] font-semibold uppercase tracking-wider text-[#2e7d32] transition group-hover:scale-105">
-                      {card.badge}
-                    </span>
-                    <h4 className="text-sm font-semibold text-neutral-900 leading-snug min-h-[34px] transition-colors duration-300 group-hover:text-[#7a5a1d]">
-                      {card.title}
-                    </h4>
-                    <p className="mt-2 text-[12px] leading-relaxed text-neutral-600 min-h-[52px]">
-                      {card.description}
-                    </p>
-                    <span className="mt-3 inline-flex items-center gap-1 text-[10px] font-semibold uppercase tracking-wider text-[#9a7b3a] transition-all duration-300 group-hover:gap-2 group-hover:text-[#6f531f]">
-                      Learn More
-                      <span aria-hidden="true">→</span>
-                    </span>
+                    <div className="relative h-28 w-full bg-neutral-100">
+                      <Image
+                        src={resolveEventImage(card.slug)}
+                        alt={card.title}
+                        fill
+                        className="object-cover transition duration-300 group-hover:scale-105"
+                        sizes="(max-width: 1024px) 33vw, 16vw"
+                      />
+                    </div>
+                    <div className="p-4">
+                      <span className="mb-3 inline-block rounded-full border border-[#d6e8d7] bg-gradient-to-r from-[#eef9ef] to-[#def5e1] px-2.5 py-1 text-[10px] font-semibold uppercase tracking-wider text-[#2e7d32] transition group-hover:scale-105">
+                        {card.badge}
+                      </span>
+                      <h4 className="text-sm font-semibold text-neutral-900 leading-snug min-h-[34px] transition-colors duration-300 group-hover:text-[#7a5a1d]">
+                        {card.title}
+                      </h4>
+                      <p className="mt-2 text-[12px] leading-relaxed text-neutral-600 min-h-[52px]">
+                        {card.description}
+                      </p>
+                      <span className="mt-3 inline-flex items-center gap-1 text-[10px] font-semibold uppercase tracking-wider text-[#9a7b3a] transition-all duration-300 group-hover:gap-2 group-hover:text-[#6f531f]">
+                        Learn More
+                        <span aria-hidden="true">→</span>
+                      </span>
+                    </div>
                   </Link>
                 ))}
               </div>

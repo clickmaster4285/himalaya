@@ -1,6 +1,10 @@
 "use client";
 
 import React from "react";
+import BookingCtaStrip from "@/components/book-page/BookingCtaStrip";
+import { buildWhatsAppBookingUrl } from "@/lib/whatsapp";
+
+const REVIEWS_WHATSAPP = buildWhatsAppBookingUrl("best hotels in bhurban murree");
 
 export default function BookingReviews() {
   const reviews = [
@@ -40,7 +44,8 @@ export default function BookingReviews() {
             <span className="block italic text-[#c9a55b] font-light mt-1">Booking Bhurban Murree Hotels With Us</span>
           </h2>
           <p className="mt-6 text-[14px] md:text-[15px] text-white/70 leading-relaxed font-light max-w-2xl">
-            Every review below is from a verified guest who stayed at Himalaya Villas. We have not curated these — we have simply earned them through consistent service.
+            Verified guests who chose us over typical bhurban hotels and ranked us among bhurban best hotels for
+            privacy, food, and staff — not because we asked for five stars, but because the stay delivered.
           </p>
         </div>
 
@@ -102,6 +107,22 @@ export default function BookingReviews() {
             </div>
           ))}
         </div>
+
+        <BookingCtaStrip
+          dark
+          className="mt-12"
+          title="Join guests who booked direct"
+          subtitle="See why families rate us alongside the best hotels in bhurban murree — then hold your dates."
+          buttons={[
+            { label: "Book villas in bhurban murree", href: "/book/stay", variant: "gold" },
+            {
+              label: "WhatsApp: hotel in bhurban private stay",
+              href: REVIEWS_WHATSAPP,
+              external: true,
+              variant: "whatsapp",
+            },
+          ]}
+        />
       </div>
     </section>
   );

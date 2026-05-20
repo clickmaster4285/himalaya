@@ -1,6 +1,10 @@
 "use client";
 
 import React from "react";
+import BookingCtaStrip from "@/components/book-page/BookingCtaStrip";
+import { buildWhatsAppBookingUrl } from "@/lib/whatsapp";
+
+const FEATURES_WHATSAPP = buildWhatsAppBookingUrl("bhurban hotels direct booking");
 
 export default function BookingFeatures() {
   const features = [
@@ -39,8 +43,27 @@ export default function BookingFeatures() {
             <span className="block italic text-[#c9a55b] font-light mt-1">Done Right.</span>
           </h2>
           <p className="mt-6 text-[14px] md:text-[15px] text-neutral-600 leading-relaxed font-light max-w-3xl">
-            Booking Bhurban Murree hotels through OTAs costs you more and gives you less. When you book directly with Himalaya Villas, you receive priority treatment, our lowest available rate, and a human reservations team — not an algorithm.
+            Booking bhurban hotels through OTAs often costs more and gives you less control. When you reserve a resort in
+            bhurban style private stay with Himalaya Villas, you get priority treatment, our lowest direct rate, and a
+            human team — not an algorithm. Many guests searching bhurban best hotels choose us for the same reason they
+            skip crowded Murree town hotels: space, privacy, and mountain views without compromise.
           </p>
+          <BookingCtaStrip
+            className="mt-8"
+            buttons={[
+              {
+                label: "Book best hotels in bhurban murree — direct",
+                href: "/book/stay",
+                variant: "dark",
+              },
+              {
+                label: "WhatsApp bhurban hotels availability",
+                href: FEATURES_WHATSAPP,
+                external: true,
+                variant: "whatsapp",
+              },
+            ]}
+          />
         </div>
 
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-0 border border-[#eae3d5] bg-white">

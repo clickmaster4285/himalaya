@@ -8,6 +8,8 @@ import BookingReviews from "@/components/book-page/BookingReviews";
 import BookingAbout from "@/components/book-page/BookingAbout";
 import BookingLocation from "@/components/book-page/BookingLocation";
 import BookingCTA from "@/components/book-page/BookingCTA";
+import BookingFAQ from "@/components/book-page/BookingFAQ";
+import BookingKeywordSections from "@/components/book-page/BookingKeywordSections";
 
 const bookingServiceSchema = {
   "@context": "https://schema.org",
@@ -59,13 +61,30 @@ const faqSchema = {
         "@type": "Answer",
         "text": "We offer flexible cancellation with free cancellation available 7+ days prior to check-in for most bookings."
       }
+    },
+    {
+      "@type": "Question",
+      "name": "How is Himalaya Villas different from other bhurban hotels?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "We offer private villas in bhurban murree with dedicated staff and in-villa dining — more like a resort in bhurban hired for your dates than a single hotel room."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Can I book villas in bhurban murree online?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Yes — use the Book Your Stay page or WhatsApp for instant availability on direct rates, often lower than OTA listings for bhurban hotel murree stays."
+      }
     }
   ]
 };
 
 export const metadata: Metadata = {
   title: "Hotel Booking in Bhurban Murree | Himalaya Villas",
-  description: "Book your luxury hotel in Bhurban Murree at Himalaya Villas. Enjoy guaranteed lowest rates, flexible cancellation, and 5-star mountain luxury.",
+  description:
+    "Book a hotel in Bhurban Murree or private villas in bhurban murree at Himalaya Villas. Compare bhurban hotels, resort in bhurban options, and best hotels in bhurban murree — direct rates and WhatsApp reservations.",
 };
 
 export default function BookNowLandingPage() {
@@ -85,10 +104,12 @@ export default function BookNowLandingPage() {
       <main className="flex-grow">
         <BookingHero />
         <BookingFeatures />
+        <BookingKeywordSections />
         <BookingPackages />
         <BookingReviews />
         <BookingAbout />
         <BookingLocation />
+        <BookingFAQ />
         <BookingCTA />
       </main>
 

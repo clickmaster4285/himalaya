@@ -1,8 +1,9 @@
 'use client';
 
+import Link from "next/link";
 import { useRef } from "react";
 import { motion, useInView } from "framer-motion";
-import { buildWhatsAppBookingUrl } from "@/lib/whatsapp";
+import { buildWhatsAppAvailabilityUrl, buildWhatsAppBookingUrl } from "@/lib/whatsapp";
 
 const ReserveSection = () => {
   const ref = useRef(null);
@@ -35,23 +36,44 @@ const ReserveSection = () => {
           transition={{ duration: 0.8, delay: 0.3 }}
           className="mt-6 text-sm md:text-base text-muted-foreground max-w-2xl mx-auto"
         >
-          Our concierge team is available 24/7 to help you select the perfect villa for your stay and customize your experience.
+          Our concierge team is available 24/7 to help you choose villas in bhurban murree — suites or the full estate —
+          and tailor dining, events, and travel from Islamabad.
         </motion.p>
 
         <motion.div
           initial={{ opacity: 0, y: 30 }}
           animate={isInView ? { opacity: 1, y: 0 } : {}}
           transition={{ duration: 0.8, delay: 0.45 }}
-          className="mt-10"
+          className="mt-10 flex flex-col sm:flex-row flex-wrap items-center justify-center gap-3"
         >
+          <Link
+            href="/book/stay"
+            className="inline-flex items-center justify-center rounded-md bg-neutral-900 px-7 py-3.5 text-xs font-semibold uppercase tracking-[0.16em] text-white transition hover:bg-neutral-800"
+          >
+            Book your stay
+          </Link>
+          <a
+            href={buildWhatsAppAvailabilityUrl()}
+            target="_blank"
+            rel="noopener noreferrer"
+            className="inline-flex items-center justify-center rounded-md border border-border bg-white px-7 py-3.5 text-xs font-semibold uppercase tracking-[0.16em] text-foreground transition hover:bg-neutral-50"
+          >
+            Check availability
+          </a>
           <a
             href={buildWhatsAppBookingUrl()}
             target="_blank"
             rel="noopener noreferrer"
-            className="inline-flex items-center justify-center rounded-sm border border-border bg-transparent px-6 py-3 text-sm font-medium tracking-wide text-foreground transition-colors duration-300 hover:bg-foreground hover:text-background"
+            className="inline-flex items-center justify-center rounded-md bg-emerald-600 px-7 py-3.5 text-xs font-semibold uppercase tracking-[0.16em] text-white transition hover:bg-emerald-700"
           >
-            Contact Us
+            WhatsApp us
           </a>
+          <Link
+            href="/contact"
+            className="inline-flex items-center justify-center rounded-md border border-border bg-transparent px-7 py-3.5 text-xs font-semibold uppercase tracking-[0.16em] text-foreground transition hover:bg-foreground hover:text-background"
+          >
+            Contact us
+          </Link>
         </motion.div>
       </div>
     </section>

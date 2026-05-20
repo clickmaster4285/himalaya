@@ -9,6 +9,29 @@ import { createPageMetadata } from "@/lib/seo/build-metadata";
 import { absoluteUrl } from "@/lib/seo/site-config";
 import EventQuoteForm from "@/components/EventQuoteForm";
 import EventFAQs from "@/components/EventFAQs";
+import EventCtaStrip, { type EventCtaButton } from "@/components/EventCtaStrip";
+import { buildWhatsAppBookingUrl } from "@/lib/whatsapp";
+import {
+  DEFAULT_EVENT_META_KEYWORDS,
+  enrichEventWithSeoKeywords,
+} from "@/lib/events/event-seo-keywords";
+import { resolveEventImage } from "@/lib/events/event-images";
+
+const EID_GATHERING_WHATSAPP_URL = buildWhatsAppBookingUrl(
+  "an Eid gathering at Himalaya Premium Villas in Bhurban Murree"
+);
+
+const HONEYMOON_WHATSAPP_URL = buildWhatsAppBookingUrl(
+  "a luxury honeymoon at Himalaya Premium Villas in Bhurban Murree"
+);
+
+const TRAILS_WHATSAPP_URL = buildWhatsAppBookingUrl(
+  "guided trails and forest walks at Himalaya Premium Villas in Bhurban Murree"
+);
+
+const ADVENTURE_WHATSAPP_URL = buildWhatsAppBookingUrl(
+  "adventure and outdoor activities at Himalaya Premium Villas in Bhurban Murree"
+);
 
 // Event data mapping
 const eventDetails: Record<string, {
@@ -25,6 +48,12 @@ const eventDetails: Record<string, {
   contentSections?: Array<{
     title: string;
     paragraphs: string[];
+  }>;
+  heroCtas?: EventCtaButton[];
+  ctaBlocks?: Array<{
+    title?: string;
+    subtitle?: string;
+    buttons: EventCtaButton[];
   }>;
 }> = {
   "nikah-wedding-reception": {
@@ -657,57 +686,129 @@ const eventDetails: Record<string, {
   "eid-gatherings-family-reunions": {
     title: "Eid Gatherings & Family Reunions",
     description:
-      "Host your Eid ul-Fitr or Eid ul-Adha reunion at a private luxury estate in bhurban in murree — full-villa coordination, festive catering, and mountain views for the whole family.",
+      "Host Eid ul-Fitr or Eid ul-Adha at a private estate — the alternative families choose after comparing any hotel in bhurban, with full-villa catering, prayer space, and mountain views.",
     longDescription:
-      "Bring your extended family together for Eid at Himalaya Premium Villas, a private estate set in bhurban in murree where the entire property is reserved for your group alone. Unlike crowded hotel lobbies in Murree town, you get landscaped terraces, in-villa dining, prayer space, and room for children, parents, and grandparents under one roof. Our team handles decorations, meal timings, guest logistics, and day-by-day coordination so you focus on salah, sehri, iftar-style feasts, and quality time — not vendor calls and parking chaos.",
+      "Bring your extended family together for Eid at Himalaya Premium Villas. If you have been shortlisting a bhurban hotel murree property with shared lobbies and fixed meal sittings, our private estate gives you the entire hillside to yourselves — landscaped terraces, in-villa dining, prayer space, and room for every generation under one roof. We handle décor, meal timings, guest parking, and day-by-day coordination so you focus on salah, feasts, and family time instead of vendor calls.",
     features: [
-      "Exclusive full-estate hire in bhurban in murree — no shared guests or corridors",
-      "Traditional Eid décor: lights, florals, and themed lounges indoors & outdoors",
-      "Multi-course family catering — biryani, karahi, BBQ, sweets & breakfast spreads",
-      "Dedicated prayer area with mats, timing reminders & quiet zones for elders",
-      "Children's play corners, lawn games & supervised outdoor time on the estate",
-      "Chauffeur & parking coordination for guests arriving from Islamabad & Murree",
-      "24/7 on-site concierge for meals, room setup & last-minute family requests",
-      "Photo-friendly terraces overlooking the Murree Hills for Eid family portraits",
-      "Flexible check-in for long weekends — ideal for city families escaping heat",
-      "WhatsApp-first booking with clear packages before peak Eid dates fill up",
+      "Full-estate hire — privacy beyond typical bhurban hotels and resort in bhurban listings",
+      "Traditional Eid décor: lights, florals, and themed lounges indoors and outdoors",
+      "Multi-course catering — biryani, karahi, BBQ, sweets, and breakfast spreads",
+      "Dedicated prayer area with mats, timing reminders, and quiet zones for elders",
+      "Children's play corners, lawn games, and supervised outdoor time",
+      "Parking and arrival coordination for guests from Islamabad and Murree",
+      "24/7 concierge for meals, room setup, and last-minute family requests",
+      "Terraces with Murree Hills views for Eid family portraits",
+      "Flexible long-weekend check-in for city families",
+      "Direct WhatsApp booking — clear packages before peak Eid dates fill",
     ],
     image: "/assets/hero-bhurban-static.png",
     category: "Family & Social Celebrations · Bhurban Murree",
+    heroCtas: [
+      {
+        label: "Book villas in bhurban murree for Eid",
+        href: EID_GATHERING_WHATSAPP_URL,
+        external: true,
+        variant: "primary",
+      },
+      {
+        label: "Best hotel in bhurban — check Eid dates",
+        href: EID_GATHERING_WHATSAPP_URL,
+        external: true,
+        variant: "outline",
+      },
+      {
+        label: "View all villas",
+        href: "/villas",
+        variant: "outline",
+      },
+    ],
+    ctaBlocks: [
+      {
+        title: "Planning Eid away from crowded bhurban hotels?",
+        subtitle: "Message us with your dates and guest count — we reply with estate availability and a clear package.",
+        buttons: [
+          {
+            label: "WhatsApp: bhurban hotel murree alternative",
+            href: EID_GATHERING_WHATSAPP_URL,
+            external: true,
+            variant: "whatsapp",
+          },
+          {
+            label: "Book your stay online",
+            href: "/book/stay",
+            variant: "primary",
+          },
+        ],
+      },
+      {
+        title: "Want the best hotel in bhurban experience — privately?",
+        subtitle: "Reserve the full estate so your family has one dining schedule, one lawn for namaz, and no shared corridors.",
+        buttons: [
+          {
+            label: "Reserve best hotel in bhurban style estate",
+            href: EID_GATHERING_WHATSAPP_URL,
+            external: true,
+            variant: "primary",
+          },
+          {
+            label: "See villas in bhurban murree",
+            href: "/villas",
+            variant: "outline",
+          },
+        ],
+      },
+      {
+        title: "Comparing resort in bhurban options?",
+        subtitle: "Get a written menu plan, décor notes, and pricing before you confirm Eid ul-Fitr or Eid ul-Adha.",
+        buttons: [
+          {
+            label: "Ask about resort in bhurban private hire",
+            href: EID_GATHERING_WHATSAPP_URL,
+            external: true,
+            variant: "whatsapp",
+          },
+          {
+            label: "Hotels in Bhurban guide",
+            href: "/hotels-in-bhurban",
+            variant: "outline",
+          },
+        ],
+      },
+    ],
     contentSections: [
       {
-        title: "Why families choose a private estate for Eid",
+        title: "Why families skip a standard hotel in bhurban for Eid",
         paragraphs: [
-          "Eid is about gathering everyone in one place — cousins, in-laws, grandparents, and children — without splitting across hotel floors. A private villa in bhurban in murree gives you shared living rooms, a single dining table (or several, if you prefer), and outdoor lawns for namaz, photos, and evening chai. You control the noise, the guest list, and the schedule.",
-          "Himalaya Premium Villas sits above the bustle of Murree Mall Road: cooler air, pine forest, and Himalayan views. Families from Islamabad and Rawalpindi often reach the estate in under two hours, making a three-day Eid break realistic without exhausting travel.",
+          "Eid reunions need one gathering space — cousins, in-laws, grandparents, and children together — not separate hotel floors and restaurant queues. When guests compare a typical hotel in bhurban with a private hire, the estate wins on privacy: shared lounges, flexible meal times, outdoor lawns for namaz and photos, and evening chai without strangers nearby.",
+          "Himalaya Premium Villas sits above Murree Mall Road with cooler air, pine forest, and Himalayan views. Most families from Islamabad and Rawalpindi arrive in under two hours, which makes a three-day Eid break practical.",
         ],
       },
       {
-        title: "What we coordinate for your Eid reunion",
+        title: "Beyond a single bhurban hotel murree booking",
         paragraphs: [
-          "Before guests arrive, we confirm room layouts, extra mattresses, high chairs, and accessibility needs. On Eid day, our team stages the dining area, manages hot-food timing, and keeps refreshments flowing between salah and main meals at our bhurban in murree estate.",
-          "We can arrange gift tables, mehndi-free festive lounges, separate seating for elders, and a simple outdoor qurbani coordination point (where families bring their own arrangements) with cleanup handled on-site. Every detail is discussed on WhatsApp so nothing is left to chance.",
+          "A bhurban hotel murree stay often means multiple rooms, limited common area, and competing for breakfast slots. Here you book the property for your group — we confirm sleeping layouts, high chairs, accessibility routes, and hot-food timing for the main Eid meal.",
+          "Gift tables, festive lounges, elder seating, and outdoor qurbani coordination (where you bring your own arrangements) can be staged with on-site cleanup. Every detail is confirmed on WhatsApp before arrival.",
         ],
       },
       {
-        title: "Catering & hospitality tailored to your family",
+        title: "How this compares with bhurban hotels & resorts",
         paragraphs: [
-          "Menus are built around your traditions: late-night chai, sehri-style breakfast if you stay over Ramadan weekends, or classic Eid lunch with biryani, roast, karahi, salads, raita, and mithai. Dietary requests — low spice, gluten-free sides, vegetarian plates — are noted in advance for your gathering in bhurban in murree.",
-          "Service can be family-style at one long table or buffet stations on the terrace. Many groups add a BBQ evening on the lawn as a second celebration night; we provide grills, staff, and seating so you are not juggling portable BBQs in a hotel parking lot.",
+          "Lists of bhurban hotels and a popular resort in bhurban focus on room nights and shared facilities. We focus on one guest list and one timeline: your salah, your lunch, your BBQ evening, your breakfast — all coordinated by the same team.",
+          "For groups who want service levels associated with the best hotel in bhurban but without hotel compromises, our staffed villa model delivers in-villa dining, concierge support, and estate-wide privacy.",
         ],
       },
       {
-        title: "Space for every generation",
+        title: "Standing out among the best hotels in bhurban murree",
         paragraphs: [
-          "Young children get safe lawn areas and indoor corners; teenagers get Wi-Fi lounges and terrace hangouts; elders get quiet rooms away from music. Couples and siblings reconnect in shared spaces without fighting hotel restaurant timings.",
-          "Capacity typically ranges from intimate groups of 8–12 up to larger reunions of 20+ when multiple sleeping zones are configured. Tell us your exact headcount early — especially for Eid ul-Fitr and Eid ul-Adha — so we reserve the right setup in bhurban in murree before calendars fill.",
+          "Travel blogs ranking the best hotels in bhurban murree and bhurban best hotels often highlight star ratings. We highlight exclusivity: limited monthly Eid bookings, multi-day meal packages, prayer setup, and terraces for portraits.",
+          "Capacity ranges from about 8–12 guests in suite configurations up to 20+ when the full estate is reserved. Share headcount early for Eid ul-Fitr and Eid ul-Adha so we hold the right layout before calendars fill.",
         ],
       },
       {
-        title: "Location, travel & peak-season tips",
+        title: "Villas in bhurban murree — your Eid base",
         paragraphs: [
-          "The estate is in Bhurban, Murree Hills — minutes from PC Bhurban and scenic drives from Patriata or Mall Road. We share live Google Maps links, parking guidance, and suggested arrival windows to avoid holiday traffic.",
-          "Book at least two to three weeks ahead for major Eid holidays. Mid-week Eid breaks often have better availability and softer rates. Ask our concierge about combining your stay with guided forest walks or a private chef dinner for a second-day activity.",
+          "Our villas in bhurban murree are designed for family reunions: multiple bedrooms, large living areas, kitchen support, and mountain-facing outdoor space. Combine your Eid gathering with a night walk in the pines or a private chef dinner on day two.",
+          "The estate is minutes from PC Bhurban with easy drives from Patriata or Mall Road. We send Google Maps links, parking notes, and suggested arrival windows to reduce holiday traffic stress.",
         ],
       },
     ],
@@ -750,7 +851,7 @@ const eventDetails: Record<string, {
       {
         question: "How do I check availability and pricing for Eid dates?",
         answer:
-          "Message us on WhatsApp with your dates, guest count, and meal plan. We reply with availability, a clear package outline, and payment steps. Peak Eid weekends sell out quickly at this bhurban in murree estate — early holds are encouraged.",
+          "Message us on WhatsApp with your dates, guest count, and meal plan. We reply with availability, a clear package outline, and payment steps. Peak Eid weekends at our villas in bhurban murree sell out quickly — early holds are encouraged.",
       },
     ],
   },
@@ -922,51 +1023,177 @@ const eventDetails: Record<string, {
   "guided-trails-forest-walks": {
     title: "Guided Trails & Forest Walks in Bhurban Murree",
     description:
-      "Pine-forest guided walks in Bhurban Murree Hills — for couples, families & groups at Himalaya Villas.",
+      "Pine-forest guided walks steps from your stay — the nature add-on guests book after comparing a hotel in bhurban with villas in bhurban murree at Himalaya Villas.",
     longDescription:
-      "Explore Bhurban Murree on foot with expert guides who know every pine ridge and forest path around Himalaya Villas. Our guided trails and forest walks are designed for guests staying in the Murree Hills who want fresh mountain air without long drives — gentle morning loops, moderate climbs to viewpoints, or longer hikes with rest stops. Routes start minutes from the estate, so you spend more time in nature and less time in traffic. Perfect as a couple's sunrise walk, a family nature outing, or a team-building add-on during a Bhurban Murree retreat.",
+      "Explore Bhurban Murree on foot with guides who know every pine ridge around the estate. Whether you are staying with us instead of a typical bhurban hotel murree room, or visiting from Islamabad for a day experience, our forest walks start minutes from the property — no crowded Mall Road traffic. Choose a gentle sunrise loop for two, a family nature outing with benches and flat sections, or a moderate climb to a ridge viewpoint. Every walk includes a safety briefing, refreshments, and pacing matched to Murree Hills weather so you return refreshed for terrace breakfast or a bonfire evening.",
     features: [
-      "Local guides on Bhurban Murree pine-forest trails",
-      "Routes from easy family loops to moderate Murree Hills climbs",
-      "Himalaya ridge & valley viewpoints for photography",
-      "Safety briefing, first-aid kit & walkie coordination",
-      "Trail refreshments & bottled water included",
-      "Morning, afternoon & sunset departures from the estate"
+      "Local guides on Bhurban Murree pine-forest trails — depart from the estate",
+      "Easy family loops, moderate ridge walks & longer Murree Hills hikes",
+      "Himalaya ridge viewpoints for photography and quiet reflection",
+      "Safety briefing, first-aid kit & walkie coordination on every route",
+      "Trail refreshments, bottled water & rest stops included",
+      "Morning, afternoon & sunset slots — pair with villas in bhurban murree stays",
+      "Corporate & school groups welcome — team-building in fresh mountain air",
+      "Add-on to resort in bhurban style private hire weekends and Eid breaks",
+      "WhatsApp booking with clear timing before you leave your hotel in bhurban area",
+      "Direct guests prioritized — no OTA middleman for walk + stay packages",
     ],
-    image: "https://picsum.photos/seed/trails26/800/600.jpg",
+    image: "/assets/murree-kashmir-point.jpg",
     category: "Experiences & Activities · Bhurban Murree",
+    heroCtas: [
+      {
+        label: "Book forest walk — villas in bhurban murree",
+        href: TRAILS_WHATSAPP_URL,
+        external: true,
+        variant: "primary",
+      },
+      {
+        label: "WhatsApp: bhurban hotel murree + nature day",
+        href: TRAILS_WHATSAPP_URL,
+        external: true,
+        variant: "whatsapp",
+      },
+      {
+        label: "Book your mountain stay",
+        href: "/book/stay",
+        variant: "outline",
+      },
+    ],
+    ctaBlocks: [
+      {
+        title: "Staying at bhurban hotels? Add a guided walk anyway",
+        subtitle:
+          "Even if your room is elsewhere, message us for estate departures — or switch to a private stay and walk from your villa door.",
+        buttons: [
+          {
+            label: "WhatsApp: bhurban hotels day-walk add-on",
+            href: TRAILS_WHATSAPP_URL,
+            external: true,
+            variant: "whatsapp",
+          },
+          {
+            label: "Compare hotel in bhurban vs villas",
+            href: "/hotels-in-bhurban",
+            variant: "outline",
+          },
+        ],
+      },
+      {
+        title: "Want the best hotel in bhurban views — on foot?",
+        subtitle:
+          "Ridge routes show the same Murree Hills panoramas guests chase in best hotels in bhurban murree photo galleries — without a crowded lobby.",
+        buttons: [
+          {
+            label: "Reserve guided trail — best hotel in bhurban area",
+            href: TRAILS_WHATSAPP_URL,
+            external: true,
+            variant: "primary",
+          },
+          {
+            label: "Book stay + walk package",
+            href: "/book/stay",
+            variant: "outline",
+          },
+        ],
+      },
+      {
+        title: "Resort in bhurban weekend? Build day two outdoors",
+        subtitle:
+          "Pair your private hire with a morning forest loop and afternoon terrace lunch — we coordinate timing with your chef team.",
+        buttons: [
+          {
+            label: "Plan resort in bhurban + forest walk",
+            href: TRAILS_WHATSAPP_URL,
+            external: true,
+            variant: "whatsapp",
+          },
+          {
+            label: "See bhurban best hotels alternative",
+            href: "/villas",
+            variant: "outline",
+          },
+        ],
+      },
+    ],
+    contentSections: [
+      {
+        title: "Why walk from the estate instead of driving to Murree town",
+        paragraphs: [
+          "Guests who pick a hotel in bhurban or a bhurban hotel murree listing often spend half the morning in traffic before they reach a trailhead. Our guided routes begin on the forested ridge behind Himalaya Premium Villas — more steps in nature, fewer hours in the car.",
+          "Guides adjust for Murree Hills weather: cooler mornings in summer, layered routes in winter, and clear turnaround points if clouds roll in. That is the same reliability families expect from bhurban best hotels — delivered on pine paths instead of in a lift queue.",
+        ],
+      },
+      {
+        title: "Beyond what most bhurban hotels offer outdoors",
+        paragraphs: [
+          "Standard bhurban hotels can point you toward Mall Road crowds. We offer mapped loops, bench rest points for elders, child-friendly pacing, and photography stops where the valley opens toward Kashmir Point views.",
+          "Couples book sunrise walks before in-villa breakfast. Families add a one-hour loop between lunch and bonfire. Corporate groups use moderate trails as a calm team-building block during a resort in bhurban style offsite.",
+        ],
+      },
+      {
+        title: "Pair walks with villas in bhurban murree",
+        paragraphs: [
+          "The best experience is booking villas in bhurban murree and adding guided trails as a concierge add-on — your guide meets you at the terrace, not at a distant parking lot. Share fitness levels on WhatsApp and we confirm route, start time, and what to wear.",
+          "Multi-day guests often walk on day one, rest on day two, and choose a longer ridge hike on day three. Direct booking keeps walk fees transparent alongside your villa package.",
+        ],
+      },
+      {
+        title: "How this fits lists of best hotels in bhurban murree",
+        paragraphs: [
+          "Travel blogs ranking the best hotels in bhurban murree highlight star ratings and restaurant buffets. We highlight fresh air, quiet forest, and guides who know local flora and safe footing after rain.",
+          "If you are comparing us with any best hotel in bhurban shortlist, treat the walk as proof of location — you are in the pines, not on a highway-facing balcony.",
+        ],
+      },
+      {
+        title: "School groups, reunions & guests from crowded resorts",
+        paragraphs: [
+          "Extended families staying at a resort in bhurban hired for one weekend sometimes book an extra walk slot for cousins and children. School and youth groups can request educational commentary on pines, birds, and mountain ecology.",
+          "Message us with headcount and ages — we assign one guide per reasonable group size and keep easy routes separate from faster hikers.",
+        ],
+      },
+    ],
     faqs: [
       {
         question: "Where do guided forest walks start in Bhurban Murree?",
         answer:
-          "Walks depart from Himalaya Villas in Bhurban Murree Hills — no need to drive into crowded Murree town. Your guide meets you at the estate and selects trails in the surrounding pine forest based on weather and your group's fitness."
+          "Walks depart from Himalaya Premium Villas in Bhurban Murree Hills — no need to drive into crowded Murree town. Your guide meets you at the estate and selects trails in the surrounding pine forest based on weather and your group's fitness. Guests from a nearby hotel in bhurban can also book a meet-at-estate slot on WhatsApp.",
       },
       {
         question: "What difficulty levels are available for forest walks?",
         answer:
-          "We offer easy, moderate, and challenging options across Bhurban Murree trails. Easy routes suit children and seniors; moderate paths reach scenic ridges; longer hikes are available for active groups."
+          "We offer easy, moderate, and challenging options across Bhurban Murree trails. Easy routes suit children and seniors; moderate paths reach scenic ridges; longer hikes are available for active groups training for a full Murree Hills day.",
       },
       {
         question: "How long are the guided trail walks?",
         answer:
-          "Most guests choose 1–2 hour walks; half-day and full-day Bhurban Murree hikes can be arranged. Duration is tailored to your villa check-in schedule and Murree Hills weather."
+          "Most guests choose 1–2 hour walks; half-day and full-day Bhurban Murree hikes can be arranged. Duration is tailored to your villa check-in schedule, bhurban hotel murree day-trip timing, or corporate agenda.",
       },
       {
         question: "What should participants wear for forest walks?",
         answer:
-          "Wear comfortable hiking shoes, layers for Murree Hills weather, and a light backpack. We send a short packing list when you book your Bhurban Murree walk."
+          "Wear comfortable hiking shoes, layers for Murree Hills weather, and a light backpack. We send a short packing list when you book — especially helpful if you are visiting from Islamabad for a single walk without an overnight bag.",
       },
       {
         question: "Are the trails suitable for children and elderly participants?",
         answer:
-          "Yes. We maintain gentle Bhurban forest loops with flat sections and benches. Guides adjust pace so families and mixed-age groups enjoy the walk safely."
+          "Yes. We maintain gentle Bhurban forest loops with flat sections and benches. Guides adjust pace so families and mixed-age groups enjoy the walk safely — a common request from guests comparing us with other bhurban hotels that lack on-site nature access.",
       },
       {
         question: "Can we combine a forest walk with a stay at Himalaya Villas?",
         answer:
-          "Absolutely — most guests book guided trails as an add-on to a Bhurban Murree villa stay. Ask our concierge on WhatsApp to pair your walk with breakfast on the terrace or a bonfire evening."
-      }
-    ]
+          "Absolutely — most guests book guided trails as an add-on to villas in bhurban murree. Ask on WhatsApp to pair your walk with terrace breakfast, private chef lunch, or a bonfire evening.",
+      },
+      {
+        question: "Do you offer walks if we are not staying overnight?",
+        answer:
+          "Day visitors can inquire on WhatsApp for estate departures when guides are available. Many guests first book a walk, then upgrade to a full stay after seeing the property — especially those researching bhurban best hotels and wanting more privacy.",
+      },
+      {
+        question: "How is this different from adventure activities on the estate?",
+        answer:
+          "Forest walks focus on nature, photography, and gentle fitness. For higher-energy options see our Adventure & Outdoor Activities experience — you can combine both during a long weekend at the estate.",
+      },
+    ],
   },
   "private-chef-dining-experiences": {
     title: "Private Chef & Dining Experiences",
@@ -1004,51 +1231,177 @@ const eventDetails: Record<string, {
   "adventure-outdoor-activities": {
     title: "Adventure & Outdoor Activities in Bhurban Murree",
     description:
-      "Thrilling Bhurban Murree adventures — hiking, zip-line style rides, team challenges & mountain fun at Himalaya Villas.",
+      "Mountain adventures from the estate — team challenges, ridge hikes & safe thrill sessions for guests choosing villas in bhurban murree over a typical hotel in bhurban.",
     longDescription:
-      "Turn your Bhurban Murree stay into an adventure. Himalaya Villas coordinates outdoor activities across the Murree Hills — from ridge hikes and nature challenges to group team-building games on the estate lawns. Every session is led by trained guides with helmets, harness checks where needed, and clear safety briefings in English and Urdu. Whether you are a family on holiday, friends on a weekend from Islamabad, or a corporate group, we match intensity to your group: soft adventure for first-timers or higher-energy options for thrill-seekers — all without leaving the Bhurban Murree corridor.",
+      "Turn your Murree Hills break into real outdoor energy. Himalaya Premium Villas coordinates adventure across Bhurban — estate obstacle games, guided ridge sessions, seasonal zip-line style add-ons when weather allows, and corporate team challenges on the lawns. Every slot starts with a safety briefing in English and Urdu, helmets and harness checks where needed, and instructors who scale intensity to your group. Families from Islamabad, friend weekends, and companies comparing bhurban hotel murree team outings book here when they want action without driving into Mall Road crowds — soft adventure for first-timers, higher-energy blocks for thrill-seekers, all minutes from your villa or resort in bhurban private hire.",
     features: [
-      "Certified adventure guides for Bhurban Murree & Murree Hills",
-      "Helmets, harnesses & safety kit included where required",
-      "Hiking, obstacle courses & estate team-challenge games",
-      "Beginner-friendly briefings plus advanced group options",
-      "On-site first aid & weather backup plans",
-      "Half-day & full-day adventure add-ons to your villa stay"
+      "Certified adventure guides for Bhurban Murree & Murree Hills routes",
+      "Helmets, harnesses & inspected safety kit included where required",
+      "Estate obstacle courses, team relays & leadership challenge games",
+      "Guided hikes from beginner ridges to longer Murree Hills segments",
+      "Seasonal zip-line style experiences when conditions are safe",
+      "Beginner briefings plus advanced options for fit groups",
+      "On-site first aid, weather pauses & backup indoor team games",
+      "Half-day & full-day add-ons to villas in bhurban murree bookings",
+      "Corporate offsites — alternative to conference rooms at bhurban hotels",
+      "WhatsApp packages before peak weekends — direct rates, clear timing",
     ],
-    image: "https://picsum.photos/seed/adventure28/800/600.jpg",
+    image: "/assets/murree-kashmir-point.jpg",
     category: "Experiences & Activities · Bhurban Murree",
+    heroCtas: [
+      {
+        label: "Book adventure — villas in bhurban murree",
+        href: ADVENTURE_WHATSAPP_URL,
+        external: true,
+        variant: "primary",
+      },
+      {
+        label: "WhatsApp: bhurban hotel murree + adventure day",
+        href: ADVENTURE_WHATSAPP_URL,
+        external: true,
+        variant: "whatsapp",
+      },
+      {
+        label: "Book your mountain stay",
+        href: "/book/stay",
+        variant: "outline",
+      },
+    ],
+    ctaBlocks: [
+      {
+        title: "Tired of passive stays at bhurban hotels?",
+        subtitle:
+          "Add a guided adventure block to your weekend — or book the estate and run team games steps from your villa.",
+        buttons: [
+          {
+            label: "WhatsApp: bhurban hotels adventure add-on",
+            href: ADVENTURE_WHATSAPP_URL,
+            external: true,
+            variant: "whatsapp",
+          },
+          {
+            label: "Compare hotel in bhurban vs estate",
+            href: "/hotels-in-bhurban",
+            variant: "outline",
+          },
+        ],
+      },
+      {
+        title: "Corporate teams & families — best hotel in bhurban energy, privately",
+        subtitle:
+          "Obstacle relays, ridge hikes, and debrief on the terrace — we match age and fitness so everyone participates safely.",
+        buttons: [
+          {
+            label: "Plan team day — best hotel in bhurban area",
+            href: ADVENTURE_WHATSAPP_URL,
+            external: true,
+            variant: "primary",
+          },
+          {
+            label: "Book stay + adventure package",
+            href: "/book/stay",
+            variant: "outline",
+          },
+        ],
+      },
+      {
+        title: "Resort in bhurban hire? Schedule day-one adventure",
+        subtitle:
+          "Full-estate groups use outdoor sessions as ice-breakers before meetings or Eid feasts — timing coordinated with catering.",
+        buttons: [
+          {
+            label: "Resort in bhurban + outdoor activities",
+            href: ADVENTURE_WHATSAPP_URL,
+            external: true,
+            variant: "whatsapp",
+          },
+          {
+            label: "See villas in bhurban murree",
+            href: "/villas",
+            variant: "outline",
+          },
+        ],
+      },
+    ],
+    contentSections: [
+      {
+        title: "Why adventure works better from the estate than Murree town",
+        paragraphs: [
+          "Guests at a hotel in bhurban or a bhurban hotel murree property often lose half a day reaching scattered activity vendors. Our sessions start on-site or on approved ridge access minutes away — more time moving, less time in holiday traffic.",
+          "Instructors know Murree Hills weather patterns and when to pause for rain or wind. That operational care is what families expect from bhurban best hotels — applied to ropes, trails, and team games instead of room service alone.",
+        ],
+      },
+      {
+        title: "What bhurban hotels rarely bundle outdoors",
+        paragraphs: [
+          "Lists of bhurban hotels focus on rooms and buffet timings. We bundle obstacle courses on the lawns, guided climbs with photography stops, and optional gentle nature walks for mixed-age groups.",
+          "Teenagers get higher-energy blocks; grandparents can join supervised viewing areas or short flat loops. Everyone returns to the same terrace for lunch without splitting across town.",
+        ],
+      },
+      {
+        title: "Adventure with villas in bhurban murree — the full weekend",
+        paragraphs: [
+          "The strongest packages pair villas in bhurban murree with day-one team challenges and day-two ridge hikes. Share headcount, ages, and fitness on WhatsApp — we send a written plan with start times and what to wear.",
+          "Direct booking keeps adventure fees clear next to your villa rate. Peak summer and Eid windows fill early; hold dates before you confirm flights from Islamabad or Lahore.",
+        ],
+      },
+      {
+        title: "How we compare with best hotels in bhurban murree listings",
+        paragraphs: [
+          "Rankings of the best hotels in bhurban murree highlight spas and restaurants. We highlight movement: fresh air, guided safety, and estate space large enough for 20–50 person corporate relays without public spectators.",
+          "If you are shortlisting the best hotel in bhurban for a team offsite, compare whether they offer on-property challenge courses — most do not. Our estate model does.",
+        ],
+      },
+      {
+        title: "School trips, reunions & resort in bhurban weekends",
+        paragraphs: [
+          "School and youth groups can request educational safety modules plus shorter obstacle paths. Families on a resort in bhurban style private hire often book a morning adventure before a private chef lunch.",
+          "Combine with Guided Trails & Forest Walks for a softer day-two experience, or Bonfire nights for evening wind-down — concierge links all experiences on one timeline.",
+        ],
+      },
+    ],
     faqs: [
       {
         question: "What adventure activities are available in Bhurban Murree?",
         answer:
-          "Popular options include guided Murree Hills hikes, estate-based obstacle and team challenges, mountain biking on approved routes, and seasonal add-ons such as zip-line style experiences when conditions allow. All are booked through Himalaya Villas concierge."
+          "Popular options include guided Murree Hills hikes, estate obstacle and team challenges, mountain biking on approved routes when available, and seasonal zip-line style experiences. All are booked through Himalaya Premium Villas — ideal for guests at villas in bhurban murree or day groups messaging from a nearby hotel in bhurban.",
       },
       {
         question: "Are adventure activities suitable for beginners?",
         answer:
-          "Yes. Most Bhurban Murree guests are first-time mountain visitors — we start with safety training, easy terrain, and shorter sessions before any harder activities."
+          "Yes. Most guests are first-time mountain visitors — we start with safety training, easy terrain, and shorter sessions before harder blocks. Tell us on WhatsApp if anyone in your group has mobility limits.",
       },
       {
         question: "What safety measures are in place?",
         answer:
-          "Certified instructors, inspected equipment, buddy-system rules, first aid on site, and activity pauses during rain or high wind. We follow conservative Murree Hills weather protocols."
+          "Certified instructors, inspected equipment, buddy-system rules, first aid on site, and pauses during rain or high wind. We follow conservative Murree Hills protocols — the same seriousness corporate clients expect from best hotels in bhurban murree brands.",
       },
       {
         question: "What is the minimum age for adventure activities?",
         answer:
-          "Typically 8+ for gentle activities and 12+ for higher-energy options. Parental consent is required for minors; families receive dedicated Bhurban-friendly routes."
+          "Typically 8+ for gentle activities and 12+ for higher-energy options. Parental consent is required for minors; families receive dedicated Bhurban-friendly routes separate from adult challenge lanes.",
       },
       {
-        question: "Can we book adventure activities with our Himalaya Villas stay?",
+        question: "Can we book adventure with our Himalaya Villas stay?",
         answer:
-          "Yes — adventure is most often added to a Bhurban Murree villa booking. Message us on WhatsApp with your dates, group size, and fitness level for a custom plan."
+          "Yes — adventure is most often added to a villa or full-estate booking. Message us with dates, group size, and fitness for a custom plan. Many guests switch from a bhurban hotel murree room list after seeing the estate layout.",
       },
       {
         question: "How far are activities from Islamabad or Murree town?",
         answer:
-          "Himalaya Villas is about 60 km from Islamabad via Murree Expressway and minutes from Bhurban attractions — so you spend time adventuring, not stuck in traffic."
-      }
-    ]
+          "About 60 km from Islamabad via Murree Expressway and minutes from Bhurban attractions — you adventure locally instead of fighting Mall Road parking.",
+      },
+      {
+        question: "Can corporate teams book without an overnight stay?",
+        answer:
+          "Day corporate packages may be available when the estate calendar allows. Share company name, headcount, and goals — we propose obstacle relays, hike segments, and terrace debrief space.",
+      },
+      {
+        question: "How is this different from Guided Trails & Forest Walks?",
+        answer:
+          "Adventure focuses on energy, team games, and higher-intensity options. Forest walks are gentler nature routes — many families book trails on day one and adventure on day two during the same stay.",
+      },
+    ],
   },
   "workshops-creative-sessions": {
     title: "Workshops & Creative Sessions",
@@ -1283,44 +1636,171 @@ const eventDetails: Record<string, {
   },
   "luxury-honeymoon-packages": {
     title: "Luxury Honeymoon Packages",
-    description: "Private and romantic stays with premium amenities.",
-    longDescription: "Celebrate your new beginning with our luxury honeymoon packages. Enjoy private and romantic stays with premium amenities in the most beautiful mountain settings.",
+    description:
+      "Romantic private honeymoon in the Murree Hills — an intimate alternative to any hotel in bhurban, with candlelit dining, couples spa time, and the estate reserved for two.",
+    longDescription:
+      "Celebrate your new beginning at Himalaya Premium Villas, where honeymoon couples trade crowded lobbies for a private mountainside estate. If you have been comparing a bhurban hotel murree room with limited privacy, our packages place the full villa experience around you — sunrise terraces, in-villa dinners, floral décor, and unhurried days in cool pine air. Every detail is coordinated by WhatsApp so you arrive to a setting that feels personal, calm, and unmistakably yours.",
     features: [
-      "Private villa accommodations",
-      "Romantic decor setup",
-      "Couples spa treatments",
-      "Private dining experiences",
-      "Romantic excursions",
-      "Butler service available"
+      "Private suites — more intimate than typical bhurban hotels or a shared resort in bhurban",
+      "Romantic welcome décor: florals, candles, and terrace setup",
+      "Couples dining — breakfast in bed, sunset dinners, and custom menus",
+      "Spa-style relaxation and slow mornings with Himalayan views",
+      "Stargazing, forest walks, and photo-friendly viewpoints",
+      "Concierge for surprises, cakes, flowers, and special requests",
+      "Flexible 3-night to two-week packages from Islamabad in under two hours",
+      "Direct booking — clear pricing before peak wedding and holiday season",
     ],
-    image: "https://picsum.photos/seed/honeymoon36/800/600.jpg",
-    category: "Wellness & Retreats",
+    image: "/assets/villa-honeymoon-real.jpg",
+    category: "Wellness & Retreats · Bhurban Murree",
+    heroCtas: [
+      {
+        label: "Book villas in bhurban murree for honeymoon",
+        href: HONEYMOON_WHATSAPP_URL,
+        external: true,
+        variant: "primary",
+      },
+      {
+        label: "Best hotel in bhurban — romantic dates",
+        href: HONEYMOON_WHATSAPP_URL,
+        external: true,
+        variant: "outline",
+      },
+      {
+        label: "View honeymoon villas",
+        href: "/villas",
+        variant: "outline",
+      },
+    ],
+    ctaBlocks: [
+      {
+        title: "Comparing bhurban hotels for your honeymoon?",
+        subtitle: "Tell us your travel dates and we will suggest the most private suite or full-estate option.",
+        buttons: [
+          {
+            label: "WhatsApp: bhurban hotel murree alternative",
+            href: HONEYMOON_WHATSAPP_URL,
+            external: true,
+            variant: "whatsapp",
+          },
+          {
+            label: "Book your stay",
+            href: "/book/stay",
+            variant: "primary",
+          },
+        ],
+      },
+      {
+        title: "Want the best hotel in bhurban feeling — in private?",
+        subtitle: "Candlelit dinners, terrace mornings, and no other guests on the property.",
+        buttons: [
+          {
+            label: "Reserve best hotel in bhurban style stay",
+            href: HONEYMOON_WHATSAPP_URL,
+            external: true,
+            variant: "primary",
+          },
+          {
+            label: "See villas in bhurban murree",
+            href: "/villas",
+            variant: "outline",
+          },
+        ],
+      },
+      {
+        title: "Weighing a resort in bhurban vs full privacy?",
+        subtitle: "Get a written package outline with meals, décor, and optional experiences before you pay.",
+        buttons: [
+          {
+            label: "Ask about resort in bhurban private hire",
+            href: HONEYMOON_WHATSAPP_URL,
+            external: true,
+            variant: "whatsapp",
+          },
+          {
+            label: "Hotels in Bhurban guide",
+            href: "/hotels-in-bhurban",
+            variant: "outline",
+          },
+        ],
+      },
+    ],
+    contentSections: [
+      {
+        title: "Why couples look beyond a standard hotel in bhurban",
+        paragraphs: [
+          "A honeymoon should feel uninterrupted — no hallway noise, no shared restaurant timings, no strangers at the pool. A typical hotel in bhurban can work for a quick night, but newlyweds who want slow mornings and long evenings together often prefer a villa where the terrace, lounge, and dining schedule belong to them alone.",
+          "Himalaya Premium Villas sits in Bhurban above Murree town: crisp air, cedar forest, and views that photograph beautifully at golden hour. Most couples drive from Islamabad or Rawalpindi in roughly two hours, which makes a long weekend realistic.",
+        ],
+      },
+      {
+        title: "More romance than a single bhurban hotel murree room",
+        paragraphs: [
+          "When you research a bhurban hotel murree listing, you usually get one room and shared hotel facilities. Our honeymoon flow reserves private space for two — floral touches on arrival, optional cake or celebration setup, and meals served where you choose: in-villa, on the terrace, or under the stars.",
+          "We align check-in, dinner, and excursion timing around your preferences rather than a hotel kitchen clock.",
+        ],
+      },
+      {
+        title: "How we differ from bhurban hotels & resort stays",
+        paragraphs: [
+          "Couples browsing bhurban hotels or a resort in bhurban often want the same basics: cool weather, scenery, and good food. We add exclusivity — the estate is focused on your stay, so walks, dinners, and quiet time are not competing with tour groups or wedding parties in the same building.",
+          "For pairs who expect the polish of the best hotel in bhurban but want a deeper sense of privacy, our staffed villa model delivers concierge care without the lobby.",
+        ],
+      },
+      {
+        title: "Among the best hotels in bhurban murree — privately",
+        paragraphs: [
+          "Rankings of the best hotels in bhurban murree and bhurban best hotels highlight room service and views. We highlight the experience: limited overlapping bookings, couples menus, sunrise coffee on the terrace, and optional forest walks or bonfire evenings arranged on request.",
+          "Packages commonly run from three nights upward; five nights or more lets you truly unwind after wedding events in the city.",
+        ],
+      },
+      {
+        title: "Villas in bhurban murree made for two",
+        paragraphs: [
+          "Our villas in bhurban murree suit honeymoons and anniversaries — choose an intimate suite or take the complete villa when you want every corner of the estate to yourselves. Combine your stay with private dining, stargazing, and a day trip toward Patriata or Mall Road if you want a short scenic drive.",
+          "Share dietary preferences, surprise ideas, and arrival time on WhatsApp; we confirm everything in writing before you travel.",
+        ],
+      },
+    ],
     faqs: [
       {
         question: "What is included in the luxury honeymoon package?",
-        answer: "Our package includes private villa, couples spa treatments, romantic dinners, sunset activities, champagne, and personalized butler service."
+        answer:
+          "Typical packages include private villa accommodation, romantic décor on arrival, couples dining (breakfast and dinner), terrace setup, and concierge support. Spa-style treatments, cakes, flowers, and excursions can be added when you inquire.",
       },
       {
         question: "Can honeymoon packages be customized?",
-        answer: "Yes, we customize every aspect including activities, dining preferences, decorations, and special surprises based on the couple's preferences."
+        answer:
+          "Yes. We tailor menus, room styling, activities, and special surprises — from proposal-style setups to quiet anniversaries. Tell us what you liked or disliked about bhurban hotels you considered so we can match your expectations.",
       },
       {
-        question: "What romantic activities are available for honeymooners?",
-        answer: "We offer private dinners, couples massages, sunset cruises, stargazing nights, and adventure activities designed for couples."
+        question: "Is this better than booking a hotel in bhurban for a honeymoon?",
+        answer:
+          "If privacy and a single shared space matter most, a private villa estate often feels more romantic than a standard hotel in bhurban. You still get staffed hospitality and mountain views, without sharing the property with other guests.",
       },
       {
-        question: "How long are honeymoon packages?",
-        answer: "Packages range from 3 nights to 2 weeks. We recommend minimum 5 nights to fully enjoy all the romantic experiences and relaxation."
-      }
-    ]
-  }
+        question: "What romantic activities are available nearby?",
+        answer:
+          "Private dinners, terrace breakfasts, forest walks, stargazing, and photography at viewpoints. We can suggest gentle day plans around Bhurban and Murree that fit your pace.",
+      },
+      {
+        question: "How long should we stay for a honeymoon?",
+        answer:
+          "We offer roughly three nights to two weeks. Five nights or more is ideal to relax after wedding festivities and enjoy villas in bhurban murree without rushing.",
+      },
+      {
+        question: "How do we check dates and pricing?",
+        answer:
+          "Message us on WhatsApp with your dates and whether you prefer a suite or full estate. We reply with availability, a clear package outline, and next steps — peak seasons fill early.",
+      },
+    ],
+  },
 };
 
 export async function generateMetadata({ params }: { params: Promise<{ slug: string }> }): Promise<Metadata> {
   const { slug } = await params;
-  const event = eventDetails[slug];
-  
-  if (!event) {
+  const raw = eventDetails[slug];
+
+  if (!raw) {
     return createPageMetadata({
       title: "Event Not Found | Himalaya Villas & Resorts",
       description: "The requested event could not be found.",
@@ -1328,54 +1808,96 @@ export async function generateMetadata({ params }: { params: Promise<{ slug: str
     });
   }
 
+  const event = enrichEventWithSeoKeywords({
+    ...raw,
+    image: resolveEventImage(slug, raw.image),
+  });
+
   const eventSeo: Record<string, { keywords: string[]; description: string }> = {
     "guided-trails-forest-walks": {
       keywords: [
         "guided trails Bhurban Murree",
         "forest walks Bhurban",
+        "hotel in bhurban",
+        "bhurban hotel murree",
+        "bhurban hotels",
+        "best hotel in bhurban",
+        "resort in bhurban",
+        "best hotels in bhurban murree",
+        "bhurban best hotels",
+        "villas in bhurban murree",
         "Murree Hills hiking",
         "nature walks Himalaya Villas",
-        "Bhurban Murree activities",
         "pine forest trails Murree",
         "things to do Bhurban Murree",
       ],
       description:
-        "Book guided pine-forest walks in Bhurban Murree Hills at Himalaya Villas. Easy to moderate trails for couples, families & groups — expert guides, safety kit & refreshments.",
+        "Guided pine-forest walks in Bhurban Murree at Himalaya Villas — nature add-on for guests comparing hotel in bhurban, bhurban hotel murree stays, and villas in bhurban murree. Book on WhatsApp.",
     },
     "adventure-outdoor-activities": {
       keywords: [
         "adventure activities Bhurban Murree",
         "outdoor activities Murree Hills",
-        "Bhurban Murree adventure",
-        "things to do Bhurban Murree",
-        "mountain activities Himalaya Villas",
+        "hotel in bhurban",
+        "bhurban hotel murree",
+        "bhurban hotels",
+        "best hotel in bhurban",
+        "resort in bhurban",
+        "best hotels in bhurban murree",
+        "bhurban best hotels",
+        "villas in bhurban murree",
         "team building Bhurban",
-        "hiking Murree Hills",
         "family adventure Bhurban",
+        "things to do Bhurban Murree",
       ],
       description:
-        "Book adventure & outdoor activities in Bhurban Murree at Himalaya Villas. Guided hikes, team challenges & safe mountain fun for families, groups & corporate retreats.",
+        "Adventure & outdoor activities in Bhurban Murree at Himalaya Villas — hikes, team challenges & safe thrills for guests comparing hotel in bhurban, bhurban hotels, and villas in bhurban murree. Book on WhatsApp.",
     },
     "eid-gatherings-family-reunions": {
       keywords: [
         "Eid gatherings Bhurban Murree",
-        "family reunion Murree Hills",
-        "Eid ul-Fitr villa Bhurban",
-        "private estate Eid Pakistan",
-        "bhurban in murree family stay",
-        "Eid celebration private villa",
-        "large family Eid Murree",
-        "Himalaya Villas Eid booking",
+        "hotel in bhurban",
+        "bhurban hotel murree",
+        "bhurban hotels",
+        "best hotel in bhurban",
+        "resort in bhurban",
+        "best hotels in bhurban murree",
+        "bhurban best hotels",
+        "villas in bhurban murree",
+        "family reunion Murree",
+        "Himalaya Villas Eid",
       ],
       description:
-        "Book Eid gatherings & family reunions at Himalaya Premium Villas in bhurban in murree. Full private estate, festive catering, prayer space & concierge for 8–20+ guests.",
+        "Book Eid gatherings at Himalaya Premium Villas — private alternative to hotel in bhurban, bhurban hotel murree stays, and crowded bhurban hotels. Full estate, catering & prayer space.",
+    },
+    "luxury-honeymoon-packages": {
+      keywords: [
+        "luxury honeymoon Bhurban Murree",
+        "hotel in bhurban",
+        "bhurban hotel murree",
+        "bhurban hotels",
+        "best hotel in bhurban",
+        "resort in bhurban",
+        "best hotels in bhurban murree",
+        "bhurban best hotels",
+        "villas in bhurban murree",
+        "romantic stay Murree Hills",
+        "honeymoon villa Pakistan",
+      ],
+      description:
+        "Luxury honeymoon packages at Himalaya Premium Villas — private alternative to hotel in bhurban and bhurban hotel murree rooms. Romantic villas in bhurban murree with dining & mountain views.",
     },
   };
 
   const seo = eventSeo[slug];
-  const keywords = seo
-    ? [...seo.keywords, event.title, event.category, "Himalaya Villas"]
-    : [event.title, event.category, "Himalaya Villas", "Bhurban Murree"];
+  const keywords = [
+    ...DEFAULT_EVENT_META_KEYWORDS,
+    ...(seo?.keywords ?? []),
+    event.title,
+    event.category,
+    "Himalaya Villas",
+    "Bhurban Murree",
+  ];
 
   const metaDescription = seo?.description ?? event.longDescription;
 
@@ -1390,9 +1912,9 @@ export async function generateMetadata({ params }: { params: Promise<{ slug: str
 
 export default async function EventPage({ params }: { params: Promise<{ slug: string }> }) {
   const { slug } = await params;
-  const event = eventDetails[slug];
+  const rawEvent = eventDetails[slug];
 
-  if (!event) {
+  if (!rawEvent) {
     return (
       <div className="min-h-screen bg-white">
         <Navbar />
@@ -1409,6 +1931,15 @@ export default async function EventPage({ params }: { params: Promise<{ slug: st
       </div>
     );
   }
+
+  const event = enrichEventWithSeoKeywords({
+    ...rawEvent,
+    image: resolveEventImage(slug, rawEvent.image),
+  });
+  const eventWhatsAppUrl = buildWhatsAppBookingUrl(
+    `${event.title} at Himalaya Premium Villas in Bhurban Murree`
+  );
+  const heroImage = event.image;
 
   const jsonLd = {
     "@context": "https://schema.org",
@@ -1435,32 +1966,68 @@ export default async function EventPage({ params }: { params: Promise<{ slug: st
       
       <Navbar />
 
-      {/* Hero Section */}
-      <section className="relative min-h-[600px] overflow-hidden">
+      {/* Hero Section — copy left, quote form right */}
+      <section className="relative min-h-[720px] lg:min-h-[780px] overflow-hidden">
         <div className="absolute inset-0">
           <Image
-            src={event.image}
+            src={heroImage}
             alt={event.title}
             fill
             className="object-cover"
             priority
+            sizes="100vw"
           />
         </div>
-        <div className="absolute inset-0 bg-black/50" />
-        
-        <div className="relative z-10 flex items-center justify-center min-h-[600px] px-6">
-          <div className="text-center text-white max-w-4xl">
-            <div className="flex items-center justify-center gap-3 text-[#c9a55b] text-[10px] md:text-[11px] font-bold uppercase tracking-[0.2em] mb-6">
-              <span className="h-[1px] w-8 bg-[#c9a55b]"></span>
-              <span>{event.category}</span>
-              <span className="h-[1px] w-8 bg-[#c9a55b]"></span>
+        <div className="absolute inset-0 bg-gradient-to-r from-black/75 via-black/55 to-black/40" />
+
+        <div className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-10 pt-28 pb-14 lg:pt-32 lg:pb-20 min-h-[720px] lg:min-h-[780px] flex items-center">
+          <div className="grid grid-cols-1 lg:grid-cols-2 gap-10 lg:gap-14 w-full items-start lg:items-center">
+            <div className="text-white max-w-xl">
+              <div className="flex items-center gap-3 text-[#c9a55b] text-[10px] md:text-[11px] font-bold uppercase tracking-[0.2em] mb-6">
+                <span className="h-[1px] w-8 bg-[#c9a55b]" />
+                <span>{event.category}</span>
+              </div>
+              <h1 className="font-display text-3xl sm:text-4xl md:text-5xl lg:text-6xl leading-tight mb-5">
+                {event.title}
+              </h1>
+              <p className="text-base md:text-lg text-white/90 leading-relaxed">
+                {event.description}
+              </p>
+              {event.heroCtas && event.heroCtas.length > 0 ? (
+                <div className="mt-8 flex flex-col sm:flex-row flex-wrap gap-3">
+                  {event.heroCtas.map((btn) => {
+                    const base =
+                      btn.variant === "whatsapp"
+                        ? "inline-flex items-center justify-center rounded-lg bg-emerald-600 px-5 py-3 text-xs font-semibold uppercase tracking-wider text-white shadow-md transition hover:bg-emerald-700"
+                        : btn.variant === "outline"
+                          ? "inline-flex items-center justify-center rounded-lg border-2 border-white/80 bg-white/10 px-5 py-3 text-xs font-semibold uppercase tracking-wider text-white backdrop-blur-sm transition hover:bg-white/20"
+                          : "inline-flex items-center justify-center rounded-lg bg-[#c9a55b] px-5 py-3 text-xs font-semibold uppercase tracking-wider text-[#1b261b] shadow-md transition hover:bg-[#ebd59f]";
+                    if (btn.external) {
+                      return (
+                        <a
+                          key={btn.label}
+                          href={btn.href}
+                          target="_blank"
+                          rel="noopener noreferrer"
+                          className={base}
+                        >
+                          {btn.label}
+                        </a>
+                      );
+                    }
+                    return (
+                      <Link key={btn.label} href={btn.href} className={base}>
+                        {btn.label}
+                      </Link>
+                    );
+                  })}
+                </div>
+              ) : null}
             </div>
-            <h1 className="font-display text-4xl md:text-6xl lg:text-7xl leading-tight mb-6">
-              {event.title}
-            </h1>
-            <p className="text-lg md:text-xl text-white/90 max-w-3xl mx-auto">
-              {event.description}
-            </p>
+
+            <div className="w-full max-w-md mx-auto lg:mx-0 lg:ml-auto shrink-0">
+              <EventQuoteForm eventTitle={event.title} id="hero-inquiry" />
+            </div>
           </div>
         </div>
       </section>
@@ -1468,9 +2035,7 @@ export default async function EventPage({ params }: { params: Promise<{ slug: st
       {/* Main Content */}
       <section className="py-16 md:py-24">
         <div className="max-w-7xl mx-auto px-6">
-          <div className="grid grid-cols-1 lg:grid-cols-3 gap-12">
-            {/* Left Content */}
-            <div className="lg:col-span-2">
+          <div className="max-w-4xl">
               <div className="prose prose-lg max-w-none">
                 <h2 className="font-display text-3xl md:text-4xl text-neutral-900 mb-6">
                   About This Experience
@@ -1478,6 +2043,15 @@ export default async function EventPage({ params }: { params: Promise<{ slug: st
                 <p className="text-gray-600 leading-relaxed mb-8">
                   {event.longDescription}
                 </p>
+
+                {event.ctaBlocks?.[0] ? (
+                  <EventCtaStrip
+                    className="mb-10"
+                    title={event.ctaBlocks[0].title}
+                    subtitle={event.ctaBlocks[0].subtitle}
+                    buttons={event.ctaBlocks[0].buttons}
+                  />
+                ) : null}
 
                 {event.contentSections?.map((section, sectionIndex) => (
                   <div key={sectionIndex} className="mb-10">
@@ -1496,6 +2070,15 @@ export default async function EventPage({ params }: { params: Promise<{ slug: st
                     </div>
                   </div>
                 ))}
+
+                {event.ctaBlocks?.[1] ? (
+                  <EventCtaStrip
+                    className="mb-10"
+                    title={event.ctaBlocks[1].title}
+                    subtitle={event.ctaBlocks[1].subtitle}
+                    buttons={event.ctaBlocks[1].buttons}
+                  />
+                ) : null}
                 
                 <h3 className="font-display text-2xl text-neutral-900 mb-6">
                   What's Included
@@ -1512,13 +2095,16 @@ export default async function EventPage({ params }: { params: Promise<{ slug: st
                     </div>
                   ))}
                 </div>
-              </div>
-            </div>
 
-            {/* Right Sidebar - Form */}
-            <div className="lg:col-span-1">
-              <EventQuoteForm />
-            </div>
+                {event.ctaBlocks?.[2] ? (
+                  <EventCtaStrip
+                    className="mt-10"
+                    title={event.ctaBlocks[2].title}
+                    subtitle={event.ctaBlocks[2].subtitle}
+                    buttons={event.ctaBlocks[2].buttons}
+                  />
+                ) : null}
+              </div>
           </div>
         </div>
       </section>
@@ -1538,6 +2124,130 @@ export default async function EventPage({ params }: { params: Promise<{ slug: st
           <div className="max-w-4xl mx-auto">
             <EventFAQs faqs={event.faqs} />
           </div>
+
+          {slug === "eid-gatherings-family-reunions" ? (
+            <EventCtaStrip
+              className="mt-12 max-w-4xl mx-auto"
+              title="Ready to book your Eid reunion?"
+              subtitle="Compare us with any bhurban best hotels list — then hold your dates on WhatsApp in minutes."
+              buttons={[
+                {
+                  label: "Book villas in bhurban murree — WhatsApp",
+                  href: EID_GATHERING_WHATSAPP_URL,
+                  external: true,
+                  variant: "whatsapp",
+                },
+                {
+                  label: "Check best hotels in bhurban murree guide",
+                  href: "/hotels-in-bhurban",
+                  variant: "outline",
+                },
+                {
+                  label: "Book your stay",
+                  href: "/book/stay",
+                  variant: "primary",
+                },
+              ]}
+            />
+          ) : null}
+          {slug === "luxury-honeymoon-packages" ? (
+            <EventCtaStrip
+              className="mt-12 max-w-4xl mx-auto"
+              title="Ready to plan your honeymoon?"
+              subtitle="Skip the crowded bhurban hotels shortlist — hold romantic dates at our private estate on WhatsApp."
+              buttons={[
+                {
+                  label: "Book villas in bhurban murree — WhatsApp",
+                  href: HONEYMOON_WHATSAPP_URL,
+                  external: true,
+                  variant: "whatsapp",
+                },
+                {
+                  label: "Compare best hotels in bhurban murree",
+                  href: "/hotels-in-bhurban",
+                  variant: "outline",
+                },
+                {
+                  label: "Book your stay",
+                  href: "/book/stay",
+                  variant: "primary",
+                },
+              ]}
+            />
+          ) : null}
+          {slug === "guided-trails-forest-walks" ? (
+            <EventCtaStrip
+              className="mt-12 max-w-4xl mx-auto"
+              title="Ready for your forest walk?"
+              subtitle="Tell us your dates, group size, and fitness level — we confirm route and timing before peak Murree weekends fill."
+              buttons={[
+                {
+                  label: "Book guided trail — villas in bhurban murree",
+                  href: TRAILS_WHATSAPP_URL,
+                  external: true,
+                  variant: "whatsapp",
+                },
+                {
+                  label: "Best hotel in bhurban area — walk + stay",
+                  href: "/book/stay",
+                  variant: "primary",
+                },
+                {
+                  label: "Bhurban hotels comparison guide",
+                  href: "/hotels-in-bhurban",
+                  variant: "outline",
+                },
+              ]}
+            />
+          ) : null}
+          {slug === "adventure-outdoor-activities" ? (
+            <EventCtaStrip
+              className="mt-12 max-w-4xl mx-auto"
+              title="Ready for your adventure day?"
+              subtitle="Share dates, ages, and fitness — we build a safe plan before peak Murree and Eid calendars fill."
+              buttons={[
+                {
+                  label: "Book adventure — villas in bhurban murree",
+                  href: ADVENTURE_WHATSAPP_URL,
+                  external: true,
+                  variant: "whatsapp",
+                },
+                {
+                  label: "Best hotels in bhurban murree — stay + thrill",
+                  href: "/book/stay",
+                  variant: "primary",
+                },
+                {
+                  label: "Bhurban best hotels guide",
+                  href: "/hotels-in-bhurban",
+                  variant: "outline",
+                },
+              ]}
+            />
+          ) : null}
+          <EventCtaStrip
+            className="mt-12 max-w-4xl mx-auto"
+            title={`Reserve ${event.title} — villas in bhurban murree`}
+            subtitle="Every event page includes direct booking: compare hotel in bhurban, bhurban hotel murree, bhurban hotels, best hotel in bhurban, resort in bhurban, best hotels in bhurban murree, and bhurban best hotels — then hold your dates."
+            buttons={[
+              {
+                label: "WhatsApp: best hotels in bhurban murree",
+                href: eventWhatsAppUrl,
+                external: true,
+                variant: "whatsapp",
+              },
+              {
+                label: "Book hotel in bhurban area — private villa",
+                href: "/book/stay",
+                variant: "primary",
+              },
+              {
+                label: "Bhurban best hotels guide",
+                href: "/hotels-in-bhurban",
+                variant: "outline",
+              },
+            ]}
+          />
         </div>
       </section>
 
@@ -1557,18 +2267,19 @@ export default async function EventPage({ params }: { params: Promise<{ slug: st
             {Object.entries(eventDetails)
               .filter(([eventSlug, details]) => details.category === event.category && eventSlug !== slug)
               .slice(0, 3)
-              .map(([slug, details]) => (
+              .map(([relatedSlug, details]) => (
                 <Link
-                  key={slug}
-                  href={`/events/${slug}`}
+                  key={relatedSlug}
+                  href={`/events/${relatedSlug}`}
                   className="group block bg-white rounded-xl shadow-sm hover:shadow-lg transition-shadow duration-300 overflow-hidden"
                 >
                   <div className="relative h-48">
                     <Image
-                      src={details.image}
+                      src={resolveEventImage(relatedSlug, details.image)}
                       alt={details.title}
                       fill
                       className="object-cover group-hover:scale-105 transition-transform duration-300"
+                      sizes="(max-width: 768px) 100vw, 33vw"
                     />
                   </div>
                   <div className="p-6">

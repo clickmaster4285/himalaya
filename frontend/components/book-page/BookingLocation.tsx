@@ -1,6 +1,11 @@
 "use client";
 
 import React from "react";
+import { buildWhatsAppBookingUrl } from "@/lib/whatsapp";
+
+const DIRECTIONS_WHATSAPP = buildWhatsAppBookingUrl("directions hotel in bhurban murree");
+const MAPS_URL =
+  "https://www.google.com/maps/search/?api=1&query=Himalaya+Villas+Bhurban+Murree";
 
 export default function BookingLocation() {
   const distances = [
@@ -30,7 +35,9 @@ export default function BookingLocation() {
           </p>
           
           <p className="text-[14px] md:text-[15px] text-white/70 leading-relaxed font-light mb-12 max-w-lg">
-            Himalaya Villas sits at 1,850 metres elevation in Bhurban Murree — a private forested ridge in the Murree Hills, yet connected by a well-maintained road to Islamabad via Murree Expressway.
+            Finding a hotel in bhurban on a map is easy — finding a private ridge with twelve villas is different.
+            We sit at 1,850 metres on a forested slope, roughly 60 km from Islamabad via Murree Expressway, minutes from
+            Pearl Continental Bhurban and Murree town.
           </p>
 
           <div className="space-y-4">
@@ -59,18 +66,20 @@ export default function BookingLocation() {
 
             <div className="w-full max-w-xs space-y-4">
               <a
-                href="#"
+                href={MAPS_URL}
+                target="_blank"
+                rel="noopener noreferrer"
                 className="block w-full bg-[#c9a55b] text-[#1b261b] py-4 text-[10px] font-bold uppercase tracking-widest hover:bg-[#ebd59f] transition-colors"
               >
-                OPEN IN GOOGLE MAPS
+                Open bhurban hotel murree location — Maps
               </a>
               <a
-                href="https://wa.me/923000000000"
+                href={DIRECTIONS_WHATSAPP}
                 target="_blank"
-                rel="noreferrer"
+                rel="noopener noreferrer"
                 className="block w-full border border-white/20 text-white py-4 text-[10px] font-bold uppercase tracking-widest hover:border-white transition-colors"
               >
-                WHATSAPP FOR DIRECTIONS
+                WhatsApp directions to resort in bhurban
               </a>
             </div>
           </div>

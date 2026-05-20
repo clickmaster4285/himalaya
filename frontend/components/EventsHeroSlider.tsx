@@ -2,6 +2,7 @@
 
 import Image from "next/image";
 import { useState, useEffect } from "react";
+import { EVENTS_HERO_SLIDES } from "@/lib/events/event-images";
 
 interface EventsHeroSliderProps {
   alt: string;
@@ -9,12 +10,7 @@ interface EventsHeroSliderProps {
   className?: string;
 }
 
-const eventImages = [
-  "/assets/event-hero-1.png",
-  "/assets/event-hero-2.png",
-  "/assets/event-hero-3.png",
-  "/assets/event-hero-4.png",
-];
+const eventImages = [...EVENTS_HERO_SLIDES];
 
 export default function EventsHeroSlider({ alt, priority = false, className = "" }: EventsHeroSliderProps) {
   const [currentImageIndex, setCurrentImageIndex] = useState(0);

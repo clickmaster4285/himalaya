@@ -2,6 +2,10 @@
 
 import React, { useState } from "react";
 import { Plus, Minus } from "lucide-react";
+import BookingCtaStrip from "@/components/book-page/BookingCtaStrip";
+import { buildWhatsAppBookingUrl } from "@/lib/whatsapp";
+
+const FAQ_WHATSAPP = buildWhatsAppBookingUrl("bhurban hotels booking FAQ");
 
 export default function BookingFAQ() {
   const [openIndex, setOpenIndex] = useState<number | null>(null);
@@ -38,6 +42,21 @@ export default function BookingFAQ() {
     {
       question: "Are heating and air conditioning available?",
       answer: "Yes, all our villas feature central heating for the winter months and air conditioning for the summer, ensuring your comfort regardless of the season."
+    },
+    {
+      question: "How is Himalaya Villas different from other bhurban hotels?",
+      answer:
+        "Most bhurban hotels offer single rooms and shared facilities. We provide private villas in bhurban murree with dedicated staff, in-villa dining, and estate-level privacy — closer to hiring a resort in bhurban for your group than booking one hotel room."
+    },
+    {
+      question: "Is this the best hotel in bhurban for families and honeymoons?",
+      answer:
+        "Guests searching best hotel in bhurban or bhurban best hotels often choose us for halal food, no alcohol on site, flexible meal times, and mountain views. Couples and families get villa space instead of corridor noise — confirm dates on Book Your Stay or WhatsApp."
+    },
+    {
+      question: "Can I compare you with best hotels in bhurban murree online?",
+      answer:
+        "Yes — read our hotels-in-bhurban guide for an honest look at bhurban hotel murree options, then message us with your dates. Direct booking usually beats OTA rates for the same peak weekends."
     }
   ];
 
@@ -60,7 +79,8 @@ export default function BookingFAQ() {
             <span className="block italic text-[#c9a55b] font-light mt-1">Booking Bhurban Murree Hotels</span>
           </h2>
           <p className="text-[14px] md:text-[15px] text-neutral-600 leading-relaxed font-light max-w-2xl mx-auto">
-            Common questions from guests planning hotel bookings in Bhurban Murree at Himalaya Villas.
+            Answers for guests comparing a hotel in bhurban, bhurban hotels on OTAs, and private villas in bhurban
+            murree at Himalaya Villas.
           </p>
         </div>
 
@@ -89,6 +109,20 @@ export default function BookingFAQ() {
           ))}
         </div>
 
+        <BookingCtaStrip
+          className="mt-12"
+          title="Still have questions about bhurban hotels?"
+          buttons={[
+            { label: "Book best hotels in bhurban murree — direct", href: "/book/stay", variant: "dark" },
+            {
+              label: "WhatsApp bhurban hotel murree team",
+              href: FAQ_WHATSAPP,
+              external: true,
+              variant: "whatsapp",
+            },
+            { label: "Hotels in Bhurban guide", href: "/hotels-in-bhurban", variant: "outline" },
+          ]}
+        />
       </div>
     </section>
   );

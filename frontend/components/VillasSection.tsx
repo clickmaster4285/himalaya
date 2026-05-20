@@ -2,6 +2,7 @@
 
 import Image from "next/image";
 import Link from "next/link";
+import VillasCtaGroup from "@/components/VillasCtaGroup";
 import { useMemo, useRef, useState } from "react";
 import { shouldUnoptimizeImageSrc, getValidImageSrc } from "@/lib/image-utils";
 import { motion, useInView } from "framer-motion";
@@ -98,8 +99,8 @@ const VillasSection = ({ initialVillas = [] }: VillasSectionProps) => {
               transition={{ duration: 0.6, delay: 0.15 }}
               className="mt-3 max-w-2xl font-body text-sm text-muted-foreground md:text-base"
             >
-              Presidential Suite and Family Residence — flagship privacy and space for those who expect the mountain at
-              its best.
+              Presidential Suite and Family Residence — flagship privacy with the calm you expect from a resort in
+              bhurban, without sharing the property with other guests.
             </motion.p>
           </div>
 
@@ -159,6 +160,12 @@ const VillasSection = ({ initialVillas = [] }: VillasSectionProps) => {
                 </button>
               </div>
             )}
+
+            <VillasCtaGroup
+              className="mt-14 bg-white/80"
+              title="Found the villa you want?"
+              subtitle="Book direct for faster replies — or WhatsApp us with your dates and we will hold the best option for you."
+            />
           </>
         )}
       </div>

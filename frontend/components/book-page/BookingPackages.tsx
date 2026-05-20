@@ -3,6 +3,10 @@
 import React from "react";
 import Link from "next/link";
 import { Check } from "lucide-react";
+import BookingCtaStrip from "@/components/book-page/BookingCtaStrip";
+import { buildWhatsAppBookingUrl } from "@/lib/whatsapp";
+
+const PACKAGES_WHATSAPP = buildWhatsAppBookingUrl("resort in bhurban package");
 
 export default function BookingPackages() {
   const packages = [
@@ -21,8 +25,8 @@ export default function BookingPackages() {
         "Late checkout at 3 PM",
         "Dedicated villa attendant throughout stay"
       ],
-      ctaText: "ENQUIRE - WHATSAPP",
-      ctaLink: "https://wa.me/923000000000",
+      ctaText: "Honeymoon villa — WhatsApp",
+      ctaLink: buildWhatsAppBookingUrl("honeymoon villa bhurban murree"),
       ctaStyle: "outline"
     },
     {
@@ -40,7 +44,7 @@ export default function BookingPackages() {
         "Bonfire & s'mores experience",
         "Children's welcome hamper on arrival"
       ],
-      ctaText: "CHECK AVAILABILITY",
+      ctaText: "Book family villa in bhurban murree",
       ctaLink: "/book/stay",
       ctaStyle: "solid"
     },
@@ -59,8 +63,8 @@ export default function BookingPackages() {
         "Corporate billing & GST invoicing",
         "Dedicated event coordinator"
       ],
-      ctaText: "REQUEST GROUP QUOTE",
-      ctaLink: "https://wa.me/923000000000",
+      ctaText: "Corporate resort in bhurban — quote",
+      ctaLink: PACKAGES_WHATSAPP,
       ctaStyle: "outline"
     }
   ];
@@ -79,7 +83,9 @@ export default function BookingPackages() {
             <span className="block italic text-[#c9a55b] font-light mt-1">Mountain Escape</span>
           </h2>
           <p className="mt-6 text-[14px] md:text-[15px] text-neutral-600 leading-relaxed font-light max-w-2xl mx-auto">
-            Every stay at Himalaya Villas is a composed experience. Choose a package designed for your occasion — or speak with our reservations team to build a bespoke programme.
+            Every stay is a composed experience — whether you want a romantic escape, a family weekend, or a corporate
+            retreat that feels like the best hotel in bhurban without sharing corridors with strangers. Choose a package
+            or ask us to build dates around Eid, summer, and peak Murree weekends.
           </p>
         </div>
 
@@ -142,6 +148,21 @@ export default function BookingPackages() {
             </div>
           ))}
         </div>
+
+        <BookingCtaStrip
+          className="mt-12"
+          title="Not sure which package fits?"
+          subtitle="Tell us your dates and group size — we match you to villas in bhurban murree or a full-estate hire."
+          buttons={[
+            { label: "Start online booking", href: "/book/stay", variant: "dark" },
+            {
+              label: "Resort in bhurban — WhatsApp planner",
+              href: PACKAGES_WHATSAPP,
+              external: true,
+              variant: "whatsapp",
+            },
+          ]}
+        />
       </div>
     </section>
   );

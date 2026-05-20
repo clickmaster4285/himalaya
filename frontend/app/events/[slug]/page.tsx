@@ -22,6 +22,10 @@ const eventDetails: Record<string, {
     question: string;
     answer: string;
   }>;
+  contentSections?: Array<{
+    title: string;
+    paragraphs: string[];
+  }>;
 }> = {
   "nikah-wedding-reception": {
     title: "Nikah & Wedding Reception",
@@ -652,36 +656,103 @@ const eventDetails: Record<string, {
   },
   "eid-gatherings-family-reunions": {
     title: "Eid Gatherings & Family Reunions",
-    description: "Large family experiences with full-villa coordination.",
-    longDescription: "Celebrate Eid and family reunions in our spacious villas. We provide full coordination for large family gatherings with traditional hospitality and modern comfort.",
+    description:
+      "Host your Eid ul-Fitr or Eid ul-Adha reunion at a private luxury estate in bhurban in murree — full-villa coordination, festive catering, and mountain views for the whole family.",
+    longDescription:
+      "Bring your extended family together for Eid at Himalaya Premium Villas, a private estate set in bhurban in murree where the entire property is reserved for your group alone. Unlike crowded hotel lobbies in Murree town, you get landscaped terraces, in-villa dining, prayer space, and room for children, parents, and grandparents under one roof. Our team handles decorations, meal timings, guest logistics, and day-by-day coordination so you focus on salah, sehri, iftar-style feasts, and quality time — not vendor calls and parking chaos.",
     features: [
-      "Full villa accommodations",
-      "Traditional Eid decorations",
-      "Family-style catering",
-      "Prayer facilities",
-      "Children's activity areas",
-      "Transportation coordination"
+      "Exclusive full-estate hire in bhurban in murree — no shared guests or corridors",
+      "Traditional Eid décor: lights, florals, and themed lounges indoors & outdoors",
+      "Multi-course family catering — biryani, karahi, BBQ, sweets & breakfast spreads",
+      "Dedicated prayer area with mats, timing reminders & quiet zones for elders",
+      "Children's play corners, lawn games & supervised outdoor time on the estate",
+      "Chauffeur & parking coordination for guests arriving from Islamabad & Murree",
+      "24/7 on-site concierge for meals, room setup & last-minute family requests",
+      "Photo-friendly terraces overlooking the Murree Hills for Eid family portraits",
+      "Flexible check-in for long weekends — ideal for city families escaping heat",
+      "WhatsApp-first booking with clear packages before peak Eid dates fill up",
     ],
-    image: "https://picsum.photos/seed/eid20/800/600.jpg",
-    category: "Family & Social Celebrations",
+    image: "/assets/hero-bhurban-static.png",
+    category: "Family & Social Celebrations · Bhurban Murree",
+    contentSections: [
+      {
+        title: "Why families choose a private estate for Eid",
+        paragraphs: [
+          "Eid is about gathering everyone in one place — cousins, in-laws, grandparents, and children — without splitting across hotel floors. A private villa in bhurban in murree gives you shared living rooms, a single dining table (or several, if you prefer), and outdoor lawns for namaz, photos, and evening chai. You control the noise, the guest list, and the schedule.",
+          "Himalaya Premium Villas sits above the bustle of Murree Mall Road: cooler air, pine forest, and Himalayan views. Families from Islamabad and Rawalpindi often reach the estate in under two hours, making a three-day Eid break realistic without exhausting travel.",
+        ],
+      },
+      {
+        title: "What we coordinate for your Eid reunion",
+        paragraphs: [
+          "Before guests arrive, we confirm room layouts, extra mattresses, high chairs, and accessibility needs. On Eid day, our team stages the dining area, manages hot-food timing, and keeps refreshments flowing between salah and main meals at our bhurban in murree estate.",
+          "We can arrange gift tables, mehndi-free festive lounges, separate seating for elders, and a simple outdoor qurbani coordination point (where families bring their own arrangements) with cleanup handled on-site. Every detail is discussed on WhatsApp so nothing is left to chance.",
+        ],
+      },
+      {
+        title: "Catering & hospitality tailored to your family",
+        paragraphs: [
+          "Menus are built around your traditions: late-night chai, sehri-style breakfast if you stay over Ramadan weekends, or classic Eid lunch with biryani, roast, karahi, salads, raita, and mithai. Dietary requests — low spice, gluten-free sides, vegetarian plates — are noted in advance for your gathering in bhurban in murree.",
+          "Service can be family-style at one long table or buffet stations on the terrace. Many groups add a BBQ evening on the lawn as a second celebration night; we provide grills, staff, and seating so you are not juggling portable BBQs in a hotel parking lot.",
+        ],
+      },
+      {
+        title: "Space for every generation",
+        paragraphs: [
+          "Young children get safe lawn areas and indoor corners; teenagers get Wi-Fi lounges and terrace hangouts; elders get quiet rooms away from music. Couples and siblings reconnect in shared spaces without fighting hotel restaurant timings.",
+          "Capacity typically ranges from intimate groups of 8–12 up to larger reunions of 20+ when multiple sleeping zones are configured. Tell us your exact headcount early — especially for Eid ul-Fitr and Eid ul-Adha — so we reserve the right setup in bhurban in murree before calendars fill.",
+        ],
+      },
+      {
+        title: "Location, travel & peak-season tips",
+        paragraphs: [
+          "The estate is in Bhurban, Murree Hills — minutes from PC Bhurban and scenic drives from Patriata or Mall Road. We share live Google Maps links, parking guidance, and suggested arrival windows to avoid holiday traffic.",
+          "Book at least two to three weeks ahead for major Eid holidays. Mid-week Eid breaks often have better availability and softer rates. Ask our concierge about combining your stay with guided forest walks or a private chef dinner for a second-day activity.",
+        ],
+      },
+    ],
     faqs: [
       {
-        question: "How many family members can stay in the villas for Eid?",
-        answer: "Our villas can accommodate 8-20 family members depending on the villa size. We offer multiple interconnected villas for larger families."
+        question: "How many guests can stay for an Eid gathering at Himalaya Villas?",
+        answer:
+          "Most families book the full estate for 8–20 guests depending on sleeping configuration. Larger reunions can be discussed on WhatsApp — we may connect multiple villa zones when dates align. Planning early for Eid ul-Fitr and Eid ul-Adha is strongly recommended.",
       },
       {
-        question: "What special Eid arrangements do you provide?",
-        answer: "We provide Eid prayer arrangements, special festive decorations, traditional Eid meals, and gift exchange setups for the entire family."
+        question: "Do you provide Eid prayer arrangements on the property?",
+        answer:
+          "Yes. We prepare a clean, quiet prayer space with mats and direction markers, plus optional outdoor lawn space when weather allows. Many guests pray jamaah as a family before the main meal; timings are shared the night before.",
       },
       {
-        question: "Can you accommodate multi-generational family reunions?",
-        answer: "Yes, our facilities are designed for all ages with accessible rooms, quiet areas for elderly family members, and activity spaces for children."
+        question: "Can we host Eid lunch and dinner on the same booking?",
+        answer:
+          "Absolutely. Packages can cover multiple meals across two or three days — lunch, evening BBQ, and breakfast. Our kitchen and service team stagger courses so hot dishes arrive together, which is especially important for large family tables.",
       },
       {
-        question: "What catering options are available for Eid gatherings?",
-        answer: "We offer traditional Eid feasts including biryani, karahi, sweets, and special Eid dishes. All meals can be customized to family preferences."
-      }
-    ]
+        question: "Is the estate suitable for elderly parents and young children?",
+        answer:
+          "Yes. We offer ground-access rooms where possible, fewer stairs on key routes, calm zones for elders, and supervised outdoor areas for children. Share mobility needs when you inquire so we assign the right rooms before arrival.",
+      },
+      {
+        question: "How far is the villa from Islamabad and Murree Mall Road?",
+        answer:
+          "From Islamabad, expect roughly 1.5–2 hours via the Murree Expressway depending on holiday traffic. Murree Mall Road is about 25 minutes away — close enough for a scenic drive, far enough to avoid crowd noise at the estate.",
+      },
+      {
+        question: "What is included in Eid decorations and setup?",
+        answer:
+          "Festive lighting, floral touches, table styling, and lounge accents matching your colour theme. You may add your own banners or family branding; our team installs everything before the first guest arrives.",
+      },
+      {
+        question: "Can we customize the menu for regional dishes or dietary needs?",
+        answer:
+          "Yes. Share preferred dishes (Sindhi, Punjabi, Pashtun favourites, etc.), spice levels, and allergies. We build a written menu plan so every meal on Eid day runs on schedule.",
+      },
+      {
+        question: "How do I check availability and pricing for Eid dates?",
+        answer:
+          "Message us on WhatsApp with your dates, guest count, and meal plan. We reply with availability, a clear package outline, and payment steps. Peak Eid weekends sell out quickly at this bhurban in murree estate — early holds are encouraged.",
+      },
+    ],
   },
   "baby-showers-gender-reveal": {
     title: "Baby Showers & Gender Reveal",
@@ -1285,6 +1356,20 @@ export async function generateMetadata({ params }: { params: Promise<{ slug: str
       description:
         "Book adventure & outdoor activities in Bhurban Murree at Himalaya Villas. Guided hikes, team challenges & safe mountain fun for families, groups & corporate retreats.",
     },
+    "eid-gatherings-family-reunions": {
+      keywords: [
+        "Eid gatherings Bhurban Murree",
+        "family reunion Murree Hills",
+        "Eid ul-Fitr villa Bhurban",
+        "private estate Eid Pakistan",
+        "bhurban in murree family stay",
+        "Eid celebration private villa",
+        "large family Eid Murree",
+        "Himalaya Villas Eid booking",
+      ],
+      description:
+        "Book Eid gatherings & family reunions at Himalaya Premium Villas in bhurban in murree. Full private estate, festive catering, prayer space & concierge for 8–20+ guests.",
+    },
   };
 
   const seo = eventSeo[slug];
@@ -1393,6 +1478,24 @@ export default async function EventPage({ params }: { params: Promise<{ slug: st
                 <p className="text-gray-600 leading-relaxed mb-8">
                   {event.longDescription}
                 </p>
+
+                {event.contentSections?.map((section, sectionIndex) => (
+                  <div key={sectionIndex} className="mb-10">
+                    <h3 className="font-display text-2xl text-neutral-900 mb-4">
+                      {section.title}
+                    </h3>
+                    <div className="space-y-4">
+                      {section.paragraphs.map((paragraph, paragraphIndex) => (
+                        <p
+                          key={paragraphIndex}
+                          className="text-gray-600 leading-relaxed"
+                        >
+                          {paragraph}
+                        </p>
+                      ))}
+                    </div>
+                  </div>
+                ))}
                 
                 <h3 className="font-display text-2xl text-neutral-900 mb-6">
                   What's Included

@@ -119,6 +119,25 @@ const RESORT_GALLERY_IMAGES = [
   "/assets/gallery-reflection.jpg",
 ] as const;
 
+/** SEO alt text per gallery image (not shown on page — img alt only). */
+const GALLERY_IMAGE_ALTS: Record<(typeof RESORT_GALLERY_IMAGES)[number], string> = {
+  "/assets/gallery-exterior.jpg": "hotels in bhurban",
+  "/assets/gallery-interior.jpg": "best hotel in bhurban",
+  "/assets/gallery-garden.jpg": "hotel one bhurban",
+  "/assets/gallery-balcony.jpg": "bhurban hotel murree",
+  "/assets/gallery-dining-night.jpg": "resort in bhurban",
+  "/assets/gallery-bbq.jpg": "bhurban hotels",
+  "/assets/gallery-sunlight.jpg": "best hotels in bhurban murree",
+  "/assets/gallery-reflection.jpg": "bhurban best hotels",
+};
+
+/** Hero alt covers keywords 9–10 (not visible on page). */
+const HERO_IMAGE_ALT = "villas in bhurban murree, hotels in bhurban pakistan";
+
+function galleryImageAlt(src: string): string {
+  return GALLERY_IMAGE_ALTS[src as (typeof RESORT_GALLERY_IMAGES)[number]] ?? "hotels in bhurban";
+}
+
 /* ----------------------------- Hero Slider ----------------------------- */
 const EMPTY_INQUIRY_FORM = {
   fullName: "",
@@ -211,7 +230,7 @@ function HeroSlider() {
       <div className="absolute inset-0">
         <img
           src={HERO_STATIC_IMAGE}
-          alt="Himalaya Villas Resort, Bhurban Murree"
+          alt={HERO_IMAGE_ALT}
           className="h-full w-full object-cover"
         />
         <div className="absolute inset-0 bh-grad-hero" />
@@ -742,7 +761,7 @@ function AnimatedGallery() {
         <div className="bh-scroller-left gap-6 px-3">
           {topRow.map((src, k) => (
             <div key={k} className="group relative h-[250px] w-[350px] shrink-0 overflow-hidden rounded-3xl md:h-[320px] md:w-[450px] bh-shadow-lux">
-              <img src={src} alt="Estate View" className="h-full w-full object-cover transition-transform duration-1000 group-hover:scale-110" />
+              <img src={src} alt={galleryImageAlt(src)} className="h-full w-full object-cover transition-transform duration-1000 group-hover:scale-110" />
               <div className="absolute inset-0 bg-gradient-to-t from-black/50 to-transparent opacity-0 transition-opacity duration-500 group-hover:opacity-100" />
             </div>
           ))}
@@ -752,7 +771,7 @@ function AnimatedGallery() {
         <div className="bh-scroller-right gap-6 px-3">
           {bottomRow.map((src, k) => (
             <div key={k} className="group relative h-[250px] w-[350px] shrink-0 overflow-hidden rounded-3xl md:h-[320px] md:w-[450px] bh-shadow-lux">
-              <img src={src} alt="Estate View" className="h-full w-full object-cover transition-transform duration-1000 group-hover:scale-110" />
+              <img src={src} alt={galleryImageAlt(src)} className="h-full w-full object-cover transition-transform duration-1000 group-hover:scale-110" />
               <div className="absolute inset-0 bg-gradient-to-t from-black/50 to-transparent opacity-0 transition-opacity duration-500 group-hover:opacity-100" />
             </div>
           ))}

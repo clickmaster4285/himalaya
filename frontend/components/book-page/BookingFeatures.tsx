@@ -43,10 +43,9 @@ export default function BookingFeatures() {
             <span className="block italic text-[#c9a55b] font-light mt-1">Done Right.</span>
           </h2>
           <p className="mt-6 text-[14px] md:text-[15px] text-neutral-600 leading-relaxed font-light max-w-3xl">
-            Booking bhurban hotels through OTAs often costs more and gives you less control. When you reserve a resort in
-            bhurban style private stay with Himalaya Villas, you get priority treatment, our lowest direct rate, and a
-            human team — not an algorithm. Many guests searching bhurban best hotels choose us for the same reason they
-            skip crowded Murree town hotels: space, privacy, and mountain views without compromise.
+            Himalaya Villas is among the best hotels in Bhurban Murree for guests who book direct — priority treatment,
+            our lowest rate, and a human team instead of an algorithm. When you reserve a resort in bhurban style private
+            stay, you get space, privacy, and Murree Hills scenery without OTA markups or crowded hotel corridors.
           </p>
           <BookingCtaStrip
             className="mt-8"

@@ -57,6 +57,11 @@ export default function BookingFAQ() {
       question: "Can I compare you with best hotels in bhurban murree online?",
       answer:
         "Yes — read our hotels-in-bhurban guide for an honest look at bhurban hotel murree options, then message us with your dates. Direct booking usually beats OTA rates for the same peak weekends."
+    },
+    {
+      question: "Why is Himalaya Villas listed among the best hotels in Bhurban Murree?",
+      answer:
+        "We are among the best hotels in Bhurban Murree for luxury stays near the natural beauty of the Murree Hills — combining mountain charm with modern luxury, private villas, and personalized hospitality for guests who value comfort, scenery, and privacy."
     }
   ];
 

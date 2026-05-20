@@ -16,8 +16,9 @@ export default function BookingCTA() {
         </h2>
 
         <p className="text-[12px] md:text-[14px] text-white/60 leading-relaxed font-light mb-10 max-w-xl mx-auto">
-          Reservations 8 AM — 10 PM, seven days a week. Ask about bhurban hotels, compare our resort in bhurban packages,
-          or lock villas in bhurban murree — no payment needed to inquire.
+          For travelers who value comfort, scenery, and privacy, Himalaya Villas remains one of the best hotels in
+          Bhurban Murree. Reservations 8 AM — 10 PM — ask about bhurban hotels or lock villas in bhurban murree; no
+          payment needed to inquire.
         </p>
 
         <div className="flex flex-col sm:flex-row flex-wrap items-center justify-center gap-3">

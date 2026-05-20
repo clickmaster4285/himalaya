@@ -13,32 +13,36 @@ export const EVENT_SEO_KEYWORDS = [
   "villas in bhurban murree",
 ] as const;
 
-export type EventContentSection = {
+export type EventInfoCard = {
   title: string;
-  paragraphs: string[];
+  description: string;
 };
 
-function sectionParagraphs(
-  eventTitle: string,
-  primary: (typeof EVENT_SEO_KEYWORDS)[number]
-): string[] {
-  const others = EVENT_SEO_KEYWORDS.filter((k) => k !== primary);
-  const o = (i: number) => others[i % others.length];
+export type EventContentSection = {
+  title: string;
+  paragraphs?: string[];
+  cards?: EventInfoCard[];
+};
 
-  return [
-    `When you plan ${eventTitle} in the Murree Hills, most families still shortlist a ${primary} first. Any ${primary} on a map looks convenient, yet a ${primary} stay often means shared lobbies — our estate gives lawns, villa privacy, and one coordinator for your entire ${eventTitle} programme instead of a rigid ${o(0)} timetable.`,
-    `Guests who compared a ${primary} with ${o(1)} listings mention noise and fixed meal sittings. Another ${primary} may offer pretty photos, but your ${primary} booking rarely includes full-property timing control. Message us on WhatsApp with dates before you lock a ${primary} elsewhere; we also answer how ${o(2)} differs from private hire.`,
-    `For ${eventTitle}, we prioritise one guest list and one timeline — halal kitchen coordination, parking, and terraces with Himalayan views. Planners who began with a ${primary} search often upgrade after visiting; a ${primary} cannot match estate-wide ${o(3)} privacy. Compare ${o(4)} and ${o(5)} lists, then tour our ridge.`,
-    `Décor, catering, and add-ons (walks, adventure, bonfire, spa) are confirmed in writing before travel. Expect ${primary}-level clarity from our concierge: every ${primary} question on capacity, meals, and access gets a direct answer. Hold dates early for Eid and summer — ${eventTitle} deserves the same lead time as a sold-out ${primary} weekend near ${o(6)} and ${o(7)}.`,
-  ];
+function keywordCardDescription(
+  eventTitle: string,
+  keyword: (typeof EVENT_SEO_KEYWORDS)[number]
+): string {
+  const others = EVENT_SEO_KEYWORDS.filter((k) => k !== keyword);
+  return `Planning ${eventTitle}? Compare any ${keyword} with our private estate — more space than a typical ${others[0]}, and clearer packages than most ${others[1]} listings. Message us on WhatsApp for dates.`;
 }
 
-/** Eight themed sections (~250+ words each) — one primary keyword per section, repeated 8× in body copy. */
+/** One card grid section — 8 keywords as scannable cards (not long paragraphs). */
 export function buildEventKeywordSections(eventTitle: string): EventContentSection[] {
-  return EVENT_SEO_KEYWORDS.map((keyword) => ({
-    title: `${eventTitle} — ${keyword} planning guide`,
-    paragraphs: sectionParagraphs(eventTitle, keyword),
-  }));
+  return [
+    {
+      title: `Bhurban Murree stay guide for ${eventTitle}`,
+      cards: EVENT_SEO_KEYWORDS.map((keyword) => ({
+        title: keyword.replace(/\b\w/g, (c) => c.toUpperCase()),
+        description: keywordCardDescription(eventTitle, keyword),
+      })),
+    },
+  ];
 }
 
 export function buildEventKeywordFaqs(eventTitle: string): Array<{ question: string; answer: string }> {

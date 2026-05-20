@@ -29,9 +29,9 @@ const EVENT_IMAGE_BY_SLUG: Record<string, string> = {
   "retirement-celebrations": "/assets/retirement1.webp",
   "farewells-send-offs": "/assets/family-reunion-group.webp",
   "bonfire-stargazing-nights": "/assets/journal-bonfire.jpg",
-  "guided-trails-forest-walks": "/assets/murree-kashmir-point.jpg",
+  "guided-trails-forest-walks": "/assets/blog-bhurban-forest-nature-walk.png",
   "private-chef-dining-experiences": "/assets/gallery-dining-night.jpg",
-  "adventure-outdoor-activities": "/assets/murree-kashmir-point.jpg",
+  "adventure-outdoor-activities": "/assets/murree-mountain-hero.jpg",
   "workshops-creative-sessions": "/assets/services-events-real.jpg",
   "photography-content-packages": "/assets/gallery-exterior.jpg",
   "yoga-meditation-retreats": "/assets/philosophy-interior.jpg",
@@ -45,7 +45,8 @@ const EVENT_IMAGE_BY_SLUG: Record<string, string> = {
 /** Slider / listing heroes — all local paths used elsewhere on the site. */
 export const EVENTS_HERO_SLIDES = [
   "/assets/hero-bhurban-static.png",
-  "/assets/murree-kashmir-point.jpg",
+  "/assets/murree-mountain-hero.jpg",
+  "/assets/blog-bhurban-forest-nature-walk.png",
   "/assets/gallery-exterior.jpg",
   "/assets/villa-honeymoon-real.jpg",
   "/assets/wedding8.jpg",

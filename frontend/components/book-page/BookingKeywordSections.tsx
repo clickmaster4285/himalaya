@@ -1,5 +1,6 @@
 import Link from "next/link";
 import BookingCtaStrip from "@/components/book-page/BookingCtaStrip";
+import EventInfoCards from "@/components/EventInfoCards";
 import { buildWhatsAppBookingUrl } from "@/lib/whatsapp";
 
 const BOOK_WHATSAPP = buildWhatsAppBookingUrl();
@@ -19,10 +20,10 @@ export default function BookingKeywordSections() {
             <span className="block italic text-[#c9a55b] font-light mt-1">hotel in bhurban</span>
           </h2>
           <p className="mt-6 text-[14px] md:text-[15px] text-neutral-600 leading-relaxed font-light max-w-3xl">
-            If you are comparing a bhurban hotel murree room with limited privacy, Himalaya Premium
-            Villas offers private suites and full-estate bookings in the Murree Hills — staffed dining, mountain
-            terraces, and direct rates without OTA commissions. Most guests from Islamabad and Rawalpindi reach us in
-            about 90 minutes via the Murree Expressway.
+            If you are comparing a bhurban hotel murree room with limited privacy, Himalaya Premium Villas offers
+            private suites and full-estate bookings in the Murree Hills. For travelers who value comfort, scenery, and
+            privacy, we remain one of the best hotels in Bhurban Murree — with staffed dining, mountain terraces, and
+            direct rates without OTA commissions. Most guests from Islamabad reach us in about 90 minutes.
           </p>
           <BookingCtaStrip
             className="mt-8"
@@ -64,19 +65,40 @@ export default function BookingKeywordSections() {
           </div>
           <div>
             <h3 className="font-display text-2xl md:text-3xl text-[#1b261b] mb-4">
-              Among the best hotels in bhurban murree — privately
+              Direct booking benefits
             </h3>
             <p className="text-[14px] text-neutral-600 leading-relaxed font-light mb-4">
-              Rankings of the best hotels in bhurban murree and bhurban best hotels{" "}
-              focus on star ratings and room counts. We focus on exclusivity: limited overlapping bookings, in-villa
-              meals, prayer and event coordination when needed, and the calm of a pine-forest ridge above Murree town.
+              Limited overlapping bookings, in-villa meals, prayer and event coordination when needed, and the calm of a
+              pine-forest ridge above Murree town — the exclusivity guests expect from the best hotel in bhurban, with
+              villa-level space for your whole group.
             </p>
             <p className="text-[14px] text-neutral-600 leading-relaxed font-light">
-              Want the service polish associated with the best hotel in bhurban but with villa-level
-              space? Message us with dates and guest count — peak Eid and summer weekends fill early.
+              Message us with dates and guest count on this page or WhatsApp — peak Eid and summer weekends fill early.
             </p>
           </div>
         </div>
+
+        <EventInfoCards
+          title="Among the best hotels in Bhurban Murree"
+          subtitle="Why guests book Himalaya Villas instead of a standard bhurban hotel murree room."
+          cards={[
+            {
+              title: "Comfort, scenery & privacy",
+              description:
+                "For travelers who value comfort, scenery, and privacy, Himalaya Villas remains one of the best hotels in Bhurban Murree — book direct for clear packages and the lowest available rates.",
+            },
+            {
+              title: "Luxury near Murree Hills",
+              description:
+                "Himalaya Villas is among the best hotels in Bhurban Murree for guests seeking luxury stays near the natural beauty of the Murree Hills, with private villas and estate-wide hospitality.",
+            },
+            {
+              title: "Mountain charm & modern luxury",
+              description:
+                "Combining mountain charm with modern luxury, Himalaya Villas continues to be recognized among the best hotels in Bhurban Murree for family breaks, honeymoons, and corporate retreats.",
+            },
+          ]}
+        />
 
         <BookingCtaStrip
           title="Hold your dates before peak season fills"

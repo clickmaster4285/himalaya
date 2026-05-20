@@ -24,10 +24,10 @@ export default function BookingHero() {
           </h1>
 
           <p className="mt-8 text-[14px] md:text-[15px] text-white/80 leading-relaxed font-light">
-            Pakistan&apos;s most exclusive private mountain estate — an alternative to a typical{" "}
-            <span className="text-white/95">hotel in bhurban</span> when you want full privacy. Twelve luxury villas
-            above the pine forests, 60 kilometres from Islamabad. Compare bhurban hotels and book villas in bhurban
-            murree with direct rates and a human reservations team.
+            Pakistan&apos;s most exclusive private mountain estate — among the best hotels in Bhurban Murree for luxury
+            stays near the Murree Hills. An alternative to a typical hotel in bhurban when you want full privacy:
+            twelve villas above the pine forests, 60 kilometres from Islamabad, with direct rates and a human
+            reservations team.
           </p>
 
           {/* Stats */}

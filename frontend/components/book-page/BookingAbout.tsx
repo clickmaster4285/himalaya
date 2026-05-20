@@ -74,8 +74,9 @@ export default function BookingAbout() {
               lift queues.
             </p>
             <p>
-              Our team — many from Pakistan&apos;s finest hotel brands — delivers the polish people associate with the
-              best hotels in bhurban murree, with the privacy of a resort in bhurban hired for your dates alone.
+              Combining mountain charm with modern luxury, Himalaya Villas continues to be recognized among the best
+              hotels in Bhurban Murree. Our team delivers the polish guests expect, with the privacy of a resort in
+              bhurban hired for your dates alone.
             </p>
           </div>
 

@@ -91,14 +91,27 @@ const VillasPage = async () => {
         </p>
 
         <h2 className="mt-12 font-display text-2xl text-neutral-900">
-          Standing out among the best hotels in bhurban murree
+          Recognized among the best hotels in Bhurban Murree
         </h2>
         <p className="mt-4 max-w-4xl text-[15px] leading-8 text-neutral-700">
-          Lists of the <strong>best hotels in bhurban murree</strong> and <strong>bhurban best hotels</strong> usually
-          rank star ratings and room counts. We focus on exclusivity: limited monthly bookings, in-villa meals, prayer
-          and event coordination, and outdoor areas for photography and bonfire evenings. Whether you are escaping the
-          city for a weekend or hosting a hill-side reunion, this page helps you match suite style, guest capacity, and
-          budget before you confirm dates.
+          Himalaya Villas is proudly recognized among the best hotels in Bhurban Murree for luxury stays, family
+          vacations, and corporate retreats. If you are searching for the best hotels in Bhurban Murree with
+          breathtaking mountain views, our estate offers an unforgettable premium experience — ranked among the best
+          hotels in Bhurban Murree for luxury interiors, peaceful surroundings, and exceptional hospitality.
+        </p>
+        <p className="mt-4 max-w-4xl text-[15px] leading-8 text-neutral-700">
+          Families looking for the best hotels in Bhurban Murree choose Himalaya Villas for spacious suites, a scenic
+          environment, and private comfort. We stand out as one of the best hotels in Bhurban Murree for weddings,
+          private events, and luxury group stays — experience premium hospitality at a property designed for travellers
+          who want elegance without shared corridors.
+        </p>
+        <p className="mt-4 max-w-4xl text-[15px] leading-8 text-neutral-700">
+          Among the best hotels in Bhurban Murree, we offer a unique blend of private luxury villas and resort-style
+          amenities. Travellers visiting Murree often consider us one of the best hotels in Bhurban Murree for peaceful,
+          secure family stays — with limited monthly bookings, in-villa meals, and terraces for photography and bonfire
+          evenings. Discover why Himalaya Villas is counted among the best hotels in Bhurban Murree for luxury
+          vacations and weekend getaways, and why guests describe our care as a world-class hospitality experience for
+          local and international visitors alike.
         </p>
 
         <VillasCtaGroup

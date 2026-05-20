@@ -84,7 +84,7 @@ const faqSchema = {
 export const metadata: Metadata = {
   title: "Hotel Booking in Bhurban Murree | Himalaya Villas",
   description:
-    "Book a hotel in Bhurban Murree or private villas in bhurban murree at Himalaya Villas. Compare bhurban hotels, resort in bhurban options, and best hotels in bhurban murree — direct rates and WhatsApp reservations.",
+    "Book at Himalaya Villas — among the best hotels in Bhurban Murree for comfort, scenery, and privacy. Private villas in bhurban murree, direct rates, and WhatsApp reservations.",
 };
 
 export default function BookNowLandingPage() {

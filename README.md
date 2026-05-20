@@ -1,68 +1,38 @@
-# Himalaya Villas — monorepo
+# Himalaya Villas — Next.js
 
-This project is split into two workspaces:
-
-| Folder | Stack | Purpose |
-|--------|--------|---------|
-| `frontend/` | Next.js 16 | Public site, dashboards, API proxy to backend |
-| `backend/` | Express + MongoDB | REST API, auth, bookings, villas, inquiries |
+Single Next.js 16 app with API routes, MongoDB, auth, bookings, villas, and inquiries.
 
 ## Quick start
 
-1. **MongoDB** — running locally (or set `DATABASE_URL` in `backend/.env`).
+1. **MongoDB** — running locally (or set `DATABASE_URL` in `frontend/.env.local`).
 
-2. **Backend env** — copy and edit:
-
-   ```bash
-   cp backend/.env.example backend/.env
-   ```
-
-3. **Frontend env** — copy and edit:
+2. **Env** — copy and edit:
 
    ```bash
    cp frontend/.env.example frontend/.env.local
    ```
 
-4. **Install and run both** (from repo root):
+3. **Install and run** (from repo root):
 
    ```bash
    npm install
    npm run dev
    ```
 
-   - Frontend: http://localhost:3000  
-   - Backend API: http://127.0.0.1:5000  
-
-Run individually:
-
-```bash
-npm run dev:backend
-npm run dev:frontend
-```
+   App: http://localhost:3000  
+   API health: http://localhost:3000/api/health
 
 ## Folder structure
 
-### `backend/src/`
-
 ```
-server.ts          # App entry
-config/            # env, bootstrap
-controllers/       # Route handlers
-routes/            # Express routers
-models/            # Mongoose schemas
-services/          # Business logic
-middleware/        # Auth session parsing
-utils/             # Password, JWT, DTOs
-data/              # Static villa catalog
+frontend/
+  app/               # Pages & API routes (app/api/*)
+  lib/
+    server/          # API logic (controllers, services, models)
+    ...              # Shared utilities, SEO, UI helpers
+  components/        # React UI
+  public/            # Static assets
+  scripts/           # SMTP / Gmail setup helpers
 ```
 
-### `frontend/`
-
-```
-app/               # Next.js pages & API routes
-components/        # React UI
-lib/               # Shared utilities, SEO, API helpers
-public/            # Static assets
-```
-
-Frontend `/api/*` requests are rewritten to the backend (see `frontend/next.config.ts`).
+API handlers live under `frontend/lib/server/` and are exposed via `frontend/app/api/[[...slug]]/route.ts`.

@@ -2,16 +2,15 @@
   "name": "himalaya-next",
   "private": true,
   "workspaces": [
-    "frontend",
-    "backend"
+    "frontend"
   ],
   "scripts": {
-    "dev": "concurrently -k \"npm run dev -w backend\" \"npm run dev -w frontend\"",
-    "dev:frontend": "npm run dev -w frontend",
-    "dev:backend": "npm run dev -w backend",
-    "build": "npm run build -w backend && npm run build -w frontend",
-    "start": "concurrently -k \"npm run start -w backend\" \"npm run start -w frontend\"",
-    "lint": "npm run lint -w frontend"
+    "dev": "npm run dev -w frontend",
+    "build": "npm run build -w frontend",
+    "start": "npm run start -w frontend",
+    "lint": "npm run lint -w frontend",
+    "test:smtp": "node frontend/scripts/test-smtp.js",
+    "gmail:setup": "node frontend/scripts/gmail-oauth-setup.js"
   },
   "devDependencies": {
     "concurrently": "^9.1.2"

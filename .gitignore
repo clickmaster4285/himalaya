@@ -3,7 +3,6 @@
 # dependencies
 /node_modules
 /frontend/node_modules
-/backend/node_modules
 /.pnp
 .pnp.*
 .yarn/*
@@ -20,8 +19,6 @@
 /out/
 frontend/.next/
 frontend/out/
-backend/dist/
-
 # production
 /build
 

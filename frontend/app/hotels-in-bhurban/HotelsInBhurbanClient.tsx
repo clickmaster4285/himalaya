@@ -4,7 +4,7 @@ import { HOTELS_IN_BHURBAN_FAQS } from "@/lib/seo/hotels-in-bhurban-faqs";
 import { useEffect, useRef, useState, ReactNode } from "react";
 import {
   Mountain, Sparkles, Home, Star, Utensils, Briefcase, Clock,
-  Phone, Mail, MapPin, ChevronLeft, ChevronRight, Check,
+  Phone, Mail, MapPin, Check,
   Sun, Snowflake, Flower2, Facebook, Twitter, Linkedin, ArrowDown, Wifi, Users, Heart, Calendar, MessageCircle,
   LogIn, LogOut, ShieldCheck, RotateCcw, Navigation, Quote, ExternalLink, BedDouble,
 } from "lucide-react";
@@ -15,6 +15,11 @@ import { buildBhurbanInquiryWhatsAppUrl, buildWhatsAppBookingUrl } from "@/lib/w
 const BHBURBAN_WHATSAPP_URL = buildWhatsAppBookingUrl(
   "a private stay at Himalaya Premium Villas in Bhurban"
 );
+const HERO_STATIC_IMAGE = "/assets/hero-bhurban-static.png";
+
+/** Deep link for pricing CTA (pre-filled message). */
+const PRICING_WHATSAPP_BOOK_URL =
+  "https://wa.me/923045679000?text=I%20want%20to%20book%20a%20private%20stay%20at%20Himalaya%20Premium%20Villas%20in%20Bhurban";
 
 /* ============================================================
    ALL-IN-ONE PAGE — fonts, design tokens, gradients, animations,
@@ -33,6 +38,8 @@ const PAGE_STYLES = `
   color:hsl(var(--fg));
   background:hsl(var(--bg));
   min-height:100vh;
+  overflow-x:hidden;
+  max-width:100%;
 }
 .bh-page h1,.bh-page h2,.bh-page h3,.bh-page h4{font-family:'Playfair Display',Georgia,serif;}
 .bh-page a{color:inherit;text-decoration:none;}
@@ -53,11 +60,7 @@ const PAGE_STYLES = `
 .bh-reveal{opacity:0;transform:translateY(40px) translateZ(0);transition:opacity .9s ease-out,transform .9s ease-out;}
 .bh-reveal.in{opacity:1;transform:translateY(0) translateZ(0);}
 
-@keyframes bhKenBurns{0%{transform:scale(1) translateZ(0)}100%{transform:scale(1.15) translateZ(0)}}
-@keyframes bhFloat{0%,100%{transform:translateY(0)}50%{transform:translateY(-20px)}}
 @keyframes bhScrollDown{0%{transform:translateY(0);opacity:1}100%{transform:translateY(12px);opacity:0}}
-.bh-ken{animation:bhKenBurns 8s ease-out both;}
-.bh-float{animation:bhFloat 6s ease-in-out infinite;}
 .bh-scroll-ind{animation:bhScrollDown 1.5s ease-in-out infinite;}
 
 html{scroll-behavior:smooth;}
@@ -116,9 +119,6 @@ const RESORT_GALLERY_IMAGES = [
   "/assets/gallery-reflection.jpg",
 ] as const;
 
-const HERO_SLIDES = [...RESORT_GALLERY_IMAGES];
-
-
 /* ----------------------------- Hero Slider ----------------------------- */
 const EMPTY_INQUIRY_FORM = {
   fullName: "",
@@ -131,22 +131,11 @@ const EMPTY_INQUIRY_FORM = {
 };
 
 function HeroSlider() {
-  const [i, setI] = useState(0);
-  const [paused, setPaused] = useState(false);
-  const scrollY = useScrollY();
   const [form, setForm] = useState(EMPTY_INQUIRY_FORM);
   const [submitting, setSubmitting] = useState(false);
   const [submitStatus, setSubmitStatus] = useState<"idle" | "success" | "error">("idle");
   const [submitError, setSubmitError] = useState("");
   const [successNote, setSuccessNote] = useState("");
-
-  useEffect(() => {
-    if (paused) return;
-    const id = setInterval(() => setI((p) => (p + 1) % HERO_SLIDES.length), 5000);
-    return () => clearInterval(id);
-  }, [paused]);
-
-  const go = (d: number) => setI((p) => (p + d + HERO_SLIDES.length) % HERO_SLIDES.length);
 
   const onFormChange = (
     e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement | HTMLSelectElement>
@@ -218,38 +207,14 @@ function HeroSlider() {
   };
 
   return (
-    <section
-      className="relative min-h-[100dvh] w-full lg:h-screen lg:overflow-hidden"
-      onMouseEnter={() => setPaused(true)}
-      onMouseLeave={() => setPaused(false)}
-    >
-      {HERO_SLIDES.map((src, idx) => (
-        <div
-          key={idx}
-          className={`absolute inset-0 transition-opacity duration-1000 ${idx === i ? "opacity-100" : "opacity-0"}`}
-          style={scrollY > 0 ? { transform: `translateY(${scrollY * 0.4}px)` } : undefined}
-        >
-          <img src={src} alt="Himalaya Villas Resort, Bhurban Murree" className={`h-full w-full object-cover ${idx === i ? "bh-ken" : ""}`} />
-          <div className="absolute inset-0 bh-grad-hero" />
-        </div>
-      ))}
-
-      {/* Floating background cards */}
-      <div className="pointer-events-none absolute inset-0 overflow-hidden hidden md:block">
-        {[...Array(6)].map((_, k) => (
-          <div
-            key={k}
-            className="absolute rounded-3xl bh-float"
-            style={{
-              width: 120 + k * 30, height: 120 + k * 30,
-              top: `${10 + k * 12}%`, left: `${5 + k * 14}%`,
-              background: "hsl(38 88% 55% / 0.06)",
-              border: "1px solid hsl(38 88% 55% / 0.2)",
-              backdropFilter: "blur(4px)",
-              animationDelay: `${k * 0.6}s`,
-            }}
-          />
-        ))}
+    <section className="relative min-h-[100dvh] w-full lg:h-screen lg:overflow-hidden">
+      <div className="absolute inset-0">
+        <img
+          src={HERO_STATIC_IMAGE}
+          alt="Himalaya Villas Resort, Bhurban Murree"
+          className="h-full w-full object-cover"
+        />
+        <div className="absolute inset-0 bh-grad-hero" />
       </div>
 
       {/* Content */}
@@ -445,20 +410,6 @@ function HeroSlider() {
         </div>
       </div>
 
-      {/* Arrows removed per user request */}
-
-      {/* Dots */}
-      <div className="absolute bottom-24 left-1/2 z-20 flex -translate-x-1/2 gap-2">
-        {HERO_SLIDES.map((_, k) => (
-          <button key={k} onClick={() => setI(k)} aria-label={`Slide ${k + 1}`}
-            className="h-2 rounded-full transition-all"
-            style={{
-              width: k === i ? 40 : 8,
-              background: k === i ? "hsl(38 88% 55%)" : "hsl(40 38% 97% / .4)",
-            }} />
-        ))}
-      </div>
-
       {/* Scroll indicator */}
       <div className="absolute bottom-6 left-1/2 z-20 flex -translate-x-1/2 flex-col items-center gap-1" style={{ color: "hsl(40 38% 97% / .7)" }}>
         <span className="text-xs uppercase tracking-widest">Scroll</span>
@@ -474,7 +425,7 @@ function Section({ id, children, className = "", style }: { id?: string; childre
 }
 
 function Container({ children }: { children: ReactNode }) {
-  return <div className="mx-auto w-full max-w-6xl px-6">{children}</div>;
+  return <div className="mx-auto w-full min-w-0 max-w-6xl px-4 sm:px-6">{children}</div>;
 }
 
 function SectionHeader({ kicker, title, sub, light = false }: { kicker?: string; title: ReactNode; sub: string; light?: boolean }) {
@@ -552,14 +503,14 @@ function Amenities() {
             Whether you are weighing a chain <strong>resort in Bhurban</strong> or a private stay, these are the amenities guests expect from a top <strong>bhurban hotel murree</strong> experience — delivered here as standard across the entire estate.
           </p>
         </Reveal>
-        <div className="grid grid-cols-2 gap-4 md:grid-cols-3 lg:grid-cols-4 mt-8">
+        <div className="mt-8 grid grid-cols-1 gap-3 sm:grid-cols-2 sm:gap-4 md:grid-cols-3 lg:grid-cols-4">
           {amenitiesList.map((item, k) => (
-            <Reveal key={k} delay={k * 50}>
-              <div className={`bh-card bh-border p-4 flex items-center gap-4 transition-transform hover:-translate-y-1 ${!item.available ? "opacity-60" : "bh-shadow-lux bg-white"}`}>
-                <div className={`flex h-10 w-10 md:h-12 md:w-12 items-center justify-center rounded-xl flex-shrink-0 ${item.available ? "bh-grad-emerald text-white" : "bg-gray-200 text-gray-500"}`}>
+            <Reveal key={k} delay={k * 50} className="min-w-0">
+              <div className={`bh-card bh-border flex min-w-0 w-full items-center gap-3 p-3 transition-transform hover:-translate-y-1 sm:gap-4 sm:p-4 ${!item.available ? "opacity-60" : "bh-shadow-lux bg-white"}`}>
+                <div className={`flex h-10 w-10 shrink-0 items-center justify-center rounded-xl md:h-12 md:w-12 ${item.available ? "bh-grad-emerald text-white" : "bg-gray-200 text-gray-500"}`}>
                   <item.icon className="h-5 w-5 md:h-6 md:w-6" />
                 </div>
-                <span className={`font-semibold text-sm md:text-base ${item.available ? "text-gray-800" : "text-gray-500 line-through"}`}>
+                <span className={`min-w-0 flex-1 text-sm font-semibold leading-snug sm:text-base ${item.available ? "text-gray-800" : "text-gray-500 line-through"}`}>
                   {item.name}
                 </span>
               </div>
@@ -946,30 +897,66 @@ function FinalCTA() {
 /* ----------------------------- 6. Pricing ----------------------------- */
 function Pricing() {
   return (
-    <Section id="booking">
-      <ParallaxBg src="/assets/murree-luxury-resort.jpg" speed={0.3} opacity={0.1} />
+    <Section id="booking" className="py-14 md:py-20" style={{ background: "hsl(40 38% 97%)" }}>
       <div className="relative" style={{ zIndex: 1 }}>
         <Container>
           <Reveal>
-            <div className="bh-card bh-border bh-shadow-lux mx-auto max-w-4xl overflow-hidden p-8 text-center md:p-12">
-              <h3 className="mb-8 text-3xl font-bold md:text-4xl" style={{ color: "hsl(165 60% 18%)" }}>
-                Hotel Pricing in Bhurban Murree
+            <div
+              className="mx-auto max-w-4xl rounded-2xl bg-white p-8 text-center bh-shadow-lux md:p-12"
+              style={{ border: "2px solid hsl(165 55% 32% / 0.35)" }}
+            >
+              <h3 className="text-3xl font-bold md:text-4xl" style={{ color: "hsl(165 60% 18%)" }}>
+                Book Your Private Stay in Bhurban
               </h3>
-              <div
-                className="flex flex-col items-center justify-center gap-4 border-t border-b py-8 text-base font-semibold md:flex-row md:flex-wrap md:gap-6 md:text-lg"
-                style={{ borderColor: "hsl(165 15% 86%)", color: "hsl(165 60% 18%)" }}
+              <p
+                className="mt-6 text-4xl font-bold tracking-tight md:text-5xl"
+                style={{ color: "hsl(165 60% 18%)" }}
               >
-                <span className="bh-text-emerald text-xl tracking-[0.2em] md:text-2xl">HIMALAYA PREMIUM VILLAS</span>
-                <span className="hidden text-neutral-300 md:inline" aria-hidden>|</span>
-                <span>From PKR 40,000/night</span>
-                <span className="hidden text-neutral-300 md:inline" aria-hidden>|</span>
-                <span className="max-w-2xl font-normal leading-relaxed bh-muted">
-                  Private Hotel in Bhurban Murree — Entire property in Bhurban murree yours
-                </span>
-              </div>
-              <p className="bh-muted mt-6 text-sm italic">
-                Direct booking via WhatsApp — best available rate for guests comparing any resort in Bhurban or hotels in Bhurban Pakistan listings. Priority allocation during peak season.
+                PKR 40,000 / night
               </p>
+              <p className="mt-3 text-lg bh-muted">
+                Entire property · Up to 12 guests
+              </p>
+              <p className="mx-auto mt-4 max-w-2xl text-base leading-relaxed md:text-lg" style={{ color: "hsl(165 12% 38%)" }}>
+                That&apos;s just PKR 3,300 per person for a luxury private estate
+              </p>
+              <a
+                href={PRICING_WHATSAPP_BOOK_URL}
+                target="_blank"
+                rel="noopener noreferrer"
+                className="mt-9 inline-flex items-center justify-center gap-2 rounded-full bg-emerald-600 px-8 py-4 text-base font-semibold text-white shadow-md transition-transform hover:scale-[1.02] hover:bg-emerald-700"
+              >
+                Book via WhatsApp
+                <span aria-hidden className="font-normal">
+                  →
+                </span>
+              </a>
+              <div className="mt-6">
+                <a
+                  href={telHref()}
+                  className="text-base font-semibold hover:underline"
+                  style={{ color: "hsl(165 55% 28%)" }}
+                >
+                  Call Us — {SITE_CONTACT.phoneDisplay}
+                </a>
+              </div>
+              <p className="mt-6 text-sm font-semibold text-red-600 md:text-base">
+                Limited bookings per month — check availability now
+              </p>
+              <div
+                className="mt-8 flex flex-wrap items-center justify-center gap-x-3 gap-y-2 border-t pt-8 text-sm md:text-base"
+                style={{ borderColor: "hsl(165 15% 90%)" }}
+              >
+                <span className="bh-muted whitespace-nowrap">⭐ 5.0 Rated</span>
+                <span className="hidden text-neutral-300 sm:inline" aria-hidden>
+                  |
+                </span>
+                <span className="bh-muted whitespace-nowrap">✓ Direct Booking</span>
+                <span className="hidden text-neutral-300 sm:inline" aria-hidden>
+                  |
+                </span>
+                <span className="bh-muted whitespace-nowrap">✓ No Hidden Fees</span>
+              </div>
             </div>
           </Reveal>
         </Container>
@@ -1406,9 +1393,22 @@ function Footer() {
           <div>
             <h4 className="mb-4 text-lg font-bold">Contact Information</h4>
             <div className="space-y-3 text-sm" style={{ color: "hsl(40 38% 97% / .7)" }}>
-              <p>­ƒô× +92 304 567 9000</p>
-              <p>­ƒôº info@himalayavillas.com</p>
-              <p>­ƒôì Bhurban, Murree, Pakistan</p>
+              <p className="flex items-center gap-2">
+                <Phone className="h-4 w-4 shrink-0" style={{ color: "hsl(42 95% 65%)" }} />
+                <a href={telHref()} className="hover:underline">
+                  {SITE_CONTACT.phoneDisplay}
+                </a>
+              </p>
+              <p className="flex items-center gap-2">
+                <Mail className="h-4 w-4 shrink-0" style={{ color: "hsl(42 95% 65%)" }} />
+                <a href={mailtoHref("info")} className="hover:underline">
+                  {SITE_CONTACT.emails.info}
+                </a>
+              </p>
+              <p className="flex items-start gap-2">
+                <MapPin className="mt-0.5 h-4 w-4 shrink-0" style={{ color: "hsl(42 95% 65%)" }} />
+                <span>Bhurban, Murree, Pakistan</span>
+              </p>
             </div>
             <div className="mt-6 flex gap-3">
               {[Facebook, Twitter, Linkedin].map((Icon, k) => (
@@ -1422,7 +1422,7 @@ function Footer() {
           </div>
         </div>
         <div className="py-6 text-center text-sm" style={{ borderTop: "1px solid hsl(40 38% 97% / .15)", color: "hsl(40 38% 97% / .6)" }}>
-          ┬® {new Date().getFullYear()} Himalaya Premium Villas. All rights reserved. | Private Luxury Estate in Bhurban | Hotels in Bhurban
+          &copy; {new Date().getFullYear()} Himalaya Premium Villas. All rights reserved. | Private Luxury Estate in Bhurban | Hotels in Bhurban
         </div>
       </Container>
     </footer>
@@ -1433,8 +1433,8 @@ function Footer() {
 function SectionCTA({ variant = 0 }: { variant?: number }) {
   const snippet = CTA_KEYWORD_SNIPPETS[variant % CTA_KEYWORD_SNIPPETS.length];
   return (
-    <div className="py-8 md:py-12 px-6">
-      <div className="mx-auto w-full max-w-6xl">
+    <div className="px-4 py-8 sm:px-6 md:py-12">
+      <div className="mx-auto w-full min-w-0 max-w-6xl">
         <Reveal>
           <div className="relative overflow-hidden rounded-3xl bh-shadow-lux" style={{ background: "hsl(165 60% 18%)", color: "hsl(40 38% 97%)" }}>
             <div className="absolute -right-20 -top-20 h-64 w-64 rounded-full" style={{ background: "hsl(165 55% 25%)", opacity: 0.5, filter: "blur(40px)" }} />
@@ -1483,6 +1483,7 @@ export default function HotelsInBhurbanClient() {
       <style>{PAGE_STYLES}</style>
       <main className="bh-page">
         <HeroSlider />
+        <Pricing />
         <Introduction />
         <Amenities />
         <SectionCTA variant={0} />
@@ -1496,7 +1497,6 @@ export default function HotelsInBhurbanClient() {
         <SectionCTA variant={4} />
         <BhurbanDestination />
         <SectionCTA variant={5} />
-        <Pricing />
         <PlanYourStaySection />
         <BhurbanKeywordGuide />
         <SectionCTA variant={6} />

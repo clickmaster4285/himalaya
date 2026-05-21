@@ -23,6 +23,16 @@ function staticMarketingRoutes(): SitemapRouteDef[] {
     { path: "/villas", changeFrequency: "weekly", priority: 0.95 },
     { path: "/blogs", changeFrequency: "weekly", priority: 0.85 },
     { path: "/experience", changeFrequency: "monthly", priority: 0.85 },
+    { path: "/things-to-do-in-murree", changeFrequency: "monthly", priority: 0.88 },
+    { path: "/things-to-do-in-murree-in-winter", changeFrequency: "monthly", priority: 0.88 },
+    { path: "/family-things-to-do-murree", changeFrequency: "monthly", priority: 0.88 },
+    { path: "/best-restaurants-murree", changeFrequency: "monthly", priority: 0.88 },
+    { path: "/places-to-visit-near-murree", changeFrequency: "monthly", priority: 0.88 },
+    { path: "/outdoor-activities-murree", changeFrequency: "monthly", priority: 0.88 },
+    { path: "/things-to-do-in-murree-for-couples", changeFrequency: "monthly", priority: 0.88 },
+    { path: "/things-to-do-in-murree-at-night", changeFrequency: "monthly", priority: 0.88 },
+    { path: "/murree-3-day-itinerary", changeFrequency: "monthly", priority: 0.88 },
+    { path: "/things-to-do-bhurban-murree", changeFrequency: "monthly", priority: 0.88 },
     { path: "/thing-to-do-bhurban-murree2", changeFrequency: "monthly", priority: 0.65 },
   ];
 

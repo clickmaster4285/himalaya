@@ -17,6 +17,13 @@ import WhyChooseSection from "@/components/WhyChooseSection";
 import FrequentlyVisitedPages from "@/components/FrequentlyVisitedPages";
 import ReserveSection from "@/components/ReserveSection";
 import Footer from "@/components/Footer";
+import MurreeHotelsContentSection from "@/components/seo/MurreeHotelsContentSection";
+import MurreeHotelsFaqSection from "@/components/seo/MurreeHotelsFaqSection";
+import {
+  homepageMurreeHotelsBlock1,
+  homepageMurreeHotelsBlock2,
+  homepageMurreeHotelsFaqs,
+} from "@/lib/seo/murree-hotels-seo-content";
 import { createPageMetadata } from "@/lib/seo/build-metadata";
 import { getPublishedVillas } from "@/lib/villas-fetch";
 
@@ -48,7 +55,9 @@ const Index = async () => {
       />
       <h1 className="sr-only">Himalaya Villas and Resort in Bhurban</h1>
       <HeroSection />
+      <MurreeHotelsContentSection content={homepageMurreeHotelsBlock1} variant="homepage" />
       <PhilosophySection />
+      <MurreeHotelsContentSection content={homepageMurreeHotelsBlock2} variant="homepage" />
       <LiveWeatherMurree />
       <VillasSection initialVillas={villas} />
       <ServicesSection />
@@ -59,6 +68,11 @@ const Index = async () => {
       <WhyChooseSection />
       <TestimonialsSection />
       <FrequentlyVisitedPages />
+      <MurreeHotelsFaqSection
+        title="Himalaya Villas vs Murree Hotels"
+        faqs={homepageMurreeHotelsFaqs}
+        variant="homepage"
+      />
       <ReserveSection />
       <Footer />
     </div>

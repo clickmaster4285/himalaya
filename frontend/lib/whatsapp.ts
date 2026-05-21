@@ -332,3 +332,11 @@ export function buildBhurbanMurreeWhatsAppUrl(fields: {
 
   return `${SITE_CONTACT.whatsappUrl}?text=${encodeURIComponent(text)}`;
 }
+
+/** Pre-filled WhatsApp for wedding / marriage hall cluster pages. */
+export function buildWeddingVenueWhatsAppUrl(message?: string): string {
+  const text =
+    message?.trim() ||
+    "I would like to inquire about a wedding event at Himalaya Villas Bhurban. Date: [ ]. Event type: [ ]. Guest count: [ ].";
+  return `${SITE_CONTACT.whatsappUrl}?text=${encodeURIComponent(text)}`;
+}

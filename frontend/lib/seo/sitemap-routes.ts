@@ -34,6 +34,11 @@ function staticMarketingRoutes(): SitemapRouteDef[] {
     { path: "/murree-3-day-itinerary", changeFrequency: "monthly", priority: 0.88 },
     { path: "/things-to-do-bhurban-murree", changeFrequency: "monthly", priority: 0.88 },
     { path: "/thing-to-do-bhurban-murree2", changeFrequency: "monthly", priority: 0.65 },
+    { path: "/marriage-hall-bhurban-murree", changeFrequency: "monthly", priority: 0.92 },
+    { path: "/outdoor-wedding-venue-murree", changeFrequency: "monthly", priority: 0.9 },
+    { path: "/wedding-packages-murree-prices", changeFrequency: "monthly", priority: 0.9 },
+    { path: "/nikah-venue-bhurban", changeFrequency: "monthly", priority: 0.9 },
+    { path: "/walima-hall-murree", changeFrequency: "monthly", priority: 0.9 },
   ];
 
   for (const child of BOOK_CHILD) {

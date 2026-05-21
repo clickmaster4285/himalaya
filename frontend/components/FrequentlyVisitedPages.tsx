@@ -90,6 +90,12 @@ const FrequentlyVisitedPages = () => {
       href: "/family-tour-murree-himalaya-villas"
     },
     {
+      title: "Marriage Hall Bhurban Murree",
+      description:
+        "Pakistan's most exclusive mountain wedding venue — nikkah, walima, mehndi & outdoor ceremonies at Himalaya Villas, 45 min from Islamabad.",
+      href: "/marriage-hall-bhurban-murree",
+    },
+    {
       title: "Wedding Venue Near Islamabad",
       description: "Host your dream wedding in the mountains with breathtaking venues and luxury accommodations.",
       href: "/wedding-venue-near-islamabad"

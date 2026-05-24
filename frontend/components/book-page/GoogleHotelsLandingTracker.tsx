@@ -13,12 +13,6 @@ function parseGoogleDateParam(raw: string | null): string | null {
   return Number.isNaN(d.getTime()) ? null : isoDate;
 }
 
-declare global {
-  interface Window {
-    dataLayer?: Record<string, unknown>[];
-  }
-}
-
 /**
  * Fires GTM `google_hotels_landing` when guests arrive from Google Hotels,
  * and forwards check-in / check-out to the stay booking flow.

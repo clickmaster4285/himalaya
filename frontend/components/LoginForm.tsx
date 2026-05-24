@@ -10,6 +10,7 @@ import { cn } from "@/lib/utils";
 import { hvAuthInput, hvAuthInputWithToggle, hvAuthLabel, hvAuthPrimaryBtn } from "@/components/auth/hv-auth-styles";
 import type { SafeUser } from "@/lib/user-public";
 import { hardNavigateAfterAuth } from "@/lib/auth-redirect";
+import { pushFormSubmission } from "@/lib/analytics/push-form-submission";
 import { dashboardPathForRole } from "@/lib/dashboard-nav";
 
 type Props = {
@@ -44,6 +45,8 @@ export default function LoginForm({ onSuccess, onSwitchToSignup, className }: Pr
       const redirectTo =
         (typeof data.redirectTo === "string" && data.redirectTo.startsWith("/") && data.redirectTo) ||
         (data.user?.role ? dashboardPathForRole(data.user.role) : "/dashboard");
+
+      pushFormSubmission("login_form");
 
       if (onSuccess && data.user) {
         onSuccess(data.user, redirectTo);

@@ -9,6 +9,7 @@ import { Input } from "@/components/ui/input";
 import { Label } from "@/components/ui/label";
 import { Textarea } from "@/components/ui/textarea";
 import { VILLA_CATEGORIES, type VillaCategory } from "@/lib/villa-types";
+import { pushFormSubmission } from "@/lib/analytics/push-form-submission";
 import { cn } from "@/lib/utils";
 
 const SLUG_RE = /^[a-z0-9]+(?:-[a-z0-9]+)*$/;
@@ -164,6 +165,7 @@ export default function VillaEditorForm({ mode, villaId, initial, className }: P
         setError(typeof data.error === "string" ? data.error : "Could not save villa.");
         return;
       }
+      pushFormSubmission("villa_editor_form");
       router.push("/dashboard/superadmin/villas");
       router.refresh();
     } catch {

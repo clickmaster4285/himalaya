@@ -2,6 +2,7 @@
 
 import { useEffect, useRef, useState, ReactNode, FormEvent, ChangeEvent } from "react";
 import { ArrowRight, MessageCircle } from "lucide-react";
+import { pushFormSubmission } from "@/lib/analytics/push-form-submission";
 import { buildBhurbanInquiryWhatsAppUrl } from "@/lib/whatsapp";
 
 const HERO_IMAGE = "/assets/gallery-exterior.jpg";
@@ -306,12 +307,7 @@ export function HeroSlider({ whatsappUrl }: { whatsappUrl: string }) {
       return;
     }
 
-    if (typeof window !== "undefined") {
-      window.dataLayer = window.dataLayer || [];
-      window.dataLayer.push({
-        event: "form_submitted",
-      });
-    }
+    pushFormSubmission("family_hotels_in_murree_inquiry_form");
 
     setSubmitStatus("success");
     const email = form.email.trim();

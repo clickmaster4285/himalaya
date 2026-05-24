@@ -549,7 +549,7 @@ export default function MurreeWeatherPage() {
                 Check Weather & Book
               </a>
               <a 
-                href="/rooms-villas" 
+                href="/villas" 
                 className="bg-white text-[#1b261b] px-8 py-3 rounded-lg font-semibold hover:bg-gray-100 transition-colors"
               >
                 View Villas

@@ -31,7 +31,7 @@ const MomentsSection = () => {
       ) : (
         <Image
           src={momentsPoster}
-          alt=""
+          alt="Guests gathered around a bonfire at Himalaya Villas Bhurban"
           fill
           sizes="100vw"
           className="object-cover"

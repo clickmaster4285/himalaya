@@ -415,7 +415,7 @@ export default function WeddingsPage() {
       {/* WHY CHOOSE US */}
       <section className="relative py-20 md:py-28 px-6 bg-neutral-900 text-white">
         <div className="absolute inset-0 opacity-20">
-          <Image src="/assets/wedding4.jpg" alt="" fill className="object-cover" />
+          <Image src="/assets/wedding4.jpg" alt="Outdoor wedding celebration at Himalaya Villas Bhurban" fill className="object-cover" />
         </div>
         <div className="relative z-10 max-w-7xl mx-auto grid md:grid-cols-2 gap-12 items-center">
           <div>

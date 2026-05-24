@@ -33,12 +33,16 @@ function staticMarketingRoutes(): SitemapRouteDef[] {
     { path: "/things-to-do-in-murree-at-night", changeFrequency: "monthly", priority: 0.88 },
     { path: "/murree-3-day-itinerary", changeFrequency: "monthly", priority: 0.88 },
     { path: "/things-to-do-bhurban-murree", changeFrequency: "monthly", priority: 0.88 },
-    { path: "/thing-to-do-bhurban-murree2", changeFrequency: "monthly", priority: 0.65 },
     { path: "/marriage-hall-bhurban-murree", changeFrequency: "monthly", priority: 0.92 },
     { path: "/outdoor-wedding-venue-murree", changeFrequency: "monthly", priority: 0.9 },
     { path: "/wedding-packages-murree-prices", changeFrequency: "monthly", priority: 0.9 },
     { path: "/nikah-venue-bhurban", changeFrequency: "monthly", priority: 0.9 },
     { path: "/walima-hall-murree", changeFrequency: "monthly", priority: 0.9 },
+    { path: "/weddings/nikah", changeFrequency: "monthly", priority: 0.9 },
+    { path: "/weddings-celebrations", changeFrequency: "monthly", priority: 0.88 },
+    { path: "/meetings-events", changeFrequency: "monthly", priority: 0.85 },
+    { path: "/weather-forecast", changeFrequency: "weekly", priority: 0.8 },
+    { path: "/adventure-games", changeFrequency: "monthly", priority: 0.85 },
   ];
 
   for (const child of BOOK_CHILD) {

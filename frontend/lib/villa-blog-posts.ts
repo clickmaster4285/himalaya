@@ -70,8 +70,8 @@ export const VILLA_BLOG_POSTS: VillaBlogPost[] = [
     coverImage: "/assets/blog-bhurban-things-to-do-featured-v2.png",
   },
   {
-    slug: "Why-Villas-are-the-ultimate-luxury-stays-in-Bhurban",
-    href: "/Why-Villas-are-the-ultimate-luxury-stays-in-Bhurban",
+    slug: "why-villas-are-the-ultimate-luxury-stays-in-bhurban",
+    href: "/blog/why-villas-are-the-ultimate-luxury-stays-in-bhurban",
     title: "Why Villas Are the Ultimate Luxury Stay in Bhurban & Murree",
     excerpt:
       "Discover why private villas in Bhurban Murree deliver unmatched privacy, space, and exclusivity compared to hotels.",

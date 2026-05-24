@@ -390,7 +390,7 @@ export function HeroSlider({ whatsappUrl }: { whatsappUrl: string }) {
         </div>
 
         <div className="family-murree-hero__mobile-img lg:hidden">
-          <img src={HERO_IMAGE} alt="" className="h-full w-full object-cover" />
+          <img src={HERO_IMAGE} alt="Himalaya Villas private estate in Bhurban pine forest" className="h-full w-full object-cover" aria-hidden="true" />
           <div className="absolute inset-0 bg-gradient-to-t from-[hsl(40,38%,97%)] via-transparent to-transparent" />
         </div>
 

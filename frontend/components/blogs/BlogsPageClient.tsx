@@ -196,7 +196,7 @@ export default function BlogsPageClient({ villas }: { villas: Villa[] }) {
                         >
                           <Image
                             src={getValidImageSrc(post.coverImage)}
-                            alt=""
+                            alt={post.title}
                             fill
                             sizes="(max-width: 640px) 100vw, 50vw"
                             className="object-cover"
@@ -274,7 +274,7 @@ export default function BlogsPageClient({ villas }: { villas: Villa[] }) {
                           <div className="relative h-16 w-20 shrink-0 overflow-hidden rounded-lg border border-[#eadfce] shadow-sm">
                             <Image
                               src={getValidImageSrc(v.image)}
-                              alt=""
+                              alt={v.title ? `${v.title} villa` : "Himalaya Villas residence"}
                               fill
                               sizes="80px"
                               className="object-cover transition-transform duration-300 group-hover:scale-105"

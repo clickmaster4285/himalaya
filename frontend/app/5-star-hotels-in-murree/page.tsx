@@ -105,14 +105,38 @@ function Reveal({ children, delay = 0, className = "" }: { children: ReactNode; 
 
 /* ----------------------------- Data ----------------------------- */
 const HERO_SLIDES = [
-  "https://images.unsplash.com/photo-1571003123894-1f05e4d68b79?w=1920&q=80",
-  "https://images.unsplash.com/photo-1582719478250-c89cae4dc85b?w=1920&q=80",
-  "https://images.unsplash.com/photo-1519904981063-b0cf448d479e?w=1920&q=80",
-  "https://images.unsplash.com/photo-1601918774946-25832a4be0d6?w=1920&q=80",
-  "https://images.unsplash.com/photo-1542314831-068cd1dbfeeb?w=1920&q=80",
-  "https://images.unsplash.com/photo-1571896349842-33c89424de2d?w=1920&q=80",
-  "https://images.unsplash.com/photo-1469474968028-56623f02e42e?w=1920&q=80",
-  "https://images.unsplash.com/photo-1506905925346-21bda4d32df4?w=1920&q=80",
+  {
+    src: "https://images.unsplash.com/photo-1571003123894-1f05e4d68b79?w=1920&q=80",
+    alt: "Luxury mountain resort exterior in Murree Hills",
+  },
+  {
+    src: "https://images.unsplash.com/photo-1582719478250-c89cae4dc85b?w=1920&q=80",
+    alt: "Five-star hotel suite with panoramic hill views",
+  },
+  {
+    src: "https://images.unsplash.com/photo-1519904981063-b0cf448d479e?w=1920&q=80",
+    alt: "Snow-dusted pine forest near Murree",
+  },
+  {
+    src: "https://images.unsplash.com/photo-1601918774946-25832a4be0d6?w=1920&q=80",
+    alt: "Premium hillside accommodation at dusk",
+  },
+  {
+    src: "https://images.unsplash.com/photo-1542314831-068cd1dbfeeb?w=1920&q=80",
+    alt: "Resort pool terrace overlooking Murree valleys",
+  },
+  {
+    src: "https://images.unsplash.com/photo-1571896349842-33c89424de2d?w=1920&q=80",
+    alt: "Elegant hotel lobby in a Murree hill station",
+  },
+  {
+    src: "https://images.unsplash.com/photo-1469474968028-56623f02e42e?w=1920&q=80",
+    alt: "Sunrise over Himalayan foothills near Bhurban",
+  },
+  {
+    src: "https://images.unsplash.com/photo-1506905925346-21bda4d32df4?w=1920&q=80",
+    alt: "Mountain ridge panorama in the Galliyat region",
+  },
 ];
 
 const MURREE_HOTELS = [
@@ -186,13 +210,13 @@ function HeroSlider() {
       onMouseEnter={() => setPaused(true)}
       onMouseLeave={() => setPaused(false)}
     >
-      {HERO_SLIDES.map((src, idx) => (
+      {HERO_SLIDES.map((slide, idx) => (
         <div
           key={idx}
           className={`absolute inset-0 transition-opacity duration-1000 ${idx === i ? "opacity-100" : "opacity-0"}`}
           style={scrollY > 0 ? { transform: `translateY(${scrollY * 0.4}px)` } : undefined}
         >
-          <img src={src} alt="" className={`h-full w-full object-cover ${idx === i ? "murree-ken" : ""}`} />
+          <img src={slide.src} alt={slide.alt} className={`h-full w-full object-cover ${idx === i ? "murree-ken" : ""}`} />
           <div className="absolute inset-0 murree-grad-hero" />
         </div>
       ))}

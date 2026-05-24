@@ -31,7 +31,7 @@ const nextConfig: NextConfig = {
     return [
       {
         source: "/villas-in-bhurban-murree",
-        destination: "/Why-Villas-are-the-ultimate-luxury-stays-in-Bhurban",
+        destination: "/blog/why-villas-are-the-ultimate-luxury-stays-in-bhurban",
         permanent: true,
       },
       { source: "/booking", destination: "/book", permanent: true },
@@ -41,10 +41,28 @@ const nextConfig: NextConfig = {
       { source: "/about", destination: "/", permanent: true },
       { source: "/services", destination: "/", permanent: true },
       { source: "/gallery", destination: "/", permanent: true },
-      { source: "/Why-Villas-are-the-ultimate-luxury-stays-in-Bhurban", destination: "/blog/Why-Villas-are-the-ultimate-luxury-stays-in-Bhurban", permanent: true },
+      { source: "/packages", destination: "/murree-hotel-packages", permanent: true },
+      { source: "/rooms-villas", destination: "/villas", permanent: true },
+      {
+        source: "/why-villas-are-the-ultimate-luxury-stays-in-bhurban",
+        destination: "/blog/why-villas-are-the-ultimate-luxury-stays-in-bhurban",
+        permanent: true,
+      },
+      {
+        source: "/Why-Villas-are-the-ultimate-luxury-stays-in-Bhurban",
+        destination: "/blog/why-villas-are-the-ultimate-luxury-stays-in-bhurban",
+        permanent: true,
+      },
       { source: "/family-tour-murree-himalaya-villas", destination: "/blog/family-tour-murree-himalaya-villas", permanent: true },
       { source: "/thing-to-do-bhurban-murree", destination: "/blog/thing-to-do-bhurban-murree", permanent: true },
       { source: "/thing-to-do-bhurban-murree2", destination: "/blog/thing-to-do-bhurban-murree", permanent: true },
+      { source: "/adventure-games/", destination: "/adventure-games", permanent: true },
+      { source: "/meetings-events/", destination: "/meetings-events", permanent: true },
+      { source: "/meetings-events-2", destination: "/meetings-events", permanent: true },
+      { source: "/meetings-events-2/", destination: "/meetings-events", permanent: true },
+      { source: "/weather-forecast/", destination: "/weather-forecast", permanent: true },
+      { source: "/weddings-celebrations/", destination: "/weddings-celebrations", permanent: true },
+      { source: "/weddings/nikah/", destination: "/weddings/nikah", permanent: true },
     ];
   },
 };

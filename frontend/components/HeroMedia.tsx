@@ -18,7 +18,7 @@ export default function HeroMedia() {
     <>
       <Image
         src={defaultPoster}
-        alt=""
+        alt="Himalaya Villas estate exterior in the Bhurban Murree hills"
         fill
         priority
         sizes="100vw"

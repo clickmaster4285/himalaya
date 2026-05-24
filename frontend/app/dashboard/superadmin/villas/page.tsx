@@ -95,7 +95,7 @@ export default function SuperadminVillasPage() {
                       <td className="px-4 py-3 md:pl-6">
                         <div className="flex items-center gap-3">
                           {/* eslint-disable-next-line @next/next/no-img-element */}
-                          <img src={v.image} alt="" className="h-12 w-16 rounded-lg object-cover ring-1 ring-black/5" />
+                          <img src={v.image} alt={v.title ? `${v.title} thumbnail` : "Villa thumbnail"} className="h-12 w-16 rounded-lg object-cover ring-1 ring-black/5" />
                           <span className="font-semibold text-[#1a1816]">{v.title}</span>
                         </div>
                       </td>

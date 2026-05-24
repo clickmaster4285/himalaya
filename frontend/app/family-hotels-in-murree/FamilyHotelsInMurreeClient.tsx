@@ -306,6 +306,13 @@ export function HeroSlider({ whatsappUrl }: { whatsappUrl: string }) {
       return;
     }
 
+    if (typeof window !== "undefined") {
+      window.dataLayer = window.dataLayer || [];
+      window.dataLayer.push({
+        event: "form_submitted",
+      });
+    }
+
     setSubmitStatus("success");
     const email = form.email.trim();
     if (data.saved && (data.guestEmailSent || data.emailPending || data.emailSent)) {

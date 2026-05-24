@@ -8,7 +8,7 @@ import { createPageMetadata } from "@/lib/seo/build-metadata";
 export const dynamic = "force-dynamic";
 
 export const metadata: Metadata = createPageMetadata({
-  title: "Journal — villa stories & Bhurban guides",
+  title: "Journal & Bhurban Guides",
   description:
     "Guides and stories from Himalaya Villas & Resorts: Bhurban travel, luxury villa life, Murree hills, family stays, and estate notes for discerning guests.",
   path: "/blogs",

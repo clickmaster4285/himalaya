@@ -1,7 +1,9 @@
 import type { Metadata } from "next";
+import { absoluteSeoTitle } from "@/lib/seo/build-metadata";
+import MurreeHotelPageChrome from "@/components/seo/MurreeHotelPageChrome";
 
 export const metadata: Metadata = {
-  title: "Corporate Hotels Murree Bhurban | Business Meetings | Himalaya Villas",
+  title: absoluteSeoTitle("Corporate Hotels Murree"),
   description: "Corporate hotels in Murree Bhurban for business meetings, conferences, and corporate retreats. Premium facilities, conference rooms, team building activities at Himalaya Villas. Book your corporate event.",
   keywords: "corporate hotels Murree, business hotels Bhurban, corporate retreats Murree, conference facilities Bhurban, business meetings Murree Hills, team building Pakistan, corporate events Himalaya Villas",
   openGraph: {
@@ -20,5 +22,5 @@ export default function CorporateHotelsLayout({
 }: {
   children: React.ReactNode;
 }) {
-  return children;
+  return <MurreeHotelPageChrome page="corporate-hotels-murree-bhurban">{children}</MurreeHotelPageChrome>;
 }

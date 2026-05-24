@@ -3,7 +3,7 @@ import { createPageMetadata } from "@/lib/seo/build-metadata";
 import PlacesToVisitNearMurreeClient from "./PlacesToVisitNearMurreeClient";
 
 export const metadata: Metadata = createPageMetadata({
-  title: "Places to Visit Near Murree — Day Trips to Nathiagali, Galliyat & More | Himalaya Villas",
+  title: "Places Near Murree",
   description:
     "Best places to visit near Murree — Nathiagali, Ayubia, Galliyat, Abbottabad, Patriata. From Himalaya Villas Bhurban, every destination in the Murree Hills is a day trip, not a separate stay.",
   path: "/places-to-visit-near-murree",

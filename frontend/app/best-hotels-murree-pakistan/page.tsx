@@ -4,6 +4,7 @@ import Link from "next/link";
 import Navbar from "@/components/Navbar";
 import Footer from "@/components/Footer";
 import MurreeHotelsContentSection from "@/components/seo/MurreeHotelsContentSection";
+import { absoluteSeoTitle } from "@/lib/seo/build-metadata";
 import {
   bestHotelsMurreeBlock1,
   bestHotelsMurreeBlock2,
@@ -12,7 +13,7 @@ import {
 import { Check, X, Building, TreePine, MapPin, Coffee, Star } from "lucide-react";
 
 export const metadata: Metadata = {
-  title: "Best Hotels in Murree Pakistan 2025 | Himalaya Villas",
+  title: absoluteSeoTitle("Best Hotels in Murree 2025"),
   description:
     "Looking for the best hotels in Murree Pakistan? Discover why discerning guests choose Himalaya Villas in Bhurban — private villas, panoramic views, in-villa dining. 1 hour from Islamabad.",
   alternates: {

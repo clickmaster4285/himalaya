@@ -1,6 +1,7 @@
 import type { Metadata } from "next";
 import Navbar from "@/components/Navbar";
 import Footer from "@/components/Footer";
+import { absoluteSeoTitle } from "@/lib/seo/build-metadata";
 
 const termsSchema = {
   "@context": "https://schema.org",
@@ -24,7 +25,7 @@ const termsSchema = {
 };
 
 export const metadata: Metadata = {
-  title: "Terms & Conditions | Himalaya Villas & Resorts",
+  title: absoluteSeoTitle("Terms & Conditions"),
   description: "Terms and Conditions for Himalaya Villas & Resorts - Understand our booking terms and guest policies.",
 };
 
@@ -138,9 +139,9 @@ export default function TermsAndConditionsPage() {
               </h2>
               <p>
                 For questions or concerns about these Terms and Conditions, please contact us at{" "}
-                <a href="mailto:info@himalayavillas.com" className="underline" style={{ color: "hsl(36 45% 55%)" }}>
+                <span className="underline" style={{ color: "hsl(36 45% 55%)" }}>
                   info@himalayavillas.com
-                </a>
+                </span>
               </p>
             </section>
 

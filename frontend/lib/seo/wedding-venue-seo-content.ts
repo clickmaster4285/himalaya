@@ -110,7 +110,7 @@ export const marriageHallPillarConfig: WeddingPageConfig = {
   path: "/marriage-hall-bhurban-murree",
   meta: {
     title:
-      "Marriage Hall Bhurban Murree | Luxury Wedding Venue in Murree Hills | Himalaya Villas",
+      "Marriage Hall Bhurban Murree",
     description:
       "Himalaya Villas — Bhurban Murree's most exclusive marriage hall and wedding venue. Private mountain setting, panoramic Himalayan views, full event management. 45 minutes from Islamabad. WhatsApp to check dates.",
     keywords: [
@@ -379,7 +379,7 @@ export const marriageHallPillarConfig: WeddingPageConfig = {
 export const outdoorWeddingConfig: WeddingPageConfig = {
   path: "/outdoor-wedding-venue-murree",
   meta: {
-    title: "Outdoor Wedding Venue Murree — Mountain Ceremonies & Receptions | Himalaya Villas Bhurban",
+    title: "Outdoor Wedding Venue Murree",
     description:
       "Pakistan's most scenic outdoor wedding venue — Himalaya Villas Bhurban. Open-air nikkah, walima & ceremonies with panoramic Himalayan views. 45 min from Islamabad. WhatsApp for dates.",
     keywords: [
@@ -537,7 +537,7 @@ export const outdoorWeddingConfig: WeddingPageConfig = {
 export const weddingPackagesConfig: WeddingPageConfig = {
   path: "/wedding-packages-murree-prices",
   meta: {
-    title: "Wedding Packages Murree Prices — Himalaya Villas Bhurban | Nikkah, Walima & Full Wedding",
+    title: "Wedding Packages Murree Prices",
     description:
       "Wedding packages at Himalaya Villas Bhurban — full pricing for nikkah, walima, mehndi & outdoor ceremonies. From PKR 150,000. Mountain venue 45 min from Islamabad. WhatsApp for custom quote.",
     keywords: [
@@ -677,7 +677,7 @@ export const weddingPackagesConfig: WeddingPageConfig = {
 export const nikahVenueConfig: WeddingPageConfig = {
   path: "/nikah-venue-bhurban",
   meta: {
-    title: "Nikah Venue Bhurban Murree — Private Mountain Ceremony | Himalaya Villas",
+    title: "Nikah Venue Bhurban Murree",
     description:
       "Himalaya Villas — the most exclusive nikah venue in Bhurban Murree. Private outdoor terrace, panoramic Himalayan views, intimate ceremonies 20–80 guests, 45 min from Islamabad. WhatsApp your date.",
     keywords: [
@@ -834,7 +834,7 @@ export const nikahVenueConfig: WeddingPageConfig = {
 export const walimaHallConfig: WeddingPageConfig = {
   path: "/walima-hall-murree",
   meta: {
-    title: "Walima Hall Murree — Luxury Mountain Reception Venue | Himalaya Villas Bhurban",
+    title: "Walima Hall Murree",
     description:
       "Walima reception at Himalaya Villas Bhurban — the most exclusive walima hall near Islamabad. Private mountain venue, up to 300 guests, full catering, panoramic views, 45 min from Islamabad. WhatsApp for dates.",
     keywords: [

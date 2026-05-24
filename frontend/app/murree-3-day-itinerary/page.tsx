@@ -3,7 +3,7 @@ import { createPageMetadata } from "@/lib/seo/build-metadata";
 import Murree3DayItineraryClient from "./Murree3DayItineraryClient";
 
 export const metadata: Metadata = createPageMetadata({
-  title: "Murree 3 Day Itinerary — Day-by-Day Guide & Packing List 2026 | Himalaya Villas",
+  title: "Murree 3-Day Itinerary 2026",
   description:
     "Best Murree 3-day itinerary — day-by-day plan, timing, packing list. Based at Himalaya Villas Bhurban. Covers Murree town, Nathiagali, Patriata and Bhurban forest in 3 days without rushing.",
   path: "/murree-3-day-itinerary",

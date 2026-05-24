@@ -12,7 +12,7 @@ import { absoluteUrl } from "@/lib/seo/site-config";
 export const dynamic = "force-dynamic";
 
 export const metadata: Metadata = createPageMetadata({
-  title: "Things to Do in Bhurban Murree | Luxury Experience Guide",
+  title: "Bhurban Experience Guide",
   description:
     "Discover top things to do in Bhurban Murree including hiking, viewpoints, dining, family activities, and curated villa experiences near Himalaya Villas & Resorts.",
   path: "/experience",

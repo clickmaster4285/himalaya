@@ -1,7 +1,9 @@
 import type { Metadata } from "next";
+import { absoluteSeoTitle } from "@/lib/seo/build-metadata";
+import MurreeHotelPageChrome from "@/components/seo/MurreeHotelPageChrome";
 
 export const metadata: Metadata = {
-  title: "Murree Hotel Packages | All-Inclusive Deals | Holiday Packages | Himalaya Villas",
+  title: absoluteSeoTitle("Murree Hotel Packages"),
   description: "Murree hotel packages with all-inclusive deals, holiday packages, and special offers at Himalaya Villas Bhurban. Family packages, honeymoon deals, corporate retreats. Best rates guaranteed!",
   keywords: "Murree hotel packages, all-inclusive hotel deals Murree, holiday packages Bhurban, family vacation packages Murree Hills, honeymoon packages Himalaya Villas, corporate retreat packages Pakistan, weekend getaways Murree",
   openGraph: {
@@ -20,5 +22,5 @@ export default function MurreeHotelPackagesLayout({
 }: {
   children: React.ReactNode;
 }) {
-  return children;
+  return <MurreeHotelPageChrome page="murree-hotel-packages">{children}</MurreeHotelPageChrome>;
 }

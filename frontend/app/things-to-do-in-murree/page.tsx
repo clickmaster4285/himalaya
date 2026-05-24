@@ -3,7 +3,7 @@ import { createPageMetadata } from "@/lib/seo/build-metadata";
 import ThingsToDoMurreeClient from "./ThingsToDoMurreeClient";
 
 export const metadata: Metadata = createPageMetadata({
-  title: "Things to Do in Murree 2026 — Activities, Food & More | Himalaya Villas Bhurban",
+  title: "Things to Do in Murree 2026",
   description:
     "The complete Murree activities guide — from Kashmir Point at dawn to private bonfire evenings in Bhurban. Everything in this guide is better when you're staying at Himalaya Villas, 45 min from Islamabad.",
   path: "/things-to-do-in-murree",

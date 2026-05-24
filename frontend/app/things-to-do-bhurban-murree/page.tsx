@@ -3,7 +3,7 @@ import { createPageMetadata } from "@/lib/seo/build-metadata";
 import ThingsToDoBhurbanMurreeClient from "./ThingsToDoBhurbanMurreeClient";
 
 export const metadata: Metadata = createPageMetadata({
-  title: "Things to Do in Bhurban Murree — Complete Activity Guide | Himalaya Villas Bhurban",
+  title: "Things to Do in Bhurban Murree",
   description:
     "Complete guide to things to do in Bhurban Murree — golf, forest trails, private villa experiences, day trips to Murree and Nathiagali. Himalaya Villas is the best luxury villa in Bhurban.",
   path: "/things-to-do-bhurban-murree",

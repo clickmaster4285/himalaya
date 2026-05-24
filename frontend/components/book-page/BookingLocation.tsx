@@ -1,12 +1,17 @@
 "use client";
 
 import React from "react";
+import { buildWhatsAppBookingUrl } from "@/lib/whatsapp";
+
+const DIRECTIONS_WHATSAPP = buildWhatsAppBookingUrl("directions hotel in bhurban murree");
+const MAPS_URL =
+  "https://www.google.com/maps/search/?api=1&query=Himalaya+Villas+Bhurban+Murree";
 
 export default function BookingLocation() {
   const distances = [
     { label: "Islamabad (F-7 / Blue Area)", distance: "60 km - ~1.5 hrs" },
     { label: "Rawalpindi (Saddar)", distance: "58 km - ~1.5 hrs" },
-    { label: "Murree Town Centre", distance: "8 km - ~15 min" },
+    { label: "Bhurban Murree Town Centre", distance: "8 km - ~15 min" },
     { label: "Lahore (via Motorway)", distance: "~390 km - ~4 hrs" },
     { label: "Islamabad International Airport", distance: "78 km - ~90 min" },
     { label: "Pearl Continental Bhurban", distance: "3.5 km - ~8 min" }
@@ -23,14 +28,16 @@ export default function BookingLocation() {
             <span>LOCATION & DIRECTIONS</span>
           </div>
           <h2 className="font-display text-4xl md:text-5xl text-white leading-[1.1] tracking-tight mb-2">
-            Bhurban, Murree Hills
+            Bhurban Murree Hills
           </h2>
           <p className="font-display text-2xl md:text-3xl text-[#c9a55b] italic font-light mb-8">
             60 km from Islamabad
           </p>
           
           <p className="text-[14px] md:text-[15px] text-white/70 leading-relaxed font-light mb-12 max-w-lg">
-            Himalaya Villas sits at 1,850 metres elevation in Bhurban — a private forested ridge above the town of Murree, yet connected by a well-maintained road to Islamabad via Expressway.
+            Finding a hotel in bhurban on a map is easy — finding a private ridge with twelve villas is different.
+            We sit at 1,850 metres on a forested slope, roughly 60 km from Islamabad via Murree Expressway, minutes from
+            Pearl Continental Bhurban and Murree town.
           </p>
 
           <div className="space-y-4">
@@ -54,23 +61,25 @@ export default function BookingLocation() {
             <h3 className="font-display text-2xl text-white mb-4">Himalaya Villas, Bhurban</h3>
             <p className="text-[12px] text-white/50 tracking-widest uppercase leading-loose mb-10">
               Bhurban Road, Bhurban,<br />
-              Murree Hills - 47160, Pakistan
+              Bhurban Murree Hills - 47160, Pakistan
             </p>
 
             <div className="w-full max-w-xs space-y-4">
               <a
-                href="#"
+                href={MAPS_URL}
+                target="_blank"
+                rel="noopener noreferrer"
                 className="block w-full bg-[#c9a55b] text-[#1b261b] py-4 text-[10px] font-bold uppercase tracking-widest hover:bg-[#ebd59f] transition-colors"
               >
-                OPEN IN GOOGLE MAPS
+                Open bhurban hotel murree location — Maps
               </a>
               <a
-                href="https://wa.me/923000000000"
+                href={DIRECTIONS_WHATSAPP}
                 target="_blank"
-                rel="noreferrer"
+                rel="noopener noreferrer"
                 className="block w-full border border-white/20 text-white py-4 text-[10px] font-bold uppercase tracking-widest hover:border-white transition-colors"
               >
-                WHATSAPP FOR DIRECTIONS
+                WhatsApp directions to resort in bhurban
               </a>
             </div>
           </div>

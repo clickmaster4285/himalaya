@@ -10,6 +10,66 @@ const FrequentlyVisitedPages = () => {
 
   const pages = [
     {
+      title: "Things to Do in Murree 2026",
+      description:
+        "Complete Murree activities guide — Kashmir Point at dawn, Mall Road, Patriata, Nathiagali day trips, and why every experience is better from Himalaya Villas Bhurban.",
+      href: "/things-to-do-in-murree",
+    },
+    {
+      title: "Murree in Winter — Snow Activities",
+      description:
+        "Private snow walks, bonfire evenings, sledging, and Patriata in snow — the winter guide from Himalaya Villas Bhurban without the Expressway queue.",
+      href: "/things-to-do-in-murree-in-winter",
+    },
+    {
+      title: "Family Things to Do in Murree",
+      description:
+        "Kid-friendly guide — Patriata, Ayubia, Sozo, horse riding, and private villa grounds. Family packages from PKR 80,000 at Himalaya Villas Bhurban.",
+      href: "/family-things-to-do-murree",
+    },
+    {
+      title: "Best Restaurants in Murree",
+      description:
+        "Dining guide — Mall Road street food, PC Bhurban, and in-villa chef meals on a private mountain terrace at Himalaya Villas.",
+      href: "/best-restaurants-murree",
+    },
+    {
+      title: "Places to Visit Near Murree",
+      description:
+        "Day trips to Nathiagali, Ayubia, Patriata, and the Galliyat — one Bhurban base, no hotel changes between destinations.",
+      href: "/places-to-visit-near-murree",
+    },
+    {
+      title: "Outdoor Activities in Murree",
+      description:
+        "Miranjani hike, forest trails from the gate, Bhurban golf, jeep safaris — adventure base at Himalaya Villas Bhurban.",
+      href: "/outdoor-activities-murree",
+    },
+    {
+      title: "Murree for Couples",
+      description:
+        "Kashmir Point at dawn, private bonfire, terrace dining — romantic guide from Himalaya Villas with couples packages from PKR 55,000.",
+      href: "/things-to-do-in-murree-for-couples",
+    },
+    {
+      title: "Murree at Night",
+      description:
+        "Mall Road evenings, terrace stargazing, private bonfire — the after-dark guide most day-trippers never experience from Bhurban.",
+      href: "/things-to-do-in-murree-at-night",
+    },
+    {
+      title: "Murree 3-Day Itinerary",
+      description:
+        "Day-by-day plan from Himalaya Villas — Murree town, Miranjani, Patriata, packing list, and timing that avoids the Expressway rush.",
+      href: "/murree-3-day-itinerary",
+    },
+    {
+      title: "Things to Do in Bhurban",
+      description:
+        "Golf, forest trails from the gate, terrace views — why Bhurban beats Murree town as your base for the full hills.",
+      href: "/things-to-do-bhurban-murree",
+    },
+    {
       title: "Himalaya Villas Bhurban Murree Rest House",
       description: "Pakistan's premier luxury rest house - private mountain villas with panoramic Himalayan views and personalized butler service.",
       href: "/himalaya-villas-bhurban-murree-rest-house"
@@ -28,6 +88,12 @@ const FrequentlyVisitedPages = () => {
       title: "Family Tour Murree",
       description: "Plan the perfect family getaway with our curated experiences and family-friendly villa accommodations.",
       href: "/family-tour-murree-himalaya-villas"
+    },
+    {
+      title: "Marriage Hall Bhurban Murree",
+      description:
+        "Pakistan's most exclusive mountain wedding venue — nikkah, walima, mehndi & outdoor ceremonies at Himalaya Villas, 45 min from Islamabad.",
+      href: "/marriage-hall-bhurban-murree",
     },
     {
       title: "Wedding Venue Near Islamabad",

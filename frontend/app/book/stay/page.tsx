@@ -32,7 +32,7 @@ const stayBookingSchema = {
   "@context": "https://schema.org",
   "@type": "ReservationPackage",
   "name": "Villa Stay Booking at Himalaya Villas",
-  "description": "Book luxury villa stays in Bhurban, Murree Hills with private accommodation, mountain views, and premium amenities.",
+  "description": "Book luxury villa stays in Bhurban Murree Hills with private accommodation, mountain views, and premium amenities.",
   "provider": {
     "@type": "Organization",
     "name": "Himalaya Villas and Resort",
@@ -40,7 +40,7 @@ const stayBookingSchema = {
     "address": {
       "@type": "PostalAddress",
       "streetAddress": "Bhurban",
-      "addressLocality": "Murree",
+      "addressLocality": "Bhurban Murree",
       "addressRegion": "Punjab",
       "addressCountry": "PK"
     }

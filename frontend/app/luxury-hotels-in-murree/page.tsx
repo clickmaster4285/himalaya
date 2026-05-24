@@ -6,6 +6,12 @@ import Image from "next/image";
 import Link from "next/link";
 import Navbar from "@/components/Navbar";
 import Footer from "@/components/Footer";
+import MurreeHotelsContentSection from "@/components/seo/MurreeHotelsContentSection";
+import {
+  luxuryHotelsMurreeBlock1,
+  luxuryHotelsMurreeBlock2,
+  luxuryHotelsMurreeAdditionalFaqs,
+} from "@/lib/seo/murree-hotels-seo-content";
 import { ChevronDown, Star, Plus, Minus, Check, MapPin } from "lucide-react";
 
 const luxuryHotelsSchema = {
@@ -295,6 +301,8 @@ export default function LuxuryHotelsMurreePage() {
           </div>
         </section>
 
+        <MurreeHotelsContentSection content={luxuryHotelsMurreeBlock1} variant="luxury" />
+
         {/* COMPARISON TABLE */}
         <section className="py-20 md:py-32 bg-white px-6">
           <div className="max-w-6xl mx-auto">
@@ -343,6 +351,8 @@ export default function LuxuryHotelsMurreePage() {
             </div>
           </div>
         </section>
+
+        <MurreeHotelsContentSection content={luxuryHotelsMurreeBlock2} variant="luxury" />
 
         {/* THE STANDARD THAT SETS US APART */}
         <section className="py-20 md:py-32 bg-[#fcfbf8] px-6">
@@ -654,6 +664,10 @@ export default function LuxuryHotelsMurreePage() {
 
             <div className="space-y-16">
               {[
+                {
+                  category: "HOTELS IN MURREE PAKISTAN",
+                  faqs: luxuryHotelsMurreeAdditionalFaqs,
+                },
                 {
                   category: "VILLA BOOKING & RESERVATIONS",
                   faqs: [

@@ -12,7 +12,7 @@ const weddingBookingSchema = {
     "address": {
       "@type": "PostalAddress",
       "streetAddress": "Bhurban",
-      "addressLocality": "Murree",
+      "addressLocality": "Bhurban Murree",
       "addressRegion": "Punjab",
       "addressCountry": "PK"
     }

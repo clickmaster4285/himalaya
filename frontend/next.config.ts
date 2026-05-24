@@ -1,19 +1,17 @@
 import path from "path";
 import type { NextConfig } from "next";
 import { loadEnvConfig } from "@next/env";
+import { securityHeaders } from "./lib/security-headers";
 
 const cwd = process.cwd();
 const repoRoot =
   path.basename(cwd).toLowerCase() === "frontend" ? path.resolve(cwd, "..") : cwd;
 
-// Merge env so server/RSC see JWT_SECRET from backend or repo root (frontend/.env* can override).
-loadEnvConfig(path.join(repoRoot, "backend"));
 loadEnvConfig(repoRoot);
 loadEnvConfig(cwd);
 
-const backend = (process.env.BACKEND_INTERNAL_URL ?? "http://127.0.0.1:5000").replace(/\/$/, "");
-
 const nextConfig: NextConfig = {
+  serverExternalPackages: ["mongoose", "bcryptjs"],
   images: {
     formats: ["image/avif", "image/webp"],
     deviceSizes: [640, 750, 828, 1080, 1200, 1920, 2048],
@@ -21,11 +19,11 @@ const nextConfig: NextConfig = {
     minimumCacheTTL: 60 * 60 * 24 * 30,
     domains: ["picsum.photos"],
   },
-  async rewrites() {
+  async headers() {
     return [
       {
-        source: "/api/:path*",
-        destination: `${backend}/api/:path*`,
+        source: "/:path*",
+        headers: securityHeaders,
       },
     ];
   },
@@ -33,10 +31,9 @@ const nextConfig: NextConfig = {
     return [
       {
         source: "/villas-in-bhurban-murree",
-        destination: "/Why-Villas-are-the-ultimate-luxury-stays-in-Bhurban",
+        destination: "/blog/why-villas-are-the-ultimate-luxury-stays-in-bhurban",
         permanent: true,
       },
-      // Legacy public URLs from sitemap → current App Router paths
       { source: "/booking", destination: "/book", permanent: true },
       { source: "/book-now", destination: "/book", permanent: true },
       { source: "/journal", destination: "/blogs", permanent: true },
@@ -44,10 +41,28 @@ const nextConfig: NextConfig = {
       { source: "/about", destination: "/", permanent: true },
       { source: "/services", destination: "/", permanent: true },
       { source: "/gallery", destination: "/", permanent: true },
-      { source: "/Why-Villas-are-the-ultimate-luxury-stays-in-Bhurban", destination: "/blog/Why-Villas-are-the-ultimate-luxury-stays-in-Bhurban", permanent: true },
+      { source: "/packages", destination: "/murree-hotel-packages", permanent: true },
+      { source: "/rooms-villas", destination: "/villas", permanent: true },
+      {
+        source: "/why-villas-are-the-ultimate-luxury-stays-in-bhurban",
+        destination: "/blog/why-villas-are-the-ultimate-luxury-stays-in-bhurban",
+        permanent: true,
+      },
+      {
+        source: "/Why-Villas-are-the-ultimate-luxury-stays-in-Bhurban",
+        destination: "/blog/why-villas-are-the-ultimate-luxury-stays-in-bhurban",
+        permanent: true,
+      },
       { source: "/family-tour-murree-himalaya-villas", destination: "/blog/family-tour-murree-himalaya-villas", permanent: true },
       { source: "/thing-to-do-bhurban-murree", destination: "/blog/thing-to-do-bhurban-murree", permanent: true },
       { source: "/thing-to-do-bhurban-murree2", destination: "/blog/thing-to-do-bhurban-murree", permanent: true },
+      { source: "/adventure-games/", destination: "/adventure-games", permanent: true },
+      { source: "/meetings-events/", destination: "/meetings-events", permanent: true },
+      { source: "/meetings-events-2", destination: "/meetings-events", permanent: true },
+      { source: "/meetings-events-2/", destination: "/meetings-events", permanent: true },
+      { source: "/weather-forecast/", destination: "/weather-forecast", permanent: true },
+      { source: "/weddings-celebrations/", destination: "/weddings-celebrations", permanent: true },
+      { source: "/weddings/nikah/", destination: "/weddings/nikah", permanent: true },
     ];
   },
 };

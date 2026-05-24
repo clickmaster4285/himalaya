@@ -8,10 +8,10 @@ import { useRouter } from "next/navigation";
 
 
 const bgImages = [
-  "/assets/why-villa-private.jpg",
-  "/assets/why-villa-garden.jpg",
-  "/assets/why-villa-view.jpg",
-  "/assets/why-villa-lounge.jpg",
+  { src: "/assets/why-villa-private.jpg", alt: "Private luxury villa exterior at Himalaya Villas Bhurban" },
+  { src: "/assets/why-villa-garden.jpg", alt: "Garden terrace at Himalaya Villas estate in Murree Hills" },
+  { src: "/assets/why-villa-view.jpg", alt: "Panoramic mountain view from a Himalaya Villas residence" },
+  { src: "/assets/why-villa-lounge.jpg", alt: "Luxury villa lounge interior at Himalaya Villas Bhurban" },
 ];
 
 const features = [
@@ -77,8 +77,8 @@ const WhyChooseSection = () => {
           transition={{ duration: 1.5, ease: "easeInOut" }}
         >
           <Image
-            src={bgImages[bgIndex]}
-            alt=""
+            src={bgImages[bgIndex].src}
+            alt={bgImages[bgIndex].alt}
             fill
             sizes="100vw"
             className="object-cover"

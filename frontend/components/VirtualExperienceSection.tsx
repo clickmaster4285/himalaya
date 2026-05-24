@@ -54,7 +54,7 @@ export default function VirtualExperienceSection() {
           ) : (
             <Image
               src={tourPoster}
-              alt=""
+              alt="Preview of the Himalaya Villas virtual estate tour"
               fill
               sizes="100vw"
               className="object-cover"

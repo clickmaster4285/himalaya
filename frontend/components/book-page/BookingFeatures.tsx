@@ -1,6 +1,10 @@
 "use client";
 
 import React from "react";
+import BookingCtaStrip from "@/components/book-page/BookingCtaStrip";
+import { buildWhatsAppBookingUrl } from "@/lib/whatsapp";
+
+const FEATURES_WHATSAPP = buildWhatsAppBookingUrl("bhurban hotels direct booking");
 
 export default function BookingFeatures() {
   const features = [
@@ -35,12 +39,30 @@ export default function BookingFeatures() {
             <span>WHY BOOK DIRECTLY WITH US</span>
           </div>
           <h2 className="font-display text-4xl md:text-5xl text-[#1b261b] leading-[1.1] tracking-tight">
-            Murree Hotel Booking
+            Bhurban Murree Hotel Booking
             <span className="block italic text-[#c9a55b] font-light mt-1">Done Right.</span>
           </h2>
           <p className="mt-6 text-[14px] md:text-[15px] text-neutral-600 leading-relaxed font-light max-w-3xl">
-            Booking Murree hotels through OTAs costs you more and gives you less. When you book directly with Himalaya Villas, you receive priority treatment, our lowest available rate, and a human reservations team — not an algorithm.
+            Himalaya Villas is among the best hotels in Bhurban Murree for guests who book direct — priority treatment,
+            our lowest rate, and a human team instead of an algorithm. When you reserve a resort in bhurban style private
+            stay, you get space, privacy, and Murree Hills scenery without OTA markups or crowded hotel corridors.
           </p>
+          <BookingCtaStrip
+            className="mt-8"
+            buttons={[
+              {
+                label: "Book best hotels in bhurban murree — direct",
+                href: "/book/stay",
+                variant: "dark",
+              },
+              {
+                label: "WhatsApp bhurban hotels availability",
+                href: FEATURES_WHATSAPP,
+                external: true,
+                variant: "whatsapp",
+              },
+            ]}
+          />
         </div>
 
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-0 border border-[#eae3d5] bg-white">

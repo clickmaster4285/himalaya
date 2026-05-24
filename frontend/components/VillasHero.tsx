@@ -1,9 +1,11 @@
 "use client";
 
 import Image from "next/image";
+import Link from "next/link";
 import { useEffect, useState } from "react";
 import { motion, AnimatePresence } from "framer-motion";
 import Navbar from "./Navbar";
+import { buildWhatsAppAvailabilityUrl, buildWhatsAppBookingUrl } from "@/lib/whatsapp";
 
 const images = [
   "/assets/villa-alpine-real.jpg",
@@ -53,19 +55,49 @@ const VillasHero = () => {
           Our Villas
         </h1>
         <p className="mt-6 max-w-3xl text-sm md:text-base text-white/90">
-          Each villa is a masterpiece of design and comfort, offering unparalleled views of the Himalayas and personalized luxury experiences.
+          Private villas in the Murree Hills — for guests who searched for a hotel in bhurban and chose space, views,
+          and an entire estate reserved for their group.
         </p>
 
-        <div className="mt-8 flex gap-3">
+        <div className="mt-8 flex flex-col sm:flex-row flex-wrap items-center justify-center gap-3">
+          <Link
+            href="/book/stay"
+            className="inline-flex items-center justify-center rounded-md bg-white px-6 py-3.5 text-xs font-semibold uppercase tracking-[0.16em] text-neutral-900 shadow-lg transition hover:bg-white/90"
+          >
+            Book your stay
+          </Link>
+          <a
+            href={buildWhatsAppAvailabilityUrl()}
+            target="_blank"
+            rel="noopener noreferrer"
+            className="inline-flex items-center justify-center rounded-md border-2 border-white/85 bg-white/10 px-6 py-3.5 text-xs font-semibold uppercase tracking-[0.16em] text-white backdrop-blur-sm transition hover:bg-white/20"
+          >
+            Check availability
+          </a>
+          <a
+            href={buildWhatsAppBookingUrl()}
+            target="_blank"
+            rel="noopener noreferrer"
+            className="inline-flex items-center justify-center rounded-md border-2 border-white/85 bg-emerald-600/90 px-6 py-3.5 text-xs font-semibold uppercase tracking-[0.16em] text-white shadow-md transition hover:bg-emerald-600"
+          >
+            WhatsApp us
+          </a>
+        </div>
+
+        <div className="mt-6 flex gap-2">
           <button
+            type="button"
             onClick={() => setIndex((prev) => (prev - 1 + images.length) % images.length)}
-            className="px-4 py-2 rounded-full border border-white/70 text-white bg-black/25 backdrop-blur transition hover:bg-black/40"
+            className="px-3 py-1.5 rounded-full border border-white/50 text-white/90 text-xs bg-black/20 backdrop-blur transition hover:bg-black/35"
+            aria-label="Previous slide"
           >
             Previous
           </button>
           <button
+            type="button"
             onClick={() => setIndex((prev) => (prev + 1) % images.length)}
-            className="px-4 py-2 rounded-full border border-white/70 text-white bg-black/25 backdrop-blur transition hover:bg-black/40"
+            className="px-3 py-1.5 rounded-full border border-white/50 text-white/90 text-xs bg-black/20 backdrop-blur transition hover:bg-black/35"
+            aria-label="Next slide"
           >
             Next
           </button>

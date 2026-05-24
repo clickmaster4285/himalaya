@@ -14,7 +14,7 @@ export function AuthBackdrop() {
       <div className="pointer-events-none fixed inset-0 z-0">
         <Image
           src={HERO_SRC}
-          alt=""
+          alt="Himalaya Villas resort backdrop in the Murree Hills"
           fill
           priority
           className="object-cover object-center"

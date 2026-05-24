@@ -1,8 +1,9 @@
+import Link from "next/link";
 import Navbar from "./Navbar";
 import BookingWidget from "./BookingWidget";
 import HeroMedia from "./HeroMedia";
 import ScrollIndicator from "./ScrollIndicator";
-import { ArrowRight } from "lucide-react";
+import { ArrowRight, Map } from "lucide-react";
 import { buildWhatsAppBookingUrl } from "@/lib/whatsapp";
 
 const heroPills = [
@@ -68,6 +69,15 @@ const HeroSection = () => {
               Himalaya Villas and Resort is not a hotel. It is a private luxury estate crafted for those who demand
               exclusivity, privacy, and elevated experiences in the hills of Bhurban.
             </p>
+
+            <Link
+              href="/things-to-do-in-murree"
+              className="group mt-5 inline-flex animate-fade-up-delay items-center gap-2 rounded-full border border-[#c9a55b]/60 bg-black/40 px-4 py-2.5 text-[10px] sm:text-[11px] font-semibold uppercase tracking-[0.16em] text-[#ebd59f] shadow-md backdrop-blur-md transition hover:border-[#c9a55b] hover:bg-black/55 hover:text-white"
+            >
+              <Map className="h-3.5 w-3.5 shrink-0" aria-hidden />
+              Things to do in Murree 2026 — full guide
+              <ArrowRight className="h-3.5 w-3.5 shrink-0 transition-transform group-hover:translate-x-0.5" aria-hidden />
+            </Link>
 
             {/* Buttons - Responsive layout */}
             <div className="mt-6 sm:mt-7 md:mt-8 flex flex-col sm:flex-row gap-3 sm:gap-4 animate-fade-up-delay-2">

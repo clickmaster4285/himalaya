@@ -26,16 +26,25 @@ export default function NavAuth({ variant = "cream" }: Props) {
 
   useEffect(() => {
     let cancelled = false;
-    fetch("/api/auth/me", { credentials: "include" })
+    const controller = new AbortController();
+    const timeout = window.setTimeout(() => controller.abort(), 8_000);
+
+    fetch("/api/auth/me", { credentials: "include", signal: controller.signal })
       .then((r) => r.json())
       .then((d) => {
         if (!cancelled) setUser(d.user ?? null);
       })
       .catch(() => {
         if (!cancelled) setUser(null);
+      })
+      .finally(() => {
+        window.clearTimeout(timeout);
       });
+
     return () => {
       cancelled = true;
+      controller.abort();
+      window.clearTimeout(timeout);
     };
   }, []);
 

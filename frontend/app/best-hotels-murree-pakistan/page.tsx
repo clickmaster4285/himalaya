@@ -3,6 +3,12 @@ import Image from "next/image";
 import Link from "next/link";
 import Navbar from "@/components/Navbar";
 import Footer from "@/components/Footer";
+import MurreeHotelsContentSection from "@/components/seo/MurreeHotelsContentSection";
+import {
+  bestHotelsMurreeBlock1,
+  bestHotelsMurreeBlock2,
+  bestHotelsMurreeAdditionalFaqs,
+} from "@/lib/seo/murree-hotels-seo-content";
 import { Check, X, Building, TreePine, MapPin, Coffee, Star } from "lucide-react";
 
 export const metadata: Metadata = {
@@ -166,6 +172,8 @@ export default function BestHotelsMurreePage() {
         </div>
       </section>
 
+      <MurreeHotelsContentSection content={bestHotelsMurreeBlock1} variant="best-hotels" />
+
       {/* COMPARISON TABLE */}
       <section className="py-16 md:py-24 bg-white px-6">
         <div className="max-w-6xl mx-auto">
@@ -303,6 +311,8 @@ export default function BestHotelsMurreePage() {
           </div>
         </div>
       </section>
+
+      <MurreeHotelsContentSection content={bestHotelsMurreeBlock2} variant="best-hotels" />
 
       {/* DECISION FRAMEWORK */}
       <section className="py-20 bg-neutral-900 text-white px-6">
@@ -557,6 +567,7 @@ export default function BestHotelsMurreePage() {
 
         <div className="space-y-6">
           {[
+            ...bestHotelsMurreeAdditionalFaqs,
             {
               q: "What is the best hotel in Murree for families?",
               a: "For families requiring private space, in-villa dining, and an environment where children can move freely without disturbing other guests, Himalaya Villas in Bhurban is consistently the recommended choice. The villa model provides exclusive occupation of the property — no shared lobby, no shared dining room, and full flexibility on meal timing. Families of 4 to 10 are accommodated within a single villa booking. Alternative chain options include Pearl Continental Bhurban for families who require formal hotel infrastructure."

@@ -1,6 +1,7 @@
+import Link from "next/link";
 import { CheckCircle2 } from "lucide-react";
-import { motion } from "framer-motion";
 import { buildWhatsAppBookingUrl } from "@/lib/whatsapp";
+import VillasCtaGroup from "@/components/VillasCtaGroup";
 
 export default function VillaConfigurations() {
   const plans = [
@@ -51,8 +52,8 @@ export default function VillaConfigurations() {
             Accommodation Options
           </h2>
           <p className="mt-6 text-muted-foreground font-sans text-sm md:text-base max-w-2xl mx-auto leading-relaxed">
-            Choose between individual luxury suites or reserve the entire complete villa experience, 
-            each thoughtfully designed for maximum comfort and privacy on your getaway.
+            Flexible layouts for travellers comparing the best hotel in bhurban with something more private — book one
+            suite or the complete villa when your group needs every room and terrace to yourselves.
           </p>
         </div>
         
@@ -99,6 +100,30 @@ export default function VillaConfigurations() {
             </div>
           ))}
         </div>
+
+        <div className="mt-14 flex flex-col items-center gap-4 sm:flex-row sm:justify-center">
+          <Link
+            href="/book/stay"
+            className="inline-flex items-center justify-center rounded-xl bg-[#1c1916] px-8 py-3.5 text-sm font-bold tracking-widest uppercase text-white transition hover:bg-[#3d362e]"
+          >
+            Book on website
+          </Link>
+          <a
+            href={buildWhatsAppBookingUrl("Complete Villa")}
+            target="_blank"
+            rel="noopener noreferrer"
+            className="inline-flex items-center justify-center rounded-xl border border-[#d4c9b8] bg-white px-8 py-3.5 text-sm font-bold tracking-widest uppercase text-[#3d362e] transition hover:border-[#c9a55b]"
+          >
+            Ask about full villa
+          </a>
+        </div>
+
+        <VillasCtaGroup
+          variant="banner"
+          className="mt-10"
+          title="Not sure which suite fits your group?"
+          subtitle="Tell us your dates and guest count — we will recommend Suite 1, Suite 2, or the complete villa."
+        />
       </div>
     </section>
   );

@@ -8,6 +8,7 @@ import Navbar from "@/components/Navbar";
 import Footer from "@/components/Footer";
 import { ExternalLink, Mail, MapPin, Phone, Send, CheckCircle } from "lucide-react";
 import { SITE_CONTACT, mailtoHref, telHref } from "@/lib/site-contact";
+import { pushFormSubmission } from "@/lib/analytics/push-form-submission";
 import { createPageMetadata } from "@/lib/seo/build-metadata";
 
 const heroImage = "/assets/journal-group-new.jpg";
@@ -40,6 +41,7 @@ export default function ContactPage() {
     // Simulate form submission - replace with actual API call
     setTimeout(() => {
       setIsSubmitting(false);
+      pushFormSubmission("contact_form");
       setIsSubmitted(true);
       setFormData({
         name: "",

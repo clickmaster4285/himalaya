@@ -10,6 +10,7 @@ import {
 } from "lucide-react";
 import { SITE_CONTACT, telHref, mailtoHref } from "@/lib/site-contact";
 import { Coffee, Car, Accessibility, Shirt, ConciergeBell, Baby, ChefHat, Bus, CigaretteOff } from "lucide-react";
+import { pushFormSubmission } from "@/lib/analytics/push-form-submission";
 import { buildBhurbanInquiryWhatsAppUrl, buildWhatsAppBookingUrl } from "@/lib/whatsapp";
 
 const BHBURBAN_WHATSAPP_URL = buildWhatsAppBookingUrl(
@@ -194,12 +195,7 @@ function HeroSlider() {
       return;
     }
 
-    if (typeof window !== "undefined") {
-      window.dataLayer = window.dataLayer || [];
-      window.dataLayer.push({
-        event: "form_submitted",
-      });
-    }
+    pushFormSubmission("hotels_in_bhurban_inquiry_form");
 
     setSubmitStatus("success");
     const email = form.email.trim();

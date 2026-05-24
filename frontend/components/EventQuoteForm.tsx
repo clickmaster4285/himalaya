@@ -2,6 +2,7 @@
 
 import { useState } from "react";
 import { CheckCircle, AlertCircle } from "lucide-react";
+import { pushFormSubmission } from "@/lib/analytics/push-form-submission";
 
 type EventQuoteFormProps = {
   eventTitle?: string;
@@ -78,7 +79,8 @@ const EventQuoteForm = ({ eventTitle, className = "", id = "inquiry" }: EventQuo
       
       // Here you would normally send the data to your backend
       console.log('Form submitted:', formData);
-      
+
+      pushFormSubmission("event_quote_form");
       setSubmitStatus('success');
       setFormData({
         fullName: '',

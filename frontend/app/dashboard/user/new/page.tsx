@@ -20,6 +20,7 @@ import {
 import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
 import { Label } from "@/components/ui/label";
+import { pushFormSubmission } from "@/lib/analytics/push-form-submission";
 import { cn } from "@/lib/utils";
 import {
   EXPERIENCE_OPTIONS,
@@ -124,6 +125,7 @@ export default function NewBookingPage() {
         setError(typeof data.error === "string" ? data.error : "Could not create booking");
         return;
       }
+      pushFormSubmission("dashboard_new_booking_form");
       router.push("/dashboard/user");
       router.refresh();
     } catch {

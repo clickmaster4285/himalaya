@@ -8,6 +8,7 @@ import {
   Car, Coffee, Dumbbell, Heart, TreePine, Wind, Cloud, Bed, Bath,
   Tv, Shield, Users, Calendar, Map, MessageCircle
 } from "lucide-react";
+import { pushFormSubmission } from "@/lib/analytics/push-form-submission";
 import { buildWhatsAppBookingUrl } from "@/lib/whatsapp";
 import { MURREE_ESTATE_HERO_STYLES } from "@/lib/murree-estate-hero-styles";
 import { MurreePakistanHero } from "./HotelsInMurreePakistanClient";
@@ -703,7 +704,9 @@ function ContactForm() {
     e.preventDefault();
     // Handle form submission here
     console.log('Form submitted:', formData);
-    
+
+    pushFormSubmission("hotels_in_murree_pakistan_contact_form");
+
     // Reset form after submission
     setFormData({
       name: '',

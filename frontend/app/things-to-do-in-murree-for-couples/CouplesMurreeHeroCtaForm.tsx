@@ -3,6 +3,7 @@
 import { useState, type FormEvent } from "react";
 import { ChevronDown } from "lucide-react";
 import { SITE_CONTACT } from "@/lib/site-contact";
+import { pushFormSubmission } from "@/lib/analytics/push-form-submission";
 import { buildCouplesMurreeWhatsAppUrl } from "@/lib/whatsapp";
 
 const guestOptions = ["2 Guests", "4 Guests"] as const;
@@ -58,6 +59,7 @@ export default function CouplesMurreeHeroCtaForm() {
       mustHave,
     });
     window.open(url, "_blank", "noopener,noreferrer");
+    pushFormSubmission("things_to_do_in_murree_for_couples_hero_form");
   };
 
   const today = new Date().toISOString().split("T")[0];

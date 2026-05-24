@@ -3,6 +3,7 @@
 import { useState, type FormEvent } from "react";
 import { ChevronDown } from "lucide-react";
 import { SITE_CONTACT } from "@/lib/site-contact";
+import { pushFormSubmission } from "@/lib/analytics/push-form-submission";
 import { buildFamilyMurreeWhatsAppUrl } from "@/lib/whatsapp";
 
 const adultOptions = ["2 Adults", "3 Adults", "4 Adults", "5+ Adults"] as const;
@@ -57,6 +58,7 @@ export default function FamilyMurreeHeroCtaForm() {
       topActivity,
     });
     window.open(url, "_blank", "noopener,noreferrer");
+    pushFormSubmission("family_things_to_do_murree_hero_form");
   };
 
   const today = new Date().toISOString().split("T")[0];

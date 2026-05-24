@@ -3,6 +3,7 @@
 import { useState, type FormEvent } from "react";
 import { ChevronDown } from "lucide-react";
 import { SITE_CONTACT } from "@/lib/site-contact";
+import { pushFormSubmission } from "@/lib/analytics/push-form-submission";
 import { buildOutdoorMurreeWhatsAppUrl } from "@/lib/whatsapp";
 
 const guestOptions = ["2 Guests", "4 Guests", "6 Guests", "8 Guests", "10+ Guests"] as const;
@@ -52,6 +53,7 @@ export default function OutdoorMurreeHeroCtaForm() {
       activitiesToArrange,
     });
     window.open(url, "_blank", "noopener,noreferrer");
+    pushFormSubmission("outdoor_activities_murree_hero_form");
   };
 
   const today = new Date().toISOString().split("T")[0];

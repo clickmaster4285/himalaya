@@ -3,6 +3,7 @@
 import { useState, type FormEvent } from "react";
 import { ChevronDown } from "lucide-react";
 import { SITE_CONTACT } from "@/lib/site-contact";
+import { pushFormSubmission } from "@/lib/analytics/push-form-submission";
 import { buildThingsToDoMurreeWhatsAppUrl } from "@/lib/whatsapp";
 
 const guestOptions = ["1 Adult", "2 Adults", "3 Adults", "4 Adults", "5 Adults", "6+ Guests"] as const;
@@ -53,6 +54,7 @@ export default function ThingsToDoHeroCtaForm() {
       activities,
     });
     window.open(url, "_blank", "noopener,noreferrer");
+    pushFormSubmission("things_to_do_in_murree_hero_form");
   };
 
   const today = new Date().toISOString().split("T")[0];

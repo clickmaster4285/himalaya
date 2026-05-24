@@ -11,6 +11,7 @@ import { cn } from "@/lib/utils";
 import { hvAuthInput, hvAuthInputWithToggle, hvAuthLabel, hvAuthPrimaryBtn } from "@/components/auth/hv-auth-styles";
 import type { SafeUser } from "@/lib/user-public";
 import { hardNavigateAfterAuth } from "@/lib/auth-redirect";
+import { pushFormSubmission } from "@/lib/analytics/push-form-submission";
 import { dashboardPathForRole } from "@/lib/dashboard-nav";
 
 const ease = [0.22, 1, 0.36, 1] as const;
@@ -56,6 +57,8 @@ export default function SignupForm({ onSuccess, onSwitchToLogin, className }: Pr
       const redirectTo =
         (typeof data.redirectTo === "string" && data.redirectTo.startsWith("/") && data.redirectTo) ||
         (data.user?.role ? dashboardPathForRole(data.user.role) : "/dashboard/user");
+
+      pushFormSubmission("signup_form");
 
       if (onSuccess && data.user) {
         onSuccess(data.user, redirectTo);

@@ -53,6 +53,11 @@ export const EVENTS_HERO_SLIDES = [
   "/assets/journal-bonfire.jpg",
 ] as const;
 
+/** Published event detail slugs for sitemap and listings. */
+export function getAllEventSlugs(): string[] {
+  return Object.keys(EVENT_IMAGE_BY_SLUG);
+}
+
 export function resolveEventImage(slug: string, image?: string): string {
   const mapped = EVENT_IMAGE_BY_SLUG[slug];
   if (mapped) return mapped;

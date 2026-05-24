@@ -1,6 +1,7 @@
 import type { Metadata } from "next";
 import Navbar from "@/components/Navbar";
 import Footer from "@/components/Footer";
+import { absoluteSeoTitle } from "@/lib/seo/build-metadata";
 
 const refundSchema = {
   "@context": "https://schema.org",
@@ -24,7 +25,7 @@ const refundSchema = {
 };
 
 export const metadata: Metadata = {
-  title: "Refund Policy | Himalaya Villas & Resorts",
+  title: absoluteSeoTitle("Refund Policy"),
   description: "Refund Policy for Himalaya Villas & Resorts - Learn about our cancellation and refund terms.",
 };
 
@@ -114,9 +115,9 @@ export default function RefundPolicyPage() {
               </h2>
               <p>
                 To request a refund, please contact us at{" "}
-                <a href="mailto:reservations@himalayavillas.com" className="underline" style={{ color: "hsl(36 45% 55%)" }}>
+                <span className="underline" style={{ color: "hsl(36 45% 55%)" }}>
                   reservations@himalayavillas.com
-                </a>{" "}
+                </span>{" "}
                 or call our reservations team. Please include your booking confirmation number and the reason for your 
                 cancellation.
               </p>

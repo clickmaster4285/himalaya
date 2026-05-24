@@ -13,7 +13,7 @@ import { absoluteUrl } from "@/lib/seo/site-config";
 import { getPublishedVillas } from "@/lib/villas-fetch";
 
 export const metadata: Metadata = createPageMetadata({
-  title: "Private Luxury Villas in Bhurban | Book Murree Stays",
+  title: "Luxury Villas in Bhurban",
   description:
     "Explore villas in bhurban murree and private suites at Himalaya Premium Villas — a premium alternative to any hotel in bhurban, bhurban hotel murree listings, and crowded bhurban hotels.",
   path: "/villas",

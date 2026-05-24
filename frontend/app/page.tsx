@@ -28,7 +28,7 @@ import { createPageMetadata } from "@/lib/seo/build-metadata";
 import { getPublishedVillas } from "@/lib/villas-fetch";
 
 export const metadata: Metadata = createPageMetadata({
-  title: "Himalaya Villas and Resort | Private Luxury Estate Bhurban",
+  title: "Private Luxury Estate Bhurban",
   description:
     "Private luxury estate in Bhurban for exclusive stays, destination weddings, and curated mountain experiences.",
   path: "/",

@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 import Navbar from "@/components/Navbar";
 import Footer from "@/components/Footer";
 import BookingHero from "@/components/book-page/BookingHero";
+import { absoluteSeoTitle } from "@/lib/seo/build-metadata";
 import BookingFeatures from "@/components/book-page/BookingFeatures";
 import BookingPackages from "@/components/book-page/BookingPackages";
 import BookingReviews from "@/components/book-page/BookingReviews";
@@ -10,6 +11,7 @@ import BookingLocation from "@/components/book-page/BookingLocation";
 import BookingCTA from "@/components/book-page/BookingCTA";
 import BookingFAQ from "@/components/book-page/BookingFAQ";
 import BookingKeywordSections from "@/components/book-page/BookingKeywordSections";
+import GoogleHotelsBookBridge from "@/components/book-page/GoogleHotelsBookBridge";
 
 const bookingServiceSchema = {
   "@context": "https://schema.org",
@@ -82,7 +84,7 @@ const faqSchema = {
 };
 
 export const metadata: Metadata = {
-  title: "Hotel Booking in Bhurban Murree | Himalaya Villas",
+  title: absoluteSeoTitle("Book Hotel in Bhurban"),
   description:
     "Book at Himalaya Villas — among the best hotels in Bhurban Murree for comfort, scenery, and privacy. Private villas in bhurban murree, direct rates, and WhatsApp reservations.",
 };
@@ -100,7 +102,8 @@ export default function BookNowLandingPage() {
       </div>
 
       <Navbar />
-      
+      <GoogleHotelsBookBridge />
+
       <main className="flex-grow">
         <BookingHero />
         <BookingFeatures />

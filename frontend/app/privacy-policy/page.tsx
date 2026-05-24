@@ -1,6 +1,7 @@
 import type { Metadata } from "next";
 import Navbar from "@/components/Navbar";
 import Footer from "@/components/Footer";
+import { absoluteSeoTitle } from "@/lib/seo/build-metadata";
 
 const privacySchema = {
   "@context": "https://schema.org",
@@ -24,7 +25,7 @@ const privacySchema = {
 };
 
 export const metadata: Metadata = {
-  title: "Privacy Policy | Himalaya Villas & Resorts",
+  title: absoluteSeoTitle("Privacy Policy"),
   description: "Privacy Policy for Himalaya Villas & Resorts - Learn how we protect your personal information.",
 };
 
@@ -120,9 +121,9 @@ export default function PrivacyPolicyPage() {
               </h2>
               <p>
                 If you have any questions about this Privacy Policy, please contact us at{" "}
-                <a href="mailto:info@himalayavillas.com" className="underline" style={{ color: "hsl(36 45% 55%)" }}>
+                <span className="underline" style={{ color: "hsl(36 45% 55%)" }}>
                   info@himalayavillas.com
-                </a>
+                </span>
               </p>
             </section>
 

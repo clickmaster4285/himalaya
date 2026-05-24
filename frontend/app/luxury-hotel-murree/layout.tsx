@@ -1,7 +1,10 @@
 import type { Metadata } from "next";
+import { absoluteSeoTitle } from "@/lib/seo/build-metadata";
+
+import MurreeHotelPageChrome from "@/components/seo/MurreeHotelPageChrome";
 
 export const metadata: Metadata = {
-  title: "5-Star Luxury Hotel Murree | Premium Suites | World-Class Service | Himalaya Villas",
+  title: absoluteSeoTitle("Luxury Hotel Murree"),
   description: "5-star luxury hotel in Murree with premium suites and world-class service at Himalaya Villas Bhurban. Elegant accommodations, fine dining, spa services. Experience ultimate luxury hospitality in Murree Hills.",
   keywords: "5-star hotel Murree, luxury suites Bhurban, premium hotel Murree Hills, world-class hospitality Pakistan, deluxe accommodation Himalaya Villas, upscale rooms Murree, high-end suites Bhurban",
   openGraph: {
@@ -20,5 +23,5 @@ export default function LuxuryHotelLayout({
 }: {
   children: React.ReactNode;
 }) {
-  return children;
+  return <MurreeHotelPageChrome page="luxury-hotel-murree">{children}</MurreeHotelPageChrome>;
 }

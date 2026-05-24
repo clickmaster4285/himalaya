@@ -17,7 +17,7 @@ import "./globals.css";
 export const dynamic = "force-dynamic";
 
 export const metadata: Metadata = createPageMetadata({
-  title: "Events & Experiences | Himalaya Villas & Resorts",
+  title: "Events & Experiences",
   description:
     "Host weddings, corporate retreats, and social celebrations at Himalaya Villas & Resorts with curated decor, premium hospitality, and mountain views.",
   path: "/events",

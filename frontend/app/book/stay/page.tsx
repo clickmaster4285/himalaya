@@ -169,6 +169,25 @@ function BookStayContent() {
   const [occupiedRanges, setOccupiedRanges] = useState<OccupiedRange[]>([]);
   const [dateError, setDateError] = useState<string | null>(null);
   const prevVillaSlugRef = useRef<string | null>(null);
+  const googleDatesAppliedRef = useRef(false);
+
+  useEffect(() => {
+    if (googleDatesAppliedRef.current) return;
+    const checkinRaw = searchParams.get("checkin");
+    const checkoutRaw = searchParams.get("checkout");
+    if (!checkinRaw || !checkoutRaw) return;
+
+    const checkinIso = checkinRaw.trim().slice(0, 10);
+    const checkoutIso = checkoutRaw.trim().slice(0, 10);
+    if (!/^\d{4}-\d{2}-\d{2}$/.test(checkinIso) || !/^\d{4}-\d{2}-\d{2}$/.test(checkoutIso)) return;
+
+    const from = new Date(`${checkinIso}T12:00:00`);
+    const to = new Date(`${checkoutIso}T12:00:00`);
+    if (Number.isNaN(from.getTime()) || Number.isNaN(to.getTime()) || to <= from) return;
+
+    googleDatesAppliedRef.current = true;
+    setRange({ from, to });
+  }, [searchParams]);
 
   useEffect(() => {
     fetch("/api/villas")

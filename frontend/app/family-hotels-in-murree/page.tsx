@@ -1,5 +1,6 @@
 ﻿import type { Metadata } from "next";
 import type { ReactNode } from "react";
+import { absoluteSeoTitle } from "@/lib/seo/build-metadata";
 import {
   Mountain, Home, Utensils, Clock,
   Phone, Mail, MapPin, Check, X,
@@ -13,13 +14,13 @@ const MURREE_FAMILY_WHATSAPP_URL = buildWhatsAppBookingUrl(
 );
 
 export const metadata: Metadata = {
-  title: "Best Family Hotel in Murree | Private Villa — Himalaya Villas",
+  title: absoluteSeoTitle("Family Hotel in Murree"),
   description: "Tired of crowded hotels in Murree? Book Himalaya Villas — a private luxury estate in Bhurban for your whole family. Exclusive, safe & scenic. WhatsApp to reserve.",
   alternates: {
     canonical: "https://himalayavillas.com/family-hotels-in-murree"
   },
   openGraph: {
-    title: "Best Family Hotel in Murree | Private Villa — Himalaya Villas",
+    title: "Family Hotel in Murree",
     description: "Tired of crowded hotels in Murree? Book Himalaya Villas — a private luxury estate in Bhurban for your whole family. Exclusive, safe & scenic. WhatsApp to reserve.",
     url: "https://himalayavillas.com/family-hotels-in-murree",
     type: "website"
@@ -740,7 +741,7 @@ function FinalCTA() {
                   +92 304 567 9000
                 </a>
                 <a 
-                  href="mailto:info@himalayavillas.com" 
+                  href="/contact" 
                   className="inline-flex w-full items-center justify-center gap-2 rounded-full border-2 border-white/40 px-8 py-4 text-base font-semibold transition-all hover:scale-105 hover:bg-white/10 sm:w-auto"
                 >
                   <Mail className="h-5 w-5" />

@@ -2106,7 +2106,7 @@ export async function generateMetadata({ params }: { params: Promise<{ slug: str
 
   if (!raw) {
     return createPageMetadata({
-      title: "Event Not Found | Himalaya Villas & Resorts",
+      title: "Event Not Found",
       description: "The requested event could not be found.",
       path: `/events/${slug}`,
     });
@@ -2206,7 +2206,7 @@ export async function generateMetadata({ params }: { params: Promise<{ slug: str
   const metaDescription = seo?.description ?? event.longDescription;
 
   return createPageMetadata({
-    title: `${event.title} | Himalaya Villas & Resorts`,
+    title: event.title,
     description: metaDescription,
     path: `/events/${slug}`,
     keywords,

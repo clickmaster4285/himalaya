@@ -3,10 +3,11 @@ import Image from "next/image";
 import Link from "next/link";
 import Navbar from "@/components/Navbar";
 import Footer from "@/components/Footer";
+import { absoluteSeoTitle } from "@/lib/seo/build-metadata";
 import { Check, X, MapPin, Users, Camera, Shield, Heart, Clock, Utensils, BedDouble, Mountain } from "lucide-react";
 
 export const metadata: Metadata = {
-    title: "Wedding Venue Near Islamabad | Mountain Wedding | Bhurban | Himalaya Villas",
+    title: absoluteSeoTitle("Wedding Venue Near Islamabad"),
     description: "Wedding venue near Islamabad at Himalaya Villas Bhurban. Mountain wedding venue with pine forest setting, full catering, on-site accommodation. Perfect destination wedding 60 minutes from Islamabad. Book your dream wedding!",
     keywords: "wedding venue near Islamabad, mountain wedding Bhurban, destination wedding Murree Hills, outdoor wedding venue Pakistan, wedding resort Himalaya Villas, wedding ceremony Bhurban, wedding reception near Islamabad",
     openGraph: {

@@ -627,7 +627,7 @@ function BookingCTA() {
                 <a href="tel:+923045679000" className="murree-grad-gold murree-shadow-gold rounded-full px-8 py-4 font-semibold transition hover:scale-105" style={{ color: "hsl(165 60% 18%)" }}>
                   Call to Book
                 </a>
-                <a href="mailto:info@himalayavillas.com" className="rounded-full px-8 py-4 font-semibold backdrop-blur-md transition"
+                <a href="/contact" className="rounded-full px-8 py-4 font-semibold backdrop-blur-md transition"
                   style={{ border: "2px solid hsl(40 38% 97% / .4)", background: "hsl(40 38% 97% / .1)", color: "hsl(40 38% 97%)" }}>
                   Email Inquiry
                 </a>

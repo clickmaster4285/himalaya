@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 import Script from "next/script";
 import Navbar from "@/components/Navbar";
 import Footer from "@/components/Footer";
+import { absoluteSeoTitle } from "@/lib/seo/build-metadata";
 
 // Simple schema data
 const lodgingBusinessSchema = {
@@ -33,7 +34,7 @@ const lodgingBusinessSchema = {
 };
 
 export const metadata: Metadata = {
-  title: "Himalaya Villas Bhurban Murree | Luxury Rest House & Private Villas | Book Direct",
+  title: absoluteSeoTitle("Luxury Rest House Bhurban"),
   description: "Himalaya Villas is Bhurban Murree's premier luxury rest house - private mountain villas with panoramic Himalayan views, butler service & premium dining. 45 min from Islamabad. WhatsApp to book.",
   keywords: "Himalaya Villas Bhurban Murree Rest House, luxury villas Bhurban, private villa Murree, rest house near Islamabad, luxury accommodation Bhurban, mountain villa Pakistan, premium rest house Murree Hills, villa rental Bhurban, family villa Murree, corporate retreat Bhurban",
   openGraph: {

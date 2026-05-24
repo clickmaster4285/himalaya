@@ -26,24 +26,7 @@ export async function generateMetadata({ params }: VillasDetailPageProps): Promi
   const villa = await getVillaBySlugPublic(slug);
   if (!villa) return {};
 
-  const metaTitle = (() => {
-    switch (slug) {
-      case 'alpine-family-lodge':
-        return 'Alpine Family Lodge | Luxury Villa Bhurban Murree | Himalaya Villas';
-      case 'serene-valley-cabin':
-        return 'Serene Valley Cabin | Luxury Villa Bhurban Murree | Himalaya Villas';
-      case 'presidential-suite':
-        return 'Presidential Suite | Luxury Villa Bhurban Murree | Himalaya Villas';
-      case 'himalayan-penthouse':
-        return 'Himalayan Penthouse | Luxury Villa Bhurban Murree | Himalaya Villas';
-      case 'garden-villa-retreat':
-        return 'Garden Villa Retreat | Luxury Villa Bhurban Murree | Himalaya Villas';
-      case 'sunset-suite':
-        return 'Sunset Suite | Luxury Villa Bhurban Murree | Himalaya Villas';
-      default:
-        return `${villa.title} | Luxury Villa Bhurban Murree | Himalaya Villas`;
-    }
-  })();
+  const metaTitle = `${villa.title}, Bhurban`;
 
   const metaDescription = (() => {
     switch (slug) {

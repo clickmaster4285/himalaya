@@ -5,7 +5,9 @@
   "private": true,
   "scripts": {
     "dev": "next dev",
-    "build": "next build",
+    "ensure-assets": "node scripts/ensure-public-assets.mjs",
+    "build": "node scripts/ensure-public-assets.mjs && next build",
+    "predev": "node scripts/ensure-public-assets.mjs",
     "start": "next start",
     "lint": "eslint"
   },

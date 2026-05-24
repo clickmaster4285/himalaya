@@ -3,7 +3,7 @@ import { createPageMetadata } from "@/lib/seo/build-metadata";
 import MurreeAtNightClient from "./MurreeAtNightClient";
 
 export const metadata: Metadata = createPageMetadata({
-  title: "Things to Do in Murree at Night — Evening Activities & Guide 2026 | Himalaya Villas",
+  title: "Murree at Night Guide 2026",
   description:
     "What to do in Murree at night — Mall Road evening walk, night food, stargazing, private bonfire evenings at Himalaya Villas. The mountain at night is the experience most Murree visitors never get.",
   path: "/things-to-do-in-murree-at-night",

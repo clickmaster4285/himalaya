@@ -3,7 +3,7 @@ import { createPageMetadata } from "@/lib/seo/build-metadata";
 import BestRestaurantsMurreeClient from "./BestRestaurantsMurreeClient";
 
 export const metadata: Metadata = createPageMetadata({
-  title: "Best Restaurants in Murree — Dining Guide | Himalaya Villas Bhurban",
+  title: "Best Restaurants in Murree",
   description:
     "Murree dining guide — Mall Road street food, Pearl Continental Bhurban, local restaurants, and in-villa chef dining at Himalaya Villas. Halal, private terrace, your schedule.",
   path: "/best-restaurants-murree",

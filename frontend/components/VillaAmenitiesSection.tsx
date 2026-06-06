@@ -38,6 +38,7 @@ export default function VillaAmenitiesSection({
     return { ...builtInAmenityImages, ...external };
   }, [imageByAmenity]);
 
+  
   const initialActive = items[0] ?? "";
   const [active, setActive] = useState(initialActive);
 

@@ -8,7 +8,7 @@ export type VillaPublic = {
   description: string;
   price: string;
   image: string;
-  gallery: string[];
+  gallery?: string[];
   bedrooms: number;
   guests: number;
   size: string;

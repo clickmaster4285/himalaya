@@ -1833,7 +1833,7 @@ const eventDetails: Record<string, {
     faqs: [
       {
         question: "What fitness activities are included in the camps?",
-        answer: "Our fitness camps include yoga, strength training, cardio workouts, hiking, swimming, and group fitness classes suitable for all levels."
+        answer: "Our fitness camps include yoga, strength training, cardio workouts, hiking, and group fitness classes suitable for all levels."
       },
       {
         question: "Are personal trainers available during fitness camps?",

@@ -101,7 +101,6 @@ const reunionPackages = [
             "Daily breakfast & one feast dinner",
             "BBQ night with live grilling",
             "Game night & movie screening",
-            "Pool access & outdoor activities",
             "Fully equipped kitchen access",
             "Concierge for local excursions"
         ],
@@ -111,7 +110,6 @@ const reunionPackages = [
 
 const reunionBenefits = [
     "Spacious 6-bedroom villa with 5,000 sq ft of indoor/outdoor space",
-    "Private swimming pool & kids' splash area",
     "Fully equipped kitchen for catering or self-cooking",
     "Dedicated family reunion coordinator from planning to farewell",
     "Ample parking for 30+ cars and valet available",
@@ -158,7 +156,7 @@ const testimonials = [
     {
         name: "Ahmed & Sara Khan",
         event: "Multi-Generational Reunion",
-        text: "We booked the 3-day package for 20 family members. The pool, BBQ night, and game room kept everyone entertained. Will definitely return.",
+        text: "We booked the 3-day package for 20 family members. The BBQ night and game room kept everyone entertained. Will definitely return.",
         rating: 5,
     },
     {

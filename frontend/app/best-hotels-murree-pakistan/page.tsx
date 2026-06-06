@@ -252,7 +252,7 @@ export default function BestHotelsMurreePage() {
             <div>
               <h3 className="text-2xl font-bold text-neutral-900 mb-4">Pearl Continental Bhurban</h3>
               <p className="text-neutral-600 leading-relaxed mb-4">
-                Pakistan's most established luxury chain property in Bhurban. Pearl Continental Bhurban offers a full-service hotel experience — multiple dining outlets, conference facilities, a swimming pool, and a spa. Its greatest strength is brand recognition and loyalty programme integration. Its limitation, from the perspective of a discerning traveller, is precisely what all large chain hotels share: shared facilities, standardised service, and an institutional atmosphere that is difficult to escape regardless of room category. A 5-star chain hotel in Bhurban is still a 5-star chain hotel.
+                Pakistan's most established luxury chain property in Bhurban. Pearl Continental Bhurban offers a full-service hotel experience — multiple dining outlets, conference facilities, and a spa. Its greatest strength is brand recognition and loyalty programme integration. Its limitation, from the perspective of a discerning traveller, is precisely what all large chain hotels share: shared facilities, standardised service, and an institutional atmosphere that is difficult to escape regardless of room category. A 5-star chain hotel in Bhurban is still a 5-star chain hotel.
               </p>
               <div className="bg-neutral-50 p-4 rounded-xl border border-neutral-100">
                 <span className="font-bold text-neutral-900 text-sm uppercase tracking-wider">Best for:</span>

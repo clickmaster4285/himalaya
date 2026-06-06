@@ -81,12 +81,11 @@ export default function LuxuryHotelMurreePage() {
     {
       id: "royal",
       name: "Royal Villa",
-      description: "Exclusive two-bedroom villa with private pool, garden, and royal treatment services.",
+      description: "Exclusive two-bedroom villa with garden, and royal treatment services.",
       price: "95,000",
       originalPrice: "120,000",
       image: "/assets/villa-presidential-real.jpg",
       features: [
-        "Private Swimming Pool",
         "Royal Garden Access",
         "Two Master Suites",
         "Private Dining Room",

@@ -106,7 +106,7 @@ export default function RomanticHotelsMurreePage() {
       originalPrice: "120,000",
       image: "/assets/villa-presidential.jpg",
       features: [
-        "Private Swimming Pool",
+        
         "Personal Garden",
         "Two Master Suites",
         "Private Kitchen",

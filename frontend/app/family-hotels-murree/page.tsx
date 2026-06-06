@@ -100,7 +100,7 @@ export default function FamilyHotelsMurreePage() {
     {
       id: "premium",
       name: "Premium Family Estate",
-      description: "Luxury family estate with multiple villas, private pool, and exclusive family activities.",
+      description: "Luxury family estate with multiple villas, and exclusive family activities.",
       price: "120,000",
       originalPrice: "150,000",
       image: "/assets/villa-presidential-real.jpg",

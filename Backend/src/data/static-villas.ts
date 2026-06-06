@@ -16,7 +16,7 @@ export const STATIC_VILLAS: VillaPublic[] = [
     size: "450m²",
     highlights: ["Valley view terrace", "Private garden", "Wood-burner fireplace"],
     amenities: [
-      "Private Pool",
+      
       "Butler Service",
       "Premium Toiletries",
       "Mountain Views",
@@ -40,7 +40,7 @@ export const STATIC_VILLAS: VillaPublic[] = [
     size: "530m²",
     highlights: ["Private terrace and jacuzzi", "Panoramic glass living room", "Master lounge"],
     amenities: [
-      "Private Pool",
+      
       "Butler Service",
       "Premium Toiletries",
       "Mountain Views",
@@ -61,9 +61,9 @@ export const STATIC_VILLAS: VillaPublic[] = [
     bedrooms: 4,
     guests: 6,
     size: "420m²",
-    highlights: ["Skyline rooftop", "Open-plan lounge", "Private pool"],
+    highlights: ["Skyline rooftop", "Open-plan lounge"],
     amenities: [
-      "Private Pool",
+      
       "Butler Service",
       "Premium Toiletries",
       "Mountain Views",
@@ -87,7 +87,7 @@ export const STATIC_VILLAS: VillaPublic[] = [
     size: "410m²",
     highlights: ["Private garden", "Indoor fireplace", "Spacious kitchenette"],
     amenities: [
-      "Private Pool",
+      
       "Butler Service",
       "Premium Toiletries",
       "Mountain Views",
@@ -110,7 +110,7 @@ export const STATIC_VILLAS: VillaPublic[] = [
     size: "350m²",
     highlights: ["Sunset views", "Cozy atmosphere", "Private balcony"],
     amenities: [
-      "Private Pool",
+      
       "Butler Service",
       "Premium Toiletries",
       "Mountain Views",
@@ -133,7 +133,7 @@ export const STATIC_VILLAS: VillaPublic[] = [
     size: "320m²",
     highlights: ["Scenic valley view", "Private terrace", "Fireplace"],
     amenities: [
-      "Private Pool",
+      
       "Butler Service",
       "Premium Toiletries",
       "Mountain Views",

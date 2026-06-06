@@ -14,7 +14,7 @@ export const STATIC_VILLAS: Villa[] = [
     guests: 10,
     size: "450m²",
     highlights: ["Valley view terrace", "Private garden", "Wood-burner fireplace"],
-    amenities: ["Private Pool", "Butler Service", "Premium Toiletries", "Mountain Views", "Fireplace", "Gourmet Kitchen"],
+    amenities: [ "Butler Service", "Premium Toiletries", "Mountain Views", "Fireplace", "Gourmet Kitchen"],
     content:
       "The Alpine Family Lodge offers a warm retreat with elegant interiors, handcrafted furnishings, and large picture windows framing the Himalayan panorama. With family-centered amenities and separate living spaces, it creates unforgettable memories.",
   },
@@ -30,7 +30,7 @@ export const STATIC_VILLAS: Villa[] = [
     guests: 8,
     size: "530m²",
     highlights: ["Private terrace and jacuzzi", "Panoramic glass living room", "Master lounge"],
-    amenities: ["Private Pool", "Butler Service", "Premium Toiletries", "Mountain Views", "Fireplace", "Gourmet Kitchen"],
+    amenities: [ "Butler Service", "Premium Toiletries", "Mountain Views", "Fireplace", "Gourmet Kitchen"],
     content:
       "Exquisite and spacious, The Presidential Suite envelops you in the highest level of comfort and privacy. Enjoy unmatched vistas, bespoke service, and a cinematic sunset from your own personal terrace.",
   },
@@ -45,8 +45,8 @@ export const STATIC_VILLAS: Villa[] = [
     bedrooms: 4,
     guests: 6,
     size: "420m²",
-    highlights: ["Skyline rooftop", "Open-plan lounge", "Private pool"],
-    amenities: ["Private Pool", "Butler Service", "Premium Toiletries", "Mountain Views", "Fireplace", "Gourmet Kitchen"],
+    highlights: ["Skyline rooftop", "Open-plan lounge"],
+    amenities: [ "Butler Service", "Premium Toiletries", "Mountain Views", "Fireplace", "Gourmet Kitchen"],
     content:
       "The Himalayan Penthouse is the pinnacle of mountain living, featuring expansive outdoor spaces, custom interiors, and the kind of discreet luxury crafted for a selective few.",
   },
@@ -62,7 +62,7 @@ export const STATIC_VILLAS: Villa[] = [
     guests: 8,
     size: "410m²",
     highlights: ["Private garden", "Indoor fireplace", "Spacious kitchenette"],
-    amenities: ["Private Pool", "Butler Service", "Premium Toiletries", "Mountain Views", "Fireplace", "Gourmet Kitchen"],
+    amenities: [ "Butler Service", "Premium Toiletries", "Mountain Views", "Fireplace", "Gourmet Kitchen"],
     content:
       "Set in tranquil garden surroundings, Garden Villa Retreat blends privacy and comfort with family-friendly spaces and a scenic outdoor seating area.",
   },
@@ -78,7 +78,7 @@ export const STATIC_VILLAS: Villa[] = [
     guests: 4,
     size: "350m²",
     highlights: ["Sunset views", "Cozy atmosphere", "Private balcony"],
-    amenities: ["Private Pool", "Butler Service", "Premium Toiletries", "Mountain Views", "Fireplace", "Gourmet Kitchen"],
+    amenities: [ "Butler Service", "Premium Toiletries", "Mountain Views", "Fireplace", "Gourmet Kitchen"],
     content:
       "Sunset Suite invites you to relax with a curated blend of warmth, refined textures, and muntane glow from sunset light.",
   },
@@ -94,7 +94,7 @@ export const STATIC_VILLAS: Villa[] = [
     guests: 4,
     size: "320m²",
     highlights: ["Scenic valley view", "Private terrace", "Fireplace"],
-    amenities: ["Private Pool", "Butler Service", "Premium Toiletries", "Mountain Views", "Fireplace", "Gourmet Kitchen"],
+    amenities: [ "Butler Service", "Premium Toiletries", "Mountain Views", "Fireplace", "Gourmet Kitchen"],
     content:
       "Serene Valley Cabin is designed for quiet reflection, with panoramic windows and intimate living spaces that bring the outside in.",
   },

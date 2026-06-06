@@ -15,7 +15,7 @@ type Props = {
 const normalizeKey = (value: string) => value.trim().toLowerCase();
 
 const builtInAmenityImages: Record<string, string> = {
-  "private pool": "/assets/why-villa-private.jpg",
+  // "private pool": "/assets/why-villa-private.jpg",
   "butler service": "/assets/services-events-real.jpg",
   "premium toiletries": "/assets/amenities-interior-real.jpg",
   "mountain views": "/assets/why-villa-view.jpg",

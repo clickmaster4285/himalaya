@@ -111,7 +111,6 @@ const reunionPackages = [
 
 const reunionBenefits = [
     "Spacious 6-bedroom villa with 5,000 sq ft of indoor/outdoor space",
-    "Private swimming pool & kids' splash area",
     "Fully equipped kitchen for catering or self-cooking",
     "Dedicated family reunion coordinator from planning to farewell",
     "Ample parking for 30+ cars and valet available",

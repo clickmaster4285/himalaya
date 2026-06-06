@@ -81,12 +81,12 @@ export default function LuxuryHotelMurreePage() {
     {
       id: "royal",
       name: "Royal Villa",
-      description: "Exclusive two-bedroom villa with private pool, garden, and royal treatment services.",
+      description: "Exclusive two-bedroom villa with garden, and royal treatment services.",
       price: "95,000",
       originalPrice: "120,000",
       image: "/assets/villa-presidential-real.jpg",
       features: [
-        "Private Swimming Pool",
+        
         "Royal Garden Access",
         "Two Master Suites",
         "Private Dining Room",
@@ -174,7 +174,7 @@ export default function LuxuryHotelMurreePage() {
     },
     {
       name: "Mrs. Sarah Malik",
-      text: "Our royal villa experience was magical. Every moment was filled with luxury and comfort. The private pool and garden were absolutely stunning.",
+      text: "Our royal villa experience was magical. Every moment was filled with luxury and comfort. The garden were absolutely stunning.",
       rating: 5,
       suite: "Royal Villa",
       title: "Business Owner"

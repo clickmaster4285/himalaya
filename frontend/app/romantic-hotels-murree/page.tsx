@@ -101,12 +101,12 @@ export default function RomanticHotelsMurreePage() {
     {
       id: "presidential",
       name: "Presidential Romance Villa",
-      description: "Luxurious two-bedroom villa with private pool, garden, and exclusive services for the ultimate romantic escape.",
+      description: "Luxurious two-bedroom villa with garden, and exclusive services for the ultimate romantic escape.",
       price: "95,000",
       originalPrice: "120,000",
       image: "/assets/villa-presidential.jpg",
       features: [
-        "Private Swimming Pool",
+       
         "Personal Garden",
         "Two Master Suites",
         "Private Kitchen",

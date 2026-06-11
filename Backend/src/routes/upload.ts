@@ -27,7 +27,12 @@ const upload = multer({
 
 export const uploadRouter = Router();
 
-uploadRouter.post("/", upload.single("file"), uploadController.uploadImage);
+uploadRouter.post("/", (req, res, next) => {
+  upload.single("file")(req, res, (err) => {
+    if (err) return next(err);
+    void uploadController.uploadImage(req, res);
+  });
+});
 
 uploadRouter.use((err: unknown, _req: Request, res: Response, next: NextFunction) => {
   if (err instanceof multer.MulterError) {

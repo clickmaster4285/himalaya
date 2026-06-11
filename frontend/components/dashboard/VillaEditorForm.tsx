@@ -9,6 +9,7 @@ import { Input } from "@/components/ui/input";
 import { Label } from "@/components/ui/label";
 import { Textarea } from "@/components/ui/textarea";
 import { VILLA_CATEGORIES, type VillaCategory } from "@/lib/villa-types";
+import { getUploadApiUrl } from "@/lib/api/upload-url";
 import { cn } from "@/lib/utils";
 
 const SLUG_RE = /^[a-z0-9]+(?:-[a-z0-9]+)*$/;
@@ -193,27 +194,51 @@ export default function VillaEditorForm({ mode, villaId, initial, className }: P
     }
   }
 
+  async function uploadImageFile(file: File): Promise<string | null> {
+    if (file.size > 10 * 1024 * 1024) {
+      setError("Image must be 10 MB or smaller.");
+      return null;
+    }
+
+    const formData = new FormData();
+    formData.append("file", file);
+    const controller = new AbortController();
+    const timeout = setTimeout(() => controller.abort(), 60_000);
+
+    try {
+      const res = await fetch(getUploadApiUrl(), {
+        method: "POST",
+        body: formData,
+        credentials: "include",
+        signal: controller.signal,
+      });
+      const data = await res.json().catch(() => ({}));
+      if (!res.ok || !data.url) {
+        setError(typeof data.error === "string" ? data.error : "Failed to upload image.");
+        return null;
+      }
+      return data.url as string;
+    } catch (err) {
+      if (err instanceof Error && err.name === "AbortError") {
+        setError("Upload timed out. Check your connection and try again.");
+      } else {
+        setError("Failed to upload image.");
+      }
+      console.error(err);
+      return null;
+    } finally {
+      clearTimeout(timeout);
+    }
+  }
+
   async function handleHeroUpload(e: React.ChangeEvent<HTMLInputElement>) {
     const file = e.target.files?.[0];
     if (!file) return;
     setUploadingHero(true);
     setError(null);
-    const formData = new FormData();
-    formData.append("file", file);
-    try {
-      const res = await fetch("/api/upload", { method: "POST", body: formData, credentials: "include" });
-      const data = await res.json().catch(() => ({}));
-      if (!res.ok || !data.url) {
-        setError(typeof data.error === "string" ? data.error : "Failed to upload hero image.");
-        return;
-      }
-      setImage(data.url);
-    } catch (err) {
-      console.error(err);
-      setError("Failed to upload hero image.");
-    } finally {
-      setUploadingHero(false);
-    }
+    const url = await uploadImageFile(file);
+    if (url) setImage(url);
+    setUploadingHero(false);
   }
 
   async function handleGalleryUpload(e: React.ChangeEvent<HTMLInputElement>) {
@@ -224,11 +249,8 @@ export default function VillaEditorForm({ mode, villaId, initial, className }: P
     try {
       const uploadedUrls: string[] = [];
       for (let i = 0; i < files.length; i++) {
-        const formData = new FormData();
-        formData.append("file", files[i]);
-        const res = await fetch("/api/upload", { method: "POST", body: formData, credentials: "include" });
-        const data = await res.json().catch(() => ({}));
-        if (res.ok && data.url) uploadedUrls.push(data.url);
+        const url = await uploadImageFile(files[i]);
+        if (url) uploadedUrls.push(url);
       }
       if (uploadedUrls.length > 0) {
         const currentUrls = splitLines(galleryText);

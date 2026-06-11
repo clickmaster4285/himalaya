@@ -14,6 +14,10 @@ loadEnvConfig(cwd);
 const backend = (process.env.BACKEND_INTERNAL_URL ?? "http://127.0.0.1:5000").replace(/\/$/, "");
 
 const nextConfig: NextConfig = {
+  experimental: {
+    // Next.js 16 proxy truncates multipart bodies above ~1MB without this (breaks iPhone photos).
+    proxyClientMaxBodySize: "15mb",
+  },
   images: {
     formats: ["image/avif", "image/webp"],
     deviceSizes: [640, 750, 828, 1080, 1200, 1920, 2048],
@@ -22,16 +26,20 @@ const nextConfig: NextConfig = {
     domains: ["picsum.photos"],
   },
   async rewrites() {
-    return [
-      {
-        source: "/uploads/:path*",
-        destination: `${backend}/uploads/:path*`,
-      },
-      {
-        source: "/api/:path*",
-        destination: `${backend}/api/:path*`,
-      },
-    ];
+    return {
+      beforeFiles: [
+        {
+          source: "/api/upload",
+          destination: `${backend}/api/upload`,
+        },
+      ],
+      afterFiles: [
+        {
+          source: "/uploads/:path*",
+          destination: `${backend}/uploads/:path*`,
+        },
+      ],
+    };
   },
   async redirects() {
     return [

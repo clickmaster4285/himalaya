@@ -197,12 +197,17 @@ export default function VillaEditorForm({ mode, villaId, initial, className }: P
     const file = e.target.files?.[0];
     if (!file) return;
     setUploadingHero(true);
+    setError(null);
     const formData = new FormData();
     formData.append("file", file);
     try {
-      const res = await fetch("/api/upload", { method: "POST", body: formData });
-      const data = await res.json();
-      if (data.url) setImage(data.url);
+      const res = await fetch("/api/upload", { method: "POST", body: formData, credentials: "include" });
+      const data = await res.json().catch(() => ({}));
+      if (!res.ok || !data.url) {
+        setError(typeof data.error === "string" ? data.error : "Failed to upload hero image.");
+        return;
+      }
+      setImage(data.url);
     } catch (err) {
       console.error(err);
       setError("Failed to upload hero image.");
@@ -221,13 +226,15 @@ export default function VillaEditorForm({ mode, villaId, initial, className }: P
       for (let i = 0; i < files.length; i++) {
         const formData = new FormData();
         formData.append("file", files[i]);
-        const res = await fetch("/api/upload", { method: "POST", body: formData });
-        const data = await res.json();
-        if (data.url) uploadedUrls.push(data.url);
+        const res = await fetch("/api/upload", { method: "POST", body: formData, credentials: "include" });
+        const data = await res.json().catch(() => ({}));
+        if (res.ok && data.url) uploadedUrls.push(data.url);
       }
       if (uploadedUrls.length > 0) {
         const currentUrls = splitLines(galleryText);
         setGalleryText([...currentUrls, ...uploadedUrls].join("\n"));
+      } else {
+        setError("Failed to upload gallery images.");
       }
     } catch (err) {
       console.error(err);

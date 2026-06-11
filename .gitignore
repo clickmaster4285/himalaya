@@ -22,6 +22,9 @@ frontend/.next/
 frontend/out/
 backend/dist/
 
+# user-uploaded media (stored on backend in production)
+backend/uploads/
+
 # production
 /build
 

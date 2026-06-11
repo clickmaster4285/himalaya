@@ -6,6 +6,7 @@ import { expensesRouter } from "./expenses";
 import { adminUsersRouter } from "./admin-users";
 import { publicVillasRouter, adminVillasRouter } from "./villas";
 import { inquiriesRouter } from "./inquiries";
+import { uploadRouter } from "./upload";
 
 /** Mount every API router on the Express app. */
 export function registerRoutes(app: Express): void {
@@ -21,6 +22,7 @@ export function registerRoutes(app: Express): void {
   app.use("/api/villas", publicVillasRouter);
   app.use("/api/admin/villas", adminVillasRouter);
   app.use("/api/inquiries", inquiriesRouter);
+  app.use("/api/upload", uploadRouter);
 }
 
 export const API_ROUTES = {
@@ -33,4 +35,5 @@ export const API_ROUTES = {
   villas: "/api/villas",
   adminVillas: "/api/admin/villas",
   inquiries: "/api/inquiries",
+  upload: "/api/upload",
 } as const;

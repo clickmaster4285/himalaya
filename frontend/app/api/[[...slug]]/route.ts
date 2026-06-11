@@ -21,15 +21,16 @@ async function proxy(req: NextRequest, ctx: Ctx) {
   if (ct) headers["Content-Type"] = ct;
 
   const method = req.method;
-  let body: string | undefined;
+  let body: ArrayBuffer | undefined;
   if (method !== "GET" && method !== "HEAD") {
-    body = await req.text();
+    const buf = await req.arrayBuffer();
+    if (buf.byteLength > 0) body = buf;
   }
 
   const res = await fetch(url, {
     method,
     headers,
-    body: body === "" ? undefined : body,
+    body,
     cache: "no-store",
   });
 

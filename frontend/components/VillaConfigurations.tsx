@@ -5,9 +5,9 @@ import { buildWhatsAppBookingUrl } from "@/lib/whatsapp";
 export default function VillaConfigurations() {
   const plans = [
     {
-      title: "SUITE - 1",
+      title: "VILLA - 1",
       bookingName: "Suite 1",
-      price: "50,000/- Rs",
+      price: "34,789/- Rs",
       features: [
         "2 LUXURY BEDROOMS (ATTACHED BATHROOMS)",
         "LARGE SHARED LIVING ROOM",
@@ -16,7 +16,7 @@ export default function VillaConfigurations() {
       ],
     },
     {
-      title: "SUITE - 2",
+      title: "VILLA - 2",
       bookingName: "Suite 2",
       price: "50,000/- Rs",
       features: [
@@ -28,9 +28,9 @@ export default function VillaConfigurations() {
       ],
     },
     {
-      title: "COMPLETE VILLA",
+      title: "VILLA - 3"  ,
       bookingName: "Complete Villa",
-      price: "100,000/- Rs",
+      price: "69,597/- Rs",
       features: [
         "1 EXECUTIVE BEDROOM",
         "3 LUXURY BEDROOMS (ATTACHED BATHROOMS)",

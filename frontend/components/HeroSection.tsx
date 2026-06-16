@@ -58,6 +58,16 @@ const HeroSection = () => {
               Himalaya Villas and Resort
             </h1>
 
+             <h1
+              className="hero-headline font-display animate-fade-up text-3xl sm:text-4xl md:text-5xl lg:text-6xl xl:text-[4.25rem] font-normal leading-[1.15] sm:leading-[1.1] md:leading-[1.08] text-white whitespace-nowrap"
+              style={{
+                textShadow: "0 2px 3px rgb(0 0 0 / 0.35), 0 12px 40px rgb(0 0 0 / 0.45)",
+              }}
+            >
+              bhurban murree
+            </h1>
+
+
             {/* Description - Responsive text size */}
             <p
               className="mt-4 sm:mt-5 max-w-xl animate-fade-up-delay text-[13px] sm:text-[14px] md:text-[15px] lg:text-base font-light leading-[1.6] sm:leading-[1.65] text-white/92"

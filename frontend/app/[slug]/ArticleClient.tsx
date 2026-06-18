@@ -10,12 +10,22 @@ import Navbar from "@/components/Navbar";
 import Footer from "@/components/Footer";
 import heroImage from "@/public/images/articles/article1-villa.jpg";
 
-
-
+// const article11Image1 = "/images/articles/article-image1.jpg";
+// const article11Image2 = "/images/articles/article-image2.jpg";
+// const article11Image3 = "/images/articles/article-image3.jpg";
+// const article11Image4 = "/images/articles/article-image4.jpg";
+// const article11Image5 = "/images/articles/article-image5.jpg";
 
 import type { Article } from "@/content/types";
 
 /* ================= TYPES ================= */
+const article11Images = [
+  "/images/articles/article-image1.jpg",
+  "/images/articles/article-image5.jpg",
+  "/images/articles/article-image6.jpg",
+  "/images/articles/article-image1.jpg",
+  "/images/articles/article-image10.jpg",
+];
 
 type BlockProps = {
   block: any;
@@ -177,19 +187,32 @@ function ParagraphBlock({ block }: BlockProps) {
 /* ================= SECTION (ALT LAYOUT FIXED) ================= */
 
 function SectionBlock({ block, index }: BlockProps) {
-  const hasImage = !!block.image;
+  const hasImageInContent = !!block.image;
   const isReversed = index % 2 === 1;
+
+  // Use static image for sections that don't have one in the content
+  // const imageSrc = hasImageInContent 
+  //   ? block.image.src 
+  //   : article11Images[index % article11Images.length];   // cycles through images
+
+  // const imageAlt = hasImageInContent 
+  //   ? block.image.alt 
+  //   : `Article image ${index + 1}`;
+  
+  
+  const imageSrc = article11Images[index % article11Images.length];
+  const imageAlt = `Article image ${index + 1}`;
 
   return (
     <section className="py-24">
       <div className="max-w-7xl mx-auto px-6" data-reveal>
         <div
           className={`grid gap-12 md:gap-16 items-center ${
-            hasImage ? "md:grid-cols-2" : "md:grid-cols-1"
+            true ? "md:grid-cols-2" : "md:grid-cols-1"   // always 2-col now if we want image
           }`}
         >
           {/* TEXT */}
-          <div className={hasImage ? "" : "w-full"}>
+          <div>
             {block.eyebrow && (
               <p className="text-sm uppercase tracking-widest text-[#a68b3b] mb-3">
                 {block.eyebrow}
@@ -207,22 +230,20 @@ function SectionBlock({ block, index }: BlockProps) {
             </div>
           </div>
 
-          {/* IMAGE */}
-          {hasImage && (
-            <div className={isReversed ? "md:order-first" : ""}>
-              <div className="relative">
-                <div className="absolute -inset-3 border border-[#e5dfcf]" />
+          {/* IMAGE - always show for section blocks */}
+          <div className={isReversed ? "md:order-first" : ""}>
+            <div className="relative">
+              <div className="absolute -inset-3 border border-[#e5dfcf]" />
 
-                <Image
-                  src={block.image.src}
-                  alt={block.image.alt}
-                  width={800}
-                  height={600}
-                  className="relative w-full h-auto object-cover"
-                />
-              </div>
+              <Image
+                src={imageSrc}
+                alt={imageAlt}
+                width={800}
+                height={600}
+                className="relative w-full h-auto object-cover"
+              />
             </div>
-          )}
+          </div>
         </div>
       </div>
     </section>

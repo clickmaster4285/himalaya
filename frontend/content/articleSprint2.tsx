@@ -10,62 +10,62 @@ import type { Article } from "./types";
 
 // Article 11 - Lockwood Hotel Alternative
 const article11Hero = "/images/articles/article11-hero.jpg";
-const article11Image1 = "/images/articles/article11-image1.jpg";
-const article11Image2 = "/images/articles/article11-image2.jpg";
-const article11Image3 = "/images/articles/article11-image3.jpg";
+const article11Image1 = "/images/articles/article-image1.jpg";
+const article11Image2 = "/images/articles/article-image2.jpg";
+const article11Image3 = "/images/articles/article-image3.jpg";
 
 // Article 12 - Ramada Alternative
-const article12Hero = "/images/articles/article12-hero.jpg";
-const article12Image1 = "/images/articles/article12-image1.jpg";
-const article12Image2 = "/images/articles/article12-image2.jpg";
+const article12Hero = "/images/articles/article-image3.jpg";
+const article12Image1 = "/images/articles/article-image1.jpg";
+const article12Image2 = "/images/articles/article-image2.jpg";
 
 // Article 13 - Murree in Summer
 const article13Hero = "/images/articles/article13-hero.jpg";
-const article13Image1 = "/images/articles/article13-image1.jpg";
-const article13Image2 = "/images/articles/article13-image2.jpg";
-const article13Image3 = "/images/articles/article13-image3.jpg";
+const article13Image1 = "/images/articles/article-image1.jpg";
+const article13Image2 = "/images/articles/article-image2.jpg";
+const article13Image3 = "/images/articles/article-image3.jpg";
 
 // Article 14 - Nathia Gali Day Trip
 const article14Hero = "/images/articles/article14-hero.jpg";
-const article14Image1 = "/images/articles/article14-image1.jpg";
-const article14Image2 = "/images/articles/article14-image2.jpg";
-const article14Image3 = "/images/articles/article14-image3.jpg";
+const article14Image1 = "/images/articles/article-image1.jpg";
+const article14Image2 = "/images/articles/article-image2.jpg";
+const article14Image3 = "/images/articles/article-image3.jpg";
 
 // Article 15 - Best Time to Visit
 const article15Hero = "/images/articles/article15-hero.jpg";
-const article15Image1 = "/images/articles/article15-image1.jpg";
-const article15Image2 = "/images/articles/article15-image2.jpg";
-const article15Image3 = "/images/articles/article15-image3.jpg";
+const article15Image1 = "/images/articles/article-image1.jpg";
+const article15Image2 = "/images/articles/article-image2.jpg";
+const article15Image3 = "/images/articles/article-image3.jpg";
 
 // Article 16 - Family Villa
 const article16Hero = "/images/articles/article16-hero.jpg";
-const article16Image1 = "/images/articles/article16-image1.jpg";
-const article16Image2 = "/images/articles/article16-image2.jpg";
-const article16Image3 = "/images/articles/article16-image3.jpg";
+const article16Image1 = "/images/articles/article-image1.jpg";
+const article16Image2 = "/images/articles/article-image2.jpg";
+const article16Image3 = "/images/articles/article-image3.jpg";
 
 // Article 17 - In-Villa Dining
 const article17Hero = "/images/articles/article17-hero.jpg";
-const article17Image1 = "/images/articles/article17-image1.jpg";
-const article17Image2 = "/images/articles/article17-image2.jpg";
-const article17Image3 = "/images/articles/article17-image3.jpg";
+const article17Image1 = "/images/articles/article-image1.jpg";
+const article17Image2 = "/images/articles/article-image2.jpg";
+const article17Image3 = "/images/articles/article-image3.jpg";
 
 // Article 18 - Murree Snowfall
 const article18Hero = "/images/articles/article18-hero.jpg";
-const article18Image1 = "/images/articles/article18-image1.jpg";
-const article18Image2 = "/images/articles/article18-image2.jpg";
-const article18Image3 = "/images/articles/article18-image3.jpg";
+const article18Image1 = "/images/articles/article-image1.jpg";
+const article18Image2 = "/images/articles/article-image2.jpg";
+const article18Image3 = "/images/articles/article-image3.jpg";
 
 // Article 19 - Murree Mall Road
 const article19Hero = "/images/articles/article19-hero.jpg";
-const article19Image1 = "/images/articles/article19-image1.jpg";
-const article19Image2 = "/images/articles/article19-image2.jpg";
-const article19Image3 = "/images/articles/article19-image3.jpg";
+const article19Image1 = "/images/articles/article-image1.jpg";
+const article19Image2 = "/images/articles/article-image2.jpg";
+const article19Image3 = "/images/articles/article-image3.jpg";
 
 // Article 20 - Weekend Getaway
 const article20Hero = "/images/articles/article20-hero.jpg";
-const article20Image1 = "/images/articles/article20-image1.jpg";
-const article20Image2 = "/images/articles/article20-image2.jpg";
-const article20Image3 = "/images/articles/article20-image3.jpg";
+const article20Image1 = "/images/articles/article-image1.jpg";
+const article20Image2 = "/images/articles/article-image2.jpg";
+const article20Image3 = "/images/articles/article-image3.jpg";
 
 // ============================================
 // ARTICLE 11 - Lockwood Hotel Murree Alternative

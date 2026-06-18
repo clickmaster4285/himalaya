@@ -46,8 +46,12 @@ import { articlesBySlugBatch38 } from "./articleSprint38";
 import { articlesBySlugBatch39 } from "./articleSprint39";
 import { articlesBySlugBatch40 } from "./articleSprint40";
 import { articlesBySlugBatch41 } from "./articleSprint41";
+import { articlesBySlugBatch42 } from "./articleSprint42";
+import { articlesBySlugBatch43 } from "./articleSprint43";
+import { articlesBySlugBatch44 } from "./articleSprint44";
+import { articlesBySlugBatch45 } from "./articleSprint45";
 
-
+import { articlesBySlugBatch46 } from "./articles-batch46";
 
 
 
@@ -95,7 +99,12 @@ export const articlesBySlug: Record<string, Article> = {
   ...articlesBySlugBatch39,
   ...articlesBySlugBatch40,
   ...articlesBySlugBatch41,
-
+    ...articlesBySlugBatch42,
+  ...articlesBySlugBatch43,
+    ...articlesBySlugBatch44,
+  ...articlesBySlugBatch45,
+  
+  ...articlesBySlugBatch46,
 };
 
 // helper for Next.js static generation

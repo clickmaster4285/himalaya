@@ -64,7 +64,7 @@ const HeroSection = () => {
                 textShadow: "0 2px 3px rgb(0 0 0 / 0.35), 0 12px 40px rgb(0 0 0 / 0.45)",
               }}
             >
-              bhurban murree
+              Bhurban Murree
             </h1>
 
 

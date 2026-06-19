@@ -13223,6 +13223,7 @@ export const article596: Article = {
       type: "section",
       eyebrow: "January",
       heading: "January",
+       paragraphs: [],
       bullets: [
         { text: "8 to 2°C" },
       ],

@@ -67,7 +67,7 @@ export const article336: Article = {
     "Murree Bhurban trip cost — the complete budget breakdown. How much does a Bhurban trip cost? Per-person budget for families, couples, solo travellers. Accommodation, transport, activities.",
   keywords:
     "murree bhurban trip cost, bhurban trip budget, how much does bhurban trip cost, murree bhurban cost per person, bhurban travel budget",
-  eyebrow: "Backlink Guest Post · Commercial | Cluster 11",
+  eyebrow: " Commercial | Cluster 11",
   h1: "Murree Bhurban Trip Cost — The Complete Budget Breakdown",
   heroTagline:
     "The Bhurban trip cost question is one of the most practical planning questions in the Murree hills travel market. This page gives a full, honest breakdown — what you actually spend, category by category, for different group sizes and accommodation choices.",
@@ -154,7 +154,7 @@ export const article337: Article = {
     "Eid holiday package at Bhurban Murree — the cedar estate Eid 2026. Eid villa stays, Iftar setup, Eid morning breakfast, qurbani coordination. Book 6-8 weeks ahead.",
   keywords:
     "eid holiday package bhurban, eid package bhurban murree, eid bhurban package 2026, murree eid holiday package",
-  eyebrow: "Backlink Guest Post · Seasonal Commercial | Cluster 7",
+  eyebrow: " Seasonal Commercial | Cluster 7",
   h1: "Eid Holiday Package at Bhurban Murree — The Cedar Estate Eid 2026",
   heroTagline:
     "The Eid mountain break at Bhurban has become one of Pakistan's most sought-after domestic travel experiences. The private cedar estate at 6,800 feet provides the specific outdoor environment that extended family Eid gatherings require — an environment that the city apartment or the hotel room cannot replicate.",
@@ -245,7 +245,7 @@ export const article338: Article = {
     "Bhurban Murree for kids — activities, safety, and the best villas for families. Patriata Chairlift, cedar forest walks, Garden Villa Retreat. Child-safe activities.",
   keywords:
     "bhurban murree kids, bhurban activities for kids, murree bhurban children activities, kids bhurban murree what to do",
-  eyebrow: "Backlink Guest Post · Family | Cluster 10",
+  eyebrow: " Family | Cluster 10",
   h1: "Bhurban Murree for Kids — Activities, Safety, and the Best Villas for Families",
   heroTagline:
     "Children's Bhurban experience divides into two categories: the outdoor adventure (chairlift, forest walk, trekking) and the estate play experience (the private garden, the fire pit, the cedar forest at eye level). The best Bhurban family visit combines both — outdoor adventure on day one, estate enjoyment on day two.",
@@ -326,7 +326,7 @@ export const article339: Article = {
     "Bhurban snowfall booking guide — when to go, when to book, how to secure your villa. Snowfall probability by month, booking strategy, Presidential Suite snow experience.",
   keywords:
     "bhurban snowfall booking, bhurban snow trip booking, murree snowfall book villa, bhurban snow january booking, snowfall bhurban book early",
-  eyebrow: "Backlink Guest Post · Seasonal Commercial | Cluster 7",
+  eyebrow: " Seasonal Commercial | Cluster 7",
   h1: "Bhurban Snowfall Booking Guide — When to Go, When to Book, How to Secure Your Villa",
   heroTagline:
     "The Bhurban snowfall villa is the single most sought-after short-break booking in Pakistan's domestic luxury market. The combination of the private cedar estate, the outdoor jacuzzi (Presidential Suite), and fresh mountain snow creates an experience that no other accessible domestic destination replicates. The challenge: snowfall is entirely unpredictable.",
@@ -417,7 +417,7 @@ export const article340: Article = {
     "Bhurban vs Naran — which Pakistan mountain trip is right for your group? Accessibility vs adventure, family-friendly vs high-altitude drama. Complete destination comparison.",
   keywords:
     "bhurban vs naran, bhurban or naran, naran vs bhurban, which is better bhurban or naran pakistan, bhurban naran comparison",
-  eyebrow: "Backlink Guest Post · Destination Comparison | Cluster 8",
+  eyebrow: " Destination Comparison | Cluster 8",
   h1: "Bhurban vs Naran — Which Pakistan Mountain Trip Is Right for Your Group?",
   heroTagline:
     "The Bhurban vs Naran comparison is one of the most common planning questions among Pakistani domestic travellers who want a mountain experience but are deciding between accessibility and drama. Both are genuinely excellent destinations; they are not interchangeable.",
@@ -520,7 +520,7 @@ export const article341: Article = {
     "Karachi to Bhurban — the mountain break that changes everything. Karachi to Islamabad flight, temperature contrast, Presidential Suite, mountain escape from the coast.",
   keywords:
     "karachi to bhurban, bhurban from karachi, karachi bhurban murree trip, karachi to murree bhurban",
-  eyebrow: "Backlink Guest Post · Destination | Cluster 8",
+  eyebrow: " Destination | Cluster 8",
   h1: "Karachi to Bhurban — The Mountain Break That Changes Everything",
   heroTagline:
     "The Karachi to Bhurban trip is one of the most rewarding short breaks available to Pakistan's largest city. Karachi — flat, hot, coastal, densely urban — has no equivalent within its region to the cedar forest at 6,800 feet. The contrast is so complete that Karachi guests consistently describe the Bhurban experience as 'like leaving the country without leaving the country.'",
@@ -605,7 +605,7 @@ export const article342: Article = {
     "In-villa dining at Bhurban — the complete private mountain dining guide. Private dinner in cedar garden, Pakistani breakfast and dinner, special occasion dining.",
   keywords:
     "in villa dining bhurban, private dining bhurban murree, bhurban in villa dinner, himalaya villas dining, mountain dining bhurban",
-  eyebrow: "Backlink Guest Post · Commercial/Experiential | Cluster 3",
+  eyebrow: " Commercial/Experiential | Cluster 3",
   h1: "In-Villa Dining at Bhurban — The Complete Private Mountain Dining Guide",
   heroTagline:
     "The in-villa dining experience at Himalaya Villas is one of the most distinctive elements of the private estate stay — and one of the most underappreciated differences from hotel accommodation. It is not room service. It is a full meal, freshly prepared, served at your timing in your private villa or outdoor space.",
@@ -695,7 +695,7 @@ export const article343: Article = {
     "Corporate wellness retreat at Bhurban — the cedar estate programme. Employee wellness, guided forest walks, in-villa massage, team wellbeing retreat near Islamabad.",
   keywords:
     "corporate wellness retreat bhurban, bhurban wellness retreat, employee wellness retreat bhurban murree, company wellness retreat near islamabad",
-  eyebrow: "Backlink Guest Post · B2B/Wellness | Cluster 6",
+  eyebrow: " B2B/Wellness | Cluster 6",
   h1: "Corporate Wellness Retreat at Bhurban — The Cedar Estate Programme",
   heroTagline:
     "The corporate wellness retreat is an emerging category in Pakistan's corporate hospitality market — driven by growing recognition that employee wellbeing investment generates measurable returns in retention, productivity, and team cohesion. Himalaya Villas in Bhurban is the natural wellness retreat venue for Islamabad-based corporates: 45 minutes from the corporate district, private estate with no competing hotel guests, and the cedar forest as the wellness environment that no wellness centre or gym can replicate.",
@@ -779,7 +779,7 @@ export const article344: Article = {
     "Extended family reunion at Bhurban — the full estate booking guide. Full estate buyout, multi-villa configuration, family gathering for 12-80 guests at cedar estate.",
   keywords:
     "extended family reunion bhurban, family reunion bhurban murree, large family gathering bhurban, family estate booking bhurban",
-  eyebrow: "Backlink Guest Post · Events | Clusters 5 & 10",
+  eyebrow: " Events | Clusters 5 & 10",
   h1: "Extended Family Reunion at Bhurban — The Full Estate Booking Guide",
   heroTagline:
     "The extended family reunion at Himalaya Villas has a specific format that no hotel venue can replicate. The full estate buyout transforms the 12-villa cedar property into the family's private mountain home — no hotel guests, no shared public spaces, the entire cedar garden and its fire pit for the family's exclusive use.",
@@ -868,7 +868,7 @@ export const article345: Article = {
     "Bhurban Murree 2026 — the complete reference guide. Distances, temperatures, rates, activities, elevation. All key facts in one place for planning your Bhurban trip.",
   keywords:
     "bhurban murree 2026, bhurban reference guide, bhurban murree facts, bhurban elevation distance temperature rates 2026",
-  eyebrow: "Backlink Guest Post · Authority Reference | Cross-Cluster",
+  eyebrow: " Authority Reference | Cross-Cluster",
   h1: "Bhurban Murree 2026 — The Complete Reference Guide",
   heroTagline:
     "This is the complete reference page for Bhurban, Murree Hills, Pakistan — all key facts, distances, temperatures, accommodation rates, activities, and planning information in one place.",

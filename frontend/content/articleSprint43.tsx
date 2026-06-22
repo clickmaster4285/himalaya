@@ -67,7 +67,7 @@ export const article416: Article = {
     "Murree and Bhurban in January — the complete winter guide. Snowfall probability, cedar estate experience, Presidential Suite jacuzzi, booking tips.",
   keywords:
     "murree in january, bhurban january, murree january trip, bhurban in january what to expect, january murree bhurban guide",
-  eyebrow: "Backlink Guest Post · Seasonal | Cluster 7",
+  eyebrow: " Seasonal | Cluster 7",
   h1: "Murree and Bhurban in January — The Complete Winter Guide",
   heroTagline:
     "January in Bhurban is the month of maximum weather drama and maximum booking competition. The combination of the snowfall possibility, the private terrace jacuzzi experience, and the cedar estate in full winter character creates demand that exceeds supply at Himalaya Villas and every other Bhurban property on prime weekend dates.",
@@ -151,7 +151,7 @@ export const article417: Article = {
     "Murree and Bhurban in October — why it's the best month of the year. Autumn colour, Pipeline Track, perfect temperatures, low crowds, optimal outdoor activities.",
   keywords:
     "murree in october, bhurban october, murree october trip, october murree bhurban, is october good for murree",
-  eyebrow: "Backlink Guest Post · Seasonal | Cluster 7",
+  eyebrow: " Seasonal | Cluster 7",
   h1: "Murree and Bhurban in October — Why It's the Best Month of the Year",
   heroTagline:
     "October is the month that most repeat Bhurban visitors settle on — the month they tell their friends about. The first-timer visits in July or August (the heat escape imperative) and finds the mountain magnificent but the crowds frustrating. The second visit, on the advice of someone who has been multiple times, happens in October. The October visitor becomes the person who tells everyone about October.",
@@ -243,7 +243,7 @@ export const article418: Article = {
     "Murree and Bhurban in April — the most underrated month. Rhododendron bloom at Ayubia, spring forest, minimal crowds, easy booking. Complete April guide.",
   keywords:
     "murree in april, bhurban april, april trip murree bhurban, is april good for murree, murree april weather",
-  eyebrow: "Backlink Guest Post · Seasonal | Cluster 7",
+  eyebrow: " Seasonal | Cluster 7",
   h1: "Murree and Bhurban in April — The Month Nobody Talks About (and Should)",
   heroTagline:
     "April's underrated status is almost entirely a function of the heat-escape narrative that dominates Pakistani domestic mountain tourism. The July-August rush is driven by the temperature imperative — when Islamabad is 42 degrees C, the mountain is the only option. In April, Islamabad is at 25-35 degrees C — hot but not the crisis-level heat that forces the mountain visit. So April visitors are the deliberate visitors, the ones who choose the mountain for the mountain rather than fleeing the city.",
@@ -321,7 +321,7 @@ export const article419: Article = {
     "Murree and Bhurban in July — the heat escape guide. 20 degrees cooler than Islamabad, monsoon pattern, private estate experience, booking tips.",
   keywords:
     "murree in july, bhurban july, july trip murree bhurban, murree july weather temperature, bhurban in july",
-  eyebrow: "Backlink Guest Post · Seasonal | Cluster 7",
+  eyebrow: " Seasonal | Cluster 7",
   h1: "Murree and Bhurban in July — The Heat Escape Guide",
   heroTagline:
     "July at Bhurban is the most popular month of the year — and the most misunderstood. Visitors who go on peak July weekends (especially Eid-adjacent Fridays-Sundays) encounter the Murree that makes the news: the traffic, the queues, the crowded Mall Road. Visitors who go to Himalaya Villas on a July Tuesday-Thursday encounter something different: the private cedar estate at 20 degrees C, the monsoon rain on the cedar canopy at 3pm, the post-rain forest walk at 6pm, and the fire pit at 9pm in 16 degree C mountain air.",
@@ -394,7 +394,7 @@ export const article420: Article = {
     "Murree and Bhurban in August — the summer peak visitor guide. Temperature, monsoon pattern, Independence Day crowds, private estate experience.",
   keywords:
     "murree in august, bhurban august, august trip murree bhurban, murree august weather, bhurban in august",
-  eyebrow: "Backlink Guest Post · Seasonal | Cluster 7",
+  eyebrow: " Seasonal | Cluster 7",
   h1: "Murree and Bhurban in August — The Summer Peak Visitor Guide",
   heroTagline:
     "August at Bhurban is the second half of the summer peak — the visitor profile and weather pattern are almost identical to July. The distinction: August begins to show the first signs of the approaching end of monsoon in the third and fourth weeks, when the afternoon rain becomes less consistent and the mornings show the first hints of the September clarity that precedes October's finest season.",
@@ -457,7 +457,7 @@ export const article421: Article = {
     "Murree peak season vs off-season — the honest comparison. When to visit, booking lead times, crowd levels, rates. Peak season vs off-season advantages.",
   keywords:
     "murree peak season, murree off season, best time murree off peak, when to avoid murree crowds, murree tourist season guide",
-  eyebrow: "Backlink Guest Post · Commercial Planning | Cluster 7",
+  eyebrow: " Commercial Planning | Cluster 7",
   h1: "Murree Peak Season vs Off-Season — The Honest Comparison",
   heroTagline:
     "The peak vs off-season question is the single most consequential planning decision for the Bhurban visitor. The experience at Himalaya Villas is consistent across seasons — the private cedar estate delivers the same level of quality in March as in July. What changes dramatically is the booking pressure, the rate environment, and the conditions on the excursion destinations (Mall Road, Chairlift, Ayubia).",
@@ -537,7 +537,7 @@ export const article422: Article = {
     "Bhurban for Rawalpindi families — the 40-minute mountain weekend. Rawalpindi to Bhurban route, family villas, Garden Villa Retreat, weekend itinerary.",
   keywords:
     "bhurban rawalpindi, rawalpindi to bhurban, rawalpindi bhurban family trip, bhurban from rawalpindi distance",
-  eyebrow: "Backlink Guest Post · Audience Geo | Cluster 10",
+  eyebrow: " Audience Geo | Cluster 10",
   h1: "Bhurban for Rawalpindi Families — The 40-Minute Mountain Weekend",
   heroTagline:
     "For Rawalpindi families, Bhurban has a geographic advantage over Islamabad families: 38km vs 47km. The mountain is closer. At 40 minutes from Pindi's main areas (Saddar, Commercial Market, Bahria Town), Bhurban is genuinely a same-evening option for spontaneous trips — though the Himalaya Villas private estate requires advance booking.",
@@ -609,7 +609,7 @@ export const article423: Article = {
     "Murree Bhurban itinerary — the optimal plans for 2, 3, and 5 days. Complete day-by-day guides, activities, timing, and planning for your Bhurban trip.",
   keywords:
     "murree bhurban itinerary, bhurban 2 day itinerary, 3 days murree bhurban itinerary, murree bhurban trip plan",
-  eyebrow: "Backlink Guest Post · Planning Hub | Cross-Cluster",
+  eyebrow: " Planning Hub | Cross-Cluster",
   h1: "Murree Bhurban Itinerary — The Optimal Plans for 2, 3, and 5 Days",
   heroTagline:
     "The itinerary at Bhurban is structured around one principle: the Himalaya Villas cedar estate is the base, not the decoration. The estate provides the dawn walk, the fire pit evening, and the private outdoor time. The excursions (Chairlift, Ayubia, Mall Road, Nathia Gali) are the day trips from this base.",
@@ -693,7 +693,7 @@ export const article424: Article = {
     "Anniversary at Bhurban — celebrating at the cedar estate. Presidential Suite, anniversary dinner, private jacuzzi, romantic getaway for couples.",
   keywords:
     "anniversary villa bhurban, bhurban anniversary trip, anniversary celebration bhurban murree, romantic anniversary bhurban",
-  eyebrow: "Backlink Guest Post · Events | Clusters 5 & 12",
+  eyebrow: " Events | Clusters 5 & 12",
   h1: "Anniversary at Bhurban — Celebrating at the Cedar Estate",
   heroTagline:
     "The anniversary at Bhurban is a specific occasion format: not the city dinner, not the hotel that the couple has stayed in before, but the private cedar estate at 6,800 feet with the exclusive outdoor space, the fire in the cedar garden, and the private mountain that belongs to the two of them for two nights.",
@@ -768,7 +768,7 @@ export const article425: Article = {
     "Villa with jacuzzi at Bhurban — the Presidential Suite complete guide. Private outdoor jacuzzi, 270-degree mountain view, seasonal experience, booking details.",
   keywords:
     "villa with jacuzzi bhurban, bhurban villa jacuzzi, presidential suite bhurban, jacuzzi bhurban murree, private jacuzzi bhurban",
-  eyebrow: "Backlink Guest Post · Commercial | Cluster 4",
+  eyebrow: " Commercial | Cluster 4",
   h1: "Villa with Jacuzzi at Bhurban — The Presidential Suite Complete Guide",
   heroTagline:
     "The private jacuzzi is the Presidential Suite's defining feature — and the most specifically described and requested amenity across all Himalaya Villas guest communications. No other property in the Murree hills market offers a private outdoor jacuzzi as a standard feature.",

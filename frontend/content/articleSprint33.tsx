@@ -67,7 +67,7 @@ export const article316: Article = {
     "Eid ul Adha at Bhurban — the mountain celebration. Eid prayer, qurbani coordination, private cedar estate celebration. Book 6-8 weeks ahead for highest-demand date.",
   keywords:
     "eid ul adha bhurban, bhurban eid ul adha trip, eid al adha murree bhurban, eid ul adha mountain islamabad",
-  eyebrow: "Backlink Guest Post · Seasonal Events | Cluster 7",
+  eyebrow: " Seasonal Events | Cluster 7",
   h1: "Eid ul Adha at Bhurban — The Mountain Celebration",
   heroTagline:
     "Eid ul Adha at Bhurban is a specific and distinct celebration from the city Eid. The mountain estate at 6,800 feet — the cedar garden Eid breakfast, the private outdoor space for the family gathering, the qurbani arranged through the local network, the Eid prayers at the Bhurban mosque — creates the Eid celebration that the city apartment cannot accommodate.",
@@ -147,7 +147,7 @@ export const article317: Article = {
     "Corporate team building at Bhurban — activities and format guide. Forest trekking, Ayubia Pipeline Track, bonfire evening, team bonding activities near Islamabad.",
   keywords:
     "corporate team building bhurban, team building activities bhurban murree, corporate team building near islamabad mountains",
-  eyebrow: "Backlink Guest Post · B2B | Cluster 6",
+  eyebrow: " B2B | Cluster 6",
   h1: "Corporate Team Building at Bhurban — Activities and Format Guide",
   heroTagline:
     "Corporate team building at Bhurban delivers something that the ropes course and the bowling alley fundamentally cannot: the shared experience of a private mountain cedar estate, belonging to the corporate team for 2 days, with no public intrusion and no competitive audience.",
@@ -225,7 +225,7 @@ export const article318: Article = {
     "Spring wildflowers at Bhurban and Ayubia — the April bloom guide. Himalayan Rhododendron, anemone, violet, wild strawberry. Peak bloom in April third week.",
   keywords:
     "murree spring wildflowers, bhurban wildflowers april, ayubia wildflowers, spring bloom bhurban murree, rhododendron murree ayubia",
-  eyebrow: "Backlink Guest Post · Nature | Cluster 3",
+  eyebrow: " Nature | Cluster 3",
   h1: "Spring Wildflowers at Bhurban and Ayubia — The April Bloom Guide",
   heroTagline:
     "April's wildflower bloom is the specific ecological event that distinguishes the Bhurban-Ayubia mountain experience in spring from any other season. The deodar cedar forest provides the permanent visual structure; the spring wildflowers are the seasonal foreground.",
@@ -302,7 +302,7 @@ export const article319: Article = {
     "Karachi to Bhurban honeymoon — the mountain escape from the coast. Presidential Suite jacuzzi, mountain views, temperature escape from coastal heat.",
   keywords:
     "karachi to bhurban honeymoon, bhurban honeymoon from karachi, mountain honeymoon pakistan karachi, honeymoon trip karachi islamabad bhurban",
-  eyebrow: "Backlink Guest Post · Romance | Cluster 12",
+  eyebrow: " Romance | Cluster 12",
   h1: "Karachi to Bhurban Honeymoon — The Mountain Escape from the Coast",
   heroTagline:
     "For couples from Karachi, Bhurban offers something no coastal city can: the mountain, the forest, the cold. Karachi's landscape — flat, coastal, hot, urban — has no natural feature that connects with the cedar forest at 6,800 feet in the Murree hills. The contrast is total. For a honeymoon, this contrast is specifically valuable.",
@@ -376,7 +376,7 @@ export const article320: Article = {
     "Bhurban for solo travellers — the complete guide. Solo travel tips, Serene Valley Cabin, activities for solo visitors, safety information, booking guide.",
   keywords:
     "bhurban for solo traveller, solo travel bhurban, bhurban solo trip, solo traveller bhurban murree, solo mountain trip islamabad",
-  eyebrow: "Backlink Guest Post · Commercial | Cluster 4",
+  eyebrow: " Commercial | Cluster 4",
   h1: "Bhurban for Solo Travellers — The Complete Guide",
   heroTagline:
     "Solo travel at Bhurban is not the same experience as solo travel in a city. The mountain environment provides a specific quality of solo experience — the dawn walk on the cedar paths alone, the private terrace with the mountain view, the Patriata Chairlift gondola with no one alongside — that social travel cannot replicate.",
@@ -455,7 +455,7 @@ export const article321: Article = {
     "Bhurban and Ayubia birdwatching — the complete guide. Himalayan Monal, Koklass Pheasant, Blue Whistling Thrush. Best locations, itinerary, bird species guide.",
   keywords:
     "bhurban birdwatching, ayubia birds, murree birds, birds bhurban murree, birdwatching near islamabad mountains",
-  eyebrow: "Backlink Guest Post · Nature | Cluster 3",
+  eyebrow: " Nature | Cluster 3",
   h1: "Bhurban and Ayubia Birdwatching — The Complete Guide",
   heroTagline:
     "The Bhurban-Galyat area is one of the most accessible quality birdwatching locations in northern Pakistan — the sub-Himalayan forest zone at 6,800-8,000 feet hosts a species mix that reflects the region's position as a transition zone between the Himalayan and peninsular bird communities.",
@@ -537,7 +537,7 @@ export const article322: Article = {
     "Bhurban for Lahore families — the complete weekend guide. Lahore to Bhurban drive, family villas, weekend itinerary, temperature escape from Lahore summer.",
   keywords:
     "bhurban for lahore families, lahore to bhurban family trip, bhurban weekend from lahore, family holiday bhurban lahore",
-  eyebrow: "Backlink Guest Post · Commercial | Cluster 10",
+  eyebrow: " Commercial | Cluster 10",
   h1: "Bhurban for Lahore Families — The Complete Weekend Guide",
   heroTagline:
     "Lahore's relationship with Bhurban is that of a city with its mountain escape. The M-2 Motorway makes the 330km drive a smooth, well-facilitated journey on Pakistan's finest road infrastructure. For Lahore families, Bhurban is closer in practical terms than many domestic destinations that require flights.",
@@ -628,7 +628,7 @@ export const article323: Article = {
     "In-villa spa and massage at Bhurban — mountain wellness guide. In-villa massage, Presidential Suite jacuzzi, forest therapy, wellness weekend itinerary.",
   keywords:
     "in villa spa bhurban, bhurban massage, mountain spa bhurban murree, in villa massage bhurban, spa near islamabad mountains",
-  eyebrow: "Backlink Guest Post · Wellness | Cluster 3",
+  eyebrow: " Wellness | Cluster 3",
   h1: "In-Villa Spa and Massage at Bhurban — Mountain Wellness Guide",
   heroTagline:
     "The in-villa wellness experience at Bhurban combines two things that spas elsewhere cannot: a qualified massage in a private villa setting, in the cedar forest at 6,800 feet, with the mountain air accessible through the open terrace door and the forest visible through the window.",
@@ -707,7 +707,7 @@ export const article324: Article = {
     "Milestone birthday celebration at Bhurban — 30th, 40th, 50th and beyond. Private cedar estate, birthday dinner, cake, group celebrations for 8-40+ guests.",
   keywords:
     "birthday celebration bhurban, 40th birthday bhurban murree, milestone birthday bhurban, birthday party bhurban cedar estate",
-  eyebrow: "Backlink Guest Post · Events | Cluster 5",
+  eyebrow: " Events | Cluster 5",
   h1: "Milestone Birthday Celebration at Bhurban — 30th, 40th, 50th and Beyond",
   heroTagline:
     "The milestone birthday at Himalaya Villas follows a specific logic: the occasion deserves a setting that marks the significance of the age. A 40th birthday dinner at a Islamabad restaurant is a good evening. A 40th birthday dinner in the cedar garden of a private mountain estate at 6,800 feet — the fire burning, the cedar canopy above, the mountain ridge visible beyond — is a specific memory that the celebrant describes for the rest of their decade.",
@@ -785,7 +785,7 @@ export const article325: Article = {
     "Bhurban in the monsoon — the complete July-August rain guide. Daily rain pattern, post-rain forest experience, activities during monsoon, temperature guide.",
   keywords:
     "bhurban monsoon, murree monsoon, bhurban july august rain, monsoon murree bhurban, does it rain bhurban murree",
-  eyebrow: "Backlink Guest Post · Seasonal | Cluster 7",
+  eyebrow: "",
   h1: "Bhurban in the Monsoon — The Complete July-August Rain Guide",
   heroTagline:
     "The monsoon at Bhurban is not a reason to avoid July and August — it is a specific character of the season that many guests specifically want. The afternoon rain that makes the city visitor shelter is the same rain that produces the forest's most intense green, fills the stream sections, and drives the mist through the valley visible from the Himalayan Penthouse balcony.",

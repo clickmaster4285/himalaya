@@ -105,11 +105,11 @@ export default function ArticleClient({ article }: { article: Article }) {
 
           <div className="absolute inset-0 flex items-center justify-center px-6">
             <div className="max-w-4xl text-center text-white">
-              {article.eyebrow && (
+              {/* {article.eyebrow && (
                 <p className="hero-eyebrow mb-6 tracking-widest uppercase text-sm text-[#e8d49a]">
                   {article.eyebrow}
                 </p>
-              )}
+              )} */}
 
               <h1 className="text-4xl md:text-6xl font-normal leading-tight">
                 {article.h1}

@@ -67,7 +67,7 @@ export const article296: Article = {
     "Hotel One Bhurban Murree — honest review and private villa alternative. Hashoo Group mid-scale hotel, rates, comparison with Himalaya Villas private estate.",
   keywords:
     "hotel one bhurban murree, hotel one bhurban, hotel one murree bhurban, hotel one bhurban rates",
-  eyebrow: "Backlink Guest Post · Competitor Intercept | Cluster 1",
+  eyebrow: " Competitor Intercept | Cluster 1",
   h1: "Hotel One Bhurban Murree — What to Know, and the Private Villa Alternative",
   heroTagline:
     "Guests searching 'hotel one bhurban murree' are typically exploring the full range of Bhurban accommodation — from the premium PC Hotel to the mid-scale Hotel One, and everything in between. This page maps that full range and helps you identify which accommodation model fits your group.",
@@ -163,7 +163,7 @@ export const article297: Article = {
     "Chinar Bhurban — the golf estate and the private villa alternative. Chinar Golf Club, residential estate, accommodation options near the golf course.",
   keywords:
     "chinar bhurban, chinar golf club bhurban murree, chinar bhurban murree golf, chinar bhurban hotel",
-  eyebrow: "Backlink Guest Post · Competitor Intercept + Guide | Cluster 1",
+  eyebrow: " Competitor Intercept + Guide | Cluster 1",
   h1: "Chinar Bhurban — The Golf Estate and the Private Villa Alternative",
   heroTagline:
     "'Chinar Bhurban' searches reflect several different needs: golfers looking for the Chinar Golf Club, property buyers researching the Chinar residential estate, and travellers who have heard the name and want to understand what the property is. This guide addresses all three.",
@@ -256,7 +256,7 @@ export const article298: Article = {
     "Hotels in Bhurban Murree — the complete comparison guide 2026. Himalaya Villas, PC Hotel Bhurban, Hotel One Bhurban. Full tier comparison, rates, best for families.",
   keywords:
     "hotels bhurban, hotels in bhurban murree, best hotels bhurban, bhurban hotels list, bhurban accommodation options 2026",
-  eyebrow: "Backlink Guest Post · Commercial Hub | Cluster 1",
+  eyebrow: " Commercial Hub | Cluster 1",
   h1: "Hotels in Bhurban Murree — The Complete Comparison Guide 2026",
   heroTagline:
     "Bhurban's accommodation market is compact but tiered — from the international chain hotel to the private villa estate. Most guests arrive not knowing that the private villa option exists; this guide maps all three tiers and helps you identify the right choice for your specific group.",
@@ -357,7 +357,7 @@ export const article299: Article = {
     "Murree best hotel — why the search ends at a private villa. Best hotel in Murree for families, couples, solo travellers. PC Hotel Bhurban vs Himalaya Villas comparison.",
   keywords:
     "murree best hotel, best hotel in murree, best hotel murree pakistan, best murree hotel for family, murree best hotels 2026",
-  eyebrow: "Backlink Guest Post · Commercial Hub with Intercept | Cluster 1",
+  eyebrow: " Commercial Hub with Intercept | Cluster 1",
   h1: "Murree's Best Hotel — Why the Answer Is Actually a Private Villa",
   heroTagline:
     "The 'best hotel in Murree' search has 3,600 monthly searches in Pakistan — a significant volume of guests who are starting their Murree accommodation research and want to know the definitive answer. The definitive answer depends on what 'best' means for your specific group.",
@@ -452,7 +452,7 @@ export const article300: Article = {
     "Ayubia National Park — complete visitor guide from Bhurban. Pipeline Track, Ayubia Chairlift, rhododendron bloom, wildlife, seasonal guide, day trip itinerary.",
   keywords:
     "ayubia national park, ayubia national park pakistan, ayubia national park nathia gali road, ayubia pipeline track, ayubia from bhurban",
-  eyebrow: "Backlink Guest Post · Destination Authority Hub | Cluster 8",
+  eyebrow: " Destination Authority Hub | Cluster 8",
   h1: "Ayubia National Park — The Complete Visitor Guide from Bhurban",
   heroTagline:
     "Ayubia National Park is one of Pakistan's most accessible yet most underestimated natural assets. At 8,100 monthly searches, it is the highest-volume destination-planning keyword in the Murree/Bhurban region — and it is the day trip that most Himalaya Villas guests describe as the highlight of their Bhurban stay.",
@@ -598,7 +598,7 @@ export const article301: Article = {
     "Opulent Hotel Bhurban — what it is and the private estate alternative. Independent boutique hotel comparison, private villa estate, exclusive-use accommodation.",
   keywords:
     "opulent hotel bhurban, opulent bhurban, opulent bhurban murree, opulent hotel bhurban murree",
-  eyebrow: "Backlink Guest Post · Competitor Intercept | Cluster 1",
+  eyebrow: " Competitor Intercept | Cluster 1",
   h1: "Opulent Hotel Bhurban — What It Is and the Private Estate Alternative",
   heroTagline:
     "Opulent Hotel Bhurban appears in search results for Bhurban accommodation and attracts guests looking for a boutique or independent hotel alternative to the Hashoo Group properties (PC Hotel, Hotel One). This page maps the full Bhurban accommodation picture so you can make an informed comparison.",
@@ -685,7 +685,7 @@ export const article302: Article = {
     "PC Hotel Bhurban rates — full comparison with the private villa alternative. Murree PC Bhurban rates 2026, room rates, villa rates, peak vs off-season comparison.",
   keywords:
     "murree pc bhurban rates, pc bhurban rates, pc hotel bhurban murree rates, bhurban pc hotel murree rates, pc hotel bhurban rates 2026",
-  eyebrow: "Backlink Guest Post · Competitor Intercept | Cluster 1",
+  eyebrow: " Competitor Intercept | Cluster 1",
   h1: "PC Hotel Bhurban Rates — Full Comparison with the Private Villa Alternative",
   heroTagline:
     "The 'murree pc bhurban rates' search (1,000/mo) reflects one of the most specific commercial intents in the Bhurban accommodation market: a guest who is comparing options and wants to understand what PC Hotel actually costs before deciding. This page serves that research — and ensures the private villa alternative is visible to the same guest.",
@@ -787,7 +787,7 @@ export const article303: Article = {
     "Bhurban Heights Murree — location, accommodation, and the villa estate. Bhurban ridge elevation, Himalaya Villas, PC Hotel, Hotel One. Complete location guide.",
   keywords:
     "bhurban heights murree, bhurban heights, bhurban heights hotel, bhurban heights accommodation",
-  eyebrow: "Backlink Guest Post · Location + Competitor Intercept | Clusters 1 & 8",
+  eyebrow: " Location + Competitor Intercept | Clusters 1 & 8",
   h1: "Bhurban Heights Murree — What to Know and Where to Stay",
   heroTagline:
     "Searches for 'Bhurban Heights Murree' typically reflect guests who have heard the term — from a property listing, a residential development advertisement, or a travel recommendation — and want to understand what it refers to. This guide clarifies the area and its accommodation options.",
@@ -870,7 +870,7 @@ export const article304: Article = {
     "Murree Bhurban hotel booking — the complete direct booking guide. How to book Himalaya Villas, PC Hotel, Hotel One. WhatsApp booking, OTA vs direct comparison.",
   keywords:
     "murree bhurban hotel booking, bhurban hotel booking, book hotel bhurban murree, booking bhurban murree, bhurban hotel reservation",
-  eyebrow: "Backlink Guest Post · Commercial Booking Guide | Clusters 1 & 2",
+  eyebrow: " Commercial Booking Guide | Clusters 1 & 2",
   h1: "Murree Bhurban Hotel Booking — The Complete Direct Booking Guide",
   heroTagline:
     "The booking process for Bhurban accommodation varies significantly by property type and booking channel. This guide covers the most efficient booking method for each Bhurban property, with particular focus on the Himalaya Villas direct booking process.",
@@ -972,7 +972,7 @@ export const article305: Article = {
     "Bhurban Murree in December — the pre-snowfall golden window. Early December vs late December, temperatures, snowfall probability, what to do, booking guide.",
   keywords:
     "bhurban december, murree bhurban december, bhurban in december, bhurban murree december trip, december bhurban visit guide",
-  eyebrow: "Backlink Guest Post · Seasonal Commercial Spoke | Cluster 7",
+  eyebrow: "",
   h1: "Bhurban Murree in December — The Pre-Snowfall Golden Window",
   heroTagline:
     "December in Bhurban contains two entirely different travel experiences separated by a few days on the calendar. Understanding which December you are booking for is the most important planning decision of the visit.",

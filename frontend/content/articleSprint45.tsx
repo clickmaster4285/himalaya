@@ -67,7 +67,7 @@ export const article436: Article = {
     "PC Hotel Bhurban vs Himalaya Villas — the definitive comparison. Rates, accommodation model, private villa vs 5-star hotel, family cost comparison.",
   keywords:
     "pc hotel bhurban rates, pc hotel bhurban murree, pearl continental bhurban, pc bhurban vs himalaya villas",
-  eyebrow: "Backlink Guest Post · Competitor Intercept | Cluster 1",
+  eyebrow: " Competitor Intercept | Cluster 1",
   h1: "PC Hotel Bhurban vs Himalaya Villas — The Definitive Comparison",
   heroTagline:
     "PC Hotel Bhurban is the most-searched hotel in Pakistan (14,800+ monthly searches) and Himalaya Villas is the only private villa estate in the Murree hills. Both are in Bhurban, 0.5km apart on the same ridge. Comparing them is not a matter of quality — both are excellent at what they do. It is a matter of model.",
@@ -155,7 +155,7 @@ export const article437: Article = {
     "Bhurban photography guide — the best shots, the best light, the best timing. Cedar estate dawn, Presidential Suite jacuzzi, Patriata Chairlift, Ayubia Pipeline Track.",
   keywords:
     "bhurban photography, bhurban murree photography spots, bhurban photo spots, best photo spots bhurban murree, photography locations bhurban",
-  eyebrow: "Backlink Guest Post · Activities | Cluster 3",
+  eyebrow: " Activities | Cluster 3",
   h1: "Bhurban Photography Guide — The Best Shots, the Best Light, the Best Timing",
   heroTagline:
     "Bhurban's photographic value is concentrated in two daily windows (dawn and golden hour) and one seasonal peak (October week 3). This guide maps exactly when and where the finest images come from.",
@@ -250,7 +250,7 @@ export const article438: Article = {
     "Corporate retreats near Islamabad — the Bhurban cedar estate guide. Best venue near Islamabad, team retreat configurations, 2-night format, ROI.",
   keywords:
     "corporate retreat near islamabad, corporate retreat bhurban, team retreat near islamabad, company retreat islamabad mountains",
-  eyebrow: "Backlink Guest Post · B2B | Cluster 6",
+  eyebrow: " B2B | Cluster 6",
   h1: "Corporate Retreats Near Islamabad — The Bhurban Cedar Estate Guide",
   heroTagline:
     "The Islamabad corporate retreat market is underserved at the quality end. The options for Islamabad-based companies wanting a retreat within 2 hours: Bhurban (45 min), Nathia Gali (1h 15min, guesthouse-level only), or Murree town (1h, hotel format). Himalaya Villas in Bhurban is the only private estate option within this radius.",
@@ -338,7 +338,7 @@ export const article439: Article = {
     "Bhurban stargazing and night sky guide — the cedar estate after dark. Milky Way, Orion, Jupiter, Saturn, Pleiades, meteor showers. Best conditions and equipment.",
   keywords:
     "bhurban stargazing, bhurban night sky, stargazing murree bhurban, murree night sky stars, bhurban star gazing",
-  eyebrow: "Backlink Guest Post · Activities | Cluster 3",
+  eyebrow: " Activities | Cluster 3",
   h1: "Bhurban Stargazing and Night Sky Guide — The Cedar Estate After Dark",
   heroTagline:
     "Stargazing at Bhurban is an incidental experience rather than the primary attraction — no telescope infrastructure, no organised observation sessions. But the cedar garden at midnight, with the fire out and the eyes dark-adapted, provides a sky quality that Pakistan's city residents have often never experienced.",
@@ -424,7 +424,7 @@ export const article440: Article = {
     "Bhurban accommodation guide — every option at every budget. Himalaya Villas, PC Hotel, Hotel One, guesthouses, TDCP rest houses. Complete comparison.",
   keywords:
     "bhurban accommodation, bhurban accommodation guide, bhurban hotel options, where to stay bhurban, best accommodation bhurban murree",
-  eyebrow: "Backlink Guest Post · Commercial Hub | Clusters 1 & 4",
+  eyebrow: " Commercial Hub | Clusters 1 & 4",
   h1: "Bhurban Accommodation Guide — Every Option at Every Budget",
   heroTagline:
     "This guide covers every Bhurban accommodation option — from the premium private villa estate to the budget guesthouses — to help every visitor find the right fit.",
@@ -512,7 +512,7 @@ export const article441: Article = {
     "Bhurban for Faisalabad families — the mountain weekend within reach. Faisalabad to Bhurban route, 25-degree temperature escape, family villas.",
   keywords:
     "bhurban from faisalabad, faisalabad to bhurban, bhurban faisalabad family trip, faisalabad bhurban weekend",
-  eyebrow: "Backlink Guest Post · Audience Geo | Cluster 10",
+  eyebrow: " Audience Geo | Cluster 10",
   h1: "Bhurban for Faisalabad Families — The Mountain Weekend Within Reach",
   heroTagline:
     "Faisalabad — Pakistan's third-largest city and its textile industrial capital — is the domestic city with arguably the most compelling case for the Bhurban mountain escape. The city sits in the Punjab plains at 500 feet elevation, with summer temperatures reaching 45-48 degrees C, some of the highest heat load of any major Pakistani city.",
@@ -587,7 +587,7 @@ export const article442: Article = {
     "Bhurban Murree insider guide 2026 — secrets the regulars keep. Patriata timing, kashmiri chai secrets, Ghora Gali paye, cedar fire timing, October week 3.",
   keywords:
     "bhurban insider guide, bhurban murree secrets, bhurban local guide 2026, best insider tips bhurban murree",
-  eyebrow: "Backlink Guest Post · Authority Guide | Cluster 3",
+  eyebrow: "",
   h1: "Bhurban Murree Insider Guide 2026 — Secrets the Regulars Keep",
   heroTagline:
     "The difference between a first-time Bhurban visitor and a fifth-time visitor is substantial. This guide distils what the regulars know — the specific knowledge that makes each aspect of the Bhurban experience better.",
@@ -671,7 +671,7 @@ export const article443: Article = {
     "Mountain wedding venues near Islamabad — the Bhurban cedar estate. Nikah, Mehndi, Walima, 20-80 guests, full estate buyout, private cedar garden.",
   keywords:
     "wedding venues bhurban, mountain wedding near islamabad, wedding venue murree bhurban, bhurban wedding venue, mountain wedding pakistan",
-  eyebrow: "Backlink Guest Post · Events | Cluster 5",
+  eyebrow: " Events | Cluster 5",
   h1: "Mountain Wedding Venues Near Islamabad — The Bhurban Cedar Estate",
   heroTagline:
     "The mountain wedding near Islamabad is a category that has emerged in Pakistani wedding culture in the past decade — the couple who has experienced the Islamabad ballroom circuit and wants the distinctive mountain setting for the occasion. Himalaya Villas in Bhurban is the specific venue that makes this possible.",
@@ -751,7 +751,7 @@ export const article444: Article = {
     "Pakistan visa guide for international visitors — planning the Bhurban visit. e-visa, visa on arrival, ISB airport to Bhurban, accommodation confirmation.",
   keywords:
     "pakistan visa for bhurban, pakistan visa murree bhurban, international visitor bhurban murree, pakistan tourist visa bhurban",
-  eyebrow: "Backlink Guest Post · Practical Planning | Cluster 11",
+  eyebrow: "",
   h1: "Pakistan Visa Guide for International Visitors — Planning the Bhurban Visit",
   heroTagline:
     "International visitors to Pakistan who include Bhurban in their itinerary find the domestic logistics straightforward: Islamabad International Airport is the arrival point; Bhurban is 60km from the airport (under 1 hour by car). The visa process is the primary planning step.",
@@ -823,7 +823,7 @@ export const article445: Article = {
     "Bhurban Murree photography spots for Instagram — the definitive shot list. Cedar path dawn, jacuzzi-mountain, fire and cedar, gondola window, Pipeline Track amber walk.",
   keywords:
     "bhurban instagram, bhurban photography instagram, bhurban photo spots instagram, murree bhurban instagram shots, bhurban photos",
-  eyebrow: "Backlink Guest Post · Social/Commercial | Cluster 3",
+  eyebrow: " Social/Commercial | Cluster 3",
   h1: "Bhurban Murree Photography Spots for Instagram — The Definitive Shot List",
   heroTagline:
     "Bhurban's most photographed and most shared content consistently clusters around 8-10 specific shots. This guide maps each with the timing, positioning, and conditions that produce the content that performs best on Instagram.",

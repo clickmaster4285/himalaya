@@ -50,7 +50,7 @@ const Navbar = () => {
   const getHref = (item: string) => {
     if (item === "Villas") return "/villas";
     if (item === "Experience") return "/experience";
-    if (item === "Virtual Tour") return "/experience#virtual-tour";
+    if (item === "Virtual Tour") return "/virtual-tour";
     if (item === "Events") return "/events";
     if (item === "Blogs") return "/blogs";
     if (item === "Contact") return "/contact";

@@ -67,7 +67,7 @@ export const article426: Article = {
     "Pakistan's fashion industry — the mountain creative season reset. Design studios, textile exporters, fashion media. Creative retreats and collection launches at Bhurban.",
   keywords:
     "pakistan fashion industry, textile industry pakistan, creative retreat bhurban, himalaya villas fashion",
-  eyebrow: "Backlink Guest Post · Pakistan Fashion / Textile Industry",
+  eyebrow: " Pakistan Fashion / Textile Industry",
   h1: "Pakistan's Fashion Industry — The Mountain Creative Season Reset",
   heroTagline:
     "Pakistan's fashion industry — the Lahore and Karachi design studios, the textile exporters whose commercial success enables the design community's creative experimentation, and the fashion media that documents and amplifies both — has a specific creative renewal need.",
@@ -130,7 +130,7 @@ export const article427: Article = {
     "Pakistan's education technology sector — the mountain build sprint. E-learning platforms, school management systems, EdTech team offsites at Bhurban.",
   keywords:
     "pakistan edtech, education innovation pakistan, edtech team sprint, himalaya villas edtech",
-  eyebrow: "Backlink Guest Post · Pakistan EdTech / Education Innovation Community",
+  eyebrow: " Pakistan EdTech / Education Innovation Community",
   h1: "Pakistan's Education Technology Sector — The Mountain Build Sprint",
   heroTagline:
     "Pakistan's education technology sector — the e-learning platforms, the school management systems, the digital content companies serving Pakistan's school market, and the assessment technology companies — has grown significantly in the past 5 years as Pakistan's education system's technology adoption has accelerated.",
@@ -184,7 +184,7 @@ export const article428: Article = {
     "Pakistan's GCC-based Pakistani community — the summer escape back. Saudi Arabia, UAE, Qatar, Kuwait. Summer return, temperature escape, mountain encounter.",
   keywords:
     "pakistani community gcc, saudi pakistani diaspora, gcc summer escape, himalaya villas gcc",
-  eyebrow: "Backlink Guest Post · Pakistani Community in GCC / Saudi Arabia",
+  eyebrow: " Pakistani Community in GCC / Saudi Arabia",
   h1: "Pakistan's GCC-Based Pakistani Community — The Summer Escape Back",
   heroTagline:
     "The Pakistani community in the Gulf Cooperation Council countries — Saudi Arabia, UAE, Qatar, Kuwait, Bahrain, and Oman — represents approximately 4.5 million Pakistanis, the largest concentration of Pakistani diaspora outside Pakistan itself.",
@@ -239,7 +239,7 @@ export const article429: Article = {
     "Pakistan's women's leadership network — the mountain convening. Women's Chambers of Commerce, female founder networks, women-in-leadership programmes.",
   keywords:
     "pakistan women leadership, women professional network, leadership retreat bhurban, himalaya villas women",
-  eyebrow: "Backlink Guest Post · Pakistan Women's Leadership / Professional Network",
+  eyebrow: " Pakistan Women's Leadership / Professional Network",
   h1: "Pakistan's Women's Leadership Network — The Mountain Convening",
   heroTagline:
     "Pakistan's women's professional leadership networks — the Women's Chambers of Commerce, the women's caucuses within professional associations, the female founder networks, the women-in-leadership programmes at Pakistan's management universities — have achieved significant institutional presence in the past decade.",
@@ -294,7 +294,7 @@ export const article430: Article = {
     "Pakistan's agriculture sector — the rural economy's mountain perspective. Agri-businesses, food processing, smallholder support, horticulture. Leadership retreats at Bhurban.",
   keywords:
     "pakistan agriculture, agri-business community, food sector pakistan, himalaya villas agriculture",
-  eyebrow: "Backlink Guest Post · Pakistan Agriculture / Agri-Business Community",
+  eyebrow: " Pakistan Agriculture / Agri-Business Community",
   h1: "Pakistan's Agriculture Sector — The Rural Economy's Mountain Perspective",
   heroTagline:
     "Pakistan's agriculture and food sector — the agri-businesses, the food processing companies, the smallholder farmer support organisations, the agricultural input companies, and the export-focused horticulture operations — constitutes the backbone of Pakistan's economy (20% of GDP, 40% of employment) while remaining significantly underrepresented in the corporate hospitality and retreat market.",
@@ -348,7 +348,7 @@ export const article431: Article = {
     "Pakistan's logistics sector — the operational excellence mountain retreat. 3PL companies, freight forwarders, e-commerce logistics, cold chain. Leadership retreats.",
   keywords:
     "pakistan logistics, supply chain industry, logistics leadership retreat, himalaya villas logistics",
-  eyebrow: "Backlink Guest Post · Pakistan Logistics / Supply Chain Industry",
+  eyebrow: " Pakistan Logistics / Supply Chain Industry",
   h1: "Pakistan's Logistics Sector — The Operational Excellence Mountain Retreat",
   heroTagline:
     "Pakistan's logistics and supply chain sector — the 3PL companies, the freight forwarders, the e-commerce logistics operations, the cold chain specialists, and the road and air freight operators — is one of Pakistan's fastest-growing industries driven by e-commerce growth and increasing supply chain sophistication.",
@@ -403,7 +403,7 @@ export const article432: Article = {
     "Pakistan's creative writing community — the mountain novel and the cedar pages. English and Urdu novelists, writers workshops, solo writing retreats at Bhurban.",
   keywords:
     "pakistan creative writing, literary community pakistan, writing retreat bhurban, himalaya villas writers",
-  eyebrow: "Backlink Guest Post · Pakistan Creative Writing / Literary Community",
+  eyebrow: " Pakistan Creative Writing / Literary Community",
   h1: "Pakistan's Creative Writing Community — The Mountain Novel and the Cedar Pages",
   heroTagline:
     "Pakistan's creative writing community — the English-language novelists, the Urdu fiction writers, the short story writers, the poets, and the emerging literary voices navigating the specific terrain of Pakistani creative writing — has a structural challenge: the city does not protect the writing time.",
@@ -459,7 +459,7 @@ export const article433: Article = {
     "Pakistan's Chinese business community — the mountain partnership dinner. CPEC project teams, Huawei, ZTE, Chinese construction. Partnership events at Bhurban.",
   keywords:
     "pakistan china business, cpec community, chinese business pakistan, himalaya villas china",
-  eyebrow: "Backlink Guest Post · Pakistan-China Business Community",
+  eyebrow: " Pakistan-China Business Community",
   h1: "Pakistan's Chinese Business Community — The Mountain Partnership Dinner",
   heroTagline:
     "Pakistan's Chinese business community — the CPEC project teams, the Huawei and ZTE technical staff, the Chinese construction company management, the Chinese manufacturing investors, and the Chinese entrepreneurs who have established businesses in Pakistan's growing market — represents a significant and growing professional community in Islamabad, Lahore, and Karachi.",
@@ -513,7 +513,7 @@ export const article434: Article = {
     "Pakistan's musicians and performing artists — the mountain creative home. Classical musicians, contemporary artists, theatre practitioners, music producers.",
   keywords:
     "pakistan music community, performing arts pakistan, musician retreat bhurban, himalaya villas music",
-  eyebrow: "Backlink Guest Post · Pakistan Music / Performing Arts Community",
+  eyebrow: " Pakistan Music / Performing Arts Community",
   h1: "Pakistan's Musicians and Performing Artists — The Mountain Creative Home",
   heroTagline:
     "Pakistan's music and performing arts community — the classical musicians, the contemporary artists, the theatre practitioners, the dancers, and the independent music producers who constitute the country's creative performance sector — has specific creative needs that the city environment does not serve.",
@@ -568,7 +568,7 @@ export const article435: Article = {
     "Pakistan's international visitors — why Bhurban should be on every Pakistan itinerary. Adventure travellers, cultural tourists, business travellers, diaspora returnees.",
   keywords:
     "international visitors pakistan, pakistan tourism press, bhurban itinerary international, himalaya villas global",
-  eyebrow: "Backlink Guest Post · International Visitors to Pakistan / Pakistan Tourism Press",
+  eyebrow: " International Visitors to Pakistan / Pakistan Tourism Press",
   h1: "Pakistan's International Visitors — Why Bhurban Should Be on Every Pakistan Itinerary",
   heroTagline:
     "International visitors to Pakistan — the adventure travellers who come for the Karakoram, the cultural tourists who come for Lahore's Mughal heritage, the business travellers who come for Pakistan's economic opportunities, and the diaspora returnees who bring international partners to see their home country — typically receive the standard Pakistan itinerary: Lahore (Badshahi Mosque, food street, Walled City), Islamabad (Faisal Mosque, Daman-e-Koh), and the north (Gilgit-Baltistan, Hunza).",

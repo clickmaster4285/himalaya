@@ -6,7 +6,7 @@ import Footer from "@/components/Footer";
 import { Check, X, Building, TreePine, MapPin, Coffee, Star } from "lucide-react";
 
 export const metadata: Metadata = {
-  title: "Best Hotels in Murree Pakistan 2025 | Himalaya Villas",
+  title: "Best Hotels in Murree Pakistan 2026 | Himalaya Villas",
   description:
     "Looking for the best hotels in Murree Pakistan? Discover why discerning guests choose Himalaya Villas in Bhurban — private villas, panoramic views, in-villa dining. 1 hour from Islamabad.",
   alternates: {
@@ -158,7 +158,7 @@ export default function BestHotelsMurreePage() {
             Every year, hundreds of thousands of travellers search for hotels in Murree. Most find the same results: a ranked list, a star rating, an OTA booking link. What they don't find is an honest comparison of what each property actually delivers — and more importantly, which type of accommodation is correct for their specific situation.
           </p>
           <p>
-            The truth about Murree hotels in 2025 is this: the best accommodation in the area is not in Murree town. It is in Bhurban — 8 km above Murree, at higher elevation, with better views, cooler air, and a quieter environment. And the best accommodation in Bhurban is increasingly villa-based, not hotel-based.
+            The truth about Murree hotels in 2026 is this: the best accommodation in the area is not in Murree town. It is in Bhurban — 8 km above Murree, at higher elevation, with better views, cooler air, and a quieter environment. And the best accommodation in Bhurban is increasingly villa-based, not hotel-based.
           </p>
           <p className="font-medium text-neutral-800 border-l-4 border-[#c9a55b] pl-4">
             This page is a direct, comparative guide to every serious option in the area — with pricing, honest assessments, and a framework that tells you which choice is correct for your group.

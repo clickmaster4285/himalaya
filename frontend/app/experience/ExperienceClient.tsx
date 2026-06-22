@@ -211,14 +211,14 @@ export default function ExperienceClient({ chapters }: ExperienceClientProps) {
   {/* Subtle background accent */}
   <div className="absolute inset-0 " />
   
-  <div className="mx-auto max-w-3xl px-6 text-center relative">
+  <div className="mx-auto max-w-3xl px-6 pt-18 text-center relative">
     {/* Decorative element */}
   
     
-    <div className="overflow-hidden">
-      <p className="reveal-line text-eyebrow tracking-[0.25em]">An Invitation</p>
+    {/* <div className="overflow-hidden">
+      <p className="reveal-line text-primary text-eyebrow tracking-[0.25em]">An Invitation</p>
     </div>
-    
+     */}
     <div className="mt-10 space-y-4 font-serif-display text-3xl md:text-5xl lg:text-6xl leading-[1.1] text-ink">
       <div className="overflow-hidden">
         <p className="reveal-line">Some places you visit.</p>

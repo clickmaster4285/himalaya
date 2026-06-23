@@ -5,6 +5,6 @@ export default function robots(): MetadataRoute.Robots {
     rules: [
       { userAgent: "*", allow: "/" },
     ],
-    sitemap: "https://himalayavillas.com/sitemap.xml",
+    sitemap: "https://himalayavillas.com/sitemap-index.xml",
   };
 }

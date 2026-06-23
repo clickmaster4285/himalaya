@@ -1,0 +1,390 @@
+// components/sections/PasSection.tsx
+'use client';
+import { motion } from 'framer-motion';
+import { Zap, Check, Target, Shield, Sparkles, GitBranch, Users, Rocket, AlertCircle, TrendingUp, Lightbulb } from 'lucide-react';
+import { Reveal } from './Reveal';
+import { SectionLabel } from './SectionLabel';
+import { ClickItem } from './types';
+
+interface PasSectionProps {
+  pasText: string;
+}
+
+interface PasContent {
+  before: string;
+  after: string;
+  problem: string;
+  agitation: string;
+  solution: string;
+  clickItems: ClickItem[];
+}
+
+// ClickLetter Component
+const ClickLetter = ({ letter, title, desc, icon: Icon }: ClickItem) => (
+  <motion.div
+    whileHover={{ y: -4 }}
+    className="group relative rounded-3xl border border-gray-200 bg-foreground p-8 hover:border-[#FF2E86]/40 transition-all duration-300 shadow-sm"
+  >
+    <div className="flex gap-6 items-center">
+      <div className="flex flex-col items-center shrink-0">
+        <div className="w-16 h-16 rounded-2xl text-[#FF2E86] grid place-items-center text-6xl font-display font-bold shadow-none">
+          {letter}
+        </div>
+      </div>
+      <div className="flex-1">
+        <div className="flex items-center gap-3 mb-4">
+          <h3 className="font-display text-3xl tracking-tight text-gray-900">{title}</h3>
+        </div>
+        <p className="text-gray-600 leading-relaxed text-[15px]">{desc}</p>
+      </div>
+    </div>
+  </motion.div>
+);
+
+// PAS UI Component
+const PasProblemAgitationSolution = ({
+  problem,
+  agitation,
+  solution,
+}: {
+  problem: string;
+  agitation: string;
+  solution: string;
+}) => {
+  const items = [problem && "problem", agitation && "agitation", solution && "solution"].filter(Boolean);
+  const colCount = Math.min(items.length, 3);
+
+  const gridClass = colCount === 1 ? "md:grid-cols-1"
+    : colCount === 2 ? "md:grid-cols-2"
+    : "md:grid-cols-3";
+
+  return (
+    <section className="relative bg-background text-foreground py-24 overflow-hidden">
+      <div className="pointer-events-none absolute inset-x-0 bottom-0 select-none text-center font-display text-[18vw] leading-none text-foreground/[0.03]">
+        PROBLEM
+      </div>
+
+      <div className="container max-w-6xl mx-auto px-6 relative z-10">
+        <SectionLabel number="02" text="Problem · Agitation · Solution" />
+
+        <Reveal>
+          <h2 className="font-display text-5xl md:text-7xl font-medium leading-[0.95] tracking-tighter mt-6 mb-16">
+            The <span className="text-[#FF2E86]">Problem</span> We Solve
+          </h2>
+        </Reveal>
+
+        <div className={`grid gap-6 ${gridClass}`}>
+          {problem && (
+            <Reveal delay={0.1}>
+              <div className="rounded-3xl border border-[#FF2E86]/20 bg-[#FF2E86]/5 p-8 h-full">
+                <div className="flex items-center gap-3 mb-6">
+                  <div className="p-3 rounded-2xl">
+                    <AlertCircle className="w-7 h-7 text-[#FF2E86]" />
+                  </div>
+                  <h3 className="font-display text-2xl tracking-tight text-white">PROBLEM</h3>
+                </div>
+                <p className="text-foreground/80 text-base leading-relaxed">{problem}</p>
+              </div>
+            </Reveal>
+          )}
+
+          {agitation && (
+            <Reveal delay={0.2}>
+              <div className="rounded-3xl border border-[#FF2E86]/20 bg-[#FF2E86]/5 p-8 h-full">
+                <div className="flex items-center gap-3 mb-6">
+                  <div className="p-3 rounded-2xl">
+                    <TrendingUp className="w-7 h-7 text-[#FF2E86]" />
+                  </div>
+                  <h3 className="font-display text-2xl tracking-tight text-white">AGITATION</h3>
+                </div>
+                <p className="text-foreground/80 text-base leading-relaxed">{agitation}</p>
+              </div>
+            </Reveal>
+          )}
+
+          {solution && (
+            <Reveal delay={0.3}>
+              <div className="rounded-3xl border border-[#FF2E86]/20 bg-[#FF2E86]/5 p-8 h-full">
+                <div className="flex items-center gap-3 mb-6">
+                  <div className="p-3 rounded-2xl">
+                    <Lightbulb className="w-7 h-7 text-[#FF2E86]" />
+                  </div>
+                  <h3 className="font-display text-2xl tracking-tight text-white">SOLUTION</h3>
+                </div>
+                <p className="text-foreground/80 text-base leading-relaxed">{solution}</p>
+              </div>
+            </Reveal>
+          )}
+        </div>
+      </div>
+    </section>
+  );
+};
+
+// Dark Section
+export const PasDarkSection = ({ pasText }: PasSectionProps) => {
+  const pasContent = parsePasContent(pasText);
+
+  const hasPAS = !!(pasContent.problem || pasContent.agitation || pasContent.solution);
+
+  if (hasPAS) {
+    return <PasProblemAgitationSolution problem={pasContent.problem} agitation={pasContent.agitation} solution={pasContent.solution} />;
+  }
+
+  // Fallback BEFORE / AFTER
+  return (
+    <section className="relative bg-background text-foreground py-24 overflow-hidden">
+      <div className="pointer-events-none absolute inset-x-0 bottom-0 select-none text-center font-display text-[18vw] leading-none text-foreground/[0.03]">
+        PROBLEM
+      </div>
+
+      <div className="container max-w-6xl mx-auto px-6 relative z-10">
+        <SectionLabel number="02" text="Problem · Agitation · Solution" />
+        <Reveal>
+          <h2 className="font-display text-5xl md:text-7xl font-medium leading-[0.95] tracking-tighter mt-6 mb-16">
+            The <span className="text-[#FF2E86]">Problem</span> We Solve
+          </h2>
+        </Reveal>
+
+        <div className="grid md:grid-cols-2 gap-8">
+          {pasContent.before && (
+            <Reveal delay={0.1}>
+              <div className="rounded-3xl border border-foreground/10 bg-foreground/[0.02] p-10 h-full flex flex-col">
+                <div className="flex items-center gap-4 mb-6">
+                  <div className="p-3 rounded-2xl">
+                    <Zap className="w-7 h-7 text-[#FF2E86]" />
+                  </div>
+                  <h3 className="font-display text-3xl tracking-tight">THE BEFORE</h3>
+                </div>
+                <p className="text-foreground/80 text-lg leading-relaxed flex-1">{pasContent.before}</p>
+              </div>
+            </Reveal>
+          )}
+          {pasContent.after && (
+            <Reveal delay={0.2}>
+              <div className="rounded-3xl border border-foreground/10 bg-foreground/[0.02] p-10 h-full flex flex-col">
+                <div className="flex items-center gap-4 mb-6">
+                  <div className="p-3">
+                    <Check className="w-7 h-7 text-[#FF2E86]" />
+                  </div>
+                  <h3 className="font-display text-3xl tracking-tight">THE AFTER</h3>
+                </div>
+                <p className="text-foreground/80 text-lg leading-relaxed flex-1">{pasContent.after}</p>
+              </div>
+            </Reveal>
+          )}
+        </div>
+      </div>
+    </section>
+  );
+};
+
+// Light Section (CLICK GROWTH SYSTEM)
+export const PasLightSection = ({ pasText }: PasSectionProps) => {
+  const pasContent = parsePasContent(pasText);
+  if (pasContent.clickItems.length === 0) return null;
+
+  return (
+   <section className="relative bg-white py-24 overflow-visible">
+      <div className="pointer-events-none absolute inset-x-0 bottom-0 select-none text-center font-display text-[18vw] leading-none text-gray-100">
+        GROWTH
+      </div>
+
+      <div className="container max-w-6xl mx-auto px-6 relative z-10">
+        <Reveal>
+          <div className="mb-12">
+            <h3 className="font-display text-4xl md:text-6xl tracking-tighter mb-3  text-gray-900">
+              THE BRIDGE — <span className="text-[#FF2E86]">CLICK GROWTH SYSTEM</span>
+            </h3>
+            <p className="text-gray-500 max-w-md">Six powerful levers that transform your growth trajectory</p>
+          </div>
+        </Reveal>
+
+
+
+
+
+
+
+
+
+
+{/* ==================== CLICK GROWTH SYSTEM ==================== */}
+<div className="grid grid-cols-1 lg:grid-cols-2 gap-12 lg:gap-16">
+  {/* LEFT COLUMN - Sticky */}
+  <div className="lg:sticky lg:top-28 lg:self-start h-fit">
+    <div className="flex flex-col gap-2 mb-8">
+      <div className="w-20 h-20 rounded-2xl text-[#FF2E86] grid place-items-center text-7xl font-display font-bold shadow-none">
+        CLICK
+      </div>
+      <div>
+        <div className="text-sm mb-2 uppercase tracking-[0.4em] text-gray-800">GROWTH FRAMEWORK</div>
+        <div className="text-2xl font-light text-gray-800">6 Core Pillars</div>
+      </div>
+    </div>
+
+    <div className="h-px bg-gray-200 mb-8" />
+    <p className="text-gray-800 leading-relaxed max-w-md text-sm">
+      A systematic approach built for sustainable, scalable growth across all channels.
+    </p>
+  </div>
+
+  {/* RIGHT COLUMN */}
+  <div className="space-y-4">
+    {pasContent.clickItems.map((item, i) => (
+      <Reveal key={i} delay={i * 0.07}>
+        <ClickLetter {...item} />
+      </Reveal>
+    ))}
+  </div>
+</div>
+
+
+
+
+
+
+
+
+
+
+
+
+      </div>
+    </section>
+  );
+};
+
+// ==================== MAIN PARSER (Enhanced) ====================
+const parsePasContent = (pasText: string): PasContent => {
+  const lines = pasText.split('\n').filter(Boolean);
+  let before = '';
+  let after = '';
+  let problem = '';
+  let agitation = '';
+  let solution = '';
+  let currentSection = 'before';
+  const clickItems: ClickItem[] = [];
+
+  const icons: Record<string, any> = {
+    'C': Target, 'L': Shield, 'I': Sparkles, 'C2': GitBranch, 'K': Users, 'S': Rocket,
+  };
+
+  // Check for new KEY ANCHORS style
+  const hasKeyAnchors = lines.some(l => l.trim().startsWith('KEY ANCHORS:'));
+
+  if (hasKeyAnchors) {
+    const fullText = lines.join('\n');
+    const sections: Record<string, string> = {};
+
+    // Split by major headers
+    const headerMatches = [...fullText.matchAll(/(KEY ANCHORS:|COMPLIANCE:|CPCs:|Solution:)/gi)];
+    
+    let lastIndex = 0;
+    for (let i = 0; i < headerMatches.length; i++) {
+      const match = headerMatches[i];
+      const header = match[0].trim();
+      const start = match.index!;
+      const end = headerMatches[i + 1] ? headerMatches[i + 1].index! : fullText.length;
+
+      const content = fullText.slice(start + header.length, end).trim();
+      sections[header.replace(':', '').trim()] = content;
+
+      lastIndex = end;
+    }
+
+    // Map to PAS
+    if (sections['KEY ANCHORS']) {
+      problem = `Major anchors: ${sections['KEY ANCHORS']}`;
+    }
+    if (sections['COMPLIANCE'] || sections['CPCs']) {
+      agitation = [
+        sections['COMPLIANCE'],
+        sections['CPCs']
+      ].filter(Boolean).join('\n\n');
+    }
+    if (sections['Solution']) {
+      solution = sections['Solution'];
+    }
+
+    return { before, after, problem, agitation, solution, clickItems };
+  }
+
+  // === Fallback: Original parsing logic (unchanged behavior) ===
+  for (const line of lines) {
+    const trimmed = line.trim();
+
+    if (trimmed.startsWith('PROBLEM:')) {
+      problem = trimmed.replace('PROBLEM:', '').trim();
+      currentSection = 'problem';
+      continue;
+    }
+    if (trimmed.startsWith('AGITATION:')) {
+      agitation = trimmed.replace('AGITATION:', '').trim();
+      currentSection = 'agitation';
+      continue;
+    }
+    if (trimmed.startsWith('SOLUTION:')) {
+      solution = trimmed.replace('SOLUTION:', '').trim();
+      currentSection = 'solution';
+      continue;
+    }
+    if (trimmed.startsWith('THE BEFORE:')) {
+      before = trimmed.replace('THE BEFORE:', '').trim();
+      currentSection = 'before';
+      continue;
+    }
+    if (trimmed.startsWith('THE AFTER:')) {
+      after = trimmed.replace('THE AFTER:', '').trim();
+      currentSection = 'after';
+      continue;
+    }
+
+    if (trimmed.includes('CLICK GROWTH SYSTEM') || trimmed.includes('THE BRIDGE')) {
+      currentSection = 'bridge';
+      continue;
+    }
+
+    if (currentSection === 'bridge' && trimmed.match(/^[CKLIS] —/)) {
+      const match = trimmed.match(/^([CKLIS]) — ([^:]+):/);
+      if (match) {
+        const letter = match[1];
+        const title = match[2].trim();
+        const desc = trimmed.replace(match[0], '').trim();
+        const iconKey = letter === 'C' && clickItems.some(item => item.letter === 'C') ? 'C2' : letter;
+
+        clickItems.push({ letter, title, desc, icon: icons[iconKey] || Target });
+      }
+      continue;
+    }
+
+    // Multi-line handling
+    if (currentSection === 'bridge' && trimmed && clickItems.length > 0 &&
+        !trimmed.match(/^(THE|PROBLEM|AGITATION|SOLUTION|KEY ANCHORS|COMPLIANCE|CPCs)/i)) {
+      clickItems[clickItems.length - 1].desc += ' ' + trimmed;
+    }
+
+    if (currentSection === 'problem') problem += ' ' + trimmed;
+    if (currentSection === 'agitation') agitation += ' ' + trimmed;
+    if (currentSection === 'solution') solution += ' ' + trimmed;
+  }
+
+  return {
+    before: before.trim(),
+    after: after.trim(),
+    problem: problem.trim(),
+    agitation: agitation.trim(),
+    solution: solution.trim(),
+    clickItems,
+  };
+};
+
+// Main Export
+export const PasSection = ({ pasText }: PasSectionProps) => {
+  return (
+    <>
+      <PasDarkSection pasText={pasText} />
+      <PasLightSection pasText={pasText} />
+    </>
+  );
+};

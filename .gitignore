@@ -41,6 +41,11 @@ yarn-error.log*
 # env files (can opt-in for committing if needed)
 .env*
 
+
+# Google service account credentials
+frontend/script/service-account.json
+
+
 # vercel
 .vercel
 

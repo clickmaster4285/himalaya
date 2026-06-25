@@ -28,7 +28,7 @@ const article11Images = [
 ];
 
 type BlockProps = {
-  block: any;
+  block?: any;
   index: number;
 };
 

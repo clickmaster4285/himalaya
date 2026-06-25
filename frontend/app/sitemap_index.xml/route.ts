@@ -10,6 +10,7 @@ export async function GET() {
     { loc: `${origin}/sitemap_villas.xml`, lastmod: new Date().toISOString().split("T")[0] },
     { loc: `${origin}/sitemap_blog.xml`, lastmod: new Date().toISOString().split("T")[0] },
     { loc: `${origin}/sitemap_events.xml`, lastmod: new Date().toISOString().split("T")[0] },
+    { loc: `${origin}/sitemap_weather.xml`, lastmod: new Date().toISOString().split("T")[0] },
   ];
 
   const xml = `<?xml version="1.0" encoding="UTF-8"?>

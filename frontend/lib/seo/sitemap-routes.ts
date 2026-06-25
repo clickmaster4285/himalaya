@@ -1,10 +1,52 @@
 import { VILLA_BLOG_POSTS } from "@/lib/villa-blog-posts";
 import { blogCanonicalPath } from "@/lib/blog-posts";
+import { allArticles } from "@/content/allArticles";
 
 /** Legacy URLs that duplicate `/blog/{slug}` — omit from sitemap to avoid duplicate indexing. */
 const LEGACY_HREFS = new Set(
   VILLA_BLOG_POSTS.map((p) => p.href).filter((h): h is string => Boolean(h)),
 );
+
+const CATEGORY_ALIAS: Record<string, string> = {
+  page: "pages",
+  pages: "pages",
+  blog: "blog",
+  villa: "villas",
+  villas: "villas",
+  event: "events",
+  events: "events",
+  weather: "weather",
+};
+
+function normalizeArticleCategory(category?: string): string {
+  if (!category) return "pages";
+  const normalized = category.trim().toLowerCase();
+  return CATEGORY_ALIAS[normalized] ?? normalized;
+}
+
+export function getArticleSitemapRouteDefs(categoryName: string): SitemapRouteDef[] {
+  const category = normalizeArticleCategory(categoryName);
+
+  return allArticles
+    .map((article) => ({
+      category: normalizeArticleCategory(article.sitemapCategory),
+      path: `/${article.slug}`,
+    }))
+    .filter((item) => item.category === category)
+    .map((item) => ({
+      path: item.path,
+      changeFrequency: "monthly" as const,
+      priority: category === "blog" ? 0.75 : category === "villas" ? 0.8 : 0.65,
+    }));
+}
+
+export function getAllArticleSitemapRouteDefs(): SitemapRouteDef[] {
+  return allArticles.map((article) => ({
+    path: `/${article.slug}`,
+    changeFrequency: "monthly" as const,
+    priority: 0.65,
+  }));
+}
 
 export type SitemapRouteDef = {
   path: string;

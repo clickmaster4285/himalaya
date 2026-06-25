@@ -1,13 +1,14 @@
 import { getSiteOrigin } from "@/lib/seo/site-config";
-import { getBlogSitemapRouteDefs } from "@/lib/seo/sitemap-routes";
+import { getArticleSitemapRouteDefs, getBlogSitemapRouteDefs } from "@/lib/seo/sitemap-routes";
 
 export const revalidate = 300;
 
 export async function GET() {
   const origin = getSiteOrigin();
   const blogDefs = getBlogSitemapRouteDefs();
+  const articleDefs = getArticleSitemapRouteDefs("blog");
 
-  const entries = blogDefs.map((def) => {
+  const entries = [...blogDefs, ...articleDefs].map((def) => {
     const lastmod = def.lastModified ? def.lastModified.toISOString().split("T")[0] : new Date().toISOString().split("T")[0];
     return `  <url>
     <loc>${origin}${def.path}</loc>

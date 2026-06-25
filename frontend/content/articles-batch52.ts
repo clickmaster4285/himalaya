@@ -1,161 +1,11 @@
-// articles-batch46.ts
-// Guest Posts 456-724 - Complete TypeScript file with all content preserved
+// articles-batch51.ts
+// Guest Posts 506-724 - Complete TypeScript file with all content preserved
 
 import type { Article } from "./types";
 
 // ============================================
 // DUMMY IMAGE PATHS FOR ARTICLES
 // ============================================
-
-// Article 456 - Murree Bhurban November Guide — The Hidden Off-Sea
-const article456Hero = "/images/articles/article456-hero.jpg";
-const article456Image1 = "/images/articles/article456-image1.jpg";
-const article456Image2 = "/images/articles/article456-image2.jpg";
-
-// Article 457 - Murree Bhurban September Guide — The Post-Monsoon 
-const article457Hero = "/images/articles/article457-hero.jpg";
-const article457Image1 = "/images/articles/article457-image1.jpg";
-const article457Image2 = "/images/articles/article457-image2.jpg";
-
-// Article 458 - Bhurban Birdwatching Guide — The Himalayan Species
-const article458Hero = "/images/articles/article458-hero.jpg";
-const article458Image1 = "/images/articles/article458-image1.jpg";
-const article458Image2 = "/images/articles/article458-image2.jpg";
-
-// Article 459 - Murree Spring Wildflowers and Rhododendron Guide
-const article459Hero = "/images/articles/article459-hero.jpg";
-const article459Image1 = "/images/articles/article459-image1.jpg";
-const article459Image2 = "/images/articles/article459-image2.jpg";
-
-// Article 460 - Bhurban for Lahore Families — The 3.5 Hour Mountai
-const article460Hero = "/images/articles/article460-hero.jpg";
-const article460Image1 = "/images/articles/article460-image1.jpg";
-const article460Image2 = "/images/articles/article460-image2.jpg";
-
-// Article 461 - Bhurban Monsoon Guide — Making the Most of Rainy S
-const article461Hero = "/images/articles/article461-hero.jpg";
-const article461Image1 = "/images/articles/article461-image1.jpg";
-const article461Image2 = "/images/articles/article461-image2.jpg";
-
-// Article 462 - Bhurban December Guide — The Winter Beginning
-const article462Hero = "/images/articles/article462-hero.jpg";
-const article462Image1 = "/images/articles/article462-image1.jpg";
-const article462Image2 = "/images/articles/article462-image2.jpg";
-
-// Article 463 - Bhurban Ayubia National Park Complete Guide
-const article463Hero = "/images/articles/article463-hero.jpg";
-const article463Image1 = "/images/articles/article463-image1.jpg";
-const article463Image2 = "/images/articles/article463-image2.jpg";
-
-// Article 464 - Bhurban Villa Pricing Guide — What Everything Actu
-const article464Hero = "/images/articles/article464-hero.jpg";
-const article464Image1 = "/images/articles/article464-image1.jpg";
-const article464Image2 = "/images/articles/article464-image2.jpg";
-
-// Article 465 - Bhurban Honeymoon Package — The Cedar Estate Roman
-const article465Hero = "/images/articles/article465-hero.jpg";
-const article465Image1 = "/images/articles/article465-image1.jpg";
-const article465Image2 = "/images/articles/article465-image2.jpg";
-
-// Article 476 - Himalaya Villas vs Nathia Gali Resort — The Direct
-const article476Hero = "/images/articles/article476-hero.jpg";
-const article476Image1 = "/images/articles/article476-image1.jpg";
-const article476Image2 = "/images/articles/article476-image2.jpg";
-
-// Article 477 - Bhurban for Multan Visitors — The Mountain's Furth
-const article477Hero = "/images/articles/article477-hero.jpg";
-const article477Image1 = "/images/articles/article477-image1.jpg";
-const article477Image2 = "/images/articles/article477-image2.jpg";
-
-// Article 478 - Murree Resort Guide — The Complete 2026 Overview
-const article478Hero = "/images/articles/article478-hero.jpg";
-const article478Image1 = "/images/articles/article478-image1.jpg";
-const article478Image2 = "/images/articles/article478-image2.jpg";
-
-// Article 479 - Bhurban Qawwali Evening — The Mountain Music Exper
-const article479Hero = "/images/articles/article479-hero.jpg";
-const article479Image1 = "/images/articles/article479-image1.jpg";
-const article479Image2 = "/images/articles/article479-image2.jpg";
-
-// Article 480 - Bhurban Campfire and Bonfire Guide — The Cedar Est
-const article480Hero = "/images/articles/article480-hero.jpg";
-const article480Image1 = "/images/articles/article480-image1.jpg";
-const article480Image2 = "/images/articles/article480-image2.jpg";
-
-// Article 481 - Bhurban Hotel Booking Guide — How to Book Every Pr
-const article481Hero = "/images/articles/article481-hero.jpg";
-const article481Image1 = "/images/articles/article481-image1.jpg";
-const article481Image2 = "/images/articles/article481-image2.jpg";
-
-// Article 482 - Bhurban Luxury Spa and Wellness Guide
-const article482Hero = "/images/articles/article482-hero.jpg";
-const article482Image1 = "/images/articles/article482-image1.jpg";
-const article482Image2 = "/images/articles/article482-image2.jpg";
-
-// Article 483 - Bhurban Team Building Activities — The Complete Co
-const article483Hero = "/images/articles/article483-hero.jpg";
-const article483Image1 = "/images/articles/article483-image1.jpg";
-const article483Image2 = "/images/articles/article483-image2.jpg";
-
-// Article 484 - Bhurban Milestone Birthday Celebration Guide
-const article484Hero = "/images/articles/article484-hero.jpg";
-const article484Image1 = "/images/articles/article484-image1.jpg";
-const article484Image2 = "/images/articles/article484-image2.jpg";
-
-// Article 485 - Bhurban Ramadan and Iftar Guide — The Mountain Ram
-const article485Hero = "/images/articles/article485-hero.jpg";
-const article485Image1 = "/images/articles/article485-image1.jpg";
-const article485Image2 = "/images/articles/article485-image2.jpg";
-
-// Article 496 - Mövenpick Hotel Murree — What to Know and the Priv
-const article496Hero = "/images/articles/article496-hero.jpg";
-const article496Image1 = "/images/articles/article496-image1.jpg";
-const article496Image2 = "/images/articles/article496-image2.jpg";
-
-// Article 497 - Shangrila Resort Murree — Guide and the Bhurban Pr
-const article497Hero = "/images/articles/article497-hero.jpg";
-const article497Image1 = "/images/articles/article497-image1.jpg";
-const article497Image2 = "/images/articles/article497-image2.jpg";
-
-// Article 498 - Murree Hotel Booking — The 2026 Complete Booking G
-const article498Hero = "/images/articles/article498-hero.jpg";
-const article498Image1 = "/images/articles/article498-image1.jpg";
-const article498Image2 = "/images/articles/article498-image2.jpg";
-
-// Article 499 - PC Hotel Bhurban Contact Number and Booking Inform
-const article499Hero = "/images/articles/article499-hero.jpg";
-const article499Image1 = "/images/articles/article499-image1.jpg";
-const article499Image2 = "/images/articles/article499-image2.jpg";
-
-// Article 500 - Ramada Murree — The Complete Guide and the Private
-const article500Hero = "/images/articles/article500-hero.jpg";
-const article500Image1 = "/images/articles/article500-image1.jpg";
-const article500Image2 = "/images/articles/article500-image2.jpg";
-
-// Article 501 - Lockwood Hotel Murree — Guide and the Bhurban Priv
-const article501Hero = "/images/articles/article501-hero.jpg";
-const article501Image1 = "/images/articles/article501-image1.jpg";
-const article501Image2 = "/images/articles/article501-image2.jpg";
-
-// Article 502 - Marco Polo Resort Murree — Guide and the Private V
-const article502Hero = "/images/articles/article502-hero.jpg";
-const article502Image1 = "/images/articles/article502-image1.jpg";
-const article502Image2 = "/images/articles/article502-image2.jpg";
-
-// Article 503 - Best Hotels in Murree Pakistan 2026 — The Definiti
-const article503Hero = "/images/articles/article503-hero.jpg";
-const article503Image1 = "/images/articles/article503-image1.jpg";
-const article503Image2 = "/images/articles/article503-image2.jpg";
-
-// Article 504 - Murree Hill Station — Pakistan's Most Accessible M
-const article504Hero = "/images/articles/article504-hero.jpg";
-const article504Image1 = "/images/articles/article504-image1.jpg";
-const article504Image2 = "/images/articles/article504-image2.jpg";
-
-// Article 505 - Murree Temperature Today — Live Weather Reference 
-const article505Hero = "/images/articles/article505-hero.jpg";
-const article505Image1 = "/images/articles/article505-image1.jpg";
-const article505Image2 = "/images/articles/article505-image2.jpg";
 
 // Article 506 - /chinar-club-bhurban-guide chinar club bhurban, ch
 const article506Hero = "/images/articles/article506-hero.jpg";
@@ -1253,2859 +1103,6 @@ const article724Image1 = "/images/articles/article724-image1.jpg";
 const article724Image2 = "/images/articles/article724-image2.jpg";
 
 // ============================================
-// ARTICLE 456 - Murree Bhurban November Guide — The Hidden Off-Season Month
-// ============================================
-export const article456: Article = {
-  slug: "murree-in-november",
-  title: "Murree Bhurban November Guide — The Hidden Off-Season Month",
-  metaDescription:
-    "URL /murree-in-november KW murree november, bhurban november, november murree bhurban, murree in november what to expect",
-  keywords:
-    "murree november, bhurban november, november murree bhurban, murree in november what to expect",
-  eyebrow: "Backlink Guest Post · WC | ~900w",
-  h1: "Murree Bhurban November Guide — The Hidden Off-Season Month",
-  heroTagline:
-    "URL /murree-in-november KW murree november, bhurban november, november murree bhurban, murree in november what to expect",
-  heroImage: article456Hero,
-  blocks: [
-    {
-      type: "callout-qa",
-      question: "Is November a good time to visit Murree and Bhurban?",
-      answer: "November at Bhurban is the quietest, most peaceful month of the year. Temperature: 2-12 degrees C daytime, 0-5 degrees overnight. Very few visitors. Himalaya Villas is easily available. The cedar forest in late autumn — the deciduous trees bare, the deodar cedar dominant, the bare-branch architecture visible — is the most architectural version of the forest. The fire pit is genuinely necessary from 5pm. The experience: private, cold, quiet, and the most complete expression of the private cedar estate away from any crowd pressure. November is the month that Bhurban regulars do not advertise. The combination of complete availability, the post-autumn cedar forest in its most architectural form,...",
-    },
-    {
-      type: "section",
-      eyebrow: "Murree and Bhurban in November",
-      heading: "Murree and Bhurban in November — The Hidden Off-Season Month",
-      paragraphs: [
-        "❓ Is November a good time to visit Murree and Bhurban?",
-        "November at Bhurban is the quietest, most peaceful month of the year. Temperature: 2-12 degrees C daytime, 0-5 degrees overnight. Very few visitors. Himalaya Villas is easily available. The cedar forest in late autumn — the deciduous trees bare, the deodar cedar dominant, the bare-branch architecture visible — is the most architectural version of t...",
-        "November is the month that Bhurban regulars do not advertise. The combination of complete availability, the post-autumn cedar forest in its most architectural form, and the private cedar estate at its quietest makes November the best-kept secret in the Bhurban calendar.",
-      ],
-      image: {
-        src: article456Image1,
-        alt: "Murree and Bhurban in November — The Hidden Off-Season Month",
-      },
-    },
-    {
-      type: "section",
-      eyebrow: "Early evening fire essential",
-      heading: "Early evening fire essential",
-      paragraphs: [
-        "0-6 degrees C",
-        "Winter arriving. First frost on the cedar path.",
-      ],
-    },
-    {
-      type: "cta",
-      eyebrow: "Booking ease: November availability at Himalaya Villas is the highest of any month. Confirmation typically within hours....",
-      heading: "Booking ease: November availability at Himalaya Villas is the highest of any month. Confirmation typically within hours. No booking pressure.",
-      text: "Q: What should I pack for Bhurban in November? A: Heavy winter clothing is required: down jacket, thermal base layers, wool socks, waterproof boots. The dawn cedar walk in November (3-5 degrees C) requires the full winter kit. The fire pit at night is the outdoor gathering, but proper cold-weather c...",
-      buttonLabel: "WhatsApp: +92 304 567 9000 | wa.me/923045679000",
-      buttonHref: "https://wa.me/923045679000",
-      footnote: "Direct bookings receive priority response and best available rate.",
-    },
-    {
-      type: "related",
-      heading: "Related Pages — Internal Links",
-      items: [
-        { href: "/murree-peak-season-vs-off-season", label: "Peak vs off-season guide" },
-        { href: "/murree-in-october", label: "October guide" },
-        { href: "/murree-temperature-guide", label: "Temperature guide" },
-        { href: "/villas", label: "Browse November availability" },
-      ],
-    },
-  ],
-};
-
-// ============================================
-// ARTICLE 457 - Murree Bhurban September Guide — The Post-Monsoon Hidden Season
-// ============================================
-export const article457: Article = {
-  slug: "murree-in-september",
-  title: "Murree Bhurban September Guide — The Post-Monsoon Hidden Season",
-  metaDescription:
-    "URL /murree-in-september KW murree september, bhurban september, september murree bhurban, is september good for murree",
-  keywords:
-    "murree september, bhurban september, september murree bhurban, is september good for murree",
-  eyebrow: "Backlink Guest Post · Template C — Seasonal Guide | ~900w",
-  h1: "Murree Bhurban September Guide — The Post-Monsoon Hidden Season",
-  heroTagline:
-    "URL /murree-in-september KW murree september, bhurban september, september murree bhurban, is september good for murree",
-  heroImage: article457Hero,
-  blocks: [
-    {
-      type: "callout-qa",
-      question: "Is September a good time to visit Murree and Bhurban?",
-      answer: "September at Bhurban is one of the most underappreciated months — the monsoon has cleared, the forest is at its most intensely green, the air has the post-rain clarity that July-August lacked, and the crowds have thinned dramatically from the August peak. Temperature: 12-22 degrees C daytime, 9-14 degrees overnight. No rain most days (the monsoon ends late August). Booking is easy. The Chairlift and Pipeline Track are accessible without summer weekend queues. September is the transition month from peak summer to the finest autumn. September is the Bhurban month that experienced visitors move to after their first July-August visit. The conditions: the green of August without the monsoon rain ...",
-    },
-    {
-      type: "section",
-      eyebrow: "Murree and Bhurban in September",
-      heading: "Murree and Bhurban in September — The Post-Monsoon Hidden Season",
-      paragraphs: [
-        "❓ Is September a good time to visit Murree and Bhurban?",
-        "September at Bhurban is one of the most underappreciated months — the monsoon has cleared, the forest is at its most intensely green, the air has the post-rain clarity that July-August lacked, and the crowds have thinned dramatically from the August peak. Temperature: 12-22 degrees C daytime, 9-14 degrees overnight. No rain most days (the monsoon e...",
-        "September is the Bhurban month that experienced visitors move to after their first July-August visit. The conditions: the green of August without the monsoon rain pattern, the beginning of the atmospheric clarity that reaches its peak in October, and the return of pleasant outdoor temperatures without the cold of November.",
-      ],
-      image: {
-        src: article457Image1,
-        alt: "Murree and Bhurban in September — The Post-Monsoon Hidden Season",
-      },
-    },
-    {
-      type: "section",
-      eyebrow: "Rain pattern",
-      heading: "Rain pattern",
-      paragraphs: [
-        "Heavy 2-5pm most days",
-      ],
-    },
-    {
-      type: "section",
-      eyebrow: "Maximum monsoon green",
-      heading: "Maximum monsoon green",
-      paragraphs: [
-        "Monsoon green still present, beginning to shift",
-      ],
-      image: {
-        src: article457Image2,
-        alt: "Maximum monsoon green",
-      },
-    },
-    {
-      type: "cta",
-      eyebrow: "Booking lead time",
-      heading: "Booking lead time",
-      text: "4-6 weeks 1-2 weeks — easy availability",
-      buttonLabel: "WhatsApp: +92 304 567 9000 | wa.me/923045679000",
-      buttonHref: "https://wa.me/923045679000",
-      footnote: "Direct bookings receive priority response and best available rate.",
-    },
-    {
-      type: "section",
-      eyebrow: "Evening fire",
-      heading: "Evening fire",
-      paragraphs: [
-        "Optional (16-18 degrees C)",
-        "Approaching ideal (14-17 degrees C)",
-      ],
-      image: {
-        src: article457Image2,
-        alt: "Evening fire",
-      },
-    },
-    {
-      type: "related",
-      heading: "Related Pages — Internal Links",
-      items: [
-        { href: "/murree-in-october", label: "October guide" },
-        { href: "/murree-in-august", label: "August guide" },
-        { href: "/best-time-to-visit-murree", label: "Full seasonal guide" },
-        { href: "/villas", label: "Browse September availability" },
-      ],
-    },
-  ],
-};
-
-// ============================================
-// ARTICLE 458 - Bhurban Birdwatching Guide — The Himalayan Species of the Cedar Forest
-// ============================================
-export const article458: Article = {
-  slug: "bhurban-birdwatching-guide",
-  title: "Bhurban Birdwatching Guide — The Himalayan Species of the Cedar Forest",
-  metaDescription:
-    "URL /bhurban-birdwatching-guide KW bhurban birdwatching, bhurban birds, murree bhurban birds, galyat birdwatching, himalayan monal bhurban murree",
-  keywords:
-    "bhurban birdwatching, bhurban birds, murree bhurban birds, galyat birdwatching, himalayan monal bhurban murree",
-  eyebrow: "Backlink Guest Post · Nature | Cluster 3 | ~900w | ~900w",
-  h1: "Bhurban Birdwatching Guide — The Himalayan Species of the Cedar Forest",
-  heroTagline:
-    "URL /bhurban-birdwatching-guide KW bhurban birdwatching, bhurban birds, murree bhurban birds, galyat birdwatching, himalayan monal bhurban murree",
-  heroImage: article458Hero,
-  blocks: [
-    {
-      type: "callout-qa",
-      question: "What birds can you see at Bhurban Murree?",
-      answer: "Key species at Bhurban and the Galyat: Himalayan Monal (Lophophorus impejanus) — Pakistan's national bird, seen on upper forest edges; Koklass Pheasant (Pucrasia macrolopha) — heard regularly at dawn from the cedar estate, rarely seen; White-crested Kalij Pheasant — forest floor species, sometimes visible on the cedar estate paths; Yellow-billed Blue Magpie — common and conspicuous in the cedar canopy; Himalayan Nutcracker — seen in conifer forest; various Himalayan woodpecker species. Best birdwatching: the Himalaya Villas cedar estate paths at dawn (5:45am) and the Ayubia Pipeline Track in the morning. The Bhurban cedar forest is one of the most accessible sub-Himalayan birdwatching enviro...",
-    },
-    {
-      type: "paragraph",
-      text: "bhurban birdwatching, bhurban birds, murree bhurban birds, galyat birdwatching, himalayan monal bhurban murree",
-    },
-    {
-      type: "section",
-      eyebrow: "Bhurban Birdwatching Guide",
-      heading: "Bhurban Birdwatching Guide — The Himalayan Species of the Cedar Forest",
-      paragraphs: [
-        "❓ What birds can you see at Bhurban Murree?",
-      ],
-    },
-    {
-      type: "section",
-      eyebrow: "Key species at Bhurban and the Galyat: Himalayan Monal (Lophophorus impejanus)",
-      heading: "Key species at Bhurban and the Galyat: Himalayan Monal (Lophophorus impejanus) — Pakistan's national bird, seen on upper forest edges; Koklass Pheasant (Pucrasia macrolopha) — heard regularly at dawn ...",
-      paragraphs: [
-        "The Bhurban cedar forest is one of the most accessible sub-Himalayan birdwatching environments in Pakistan. The specific combination of mature deodar cedar, blue pine, and mixed deciduous species creates a layered habitat that supports a range of Himalayan forest species within 47km of Islamabad.",
-      ],
-      image: {
-        src: article458Image2,
-        alt: "Key species at Bhurban and the Galyat: Himalayan Monal (Lophophorus impejanus) — Pakistan's national...",
-      },
-    },
-    {
-      type: "section",
-      eyebrow: "Uncommon",
-      heading: "Uncommon — worth the search",
-      paragraphs: [
-        "Upper forest edges, Miranjani route",
-      ],
-    },
-    {
-      type: "section",
-      eyebrow: "Dawn and dusk",
-      heading: "Dawn and dusk",
-      paragraphs: [
-        "Pakistan's most spectacular bird; rainbow plumage male unforgettable",
-      ],
-      image: {
-        src: article458Image2,
-        alt: "Dawn and dusk",
-      },
-    },
-    {
-      type: "section",
-      eyebrow: "Morning",
-      heading: "Morning",
-      paragraphs: [
-        "Large, conspicuous, blue-and-yellow — the most reliably seen Bhurban forest bird",
-      ],
-    },
-    {
-      type: "section",
-      eyebrow: "Dense cedar understory",
-      heading: "Dense cedar understory",
-      paragraphs: [
-        "Dawn, forest edge",
-        "Ground-dweller; seen crossing paths early morning",
-      ],
-      image: {
-        src: article458Image2,
-        alt: "Dense cedar understory",
-      },
-    },
-    {
-      type: "section",
-      eyebrow: "Morning",
-      heading: "Morning",
-      paragraphs: [
-        "Large, white-spotted brown; conspicuous when present in conifers",
-      ],
-    },
-    {
-      type: "section",
-      eyebrow: "Morning",
-      heading: "Morning",
-      paragraphs: [
-        "Active tit species in mixed flocks; follows roving bird flocks",
-      ],
-      image: {
-        src: article458Image2,
-        alt: "Morning",
-      },
-    },
-    {
-      type: "related",
-      heading: "Related Pages — Internal Links",
-      items: [
-        { href: "/bhurban-pine-forest-guide", label: "Cedar forest ecology" },
-        { href: "/bhurban-hiking-trails", label: "Forest trails guide" },
-        { href: "/bhurban-photography-guide", label: "Wildlife photography" },
-        { href: "/villas", label: "Browse Himalaya Villas" },
-      ],
-    },
-  ],
-};
-
-// ============================================
-// ARTICLE 459 - Murree Spring Wildflowers and Rhododendron Guide
-// ============================================
-export const article459: Article = {
-  slug: "murree-spring-wildflowers",
-  title: "Murree Spring Wildflowers and Rhododendron Guide",
-  metaDescription:
-    "URL /murree-spring-wildflowers KW murree spring flowers, ayubia rhododendron, rhododendron murree bhurban, spring flowers bhurban murree, ayubia wildflowers",
-  keywords:
-    "murree spring flowers, ayubia rhododendron, rhododendron murree bhurban, spring flowers bhurban murree, ayubia wildflowers",
-  eyebrow: "Backlink Guest Post · Template C — Nature Guide | ~900w",
-  h1: "Murree Spring Wildflowers and Rhododendron Guide",
-  heroTagline:
-    "URL /murree-spring-wildflowers KW murree spring flowers, ayubia rhododendron, rhododendron murree bhurban, spring flowers bhurban murree, ayubia wildflowers",
-  heroImage: article459Hero,
-  blocks: [
-    {
-      type: "callout-qa",
-      question: "When do the rhododendrons bloom near Murree and Bhurban?",
-      answer: "The Himalayan Rhododendron (Rhododendron arboreum) blooms at Ayubia National Park and the Galyat forest approximately in April weeks 2-4 (approximately April 10-25), with the exact timing varying by 7-10 days each year. The bloom produces dense crimson-red flower clusters on tree-sized shrubs 4-5 metres tall along the Pipeline Track and Ayubia forest edges. This is the most spectacular single wildflower event accessible near Islamabad. From Himalaya Villas in Bhurban: Ayubia is 30km away, 40 minutes by car. The spring wildflower season at Bhurban and the Galyat (March through May) is one of the most underappreciated natural events near Islamabad. The combination of forest floor wildflowers o...",
-    },
-    {
-      type: "paragraph",
-      text: "murree spring flowers, ayubia rhododendron, rhododendron murree bhurban, spring flowers bhurban murree, ayubia wildflowers",
-    },
-    {
-      type: "section",
-      eyebrow: "Murree and Bhurban Spring Wildflowers",
-      heading: "Murree and Bhurban Spring Wildflowers — The Rhododendron and Beyond",
-      paragraphs: [
-        "❓ When do the rhododendrons bloom near Murree and Bhurban?",
-        "The Himalayan Rhododendron (Rhododendron arboreum) blooms at Ayubia National Park and the Galyat forest approximately in April weeks 2-4 (approximately April 10-25), with the exact timing varying by 7-10 days each year. The bloom produces dense crimson-red flower clusters on tree-sized shrubs 4-5 metres tall along the Pipeline Track and Ayubia fore...",
-        "The spring wildflower season at Bhurban and the Galyat (March through May) is one of the most underappreciated natural events near Islamabad. The combination of forest floor wildflowers on the cedar estate paths, the rhododendron bloom at Ayubia (the area's defining spring spectacle), and the wild cherry blossom visible from the Bhurban approach ro...",
-      ],
-    },
-    {
-      type: "section",
-      eyebrow: "Notes",
-      heading: "Notes",
-      paragraphs: [
-        "March weeks 3-4",
-        "Forest floor anemones (Anemone obtusiloba)",
-        "Cedar estate paths, Himalaya Villas gate walk",
-        "White flowers on the forest floor; earliest spring indicator",
-        "April week 1",
-        "Wild cherry blossom (Prunus cornuta)",
-      ],
-      image: {
-        src: article459Image2,
-        alt: "Notes",
-      },
-    },
-    {
-      type: "section",
-      eyebrow: "Fresh olive-green against permanent cedar dark green",
-      heading: "Fresh olive-green against permanent cedar dark green",
-      paragraphs: [
-        "May weeks 1-2",
-        "Woodland geraniums (Geranium wallichianum)",
-      ],
-    },
-    {
-      type: "section",
-      eyebrow: "Forest edges and path margins",
-      heading: "Forest edges and path margins",
-      paragraphs: [
-        "Purple-mauve; the final spring bloom before summer green",
-        "May weeks 2-3",
-        "Iris species (Iris hookeriana)",
-      ],
-      image: {
-        src: article459Image2,
-        alt: "Forest edges and path margins",
-      },
-    },
-    {
-      type: "section",
-      eyebrow: "Open grassy sections near Ghora Gali",
-      heading: "Open grassy sections near Ghora Gali",
-      paragraphs: [
-        "Blue-purple iris; notable wildflower find if located",
-      ],
-    },
-    {
-      type: "section",
-      eyebrow: "Best photography: 9-11am in April weeks 2-3, when the morning light is at the optimal angle for the ...",
-      heading: "Best photography: 9-11am in April weeks 2-3, when the morning light is at the optimal angle for the red flowers against the dark cedar trunks. The colour contrast (crimson-red flower against near-blac...",
-      paragraphs: [
-        "Book the Spring Cedar Estate — WhatsApp +92 304 567 9000",
-      ],
-      image: {
-        src: article459Image2,
-        alt: "Best photography: 9-11am in April weeks 2-3, when the morning light is at the optimal angle for the ...",
-      },
-    },
-    {
-      type: "related",
-      heading: "Related Pages — Internal Links",
-      items: [
-        { href: "/murree-in-april", label: "April guide" },
-        { href: "/ayubia-national-park-guide", label: "Ayubia guide" },
-        { href: "/bhurban-birdwatching-guide", label: "Spring birds" },
-        { href: "/villas", label: "Browse spring availability" },
-      ],
-    },
-  ],
-};
-
-// ============================================
-// ARTICLE 460 - Bhurban for Lahore Families — The 3.5 Hour Mountain Weekend
-// ============================================
-export const article460: Article = {
-  slug: "bhurban-for-lahore-families",
-  title: "Bhurban for Lahore Families — The 3.5 Hour Mountain Weekend",
-  metaDescription:
-    "URL /bhurban-for-lahore-families KW bhurban from lahore, lahore to bhurban, lahore bhurban family trip, bhurban for lahore families drive",
-  keywords:
-    "bhurban from lahore, lahore to bhurban, lahore bhurban family trip, bhurban for lahore families drive",
-  eyebrow: "Backlink Guest Post · Template C — Audience Geo | ~900w",
-  h1: "Bhurban for Lahore Families — The 3.5 Hour Mountain Weekend",
-  heroTagline:
-    "URL /bhurban-for-lahore-families KW bhurban from lahore, lahore to bhurban, lahore bhurban family trip, bhurban for lahore families drive",
-  heroImage: article460Hero,
-  blocks: [
-    {
-      type: "callout-qa",
-      question: "How far is Bhurban from Lahore and is it worth the drive?",
-      answer: "Lahore to Bhurban: 330km via the M-2 Motorway, approximately 3 hours 30 minutes in normal traffic. Worth the drive for a minimum 2-night stay. The journey: M-2 from Lahore to Islamabad interchange, then N-75 Murree Expressway to Bhurban junction, 7km approach road to Himalaya Villas. Optimal Lahore departure: Thursday at 9pm (road quiet, arrive midnight, wake to the cedar forest on Friday morning) or Friday at 4am (arrive 7:30am, full Friday at the estate). For Lahore's HNW families, Bhurban represents the closest premium mountain escape. Naran, Hunza, and Swat are all 7-10 hour drives from Lahore with demanding road conditions. Bhurban is 3.5 hours on Pakistan's best motorway infrastructure...",
-    },
-    {
-      type: "paragraph",
-      text: "bhurban from lahore, lahore to bhurban, lahore bhurban family trip, bhurban for lahore families drive",
-    },
-    {
-      type: "section",
-      eyebrow: "Lahore to Bhurban: 330km via the M-2 Motorway, approximately 3 hours 30 minutes in normal traffic. W...",
-      heading: "Lahore to Bhurban: 330km via the M-2 Motorway, approximately 3 hours 30 minutes in normal traffic. Worth the drive for a minimum 2-night stay. The journey: M-2 from Lahore to Islamabad interchange, th...",
-      paragraphs: [
-        "For Lahore's HNW families, Bhurban represents the closest premium mountain escape. Naran, Hunza, and Swat are all 7-10 hour drives from Lahore with demanding road conditions. Bhurban is 3.5 hours on Pakistan's best motorway infrastructure, with a private cedar estate waiting at the end.",
-        "The Lahore family that has done the Thai beach holiday, the Turkey cultural trip, or the Dubai leisure weekend discovers something in the Bhurban cedar estate that the international trip does not provide: the specific combination of Pakistani mountain, cedar forest, private outdoor space, and in-villa dining at 6,800 feet that is available only her...",
-      ],
-    },
-    {
-      type: "related",
-      heading: "Related Pages — Internal Links",
-      items: [
-        { href: "/bhurban-distance-from-major-cities", label: "Distance guide" },
-        { href: "/bhurban-for-faisalabad-families", label: "Faisalabad guide" },
-        { href: "/bhurban-murree-kids-guide", label: "Kids guide" },
-        { href: "/villas", label: "Browse family villas" },
-      ],
-    },
-  ],
-};
-
-// ============================================
-// ARTICLE 461 - Bhurban Monsoon Guide — Making the Most of Rainy Season
-// ============================================
-export const article461: Article = {
-  slug: "bhurban-monsoon-guide",
-  title: "Bhurban Monsoon Guide — Making the Most of Rainy Season",
-  metaDescription:
-    "URL /bhurban-monsoon-guide KW bhurban monsoon, bhurban in monsoon season, murree bhurban rain season, bhurban monsoon guide july august",
-  keywords:
-    "bhurban monsoon, bhurban in monsoon season, murree bhurban rain season, bhurban monsoon guide july august",
-  eyebrow: "Backlink Guest Post · WC | ~900w",
-  h1: "Bhurban Monsoon Guide — Making the Most of Rainy Season",
-  heroTagline:
-    "URL /bhurban-monsoon-guide KW bhurban monsoon, bhurban in monsoon season, murree bhurban rain season, bhurban monsoon guide july august",
-  heroImage: article461Hero,
-  blocks: [
-    {
-      type: "callout-qa",
-      question: "What is the monsoon season like at Bhurban Murree?",
-      answer: "The monsoon at Bhurban runs approximately late June through late August. Daily pattern: clear or partly cloudy mornings (5:30am-12pm), cloud building from midday, heavy rain 2-5pm most days, clearing by 6pm. The specific monsoon value: the rain transforms the cedar forest into its most saturated green; the post-rain atmosphere at 6pm has the specific smell of wet cedar bark and the crystal clarity of rain-washed mountain air; and the forest sounds in monsoon rain on the cedar canopy are among the most immersive natural soundscapes near Islamabad. The monsoon is not the enemy of the Bhurban experience — it is the producer of the experience's most distinctive elements. The guests who understan...",
-    },
-    {
-      type: "paragraph",
-      text: "bhurban monsoon, bhurban in monsoon season, murree bhurban rain season, bhurban monsoon guide july august",
-    },
-    {
-      type: "section",
-      eyebrow: "Bhurban Monsoon Guide",
-      heading: "Bhurban Monsoon Guide — Making the Most of Rainy Season",
-      paragraphs: [
-        "❓ What is the monsoon season like at Bhurban Murree?",
-        "The monsoon at Bhurban runs approximately late June through late August. Daily pattern: clear or partly cloudy mornings (5:30am-12pm), cloud building from midday, heavy rain 2-5pm most days, clearing by 6pm. The specific monsoon value: the rain transforms the cedar forest into its most saturated green; the post-rain atmosphere at 6pm has the specif...",
-        "The monsoon is not the enemy of the Bhurban experience — it is the producer of the experience's most distinctive elements. The guests who understand the monsoon pattern have a better Bhurban visit than those who are frustrated by the afternoon rain. This guide explains how to structure the monsoon day for maximum value.",
-      ],
-    },
-    {
-      type: "section",
-      eyebrow: "Activities: Chairlift at 9am opening, Ayubia (depart 8am for Pipeline Track)",
-      heading: "Activities: Chairlift at 9am opening, Ayubia (depart 8am for Pipeline Track)",
-      paragraphs: [
-        "12-1:30pm",
-      ],
-      image: {
-        src: article461Image2,
-        alt: "Activities: Chairlift at 9am opening, Ayubia (depart 8am for Pipeline Track)",
-      },
-    },
-    {
-      type: "related",
-      heading: "Related Pages — Internal Links",
-      items: [
-        { href: "/bhurban-summer-activities", label: "Summer activity guide" },
-        { href: "/murree-in-july", label: "July guide" },
-        { href: "/murree-in-august", label: "August guide" },
-        { href: "/villas", label: "Browse monsoon availability" },
-      ],
-    },
-  ],
-};
-
-// ============================================
-// ARTICLE 462 - Bhurban December Guide — The Winter Beginning
-// ============================================
-export const article462: Article = {
-  slug: "bhurban-december-guide",
-  title: "Bhurban December Guide — The Winter Beginning",
-  metaDescription:
-    "URL /bhurban-december-guide KW bhurban december, murree december, bhurban in december, december trip bhurban murree, bhurban murree december guide",
-  keywords:
-    "bhurban december, murree december, bhurban in december, december trip bhurban murree, bhurban murree december guide",
-  eyebrow: "Backlink Guest Post · Template C — Seasonal Guide | ~900w",
-  h1: "Bhurban December Guide — The Winter Beginning",
-  heroTagline:
-    "URL /bhurban-december-guide KW bhurban december, murree december, bhurban in december, december trip bhurban murree, bhurban murree december guide",
-  heroImage: article462Hero,
-  blocks: [
-    {
-      type: "callout-qa",
-      question: "What is Bhurban like in December?",
-      answer: "December at Bhurban has two distinct phases: December 1-20 (the quiet beginning of winter — cool, available, fire pit season at its most peaceful) and December 21-31 (the holiday spike — high demand, advance booking essential, the cedar estate in full winter character). Temperature: 0-10 degrees C daytime, -2 to 4 degrees overnight. Snowfall possible from mid-December. The full-winter experience with fire pit, heavy clothing, and the cedar forest in bare-branch and possible snowfall: this is what December delivers. December at Bhurban is the month of the sharpest contrast: the quietest and most available period (December 1-20) immediately followed by the most booked and most competitive peri...",
-    },
-    {
-      type: "paragraph",
-      text: "bhurban december, murree december, bhurban in december, december trip bhurban murree, bhurban murree december guide",
-    },
-    {
-      type: "section",
-      eyebrow: "Bhurban and Murree in December",
-      heading: "Bhurban and Murree in December — The Winter Beginning Guide",
-      paragraphs: [
-        "❓ What is Bhurban like in December?",
-      ],
-    },
-    {
-      type: "section",
-      eyebrow: "December at Bhurban",
-      heading: "December at Bhurban — The Two Phases",
-      paragraphs: [
-        "December 1-20: The Quiet Winter Beginning",
-      ],
-      image: {
-        src: article462Image2,
-        alt: "December at Bhurban — The Two Phases",
-      },
-    },
-    {
-      type: "section",
-      eyebrow: "December Snowfall",
-      heading: "December Snowfall — Probability",
-      paragraphs: [
-        "December 1-15: 10-15% probability of measurable snowfall — possible but uncommon",
-        "December 16-24: 20-30% probability — snowfall becoming more likely as the month progresses",
-        "December 25-31: 30-40% probability — the late December window where snowfall becomes genuinely likely in some years",
-        "Book December at the Cedar Estate — WhatsApp +92 304 567 9000",
-      ],
-    },
-    {
-      type: "related",
-      heading: "Related Pages — Internal Links",
-      items: [
-        { href: "/murree-in-january", label: "January guide" },
-        { href: "/murree-snowfall-guide", label: "Snowfall guide" },
-        { href: "/murree-temperature-guide", label: "Temperature guide" },
-        { href: "/villas", label: "Browse December availability" },
-      ],
-    },
-  ],
-};
-
-// ============================================
-// ARTICLE 463 - Bhurban Ayubia National Park Complete Guide
-// ============================================
-export const article463: Article = {
-  slug: "ayubia-national-park-guide",
-  title: "Bhurban Ayubia National Park Complete Guide",
-  metaDescription:
-    "URL /ayubia-national-park-guide KW ayubia national park, ayubia pipeline track, ayubia bhurban, ayubia murree guide, bhurban to ayubia",
-  keywords:
-    "ayubia national park, ayubia pipeline track, ayubia bhurban, ayubia murree guide, bhurban to ayubia",
-  eyebrow: "Backlink Guest Post · Template B — Activity Guide | ~1,000w",
-  h1: "Bhurban Ayubia National Park Complete Guide",
-  heroTagline:
-    "URL /ayubia-national-park-guide KW ayubia national park, ayubia pipeline track, ayubia bhurban, ayubia murree guide, bhurban to ayubia",
-  heroImage: article463Hero,
-  blocks: [
-    {
-      type: "callout-qa",
-      question: "How do I visit Ayubia National Park from Bhurban?",
-      answer: "Ayubia National Park from Bhurban: 30km, 40-45 minutes by car via Ghora Gali and Changla Gali on the Galyat road. The park's main attraction is the Pipeline Track — an 8km walking trail from Ayubia (7,500 feet) to Nathia Gali (8,000 feet) through mature cedar-oak forest. Best visited as a full-day trip from Himalaya Villas: depart 8am, arrive 8:45am, walk 9am-1pm (Ayubia to Nathia Gali), taxi return to Ayubia (15 minutes), drive back to Bhurban. Entry fee: confirm current rate at the park gate. Ayubia National Park is the most rewarding full-day excursion from the Himalaya Villas cedar estate in Bhurban. The 8km Pipeline Track through the protected cedar-oak forest of Ayubia is Pakistan's mo...",
-    },
-    {
-      type: "section",
-      eyebrow: "Ayubia National Park",
-      heading: "Ayubia National Park — The Complete Guide from Bhurban",
-      paragraphs: [
-        "❓ How do I visit Ayubia National Park from Bhurban?",
-      ],
-      image: {
-        src: article463Image1,
-        alt: "Ayubia National Park — The Complete Guide from Bhurban",
-      },
-    },
-    {
-      type: "section",
-      eyebrow: "Ayubia National Park from Bhurban: 30km, 40-45 minutes by car via Ghora Gali and Changla Gali on the...",
-      heading: "Ayubia National Park from Bhurban: 30km, 40-45 minutes by car via Ghora Gali and Changla Gali on the Galyat road. The park's main attraction is the Pipeline Track — an 8km walking trail from Ayubia (7...",
-      paragraphs: [
-        "Ayubia National Park is the most rewarding full-day excursion from the Himalaya Villas cedar estate in Bhurban. The 8km Pipeline Track through the protected cedar-oak forest of Ayubia is Pakistan's most-walked forest trail — and justifiably so.",
-      ],
-    },
-    {
-      type: "section",
-      eyebrow: "First viewpoint to mid-trail shelter",
-      heading: "First viewpoint to mid-trail shelter",
-      paragraphs: [
-        "2.5km",
-      ],
-      image: {
-        src: article463Image2,
-        alt: "First viewpoint to mid-trail shelter",
-      },
-    },
-    {
-      type: "section",
-      eyebrow: "Relatively flat forest trail",
-      heading: "Relatively flat forest trail",
-      paragraphs: [
-        "The densest rhododendron sections (April bloom). Oak canopy becomes dominant.",
-      ],
-    },
-    {
-      type: "section",
-      eyebrow: "Mid-trail shelter to Changla Gali junction",
-      heading: "Mid-trail shelter to Changla Gali junction",
-      paragraphs: [
-        "2km",
-      ],
-      image: {
-        src: article463Image2,
-        alt: "Mid-trail shelter to Changla Gali junction",
-      },
-    },
-    {
-      type: "section",
-      eyebrow: "Undulating forest path",
-      heading: "Undulating forest path",
-      paragraphs: [
-        "Highest point of the trail at approximately 8,200 feet; excellent forest views",
-      ],
-    },
-    {
-      type: "section",
-      eyebrow: "Gentle descent into Nathia Gali",
-      heading: "Gentle descent into Nathia Gali",
-      paragraphs: [
-        "The path descends through pine forest into the Nathia Gali settlement. End at the main Nathia Gali road.",
-      ],
-      image: {
-        src: article463Image2,
-        alt: "Gentle descent into Nathia Gali",
-      },
-    },
-    {
-      type: "section",
-      eyebrow: "Best Season for the Pipeline Track",
-      heading: "Best Season for the Pipeline Track",
-      paragraphs: [
-        "October week 3 (best): the amber deciduous canopy over the trail. The pipeline track in peak autumn colour is the most visually dramatic walking experience accessible near Islamabad.",
-        "April weeks 2-4 (second best): the rhododendron bloom — crimson-red tree-shrubs along the trail in the specific 10-day window when they peak.",
-      ],
-    },
-    {
-      type: "cta",
-      eyebrow: "Return transport: Taxi from Nathia Gali to Ayubia start (15 minutes, PKR 300-500). Agree the price before boarding. Alte...",
-      heading: "Return transport: Taxi from Nathia Gali to Ayubia start (15 minutes, PKR 300-500). Agree the price before boarding. Alternatively, arrange a pick-up at Nathia Gali via WhatsApp with the Himalaya Villa...",
-      text: "",
-      buttonLabel: "WhatsApp: +92 304 567 9000 | wa.me/923045679000",
-      buttonHref: "https://wa.me/923045679000",
-      footnote: "Direct bookings receive priority response and best available rate.",
-    },
-    {
-      type: "section",
-      eyebrow: "Fitness requirement: The Pipeline Track is appropriate for all moderately fit adults and children 8+...",
-      heading: "Fitness requirement: The Pipeline Track is appropriate for all moderately fit adults and children 8+. The gradient is gentle throughout — it is classified as a walking trail, not a hike. Appropriate f...",
-      paragraphs: [
-        "Book Bhurban as Your Ayubia Base — WhatsApp +92 304 567 9000",
-      ],
-    },
-    {
-      type: "related",
-      heading: "Related Pages — Internal Links",
-      items: [
-        { href: "/bhurban-hiking-trails", label: "Full hiking guide" },
-        { href: "/murree-spring-wildflowers", label: "Rhododendron guide" },
-        { href: "/bhurban-october-activities", label: "October Pipeline Track timing" },
-        { href: "/villas", label: "Browse Himalaya Villas" },
-      ],
-    },
-  ],
-};
-
-// ============================================
-// ARTICLE 464 - Bhurban Villa Pricing Guide — What Everything Actually Costs
-// ============================================
-export const article464: Article = {
-  slug: "bhurban-villa-pricing-guide",
-  title: "Bhurban Villa Pricing Guide — What Everything Actually Costs",
-  metaDescription:
-    "URL /bhurban-villa-pricing-guide KW bhurban villa prices, himalaya villas rates, bhurban villa rate, himalaya villas bhurban price, bhurban villa cost",
-  keywords:
-    "bhurban villa prices, himalaya villas rates, bhurban villa rate, himalaya villas bhurban price, bhurban villa cost",
-  eyebrow: "Backlink Guest Post · WC | ~900w",
-  h1: "Bhurban Villa Pricing Guide — What Everything Actually Costs",
-  heroTagline:
-    "URL /bhurban-villa-pricing-guide KW bhurban villa prices, himalaya villas rates, bhurban villa rate, himalaya villas bhurban price, bhurban villa cost",
-  heroImage: article464Hero,
-  blocks: [
-    {
-      type: "callout-qa",
-      question: "What are the prices for villas at Himalaya Villas Bhurban?",
-      answer: "Himalaya Villas & Resorts 2026 villa rates: Serene Valley Cabin (1-4 guests) PKR 39,000-45,000/villa/night; Sunset Suite (2-4 guests) PKR 50,000-55,000/villa/night; Himalayan Penthouse (2-4 guests) PKR 60,000-65,000/villa/night; Garden Villa Retreat (4-8 guests) PKR 55,000-60,000/villa/night; Alpine Family Lodge (8-12 guests) PKR 60,000-70,000/villa/night; Presidential Suite (2-4 guests) PKR 65,000-70,000/villa/night. All rates are per villa per night. Confirm current rates via WhatsApp +92 304 567 9000. The Himalaya Villas pricing structure is simple: one rate per villa per night, regardless of the number of guests within the villa's stated capacity. The rate is for the villa — a complete p...",
-    },
-    {
-      type: "paragraph",
-      text: "bhurban villa prices, himalaya villas rates, bhurban villa rate, himalaya villas bhurban price, bhurban villa cost",
-    },
-    {
-      type: "section",
-      eyebrow: "Bhurban Villa Pricing Guide",
-      heading: "Bhurban Villa Pricing Guide — What the Himalaya Villas Estate Actually Costs",
-      paragraphs: [
-        "❓ What are the prices for villas at Himalaya Villas Bhurban?",
-        "Himalaya Villas & Resorts 2026 villa rates: Serene Valley Cabin (1-4 guests) PKR 39,000-45,000/villa/night; Sunset Suite (2-4 guests) PKR 50,000-55,000/villa/night; Himalayan Penthouse (2-4 guests) PKR 60,000-65,000/villa/night; Garden Villa Retreat (4-8 guests) PKR 55,000-60,000/villa/night; Alpine Family Lodge (8-12 guests) PKR 60,000-70,000/vill...",
-      ],
-    },
-    {
-      type: "section",
-      eyebrow: "Standout Feature",
-      heading: "Standout Feature",
-      paragraphs: [
-        "Per Person (6 guests)",
-      ],
-      image: {
-        src: article464Image2,
-        alt: "Standout Feature",
-      },
-    },
-    {
-      type: "section",
-      eyebrow: "Serene Valley Cabin",
-      heading: "Serene Valley Cabin",
-      paragraphs: [
-        "1-4 guests",
-        "PKR 39,000-45,000",
-        "Ground floor, full cedar forest windows",
-        "PKR 6,500-7,500 (4 guests)",
-      ],
-    },
-    {
-      type: "section",
-      eyebrow: "Sunset Suite",
-      heading: "Sunset Suite",
-      paragraphs: [
-        "2-4 guests",
-        "PKR 50,000-55,000",
-      ],
-      image: {
-        src: article464Image2,
-        alt: "Sunset Suite",
-      },
-    },
-    {
-      type: "section",
-      eyebrow: "West-facing sunset mountain views",
-      heading: "West-facing sunset mountain views",
-      paragraphs: [
-        "PKR 12,500-13,750 (4 guests)",
-      ],
-    },
-    {
-      type: "section",
-      eyebrow: "Himalayan Penthouse",
-      heading: "Himalayan Penthouse",
-      paragraphs: [
-        "2-4 guests",
-        "PKR 60,000-65,000",
-        "Panoramic 360-degree balcony",
-        "PKR 15,000-16,250 (4 guests)",
-      ],
-      image: {
-        src: article464Image2,
-        alt: "Himalayan Penthouse",
-      },
-    },
-    {
-      type: "section",
-      eyebrow: "Garden Villa Retreat",
-      heading: "Garden Villa Retreat",
-      paragraphs: [
-        "4-8 guests",
-        "PKR 55,000-60,000",
-      ],
-    },
-    {
-      type: "section",
-      eyebrow: "Private enclosed garden",
-      heading: "Private enclosed garden — best for families",
-      paragraphs: [
-        "PKR 6,875-7,500 (8 guests)",
-      ],
-      image: {
-        src: article464Image2,
-        alt: "Private enclosed garden — best for families",
-      },
-    },
-    {
-      type: "section",
-      eyebrow: "Alpine Family Lodge",
-      heading: "Alpine Family Lodge",
-      paragraphs: [
-        "8-12 guests",
-        "PKR 60,000-70,000",
-        "Largest indoor space, extended families",
-        "PKR 5,000-5,833 (12 guests)",
-      ],
-    },
-    {
-      type: "section",
-      eyebrow: "Presidential Suite",
-      heading: "Presidential Suite",
-      paragraphs: [
-        "2-4 guests",
-        "PKR 65,000-70,000",
-      ],
-      image: {
-        src: article464Image2,
-        alt: "Presidential Suite",
-      },
-    },
-    {
-      type: "section",
-      eyebrow: "Private outdoor jacuzzi terrace",
-      heading: "Private outdoor jacuzzi terrace",
-      paragraphs: [
-        "PKR 16,250-17,500 (4 guests)",
-      ],
-    },
-    {
-      type: "related",
-      heading: "Related Pages — Internal Links",
-      items: [
-        { href: "/booking-villa-bhurban-faq", label: "Full booking guide" },
-        { href: "/bhurban-accommodation-guide", label: "Accommodation comparison" },
-        { href: "/villas", label: "Browse all villas" },
-        { href: "/bhurban-private-estate-vs-pc-hotel", label: "Value comparison" },
-      ],
-    },
-  ],
-};
-
-// ============================================
-// ARTICLE 465 - Bhurban Honeymoon Package — The Cedar Estate Romance Guide
-// ============================================
-export const article465: Article = {
-  slug: "honeymoon-package-bhurban-murree",
-  title: "Bhurban Honeymoon Package — The Cedar Estate Romance Guide",
-  metaDescription:
-    "URL /honeymoon-package-bhurban-murree KW honeymoon bhurban, bhurban honeymoon package, honeymoon package bhurban murree, romantic getaway bhurban murree",
-  keywords:
-    "honeymoon bhurban, bhurban honeymoon package, honeymoon package bhurban murree, romantic getaway bhurban murree",
-  eyebrow: "Backlink Guest Post · Template C — Commercial Romance | ~900w",
-  h1: "Bhurban Honeymoon Package — The Cedar Estate Romance Guide",
-  heroTagline:
-    "URL /honeymoon-package-bhurban-murree KW honeymoon bhurban, bhurban honeymoon package, honeymoon package bhurban murree, romantic getaway bhurban murree",
-  heroImage: article465Hero,
-  blocks: [
-    {
-      type: "callout-qa",
-      question: "Is there a honeymoon package at Himalaya Villas Bhurban?",
-      answer: "Yes. The Presidential Suite at Himalaya Villas & Resorts (PKR 65,000-70,000/villa/night) is the honeymoon accommodation in Bhurban — private outdoor jacuzzi terrace, 270-degree mountain view, in-villa dining, pre-arrival romance setup (flowers, candles) coordinated via WhatsApp. The Himalaya Villas team pre-arranges all honeymoon elements before arrival. The 'package' is the Presidential Suite plus the specific elements (cedar garden dinner, fire pit, dawn cedar walk) that make the honeymoon stay distinctive. WhatsApp +92 304 567 9000 for honeymoon planning. The Bhurban honeymoon is the specific alternative to the international honeymoon that Pakistani newlyweds have historically had to choo...",
-    },
-    {
-      type: "paragraph",
-      text: "honeymoon bhurban, bhurban honeymoon package, honeymoon package bhurban murree, romantic getaway bhurban murree",
-    },
-    {
-      type: "section",
-      eyebrow: "Bhurban Honeymoon Package",
-      heading: "Bhurban Honeymoon Package — The Cedar Estate Romance",
-      paragraphs: [
-        "❓ Is there a honeymoon package at Himalaya Villas Bhurban?",
-        "Yes. The Presidential Suite at Himalaya Villas & Resorts (PKR 65,000-70,000/villa/night) is the honeymoon accommodation in Bhurban — private outdoor jacuzzi terrace, 270-degree mountain view, in-villa dining, pre-arrival romance setup (flowers, candles) coordinated via WhatsApp. The Himalaya Villas team pre-arranges all honeymoon elements before ar...",
-      ],
-    },
-    {
-      type: "cta",
-      eyebrow: "Pre-arrival: flower arrangement in the villa — specify your preference (roses, wildflowers, specific colours) via WhatsA...",
-      heading: "Pre-arrival: flower arrangement in the villa — specify your preference (roses, wildflowers, specific colours) via WhatsApp 72 hours before arrival.",
-      text: "",
-      buttonLabel: "WhatsApp: +92 304 567 9000 | wa.me/923045679000",
-      buttonHref: "https://wa.me/923045679000",
-      footnote: "Direct bookings receive priority response and best available rate.",
-    },
-    {
-      type: "section",
-      eyebrow: "Presidential Suite",
-      heading: "Presidential Suite",
-      paragraphs: [
-        "PKR 65,000-70,000",
-      ],
-    },
-    {
-      type: "section",
-      eyebrow: "Private outdoor jacuzzi terrace",
-      heading: "Private outdoor jacuzzi terrace",
-      paragraphs: [
-        "You want the jacuzzi as the centrepiece — the estate's most romantic single feature",
-      ],
-      image: {
-        src: article465Image2,
-        alt: "Private outdoor jacuzzi terrace",
-      },
-    },
-    {
-      type: "section",
-      eyebrow: "Himalayan Penthouse",
-      heading: "Himalayan Penthouse",
-      paragraphs: [
-        "PKR 60,000-65,000",
-        "360-degree panoramic balcony",
-      ],
-    },
-    {
-      type: "section",
-      eyebrow: "Serene Valley Cabin",
-      heading: "Serene Valley Cabin",
-      paragraphs: [
-        "PKR 39,000-45,000",
-      ],
-      image: {
-        src: article465Image2,
-        alt: "Serene Valley Cabin",
-      },
-    },
-    {
-      type: "related",
-      heading: "Related Pages — Internal Links",
-      items: [
-        { href: "/villa-with-jacuzzi-bhurban", label: "Presidential Suite" },
-        { href: "/anniversary-villa-bhurban", label: "Anniversary guide" },
-        { href: "/murree-in-january", label: "January honeymoon guide" },
-        { href: "/villas", label: "Browse honeymoon villas" },
-      ],
-    },
-  ],
-};
-
-// ============================================
-// ARTICLE 476 - Himalaya Villas vs Nathia Gali Resort — The Direct Comparison
-// ============================================
-export const article476: Article = {
-  slug: "himalaya-villas-vs-nathia-gali",
-  title: "Himalaya Villas vs Nathia Gali Resort — The Direct Comparison",
-  metaDescription:
-    "URL /himalaya-villas-vs-nathia-gali KW himalaya villas vs nathia gali, nathia gali resort vs bhurban villa, nathia gali accommodation vs himalaya villas",
-  keywords:
-    "himalaya villas vs nathia gali, nathia gali resort vs bhurban villa, nathia gali accommodation vs himalaya villas",
-  eyebrow: "Backlink Guest Post · Template A — Direct Comparison | ~900w",
-  h1: "Himalaya Villas vs Nathia Gali Resort — The Direct Comparison",
-  heroTagline:
-    "URL /himalaya-villas-vs-nathia-gali KW himalaya villas vs nathia gali, nathia gali resort vs bhurban villa, nathia gali accommodation vs himalaya villas",
-  heroImage: article476Hero,
-  blocks: [
-    {
-      type: "callout-qa",
-      question: "Is Himalaya Villas Bhurban better than Nathia Gali for accommodation?",
-      answer: "For premium accommodation in the Galyat: Himalaya Villas in Bhurban wins unambiguously. Nathia Gali's accommodation market is guesthouses and basic hotels only — no private villa estate exists in Nathia Gali. Himalaya Villas (Bhurban, 30km from Nathia Gali, 45 minutes): private villa estate, 12 exclusive-use villas, PKR 39,000-70,000/villa/night, in-villa dining, cedar garden, private outdoor space. Nathia Gali: guesthouses and small hotels, PKR 5,000-20,000/night. These are not competing at the same tier. The Nathia Gali accommodation search reflects strong interest in the Galyat's highest permanent settlement (8,000 feet) — but the market currently has no premium private estate option. Him...",
-    },
-    {
-      type: "paragraph",
-      text: "himalaya villas vs nathia gali, nathia gali resort vs bhurban villa, nathia gali accommodation vs himalaya villas",
-    },
-    {
-      type: "section",
-      eyebrow: "Himalaya Villas Bhurban vs Nathia Gali Accommodation",
-      heading: "Himalaya Villas Bhurban vs Nathia Gali Accommodation — The Direct Comparison",
-      paragraphs: [
-        "❓ Is Himalaya Villas Bhurban better than Nathia Gali for accommodation?",
-      ],
-    },
-    {
-      type: "section",
-      eyebrow: "For premium accommodation in the Galyat: Himalaya Villas in Bhurban wins unambiguously. Nathia Gali'...",
-      heading: "For premium accommodation in the Galyat: Himalaya Villas in Bhurban wins unambiguously. Nathia Gali's accommodation market is guesthouses and basic hotels only — no private villa estate exists in Nath...",
-      paragraphs: [
-        "The Nathia Gali accommodation search reflects strong interest in the Galyat's highest permanent settlement (8,000 feet) — but the market currently has no premium private estate option. Himalaya Villas in Bhurban is the premium Galyat accommodation, with Nathia Gali available as a 45-minute day trip.",
-      ],
-      image: {
-        src: article476Image2,
-        alt: "For premium accommodation in the Galyat: Himalaya Villas in Bhurban wins unambiguously. Nathia Gali'...",
-      },
-    },
-    {
-      type: "section",
-      eyebrow: "Factor",
-      heading: "Factor",
-      paragraphs: [
-        "Himalaya Villas, Bhurban",
-        "Nathia Gali Guesthouses/Hotels",
-      ],
-    },
-    {
-      type: "section",
-      eyebrow: "Elevation",
-      heading: "Elevation",
-      paragraphs: [
-        "6,800 feet",
-        "8,000 feet",
-      ],
-      image: {
-        src: article476Image2,
-        alt: "Elevation",
-      },
-    },
-    {
-      type: "section",
-      eyebrow: "Rate",
-      heading: "Rate",
-      paragraphs: [
-        "PKR 39,000-70,000/villa/night",
-        "PKR 5,000-20,000/night",
-      ],
-    },
-    {
-      type: "section",
-      eyebrow: "Self-catering or guesthouse meals",
-      heading: "Self-catering or guesthouse meals",
-      paragraphs: [
-        "Family of 8",
-      ],
-      image: {
-        src: article476Image2,
-        alt: "Self-catering or guesthouse meals",
-      },
-    },
-    {
-      type: "section",
-      eyebrow: "Pipeline Track access",
-      heading: "Pipeline Track access",
-      paragraphs: [
-        "30km (40 min drive to Ayubia)",
-        "30km (the same drive)",
-      ],
-    },
-    {
-      type: "section",
-      eyebrow: "Nathia Gali itself",
-      heading: "Nathia Gali itself",
-      paragraphs: [
-        "30km day trip",
-      ],
-      image: {
-        src: article476Image2,
-        alt: "Nathia Gali itself",
-      },
-    },
-    {
-      type: "section",
-      eyebrow: "You are in Nathia Gali",
-      heading: "You are in Nathia Gali",
-      paragraphs: [
-        "The Best Approach — Bhurban Estate + Nathia Gali Day Trip",
-        "The most intelligent approach for visitors who want both the premium cedar estate and Nathia Gali's specific character: book Himalaya Villas in Bhurban for 2-3 nights, visit Nathia Gali as a day trip (30km, 45 minutes). You get the private villa estate with exclusive outdoor space AND the Nathia Gali experience (Governor's House grounds, the Galyat...",
-        "Book the Galyat Premium Estate — WhatsApp +92 304 567 9000",
-      ],
-    },
-    {
-      type: "related",
-      heading: "Related Pages — Internal Links",
-      items: [
-        { href: "/nathia-gali-resort-guide", label: "Nathia Gali guide" },
-        { href: "/bhurban-galyat-comparison", label: "Full Galyat comparison" },
-        { href: "/bhurban-accommodation-guide", label: "Full accommodation guide" },
-        { href: "/villas", label: "Browse Himalaya Villas" },
-      ],
-    },
-  ],
-};
-
-// ============================================
-// ARTICLE 477 - Bhurban for Multan Visitors — The Mountain's Furthest Travellers
-// ============================================
-export const article477: Article = {
-  slug: "bhurban-from-multan",
-  title: "Bhurban for Multan Visitors — The Mountain's Furthest Travellers",
-  metaDescription:
-    "URL /bhurban-from-multan KW bhurban from multan, multan to bhurban, bhurban multan distance, bhurban trip from multan",
-  keywords:
-    "bhurban from multan, multan to bhurban, bhurban multan distance, bhurban trip from multan",
-  eyebrow: "Backlink Guest Post · Template C — Audience Geo | ~800w",
-  h1: "Bhurban for Multan Visitors — The Mountain's Furthest Travellers",
-  heroTagline:
-    "URL /bhurban-from-multan KW bhurban from multan, multan to bhurban, bhurban multan distance, bhurban trip from multan",
-  heroImage: article477Hero,
-  blocks: [
-    {
-      type: "callout-qa",
-      question: "How far is Multan from Bhurban and is it worth the trip?",
-      answer: "Multan to Bhurban: approximately 430km via the M-4 Motorway to M-3, then M-2 Motorway to Islamabad, then N-75 Expressway to Bhurban. Total drive: approximately 4 hours 45 minutes. For Multan visitors, the minimum recommended stay is 3 nights to justify the journey. The temperature escape from Multan's 48-50 degrees C summer to Bhurban's 20 degrees C is the most dramatic domestic temperature escape available to any Pakistani city. Worth the trip: unambiguously yes for a 3+ night stay. Multan — Pakistan's hottest major city, with summer temperatures reaching 48-52 degrees C — has the most compelling case for the Bhurban mountain escape of any major Pakistani city. The 28-degree temperature red...",
-    },
-    {
-      type: "section",
-      eyebrow: "Multan to Bhurban: approximately 430km via the M-4 Motorway to M-3, then M-2 Motorway to Islamabad, ...",
-      heading: "Multan to Bhurban: approximately 430km via the M-4 Motorway to M-3, then M-2 Motorway to Islamabad, then N-75 Expressway to Bhurban. Total drive: approximately 4 hours 45 minutes. For Multan visitors,...",
-      paragraphs: [
-        "Multan — Pakistan's hottest major city, with summer temperatures reaching 48-52 degrees C — has the most compelling case for the Bhurban mountain escape of any major Pakistani city. The 28-degree temperature reduction from Multan's summer peak to Bhurban's cedar estate is the most dramatic domestic temperature escape accessible in Pakistan.",
-      ],
-      image: {
-        src: article477Image1,
-        alt: "Multan to Bhurban: approximately 430km via the M-4 Motorway to M-3, then M-2 Motorway to Islamabad, ...",
-      },
-    },
-    {
-      type: "section",
-      eyebrow: "Multan",
-      heading: "Multan",
-      paragraphs: [
-        "45-50 degrees C",
-        "18-24 degrees C",
-        "25-28 degree escape — the most dramatic in Pakistan",
-      ],
-    },
-    {
-      type: "section",
-      eyebrow: "Islamabad",
-      heading: "Islamabad",
-      paragraphs: [
-        "35-42 degrees C",
-        "18-24 degrees C",
-        "17-20 degree escape",
-      ],
-      image: {
-        src: article477Image2,
-        alt: "Islamabad",
-      },
-    },
-    {
-      type: "section",
-      eyebrow: "Lahore",
-      heading: "Lahore",
-      paragraphs: [
-        "38-44 degrees C",
-        "18-24 degrees C",
-        "20-22 degree escape",
-      ],
-    },
-    {
-      type: "section",
-      eyebrow: "Karachi",
-      heading: "Karachi",
-      paragraphs: [
-        "32-38 degrees C",
-        "18-24 degrees C",
-        "14-16 degree escape",
-        "Multan's summer is the most extreme of Pakistan's major cities. The Bhurban cedar estate at 20 degrees C is not just a break — it is a physiological reset that no other domestic destination within 5 hours of Multan can provide.",
-        "Book the Multan Escape — WhatsApp +92 304 567 9000",
-      ],
-      image: {
-        src: article477Image2,
-        alt: "Karachi",
-      },
-    },
-    {
-      type: "related",
-      heading: "Related Pages — Internal Links",
-      items: [
-        { href: "/bhurban-distance-from-major-cities", label: "Distance guide" },
-        { href: "/bhurban-summer-activities", label: "Summer activities" },
-        { href: "/bhurban-accommodation-guide", label: "Accommodation guide" },
-        { href: "/villas", label: "Browse family villas" },
-      ],
-    },
-  ],
-};
-
-// ============================================
-// ARTICLE 478 - Murree Resort Guide — The Complete 2026 Overview
-// ============================================
-export const article478: Article = {
-  slug: "murree-resort-guide",
-  title: "Murree Resort Guide — The Complete 2026 Overview",
-  metaDescription:
-    "URL /murree-resort-guide KW murree resort, resorts in murree pakistan, murree resort 2026, best murree resort, murree hills resort",
-  keywords:
-    "murree resort, resorts in murree pakistan, murree resort 2026, best murree resort, murree hills resort",
-  eyebrow: "Backlink Guest Post · WC | ~900w",
-  h1: "Murree Resort Guide — The Complete 2026 Overview",
-  heroTagline:
-    "URL /murree-resort-guide KW murree resort, resorts in murree pakistan, murree resort 2026, best murree resort, murree hills resort",
-  heroImage: article478Hero,
-  blocks: [
-    {
-      type: "callout-qa",
-      question: "What are the best resorts in Murree Pakistan?",
-      answer: "The Murree hills 'resort' market in 2026: Mövenpick Hotel Murree (Accor brand, international resort positioning), Ramada by Wyndham Murree (resort-category hotel), Shangrila Resort Murree (domestic brand with resort positioning), PC Hotel Bhurban (Marriott, 5-star resort standards), and Himalaya Villas & Resorts Bhurban (private villa estate — the only resort-category private estate in the area). 'Resort' in the Murree context typically means a hotel with multiple amenities (pool, spa, multiple restaurants) rather than the international resort definition. The word 'resort' in the Pakistani domestic market covers a range of accommodation from large chain hotels with recreational facilities to...",
-    },
-    {
-      type: "paragraph",
-      text: "murree resort, resorts in murree pakistan, murree resort 2026, best murree resort, murree hills resort",
-    },
-    {
-      type: "section",
-      eyebrow: "Location",
-      heading: "Location",
-      paragraphs: [
-        "Himalaya Villas & Resorts",
-      ],
-    },
-    {
-      type: "section",
-      eyebrow: "Bhurban ridge",
-      heading: "Bhurban ridge",
-      paragraphs: [
-        "Mövenpick Hotel Murree",
-      ],
-      image: {
-        src: article478Image2,
-        alt: "Bhurban ridge",
-      },
-    },
-    {
-      type: "section",
-      eyebrow: "International hotel resort",
-      heading: "International hotel resort",
-      paragraphs: [
-        "Accor brand, resort positioning",
-        "Confirm at Mövenpick.com",
-      ],
-    },
-    {
-      type: "section",
-      eyebrow: "Hotel resort",
-      heading: "Hotel resort",
-      paragraphs: [
-        "Wyndham positioning, Mall Road area",
-        "Confirm at Wyndham.com",
-      ],
-      image: {
-        src: article478Image2,
-        alt: "Hotel resort",
-      },
-    },
-    {
-      type: "section",
-      eyebrow: "Murree area",
-      heading: "Murree area",
-      paragraphs: [
-        "The 'Resort' That Is Not a Hotel",
-        "Himalaya Villas & Resorts uses 'Resorts' in its name but operates the private villa estate model rather than the conventional resort format. It has no shared pool, no spa, no convention centre. What it has instead: 12 private exclusive-use villas with private outdoor spaces, a cedar garden fire pit as the communal gathering space, in-villa dining a...",
-        "For guests searching for a 'resort in Murree' who actually want the private outdoor space and exclusive-use accommodation that hotel resorts cannot provide: Himalaya Villas is the specific answer.",
-        "Book the Private Villa Estate — WhatsApp +92 304 567 9000",
-      ],
-    },
-    {
-      type: "related",
-      heading: "Related Pages — Internal Links",
-      items: [
-        { href: "/hotels-in-murree-pakistan", label: "Full Murree hotel guide" },
-        { href: "/5-star-hotels-murree-pakistan", label: "5-star guide" },
-        { href: "/bhurban-private-estate-vs-pc-hotel", label: "PC Hotel comparison" },
-        { href: "/villas", label: "Browse Himalaya Villas" },
-      ],
-    },
-  ],
-};
-
-// ============================================
-// ARTICLE 479 - Bhurban Qawwali Evening — The Mountain Music Experience
-// ============================================
-export const article479: Article = {
-  slug: "bhurban-qawwali-evening",
-  title: "Bhurban Qawwali Evening — The Mountain Music Experience",
-  metaDescription:
-    "URL /bhurban-qawwali-evening KW qawwali bhurban, qawwali evening bhurban murree, bhurban murree qawwali night, mountain qawwali pakistan",
-  keywords:
-    "qawwali bhurban, qawwali evening bhurban murree, bhurban murree qawwali night, mountain qawwali pakistan",
-  eyebrow: "Backlink Guest Post · Template C — Experience Guide | ~800w",
-  h1: "Bhurban Qawwali Evening — The Mountain Music Experience",
-  heroTagline:
-    "URL /bhurban-qawwali-evening KW qawwali bhurban, qawwali evening bhurban murree, bhurban murree qawwali night, mountain qawwali pakistan",
-  heroImage: article479Hero,
-  blocks: [
-    {
-      type: "callout-qa",
-      question: "Can I arrange a Qawwali evening at Bhurban?",
-      answer: "Yes. A Qawwali evening at Himalaya Villas & Resorts in Bhurban can be arranged for groups booking the cedar estate. The cedar garden fire pit as the performance venue, the Qawwali ensemble (typically 4-8 musicians), the mountain air at 6,800 feet: the combination creates a distinctly Pakistani music experience that the city venue cannot replicate. The outdoor cedar estate is the appropriate setting — the cedar canopy above, the fire light, the mountain night. Arrange via WhatsApp +92 304 567 9000 with 4-6 weeks notice. The Qawwali evening at the mountain cedar estate is the most specifically Pakistani experiential offering at Himalaya Villas — the ancient devotional music tradition of the Su...",
-    },
-    {
-      type: "paragraph",
-      text: "qawwali bhurban, qawwali evening bhurban murree, bhurban murree qawwali night, mountain qawwali pakistan",
-    },
-    {
-      type: "section",
-      eyebrow: "Bhurban Qawwali Evening",
-      heading: "Bhurban Qawwali Evening — The Mountain Music Experience at the Cedar Estate",
-      paragraphs: [
-        "❓ Can I arrange a Qawwali evening at Bhurban?",
-        "Yes. A Qawwali evening at Himalaya Villas & Resorts in Bhurban can be arranged for groups booking the cedar estate. The cedar garden fire pit as the performance venue, the Qawwali ensemble (typically 4-8 musicians), the mountain air at 6,800 feet: the combination creates a distinctly Pakistani music experience that the city venue cannot replicate. ...",
-        "The Qawwali evening at the mountain cedar estate is the most specifically Pakistani experiential offering at Himalaya Villas — the ancient devotional music tradition of the Sufi path, performed in the cedar garden at 6,800 feet under the mountain night.",
-      ],
-    },
-    {
-      type: "section",
-      eyebrow: "Private occasion: the birthday, anniversary, or milestone evening where music and mountain are the c...",
-      heading: "Private occasion: the birthday, anniversary, or milestone evening where music and mountain are the celebration",
-      paragraphs: [
-        "Arrange a Cedar Garden Qawwali Evening — WhatsApp +92 304 567 9000",
-      ],
-      image: {
-        src: article479Image2,
-        alt: "Private occasion: the birthday, anniversary, or milestone evening where music and mountain are the c...",
-      },
-    },
-    {
-      type: "related",
-      heading: "Related Pages — Internal Links",
-      items: [
-        { href: "/extended-family-reunion-bhurban", label: "Large gatherings" },
-        { href: "/bhurban-nikah-package", label: "Nikah celebration" },
-        { href: "/bhurban-photography-guide", label: "Evening photography" },
-        { href: "/villas", label: "Browse estate villas" },
-      ],
-    },
-  ],
-};
-
-// ============================================
-// ARTICLE 480 - Bhurban Campfire and Bonfire Guide — The Cedar Estate Fire Experience
-// ============================================
-export const article480: Article = {
-  slug: "bhurban-campfire-bonfire-guide",
-  title: "Bhurban Campfire and Bonfire Guide — The Cedar Estate Fire Experience",
-  metaDescription:
-    "URL /bhurban-campfire-bonfire-guide KW bhurban campfire, bhurban fire pit, cedar estate fire bhurban, bonfire bhurban murree, fire pit bhurban murree",
-  keywords:
-    "bhurban campfire, bhurban fire pit, cedar estate fire bhurban, bonfire bhurban murree, fire pit bhurban murree",
-  eyebrow: "Backlink Guest Post · Template C — Experience Guide | ~800w",
-  h1: "Bhurban Campfire and Bonfire Guide — The Cedar Estate Fire Experience",
-  heroTagline:
-    "URL /bhurban-campfire-bonfire-guide KW bhurban campfire, bhurban fire pit, cedar estate fire bhurban, bonfire bhurban murree, fire pit bhurban murree",
-  heroImage: article480Hero,
-  blocks: [
-    {
-      type: "callout-qa",
-      question: "Is there a campfire or fire pit at Bhurban?",
-      answer: "Yes. The Himalaya Villas & Resorts cedar garden fire pit is the signature experience of the private estate — a stone fire pit in the private cedar garden, lit at the guest's requested time, surrounded by seating and the cedar canopy overhead. The fire pit is available to all villa guests as part of the estate experience. Request the fire lighting time at the booking stage or via WhatsApp on the day of arrival. No additional charge for the fire — it is part of the estate's standard arrangement. The cedar garden fire pit at Himalaya Villas is described in more guest reviews than any other single feature of the estate. The specific combination — a private cedar garden, a stone fire pit, the ced...",
-    },
-    {
-      type: "paragraph",
-      text: "bhurban campfire, bhurban fire pit, cedar estate fire bhurban, bonfire bhurban murree, fire pit bhurban murree",
-    },
-    {
-      type: "paragraph",
-      text: "The Himalaya Villas cedar garden fire pit is not a decorative garden feature. It is a functioning stone fire pit, wood-fuelled, managed by the estate team. It burns from the lighting time (typically 5:30-6:00pm) through to approximately midnight — the duration depends on the group's preference and the fuel maintained.",
-    },
-    {
-      type: "section",
-      eyebrow: "Bhurban Campfire and Fire Pit Guide",
-      heading: "Bhurban Campfire and Fire Pit Guide — The Cedar Estate Fire Experience",
-      paragraphs: [
-        "❓ Is there a campfire or fire pit at Bhurban?",
-        "Yes. The Himalaya Villas & Resorts cedar garden fire pit is the signature experience of the private estate — a stone fire pit in the private cedar garden, lit at the guest's requested time, surrounded by seating and the cedar canopy overhead. The fire pit is available to all villa guests as part of the estate experience. Request the fire lighting t...",
-        "The cedar garden fire pit at Himalaya Villas is described in more guest reviews than any other single feature of the estate. The specific combination — a private cedar garden, a stone fire pit, the cedar canopy overhead, and no other guests — creates the campfire experience in a private estate format that Pakistan's domestic tourism market has not ...",
-      ],
-      image: {
-        src: article480Image2,
-        alt: "Bhurban Campfire and Fire Pit Guide — The Cedar Estate Fire Experience",
-      },
-    },
-    {
-      type: "related",
-      heading: "Related Pages — Internal Links",
-      items: [
-        { href: "/bhurban-murree-local-tips", label: "Insider tips" },
-        { href: "/bhurban-insider-guide-2026", label: "Fire timing guide" },
-        { href: "/in-villa-dining-bhurban", label: "Outdoor dining guide" },
-        { href: "/villas", label: "Browse Himalaya Villas" },
-      ],
-    },
-  ],
-};
-
-// ============================================
-// ARTICLE 481 - Bhurban Hotel Booking Guide — How to Book Every Property
-// ============================================
-export const article481: Article = {
-  slug: "murree-bhurban-hotel-booking",
-  title: "Bhurban Hotel Booking Guide — How to Book Every Property",
-  metaDescription:
-    "URL /murree-bhurban-hotel-booking KW bhurban hotel booking, murree bhurban hotel book, book hotel bhurban murree, bhurban hotel reservation",
-  keywords:
-    "bhurban hotel booking, murree bhurban hotel book, book hotel bhurban murree, bhurban hotel reservation",
-  eyebrow: "Backlink Guest Post · Template C — Commercial Booking Guide | ~800w",
-  h1: "Bhurban Hotel Booking Guide — How to Book Every Property",
-  heroTagline:
-    "URL /murree-bhurban-hotel-booking KW bhurban hotel booking, murree bhurban hotel book, book hotel bhurban murree, bhurban hotel reservation",
-  heroImage: article481Hero,
-  blocks: [
-    {
-      type: "callout-qa",
-      question: "How do I book hotels and villas at Bhurban?",
-      answer: "Booking options by property: Himalaya Villas & Resorts — WhatsApp +92 304 567 9000 (direct, best rate) or Airbnb/Booking.com; PC Hotel Bhurban — pchotels.com, Marriott.com, or Marriott app (Bonvoy booking); Hotel One Bhurban — hotelsone.com.pk; Bhurban guesthouses — Airbnb and Booking.com (search 'Bhurban'); TDCP rest houses — tdcp.gop.pk. The booking process for each Bhurban property type is different. This guide maps each booking channel clearly so every visitor can find and confirm the right accommodation through the right process.",
-    },
-    {
-      type: "paragraph",
-      text: "bhurban hotel booking, murree bhurban hotel book, book hotel bhurban murree, bhurban hotel reservation",
-    },
-    {
-      type: "cta",
-      eyebrow: "Bhurban Hotel Booking Guide — How to Book Every Property",
-      heading: "Bhurban Hotel Booking Guide — How to Book Every Property",
-      text: "Commercial | Cluster 2 | ~800w",
-      buttonLabel: "WhatsApp: +92 304 567 9000 | wa.me/923045679000",
-      buttonHref: "https://wa.me/923045679000",
-      footnote: "Direct bookings receive priority response and best available rate.",
-    },
-    {
-      type: "cta",
-      eyebrow: "Bhurban Hotel Booking Guide — How to Book Every Property",
-      heading: "Bhurban Hotel Booking Guide — How to Book Every Property",
-      text: "❓ How do I book hotels and villas at Bhurban?",
-      buttonLabel: "WhatsApp: +92 304 567 9000 | wa.me/923045679000",
-      buttonHref: "https://wa.me/923045679000",
-      footnote: "Direct bookings receive priority response and best available rate.",
-    },
-    {
-      type: "cta",
-      eyebrow: "Booking options by property: Himalaya Villas & Resorts — WhatsApp +92 304 567 9000 (direct, best rate) or Airbnb/Booking...",
-      heading: "Booking options by property: Himalaya Villas & Resorts — WhatsApp +92 304 567 9000 (direct, best rate) or Airbnb/Booking.com; PC Hotel Bhurban — pchotels.com, Marriott.com, or Marriott app (Bonvoy boo...",
-      text: "The booking process for each Bhurban property type is different. This guide maps each booking channel clearly so every visitor can find and confirm the right accommodation through the right process.",
-      buttonLabel: "WhatsApp: +92 304 567 9000 | wa.me/923045679000",
-      buttonHref: "https://wa.me/923045679000",
-      footnote: "Direct bookings receive priority response and best available rate.",
-    },
-    {
-      type: "cta",
-      eyebrow: "Booking by Property",
-      heading: "Booking by Property",
-      text: "Himalaya Villas & Resorts WhatsApp +92 304 567 9000 — the primary and fastest booking channel. Response typically same-day.",
-      buttonLabel: "WhatsApp: +92 304 567 9000 | wa.me/923045679000",
-      buttonHref: "https://wa.me/923045679000",
-      footnote: "Direct bookings receive priority response and best available rate.",
-    },
-    {
-      type: "section",
-      eyebrow: "Airbnb: search 'Himalaya Villas Bhurban' or browse the listing at airbnb.com under host 'Faatima'",
-      heading: "Airbnb: search 'Himalaya Villas Bhurban' or browse the listing at airbnb.com under host 'Faatima'",
-      paragraphs: [
-        "Booking.com: search 'Himalaya Villas Bhurban' for listed villa options",
-      ],
-    },
-    {
-      type: "cta",
-      eyebrow: "Direct recommendation: WhatsApp booking always provides the best rate, the pre-arrival concierge, and the direct communi...",
-      heading: "Direct recommendation: WhatsApp booking always provides the best rate, the pre-arrival concierge, and the direct communication that online platforms cannot match",
-      text: "PC Hotel Bhurban (Marriott) pchotels.com — the PC Hotels direct booking website Marriott.com — for Bonvoy member bookings and loyalty rate",
-      buttonLabel: "WhatsApp: +92 304 567 9000 | wa.me/923045679000",
-      buttonHref: "https://wa.me/923045679000",
-      footnote: "Direct bookings receive priority response and best available rate.",
-    },
-    {
-      type: "section",
-      eyebrow: "Hotel One Bhurban",
-      heading: "Hotel One Bhurban",
-      paragraphs: [
-        "hotelsone.com.pk — the Hashoo Group's direct booking portal",
-      ],
-    },
-    {
-      type: "section",
-      eyebrow: "Bhurban Guesthouses",
-      heading: "Bhurban Guesthouses",
-      paragraphs: [
-        "Airbnb — the primary channel for privately managed Bhurban guesthouses. Search 'Bhurban' with your dates.",
-        "Booking.com — also lists Bhurban guesthouses. Search 'Bhurban, Pakistan'.",
-      ],
-      image: {
-        src: article481Image2,
-        alt: "Bhurban Guesthouses",
-      },
-    },
-    {
-      type: "cta",
-      eyebrow: "For Himalaya Villas specifically: direct WhatsApp booking delivers (1) the best available rate (no OTA commission markup...",
-      heading: "For Himalaya Villas specifically: direct WhatsApp booking delivers (1) the best available rate (no OTA commission markup), (2) pre-arrival concierge coordination (meal preferences, fire timing, occasi...",
-      text: "Q: Can I book Himalaya Villas same-day? A: Yes — if the villa is available, same-day bookings are possible via WhatsApp +92 304 567 9000. The team confirms availability and deposit within business hours. For peak dates (July-August weekends, Eid, January snowfall weekends), same-day availability is ...",
-      buttonLabel: "WhatsApp: +92 304 567 9000 | wa.me/923045679000",
-      buttonHref: "https://wa.me/923045679000",
-      footnote: "Direct bookings receive priority response and best available rate.",
-    },
-    {
-      type: "related",
-      heading: "Related Pages — Internal Links",
-      items: [
-        { href: "/booking-villa-bhurban-faq", label: "Full booking FAQ" },
-        { href: "/bhurban-accommodation-guide", label: "Full accommodation guide" },
-        { href: "/villas", label: "Browse Himalaya Villas" },
-      ],
-    },
-  ],
-};
-
-// ============================================
-// ARTICLE 482 - Bhurban Luxury Spa and Wellness Guide
-// ============================================
-export const article482: Article = {
-  slug: "in-villa-spa-bhurban",
-  title: "Bhurban Luxury Spa and Wellness Guide",
-  metaDescription:
-    "URL /in-villa-spa-bhurban KW spa bhurban, bhurban spa murree, bhurban wellness retreat, in villa spa bhurban murree, bhurban massage",
-  keywords:
-    "spa bhurban, bhurban spa murree, bhurban wellness retreat, in villa spa bhurban murree, bhurban massage",
-  eyebrow: "Backlink Guest Post · Template C — Wellness Guide | ~800w",
-  h1: "Bhurban Luxury Spa and Wellness Guide",
-  heroTagline:
-    "URL /in-villa-spa-bhurban KW spa bhurban, bhurban spa murree, bhurban wellness retreat, in villa spa bhurban murree, bhurban massage",
-  heroImage: article482Hero,
-  blocks: [
-    {
-      type: "callout-qa",
-      question: "Is there a spa at Himalaya Villas Bhurban?",
-      answer: "Himalaya Villas & Resorts does not have a fixed on-site spa facility. The wellness model is in-villa: massage therapists and wellness practitioners can be arranged to visit the estate for the duration of a guest's stay, providing in-villa treatments in the privacy of the booked villa. This is the specific wellness model that the private estate offers — private treatment in a private villa at 6,800 feet, rather than a shared spa facility. Arrange in-villa massage and treatments via WhatsApp +92 304 567 9000 with 48-72 hours advance notice. The wellness experience at Himalaya Villas is not a hotel spa — it is the in-villa wellness arrangement that the private estate model makes possible. The m...",
-    },
-    {
-      type: "paragraph",
-      text: "spa bhurban, bhurban spa murree, bhurban wellness retreat, in villa spa bhurban murree, bhurban massage",
-    },
-    {
-      type: "section",
-      eyebrow: "In-Villa Spa and Wellness at Bhurban",
-      heading: "In-Villa Spa and Wellness at Bhurban — The Cedar Estate Wellness Guide",
-      paragraphs: [
-        "❓ Is there a spa at Himalaya Villas Bhurban?",
-        "Himalaya Villas & Resorts does not have a fixed on-site spa facility. The wellness model is in-villa: massage therapists and wellness practitioners can be arranged to visit the estate for the duration of a guest's stay, providing in-villa treatments in the privacy of the booked villa. This is the specific wellness model that the private estate offe...",
-        "The wellness experience at Himalaya Villas is not a hotel spa — it is the in-villa wellness arrangement that the private estate model makes possible. The massage therapist comes to the villa; the treatment happens in the private bedroom or outdoor terrace; the cedar forest is the ambient environment.",
-      ],
-    },
-    {
-      type: "related",
-      heading: "Related Pages — Internal Links",
-      items: [
-        { href: "/corporate-wellness-retreat-bhurban", label: "Wellness retreat guide" },
-        { href: "/anniversary-villa-bhurban", label: "Anniversary wellness" },
-        { href: "/honeymoon-package-bhurban-murree", label: "Honeymoon wellness" },
-        { href: "/villas", label: "Browse Himalaya Villas" },
-      ],
-    },
-  ],
-};
-
-// ============================================
-// ARTICLE 483 - Bhurban Team Building Activities — The Complete Corporate Guide
-// ============================================
-export const article483: Article = {
-  slug: "corporate-team-building-bhurban",
-  title: "Bhurban Team Building Activities — The Complete Corporate Guide",
-  metaDescription:
-    "URL /corporate-team-building-bhurban KW corporate team building bhurban, team building activities bhurban murree, team building near islamabad bhurban",
-  keywords:
-    "corporate team building bhurban, team building activities bhurban murree, team building near islamabad bhurban",
-  eyebrow: "Backlink Guest Post · Template B — B2B Activity Guide | ~900w",
-  h1: "Bhurban Team Building Activities — The Complete Corporate Guide",
-  heroTagline:
-    "URL /corporate-team-building-bhurban KW corporate team building bhurban, team building activities bhurban murree, team building near islamabad bhurban",
-  heroImage: article483Hero,
-  blocks: [
-    {
-      type: "callout-qa",
-      question: "What team building activities are available at Bhurban for corporate groups?",
-      answer: "Corporate team building activities accessible from Himalaya Villas Bhurban: (1) Guided cedar forest group walk (from the estate gate — 45-90 min, all fitness levels); (2) Patriata Chairlift group visit (3km, book the full gondola session for the group); (3) Ayubia Pipeline Track team hike (30km drive, 8km moderate trail, half-day activity); (4) Cedar garden fire pit leadership session (the evening around the fire as a facilitated team conversation); (5) Cooking or karahi demonstration in the estate (in-villa group cooking session with the estate chef team). Specific facilitated team-building sessions with external facilitators can be arranged for any activity combination. The best corporate ...",
-    },
-    {
-      type: "paragraph",
-      text: "corporate team building bhurban, team building activities bhurban murree, team building near islamabad bhurban",
-    },
-    {
-      type: "paragraph",
-      text: "Individual outdoor experience, conversation in pairs and small groups on the path — the informal connection that large-group activities cannot create",
-    },
-    {
-      type: "paragraph",
-      text: "The physical challenge and pace-sharing of the trail creates peer trust that the office cannot produce",
-    },
-    {
-      type: "paragraph",
-      text: "The fire as the leveller — no hierarchy at the fire. The facilitator-led conversation at the cedar fire is the most effective team communication format the estate offers",
-    },
-    {
-      type: "section",
-      eyebrow: "Bhurban Team Building Activities",
-      heading: "Bhurban Team Building Activities — The Corporate Estate Guide",
-      paragraphs: [
-        "❓ What team building activities are available at Bhurban for corporate groups?",
-      ],
-      image: {
-        src: article483Image2,
-        alt: "Bhurban Team Building Activities — The Corporate Estate Guide",
-      },
-    },
-    {
-      type: "section",
-      eyebrow: "Patriata Chairlift group excursion",
-      heading: "Patriata Chairlift group excursion",
-      paragraphs: [
-        "8-40",
-        "2-3 hours",
-        "Shared aerial experience; the gondola conversations at 8,700 feet; the group at the summit together",
-      ],
-    },
-    {
-      type: "section",
-      eyebrow: "Ayubia Pipeline Track team hike",
-      heading: "Ayubia Pipeline Track team hike",
-      paragraphs: [
-        "8-30",
-      ],
-      image: {
-        src: article483Image2,
-        alt: "Ayubia Pipeline Track team hike",
-      },
-    },
-    {
-      type: "section",
-      eyebrow: "In-villa cooking session",
-      heading: "In-villa cooking session",
-      paragraphs: [
-        "8-20",
-        "2-3 hours",
-        "The collaborative task (cooking karahi together) as the team-building activity — lower exertion, higher social engagement",
-      ],
-    },
-    {
-      type: "section",
-      eyebrow: "Facilitated vs Non-Facilitated Team Building",
-      heading: "Facilitated vs Non-Facilitated Team Building",
-      paragraphs: [
-        "Facilitated team building (with an external facilitator running structured activities) works well in the cedar estate for groups that need specific outcomes: conflict resolution, strategy alignment, culture reset. The cedar garden fire is the facilitated session's venue.",
-        "Non-facilitated team building (just the team, in the cedar estate, without a structured programme) works better for groups that are already high-functioning and need the connection and informal trust rather than the structured workshop. The cedar estate delivers this naturally — the hike, the fire, the shared mountain experience — without any facil...",
-        "Plan Your Corporate Retreat — WhatsApp +92 304 567 9000",
-      ],
-      image: {
-        src: article483Image2,
-        alt: "Facilitated vs Non-Facilitated Team Building",
-      },
-    },
-    {
-      type: "related",
-      heading: "Related Pages — Internal Links",
-      items: [
-        { href: "/corporate-retreat-near-islamabad", label: "Full corporate guide" },
-        { href: "/corporate-wellness-retreat-bhurban", label: "Wellness retreat" },
-        { href: "/bhurban-hiking-trails", label: "Activity options" },
-        { href: "/villas", label: "Browse corporate configurations" },
-      ],
-    },
-  ],
-};
-
-// ============================================
-// ARTICLE 484 - Bhurban Milestone Birthday Celebration Guide
-// ============================================
-export const article484: Article = {
-  slug: "milestone-birthday-bhurban",
-  title: "Bhurban Milestone Birthday Celebration Guide",
-  metaDescription:
-    "URL /milestone-birthday-bhurban KW birthday bhurban, birthday celebration bhurban murree, milestone birthday bhurban, 30th birthday bhurban, 40th birthday bhurban murree",
-  keywords:
-    "birthday bhurban, birthday celebration bhurban murree, milestone birthday bhurban, 30th birthday bhurban, 40th birthday bhurban murree",
-  eyebrow: "Backlink Guest Post · Template C — Event Commercial | ~800w",
-  h1: "Bhurban Milestone Birthday Celebration Guide",
-  heroTagline:
-    "URL /milestone-birthday-bhurban KW birthday bhurban, birthday celebration bhurban murree, milestone birthday bhurban, 30th birthday bhurban, 40th birthday bhurban murree",
-  heroImage: article484Hero,
-  blocks: [
-    {
-      type: "callout-qa",
-      question: "Is Bhurban a good place for a milestone birthday celebration?",
-      answer: "Yes. Himalaya Villas & Resorts in Bhurban is one of Pakistan's finest private celebration venues. For milestone birthdays (30th, 40th, 50th), the private cedar estate model provides the exclusive event venue that a city restaurant or hotel cannot match. Group configuration: the birthday guest of honour's specific villa (typically Presidential Suite for a milestone birthday) plus additional villas for the guest group. Cedar garden birthday dinner setup, fire pit, possible Qawwali or music arrangement, birthday cake at midnight. WhatsApp +92 304 567 9000 for birthday event planning. The milestone birthday at the cedar estate is the specific celebration format that the city cannot replicate. Th...",
-    },
-    {
-      type: "paragraph",
-      text: "birthday bhurban, birthday celebration bhurban murree, milestone birthday bhurban, 30th birthday bhurban, 40th birthday bhurban murree",
-    },
-    {
-      type: "section",
-      eyebrow: "Milestone Birthday at Bhurban",
-      heading: "Milestone Birthday at Bhurban — The Cedar Estate Celebration Guide",
-      paragraphs: [
-        "❓ Is Bhurban a good place for a milestone birthday celebration?",
-        "Yes. Himalaya Villas & Resorts in Bhurban is one of Pakistan's finest private celebration venues. For milestone birthdays (30th, 40th, 50th), the private cedar estate model provides the exclusive event venue that a city restaurant or hotel cannot match. Group configuration: the birthday guest of honour's specific villa (typically Presidential Suite...",
-        "The milestone birthday at the cedar estate is the specific celebration format that the city cannot replicate. The private outdoor cedar garden as the party venue, the fire pit as the celebration centrepiece, and the mountain air at 6,800 feet as the environment: this is the birthday that the guest of honour describes for years.",
-      ],
-    },
-    {
-      type: "cta",
-      eyebrow: "Pre-arrival setup: birthday decorations in the honouree's villa — specify colours, balloon preference, personal touches ...",
-      heading: "Pre-arrival setup: birthday decorations in the honouree's villa — specify colours, balloon preference, personal touches via WhatsApp 72 hours before arrival.",
-      text: "",
-      buttonLabel: "WhatsApp: +92 304 567 9000 | wa.me/923045679000",
-      buttonHref: "https://wa.me/923045679000",
-      footnote: "Direct bookings receive priority response and best available rate.",
-    },
-    {
-      type: "cta",
-      eyebrow: "Full estate section — quote via WhatsApp",
-      heading: "Full estate section — quote via WhatsApp",
-      text: "Q: Can I keep the birthday a surprise at Himalaya Villas? A: Yes — the property team can prepare a surprise setup when one guest is arranging without the birthday person's knowledge. Coordinate all setup and timing via WhatsApp with the organising guest only. Q: What is the best villa for a 40th bir...",
-      buttonLabel: "WhatsApp: +92 304 567 9000 | wa.me/923045679000",
-      buttonHref: "https://wa.me/923045679000",
-      footnote: "Direct bookings receive priority response and best available rate.",
-    },
-    {
-      type: "related",
-      heading: "Related Pages — Internal Links",
-      items: [
-        { href: "/anniversary-villa-bhurban", label: "Anniversary guide" },
-        { href: "/honeymoon-package-bhurban-murree", label: "Romance guide" },
-        { href: "/villa-with-jacuzzi-bhurban", label: "Presidential Suite" },
-        { href: "/villas", label: "Browse celebration villas" },
-      ],
-    },
-  ],
-};
-
-// ============================================
-// ARTICLE 485 - Bhurban Ramadan and Iftar Guide — The Mountain Ramadan Experience
-// ============================================
-export const article485: Article = {
-  slug: "bhurban-murree-ramadan",
-  title: "Bhurban Ramadan and Iftar Guide — The Mountain Ramadan Experience",
-  metaDescription:
-    "URL /bhurban-murree-ramadan KW bhurban ramadan, iftar bhurban murree, ramadan bhurban, mountain ramadan experience pakistan, bhurban iftar",
-  keywords:
-    "bhurban ramadan, iftar bhurban murree, ramadan bhurban, mountain ramadan experience pakistan, bhurban iftar",
-  eyebrow: "Backlink Guest Post · Template C — Seasonal/Cultural Guide | ~800w",
-  h1: "Bhurban Ramadan and Iftar Guide — The Mountain Ramadan Experience",
-  heroTagline:
-    "URL /bhurban-murree-ramadan KW bhurban ramadan, iftar bhurban murree, ramadan bhurban, mountain ramadan experience pakistan, bhurban iftar",
-  heroImage: article485Hero,
-  blocks: [
-    {
-      type: "callout-qa",
-      question: "Is Bhurban good to visit during Ramadan?",
-      answer: "Ramadan at Bhurban is a distinctive and beautiful experience. Himalaya Villas is a fully halal property. The Ramadan visit specifics: Iftar in-villa or in the cedar garden (pre-arranged meal at the Iftar time); Sehri service available pre-dawn; the cedar forest in the Ramadan dawn (post-Fajr walk in the forest before Sehri becomes standard); the cool mountain air reduces the physical depletion of the fast compared to the city; and the mountain distance from the city's Ramadan social calendar creates the specific reflective environment that Ramadan's spiritual purpose calls for. Ramadan at Himalaya Villas is the most specific Pakistani cultural-religious mountain experience the estate offers....",
-    },
-    {
-      type: "paragraph",
-      text: "bhurban ramadan, iftar bhurban murree, ramadan bhurban, mountain ramadan experience pakistan, bhurban iftar",
-    },
-    {
-      type: "section",
-      eyebrow: "Bhurban Ramadan and Iftar",
-      heading: "Bhurban Ramadan and Iftar — The Mountain Ramadan Experience",
-      paragraphs: [
-        "❓ Is Bhurban good to visit during Ramadan?",
-        "Ramadan at Bhurban is a distinctive and beautiful experience. Himalaya Villas is a fully halal property. The Ramadan visit specifics: Iftar in-villa or in the cedar garden (pre-arranged meal at the Iftar time); Sehri service available pre-dawn; the cedar forest in the Ramadan dawn (post-Fajr walk in the forest before Sehri becomes standard); the co...",
-        "Ramadan at Himalaya Villas is the most specific Pakistani cultural-religious mountain experience the estate offers. The combination of the fully halal private estate, the cedar forest at Fajr, the Iftar in the cedar garden, and the Tarawih coordination with the Bhurban mosque creates a Ramadan retreat that the city apartment and the city hotel cann...",
-      ],
-    },
-    {
-      type: "related",
-      heading: "Related Pages — Internal Links",
-      items: [
-        { href: "/bhurban-murree-local-tips", label: "Local tips" },
-        { href: "/murree-temperature-guide", label: "Temperature guide" },
-        { href: "/eid-holiday-package-bhurban-murree", label: "Eid guide" },
-        { href: "/villas", label: "Browse Himalaya Villas" },
-      ],
-    },
-  ],
-};
-
-// ============================================
-// ARTICLE 496 - Mövenpick Hotel Murree — What to Know and the Private Villa Alternative
-// ============================================
-export const article496: Article = {
-  slug: "movenpick-murree-alternative",
-  title: "Mövenpick Hotel Murree — What to Know and the Private Villa Alternative",
-  metaDescription:
-    "URL /movenpick-murree-alternative Target Keywords movenpick murree, move n pick murree, hotel move n pick murree, moven pick murree, movenpick murree rates",
-  keywords:
-    "",
-  eyebrow: "Backlink Guest Post · ~900w",
-  h1: "Mövenpick Hotel Murree — What to Know and the Private Villa Alternative",
-  heroTagline:
-    "URL /movenpick-murree-alternative Target Keywords movenpick murree, move n pick murree, hotel move n pick murree, moven pick murree, movenpick murree rates",
-  heroImage: article496Hero,
-  blocks: [
-    {
-      type: "callout-qa",
-      question: "What is Mövenpick Hotel Murree and is there a better alternative?",
-      answer: "Mövenpick Hotel Murree is an Accor-brand hotel in the Murree hills — part of the Mövenpick Hotels & Resorts international chain, which positions itself as premium lifestyle hospitality. Mövenpick is the second international brand in the Murree market after PC Hotel Bhurban (Marriott). For guests seeking Accor ALL loyalty credit: Mövenpick is the answer. For guests who want exclusive private outdoor space, a cedar forest setting, and in-villa dining: Himalaya Villas & Resorts in Bhurban (11km from Murree Mall Road, 20 minutes) is the private estate alternative that neither Mövenpick nor any other Murree hotel can structurally replicate. WhatsApp +92 304 567 9000. Mövenpick Hotel Murree is one...",
-    },
-    {
-      type: "paragraph",
-      text: "movenpick murree, move n pick murree, hotel move n pick murree, moven pick murree, movenpick murree rates",
-    },
-    {
-      type: "paragraph",
-      text: "You are a solo traveller or couple who prefers the hotel environment and the Mövenpick's specific dining offering",
-    },
-    {
-      type: "section",
-      eyebrow: "Word Count",
-      heading: "Word Count",
-      paragraphs: [
-        "~900w",
-      ],
-      image: {
-        src: article496Image2,
-        alt: "Word Count",
-      },
-    },
-    {
-      type: "section",
-      eyebrow: "Factor",
-      heading: "Factor",
-      paragraphs: [
-        "Mövenpick Hotel Murree (Accor)",
-        "Himalaya Villas & Resorts, Bhurban",
-        "Brand/Type",
-      ],
-    },
-    {
-      type: "section",
-      eyebrow: "Location",
-      heading: "Location",
-      paragraphs: [
-        "Murree area (confirm exact address at accor.com)",
-        "Bhurban — 11km from Murree Mall Road",
-      ],
-      image: {
-        src: article496Image2,
-        alt: "Location",
-      },
-    },
-    {
-      type: "cta",
-      eyebrow: "None — direct WhatsApp booking only",
-      heading: "None — direct WhatsApp booking only",
-      text: "",
-      buttonLabel: "WhatsApp: +92 304 567 9000 | wa.me/923045679000",
-      buttonHref: "https://wa.me/923045679000",
-      footnote: "Direct bookings receive priority response and best available rate.",
-    },
-    {
-      type: "section",
-      eyebrow: "You want the international hotel brand service package: 24-hour front desk, branded F&B, hotel ameni...",
-      heading: "You want the international hotel brand service package: 24-hour front desk, branded F&B, hotel amenities",
-      paragraphs: [
-        "You are a solo traveller or couple who prefers the hotel environment and the Mövenpick's specific dining offering",
-      ],
-      image: {
-        src: article496Image2,
-        alt: "You want the international hotel brand service package: 24-hour front desk, branded F&B, hotel ameni...",
-      },
-    },
-    {
-      type: "section",
-      eyebrow: "You are celebrating an occasion where the private estate",
-      heading: "You are celebrating an occasion where the private estate — not the hotel ballroom — is the right venue",
-      paragraphs: [
-        "Both the Mövenpick and Himalaya Villas are within 20 minutes of each other in the Murree hills. They serve different models. The 4,400 monthly searches for 'movenpick murree' represent guests in the Murree premium accommodation market — the private villa estate option is what those guests should also see before they book.",
-        "Book the Private Cedar Estate — WhatsApp +92 304 567 9000",
-      ],
-    },
-    {
-      type: "related",
-      heading: "Related Pages — Internal Links",
-      items: [
-        { href: "/hotels-in-murree-pakistan", label: "Full Murree hotel guide" },
-        { href: "/bhurban-private-estate-vs-pc-hotel", label: "PC Hotel comparison" },
-        { href: "/murree-resort-guide", label: "Resort overview" },
-        { href: "/villas", label: "Browse Himalaya Villas" },
-      ],
-    },
-  ],
-};
-
-// ============================================
-// ARTICLE 497 - Shangrila Resort Murree — Guide and the Bhurban Private Estate Alternative
-// ============================================
-export const article497: Article = {
-  slug: "shangrila-murree-alternative",
-  title: "Shangrila Resort Murree — Guide and the Bhurban Private Estate Alternative",
-  metaDescription:
-    "URL /shangrila-murree-alternative Target Keywords shangrila murree, shangrila resort murree, shangrila hotel murree, shangrila resort murree rates",
-  keywords:
-    "",
-  eyebrow: "Backlink Guest Post · ~900w",
-  h1: "Shangrila Resort Murree — Guide and the Bhurban Private Estate Alternative",
-  heroTagline:
-    "URL /shangrila-murree-alternative Target Keywords shangrila murree, shangrila resort murree, shangrila hotel murree, shangrila resort murree rates",
-  heroImage: article497Hero,
-  blocks: [
-    {
-      type: "callout-qa",
-      question: "What is Shangrila Resort Murree?",
-      answer: "Shangrila Resort Murree is a Pakistani domestic hotel brand operating in the Murree hills area. The Shangrila name carries strong brand recognition in Pakistan's domestic luxury tourism market — the Shangrila Resorts chain is associated with high-end leisure stays in Pakistan's scenic destinations. For guests considering Shangrila Murree who want exclusive private outdoor space and the cedar forest private estate experience: Himalaya Villas & Resorts in Bhurban (11km from Murree Mall Road) is the structural alternative. WhatsApp +92 304 567 9000. Shangrila Resort Murree draws 2,400 monthly searches — peaking at 4,400 in July (the heat-escape season) and 3,600 in June. The Shangrila brand is ...",
-    },
-    {
-      type: "paragraph",
-      text: "The Himalaya Villas model is structurally different: 12 exclusive-use private villas in a mature deodar cedar forest, each with private outdoor space belonging only to the booked group. No shared lobby. No shared outdoor areas. In-villa dining at the guest's timing. The private estate model that the resort hotel cannot replicate.",
-    },
-    {
-      type: "section",
-      eyebrow: "Word Count",
-      heading: "Word Count",
-      paragraphs: [
-        "~900w",
-      ],
-    },
-    {
-      type: "section",
-      eyebrow: "Shangrila Resort Murree",
-      heading: "Shangrila Resort Murree — What to Know and the Bhurban Private Estate Alternative",
-      paragraphs: [
-        "❓ What is Shangrila Resort Murree?",
-        "Shangrila Resort Murree is a Pakistani domestic hotel brand operating in the Murree hills area. The Shangrila name carries strong brand recognition in Pakistan's domestic luxury tourism market — the Shangrila Resorts chain is associated with high-end leisure stays in Pakistan's scenic destinations. For guests considering Shangrila Murree who want e...",
-        "Shangrila Resort Murree draws 2,400 monthly searches — peaking at 4,400 in July (the heat-escape season) and 3,600 in June. The Shangrila brand is one of Pakistan's most recognised domestic resort names, and its Murree presence reflects strong consumer interest in the premium leisure category for the Murree hills area.",
-      ],
-      image: {
-        src: article497Image2,
-        alt: "Shangrila Resort Murree — What to Know and the Bhurban Private Estate Alternative",
-      },
-    },
-    {
-      type: "section",
-      eyebrow: "Exclusive terrace or garden per villa",
-      heading: "Exclusive terrace or garden per villa",
-      paragraphs: [
-        "Group of 6 cost",
-        "3 rooms required",
-        "1 family villa — PKR 55,000–65,000/night",
-      ],
-    },
-    {
-      type: "section",
-      eyebrow: "Murree area setting",
-      heading: "Murree area setting",
-      paragraphs: [
-        "From the estate gate, immediate",
-      ],
-      image: {
-        src: article497Image2,
-        alt: "Murree area setting",
-      },
-    },
-    {
-      type: "related",
-      heading: "Related Pages — Internal Links",
-      items: [
-        { href: "/hotels-in-murree-pakistan", label: "Full Murree hotel guide" },
-        { href: "/movenpick-murree-alternative", label: "Mövenpick comparison" },
-        { href: "/murree-resort-guide", label: "Resort overview" },
-        { href: "/villas", label: "Browse Himalaya Villas" },
-      ],
-    },
-  ],
-};
-
-// ============================================
-// ARTICLE 498 - Murree Hotel Booking — The 2026 Complete Booking Guide
-// ============================================
-export const article498: Article = {
-  slug: "murree-hotel-booking-guide",
-  title: "Murree Hotel Booking — The 2026 Complete Booking Guide",
-  metaDescription:
-    "URL /murree-hotel-booking-guide Target Keywords murree hotel booking, murree hotel booking 2026, how to book hotel murree, murree hotel booking near mall road, booking murree hotel",
-  keywords:
-    "",
-  eyebrow: "Backlink Guest Post · ~1,000w",
-  h1: "Murree Hotel Booking — The 2026 Complete Booking Guide",
-  heroTagline:
-    "URL /murree-hotel-booking-guide Target Keywords murree hotel booking, murree hotel booking 2026, how to book hotel murree, murree hotel booking near mall road, booking murree hotel",
-  heroImage: article498Hero,
-  blocks: [
-    {
-      type: "callout-qa",
-      question: "How do I book a hotel in Murree Pakistan?",
-      answer: "Murree hotel booking options 2026: (1) Himalaya Villas & Resorts (private villa estate, Bhurban) — WhatsApp +92 304 567 9000 or Airbnb/Booking.com; (2) PC Hotel Bhurban (Marriott 5-star) — pchotels.com or Marriott app; (3) Mövenpick Murree (Accor) — accor.com or Booking.com; (4) Ramada by Wyndham Murree — Booking.com or wyndhamhotels.com; (5) Shangrila Resort Murree — shangrila.com.pk; (6) Guesthouses and mid-range hotels — Booking.com search 'Murree Pakistan'. Best booking tip: for Himalaya Villas specifically, WhatsApp direct booking always delivers the best rate and pre-arrival concierge service. Murree hotel booking draws 2,900 monthly searches — people who have decided on Murree as thei...",
-    },
-    {
-      type: "paragraph",
-      text: "murree hotel booking, murree hotel booking 2026, how to book hotel murree, murree hotel booking near mall road, booking murree hotel",
-    },
-    {
-      type: "section",
-      eyebrow: "Word Count",
-      heading: "Word Count",
-      paragraphs: [
-        "~1,000w",
-      ],
-    },
-    {
-      type: "cta",
-      eyebrow: "How to Book",
-      heading: "How to Book",
-      text: "",
-      buttonLabel: "WhatsApp: +92 304 567 9000 | wa.me/923045679000",
-      buttonHref: "https://wa.me/923045679000",
-      footnote: "Direct bookings receive priority response and best available rate.",
-    },
-    {
-      type: "section",
-      eyebrow: "Best Rate Channel",
-      heading: "Best Rate Channel",
-      paragraphs: [
-        "Himalaya Villas & Resorts",
-        "Private villa estate (Bhurban)",
-      ],
-    },
-    {
-      type: "cta",
-      eyebrow: "WhatsApp direct — no OTA markup",
-      heading: "WhatsApp direct — no OTA markup",
-      text: "PC Hotel Bhurban (Marriott) 5-star chain (Bhurban) pchotels.com | marriott.com | Marriott app",
-      buttonLabel: "WhatsApp: +92 304 567 9000 | wa.me/923045679000",
-      buttonHref: "https://wa.me/923045679000",
-      footnote: "Direct bookings receive priority response and best available rate.",
-    },
-    {
-      type: "section",
-      eyebrow: "Marriott app for Bonvoy rate",
-      heading: "Marriott app for Bonvoy rate",
-      paragraphs: [
-        "Mövenpick Murree (Accor)",
-        "International brand (Murree)",
-        "Accor ALL member rate via accor.com",
-      ],
-    },
-    {
-      type: "section",
-      eyebrow: "Ramada by Wyndham Murree",
-      heading: "Ramada by Wyndham Murree",
-      paragraphs: [
-        "Wyndham brand (Mall Road area)",
-      ],
-      image: {
-        src: article498Image2,
-        alt: "Ramada by Wyndham Murree",
-      },
-    },
-    {
-      type: "section",
-      eyebrow: "Domestic resort brand",
-      heading: "Domestic resort brand",
-      paragraphs: [
-        "| shangrila.com.pk | Booking.com |",
-        "| --- | --- |",
-        "| Direct at shangrila.com.pk | |",
-      ],
-    },
-    {
-      type: "section",
-      eyebrow: "Established hill station hotel",
-      heading: "Established hill station hotel",
-      paragraphs: [
-        "| Booking.com | direct call |",
-        "| --- | --- |",
-        "| Booking.com or direct | |",
-      ],
-      image: {
-        src: article498Image2,
-        alt: "Established hill station hotel",
-      },
-    },
-    {
-      type: "section",
-      eyebrow: "Hotel One Bhurban",
-      heading: "Hotel One Bhurban",
-      paragraphs: [
-        "Mid-scale (Bhurban)",
-        "hotelsone.com.pk",
-        "Direct at hotelsone.com.pk",
-        "Bhurban/Murree guesthouses",
-      ],
-    },
-    {
-      type: "section",
-      eyebrow: "Government tourism",
-      heading: "Government tourism",
-      paragraphs: [
-        "tdcp.gop.pk",
-      ],
-      image: {
-        src: article498Image2,
-        alt: "Government tourism",
-      },
-    },
-    {
-      type: "section",
-      eyebrow: "October: 2–3 weeks for Himalaya Villas. October is the finest month but has easier availability than...",
-      heading: "October: 2–3 weeks for Himalaya Villas. October is the finest month but has easier availability than peak summer.",
-      paragraphs: [
-        "April, March, November: 1–2 weeks or less. These are quiet months with easy availability.",
-      ],
-    },
-    {
-      type: "cta",
-      eyebrow: "Best rate: no OTA platform commission (typically 15–25%) is built into the rate. The WhatsApp rate is always the lowest ...",
-      heading: "Best rate: no OTA platform commission (typically 15–25%) is built into the rate. The WhatsApp rate is always the lowest available.",
-      text: "",
-      buttonLabel: "WhatsApp: +92 304 567 9000 | wa.me/923045679000",
-      buttonHref: "https://wa.me/923045679000",
-      footnote: "Direct bookings receive priority response and best available rate.",
-    },
-    {
-      type: "cta",
-      eyebrow: "Pre-arrival concierge: meal preferences, fire pit timing, occasion setup, villa-specific requests — all coordinated via ...",
-      heading: "Pre-arrival concierge: meal preferences, fire pit timing, occasion setup, villa-specific requests — all coordinated via the booking WhatsApp thread before arrival.",
-      text: "",
-      buttonLabel: "WhatsApp: +92 304 567 9000 | wa.me/923045679000",
-      buttonHref: "https://wa.me/923045679000",
-      footnote: "Direct bookings receive priority response and best available rate.",
-    },
-    {
-      type: "related",
-      heading: "Related Pages — Internal Links",
-      items: [
-        { href: "/bhurban-accommodation-guide", label: "Full accommodation guide" },
-        { href: "/booking-villa-bhurban-faq", label: "Villa booking FAQ" },
-        { href: "/hotels-in-murree-pakistan", label: "Full hotel guide" },
-        { href: "/villas", label: "Browse Himalaya Villas" },
-      ],
-    },
-  ],
-};
-
-// ============================================
-// ARTICLE 499 - PC Hotel Bhurban Contact Number and Booking Information
-// ============================================
-export const article499: Article = {
-  slug: "pc-bhurban-contact-booking",
-  title: "PC Hotel Bhurban Contact Number and Booking Information",
-  metaDescription:
-    "URL /pc-bhurban-contact-booking Target Keywords pc bhurban contact number, pc hotel bhurban contact, pearl continental bhurban contact number, pc bhurban phone number, book pc hotel bhurban",
-  keywords:
-    "",
-  eyebrow: "Backlink Guest Post · ~700w",
-  h1: "PC Hotel Bhurban Contact Number and Booking Information",
-  heroTagline:
-    "URL /pc-bhurban-contact-booking Target Keywords pc bhurban contact number, pc hotel bhurban contact, pearl continental bhurban contact number, pc bhurban phone number, book pc hotel bhurban",
-  heroImage: article499Hero,
-  blocks: [
-    {
-      type: "callout-qa",
-      question: "What is PC Hotel Bhurban's contact number and how do I book?",
-      answer: "PC Hotel Bhurban (Pearl Continental / Marriott International) contact: confirm the current direct number at pchotels.com — phone numbers change and the live website is the authoritative source. Online booking: pchotels.com, marriott.com, or the Marriott Bonvoy app. For the private villa estate alternative next door (0.5km from PC Hotel): Himalaya Villas & Resorts, WhatsApp +92 304 567 9000. 'PC Bhurban contact number' generates 1,000 monthly searches — people who have already decided they want to stay at or enquire about PC Hotel Bhurban and need the direct contact. This page provides the booking pathway for PC Hotel and introduces the private villa alternative for those whose underlying nee...",
-    },
-    {
-      type: "paragraph",
-      text: "pc bhurban contact number, pc hotel bhurban contact, pearl continental bhurban contact number, pc bhurban phone number, book pc hotel bhurban",
-    },
-    {
-      type: "cta",
-      eyebrow: "PC Hotel Bhurban Contact Number and Booking Information",
-      heading: "PC Hotel Bhurban Contact Number and Booking Information",
-      text: "Navigational Intercept | Cluster 1 | ~700w",
-      buttonLabel: "WhatsApp: +92 304 567 9000 | wa.me/923045679000",
-      buttonHref: "https://wa.me/923045679000",
-      footnote: "Direct bookings receive priority response and best available rate.",
-    },
-    {
-      type: "section",
-      eyebrow: "Word Count",
-      heading: "Word Count",
-      paragraphs: [
-        "~700w",
-      ],
-      image: {
-        src: article499Image2,
-        alt: "Word Count",
-      },
-    },
-    {
-      type: "cta",
-      eyebrow: "PC Hotel Bhurban Contact Number and Booking — Plus the Private Estate Alternative",
-      heading: "PC Hotel Bhurban Contact Number and Booking — Plus the Private Estate Alternative",
-      text: "❓ What is PC Hotel Bhurban's contact number and how do I book? PC Hotel Bhurban (Pearl Continental / Marriott International) contact: confirm the current direct number at pchotels.com — phone numbers change and the live website is the authoritative source. Online booking: pchotels.com, marriott.com,...",
-      buttonLabel: "WhatsApp: +92 304 567 9000 | wa.me/923045679000",
-      buttonHref: "https://wa.me/923045679000",
-      footnote: "Direct bookings receive priority response and best available rate.",
-    },
-    {
-      type: "cta",
-      eyebrow: "PC Hotel Bhurban — Booking Channels",
-      heading: "PC Hotel Bhurban — Booking Channels",
-      text: "",
-      buttonLabel: "WhatsApp: +92 304 567 9000 | wa.me/923045679000",
-      buttonHref: "https://wa.me/923045679000",
-      footnote: "Direct bookings receive priority response and best available rate.",
-    },
-    {
-      type: "section",
-      eyebrow: "Direct phone: the current PC Hotel Bhurban phone number is on pchotels.com",
-      heading: "Direct phone: the current PC Hotel Bhurban phone number is on pchotels.com — this page does not publish a phone number that may become outdated. Check the live website.",
-      paragraphs: [
-        "Booking.com: 'Pearl Continental Hotel Bhurban' is listed on Booking.com — a third-party option for price comparison.",
-      ],
-    },
-    {
-      type: "section",
-      eyebrow: "PC Hotel Bhurban",
-      heading: "PC Hotel Bhurban",
-      paragraphs: [
-        "Himalaya Villas, Bhurban",
-      ],
-      image: {
-        src: article499Image2,
-        alt: "PC Hotel Bhurban",
-      },
-    },
-    {
-      type: "section",
-      eyebrow: "Yes",
-      heading: "Yes — per villa",
-      paragraphs: [
-        "Family of 8 (approx cost)",
-        "PKR 90,000–225,000 (3 rooms)",
-        "PKR 60,000–70,000 (1 villa)",
-      ],
-    },
-    {
-      type: "cta",
-      eyebrow: "Booking",
-      heading: "Booking",
-      text: "pchotels.com / Marriott app WhatsApp +92 304 567 9000 Q: Does PC Hotel Bhurban have WhatsApp booking?",
-      buttonLabel: "WhatsApp: +92 304 567 9000 | wa.me/923045679000",
-      buttonHref: "https://wa.me/923045679000",
-      footnote: "Direct bookings receive priority response and best available rate.",
-    },
-    {
-      type: "related",
-      heading: "Related Pages — Internal Links",
-      items: [
-        { href: "/bhurban-private-estate-vs-pc-hotel", label: "Full PC Hotel vs HV comparison" },
-        { href: "/5-star-hotels-murree-pakistan", label: "5-star guide" },
-        { href: "/bhurban-accommodation-guide", label: "Full accommodation guide" },
-        { href: "/villas", label: "Browse Himalaya Villas" },
-      ],
-    },
-  ],
-};
-
-// ============================================
-// ARTICLE 500 - Ramada Murree — The Complete Guide and the Private Villa Alternative
-// ============================================
-export const article500: Article = {
-  slug: "ramada-murree-alternative",
-  title: "Ramada Murree — The Complete Guide and the Private Villa Alternative",
-  metaDescription:
-    "URL /ramada-murree-alternative Target Keywords ramada murree, ramada hotel murree, ramada by wyndham murree, ramada resort murree, ramada murree pakistan",
-  keywords:
-    "",
-  eyebrow: "Backlink Guest Post · ~900w",
-  h1: "Ramada Murree — The Complete Guide and the Private Villa Alternative",
-  heroTagline:
-    "URL /ramada-murree-alternative Target Keywords ramada murree, ramada hotel murree, ramada by wyndham murree, ramada resort murree, ramada murree pakistan",
-  heroImage: article500Hero,
-  blocks: [
-    {
-      type: "callout-qa",
-      question: "What is Ramada Murree and is there a better alternative?",
-      answer: "Ramada by Wyndham Murree is a Wyndham Hotels & Resorts brand property in the Murree hills — part of Pakistan's growing international hotel chain presence in domestic tourism destinations. Ramada's Murree positioning is the mid-to-upper tier with the Wyndham brand backing. For guests seeking Wyndham Rewards credit: Ramada Murree is the option. For guests who want exclusive private outdoor space and the cedar forest private estate: Himalaya Villas & Resorts in Bhurban (11km from Murree Mall Road) is the private estate alternative. WhatsApp +92 304 567 9000. Ramada Murree draws 6,600 monthly searches — one of the highest-volume competitor searches in the Murree hills market. The Wyndham brand's...",
-    },
-    {
-      type: "paragraph",
-      text: "ramada murree, ramada hotel murree, ramada by wyndham murree, ramada resort murree, ramada murree pakistan",
-    },
-    {
-      type: "paragraph",
-      text: "You specifically want to be walking distance from the Murree Mall Road bazaar — the kashmiri chai, the dried fruit stalls, the Kashmir Point viewpoint",
-    },
-    {
-      type: "section",
-      eyebrow: "Word Count",
-      heading: "Word Count",
-      paragraphs: [
-        "~900w",
-      ],
-      image: {
-        src: article500Image2,
-        alt: "Word Count",
-      },
-    },
-    {
-      type: "section",
-      eyebrow: "Ramada Murree",
-      heading: "Ramada Murree — What to Know and the Private Villa Alternative",
-      paragraphs: [
-        "❓ What is Ramada Murree and is there a better alternative?",
-        "Ramada by Wyndham Murree is a Wyndham Hotels & Resorts brand property in the Murree hills — part of Pakistan's growing international hotel chain presence in domestic tourism destinations. Ramada's Murree positioning is the mid-to-upper tier with the Wyndham brand backing. For guests seeking Wyndham Rewards credit: Ramada Murree is the option. For g...",
-        "Ramada Murree draws 6,600 monthly searches — one of the highest-volume competitor searches in the Murree hills market. The Wyndham brand's Ramada is a globally recognised name and its Murree presence draws significant search traffic from both loyal Wyndham Rewards members and general travellers researching the Murree premium market.",
-      ],
-    },
-    {
-      type: "section",
-      eyebrow: "Ramada by Wyndham Murree",
-      heading: "Ramada by Wyndham Murree",
-      paragraphs: [
-        "Himalaya Villas & Resorts, Bhurban",
-        "Brand/Type",
-      ],
-      image: {
-        src: article500Image2,
-        alt: "Ramada by Wyndham Murree",
-      },
-    },
-    {
-      type: "section",
-      eyebrow: "Location",
-      heading: "Location",
-      paragraphs: [
-        "Murree Mall Road area (confirm at wyndhamhotels.com)",
-        "Bhurban — 11km from Murree Mall Road",
-      ],
-    },
-    {
-      type: "cta",
-      eyebrow: "None — direct WhatsApp booking only",
-      heading: "None — direct WhatsApp booking only",
-      text: "",
-      buttonLabel: "WhatsApp: +92 304 567 9000 | wa.me/923045679000",
-      buttonHref: "https://wa.me/923045679000",
-      footnote: "Direct bookings receive priority response and best available rate.",
-    },
-    {
-      type: "section",
-      eyebrow: "You want Wyndham Rewards points and tier status credit for your Murree stay",
-      heading: "You want Wyndham Rewards points and tier status credit for your Murree stay",
-      paragraphs: [
-        "You specifically want to be walking distance from the Murree Mall Road bazaar — the kashmiri chai, the dried fruit stalls, the Kashmir Point viewpoint",
-      ],
-    },
-    {
-      type: "section",
-      eyebrow: "Occasions: the cedar garden private event space for a birthday, anniversary, Nikah, or corporate din...",
-      heading: "Occasions: the cedar garden private event space for a birthday, anniversary, Nikah, or corporate dinner that the hotel conference room cannot approach in character",
-      paragraphs: [
-        "Book the Cedar Estate Instead — WhatsApp +92 304 567 9000",
-      ],
-      image: {
-        src: article500Image2,
-        alt: "Occasions: the cedar garden private event space for a birthday, anniversary, Nikah, or corporate din...",
-      },
-    },
-    {
-      type: "related",
-      heading: "Related Pages — Internal Links",
-      items: [
-        { href: "/hotels-in-murree-pakistan", label: "Full Murree hotel guide" },
-        { href: "/movenpick-murree-alternative", label: "Mövenpick comparison" },
-        { href: "/shangrila-murree-alternative", label: "Shangrila comparison" },
-        { href: "/villas", label: "Browse Himalaya Villas" },
-      ],
-    },
-  ],
-};
-
-// ============================================
-// ARTICLE 501 - Lockwood Hotel Murree — Guide and the Bhurban Private Estate Alternative
-// ============================================
-export const article501: Article = {
-  slug: "lockwood-hotel-murree-alternative",
-  title: "Lockwood Hotel Murree — Guide and the Bhurban Private Estate Alternative",
-  metaDescription:
-    "URL /lockwood-hotel-murree-alternative Target Keywords lockwood hotel murree, lockwood murree, lock wood hotel murree, lockwood hotel murree murree",
-  keywords:
-    "",
-  eyebrow: "Backlink Guest Post · ~800w",
-  h1: "Lockwood Hotel Murree — Guide and the Bhurban Private Estate Alternative",
-  heroTagline:
-    "URL /lockwood-hotel-murree-alternative Target Keywords lockwood hotel murree, lockwood murree, lock wood hotel murree, lockwood hotel murree murree",
-  heroImage: article501Hero,
-  blocks: [
-    {
-      type: "callout-qa",
-      question: "What is Lockwood Hotel Murree?",
-      answer: "Lockwood Hotel Murree is one of Murree's established mid-to-upper tier hill station hotels — a recognised local name with sustained search volume (2,900 monthly searches). Located in the Murree Mall Road area. For guests considering Lockwood who want the private cedar estate experience — exclusive outdoor space, cedar forest, in-villa dining — Himalaya Villas & Resorts in Bhurban (11km, 20 minutes) is the structurally different alternative. WhatsApp +92 304 567 9000. Lockwood Hotel Murree is one of the most-searched Murree hotel names — with 2,900 monthly searches it ranks alongside Cecil, Grand Taj, and Hotel One Bhurban in the recognised Murree hotel name tier. Its Mall Road proximity is i...",
-    },
-    {
-      type: "section",
-      eyebrow: "Word Count",
-      heading: "Word Count",
-      paragraphs: [
-        "~800w",
-      ],
-      image: {
-        src: article501Image1,
-        alt: "Word Count",
-      },
-    },
-    {
-      type: "section",
-      eyebrow: "Lockwood Hotel Murree",
-      heading: "Lockwood Hotel Murree — What to Know and the Bhurban Private Villa Alternative",
-      paragraphs: [
-        "❓ What is Lockwood Hotel Murree?",
-        "Lockwood Hotel Murree is one of Murree's established mid-to-upper tier hill station hotels — a recognised local name with sustained search volume (2,900 monthly searches). Located in the Murree Mall Road area. For guests considering Lockwood who want the private cedar estate experience — exclusive outdoor space, cedar forest, in-villa dining — Hima...",
-        "Lockwood Hotel Murree is one of the most-searched Murree hotel names — with 2,900 monthly searches it ranks alongside Cecil, Grand Taj, and Hotel One Bhurban in the recognised Murree hotel name tier. Its Mall Road proximity is its specific selling point for guests who want the bazaar within walking distance.",
-      ],
-    },
-    {
-      type: "section",
-      eyebrow: "Lockwood Hotel Murree",
-      heading: "Lockwood Hotel Murree",
-      paragraphs: [
-        "Himalaya Villas & Resorts, Bhurban",
-      ],
-      image: {
-        src: article501Image2,
-        alt: "Lockwood Hotel Murree",
-      },
-    },
-    {
-      type: "section",
-      eyebrow: "Private outdoor space",
-      heading: "Private outdoor space",
-      paragraphs: [
-        "Shared hotel grounds/terraces",
-      ],
-    },
-    {
-      type: "section",
-      eyebrow: "Hotel restaurant",
-      heading: "Hotel restaurant",
-      paragraphs: [
-        "Pre-arranged in villa at guest's timing",
-      ],
-      image: {
-        src: article501Image2,
-        alt: "Hotel restaurant",
-      },
-    },
-    {
-      type: "section",
-      eyebrow: "Multiple rooms required",
-      heading: "Multiple rooms required",
-      paragraphs: [
-        "1 villa: PKR 55,000–60,000 (Garden Villa)",
-      ],
-    },
-    {
-      type: "related",
-      heading: "Related Pages — Internal Links",
-      items: [
-        { href: "/hotels-in-murree-pakistan", label: "Full Murree hotel guide" },
-        { href: "/bhurban-vs-murree-mall-road", label: "Bhurban vs Mall Road" },
-        { href: "/murree-hotel-booking-guide", label: "Hotel booking guide" },
-        { href: "/villas", label: "Browse Himalaya Villas" },
-      ],
-    },
-  ],
-};
-
-// ============================================
-// ARTICLE 502 - Marco Polo Resort Murree — Guide and the Private Villa Alternative
-// ============================================
-export const article502: Article = {
-  slug: "marco-polo-murree-alternative",
-  title: "Marco Polo Resort Murree — Guide and the Private Villa Alternative",
-  metaDescription:
-    "URL /marco-polo-murree-alternative Target Keywords marco polo resort murree, marco polo murree, marco polo hotel murree",
-  keywords:
-    "",
-  eyebrow: "Backlink Guest Post · ~800w",
-  h1: "Marco Polo Resort Murree — Guide and the Private Villa Alternative",
-  heroTagline:
-    "URL /marco-polo-murree-alternative Target Keywords marco polo resort murree, marco polo murree, marco polo hotel murree",
-  heroImage: article502Hero,
-  blocks: [
-    {
-      type: "callout-qa",
-      question: "What is Marco Polo Resort Murree?",
-      answer: "Marco Polo Resort Murree is a hotel property in the Murree hills market, drawing approximately 4,400 monthly searches. The Marco Polo name suggests a travel/explorer brand positioning in the Murree leisure market. For guests researching Marco Polo who want the private villa estate model — exclusive outdoor space, cedar forest, in-villa dining — Himalaya Villas & Resorts in Bhurban (11km from Murree Mall Road) is the private estate alternative. WhatsApp +92 304 567 9000. Marco Polo Resort Murree generates 4,400 monthly searches — placing it among the top 5 most-searched individual hotel names in the Murree hills market alongside PC Hotel (14,800), Ramada (6,600), and Mövenpick (4,400). Its se...",
-    },
-    {
-      type: "section",
-      eyebrow: "Word Count",
-      heading: "Word Count",
-      paragraphs: [
-        "~800w",
-      ],
-      image: {
-        src: article502Image1,
-        alt: "Word Count",
-      },
-    },
-    {
-      type: "section",
-      eyebrow: "Marco Polo Resort Murree",
-      heading: "Marco Polo Resort Murree — Guide and the Bhurban Private Estate Alternative",
-      paragraphs: [
-        "❓ What is Marco Polo Resort Murree?",
-        "Marco Polo Resort Murree is a hotel property in the Murree hills market, drawing approximately 4,400 monthly searches. The Marco Polo name suggests a travel/explorer brand positioning in the Murree leisure market. For guests researching Marco Polo who want the private villa estate model — exclusive outdoor space, cedar forest, in-villa dining — Him...",
-        "Marco Polo Resort Murree generates 4,400 monthly searches — placing it among the top 5 most-searched individual hotel names in the Murree hills market alongside PC Hotel (14,800), Ramada (6,600), and Mövenpick (4,400). Its search volume significantly exceeds its competitive profile — reflecting brand recognition in the Pakistani domestic tourism ma...",
-      ],
-    },
-    {
-      type: "section",
-      eyebrow: "What Separates Himalaya Villas from All Murree Hotel Options",
-      heading: "What Separates Himalaya Villas from All Murree Hotel Options",
-      paragraphs: [
-        "Rather than a direct comparison table for Marco Polo specifically (whose facilities and exact positioning should be confirmed on Booking.com), this section addresses the fundamental structural difference that separates Himalaya Villas from all Murree area hotel options regardless of brand:",
-        "Every hotel in the Murree hills — Marco Polo, Mövenpick, Ramada, Shangrila, PC Hotel, Lockwood, Cecil, Grand Taj — operates the shared building hotel model. Guests rent a room within a building shared with all other hotel guests.",
-        "Himalaya Villas is the only property in the Bhurban/Murree hills area that operates the private villa estate model: each booking is an exclusive private building with private outdoor spaces belonging only to the booked group.",
-      ],
-      image: {
-        src: article502Image2,
-        alt: "What Separates Himalaya Villas from All Murree Hotel Options",
-      },
-    },
-    {
-      type: "related",
-      heading: "Related Pages — Internal Links",
-      items: [
-        { href: "/hotels-in-murree-pakistan", label: "Full Murree hotel guide" },
-        { href: "/movenpick-murree-alternative", label: "Mövenpick comparison" },
-        { href: "/murree-hotel-booking-guide", label: "Booking guide" },
-        { href: "/villas", label: "Browse Himalaya Villas" },
-      ],
-    },
-  ],
-};
-
-// ============================================
-// ARTICLE 503 - Best Hotels in Murree Pakistan 2026 — The Definitive Ranked Guide
-// ============================================
-export const article503: Article = {
-  slug: "best-hotels-murree-pakistan-2026",
-  title: "Best Hotels in Murree Pakistan 2026 — The Definitive Ranked Guide",
-  metaDescription:
-    "URL /best-hotels-murree-pakistan-2026 Target Keywords best hotels in murree pakistan, best hotels murree, best hotel murree pakistan 2026, top hotels murree pakistan",
-  keywords:
-    "",
-  eyebrow: "Backlink Guest Post · ~1,100w",
-  h1: "Best Hotels in Murree Pakistan 2026 — The Definitive Ranked Guide",
-  heroTagline:
-    "URL /best-hotels-murree-pakistan-2026 Target Keywords best hotels in murree pakistan, best hotels murree, best hotel murree pakistan 2026, top hotels murree pakistan",
-  heroImage: article503Hero,
-  blocks: [
-    {
-      type: "callout-qa",
-      question: "What are the best hotels in Murree Pakistan in 2026?",
-      answer: "The best hotels in Murree Pakistan 2026 by category: Best private villa estate — Himalaya Villas & Resorts, Bhurban (PKR 39,000–70,000/villa/night; the only exclusive-use private villa estate in the Murree hills); Best 5-star chain — PC Hotel Bhurban / Marriott (PKR 35,000–75,000/room; pool, Bonvoy); Best international brand — Mövenpick Murree (Accor ALL); Best Wyndham — Ramada by Wyndham Murree; Best domestic resort — Shangrila Resort Murree. For families wanting private outdoor space: Himalaya Villas is the only option in the market. The 'best hotels in Murree Pakistan' search is the Murree hospitality market's highest-intent informational query — 2,400 monthly searches from visitors in th...",
-    },
-    {
-      type: "paragraph",
-      text: "best hotels in murree pakistan, best hotels murree, best hotel murree pakistan 2026, top hotels murree pakistan",
-    },
-    {
-      type: "section",
-      eyebrow: "Word Count",
-      heading: "Word Count",
-      paragraphs: [
-        "~1,100w",
-      ],
-    },
-    {
-      type: "section",
-      eyebrow: "Best for Private Outdoor Space: Himalaya Villas & Resorts, Bhurban",
-      heading: "Best for Private Outdoor Space: Himalaya Villas & Resorts, Bhurban",
-      paragraphs: [
-        "The only property in the Murree hills with exclusive-use private outdoor spaces per booking. 12 private villas, each with a private terrace, enclosed garden, or outdoor terrace jacuzzi. Rate: PKR 39,000–70,000/villa/night. For families of 4+, groups celebrating occasions, honeymooners, and anyone for whom the private outdoor space is non-negotiable...",
-      ],
-      image: {
-        src: article503Image2,
-        alt: "Best for Private Outdoor Space: Himalaya Villas & Resorts, Bhurban",
-      },
-    },
-    {
-      type: "section",
-      eyebrow: "Best Accor Brand: Mövenpick Murree",
-      heading: "Best Accor Brand: Mövenpick Murree",
-      paragraphs: [
-        "The second international brand in the Murree hills market (after PC Hotel). Accor ALL loyalty eligible. Mövenpick's brand strength is food and beverage quality — the brand consistently delivers good dining. For Accor ALL members and guests who specifically want the Mövenpick F&B experience in the mountain setting.",
-      ],
-    },
-    {
-      type: "section",
-      eyebrow: "Best Domestic Resort Brand: Shangrila Resort Murree",
-      heading: "Best Domestic Resort Brand: Shangrila Resort Murree",
-      paragraphs: [
-        "The Shangrila brand is Pakistan's strongest domestic mountain resort name. The Murree property extends the Shangrila positioning into the Murree hills market. For guests drawn to the Shangrila brand's Pakistan mountain leisure heritage.",
-      ],
-      image: {
-        src: article503Image2,
-        alt: "Best Domestic Resort Brand: Shangrila Resort Murree",
-      },
-    },
-    {
-      type: "section",
-      eyebrow: "Best Mid-Scale: Hotel One Bhurban",
-      heading: "Best Mid-Scale: Hotel One Bhurban",
-      paragraphs: [
-        "The Hashoo Group's mid-scale brand in Bhurban. Lower rate tier than PC Hotel while sharing the Bhurban location. For budget-conscious guests who want the Bhurban location and a mid-scale hotel experience.",
-      ],
-    },
-    {
-      type: "cta",
-      eyebrow: "Book: hotelsone.com.pk",
-      heading: "Book: hotelsone.com.pk",
-      text: "",
-      buttonLabel: "WhatsApp: +92 304 567 9000 | wa.me/923045679000",
-      buttonHref: "https://wa.me/923045679000",
-      footnote: "Direct bookings receive priority response and best available rate.",
-    },
-    {
-      type: "section",
-      eyebrow: "Best Budget: Bhurban and Murree Guesthouses",
-      heading: "Best Budget: Bhurban and Murree Guesthouses",
-      paragraphs: [
-        "The guesthouse market offers PKR 5,000–20,000/night across both Bhurban and Murree Mall Road. Variable quality — read reviews carefully. Search Airbnb or Booking.com for current listings.",
-      ],
-    },
-    {
-      type: "section",
-      eyebrow: "Ramada by Wyndham",
-      heading: "Ramada by Wyndham",
-      paragraphs: [
-        "Wyndham Rewards, Mall Road access",
-        "Confirm at wyndhamhotels.com",
-        "wyndhamhotels.com",
-      ],
-      image: {
-        src: article503Image2,
-        alt: "Ramada by Wyndham",
-      },
-    },
-    {
-      type: "section",
-      eyebrow: "Shangrila Resort Murree",
-      heading: "Shangrila Resort Murree",
-      paragraphs: [
-        "Domestic resort brand, Shangrila loyalty",
-        "Confirm at shangrila.com.pk",
-        "shangrila.com.pk",
-      ],
-    },
-    {
-      type: "section",
-      eyebrow: "Hotel One Bhurban",
-      heading: "Hotel One Bhurban",
-      paragraphs: [
-        "Budget tier, Bhurban location",
-        "Confirm at hotelsone.com.pk",
-        "hotelsone.com.pk",
-        "Bhurban/Murree guesthouses",
-      ],
-      image: {
-        src: article503Image2,
-        alt: "Hotel One Bhurban",
-      },
-    },
-    {
-      type: "section",
-      eyebrow: "Lowest budget",
-      heading: "Lowest budget",
-      paragraphs: [
-        "PKR 5,000–20,000/night",
-        "Airbnb / Booking.com",
-        "Book the Best Private Villa in Murree Hills — WhatsApp +92 304 567 9000",
-      ],
-    },
-    {
-      type: "related",
-      heading: "Related Pages — Internal Links",
-      items: [
-        { href: "/hotels-in-murree-pakistan", label: "Full hotel guide" },
-        { href: "/murree-hotel-booking-guide", label: "Booking hub" },
-        { href: "/bhurban-accommodation-guide", label: "Bhurban-specific guide" },
-        { href: "/villas", label: "Browse Himalaya Villas" },
-      ],
-    },
-  ],
-};
-
-// ============================================
-// ARTICLE 504 - Murree Hill Station — Pakistan's Most Accessible Mountain Destination
-// ============================================
-export const article504: Article = {
-  slug: "murree-hill-station-guide",
-  title: "Murree Hill Station — Pakistan's Most Accessible Mountain Destination",
-  metaDescription:
-    "URL /murree-hill-station-guide Target Keywords murree hill station, murree pakistan hill station, murree hill station pakistan, pakistan hill station murree bhurban",
-  keywords:
-    "",
-  eyebrow: "Backlink Guest Post · ~1,000w",
-  h1: "Murree Hill Station — Pakistan's Most Accessible Mountain Destination",
-  heroTagline:
-    "URL /murree-hill-station-guide Target Keywords murree hill station, murree pakistan hill station, murree hill station pakistan, pakistan hill station murree bhurban",
-  heroImage: article504Hero,
-  blocks: [
-    {
-      type: "callout-qa",
-      question: "What is Murree hill station and why is it Pakistan's most visited?",
-      answer: "Murree is Pakistan's most-visited hill station — a mountain town at 7,500 feet in the Murree Hills of Punjab province, 55km from Islamabad. It has served as a hill station since the British colonial period (established 1850s as a sanatorium for British troops). The Murree hills area includes Bhurban (47km from Islamabad, 6,800 feet), the Galyat chain (Ayubia, Nathia Gali, 8,000 feet), and Murree Mall Road itself. Pakistan's premier hill station for domestic tourism. The closest to Islamabad of any significant mountain destination. 'Murree hill station' reflects the foundational search query for Pakistan's oldest and most accessible mountain tourism destination. Established by British colonia...",
-    },
-    {
-      type: "paragraph",
-      text: "murree hill station, murree pakistan hill station, murree hill station pakistan, pakistan hill station murree bhurban",
-    },
-    {
-      type: "section",
-      eyebrow: "Word Count",
-      heading: "Word Count",
-      paragraphs: [
-        "~1,000w",
-      ],
-    },
-    {
-      type: "section",
-      eyebrow: "Bhurban",
-      heading: "Bhurban",
-      paragraphs: [
-        "6,800 feet",
-        "47km, 45 min",
-        "Premium accommodation hub — PC Hotel Bhurban, Himalaya Villas cedar estate",
-      ],
-      image: {
-        src: article504Image2,
-        alt: "Bhurban",
-      },
-    },
-    {
-      type: "section",
-      eyebrow: "Ghora Gali",
-      heading: "Ghora Gali",
-      paragraphs: [
-        "7,800 feet",
-        "65km, 1h 10min",
-      ],
-    },
-    {
-      type: "section",
-      eyebrow: "Nathia Gali",
-      heading: "Nathia Gali",
-      paragraphs: [
-        "8,000 feet",
-        "75km, 1h 15min",
-        "The Galyat's highest permanent settlement — quietest hill station town",
-        "Why Murree Became Pakistan's Dominant Hill Station",
-        "Three factors explain Murree's dominance in Pakistan's domestic mountain tourism:",
-      ],
-      image: {
-        src: article504Image2,
-        alt: "Nathia Gali",
-      },
-    },
-    {
-      type: "section",
-      eyebrow: "Historical establishment: 170 years of hill station development has created Murree's hotel infrastru...",
-      heading: "Historical establishment: 170 years of hill station development has created Murree's hotel infrastructure, bazaar culture, and domestic tourism identity. Murree's reputation is self-reinforcing — it i...",
-      paragraphs: [
-        "Murree Hill Station Today — What It Is and Isn't",
-        "Murree Mall Road in July is one of Pakistan's most crowded outdoor spaces — the heat-escape demand from Islamabad, Rawalpindi, and Lahore produces visitor volumes that the infrastructure struggles to accommodate. The kashmiri chai, the bhutta, the dried fruit stalls, and the Kashmir Point viewpoint remain the authentic hill station experience — but...",
-        "Bhurban, 11km from Mall Road, offers the specific alternative that most experienced Murree visitors move toward after their first Mall Road experience: the private cedar estate at Himalaya Villas where the private outdoor space, the cedar forest, and the absence of other guests create the hill station experience that the Mall Road hotel no longer p...",
-        "Book the Bhurban Cedar Estate — Pakistan's Finest Hill Station Private Villa",
-      ],
-    },
-    {
-      type: "related",
-      heading: "Related Pages — Internal Links",
-      items: [
-        { href: "/murree-bhurban-complete-guide", label: "Complete destination guide" },
-        { href: "/hotels-in-murree-pakistan", label: "Full hotel guide" },
-        { href: "/best-time-to-visit-murree", label: "Seasonal guide" },
-        { href: "/villas", label: "Browse Himalaya Villas" },
-      ],
-    },
-  ],
-};
-
-// ============================================
-// ARTICLE 505 - Murree Temperature Today — Live Weather Reference and the Bhurban Experience
-// ============================================
-export const article505: Article = {
-  slug: "murree-temperature-today",
-  title: "Murree Temperature Today — Live Weather Reference and the Bhurban Experience",
-  metaDescription:
-    "URL /murree-temperature-today Target Keywords murree temperature today, murree temperature now, murree temperature right now, today murree temperature, bhurban temperature today",
-  keywords:
-    "",
-  eyebrow: "Backlink Guest Post · ~800w | -1 to -3°C",
-  h1: "Murree Temperature Today — Live Weather Reference and the Bhurban Experience",
-  heroTagline:
-    "URL /murree-temperature-today Target Keywords murree temperature today, murree temperature now, murree temperature right now, today murree temperature, bhurban temperature today",
-  heroImage: article505Hero,
-  blocks: [
-    {
-      type: "callout-qa",
-      question: "What is Murree's temperature today?",
-      answer: "For live Murree temperature right now: search 'Murree weather' on Google for the instant weather widget, or check pmd.gov.pk (Pakistan Meteorological Department), AccuWeather (search 'Murree Pakistan'), or timeanddate.com/weather/pakistan/murree. Bhurban — where Himalaya Villas is located, 11km from Murree Mall Road — runs approximately 1–2°C cooler than Murree town at any given time due to the slightly higher elevation (6,800 feet vs 7,500 feet). Himalaya Villas WhatsApp (+92 304 567 9000) can advise on current cedar estate conditions for confirmed guests. 'Murree temperature today' and 'murree temperature now' together generate over 6,800 monthly searches — the real-time weather check quer...",
-    },
-    {
-      type: "paragraph",
-      text: "murree temperature today, murree temperature now, murree temperature right now, today murree temperature, bhurban temperature today",
-    },
-    {
-      type: "section",
-      eyebrow: "Word Count",
-      heading: "Word Count",
-      paragraphs: [
-        "~800w",
-      ],
-    },
-    {
-      type: "section",
-      eyebrow: "Murree Temperature Today",
-      heading: "Murree Temperature Today — Live Reference and What It Means for Your Visit",
-      paragraphs: [
-        "❓ What is Murree's temperature today?",
-      ],
-      image: {
-        src: article505Image2,
-        alt: "Murree Temperature Today — Live Reference and What It Means for Your Visit",
-      },
-    },
-    {
-      type: "cta",
-      eyebrow: "For live Murree temperature right now: search 'Murree weather' on Google for the instant weather widget, or check pmd.go...",
-      heading: "For live Murree temperature right now: search 'Murree weather' on Google for the instant weather widget, or check pmd.gov.pk (Pakistan Meteorological Department), AccuWeather (search 'Murree Pakistan'...",
-      text: "'Murree temperature today' and 'murree temperature now' together generate over 6,800 monthly searches — the real-time weather check query from people either currently in Murree, planning an imminent trip, or monitoring conditions for a booking decision. This page provides the live reference points a...",
-      buttonLabel: "WhatsApp: +92 304 567 9000 | wa.me/923045679000",
-      buttonHref: "https://wa.me/923045679000",
-      footnote: "Direct bookings receive priority response and best available rate.",
-    },
-    {
-      type: "section",
-      eyebrow: "What the Temperature Means for Your Cedar Estate Experience",
-      heading: "What the Temperature Means for Your Cedar Estate Experience",
-      paragraphs: [
-        "Current Temp (Murree)",
-      ],
-      image: {
-        src: article505Image2,
-        alt: "What the Temperature Means for Your Cedar Estate Experience",
-      },
-    },
-    {
-      type: "related",
-      heading: "Related Pages — Internal Links",
-      items: [
-        { href: "/murree-temperature-guide", label: "Full temperature guide" },
-        { href: "/murree-snowfall-guide", label: "Snowfall guide" },
-        { href: "/best-time-to-visit-murree", label: "Full seasonal guide" },
-        { href: "/villas", label: "Browse Himalaya Villas" },
-      ],
-    },
-  ],
-};
-
-// ============================================
 // ARTICLE 506 - /chinar-club-bhurban-guide chinar club bhurban, chinar golf club bhurban, chinar...
 // ============================================
 export const article506: Article = {
@@ -4116,7 +1113,7 @@ export const article506: Article = {
   keywords:
     "chinar club bhurban, chinar golf club bhurban, chinar family resort bhurban, chinar resort bhurban, chinar hotel bhurban",
   eyebrow: "Backlink Guest Post · ~1,000w",
-  h1: "/chinar-club-bhurban-guide chinar club bhurban, chinar golf club bhurban, chinar family resort bhurban, chinar resort bhurban, chinar hotel bhurban",
+  h1: " chinar club bhurban, chinar golf club bhurban, chinar family resort bhurban, chinar resort bhurban, chinar hotel bhurban",
   heroTagline:
     "chinar club bhurban, chinar golf club bhurban, chinar family resort bhurban, chinar resort bhurban, chinar hotel bhurban",
   heroImage: article506Hero,
@@ -4181,13 +1178,17 @@ export const article506: Article = {
       ],
     },
     {
-      type: "cta",
+      type: "section",
       eyebrow: "Booking",
       heading: "Booking",
-      text: "pchotels.com / Marriott app WhatsApp +92 304 567 9000",
-      buttonLabel: "WhatsApp: +92 304 567 9000 | wa.me/923045679000",
-      buttonHref: "https://wa.me/923045679000",
-      footnote: "Direct bookings receive priority response and best available rate.",
+      paragraphs: [
+        "pchotels.com / Marriott app",
+        "WhatsApp +92 304 567 9000",
+      ],
+      image: {
+        src: article506Image2,
+        alt: "Booking",
+      },
     },
     {
       type: "section",
@@ -4265,13 +1266,13 @@ export const article507: Article = {
       },
     },
     {
-      type: "cta",
+      type: "section",
       eyebrow: "Booking",
       heading: "Booking",
-      text: "Confirm via PC Hotel / Chinar complex WhatsApp +92 304 567 9000 direct",
-      buttonLabel: "WhatsApp: +92 304 567 9000 | wa.me/923045679000",
-      buttonHref: "https://wa.me/923045679000",
-      footnote: "Direct bookings receive priority response and best available rate.",
+      paragraphs: [
+        "Confirm via PC Hotel / Chinar complex",
+        "WhatsApp +92 304 567 9000 direct",
+      ],
     },
     {
       type: "related",
@@ -4292,13 +1293,13 @@ export const article508: Article = {
   slug: "holiday-grand-resort-bhurban-guide",
   title: "Holiday Grand Resort Bhurban and Other Cedar Forest Stays — Complete Guide",
   metaDescription:
-    "URL /holiday-grand-resort-bhurban-guide Target KW holiday grand resort bhurban, insignia resort bhurban, jasmine villa murree, bhurban resort accommodation",
+    "holiday grand resort bhurban, insignia resort bhurban, jasmine villa murree, bhurban resort accommodation",
   keywords:
     "holiday grand resort bhurban, insignia resort bhurban, jasmine villa murree, bhurban resort accommodation",
   eyebrow: "Backlink Guest Post · Cluster | ~800w",
   h1: "Holiday Grand Resort Bhurban and Other Cedar Forest Stays — Complete Guide",
   heroTagline:
-    "URL /holiday-grand-resort-bhurban-guide Target KW holiday grand resort bhurban, insignia resort bhurban, jasmine villa murree, bhurban resort accommodation",
+    "holiday grand resort bhurban, insignia resort bhurban, jasmine villa murree, bhurban resort accommodation",
   heroImage: article508Hero,
   blocks: [
     {
@@ -4321,13 +1322,16 @@ export const article508: Article = {
       ],
     },
     {
-      type: "cta",
-      eyebrow: "Booking: check Booking.com for current availability and rates",
-      heading: "Booking: check Booking.com for current availability and rates",
-      text: "",
-      buttonLabel: "WhatsApp: +92 304 567 9000 | wa.me/923045679000",
-      buttonHref: "https://wa.me/923045679000",
-      footnote: "Direct bookings receive priority response and best available rate.",
+      type: "section",
+      eyebrow: "Insignia Resort Bhurban",
+      heading: "Insignia Resort Bhurban",
+      paragraphs: [
+        "Insignia Resort Bhurban draws approximately 90 monthly searches — a smaller established name in the Bhurban accommodation market. Confirm current status, rates, and availability directly on Booking.com or via Google Maps search.",
+      ],
+      image: {
+        src: article508Image2,
+        alt: "Insignia Resort Bhurban",
+      },
     },
     {
       type: "section",
@@ -4403,13 +1407,13 @@ export const article509: Article = {
   slug: "pc-bhurban-hi-tea-guide",
   title: "PC Bhurban Hi Tea — Guide and the Cedar Estate Day Visit Alternative",
   metaDescription:
-    "URL /pc-bhurban-hi-tea-guide Target KW pc bhurban hi tea, pc bhurban hi tea price, hi tea pc bhurban, pc bhurban hi tea menu, hi tea in pc bhurban",
+    "pc bhurban hi tea, pc bhurban hi tea price, hi tea pc bhurban, pc bhurban hi tea menu, hi tea in pc bhurban",
   keywords:
     "pc bhurban hi tea, pc bhurban hi tea price, hi tea pc bhurban, pc bhurban hi tea menu, hi tea in pc bhurban",
   eyebrow: "Backlink Guest Post · Cluster | ~800w",
   h1: "PC Bhurban Hi Tea — Guide and the Cedar Estate Day Visit Alternative",
   heroTagline:
-    "URL /pc-bhurban-hi-tea-guide Target KW pc bhurban hi tea, pc bhurban hi tea price, hi tea pc bhurban, pc bhurban hi tea menu, hi tea in pc bhurban",
+    "pc bhurban hi tea, pc bhurban hi tea price, hi tea pc bhurban, pc bhurban hi tea menu, hi tea in pc bhurban",
   heroImage: article509Hero,
   blocks: [
     {
@@ -4451,13 +1455,13 @@ export const article510: Article = {
   slug: "bhurban-apartments-guide",
   title: "Bhurban Apartments — Guide to Self-Catering Stays and the Villa Alternative",
   metaDescription:
-    "URL /bhurban-apartments-guide Target KW bhurban apartments, bhurban apartments for rent, bhurban hill apartments, bhurban crystal apartments, bhurban heights apartments",
+    "bhurban apartments, bhurban apartments for rent, bhurban hill apartments, bhurban crystal apartments, bhurban heights apartments",
   keywords:
     "bhurban apartments, bhurban apartments for rent, bhurban hill apartments, bhurban crystal apartments, bhurban heights apartments",
   eyebrow: "Backlink Guest Post · Himalaya Villas Private Villa | ~800w",
   h1: "Bhurban Apartments — Guide to Self-Catering Stays and the Villa Alternative",
   heroTagline:
-    "URL /bhurban-apartments-guide Target KW bhurban apartments, bhurban apartments for rent, bhurban hill apartments, bhurban crystal apartments, bhurban heights apartments",
+    "bhurban apartments, bhurban apartments for rent, bhurban hill apartments, bhurban crystal apartments, bhurban heights apartments",
   heroImage: article510Hero,
   blocks: [
     {
@@ -4480,21 +1484,16 @@ export const article510: Article = {
       ],
     },
     {
-      type: "cta",
-      eyebrow: "Bhurban Crystal Apartments: smaller search volume; confirm on Booking.com or Airbnb.",
-      heading: "Bhurban Crystal Apartments: smaller search volume; confirm on Booking.com or Airbnb.",
-      text: "",
-      buttonLabel: "WhatsApp: +92 304 567 9000 | wa.me/923045679000",
-      buttonHref: "https://wa.me/923045679000",
-      footnote: "Direct bookings receive priority response and best available rate.",
-    },
-    {
       type: "section",
       eyebrow: "Self-catering kitchen",
       heading: "Self-catering kitchen",
       paragraphs: [
         "In-villa dining pre-arranged (no kitchen required)",
       ],
+      image: {
+        src: article510Image2,
+        alt: "Self-catering kitchen",
+      },
     },
     {
       type: "section",
@@ -4504,10 +1503,6 @@ export const article510: Article = {
         "PKR 8,000-25,000/night approx.",
         "PKR 39,000-70,000/villa/night",
       ],
-      image: {
-        src: article510Image2,
-        alt: "Rate",
-      },
     },
     {
       type: "section",
@@ -4516,6 +1511,10 @@ export const article510: Article = {
       paragraphs: [
         "Balcony (shared block, limited)",
       ],
+      image: {
+        src: article510Image2,
+        alt: "Private outdoor space",
+      },
     },
     {
       type: "section",
@@ -4524,10 +1523,6 @@ export const article510: Article = {
       paragraphs: [
         "For stays of 4+ nights where self-catering significantly reduces the total food cost, the apartment model can make financial sense — particularly for budget-conscious families who are comfortable cooking their own meals. PKR 15,000/night for a good Bhurban apartment vs PKR 58,000/night for the Himalaya Villas Garden Villa Retreat: the apartment is ...",
       ],
-      image: {
-        src: article510Image2,
-        alt: "When Bhurban Apartments Win the Value Calculation",
-      },
     },
     {
       type: "related",
@@ -4549,13 +1544,13 @@ export const article511: Article = {
   slug: "hotels-in-bhurban-murree",
   title: "Hotels Near Bhurban — Everything on the Bhurban Ridge and Cedar Forest",
   metaDescription:
-    "URL /hotels-in-bhurban-murree Target KW hotels in bhurban, hotels bhurban, hotel bhurban, hotels in bhurban pakistan, hotels near bhurban, hotel near pc bhurban",
+    "hotels in bhurban, hotels bhurban, hotel bhurban, hotels in bhurban pakistan, hotels near bhurban, hotel near pc bhurban",
   keywords:
     "hotels in bhurban, hotels bhurban, hotel bhurban, hotels in bhurban pakistan, hotels near bhurban, hotel near pc bhurban",
   eyebrow: "Backlink Guest Post · Commercial Hub | Cluster 1 | ~900w | ~900w",
   h1: "Hotels Near Bhurban — Everything on the Bhurban Ridge and Cedar Forest",
   heroTagline:
-    "URL /hotels-in-bhurban-murree Target KW hotels in bhurban, hotels bhurban, hotel bhurban, hotels in bhurban pakistan, hotels near bhurban, hotel near pc bhurban",
+    "hotels in bhurban, hotels bhurban, hotel bhurban, hotels in bhurban pakistan, hotels near bhurban, hotel near pc bhurban",
   heroImage: article511Hero,
   blocks: [
     {
@@ -4717,13 +1712,13 @@ export const article512: Article = {
   slug: "bhurban-boutique-accommodation",
   title: "Bhurban Inn, Swiss Cottage Bhurban and Boutique Accommodation — Complete Guide",
   metaDescription:
-    "URL /bhurban-boutique-accommodation Target KW bhurban inn, swiss cottage bhurban, falcon inn bhurban, bhurban huts, boutique accommodation bhurban",
+    "bhurban inn, swiss cottage bhurban, falcon inn bhurban, bhurban huts, boutique accommodation bhurban ~800w",
   keywords:
     "bhurban inn, swiss cottage bhurban, falcon inn bhurban, bhurban huts, boutique accommodation bhurban",
   eyebrow: "Backlink Guest Post · ~800w",
   h1: "Bhurban Inn, Swiss Cottage Bhurban and Boutique Accommodation — Complete Guide",
   heroTagline:
-    "URL /bhurban-boutique-accommodation Target KW bhurban inn, swiss cottage bhurban, falcon inn bhurban, bhurban huts, boutique accommodation bhurban",
+    "bhurban inn, swiss cottage bhurban, falcon inn bhurban, bhurban huts, boutique accommodation bhurban ~800w",
   heroImage: article512Hero,
   blocks: [
     {
@@ -4755,13 +1750,13 @@ export const article513: Article = {
   slug: "murree-day-trip-islamabad",
   title: "Murree Day Trip from Islamabad — Can You Do It and Should You?",
   metaDescription:
-    "URL /murree-day-trip-islamabad Target KW murree day trip islamabad, one day trip to murree, murree one day, islamabad to murree day trip",
+    "murree day trip islamabad, one day trip to murree, murree one day, islamabad to murree day trip ~900w",
   keywords:
     "murree day trip islamabad, one day trip to murree, murree one day, islamabad to murree day trip",
   eyebrow: "Backlink Guest Post · ❓ Can I do Murree as a day trip from Islamabad? | ~900w",
   h1: "Murree Day Trip from Islamabad — Can You Do It and Should You?",
   heroTagline:
-    "URL /murree-day-trip-islamabad Target KW murree day trip islamabad, one day trip to murree, murree one day, islamabad to murree day trip",
+    "murree day trip islamabad, one day trip to murree, murree one day, islamabad to murree day trip ~900w",
   heroImage: article513Hero,
   blocks: [
     {
@@ -4853,13 +1848,13 @@ export const article514: Article = {
   slug: "murree-tour-packages-guide",
   title: "Murree Tour Packages — What Exists and the Private Estate Alternative",
   metaDescription:
-    "URL /murree-tour-packages-guide Target KW murree tour package, murree trip packages, murree tourism packages, murree travel package, islamabad murree tour",
+    "murree tour package, murree trip packages, murree tourism packages, murree travel package, islamabad murree tour",
   keywords:
     "murree tour package, murree trip packages, murree tourism packages, murree travel package, islamabad murree tour",
   eyebrow: "Backlink Guest Post · Most Murree tour packages sold through Pakistani travel agents and OTA platforms follow a standard format: | ~800w",
   h1: "Murree Tour Packages — What Exists and the Private Estate Alternative",
   heroTagline:
-    "URL /murree-tour-packages-guide Target KW murree tour package, murree trip packages, murree tourism packages, murree travel package, islamabad murree tour",
+    "murree tour package, murree trip packages, murree tourism packages, murree travel package, islamabad murree tour",
   heroImage: article514Hero,
   blocks: [
     {
@@ -4915,13 +1910,13 @@ export const article515: Article = {
   slug: "bhurban-golf-club-guide",
   title: "Bhurban Golf Club — The Cedar Forest Mountain Course and Overnight Stay Guide",
   metaDescription:
-    "URL /bhurban-golf-club-guide Target KW bhurban golf club, golf hotel bhurban, chinar golf club bhurban murree, pc bhurban golf course, bhurban murree golf",
+    "bhurban golf club, golf hotel bhurban, chinar golf club bhurban murree, pc bhurban golf course, bhurban murree golf",
   keywords:
     "bhurban golf club, golf hotel bhurban, chinar golf club bhurban murree, pc bhurban golf course, bhurban murree golf",
   eyebrow: "Backlink Guest Post · ~800w",
   h1: "Bhurban Golf Club — The Cedar Forest Mountain Course and Overnight Stay Guide",
   heroTagline:
-    "URL /bhurban-golf-club-guide Target KW bhurban golf club, golf hotel bhurban, chinar golf club bhurban murree, pc bhurban golf course, bhurban murree golf",
+    "bhurban golf club, golf hotel bhurban, chinar golf club bhurban murree, pc bhurban golf course, bhurban murree golf",
   heroImage: article515Hero,
   blocks: [
     {
@@ -4972,13 +1967,13 @@ export const article516: Article = {
   slug: "murree-weather-guide",
   title: "Murree Weather — Live Reference, Forecast Guide and Bhurban Planning",
   metaDescription:
-    "URL /murree-weather-guide Target KW murree weather, murree weather pakistan, murree weather today, current murree weather, murree weather report",
+    "murree weather, murree weather pakistan, murree weather today, current murree weather, murree weather report",
   keywords:
     "murree weather, murree weather pakistan, murree weather today, current murree weather, murree weather report",
   eyebrow: "Backlink Guest Post · WC | ~1,000w",
   h1: "Murree Weather — Live Reference, Forecast Guide and Bhurban Planning",
   heroTagline:
-    "URL /murree-weather-guide Target KW murree weather, murree weather pakistan, murree weather today, current murree weather, murree weather report",
+    "murree weather, murree weather pakistan, murree weather today, current murree weather, murree weather report",
   heroImage: article516Hero,
   blocks: [
     {
@@ -5099,13 +2094,13 @@ export const article517: Article = {
   slug: "murree-weather-today",
   title: "Murree Weather Today — Live Check and What It Means for Your Visit",
   metaDescription:
-    "URL /murree-weather-today Target KW murree weather today, murree weather today snowfall, murree weather right now, live murree weather, today murree weather update",
+    "murree weather today, murree weather today snowfall, murree weather right now, live murree weather, today murree weather update",
   keywords:
     "murree weather today, murree weather today snowfall, murree weather right now, live murree weather, today murree weather update",
   eyebrow: "Backlink Guest Post · Weather | Cluster 7 | ~700w | ~700w",
   h1: "Murree Weather Today — Live Check and What It Means for Your Visit",
   heroTagline:
-    "URL /murree-weather-today Target KW murree weather today, murree weather today snowfall, murree weather right now, live murree weather, today murree weather update",
+    "murree weather today, murree weather today snowfall, murree weather right now, live murree weather, today murree weather update",
   heroImage: article517Hero,
   blocks: [
     {
@@ -5212,13 +2207,13 @@ export const article518: Article = {
   slug: "murree-weather-forecast",
   title: "Murree Weather Forecast — 10, 15 and 30 Day Planning Guide",
   metaDescription:
-    "URL /murree-weather-forecast Target KW murree weather 10 days, murree weather 30 days, murree weather 10 day forecast, murree weather 15 days, murree weather next 10 days",
+    "murree weather 10 days, murree weather 30 days, murree weather 10 day forecast, murree weather 15 days, murree weather next 10 days",
   keywords:
     "murree weather 10 days, murree weather 30 days, murree weather 10 day forecast, murree weather 15 days, murree weather next 10 days",
   eyebrow: "Backlink Guest Post · Target KW | ~800w",
   h1: "Murree Weather Forecast — 10, 15 and 30 Day Planning Guide",
   heroTagline:
-    "URL /murree-weather-forecast Target KW murree weather 10 days, murree weather 30 days, murree weather 10 day forecast, murree weather 15 days, murree weather next 10 days",
+    "murree weather 10 days, murree weather 30 days, murree weather 10 day forecast, murree weather 15 days, murree weather next 10 days",
   heroImage: article518Hero,
   blocks: [
     {
@@ -5284,15 +2279,6 @@ export const article518: Article = {
       ],
     },
     {
-      type: "cta",
-      eyebrow: "Using the Forecast for Bhurban Booking Decisions",
-      heading: "Using the Forecast for Bhurban Booking Decisions",
-      text: "",
-      buttonLabel: "WhatsApp: +92 304 567 9000 | wa.me/923045679000",
-      buttonHref: "https://wa.me/923045679000",
-      footnote: "Direct bookings receive priority response and best available rate.",
-    },
-    {
       type: "related",
       heading: "Related Pages — Internal Links",
       items: [
@@ -5312,13 +2298,13 @@ export const article519: Article = {
   slug: "murree-weather-snowfall",
   title: "Murree Weather Snowfall — Live Conditions and Visit Planning",
   metaDescription:
-    "URL /murree-weather-snowfall Target KW murree weather snowfall, murree weather snowfall next 30 days, murree weather snowfall next 10 days, murree weather snow",
+    "murree weather snowfall, murree weather snowfall next 30 days, murree weather snowfall next 10 days, murree weather snow",
   keywords:
     "murree weather snowfall, murree weather snowfall next 30 days, murree weather snowfall next 10 days, murree weather snow",
   eyebrow: "Backlink Guest Post · November | ~800w",
   h1: "Murree Weather Snowfall — Live Conditions and Visit Planning",
   heroTagline:
-    "URL /murree-weather-snowfall Target KW murree weather snowfall, murree weather snowfall next 30 days, murree weather snowfall next 10 days, murree weather snow",
+    "murree weather snowfall, murree weather snowfall next 30 days, murree weather snowfall next 10 days, murree weather snow",
   heroImage: article519Hero,
   blocks: [
     {
@@ -5454,13 +2440,13 @@ export const article520: Article = {
   slug: "kashmir-point-murree-guide",
   title: "Kashmir Point Murree Pakistan — The Complete Viewpoint and Visit Guide",
   metaDescription:
-    "URL /kashmir-point-murree-guide Target KW kashmir point murree pakistan, kashmir point murree, hotel in kashmir point murree, kashmir point murree hotels",
+    "kashmir point murree pakistan, kashmir point murree, hotel in kashmir point murree, kashmir point murree hotels",
   keywords:
     "kashmir point murree pakistan, kashmir point murree, hotel in kashmir point murree, kashmir point murree hotels",
   eyebrow: "Backlink Guest Post · Time/Season | ~1,000w",
   h1: "Kashmir Point Murree Pakistan — The Complete Viewpoint and Visit Guide",
   heroTagline:
-    "URL /kashmir-point-murree-guide Target KW kashmir point murree pakistan, kashmir point murree, hotel in kashmir point murree, kashmir point murree hotels",
+    "kashmir point murree pakistan, kashmir point murree, hotel in kashmir point murree, kashmir point murree hotels",
   heroImage: article520Hero,
   blocks: [
     {
@@ -5567,13 +2553,13 @@ export const article521: Article = {
   slug: "murree-mall-road-guide",
   title: "Murree Mall Road — The Complete Visitor Guide 2026",
   metaDescription:
-    "URL /murree-mall-road-guide Target KW murree mall road, pakistan murree mall road, murree mall road weather, murree mall road hotels rates",
+    "murree mall road, pakistan murree mall road, murree mall road weather, murree mall road hotels rates ~1,000w",
   keywords:
     "murree mall road, pakistan murree mall road, murree mall road weather, murree mall road hotels rates",
   eyebrow: "Backlink Guest Post · Mall Road in July on a Saturday afternoon is one of Pakistan's most crowded outdoor spaces — the pedestrian flow from Islamabad ...",
   h1: "Murree Mall Road — The Complete Visitor Guide 2026",
   heroTagline:
-    "URL /murree-mall-road-guide Target KW murree mall road, pakistan murree mall road, murree mall road weather, murree mall road hotels rates",
+    "murree mall road, pakistan murree mall road, murree mall road weather, murree mall road hotels rates ~1,000w",
   heroImage: article521Hero,
   blocks: [
     {
@@ -5637,13 +2623,13 @@ export const article522: Article = {
   slug: "murree-tourist-places-guide",
   title: "Murree Tourist Places — The Complete 2026 Guide to Every Attraction",
   metaDescription:
-    "URL /murree-tourist-places-guide Target KW murree tourist places, murree tourist places list, places to visit near islamabad, things to do murree",
+    "murree tourist places, murree tourist places list, places to visit near islamabad, things to do murree",
   keywords:
     "murree tourist places, murree tourist places list, places to visit near islamabad, things to do murree",
   eyebrow: "Backlink Guest Post · Murree Mall Road | ~1,000w",
   h1: "Murree Tourist Places — The Complete 2026 Guide to Every Attraction",
   heroTagline:
-    "URL /murree-tourist-places-guide Target KW murree tourist places, murree tourist places list, places to visit near islamabad, things to do murree",
+    "murree tourist places, murree tourist places list, places to visit near islamabad, things to do murree",
   heroImage: article522Hero,
   blocks: [
     {
@@ -5863,13 +2849,13 @@ export const article524: Article = {
   slug: "places-to-visit-near-islamabad",
   title: "Places to Visit Near Islamabad — The 2026 Complete Guide",
   metaDescription:
-    "URL /places-to-visit-near-islamabad Target KW places to visit near islamabad, places to visit near islamabad with family, tourist places near islamabad",
+    "places to visit near islamabad, places to visit near islamabad with family, tourist places near islamabad",
   keywords:
     "places to visit near islamabad, places to visit near islamabad with family, tourist places near islamabad",
   eyebrow: "Backlink Guest Post · Essential — dawn walk and fire pit need overnight | ~900w",
   h1: "Places to Visit Near Islamabad — The 2026 Complete Guide",
   heroTagline:
-    "URL /places-to-visit-near-islamabad Target KW places to visit near islamabad, places to visit near islamabad with family, tourist places near islamabad",
+    "places to visit near islamabad, places to visit near islamabad with family, tourist places near islamabad",
   heroImage: article524Hero,
   blocks: [
     {
@@ -5967,13 +2953,13 @@ export const article525: Article = {
   slug: "murree-pakistan-tourism-guide",
   title: "Murree Pakistan — The Complete 2026 Tourism Authority Guide",
   metaDescription:
-    "URL /murree-pakistan-tourism-guide Target KW murree pakistan, murree pakistan tourism, pakistan murree bhurban, bhurban murree pakistan guide",
+    "murree pakistan, murree pakistan tourism, pakistan murree bhurban, bhurban murree pakistan guide ~1,100w",
   keywords:
     "murree pakistan, murree pakistan tourism, pakistan murree bhurban, bhurban murree pakistan guide",
   eyebrow: "Backlink Guest Post · The 60km mountain ridge chain beyond Bhurban toward Nathia Gali — includes Ghora Gali, Ayubia National Park, Changla Gali, and N...",
   h1: "Murree Pakistan — The Complete 2026 Tourism Authority Guide",
   heroTagline:
-    "URL /murree-pakistan-tourism-guide Target KW murree pakistan, murree pakistan tourism, pakistan murree bhurban, bhurban murree pakistan guide",
+    "murree pakistan, murree pakistan tourism, pakistan murree bhurban, bhurban murree pakistan guide ~1,100w",
   heroImage: article525Hero,
   blocks: [
     {
@@ -6074,13 +3060,13 @@ export const article526: Article = {
   slug: "murree-weather-tomorrow",
   title: "Murree Weather Tomorrow — Forecast Check and Planning",
   metaDescription:
-    "URL /murree-weather-tomorrow Target KW murree weather tomorrow, tomorrow murree weather, murree weather next day, murree weather tomorrow hourly",
+    "murree weather tomorrow, tomorrow murree weather, murree weather next day, murree weather tomorrow hourly",
   keywords:
     "murree weather tomorrow, tomorrow murree weather, murree weather next day, murree weather tomorrow hourly",
   eyebrow: "Backlink Guest Post · What to Prepare | ~700w",
   h1: "Murree Weather Tomorrow — Forecast Check and Planning",
   heroTagline:
-    "URL /murree-weather-tomorrow Target KW murree weather tomorrow, tomorrow murree weather, murree weather next day, murree weather tomorrow hourly",
+    "murree weather tomorrow, tomorrow murree weather, murree weather next day, murree weather tomorrow hourly",
   heroImage: article526Hero,
   blocks: [
     {
@@ -6143,13 +3129,13 @@ export const article527: Article = {
   slug: "murree-mall-road-hotels-guide",
   title: "Hotels at Murree Mall Road — Complete 2026 Rate and Booking Guide",
   metaDescription:
-    "URL /murree-mall-road-hotels-guide Target KW hotel at murree mall road, hotel murree mall road, hotel in murree mall road, murree mall road hotels rates, murree mall road hotels",
+    "hotel at murree mall road, hotel murree mall road, hotel in murree mall road, murree mall road hotels rates, murree mall road hotels",
   keywords:
     "hotel at murree mall road, hotel murree mall road, hotel in murree mall road, murree mall road hotels rates, murree mall road hotels",
   eyebrow: "Backlink Guest Post · Heritage hill station name | ~900w",
   h1: "Hotels at Murree Mall Road — Complete 2026 Rate and Booking Guide",
   heroTagline:
-    "URL /murree-mall-road-hotels-guide Target KW hotel at murree mall road, hotel murree mall road, hotel in murree mall road, murree mall road hotels rates, murree mall road hotels",
+    "hotel at murree mall road, hotel murree mall road, hotel in murree mall road, murree mall road hotels rates, murree mall road hotels",
   heroImage: article527Hero,
   blocks: [
     {
@@ -6313,13 +3299,13 @@ export const article529: Article = {
   slug: "murree-bhurban-trip-cost",
   title: "Murree Bhurban Trip Cost — The Complete 2026 Budget Guide",
   metaDescription:
-    "URL /murree-bhurban-trip-cost Target KW murree bhurban trip cost, murree trip budget, how much does a murree trip cost, murree bhurban expenses 2026",
+    "murree bhurban trip cost, murree trip budget, how much does a murree trip cost, murree bhurban expenses 2026",
   keywords:
     "murree bhurban trip cost, murree trip budget, how much does a murree trip cost, murree bhurban expenses 2026",
   eyebrow: "Backlink Guest Post · Target KW | ~900w",
   h1: "Murree Bhurban Trip Cost — The Complete 2026 Budget Guide",
   heroTagline:
-    "URL /murree-bhurban-trip-cost Target KW murree bhurban trip cost, murree trip budget, how much does a murree trip cost, murree bhurban expenses 2026",
+    "murree bhurban trip cost, murree trip budget, how much does a murree trip cost, murree bhurban expenses 2026",
   heroImage: article529Hero,
   blocks: [
     {
@@ -6401,13 +3387,13 @@ export const article530: Article = {
   slug: "murree-vs-naran-kaghan",
   title: "Murree Bhurban vs Naran Kaghan — Which Should You Visit?",
   metaDescription:
-    "URL /murree-vs-naran-kaghan Target KW murree vs naran, bhurban vs naran kaghan, murree bhurban or naran kaghan, which is better murree or naran",
+    "murree vs naran, bhurban vs naran kaghan, murree bhurban or naran kaghan, which is better murree or naran",
   keywords:
     "murree vs naran, bhurban vs naran kaghan, murree bhurban or naran kaghan, which is better murree or naran",
   eyebrow: "Backlink Guest Post · 9,000–14,000 feet (Babusar Pass) | ~900w",
   h1: "Murree Bhurban vs Naran Kaghan — Which Should You Visit?",
   heroTagline:
-    "URL /murree-vs-naran-kaghan Target KW murree vs naran, bhurban vs naran kaghan, murree bhurban or naran kaghan, which is better murree or naran",
+    "murree vs naran, bhurban vs naran kaghan, murree bhurban or naran kaghan, which is better murree or naran",
   heroImage: article530Hero,
   blocks: [
     {
@@ -6503,13 +3489,13 @@ export const article531: Article = {
   slug: "bhurban-vs-murree-mall-road",
   title: "Bhurban vs Murree Mall Road — Which Is the Better Base?",
   metaDescription:
-    "URL /bhurban-vs-murree-mall-road Target KW bhurban vs murree mall road, bhurban or murree which is better, stay in bhurban or murree, bhurban vs murree for families",
+    "bhurban vs murree mall road, bhurban or murree which is better, stay in bhurban or murree, bhurban vs murree for families",
   keywords:
     "bhurban vs murree mall road, bhurban or murree which is better, stay in bhurban or murree, bhurban vs murree for families",
   eyebrow: "Backlink Guest Post · Fire pit evening | ~900w",
   h1: "Bhurban vs Murree Mall Road — Which Is the Better Base?",
   heroTagline:
-    "URL /bhurban-vs-murree-mall-road Target KW bhurban vs murree mall road, bhurban or murree which is better, stay in bhurban or murree, bhurban vs murree for families",
+    "bhurban vs murree mall road, bhurban or murree which is better, stay in bhurban or murree, bhurban vs murree for families",
   heroImage: article531Hero,
   blocks: [
     {
@@ -6584,13 +3570,13 @@ export const article532: Article = {
   slug: "bhurban-from-karachi",
   title: "Murree and Bhurban from Karachi — The Farthest Travellers' Complete Guide",
   metaDescription:
-    "URL /bhurban-from-karachi Target KW bhurban from karachi, karachi to murree bhurban, murree bhurban karachi visitors, karachi to bhurban",
+    "bhurban from karachi, karachi to murree bhurban, murree bhurban karachi visitors, karachi to bhurban ~900w",
   keywords:
     "bhurban from karachi, karachi to murree bhurban, murree bhurban karachi visitors, karachi to bhurban",
   eyebrow: "Backlink Guest Post · PIA/Air Sial/Airblue from Karachi to Islamabad International (BIAP) | ~900w",
   h1: "Murree and Bhurban from Karachi — The Farthest Travellers' Complete Guide",
   heroTagline:
-    "URL /bhurban-from-karachi Target KW bhurban from karachi, karachi to murree bhurban, murree bhurban karachi visitors, karachi to bhurban",
+    "bhurban from karachi, karachi to murree bhurban, murree bhurban karachi visitors, karachi to bhurban ~900w",
   heroImage: article532Hero,
   blocks: [
     {
@@ -6675,13 +3661,13 @@ export const article533: Article = {
   slug: "patriata-chairlift-bhurban-guide",
   title: "Patriata Chairlift Bhurban — The Complete 2026 Visitor Guide",
   metaDescription:
-    "URL /patriata-chairlift-bhurban-guide Target KW patriata chairlift bhurban, chairlift bhurban, patriata murree chairlift, bhurban chairlift price",
+    "patriata chairlift bhurban, chairlift bhurban, patriata murree chairlift, bhurban chairlift price ~900w",
   keywords:
     "patriata chairlift bhurban, chairlift bhurban, patriata murree chairlift, bhurban chairlift price",
   eyebrow: "Backlink Guest Post · The Patriata Chairlift uses enclosed gondola cars (seating 4-6 persons) rather than open chairlifts — the enclosed gondola is mo...",
   h1: "Patriata Chairlift Bhurban — The Complete 2026 Visitor Guide",
   heroTagline:
-    "URL /patriata-chairlift-bhurban-guide Target KW patriata chairlift bhurban, chairlift bhurban, patriata murree chairlift, bhurban chairlift price",
+    "patriata chairlift bhurban, chairlift bhurban, patriata murree chairlift, bhurban chairlift price ~900w",
   heroImage: article533Hero,
   blocks: [
     {
@@ -6751,13 +3737,13 @@ export const article534: Article = {
   slug: "bhurban-cedar-pine-forest-guide",
   title: "Bhurban Cedar Pine Forest — The Ecology and Experience Guide",
   metaDescription:
-    "URL /bhurban-cedar-pine-forest-guide Target KW bhurban cedar forest, bhurban pine forest, bhurban deodar cedar, murree bhurban forest walk, cedar forest bhurban murree",
+    "bhurban cedar forest, bhurban pine forest, bhurban deodar cedar, murree bhurban forest walk, cedar forest bhurban murree",
   keywords:
     "bhurban cedar forest, bhurban pine forest, bhurban deodar cedar, murree bhurban forest walk, cedar forest bhurban murree",
   eyebrow: "Backlink Guest Post · ~900w",
   h1: "Bhurban Cedar Pine Forest — The Ecology and Experience Guide",
   heroTagline:
-    "URL /bhurban-cedar-pine-forest-guide Target KW bhurban cedar forest, bhurban pine forest, bhurban deodar cedar, murree bhurban forest walk, cedar forest bhurban murree",
+    "bhurban cedar forest, bhurban pine forest, bhurban deodar cedar, murree bhurban forest walk, cedar forest bhurban murree",
   heroImage: article534Hero,
   blocks: [
     {
@@ -6800,13 +3786,13 @@ export const article535: Article = {
   slug: "islamabad-to-bhurban-guide",
   title: "Islamabad to Bhurban — Distance, Route and Complete Getting There Guide",
   metaDescription:
-    "URL /islamabad-to-bhurban-guide Target KW islamabad to bhurban, islamabad bhurban distance, islamabad to bhurban how far, distance from islamabad to bhurban",
+    "islamabad to bhurban, islamabad bhurban distance, islamabad to bhurban how far, distance from islamabad to bhurban",
   keywords:
     "islamabad to bhurban, islamabad bhurban distance, islamabad to bhurban how far, distance from islamabad to bhurban",
   eyebrow: "Backlink Guest Post · ~800w",
   h1: "Islamabad to Bhurban — Distance, Route and Complete Getting There Guide",
   heroTagline:
-    "URL /islamabad-to-bhurban-guide Target KW islamabad to bhurban, islamabad bhurban distance, islamabad to bhurban how far, distance from islamabad to bhurban",
+    "islamabad to bhurban, islamabad bhurban distance, islamabad to bhurban how far, distance from islamabad to bhurban",
   heroImage: article535Hero,
   blocks: [
     {
@@ -6937,13 +3923,13 @@ export const article536: Article = {
   slug: "falettis-grand-hotel-murree",
   title: "Faletti's Grand Hotel Murree — Guide and the Bhurban Private Estate Alternative",
   metaDescription:
-    "URL /falettis-grand-hotel-murree Target KW falettis grand hotel murree, faletti's grand hotel murree, falettis hotel murree, faletti's hotel murree",
+    "falettis grand hotel murree, faletti's grand hotel murree, falettis hotel murree, faletti's hotel murree",
   keywords:
     "falettis grand hotel murree, faletti's grand hotel murree, falettis hotel murree, faletti's hotel murree",
   eyebrow: "Backlink Guest Post · Cluster | ~800w",
   h1: "Faletti's Grand Hotel Murree — Guide and the Bhurban Private Estate Alternative",
   heroTagline:
-    "URL /falettis-grand-hotel-murree Target KW falettis grand hotel murree, faletti's grand hotel murree, falettis hotel murree, faletti's hotel murree",
+    "falettis grand hotel murree, faletti's grand hotel murree, falettis hotel murree, faletti's hotel murree",
   heroImage: article536Hero,
   blocks: [
     {
@@ -7005,13 +3991,13 @@ export const article537: Article = {
   slug: "best-hotels-nathia-gali",
   title: "Best Hotels in Nathia Gali — Complete 2026 Guide",
   metaDescription:
-    "URL /best-hotels-nathia-gali Target KW best hotels in nathia gali, best hotels nathia gali, top hotels in nathia gali, nathia gali best hotel, luxury hotels nathia gali",
+    "best hotels in nathia gali, best hotels nathia gali, top hotels in nathia gali, nathia gali best hotel, luxury hotels nathia gali",
   keywords:
     "best hotels in nathia gali, best hotels nathia gali, top hotels in nathia gali, nathia gali best hotel, luxury hotels nathia gali",
   eyebrow: "Backlink Guest Post · The honest reality of Nathia Gali's accommodation market: no internationally accredited hotel, no private villa estate, and no m...",
   h1: "Best Hotels in Nathia Gali — Complete 2026 Guide",
   heroTagline:
-    "URL /best-hotels-nathia-gali Target KW best hotels in nathia gali, best hotels nathia gali, top hotels in nathia gali, nathia gali best hotel, luxury hotels nathia gali",
+    "best hotels in nathia gali, best hotels nathia gali, top hotels in nathia gali, nathia gali best hotel, luxury hotels nathia gali",
   heroImage: article537Hero,
   blocks: [
     {
@@ -7022,28 +4008,6 @@ export const article537: Article = {
     {
       type: "paragraph",
       text: "best hotels in nathia gali, best hotels nathia gali, top hotels in nathia gali, nathia gali best hotel, luxury hotels nathia gali",
-    },
-    {
-      type: "cta",
-      eyebrow: "Bellevue Luxury Apartments Nathia Gali: a named apartment complex drawing search volume — confirm availability on Airbnb...",
-      heading: "Bellevue Luxury Apartments Nathia Gali: a named apartment complex drawing search volume — confirm availability on Airbnb or Booking.com",
-      text: "",
-      buttonLabel: "WhatsApp: +92 304 567 9000 | wa.me/923045679000",
-      buttonHref: "https://wa.me/923045679000",
-      footnote: "Direct bookings receive priority response and best available rate.",
-    },
-    {
-      type: "section",
-      eyebrow: "Bhurban as the Premium Nathia Gali-Area Base",
-      heading: "Bhurban as the Premium Nathia Gali-Area Base",
-      paragraphs: [
-        "For visitors who want to experience Nathia Gali's specific character — the Governor's House grounds, the Pipeline Track starting point, the highest-altitude town in the Galyat — but want to stay in premium private villa accommodation: Himalaya Villas in Bhurban is the combination strategy.",
-        "The Bhurban + Nathia Gali combination: 3 nights at Himalaya Villas cedar estate (47km from Islamabad, 45 minutes), Nathia Gali as a day trip (30km, 45 minutes from Bhurban). You get the cedar estate private villa experience AND the Nathia Gali day visit without staying in a guesthouse.",
-      ],
-      image: {
-        src: article537Image2,
-        alt: "Bhurban as the Premium Nathia Gali-Area Base",
-      },
     },
     {
       type: "section",
@@ -7107,13 +4071,13 @@ export const article538: Article = {
   slug: "eid-holiday-package-bhurban-murree",
   title: "Eid Holiday Package Bhurban — Cedar Estate for Eid ul Fitr and Eid ul Adha",
   metaDescription:
-    "URL /eid-holiday-package-bhurban-murree Target KW eid holiday package bhurban, eid package murree bhurban, eid bhurban murree, eid ul fitr bhurban, eid family getaway bhurban",
+    "eid holiday package bhurban, eid package murree bhurban, eid bhurban murree, eid ul fitr bhurban, eid family getaway bhurban",
   keywords:
     "eid holiday package bhurban, eid package murree bhurban, eid bhurban murree, eid ul fitr bhurban, eid family getaway bhurban",
   eyebrow: "Backlink Guest Post · Eid Morning | ~900w",
   h1: "Eid Holiday Package Bhurban — Cedar Estate for Eid ul Fitr and Eid ul Adha",
   heroTagline:
-    "URL /eid-holiday-package-bhurban-murree Target KW eid holiday package bhurban, eid package murree bhurban, eid bhurban murree, eid ul fitr bhurban, eid family getaway bhurban",
+    "eid holiday package bhurban, eid package murree bhurban, eid bhurban murree, eid ul fitr bhurban, eid family getaway bhurban",
   heroImage: article538Hero,
   blocks: [
     {
@@ -7182,13 +4146,20 @@ export const article538: Article = {
       ],
     },
     {
-      type: "cta",
-      eyebrow: "Eid Booking — The Critical Timing",
+      type: "section",
+      eyebrow: "Eid Booking",
       heading: "Eid Booking — The Critical Timing",
-      text: "Eid dates at Himalaya Villas fill 6-8 weeks in advance without exception. The Eid ul Fitr and Eid ul Adha booking windows are the most competitive booking periods of the year — more demanding than summer peak or January snowfall weekends. If you are planning to spend Eid at Himalaya Villas, the book...",
-      buttonLabel: "WhatsApp: +92 304 567 9000 | wa.me/923045679000",
-      buttonHref: "https://wa.me/923045679000",
-      footnote: "Direct bookings receive priority response and best available rate.",
+      paragraphs: [
+        "Eid dates at Himalaya Villas fill 6-8 weeks in advance without exception. The Eid ul Fitr and Eid ul Adha booking windows are the most competitive booking periods of the year — more demanding than summer peak or January snowfall weekends. If you are planning to spend Eid at Himalaya Villas, the booking enquiry should happen as soon as the approxima...",
+        "Eid ul Fitr 2026: confirm the approximate date based on the Islamic calendar — book as soon as it is known",
+        "Eid ul Adha 2026: same approach — early booking is non-negotiable",
+        "The 5-night Eid window (2 days before + Eid day + 2 days after) is the target: arrive 2 days before to settle in; depart 2 days after to avoid the Expressway Eid return peak traffic",
+        "Book Eid at the Cedar Estate — WhatsApp +92 304 567 9000",
+      ],
+      image: {
+        src: article538Image2,
+        alt: "Eid Booking — The Critical Timing",
+      },
     },
     {
       type: "related",
@@ -7210,13 +4181,13 @@ export const article539: Article = {
   slug: "in-villa-dining-bhurban",
   title: "In-Villa Dining at Bhurban — The Himalaya Villas Food Experience",
   metaDescription:
-    "URL /in-villa-dining-bhurban Target KW in villa dining bhurban, bhurban in villa meals, himalaya villas dining, bhurban private dining, cedar estate dining bhurban",
+    "in villa dining bhurban, bhurban in villa meals, himalaya villas dining, bhurban private dining, cedar estate dining bhurban",
   keywords:
     "in villa dining bhurban, bhurban in villa meals, himalaya villas dining, bhurban private dining, cedar estate dining bhurban",
   eyebrow: "Backlink Guest Post · Breakfast | ~800w",
   h1: "In-Villa Dining at Bhurban — The Himalaya Villas Food Experience",
   heroTagline:
-    "URL /in-villa-dining-bhurban Target KW in villa dining bhurban, bhurban in villa meals, himalaya villas dining, bhurban private dining, cedar estate dining bhurban",
+    "in villa dining bhurban, bhurban in villa meals, himalaya villas dining, bhurban private dining, cedar estate dining bhurban",
   heroImage: article539Hero,
   blocks: [
     {
@@ -7258,13 +4229,13 @@ export const article540: Article = {
   slug: "extended-family-reunion-bhurban",
   title: "Extended Family Reunion at Bhurban — The Cedar Estate for Large Family Gatherings",
   metaDescription:
-    "URL /extended-family-reunion-bhurban Target KW extended family reunion bhurban, family gathering bhurban, family reunion murree bhurban, large family stay bhurban",
+    "extended family reunion bhurban, family gathering bhurban, family reunion murree bhurban, large family stay bhurban",
   keywords:
     "extended family reunion bhurban, family gathering bhurban, family reunion murree bhurban, large family stay bhurban",
   eyebrow: "Backlink Guest Post · 15-20 persons | ~900w",
   h1: "Extended Family Reunion at Bhurban — The Cedar Estate for Large Family Gatherings",
   heroTagline:
-    "URL /extended-family-reunion-bhurban Target KW extended family reunion bhurban, family gathering bhurban, family reunion murree bhurban, large family stay bhurban",
+    "extended family reunion bhurban, family gathering bhurban, family reunion murree bhurban, large family stay bhurban",
   heroImage: article540Hero,
   blocks: [
     {
@@ -7364,13 +4335,13 @@ export const article541: Article = {
   slug: "best-time-to-visit-murree",
   title: "Best Time to Visit Murree and Bhurban — The Definitive Month-by-Month Guide",
   metaDescription:
-    "URL /best-time-to-visit-murree Target KW best time to visit murree, best time to visit bhurban, best time murree bhurban, murree bhurban best month visit",
+    "best time to visit murree, best time to visit bhurban, best time murree bhurban, murree bhurban best month visit",
   keywords:
     "best time to visit murree, best time to visit bhurban, best time murree bhurban, murree bhurban best month visit",
   eyebrow: "Backlink Guest Post · WC | ~1,100w",
   h1: "Best Time to Visit Murree and Bhurban — The Definitive Month-by-Month Guide",
   heroTagline:
-    "URL /best-time-to-visit-murree Target KW best time to visit murree, best time to visit bhurban, best time murree bhurban, murree bhurban best month visit",
+    "best time to visit murree, best time to visit bhurban, best time murree bhurban, murree bhurban best month visit",
   heroImage: article541Hero,
   blocks: [
     {
@@ -7494,13 +4465,13 @@ export const article542: Article = {
   slug: "bhurban-distance-from-major-cities",
   title: "Distance from Major Pakistani Cities to Bhurban — The Complete Guide",
   metaDescription:
-    "URL /bhurban-distance-from-major-cities Target KW bhurban distance from islamabad, bhurban from lahore distance, distance bhurban karachi, rawalpindi to bhurban distance",
+    "bhurban distance from islamabad, bhurban from lahore distance, distance bhurban karachi, rawalpindi to bhurban distance",
   keywords:
     "bhurban distance from islamabad, bhurban from lahore distance, distance bhurban karachi, rawalpindi to bhurban distance",
   eyebrow: "Backlink Guest Post · 3-4 nights | ~800w",
   h1: "Distance from Major Pakistani Cities to Bhurban — The Complete Guide",
   heroTagline:
-    "URL /bhurban-distance-from-major-cities Target KW bhurban distance from islamabad, bhurban from lahore distance, distance bhurban karachi, rawalpindi to bhurban distance",
+    "bhurban distance from islamabad, bhurban from lahore distance, distance bhurban karachi, rawalpindi to bhurban distance",
   heroImage: article542Hero,
   blocks: [
     {
@@ -7671,13 +4642,13 @@ export const article543: Article = {
   slug: "luxury-villas-near-islamabad",
   title: "Luxury Villas Near Islamabad — Why Bhurban Is the Answer",
   metaDescription:
-    "URL /luxury-villas-near-islamabad Target KW luxury villas near islamabad, luxury villa islamabad, private villa near islamabad, luxury villa murree bhurban",
+    "luxury villas near islamabad, luxury villa islamabad, private villa near islamabad, luxury villa murree bhurban",
   keywords:
     "luxury villas near islamabad, luxury villa islamabad, private villa near islamabad, luxury villa murree bhurban",
   eyebrow: "Backlink Guest Post · ~800w",
   h1: "Luxury Villas Near Islamabad — Why Bhurban Is the Answer",
   heroTagline:
-    "URL /luxury-villas-near-islamabad Target KW luxury villas near islamabad, luxury villa islamabad, private villa near islamabad, luxury villa murree bhurban",
+    "luxury villas near islamabad, luxury villa islamabad, private villa near islamabad, luxury villa murree bhurban",
   heroImage: article543Hero,
   blocks: [
     {
@@ -7719,13 +4690,13 @@ export const article544: Article = {
   slug: "bhurban-hiking-trails",
   title: "Bhurban Hiking Trails and Forest Walks — The Complete Activity Guide",
   metaDescription:
-    "URL /bhurban-hiking-trails Target KW bhurban hiking trails, bhurban forest walk, bhurban trekking, murree bhurban hiking, cedar forest trek bhurban",
+    "bhurban hiking trails, bhurban forest walk, bhurban trekking, murree bhurban hiking, cedar forest trek bhurban",
   keywords:
     "bhurban hiking trails, bhurban forest walk, bhurban trekking, murree bhurban hiking, cedar forest trek bhurban",
   eyebrow: "Backlink Guest Post · The Bhurban ridge road connects the Himalaya Villas/PC Hotel area with the Bhurban local town and the continuation toward the Gh...",
   h1: "Bhurban Hiking Trails and Forest Walks — The Complete Activity Guide",
   heroTagline:
-    "URL /bhurban-hiking-trails Target KW bhurban hiking trails, bhurban forest walk, bhurban trekking, murree bhurban hiking, cedar forest trek bhurban",
+    "bhurban hiking trails, bhurban forest walk, bhurban trekking, murree bhurban hiking, cedar forest trek bhurban",
   heroImage: article544Hero,
   blocks: [
     {
@@ -7777,13 +4748,13 @@ export const article545: Article = {
   slug: "murree-bhurban-complete-guide",
   title: "Bhurban Murree Complete Guide 2026 — Everything You Need to Know",
   metaDescription:
-    "URL /murree-bhurban-complete-guide Target KW bhurban murree complete guide, bhurban murree guide 2026, murree bhurban travel guide, bhurban pakistan complete guide",
+    "bhurban murree complete guide, bhurban murree guide 2026, murree bhurban travel guide, bhurban pakistan complete guide",
   keywords:
     "bhurban murree complete guide, bhurban murree guide 2026, murree bhurban travel guide, bhurban pakistan complete guide",
   eyebrow: "Backlink Guest Post · Cedar estate dawn walk (Himalaya Villas gate, 5:45am) — the finest single experience at Bhurban | ~1,200w",
   h1: "Bhurban Murree Complete Guide 2026 — Everything You Need to Know",
   heroTagline:
-    "URL /murree-bhurban-complete-guide Target KW bhurban murree complete guide, bhurban murree guide 2026, murree bhurban travel guide, bhurban pakistan complete guide",
+    "bhurban murree complete guide, bhurban murree guide 2026, murree bhurban travel guide, bhurban pakistan complete guide",
   heroImage: article545Hero,
   blocks: [
     {
@@ -7973,13 +4944,13 @@ export const article546: Article = {
   slug: "ramada-murree-guide",
   title: "Ramada Murree — Complete Guide and the Private Cedar Estate Alternative",
   metaDescription:
-    "URL /ramada-murree-guide Target KW ramada murree, ramada by wyndham murree, ramada murree price, ramada murree booking, ramada murree room rates",
+    "ramada murree, ramada by wyndham murree, ramada murree price, ramada murree booking, ramada murree room rates",
   keywords:
     "ramada murree, ramada by wyndham murree, ramada murree price, ramada murree booking, ramada murree room rates",
   eyebrow: "Backlink Guest Post · Cluster | ~900w",
   h1: "Ramada Murree — Complete Guide and the Private Cedar Estate Alternative",
   heroTagline:
-    "URL /ramada-murree-guide Target KW ramada murree, ramada by wyndham murree, ramada murree price, ramada murree booking, ramada murree room rates",
+    "ramada murree, ramada by wyndham murree, ramada murree price, ramada murree booking, ramada murree room rates",
   heroImage: article546Hero,
   blocks: [
     {
@@ -8024,13 +4995,17 @@ export const article546: Article = {
       ],
     },
     {
-      type: "cta",
+      type: "section",
       eyebrow: "Booking",
       heading: "Booking",
-      text: "wyndhamhotels.com / Booking.com WhatsApp +92 304 567 9000 direct",
-      buttonLabel: "WhatsApp: +92 304 567 9000 | wa.me/923045679000",
-      buttonHref: "https://wa.me/923045679000",
-      footnote: "Direct bookings receive priority response and best available rate.",
+      paragraphs: [
+        "wyndhamhotels.com / Booking.com",
+        "WhatsApp +92 304 567 9000 direct",
+      ],
+      image: {
+        src: article546Image2,
+        alt: "Booking",
+      },
     },
     {
       type: "section",
@@ -8076,13 +5051,13 @@ export const article547: Article = {
   slug: "movenpick-murree-guide",
   title: "Mövenpick Murree — Complete Guide and the Private Cedar Estate Alternative",
   metaDescription:
-    "URL /movenpick-murree-guide Target KW movenpick murree, hotel movenpick murree, movenpick murree price, movenpick hotel murree",
+    "movenpick murree, hotel movenpick murree, movenpick murree price, movenpick hotel murree ~800w Mövenpick Murree — What to Know and the Bhurban Private Estate Alternative",
   keywords:
     "movenpick murree, hotel movenpick murree, movenpick murree price, movenpick hotel murree",
   eyebrow: "Backlink Guest Post · Cluster | ~800w",
   h1: "Mövenpick Murree — Complete Guide and the Private Cedar Estate Alternative",
   heroTagline:
-    "URL /movenpick-murree-guide Target KW movenpick murree, hotel movenpick murree, movenpick murree price, movenpick hotel murree",
+    "movenpick murree, hotel movenpick murree, movenpick murree price, movenpick hotel murree ~800w Mövenpick Murree — What to Know and the Bhurban Private Estate Alternative",
   heroImage: article547Hero,
   blocks: [
     {
@@ -8146,13 +5121,13 @@ export const article547: Article = {
       },
     },
     {
-      type: "cta",
+      type: "section",
       eyebrow: "Booking",
       heading: "Booking",
-      text: "accorhotels.com / Booking.com WhatsApp +92 304 567 9000",
-      buttonLabel: "WhatsApp: +92 304 567 9000 | wa.me/923045679000",
-      buttonHref: "https://wa.me/923045679000",
-      footnote: "Direct bookings receive priority response and best available rate.",
+      paragraphs: [
+        "accorhotels.com / Booking.com",
+        "WhatsApp +92 304 567 9000",
+      ],
     },
     {
       type: "related",
@@ -8174,13 +5149,13 @@ export const article548: Article = {
   slug: "lockwood-hotel-murree-guide",
   title: "Lockwood Hotel Murree — Guide and the Private Estate Alternative",
   metaDescription:
-    "URL /lockwood-hotel-murree-guide Target KW lockwood hotel murree, lockwood hotel murree prices, lockwood hotel murree murree, lockwood murree",
+    "lockwood hotel murree, lockwood hotel murree prices, lockwood hotel murree murree, lockwood murree ~700w",
   keywords:
     "lockwood hotel murree, lockwood hotel murree prices, lockwood hotel murree murree, lockwood murree",
   eyebrow: "Backlink Guest Post · Cluster | ~700w",
   h1: "Lockwood Hotel Murree — Guide and the Private Estate Alternative",
   heroTagline:
-    "URL /lockwood-hotel-murree-guide Target KW lockwood hotel murree, lockwood hotel murree prices, lockwood hotel murree murree, lockwood murree",
+    "lockwood hotel murree, lockwood hotel murree prices, lockwood hotel murree murree, lockwood murree ~700w",
   heroImage: article548Hero,
   blocks: [
     {
@@ -8251,13 +5226,13 @@ export const article549: Article = {
   slug: "shangrila-marco-polo-murree-guide",
   title: "Shangrila Murree and Marco Polo Murree — Guides and the Private Villa Alternative",
   metaDescription:
-    "URL /shangrila-marco-polo-murree-guide Target KW shangrila murree, marco polo murree, shangrila resort murree, marco polo resort murree bhurban",
+    "shangrila murree, marco polo murree, shangrila resort murree, marco polo resort murree bhurban ~800w Shangrila Murree and Marco Polo Murree — Complete Guides",
   keywords:
     "shangrila murree, marco polo murree, shangrila resort murree, marco polo resort murree bhurban",
   eyebrow: "Backlink Guest Post · Cluster | ~800w",
   h1: "Shangrila Murree and Marco Polo Murree — Guides and the Private Villa Alternative",
   heroTagline:
-    "URL /shangrila-marco-polo-murree-guide Target KW shangrila murree, marco polo murree, shangrila resort murree, marco polo resort murree bhurban",
+    "shangrila murree, marco polo murree, shangrila resort murree, marco polo resort murree bhurban ~800w Shangrila Murree and Marco Polo Murree — Complete Guides",
   heroImage: article549Hero,
   blocks: [
     {
@@ -8342,13 +5317,13 @@ export const article550: Article = {
   slug: "murree-temperature-guide",
   title: "Murree Temperature — Month-by-Month Guide and Live Check",
   metaDescription:
-    "URL /murree-temperature-guide Target KW murree temperature, murree temperature today, murree temperature now, murree temperature right now, today murree temperature",
+    "murree temperature, murree temperature today, murree temperature now, murree temperature right now, today murree temperature",
   keywords:
     "murree temperature, murree temperature today, murree temperature now, murree temperature right now, today murree temperature",
   eyebrow: "Backlink Guest Post · 17 to 25 | ~1,000w",
   h1: "Murree Temperature — Month-by-Month Guide and Live Check",
   heroTagline:
-    "URL /murree-temperature-guide Target KW murree temperature, murree temperature today, murree temperature now, murree temperature right now, today murree temperature",
+    "murree temperature, murree temperature today, murree temperature now, murree temperature right now, today murree temperature",
   heroImage: article550Hero,
   blocks: [
     {
@@ -8620,13 +5595,13 @@ export const article551: Article = {
   slug: "nathia-gali-weather-guide",
   title: "Nathia Gali Weather — Live Check, Forecast Guide and Bhurban Planning",
   metaDescription:
-    "URL /nathia-gali-weather-guide Target KW nathia gali weather, nathia gali weather today, nathia gali weather 15 days, nathia gali weather forecast, ayubia weather today",
+    "nathia gali weather, nathia gali weather today, nathia gali weather 15 days, nathia gali weather forecast, ayubia weather today",
   keywords:
     "nathia gali weather, nathia gali weather today, nathia gali weather 15 days, nathia gali weather forecast, ayubia weather today",
   eyebrow: "Backlink Guest Post · AccuWeather 'Nathia Gali Pakistan': hourly forecast most useful for Pipeline Track day planning | ~900w",
   h1: "Nathia Gali Weather — Live Check, Forecast Guide and Bhurban Planning",
   heroTagline:
-    "URL /nathia-gali-weather-guide Target KW nathia gali weather, nathia gali weather today, nathia gali weather 15 days, nathia gali weather forecast, ayubia weather today",
+    "nathia gali weather, nathia gali weather today, nathia gali weather 15 days, nathia gali weather forecast, ayubia weather today",
   heroImage: article551Hero,
   blocks: [
     {
@@ -8759,13 +5734,13 @@ export const article552: Article = {
   slug: "murree-snowfall-guide",
   title: "Murree Snowfall Guide — When It Snows, How to Plan, Bhurban in the Snow",
   metaDescription:
-    "URL /murree-snowfall-guide Target KW murree snowfall 2026, murree snowfall expected date, murree snowfall guide, murree snow bhurban, when does it snow in murree",
+    "murree snowfall 2026, murree snowfall expected date, murree snowfall guide, murree snow bhurban, when does it snow in murree",
   keywords:
     "murree snowfall 2026, murree snowfall expected date, murree snowfall guide, murree snow bhurban, when does it snow in murree",
   eyebrow: "Backlink Guest Post · ~900w",
   h1: "Murree Snowfall Guide — When It Snows, How to Plan, Bhurban in the Snow",
   heroTagline:
-    "URL /murree-snowfall-guide Target KW murree snowfall 2026, murree snowfall expected date, murree snowfall guide, murree snow bhurban, when does it snow in murree",
+    "murree snowfall 2026, murree snowfall expected date, murree snowfall guide, murree snow bhurban, when does it snow in murree",
   heroImage: article552Hero,
   blocks: [
     {
@@ -8877,13 +5852,13 @@ export const article553: Article = {
   slug: "lahore-to-murree-bhurban-guide",
   title: "Lahore to Murree Bhurban — Distance, Route and Complete Travel Guide",
   metaDescription:
-    "URL /lahore-to-murree-bhurban-guide Target KW lahore to murree, distance from lahore to murree, lahore to murree ticket price, lahore to murree bus, bhurban for lahore families",
+    "lahore to murree, distance from lahore to murree, lahore to murree ticket price, lahore to murree bus, bhurban for lahore families",
   keywords:
     "lahore to murree, distance from lahore to murree, lahore to murree ticket price, lahore to murree bus, bhurban for lahore families",
   eyebrow: "Backlink Guest Post · ~900w",
   h1: "Lahore to Murree Bhurban — Distance, Route and Complete Travel Guide",
   heroTagline:
-    "URL /lahore-to-murree-bhurban-guide Target KW lahore to murree, distance from lahore to murree, lahore to murree ticket price, lahore to murree bus, bhurban for lahore families",
+    "lahore to murree, distance from lahore to murree, lahore to murree ticket price, lahore to murree bus, bhurban for lahore families",
   heroImage: article553Hero,
   blocks: [
     {
@@ -8968,13 +5943,13 @@ export const article554: Article = {
   slug: "galyat-ayubia-guide",
   title: "Galyat Ayubia — The Complete Visitor Guide and Bhurban Base Strategy",
   metaDescription:
-    "URL /galyat-ayubia-guide Target KW galyat ayubia, ayubia national park, ayubia pipeline track, galyat hills pakistan, ayubia weather",
+    "galyat ayubia, ayubia national park, ayubia pipeline track, galyat hills pakistan, ayubia weather ~900w",
   keywords:
     "galyat ayubia, ayubia national park, ayubia pipeline track, galyat hills pakistan, ayubia weather",
   eyebrow: "Backlink Guest Post · Small market town, pine forest entry | ~900w",
   h1: "Galyat Ayubia — The Complete Visitor Guide and Bhurban Base Strategy",
   heroTagline:
-    "URL /galyat-ayubia-guide Target KW galyat ayubia, ayubia national park, ayubia pipeline track, galyat hills pakistan, ayubia weather",
+    "galyat ayubia, ayubia national park, ayubia pipeline track, galyat hills pakistan, ayubia weather ~900w",
   heroImage: article554Hero,
   blocks: [
     {
@@ -9040,13 +6015,13 @@ export const article555: Article = {
   slug: "hotels-in-murree-pakistan",
   title: "Best Hotels in Murree Pakistan — The Complete 2026 Guide",
   metaDescription:
-    "URL /hotels-in-murree-pakistan Target KW best hotels in murree, best hotels in murree pakistan, murree top hotels, 5 star hotels in murree, five star hotel in murree",
+    "best hotels in murree, best hotels in murree pakistan, murree top hotels, 5 star hotels in murree, five star hotel in murree",
   keywords:
     "best hotels in murree, best hotels in murree pakistan, murree top hotels, 5 star hotels in murree, five star hotel in murree",
   eyebrow: "Backlink Guest Post · Murree area | ~900w",
   h1: "Best Hotels in Murree Pakistan — The Complete 2026 Guide",
   heroTagline:
-    "URL /hotels-in-murree-pakistan Target KW best hotels in murree, best hotels in murree pakistan, murree top hotels, 5 star hotels in murree, five star hotel in murree",
+    "best hotels in murree, best hotels in murree pakistan, murree top hotels, 5 star hotels in murree, five star hotel in murree",
   heroImage: article555Hero,
   blocks: [
     {
@@ -9059,13 +6034,12 @@ export const article555: Article = {
       text: "best hotels in murree, best hotels in murree pakistan, murree top hotels, 5 star hotels in murree, five star hotel in murree",
     },
     {
-      type: "cta",
+      type: "section",
       eyebrow: "Book Via",
       heading: "Book Via",
-      text: "Himalaya Villas & Resorts",
-      buttonLabel: "WhatsApp: +92 304 567 9000 | wa.me/923045679000",
-      buttonHref: "https://wa.me/923045679000",
-      footnote: "Direct bookings receive priority response and best available rate.",
+      paragraphs: [
+        "Himalaya Villas & Resorts",
+      ],
     },
     {
       type: "section",
@@ -9146,13 +6120,13 @@ export const article556: Article = {
   slug: "murree-bhurban-in-january",
   title: "Murree Bhurban in January — The Snowfall Month Guide",
   metaDescription:
-    "URL /murree-bhurban-in-january Target KW murree in january, bhurban in january, murree bhurban january snowfall, murree january trip, bhurban january weather",
+    "murree in january, bhurban in january, murree bhurban january snowfall, murree january trip, bhurban january weather",
   keywords:
     "murree in january, bhurban in january, murree bhurban january snowfall, murree january trip, bhurban january weather",
   eyebrow: "Backlink Guest Post · Departure timing | ~900w",
   h1: "Murree Bhurban in January — The Snowfall Month Guide",
   heroTagline:
-    "URL /murree-bhurban-in-january Target KW murree in january, bhurban in january, murree bhurban january snowfall, murree january trip, bhurban january weather",
+    "murree in january, bhurban in january, murree bhurban january snowfall, murree january trip, bhurban january weather",
   heroImage: article556Hero,
   blocks: [
     {
@@ -9241,13 +6215,13 @@ export const article557: Article = {
   slug: "murree-bhurban-in-october",
   title: "Murree Bhurban in October — Why It's the Best Month",
   metaDescription:
-    "URL /murree-bhurban-in-october Target KW murree in october, bhurban october, murree october weather, bhurban in october activities, murree autumn",
+    "murree in october, bhurban october, murree october weather, bhurban in october activities, murree autumn",
   keywords:
     "murree in october, bhurban october, murree october weather, bhurban in october activities, murree autumn",
   eyebrow: "Backlink Guest Post · Week 1 (Oct 1-7) | ~900w",
   h1: "Murree Bhurban in October — Why It's the Best Month",
   heroTagline:
-    "URL /murree-bhurban-in-october Target KW murree in october, bhurban october, murree october weather, bhurban in october activities, murree autumn",
+    "murree in october, bhurban october, murree october weather, bhurban in october activities, murree autumn",
   heroImage: article557Hero,
   blocks: [
     {
@@ -9300,13 +6274,13 @@ export const article558: Article = {
   slug: "murree-bhurban-in-summer",
   title: "Murree Bhurban in July and August — The Summer Heat Escape Guide",
   metaDescription:
-    "URL /murree-bhurban-in-summer Target KW murree in july, bhurban in august, murree bhurban summer, murree bhurban july august, murree bhurban heat escape",
+    "murree in july, bhurban in august, murree bhurban summer, murree bhurban july august, murree bhurban heat escape",
   keywords:
     "murree in july, bhurban in august, murree bhurban summer, murree bhurban july august, murree bhurban heat escape",
   eyebrow: "Backlink Guest Post · 5:45am — 8:00am: The Morning Window | ~900w",
   h1: "Murree Bhurban in July and August — The Summer Heat Escape Guide",
   heroTagline:
-    "URL /murree-bhurban-in-summer Target KW murree in july, bhurban in august, murree bhurban summer, murree bhurban july august, murree bhurban heat escape",
+    "murree in july, bhurban in august, murree bhurban summer, murree bhurban july august, murree bhurban heat escape",
   heroImage: article558Hero,
   blocks: [
     {
@@ -9355,13 +6329,13 @@ export const article559: Article = {
   slug: "murree-bhurban-in-spring",
   title: "Murree Bhurban in Spring — April Wildflower and Rhododendron Guide",
   metaDescription:
-    "URL /murree-bhurban-in-spring Target KW murree in april, bhurban spring, murree bhurban april, murree spring wildflowers, murree rhododendron",
+    "murree in april, bhurban spring, murree bhurban april, murree spring wildflowers, murree rhododendron",
   keywords:
     "murree in april, bhurban spring, murree bhurban april, murree spring wildflowers, murree rhododendron",
   eyebrow: "Backlink Guest Post · ~800w",
   h1: "Murree Bhurban in Spring — April Wildflower and Rhododendron Guide",
   heroTagline:
-    "URL /murree-bhurban-in-spring Target KW murree in april, bhurban spring, murree bhurban april, murree spring wildflowers, murree rhododendron",
+    "murree in april, bhurban spring, murree bhurban april, murree spring wildflowers, murree rhododendron",
   heroImage: article559Hero,
   blocks: [
     {
@@ -9413,13 +6387,13 @@ export const article560: Article = {
   slug: "bhurban-birdwatching-wildlife",
   title: "Birdwatching at Bhurban — The Cedar Estate Wildlife Guide",
   metaDescription:
-    "URL /bhurban-birdwatching-wildlife Target KW bhurban birdwatching, bhurban birds, murree birds, cedar forest wildlife bhurban, koklass pheasant bhurban",
+    "bhurban birdwatching, bhurban birds, murree birds, cedar forest wildlife bhurban, koklass pheasant bhurban",
   keywords:
     "bhurban birdwatching, bhurban birds, murree birds, cedar forest wildlife bhurban, koklass pheasant bhurban",
   eyebrow: "Backlink Guest Post · Pheasant family | ~800w",
   h1: "Birdwatching at Bhurban — The Cedar Estate Wildlife Guide",
   heroTagline:
-    "URL /bhurban-birdwatching-wildlife Target KW bhurban birdwatching, bhurban birds, murree birds, cedar forest wildlife bhurban, koklass pheasant bhurban",
+    "bhurban birdwatching, bhurban birds, murree birds, cedar forest wildlife bhurban, koklass pheasant bhurban",
   heroImage: article560Hero,
   blocks: [
     {
@@ -9580,13 +6554,13 @@ export const article562: Article = {
   slug: "murree-hill-station-history-guide",
   title: "Murree Hill Station — History, Heritage and What the 170 Years Mean Today",
   metaDescription:
-    "URL /murree-hill-station-history-guide Target KW murree hill station, murree hill station history, murree british era, murree history pakistan, murree heritage",
+    "murree hill station, murree hill station history, murree british era, murree history pakistan, murree heritage",
   keywords:
     "murree hill station, murree hill station history, murree british era, murree history pakistan, murree heritage",
   eyebrow: "Backlink Guest Post · The British infrastructure in the Murree hills area: the Mall Road and its commercial strip (originally the British military can...",
   h1: "Murree Hill Station — History, Heritage and What the 170 Years Mean Today",
   heroTagline:
-    "URL /murree-hill-station-history-guide Target KW murree hill station, murree hill station history, murree british era, murree history pakistan, murree heritage",
+    "murree hill station, murree hill station history, murree british era, murree history pakistan, murree heritage",
   heroImage: article562Hero,
   blocks: [
     {
@@ -9626,13 +6600,13 @@ export const article563: Article = {
   slug: "bhurban-photography-guide",
   title: "Bhurban Photography Guide — The Cedar Estate and Murree Hills Locations",
   metaDescription:
-    "URL /bhurban-photography-guide Target KW bhurban photography, murree bhurban photography guide, cedar forest photography, bhurban photo spots, murree hills photography",
+    "bhurban photography, murree bhurban photography guide, cedar forest photography, bhurban photo spots, murree hills photography",
   keywords:
     "bhurban photography, murree bhurban photography guide, cedar forest photography, bhurban photo spots, murree hills photography",
   eyebrow: "Backlink Guest Post · Subject | ~800w",
   h1: "Bhurban Photography Guide — The Cedar Estate and Murree Hills Locations",
   heroTagline:
-    "URL /bhurban-photography-guide Target KW bhurban photography, murree bhurban photography guide, cedar forest photography, bhurban photo spots, murree hills photography",
+    "bhurban photography, murree bhurban photography guide, cedar forest photography, bhurban photo spots, murree hills photography",
   heroImage: article563Hero,
   blocks: [
     {
@@ -9740,13 +6714,13 @@ export const article564: Article = {
   slug: "stargazing-bhurban-murree",
   title: "Stargazing at Bhurban — The Cedar Estate Night Sky Guide",
   metaDescription:
-    "URL /stargazing-bhurban-murree Target KW stargazing bhurban, murree stargazing, night sky bhurban, bhurban astronomy, cedar estate night sky",
+    "stargazing bhurban, murree stargazing, night sky bhurban, bhurban astronomy, cedar estate night sky ~700w",
   keywords:
     "stargazing bhurban, murree stargazing, night sky bhurban, bhurban astronomy, cedar estate night sky",
   eyebrow: "Backlink Guest Post · Core visible | ~700w",
   h1: "Stargazing at Bhurban — The Cedar Estate Night Sky Guide",
   heroTagline:
-    "URL /stargazing-bhurban-murree Target KW stargazing bhurban, murree stargazing, night sky bhurban, bhurban astronomy, cedar estate night sky",
+    "stargazing bhurban, murree stargazing, night sky bhurban, bhurban astronomy, cedar estate night sky ~700w",
   heroImage: article564Hero,
   blocks: [
     {
@@ -9795,13 +6769,13 @@ export const article565: Article = {
   slug: "honeymoon-package-bhurban-murree",
   title: "Honeymoon Package at Bhurban — The Cedar Estate for Couples",
   metaDescription:
-    "URL /honeymoon-package-bhurban-murree Target KW honeymoon package bhurban, bhurban honeymoon, bhurban murree honeymoon, couples package bhurban, romantic stay bhurban",
+    "honeymoon package bhurban, bhurban honeymoon, bhurban murree honeymoon, couples package bhurban, romantic stay bhurban",
   keywords:
     "honeymoon package bhurban, bhurban honeymoon, bhurban murree honeymoon, couples package bhurban, romantic stay bhurban",
   eyebrow: "Backlink Guest Post · Panoramic mountain balcony: valley and ridge views across the cedar forest | ~900w",
   h1: "Honeymoon Package at Bhurban — The Cedar Estate for Couples",
   heroTagline:
-    "URL /honeymoon-package-bhurban-murree Target KW honeymoon package bhurban, bhurban honeymoon, bhurban murree honeymoon, couples package bhurban, romantic stay bhurban",
+    "honeymoon package bhurban, bhurban honeymoon, bhurban murree honeymoon, couples package bhurban, romantic stay bhurban",
   heroImage: article565Hero,
   blocks: [
     {
@@ -9877,13 +6851,13 @@ export const article566: Article = {
   slug: "murree-expressway-guide",
   title: "Murree Expressway — Toll Plaza, Route, Directions and Complete Guide",
   metaDescription:
-    "URL /murree-expressway-guide Target KW murree expressway toll plaza, islamabad murree expressway, murree expressway, murree expressway directions, islamabad murree expressway",
+    "murree expressway toll plaza, islamabad murree expressway, murree expressway, murree expressway directions, islamabad murree expressway",
   keywords:
     "murree expressway toll plaza, islamabad murree expressway, murree expressway, murree expressway directions, islamabad murree expressway",
   eyebrow: "Backlink Guest Post · Toll rate | ~1,000w",
   h1: "Murree Expressway — Toll Plaza, Route, Directions and Complete Guide",
   heroTagline:
-    "URL /murree-expressway-guide Target KW murree expressway toll plaza, islamabad murree expressway, murree expressway, murree expressway directions, islamabad murree expressway",
+    "murree expressway toll plaza, islamabad murree expressway, murree expressway, murree expressway directions, islamabad murree expressway",
   heroImage: article566Hero,
   blocks: [
     {
@@ -10006,13 +6980,13 @@ export const article567: Article = {
   slug: "murree-hotel-booking-guide",
   title: "Murree Hotel Booking Guide — How to Book and Why Direct Is Better",
   metaDescription:
-    "URL /murree-hotel-booking-guide Target KW murree hotel booking, murree hotel rates, murree hotel booking near mall road, cheap hotels murree",
+    "murree hotel booking, murree hotel rates, murree hotel booking near mall road, cheap hotels murree ~900w",
   keywords:
     "murree hotel booking, murree hotel rates, murree hotel booking near mall road, cheap hotels murree",
   eyebrow: "Backlink Guest Post · Category | ~900w",
   h1: "Murree Hotel Booking Guide — How to Book and Why Direct Is Better",
   heroTagline:
-    "URL /murree-hotel-booking-guide Target KW murree hotel booking, murree hotel rates, murree hotel booking near mall road, cheap hotels murree",
+    "murree hotel booking, murree hotel rates, murree hotel booking near mall road, cheap hotels murree ~900w",
   heroImage: article567Hero,
   blocks: [
     {
@@ -10030,13 +7004,13 @@ export const article567: Article = {
       footnote: "Direct bookings receive priority response and best available rate.",
     },
     {
-      type: "cta",
-      eyebrow: "Booking Channels — Where to Book",
+      type: "section",
+      eyebrow: "Booking Channels",
       heading: "Booking Channels — Where to Book",
-      text: "Booking.com The largest OTA inventory for Murree hotels. Advantages: easy comparison of multiple properties on one screen, guest reviews for each property, flexible cancellation options on many listings. Best for: comparing mid-range and budget properties. Use filter 'Bhurban' or 'Murree Pakistan' t...",
-      buttonLabel: "WhatsApp: +92 304 567 9000 | wa.me/923045679000",
-      buttonHref: "https://wa.me/923045679000",
-      footnote: "Direct bookings receive priority response and best available rate.",
+      paragraphs: [
+        "Booking.com",
+        "The largest OTA inventory for Murree hotels. Advantages: easy comparison of multiple properties on one screen, guest reviews for each property, flexible cancellation options on many listings. Best for: comparing mid-range and budget properties. Use filter 'Bhurban' or 'Murree Pakistan' to narrow by location.",
+      ],
     },
     {
       type: "section",
@@ -10059,25 +7033,6 @@ export const article567: Article = {
       buttonLabel: "WhatsApp: +92 304 567 9000 | wa.me/923045679000",
       buttonHref: "https://wa.me/923045679000",
       footnote: "Direct bookings receive priority response and best available rate.",
-    },
-    {
-      type: "cta",
-      eyebrow: "Best Booking Channel",
-      heading: "Best Booking Channel",
-      text: "",
-      buttonLabel: "WhatsApp: +92 304 567 9000 | wa.me/923045679000",
-      buttonHref: "https://wa.me/923045679000",
-      footnote: "Direct bookings receive priority response and best available rate.",
-    },
-    {
-      type: "section",
-      eyebrow: "Budget guesthouses",
-      heading: "Budget guesthouses",
-      paragraphs: [
-        "Various Bhurban/Murree guesthouses",
-        "PKR 5,000-15,000",
-        "Airbnb / Booking.com",
-      ],
     },
     {
       type: "section",
@@ -10148,13 +7103,13 @@ export const article568: Article = {
   slug: "pindi-point-murree-guide",
   title: "Pindi Point Murree — Complete Guide and the Bhurban Chairlift Comparison",
   metaDescription:
-    "URL /pindi-point-murree-guide Target KW pindi point murree, murree pindi point, murree pindi point chair lift, pindi point murree chairlift ticket",
+    "pindi point murree, murree pindi point, murree pindi point chair lift, pindi point murree chairlift ticket",
   keywords:
     "pindi point murree, murree pindi point, murree pindi point chair lift, pindi point murree chairlift ticket",
   eyebrow: "Backlink Guest Post · WC | ~800w",
   h1: "Pindi Point Murree — Complete Guide and the Bhurban Chairlift Comparison",
   heroTagline:
-    "URL /pindi-point-murree-guide Target KW pindi point murree, murree pindi point, murree pindi point chair lift, pindi point murree chairlift ticket",
+    "pindi point murree, murree pindi point, murree pindi point chair lift, pindi point murree chairlift ticket",
   heroImage: article568Hero,
   blocks: [
     {
@@ -10167,6 +7122,18 @@ export const article568: Article = {
       text: "pindi point murree, murree pindi point, murree pindi point chair lift, pindi point murree chairlift ticket",
     },
     {
+      type: "comparison",
+      heading: "Pindi Point Murree — Complete Guide and the Bhurban Chairlift Comparison",
+      columns: [
+        "Feature",
+        "Option A",
+        "Option B",
+      ],
+      rows: [
+        { feature: "Destination", a: "Cluster 8", b: "~800w" },
+      ],
+    },
+    {
       type: "section",
       eyebrow: "Pindi Point Murree",
       heading: "Pindi Point Murree — The Viewpoint and Chairlift Guide",
@@ -10175,6 +7142,10 @@ export const article568: Article = {
         "Pindi Point is a Murree Mall Road viewpoint with a separate chairlift — a second Murree chairlift option in addition to the Patriata Chairlift at Bhurban. Located at the Kashmir Point end of Murree Mall Road, the Pindi Point chairlift lifts visitors to a viewpoint above the Murree ridge. Monthly searches: 880/mo for 'murree pindi point' and 1,900/m...",
         "Pindi Point generates 880+ monthly searches as a location name and 1,900/mo specifically for the chairlift — indicating that the chairlift is the primary reason people search for Pindi Point. It is Murree's second chairlift option alongside the Patriata Chairlift at Bhurban.",
       ],
+      image: {
+        src: article568Image2,
+        alt: "Pindi Point Murree — The Viewpoint and Chairlift Guide",
+      },
     },
     {
       type: "section",
@@ -10184,10 +7155,6 @@ export const article568: Article = {
         "Kashmir Point area, Murree Mall Road",
         "Patriata, Bhurban — 3km from Himalaya Villas",
       ],
-      image: {
-        src: article568Image2,
-        alt: "Location",
-      },
     },
     {
       type: "section",
@@ -10197,6 +7164,10 @@ export const article568: Article = {
         "22km, 30 min drive",
         "3km, 8 min drive",
       ],
+      image: {
+        src: article568Image2,
+        alt: "Distance from Himalaya Villas",
+      },
     },
     {
       type: "related",
@@ -10301,13 +7272,13 @@ export const article570: Article = {
   slug: "murree-bhurban-itinerary",
   title: "Bhurban Murree Itinerary — 2-Night and 3-Night Plans",
   metaDescription:
-    "URL /murree-bhurban-itinerary Target KW murree bhurban itinerary, 2 nights bhurban murree plan, 3 days murree bhurban, bhurban murree trip plan",
+    "murree bhurban itinerary, 2 nights bhurban murree plan, 3 days murree bhurban, bhurban murree trip plan",
   keywords:
     "murree bhurban itinerary, 2 nights bhurban murree plan, 3 days murree bhurban, bhurban murree trip plan",
   eyebrow: "Backlink Guest Post · Chairlift at 9am (beat queue), Ayubia before noon | ~900w",
   h1: "Bhurban Murree Itinerary — 2-Night and 3-Night Plans",
   heroTagline:
-    "URL /murree-bhurban-itinerary Target KW murree bhurban itinerary, 2 nights bhurban murree plan, 3 days murree bhurban, bhurban murree trip plan",
+    "murree bhurban itinerary, 2 nights bhurban murree plan, 3 days murree bhurban, bhurban murree trip plan",
   heroImage: article570Hero,
   blocks: [
     {
@@ -10393,13 +7364,13 @@ export const article571: Article = {
   slug: "bhurban-villa-pricing-guide",
   title: "Himalaya Villas Bhurban — Villa Pricing and Room Rate Guide 2026",
   metaDescription:
-    "URL /bhurban-villa-pricing-guide Target KW himalaya villas bhurban rates, bhurban villa price, himalaya villas room rates, bhurban villa cost per night",
+    "himalaya villas bhurban rates, bhurban villa price, himalaya villas room rates, bhurban villa cost per night",
   keywords:
     "himalaya villas bhurban rates, bhurban villa price, himalaya villas room rates, bhurban villa cost per night",
   eyebrow: "Backlink Guest Post · WC | ~900w",
   h1: "Himalaya Villas Bhurban — Villa Pricing and Room Rate Guide 2026",
   heroTagline:
-    "URL /bhurban-villa-pricing-guide Target KW himalaya villas bhurban rates, bhurban villa price, himalaya villas room rates, bhurban villa cost per night",
+    "himalaya villas bhurban rates, bhurban villa price, himalaya villas room rates, bhurban villa cost per night",
   heroImage: article571Hero,
   blocks: [
     {
@@ -10568,13 +7539,13 @@ export const article572: Article = {
   slug: "bhurban-murree-for-families",
   title: "Bhurban Murree for Families — The Complete Family Travel Guide",
   metaDescription:
-    "URL /bhurban-murree-for-families Target KW bhurban murree for families, family vacation bhurban, murree family trip, bhurban family villa",
+    "bhurban murree for families, family vacation bhurban, murree family trip, bhurban family villa ~900w Bhurban Murree for Families — The Complete 2026 Guide",
   keywords:
     "bhurban murree for families, family vacation bhurban, murree family trip, bhurban family villa",
   eyebrow: "Backlink Guest Post · ~900w",
   h1: "Bhurban Murree for Families — The Complete Family Travel Guide",
   heroTagline:
-    "URL /bhurban-murree-for-families Target KW bhurban murree for families, family vacation bhurban, murree family trip, bhurban family villa",
+    "bhurban murree for families, family vacation bhurban, murree family trip, bhurban family villa ~900w Bhurban Murree for Families — The Complete 2026 Guide",
   heroImage: article572Hero,
   blocks: [
     {
@@ -10635,13 +7606,13 @@ export const article573: Article = {
   slug: "bhurban-private-estate-vs-pc-hotel",
   title: "Himalaya Villas vs PC Hotel Bhurban — The Honest Comparison",
   metaDescription:
-    "URL /bhurban-private-estate-vs-pc-hotel Target KW himalaya villas vs pc hotel bhurban, bhurban private estate or pc hotel, pc hotel bhurban vs himalaya villas",
+    "himalaya villas vs pc hotel bhurban, bhurban private estate or pc hotel, pc hotel bhurban vs himalaya villas",
   keywords:
     "himalaya villas vs pc hotel bhurban, bhurban private estate or pc hotel, pc hotel bhurban vs himalaya villas",
   eyebrow: "Backlink Guest Post · Pool | ~1,000w",
   h1: "Himalaya Villas vs PC Hotel Bhurban — The Honest Comparison",
   heroTagline:
-    "URL /bhurban-private-estate-vs-pc-hotel Target KW himalaya villas vs pc hotel bhurban, bhurban private estate or pc hotel, pc hotel bhurban vs himalaya villas",
+    "himalaya villas vs pc hotel bhurban, bhurban private estate or pc hotel, pc hotel bhurban vs himalaya villas",
   heroImage: article573Hero,
   blocks: [
     {
@@ -10662,6 +7633,18 @@ export const article573: Article = {
       text: "The cedar forest estate — dawn walks, fire pit, in-villa dining — is the purpose, not the pool and spa",
     },
     {
+      type: "comparison",
+      heading: "Himalaya Villas vs PC Hotel Bhurban — The Honest Comparison",
+      columns: [
+        "Feature",
+        "Option A",
+        "Option B",
+      ],
+      rows: [
+        { feature: "Conversion", a: "Cluster 1", b: "~1,000w" },
+      ],
+    },
+    {
       type: "section",
       eyebrow: "Himalaya Villas vs PC Hotel Bhurban",
       heading: "Himalaya Villas vs PC Hotel Bhurban — The Honest Comparison",
@@ -10670,6 +7653,10 @@ export const article573: Article = {
         "Himalaya Villas & Resorts and PC Hotel Bhurban (Pearl Continental/Marriott) are the two premium properties on the Bhurban ridge — 0.5km apart, radically different models. PC Hotel: 162-room Marriott chain hotel with pool, spa, ballroom, Bonvoy loyalty points, and shared facilities. Himalaya Villas: 12 exclusive-use private cedar villas with private...",
         "This is the most important buying decision in the Bhurban accommodation market. Himalaya Villas and PC Hotel Bhurban are both premium properties 0.5km apart. Understanding the genuine difference — not a quality comparison, but a model comparison — is the purpose of this guide.",
       ],
+      image: {
+        src: article573Image2,
+        alt: "Himalaya Villas vs PC Hotel Bhurban — The Honest Comparison",
+      },
     },
     {
       type: "section",
@@ -10679,10 +7666,6 @@ export const article573: Article = {
         "162-room 5-star chain hotel",
         "12 exclusive-use private cedar villas",
       ],
-      image: {
-        src: article573Image2,
-        alt: "Model",
-      },
     },
     {
       type: "section",
@@ -10692,6 +7675,10 @@ export const article573: Article = {
         "Multiple restaurants — 24h room service",
         "In-villa dining at guest's timing (pre-arranged)",
       ],
+      image: {
+        src: article573Image2,
+        alt: "Restaurant",
+      },
     },
     {
       type: "section",
@@ -10704,19 +7691,19 @@ export const article573: Article = {
         "3 rooms × PKR 45,000 = PKR 135,000/night",
         "1 villa: PKR 55,000-70,000/night",
       ],
-      image: {
-        src: article573Image2,
-        alt: "Golf course",
-      },
     },
     {
-      type: "cta",
+      type: "section",
       eyebrow: "Booking",
       heading: "Booking",
-      text: "pchotels.com / Marriott app / Bonvoy WhatsApp +92 304 567 9000 direct",
-      buttonLabel: "WhatsApp: +92 304 567 9000 | wa.me/923045679000",
-      buttonHref: "https://wa.me/923045679000",
-      footnote: "Direct bookings receive priority response and best available rate.",
+      paragraphs: [
+        "pchotels.com / Marriott app / Bonvoy",
+        "WhatsApp +92 304 567 9000 direct",
+      ],
+      image: {
+        src: article573Image2,
+        alt: "Booking",
+      },
     },
     {
       type: "section",
@@ -10727,10 +7714,6 @@ export const article573: Article = {
         "PKR 116,000",
         "PKR 9,667/person/night",
       ],
-      image: {
-        src: article573Image2,
-        alt: "Himalaya Villas Garden Villa",
-      },
     },
     {
       type: "section",
@@ -10742,6 +7725,10 @@ export const article573: Article = {
         "PKR 10,500/person/night",
         "The Himalaya Villas garden villa for 6 is PKR 116,000 for 2 nights vs PC Hotel's PKR 270,000 for 3 rooms. The private villa estate at Himalaya Villas is less than half the cost of PC Hotel for a family of 6 — and delivers the exclusive private garden the PC Hotel's shared grounds cannot.",
       ],
+      image: {
+        src: article573Image2,
+        alt: "Himalaya Villas Himalayan Penthouse",
+      },
     },
     {
       type: "section",
@@ -10753,10 +7740,6 @@ export const article573: Article = {
         "You want 24-hour room service rather than pre-arranged in-villa dining",
         "Your party is 1-2 persons who don't need a full private villa",
       ],
-      image: {
-        src: article573Image2,
-        alt: "You are a Marriott Bonvoy member who wants to earn or redeem points",
-      },
     },
     {
       type: "section",
@@ -10765,6 +7748,10 @@ export const article573: Article = {
       paragraphs: [
         "The cedar forest estate — dawn walks, fire pit, in-villa dining — is the purpose, not the pool and spa",
       ],
+      image: {
+        src: article573Image2,
+        alt: "You want a private outdoor space that belongs only to your group",
+      },
     },
     {
       type: "related",
@@ -10786,13 +7773,13 @@ export const article574: Article = {
   slug: "destination-wedding-bhurban-murree",
   title: "Destination Wedding at Bhurban — Cedar Estate Nikah and Celebration Guide",
   metaDescription:
-    "URL /destination-wedding-bhurban-murree Target KW destination wedding bhurban, nikah bhurban murree, wedding venue bhurban, outdoor nikah bhurban, bhurban wedding",
+    "destination wedding bhurban, nikah bhurban murree, wedding venue bhurban, outdoor nikah bhurban, bhurban wedding",
   keywords:
     "destination wedding bhurban, nikah bhurban murree, wedding venue bhurban, outdoor nikah bhurban, bhurban wedding",
   eyebrow: "Backlink Guest Post · The Setting | ~900w",
   h1: "Destination Wedding at Bhurban — Cedar Estate Nikah and Celebration Guide",
   heroTagline:
-    "URL /destination-wedding-bhurban-murree Target KW destination wedding bhurban, nikah bhurban murree, wedding venue bhurban, outdoor nikah bhurban, bhurban wedding",
+    "destination wedding bhurban, nikah bhurban murree, wedding venue bhurban, outdoor nikah bhurban, bhurban wedding",
   heroImage: article574Hero,
   blocks: [
     {
@@ -10843,13 +7830,12 @@ export const article574: Article = {
       },
     },
     {
-      type: "cta",
+      type: "section",
       eyebrow: "Booking lead time",
       heading: "Booking lead time",
-      text: "Minimum 8-12 weeks for wedding configuration — earlier preferred",
-      buttonLabel: "WhatsApp: +92 304 567 9000 | wa.me/923045679000",
-      buttonHref: "https://wa.me/923045679000",
-      footnote: "Direct bookings receive priority response and best available rate.",
+      paragraphs: [
+        "Minimum 8-12 weeks for wedding configuration — earlier preferred",
+      ],
     },
     {
       type: "related",
@@ -10871,13 +7857,13 @@ export const article575: Article = {
   slug: "bhurban-accommodation-guide",
   title: "Bhurban Accommodation Guide — How to Choose the Right Stay",
   metaDescription:
-    "URL /bhurban-accommodation-guide Target KW bhurban accommodation, bhurban accommodation guide, where to stay bhurban, best accommodation bhurban murree",
+    "bhurban accommodation, bhurban accommodation guide, where to stay bhurban, best accommodation bhurban murree",
   keywords:
     "bhurban accommodation, bhurban accommodation guide, where to stay bhurban, best accommodation bhurban murree",
   eyebrow: "Backlink Guest Post · Airbnb | ~900w",
   h1: "Bhurban Accommodation Guide — How to Choose the Right Stay",
   heroTagline:
-    "URL /bhurban-accommodation-guide Target KW bhurban accommodation, bhurban accommodation guide, where to stay bhurban, best accommodation bhurban murree",
+    "bhurban accommodation, bhurban accommodation guide, where to stay bhurban, best accommodation bhurban murree",
   heroImage: article575Hero,
   blocks: [
     {
@@ -10900,13 +7886,18 @@ export const article575: Article = {
       ],
     },
     {
-      type: "cta",
-      eyebrow: "Booking",
-      heading: "Booking",
-      text: "",
-      buttonLabel: "WhatsApp: +92 304 567 9000 | wa.me/923045679000",
-      buttonHref: "https://wa.me/923045679000",
-      footnote: "Direct bookings receive priority response and best available rate.",
+      type: "section",
+      eyebrow: "Private villa estate",
+      heading: "Private villa estate",
+      paragraphs: [
+        "Families 4+, occasions, cedar estate",
+        "PKR 39,000-70,000/villa",
+        "WhatsApp +92 304 567 9000",
+      ],
+      image: {
+        src: article575Image2,
+        alt: "Private villa estate",
+      },
     },
     {
       type: "section",
@@ -10986,13 +7977,13 @@ export const article576: Article = {
   slug: "nathia-gali-pakistan-guide",
   title: "Nathia Gali Pakistan — The Complete 2026 Visitor Guide",
   metaDescription:
-    "URL /nathia-gali-pakistan-guide Target KW nathia gali, nathia gali pakistan, nathiagali pakistan, nathia gali abbottabad, pakistan nathia gali",
+    "nathia gali, nathia gali pakistan, nathiagali pakistan, nathia gali abbottabad, pakistan nathia gali ~1,100w",
   keywords:
     "nathia gali, nathia gali pakistan, nathiagali pakistan, nathia gali abbottabad, pakistan nathia gali",
   eyebrow: "Backlink Guest Post · Abbottabad District | ~1,100w",
   h1: "Nathia Gali Pakistan — The Complete 2026 Visitor Guide",
   heroTagline:
-    "URL /nathia-gali-pakistan-guide Target KW nathia gali, nathia gali pakistan, nathiagali pakistan, nathia gali abbottabad, pakistan nathia gali",
+    "nathia gali, nathia gali pakistan, nathiagali pakistan, nathia gali abbottabad, pakistan nathia gali ~1,100w",
   heroImage: article576Hero,
   blocks: [
     {
@@ -11115,13 +8106,13 @@ export const article577: Article = {
   slug: "hotels-in-nathia-gali-guide",
   title: "Hotels in Nathia Gali — 2026 Accommodation Guide and Bhurban Premium Alternative",
   metaDescription:
-    "URL /hotels-in-nathia-gali-guide Target KW hotel in nathiagali, hotel in nathia gali pakistan, hotels nathia gali, nathia gali hotel booking",
+    "hotel in nathiagali, hotel in nathia gali pakistan, hotels nathia gali, nathia gali hotel booking ~900w",
   keywords:
     "hotel in nathiagali, hotel in nathia gali pakistan, hotels nathia gali, nathia gali hotel booking",
   eyebrow: "Backlink Guest Post · Hotel | ~900w",
   h1: "Hotels in Nathia Gali — 2026 Accommodation Guide and Bhurban Premium Alternative",
   heroTagline:
-    "URL /hotels-in-nathia-gali-guide Target KW hotel in nathiagali, hotel in nathia gali pakistan, hotels nathia gali, nathia gali hotel booking",
+    "hotel in nathiagali, hotel in nathia gali pakistan, hotels nathia gali, nathia gali hotel booking ~900w",
   heroImage: article577Hero,
   blocks: [
     {
@@ -11134,13 +8125,12 @@ export const article577: Article = {
       text: "For visitors specifically seeking premium private accommodation as the Nathia Gali day-trip base: Himalaya Villas in Bhurban (30km from Nathia Gali, 45 min drive) delivers:",
     },
     {
-      type: "cta",
-      eyebrow: "Book Via",
-      heading: "Book Via",
-      text: "",
-      buttonLabel: "WhatsApp: +92 304 567 9000 | wa.me/923045679000",
-      buttonHref: "https://wa.me/923045679000",
-      footnote: "Direct bookings receive priority response and best available rate.",
+      type: "section",
+      eyebrow: "Elites Hotel Nathiagali",
+      heading: "Elites Hotel Nathiagali",
+      paragraphs: [
+        "12,100/mo",
+      ],
     },
     {
       type: "section",
@@ -11236,13 +8226,12 @@ export const article577: Article = {
       },
     },
     {
-      type: "cta",
+      type: "section",
       eyebrow: "Booking platform partner",
       heading: "Booking platform partner",
-      text: "roomy.pk",
-      buttonLabel: "WhatsApp: +92 304 567 9000 | wa.me/923045679000",
-      buttonHref: "https://wa.me/923045679000",
-      footnote: "Direct bookings receive priority response and best available rate.",
+      paragraphs: [
+        "roomy.pk",
+      ],
     },
     {
       type: "section",
@@ -11299,13 +8288,13 @@ export const article578: Article = {
   slug: "elites-hotel-nathiagali-guide",
   title: "Elites Hotel Nathiagali — Guide and the Bhurban Private Estate Alternative",
   metaDescription:
-    "URL /elites-hotel-nathiagali-guide Target KW elite hotel nathia gali, elites hotel nathiagali, hotel elites nathiagali, elite hotel nathia gali price",
+    "elite hotel nathia gali, elites hotel nathiagali, hotel elites nathiagali, elite hotel nathia gali price",
   keywords:
     "elite hotel nathia gali, elites hotel nathiagali, hotel elites nathiagali, elite hotel nathia gali price",
   eyebrow: "Backlink Guest Post · Cluster | ~700w",
   h1: "Elites Hotel Nathiagali — Guide and the Bhurban Private Estate Alternative",
   heroTagline:
-    "URL /elites-hotel-nathiagali-guide Target KW elite hotel nathia gali, elites hotel nathiagali, hotel elites nathiagali, elite hotel nathia gali price",
+    "elite hotel nathia gali, elites hotel nathiagali, hotel elites nathiagali, elite hotel nathia gali price",
   heroImage: article578Hero,
   blocks: [
     {
@@ -11380,13 +8369,13 @@ export const article579: Article = {
   slug: "alpine-hotel-nathiagali-guide",
   title: "Alpine Hotel Nathiagali — Guide and the Bhurban Cedar Estate Alternative",
   metaDescription:
-    "URL /alpine-hotel-nathiagali-guide Target KW alpine hotel nathiagali, alpine nathia gali, alpine nathiagali, alpine hotel nathia gali price",
+    "alpine hotel nathiagali, alpine nathia gali, alpine nathiagali, alpine hotel nathia gali price ~700w Alpine Hotel Nathiagali — What to Know and the Private Estate Alternative",
   keywords:
     "alpine hotel nathiagali, alpine nathia gali, alpine nathiagali, alpine hotel nathia gali price",
   eyebrow: "Backlink Guest Post · Cluster | ~700w",
   h1: "Alpine Hotel Nathiagali — Guide and the Bhurban Cedar Estate Alternative",
   heroTagline:
-    "URL /alpine-hotel-nathiagali-guide Target KW alpine hotel nathiagali, alpine nathia gali, alpine nathiagali, alpine hotel nathia gali price",
+    "alpine hotel nathiagali, alpine nathia gali, alpine nathiagali, alpine hotel nathia gali price ~700w Alpine Hotel Nathiagali — What to Know and the Private Estate Alternative",
   heroImage: article579Hero,
   blocks: [
     {
@@ -11473,13 +8462,13 @@ export const article580: Article = {
   slug: "doubletree-nathia-gali-guide",
   title: "Doubletree by Hilton Nathia Gali and Fogland Hotel — Guides and the Bhurban Alternative",
   metaDescription:
-    "URL /doubletree-nathia-gali-guide Target KW doubletree by hilton nathia gali, doubletree nathia gali, hilton nathia gali, fogland hotel nathia gali",
+    "doubletree by hilton nathia gali, doubletree nathia gali, hilton nathia gali, fogland hotel nathia gali",
   keywords:
     "doubletree by hilton nathia gali, doubletree nathia gali, hilton nathia gali, fogland hotel nathia gali",
   eyebrow: "Backlink Guest Post · Cluster | ~700w",
   h1: "Doubletree by Hilton Nathia Gali and Fogland Hotel — Guides and the Bhurban Alternative",
   heroTagline:
-    "URL /doubletree-nathia-gali-guide Target KW doubletree by hilton nathia gali, doubletree nathia gali, hilton nathia gali, fogland hotel nathia gali",
+    "doubletree by hilton nathia gali, doubletree nathia gali, hilton nathia gali, fogland hotel nathia gali",
   heroImage: article580Hero,
   blocks: [
     {
@@ -11597,13 +8586,13 @@ export const article581: Article = {
   slug: "murree-snowfall-today",
   title: "Murree Snowfall Today — Live Check and Cedar Estate Snowfall Guide",
   metaDescription:
-    "URL /murree-snowfall-today Target KW murree snowfall today, murree snowfall today live, is murree snowfall today, murree snowfall today update",
+    "murree snowfall today, murree snowfall today live, is murree snowfall today, murree snowfall today update",
   keywords:
     "murree snowfall today, murree snowfall today live, is murree snowfall today, murree snowfall today update",
   eyebrow: "Backlink Guest Post · ~800w",
   h1: "Murree Snowfall Today — Live Check and Cedar Estate Snowfall Guide",
   heroTagline:
-    "URL /murree-snowfall-today Target KW murree snowfall today, murree snowfall today live, is murree snowfall today, murree snowfall today update",
+    "murree snowfall today, murree snowfall today live, is murree snowfall today, murree snowfall today update",
   heroImage: article581Hero,
   blocks: [
     {
@@ -11677,13 +8666,13 @@ export const article582: Article = {
   slug: "nathia-gali-things-to-do",
   title: "Nathia Gali Things to Do — Complete Activity Guide from Bhurban",
   metaDescription:
-    "URL /nathia-gali-things-to-do Target KW nathia gali things to do, nathia gali activities, what to do nathia gali, nathia gali tourism",
+    "nathia gali things to do, nathia gali activities, what to do nathia gali, nathia gali tourism ~900w Nathia Gali Things to Do — The Complete Activity Guide",
   keywords:
     "nathia gali things to do, nathia gali activities, what to do nathia gali, nathia gali tourism",
   eyebrow: "Backlink Guest Post · On the Galyat road between Bhurban and Nathia Gali, Changla Gali (7,800 feet) has a roadside viewpoint with valley panorama. A 1...",
   h1: "Nathia Gali Things to Do — Complete Activity Guide from Bhurban",
   heroTagline:
-    "URL /nathia-gali-things-to-do Target KW nathia gali things to do, nathia gali activities, what to do nathia gali, nathia gali tourism",
+    "nathia gali things to do, nathia gali activities, what to do nathia gali, nathia gali tourism ~900w Nathia Gali Things to Do — The Complete Activity Guide",
   heroImage: article582Hero,
   blocks: [
     {
@@ -11756,13 +8745,13 @@ export const article583: Article = {
   slug: "qubed-richmond-nathiagali-guide",
   title: "Qubed Nathiagali and Richmond Boutique Hotel — Guides and the Bhurban Alternative",
   metaDescription:
-    "URL /qubed-richmond-nathiagali-guide Target KW qubed nathiagali, qubed nathia gali, richmond boutique hotel nathia gali, boutique hotels nathia gali",
+    "qubed nathiagali, qubed nathia gali, richmond boutique hotel nathia gali, boutique hotels nathia gali",
   keywords:
     "qubed nathiagali, qubed nathia gali, richmond boutique hotel nathia gali, boutique hotels nathia gali",
   eyebrow: "Backlink Guest Post · Cluster | ~700w",
   h1: "Qubed Nathiagali and Richmond Boutique Hotel — Guides and the Bhurban Alternative",
   heroTagline:
-    "URL /qubed-richmond-nathiagali-guide Target KW qubed nathiagali, qubed nathia gali, richmond boutique hotel nathia gali, boutique hotels nathia gali",
+    "qubed nathiagali, qubed nathia gali, richmond boutique hotel nathia gali, boutique hotels nathia gali",
   heroImage: article583Hero,
   blocks: [
     {
@@ -11805,13 +8794,13 @@ export const article584: Article = {
   slug: "mushkpuri-top-nathia-gali-guide",
   title: "Mushkpuri Top Nathia Gali — The Hiking Guide",
   metaDescription:
-    "URL /mushkpuri-top-nathia-gali-guide Target KW mushkpuri top nathia gali, mushkpuri nathia gali, nathia gali to mushkpuri top, miranjani nathia gali",
+    "mushkpuri top nathia gali, mushkpuri nathia gali, nathia gali to mushkpuri top, miranjani nathia gali",
   keywords:
     "mushkpuri top nathia gali, mushkpuri nathia gali, nathia gali to mushkpuri top, miranjani nathia gali",
   eyebrow: "Backlink Guest Post · ~700w",
   h1: "Mushkpuri Top Nathia Gali — The Hiking Guide",
   heroTagline:
-    "URL /mushkpuri-top-nathia-gali-guide Target KW mushkpuri top nathia gali, mushkpuri nathia gali, nathia gali to mushkpuri top, miranjani nathia gali",
+    "mushkpuri top nathia gali, mushkpuri nathia gali, nathia gali to mushkpuri top, miranjani nathia gali",
   heroImage: article584Hero,
   blocks: [
     {
@@ -11870,13 +8859,13 @@ export const article585: Article = {
   slug: "nathia-gali-cottages-villas",
   title: "Nathia Gali Cottages and Villas — Rental Accommodation Guide",
   metaDescription:
-    "URL /nathia-gali-cottages-villas Target KW nathia gali cottages, cottages in nathia gali, nathia gali villas, villas in nathia gali, nathia gali airbnb",
+    "nathia gali cottages, cottages in nathia gali, nathia gali villas, villas in nathia gali, nathia gali airbnb",
   keywords:
     "nathia gali cottages, cottages in nathia gali, nathia gali villas, villas in nathia gali, nathia gali airbnb",
   eyebrow: "Backlink Guest Post · From estate gate — maintained paths | ~700w",
   h1: "Nathia Gali Cottages and Villas — Rental Accommodation Guide",
   heroTagline:
-    "URL /nathia-gali-cottages-villas Target KW nathia gali cottages, cottages in nathia gali, nathia gali villas, villas in nathia gali, nathia gali airbnb",
+    "nathia gali cottages, cottages in nathia gali, nathia gali villas, villas in nathia gali, nathia gali airbnb",
   heroImage: article585Hero,
   blocks: [
     {
@@ -11973,13 +8962,13 @@ export const article586: Article = {
   slug: "ayubia-national-park-guide",
   title: "Ayubia National Park Pakistan — The Complete Visitor Guide",
   metaDescription:
-    "URL /ayubia-national-park-guide Target KW ayubia national park, ayubia national park pakistan, ayubia pipeline track, ayubia chairlift",
+    "ayubia national park, ayubia national park pakistan, ayubia pipeline track, ayubia chairlift ~1,000w Ayubia National Park Pakistan — The Complete Visitor Guide",
   keywords:
     "ayubia national park, ayubia national park pakistan, ayubia pipeline track, ayubia chairlift",
   eyebrow: "Backlink Guest Post · WC | ~1,000w",
   h1: "Ayubia National Park Pakistan — The Complete Visitor Guide",
   heroTagline:
-    "URL /ayubia-national-park-guide Target KW ayubia national park, ayubia national park pakistan, ayubia pipeline track, ayubia chairlift",
+    "ayubia national park, ayubia national park pakistan, ayubia pipeline track, ayubia chairlift ~1,000w Ayubia National Park Pakistan — The Complete Visitor Guide",
   heroImage: article586Hero,
   blocks: [
     {
@@ -12148,13 +9137,13 @@ export const article587: Article = {
   slug: "nathia-gali-weather-today",
   title: "Nathia Gali Weather Today — Live Check and Planning Guide",
   metaDescription:
-    "URL /nathia-gali-weather-today Target KW nathia gali weather today, today nathia gali weather, nathia gali weather 15 days, nathia gali weather tomorrow, nathia gali weather forecast",
+    "nathia gali weather today, today nathia gali weather, nathia gali weather 15 days, nathia gali weather tomorrow, nathia gali weather forecast",
   keywords:
     "nathia gali weather today, today nathia gali weather, nathia gali weather 15 days, nathia gali weather tomorrow, nathia gali weather forecast",
   eyebrow: "Backlink Guest Post · WC | ~900w",
   h1: "Nathia Gali Weather Today — Live Check and Planning Guide",
   heroTagline:
-    "URL /nathia-gali-weather-today Target KW nathia gali weather today, today nathia gali weather, nathia gali weather 15 days, nathia gali weather tomorrow, nathia gali weather forecast",
+    "nathia gali weather today, today nathia gali weather, nathia gali weather 15 days, nathia gali weather tomorrow, nathia gali weather forecast",
   heroImage: article587Hero,
   blocks: [
     {
@@ -12310,13 +9299,13 @@ export const article588: Article = {
   slug: "murree-hill-station-heritage",
   title: "Murree Hill Station Heritage — The 170-Year Story from 1851 to Today",
   metaDescription:
-    "URL /murree-hill-station-heritage Target KW murree hill station, murree pakistan heritage, murree british era, lawrence college ghora gali, all saints church murree",
+    "murree hill station, murree pakistan heritage, murree british era, lawrence college ghora gali, all saints church murree",
   keywords:
     "murree hill station, murree pakistan heritage, murree british era, lawrence college ghora gali, all saints church murree",
   eyebrow: "Backlink Guest Post · Legacy Today | ~900w",
   h1: "Murree Hill Station Heritage — The 170-Year Story from 1851 to Today",
   heroTagline:
-    "URL /murree-hill-station-heritage Target KW murree hill station, murree pakistan heritage, murree british era, lawrence college ghora gali, all saints church murree",
+    "murree hill station, murree pakistan heritage, murree british era, lawrence college ghora gali, all saints church murree",
   heroImage: article588Hero,
   blocks: [
     {
@@ -12415,13 +9404,13 @@ export const article589: Article = {
   slug: "bhurban-for-lahore-families",
   title: "Bhurban for Lahore Families — The Complete 2026 Travel Guide",
   metaDescription:
-    "URL /bhurban-for-lahore-families Target KW bhurban from lahore, lahore to bhurban murree, bhurban murree lahore families, lahore bhurban weekend",
+    "bhurban from lahore, lahore to bhurban murree, bhurban murree lahore families, lahore bhurban weekend",
   keywords:
     "bhurban from lahore, lahore to bhurban murree, bhurban murree lahore families, lahore bhurban weekend",
   eyebrow: "Backlink Guest Post · ~900w",
   h1: "Bhurban for Lahore Families — The Complete 2026 Travel Guide",
   heroTagline:
-    "URL /bhurban-for-lahore-families Target KW bhurban from lahore, lahore to bhurban murree, bhurban murree lahore families, lahore bhurban weekend",
+    "bhurban from lahore, lahore to bhurban murree, bhurban murree lahore families, lahore bhurban weekend",
   heroImage: article589Hero,
   blocks: [
     {
@@ -12524,13 +9513,13 @@ export const article590: Article = {
   slug: "resort-near-islamabad",
   title: "Resort Near Islamabad — The 45-Minute Cedar Estate Option",
   metaDescription:
-    "URL /resort-near-islamabad Target KW resort near islamabad, hotels near islamabad, getaway near islamabad, mountain resort islamabad, private resort near islamabad",
+    "resort near islamabad, hotels near islamabad, getaway near islamabad, mountain resort islamabad, private resort near islamabad",
   keywords:
     "resort near islamabad, hotels near islamabad, getaway near islamabad, mountain resort islamabad, private resort near islamabad",
   eyebrow: "Backlink Guest Post · 1. The Only Private Villa Estate | ~800w",
   h1: "Resort Near Islamabad — The 45-Minute Cedar Estate Option",
   heroTagline:
-    "URL /resort-near-islamabad Target KW resort near islamabad, hotels near islamabad, getaway near islamabad, mountain resort islamabad, private resort near islamabad",
+    "resort near islamabad, hotels near islamabad, getaway near islamabad, mountain resort islamabad, private resort near islamabad",
   heroImage: article590Hero,
   blocks: [
     {
@@ -12641,13 +9630,13 @@ export const article591: Article = {
   slug: "bhurban-for-pakistani-diaspora",
   title: "Bhurban Murree for Pakistani Diaspora — The Returning Home Guide",
   metaDescription:
-    "URL /bhurban-for-pakistani-diaspora Target KW bhurban murree diaspora, bhurban for overseas pakistanis, murree bhurban uae visitors, bhurban uk visitors",
+    "bhurban murree diaspora, bhurban for overseas pakistanis, murree bhurban uae visitors, bhurban uk visitors",
   keywords:
     "bhurban murree diaspora, bhurban for overseas pakistanis, murree bhurban uae visitors, bhurban uk visitors",
   eyebrow: "Backlink Guest Post · ~800w",
   h1: "Bhurban Murree for Pakistani Diaspora — The Returning Home Guide",
   heroTagline:
-    "URL /bhurban-for-pakistani-diaspora Target KW bhurban murree diaspora, bhurban for overseas pakistanis, murree bhurban uae visitors, bhurban uk visitors",
+    "bhurban murree diaspora, bhurban for overseas pakistanis, murree bhurban uae visitors, bhurban uk visitors",
   heroImage: article591Hero,
   blocks: [
     {
@@ -12712,13 +9701,13 @@ export const article592: Article = {
   slug: "bhurban-for-couples",
   title: "Bhurban for Couples — The Private Cedar Estate Romantic Weekend Guide",
   metaDescription:
-    "URL /bhurban-for-couples Target KW bhurban for couples, romantic getaway bhurban, couples stay bhurban, bhurban murree romantic weekend",
+    "bhurban for couples, romantic getaway bhurban, couples stay bhurban, bhurban murree romantic weekend ~800w",
   keywords:
     "bhurban for couples, romantic getaway bhurban, couples stay bhurban, bhurban murree romantic weekend",
   eyebrow: "Backlink Guest Post · Romantic Feature | ~800w",
   h1: "Bhurban for Couples — The Private Cedar Estate Romantic Weekend Guide",
   heroTagline:
-    "URL /bhurban-for-couples Target KW bhurban for couples, romantic getaway bhurban, couples stay bhurban, bhurban murree romantic weekend",
+    "bhurban for couples, romantic getaway bhurban, couples stay bhurban, bhurban murree romantic weekend ~800w",
   heroImage: article592Hero,
   blocks: [
     {
@@ -12810,13 +9799,13 @@ export const article593: Article = {
   slug: "murree-bhurban-in-december",
   title: "Bhurban Murree in December and New Year — The Winter Guide",
   metaDescription:
-    "URL /murree-bhurban-in-december Target KW murree bhurban in december, bhurban december, new year bhurban murree, murree new year 2026",
+    "murree bhurban in december, bhurban december, new year bhurban murree, murree new year 2026 ~800w Bhurban in December and New Year — The Winter Cedar Estate Guide",
   keywords:
     "murree bhurban in december, bhurban december, new year bhurban murree, murree new year 2026",
   eyebrow: "Backlink Guest Post · In-villa dinner: pre-arranged via WhatsApp — the specific New Year's Eve menu specified at the booking stage | ~800w",
   h1: "Bhurban Murree in December and New Year — The Winter Guide",
   heroTagline:
-    "URL /murree-bhurban-in-december Target KW murree bhurban in december, bhurban december, new year bhurban murree, murree new year 2026",
+    "murree bhurban in december, bhurban december, new year bhurban murree, murree new year 2026 ~800w Bhurban in December and New Year — The Winter Cedar Estate Guide",
   heroImage: article593Hero,
   blocks: [
     {
@@ -12874,13 +9863,13 @@ export const article594: Article = {
   slug: "bhurban-murree-instagram-guide",
   title: "Bhurban Murree Instagram and Photography — Content Creator's Guide",
   metaDescription:
-    "URL /bhurban-murree-instagram-guide Target KW bhurban murree instagram, bhurban photography spots, murree bhurban content creator, cedar estate instagram photos",
+    "bhurban murree instagram, bhurban photography spots, murree bhurban content creator, cedar estate instagram photos",
   keywords:
     "bhurban murree instagram, bhurban photography spots, murree bhurban content creator, cedar estate instagram photos",
   eyebrow: "Backlink Guest Post · The cedar estate at Himalaya Villas at 6–7am on a clear morning: the horizontal morning light from the east hits the massive ced...",
   h1: "Bhurban Murree Instagram and Photography — Content Creator's Guide",
   heroTagline:
-    "URL /bhurban-murree-instagram-guide Target KW bhurban murree instagram, bhurban photography spots, murree bhurban content creator, cedar estate instagram photos",
+    "bhurban murree instagram, bhurban photography spots, murree bhurban content creator, cedar estate instagram photos",
   heroImage: article594Hero,
   blocks: [
     {
@@ -12901,13 +9890,16 @@ export const article594: Article = {
       ],
     },
     {
-      type: "cta",
-      eyebrow: "Public Photography Spots — Accessible Without Booking",
+      type: "section",
+      eyebrow: "Public Photography Spots",
       heading: "Public Photography Spots — Accessible Without Booking",
-      text: "Patriata Chairlift gondola (3km from Himalaya Villas): the aerial forest image from the gondola window. Go at 9am opening for the clearest light. October week 3 for amber forest below.",
-      buttonLabel: "WhatsApp: +92 304 567 9000 | wa.me/923045679000",
-      buttonHref: "https://wa.me/923045679000",
-      footnote: "Direct bookings receive priority response and best available rate.",
+      paragraphs: [
+        "Patriata Chairlift gondola (3km from Himalaya Villas): the aerial forest image from the gondola window. Go at 9am opening for the clearest light. October week 3 for amber forest below.",
+      ],
+      image: {
+        src: article594Image2,
+        alt: "Public Photography Spots — Accessible Without Booking",
+      },
     },
     {
       type: "related",
@@ -12929,13 +9921,13 @@ export const article595: Article = {
   slug: "bhurban-villa-vs-apartment",
   title: "Bhurban Villa vs Apartment — Which Should You Book?",
   metaDescription:
-    "URL /bhurban-villa-vs-apartment Target KW bhurban villa or apartment, bhurban private villa vs apartment, bhurban murree villa booking, villa bhurban murree",
+    "bhurban villa or apartment, bhurban private villa vs apartment, bhurban murree villa booking, villa bhurban murree",
   keywords:
     "bhurban villa or apartment, bhurban private villa vs apartment, bhurban murree villa booking, villa bhurban murree",
   eyebrow: "Backlink Guest Post · Target KW | ~800w",
   h1: "Bhurban Villa vs Apartment — Which Should You Book?",
   heroTagline:
-    "URL /bhurban-villa-vs-apartment Target KW bhurban villa or apartment, bhurban private villa vs apartment, bhurban murree villa booking, villa bhurban murree",
+    "bhurban villa or apartment, bhurban private villa vs apartment, bhurban murree villa booking, villa bhurban murree",
   heroImage: article595Hero,
   blocks: [
     {
@@ -13020,13 +10012,13 @@ export const article596: Article = {
   slug: "mushkpuri-top-weather",
   title: "Mushkpuri Top Weather — Live Check and Complete Hiking Guide",
   metaDescription:
-    "URL /mushkpuri-top-weather Target KW mushkpuri top weather, mushkpuri top weather today, mushkpuri top nathia gali weather, mushkpuri top temperature, mushkpuri top height",
+    "mushkpuri top weather, mushkpuri top weather today, mushkpuri top nathia gali weather, mushkpuri top temperature, mushkpuri top height",
   keywords:
     "mushkpuri top weather, mushkpuri top weather today, mushkpuri top nathia gali weather, mushkpuri top temperature, mushkpuri top height",
   eyebrow: "Backlink Guest Post · WC | ~1,000w",
   h1: "Mushkpuri Top Weather — Live Check and Complete Hiking Guide",
   heroTagline:
-    "URL /mushkpuri-top-weather Target KW mushkpuri top weather, mushkpuri top weather today, mushkpuri top nathia gali weather, mushkpuri top temperature, mushkpuri top height",
+    "mushkpuri top weather, mushkpuri top weather today, mushkpuri top nathia gali weather, mushkpuri top temperature, mushkpuri top height",
   heroImage: article596Hero,
   blocks: [
     {
@@ -13219,15 +10211,14 @@ export const article596: Article = {
         alt: "How to Check Mushkpuri Top Weather Today",
       },
     },
-    {
-      type: "section",
-      eyebrow: "January",
-      heading: "January",
-       paragraphs: [],
-      bullets: [
-        { text: "8 to 2°C" },
-      ],
-    },
+    // {
+    //   type: "section",
+    //   eyebrow: "January",
+    //   heading: "January",
+    //   bullets: [
+    //     { text: "8 to 2°C" },
+    //   ],
+    // },
     {
       type: "section",
       eyebrow: "March",
@@ -13330,13 +10321,13 @@ export const article597: Article = {
   slug: "bhurban-murree-pakistan-guide",
   title: "Bhurban Murree — The Complete Pakistan Tourism Guide",
   metaDescription:
-    "URL /bhurban-murree-pakistan-guide Target KW bhurban murree, bhurban pakistan, murree tourism guide, bhurban tourism",
+    "bhurban murree, bhurban pakistan, murree tourism guide, bhurban tourism ~900w Bhurban Murree — The Complete Pakistan Tourism Guide",
   keywords:
     "bhurban murree, bhurban pakistan, murree tourism guide, bhurban tourism",
   eyebrow: "Backlink Guest Post · Detail | ~900w",
   h1: "Bhurban Murree — The Complete Pakistan Tourism Guide",
   heroTagline:
-    "URL /bhurban-murree-pakistan-guide Target KW bhurban murree, bhurban pakistan, murree tourism guide, bhurban tourism",
+    "bhurban murree, bhurban pakistan, murree tourism guide, bhurban tourism ~900w Bhurban Murree — The Complete Pakistan Tourism Guide",
   heroImage: article597Hero,
   blocks: [
     {
@@ -13521,13 +10512,13 @@ export const article598: Article = {
   slug: "islamabad-to-bhurban-guide",
   title: "Islamabad to Bhurban — The Complete 2026 Route and Travel Guide",
   metaDescription:
-    "URL /islamabad-to-bhurban-guide Target KW islamabad to bhurban, islamabad to bhurban murree distance, how far is bhurban from islamabad, islamabad bhurban route",
+    "islamabad to bhurban, islamabad to bhurban murree distance, how far is bhurban from islamabad, islamabad bhurban route",
   keywords:
     "islamabad to bhurban, islamabad to bhurban murree distance, how far is bhurban from islamabad, islamabad bhurban route",
   eyebrow: "Backlink Guest Post · 9:00am–11:00am | ~900w",
   h1: "Islamabad to Bhurban — The Complete 2026 Route and Travel Guide",
   heroTagline:
-    "URL /islamabad-to-bhurban-guide Target KW islamabad to bhurban, islamabad to bhurban murree distance, how far is bhurban from islamabad, islamabad bhurban route",
+    "islamabad to bhurban, islamabad to bhurban murree distance, how far is bhurban from islamabad, islamabad bhurban route",
   heroImage: article598Hero,
   blocks: [
     {
@@ -13649,13 +10640,13 @@ export const article599: Article = {
   slug: "murree-pakistan-tourism-guide",
   title: "Murree Pakistan — The Definitive Tourism Guide 2026",
   metaDescription:
-    "URL /murree-pakistan-tourism-guide Target KW murree pakistan, murree hills pakistan, murree tourism, pakistan hill station murree",
+    "murree pakistan, murree hills pakistan, murree tourism, pakistan hill station murree ~1,000w Murree Pakistan — The Definitive Tourism Guide 2026",
   keywords:
     "murree pakistan, murree hills pakistan, murree tourism, pakistan hill station murree",
   eyebrow: "Backlink Guest Post · Detail | ~1,000w",
   h1: "Murree Pakistan — The Definitive Tourism Guide 2026",
   heroTagline:
-    "URL /murree-pakistan-tourism-guide Target KW murree pakistan, murree hills pakistan, murree tourism, pakistan hill station murree",
+    "murree pakistan, murree hills pakistan, murree tourism, pakistan hill station murree ~1,000w Murree Pakistan — The Definitive Tourism Guide 2026",
   heroImage: article599Hero,
   blocks: [
     {
@@ -13839,13 +10830,13 @@ export const article600: Article = {
   slug: "murree-tourist-places-guide",
   title: "Murree Tourist Places — The 2026 Complete Attractions Guide",
   metaDescription:
-    "URL /murree-tourist-places-guide Target KW murree tourist places, tourist places murree, murree tourist attractions, places to visit murree, murree sightseeing",
+    "murree tourist places, tourist places murree, murree tourist attractions, places to visit murree, murree sightseeing",
   keywords:
     "murree tourist places, tourist places murree, murree tourist attractions, places to visit murree, murree sightseeing",
   eyebrow: "Backlink Guest Post · Viewpoint (7,800ft north-facing) | ~900w",
   h1: "Murree Tourist Places — The 2026 Complete Attractions Guide",
   heroTagline:
-    "URL /murree-tourist-places-guide Target KW murree tourist places, tourist places murree, murree tourist attractions, places to visit murree, murree sightseeing",
+    "murree tourist places, tourist places murree, murree tourist attractions, places to visit murree, murree sightseeing",
   heroImage: article600Hero,
   blocks: [
     {
@@ -14012,13 +11003,13 @@ export const article601: Article = {
   slug: "ayubia-chairlift-pipeline-track",
   title: "Ayubia Chairlift and Pipeline Track — The Complete Activity Guide",
   metaDescription:
-    "URL /ayubia-chairlift-pipeline-track Target KW ayubia chairlift, ayubia pipeline track, ayubia national park chairlift, ayubia to nathia gali track",
+    "ayubia chairlift, ayubia pipeline track, ayubia national park chairlift, ayubia to nathia gali track ~800w",
   keywords:
     "ayubia chairlift, ayubia pipeline track, ayubia national park chairlift, ayubia to nathia gali track",
   eyebrow: "Backlink Guest Post · The Ayubia chairlift operates within the national park boundary — a shorter aerial ride above the forest canopy. Unlike the Patr...",
   h1: "Ayubia Chairlift and Pipeline Track — The Complete Activity Guide",
   heroTagline:
-    "URL /ayubia-chairlift-pipeline-track Target KW ayubia chairlift, ayubia pipeline track, ayubia national park chairlift, ayubia to nathia gali track",
+    "ayubia chairlift, ayubia pipeline track, ayubia national park chairlift, ayubia to nathia gali track ~800w",
   heroImage: article601Hero,
   blocks: [
     {
@@ -14078,13 +11069,13 @@ export const article602: Article = {
   slug: "bhurban-from-karachi",
   title: "Bhurban Murree for Karachi Visitors — The Complete 2026 Travel Guide",
   metaDescription:
-    "URL /bhurban-from-karachi Target KW bhurban from karachi, murree bhurban karachi visitors, bhurban murree karachi flight, karachi islamabad bhurban",
+    "bhurban from karachi, murree bhurban karachi visitors, bhurban murree karachi flight, karachi islamabad bhurban",
   keywords:
     "bhurban from karachi, murree bhurban karachi visitors, bhurban murree karachi flight, karachi islamabad bhurban",
   eyebrow: "Backlink Guest Post · Multiple daily flights from JIAP | ~800w",
   h1: "Bhurban Murree for Karachi Visitors — The Complete 2026 Travel Guide",
   heroTagline:
-    "URL /bhurban-from-karachi Target KW bhurban from karachi, murree bhurban karachi visitors, bhurban murree karachi flight, karachi islamabad bhurban",
+    "bhurban from karachi, murree bhurban karachi visitors, bhurban murree karachi flight, karachi islamabad bhurban",
   heroImage: article602Hero,
   blocks: [
     {
@@ -14171,13 +11162,13 @@ export const article603: Article = {
   slug: "murree-bhurban-trip-cost",
   title: "Bhurban Murree Trip Cost — Complete 2026 Budget Guide",
   metaDescription:
-    "URL /murree-bhurban-trip-cost Target KW bhurban murree trip cost, murree bhurban budget, how much does bhurban cost, bhurban holiday cost 2026",
+    "bhurban murree trip cost, murree bhurban budget, how much does bhurban cost, bhurban holiday cost 2026",
   keywords:
     "bhurban murree trip cost, murree bhurban budget, how much does bhurban cost, bhurban holiday cost 2026",
   eyebrow: "Backlink Guest Post · Target KW | ~900w",
   h1: "Bhurban Murree Trip Cost — Complete 2026 Budget Guide",
   heroTagline:
-    "URL /murree-bhurban-trip-cost Target KW bhurban murree trip cost, murree bhurban budget, how much does bhurban cost, bhurban holiday cost 2026",
+    "bhurban murree trip cost, murree bhurban budget, how much does bhurban cost, bhurban holiday cost 2026",
   heroImage: article603Hero,
   blocks: [
     {
@@ -14345,13 +11336,13 @@ export const article604: Article = {
   slug: "eid-holiday-package-bhurban-murree",
   title: "Eid Holiday Package Bhurban Murree — Cedar Estate for Eid Gatherings",
   metaDescription:
-    "URL /eid-holiday-package-bhurban-murree Target KW eid holiday bhurban murree, bhurban eid package, eid ul adha bhurban, eid ul fitr bhurban, eid murree bhurban",
+    "eid holiday bhurban murree, bhurban eid package, eid ul adha bhurban, eid ul fitr bhurban, eid murree bhurban",
   keywords:
     "eid holiday bhurban murree, bhurban eid package, eid ul adha bhurban, eid ul fitr bhurban, eid murree bhurban",
   eyebrow: "Backlink Guest Post · Pakistani Eid celebrations are extended family events — grandparents, parents, children, cousins across multiple households arri...",
   h1: "Eid Holiday Package Bhurban Murree — Cedar Estate for Eid Gatherings",
   heroTagline:
-    "URL /eid-holiday-package-bhurban-murree Target KW eid holiday bhurban murree, bhurban eid package, eid ul adha bhurban, eid ul fitr bhurban, eid murree bhurban",
+    "eid holiday bhurban murree, bhurban eid package, eid ul adha bhurban, eid ul fitr bhurban, eid murree bhurban",
   heroImage: article604Hero,
   blocks: [
     {
@@ -14374,15 +11365,6 @@ export const article604: Article = {
       ],
     },
     {
-      type: "cta",
-      eyebrow: "Eid Booking — The Critical Timing Note",
-      heading: "Eid Booking — The Critical Timing Note",
-      text: "",
-      buttonLabel: "WhatsApp: +92 304 567 9000 | wa.me/923045679000",
-      buttonHref: "https://wa.me/923045679000",
-      footnote: "Direct bookings receive priority response and best available rate.",
-    },
-    {
       type: "section",
       eyebrow: "Notes",
       heading: "Notes",
@@ -14391,6 +11373,10 @@ export const article604: Article = {
         "June 27–July 1 (approximate — confirm moon-sighting)",
         "12–16 weeks in advance",
       ],
+      image: {
+        src: article604Image2,
+        alt: "Notes",
+      },
     },
     {
       type: "section",
@@ -14401,10 +11387,6 @@ export const article604: Article = {
         "March 30–April 2 (approximate — confirm moon-sighting)",
         "10–12 weeks in advance",
       ],
-      image: {
-        src: article604Image2,
-        alt: "If falls in summer heat: most competed booking of year",
-      },
     },
     {
       type: "section",
@@ -14414,6 +11396,10 @@ export const article604: Article = {
         "The approximate dates above are calculated; actual Eid dates depend on the moon sighting and will be confirmed by official announcements. Enquire early and book as soon as dates are confirmed — Eid availability at Himalaya Villas is the most competed window of the year.",
         "Book the Eid Cedar Estate — WhatsApp +92 304 567 9000",
       ],
+      image: {
+        src: article604Image2,
+        alt: "Spring Eid — better conditions than summer but still high demand",
+      },
     },
     {
       type: "related",
@@ -14435,13 +11421,13 @@ export const article605: Article = {
   slug: "extended-family-reunion-bhurban",
   title: "Extended Family Reunion at Bhurban — The Cedar Estate Group Guide",
   metaDescription:
-    "URL /extended-family-reunion-bhurban Target KW extended family reunion bhurban, family gathering bhurban murree, bhurban family event, multi-family stay bhurban",
+    "extended family reunion bhurban, family gathering bhurban murree, bhurban family event, multi-family stay bhurban",
   keywords:
     "extended family reunion bhurban, family gathering bhurban murree, bhurban family event, multi-family stay bhurban",
   eyebrow: "Backlink Guest Post · ~800w",
   h1: "Extended Family Reunion at Bhurban — The Cedar Estate Group Guide",
   heroTagline:
-    "URL /extended-family-reunion-bhurban Target KW extended family reunion bhurban, family gathering bhurban murree, bhurban family event, multi-family stay bhurban",
+    "extended family reunion bhurban, family gathering bhurban murree, bhurban family event, multi-family stay bhurban",
   heroImage: article605Hero,
   blocks: [
     {
@@ -14506,13 +11492,13 @@ export const article606: Article = {
   slug: "chinar-golf-club-bhurban-guide",
   title: "/chinar-golf-club-bhurban-guide chinar golf club bhurban, chinar golf club, chinar golf club pc bhurban, chinar golf club bhurban murree, bhurban golf club",
   metaDescription:
-    "Target KW chinar golf club bhurban, chinar golf club, chinar golf club pc bhurban, chinar golf club bhurban murree, bhurban golf club",
+    "chinar golf club bhurban, chinar golf club, chinar golf club pc bhurban, chinar golf club bhurban murree, bhurban golf club",
   keywords:
     "chinar golf club bhurban, chinar golf club, chinar golf club pc bhurban, chinar golf club bhurban murree, bhurban golf club",
   eyebrow: "Backlink Guest Post · Pearl Continental Hotel Bhurban (PC Hotels / Marriott) | ~1,000w",
   h1: "/chinar-golf-club-bhurban-guide chinar golf club bhurban, chinar golf club, chinar golf club pc bhurban, chinar golf club bhurban murree, bhurban golf club",
   heroTagline:
-    "Target KW chinar golf club bhurban, chinar golf club, chinar golf club pc bhurban, chinar golf club bhurban murree, bhurban golf club",
+    "chinar golf club bhurban, chinar golf club, chinar golf club pc bhurban, chinar golf club bhurban murree, bhurban golf club",
   heroImage: article606Hero,
   blocks: [
     {
@@ -14648,13 +11634,13 @@ export const article607: Article = {
   slug: "kashmir-point-murree-guide",
   title: "Kashmir Point Murree — The Complete Viewpoint Guide",
   metaDescription:
-    "URL /kashmir-point-murree-guide Target KW kashmir point murree pakistan, kashmir point murree, kashmir point murree hotels",
+    "kashmir point murree pakistan, kashmir point murree, kashmir point murree hotels ~900w Kashmir Point Murree Pakistan — The Complete Guide",
   keywords:
     "kashmir point murree pakistan, kashmir point murree, kashmir point murree hotels",
   eyebrow: "Backlink Guest Post · Adjacent to Kashmir Point — the Mall Road chairlift starts near here | ~900w",
   h1: "Kashmir Point Murree — The Complete Viewpoint Guide",
   heroTagline:
-    "URL /kashmir-point-murree-guide Target KW kashmir point murree pakistan, kashmir point murree, kashmir point murree hotels",
+    "kashmir point murree pakistan, kashmir point murree, kashmir point murree hotels ~900w Kashmir Point Murree Pakistan — The Complete Guide",
   heroImage: article607Hero,
   blocks: [
     {
@@ -14777,13 +11763,13 @@ export const article608: Article = {
   slug: "hotel-one-bhurban-guide",
   title: "Hotel One Bhurban Murree — Guide and the Private Cedar Estate Alternative",
   metaDescription:
-    "URL /hotel-one-bhurban-guide Target KW hotel one bhurban, hotel one bhurban murree, hotel one bhurban rates, hotel one murree bhurban",
+    "hotel one bhurban, hotel one bhurban murree, hotel one bhurban rates, hotel one murree bhurban ~700w Hotel One Bhurban Murree — What to Know and the Private Estate Alternative",
   keywords:
     "hotel one bhurban, hotel one bhurban murree, hotel one bhurban rates, hotel one murree bhurban",
   eyebrow: "Backlink Guest Post · Cluster | ~700w",
   h1: "Hotel One Bhurban Murree — Guide and the Private Cedar Estate Alternative",
   heroTagline:
-    "URL /hotel-one-bhurban-guide Target KW hotel one bhurban, hotel one bhurban murree, hotel one bhurban rates, hotel one murree bhurban",
+    "hotel one bhurban, hotel one bhurban murree, hotel one bhurban rates, hotel one murree bhurban ~700w Hotel One Bhurban Murree — What to Know and the Private Estate Alternative",
   heroImage: article608Hero,
   blocks: [
     {
@@ -14874,13 +11860,13 @@ export const article609: Article = {
   slug: "patriata-chairlift-bhurban-guide",
   title: "Patriata Chairlift Bhurban — Complete Guide and Ticket Information",
   metaDescription:
-    "URL /patriata-chairlift-bhurban-guide Target KW patriata chairlift, patriata chairlift bhurban, patriata chairlift price, new murree chairlift bhurban",
+    "patriata chairlift, patriata chairlift bhurban, patriata chairlift price, new murree chairlift bhurban",
   keywords:
     "patriata chairlift, patriata chairlift bhurban, patriata chairlift price, new murree chairlift bhurban",
   eyebrow: "Backlink Guest Post · Type | ~900w",
   h1: "Patriata Chairlift Bhurban — Complete Guide and Ticket Information",
   heroTagline:
-    "URL /patriata-chairlift-bhurban-guide Target KW patriata chairlift, patriata chairlift bhurban, patriata chairlift price, new murree chairlift bhurban",
+    "patriata chairlift, patriata chairlift bhurban, patriata chairlift price, new murree chairlift bhurban",
   heroImage: article609Hero,
   blocks: [
     {
@@ -15207,13 +12193,13 @@ export const article611: Article = {
   slug: "bhurban-cedar-pine-forest-guide",
   title: "/bhurban-cedar-pine-forest-guide bhurban cedar forest, deodar cedar bhurban, bhurban pine forest, cedar forest murree, deodar cedar murree hills",
   metaDescription:
-    "Target KW bhurban cedar forest, deodar cedar bhurban, bhurban pine forest, cedar forest murree, deodar cedar murree hills",
+    "bhurban cedar forest, deodar cedar bhurban, bhurban pine forest, cedar forest murree, deodar cedar murree hills",
   keywords:
     "bhurban cedar forest, deodar cedar bhurban, bhurban pine forest, cedar forest murree, deodar cedar murree hills",
   eyebrow: "Backlink Guest Post · ~900w",
   h1: "/bhurban-cedar-pine-forest-guide bhurban cedar forest, deodar cedar bhurban, bhurban pine forest, cedar forest murree, deodar cedar murree hills",
   heroTagline:
-    "Target KW bhurban cedar forest, deodar cedar bhurban, bhurban pine forest, cedar forest murree, deodar cedar murree hills",
+    "bhurban cedar forest, deodar cedar bhurban, bhurban pine forest, cedar forest murree, deodar cedar murree hills",
   heroImage: article611Hero,
   blocks: [
     {
@@ -15227,24 +12213,12 @@ export const article611: Article = {
     },
     {
       type: "section",
-      eyebrow: "Specific Experience",
-      heading: "Specific Experience",
-      paragraphs: [
-        "5:30–6:00am",
-      ],
-    },
-    {
-      type: "section",
       eyebrow: "Monsoon: rain releases the cedar and pine resin",
       heading: "Monsoon: rain releases the cedar and pine resin",
       paragraphs: [
         "In July–August, the post-rain forest smell is the most intense cedar scent of the year",
         "5:30–7:00pm",
       ],
-      image: {
-        src: article611Image2,
-        alt: "Monsoon: rain releases the cedar and pine resin",
-      },
     },
     {
       type: "section",
@@ -15254,6 +12228,10 @@ export const article611: Article = {
         "The fire pit hour; the cedar canopy catching last light above the fire",
         "7:00pm–dawn",
       ],
+      image: {
+        src: article611Image2,
+        alt: "Golden hour — the cedar canopy lit from below",
+      },
     },
     {
       type: "section",
@@ -15263,10 +12241,6 @@ export const article611: Article = {
         "The stargazing window; the cedar silhouettes against the night sky",
         "Book the Cedar Forest Estate — WhatsApp +92 304 567 9000",
       ],
-      image: {
-        src: article611Image2,
-        alt: "Night — the cedar estate in full darkness",
-      },
     },
     {
       type: "related",
@@ -15288,13 +12262,13 @@ export const article612: Article = {
   slug: "bhurban-hiking-trails",
   title: "Bhurban Murree Hiking Trails — The Complete Guide to All Walks",
   metaDescription:
-    "URL /bhurban-hiking-trails Target KW bhurban murree hiking, murree hiking trails, bhurban forest walk, murree hiking guide 2026",
+    "bhurban murree hiking, murree hiking trails, bhurban forest walk, murree hiking guide 2026 ~900w Bhurban Murree Hiking Trails — The Complete 2026 Guide",
   keywords:
     "bhurban murree hiking, murree hiking trails, bhurban forest walk, murree hiking guide 2026",
   eyebrow: "Backlink Guest Post · Difficulty | ~900w",
   h1: "Bhurban Murree Hiking Trails — The Complete Guide to All Walks",
   heroTagline:
-    "URL /bhurban-hiking-trails Target KW bhurban murree hiking, murree hiking trails, bhurban forest walk, murree hiking guide 2026",
+    "bhurban murree hiking, murree hiking trails, bhurban forest walk, murree hiking guide 2026 ~900w Bhurban Murree Hiking Trails — The Complete 2026 Guide",
   heroImage: article612Hero,
   blocks: [
     {
@@ -15390,13 +12364,13 @@ export const article613: Article = {
   slug: "murree-mall-road-guide",
   title: "Murree Mall Road — The Complete Visitor Guide",
   metaDescription:
-    "URL /murree-mall-road-guide Target KW murree mall road, murree mall road guide, murree mall road hotels, murree mall road things to do",
+    "murree mall road, murree mall road guide, murree mall road hotels, murree mall road things to do ~900w",
   keywords:
     "murree mall road, murree mall road guide, murree mall road hotels, murree mall road things to do",
   eyebrow: "Backlink Guest Post · 9:00–11:00am weekday | ~900w",
   h1: "Murree Mall Road — The Complete Visitor Guide",
   heroTagline:
-    "URL /murree-mall-road-guide Target KW murree mall road, murree mall road guide, murree mall road hotels, murree mall road things to do",
+    "murree mall road, murree mall road guide, murree mall road hotels, murree mall road things to do ~900w",
   heroImage: article613Hero,
   blocks: [
     {
@@ -15422,6 +12396,15 @@ export const article613: Article = {
       },
     },
     {
+      type: "section",
+      eyebrow: "Best overall timing for Mall Road visit",
+      heading: "Best overall timing for Mall Road visit",
+      paragraphs: [
+        "9:00–11:00am weekday",
+        "Low–moderate",
+      ],
+    },
+    {
       type: "related",
       heading: "Related Pages — Internal Links",
       items: [
@@ -15441,13 +12424,13 @@ export const article614: Article = {
   slug: "in-villa-dining-bhurban",
   title: "In-Villa Dining at Bhurban — The Himalaya Villas Cedar Estate Dining Guide",
   metaDescription:
-    "URL /in-villa-dining-bhurban Target KW in villa dining bhurban, bhurban in villa dining, himalaya villas dining, cedar estate meals bhurban",
+    "in villa dining bhurban, bhurban in villa dining, himalaya villas dining, cedar estate meals bhurban ~800w",
   keywords:
     "in villa dining bhurban, bhurban in villa dining, himalaya villas dining, cedar estate meals bhurban",
   eyebrow: "Backlink Guest Post · The morning after the cedar dawn walk: terrace breakfast with the valley visible through the cedar branches, the morning mist be...",
   h1: "In-Villa Dining at Bhurban — The Himalaya Villas Cedar Estate Dining Guide",
   heroTagline:
-    "URL /in-villa-dining-bhurban Target KW in villa dining bhurban, bhurban in villa dining, himalaya villas dining, cedar estate meals bhurban",
+    "in villa dining bhurban, bhurban in villa dining, himalaya villas dining, cedar estate meals bhurban ~800w",
   heroImage: article614Hero,
   blocks: [
     {
@@ -15507,13 +12490,13 @@ export const article615: Article = {
   slug: "bhurban-vs-nathia-gali",
   title: "Bhurban vs Nathia Gali — Which Should You Choose?",
   metaDescription:
-    "URL /bhurban-vs-nathia-gali Target KW bhurban vs nathia gali, nathia gali vs bhurban, bhurban or nathia gali, bhurban nathia gali which is better",
+    "bhurban vs nathia gali, nathia gali vs bhurban, bhurban or nathia gali, bhurban nathia gali which is better",
   keywords:
     "bhurban vs nathia gali, nathia gali vs bhurban, bhurban or nathia gali, bhurban nathia gali which is better",
   eyebrow: "Backlink Guest Post · Yes — Patriata gondola (3km from Himalaya Villas) | ~800w",
   h1: "Bhurban vs Nathia Gali — Which Should You Choose?",
   heroTagline:
-    "URL /bhurban-vs-nathia-gali Target KW bhurban vs nathia gali, nathia gali vs bhurban, bhurban or nathia gali, bhurban nathia gali which is better",
+    "bhurban vs nathia gali, nathia gali vs bhurban, bhurban or nathia gali, bhurban nathia gali which is better",
   heroImage: article615Hero,
   blocks: [
     {
@@ -15665,13 +12648,13 @@ export const article616: Article = {
   slug: "pc-bhurban-pearl-continental-guide",
   title: "PC Bhurban — Pearl Continental Hotel Bhurban Complete Guide",
   metaDescription:
-    "URL /pc-bhurban-pearl-continental-guide Target KW pc bhurban, pearl continental bhurban, pc hotel bhurban, pearl continental hotel bhurban, murree bhurban pc hotel",
+    "pc bhurban, pearl continental bhurban, pc hotel bhurban, pearl continental hotel bhurban, murree bhurban pc hotel",
   keywords:
     "pc bhurban, pearl continental bhurban, pc hotel bhurban, pearl continental hotel bhurban, murree bhurban pc hotel",
   eyebrow: "Backlink Guest Post · Pool | ~1,100w",
   h1: "PC Bhurban — Pearl Continental Hotel Bhurban Complete Guide",
   heroTagline:
-    "URL /pc-bhurban-pearl-continental-guide Target KW pc bhurban, pearl continental bhurban, pc hotel bhurban, pearl continental hotel bhurban, murree bhurban pc hotel",
+    "pc bhurban, pearl continental bhurban, pc hotel bhurban, pearl continental hotel bhurban, murree bhurban pc hotel",
   heroImage: article616Hero,
   blocks: [
     {
@@ -15742,13 +12725,12 @@ export const article616: Article = {
       },
     },
     {
-      type: "cta",
+      type: "section",
       eyebrow: "Booking",
       heading: "Booking",
-      text: "pchotels.com / Marriott Bonvoy app / Booking.com",
-      buttonLabel: "WhatsApp: +92 304 567 9000 | wa.me/923045679000",
-      buttonHref: "https://wa.me/923045679000",
-      footnote: "Direct bookings receive priority response and best available rate.",
+      paragraphs: [
+        "pchotels.com / Marriott Bonvoy app / Booking.com",
+      ],
     },
     {
       type: "section",
@@ -15812,34 +12794,16 @@ export const article616: Article = {
       ],
     },
     {
-      type: "cta",
+      type: "section",
       eyebrow: "Booking",
       heading: "Booking",
-      text: "pchotels.com / Bonvoy app WhatsApp +92 304 567 9000",
-      buttonLabel: "WhatsApp: +92 304 567 9000 | wa.me/923045679000",
-      buttonHref: "https://wa.me/923045679000",
-      footnote: "Direct bookings receive priority response and best available rate.",
-    },
-    {
-      type: "cta",
-      eyebrow: "PC Bhurban Booking — How to Reserve",
-      heading: "PC Bhurban Booking — How to Reserve",
-      text: "",
-      buttonLabel: "WhatsApp: +92 304 567 9000 | wa.me/923045679000",
-      buttonHref: "https://wa.me/923045679000",
-      footnote: "Direct bookings receive priority response and best available rate.",
-    },
-    {
-      type: "section",
-      eyebrow: "Marriott Bonvoy app: the primary booking channel for Bonvoy members",
-      heading: "Marriott Bonvoy app: the primary booking channel for Bonvoy members — shows member rates, points redemption options, and room-type availability",
       paragraphs: [
-        "pchotels.com: the Pearl Continental website for direct booking with the Pakistan-specific rate structure",
-        "Booking.com: available for PC Bhurban with guest reviews and occasionally promotional rates",
+        "pchotels.com / Bonvoy app",
+        "WhatsApp +92 304 567 9000",
       ],
       image: {
         src: article616Image2,
-        alt: "Marriott Bonvoy app: the primary booking channel for Bonvoy members — shows member rates, points red...",
+        alt: "Booking",
       },
     },
     {
@@ -15882,13 +12846,13 @@ export const article617: Article = {
   slug: "pc-bhurban-room-rates-2026",
   title: "PC Bhurban Room Rates 2026 — What to Know and the Comparable Alternative",
   metaDescription:
-    "URL /pc-bhurban-room-rates-2026 Target KW pc bhurban rooms rates, pearl continental hotel bhurban prices, pc bhurban rates per night, murree pc bhurban rates",
+    "pc bhurban rooms rates, pearl continental hotel bhurban prices, pc bhurban rates per night, murree pc bhurban rates",
   keywords:
     "pc bhurban rooms rates, pearl continental hotel bhurban prices, pc bhurban rates per night, murree pc bhurban rates",
   eyebrow: "Backlink Guest Post · Cluster | ~800w",
   h1: "PC Bhurban Room Rates 2026 — What to Know and the Comparable Alternative",
   heroTagline:
-    "URL /pc-bhurban-room-rates-2026 Target KW pc bhurban rooms rates, pearl continental hotel bhurban prices, pc bhurban rates per night, murree pc bhurban rates",
+    "pc bhurban rooms rates, pearl continental hotel bhurban prices, pc bhurban rates per night, murree pc bhurban rates",
   heroImage: article617Hero,
   blocks: [
     {
@@ -15993,13 +12957,13 @@ export const article618: Article = {
   slug: "pc-bhurban-amphitheatre-guide",
   title: "PC Bhurban Amphitheatre — Complete Guide to Events and Access",
   metaDescription:
-    "URL /pc-bhurban-amphitheatre-guide Target KW pc bhurban amphitheatre, pc bhurban amphitheatre bhurban, amphitheatre bhurban murree",
+    "pc bhurban amphitheatre, pc bhurban amphitheatre bhurban, amphitheatre bhurban murree ~700w PC Bhurban Amphitheatre — The Complete Guide",
   keywords:
     "pc bhurban amphitheatre, pc bhurban amphitheatre bhurban, amphitheatre bhurban murree",
   eyebrow: "Backlink Guest Post · Wedding events: the amphitheatre as a setting for wedding receptions and Mehndi evenings — the cedar forest backdrop for the cel...",
   h1: "PC Bhurban Amphitheatre — Complete Guide to Events and Access",
   heroTagline:
-    "URL /pc-bhurban-amphitheatre-guide Target KW pc bhurban amphitheatre, pc bhurban amphitheatre bhurban, amphitheatre bhurban murree",
+    "pc bhurban amphitheatre, pc bhurban amphitheatre bhurban, amphitheatre bhurban murree ~700w PC Bhurban Amphitheatre — The Complete Guide",
   heroImage: article618Hero,
   blocks: [
     {
@@ -16052,13 +13016,13 @@ export const article619: Article = {
   slug: "pearl-continental-bhurban-booking",
   title: "Pearl Continental Bhurban Booking — How to Book and the Direct Alternative",
   metaDescription:
-    "URL /pearl-continental-bhurban-booking Target KW pearl continental bhurban booking, pc bhurban booking, pc bhurban reservation, pc bhurban booking contact number",
+    "pearl continental bhurban booking, pc bhurban booking, pc bhurban reservation, pc bhurban booking contact number",
   keywords:
     "pearl continental bhurban booking, pc bhurban booking, pc bhurban reservation, pc bhurban booking contact number",
   eyebrow: "Backlink Guest Post · Cluster | ~700w",
   h1: "Pearl Continental Bhurban Booking — How to Book and the Direct Alternative",
   heroTagline:
-    "URL /pearl-continental-bhurban-booking Target KW pearl continental bhurban booking, pc bhurban booking, pc bhurban reservation, pc bhurban booking contact number",
+    "pearl continental bhurban booking, pc bhurban booking, pc bhurban reservation, pc bhurban booking contact number",
   heroImage: article619Hero,
   blocks: [
     {
@@ -16080,13 +13044,16 @@ export const article619: Article = {
       footnote: "Direct bookings receive priority response and best available rate.",
     },
     {
-      type: "cta",
-      eyebrow: "Pearl Continental Bhurban Booking — How to Reserve and the Himalaya Villas Alternative",
+      type: "section",
+      eyebrow: "Pearl Continental Bhurban Booking",
       heading: "Pearl Continental Bhurban Booking — How to Reserve and the Himalaya Villas Alternative",
-      text: "❓ How do I book Pearl Continental Bhurban?",
-      buttonLabel: "WhatsApp: +92 304 567 9000 | wa.me/923045679000",
-      buttonHref: "https://wa.me/923045679000",
-      footnote: "Direct bookings receive priority response and best available rate.",
+      paragraphs: [
+        "❓ How do I book Pearl Continental Bhurban?",
+      ],
+      image: {
+        src: article619Image2,
+        alt: "Pearl Continental Bhurban Booking — How to Reserve and the Himalaya Villas Alternative",
+      },
     },
     {
       type: "cta",
@@ -16098,13 +13065,16 @@ export const article619: Article = {
       footnote: "Direct bookings receive priority response and best available rate.",
     },
     {
-      type: "cta",
-      eyebrow: "PC Bhurban Booking — Channel by Channel",
+      type: "section",
+      eyebrow: "PC Bhurban Booking",
       heading: "PC Bhurban Booking — Channel by Channel",
-      text: "1. Marriott Bonvoy App / Bonvoy.com",
-      buttonLabel: "WhatsApp: +92 304 567 9000 | wa.me/923045679000",
-      buttonHref: "https://wa.me/923045679000",
-      footnote: "Direct bookings receive priority response and best available rate.",
+      paragraphs: [
+        "1. Marriott Bonvoy App / Bonvoy.com",
+      ],
+      image: {
+        src: article619Image2,
+        alt: "PC Bhurban Booking — Channel by Channel",
+      },
     },
     {
       type: "cta",
@@ -16153,13 +13123,13 @@ export const article620: Article = {
   slug: "best-time-to-visit-murree",
   title: "Best Time to Visit Murree Bhurban — The Definitive 2026 Seasonal Guide",
   metaDescription:
-    "URL /best-time-to-visit-murree Target KW best time to visit murree, best time to visit bhurban, best season for murree bhurban, when to visit murree",
+    "best time to visit murree, best time to visit bhurban, best season for murree bhurban, when to visit murree",
   keywords:
     "best time to visit murree, best time to visit bhurban, best season for murree bhurban, when to visit murree",
   eyebrow: "Backlink Guest Post · Rank 1: October (The Best Month) | ~1,000w",
   h1: "Best Time to Visit Murree Bhurban — The Definitive 2026 Seasonal Guide",
   heroTagline:
-    "URL /best-time-to-visit-murree Target KW best time to visit murree, best time to visit bhurban, best season for murree bhurban, when to visit murree",
+    "best time to visit murree, best time to visit bhurban, best season for murree bhurban, when to visit murree",
   heroImage: article620Hero,
   blocks: [
     {
@@ -16202,13 +13172,23 @@ export const article620: Article = {
       ],
     },
     {
-      type: "cta",
-      eyebrow: "Book: 8–10 weeks in advance — the most competed booking window",
+      type: "section",
+      eyebrow: "Book: 8–10 weeks in advance",
       heading: "Book: 8–10 weeks in advance — the most competed booking window",
-      text: "Rank 5: May–June (The Pre-Monsoon Green) May and June are the most overlooked months — the pre-monsoon forest at its deepest green before the July saturation, the weather still clear, the crowds building but not yet at peak. Good availability with 2–3 weeks notice. 14–26°C. All activities open. The ...",
-      buttonLabel: "WhatsApp: +92 304 567 9000 | wa.me/923045679000",
-      buttonHref: "https://wa.me/923045679000",
-      footnote: "Direct bookings receive priority response and best available rate.",
+      paragraphs: [
+        "Rank 5: May–June (The Pre-Monsoon Green)",
+        "May and June are the most overlooked months — the pre-monsoon forest at its deepest green before the July saturation, the weather still clear, the crowds building but not yet at peak. Good availability with 2–3 weeks notice. 14–26°C. All activities open. The cedar estate at its most lushly green before the monsoon.",
+        "Rank 6: September (Post-Monsoon Clarity)",
+        "September is the post-monsoon clearing month — excellent atmospheric clarity, the monsoon ending, 10–23°C. Similar to October but without the full autumn colour (which develops in the last 2 weeks of October). An excellent shoulder month that shares October's clarity advantage.",
+        "Rank 7: November (The Quiet Window)",
+        "November is Bhurban's most peaceful month: very low demand, bare-branch cedar forest, 2–12°C, the estate at its most contemplative. For guests who want the cedar estate private experience at its most undisturbed: November delivers this. The fire pit is essential from late afternoon.",
+        "Rank 8: February–March (Late Winter to Early Spring)",
+        "February-March transitions from potential snowfall (February) to early spring (March). Quiet, available, and the least dramatic of any Bhurban window — but the fire pit and cedar forest work in any season, and the availability is the best of the year.",
+      ],
+      image: {
+        src: article620Image2,
+        alt: "Book: 8–10 weeks in advance — the most competed booking window",
+      },
     },
     {
       type: "section",
@@ -16280,6 +13260,18 @@ export const article620: Article = {
       ],
     },
     {
+      type: "section",
+      eyebrow: "Rare",
+      heading: "Rare",
+      paragraphs: [
+        "★★★",
+      ],
+      image: {
+        src: article620Image2,
+        alt: "Rare",
+      },
+    },
+    {
       type: "related",
       heading: "Related Pages — Internal Links",
       items: [
@@ -16299,13 +13291,13 @@ export const article621: Article = {
   slug: "bhurban-distance-from-major-cities",
   title: "Bhurban Distance from Major Cities — Islamabad, Lahore, Karachi, Rawalpindi",
   metaDescription:
-    "URL /bhurban-distance-from-major-cities Target KW bhurban distance from islamabad, bhurban distance from lahore, bhurban from rawalpindi, bhurban location pakistan",
+    "bhurban distance from islamabad, bhurban distance from lahore, bhurban from rawalpindi, bhurban location pakistan",
   keywords:
     "bhurban distance from islamabad, bhurban distance from lahore, bhurban from rawalpindi, bhurban location pakistan",
   eyebrow: "Backlink Guest Post · 2 nights | ~800w",
   h1: "Bhurban Distance from Major Cities — Islamabad, Lahore, Karachi, Rawalpindi",
   heroTagline:
-    "URL /bhurban-distance-from-major-cities Target KW bhurban distance from islamabad, bhurban distance from lahore, bhurban from rawalpindi, bhurban location pakistan",
+    "bhurban distance from islamabad, bhurban distance from lahore, bhurban from rawalpindi, bhurban location pakistan",
   heroImage: article621Hero,
   blocks: [
     {
@@ -16484,13 +13476,13 @@ export const article622: Article = {
   slug: "murree-weather-guide",
   title: "Murree Weather Guide — The Complete Season-by-Season Authority",
   metaDescription:
-    "URL /murree-weather-guide Target KW murree weather, murree weather guide, murree climate, murree bhurban weather seasons",
+    "murree weather, murree weather guide, murree climate, murree bhurban weather seasons ~900w Murree and Bhurban Weather — The Complete Season-by-Season Guide",
   keywords:
     "murree weather, murree weather guide, murree climate, murree bhurban weather seasons",
   eyebrow: "Backlink Guest Post · 17 to 25 | ~900w",
   h1: "Murree Weather Guide — The Complete Season-by-Season Authority",
   heroTagline:
-    "URL /murree-weather-guide Target KW murree weather, murree weather guide, murree climate, murree bhurban weather seasons",
+    "murree weather, murree weather guide, murree climate, murree bhurban weather seasons ~900w Murree and Bhurban Weather — The Complete Season-by-Season Guide",
   heroImage: article622Hero,
   blocks: [
     {
@@ -16721,13 +13713,13 @@ export const article623: Article = {
   slug: "about-himalaya-villas-bhurban",
   title: "About Himalaya Villas & Resorts Bhurban — The Cedar Estate",
   metaDescription:
-    "URL /about-himalaya-villas-bhurban Target KW himalaya villas bhurban, himalaya villas resorts bhurban, himalaya villas bhurban murree, about himalaya villas",
+    "himalaya villas bhurban, himalaya villas resorts bhurban, himalaya villas bhurban murree, about himalaya villas",
   keywords:
     "himalaya villas bhurban, himalaya villas resorts bhurban, himalaya villas bhurban murree, about himalaya villas",
   eyebrow: "Backlink Guest Post · Villa | ~800w",
   h1: "About Himalaya Villas & Resorts Bhurban — The Cedar Estate",
   heroTagline:
-    "URL /about-himalaya-villas-bhurban Target KW himalaya villas bhurban, himalaya villas resorts bhurban, himalaya villas bhurban murree, about himalaya villas",
+    "himalaya villas bhurban, himalaya villas resorts bhurban, himalaya villas bhurban murree, about himalaya villas",
   heroImage: article623Hero,
   blocks: [
     {
@@ -16779,6 +13771,27 @@ export const article623: Article = {
       image: {
         src: article623Image2,
         alt: "In-Villa Dining",
+      },
+    },
+    {
+      type: "cta",
+      eyebrow: "Location and Contact",
+      heading: "Location and Contact",
+      text: "",
+      buttonLabel: "WhatsApp: +92 304 567 9000 | wa.me/923045679000",
+      buttonHref: "https://wa.me/923045679000",
+      footnote: "Direct bookings receive priority response and best available rate.",
+    },
+    {
+      type: "section",
+      eyebrow: "Address",
+      heading: "Address",
+      paragraphs: [
+        "Mohra Iswal, Bhurban, Murree Hills 47190, Punjab, Pakistan",
+      ],
+      image: {
+        src: article623Image2,
+        alt: "Address",
       },
     },
     {
@@ -16850,13 +13863,13 @@ export const article624: Article = {
   slug: "bhurban-from-rawalpindi",
   title: "Bhurban Murree from Rawalpindi — The Complete Day Trip and Stay Guide",
   metaDescription:
-    "URL /bhurban-from-rawalpindi Target KW bhurban from rawalpindi, rawalpindi to bhurban, bhurban murree rawalpindi, rawalpindi bhurban drive",
+    "bhurban from rawalpindi, rawalpindi to bhurban, bhurban murree rawalpindi, rawalpindi bhurban drive ~700w",
   keywords:
     "bhurban from rawalpindi, rawalpindi to bhurban, bhurban murree rawalpindi, rawalpindi bhurban drive",
   eyebrow: "Backlink Guest Post · ~700w",
   h1: "Bhurban Murree from Rawalpindi — The Complete Day Trip and Stay Guide",
   heroTagline:
-    "URL /bhurban-from-rawalpindi Target KW bhurban from rawalpindi, rawalpindi to bhurban, bhurban murree rawalpindi, rawalpindi bhurban drive",
+    "bhurban from rawalpindi, rawalpindi to bhurban, bhurban murree rawalpindi, rawalpindi bhurban drive ~700w",
   heroImage: article624Hero,
   blocks: [
     {
@@ -16920,13 +13933,13 @@ export const article625: Article = {
   slug: "galiyat-hotels-guide",
   title: "Galiyat Hotels — Complete Accommodation Guide for the Galyat Chain",
   metaDescription:
-    "URL /galiyat-hotels-guide Target KW galiyat hotel, galyat hotels, hotels in galiyat, accommodation galyat chain",
+    "galiyat hotel, galyat hotels, hotels in galiyat, accommodation galyat chain ~700w Galiyat Hotels — The Complete 2026 Accommodation Guide",
   keywords:
     "galiyat hotel, galyat hotels, hotels in galiyat, accommodation galyat chain",
   eyebrow: "Backlink Guest Post · WhatsApp +92 304 567 9000 | ~700w",
   h1: "Galiyat Hotels — Complete Accommodation Guide for the Galyat Chain",
   heroTagline:
-    "URL /galiyat-hotels-guide Target KW galiyat hotel, galyat hotels, hotels in galiyat, accommodation galyat chain",
+    "galiyat hotel, galyat hotels, hotels in galiyat, accommodation galyat chain ~700w Galiyat Hotels — The Complete 2026 Accommodation Guide",
   heroImage: article625Hero,
   blocks: [
     {
@@ -17008,13 +14021,13 @@ export const article626: Article = {
   slug: "murree-restaurants-guide",
   title: "Murree Restaurants — The Complete 2026 Dining Guide",
   metaDescription:
-    "URL /murree-restaurants-guide Target KW murree restaurants, mall road murree restaurants, murree restaurants menu, murree bhurban food",
+    "murree restaurants, mall road murree restaurants, murree restaurants menu, murree bhurban food ~900w Murree Restaurants — The Complete 2026 Dining Guide",
   keywords:
     "murree restaurants, mall road murree restaurants, murree restaurants menu, murree bhurban food",
   eyebrow: "Backlink Guest Post · Pakora and samosa: the fried snack stalls at the mall road entry points — the arrive-in-Murree first food stop for many visitors...",
   h1: "Murree Restaurants — The Complete 2026 Dining Guide",
   heroTagline:
-    "URL /murree-restaurants-guide Target KW murree restaurants, mall road murree restaurants, murree restaurants menu, murree bhurban food",
+    "murree restaurants, mall road murree restaurants, murree restaurants menu, murree bhurban food ~900w Murree Restaurants — The Complete 2026 Dining Guide",
   heroImage: article626Hero,
   blocks: [
     {
@@ -17236,13 +14249,13 @@ export const article628: Article = {
   slug: "bhurban-weather-today",
   title: "Bhurban Weather Today — Live Check, Temperature and Planning Guide",
   metaDescription:
-    "URL /bhurban-weather-today Target KW bhurban weather today, bhurban weather, bhurban temperature today, bhurban murree weather today",
+    "bhurban weather today, bhurban weather, bhurban temperature today, bhurban murree weather today ~800w",
   keywords:
     "bhurban weather today, bhurban weather, bhurban temperature today, bhurban murree weather today",
   eyebrow: "Backlink Guest Post · Fastest check — instant | ~800w",
   h1: "Bhurban Weather Today — Live Check, Temperature and Planning Guide",
   heroTagline:
-    "URL /bhurban-weather-today Target KW bhurban weather today, bhurban weather, bhurban temperature today, bhurban murree weather today",
+    "bhurban weather today, bhurban weather, bhurban temperature today, bhurban murree weather today ~800w",
   heroImage: article628Hero,
   blocks: [
     {
@@ -17290,7 +14303,10 @@ export const article628: Article = {
       paragraphs: [
         "| Windy.com | Search 'Bhurban Pakistan' |",
         "| --- | --- |",
-        "| AccuWeather 15-day | Same search, extended forecast tab |",
+        "| Interactive wind + temperature map | |",
+        "| Mushkpuri Top / exposed hiking | |",
+        "| AccuWeather 15-day | |",
+        "| Same search, extended forecast tab | |",
         "| 15-day trend | |",
         "| Trip planning 1-2 weeks ahead | |",
       ],
@@ -17401,13 +14417,13 @@ export const article629: Article = {
   slug: "murree-bhurban-faq",
   title: "Murree Bhurban FAQ — 50 Questions Answered for 2026",
   metaDescription:
-    "URL /murree-bhurban-faq Target KW murree bhurban faq, murree bhurban questions answered, bhurban questions, murree questions",
+    "murree bhurban faq, murree bhurban questions answered, bhurban questions, murree questions ~1,200w All Clusters",
   keywords:
     "murree bhurban faq, murree bhurban questions answered, bhurban questions, murree questions",
   eyebrow: "Backlink Guest Post · ~1,200w",
   h1: "Murree Bhurban FAQ — 50 Questions Answered for 2026",
   heroTagline:
-    "URL /murree-bhurban-faq Target KW murree bhurban faq, murree bhurban questions answered, bhurban questions, murree questions",
+    "murree bhurban faq, murree bhurban questions answered, bhurban questions, murree questions ~1,200w All Clusters",
   heroImage: article629Hero,
   blocks: [
     {
@@ -17445,13 +14461,13 @@ export const article630: Article = {
   slug: "bhurban-cedar-estate-guide",
   title: "Bhurban Cedar Estate — The Complete Himalaya Villas Private Villa Experience",
   metaDescription:
-    "URL /bhurban-cedar-estate-guide Target KW bhurban cedar estate, private cedar estate bhurban, himalaya villas cedar estate bhurban murree",
+    "bhurban cedar estate, private cedar estate bhurban, himalaya villas cedar estate bhurban murree ~1,000w",
   keywords:
     "bhurban cedar estate, private cedar estate bhurban, himalaya villas cedar estate bhurban murree",
   eyebrow: "Backlink Guest Post · 7:30am: the in-villa breakfast on the private terrace. The valley below the ridge emerging from the morning mist. The cedar bran...",
   h1: "Bhurban Cedar Estate — The Complete Himalaya Villas Private Villa Experience",
   heroTagline:
-    "URL /bhurban-cedar-estate-guide Target KW bhurban cedar estate, private cedar estate bhurban, himalaya villas cedar estate bhurban murree",
+    "bhurban cedar estate, private cedar estate bhurban, himalaya villas cedar estate bhurban murree ~1,000w",
   heroImage: article630Hero,
   blocks: [
     {
@@ -17516,19 +14532,31 @@ export const article631: Article = {
   slug: "bhurban-vs-islamabad-hotel-weekend",
   title: "Bhurban Cedar Estate vs Islamabad City Hotel — The Weekend Decision",
   metaDescription:
-    "URL /bhurban-vs-islamabad-hotel-weekend Target KW bhurban weekend islamabad, bhurban vs islamabad hotel, islamabad weekend escape bhurban",
+    "bhurban weekend islamabad, bhurban vs islamabad hotel, islamabad weekend escape bhurban ~700w Bhurban Cedar Estate vs Islamabad Hotel — The Weekend Decision",
   keywords:
     "bhurban weekend islamabad, bhurban vs islamabad hotel, islamabad weekend escape bhurban",
   eyebrow: "Backlink Guest Post · PKR 42,000-55,000/villa/night (2 persons) | ~700w",
   h1: "Bhurban Cedar Estate vs Islamabad City Hotel — The Weekend Decision",
   heroTagline:
-    "URL /bhurban-vs-islamabad-hotel-weekend Target KW bhurban weekend islamabad, bhurban vs islamabad hotel, islamabad weekend escape bhurban",
+    "bhurban weekend islamabad, bhurban vs islamabad hotel, islamabad weekend escape bhurban ~700w Bhurban Cedar Estate vs Islamabad Hotel — The Weekend Decision",
   heroImage: article631Hero,
   blocks: [
     {
       type: "callout-qa",
       question: "Is it worth going to Bhurban instead of staying in Islamabad for a weekend?",
       answer: "For a family of 4 spending a premium Islamabad city hotel weekend: Islamabad Marriott PKR 45,000/room × 2 = PKR 90,000 for 2 rooms in the city heat. Bhurban (47km, 45 min): Himalaya Villas Serene Valley Cabin PKR 42,000/night in a cedar forest at 6,800 feet, 20°C cooler, with a private terrace and the cedar garden fire. The rates are comparable. The experience is not. The 45-minute expressway drive is the only additional variable. The Islamabad city hotel weekend vs the Bhurban cedar estate weekend is the specific comparison that the highest-value Islamabad family segment makes when choosing their Friday-Saturday getaway. The comparison is not always obvious — but when the numbers are side b...",
+    },
+    {
+      type: "comparison",
+      heading: "Bhurban Cedar Estate vs Islamabad City Hotel — The Weekend Decision",
+      columns: [
+        "Feature",
+        "Option A",
+        "Option B",
+      ],
+      rows: [
+        { feature: "Commercial", a: "Cluster 11", b: "~700w" },
+      ],
     },
     {
       type: "section",
@@ -17539,10 +14567,6 @@ export const article631: Article = {
         "For a family of 4 spending a premium Islamabad city hotel weekend: Islamabad Marriott PKR 45,000/room × 2 = PKR 90,000 for 2 rooms in the city heat. Bhurban (47km, 45 min): Himalaya Villas Serene Valley Cabin PKR 42,000/night in a cedar forest at 6,800 feet, 20°C cooler, with a private terrace and the cedar garden fire. The rates are comparable. Th...",
         "The Islamabad city hotel weekend vs the Bhurban cedar estate weekend is the specific comparison that the highest-value Islamabad family segment makes when choosing their Friday-Saturday getaway. The comparison is not always obvious — but when the numbers are side by side, the cedar estate wins decisively for groups of 4+.",
       ],
-      image: {
-        src: article631Image1,
-        alt: "Bhurban Cedar Estate vs Islamabad Hotel — The Weekend Decision",
-      },
     },
     {
       type: "section",
@@ -17552,6 +14576,10 @@ export const article631: Article = {
         "Islamabad City Hotel (Marriott/Serena)",
         "Himalaya Villas Cedar Estate, Bhurban",
       ],
+      image: {
+        src: article631Image2,
+        alt: "Factor",
+      },
     },
     {
       type: "section",
@@ -17567,10 +14595,6 @@ export const article631: Article = {
         "40-44°C — full city heat",
         "18-24°C — cedar forest",
       ],
-      image: {
-        src: article631Image2,
-        alt: "Rate for couple",
-      },
     },
     {
       type: "section",
@@ -17580,6 +14604,10 @@ export const article631: Article = {
         "Hotel pool deck (shared)",
         "Private cedar garden and terrace (exclusive)",
       ],
+      image: {
+        src: article631Image2,
+        alt: "Outdoor space",
+      },
     },
     {
       type: "section",
@@ -17589,10 +14617,6 @@ export const article631: Article = {
         "0 minutes — already there",
         "45 minutes on the Expressway",
       ],
-      image: {
-        src: article631Image2,
-        alt: "Drive from Islamabad",
-      },
     },
     {
       type: "related",
@@ -17614,13 +14638,13 @@ export const article632: Article = {
   slug: "himalaya-villas-unique-experiences",
   title: "Six Cedar Estate Experiences Unique to Himalaya Villas Bhurban",
   metaDescription:
-    "URL /himalaya-villas-unique-experiences Target KW himalaya villas cedar estate experiences, what makes himalaya villas special, bhurban cedar estate unique experience",
+    "himalaya villas cedar estate experiences, what makes himalaya villas special, bhurban cedar estate unique experience",
   keywords:
     "himalaya villas cedar estate experiences, what makes himalaya villas special, bhurban cedar estate unique experience",
   eyebrow: "Backlink Guest Post · ~800w",
   h1: "Six Cedar Estate Experiences Unique to Himalaya Villas Bhurban",
   heroTagline:
-    "URL /himalaya-villas-unique-experiences Target KW himalaya villas cedar estate experiences, what makes himalaya villas special, bhurban cedar estate unique experience",
+    "himalaya villas cedar estate experiences, what makes himalaya villas special, bhurban cedar estate unique experience",
   heroImage: article632Hero,
   blocks: [
     {
@@ -17670,13 +14694,13 @@ export const article633: Article = {
   slug: "bhurban-vs-naran-kaghan",
   title: "Bhurban vs Naran Kaghan — Which Mountain Destination to Choose?",
   metaDescription:
-    "URL /bhurban-vs-naran-kaghan Target KW bhurban vs naran kaghan, bhurban or naran kaghan which is better, naran kaghan or murree bhurban",
+    "bhurban vs naran kaghan, bhurban or naran kaghan which is better, naran kaghan or murree bhurban ~800w",
   keywords:
     "bhurban vs naran kaghan, bhurban or naran kaghan which is better, naran kaghan or murree bhurban",
   eyebrow: "Backlink Guest Post · 8,000-14,000+ feet (varies) | ~800w",
   h1: "Bhurban vs Naran Kaghan — Which Mountain Destination to Choose?",
   heroTagline:
-    "URL /bhurban-vs-naran-kaghan Target KW bhurban vs naran kaghan, bhurban or naran kaghan which is better, naran kaghan or murree bhurban",
+    "bhurban vs naran kaghan, bhurban or naran kaghan which is better, naran kaghan or murree bhurban ~800w",
   heroImage: article633Hero,
   blocks: [
     {
@@ -17820,13 +14844,13 @@ export const article634: Article = {
   slug: "qawwali-evening-bhurban-cedar-estate",
   title: "Qawwali Evening at Bhurban — The Cedar Forest Sufi Music Experience",
   metaDescription:
-    "URL /qawwali-evening-bhurban-cedar-estate Target KW qawwali evening bhurban, bhurban sufi music, cedar estate qawwali, private qawwali bhurban",
+    "qawwali evening bhurban, bhurban sufi music, cedar estate qawwali, private qawwali bhurban ~700w Qawwali Evening at the Bhurban Cedar Estate",
   keywords:
     "qawwali evening bhurban, bhurban sufi music, cedar estate qawwali, private qawwali bhurban",
   eyebrow: "Backlink Guest Post · ~700w",
   h1: "Qawwali Evening at Bhurban — The Cedar Forest Sufi Music Experience",
   heroTagline:
-    "URL /qawwali-evening-bhurban-cedar-estate Target KW qawwali evening bhurban, bhurban sufi music, cedar estate qawwali, private qawwali bhurban",
+    "qawwali evening bhurban, bhurban sufi music, cedar estate qawwali, private qawwali bhurban ~700w Qawwali Evening at the Bhurban Cedar Estate",
   heroImage: article634Hero,
   blocks: [
     {
@@ -17849,13 +14873,17 @@ export const article634: Article = {
       ],
     },
     {
-      type: "cta",
+      type: "section",
       eyebrow: "Booking a Private Qawwali at Himalaya Villas",
       heading: "Booking a Private Qawwali at Himalaya Villas",
-      text: "Coordinate at the booking stage via WhatsApp +92 304 567 9000 Specify the group size and preferred evening — the arrangements require lead time of 2-4 weeks minimum",
-      buttonLabel: "WhatsApp: +92 304 567 9000 | wa.me/923045679000",
-      buttonHref: "https://wa.me/923045679000",
-      footnote: "Direct bookings receive priority response and best available rate.",
+      paragraphs: [
+        "Coordinate at the booking stage via WhatsApp +92 304 567 9000",
+        "Specify the group size and preferred evening — the arrangements require lead time of 2-4 weeks minimum",
+      ],
+      image: {
+        src: article634Image2,
+        alt: "Booking a Private Qawwali at Himalaya Villas",
+      },
     },
     {
       type: "section",
@@ -17885,13 +14913,13 @@ export const article635: Article = {
   slug: "bhurban-vs-swat-valley",
   title: "Bhurban Murree vs Swat Valley — Which Mountain Destination?",
   metaDescription:
-    "URL /bhurban-vs-swat-valley Target KW bhurban murree vs swat valley, bhurban or swat, swat or murree bhurban which is better",
+    "bhurban murree vs swat valley, bhurban or swat, swat or murree bhurban which is better ~700w Bhurban Murree vs Swat Valley — The Comparison",
   keywords:
     "bhurban murree vs swat valley, bhurban or swat, swat or murree bhurban which is better",
   eyebrow: "Backlink Guest Post · Mingora 3,200 feet; Kalam 7,200 feet; Mahudand higher | ~700w",
   h1: "Bhurban Murree vs Swat Valley — Which Mountain Destination?",
   heroTagline:
-    "URL /bhurban-vs-swat-valley Target KW bhurban murree vs swat valley, bhurban or swat, swat or murree bhurban which is better",
+    "bhurban murree vs swat valley, bhurban or swat, swat or murree bhurban which is better ~700w Bhurban Murree vs Swat Valley — The Comparison",
   heroImage: article635Hero,
   blocks: [
     {
@@ -18020,13 +15048,13 @@ export const article636: Article = {
   slug: "murree-bhurban-in-april",
   title: "Bhurban Murree in April — The Rhododendron and Spring Awakening Guide",
   metaDescription:
-    "URL /murree-bhurban-in-april Target KW bhurban murree in april, murree april rhododendron, bhurban april, spring murree bhurban",
+    "bhurban murree in april, murree april rhododendron, bhurban april, spring murree bhurban ~800w Bhurban Murree in April — The Rhododendron Season Guide",
   keywords:
     "bhurban murree in april, murree april rhododendron, bhurban april, spring murree bhurban",
   eyebrow: "Backlink Guest Post · What and Where | ~800w",
   h1: "Bhurban Murree in April — The Rhododendron and Spring Awakening Guide",
   heroTagline:
-    "URL /murree-bhurban-in-april Target KW bhurban murree in april, murree april rhododendron, bhurban april, spring murree bhurban",
+    "bhurban murree in april, murree april rhododendron, bhurban april, spring murree bhurban ~800w Bhurban Murree in April — The Rhododendron Season Guide",
   heroImage: article636Hero,
   blocks: [
     {
@@ -18275,13 +15303,13 @@ export const article638: Article = {
   slug: "walima-bhurban-cedar-estate",
   title: "Walima at Bhurban Cedar Estate — Planning the Post-Wedding Celebration",
   metaDescription:
-    "URL /walima-bhurban-cedar-estate Target KW walima bhurban, walima murree bhurban, cedar estate walima, bhurban walima venue",
+    "walima bhurban, walima murree bhurban, cedar estate walima, bhurban walima venue ~700w Walima at Bhurban — The Cedar Estate Post-Wedding Guide",
   keywords:
     "walima bhurban, walima murree bhurban, cedar estate walima, bhurban walima venue",
   eyebrow: "Backlink Guest Post · The Setting | ~700w",
   h1: "Walima at Bhurban Cedar Estate — Planning the Post-Wedding Celebration",
   heroTagline:
-    "URL /walima-bhurban-cedar-estate Target KW walima bhurban, walima murree bhurban, cedar estate walima, bhurban walima venue",
+    "walima bhurban, walima murree bhurban, cedar estate walima, bhurban walima venue ~700w Walima at Bhurban — The Cedar Estate Post-Wedding Guide",
   heroImage: article638Hero,
   blocks: [
     {
@@ -18368,13 +15396,13 @@ export const article639: Article = {
   slug: "corporate-retreat-bhurban-planning-guide",
   title: "/corporate-retreat-bhurban-planning-guide corporate retreat bhurban murree, company offsite bhurban, executive retreat bhurban, team building bhurban",
   metaDescription:
-    "Target KW corporate retreat bhurban murree, company offsite bhurban, executive retreat bhurban, team building bhurban",
+    "corporate retreat bhurban murree, company offsite bhurban, executive retreat bhurban, team building bhurban",
   keywords:
     "corporate retreat bhurban murree, company offsite bhurban, executive retreat bhurban, team building bhurban",
   eyebrow: "Backlink Guest Post · 8-12 persons | ~900w",
   h1: "/corporate-retreat-bhurban-planning-guide corporate retreat bhurban murree, company offsite bhurban, executive retreat bhurban, team building bhurban",
   heroTagline:
-    "Target KW corporate retreat bhurban murree, company offsite bhurban, executive retreat bhurban, team building bhurban",
+    "corporate retreat bhurban murree, company offsite bhurban, executive retreat bhurban, team building bhurban",
   heroImage: article639Hero,
   blocks: [
     {
@@ -18461,13 +15489,13 @@ export const article640: Article = {
   slug: "islamabad-families-bhurban-weekend",
   title: "Bhurban Weekend Guide for Islamabad Families — The 48-Hour Cedar Estate Plan",
   metaDescription:
-    "URL /islamabad-families-bhurban-weekend Target KW bhurban weekend islamabad families, islamabad family getaway bhurban, bhurban 48 hour islamabad family",
+    "bhurban weekend islamabad families, islamabad family getaway bhurban, bhurban 48 hour islamabad family",
   keywords:
     "bhurban weekend islamabad families, islamabad family getaway bhurban, bhurban 48 hour islamabad family",
   eyebrow: "Backlink Guest Post · Enclosed private garden — the children have safe outdoor space | ~800w",
   h1: "Bhurban Weekend Guide for Islamabad Families — The 48-Hour Cedar Estate Plan",
   heroTagline:
-    "URL /islamabad-families-bhurban-weekend Target KW bhurban weekend islamabad families, islamabad family getaway bhurban, bhurban 48 hour islamabad family",
+    "bhurban weekend islamabad families, islamabad family getaway bhurban, bhurban 48 hour islamabad family",
   heroImage: article640Hero,
   blocks: [
     {
@@ -18521,13 +15549,13 @@ export const article641: Article = {
   slug: "murree-bhurban-in-may-june",
   title: "Bhurban Murree in May and June — The Pre-Monsoon Green Season Guide",
   metaDescription:
-    "URL /murree-bhurban-in-may-june Target KW bhurban murree in may, bhurban murree in june, murree may june, bhurban pre-monsoon",
+    "bhurban murree in may, bhurban murree in june, murree may june, bhurban pre-monsoon ~700w Bhurban in May and June — The Pre-Monsoon Green Season",
   keywords:
     "bhurban murree in may, bhurban murree in june, murree may june, bhurban pre-monsoon",
   eyebrow: "Backlink Guest Post · ~700w",
   h1: "Bhurban Murree in May and June — The Pre-Monsoon Green Season Guide",
   heroTagline:
-    "URL /murree-bhurban-in-may-june Target KW bhurban murree in may, bhurban murree in june, murree may june, bhurban pre-monsoon",
+    "bhurban murree in may, bhurban murree in june, murree may june, bhurban pre-monsoon ~700w Bhurban in May and June — The Pre-Monsoon Green Season",
   heroImage: article641Hero,
   blocks: [
     {
@@ -18556,13 +15584,16 @@ export const article641: Article = {
       ],
     },
     {
-      type: "cta",
-      eyebrow: "May and June in Bhurban: 14-26°C, the cedar forest in its pre-monsoon green peak, all activities open, and the Islamabad...",
+      type: "section",
+      eyebrow: "May and June in Bhurban: 14-26°C, the cedar forest in its pre-monsoon green peak, all activities ope...",
       heading: "May and June in Bhurban: 14-26°C, the cedar forest in its pre-monsoon green peak, all activities open, and the Islamabad heat escape beginning in earnest (Islamabad already 38-42°C by June). May: the ...",
-      text: "May and June are the under-booked transition months between the spring quiet (March-April) and the summer peak (July-August). They combine the finest weather conditions of any warm-season month with availability that the July-August peak does not offer.",
-      buttonLabel: "WhatsApp: +92 304 567 9000 | wa.me/923045679000",
-      buttonHref: "https://wa.me/923045679000",
-      footnote: "Direct bookings receive priority response and best available rate.",
+      paragraphs: [
+        "May and June are the under-booked transition months between the spring quiet (March-April) and the summer peak (July-August). They combine the finest weather conditions of any warm-season month with availability that the July-August peak does not offer.",
+      ],
+      image: {
+        src: article641Image2,
+        alt: "May and June in Bhurban: 14-26°C, the cedar forest in its pre-monsoon green peak, all activities ope...",
+      },
     },
     {
       type: "section",
@@ -18595,13 +15626,13 @@ export const article642: Article = {
   slug: "murree-bhurban-in-september",
   title: "Bhurban Murree in September — The Post-Monsoon Clarity Month",
   metaDescription:
-    "URL /murree-bhurban-in-september Target KW bhurban murree in september, murree september, bhurban september clarity post-monsoon",
+    "bhurban murree in september, murree september, bhurban september clarity post-monsoon ~700w Bhurban in September — The Post-Monsoon Clarity Month",
   keywords:
     "bhurban murree in september, murree september, bhurban september clarity post-monsoon",
   eyebrow: "Backlink Guest Post · Very good | ~700w",
   h1: "Bhurban Murree in September — The Post-Monsoon Clarity Month",
   heroTagline:
-    "URL /murree-bhurban-in-september Target KW bhurban murree in september, murree september, bhurban september clarity post-monsoon",
+    "bhurban murree in september, murree september, bhurban september clarity post-monsoon ~700w Bhurban in September — The Post-Monsoon Clarity Month",
   heroImage: article642Hero,
   blocks: [
     {
@@ -18666,13 +15697,13 @@ export const article643: Article = {
   slug: "murree-bhurban-in-november",
   title: "Bhurban Murree in November — The Quiet Month Guide",
   metaDescription:
-    "URL /murree-bhurban-in-november Target KW bhurban murree in november, murree november, bhurban november quiet season",
+    "bhurban murree in november, murree november, bhurban november quiet season ~700w Bhurban in November — The Quietest Month at the Cedar Estate",
   keywords:
     "bhurban murree in november, murree november, bhurban november quiet season",
   eyebrow: "Backlink Guest Post · ~700w",
   h1: "Bhurban Murree in November — The Quiet Month Guide",
   heroTagline:
-    "URL /murree-bhurban-in-november Target KW bhurban murree in november, murree november, bhurban november quiet season",
+    "bhurban murree in november, murree november, bhurban november quiet season ~700w Bhurban in November — The Quietest Month at the Cedar Estate",
   heroImage: article643Hero,
   blocks: [
     {
@@ -18720,13 +15751,13 @@ export const article644: Article = {
   slug: "bhurban-cedar-estate-karachi-argument",
   title: "Why Karachi Families Choose Bhurban — The Cedar Estate Argument",
   metaDescription:
-    "URL /bhurban-cedar-estate-karachi-argument Target KW bhurban for karachi families, why visit bhurban from karachi, karachi bhurban cedar estate",
+    "bhurban for karachi families, why visit bhurban from karachi, karachi bhurban cedar estate ~700w Why Karachi Families Choose Bhurban — The Cedar Estate Argument",
   keywords:
     "bhurban for karachi families, why visit bhurban from karachi, karachi bhurban cedar estate",
   eyebrow: "Backlink Guest Post · Audience | Cluster 10 | ~700w | ~700w",
   h1: "Why Karachi Families Choose Bhurban — The Cedar Estate Argument",
   heroTagline:
-    "URL /bhurban-cedar-estate-karachi-argument Target KW bhurban for karachi families, why visit bhurban from karachi, karachi bhurban cedar estate",
+    "bhurban for karachi families, why visit bhurban from karachi, karachi bhurban cedar estate ~700w Why Karachi Families Choose Bhurban — The Cedar Estate Argument",
   heroImage: article644Hero,
   blocks: [
     {
@@ -18774,13 +15805,13 @@ export const article645: Article = {
   slug: "himalaya-villas-guest-reviews",
   title: "What Himalaya Villas Bhurban Guests Say — Guest Experiences Compiled",
   metaDescription:
-    "URL /himalaya-villas-guest-reviews Target KW himalaya villas bhurban reviews, himalaya villas guest experience, bhurban cedar estate reviews",
+    "himalaya villas bhurban reviews, himalaya villas guest experience, bhurban cedar estate reviews ~800w",
   keywords:
     "himalaya villas bhurban reviews, himalaya villas guest experience, bhurban cedar estate reviews",
   eyebrow: "Backlink Guest Post · ~800w",
   h1: "What Himalaya Villas Bhurban Guests Say — Guest Experiences Compiled",
   heroTagline:
-    "URL /himalaya-villas-guest-reviews Target KW himalaya villas bhurban reviews, himalaya villas guest experience, bhurban cedar estate reviews",
+    "himalaya villas bhurban reviews, himalaya villas guest experience, bhurban cedar estate reviews ~800w",
   heroImage: article645Hero,
   blocks: [
     {
@@ -18820,13 +15851,13 @@ export const article646: Article = {
   slug: "viva-pines-murree-guide",
   title: "Viva Pines Murree — Guide and the Private Cedar Estate Alternative",
   metaDescription:
-    "URL /viva-pines-murree-guide Target KW viva pines murree, viva pines murree rates, viva pines murree bhurban",
+    "viva pines murree, viva pines murree rates, viva pines murree bhurban ~700w Viva Pines Murree — What to Know and the Cedar Estate Alternative",
   keywords:
     "viva pines murree, viva pines murree rates, viva pines murree bhurban",
   eyebrow: "Backlink Guest Post · Cluster | ~700w",
   h1: "Viva Pines Murree — Guide and the Private Cedar Estate Alternative",
   heroTagline:
-    "URL /viva-pines-murree-guide Target KW viva pines murree, viva pines murree rates, viva pines murree bhurban",
+    "viva pines murree, viva pines murree rates, viva pines murree bhurban ~700w Viva Pines Murree — What to Know and the Cedar Estate Alternative",
   heroImage: article646Hero,
   blocks: [
     {
@@ -18869,13 +15900,15 @@ export const article646: Article = {
       },
     },
     {
-      type: "cta",
+      type: "section",
       eyebrow: "Booking",
       heading: "Booking",
-      text: "Booking.com / direct WhatsApp +92 304 567 9000 The Villa/cottage model in the Murree hills serves the same core need as Himalaya Villas: private accommodation with outdoor space away from the hotel room structure. The distinction is the scale of investment in the estate and the specific cedar forest...",
-      buttonLabel: "WhatsApp: +92 304 567 9000 | wa.me/923045679000",
-      buttonHref: "https://wa.me/923045679000",
-      footnote: "Direct bookings receive priority response and best available rate.",
+      paragraphs: [
+        "Booking.com / direct",
+        "WhatsApp +92 304 567 9000",
+        "The Villa/cottage model in the Murree hills serves the same core need as Himalaya Villas: private accommodation with outdoor space away from the hotel room structure. The distinction is the scale of investment in the estate and the specific cedar forest quality. Himalaya Villas at 100-200 year old deodar cedar, at 6,800 feet with the maintained est...",
+        "Book the Premium Cedar Estate Alternative — WhatsApp +92 304 567 9000",
+      ],
     },
     {
       type: "related",
@@ -18897,13 +15930,13 @@ export const article647: Article = {
   slug: "swiss-cottages-bhurban-guide",
   title: "Swiss Cottages Bhurban — Guide and the Cedar Estate Alternative",
   metaDescription:
-    "URL /swiss-cottages-bhurban-guide Target KW swiss cottages bhurban, swiss cottage bhurban, swiss bhurban cottage rent",
+    "swiss cottages bhurban, swiss cottage bhurban, swiss bhurban cottage rent ~700w Swiss Cottages Bhurban — What to Know and the Himalaya Villas Alternative",
   keywords:
     "swiss cottages bhurban, swiss cottage bhurban, swiss bhurban cottage rent",
   eyebrow: "Backlink Guest Post · WC | ~700w",
   h1: "Swiss Cottages Bhurban — Guide and the Cedar Estate Alternative",
   heroTagline:
-    "URL /swiss-cottages-bhurban-guide Target KW swiss cottages bhurban, swiss cottage bhurban, swiss bhurban cottage rent",
+    "swiss cottages bhurban, swiss cottage bhurban, swiss bhurban cottage rent ~700w Swiss Cottages Bhurban — What to Know and the Himalaya Villas Alternative",
   heroImage: article647Hero,
   blocks: [
     {
@@ -18947,29 +15980,6 @@ export const article647: Article = {
       },
     },
     {
-      type: "cta",
-      eyebrow: "Booking",
-      heading: "Booking",
-      text: "",
-      buttonLabel: "WhatsApp: +92 304 567 9000 | wa.me/923045679000",
-      buttonHref: "https://wa.me/923045679000",
-      footnote: "Direct bookings receive priority response and best available rate.",
-    },
-    {
-      type: "section",
-      eyebrow: "Property website",
-      heading: "Property website",
-      paragraphs: [
-        "WhatsApp +92 304 567 9000",
-        "The chalet/European cottage aesthetic (Swiss Cottages) and the cedar estate aesthetic (Himalaya Villas) represent two distinct positioning approaches in the Bhurban villa market. The cedar estate positioning — the authentic 100-200 year deodar trees, the sub-Himalayan forest character — is specific to Pakistan's mountain landscape and carries a dif...",
-        "Book the Authentic Cedar Estate — WhatsApp +92 304 567 9000",
-      ],
-      image: {
-        src: article647Image2,
-        alt: "Property website",
-      },
-    },
-    {
       type: "related",
       heading: "Related Pages — Internal Links",
       items: [
@@ -18989,13 +15999,13 @@ export const article648: Article = {
   slug: "bhurban-villas-murree-alternative",
   title: "Bhurban Villas Murree — The Complete Alternative Guide",
   metaDescription:
-    "URL /bhurban-villas-murree-alternative Target KW bhurban villas murree, bhurban villa murree, villas in bhurban murree pakistan",
+    "bhurban villas murree, bhurban villa murree, villas in bhurban murree pakistan ~700w Bhurban Villas Murree — All Options and the Cedar Estate Comparison",
   keywords:
     "bhurban villas murree, bhurban villa murree, villas in bhurban murree pakistan",
   eyebrow: "Backlink Guest Post · Cluster | ~700w",
   h1: "Bhurban Villas Murree — The Complete Alternative Guide",
   heroTagline:
-    "URL /bhurban-villas-murree-alternative Target KW bhurban villas murree, bhurban villa murree, villas in bhurban murree pakistan",
+    "bhurban villas murree, bhurban villa murree, villas in bhurban murree pakistan ~700w Bhurban Villas Murree — All Options and the Cedar Estate Comparison",
   heroImage: article648Hero,
   blocks: [
     {
@@ -19018,13 +16028,16 @@ export const article648: Article = {
       },
     },
     {
-      type: "cta",
+      type: "section",
       eyebrow: "Booking",
       heading: "Booking",
-      text: "Himalaya Villas & Resorts Private cedar estate (12 exclusive villas) PKR 39,000-70,000/villa",
-      buttonLabel: "WhatsApp: +92 304 567 9000 | wa.me/923045679000",
-      buttonHref: "https://wa.me/923045679000",
-      footnote: "Direct bookings receive priority response and best available rate.",
+      paragraphs: [
+        "Himalaya Villas & Resorts",
+        "Private cedar estate (12 exclusive villas)",
+        "PKR 39,000-70,000/villa",
+        "Cedar estate, fire pit, in-villa dining",
+        "WhatsApp +92 304 567 9000",
+      ],
     },
     {
       type: "section",
@@ -19078,13 +16091,13 @@ export const article649: Article = {
   slug: "murree-weather-live-sources",
   title: "Murree Weather Live — The Best Sources and What They Tell You",
   metaDescription:
-    "URL /murree-weather-live-sources Target KW murree weather live, murree weather live today, bhurban murree weather today, murree weather 2026",
+    "murree weather live, murree weather live today, bhurban murree weather today, murree weather 2026 ~800w",
   keywords:
     "murree weather live, murree weather live today, bhurban murree weather today, murree weather 2026",
   eyebrow: "Backlink Guest Post · ~800w",
   h1: "Murree Weather Live — The Best Sources and What They Tell You",
   heroTagline:
-    "URL /murree-weather-live-sources Target KW murree weather live, murree weather live today, bhurban murree weather today, murree weather 2026",
+    "murree weather live, murree weather live today, bhurban murree weather today, murree weather 2026 ~800w",
   heroImage: article649Hero,
   blocks: [
     {
@@ -19171,13 +16184,13 @@ export const article650: Article = {
   slug: "murree-bhurban-tour-package",
   title: "Murree Bhurban Tour Package — What's Included and the Direct Cedar Estate Booking",
   metaDescription:
-    "URL /murree-bhurban-tour-package Target KW murree tour package, bhurban murree tour package, murree bhurban package deal, murree package islamabad",
+    "murree tour package, bhurban murree tour package, murree bhurban package deal, murree package islamabad",
   keywords:
     "murree tour package, bhurban murree tour package, murree bhurban package deal, murree package islamabad",
   eyebrow: "Backlink Guest Post · Meals: occasionally included in full-board packages; more often excluded | ~800w",
   h1: "Murree Bhurban Tour Package — What's Included and the Direct Cedar Estate Booking",
   heroTagline:
-    "URL /murree-bhurban-tour-package Target KW murree tour package, bhurban murree tour package, murree bhurban package deal, murree package islamabad",
+    "murree tour package, bhurban murree tour package, murree bhurban package deal, murree package islamabad",
   heroImage: article650Hero,
   blocks: [
     {
@@ -19190,25 +16203,12 @@ export const article650: Article = {
       text: "murree tour package, bhurban murree tour package, murree bhurban package deal, murree package islamabad",
     },
     {
-      type: "cta",
-      eyebrow: "Why Direct Booking at Himalaya Villas Beats Any Package",
-      heading: "Why Direct Booking at Himalaya Villas Beats Any Package",
-      text: "",
-      buttonLabel: "WhatsApp: +92 304 567 9000 | wa.me/923045679000",
-      buttonHref: "https://wa.me/923045679000",
-      footnote: "Direct bookings receive priority response and best available rate.",
-    },
-    {
       type: "section",
       eyebrow: "Rate",
       heading: "Rate",
       paragraphs: [
         "Package rate + operator markup (10-20%)",
       ],
-      image: {
-        src: article650Image2,
-        alt: "Rate",
-      },
     },
     {
       type: "cta",
@@ -19239,19 +16239,31 @@ export const article651: Article = {
   slug: "mountain-lodges-near-islamabad",
   title: "Mountain Lodges Near Islamabad — Bhurban Cedar Estate vs the Alternatives",
   metaDescription:
-    "URL /mountain-lodges-near-islamabad Target KW mountain lodges near islamabad, mountain resort lodge islamabad, cedar lodge bhurban islamabad",
+    "mountain lodges near islamabad, mountain resort lodge islamabad, cedar lodge bhurban islamabad ~800w Mountain Lodges Near Islamabad — Bhurban Cedar Estate vs the Alternatives",
   keywords:
     "mountain lodges near islamabad, mountain resort lodge islamabad, cedar lodge bhurban islamabad",
   eyebrow: "Backlink Guest Post · Rate | ~800w",
   h1: "Mountain Lodges Near Islamabad — Bhurban Cedar Estate vs the Alternatives",
   heroTagline:
-    "URL /mountain-lodges-near-islamabad Target KW mountain lodges near islamabad, mountain resort lodge islamabad, cedar lodge bhurban islamabad",
+    "mountain lodges near islamabad, mountain resort lodge islamabad, cedar lodge bhurban islamabad ~800w Mountain Lodges Near Islamabad — Bhurban Cedar Estate vs the Alternatives",
   heroImage: article651Hero,
   blocks: [
     {
       type: "callout-qa",
       question: "What are the best mountain lodges near Islamabad?",
       answer: "Best mountain lodges within 2 hours of Islamabad 2026: (1) Himalaya Villas & Resorts, Bhurban (47km, 45 min) — private cedar estate lodge, PKR 39,000-70,000/villa/night; (2) PC Hotel Bhurban (48km, 45 min) — Marriott 5-star, shared hotel facilities; (3) Doubletree by Hilton Nathia Gali (75km, 1h 15min) — international chain; (4) Hotel One Bhurban (48km, 45 min) — mid-scale chain; (5) Various Nathia Gali hotels (75km, 1h 15min). For the authentic mountain lodge cedar estate experience within 45 minutes: Himalaya Villas is the definitive answer. The 'mountain lodge near Islamabad' search represents a visitor profile that wants the complete mountain experience — the forest, the fire, the altitu...",
+    },
+    {
+      type: "comparison",
+      heading: "Mountain Lodges Near Islamabad — Bhurban Cedar Estate vs the Alternatives",
+      columns: [
+        "Feature",
+        "Option A",
+        "Option B",
+      ],
+      rows: [
+        { feature: "Commercial", a: "Cluster 11", b: "~800w" },
+      ],
     },
     {
       type: "section",
@@ -19262,10 +16274,6 @@ export const article651: Article = {
         "Best mountain lodges within 2 hours of Islamabad 2026: (1) Himalaya Villas & Resorts, Bhurban (47km, 45 min) — private cedar estate lodge, PKR 39,000-70,000/villa/night; (2) PC Hotel Bhurban (48km, 45 min) — Marriott 5-star, shared hotel facilities; (3) Doubletree by Hilton Nathia Gali (75km, 1h 15min) — international chain; (4) Hotel One Bhurban (...",
         "The 'mountain lodge near Islamabad' search represents a visitor profile that wants the complete mountain experience — the forest, the fire, the altitude — without a long journey. Bhurban at 47km (45 minutes) is the answer that 6,800-foot cedar estate accommodation within 1 hour of Islamabad provides.",
       ],
-      image: {
-        src: article651Image1,
-        alt: "Mountain Lodges Near Islamabad — Bhurban Cedar Estate vs the Alternatives",
-      },
     },
     {
       type: "section",
@@ -19276,6 +16284,10 @@ export const article651: Article = {
         "47km",
         "45 min",
       ],
+      image: {
+        src: article651Image2,
+        alt: "Rate",
+      },
     },
     {
       type: "section",
@@ -19285,10 +16297,6 @@ export const article651: Article = {
         "Yes — 100-200 yr cedar",
         "PKR 39,000-70,000/villa",
       ],
-      image: {
-        src: article651Image2,
-        alt: "Private cedar villa estate",
-      },
     },
     {
       type: "section",
@@ -19299,6 +16307,10 @@ export const article651: Article = {
         "45 min",
         "5-star chain hotel",
       ],
+      image: {
+        src: article651Image2,
+        alt: "PC Hotel Bhurban",
+      },
     },
     {
       type: "section",
@@ -19307,10 +16319,6 @@ export const article651: Article = {
       paragraphs: [
         "PKR 35,000-75,000/room",
       ],
-      image: {
-        src: article651Image2,
-        alt: "Adjacent forest",
-      },
     },
     {
       type: "section",
@@ -19320,6 +16328,10 @@ export const article651: Article = {
         "48km",
         "45 min",
       ],
+      image: {
+        src: article651Image2,
+        alt: "Hotel One Bhurban",
+      },
     },
     {
       type: "section",
@@ -19329,10 +16341,6 @@ export const article651: Article = {
         "55km",
         "60 min",
       ],
-      image: {
-        src: article651Image2,
-        alt: "Ramada Murree",
-      },
     },
     {
       type: "section",
@@ -19342,6 +16350,10 @@ export const article651: Article = {
         "75km",
         "1h 15min",
       ],
+      image: {
+        src: article651Image2,
+        alt: "Doubletree Nathia Gali",
+      },
     },
     {
       type: "section",
@@ -19351,10 +16363,6 @@ export const article651: Article = {
         "75km",
         "1h 15min",
       ],
-      image: {
-        src: article651Image2,
-        alt: "Elites Hotel Nathiagali",
-      },
     },
     {
       type: "related",
@@ -19376,13 +16384,13 @@ export const article652: Article = {
   slug: "honeymoon-pakistan-bhurban",
   title: "Honeymoon in Pakistan — Why Bhurban Cedar Estate is the Finest Choice",
   metaDescription:
-    "URL /honeymoon-pakistan-bhurban Target KW honeymoon in pakistan, best honeymoon destination pakistan, pakistan honeymoon places, bhurban honeymoon pakistan",
+    "honeymoon in pakistan, best honeymoon destination pakistan, pakistan honeymoon places, bhurban honeymoon pakistan",
   keywords:
     "honeymoon in pakistan, best honeymoon destination pakistan, pakistan honeymoon places, bhurban honeymoon pakistan",
   eyebrow: "Backlink Guest Post · Naran, Kaghan Valley | ~800w",
   h1: "Honeymoon in Pakistan — Why Bhurban Cedar Estate is the Finest Choice",
   heroTagline:
-    "URL /honeymoon-pakistan-bhurban Target KW honeymoon in pakistan, best honeymoon destination pakistan, pakistan honeymoon places, bhurban honeymoon pakistan",
+    "honeymoon in pakistan, best honeymoon destination pakistan, pakistan honeymoon places, bhurban honeymoon pakistan",
   heroImage: article652Hero,
   blocks: [
     {
@@ -19475,13 +16483,13 @@ export const article653: Article = {
   slug: "bhurban-murree-famous-visitors-profile",
   title: "Who Visits Bhurban Murree — The Cedar Estate Guest Profile",
   metaDescription:
-    "URL /bhurban-murree-famous-visitors-profile Target KW who visits bhurban murree, bhurban murree guest profile, himalaya villas guest type",
+    "who visits bhurban murree, bhurban murree guest profile, himalaya villas guest type ~700w Who Visits Bhurban? — The Himalaya Villas Guest Profile",
   keywords:
     "who visits bhurban murree, bhurban murree guest profile, himalaya villas guest type",
   eyebrow: "Backlink Guest Post · → /villas — Browse Himalaya Villas | ~700w",
   h1: "Who Visits Bhurban Murree — The Cedar Estate Guest Profile",
   heroTagline:
-    "URL /bhurban-murree-famous-visitors-profile Target KW who visits bhurban murree, bhurban murree guest profile, himalaya villas guest type",
+    "who visits bhurban murree, bhurban murree guest profile, himalaya villas guest type ~700w Who Visits Bhurban? — The Himalaya Villas Guest Profile",
   heroImage: article653Hero,
   blocks: [
     {
@@ -19509,13 +16517,13 @@ export const article654: Article = {
   slug: "bhurban-vs-murree-what-is-difference",
   title: "Bhurban Hill Station vs Murree City — Understanding the Difference",
   metaDescription:
-    "URL /bhurban-vs-murree-what-is-difference Target KW bhurban vs murree, difference between bhurban and murree, is bhurban part of murree, bhurban murree same",
+    "bhurban vs murree, difference between bhurban and murree, is bhurban part of murree, bhurban murree same",
   keywords:
     "bhurban vs murree, difference between bhurban and murree, is bhurban part of murree, bhurban murree same",
   eyebrow: "Backlink Guest Post · Moderate — private estates reduce visible crowd density | ~700w",
   h1: "Bhurban Hill Station vs Murree City — Understanding the Difference",
   heroTagline:
-    "URL /bhurban-vs-murree-what-is-difference Target KW bhurban vs murree, difference between bhurban and murree, is bhurban part of murree, bhurban murree same",
+    "bhurban vs murree, difference between bhurban and murree, is bhurban part of murree, bhurban murree same",
   heroImage: article654Hero,
   blocks: [
     {
@@ -19528,6 +16536,18 @@ export const article654: Article = {
       text: "bhurban vs murree, difference between bhurban and murree, is bhurban part of murree, bhurban murree same",
     },
     {
+      type: "comparison",
+      heading: "Bhurban Hill Station vs Murree City — Understanding the Difference",
+      columns: [
+        "Feature",
+        "Option A",
+        "Option B",
+      ],
+      rows: [
+        { feature: "Decision", a: "Cluster 8+11", b: "~700w" },
+      ],
+    },
+    {
       type: "section",
       eyebrow: "Bhurban vs Murree",
       heading: "Bhurban vs Murree — Understanding the Difference",
@@ -19536,6 +16556,10 @@ export const article654: Article = {
         "Bhurban and Murree are two distinct settlements 11km apart on the same Murree ridge system. Murree (7,500 feet) is the main hill station town — the Mall Road, the bazaar, the colonial heritage, the high weekend crowds. Bhurban (6,800 feet) is a quieter cedar forest settlement 11km away — the PC Hotel Bhurban (Pearl Continental/Marriott), the Chinar...",
         "The Bhurban vs Murree question is the single most common geographic confusion in the Murree hills accommodation market — many potential guests don't know that Bhurban and Murree Mall Road are different places, and that choosing between them is a meaningful decision.",
       ],
+      image: {
+        src: article654Image2,
+        alt: "Bhurban vs Murree — Understanding the Difference",
+      },
     },
     {
       type: "section",
@@ -19544,10 +16568,6 @@ export const article654: Article = {
       paragraphs: [
         "Murree Town / Mall Road",
       ],
-      image: {
-        src: article654Image2,
-        alt: "Factor",
-      },
     },
     {
       type: "section",
@@ -19556,6 +16576,10 @@ export const article654: Article = {
       paragraphs: [
         "Stay at Bhurban, Visit Murree — WhatsApp +92 304 567 9000",
       ],
+      image: {
+        src: article654Image2,
+        alt: "Result: the Bhurban cedar estate character plus the Murree bazaar character — both available from a ...",
+      },
     },
     {
       type: "related",
@@ -19577,13 +16601,13 @@ export const article655: Article = {
   slug: "bhurban-cedar-estate-in-winter",
   title: "Bhurban Cedar Estate in Winter — The Sub-Zero Cedar Forest Experience",
   metaDescription:
-    "URL /bhurban-cedar-estate-in-winter Target KW bhurban in winter, bhurban cedar estate winter, bhurban murree winter experience, cedar estate snow bhurban",
+    "bhurban in winter, bhurban cedar estate winter, bhurban murree winter experience, cedar estate snow bhurban",
   keywords:
     "bhurban in winter, bhurban cedar estate winter, bhurban murree winter experience, cedar estate snow bhurban",
   eyebrow: "Backlink Guest Post · ❓ What is the Himalaya Villas cedar estate like in winter? | ~800w",
   h1: "Bhurban Cedar Estate in Winter — The Sub-Zero Cedar Forest Experience",
   heroTagline:
-    "URL /bhurban-cedar-estate-in-winter Target KW bhurban in winter, bhurban cedar estate winter, bhurban murree winter experience, cedar estate snow bhurban",
+    "bhurban in winter, bhurban cedar estate winter, bhurban murree winter experience, cedar estate snow bhurban",
   heroImage: article655Hero,
   blocks: [
     {
@@ -19677,13 +16701,13 @@ export const article656: Article = {
   slug: "why-private-villa-over-hotel-bhurban",
   title: "Why Choose a Private Villa Over a Hotel in Bhurban — The Definitive Argument",
   metaDescription:
-    "URL /why-private-villa-over-hotel-bhurban Target KW private villa vs hotel bhurban, bhurban private villa over hotel, villa better than hotel bhurban",
+    "private villa vs hotel bhurban, bhurban private villa over hotel, villa better than hotel bhurban ~800w",
   keywords:
     "private villa vs hotel bhurban, bhurban private villa over hotel, villa better than hotel bhurban",
   eyebrow: "Backlink Guest Post · Conversion | Cluster 6 | ~800w | ~800w",
   h1: "Why Choose a Private Villa Over a Hotel in Bhurban — The Definitive Argument",
   heroTagline:
-    "URL /why-private-villa-over-hotel-bhurban Target KW private villa vs hotel bhurban, bhurban private villa over hotel, villa better than hotel bhurban",
+    "private villa vs hotel bhurban, bhurban private villa over hotel, villa better than hotel bhurban ~800w",
   heroImage: article656Hero,
   blocks: [
     {
@@ -19745,13 +16769,13 @@ export const article657: Article = {
   slug: "himalaya-villas-booking-tips",
   title: "Himalaya Villas Bhurban Booking Tips — How to Get the Best Deal",
   metaDescription:
-    "URL /himalaya-villas-booking-tips Target KW himalaya villas bhurban booking tips, how to book bhurban villa best price, bhurban villa booking guide",
+    "himalaya villas bhurban booking tips, how to book bhurban villa best price, bhurban villa booking guide",
   keywords:
     "himalaya villas bhurban booking tips, how to book bhurban villa best price, bhurban villa booking guide",
   eyebrow: "Backlink Guest Post · Book as soon as dates confirmed | ~700w",
   h1: "Himalaya Villas Bhurban Booking Tips — How to Get the Best Deal",
   heroTagline:
-    "URL /himalaya-villas-booking-tips Target KW himalaya villas bhurban booking tips, how to book bhurban villa best price, bhurban villa booking guide",
+    "himalaya villas bhurban booking tips, how to book bhurban villa best price, bhurban villa booking guide",
   heroImage: article657Hero,
   blocks: [
     {
@@ -19764,22 +16788,12 @@ export const article657: Article = {
       text: "himalaya villas bhurban booking tips, how to book bhurban villa best price, bhurban villa booking guide",
     },
     {
-      type: "cta",
-      eyebrow: "Himalaya Villas Bhurban Booking Tips — How to Get the Best Deal",
+      type: "section",
+      eyebrow: "Himalaya Villas Bhurban Booking Tips",
       heading: "Himalaya Villas Bhurban Booking Tips — How to Get the Best Deal",
-      text: "Conversion | Cluster 11 | ~700w",
-      buttonLabel: "WhatsApp: +92 304 567 9000 | wa.me/923045679000",
-      buttonHref: "https://wa.me/923045679000",
-      footnote: "Direct bookings receive priority response and best available rate.",
-    },
-    {
-      type: "cta",
-      eyebrow: "Himalaya Villas Bhurban Booking Tips — How to Get the Best Deal",
-      heading: "Himalaya Villas Bhurban Booking Tips — How to Get the Best Deal",
-      text: "❓ What are the tips for booking Himalaya Villas Bhurban at the best price?",
-      buttonLabel: "WhatsApp: +92 304 567 9000 | wa.me/923045679000",
-      buttonHref: "https://wa.me/923045679000",
-      footnote: "Direct bookings receive priority response and best available rate.",
+      paragraphs: [
+        "❓ What are the tips for booking Himalaya Villas Bhurban at the best price?",
+      ],
     },
     {
       type: "cta",
@@ -19818,13 +16832,16 @@ export const article657: Article = {
       footnote: "Direct bookings receive priority response and best available rate.",
     },
     {
-      type: "cta",
-      eyebrow: "Booking by Season — The Timing Guide",
-      heading: "Booking by Season — The Timing Guide",
-      text: "",
-      buttonLabel: "WhatsApp: +92 304 567 9000 | wa.me/923045679000",
-      buttonHref: "https://wa.me/923045679000",
-      footnote: "Direct bookings receive priority response and best available rate.",
+      type: "section",
+      eyebrow: "July-August peak",
+      heading: "July-August peak",
+      paragraphs: [
+        "8-10 weeks",
+      ],
+      image: {
+        src: article657Image2,
+        alt: "July-August peak",
+      },
     },
     {
       type: "cta",
@@ -19842,23 +16859,10 @@ export const article657: Article = {
       paragraphs: [
         "10-14 weeks",
       ],
-    },
-    {
-      type: "cta",
-      eyebrow: "Book immediately after Eid date announcement",
-      heading: "Book immediately after Eid date announcement",
-      text: "",
-      buttonLabel: "WhatsApp: +92 304 567 9000 | wa.me/923045679000",
-      buttonHref: "https://wa.me/923045679000",
-      footnote: "Direct bookings receive priority response and best available rate.",
-    },
-    {
-      type: "section",
-      eyebrow: "January snowfall weeks",
-      heading: "January snowfall weeks",
-      paragraphs: [
-        "8-12 weeks",
-      ],
+      image: {
+        src: article657Image2,
+        alt: "Eid holidays",
+      },
     },
     {
       type: "section",
@@ -19867,10 +16871,6 @@ export const article657: Article = {
       paragraphs: [
         "1-2 weeks",
       ],
-      image: {
-        src: article657Image2,
-        alt: "April-May",
-      },
     },
     {
       type: "section",
@@ -19879,6 +16879,10 @@ export const article657: Article = {
       paragraphs: [
         "1-2 weeks",
       ],
+      image: {
+        src: article657Image2,
+        alt: "February-March",
+      },
     },
     {
       type: "related",
@@ -19900,13 +16904,13 @@ export const article658: Article = {
   slug: "bhurban-murree-resource-guide",
   title: "Bhurban Murree — The Complete Himalaya Villas Resource Guide",
   metaDescription:
-    "URL /bhurban-murree-resource-guide Target KW bhurban murree guide, bhurban murree complete guide, himalaya villas bhurban resource",
+    "bhurban murree guide, bhurban murree complete guide, himalaya villas bhurban resource ~700w All Clusters",
   keywords:
     "bhurban murree guide, bhurban murree complete guide, himalaya villas bhurban resource",
   eyebrow: "Backlink Guest Post · Audience Guides | ~700w",
   h1: "Bhurban Murree — The Complete Himalaya Villas Resource Guide",
   heroTagline:
-    "URL /bhurban-murree-resource-guide Target KW bhurban murree guide, bhurban murree complete guide, himalaya villas bhurban resource",
+    "bhurban murree guide, bhurban murree complete guide, himalaya villas bhurban resource ~700w All Clusters",
   heroImage: article658Hero,
   blocks: [
     {
@@ -19919,28 +16923,6 @@ export const article658: Article = {
       ],
     },
     {
-      type: "cta",
-      eyebrow: "Booking Tips — How to book directly for the best rate",
-      heading: "Booking Tips — How to book directly for the best rate",
-      text: "",
-      buttonLabel: "WhatsApp: +92 304 567 9000 | wa.me/923045679000",
-      buttonHref: "https://wa.me/923045679000",
-      footnote: "Direct bookings receive priority response and best available rate.",
-    },
-    {
-      type: "section",
-      eyebrow: "Getting There",
-      heading: "Getting There",
-      paragraphs: [
-        "Islamabad to Bhurban — Route, toll, and driving guide",
-        "Bhurban Distance from Major Cities — Islamabad, Lahore, Karachi, Rawalpindi",
-        "Murree Expressway Guide — Toll plaza, route, traffic times",
-        "Lahore to Bhurban — The 3h 30min M-2 journey",
-        "Bhurban from Karachi — Flight + drive guide",
-        "Bhurban from Rawalpindi — 50-minute drive guide",
-      ],
-    },
-    {
       type: "section",
       eyebrow: "Patriata Chairlift Guide",
       heading: "Patriata Chairlift Guide — The cedar forest aerial experience",
@@ -19948,7 +16930,7 @@ export const article658: Article = {
         "Chinar Golf Club Bhurban — Pakistan's highest golf course",
       ],
       image: {
-        src: article658Image2,
+        src: article658Image1,
         alt: "Patriata Chairlift Guide — The cedar forest aerial experience",
       },
     },
@@ -19992,13 +16974,13 @@ export const article659: Article = {
   slug: "bhurban-murree-4-5-day-itinerary",
   title: "Bhurban Murree 4-5 Day Itinerary — The Long Weekend Cedar Estate Plan",
   metaDescription:
-    "URL /bhurban-murree-4-5-day-itinerary Target KW bhurban murree 4 days itinerary, bhurban murree 5 day plan, long weekend bhurban murree",
+    "bhurban murree 4 days itinerary, bhurban murree 5 day plan, long weekend bhurban murree ~800w Bhurban Murree 4-5 Day Long Weekend Itinerary",
   keywords:
     "bhurban murree 4 days itinerary, bhurban murree 5 day plan, long weekend bhurban murree",
   eyebrow: "Backlink Guest Post · ~800w",
   h1: "Bhurban Murree 4-5 Day Itinerary — The Long Weekend Cedar Estate Plan",
   heroTagline:
-    "URL /bhurban-murree-4-5-day-itinerary Target KW bhurban murree 4 days itinerary, bhurban murree 5 day plan, long weekend bhurban murree",
+    "bhurban murree 4 days itinerary, bhurban murree 5 day plan, long weekend bhurban murree ~800w Bhurban Murree 4-5 Day Long Weekend Itinerary",
   heroImage: article659Hero,
   blocks: [
     {
@@ -20026,13 +17008,13 @@ export const article660: Article = {
   slug: "himalaya-villas-not-a-hotel",
   title: "Himalaya Villas is Not a Hotel — Why This Matters",
   metaDescription:
-    "URL /himalaya-villas-not-a-hotel Target KW himalaya villas not a hotel bhurban, private estate not hotel bhurban, bhurban private villa estate not hotel",
+    "himalaya villas not a hotel bhurban, private estate not hotel bhurban, bhurban private villa estate not hotel",
   keywords:
     "himalaya villas not a hotel bhurban, private estate not hotel bhurban, bhurban private villa estate not hotel",
   eyebrow: "Backlink Guest Post · There is no hotel restaurant. No breakfast buffet with strangers. No dinner menu posted at 6pm. Meals at Himalaya Villas are ser...",
   h1: "Himalaya Villas is Not a Hotel — Why This Matters",
   heroTagline:
-    "URL /himalaya-villas-not-a-hotel Target KW himalaya villas not a hotel bhurban, private estate not hotel bhurban, bhurban private villa estate not hotel",
+    "himalaya villas not a hotel bhurban, private estate not hotel bhurban, bhurban private villa estate not hotel",
   heroImage: article660Hero,
   blocks: [
     {
@@ -20096,13 +17078,13 @@ export const article661: Article = {
   slug: "presidential-suite-himalaya-villas-bhurban",
   title: "/presidential-suite-himalaya-villas-bhurban presidential suite bhurban, himalaya villas presidential suite, jacuzzi villa bhurban, private jacuzzi bhurban",
   metaDescription:
-    "Target KW presidential suite bhurban, himalaya villas presidential suite, jacuzzi villa bhurban, private jacuzzi bhurban",
+    "presidential suite bhurban, himalaya villas presidential suite, jacuzzi villa bhurban, private jacuzzi bhurban",
   keywords:
     "presidential suite bhurban, himalaya villas presidential suite, jacuzzi villa bhurban, private jacuzzi bhurban",
   eyebrow: "Backlink Guest Post · ~800w",
   h1: "/presidential-suite-himalaya-villas-bhurban presidential suite bhurban, himalaya villas presidential suite, jacuzzi villa bhurban, private jacuzzi bhurban",
   heroTagline:
-    "Target KW presidential suite bhurban, himalaya villas presidential suite, jacuzzi villa bhurban, private jacuzzi bhurban",
+    "presidential suite bhurban, himalaya villas presidential suite, jacuzzi villa bhurban, private jacuzzi bhurban",
   heroImage: article661Hero,
   blocks: [
     {
@@ -20155,13 +17137,14 @@ export const article661: Article = {
       },
     },
     {
-      type: "cta",
+      type: "section",
       eyebrow: "Booking the Presidential Suite",
       heading: "Booking the Presidential Suite",
-      text: "WhatsApp +92 304 567 9000 — state 'Presidential Suite' and your preferred dates Book January weeks 3-4 a minimum of 10-12 weeks in advance — the Presidential Suite in snowfall season is the most competed single villa booking of the year Book October weeks 2-3 at least 4-5 weeks in advance — also hig...",
-      buttonLabel: "WhatsApp: +92 304 567 9000 | wa.me/923045679000",
-      buttonHref: "https://wa.me/923045679000",
-      footnote: "Direct bookings receive priority response and best available rate.",
+      paragraphs: [
+        "WhatsApp +92 304 567 9000 — state 'Presidential Suite' and your preferred dates",
+        "Book January weeks 3-4 a minimum of 10-12 weeks in advance — the Presidential Suite in snowfall season is the most competed single villa booking of the year",
+        "Book October weeks 2-3 at least 4-5 weeks in advance — also high demand",
+      ],
     },
     {
       type: "section",
@@ -20195,13 +17178,13 @@ export const article662: Article = {
   slug: "bhurban-murree-sunrise-sunset",
   title: "Bhurban Murree Sunrise and Sunset — The Best Views Guide",
   metaDescription:
-    "URL /bhurban-murree-sunrise-sunset Target KW bhurban murree sunrise, bhurban murree sunset, sunset view bhurban, sunrise bhurban murree hills",
+    "bhurban murree sunrise, bhurban murree sunset, sunset view bhurban, sunrise bhurban murree hills ~700w",
   keywords:
     "bhurban murree sunrise, bhurban murree sunset, sunset view bhurban, sunrise bhurban murree hills",
   eyebrow: "Backlink Guest Post · Target KW | ~700w",
   h1: "Bhurban Murree Sunrise and Sunset — The Best Views Guide",
   heroTagline:
-    "URL /bhurban-murree-sunrise-sunset Target KW bhurban murree sunrise, bhurban murree sunset, sunset view bhurban, sunrise bhurban murree hills",
+    "bhurban murree sunrise, bhurban murree sunset, sunset view bhurban, sunrise bhurban murree hills ~700w",
   heroImage: article662Hero,
   blocks: [
     {
@@ -20249,13 +17232,13 @@ export const article663: Article = {
   slug: "private-events-bhurban-cedar-estate",
   title: "Private Events at Bhurban Cedar Estate — The Complete Occasions Guide",
   metaDescription:
-    "URL /private-events-bhurban-cedar-estate Target KW private events bhurban, cedar estate events bhurban, bhurban private event venue, occasions bhurban cedar estate",
+    "private events bhurban, cedar estate events bhurban, bhurban private event venue, occasions bhurban cedar estate",
   keywords:
     "private events bhurban, cedar estate events bhurban, bhurban private event venue, occasions bhurban cedar estate",
   eyebrow: "Backlink Guest Post · Nikah/Destination Wedding | ~800w",
   h1: "Private Events at Bhurban Cedar Estate — The Complete Occasions Guide",
   heroTagline:
-    "URL /private-events-bhurban-cedar-estate Target KW private events bhurban, cedar estate events bhurban, bhurban private event venue, occasions bhurban cedar estate",
+    "private events bhurban, cedar estate events bhurban, bhurban private event venue, occasions bhurban cedar estate",
   heroImage: article663Hero,
   blocks: [
     {
@@ -20385,13 +17368,13 @@ export const article664: Article = {
   slug: "bhurban-cedar-estate-with-children",
   title: "Bhurban Cedar Estate with Children — The Complete Family Guide",
   metaDescription:
-    "URL /bhurban-cedar-estate-with-children Target KW bhurban with children, bhurban cedar estate kids, bhurban murree family with young children",
+    "bhurban with children, bhurban cedar estate kids, bhurban murree family with young children ~700w Bhurban Cedar Estate with Children — The Complete Guide",
   keywords:
     "bhurban with children, bhurban cedar estate kids, bhurban murree family with young children",
   eyebrow: "Backlink Guest Post · Enclosed private garden — safe outdoor space, no drop-offs | ~700w",
   h1: "Bhurban Cedar Estate with Children — The Complete Family Guide",
   heroTagline:
-    "URL /bhurban-cedar-estate-with-children Target KW bhurban with children, bhurban cedar estate kids, bhurban murree family with young children",
+    "bhurban with children, bhurban cedar estate kids, bhurban murree family with young children ~700w Bhurban Cedar Estate with Children — The Complete Guide",
   heroImage: article664Hero,
   blocks: [
     {
@@ -20486,13 +17469,13 @@ export const article665: Article = {
   slug: "bhurban-murree-villas-book-direct",
   title: "Bhurban Murree Villas — The Direct Booking Guide and WhatsApp Contact",
   metaDescription:
-    "URL /bhurban-murree-villas-book-direct Target KW bhurban murree villas book direct, himalaya villas contact bhurban, bhurban murree villas whatsapp booking",
+    "bhurban murree villas book direct, himalaya villas contact bhurban, bhurban murree villas whatsapp booking",
   keywords:
     "bhurban murree villas book direct, himalaya villas contact bhurban, bhurban murree villas whatsapp booking",
   eyebrow: "Backlink Guest Post · Conversion | All Clusters | ~600w | ~600w",
   h1: "Bhurban Murree Villas — The Direct Booking Guide and WhatsApp Contact",
   heroTagline:
-    "URL /bhurban-murree-villas-book-direct Target KW bhurban murree villas book direct, himalaya villas contact bhurban, bhurban murree villas whatsapp booking",
+    "bhurban murree villas book direct, himalaya villas contact bhurban, bhurban murree villas whatsapp booking",
   heroImage: article665Hero,
   blocks: [
     {
@@ -20580,29 +17563,11 @@ export const article665: Article = {
       },
     },
     {
-      type: "cta",
+      type: "section",
       eyebrow: "Booking hours",
       heading: "Booking hours",
-      text: "WhatsApp available 9am-11pm for booking enquiries",
-      buttonLabel: "WhatsApp: +92 304 567 9000 | wa.me/923045679000",
-      buttonHref: "https://wa.me/923045679000",
-      footnote: "Direct bookings receive priority response and best available rate.",
-    },
-    {
-      type: "cta",
-      eyebrow: "What to Include in Your Booking Message",
-      heading: "What to Include in Your Booking Message",
-      text: "",
-      buttonLabel: "WhatsApp: +92 304 567 9000 | wa.me/923045679000",
-      buttonHref: "https://wa.me/923045679000",
-      footnote: "Direct bookings receive priority response and best available rate.",
-    },
-    {
-      type: "section",
-      eyebrow: "Your preferred arrival and departure dates",
-      heading: "Your preferred arrival and departure dates",
       paragraphs: [
-        "Number of adults and children (with ages if under 10)",
+        "WhatsApp available 9am-11pm for booking enquiries",
       ],
     },
     {
@@ -20667,13 +17632,13 @@ export const article666: Article = {
   slug: "hotel-one-murree-guide",
   title: "Hotel One Murree — Guide and the Private Cedar Estate Alternative",
   metaDescription:
-    "URL /hotel-one-murree-guide Target KW hotel one murree, hotel one mall road murree, hotel one murree rates, hotel one murree contact number",
+    "hotel one murree, hotel one mall road murree, hotel one murree rates, hotel one murree contact number",
   keywords:
     "hotel one murree, hotel one mall road murree, hotel one murree rates, hotel one murree contact number",
   eyebrow: "Backlink Guest Post · Cluster | ~800w",
   h1: "Hotel One Murree — Guide and the Private Cedar Estate Alternative",
   heroTagline:
-    "URL /hotel-one-murree-guide Target KW hotel one murree, hotel one mall road murree, hotel one murree rates, hotel one murree contact number",
+    "hotel one murree, hotel one mall road murree, hotel one murree rates, hotel one murree contact number",
   heroImage: article666Hero,
   blocks: [
     {
@@ -20768,13 +17733,13 @@ export const article667: Article = {
   slug: "monal-murree-guide",
   title: "Monal Murree — Menu, Location and the Cedar Garden Dining Alternative",
   metaDescription:
-    "URL /monal-murree-guide Target KW monal murree menu, monal restaurant murree, monal murree, monal murree location",
+    "monal murree menu, monal restaurant murree, monal murree, monal murree location ~700w Monal Murree — What to Know and the Cedar Garden Dining Alternative",
   keywords:
     "monal murree menu, monal restaurant murree, monal murree, monal murree location",
   eyebrow: "Backlink Guest Post · Menu: The Monal specialises in Pakistani cuisine — karahi, biryani, daal, BBQ items, and the full range of Pakistani main dishes...",
   h1: "Monal Murree — Menu, Location and the Cedar Garden Dining Alternative",
   heroTagline:
-    "URL /monal-murree-guide Target KW monal murree menu, monal restaurant murree, monal murree, monal murree location",
+    "monal murree menu, monal restaurant murree, monal murree, monal murree location ~700w Monal Murree — What to Know and the Cedar Garden Dining Alternative",
   heroImage: article667Hero,
   blocks: [
     {
@@ -20845,13 +17810,13 @@ export const article668: Article = {
   slug: "bhurban-murree-wildlife-nature-guide",
   title: "Bhurban Murree Wildlife and Nature Guide — The Cedar Estate Ecosystem",
   metaDescription:
-    "URL /bhurban-murree-wildlife-nature-guide Target KW bhurban murree wildlife, bhurban nature guide, murree hills wildlife, cedar forest animals bhurban",
+    "bhurban murree wildlife, bhurban nature guide, murree hills wildlife, cedar forest animals bhurban ~900w",
   keywords:
     "bhurban murree wildlife, bhurban nature guide, murree hills wildlife, cedar forest animals bhurban",
   eyebrow: "Backlink Guest Post · Why It's Special | ~900w",
   h1: "Bhurban Murree Wildlife and Nature Guide — The Cedar Estate Ecosystem",
   heroTagline:
-    "URL /bhurban-murree-wildlife-nature-guide Target KW bhurban murree wildlife, bhurban nature guide, murree hills wildlife, cedar forest animals bhurban",
+    "bhurban murree wildlife, bhurban nature guide, murree hills wildlife, cedar forest animals bhurban ~900w",
   heroImage: article668Hero,
   blocks: [
     {
@@ -20961,13 +17926,13 @@ export const article669: Article = {
   slug: "anniversary-birthday-bhurban-cedar-estate",
   title: "Anniversary and Birthday Celebrations at Bhurban Cedar Estate",
   metaDescription:
-    "URL /anniversary-birthday-bhurban-cedar-estate Target KW anniversary bhurban, birthday celebration bhurban, milestone celebration bhurban murree",
+    "anniversary bhurban, birthday celebration bhurban, milestone celebration bhurban murree ~700w Anniversary and Birthday Celebrations at the Bhurban Cedar Estate",
   keywords:
     "anniversary bhurban, birthday celebration bhurban, milestone celebration bhurban murree",
   eyebrow: "Backlink Guest Post · Private garden for the family gathering + fire pit | ~700w",
   h1: "Anniversary and Birthday Celebrations at Bhurban Cedar Estate",
   heroTagline:
-    "URL /anniversary-birthday-bhurban-cedar-estate Target KW anniversary bhurban, birthday celebration bhurban, milestone celebration bhurban murree",
+    "anniversary bhurban, birthday celebration bhurban, milestone celebration bhurban murree ~700w Anniversary and Birthday Celebrations at the Bhurban Cedar Estate",
   heroImage: article669Hero,
   blocks: [
     {
@@ -21029,13 +17994,13 @@ export const article670: Article = {
   slug: "cedar-estate-dawn-walk-himalaya-villas",
   title: "/cedar-estate-dawn-walk-himalaya-villas cedar estate dawn walk bhurban, himalaya villas dawn walk, cedar forest morning walk bhurban",
   metaDescription:
-    "Target KW cedar estate dawn walk bhurban, himalaya villas dawn walk, cedar forest morning walk bhurban",
+    "cedar estate dawn walk bhurban, himalaya villas dawn walk, cedar forest morning walk bhurban ~800w 5:30am — The Koklass Begins",
   keywords:
     "cedar estate dawn walk bhurban, himalaya villas dawn walk, cedar forest morning walk bhurban",
   eyebrow: "Backlink Guest Post · The first directional light of the day appears above the eastern ridge at approximately 6am-6:15am depending on season. In summe...",
   h1: "/cedar-estate-dawn-walk-himalaya-villas cedar estate dawn walk bhurban, himalaya villas dawn walk, cedar forest morning walk bhurban",
   heroTagline:
-    "Target KW cedar estate dawn walk bhurban, himalaya villas dawn walk, cedar forest morning walk bhurban",
+    "cedar estate dawn walk bhurban, himalaya villas dawn walk, cedar forest morning walk bhurban ~800w 5:30am — The Koklass Begins",
   heroImage: article670Hero,
   blocks: [
     {
@@ -21125,13 +18090,13 @@ export const article671: Article = {
   slug: "bhurban-vs-galiyat-geography",
   title: "Bhurban vs the Galiyat — Understanding the Murree Hills Geography",
   metaDescription:
-    "URL /bhurban-vs-galiyat-geography Target KW bhurban vs galiyat, galiyat vs bhurban, bhurban murree hills geography, murree galiyat which is better",
+    "bhurban vs galiyat, galiyat vs bhurban, bhurban murree hills geography, murree galiyat which is better",
   keywords:
     "bhurban vs galiyat, galiyat vs bhurban, bhurban murree hills geography, murree galiyat which is better",
   eyebrow: "Backlink Guest Post · Punjab | ~700w",
   h1: "Bhurban vs the Galiyat — Understanding the Murree Hills Geography",
   heroTagline:
-    "URL /bhurban-vs-galiyat-geography Target KW bhurban vs galiyat, galiyat vs bhurban, bhurban murree hills geography, murree galiyat which is better",
+    "bhurban vs galiyat, galiyat vs bhurban, bhurban murree hills geography, murree galiyat which is better",
   heroImage: article671Hero,
   blocks: [
     {
@@ -21148,6 +18113,18 @@ export const article671: Article = {
       text: "The Murree hills form a northeast-trending ridge at approximately 6,500-8,700 feet elevation. The ridge runs approximately 60km from its southwestern end (Bhurban, 6,800 feet) through Murree town (7,500 feet) and along the Galiyat chain to its highest accessible point at Mushkpuri Top (9,230 feet).",
     },
     {
+      type: "comparison",
+      heading: "Bhurban vs the Galiyat — Understanding the Murree Hills Geography",
+      columns: [
+        "Feature",
+        "Option A",
+        "Option B",
+      ],
+      rows: [
+        { feature: "Authority", a: "Cluster 8", b: "~700w" },
+      ],
+    },
+    {
       type: "section",
       eyebrow: "Bhurban vs the Galiyat",
       heading: "Bhurban vs the Galiyat — The Murree Hills Geography Explained",
@@ -21155,10 +18132,6 @@ export const article671: Article = {
         "❓ What is the difference between Bhurban and the Galiyat?",
         "Bhurban is the western end of the Murree ridge — in Punjab province, 47km from Islamabad, 6,800 feet. The Galiyat (also Galyat) is the eastern extension of the same ridge chain into KPK province — encompassing Ghora Gali, Changla Gali, Ayubia, and Nathia Gali. Bhurban and the Galiyat are on the same physical ridge, approximately 30km apart at their...",
       ],
-      image: {
-        src: article671Image2,
-        alt: "Bhurban vs the Galiyat — The Murree Hills Geography Explained",
-      },
     },
     {
       type: "section",
@@ -21167,6 +18140,10 @@ export const article671: Article = {
       paragraphs: [
         "6,800 ft",
       ],
+      image: {
+        src: article671Image2,
+        alt: "Bhurban",
+      },
     },
     {
       type: "section",
@@ -21178,10 +18155,6 @@ export const article671: Article = {
         "Murree town (Mall Road)",
         "7,500 ft",
       ],
-      image: {
-        src: article671Image2,
-        alt: "Punjab",
-      },
     },
     {
       type: "section",
@@ -21191,6 +18164,10 @@ export const article671: Article = {
         "55km — 60 min",
         "Bazaar, colonial heritage, Kashmir Point",
       ],
+      image: {
+        src: article671Image2,
+        alt: "Punjab",
+      },
     },
     {
       type: "section",
@@ -21199,10 +18176,6 @@ export const article671: Article = {
       paragraphs: [
         "7,200 ft",
       ],
-      image: {
-        src: article671Image2,
-        alt: "Ghora Gali",
-      },
     },
     {
       type: "section",
@@ -21211,6 +18184,10 @@ export const article671: Article = {
       paragraphs: [
         "8,000 ft",
       ],
+      image: {
+        src: article671Image2,
+        alt: "Ayubia",
+      },
     },
     {
       type: "section",
@@ -21219,10 +18196,6 @@ export const article671: Article = {
       paragraphs: [
         "8,000 ft",
       ],
-      image: {
-        src: article671Image2,
-        alt: "Nathia Gali",
-      },
     },
     {
       type: "section",
@@ -21231,6 +18204,10 @@ export const article671: Article = {
       paragraphs: [
         "9,230 ft",
       ],
+      image: {
+        src: article671Image2,
+        alt: "Mushkpuri Top",
+      },
     },
     {
       type: "section",
@@ -21239,10 +18216,6 @@ export const article671: Article = {
       paragraphs: [
         "The Bhurban Base + Galiyat Day Trip Strategy",
       ],
-      image: {
-        src: article671Image2,
-        alt: "Highest accessible Galyat peak",
-      },
     },
     {
       type: "related",
@@ -21264,13 +18237,13 @@ export const article672: Article = {
   slug: "murree-hills-pakistan-geography",
   title: "Murree Hills Pakistan — The Complete Geographic and Tourism Context",
   metaDescription:
-    "URL /murree-hills-pakistan-geography Target KW murree hills pakistan, murree hills tourism, sub himalayan murree hills, murree punjab pakistan",
+    "murree hills pakistan, murree hills tourism, sub himalayan murree hills, murree punjab pakistan ~900w",
   keywords:
     "murree hills pakistan, murree hills tourism, sub himalayan murree hills, murree punjab pakistan",
   eyebrow: "Backlink Guest Post · Authority | Cluster 8 | ~900w | ~900w",
   h1: "Murree Hills Pakistan — The Complete Geographic and Tourism Context",
   heroTagline:
-    "URL /murree-hills-pakistan-geography Target KW murree hills pakistan, murree hills tourism, sub himalayan murree hills, murree punjab pakistan",
+    "murree hills pakistan, murree hills tourism, sub himalayan murree hills, murree punjab pakistan ~900w",
   heroImage: article672Hero,
   blocks: [
     {
@@ -21312,13 +18285,13 @@ export const article673: Article = {
   slug: "bhurban-cedar-estate-pre-arrival-checklist",
   title: "Bhurban Murree Cedar Estate — The Pre-Arrival Checklist",
   metaDescription:
-    "URL /bhurban-cedar-estate-pre-arrival-checklist Target KW bhurban murree pre arrival checklist, what to bring bhurban murree, bhurban packing list, what to pack cedar estate",
+    "bhurban murree pre arrival checklist, what to bring bhurban murree, bhurban packing list, what to pack cedar estate",
   keywords:
     "bhurban murree pre arrival checklist, what to bring bhurban murree, bhurban packing list, what to pack cedar estate",
   eyebrow: "Backlink Guest Post · Planning | Cluster 11 | ~700w | ~700w",
   h1: "Bhurban Murree Cedar Estate — The Pre-Arrival Checklist",
   heroTagline:
-    "URL /bhurban-cedar-estate-pre-arrival-checklist Target KW bhurban murree pre arrival checklist, what to bring bhurban murree, bhurban packing list, what to pack cedar estate",
+    "bhurban murree pre arrival checklist, what to bring bhurban murree, bhurban packing list, what to pack cedar estate",
   heroImage: article673Hero,
   blocks: [
     {
@@ -21402,13 +18375,13 @@ export const article674: Article = {
   slug: "bhurban-murree-all-distances",
   title: "Bhurban Murree — All Distances, Drive Times and Route Guide",
   metaDescription:
-    "URL /bhurban-murree-all-distances Target KW bhurban murree distance, bhurban murree how far, distance bhurban murree attractions, bhurban to murree distance drive",
+    "bhurban murree distance, bhurban murree how far, distance bhurban murree attractions, bhurban to murree distance drive",
   keywords:
     "bhurban murree distance, bhurban murree how far, distance bhurban murree attractions, bhurban to murree distance drive",
   eyebrow: "Backlink Guest Post · 3km | ~800w",
   h1: "Bhurban Murree — All Distances, Drive Times and Route Guide",
   heroTagline:
-    "URL /bhurban-murree-all-distances Target KW bhurban murree distance, bhurban murree how far, distance bhurban murree attractions, bhurban to murree distance drive",
+    "bhurban murree distance, bhurban murree how far, distance bhurban murree attractions, bhurban to murree distance drive",
   heroImage: article674Hero,
   blocks: [
     {
@@ -21638,13 +18611,13 @@ export const article675: Article = {
   slug: "garden-villa-retreat-bhurban",
   title: "Garden Villa Retreat at Himalaya Villas Bhurban — The Family Cedar Garden Villa",
   metaDescription:
-    "URL /garden-villa-retreat-bhurban Target KW garden villa retreat bhurban, himalaya villas garden villa, enclosed garden villa bhurban, family villa bhurban garden",
+    "garden villa retreat bhurban, himalaya villas garden villa, enclosed garden villa bhurban, family villa bhurban garden",
   keywords:
     "garden villa retreat bhurban, himalaya villas garden villa, enclosed garden villa bhurban, family villa bhurban garden",
   eyebrow: "Backlink Guest Post · The enclosed garden of the Garden Villa Retreat is within the Himalaya Villas cedar estate — the mature deodar cedar trees form ...",
   h1: "Garden Villa Retreat at Himalaya Villas Bhurban — The Family Cedar Garden Villa",
   heroTagline:
-    "URL /garden-villa-retreat-bhurban Target KW garden villa retreat bhurban, himalaya villas garden villa, enclosed garden villa bhurban, family villa bhurban garden",
+    "garden villa retreat bhurban, himalaya villas garden villa, enclosed garden villa bhurban, family villa bhurban garden",
   heroImage: article675Hero,
   blocks: [
     {
@@ -21723,13 +18696,13 @@ export const article676: Article = {
   slug: "islamabad-murree-expressway-guide",
   title: "Islamabad Murree Expressway — Complete Guide and Toll Plaza Information",
   metaDescription:
-    "URL /islamabad-murree-expressway-guide Target KW islamabad murree expressway, murree expressway, murree expressway toll plaza, murree expressway directions",
+    "islamabad murree expressway, murree expressway, murree expressway toll plaza, murree expressway directions",
   keywords:
     "islamabad murree expressway, murree expressway, murree expressway toll plaza, murree expressway directions",
   eyebrow: "Backlink Guest Post · National Highways and Motorway Police — 24/7 patrol | ~1,000w",
   h1: "Islamabad Murree Expressway — Complete Guide and Toll Plaza Information",
   heroTagline:
-    "URL /islamabad-murree-expressway-guide Target KW islamabad murree expressway, murree expressway, murree expressway toll plaza, murree expressway directions",
+    "islamabad murree expressway, murree expressway, murree expressway toll plaza, murree expressway directions",
   heroImage: article676Hero,
   blocks: [
     {
@@ -21879,13 +18852,13 @@ export const article677: Article = {
   slug: "stargazing-bhurban-murree",
   title: "Stargazing at Bhurban Murree — The Cedar Estate Night Sky Guide",
   metaDescription:
-    "URL /stargazing-bhurban-murree Target KW stargazing bhurban murree, bhurban night sky, murree stargazing, cedar estate stars bhurban",
+    "stargazing bhurban murree, bhurban night sky, murree stargazing, cedar estate stars bhurban ~700w Stargazing at Bhurban — The Cedar Estate Night Sky Guide",
   keywords:
     "stargazing bhurban murree, bhurban night sky, murree stargazing, cedar estate stars bhurban",
   eyebrow: "Backlink Guest Post · Bhurban is not a dark sky site in the formal astronomical sense — Islamabad's light dome is visible to the southwest on the hori...",
   h1: "Stargazing at Bhurban Murree — The Cedar Estate Night Sky Guide",
   heroTagline:
-    "URL /stargazing-bhurban-murree Target KW stargazing bhurban murree, bhurban night sky, murree stargazing, cedar estate stars bhurban",
+    "stargazing bhurban murree, bhurban night sky, murree stargazing, cedar estate stars bhurban ~700w Stargazing at Bhurban — The Cedar Estate Night Sky Guide",
   heroImage: article677Hero,
   blocks: [
     {
@@ -21961,13 +18934,13 @@ export const article678: Article = {
   slug: "bhurban-murree-for-lahore-families",
   title: "Bhurban Murree for Lahore Families — The 3h 30min Cedar Estate Escape",
   metaDescription:
-    "URL /bhurban-murree-for-lahore-families Target KW bhurban murree for lahore families, lahore to bhurban trip, lahore families bhurban murree cedar estate",
+    "bhurban murree for lahore families, lahore to bhurban trip, lahore families bhurban murree cedar estate",
   keywords:
     "bhurban murree for lahore families, lahore to bhurban trip, lahore families bhurban murree cedar estate",
   eyebrow: "Backlink Guest Post · Sunday | ~800w",
   h1: "Bhurban Murree for Lahore Families — The 3h 30min Cedar Estate Escape",
   heroTagline:
-    "URL /bhurban-murree-for-lahore-families Target KW bhurban murree for lahore families, lahore to bhurban trip, lahore families bhurban murree cedar estate",
+    "bhurban murree for lahore families, lahore to bhurban trip, lahore families bhurban murree cedar estate",
   heroImage: article678Hero,
   blocks: [
     {
@@ -22053,13 +19026,13 @@ export const article679: Article = {
   slug: "murree-expressway-restaurants",
   title: "Murree Expressway Restaurants — What's Available on the N-75 Journey",
   metaDescription:
-    "URL /murree-expressway-restaurants Target KW murree expressway restaurants, restaurants on murree expressway, monal murree expressway, food on n75 murree road",
+    "murree expressway restaurants, restaurants on murree expressway, monal murree expressway, food on n75 murree road",
   keywords:
     "murree expressway restaurants, restaurants on murree expressway, monal murree expressway, food on n75 murree road",
   eyebrow: "Backlink Guest Post · ~700w",
   h1: "Murree Expressway Restaurants — What's Available on the N-75 Journey",
   heroTagline:
-    "URL /murree-expressway-restaurants Target KW murree expressway restaurants, restaurants on murree expressway, monal murree expressway, food on n75 murree road",
+    "murree expressway restaurants, restaurants on murree expressway, monal murree expressway, food on n75 murree road",
   heroImage: article679Hero,
   blocks: [
     {
@@ -22120,13 +19093,13 @@ export const article680: Article = {
   slug: "islamabad-to-bhurban-guide",
   title: "Islamabad to Bhurban — The Definitive 2026 Route and Driving Guide",
   metaDescription:
-    "URL /islamabad-to-bhurban-guide Target KW islamabad to bhurban, islamabad to bhurban drive, islamabad bhurban route, how to get to bhurban from islamabad",
+    "islamabad to bhurban, islamabad to bhurban drive, islamabad bhurban route, how to get to bhurban from islamabad",
   keywords:
     "islamabad to bhurban, islamabad to bhurban drive, islamabad bhurban route, how to get to bhurban from islamabad",
   eyebrow: "Backlink Guest Post · Expected Arrival | ~900w",
   h1: "Islamabad to Bhurban — The Definitive 2026 Route and Driving Guide",
   heroTagline:
-    "URL /islamabad-to-bhurban-guide Target KW islamabad to bhurban, islamabad to bhurban drive, islamabad bhurban route, how to get to bhurban from islamabad",
+    "islamabad to bhurban, islamabad to bhurban drive, islamabad bhurban route, how to get to bhurban from islamabad",
   heroImage: article680Hero,
   blocks: [
     {
@@ -22286,13 +19259,13 @@ export const article681: Article = {
   slug: "bhurban-pakistan-history-heritage",
   title: "Bhurban Pakistan — History, Heritage and the Cedar Estate",
   metaDescription:
-    "URL /bhurban-pakistan-history-heritage Target KW bhurban pakistan, bhurban pakistan history, bhurban murree history, bhurban heritage",
+    "bhurban pakistan, bhurban pakistan history, bhurban murree history, bhurban heritage ~800w Bhurban Pakistan — History, Heritage and the Cedar Estate",
   keywords:
     "bhurban pakistan, bhurban pakistan history, bhurban murree history, bhurban heritage",
   eyebrow: "Backlink Guest Post · The Himalaya Villas cedar estate occupies a portion of the Bhurban ridge that was historically developed as a colonial-era resid...",
   h1: "Bhurban Pakistan — History, Heritage and the Cedar Estate",
   heroTagline:
-    "URL /bhurban-pakistan-history-heritage Target KW bhurban pakistan, bhurban pakistan history, bhurban murree history, bhurban heritage",
+    "bhurban pakistan, bhurban pakistan history, bhurban murree history, bhurban heritage ~800w Bhurban Pakistan — History, Heritage and the Cedar Estate",
   heroImage: article681Hero,
   blocks: [
     {
@@ -22320,13 +19293,13 @@ export const article682: Article = {
   slug: "himalaya-villas-full-estate-buyout",
   title: "Himalaya Villas Full Estate Buyout — The Extended Family Bhurban Guide",
   metaDescription:
-    "URL /himalaya-villas-full-estate-buyout Target KW himalaya villas full estate bhurban, bhurban full estate buyout, himalaya villas all 12 villas, bhurban private estate booking all villas",
+    "himalaya villas full estate bhurban, bhurban full estate buyout, himalaya villas all 12 villas, bhurban private estate booking all villas",
   keywords:
     "himalaya villas full estate bhurban, bhurban full estate buyout, himalaya villas all 12 villas, bhurban private estate booking all villas",
   eyebrow: "Backlink Guest Post · Target KW | ~700w",
   h1: "Himalaya Villas Full Estate Buyout — The Extended Family Bhurban Guide",
   heroTagline:
-    "URL /himalaya-villas-full-estate-buyout Target KW himalaya villas full estate bhurban, bhurban full estate buyout, himalaya villas all 12 villas, bhurban private estate booking all villas",
+    "himalaya villas full estate bhurban, bhurban full estate buyout, himalaya villas all 12 villas, bhurban private estate booking all villas",
   heroImage: article682Hero,
   blocks: [
     {
@@ -22408,13 +19381,13 @@ export const article683: Article = {
   slug: "murree-bhurban-in-december-new-year",
   title: "Bhurban Murree in December and New Year — The Winter Cedar Estate Guide",
   metaDescription:
-    "URL /murree-bhurban-in-december-new-year Target KW murree bhurban in december, bhurban new year, bhurban december cedar estate, murree bhurban christmas new year",
+    "murree bhurban in december, bhurban new year, bhurban december cedar estate, murree bhurban christmas new year",
   keywords:
     "murree bhurban in december, bhurban new year, bhurban december cedar estate, murree bhurban christmas new year",
   eyebrow: "Backlink Guest Post · Day 4 | ~800w",
   h1: "Bhurban Murree in December and New Year — The Winter Cedar Estate Guide",
   heroTagline:
-    "URL /murree-bhurban-in-december-new-year Target KW murree bhurban in december, bhurban new year, bhurban december cedar estate, murree bhurban christmas new year",
+    "murree bhurban in december, bhurban new year, bhurban december cedar estate, murree bhurban christmas new year",
   heroImage: article683Hero,
   blocks: [
     {
@@ -22495,13 +19468,13 @@ export const article684: Article = {
   slug: "bhurban-murree-photography-guide",
   title: "Bhurban Murree Photography Guide — The Cedar Estate Shots and Best Locations",
   metaDescription:
-    "URL /bhurban-murree-photography-guide Target KW bhurban murree photography, cedar estate photography, bhurban instagram spots, bhurban photography guide",
+    "bhurban murree photography, cedar estate photography, bhurban instagram spots, bhurban photography guide",
   keywords:
     "bhurban murree photography, cedar estate photography, bhurban instagram spots, bhurban photography guide",
   eyebrow: "Backlink Guest Post · Location: Himalayan Penthouse panoramic balcony or Sunset Suite balcony. Timing: 7:00-8:00am in summer (July-August monsoon morn...",
   h1: "Bhurban Murree Photography Guide — The Cedar Estate Shots and Best Locations",
   heroTagline:
-    "URL /bhurban-murree-photography-guide Target KW bhurban murree photography, cedar estate photography, bhurban instagram spots, bhurban photography guide",
+    "bhurban murree photography, cedar estate photography, bhurban instagram spots, bhurban photography guide",
   heroImage: article684Hero,
   blocks: [
     {
@@ -22581,13 +19554,13 @@ export const article685: Article = {
   slug: "eid-at-bhurban-cedar-estate",
   title: "Eid at the Bhurban Cedar Estate — Planning the Ultimate Eid Gathering",
   metaDescription:
-    "URL /eid-at-bhurban-cedar-estate Target KW eid bhurban cedar estate, eid murree bhurban, bhurban eid package, himalaya villas eid gathering",
+    "eid bhurban cedar estate, eid murree bhurban, bhurban eid package, himalaya villas eid gathering ~800w",
   keywords:
     "eid bhurban cedar estate, eid murree bhurban, bhurban eid package, himalaya villas eid gathering",
   eyebrow: "Backlink Guest Post · The Extended Family Model | ~800w",
   h1: "Eid at the Bhurban Cedar Estate — Planning the Ultimate Eid Gathering",
   heroTagline:
-    "URL /eid-at-bhurban-cedar-estate Target KW eid bhurban cedar estate, eid murree bhurban, bhurban eid package, himalaya villas eid gathering",
+    "eid bhurban cedar estate, eid murree bhurban, bhurban eid package, himalaya villas eid gathering ~800w",
   heroImage: article685Hero,
   blocks: [
     {
@@ -22610,13 +19583,16 @@ export const article685: Article = {
       ],
     },
     {
-      type: "cta",
-      eyebrow: "Eid Booking Configuration",
-      heading: "Eid Booking Configuration",
-      text: "",
-      buttonLabel: "WhatsApp: +92 304 567 9000 | wa.me/923045679000",
-      buttonHref: "https://wa.me/923045679000",
-      footnote: "Direct bookings receive priority response and best available rate.",
+      type: "section",
+      eyebrow: "Recommended Villas",
+      heading: "Recommended Villas",
+      paragraphs: [
+        "Nightly Rate (est.)",
+      ],
+      image: {
+        src: article685Image2,
+        alt: "Recommended Villas",
+      },
     },
     {
       type: "section",
@@ -22684,13 +19660,13 @@ export const article686: Article = {
   slug: "himalayan-penthouse-bhurban",
   title: "Himalayan Penthouse at Himalaya Villas — The 360° Panoramic Villa Guide",
   metaDescription:
-    "URL /himalayan-penthouse-bhurban Target KW himalayan penthouse bhurban, himalaya villas penthouse, 360 view villa bhurban murree",
+    "himalayan penthouse bhurban, himalaya villas penthouse, 360 view villa bhurban murree ~700w Unlike a hotel room view (looking out over a car park or hotel grounds), the Himalayan Penthouse balcony loo...",
   keywords:
     "himalayan penthouse bhurban, himalaya villas penthouse, 360 view villa bhurban murree",
   eyebrow: "Backlink Guest Post · The 360° Panoramic Balcony | ~700w",
   h1: "Himalayan Penthouse at Himalaya Villas — The 360° Panoramic Villa Guide",
   heroTagline:
-    "URL /himalayan-penthouse-bhurban Target KW himalayan penthouse bhurban, himalaya villas penthouse, 360 view villa bhurban murree",
+    "himalayan penthouse bhurban, himalaya villas penthouse, 360 view villa bhurban murree ~700w Unlike a hotel room view (looking out over a car park or hotel grounds), the Himalayan Penthouse balcony looks out over the mature cedar estate in all directions — the 30-40 metre cedar canopy at and below eye level, the cedar tops creating the specific visual of a human-scale mountain forest from above. Th...",
   heroImage: article686Hero,
   blocks: [
     {
@@ -22731,13 +19707,12 @@ export const article686: Article = {
       },
     },
     {
-      type: "cta",
+      type: "section",
       eyebrow: "Who Should Book the Himalayan Penthouse",
       heading: "Who Should Book the Himalayan Penthouse",
-      text: "Couples who want the widest mountain view at Himalaya Villas — the 360° balcony is the most complete panoramic experience on the estate",
-      buttonLabel: "WhatsApp: +92 304 567 9000 | wa.me/923045679000",
-      buttonHref: "https://wa.me/923045679000",
-      footnote: "Direct bookings receive priority response and best available rate.",
+      paragraphs: [
+        "Couples who want the widest mountain view at Himalaya Villas — the 360° balcony is the most complete panoramic experience on the estate",
+      ],
     },
     {
       type: "section",
@@ -22779,13 +19754,13 @@ export const article687: Article = {
   slug: "alpine-family-lodge-bhurban",
   title: "Alpine Family Lodge at Himalaya Villas — The Largest Family Cedar Villa",
   metaDescription:
-    "URL /alpine-family-lodge-bhurban Target KW alpine family lodge bhurban, himalaya villas family lodge, large family villa bhurban murree cedar estate",
+    "alpine family lodge bhurban, himalaya villas family lodge, large family villa bhurban murree cedar estate",
   keywords:
     "alpine family lodge bhurban, himalaya villas family lodge, large family villa bhurban murree cedar estate",
   eyebrow: "Backlink Guest Post · Mature cedar estate accessible from the villa gate | ~700w",
   h1: "Alpine Family Lodge at Himalaya Villas — The Largest Family Cedar Villa",
   heroTagline:
-    "URL /alpine-family-lodge-bhurban Target KW alpine family lodge bhurban, himalaya villas family lodge, large family villa bhurban murree cedar estate",
+    "alpine family lodge bhurban, himalaya villas family lodge, large family villa bhurban murree cedar estate",
   heroImage: article687Hero,
   blocks: [
     {
@@ -22855,13 +19830,13 @@ export const article688: Article = {
   slug: "murree-bhurban-trip-cost",
   title: "Bhurban Murree Trip Cost — What It Actually Costs for a Family in 2026",
   metaDescription:
-    "URL /murree-bhurban-trip-cost Target KW bhurban murree trip cost, how much does bhurban murree trip cost, bhurban murree budget, bhurban murree expense guide",
+    "bhurban murree trip cost, how much does bhurban murree trip cost, bhurban murree budget, bhurban murree expense guide",
   keywords:
     "bhurban murree trip cost, how much does bhurban murree trip cost, bhurban murree budget, bhurban murree expense guide",
   eyebrow: "Backlink Guest Post · Target KW | ~800w",
   h1: "Bhurban Murree Trip Cost — What It Actually Costs for a Family in 2026",
   heroTagline:
-    "URL /murree-bhurban-trip-cost Target KW bhurban murree trip cost, how much does bhurban murree trip cost, bhurban murree budget, bhurban murree expense guide",
+    "bhurban murree trip cost, how much does bhurban murree trip cost, bhurban murree budget, bhurban murree expense guide",
   heroImage: article688Hero,
   blocks: [
     {
@@ -23059,13 +20034,13 @@ export const article689: Article = {
   slug: "bhurban-cedar-estate-pakistani-diaspora",
   title: "Bhurban Cedar Estate for Pakistani Diaspora — The Coming Home Guide",
   metaDescription:
-    "URL /bhurban-cedar-estate-pakistani-diaspora Target KW bhurban murree for pakistani diaspora, bhurban overseas pakistanis, himalaya villas for nrps, bhurban murree from uk dubai",
+    "bhurban murree for pakistani diaspora, bhurban overseas pakistanis, himalaya villas for nrps, bhurban murree from uk dubai",
   keywords:
     "bhurban murree for pakistani diaspora, bhurban overseas pakistanis, himalaya villas for nrps, bhurban murree from uk dubai",
   eyebrow: "Backlink Guest Post · Islamabad International Airport (BIAP) to Himalaya Villas: 60km, under 1 hour. Diaspora families arriving at BIAP can be at the ...",
   h1: "Bhurban Cedar Estate for Pakistani Diaspora — The Coming Home Guide",
   heroTagline:
-    "URL /bhurban-cedar-estate-pakistani-diaspora Target KW bhurban murree for pakistani diaspora, bhurban overseas pakistanis, himalaya villas for nrps, bhurban murree from uk dubai",
+    "bhurban murree for pakistani diaspora, bhurban overseas pakistanis, himalaya villas for nrps, bhurban murree from uk dubai",
   heroImage: article689Hero,
   blocks: [
     {
@@ -23169,13 +20144,13 @@ export const article690: Article = {
   slug: "bhurban-cedar-estate-for-couples",
   title: "Bhurban Cedar Estate for Couples — The Romantic Mountain Guide",
   metaDescription:
-    "URL /bhurban-cedar-estate-for-couples Target KW bhurban cedar estate for couples, bhurban murree romantic, couples bhurban murree guide",
+    "bhurban cedar estate for couples, bhurban murree romantic, couples bhurban murree guide ~700w Bhurban Cedar Estate for Couples — The Romantic Mountain Guide",
   keywords:
     "bhurban cedar estate for couples, bhurban murree romantic, couples bhurban murree guide",
   eyebrow: "Backlink Guest Post · Romantic Feature | ~700w",
   h1: "Bhurban Cedar Estate for Couples — The Romantic Mountain Guide",
   heroTagline:
-    "URL /bhurban-cedar-estate-for-couples Target KW bhurban cedar estate for couples, bhurban murree romantic, couples bhurban murree guide",
+    "bhurban cedar estate for couples, bhurban murree romantic, couples bhurban murree guide ~700w Bhurban Cedar Estate for Couples — The Romantic Mountain Guide",
   heroImage: article690Hero,
   blocks: [
     {
@@ -23282,13 +20257,13 @@ export const article691: Article = {
   slug: "bhurban-murree-trip-planning-timeline",
   title: "Bhurban Murree Trip Planning — The Month-by-Month Booking Timeline",
   metaDescription:
-    "URL /bhurban-murree-trip-planning-timeline Target KW bhurban murree trip planning, when to book bhurban murree, bhurban murree advance booking guide",
+    "bhurban murree trip planning, when to book bhurban murree, bhurban murree advance booking guide ~700w",
   keywords:
     "bhurban murree trip planning, when to book bhurban murree, bhurban murree advance booking guide",
   eyebrow: "Backlink Guest Post · August | ~700w",
   h1: "Bhurban Murree Trip Planning — The Month-by-Month Booking Timeline",
   heroTagline:
-    "URL /bhurban-murree-trip-planning-timeline Target KW bhurban murree trip planning, when to book bhurban murree, bhurban murree advance booking guide",
+    "bhurban murree trip planning, when to book bhurban murree, bhurban murree advance booking guide ~700w",
   heroImage: article691Hero,
   blocks: [
     {
@@ -23297,22 +20272,16 @@ export const article691: Article = {
       answer: "Bhurban Murree booking lead times by period: Eid holidays (10-14 weeks minimum); January snowfall weekends (8-12 weeks); December 21-31/New Year (10-12 weeks); July-August peak (8-10 weeks); October (3-5 weeks); April-May (1-2 weeks); November-March (1 week). The general principle: the more people want to be at Bhurban at a specific time, the further in advance they book it. Eid and December peak fill the fastest. The Bhurban Murree booking timeline is the most important practical planning decision after choosing the villa — getting the lead time right determines whether the preferred dates and villa are available. This guide maps the entire year's booking urgency so families can plan accord...",
     },
     {
-      type: "cta",
-      eyebrow: "Bhurban Murree Trip Planning — The Month-by-Month Booking Timeline",
-      heading: "Bhurban Murree Trip Planning — The Month-by-Month Booking Timeline",
-      text: "Planning | Cluster 11 | ~700w",
-      buttonLabel: "WhatsApp: +92 304 567 9000 | wa.me/923045679000",
-      buttonHref: "https://wa.me/923045679000",
-      footnote: "Direct bookings receive priority response and best available rate.",
-    },
-    {
-      type: "cta",
-      eyebrow: "Bhurban Murree Trip Planning — The Booking Timeline Guide",
+      type: "section",
+      eyebrow: "Bhurban Murree Trip Planning",
       heading: "Bhurban Murree Trip Planning — The Booking Timeline Guide",
-      text: "❓ How far in advance should I book Bhurban Murree?",
-      buttonLabel: "WhatsApp: +92 304 567 9000 | wa.me/923045679000",
-      buttonHref: "https://wa.me/923045679000",
-      footnote: "Direct bookings receive priority response and best available rate.",
+      paragraphs: [
+        "❓ How far in advance should I book Bhurban Murree?",
+      ],
+      image: {
+        src: article691Image1,
+        alt: "Bhurban Murree Trip Planning — The Booking Timeline Guide",
+      },
     },
     {
       type: "section",
@@ -23321,10 +20290,6 @@ export const article691: Article = {
       paragraphs: [
         "The Bhurban Murree booking timeline is the most important practical planning decision after choosing the villa — getting the lead time right determines whether the preferred dates and villa are available. This guide maps the entire year's booking urgency so families can plan accordingly.",
       ],
-      image: {
-        src: article691Image2,
-        alt: "Bhurban Murree booking lead times by period: Eid holidays (10-14 weeks minimum); January snowfall we...",
-      },
     },
     {
       type: "section",
@@ -23333,6 +20298,10 @@ export const article691: Article = {
       paragraphs: [
         "10-14 weeks",
       ],
+      image: {
+        src: article691Image2,
+        alt: "Eid Al-Adha",
+      },
     },
     {
       type: "section",
@@ -23341,10 +20310,6 @@ export const article691: Article = {
       paragraphs: [
         "8-10 weeks",
       ],
-      image: {
-        src: article691Image2,
-        alt: "August",
-      },
     },
     {
       type: "section",
@@ -23353,6 +20318,10 @@ export const article691: Article = {
       paragraphs: [
         "3-4 weeks",
       ],
+      image: {
+        src: article691Image2,
+        alt: "June",
+      },
     },
     {
       type: "section",
@@ -23361,10 +20330,6 @@ export const article691: Article = {
       paragraphs: [
         "2-3 weeks",
       ],
-      image: {
-        src: article691Image2,
-        alt: "September",
-      },
     },
     {
       type: "section",
@@ -23373,6 +20338,10 @@ export const article691: Article = {
       paragraphs: [
         "1-2 weeks",
       ],
+      image: {
+        src: article691Image2,
+        alt: "April-May",
+      },
     },
     {
       type: "section",
@@ -23381,10 +20350,6 @@ export const article691: Article = {
       paragraphs: [
         "1 week",
       ],
-      image: {
-        src: article691Image2,
-        alt: "November",
-      },
     },
     {
       type: "section",
@@ -23393,6 +20358,10 @@ export const article691: Article = {
       paragraphs: [
         "1 week",
       ],
+      image: {
+        src: article691Image2,
+        alt: "February-March",
+      },
     },
     {
       type: "related",
@@ -23414,13 +20383,13 @@ export const article692: Article = {
   slug: "murree-bhurban-in-october",
   title: "Bhurban Murree in October — The Definitive Amber Season Guide",
   metaDescription:
-    "URL /murree-bhurban-in-october Target KW bhurban murree in october, murree october, bhurban in october, cedar estate october bhurban",
+    "bhurban murree in october, murree october, bhurban in october, cedar estate october bhurban ~1,000w Bhurban Murree in October — The Definitive Amber Cedar Season Guide",
   keywords:
     "bhurban murree in october, murree october, bhurban in october, cedar estate october bhurban",
   eyebrow: "Backlink Guest Post · Low-moderate | ~1,000w",
   h1: "Bhurban Murree in October — The Definitive Amber Season Guide",
   heroTagline:
-    "URL /murree-bhurban-in-october Target KW bhurban murree in october, murree october, bhurban in october, cedar estate october bhurban",
+    "bhurban murree in october, murree october, bhurban in october, cedar estate october bhurban ~1,000w Bhurban Murree in October — The Definitive Amber Cedar Season Guide",
   heroImage: article692Hero,
   blocks: [
     {
@@ -23548,13 +20517,13 @@ export const article693: Article = {
   slug: "murree-bhurban-snowfall-guide",
   title: "Murree Bhurban Snowfall — The Definitive Planning and Prediction Guide",
   metaDescription:
-    "URL /murree-bhurban-snowfall-guide Target KW murree bhurban snowfall, bhurban snowfall, murree snowfall guide, bhurban murree when does it snow",
+    "murree bhurban snowfall, bhurban snowfall, murree snowfall guide, bhurban murree when does it snow ~900w",
   keywords:
     "murree bhurban snowfall, bhurban snowfall, murree snowfall guide, bhurban murree when does it snow",
   eyebrow: "Backlink Guest Post · Step 1: Book the Right Window | ~900w",
   h1: "Murree Bhurban Snowfall — The Definitive Planning and Prediction Guide",
   heroTagline:
-    "URL /murree-bhurban-snowfall-guide Target KW murree bhurban snowfall, bhurban snowfall, murree snowfall guide, bhurban murree when does it snow",
+    "murree bhurban snowfall, bhurban snowfall, murree snowfall guide, bhurban murree when does it snow ~900w",
   heroImage: article693Hero,
   blocks: [
     {
@@ -23734,13 +20703,13 @@ export const article694: Article = {
   slug: "haven-resort-bhurban-guide",
   title: "Haven Resort Bhurban Murree — Guide and the Cedar Estate Alternative",
   metaDescription:
-    "URL /haven-resort-bhurban-guide Target KW haven resort bhurban, haven resort bhurban murree, haven resort bhurban prices",
+    "haven resort bhurban, haven resort bhurban murree, haven resort bhurban prices ~700w Haven Resort Bhurban Murree — What to Know and the Himalaya Villas Alternative",
   keywords:
     "haven resort bhurban, haven resort bhurban murree, haven resort bhurban prices",
   eyebrow: "Backlink Guest Post · Cluster | ~700w",
   h1: "Haven Resort Bhurban Murree — Guide and the Cedar Estate Alternative",
   heroTagline:
-    "URL /haven-resort-bhurban-guide Target KW haven resort bhurban, haven resort bhurban murree, haven resort bhurban prices",
+    "haven resort bhurban, haven resort bhurban murree, haven resort bhurban prices ~700w Haven Resort Bhurban Murree — What to Know and the Himalaya Villas Alternative",
   heroImage: article694Hero,
   blocks: [
     {
@@ -23811,13 +20780,13 @@ export const article695: Article = {
   slug: "bhurban-resort-guide",
   title: "Bhurban Resort Guide — Every Resort and the Cedar Estate Comparison",
   metaDescription:
-    "URL /bhurban-resort-guide Target KW bhurban resort, bhurban resort murree, resorts in bhurban, bhurban murree resort guide",
+    "bhurban resort, bhurban resort murree, resorts in bhurban, bhurban murree resort guide ~800w Bhurban Resort Guide — Every Option and the Cedar Estate Comparison",
   keywords:
     "bhurban resort, bhurban resort murree, resorts in bhurban, bhurban murree resort guide",
   eyebrow: "Backlink Guest Post · A resort (in the traditional sense) is a shared property: shared pool, shared grounds, shared restaurant, shared common areas. T...",
   h1: "Bhurban Resort Guide — Every Resort and the Cedar Estate Comparison",
   heroTagline:
-    "URL /bhurban-resort-guide Target KW bhurban resort, bhurban resort murree, resorts in bhurban, bhurban murree resort guide",
+    "bhurban resort, bhurban resort murree, resorts in bhurban, bhurban murree resort guide ~800w Bhurban Resort Guide — Every Option and the Cedar Estate Comparison",
   heroImage: article695Hero,
   blocks: [
     {
@@ -23830,6 +20799,18 @@ export const article695: Article = {
       text: "A resort (in the traditional sense) is a shared property: shared pool, shared grounds, shared restaurant, shared common areas. The resort experience is defined by the facilities available to all guests — the infrastructure that justifies the resort designation. PC Hotel Bhurban is the definitive Bhurban resort by this definition: 162 rooms, shared pool, spa, multiple restaurants, golf course, amphitheatre.",
     },
     {
+      type: "comparison",
+      heading: "Bhurban Resort Guide — Every Resort and the Cedar Estate Comparison",
+      columns: [
+        "Feature",
+        "Option A",
+        "Option B",
+      ],
+      rows: [
+        { feature: "Commercial Hub", a: "Cluster 1", b: "~800w" },
+      ],
+    },
+    {
       type: "section",
       eyebrow: "Bhurban Resort Guide",
       heading: "Bhurban Resort Guide — Every Option and the Cedar Estate Comparison",
@@ -23838,6 +20819,10 @@ export const article695: Article = {
         "Best Bhurban resorts 2026: (1) Himalaya Villas & Resorts (himalayavillas.com) — the only private cedar villa estate, PKR 39,000-70,000/villa/night, 12 exclusive-use villas; (2) Pearl Continental Hotel Bhurban (PC Bhurban, Marriott 5-star) — the benchmark 5-star mountain resort; (3) Haven Resort Bhurban — mid-range resort (confirm at Booking.com); (...",
         "'Bhurban resort' draws 390 monthly searches — the research-stage query from visitors comparing all resort options in Bhurban before choosing. This guide maps every significant Bhurban resort option, explains the model distinction between shared resort and private villa estate, and positions Himalaya Villas as the specific option for guests who want...",
       ],
+      image: {
+        src: article695Image2,
+        alt: "Bhurban Resort Guide — Every Option and the Cedar Estate Comparison",
+      },
     },
     {
       type: "section",
@@ -23846,10 +20831,6 @@ export const article695: Article = {
       paragraphs: [
         "5-star hotel resort (Marriott)",
       ],
-      image: {
-        src: article695Image2,
-        alt: "Pearl Continental Bhurban",
-      },
     },
     {
       type: "section",
@@ -23859,6 +20840,10 @@ export const article695: Article = {
         "PKR 35,000-75,000/room",
         "pchotels.com / Bonvoy",
       ],
+      image: {
+        src: article695Image2,
+        alt: "Premium chain",
+      },
     },
     {
       type: "section",
@@ -23868,10 +20853,6 @@ export const article695: Article = {
         "Confirm Booking.com",
         "Booking.com",
       ],
-      image: {
-        src: article695Image2,
-        alt: "Mid-range",
-      },
     },
     {
       type: "section",
@@ -23881,6 +20862,10 @@ export const article695: Article = {
         "Confirm hotelsone.com.pk",
         "hotelsone.com.pk",
       ],
+      image: {
+        src: article695Image2,
+        alt: "Mid-range",
+      },
     },
     {
       type: "section",
@@ -23889,10 +20874,6 @@ export const article695: Article = {
       paragraphs: [
         "Villa/cottage properties",
       ],
-      image: {
-        src: article695Image2,
-        alt: "Bhurban Villas properties",
-      },
     },
     {
       type: "section",
@@ -23901,6 +20882,10 @@ export const article695: Article = {
       paragraphs: [
         "One villa < 3 hotel rooms; adds private garden",
       ],
+      image: {
+        src: article695Image2,
+        alt: "Himalaya Villas Garden Villa",
+      },
     },
     {
       type: "related",
@@ -23922,13 +20907,13 @@ export const article696: Article = {
   slug: "pindi-point-murree-guide",
   title: "Pindi Point Murree — Complete Chairlift and Viewpoint Guide",
   metaDescription:
-    "URL /pindi-point-murree-guide Target KW pindi point murree, pindi point murree chairlift, pindi point chairlift, pindi point murree price",
+    "pindi point murree, pindi point murree chairlift, pindi point chairlift, pindi point murree price ~800w",
   keywords:
     "pindi point murree, pindi point murree chairlift, pindi point chairlift, pindi point murree price",
   eyebrow: "Backlink Guest Post · Type | ~800w",
   h1: "Pindi Point Murree — Complete Chairlift and Viewpoint Guide",
   heroTagline:
-    "URL /pindi-point-murree-guide Target KW pindi point murree, pindi point murree chairlift, pindi point chairlift, pindi point murree price",
+    "pindi point murree, pindi point murree chairlift, pindi point chairlift, pindi point murree price ~800w",
   heroImage: article696Hero,
   blocks: [
     {
@@ -24114,13 +21099,13 @@ export const article697: Article = {
   slug: "murree-bhurban-in-january",
   title: "Bhurban Murree in January — The Snowfall Season Definitive Guide",
   metaDescription:
-    "URL /murree-bhurban-in-january Target KW bhurban murree in january, murree january, bhurban in january, bhurban murree january snowfall",
+    "bhurban murree in january, murree january, bhurban in january, bhurban murree january snowfall ~1,000w",
   keywords:
     "bhurban murree in january, murree january, bhurban in january, bhurban murree january snowfall",
   eyebrow: "Backlink Guest Post · Even without snowfall, the January cedar estate at -2 to -8°C overnight is a categorically different environment from any other ...",
   h1: "Bhurban Murree in January — The Snowfall Season Definitive Guide",
   heroTagline:
-    "URL /murree-bhurban-in-january Target KW bhurban murree in january, murree january, bhurban in january, bhurban murree january snowfall",
+    "bhurban murree in january, murree january, bhurban in january, bhurban murree january snowfall ~1,000w",
   heroImage: article697Hero,
   blocks: [
     {
@@ -24232,13 +21217,13 @@ export const article698: Article = {
   slug: "sunset-suite-himalaya-villas-bhurban",
   title: "/sunset-suite-himalaya-villas-bhurban sunset suite bhurban, himalaya villas sunset suite, valley view villa bhurban, sunset view bhurban murree",
   metaDescription:
-    "Target KW sunset suite bhurban, himalaya villas sunset suite, valley view villa bhurban, sunset view bhurban murree",
+    "sunset suite bhurban, himalaya villas sunset suite, valley view villa bhurban, sunset view bhurban murree",
   keywords:
     "sunset suite bhurban, himalaya villas sunset suite, valley view villa bhurban, sunset view bhurban murree",
   eyebrow: "Backlink Guest Post · Best for | ~700w",
   h1: "/sunset-suite-himalaya-villas-bhurban sunset suite bhurban, himalaya villas sunset suite, valley view villa bhurban, sunset view bhurban murree",
   heroTagline:
-    "Target KW sunset suite bhurban, himalaya villas sunset suite, valley view villa bhurban, sunset view bhurban murree",
+    "sunset suite bhurban, himalaya villas sunset suite, valley view villa bhurban, sunset view bhurban murree",
   heroImage: article698Hero,
   blocks: [
     {
@@ -24407,13 +21392,13 @@ export const article700: Article = {
   slug: "bhurban-murree-pakistan-guide",
   title: "Bhurban Murree Pakistan — The Definitive 2026 Travel Authority",
   metaDescription:
-    "URL /bhurban-murree-pakistan-guide Target KW bhurban murree pakistan, bhurban murree guide 2026, bhurban murree travel guide, bhurban pakistan travel",
+    "bhurban murree pakistan, bhurban murree guide 2026, bhurban murree travel guide, bhurban pakistan travel",
   keywords:
     "bhurban murree pakistan, bhurban murree guide 2026, bhurban murree travel guide, bhurban pakistan travel",
   eyebrow: "Backlink Guest Post · Detail | ~1,100w",
   h1: "Bhurban Murree Pakistan — The Definitive 2026 Travel Authority",
   heroTagline:
-    "URL /bhurban-murree-pakistan-guide Target KW bhurban murree pakistan, bhurban murree guide 2026, bhurban murree travel guide, bhurban pakistan travel",
+    "bhurban murree pakistan, bhurban murree guide 2026, bhurban murree travel guide, bhurban pakistan travel",
   heroImage: article700Hero,
   blocks: [
     {
@@ -24651,13 +21636,18 @@ export const article700: Article = {
       ],
     },
     {
-      type: "cta",
+      type: "section",
       eyebrow: "Book Ahead",
       heading: "Book Ahead",
-      text: "October (best) Amber cedar, crystal clarity, perfect temp 8-19°C",
-      buttonLabel: "WhatsApp: +92 304 567 9000 | wa.me/923045679000",
-      buttonHref: "https://wa.me/923045679000",
-      footnote: "Direct bookings receive priority response and best available rate.",
+      paragraphs: [
+        "October (best)",
+        "Amber cedar, crystal clarity, perfect temp",
+        "8-19°C",
+      ],
+      image: {
+        src: article700Image2,
+        alt: "Book Ahead",
+      },
     },
     {
       type: "section",
@@ -24723,6 +21713,14 @@ export const article700: Article = {
       },
     },
     {
+      type: "section",
+      eyebrow: "Very low",
+      heading: "Very low",
+      paragraphs: [
+        "1 week",
+      ],
+    },
+    {
       type: "cta",
       eyebrow: "WhatsApp: +92 304 567 9000 (wa.me/923045679000)",
       heading: "WhatsApp: +92 304 567 9000 (wa.me/923045679000)",
@@ -24751,13 +21749,13 @@ export const article701: Article = {
   slug: "murree-bhurban-in-summer",
   title: "Bhurban Murree in Summer — The Complete July August Heat Escape Guide",
   metaDescription:
-    "URL /murree-bhurban-in-summer Target KW bhurban murree in summer, murree bhurban july august, bhurban summer heat escape, murree summer guide",
+    "bhurban murree in summer, murree bhurban july august, bhurban summer heat escape, murree summer guide",
   keywords:
     "bhurban murree in summer, murree bhurban july august, bhurban summer heat escape, murree summer guide",
   eyebrow: "Backlink Guest Post · July-August is the forest at its most lush: the deodar cedar and blue pine at their deepest green, the monsoon rain saturating t...",
   h1: "Bhurban Murree in Summer — The Complete July August Heat Escape Guide",
   heroTagline:
-    "URL /murree-bhurban-in-summer Target KW bhurban murree in summer, murree bhurban july august, bhurban summer heat escape, murree summer guide",
+    "bhurban murree in summer, murree bhurban july august, bhurban summer heat escape, murree summer guide",
   heroImage: article701Hero,
   blocks: [
     {
@@ -24808,13 +21806,21 @@ export const article701: Article = {
       ],
     },
     {
-      type: "cta",
+      type: "section",
       eyebrow: "Booking lead time",
       heading: "Booking lead time",
-      text: "8-10 weeks minimum 3-5 weeks sufficient Who it's best for",
-      buttonLabel: "WhatsApp: +92 304 567 9000 | wa.me/923045679000",
-      buttonHref: "https://wa.me/923045679000",
-      footnote: "Direct bookings receive priority response and best available rate.",
+      paragraphs: [
+        "8-10 weeks minimum",
+        "3-5 weeks sufficient",
+        "Who it's best for",
+        "Heat escape from Islamabad/Lahore families",
+        "Experienced visitors; photography; hiking",
+        "Book the Summer Cedar Estate Escape — WhatsApp +92 304 567 9000",
+      ],
+      image: {
+        src: article701Image2,
+        alt: "Booking lead time",
+      },
     },
     {
       type: "related",
@@ -24836,13 +21842,13 @@ export const article702: Article = {
   slug: "murree-bhurban-september-october",
   title: "Murree Bhurban in September and October — The Post-Monsoon Clarity Season",
   metaDescription:
-    "URL /murree-bhurban-september-october Target KW murree bhurban september october, bhurban autumn season, bhurban post-monsoon clarity, murree bhurban autumn",
+    "murree bhurban september october, bhurban autumn season, bhurban post-monsoon clarity, murree bhurban autumn",
   keywords:
     "murree bhurban september october, bhurban autumn season, bhurban post-monsoon clarity, murree bhurban autumn",
   eyebrow: "Backlink Guest Post · 10-20°C | ~700w",
   h1: "Murree Bhurban in September and October — The Post-Monsoon Clarity Season",
   heroTagline:
-    "URL /murree-bhurban-september-october Target KW murree bhurban september october, bhurban autumn season, bhurban post-monsoon clarity, murree bhurban autumn",
+    "murree bhurban september october, bhurban autumn season, bhurban post-monsoon clarity, murree bhurban autumn",
   heroImage: article702Hero,
   blocks: [
     {
@@ -24979,13 +21985,13 @@ export const article703: Article = {
   slug: "bhurban-murree-cedar-estate-faq-2",
   title: "Bhurban Murree Cedar Estate — 30 More Questions Answered",
   metaDescription:
-    "URL /bhurban-murree-cedar-estate-faq-2 Target KW bhurban murree faq, bhurban cedar estate questions, himalaya villas questions 2026",
+    "bhurban murree faq, bhurban cedar estate questions, himalaya villas questions 2026 ~900w All Clusters",
   keywords:
     "bhurban murree faq, bhurban cedar estate questions, himalaya villas questions 2026",
   eyebrow: "Backlink Guest Post · ~900w",
   h1: "Bhurban Murree Cedar Estate — 30 More Questions Answered",
   heroTagline:
-    "URL /bhurban-murree-cedar-estate-faq-2 Target KW bhurban murree faq, bhurban cedar estate questions, himalaya villas questions 2026",
+    "bhurban murree faq, bhurban cedar estate questions, himalaya villas questions 2026 ~900w All Clusters",
   heroImage: article703Hero,
   blocks: [
     {
@@ -25021,13 +22027,13 @@ export const article704: Article = {
   slug: "bhurban-from-karachi",
   title: "Bhurban Murree from Karachi — The Flight and Cedar Estate Guide",
   metaDescription:
-    "URL /bhurban-from-karachi Target KW bhurban from karachi, karachi to bhurban, karachi to bhurban murree, bhurban murree karachi guide",
+    "bhurban from karachi, karachi to bhurban, karachi to bhurban murree, bhurban murree karachi guide ~700w",
   keywords:
     "bhurban from karachi, karachi to bhurban, karachi to bhurban murree, bhurban murree karachi guide",
   eyebrow: "Backlink Guest Post · 15-20 min | ~700w",
   h1: "Bhurban Murree from Karachi — The Flight and Cedar Estate Guide",
   heroTagline:
-    "URL /bhurban-from-karachi Target KW bhurban from karachi, karachi to bhurban, karachi to bhurban murree, bhurban murree karachi guide",
+    "bhurban from karachi, karachi to bhurban, karachi to bhurban murree, bhurban murree karachi guide ~700w",
   heroImage: article704Hero,
   blocks: [
     {
@@ -25127,13 +22133,13 @@ export const article705: Article = {
   slug: "bhurban-cedar-estate-from-dubai-uae",
   title: "Bhurban Cedar Estate from Dubai and UAE — The Pakistani Diaspora Guide",
   metaDescription:
-    "URL /bhurban-cedar-estate-from-dubai-uae Target KW bhurban from dubai, bhurban murree from uae, pakistani diaspora dubai bhurban",
+    "bhurban from dubai, bhurban murree from uae, pakistani diaspora dubai bhurban ~700w Bhurban Cedar Estate from Dubai and UAE — The Complete Diaspora Guide",
   keywords:
     "bhurban from dubai, bhurban murree from uae, pakistani diaspora dubai bhurban",
   eyebrow: "Backlink Guest Post · Total door to cedar estate | ~700w",
   h1: "Bhurban Cedar Estate from Dubai and UAE — The Pakistani Diaspora Guide",
   heroTagline:
-    "URL /bhurban-cedar-estate-from-dubai-uae Target KW bhurban from dubai, bhurban murree from uae, pakistani diaspora dubai bhurban",
+    "bhurban from dubai, bhurban murree from uae, pakistani diaspora dubai bhurban ~700w Bhurban Cedar Estate from Dubai and UAE — The Complete Diaspora Guide",
   heroImage: article705Hero,
   blocks: [
     {
@@ -25219,13 +22225,13 @@ export const article706: Article = {
   slug: "bhurban-cedar-estate-from-uk-london",
   title: "Bhurban Cedar Estate from London and UK — The British-Pakistani Diaspora Guide",
   metaDescription:
-    "URL /bhurban-cedar-estate-from-uk-london Target KW bhurban from london, bhurban murree from uk, british pakistani bhurban cedar estate",
+    "bhurban from london, bhurban murree from uk, british pakistani bhurban cedar estate ~700w Bhurban Cedar Estate from London and the UK — The British-Pakistani Diaspora Guide",
   keywords:
     "bhurban from london, bhurban murree from uk, british pakistani bhurban cedar estate",
   eyebrow: "Backlink Guest Post · → /villas — Browse Himalaya Villas | ~700w",
   h1: "Bhurban Cedar Estate from London and UK — The British-Pakistani Diaspora Guide",
   heroTagline:
-    "URL /bhurban-cedar-estate-from-uk-london Target KW bhurban from london, bhurban murree from uk, british pakistani bhurban cedar estate",
+    "bhurban from london, bhurban murree from uk, british pakistani bhurban cedar estate ~700w Bhurban Cedar Estate from London and the UK — The British-Pakistani Diaspora Guide",
   heroImage: article706Hero,
   blocks: [
     {
@@ -25288,13 +22294,13 @@ export const article707: Article = {
   slug: "private-dining-bhurban-cedar-estate",
   title: "Private Dining at Bhurban Cedar Estate — The Complete Menu and Setup Guide",
   metaDescription:
-    "URL /private-dining-bhurban-cedar-estate Target KW private dining bhurban, cedar estate private dining, himalaya villas private dining menu",
+    "private dining bhurban, cedar estate private dining, himalaya villas private dining menu ~700w Private Dining at the Bhurban Cedar Estate — The Complete Guide",
   keywords:
     "private dining bhurban, cedar estate private dining, himalaya villas private dining menu",
   eyebrow: "Backlink Guest Post · Kashmiri chai, paratha or toast, eggs, fruit, juice | ~700w",
   h1: "Private Dining at Bhurban Cedar Estate — The Complete Menu and Setup Guide",
   heroTagline:
-    "URL /private-dining-bhurban-cedar-estate Target KW private dining bhurban, cedar estate private dining, himalaya villas private dining menu",
+    "private dining bhurban, cedar estate private dining, himalaya villas private dining menu ~700w Private Dining at the Bhurban Cedar Estate — The Complete Guide",
   heroImage: article707Hero,
   blocks: [
     {
@@ -25367,13 +22373,13 @@ export const article708: Article = {
   slug: "bhurban-murree-in-february-march",
   title: "Bhurban Murree in February and March — The Winter-to-Spring Transition Guide",
   metaDescription:
-    "URL /bhurban-murree-in-february-march Target KW bhurban murree in february, bhurban murree in march, murree february march guide, bhurban late winter spring",
+    "bhurban murree in february, bhurban murree in march, murree february march guide, bhurban late winter spring",
   keywords:
     "bhurban murree in february, bhurban murree in march, murree february march guide, bhurban late winter spring",
   eyebrow: "Backlink Guest Post · Q: Is February a good time to visit Bhurban? | ~700w",
   h1: "Bhurban Murree in February and March — The Winter-to-Spring Transition Guide",
   heroTagline:
-    "URL /bhurban-murree-in-february-march Target KW bhurban murree in february, bhurban murree in march, murree february march guide, bhurban late winter spring",
+    "bhurban murree in february, bhurban murree in march, murree february march guide, bhurban late winter spring",
   heroImage: article708Hero,
   blocks: [
     {
@@ -25440,16 +22446,6 @@ export const article708: Article = {
     },
     {
       type: "section",
-      eyebrow: "Last winter snowfall chance",
-      heading: "Last winter snowfall chance",
-      paragraphs: [
-        "February 15-28",
-        "2 to 10°C",
-        "15-25%",
-      ],
-    },
-    {
-      type: "section",
       eyebrow: "Late winter transition",
       heading: "Late winter transition",
       paragraphs: [
@@ -25457,10 +22453,6 @@ export const article708: Article = {
         "5 to 14°C",
         "10-15%",
       ],
-      image: {
-        src: article708Image2,
-        alt: "Late winter transition",
-      },
     },
     {
       type: "related",
@@ -25482,13 +22474,13 @@ export const article709: Article = {
   slug: "bhurban-accommodation-guide",
   title: "Bhurban Murree Accommodation — The Complete 2026 Guide",
   metaDescription:
-    "URL /bhurban-accommodation-guide Target KW bhurban accommodation, bhurban murree accommodation, accommodation in bhurban, bhurban hotels and villas guide",
+    "bhurban accommodation, bhurban murree accommodation, accommodation in bhurban, bhurban hotels and villas guide",
   keywords:
     "bhurban accommodation, bhurban murree accommodation, accommodation in bhurban, bhurban hotels and villas guide",
   eyebrow: "Backlink Guest Post · Property | ~900w",
   h1: "Bhurban Murree Accommodation — The Complete 2026 Guide",
   heroTagline:
-    "URL /bhurban-accommodation-guide Target KW bhurban accommodation, bhurban murree accommodation, accommodation in bhurban, bhurban hotels and villas guide",
+    "bhurban accommodation, bhurban murree accommodation, accommodation in bhurban, bhurban hotels and villas guide",
   heroImage: article709Hero,
   blocks: [
     {
@@ -25509,13 +22501,16 @@ export const article709: Article = {
       ],
     },
     {
-      type: "cta",
+      type: "section",
       eyebrow: "Book Via",
       heading: "Book Via",
-      text: "Himalaya Villas & Resorts",
-      buttonLabel: "WhatsApp: +92 304 567 9000 | wa.me/923045679000",
-      buttonHref: "https://wa.me/923045679000",
-      footnote: "Direct bookings receive priority response and best available rate.",
+      paragraphs: [
+        "Himalaya Villas & Resorts",
+      ],
+      image: {
+        src: article709Image2,
+        alt: "Book Via",
+      },
     },
     {
       type: "section",
@@ -25676,13 +22671,13 @@ export const article710: Article = {
   slug: "murree-pakistan-tourism-guide",
   title: "Bhurban Murree Pakistan Tourism — The 2026 Complete Authority",
   metaDescription:
-    "URL /murree-pakistan-tourism-guide Target KW murree pakistan tourism, bhurban murree tourism guide, murree hills tourism 2026, pakistan murree bhurban travel",
+    "murree pakistan tourism, bhurban murree tourism guide, murree hills tourism 2026, pakistan murree bhurban travel",
   keywords:
     "murree pakistan tourism, bhurban murree tourism guide, murree hills tourism 2026, pakistan murree bhurban travel",
   eyebrow: "Backlink Guest Post · 47km — 45 min | ~1,000w",
   h1: "Bhurban Murree Pakistan Tourism — The 2026 Complete Authority",
   heroTagline:
-    "URL /murree-pakistan-tourism-guide Target KW murree pakistan tourism, bhurban murree tourism guide, murree hills tourism 2026, pakistan murree bhurban travel",
+    "murree pakistan tourism, bhurban murree tourism guide, murree hills tourism 2026, pakistan murree bhurban travel",
   heroImage: article710Hero,
   blocks: [
     {
@@ -25799,13 +22794,13 @@ export const article711: Article = {
   slug: "lahore-to-murree-bhurban-guide",
   title: "Lahore to Murree Bhurban — The Complete Road Trip and Cedar Estate Guide",
   metaDescription:
-    "URL /lahore-to-murree-bhurban-guide Target KW lahore to murree bhurban, lahore to bhurban murree, lahore murree bhurban road trip, lahore bhurban drive",
+    "lahore to murree bhurban, lahore to bhurban murree, lahore murree bhurban road trip, lahore bhurban drive",
   keywords:
     "lahore to murree bhurban, lahore to bhurban murree, lahore murree bhurban road trip, lahore bhurban drive",
   eyebrow: "Backlink Guest Post · ~800w",
   h1: "Lahore to Murree Bhurban — The Complete Road Trip and Cedar Estate Guide",
   heroTagline:
-    "URL /lahore-to-murree-bhurban-guide Target KW lahore to murree bhurban, lahore to bhurban murree, lahore murree bhurban road trip, lahore bhurban drive",
+    "lahore to murree bhurban, lahore to bhurban murree, lahore murree bhurban road trip, lahore bhurban drive",
   heroImage: article711Hero,
   blocks: [
     {
@@ -25917,13 +22912,13 @@ export const article712: Article = {
   slug: "bhurban-cedar-estate-eid-weekend-planning",
   title: "Bhurban Cedar Estate for Eid Weekend — The Ultimate Planning Guide",
   metaDescription:
-    "URL /bhurban-cedar-estate-eid-weekend-planning Target KW bhurban eid weekend, eid bhurban planning guide, bhurban murree eid 2026, eid getaway bhurban",
+    "bhurban eid weekend, eid bhurban planning guide, bhurban murree eid 2026, eid getaway bhurban ~800w Bhurban Cedar Estate for Eid Weekend — The Complete Planning Guide",
   keywords:
     "bhurban eid weekend, eid bhurban planning guide, bhurban murree eid 2026, eid getaway bhurban",
   eyebrow: "Backlink Guest Post · The Eid Al-Fitr Dimension | ~800w",
   h1: "Bhurban Cedar Estate for Eid Weekend — The Ultimate Planning Guide",
   heroTagline:
-    "URL /bhurban-cedar-estate-eid-weekend-planning Target KW bhurban eid weekend, eid bhurban planning guide, bhurban murree eid 2026, eid getaway bhurban",
+    "bhurban eid weekend, eid bhurban planning guide, bhurban murree eid 2026, eid getaway bhurban ~800w Bhurban Cedar Estate for Eid Weekend — The Complete Planning Guide",
   heroImage: article712Hero,
   blocks: [
     {
@@ -25953,13 +22948,13 @@ export const article712: Article = {
       footnote: "Direct bookings receive priority response and best available rate.",
     },
     {
-      type: "cta",
-      eyebrow: "Book by",
-      heading: "Book by",
-      text: "",
-      buttonLabel: "WhatsApp: +92 304 567 9000 | wa.me/923045679000",
-      buttonHref: "https://wa.me/923045679000",
-      footnote: "Direct bookings receive priority response and best available rate.",
+      type: "section",
+      eyebrow: "Risk if Late",
+      heading: "Risk if Late",
+      paragraphs: [
+        "Eid Al-Fitr 2026 (~March 30)",
+        "Moon sighting ~March 28",
+      ],
     },
     {
       type: "section",
@@ -26001,15 +22996,6 @@ export const article712: Article = {
     },
     {
       type: "cta",
-      eyebrow: "Book the estimated window before official date",
-      heading: "Book the estimated window before official date",
-      text: "",
-      buttonLabel: "WhatsApp: +92 304 567 9000 | wa.me/923045679000",
-      buttonHref: "https://wa.me/923045679000",
-      footnote: "Direct bookings receive priority response and best available rate.",
-    },
-    {
-      type: "cta",
       eyebrow: "Eid morning flowers: rose arrangement in the villa on Eid morning — specify via WhatsApp at booking stage",
       heading: "Eid morning flowers: rose arrangement in the villa on Eid morning — specify via WhatsApp at booking stage",
       text: "",
@@ -26033,10 +23019,6 @@ export const article712: Article = {
       paragraphs: [
         "Eid lunch/dinner: the main Eid meal in the cedar garden — coordinate menu (biryani, qorma, naan, dessert) and timing",
       ],
-      image: {
-        src: article712Image2,
-        alt: "Eid morning dress coordination: the cedar garden and cedar terrace are the specific backdrop for the...",
-      },
     },
     {
       type: "related",
@@ -26058,13 +23040,13 @@ export const article713: Article = {
   slug: "bhurban-cedar-estate-vs-islamabad-marriott",
   title: "Bhurban Cedar Estate vs Islamabad Marriott — The True Weekend Comparison",
   metaDescription:
-    "URL /bhurban-cedar-estate-vs-islamabad-marriott Target KW bhurban cedar estate vs islamabad marriott, islamabad marriott vs bhurban, bhurban vs islamabad hotel weekend",
+    "bhurban cedar estate vs islamabad marriott, islamabad marriott vs bhurban, bhurban vs islamabad hotel weekend",
   keywords:
     "bhurban cedar estate vs islamabad marriott, islamabad marriott vs bhurban, bhurban vs islamabad hotel weekend",
   eyebrow: "Backlink Guest Post · Target KW | ~800w",
   h1: "Bhurban Cedar Estate vs Islamabad Marriott — The True Weekend Comparison",
   heroTagline:
-    "URL /bhurban-cedar-estate-vs-islamabad-marriott Target KW bhurban cedar estate vs islamabad marriott, islamabad marriott vs bhurban, bhurban vs islamabad hotel weekend",
+    "bhurban cedar estate vs islamabad marriott, islamabad marriott vs bhurban, bhurban vs islamabad hotel weekend",
   heroImage: article713Hero,
   blocks: [
     {
@@ -26077,6 +23059,18 @@ export const article713: Article = {
       text: "bhurban cedar estate vs islamabad marriott, islamabad marriott vs bhurban, bhurban vs islamabad hotel weekend",
     },
     {
+      type: "comparison",
+      heading: "Bhurban Cedar Estate vs Islamabad Marriott — The True Weekend Comparison",
+      columns: [
+        "Feature",
+        "Option A",
+        "Option B",
+      ],
+      rows: [
+        { feature: "Conversion", a: "Cluster 11", b: "~800w" },
+      ],
+    },
+    {
       type: "section",
       eyebrow: "Bhurban Cedar Estate vs Islamabad Marriott",
       heading: "Bhurban Cedar Estate vs Islamabad Marriott — The Honest Weekend Comparison",
@@ -26086,6 +23080,10 @@ export const article713: Article = {
         "The Islamabad premium hotel weekend vs the Bhurban cedar estate weekend is the most directly comparable accommodation decision for Islamabad HNW families. Both options are at the same approximate price point for families of 4+. The comparison is not about budget — it is about what each option actually delivers.",
         "The Side-by-Side for July Weekend, Family of 4",
       ],
+      image: {
+        src: article713Image2,
+        alt: "Bhurban Cedar Estate vs Islamabad Marriott — The Honest Weekend Comparison",
+      },
     },
     {
       type: "section",
@@ -26101,10 +23099,6 @@ export const article713: Article = {
         "40-44°C — full city summer",
         "18-24°C — cedar forest summer",
       ],
-      image: {
-        src: article713Image2,
-        alt: "Factor",
-      },
     },
     {
       type: "section",
@@ -26114,6 +23108,10 @@ export const article713: Article = {
         "Hotel pool deck (shared)",
         "Exclusive private cedar garden + terrace",
       ],
+      image: {
+        src: article713Image2,
+        alt: "Private outdoor space",
+      },
     },
     {
       type: "section",
@@ -26123,10 +23121,6 @@ export const article713: Article = {
         "Hotel gym or Margalla Hills (15 min drive)",
         "Cedar estate dawn walk 5:45am — from villa gate",
       ],
-      image: {
-        src: article713Image2,
-        alt: "Morning walk",
-      },
     },
     {
       type: "section",
@@ -26136,6 +23130,10 @@ export const article713: Article = {
         "Hotel lobby, city restaurant",
         "Cedar garden fire pit, private cedar garden",
       ],
+      image: {
+        src: article713Image2,
+        alt: "Evening experience",
+      },
     },
     {
       type: "section",
@@ -26148,10 +23146,6 @@ export const article713: Article = {
         "Hotel pool area (shared)",
         "Enclosed private garden (Garden Villa choice)",
       ],
-      image: {
-        src: article713Image2,
-        alt: "Drive from home",
-      },
     },
     {
       type: "section",
@@ -26160,6 +23154,10 @@ export const article713: Article = {
       paragraphs: [
         "Yes (Marriott Bonvoy)",
       ],
+      image: {
+        src: article713Image2,
+        alt: "Loyalty points",
+      },
     },
     {
       type: "section",
@@ -26170,10 +23168,6 @@ export const article713: Article = {
         "The only genuine argument for the Islamabad city hotel over the Bhurban cedar estate for a leisure weekend is the 45 minutes. No driving at all vs 45 minutes each way on the Expressway. The question is whether 90 minutes of total driving (arrival Thursday evening + departure Sunday morning) is worth the trade for the cedar estate.",
         "The typical Islamabad family answer, once they have experienced the cedar estate: yes, categorically. The specific calculation: spend 90 minutes total in the car across a 60-hour stay (2.5% of the time). Receive in exchange: the cedar forest, the 20°C temperature reduction in July, the private outdoor space, the fire pit at 6:30pm, and the cedar da...",
       ],
-      image: {
-        src: article713Image2,
-        alt: "No OTA loyalty programme",
-      },
     },
     {
       type: "section",
@@ -26183,6 +23177,10 @@ export const article713: Article = {
         "Saturday morning commitment that cannot be moved (work event, meeting, function) — the city hotel saves the 90 minutes that would otherwise be paid for travel",
         "Marriott Bonvoy points are specifically needed (qualification for tier status, redemption target)",
       ],
+      image: {
+        src: article713Image2,
+        alt: "When to Choose the Islamabad Hotel",
+      },
     },
     {
       type: "section",
@@ -26191,10 +23189,6 @@ export const article713: Article = {
       paragraphs: [
         "Book the Cedar Estate — 45 Minutes from Islamabad — WhatsApp +92 304 567 9000",
       ],
-      image: {
-        src: article713Image2,
-        alt: "If none of these apply: the cedar estate wins the comparison on every other dimension.",
-      },
     },
     {
       type: "related",
@@ -26216,13 +23210,13 @@ export const article714: Article = {
   slug: "what-makes-bhurban-cedar-estate-different",
   title: "What Makes Bhurban Cedar Estate Different — The Himalaya Villas Philosophy",
   metaDescription:
-    "URL /what-makes-bhurban-cedar-estate-different Target KW what makes himalaya villas different, bhurban cedar estate why choose, himalaya villas philosophy bhurban",
+    "what makes himalaya villas different, bhurban cedar estate why choose, himalaya villas philosophy bhurban",
   keywords:
     "what makes himalaya villas different, bhurban cedar estate why choose, himalaya villas philosophy bhurban",
   eyebrow: "Backlink Guest Post · Target KW | ~800w",
   h1: "What Makes Bhurban Cedar Estate Different — The Himalaya Villas Philosophy",
   heroTagline:
-    "URL /what-makes-bhurban-cedar-estate-different Target KW what makes himalaya villas different, bhurban cedar estate why choose, himalaya villas philosophy bhurban",
+    "what makes himalaya villas different, bhurban cedar estate why choose, himalaya villas philosophy bhurban",
   heroImage: article714Hero,
   blocks: [
     {
@@ -26261,13 +23255,13 @@ export const article715: Article = {
   slug: "destination-wedding-bhurban-murree",
   title: "Destination Wedding at Bhurban — The Complete Cedar Estate Wedding Planning Guide",
   metaDescription:
-    "URL /destination-wedding-bhurban-murree Target KW destination wedding bhurban murree, nikah bhurban, cedar estate wedding bhurban, mountain wedding pakistan",
+    "destination wedding bhurban murree, nikah bhurban, cedar estate wedding bhurban, mountain wedding pakistan",
   keywords:
     "destination wedding bhurban murree, nikah bhurban, cedar estate wedding bhurban, mountain wedding pakistan",
   eyebrow: "Backlink Guest Post · The Three-Day Wedding Programme | ~1,000w",
   h1: "Destination Wedding at Bhurban — The Complete Cedar Estate Wedding Planning Guide",
   heroTagline:
-    "URL /destination-wedding-bhurban-murree Target KW destination wedding bhurban murree, nikah bhurban, cedar estate wedding bhurban, mountain wedding pakistan",
+    "destination wedding bhurban murree, nikah bhurban, cedar estate wedding bhurban, mountain wedding pakistan",
   heroImage: article715Hero,
   blocks: [
     {
@@ -26417,13 +23411,13 @@ export const article716: Article = {
   slug: "extended-family-reunion-bhurban",
   title: "Extended Family Reunion at Bhurban Cedar Estate — The Complete Planning Guide",
   metaDescription:
-    "URL /extended-family-reunion-bhurban Target KW extended family reunion bhurban, family reunion bhurban cedar estate, bhurban family gathering, large family bhurban murree",
+    "extended family reunion bhurban, family reunion bhurban cedar estate, bhurban family gathering, large family bhurban murree",
   keywords:
     "extended family reunion bhurban, family reunion bhurban cedar estate, bhurban family gathering, large family bhurban murree",
   eyebrow: "Backlink Guest Post · 4-8 | ~800w",
   h1: "Extended Family Reunion at Bhurban Cedar Estate — The Complete Planning Guide",
   heroTagline:
-    "URL /extended-family-reunion-bhurban Target KW extended family reunion bhurban, family reunion bhurban cedar estate, bhurban family gathering, large family bhurban murree",
+    "extended family reunion bhurban, family reunion bhurban cedar estate, bhurban family gathering, large family bhurban murree",
   heroImage: article716Hero,
   blocks: [
     {
@@ -26554,13 +23548,13 @@ export const article717: Article = {
   slug: "honeymoon-package-bhurban-murree",
   title: "Honeymoon Package at Bhurban Cedar Estate — The Complete Guide",
   metaDescription:
-    "URL /honeymoon-package-bhurban-murree Target KW honeymoon package bhurban murree, bhurban honeymoon package, honeymoon bhurban cedar estate, honeymoon murree pakistan",
+    "honeymoon package bhurban murree, bhurban honeymoon package, honeymoon bhurban cedar estate, honeymoon murree pakistan",
   keywords:
     "honeymoon package bhurban murree, bhurban honeymoon package, honeymoon bhurban cedar estate, honeymoon murree pakistan",
   eyebrow: "Backlink Guest Post · The Arrival | ~800w",
   h1: "Honeymoon Package at Bhurban Cedar Estate — The Complete Guide",
   heroTagline:
-    "URL /honeymoon-package-bhurban-murree Target KW honeymoon package bhurban murree, bhurban honeymoon package, honeymoon bhurban cedar estate, honeymoon murree pakistan",
+    "honeymoon package bhurban murree, bhurban honeymoon package, honeymoon bhurban cedar estate, honeymoon murree pakistan",
   heroImage: article717Hero,
   blocks: [
     {
@@ -26643,13 +23637,13 @@ export const article718: Article = {
   slug: "himalaya-villas-bhurban-story",
   title: "/himalaya-villas-bhurban-story himalaya villas bhurban story, himalaya villas bhurban about, bhurban cedar estate story",
   metaDescription:
-    "Target KW himalaya villas bhurban story, himalaya villas bhurban about, bhurban cedar estate story WC",
+    "himalaya villas bhurban story, himalaya villas bhurban about, bhurban cedar estate story ~900w Himalaya Villas & Resorts at Mohra Iswal, Bhurban, Murree Hills, Pakistan is a private cedar villa estate...",
   keywords:
     "himalaya villas bhurban story, himalaya villas bhurban about, bhurban cedar estate story",
   eyebrow: "Backlink Guest Post · For the Himalaya Villas guest, the cedar estate history is not a museum piece — it is the daily physical experience. The 180-yea...",
   h1: "/himalaya-villas-bhurban-story himalaya villas bhurban story, himalaya villas bhurban about, bhurban cedar estate story",
   heroTagline:
-    "Target KW himalaya villas bhurban story, himalaya villas bhurban about, bhurban cedar estate story WC",
+    "himalaya villas bhurban story, himalaya villas bhurban about, bhurban cedar estate story ~900w Himalaya Villas & Resorts at Mohra Iswal, Bhurban, Murree Hills, Pakistan is a private cedar villa estate set in 100-200 year old deodar cedar forest at 6,800 feet. The cedar trees were planted in the 1850s-1880s British colonial hill station period. The estate model — private villas within the cedar est...",
   heroImage: article718Hero,
   blocks: [
     {
@@ -26700,13 +23694,13 @@ export const article719: Article = {
   slug: "corporate-retreat-bhurban-authority",
   title: "/corporate-retreat-bhurban-authority corporate retreat bhurban, bhurban corporate retreat islamabad, team offsite bhurban pakistan",
   metaDescription:
-    "Target KW corporate retreat bhurban, bhurban corporate retreat islamabad, team offsite bhurban pakistan",
+    "corporate retreat bhurban, bhurban corporate retreat islamabad, team offsite bhurban pakistan ~800w Bhurban cedar estate (Himalaya Villas) vs Islamabad hotel conference room for corporate retreats: th...",
   keywords:
     "corporate retreat bhurban, bhurban corporate retreat islamabad, team offsite bhurban pakistan",
   eyebrow: "Backlink Guest Post · The most significant corporate decisions are made in informal settings. The fire pit conversation at 7pm, the cedar dawn walk at...",
   h1: "/corporate-retreat-bhurban-authority corporate retreat bhurban, bhurban corporate retreat islamabad, team offsite bhurban pakistan",
   heroTagline:
-    "Target KW corporate retreat bhurban, bhurban corporate retreat islamabad, team offsite bhurban pakistan",
+    "corporate retreat bhurban, bhurban corporate retreat islamabad, team offsite bhurban pakistan ~800w Bhurban cedar estate (Himalaya Villas) vs Islamabad hotel conference room for corporate retreats: the 45-minute N-75 drive delivers the team to a cedar forest estate at 6,800 feet. The environmental contrast from the Islamabad office is immediate and complete — the cedar forest, the mountain air, th...",
   heroImage: article719Hero,
   blocks: [
     {
@@ -26791,13 +23785,13 @@ export const article720: Article = {
   slug: "bhurban-murree-vs-all-pakistan-hill-stations",
   title: "Bhurban Murree vs All Pakistan Hill Stations — The Definitive Comparison",
   metaDescription:
-    "URL /bhurban-murree-vs-all-pakistan-hill-stations Target KW bhurban vs pakistan hill stations, murree bhurban vs nathia gali swat naran hunza, best hill station pakistan",
+    "bhurban vs pakistan hill stations, murree bhurban vs nathia gali swat naran hunza, best hill station pakistan",
   keywords:
     "bhurban vs pakistan hill stations, murree bhurban vs nathia gali swat naran hunza, best hill station pakistan",
   eyebrow: "Backlink Guest Post · Private cedar estate, proximity, October amber | ~900w",
   h1: "Bhurban Murree vs All Pakistan Hill Stations — The Definitive Comparison",
   heroTagline:
-    "URL /bhurban-murree-vs-all-pakistan-hill-stations Target KW bhurban vs pakistan hill stations, murree bhurban vs nathia gali swat naran hunza, best hill station pakistan",
+    "bhurban vs pakistan hill stations, murree bhurban vs nathia gali swat naran hunza, best hill station pakistan",
   heroImage: article720Hero,
   blocks: [
     {
@@ -26810,12 +23804,28 @@ export const article720: Article = {
       text: "bhurban vs pakistan hill stations, murree bhurban vs nathia gali swat naran hunza, best hill station pakistan",
     },
     {
+      type: "comparison",
+      heading: "Bhurban Murree vs All Pakistan Hill Stations — The Definitive Comparison",
+      columns: [
+        "Feature",
+        "Option A",
+        "Option B",
+      ],
+      rows: [
+        { feature: "Authority", a: "All Clusters", b: "~900w" },
+      ],
+    },
+    {
       type: "section",
       eyebrow: "Bhurban Murree compared to all major Pakistan hill stations: Bhurban wins on proximity (47km from Is...",
       heading: "Bhurban Murree compared to all major Pakistan hill stations: Bhurban wins on proximity (47km from Islamabad — no flight, no long drive), private cedar estate accommodation (Himalaya Villas — unique in...",
       paragraphs: [
         "Pakistan's domestic mountain tourism market offers a genuinely diverse range of hill station options — from the accessible sub-Himalayan cedar forests of Bhurban to the dramatic 14,000-foot passes of the Karakoram. The question for any visitor is not 'which is the best hill station in Pakistan' but 'which hill station is best for my specific trip f...",
       ],
+      image: {
+        src: article720Image2,
+        alt: "Bhurban Murree compared to all major Pakistan hill stations: Bhurban wins on proximity (47km from Is...",
+      },
     },
     {
       type: "section",
@@ -26829,10 +23839,6 @@ export const article720: Article = {
         "8,000 ft",
         "Pipeline Track, cooler, quieter",
       ],
-      image: {
-        src: article720Image2,
-        alt: "Yes — Himalaya Villas",
-      },
     },
     {
       type: "section",
@@ -26843,6 +23849,10 @@ export const article720: Article = {
         "4,120 ft",
         "Transit to northern areas; city character",
       ],
+      image: {
+        src: article720Image2,
+        alt: "Abbottabad",
+      },
     },
     {
       type: "section",
@@ -26855,10 +23865,6 @@ export const article720: Article = {
         "7,200 ft",
         "High meadows, Mahodand Lake",
       ],
-      image: {
-        src: article720Image2,
-        alt: "Improving hotel stock",
-      },
     },
     {
       type: "section",
@@ -26868,6 +23874,10 @@ export const article720: Article = {
         "~250km — 4 hrs",
         "8,694 ft",
       ],
+      image: {
+        src: article720Image2,
+        alt: "Shogran",
+      },
     },
     {
       type: "section",
@@ -26878,10 +23888,6 @@ export const article720: Article = {
         "7,500 ft",
         "Bazaar, colonial heritage, Kashmir Point",
       ],
-      image: {
-        src: article720Image2,
-        alt: "Murree Mall Road",
-      },
     },
     {
       type: "section",
@@ -26890,6 +23896,10 @@ export const article720: Article = {
       paragraphs: [
         "Proximity to Islamabad is a constraint — 45 minutes beats any alternative by 1-8 hours",
       ],
+      image: {
+        src: article720Image2,
+        alt: "Private cedar villa estate accommodation is the priority — Himalaya Villas is unique in Pakistan",
+      },
     },
     {
       type: "section",
@@ -26899,10 +23909,6 @@ export const article720: Article = {
         "January snowfall experience is the objective — Bhurban at 6,800 feet with the Presidential Suite jacuzzi",
         "A 2-3 night weekend trip is the format — the short journey supports short stays",
       ],
-      image: {
-        src: article720Image2,
-        alt: "October amber season is the objective — the Bhurban cedar forest colour is the finest accessible fro...",
-      },
     },
     {
       type: "related",
@@ -26924,13 +23930,13 @@ export const article721: Article = {
   slug: "bhurban-villa-pricing-guide",
   title: "Himalaya Villas Bhurban Pricing Guide — All 12 Villas Rates 2026",
   metaDescription:
-    "URL /bhurban-villa-pricing-guide Target KW himalaya villas bhurban pricing, bhurban villa prices 2026, himalaya villas rates, bhurban cedar estate pricing",
+    "himalaya villas bhurban pricing, bhurban villa prices 2026, himalaya villas rates, bhurban cedar estate pricing",
   keywords:
     "himalaya villas bhurban pricing, bhurban villa prices 2026, himalaya villas rates, bhurban cedar estate pricing",
   eyebrow: "Backlink Guest Post · Capacity | ~800w",
   h1: "Himalaya Villas Bhurban Pricing Guide — All 12 Villas Rates 2026",
   heroTagline:
-    "URL /bhurban-villa-pricing-guide Target KW himalaya villas bhurban pricing, bhurban villa prices 2026, himalaya villas rates, bhurban cedar estate pricing",
+    "himalaya villas bhurban pricing, bhurban villa prices 2026, himalaya villas rates, bhurban cedar estate pricing",
   heroImage: article721Hero,
   blocks: [
     {
@@ -27110,19 +24116,31 @@ export const article722: Article = {
   slug: "bhurban-murree-outdoor-activities",
   title: "Bhurban Murree Outdoor Activities — The Complete 2026 Guide",
   metaDescription:
-    "URL /bhurban-murree-outdoor-activities Target KW bhurban murree outdoor activities, bhurban murree activities guide, outdoor activities bhurban 2026",
+    "bhurban murree outdoor activities, bhurban murree activities guide, outdoor activities bhurban 2026 ~900w",
   keywords:
     "bhurban murree outdoor activities, bhurban murree activities guide, outdoor activities bhurban 2026",
   eyebrow: "Backlink Guest Post · 22km — 30 min drive | ~900w",
   h1: "Bhurban Murree Outdoor Activities — The Complete 2026 Guide",
   heroTagline:
-    "URL /bhurban-murree-outdoor-activities Target KW bhurban murree outdoor activities, bhurban murree activities guide, outdoor activities bhurban 2026",
+    "bhurban murree outdoor activities, bhurban murree activities guide, outdoor activities bhurban 2026 ~900w",
   heroImage: article722Hero,
   blocks: [
     {
       type: "callout-qa",
       question: "What outdoor activities are available at Bhurban Murree?",
       answer: "Bhurban Murree outdoor activities 2026: cedar estate dawn walk (Himalaya Villas guests, 5:45am, year-round); Patriata Chairlift gondola (3km, 8 min, 9am-5pm approx., ~PKR 700-1,000/person); Chinar Golf Club (0.5km, 9-hole cedar forest course, April-October); Murree Mall Road walk (11km, 20 min); Kashmir Point viewpoint (22km, 30 min); Pindi Point Chairlift (22km, 30 min); Ayubia Pipeline Track hike (30km, 40 min, 8km, 2.5-3.5 hrs); Nathia Gali walk (30km, 45 min); Mushkpuri Top summit hike (35km to trailhead, 6km, 4 hrs, 9,230 ft). Bhurban's outdoor activity portfolio spans the full range from the completely flat and accessible cedar estate walk to the demanding 9,230-foot Mushkpuri Top summ...",
+    },
+    {
+      type: "section",
+      eyebrow: "Minimal",
+      heading: "Minimal",
+      paragraphs: [
+        "Maintained paths; flat; year-round",
+      ],
+      image: {
+        src: article722Image1,
+        alt: "Minimal",
+      },
     },
     {
       type: "section",
@@ -27134,10 +24152,6 @@ export const article722: Article = {
         "Minimal (flat road)",
         "The bazaar walk; no hiking boots needed",
       ],
-      image: {
-        src: article722Image1,
-        alt: "Murree Mall Road walk",
-      },
     },
     {
       type: "section",
@@ -27148,6 +24162,10 @@ export const article722: Article = {
         "30-60 min at viewpoint",
         "Short walk, minimal",
       ],
+      image: {
+        src: article722Image2,
+        alt: "Kashmir Point viewpoint",
+      },
     },
     {
       type: "section",
@@ -27156,10 +24174,6 @@ export const article722: Article = {
       paragraphs: [
         "All ages; chairlift is open — some height exposure",
       ],
-      image: {
-        src: article722Image2,
-        alt: "Lift does the ascent",
-      },
     },
     {
       type: "section",
@@ -27169,6 +24183,10 @@ export const article722: Article = {
         "3km — 8 min drive",
         "1.5-2 hrs total",
       ],
+      image: {
+        src: article722Image2,
+        alt: "Patriata Chairlift gondola",
+      },
     },
     {
       type: "section",
@@ -27177,10 +24195,6 @@ export const article722: Article = {
       paragraphs: [
         "Enclosed; all ages; most accessible aerial activity",
       ],
-      image: {
-        src: article722Image2,
-        alt: "Gondola does the ascent",
-      },
     },
     {
       type: "section",
@@ -27189,6 +24203,10 @@ export const article722: Article = {
       paragraphs: [
         "Some unmaintained sections; guide helpful",
       ],
+      image: {
+        src: article722Image2,
+        alt: "Gentle slopes",
+      },
     },
     {
       type: "section",
@@ -27197,10 +24215,6 @@ export const article722: Article = {
       paragraphs: [
         "After gondola ascent; some uneven terrain",
       ],
-      image: {
-        src: article722Image2,
-        alt: "Gentle ridge walking",
-      },
     },
     {
       type: "section",
@@ -27212,6 +24226,10 @@ export const article722: Article = {
         "Minimal (along pipe route)",
         "Good shoes needed; best October-April",
       ],
+      image: {
+        src: article722Image2,
+        alt: "Ayubia Pipeline Track",
+      },
     },
     {
       type: "section",
@@ -27222,10 +24240,6 @@ export const article722: Article = {
         "2 hrs town walk",
         "Minimal (town walking)",
       ],
-      image: {
-        src: article722Image2,
-        alt: "Nathia Gali walk",
-      },
     },
     {
       type: "section",
@@ -27234,6 +24248,10 @@ export const article722: Article = {
       paragraphs: [
         "40km+ away",
       ],
+      image: {
+        src: article722Image2,
+        alt: "Upper Galiyat tracks",
+      },
     },
     {
       type: "section",
@@ -27244,10 +24262,6 @@ export const article722: Article = {
         "Sub-zero cedar + snowfall possible",
         "Chains for car; heavy clothing",
       ],
-      image: {
-        src: article722Image2,
-        alt: "January",
-      },
     },
     {
       type: "section",
@@ -27257,6 +24271,10 @@ export const article722: Article = {
         "Daisy meadow + clear summit",
         "Pre-monsoon clarity; summit accessible",
       ],
+      image: {
+        src: article722Image2,
+        alt: "Mushkpuri Top",
+      },
     },
     {
       type: "section",
@@ -27267,10 +24285,6 @@ export const article722: Article = {
         "All activities open; avoid monsoon afternoon",
         "Morning activities only; afternoon rain",
       ],
-      image: {
-        src: article722Image2,
-        alt: "July-August",
-      },
     },
     {
       type: "section",
@@ -27282,6 +24296,10 @@ export const article722: Article = {
         "Very low demand; most private",
         "Book the Outdoor Activity Base — WhatsApp +92 304 567 9000",
       ],
+      image: {
+        src: article722Image2,
+        alt: "November",
+      },
     },
     {
       type: "related",
@@ -27303,13 +24321,13 @@ export const article723: Article = {
   slug: "luxury-private-villa-bhurban-murree",
   title: "Luxury Private Villa Bhurban Murree — The Himalaya Villas Definitive Guide",
   metaDescription:
-    "URL /luxury-private-villa-bhurban-murree Target KW luxury private villa bhurban murree, luxury villa bhurban, private villa bhurban murree luxury",
+    "luxury private villa bhurban murree, luxury villa bhurban, private villa bhurban murree luxury ~800w Luxury Private Villa Bhurban Murree — The Himalaya Villas Definitive Guide",
   keywords:
     "luxury private villa bhurban murree, luxury villa bhurban, private villa bhurban murree luxury",
   eyebrow: "Backlink Guest Post · The proximity: all of the above within 45 minutes of Islamabad — the accessible luxury | ~800w",
   h1: "Luxury Private Villa Bhurban Murree — The Himalaya Villas Definitive Guide",
   heroTagline:
-    "URL /luxury-private-villa-bhurban-murree Target KW luxury private villa bhurban murree, luxury villa bhurban, private villa bhurban murree luxury",
+    "luxury private villa bhurban murree, luxury villa bhurban, private villa bhurban murree luxury ~800w Luxury Private Villa Bhurban Murree — The Himalaya Villas Definitive Guide",
   heroImage: article723Hero,
   blocks: [
     {
@@ -27368,13 +24386,16 @@ export const article723: Article = {
       ],
     },
     {
-      type: "cta",
+      type: "section",
       eyebrow: "Book Via",
       heading: "Book Via",
-      text: "Himalaya Villas (Presidential Suite)",
-      buttonLabel: "WhatsApp: +92 304 567 9000 | wa.me/923045679000",
-      buttonHref: "https://wa.me/923045679000",
-      footnote: "Direct bookings receive priority response and best available rate.",
+      paragraphs: [
+        "Himalaya Villas (Presidential Suite)",
+      ],
+      image: {
+        src: article723Image2,
+        alt: "Book Via",
+      },
     },
     {
       type: "section",
@@ -27432,13 +24453,13 @@ export const article724: Article = {
   slug: "resort-near-islamabad",
   title: "Resort Near Islamabad — Bhurban Cedar Estate vs All Options",
   metaDescription:
-    "URL /resort-near-islamabad Target KW resort near islamabad, private resort near islamabad, bhurban resort near islamabad, mountain resort islamabad",
+    "resort near islamabad, private resort near islamabad, bhurban resort near islamabad, mountain resort islamabad",
   keywords:
     "resort near islamabad, private resort near islamabad, bhurban resort near islamabad, mountain resort islamabad",
   eyebrow: "Backlink Guest Post · Distance | ~800w",
   h1: "Resort Near Islamabad — Bhurban Cedar Estate vs All Options",
   heroTagline:
-    "URL /resort-near-islamabad Target KW resort near islamabad, private resort near islamabad, bhurban resort near islamabad, mountain resort islamabad",
+    "resort near islamabad, private resort near islamabad, bhurban resort near islamabad, mountain resort islamabad",
   heroImage: article724Hero,
   blocks: [
     {
@@ -27451,6 +24472,18 @@ export const article724: Article = {
       text: "resort near islamabad, private resort near islamabad, bhurban resort near islamabad, mountain resort islamabad",
     },
     {
+      type: "comparison",
+      heading: "Resort Near Islamabad — Bhurban Cedar Estate vs All Options",
+      columns: [
+        "Feature",
+        "Option A",
+        "Option B",
+      ],
+      rows: [
+        { feature: "Commercial", a: "Cluster 11", b: "~800w" },
+      ],
+    },
+    {
       type: "section",
       eyebrow: "Resort Near Islamabad",
       heading: "Resort Near Islamabad — Bhurban Cedar Estate vs Every Option",
@@ -27460,6 +24493,10 @@ export const article724: Article = {
         "The 'resort near Islamabad' search is the high-intent planning query from Islamabad residents who have decided to escape the city and are looking for the best option within reasonable driving distance. This guide maps every significant resort within 75km of Islamabad and makes the honest case for each.",
         "All Resorts Within 75km of Islamabad",
       ],
+      image: {
+        src: article724Image2,
+        alt: "Resort Near Islamabad — Bhurban Cedar Estate vs Every Option",
+      },
     },
     {
       type: "section",
@@ -27476,10 +24513,6 @@ export const article724: Article = {
         "Hotel One Bhurban (Hashoo)",
         "48km — 45 min",
       ],
-      image: {
-        src: article724Image2,
-        alt: "Private cedar villa estate",
-      },
     },
     {
       type: "section",
@@ -27489,6 +24522,10 @@ export const article724: Article = {
         "Confirm hotelsone.com.pk",
         "Brand reliability; Bhurban location",
       ],
+      image: {
+        src: article724Image2,
+        alt: "Mid-scale chain hotel",
+      },
     },
     {
       type: "section",
@@ -27497,10 +24534,6 @@ export const article724: Article = {
       paragraphs: [
         "~48km — 45 min",
       ],
-      image: {
-        src: article724Image2,
-        alt: "Haven Resort Bhurban",
-      },
     },
     {
       type: "section",
@@ -27512,6 +24545,10 @@ export const article724: Article = {
         "Ramada Murree (Wyndham)",
         "55km — 60 min",
       ],
+      image: {
+        src: article724Image2,
+        alt: "Resort property",
+      },
     },
     {
       type: "section",
@@ -27526,10 +24563,6 @@ export const article724: Article = {
         "Confirm accorhotels.com",
         "Murree hills; AccorHotels brand",
       ],
-      image: {
-        src: article724Image2,
-        alt: "International chain hotel",
-      },
     },
     {
       type: "section",
@@ -27538,6 +24571,10 @@ export const article724: Article = {
       paragraphs: [
         "55km — 60 min",
       ],
+      image: {
+        src: article724Image2,
+        alt: "Lockwood Hotel Murree",
+      },
     },
     {
       type: "section",
@@ -27547,10 +24584,6 @@ export const article724: Article = {
         "Confirm Booking.com",
         "Colonial era building; Mall Road",
       ],
-      image: {
-        src: article724Image2,
-        alt: "Heritage hotel",
-      },
     },
     {
       type: "section",
@@ -27559,6 +24592,10 @@ export const article724: Article = {
       paragraphs: [
         "55km — 60 min",
       ],
+      image: {
+        src: article724Image2,
+        alt: "Hotel One Mall Road Murree",
+      },
     },
     {
       type: "section",
@@ -27570,10 +24607,6 @@ export const article724: Article = {
         "The 47km Advantage — Why Bhurban Leads",
         "The 47km proximity to Islamabad is the specific structural advantage that separates Bhurban from all other Pakistan mountain resorts. The practical implication:",
       ],
-      image: {
-        src: article724Image2,
-        alt: "Mid-scale chain",
-      },
     },
     {
       type: "related",
@@ -27589,39 +24622,9 @@ export const article724: Article = {
 };
 
 // ============================================
-// EXPORT ALL ARTICLES 456-724
+// EXPORT ALL ARTICLES 506-724
 // ============================================
-export const articlesBatch46 = [
-    article456,
-    article457,
-    article458,
-    article459,
-    article460,
-    article461,
-    article462,
-    article463,
-    article464,
-    article465,
-    article476,
-    article477,
-    article478,
-    article479,
-    article480,
-    article481,
-    article482,
-    article483,
-    article484,
-    article485,
-    article496,
-    article497,
-    article498,
-    article499,
-    article500,
-    article501,
-    article502,
-    article503,
-    article504,
-    article505,
+export const articlesBatch52 = [
     article506,
     article507,
     article508,
@@ -27844,37 +24847,7 @@ export const articlesBatch46 = [
 ];
 
 // Export articles by slug
-export const articlesBySlugBatch46 = {
-  "murree-in-november": article456,
-  "murree-in-september": article457,
-  "bhurban-birdwatching-guide": article458,
-  "murree-spring-wildflowers": article459,
-  "bhurban-for-lahore-families": article589,
-  "bhurban-monsoon-guide": article461,
-  "bhurban-december-guide": article462,
-  "ayubia-national-park-guide": article586,
-  "bhurban-villa-pricing-guide": article721,
-  "honeymoon-package-bhurban-murree": article717,
-  "himalaya-villas-vs-nathia-gali": article476,
-  "bhurban-from-multan": article477,
-  "murree-resort-guide": article478,
-  "bhurban-qawwali-evening": article479,
-  "bhurban-campfire-bonfire-guide": article480,
-  "murree-bhurban-hotel-booking": article481,
-  "in-villa-spa-bhurban": article482,
-  "corporate-team-building-bhurban": article483,
-  "milestone-birthday-bhurban": article484,
-  "bhurban-murree-ramadan": article485,
-  "movenpick-murree-alternative": article496,
-  "shangrila-murree-alternative": article497,
-  "murree-hotel-booking-guide": article567,
-  "pc-bhurban-contact-booking": article499,
-  "ramada-murree-alternative": article500,
-  "lockwood-hotel-murree-alternative": article501,
-  "marco-polo-murree-alternative": article502,
-  "best-hotels-murree-pakistan-2026": article503,
-  "murree-hill-station-guide": article504,
-  "murree-temperature-today": article505,
+export const articlesBySlugBatch52 = {
   "chinar-club-bhurban-guide": article506,
   "chinar-bhurban-huts-lodges": article507,
   "holiday-grand-resort-bhurban-guide": article508,
@@ -27882,6 +24855,7 @@ export const articlesBySlugBatch46 = {
   "bhurban-apartments-guide": article510,
   "hotels-in-bhurban-murree": article511,
   "bhurban-boutique-accommodation": article512,
+
   "murree-day-trip-islamabad": article513,
   "murree-tour-packages-guide": article514,
   "bhurban-golf-club-guide": article515,
@@ -27934,10 +24908,13 @@ export const articlesBySlugBatch46 = {
   "murree-hill-station-history-guide": article562,
   "bhurban-photography-guide": article563,
   "stargazing-bhurban-murree": article677,
+  "honeymoon-package-bhurban-murree": article717,
   "murree-expressway-guide": article566,
+  "murree-hotel-booking-guide": article567,
   "pindi-point-murree-guide": article696,
   "cheap-hotels-murree-guide": article569,
   "murree-bhurban-itinerary": article570,
+  "bhurban-villa-pricing-guide": article721,
   "bhurban-murree-for-families": article572,
   "bhurban-private-estate-vs-pc-hotel": article573,
   "destination-wedding-bhurban-murree": article715,
@@ -27952,8 +24929,10 @@ export const articlesBySlugBatch46 = {
   "qubed-richmond-nathiagali-guide": article583,
   "mushkpuri-top-nathia-gali-guide": article584,
   "nathia-gali-cottages-villas": article585,
+  "ayubia-national-park-guide": article586,
   "nathia-gali-weather-today": article587,
   "murree-hill-station-heritage": article588,
+  "bhurban-for-lahore-families": article589,
   "resort-near-islamabad": article724,
   "bhurban-for-pakistani-diaspora": article591,
   "bhurban-for-couples": article592,
@@ -28058,4 +25037,4 @@ export const articlesBySlugBatch46 = {
   "luxury-private-villa-bhurban-murree": article723,
 };
 
-export default articlesBatch46;
+export default articlesBatch52;

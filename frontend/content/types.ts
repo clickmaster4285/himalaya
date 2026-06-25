@@ -9,8 +9,8 @@ export interface Article {
   h1: string;
   heroTagline: string;
   heroImage: string;
-    blocks: Block[];
-    
+  sitemapCategory?: string;
+  blocks: Block[];
 }
 
 export type Block =

@@ -245,7 +245,7 @@ const Footer = () => {
               Terms & Conditions
             </Link>
             <Link
-              href="/sitemap.xml"
+              href="/sitemap_index.xml"
               className="text-xs font-body transition-opacity hover:opacity-100"
               style={{ color: "hsl(0 0% 100% / 0.35)" }}
             >

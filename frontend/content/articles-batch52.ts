@@ -1222,7 +1222,7 @@ export const article507: Article = {
   keywords:
     "chinar bhurban, chinar huts bhurban, chinar lodges bhurban, chinar bhurban murree",
   eyebrow: "Backlink Guest Post · Cluster | ~700w",
-  h1: "/chinar-bhurban-huts-lodges chinar bhurban, chinar huts bhurban, chinar lodges bhurban, chinar bhurban murree",
+  h1: "chinar bhurban, chinar huts bhurban, chinar lodges bhurban, chinar bhurban murree",
   heroTagline:
     "Chinar Huts Bhurban and Chinar Lodges Bhurban are accommodation options in the Bhurban cedar forest area — typically smaller-scale chalet or hut-style accommodation units set in the cedar trees, distinct from the main PC Hotel / Chinar Club complex. For guests seeking the private villa estate experience (exclusive-use villa, private outdoor space, in-villa dining) near the Chinar complex: Himalaya...",
   heroImage: article507Hero,

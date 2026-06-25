@@ -1,3 +1,4 @@
+import type { Article } from "@/content/types";
 import { VILLA_BLOG_POSTS } from "@/lib/villa-blog-posts";
 import { blogCanonicalPath } from "@/lib/blog-posts";
 import { allArticles } from "@/content/allArticles";
@@ -11,17 +12,47 @@ const CATEGORY_ALIAS: Record<string, string> = {
   page: "pages",
   pages: "pages",
   blog: "blog",
+  blogs: "blog",
+  article: "blog",
   villa: "villas",
   villas: "villas",
   event: "events",
   events: "events",
+  wedding: "events",
+  weddings: "events",
+  banquet: "events",
+  dining: "events",
   weather: "weather",
+  forecast: "weather",
+  temperature: "weather",
+  temperatures: "weather",
+  temp: "weather",
+  snow: "weather",
+  climate: "weather",
 };
 
 function normalizeArticleCategory(category?: string): string {
-  if (!category) return "pages";
+  if (!category || !category.trim()) return "pages";
   const normalized = category.trim().toLowerCase();
   return CATEGORY_ALIAS[normalized] ?? normalized;
+}
+
+function inferArticleCategory(article: Article): string {
+  const explicitCategory = normalizeArticleCategory(article.sitemapCategory);
+  if (article.sitemapCategory && explicitCategory !== "pages") {
+    return explicitCategory;
+  }
+
+  const lookup = [article.slug, article.title, article.metaDescription, article.eyebrow]
+    .filter(Boolean)
+    .join(" ")
+    .toLowerCase();
+
+  if (/(\bblog\b|\barticle\b|\bnews\b)/.test(lookup)) return "blog";
+  if (/(weather|temperature|temperatur|forecast|snow|rain|climate)/.test(lookup)) return "weather";
+  if (/(event|events|wedding|banquet|celebration|celebrations|corporate|retreat|dining|function|party)/.test(lookup)) return "events";
+
+  return "pages";
 }
 
 export function getArticleSitemapRouteDefs(categoryName: string): SitemapRouteDef[] {
@@ -29,7 +60,7 @@ export function getArticleSitemapRouteDefs(categoryName: string): SitemapRouteDe
 
   return allArticles
     .map((article) => ({
-      category: normalizeArticleCategory(article.sitemapCategory),
+      category: inferArticleCategory(article),
       path: `/${article.slug}`,
     }))
     .filter((item) => item.category === category)
@@ -57,7 +88,7 @@ export type SitemapRouteDef = {
 
 const BOOK_CHILD = ["/stay", "/wedding", "/dining", "/event", "/activities", "/meetings"] as const;
 
-function staticMarketingRoutes(): SitemapRouteDef[] {
+function staticMarketingRoutes(includeBookRoutes = true): SitemapRouteDef[] {
   const core: SitemapRouteDef[] = [
     { path: "/", changeFrequency: "weekly", priority: 1 },
     { path: "/contact", changeFrequency: "monthly", priority: 0.75 },
@@ -68,19 +99,21 @@ function staticMarketingRoutes(): SitemapRouteDef[] {
     { path: "/thing-to-do-bhurban-murree2", changeFrequency: "monthly", priority: 0.65 },
   ];
 
-  for (const child of BOOK_CHILD) {
-    core.push({
-      path: `/book${child}`,
-      changeFrequency: "monthly",
-      priority: 0.8,
-    });
+  if (includeBookRoutes) {
+    for (const child of BOOK_CHILD) {
+      core.push({
+        path: `/book${child}`,
+        changeFrequency: "monthly",
+        priority: 0.8,
+      });
+    }
   }
 
   return core.filter((r) => !LEGACY_HREFS.has(r.path));
 }
 
-export function getStaticSitemapRouteDefs(): SitemapRouteDef[] {
-  return staticMarketingRoutes();
+export function getStaticSitemapRouteDefs(options?: { includeBookRoutes?: boolean }): SitemapRouteDef[] {
+  return staticMarketingRoutes(options?.includeBookRoutes ?? true);
 }
 
 export function getBlogSitemapRouteDefs(): SitemapRouteDef[] {

@@ -5,7 +5,7 @@ export const revalidate = 300;
 
 export async function GET() {
   const origin = getSiteOrigin();
-  const staticDefs = getStaticSitemapRouteDefs();
+  const staticDefs = getStaticSitemapRouteDefs({ includeBookRoutes: false });
   const articleDefs = getArticleSitemapRouteDefs("pages");
 
   const entries = [...staticDefs, ...articleDefs].map((def) => {

@@ -241,13 +241,7 @@ export default function ExperienceClient({ chapters }: ExperienceClientProps) {
     
     {/* Additional content */}
     <div className="mt-12 space-y-6 text-left max-w-2xl mx-auto">
-      <div className="overflow-hidden">
-        <p className="reveal-line text-ink-soft/80 text-sm md:text-base leading-relaxed border-l-2 border-primary pl-6">
-          No check-in queues. No generic lobbies. Just the scent of pine, 
-          the crackle of a fireplace, and a valley that stretches below 
-          you like a forgotten world.
-        </p>
-      </div>
+  
       
       <div className="grid grid-cols-1 md:grid-cols-3 gap-6 mt-8">
         <div className="overflow-hidden">
@@ -269,6 +263,15 @@ export default function ExperienceClient({ chapters }: ExperienceClientProps) {
           </div>
         </div>
       </div>
+
+
+          {/* <div className="overflow-hidden">
+        <p className="reveal-line text-ink-soft/80 text-sm md:text-base leading-relaxed border-l-2 border-primary pl-6">
+          No check-in queues. No generic lobbies. Just the scent of pine, 
+          the crackle of a fireplace, and a valley that stretches below 
+          you like a forgotten world.
+        </p>
+      </div> */}
       
       <div className="overflow-hidden mt-24">
         <p className="reveal-line text-xs tracking-[0.2em] uppercase text-ink-soft/50 text-center">
@@ -398,7 +401,7 @@ export default function ExperienceClient({ chapters }: ExperienceClientProps) {
           </h2>
           <div className="mx-auto mt-8 h-px w-24 bg-[var(--gold)]" />
           <p className="mt-8 text-white/85 text-lg  leading-relaxed">
-            Tell us when. We'll light the fire and brew the first pot of tea.
+            Tell us when. We will light the fire and brew the first pot of tea.
           </p>
           <a
             href="https://wa.me/923045679000"

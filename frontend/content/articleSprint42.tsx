@@ -102,14 +102,16 @@ export const article406: Article = {
         alt: "Wedding planner venue discovery at Himalaya Villas Bhurban",
       },
     },
-    {
-      type: "section",
-      eyebrow: "Himalaya Villas & Resorts — The Mountain Wedding Venue for Pakistan's Wedding Planners",
-      heading: "Book Your Wedding Venue",
-      paragraphs: [
-        "himalayavillas.com | +92 304 567 9000",
-      ],
-    },
+   // ARTICLE 406 - Fixed CTABlock
+{
+  type: "cta",  // ← lowercase "cta", not "CTABlock"
+  eyebrow: "Himalaya Villas & Resorts — The Mountain Wedding Venue for Pakistan's Wedding Planners",
+  heading: "Book Your Wedding Venue",
+  text: "Call us or visit our website to book your mountain wedding venue.",
+  buttonLabel: "Book Now",
+  buttonHref: "https://himalayavillas.com",
+  footnote: "himalayavillas.com | +92 304 567 9000",
+},
   ],
 };
 

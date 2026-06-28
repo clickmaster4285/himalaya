@@ -56,53 +56,120 @@ def parse_slug_from_url(text: str) -> str:
 # TABLE DETECTION
 # -----------------------------
 
-def detect_and_parse_table(content: str) -> List[str]:
-    """Detect if content contains a table and parse it into markdown format."""
+def detect_and_parse_table(content: str) -> List[Dict]:
+    """Improved table detection for comparison blocks."""
     lines = [l.strip() for l in content.split('\n') if l.strip()]
     
-    if len(lines) < 2:
-        return None
-    
-    # Check for pipe tables (| Feature | Value |)
-    if '|' in lines[0]:
-        rows = []
+    # Strong comparison patterns
+    if any(word in content for word in ["vs", "Comparison", "Direct Comparison", "PC Hotel", "Himalaya"]):
+        # Try pipe table
+        pipe_rows = []
         for line in lines:
-            if line.startswith('|---') or line.startswith('| ---'):
-                continue
-            cells = [c.strip() for c in line.split('|') if c.strip()]
-            if cells:
-                rows.append(cells)
-        if len(rows) >= 2:
-            md_rows = []
-            md_rows.append("| " + " | ".join(rows[0]) + " |")
-            md_rows.append("| " + " | ".join(["---"] * len(rows[0])) + " |")
-            for row in rows[1:]:
-                while len(row) < len(rows[0]):
-                    row.append("")
-                md_rows.append("| " + " | ".join(row[:len(rows[0])]) + " |")
-            return md_rows
+            if '|' in line and not line.startswith('|---'):
+                cells = [c.strip() for c in line.split('|') if c.strip()]
+                if cells and len(cells) >= 2:
+                    pipe_rows.append(cells)
+        
+        if len(pipe_rows) >= 3:
+            headers = pipe_rows[0]
+            rows = []
+            for row in pipe_rows[1:]:
+                if len(row) >= 2:
+                    rows.append({
+                        "feature": row[0],
+                        "a": row[1] if len(row) > 1 else "",
+                        "b": row[2] if len(row) > 2 else ""
+                    })
+            return {
+                "type": "comparison",
+                "heading": "Direct Comparison",
+                "columns": headers[:3],
+                "rows": rows
+            }
     
-    # Check for space/tab separated tables
-    tab_lines = []
-    for line in lines:
-        parts = re.split(r'\s{2,}|\t', line)
-        parts = [p.strip() for p in parts if p.strip()]
-        if len(parts) >= 3:
-            tab_lines.append(parts)
-    
-    if len(tab_lines) >= 2:
-        headers = tab_lines[0]
-        if all(len(h) < 30 for h in headers):
-            md_rows = []
-            md_rows.append("| " + " | ".join(headers) + " |")
-            md_rows.append("| " + " | ".join(["---"] * len(headers)) + " |")
-            for row in tab_lines[1:]:
-                while len(row) < len(headers):
-                    row.append("")
-                md_rows.append("| " + " | ".join(row[:len(headers)]) + " |")
-            return md_rows
+    # Seasonal / Quick Reference tables
+    if any(word in content for word in ["Spring", "Summer", "Autumn", "Winter", "★★★★", "Guest Type"]):
+        # Simple 2-column or rating table
+        return {
+            "type": "section",
+            "heading": "Seasonal Activity Guide" if "Season" in content else "Quick Reference",
+            "paragraphs": lines[:20]  # fallback
+        }
     
     return None
+
+
+def parse_all_blocks(text: str, article_id: str) -> List[Dict[str, Any]]:
+    """Improved block parser"""
+    blocks = []
+    lines = [l.strip() for l in text.split('\n') if l.strip()]
+    
+    i = 0
+    while i < len(lines):
+        line = lines[i]
+        
+        # CTA Detection (much stronger)
+        if any(kw in line for kw in ["Book Your", "How to Book", "Book Now", "Enquire", "WhatsApp", "Stay at", "Book a Private"]):
+            cta_text = ""
+            j = i + 1
+            while j < len(lines) and not re.match(r'^[A-Z][A-Za-z\s\-—]+$', lines[j]):
+                cta_text += lines[j] + " "
+                j += 1
+            
+            blocks.append({
+                "type": "cta",
+                "eyebrow": "Ready to Book?",
+                "heading": line,
+                "text": clean_text(cta_text, 400),
+                "buttonLabel": "WhatsApp: +92 304 567 9000",
+                "buttonHref": "https://wa.me/923045679000",
+                "footnote": "Direct bookings receive priority response and best available rate."
+            })
+            i = j
+            continue
+        
+        # FAQ Detection
+        if "Frequently Asked Questions" in line or "FAQ" in line:
+            faq_items = []
+            j = i + 1
+            current_q = ""
+            current_a = ""
+            
+            while j < len(lines) and not re.match(r'^[A-Z][A-Za-z\s\-—]{10,}$', lines[j]):
+                cl = lines[j]
+                if cl.startswith("Q:") or re.match(r'^\d+\.', cl):
+                    if current_q and current_a:
+                        faq_items.append({"q": current_q, "a": current_a})
+                    current_q = re.sub(r'^Q:|\d+\.\s*', '', cl).strip()
+                    current_a = ""
+                elif cl.startswith("A:"):
+                    current_a = re.sub(r'^A:\s*', '', cl).strip()
+                elif current_q:
+                    current_a += " " + cl.strip()
+                j += 1
+            
+            if current_q and current_a:
+                faq_items.append({"q": current_q, "a": current_a})
+            
+            if faq_items:
+                blocks.append({
+                    "type": "faqs",
+                    "heading": line,
+                    "items": faq_items
+                })
+            i = j
+            continue
+        
+        # Table / Comparison
+        table = detect_and_parse_table('\n'.join(lines[i:i+30]))
+        if table and isinstance(table, dict):
+            blocks.append(table)
+            i += 15  # skip ahead
+            continue
+        
+        i += 1
+    
+    return blocks
 
 
 def detect_table_from_lines(lines: List[str]) -> List[str]:
@@ -292,344 +359,6 @@ def parse_article_content(text: str, article_id: str) -> Dict[str, Any]:
 # -----------------------------
 # PARSE ALL BLOCKS
 # -----------------------------
-
-def parse_all_blocks(text: str, article_id: str) -> List[Dict[str, Any]]:
-    """Parse all blocks from text - handles all block types."""
-    blocks = []
-    lines = [l.strip() for l in text.split('\n') if l.strip()]
-    
-    # ============================================
-    # 1. FIND CALLOUT-QA (❓ sections)
-    # ============================================
-    qa_pattern = r'❓\s*([^?]+\?)\s*\n\s*([^❓📎]+?)(?=\n❓|\n📎|$|\n[A-Z][A-Za-z\s\-—]+?\n)'
-    qa_matches = re.finditer(qa_pattern, text, re.DOTALL)
-    
-    for match in qa_matches:
-        question = match.group(1).strip()
-        answer = match.group(2).strip()
-        if question and answer and len(question) > 5:
-            blocks.append({
-                "type": "callout-qa",
-                "question": clean_text(question, 300),
-                "answer": clean_text(answer, 700)
-            })
-    
-    # ============================================
-    # 2. FIND PARAGRAPHS
-    # ============================================
-    para_pattern = r'\n\n([^❓📎\n]{100,800}?)\n\n(?=[A-Z][A-Za-z\s\-—]+?\n|❓|📎|$)'
-    para_matches = re.finditer(para_pattern, text, re.DOTALL)
-    
-    for match in para_matches:
-        para_text = match.group(1).strip()
-        if para_text and not para_text.startswith('❓') and not para_text.startswith('📎'):
-            if not re.match(r'^[A-Za-z\s]+\|\s*Cluster', para_text):
-                if '|' not in para_text:
-                    if len(para_text) > 50:
-                        if not para_text.startswith('Week') and not para_text.startswith('Why November'):
-                            if not para_text.startswith('Property Facts') and not para_text.startswith('Direct Comparison'):
-                                if not para_text.startswith('How to Book') and not para_text.startswith('Frequently Asked'):
-                                    blocks.append({
-                                        "type": "paragraph",
-                                        "text": clean_text(para_text, 500)
-                                    })
-    
-    # ============================================
-    # 3. FIND ALL SPECIAL BLOCKS BY HEADER
-    # ============================================
-    i = 0
-    while i < len(lines):
-        line = lines[i].strip()
-        
-        # Skip short lines or lines with pipes (tables)
-        if len(line) < 4 or '|' in line:
-            i += 1
-            continue
-        
-        # Skip metadata
-        if any(line.startswith(p) for p in ['ARTICLE', 'URL', 'KW', 'WC', 'T', 'C', 'Template', 'Cluster', '❓', '📎']):
-            i += 1
-            continue
-        if re.match(r'^[A-Za-z\s]+\|\s*Cluster', line):
-            i += 1
-            continue
-        
-        # Check if this is a section header
-        if re.match(r'^[A-Z][A-Za-z\s\-—]+$', line) or re.match(r'^[A-Z][A-Za-z\s\-—]+:', line):
-            
-            # Collect content until next header
-            content_lines = []
-            i += 1
-            while i < len(lines):
-                next_line = lines[i].strip()
-                if next_line and (re.match(r'^[A-Z][A-Za-z\s\-—]+$', next_line) or re.match(r'^[A-Z][A-Za-z\s\-—]+:', next_line)):
-                    break
-                if next_line:
-                    content_lines.append(next_line)
-                i += 1
-            
-            # ============================================
-            # DETECT BLOCK TYPE
-            # ============================================
-            
-            # --- CTA BLOCK ---
-            # Detect: "How to Book", "Book Your", "WhatsApp", "Enquire", "Contact"
-            if any(keyword in line for keyword in ['How to Book', 'Book Your', 'Book Now', 'WhatsApp', 'Enquire', 'Contact', 'Book a']):
-                # Check if it has booking-related content
-                full_content = ' '.join(content_lines[:5]) if content_lines else ""
-                
-                # Extract button info
-                button_match = re.search(r'WhatsApp[\s:]*\+92\s*3\d{2}\s*\d{7}', text)
-                button_label = "WhatsApp: +92 304 567 9000  |  wa.me/923045679000"
-                button_href = "https://wa.me/923045679000"
-                
-                if button_match:
-                    button_label = button_match.group(0)
-                
-                # Build CTA text
-                cta_text = ' '.join(content_lines[:3]) if content_lines else ""
-                
-                blocks.append({
-                    "type": "cta",
-                    "eyebrow": clean_text(line, 120),
-                    "heading": clean_text(line, 200),
-                    "text": clean_text(cta_text, 300),
-                    "buttonLabel": button_label,
-                    "buttonHref": "https://wa.me/923045679000",
-                    "footnote": "Direct bookings receive priority response and best available rate."
-                })
-                continue
-            
-            # --- FACTS BLOCK ---
-            if 'Property Facts' in line or 'Key Facts' in line or 'Facts' in line:
-                items = []
-                for cl in content_lines:
-                    if ':' in cl and not cl.startswith('•') and not cl.startswith('-'):
-                        parts = cl.split(':', 1)
-                        label = parts[0].strip()
-                        value = parts[1].strip() if len(parts) > 1 else ''
-                        if label and value:
-                            items.append({"label": clean_text(label, 50), "value": clean_text(value, 150)})
-                if items:
-                    blocks.append({
-                        "type": "facts",
-                        "heading": clean_text(line, 200),
-                        "items": items
-                    })
-                    continue
-            
-            # --- COMPARISON BLOCK ---
-            if 'Comparison' in line or 'vs' in line.lower() or 'Direct Comparison' in line:
-                # Check if content has pipe table
-                rows = []
-                columns = []
-                
-                # Try to parse comparison from pipe table
-                pipe_rows = []
-                for cl in content_lines:
-                    if '|' in cl and not cl.startswith('|---'):
-                        cells = [c.strip() for c in cl.split('|') if c.strip()]
-                        if cells:
-                            pipe_rows.append(cells)
-                
-                if len(pipe_rows) >= 2:
-                    columns = pipe_rows[0]
-                    for row in pipe_rows[1:]:
-                        if len(row) >= 2:
-                            rows.append({
-                                "feature": clean_text(row[0], 100),
-                                "a": clean_text(row[1], 200) if len(row) > 1 else "",
-                                "b": clean_text(row[2], 200) if len(row) > 2 else ""
-                            })
-                else:
-                    # Try to parse as separated values
-                    for cl in content_lines:
-                        if cl:
-                            parts = re.split(r'\s{2,}|\t|\|', cl)
-                            parts = [p.strip() for p in parts if p.strip()]
-                            if len(parts) >= 3:
-                                if not columns:
-                                    columns = ['Feature', 'Option A', 'Option B']
-                                rows.append({
-                                    "feature": clean_text(parts[0], 100),
-                                    "a": clean_text(parts[1], 200),
-                                    "b": clean_text(parts[2], 200)
-                                })
-                
-                if rows:
-                    blocks.append({
-                        "type": "comparison",
-                        "heading": clean_text(line, 200),
-                        "columns": columns if columns else ['Feature', 'Option A', 'Option B'],
-                        "rows": rows
-                    })
-                    continue
-            
-            # --- AUDIENCE BLOCK ---
-            if 'Who Should Choose' in line or 'Who Should Book' in line or 'Best For' in line or 'Who Should' in line:
-                items = []
-                current_title = ""
-                current_text = ""
-                for cl in content_lines:
-                    if cl.endswith(':') or (len(cl) < 50 and ':' in cl and not cl.startswith('Week')):
-                        if current_title and current_text:
-                            items.append({"title": clean_text(current_title, 100), "text": clean_text(current_text, 300)})
-                        current_title = cl.replace(':', '').strip()
-                        current_text = ""
-                    elif current_title:
-                        current_text += " " + cl
-                if current_title and current_text:
-                    items.append({"title": clean_text(current_title, 100), "text": clean_text(current_text, 300)})
-                if items:
-                    blocks.append({
-                        "type": "audience",
-                        "heading": clean_text(line, 200),
-                        "items": items
-                    })
-                    continue
-            
-            # --- FAQS BLOCK ---
-            if 'Frequently Asked Questions' in line or 'FAQs' in line or 'FAQ' in line or 'Questions' in line:
-                items = []
-                q = ""
-                a = ""
-                
-                for cl in content_lines:
-                    # Check for Q: A: format
-                    if cl.startswith('Q:') or cl.startswith('Q -') or cl.startswith('Q.'):
-                        if q and a:
-                            items.append({"q": clean_text(q, 200), "a": clean_text(a, 350)})
-                        q = cl.replace('Q:', '').replace('Q -', '').replace('Q.', '').strip()
-                        a = ""
-                    elif cl.startswith('A:') or cl.startswith('A -') or cl.startswith('A.'):
-                        a = cl.replace('A:', '').replace('A -', '').replace('A.', '').strip()
-                    elif q and not a:
-                        # Check if it's a numbered question (1. How far is...)
-                        if re.match(r'^\d+\.', cl):
-                            if q and a:
-                                items.append({"q": clean_text(q, 200), "a": clean_text(a, 350)})
-                            q = re.sub(r'^\d+\.\s*', '', cl).strip()
-                            a = ""
-                        elif len(cl) > 10:
-                            a += " " + cl
-                
-                if q and a:
-                    items.append({"q": clean_text(q, 200), "a": clean_text(a, 350)})
-                
-                if items:
-                    blocks.append({
-                        "type": "faqs",
-                        "heading": clean_text(line, 200),
-                        "items": items
-                    })
-                    continue
-            
-            # --- RELATED BLOCK ---
-            if 'Related Pages' in line or 'Internal Links' in line or 'Related' in line:
-                items = []
-                for cl in content_lines:
-                    if cl.startswith('→') or cl.startswith('-') or cl.startswith('•') or cl.startswith('*'):
-                        href_match = re.search(r'/([\w-]+(?:/[\w-]+)*)', cl)
-                        label = cl.replace('→', '').replace('-', '').replace('•', '').replace('*', '').strip()
-                        if href_match:
-                            href = '/' + href_match.group(1)
-                            items.append({"href": href, "label": clean_text(label, 100)})
-                if items:
-                    blocks.append({
-                        "type": "related",
-                        "heading": clean_text(line, 200),
-                        "items": items
-                    })
-                    continue
-            
-            # --- REGULAR SECTION ---
-            # Check if it's a table
-            table_md = detect_and_parse_table('\n'.join(content_lines))
-            if not table_md:
-                table_md = detect_table_from_lines(content_lines)
-            
-            if table_md:
-                blocks.append({
-                    "type": "section",
-                    "eyebrow": clean_text(line.split('—')[0].strip() if '—' in line else line, 100),
-                    "heading": clean_text(line, 200),
-                    "paragraphs": table_md
-                })
-                continue
-            
-            # Regular section
-            paragraphs = []
-            bullets = []
-            for p in content_lines:
-                if '|' in p:
-                    continue
-                if p.startswith('•') or p.startswith('-') or p.startswith('*'):
-                    if ':' in p and len(p.split(':', 1)[0]) < 30:
-                        parts = p.split(':', 1)
-                        label = parts[0].strip().lstrip('• - *')
-                        text = parts[1].strip()
-                        bullets.append({"label": clean_text(label, 50), "text": clean_text(text, 300)})
-                    else:
-                        bullets.append({"text": clean_text(p.lstrip('• - *'), 300)})
-                elif p and not p.startswith('Q:') and not p.startswith('A:'):
-                    if not p.startswith('Week') or len(p) > 20:
-                        paragraphs.append(clean_text(p, 350))
-            
-            if paragraphs or bullets:
-                block = {
-                    "type": "section",
-                    "eyebrow": clean_text(line.split('—')[0].strip() if '—' in line else line, 100),
-                    "heading": clean_text(line, 200),
-                }
-                if paragraphs:
-                    block["paragraphs"] = paragraphs[:12]
-                if bullets:
-                    block["bullets"] = bullets[:15]
-                blocks.append(block)
-                continue
-        
-        i += 1
-    
-    # ============================================
-    # 4. FIND FAQS (Q: A: pairs not in sections)
-    # ============================================
-    qa_pairs = re.findall(r'Q:\s*([^?\n]+?)\s*\n\s*A:\s*([^❓📎\n]+(?:[^\n]+)?)', text, re.DOTALL)
-    if qa_pairs:
-        has_faq_block = any(b.get("type") == "faqs" for b in blocks)
-        if not has_faq_block:
-            items = []
-            for question, answer in qa_pairs:
-                q = question.strip()
-                a = answer.strip()
-                if q and a:
-                    items.append({"q": clean_text(q, 200), "a": clean_text(a, 350)})
-            if items:
-                blocks.append({
-                    "type": "faqs",
-                    "heading": "Frequently Asked Questions",
-                    "items": items
-                })
-    
-    # ============================================
-    # 5. FIND RELATED (→ links)
-    # ============================================
-    if not any(b.get("type") == "related" for b in blocks):
-        related_items = []
-        related_pattern = r'→\s*/([\w-]+(?:/[\w-]+)*)\s*[—\-]+\s*([^\n]+)'
-        related_matches = re.finditer(related_pattern, text)
-        for match in related_matches:
-            href = '/' + match.group(1)
-            label = match.group(2).strip()
-            related_items.append({"href": href, "label": clean_text(label, 100)})
-        
-        if related_items:
-            blocks.append({
-                "type": "related",
-                "heading": "Related Pages — Internal Links",
-                "items": related_items
-            })
-    
-    return blocks
 
 # -----------------------------
 # GENERATE TYPESCRIPT

@@ -46,7 +46,7 @@ const Index = async () => {
         type="application/ld+json"
         dangerouslySetInnerHTML={{ __html: JSON.stringify(faqSchema) }}
       />
-      <h1 className="sr-only">Himalaya Villas and Resort in Bhurban</h1>
+ 
       <HeroSection />
       <PhilosophySection />
       <LiveWeatherMurree />

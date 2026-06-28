@@ -133,7 +133,7 @@ export const article296: Article = {
     },
     {
       type: "section",
-      eyebrow: "Q: Is Hotel One Bhurban cheaper than PC Hotel?",
+      eyebrow: "FAQS",
       heading: "Frequently Asked Questions",
       paragraphs: [
         "A: Yes — Hotel One is positioned as the budget-tier option within the same Hashoo Group portfolio. PC Hotel Bhurban is the full 5-star product; Hotel One is the accessible mid-scale alternative. Rates should be confirmed directly at hotelsone.com.pk as they fluctuate seasonally.",
@@ -226,7 +226,7 @@ export const article297: Article = {
     },
     {
       type: "section",
-      eyebrow: "Q: Can non-members play at Chinar Golf Club Bhurban?",
+      eyebrow: "FAQS",
       heading: "Frequently Asked Questions",
       paragraphs: [
         "A: Visitor access at Chinar Golf Club is managed through the club's guest policy — contact Chinar Golf Club directly for current visitor tee time availability. Himalaya Villas can assist guests with local Bhurban activity coordination at the booking stage.",
@@ -327,7 +327,7 @@ export const article298: Article = {
     },
     {
       type: "section",
-      eyebrow: "Q: Which hotel in Bhurban is best for a family of 10?",
+      eyebrow: "FAQS",
       heading: "Frequently Asked Questions",
       paragraphs: [
         "A: For a family of 10, Himalaya Villas is almost certainly the best choice. The Alpine Family Lodge accommodates 10–12 in a single private villa (PKR 60,000–70,000/night). Alternatively, two smaller villas can be booked together as a private estate configuration. PC Hotel would require 4–5 rooms; Hotel One would also require multiple rooms with no private outdoor space. Contact: +92 304 567 9000.",
@@ -422,7 +422,7 @@ export const article299: Article = {
     },
     {
       type: "section",
-      eyebrow: "Q: Is PC Hotel Bhurban the best hotel in Murree?",
+      eyebrow: "FAQS",
       heading: "Frequently Asked Questions",
       paragraphs: [
         "A: PC Hotel Bhurban is the best conventional hotel (by international chain standard, 5-star rating, and breadth of services) in the Murree hills. However, for families and groups, Himalaya Villas & Resorts consistently delivers a better experience at a comparable or lower total cost — because the villa model replaces multiple hotel rooms with a single private estate booking.",

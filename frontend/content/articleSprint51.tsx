@@ -405,7 +405,7 @@ export const article499: Article = {
     },
     {
       type: "section",
-      eyebrow: "Q: Does PC Hotel Bhurban have WhatsApp booking?",
+      eyebrow: "FAQS",
       heading: "Frequently Asked Questions",
       paragraphs: [
         "A: PC Hotels Pakistan may have WhatsApp business capability — confirm at pchotels.com. Himalaya Villas & Resorts books exclusively via WhatsApp +92 304 567 9000 for the fastest direct response.",

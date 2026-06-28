@@ -353,84 +353,103 @@ export const article378: Article = {
       text: "What 'Luxury Villa' Means at Himalaya Villas:",
     },
     {
-      type: "section",
-      eyebrow: "Exclusive use:",
-      heading: "Exclusive Use",
-      paragraphs: [
-        "each villa is a complete private building — your group occupies it, no other guests share the building or its outdoor spaces",
-      ],
+      type: "facts",
+      heading: "What 'Luxury Villa' Means at Himalaya Villas",
+      items: [
+        {
+          label: "Exclusive Use",
+          value: "each villa is a complete private building — your group occupies it, no other guests share the building or its outdoor spaces"
+        },
+        {
+          label: "Private Outdoor Space",
+          value: "terrace, garden, or both. The enclosed garden of the Garden Villa Retreat, the panoramic balcony of the Himalayan Penthouse, the jacuzzi terrace of the Presidential Suite."
+        },
+        {
+          label: "Cedar Forest Setting",
+          value: "the mature deodar cedar forest surrounds the estate — accessible from every villa within a 2-minute walk of the property gate"
+        },
+        {
+          label: "In-Villa Dining",
+          value: "pre-arranged meals served in the villa or cedar garden at the guest's timing, from a menu confirmed before arrival"
+        },
+        {
+          label: "Pre-Arrival Concierge",
+          value: "WhatsApp-based coordination — meal preferences, fire pit timing, activity plans, occasion setup"
+        }
+      ]
     },
     {
-      type: "section",
-      eyebrow: "Private outdoor space:",
-      heading: "Private Outdoor Space",
-      paragraphs: [
-        "terrace, garden, or both. The enclosed garden of the Garden Villa Retreat, the panoramic balcony of the Himalayan Penthouse, the jacuzzi terrace of the Presidential Suite.",
-      ],
-    },
-    {
-      type: "section",
-      eyebrow: "Cedar forest setting:",
-      heading: "Cedar Forest Setting",
-      paragraphs: [
-        "the mature deodar cedar forest surrounds the estate — accessible from every villa within a 2-minute walk of the property gate",
-      ],
-    },
-    {
-      type: "section",
-      eyebrow: "In-villa dining:",
-      heading: "In-Villa Dining",
-      paragraphs: [
-        "pre-arranged meals served in the villa or cedar garden at the guest's timing, from a menu confirmed before arrival",
-      ],
-    },
-    {
-      type: "section",
-      eyebrow: "Pre-arrival concierge:",
-      heading: "Pre-Arrival Concierge",
-      paragraphs: [
-        "WhatsApp-based coordination — meal preferences, fire pit timing, activity plans, occasion setup",
-      ],
-    },
-    {
-      type: "section",
-      eyebrow: "The Six Villas — From Entry Luxury to the Estate's Pinnacle",
-      heading: "Villa Options",
-      paragraphs: [
-        "Villa: Serene Valley Cabin — Rate: PKR 39,000-45,000 — Standout Feature: Floor-to-ceiling cedar forest windows, ground floor — Best For: Couples, solo, full forest immersion",
-        "Villa: Sunset Suite — Rate: PKR 50,000-55,000 — Standout Feature: West-facing mountain sunset views — Best For: Couples wanting the sunset experience",
-        "Villa: Himalayan Penthouse — Rate: PKR 60,000-65,000 — Standout Feature: Panoramic balcony, 360 degree ridge views — Best For: Couples and small groups wanting the widest outdoor view",
-        "Villa: Garden Villa Retreat — Rate: PKR 55,000-60,000 — Standout Feature: Private enclosed garden — Best For: Families with young children",
-        "Villa: Alpine Family Lodge — Rate: PKR 60,000-70,000 — Standout Feature: Largest indoor living space — Best For: Large families 8-12",
-        "Villa: Presidential Suite — Rate: PKR 65,000-70,000 — Standout Feature: Private terrace jacuzzi, 270 degree panoramic views — Best For: Honeymooners, the estate's most iconic villa",
+      type: "comparison",
+      heading: "The Six Villas — From Entry Luxury to the Estate's Pinnacle",
+      columns: ["Villa", "Rate", "Standout Feature", "Best For"],
+      rows: [
+        {
+          feature: "Serene Valley Cabin",
+          a: "PKR 39,000-45,000",
+          b: "Floor-to-ceiling cedar forest windows, ground floor",
+          c: "Couples, solo, full forest immersion"
+        },
+        {
+          feature: "Sunset Suite",
+          a: "PKR 50,000-55,000",
+          b: "West-facing mountain sunset views",
+          c: "Couples wanting the sunset experience"
+        },
+        {
+          feature: "Himalayan Penthouse",
+          a: "PKR 60,000-65,000",
+          b: "Panoramic balcony, 360 degree ridge views",
+          c: "Couples and small groups wanting the widest outdoor view"
+        },
+        {
+          feature: "Garden Villa Retreat",
+          a: "PKR 55,000-60,000",
+          b: "Private enclosed garden",
+          c: "Families with young children"
+        },
+        {
+          feature: "Alpine Family Lodge",
+          a: "PKR 60,000-70,000",
+          b: "Largest indoor living space",
+          c: "Large families 8-12"
+        },
+        {
+          feature: "Presidential Suite",
+          a: "PKR 65,000-70,000",
+          b: "Private terrace jacuzzi, 270 degree panoramic views",
+          c: "Honeymooners, the estate's most iconic villa"
+        }
       ],
       image: {
         src: article378Image1,
         alt: "Luxury villa options at Himalaya Villas Bhurban",
-      },
+      }
     },
     {
-      type: "section",
-      eyebrow: "Q: Is Himalaya Villas the only luxury villa in Bhurban?",
+      type: "faqs",
       heading: "Frequently Asked Questions",
-      paragraphs: [
-        "A: Yes — Himalaya Villas and Resorts is the only property in Bhurban operating the private luxury villa estate model. No other Bhurban or Murree hills accommodation offers exclusive-use private villas with private outdoor space at a comparable quality.",
-        "Q: How is a luxury villa different from a luxury hotel room?",
-        "A: The luxury hotel room gives you a private sleeping space within a shared building. The luxury villa gives you a private building with private outdoor space. The distinction matters most for privacy, private outdoor space, and the occasion feeling of exclusivity.",
-      ],
+      items: [
+        {
+          q: "Is Himalaya Villas the only luxury villa in Bhurban?",
+          a: "Yes — Himalaya Villas and Resorts is the only property in Bhurban operating the private luxury villa estate model. No other Bhurban or Murree hills accommodation offers exclusive-use private villas with private outdoor space at a comparable quality."
+        },
+        {
+          q: "How is a luxury villa different from a luxury hotel room?",
+          a: "The luxury hotel room gives you a private sleeping space within a shared building. The luxury villa gives you a private building with private outdoor space. The distinction matters most for privacy, private outdoor space, and the occasion feeling of exclusivity."
+        }
+      ]
     },
     {
-      type: "section",
-      eyebrow: "Book Your Bhurban Luxury Villa — WhatsApp +92 304 567 9000",
-      heading: "Book Your Stay",
-      paragraphs: [
-        "WhatsApp: +92 304 567 9000  |  wa.me/923045679000",
-        "Direct bookings receive the best available rate.",
-      ],
+      type: "cta",
+      eyebrow: "Himalaya Villas & Resorts — Bhurban's Only Private Luxury Villa Estate",
+      heading: "Book Your Luxury Villa",
+      text: "WhatsApp +92 304 567 9000 for direct booking at the best available rate.",
+      buttonLabel: "Contact Us on WhatsApp",
+      buttonHref: "https://wa.me/923045679000",
+      footnote: "WhatsApp: +92 304 567 9000  |  wa.me/923045679000"
     },
   ],
 };
-
 // ============================================
 // ARTICLE 379 - Nikah Package
 // ============================================

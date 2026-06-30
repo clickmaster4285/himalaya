@@ -15,7 +15,7 @@ export const metadata: Metadata = createPageMetadata({
   title: "Things to Do in Bhurban Murree | Luxury Experience Guide",
   description:
     "Discover top things to do in Bhurban Murree including hiking, viewpoints, dining, family activities, and curated villa experiences near Himalaya Villas & Resorts.",
-  path: "/experience",
+  path: "/virtual-tour",
   keywords: [
     "things to do in Bhurban Murree",
     "Bhurban travel experiences",

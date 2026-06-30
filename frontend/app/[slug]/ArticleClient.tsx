@@ -10,19 +10,19 @@ import Navbar from "@/components/Navbar";
 import Footer from "@/components/Footer";
 import heroImage from "@/public/images/articles/article1-villa.jpg";
 
-import type { Article } from "@/content/types";
+import type { Article, Block } from "@/content/types";
 
 /* ================= TYPES ================= */
 const article11Images = [
-  "/images/articles/article-image1.jpg",
-  "/images/articles/article-image5.jpg",
+  "/images/articles/article-image3.jpg",
+  "/images/articles/article-image2.jpg",
   "/images/articles/article-image6.jpg",
   "/images/articles/article-image1.jpg",
   "/images/articles/article-image10.jpg",
 ];
 
 type BlockProps = {
-  block?: any;
+  block: Block;
   index: number;
 };
 
@@ -136,22 +136,35 @@ const blockMap: Record<string, React.FC<BlockProps>> = {
   comparison: ComparisonBlock,
   audience: AudienceBlock,
   related: RelatedBlock,
-  "cta": CTABlock,
-  "faqs": FAQBlock, // ← ADD THIS
+  cta: CTABlock,
+  faqs: FAQBlock,
 };
 
 /* ================= BLOCK RENDERER ================= */
 
+/* ================= BLOCK RENDERER ================= */
+
 function BlockRenderer({ block, index }: BlockProps) {
-  const Component = blockMap[block.type];
-  if (!Component) return null;
+  // Guard against undefined or unknown block types
+  if (!block?.type) {
+    console.warn(`Unknown or missing block type at index ${index}`);
+    return null;
+  }
+
+  const Component = blockMap[block.type as keyof typeof blockMap];
+
+  if (!Component) {
+    console.warn(`No component found for block type: ${block.type}`);
+    return null;
+  }
 
   return <Component block={block} index={index} />;
 }
-
 /* ================= BLOCKS ================= */
 
 function CalloutQA({ block }: BlockProps) {
+  if (block.type !== "callout-qa") return null;
+  
   return (
     <section className="pt-24 bg-[#fbf7ee]">
       <div className="max-w-7xl mx-auto px-6" data-reveal>
@@ -164,6 +177,8 @@ function CalloutQA({ block }: BlockProps) {
 }
 
 function ParagraphBlock({ block }: BlockProps) {
+  if (block.type !== "paragraph") return null;
+  
   return (
     <section className="pt-6 pb-16 bg-[#fbf7ee]">
       <div className="max-w-7xl mx-auto px-6" data-reveal>
@@ -173,37 +188,37 @@ function ParagraphBlock({ block }: BlockProps) {
   );
 }
 
-/* ================= SECTION ================= */
-
 function SectionBlock({ block, index }: BlockProps) {
+  if (block.type !== "section") return null;
+  
   const imageSrc = article11Images[index % article11Images.length];
   const imageAlt = `Article image ${index + 1}`;
+  const isReversed = index % 2 === 1;
 
   return (
     <section className="py-24">
       <div className="max-w-7xl mx-auto px-6" data-reveal>
-        <div className="grid gap-12 md:gap-16 items-center md:grid-cols-2">
-          {/* TEXT */}
-          <div>
+        <div
+          className={`grid gap-12 md:gap-16 items-center md:grid-cols-2 ${
+            isReversed ? "md:[&>*:first-child]:order-2" : ""
+          }`}
+        >
+          <div className={isReversed ? "md:order-2" : ""}>
             {block.eyebrow && (
               <p className="text-sm uppercase tracking-widest text-[#a68b3b] mb-3">
                 {block.eyebrow}
               </p>
             )}
-
             <h2 className="text-3xl md:text-4xl font-display mb-6">
               {block.heading}
             </h2>
-
             <div className="space-y-5 text-gray-800 text-justify">
-              {block.paragraphs?.map((p: string, i: number) => (
+              {block.paragraphs?.map((p, i) => (
                 <p key={i}>{p}</p>
               ))}
             </div>
           </div>
-
-          {/* IMAGE */}
-          <div>
+          <div className={isReversed ? "md:order-1" : ""}>
             <div className="relative">
               <div className="absolute -inset-3 border border-[#e5dfcf]" />
               <Image
@@ -221,9 +236,9 @@ function SectionBlock({ block, index }: BlockProps) {
   );
 }
 
-/* ================= CTA BLOCK ================= */
-
 function CTABlock({ block }: BlockProps) {
+  if (block.type !== "cta") return null;
+  
   return (
     <section className="py-24 bg-primary/10 text-black">
       <div className="max-w-4xl mx-auto px-6 text-center" data-reveal>
@@ -232,24 +247,20 @@ function CTABlock({ block }: BlockProps) {
             {block.eyebrow}
           </p>
         )}
-
         <h2 className="text-3xl md:text-5xl font-display mb-6">
           {block.heading}
         </h2>
-
         <p className="text-black text-lg max-w-2xl mx-auto mb-10">
           {block.text}
         </p>
-
         <Link
-          href={block.buttonHref}
+          href={block.buttonHref || "#"}
           target="_blank"
           rel="noopener noreferrer"
           className="inline-block bg-primary hover:bg-primary text-white font-semibold px-10 py-4 rounded-sm transition-colors"
         >
           {block.buttonLabel}
         </Link>
-
         {block.footnote && (
           <p className="mt-6 text-sm text-black/70">
             {block.footnote}
@@ -260,18 +271,22 @@ function CTABlock({ block }: BlockProps) {
   );
 }
 
-/* ================= FAQ BLOCK ================= */
-
 function FAQBlock({ block }: BlockProps) {
+  if (block.type !== "faqs") return null;
+  
+  // Guard against missing items
+  if (!block.items || block.items.length === 0) {
+    return null;
+  }
+
   return (
-    <section className="py-24 bg-[#fbf7ee]  ">
+    <section className="py-24 bg-[#fbf7ee]">
       <div className="max-w-7xl mx-auto px-6" data-reveal>
         <h2 className="text-3xl md:text-4xl font-display text-[#1b1b1b] mb-10 text-center">
           {block.heading}
         </h2>
-
         <div className="space-y-6">
-          {block.items.map((item: any, i: number) => (
+          {block.items.map((item, i) => (
             <div key={i} className="pt-6 first:pt-0">
               <h3 className="text-lg font-semibold text-[#1b1b1b] mb-3">
                 {item.q}
@@ -287,16 +302,19 @@ function FAQBlock({ block }: BlockProps) {
   );
 }
 
-/* ================= OTHER BLOCKS ================= */
-
 function FactsBlock({ block }: BlockProps) {
+  if (block.type !== "facts") return null;
+  
+  if (!block.items || block.items.length === 0) {
+    return null;
+  }
+
   return (
     <section className="py-24 bg-[#fbf7ee] border-y border-[#e5dfcf]">
       <div className="max-w-7xl mx-auto px-6" data-reveal>
         <h2 className="text-4xl font-bold mb-10">{block.heading}</h2>
-
         <div className="divide-y divide-[#e5dfcf]">
-          {block.items.map((item: any, i: number) => (
+          {block.items.map((item, i) => (
             <div key={i} className="py-5 grid md:grid-cols-[200px_1fr] gap-4">
               <div className="text-sm uppercase text-[#a68b3b]">
                 {item.label}
@@ -311,28 +329,31 @@ function FactsBlock({ block }: BlockProps) {
 }
 
 function ComparisonBlock({ block }: BlockProps) {
+  if (block.type !== "comparison") return null;
+  
+  if (!block.rows || block.rows.length === 0) {
+    return null;
+  }
+
   return (
     <section className="py-24">
       <div className="max-w-7xl mx-auto px-6" data-reveal>
         <h2 className="text-4xl font-bold mb-10">{block.heading}</h2>
-
         <div className="overflow-x-auto">
           <table className="w-full border-collapse">
             <thead>
               <tr className="border-b border-[#e5dfcf]">
-                {block.columns.map((col: string, i: number) => (
+                {block.columns?.map((col, i) => (
                   <th key={i} className="py-3 text-left font-semibold text-[#1b1b1b]">
                     {col}
                   </th>
                 ))}
               </tr>
             </thead>
-
             <tbody>
-              {block.rows.map((row: any, i: number) => {
-                // Get all values from the row (a, b, c, d, e) as an array
+              {block.rows.map((row, i) => {
                 const values = ['a', 'b', 'c', 'd', 'e']
-                  .map(key => row[key])
+                  .map(key => row[key as keyof typeof row])
                   .filter(val => val !== undefined);
                 
                 return (
@@ -349,24 +370,27 @@ function ComparisonBlock({ block }: BlockProps) {
             </tbody>
           </table>
         </div>
-
-      
       </div>
     </section>
   );
 }
 
 function AudienceBlock({ block }: BlockProps) {
+  if (block.type !== "audience") return null;
+  
+  if (!block.items || block.items.length === 0) {
+    return null;
+  }
+
   return (
     <section className="py-24">
       <div className="max-w-7xl mx-auto px-6" data-reveal>
         <h2 className="text-4xl font-bold mb-12">{block.heading}</h2>
-
         <div className="grid md:grid-cols-2 gap-10">
-          {block.items.map((it: any, i: number) => (
+          {block.items.map((item, i) => (
             <div key={i} className="border-l-2 border-primary pl-6">
-              <h3 className="text-xl font-semibold mb-2">{it.title}</h3>
-              <p className="text-gray-700">{it.text}</p>
+              <h3 className="text-xl font-semibold mb-2">{item.title}</h3>
+              <p className="text-gray-700">{item.text}</p>
             </div>
           ))}
         </div>
@@ -376,16 +400,22 @@ function AudienceBlock({ block }: BlockProps) {
 }
 
 function RelatedBlock({ block }: BlockProps) {
+  if (block.type !== "related") return null;
+  
+  // This guard prevents the "Cannot read properties of undefined (reading 'map')" error
+  if (!block.items || block.items.length === 0) {
+    return null;
+  }
+
   return (
     <section className="py-24">
       <div className="max-w-7xl mx-auto px-6" data-reveal>
         <h2 className="text-4xl font-bold mb-10">{block.heading}</h2>
-
         <div className="grid sm:grid-cols-2 gap-4">
-          {block.items.map((item: any, i: number) => (
+          {block.items.map((item, i) => (
             <Link
               key={i}
-              href={item.href}
+              href={item.href || "#"}
               className="border border-[#e5dfcf] p-5 hover:bg-[#fbf7ee] italic transition-colors hover:underline tracking-wide hover:text-primary"
             >
               {item.label}

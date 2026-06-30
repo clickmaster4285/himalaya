@@ -19,7 +19,7 @@ function getSlugKey(params: { slug?: string | string[] } | undefined): string {
 }
 
 // ============================================
-// STATIC PARAMS (ALL SLUGS)
+// STATIC PARAMS
 // ============================================
 export async function generateStaticParams() {
   return allSlugs.map((slug) => ({
@@ -44,15 +44,25 @@ export async function generateMetadata({
     };
   }
 
+  // Full canonical URL using your domain
+  const canonicalUrl = `https://himalayavillas.com/${slugKey}`;
+
   return {
     title: article.title,
     description: article.metaDescription,
     keywords: article.keywords,
+
+    // Canonical
+    alternates: {
+      canonical: canonicalUrl,
+    },
+
     openGraph: {
       title: article.title,
       description: article.metaDescription,
       images: [article.heroImage],
       type: "article",
+      url: canonicalUrl,
     },
     twitter: {
       card: "summary_large_image",

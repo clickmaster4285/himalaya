@@ -4,7 +4,7 @@ import Image from "next/image";
 import { useRef } from "react";
 import { motion, useInView } from "framer-motion";
 
-const momentsVideo = "/assets/moments-video.mp4";
+const momentsVideo = "/assets/homePage-video.mp4";
 const momentsPoster = "/assets/journal-bonfire.jpg";
 
 const MomentsSection = () => {
@@ -48,7 +48,7 @@ const MomentsSection = () => {
       />
 
       {/* Content */}
-      <div className="relative z-10 flex items-center justify-center h-full text-center px-8">
+      {/* <div className="relative z-10 flex items-center justify-center h-full text-center px-8">
         <div>
           <motion.h2
             initial={{ opacity: 0, y: 40, scale: 0.95 }}
@@ -70,7 +70,7 @@ const MomentsSection = () => {
             </button>
           </motion.div>
         </div>
-      </div>
+      </div> */}
     </section>
   );
 };

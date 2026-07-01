@@ -1,30 +1,38 @@
 "use client";
 
 import Image from "next/image";
-import { useRef } from "react";
-import { motion, useInView } from "framer-motion";
+import { useState } from "react";
 
-const momentsVideo = "/assets/homePage-video.mp4";
+const videoSources = ["/assets/homePage-video.mp4", "/assets/homePage-video2.mp4"];
 const momentsPoster = "/assets/journal-bonfire.jpg";
 
 const MomentsSection = () => {
-  const ref = useRef(null);
-  const isInView = useInView(ref, { once: true, margin: "-100px" });
-  const loadVideo = useInView(ref, { once: true, margin: "180px" });
+  const [activeVideoSrc, setActiveVideoSrc] = useState(videoSources[0]);
+  const [videoFailed, setVideoFailed] = useState(false);
+
+  const handleVideoError = () => {
+    if (activeVideoSrc === videoSources[0]) {
+      setActiveVideoSrc(videoSources[1]);
+      return;
+    }
+
+    setVideoFailed(true);
+  };
 
   return (
-    <section ref={ref} className="relative h-[70vh] md:h-[80vh] w-full overflow-hidden">
-      {loadVideo ? (
+    <section className="relative h-[70vh] md:h-[80vh] w-full overflow-hidden">
+      {!videoFailed && activeVideoSrc ? (
         <video
           autoPlay
           muted
           loop
           playsInline
-          preload="metadata"
+          preload="auto"
           poster={momentsPoster}
+          onError={handleVideoError}
           className="absolute inset-0 h-full w-full object-cover"
         >
-          <source src={momentsVideo} type="video/mp4" />
+          <source src={activeVideoSrc} type="video/mp4" />
         </video>
       ) : (
         <Image

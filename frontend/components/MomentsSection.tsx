@@ -23,7 +23,7 @@ const MomentsSection = () => {
         >
           {/* Use the public folder path (correct for Next.js) */}
           <source 
-            src="/assets/homePage-video.mp4" 
+            src="/videos/homePage-video.mp4" 
             type="video/mp4" 
           />
         </video>

@@ -3,7 +3,7 @@
 import Image from "next/image";
 import { useState } from "react";
 
-const videoSources = ["/assets/homePage-video.mp4", "/assets/homePage-video2.mp4"];
+const videoSources = ["/assets/homePage-video2.mp4", "/assets/homePage-video.mp4"];
 const momentsPoster = "/assets/journal-bonfire.jpg";
 
 const MomentsSection = () => {
@@ -27,7 +27,7 @@ const MomentsSection = () => {
           muted
           loop
           playsInline
-          preload="auto"
+          preload="metadata"
           poster={momentsPoster}
           onError={handleVideoError}
           className="absolute inset-0 h-full w-full object-cover"

@@ -71426,68 +71426,75 @@ export const article657: Article = {
       },
     },
 
+  {
+  type: "comparison",
+  heading: "Booking by Season — The Timing Guide",
+  columns: [
+    "Season",
+    "Lead Time",
+    "Rate Level",
+    "Availability",
+    "Strategy",
+  ],
+  rows: [
     {
-      type: "table",
-      heading: "Booking by Season — The Timing Guide",
-      rows: [
-        {
-          season: "July-August peak",
-          leadTime: "8-10 weeks",
-          rateLevel: "High end",
-          availability: "Very tight",
-          strategy: "Book as soon as dates confirmed",
-        },
-        {
-          season: "Eid holidays",
-          leadTime: "10-14 weeks",
-          rateLevel: "High end — often max",
-          availability: "Very tight",
-          strategy: "Book immediately after Eid date announcement",
-        },
-        {
-          season: "January snowfall weeks",
-          leadTime: "8-12 weeks",
-          rateLevel: "High end",
-          availability: "Tight",
-          strategy: "January 15-31 especially — book early",
-        },
-        {
-          season: "December 21-31",
-          leadTime: "10-12 weeks",
-          rateLevel: "High end",
-          availability: "Very tight",
-          strategy: "Most competed single booking window of year",
-        },
-        {
-          season: "October",
-          leadTime: "3-4 weeks",
-          rateLevel: "Mid range",
-          availability: "Good",
-          strategy: "Book 3-4 weeks ahead for preferred dates",
-        },
-        {
-          season: "April-May",
-          leadTime: "1-2 weeks",
-          rateLevel: "Lower range",
-          availability: "Excellent",
-          strategy: "Best shoulder season availability",
-        },
-        {
-          season: "November",
-          leadTime: "1 week",
-          rateLevel: "Low range",
-          availability: "Best of year",
-          strategy: "Best value month — quiet, available, lower rate",
-        },
-        {
-          season: "February-March",
-          leadTime: "1-2 weeks",
-          rateLevel: "Lowest",
-          availability: "Best of year",
-          strategy: "Winter shoulder — best rates and most private",
-        },
-      ],
+      feature: "July–August peak",
+      a: "8–10 weeks",
+      b: "High end",
+      c: "Very tight",
+      d: "Book as soon as dates are confirmed.",
     },
+    {
+      feature: "Eid holidays",
+      a: "10–14 weeks",
+      b: "High end — often maximum",
+      c: "Very tight",
+      d: "Book immediately after Eid dates are announced.",
+    },
+    {
+      feature: "January snowfall weeks",
+      a: "8–12 weeks",
+      b: "High end",
+      c: "Tight",
+      d: "January 15–31 is especially popular—book early.",
+    },
+    {
+      feature: "December 21–31",
+      a: "10–12 weeks",
+      b: "High end",
+      c: "Very tight",
+      d: "The most competitive booking window of the year.",
+    },
+    {
+      feature: "October",
+      a: "3–4 weeks",
+      b: "Mid range",
+      c: "Good",
+      d: "Book 3–4 weeks ahead for preferred dates.",
+    },
+    {
+      feature: "April–May",
+      a: "1–2 weeks",
+      b: "Lower range",
+      c: "Excellent",
+      d: "Best shoulder-season availability.",
+    },
+    {
+      feature: "November",
+      a: "1 week",
+      b: "Low range",
+      c: "Best of year",
+      d: "Best value month—quiet, available, and lower rates.",
+    },
+    {
+      feature: "February–March",
+      a: "1–2 weeks",
+      b: "Lowest",
+      c: "Best of year",
+      d: "Winter shoulder season with the best rates and most privacy.",
+    },
+  ],
+},
 
     {
       type: "section",
@@ -72018,20 +72025,45 @@ export const article661: Article = {
       },
     },
 
+ {
+  type: "comparison",
+  heading: "The Presidential Suite — What It Includes",
+  columns: ["Feature", "Details"],
+  rows: [
     {
-      type: "table",
-      heading: "The Presidential Suite — What It Includes",
-      rows: [
-        { feature: "Private outdoor jacuzzi", detail: "The defining feature — private to the villa, on the outdoor terrace" },
-        { feature: "Panoramic mountain balcony", detail: "Mountain and valley views across the cedar ridge" },
-        { feature: "Cedar forest setting", detail: "Mature deodar cedar surrounding the villa and jacuzzi terrace" },
-        { feature: "Rate", detail: "PKR 65,000-70,000/night — confirm exact rate at WhatsApp booking stage" },
-        { feature: "Capacity", detail: "2-4 persons optimal" },
-        { feature: "Cedar garden fire", detail: "The cedar garden fire lit at the guest's timing (typically 6:30pm)" },
-        { feature: "In-villa dining", detail: "Cedar garden dinner and all meals pre-arranged via WhatsApp" },
-        { feature: "Best season", detail: "January (snowfall + jacuzzi), October (amber forest + jacuzzi), December 24-31 (year-end jacuzzi)" },
-      ],
+      feature: "Private outdoor jacuzzi",
+      a: "The defining feature—private to the villa, located on the outdoor terrace.",
     },
+    {
+      feature: "Panoramic mountain balcony",
+      a: "Mountain and valley views across the cedar ridge.",
+    },
+    {
+      feature: "Cedar forest setting",
+      a: "Mature deodar cedar trees surrounding the villa and jacuzzi terrace.",
+    },
+    {
+      feature: "Rate",
+      a: "PKR 65,000–70,000 per night—confirm the exact rate during the WhatsApp booking process.",
+    },
+    {
+      feature: "Capacity",
+      a: "Ideal for 2–4 persons.",
+    },
+    {
+      feature: "Cedar garden fire",
+      a: "The cedar garden fire is lit at the guest's preferred time (typically around 6:30 pm).",
+    },
+    {
+      feature: "In-villa dining",
+      a: "Cedar garden dinner and all meals can be pre-arranged via WhatsApp.",
+    },
+    {
+      feature: "Best season",
+      a: "January (snowfall + jacuzzi), October (amber forest + jacuzzi), and December 24–31 (year-end jacuzzi experience).",
+    },
+  ],
+},
 
     {
       type: "section",
@@ -72261,20 +72293,66 @@ export const article663: Article = {
       },
     },
 
+{
+  type: "comparison",
+  heading: "Event Types and Cedar Estate Configuration",
+  columns: [
+    "Event Type",
+    "Configuration",
+    "Villas",
+    "Guests",
+  ],
+  rows: [
     {
-      type: "table",
-      heading: "Event Types and Cedar Estate Configuration",
-      rows: [
-        { eventType: "Nikah/Destination Wedding", configuration: "Cedar garden ceremony + fire dinner", villas: "2-6 villas", guests: "20-50 guests" },
-        { eventType: "Mehndi Evening", configuration: "Cedar garden dhol + dance setup", villas: "2-4 villas", guests: "20-40 guests" },
-        { eventType: "Walima Feast", configuration: "Long cedar garden dining table", villas: "2-6 villas", guests: "20-60 guests" },
-        { eventType: "Anniversary Celebration", configuration: "Presidential Suite jacuzzi + cedar garden", villas: "1-2 villas", guests: "2-8 persons" },
-        { eventType: "Birthday Milestone", configuration: "Cedar garden setup + fire + cake", villas: "1-4 villas", guests: "10-30 guests" },
-        { eventType: "Corporate Retreat", configuration: "Multi-villa working days + fire evenings", villas: "2-6 villas", guests: "8-40 persons" },
-        { eventType: "Qawwali Evening", configuration: "Cedar garden fire + performers", villas: "2-4 villas", guests: "15-30 guests" },
-        { eventType: "Family Reunion / Eid", configuration: "Cedar garden gathering + multi-villa", villas: "3-12 villas", guests: "20-80 persons" },
-      ],
+      feature: "Nikah / Destination Wedding",
+      a: "Cedar garden ceremony + fire dinner",
+      b: "2–6 villas",
+      c: "20–50 guests",
     },
+    {
+      feature: "Mehndi Evening",
+      a: "Cedar garden dhol + dance setup",
+      b: "2–4 villas",
+      c: "20–40 guests",
+    },
+    {
+      feature: "Walima Feast",
+      a: "Long cedar garden dining table",
+      b: "2–6 villas",
+      c: "20–60 guests",
+    },
+    {
+      feature: "Anniversary Celebration",
+      a: "Presidential Suite jacuzzi + cedar garden",
+      b: "1–2 villas",
+      c: "2–8 persons",
+    },
+    {
+      feature: "Birthday Milestone",
+      a: "Cedar garden setup + fire + cake",
+      b: "1–4 villas",
+      c: "10–30 guests",
+    },
+    {
+      feature: "Corporate Retreat",
+      a: "Multi-villa working days + fire evenings",
+      b: "2–6 villas",
+      c: "8–40 persons",
+    },
+    {
+      feature: "Qawwali Evening",
+      a: "Cedar garden fire + performers",
+      b: "2–4 villas",
+      c: "15–30 guests",
+    },
+    {
+      feature: "Family Reunion / Eid",
+      a: "Cedar garden gathering + multi-villa",
+      b: "3–12 villas",
+      c: "20–80 persons",
+    },
+  ],
+},
 
     {
       type: "section",
@@ -72380,17 +72458,42 @@ export const article664: Article = {
       },
     },
 
+{
+  type: "comparison",
+  heading: "The Best Villas for Families with Children",
+  columns: [
+    "Age Group",
+    "Recommended Villa",
+    "Why It's Recommended",
+  ],
+  rows: [
     {
-      type: "table",
-      heading: "The Best Villas for Families with Children",
-      rows: [
-        { ageGroup: "Infants and toddlers (0-3)", recommended: "Garden Villa Retreat", reason: "Enclosed private garden — safe outdoor space, no drop-offs" },
-        { ageGroup: "Young children (4-8)", recommended: "Garden Villa Retreat or Alpine Family Lodge", reason: "Private garden for play; family lodge for larger family" },
-        { ageGroup: "Mixed ages (toddler to teenager)", recommended: "Alpine Family Lodge or 2-villa combination", reason: "Space for different age-group activities simultaneously" },
-        { ageGroup: "Teenagers", recommended: "Himalayan Penthouse", reason: "360° panoramic balcony — the 'teenage cool factor' villa" },
-        { ageGroup: "Multigenerational", recommended: "2 villas: Garden Villa (grandkids) + any other (adults)", reason: "Separate villa for grandchildren's generation; shared cedar garden" },
-      ],
+      feature: "Infants and toddlers (0–3)",
+      a: "Garden Villa Retreat",
+      b: "Enclosed private garden with a safe outdoor space and no drop-offs.",
     },
+    {
+      feature: "Young children (4–8)",
+      a: "Garden Villa Retreat or Alpine Family Lodge",
+      b: "Private garden for play; family lodge provides extra space for larger families.",
+    },
+    {
+      feature: "Mixed ages (toddlers to teenagers)",
+      a: "Alpine Family Lodge or a 2-villa combination",
+      b: "Plenty of space for different age-group activities at the same time.",
+    },
+    {
+      feature: "Teenagers",
+      a: "Himalayan Penthouse",
+      b: "360° panoramic balcony with a strong 'teenage cool factor'.",
+    },
+    {
+      feature: "Multigenerational families",
+      a: "2 villas: Garden Villa + any other villa",
+      b: "Grandchildren have their own villa while the family shares the cedar garden.",
+    },
+  ],
+},
 
     {
       type: "section",
@@ -72482,19 +72585,41 @@ export const article665: Article = {
       },
     },
 
+ {
+  type: "comparison",
+  heading: "Complete Contact Information",
+  columns: ["Channel", "Details"],
+  rows: [
     {
-      type: "table",
-      heading: "Complete Contact Information",
-      rows: [
-        { channel: "WhatsApp (primary)", detail: "wa.me/923045679000 (+92 304 567 9000)" },
-        { channel: "Email", detail: "reservations@himalayavillas.com" },
-        { channel: "Website", detail: "himalayavillas.com" },
-        { channel: "Address", detail: "Mohra Iswal, Bhurban, Murree Hills 47190, Punjab, Pakistan" },
-        { channel: "GPS", detail: "Search 'Himalaya Villas Mohra Iswal Bhurban' on Google Maps" },
-        { channel: "Distance from Islamabad", detail: "47km — 45 minutes on the N-75 Murree Expressway" },
-        { channel: "Booking hours", detail: "WhatsApp available 9am-11pm for booking enquiries" },
-      ],
+      feature: "WhatsApp (primary)",
+      a: "wa.me/923045679000 (+92 304 567 9000)",
     },
+    {
+      feature: "Email",
+      a: "reservations@himalayavillas.com",
+    },
+    {
+      feature: "Website",
+      a: "himalayavillas.com",
+    },
+    {
+      feature: "Address",
+      a: "Mohra Iswal, Bhurban, Murree Hills 47190, Punjab, Pakistan",
+    },
+    {
+      feature: "GPS",
+      a: "Search 'Himalaya Villas Mohra Iswal Bhurban' on Google Maps.",
+    },
+    {
+      feature: "Distance from Islamabad",
+      a: "47 km — approximately 45 minutes via the N-75 Murree Expressway.",
+    },
+    {
+      feature: "Booking hours",
+      a: "WhatsApp enquiries are available daily from 9:00 am to 11:00 pm.",
+    },
+  ],
+},
 
     {
       type: "section",
@@ -72512,18 +72637,54 @@ export const article665: Article = {
       },
     },
 
+  {
+  type: "comparison",
+  heading: "The 12 Villas — Quick Reference",
+  columns: [
+    "Villa",
+    "Rate",
+    "Capacity",
+    "Key Feature",
+  ],
+  rows: [
     {
-      type: "table",
-      heading: "The 12 Villas — Quick Reference",
-      rows: [
-        { villa: "Serene Valley Cabin", rate: "PKR 39,000-45,000", capacity: "2-4", keyFeature: "Cedar cabin — intimate" },
-        { villa: "Sunset Suite", rate: "PKR 50,000-55,000", capacity: "2-4", keyFeature: "West-facing sunset balcony" },
-        { villa: "Garden Villa Retreat", rate: "PKR 55,000-60,000", capacity: "4-8", keyFeature: "Enclosed private garden" },
-        { villa: "Himalayan Penthouse", rate: "PKR 60,000-65,000", capacity: "4-6", keyFeature: "360° panoramic balcony" },
-        { villa: "Alpine Family Lodge", rate: "PKR 60,000-70,000", capacity: "6-10", keyFeature: "Largest family villa" },
-        { villa: "Presidential Suite", rate: "PKR 65,000-70,000", capacity: "2-4", keyFeature: "Private outdoor jacuzzi" },
-      ],
+      feature: "Serene Valley Cabin",
+      a: "PKR 39,000–45,000",
+      b: "2–4",
+      c: "Cedar cabin — intimate",
     },
+    {
+      feature: "Sunset Suite",
+      a: "PKR 50,000–55,000",
+      b: "2–4",
+      c: "West-facing sunset balcony",
+    },
+    {
+      feature: "Garden Villa Retreat",
+      a: "PKR 55,000–60,000",
+      b: "4–8",
+      c: "Enclosed private garden",
+    },
+    {
+      feature: "Himalayan Penthouse",
+      a: "PKR 60,000–65,000",
+      b: "4–6",
+      c: "360° panoramic balcony",
+    },
+    {
+      feature: "Alpine Family Lodge",
+      a: "PKR 60,000–70,000",
+      b: "6–10",
+      c: "Largest family villa",
+    },
+    {
+      feature: "Presidential Suite",
+      a: "PKR 65,000–70,000",
+      b: "2–4",
+      c: "Private outdoor jacuzzi",
+    },
+  ],
+},
 
     {
       type: "section",
@@ -74153,18 +74314,47 @@ export const article676: Article = {
       },
     },
 
+{
+  type: "comparison",
+  heading: "Expressway Road Conditions by Season",
+  columns: [
+    "Season",
+    "Road Condition",
+    "Travel Advisory",
+  ],
+  rows: [
     {
-      type: "table",
-      heading: "Expressway Road Conditions by Season",
-      rows: [
-        { season: "May-October", condition: "Excellent — clear dual carriageway", advisory: "No special preparation needed" },
-        { season: "November", condition: "Good — some wet weather", advisory: "Light rain possible; standard driving" },
-        { season: "December", condition: "Variable — first snowfall events", advisory: "Carry chains from December 15; check @NHMPakistan before travel" },
-        { season: "January-February", condition: "Snowfall season", advisory: "Chains mandatory in snowfall; NHMP may close in extreme events" },
-        { season: "March", condition: "Improving — late snow possible", advisory: "Check conditions if traveling early March" },
-        { season: "April", condition: "Good — spring clearing", advisory: "Occasional rain; no snowfall concerns" },
-      ],
+      feature: "May–October",
+      a: "Excellent — clear dual carriageway",
+      b: "No special preparation needed.",
     },
+    {
+      feature: "November",
+      a: "Good — some wet weather",
+      b: "Light rain is possible; standard driving precautions are sufficient.",
+    },
+    {
+      feature: "December",
+      a: "Variable — first snowfall events",
+      b: "Carry snow chains from December 15 onward and check @NHMPakistan before traveling.",
+    },
+    {
+      feature: "January–February",
+      a: "Snowfall season",
+      b: "Snow chains are mandatory during snowfall; NHMP may close the road during severe weather.",
+    },
+    {
+      feature: "March",
+      a: "Improving — late snow possible",
+      b: "Check road conditions if traveling in early March.",
+    },
+    {
+      feature: "April",
+      a: "Good — spring clearing",
+      b: "Occasional rain is possible; snowfall is generally not a concern.",
+    },
+  ],
+},
 
     {
       type: "section",
@@ -74286,18 +74476,42 @@ export const article678: Article = {
         alt: "Why the Journey is Worth It",
       },
     },
-
+{
+  type: "comparison",
+  heading: "The Optimal Lahore Family Itinerary (4 Nights)",
+  columns: [
+    "Day",
+    "Activity",
+    "Notes",
+  ],
+  rows: [
     {
-      type: "table",
-      heading: "The Optimal Lahore Family Itinerary (4 Nights)",
-      rows: [
-        { day: "Thursday", activity: "Depart Lahore 6pm → arrive Bhurban 10:30pm", notes: "Late evening arrival — cedar estate immediately" },
-        { day: "Friday", activity: "Cedar dawn walk + Patriata Chairlift (9am) + cedar estate afternoon", notes: "First full day — the core Bhurban experience" },
-        { day: "Saturday", activity: "Murree Mall Road day (8am) — Kashmir Point, bazaar, chai + walnut shopping", notes: "11km from estate — back by 1pm; afternoon rest" },
-        { day: "Sunday", activity: "Ayubia Pipeline Track day (7am depart, 30km)", notes: "The forest walk Lahore has no equivalent of" },
-        { day: "Monday", activity: "Cedar dawn walk → breakfast → depart by 10am → Lahore by 2pm", notes: "Arrive Lahore before Monday afternoon traffic" },
-      ],
+      feature: "Thursday",
+      a: "Depart Lahore at 6:00 pm → arrive in Bhurban at 10:30 pm",
+      b: "Late evening arrival—settle into the cedar estate immediately.",
     },
+    {
+      feature: "Friday",
+      a: "Cedar dawn walk + Patriata Chairlift (9:00 am) + cedar estate afternoon",
+      b: "First full day—the core Bhurban experience.",
+    },
+    {
+      feature: "Saturday",
+      a: "Murree Mall Road day (8:00 am) — Kashmir Point, bazaar, chai, and walnut shopping",
+      b: "Just 11 km from the estate—return by 1:00 pm for an afternoon of relaxation.",
+    },
+    {
+      feature: "Sunday",
+      a: "Ayubia Pipeline Track day (depart at 7:00 am, 30 km)",
+      b: "A forest walk unlike anything available in Lahore.",
+    },
+    {
+      feature: "Monday",
+      a: "Cedar dawn walk → breakfast → depart by 10:00 am → arrive in Lahore by 2:00 pm",
+      b: "Reach Lahore before Monday afternoon traffic builds.",
+    },
+  ],
+},
 
     {
       type: "faqs",
@@ -74972,16 +75186,42 @@ export const article685: Article = {
       },
     },
 
+   {
+  type: "comparison",
+  heading: "Eid Booking Configuration",
+  columns: [
+    "Group Size",
+    "Recommended Villas",
+    "Rate",
+    "Notes",
+  ],
+  rows: [
     {
-      type: "table",
-      heading: "Eid Booking Configuration",
-      rows: [
-        { size: "8-12 persons (nuclear + parents)", villas: "2 villas", rate: "PKR 90,000-130,000", notes: "Garden Villa + any other" },
-        { size: "15-25 persons (extended, 2 branches)", villas: "3-4 villas", rate: "PKR 150,000-230,000", notes: "Each branch has own villa" },
-        { size: "25-40 persons (extended, 3 branches)", villas: "5-7 villas", rate: "PKR 265,000-450,000", notes: "Full cedar garden configuration" },
-        { size: "40-70 persons (large family reunion)", villas: "8-12 villas", rate: "Contact for group pricing", notes: "Full estate buyout territory" },
-      ],
+      feature: "8–12 persons (nuclear family + parents)",
+      a: "2 villas",
+      b: "PKR 90,000–130,000",
+      c: "Garden Villa + any other villa",
     },
+    {
+      feature: "15–25 persons (extended family, 2 branches)",
+      a: "3–4 villas",
+      b: "PKR 150,000–230,000",
+      c: "Each family branch has its own villa.",
+    },
+    {
+      feature: "25–40 persons (extended family, 3 branches)",
+      a: "5–7 villas",
+      b: "PKR 265,000–450,000",
+      c: "Full cedar garden configuration.",
+    },
+    {
+      feature: "40–70 persons (large family reunion)",
+      a: "8–12 villas",
+      b: "Contact for group pricing",
+      c: "Suitable for a full estate buyout.",
+    },
+  ],
+},
 
     {
       type: "section",

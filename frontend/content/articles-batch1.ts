@@ -2074,239 +2074,262 @@ export const article01: Article = {
 // ============================================
 // ARTICLE 02 - Best Hotels in Murree Pakistan 2026 — Complete Guide with Rates /blog/best-hotel...
 // ============================================
+
+
 export const article02: Article = {
-  slug: "blog",
-  title: "Best Hotels in Murree Pakistan 2026 — Complete Guide with Rates /blog/best-hotels-in-murree-pakistan",
+  slug: "best-hotels-in-murree-pakistan",
+  title: "Best Hotels in Murree Pakistan 2026 — Complete Guide with Rates",
   metaDescription:
-    "best hotels in murree (2,400/mo), best hotels in murree pakistan, best hotels of murree, top hotels in murree, murree best hotel, murree best hotels, 5 star hotels murree",
+    "best hotels in murree, best hotels in murree pakistan, best hotels of murree, top hotels in murree, murree best hotel, murree best hotels, 5 star hotels murree",
   keywords:
-    "best hotels in murree (2,400/mo), best hotels in murree pakistan, best hotels of murree, top hotels in murree, murree best hotel, murree best hotels, 5 star hotels murree",
-  eyebrow: "Template A — Hub/Pillar (enhance existing) | Cluster 1: Hotels & Accommodation",
-  h1: "Best Hotels in Murree Pakistan 2026 — Complete Guide with Rates /blog/best-hotels-in-murree-pakistan",
+    "best hotels in murree, best hotels in murree pakistan, best hotels of murree, top hotels in murree, murree best hotel, murree best hotels, 5 star hotels murree",
+  eyebrow: "Guest Post | Commercial Investigation | Cluster 1: Hotels | ~2,400w",
+  h1: "Best Hotels in Murree Pakistan 2026 — Complete Guide with Rates",
   heroTagline:
-    "best hotels in murree (2,400/mo), best hotels in murree pakistan, best hotels of murree, top hotels in murree, murree best hotel, murree best hotels, 5 star hotels murree",
-  heroImage: article02Hero,
+    "The best hotels in Murree in 2026 include Pearl Continental Bhurban (5-star chain property, PKR 35,000–75,000/night), Lockwood Hotel Murree (mid-luxury, Mall Road), Ramada by Wyndham Murree (international brand, PKR 18,000–40,000), Mövenpick Murree (Accor brand, mid-premium), and Himalaya Villas & Resorts Bhurban (private villa estate, 12 villas, PKR 39,000–70,000/night, exclusive use). For families and groups wanting complete privacy, Himalaya Villas is the highest-rated option by returning guests.",
+  heroImage: dummyImageTemp,
+
   blocks: [
-    {
-      type: "paragraph",
-      text: "Best Hotels in Murree Pakistan 2026 — Complete Guide with Rates Commercial Investigation | Cluster 1: Hotels | Template A — ~2,400 words",
-    },
-    {
-      type: "paragraph",
-      text: "/blog/best-hotels-in-murree-pakistan",
-    },
-    {
-      type: "paragraph",
-      text: "best hotels in murree (2,400/mo), best hotels in murree pakistan, best hotels of murree, top hotels in murree, murree best hotel, murree best hotels, 5 star hotels murree",
-    },
-    {
-      type: "paragraph",
-      text: "Best Hotels in Murree Pakistan 2026 — Complete Guide with Rates",
-    },
     {
       type: "callout-qa",
       question: "What are the best hotels in Murree Pakistan?",
-      answer: "The best hotels in Murree in 2026 include Pearl Continental Bhurban (5-star chain property, PKR 35,000–75,000/night), Lockwood Hotel Murree (mid-luxury, Mall Road), Ramada by Wyndham Murree (international brand, PKR 18,000–40,000), Mövenpick Murree (Accor brand, mid-premium), and Himalaya Villas & Resorts Bhurban (private villa estate, 12 villas, PKR 39,000–70,000/night, exclusive use). For families and groups wanting complete privacy, Himalaya Villas is the highest-rated option by returning guests. Murree remains Pakistan's most visited hill station, but how you experience it depends almost entirely on where you stay. The difference between a Mall Road guesthouse and a private villa in Bhur...",
+      answer:
+        "The best hotels in Murree in 2026 include Pearl Continental Bhurban (5-star chain property, PKR 35,000–75,000/night), Lockwood Hotel Murree (mid-luxury, Mall Road), Ramada by Wyndham Murree (international brand, PKR 18,000–40,000), Mövenpick Murree (Accor brand, mid-premium), and Himalaya Villas & Resorts Bhurban (private villa estate, 12 villas, PKR 39,000–70,000/night, exclusive use). For families and groups wanting complete privacy, Himalaya Villas is the highest-rated option by returning guests.",
     },
-    // {
-    //   type: "comparison",
-    //   heading: "Murree vs Bhurban: The Geography That Matters",
-    //   columns: [
-    //     "Feature",
-    //     "PC Hotel Bhurban",
-    //     "Himalaya Villas & Resorts",
-    //   ],
-    // },
+
     {
-      type: "callout-qa",
-      question: "What is the price of PC Hotel Bhurban per night?",
-      answer: "Pearl Continental Bhurban room rates range from approximately PKR 35,000 for a Deluxe Room to PKR 75,000 for Executive Suites in peak season. Rates vary between weekdays and peak weekends (Eid, summer). Contact PC Hotels at pchotels.com or +92 51 565 2000 for current rates. Type: 5-Star Chain Hotel (PC Hotels / Marriott Bonvoy) Location: Bhurban, Murree Hills — 6,900 feet elevation Rate Range: PKR 35,000 – PKR 75,000 per night",
-    },
-    {
-      type: "audience",
-      heading: "Best For: Couples, business travellers, loyalty programme guests",
-      items: [
-        { title: "Its structural limitation is shared facilities", text: "the pool, lobby, and dining are available to all 162 rooms of guests simultaneously. For individual travellers and couples, this is irrelevant. For groups wanting exclusivity, it is the defining constraint. 2. Himalaya Villas & Resorts, Bhurban" },
+      type: "section",
+      heading: "Best Hotels in Murree Pakistan 2026 — Complete Guide with Rates",
+      paragraphs: [
+        "Murree remains Pakistan's most visited hill station, but how you experience it depends almost entirely on where you stay. The difference between a Mall Road guesthouse and a private villa in Bhurban is not just price — it is altitude, atmosphere, and whether you spend your weekend genuinely rested or fighting for a parking space.",
+        "This guide covers every significant hotel and accommodation option in Murree and Bhurban for 2026: rated honestly, with real price ranges, and with the specific context of what type of traveller each property suits.",
       ],
+      image: {
+        src: dummyImageTemp,
+        alt: "Best Hotels in Murree",
+      },
     },
+
     {
-      type: "callout-qa",
-      question: "What is the best private villa in Bhurban Murree?",
-      answer: "Himalaya Villas & Resorts in Mohra Iswal, Bhurban, is the only fully private villa estate in the Bhurban area. It offers 12 villas — Presidential Suite (jacuzzi, 270° views, PKR 65,000–70,000/night), Himalayan Penthouse (panoramic balcony, PKR 60,000–65,000/night), Garden Villa Retreat (3 bedrooms, family, PKR 55,000–60,000/night), and others. Full estate buyout accommodates 30–120 guests for weddings and corporate retreats. 0.5km from PC Hotel Bhurban. Type: Private Villa Estate (12 villas, exclusive use) Location: Mohra Iswal, Bhurban — 0.5km from PC Hotel Bhurban Rate Range: PKR 39,000 – PKR 70,000 per villa per night",
+      type: "section",
+      heading: "Murree vs Bhurban: The Geography That Matters",
+      paragraphs: [
+        "Most people searching for hotels in Murree are looking at two distinct areas: Murree town (Mall Road) and Bhurban, a hill station township 11 kilometres east at slightly higher elevation. They attract different guests.",
+        "Murree Mall Road: central, walkable, crowded in peak season. Best for first-time visitors who want the bazaar, chairlifts, and Kashmir Point walking distance.",
+        "Bhurban: quieter, more forested, 6,800–6,900 feet elevation. Pine forests are thicker, views broader. Suits guests who want relaxation. 15–20 minutes from Mall Road — access is trivial.",
+      ],
+      image: {
+        src: dummyImageTemp,
+        alt: "Murree vs Bhurban",
+      },
     },
-    // {
-    //   type: "audience",
-    //   heading: "Best For: Families, groups, weddings, corporate retreats, privacy-seeking guests",
-    // },
+
+    {
+      type: "section",
+      heading: "1. Pearl Continental Hotel Bhurban (PC Bhurban)",
+      paragraphs: [
+        "Pearl Continental Bhurban room rates range from approximately PKR 35,000 for a Deluxe Room to PKR 75,000 for Executive Suites in peak season. Rates vary between weekdays and peak weekends (Eid, summer). Contact PC Hotels at pchotels.com or +92 51 565 2000 for current rates.",
+        "",
+        "Type: 5-Star Chain Hotel (PC Hotels / Marriott Bonvoy)",
+        "Location: Bhurban, Murree Hills — 6,900 feet elevation",
+        "Rate Range: PKR 35,000 – PKR 75,000 per night",
+        "Best For: Couples, business travellers, loyalty programme guests",
+        "",
+        "Pearl Continental Bhurban is Pakistan's reference-point luxury property in the hills. Operated by PC Hotels (Pakistan's largest luxury hotel group), the property offers 162 rooms and suites, the Polo Lounge restaurant, an outdoor swimming pool, and conference facilities. The Bhurban location — set within maintained grounds with valley views — is genuinely excellent.",
+        "Its structural limitation is shared facilities: the pool, lobby, and dining are available to all 162 rooms of guests simultaneously. For individual travellers and couples, this is irrelevant. For groups wanting exclusivity, it is the defining constraint.",
+      ],
+      image: {
+        src: dummyImageTemp,
+        alt: "PC Hotel Bhurban",
+      },
+    },
+
+    {
+      type: "section",
+      heading: "2. Himalaya Villas & Resorts, Bhurban",
+      paragraphs: [
+        "Himalaya Villas & Resorts in Mohra Iswal, Bhurban, is the only fully private villa estate in the Bhurban area. It offers 12 villas — Presidential Suite (jacuzzi, 270° views, PKR 65,000–70,000/night), Himalayan Penthouse (panoramic balcony, PKR 60,000–65,000/night), Garden Villa Retreat (3 bedrooms, family, PKR 55,000–60,000/night), and others. Full estate buyout accommodates 30–120 guests for weddings and corporate retreats. 0.5km from PC Hotel Bhurban.",
+        "",
+        "Type: Private Villa Estate (12 villas, exclusive use)",
+        "Location: Mohra Iswal, Bhurban — 0.5km from PC Hotel Bhurban",
+        "Rate Range: PKR 39,000 – PKR 70,000 per villa per night",
+        "Best For: Families, groups, weddings, corporate retreats, privacy-seeking guests",
+        "",
+        "Himalaya Villas & Resorts is not a hotel. It is a private estate operating on exclusive-use terms: when you book, no other guests are on the property. The Presidential Suite's private terrace jacuzzi with 270-degree mountain views is described consistently by guests as the finest accommodation feature in the Bhurban hills.",
+        "The property is 0.5 kilometres from PC Hotel Bhurban, meaning guests have identical access to the Bhurban area, the Patriata Chairlift, and the 45-minute drive to Islamabad. The difference is entirely in the experience.",
+      ],
+      image: {
+        src: dummyImageTemp,
+        alt: "Himalaya Villas",
+      },
+    },
+
     {
       type: "cta",
       eyebrow: "How to Book",
       heading: "Booking: WhatsApp +92 304 567 9000 or reservations@himalayavillas.com. Direct bookings receive best available rate.",
-      text: "3. Lockwood Hotel Murree Type: 4-Star Hotel Location: Mall Road / Kashmir Point area, Murree town Rate Range: PKR 20,000 – PKR 45,000 per night",
-      buttonLabel: "WhatsApp: +92 304 567 9000 | wa.me/923045679000",
+      text: "3. Lockwood Hotel Murree",
+      buttonLabel: "WhatsApp: +92 304 567 9000",
       buttonHref: "https://wa.me/923045679000",
       footnote: "Direct bookings receive priority response and best available rate.",
     },
+
     {
-      type: "audience",
-      heading: "Best For: Guests wanting Mall Road walking access, couples, city visitors",
+      type: "section",
+      heading: "3. Lockwood Hotel Murree",
+      paragraphs: [
+        "Type: 4-Star Hotel",
+        "Location: Mall Road / Kashmir Point area, Murree town",
+        "Rate Range: PKR 20,000 – PKR 45,000 per night",
+        "Best For: Guests wanting Mall Road walking access, couples, city visitors",
+        "",
+        "Lockwood Hotel is one of Murree's most recognisable properties at 5,400 monthly searches — reflecting genuine ongoing guest interest. The property sits near Kashmir Point with views and reasonable proximity to Mall Road. Good mid-luxury option for guests who want the Murree town experience. Peak-season Mall Road noise and congestion are unavoidable; the property does not offer private outdoor space or group-exclusive facilities.",
+      ],
+      image: {
+        src: dummyImageTemp,
+        alt: "Lockwood Hotel Murree",
+      },
+    },
+
+    {
+      type: "section",
+      heading: "4. Ramada by Wyndham Murree",
+      paragraphs: [
+        "Type: 4-Star International Chain",
+        "Rate Range: PKR 18,000 – PKR 40,000 per night",
+        "Best For: International travellers, Wyndham loyalty members, budget-conscious premium guests",
+        "",
+        "Ramada Murree offers international brand consistency at a lower price point than PC Bhurban. The 6,600 monthly searches confirm strong brand awareness. Well-suited to diaspora guests and business travellers who want a Wyndham-standard experience. Shares the structural limitation of all chain hotels: no exclusivity for groups.",
+      ],
+      image: {
+        src: dummyImageTemp,
+        alt: "Ramada Murree",
+      },
+    },
+
+    {
+      type: "section",
+      heading: "5. Mövenpick Hotel Murree",
+      paragraphs: [
+        "Type: 4-Star International Chain (Accor)",
+        "Rate Range: PKR 25,000 – PKR 55,000 per night",
+        "Best For: International guests, Accor loyalty members, business travellers",
+        "",
+        "Mövenpick Murree (known locally as Move n Pick) attracts 4,400 monthly searches with strong brand recognition among Accor loyalty guests and international visitors. The Swiss brand's service standard is well-maintained. As with other chain properties, the hotel model means shared facilities — appropriate for individual travellers, limited for groups.",
+      ],
+      image: {
+        src: dummyImageTemp,
+        alt: "Mövenpick Murree",
+      },
+    },
+
+    {
+      type: "section",
+      heading: "6. Marco Polo Resort Murree",
+      paragraphs: [
+        "Type: Resort / Hotel",
+        "Rate Range: PKR 15,000 – PKR 35,000 per night",
+        "Best For: Families wanting resort-format, budget-conscious premium guests",
+        "",
+        "Marco Polo Resort attracts 4,400 monthly searches with strong regional recognition, particularly for families. Resort-style layout with multiple facilities. For families comparing Marco Polo to Himalaya Villas: Marco Polo is a multi-guest resort; Himalaya Villas is a private estate for one group only. The right choice depends on whether exclusivity is a priority.",
+      ],
+      image: {
+        src: dummyImageTemp,
+        alt: "Marco Polo Resort",
+      },
+    },
+
+    {
+      type: "facts",
+      heading: "Quick Reference — Match Your Guest Type to the Right Hotel",
       items: [
-        { title: "Type", text: "4-Star International Chain" },
-        { title: "Rate Range", text: "PKR 18,000 – PKR 40,000 per night" },
+        {
+          label: "Family of 6–15",
+          value: "Best Option: Himalaya Villas & Resorts | Why: Private villas, multiple bedrooms, no shared spaces",
+        },
+        {
+          label: "Couple — luxury weekend",
+          value: "Best Option: Presidential Suite (HV) or PC Bhurban | Why: Jacuzzi terrace at HV; brand loyalty at PC",
+        },
+        {
+          label: "Corporate group (10–40)",
+          value: "Best Option: Himalaya Villas — full estate | Why: Exclusive use, meeting space, genuine offsite",
+        },
+        {
+          label: "Wedding / mehndi party",
+          value: "Best Option: Himalaya Villas — estate buyout | Why: Entire property for one event",
+        },
+        {
+          label: "Solo business traveller",
+          value: "Best Option: PC Bhurban or Ramada | Why: Loyalty points, simpler OTA booking",
+        },
+        {
+          label: "First-time Murree visitor",
+          value: "Best Option: Lockwood or Ramada (Mall Road) | Why: Walking distance to Murree attractions",
+        },
+        {
+          label: "Diaspora from UAE/UK",
+          value: "Best Option: PC Bhurban or Himalaya Villas | Why: Brand recognition (PC) or premium private (HV)",
+        },
       ],
     },
-    {
-      type: "audience",
-      heading: "Best For: International travellers, Wyndham loyalty members, budget-conscious premium guests",
-      items: [
-        { title: "Type", text: "4-Star International Chain (Accor)" },
-        { title: "Rate Range", text: "PKR 25,000 – PKR 55,000 per night" },
-      ],
-    },
-    {
-      type: "audience",
-      heading: "Best For: International guests, Accor loyalty members, business travellers",
-      items: [
-        { title: "Type", text: "Resort / Hotel" },
-        { title: "Rate Range", text: "PKR 15,000 – PKR 35,000 per night" },
-      ],
-    },
-    // {
-    //   type: "audience",
-    //   heading: "Best For: Families wanting resort-format, budget-conscious premium guests",
-    // },
-    // {
-    //   type: "audience",
-    //   heading: "Quick Reference — Match Your Guest Type to the Right Hotel",
-    // },
-    // {
-    //   type: "audience",
-    //   heading: "Guest Type",
-    // },
-    {
-      type: "section",
-      heading: "Best Option",
-      paragraphs: [
-        "Why",
-        "Family of 6–15",
-        "Himalaya Villas & Resorts",
-        "Private villas, multiple bedrooms, no shared spaces",
-      ],
-      image: {
-        src: article02Villa,
-        alt: "Best Option",
-      },
-    },
-    {
-      type: "paragraph",
-      text: "Presidential Suite (HV) or PC Bhurban Jacuzzi terrace at HV; brand loyalty at PC Corporate group (10–40)",
-    },
-    {
-      type: "section",
-      heading: "Himalaya Villas — full estate",
-      paragraphs: [
-        "Exclusive use, meeting space, genuine offsite",
-        "Wedding / mehndi party",
-      ],
-      image: {
-        src: article02View,
-        alt: "Himalaya Villas — full estate",
-      },
-    },
-    // {
-    //   type: "section",
-    //   heading: "Himalaya Villas — estate buyout",
-    //   image: {
-    //     src: article02Villa,
-    //     alt: "Himalaya Villas — estate buyout",
-    //   },
-    // },
-    // {
-    //   type: "section",
-    //   heading: "Entire property for one event",
-    //   image: {
-    //     src: article02View,
-    //     alt: "Entire property for one event",
-    //   },
-    // },
-    // {
-    //   type: "section",
-    //   heading: "Solo business traveller",
-    //   image: {
-    //     src: article02Villa,
-    //     alt: "Solo business traveller",
-    //   },
-    // },
-    {
-      type: "section",
-      heading: "PC Bhurban or Ramada",
-      paragraphs: [
-        "Loyalty points, simpler OTA booking",
-      ],
-      image: {
-        src: article02View,
-        alt: "PC Bhurban or Ramada",
-      },
-    },
-    {
-      type: "section",
-      heading: "First-time Murree visitor",
-      paragraphs: [
-        "Lockwood or Ramada (Mall Road)",
-      ],
-      image: {
-        src: article02Villa,
-        alt: "First-time Murree visitor",
-      },
-    },
-    {
-      type: "section",
-      heading: "Walking distance to Murree attractions",
-      paragraphs: [
-        "Diaspora from UAE/UK",
-      ],
-      image: {
-        src: article02View,
-        alt: "Walking distance to Murree attractions",
-      },
-    },
-    {
-      type: "section",
-      heading: "PC Bhurban or Himalaya Villas",
-      paragraphs: [
-        "Brand recognition (PC) or premium private (HV)",
-      ],
-      image: {
-        src: article02Villa,
-        alt: "PC Bhurban or Himalaya Villas",
-      },
-    },
+
     {
       type: "faqs",
       heading: "Frequently Asked Questions",
       items: [
-        { q: "What is the best hotel in Murree for a family of 10?", a: "Himalaya Villas & Resorts is the best option for families of 10 or more. Individual villas like the Alpine Family Lodge and Garden Villa Retreat accommodate multi-bedroom family groups with shared lounge and private outdoor space. Unlike hotel rooms in a corridor, the villas give families a unified private space." },
-        { q: "Are there 5-star hotels in Murree?", a: "Pearl Continental Hotel Bhurban is the established 5-star property in the Murree hills. Himalaya Villas & Resorts is not officially star-rated but offers an experience rated comparable or superior to 5-star by returning family and group guests. Ramada by Wyndham and Mövenpick Murree are 4-star international chain properties." },
-        { q: "How far in advance should I book for peak season?", a: "For Eid and the summer peak (June–August), booking 4–6 weeks in advance is recommended. PC Bhurban and Himalaya Villas fill on peak weekends 3–4 weeks ahead. For full estate bookings at Himalaya Villas for weddings, 6–8 weeks advance booking is advised." },
-        { q: "Which Murree hotel has the best mountain view?", a: "PC Bhurban and Himalaya Villas & Resorts both sit in Bhurban at 6,800–6,900 feet with panoramic views. The Presidential Suite at Himalaya Villas offers a 270-degree private terrace view. PC Bhurban's upper floor suites have strong valley views." },
+        {
+          q: "What is the best hotel in Murree for a family of 10?",
+          a: "Himalaya Villas & Resorts is the best option for families of 10 or more. Individual villas like the Alpine Family Lodge and Garden Villa Retreat accommodate multi-bedroom family groups with shared lounge and private outdoor space. Unlike hotel rooms in a corridor, the villas give families a unified private space.",
+        },
+        {
+          q: "Are there 5-star hotels in Murree?",
+          a: "Pearl Continental Hotel Bhurban is the established 5-star property in the Murree hills. Himalaya Villas & Resorts is not officially star-rated but offers an experience rated comparable or superior to 5-star by returning family and group guests. Ramada by Wyndham and Mövenpick Murree are 4-star international chain properties.",
+        },
+        {
+          q: "How far in advance should I book for peak season?",
+          a: "For Eid and the summer peak (June–August), booking 4–6 weeks in advance is recommended. PC Bhurban and Himalaya Villas fill on peak weekends 3–4 weeks ahead. For full estate bookings at Himalaya Villas for weddings, 6–8 weeks advance booking is advised.",
+        },
+        {
+          q: "Which Murree hotel has the best mountain view?",
+          a: "PC Bhurban and Himalaya Villas & Resorts both sit in Bhurban at 6,800–6,900 feet with panoramic views. The Presidential Suite at Himalaya Villas offers a 270-degree private terrace view. PC Bhurban's upper floor suites have strong valley views.",
+        },
       ],
     },
-    // {
-    //   type: "related",
-    //   heading: "📎 Related Pages — Internal Links",
-    // },
-    // {
-    //   type: "comparison",
-    //   heading: "→ /pc-hotel-bhurban-alternative — PC Hotel vs Himalaya Villas: full comparison",
-    //   columns: [
-    //     "Feature",
-    //     "PC Hotel Bhurban",
-    //     "Himalaya Villas & Resorts",
-    //   ],
-    // },
+
+    {
+      type: "cta",
+      eyebrow: "Book a Private Villa in Bhurban — Direct Enquiry via WhatsApp",
+      heading: "WhatsApp +92 304 567 9000",
+      text: "Direct bookings receive priority response and best available rate.",
+      buttonLabel: "WhatsApp: +92 304 567 9000",
+      buttonHref: "https://wa.me/923045679000",
+      footnote: "Direct bookings receive priority response and best available rate.",
+    },
+
+    {
+      type: "related",
+      heading: "📎 Related Pages — Internal Links",
+      items: [
+        { href: "/pc-hotel-bhurban-alternative", label: "PC Hotel vs Himalaya Villas: full comparison" },
+        { href: "/villas", label: "Browse all 12 villa types at Himalaya Villas" },
+        { href: "/hotels-in-bhurban-murree", label: "Complete guide to Bhurban accommodation" },
+        { href: "/things-to-do-in-murree", label: "Activities guide for Murree and Bhurban" },
+        { href: "/seasons-in-the-hills", label: "When to book for best weather" },
+      ],
+    },
   ],
 };
 
+// ============================================
+// ARTICLES MAP - Add to your articles map
+// ============================================
+
+/*
+Add to your articles map:
+
+"best-hotels-in-murree-pakistan": article02,
+*/
 // ============================================
 // ARTICLE 03 - /things-to-do-in-murree ~2,800 words
 // ============================================
@@ -79170,7 +79193,7 @@ export const articlesBatch1 = [
 // Export articles by slug
 export const articlesBySlugBatch1 = {
   "pc-hotel-bhurban-alternative": article01,
-  "blog": article02,
+  "best-hotels-in-murree-pakistan": article02,
   "things-to-do-in-murree": article03,
   "luxury-villa-bhurban-murree": article05,
   "wedding-venues-bhurban-murree": article06,

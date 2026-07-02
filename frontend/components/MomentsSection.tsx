@@ -3,7 +3,7 @@
 import Image from "next/image";
 import { useState } from "react";
 
-const videoSources = ["/videos/homepage-video2.mp4", "/videos/homepage-video.mp4"];
+const videoSources = ["/videos/homepage-video.mp4", "/videos/homepage-video2.mp4"];
 const momentsPoster = "/assets/journal-bonfire.jpg";
 
 const MomentsSection = () => {
@@ -47,13 +47,13 @@ const MomentsSection = () => {
       )}
 
       {/* Overlay */}
-      <div
+      {/* <div
         className="absolute inset-0"
         style={{
           background:
             "linear-gradient(to bottom, hsl(220 20% 10% / 0.3) 0%, hsl(220 20% 10% / 0.5) 50%, hsl(220 20% 10% / 0.6) 100%)",
         }}
-      />
+      /> */}
 
       {/* Content */}
       {/* <div className="relative z-10 flex items-center justify-center h-full text-center px-8">

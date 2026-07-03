@@ -2059,7 +2059,7 @@ export const article01: Article = {
     },
     {
       type: "related",
-      heading: "📎 Related Pages — Internal Links",
+      heading: "📎 Related Pages — Explore More",
       items: [
         { href: "/villas", label: "Browse individual villa options at Himalaya Villas" },
         { href: "/blog/hotels-in-bhurban-murree", label: "Complete guide to all hotels in Bhurban" },
@@ -2309,7 +2309,7 @@ export const article02: Article = {
 
     {
       type: "related",
-      heading: "📎 Related Pages — Internal Links",
+      heading: "📎 Related Pages — Explore More",
       items: [
         { href: "/pc-hotel-bhurban-alternative", label: "PC Hotel vs Himalaya Villas: full comparison" },
         { href: "/villas", label: "Browse all 12 villa types at Himalaya Villas" },
@@ -2461,7 +2461,7 @@ export const article03: Article = {
     },
     {
       type: "related",
-      heading: "📎 Related Pages — Internal Links",
+      heading: "📎 Related Pages — Explore More",
       items: [
         { href: "/blog/best-places-to-visit-in-murree", label: "Murree's top destinations in detail" },
         { href: "/pc-hotel-bhurban-alternative", label: "Accommodation comparison guide for Bhurban" },
@@ -2564,7 +2564,7 @@ export const article05: Article = {
     },
  {
   type: "related",
-  heading: "📎 Related Pages — Internal Links",
+  heading: "📎 Related Pages — Explore More",
   items: [
     {
       href: "/villas",
@@ -2683,7 +2683,7 @@ export const article06: Article = {
     },
     {
       type: "related",
-      heading: "📎 Related Pages — Internal Links",
+      heading: "📎 Related Pages — Explore More",
       items: [
         { href: "/events", label: "Full events overview including corporate and private celebrations" },
         { href: "/villas", label: "Guest accommodation options for the wedding party" },
@@ -2802,7 +2802,7 @@ export const article07: Article = {
     },
     {
       type: "related",
-      heading: "📎 Related Pages — Internal Links",
+      heading: "📎 Related Pages — Explore More",
       items: [
         { href: "/events", label: "Full events and corporate offerings" },
         { href: "/luxury-villa-bhurban-murree", label: "Full property details for corporate clients" },
@@ -2969,7 +2969,7 @@ export const article09: Article = {
 
   {
     type: "related",
-    heading: "📎 Related Pages — Internal Links",
+    heading: "📎 Related Pages — Explore More",
     items: [
       {
         href: "/blog/hotels-in-bhurban-murree",
@@ -3155,7 +3155,7 @@ export const article10: Article = {
 
   {
     type: "related",
-    heading: "📎 Related Pages — Internal Links",
+    heading: "📎 Related Pages — Explore More",
     items: [
       {
         href: "/luxury-villa-bhurban-murree",
@@ -3392,7 +3392,7 @@ export const article11: Article = {
 
   {
     type: "related",
-    heading: "📎 Internal Links",
+    heading: "📎 Explore More",
     items: [
       {
         href: "/pc-hotel-bhurban-alternative",
@@ -3596,7 +3596,7 @@ export const article12: Article = {
 
     {
       type: "related",
-      heading: "📎 Internal Links",
+      heading: "📎 Explore More",
       items: [
         {
           href: "/pc-hotel-bhurban-alternative",
@@ -3813,7 +3813,7 @@ export const article13: Article = {
 
     {
       type: "related",
-      heading: "📎 Internal Links",
+      heading: "📎 Explore More",
       items: [
         {
           href: "/murree-in-december",
@@ -4033,7 +4033,7 @@ export const article14: Article = {
 
     {
       type: "related",
-      heading: "📎 Internal Links",
+      heading: "📎 Explore More",
       items: [
         {
           href: "/things-to-do-in-murree",
@@ -4260,7 +4260,7 @@ export const article15: Article = {
 
     {
       type: "related",
-      heading: "📎 Internal Links",
+      heading: "📎 Explore More",
       items: [
         {
           href: "/murree-in-december",
@@ -4456,7 +4456,7 @@ export const article16: Article = {
 
     {
       type: "related",
-      heading: "📎 Internal Links",
+      heading: "📎 Explore More",
       items: [
         {
           href: "/villas",
@@ -4621,7 +4621,7 @@ export const article17: Article = {
 
     {
       type: "related",
-      heading: "📎 Internal Links",
+      heading: "📎 Explore More",
       items: [
         {
           href: "/villas",
@@ -4825,7 +4825,7 @@ export const article18: Article = {
 
     {
       type: "related",
-      heading: "📎 Internal Links",
+      heading: "📎 Explore More",
       items: [
         {
           href: "/murree-in-december",
@@ -5032,7 +5032,7 @@ export const article19: Article = {
 
     {
       type: "related",
-      heading: "📎 Internal Links",
+      heading: "📎 Explore More",
       items: [
         {
           href: "/things-to-do-in-murree",
@@ -5246,7 +5246,7 @@ export const article21: Article = {
 
     {
       type: "related",
-      heading: "📎 Internal Links",
+      heading: "📎 Explore More",
       items: [
         {
           href: "/pc-hotel-bhurban-alternative",
@@ -5430,7 +5430,7 @@ export const article22: Article = {
 
     {
       type: "related",
-      heading: "📎 Internal Links",
+      heading: "📎 Explore More",
       items: [
         {
           href: "/pc-hotel-bhurban-alternative",
@@ -5633,7 +5633,7 @@ export const article23: Article = {
 
     {
       type: "related",
-      heading: "📎 Internal Links",
+      heading: "📎 Explore More",
       items: [
         {
           href: "/things-to-do-in-murree",
@@ -5872,7 +5872,7 @@ export const article24: Article = {
 
     {
       type: "related",
-      heading: "📎 Internal Links",
+      heading: "📎 Explore More",
       items: [
         {
           href: "/nathia-gali-day-trip-from-bhurban",
@@ -6097,7 +6097,7 @@ export const article25: Article = {
 
     {
       type: "related",
-      heading: "📎 Internal Links",
+      heading: "📎 Explore More",
       items: [
         {
           href: "/blog/hotels-in-bhurban-murree",
@@ -6253,7 +6253,7 @@ export const article26: Article = {
 
     {
       type: "related",
-      heading: "📎 Internal Links",
+      heading: "📎 Explore More",
       items: [
         {
           href: "/villas",
@@ -6398,7 +6398,7 @@ export const article27: Article = {
 
     {
       type: "related",
-      heading: "📎 Internal Links",
+      heading: "📎 Explore More",
       items: [
         {
           href: "/villas",
@@ -6583,7 +6583,7 @@ export const article28: Article = {
 
     {
       type: "related",
-      heading: "📎 Internal Links",
+      heading: "📎 Explore More",
       items: [
         {
           href: "/luxury-villa-bhurban-murree",
@@ -6770,7 +6770,7 @@ export const article29: Article = {
 
     {
       type: "related",
-      heading: "📎 Internal Links",
+      heading: "📎 Explore More",
       items: [
         {
           href: "/pc-hotel-bhurban-alternative",
@@ -6983,7 +6983,7 @@ export const article30: Article = {
 
     {
       type: "related",
-      heading: "📎 Internal Links",
+      heading: "📎 Explore More",
       items: [
         {
           href: "/best-time-to-visit-murree",
@@ -7249,7 +7249,7 @@ export const article31: Article = {
 
     {
       type: "related",
-      heading: "📎 Internal Links",
+      heading: "📎 Explore More",
       items: [
         {
           href: "/things-to-do-in-murree",
@@ -7443,7 +7443,7 @@ export const article32: Article = {
 
     {
       type: "related",
-      heading: "📎 Internal Links",
+      heading: "📎 Explore More",
       items: [
         {
           href: "/kashmir-point-murree-guide",
@@ -7698,7 +7698,7 @@ export const article33: Article = {
 
     {
       type: "related",
-      heading: "📎 Internal Links",
+      heading: "📎 Explore More",
       items: [
         {
           href: "/how-far-is-bhurban-from-islamabad",
@@ -7925,7 +7925,7 @@ export const article34: Article = {
 
     {
       type: "related",
-      heading: "📎 Internal Links",
+      heading: "📎 Explore More",
       items: [
         {
           href: "/islamabad-to-murree-guide",
@@ -8152,7 +8152,7 @@ export const article35: Article = {
 
     {
       type: "related",
-      heading: "📎 Internal Links",
+      heading: "📎 Explore More",
       items: [
         {
           href: "/best-time-to-visit-murree",
@@ -8340,7 +8340,7 @@ export const article37: Article = {
 
     {
       type: "related",
-      heading: "📎 Internal Links",
+      heading: "📎 Explore More",
       items: [
         {
           href: "/wedding-venues-bhurban-murree",
@@ -8545,7 +8545,7 @@ export const article39: Article = {
 
     {
       type: "related",
-      heading: "📎 Internal Links",
+      heading: "📎 Explore More",
       items: [
         {
           href: "/things-to-do-in-murree",
@@ -8856,7 +8856,7 @@ export const article41: Article = {
 
     {
       type: "related",
-      heading: "📎 Internal Links",
+      heading: "📎 Explore More",
       items: [
         {
           href: "/things-to-do-in-murree",
@@ -9055,7 +9055,7 @@ export const article42: Article = {
 
     {
       type: "related",
-      heading: "📎 Internal Links",
+      heading: "📎 Explore More",
       items: [
         {
           href: "/blog/hotels-in-bhurban-murree",
@@ -9283,7 +9283,7 @@ export const article43: Article = {
 
     {
       type: "related",
-      heading: "📎 Internal Links",
+      heading: "📎 Explore More",
       items: [
         {
           href: "/honeymoon-package-bhurban-murree",
@@ -9541,7 +9541,7 @@ export const article44: Article = {
 
     {
       type: "related",
-      heading: "📎 Internal Links",
+      heading: "📎 Explore More",
       items: [
         {
           href: "/ayubia-national-park-from-bhurban",
@@ -9725,7 +9725,7 @@ export const article46: Article = {
 
     {
       type: "related",
-      heading: "📎 Internal Links",
+      heading: "📎 Explore More",
       items: [
         {
           href: "/3-day-murree-itinerary-bhurban",
@@ -9885,7 +9885,7 @@ export const article51: Article = {
 
     {
       type: "related",
-      heading: "📎 Internal Links",
+      heading: "📎 Explore More",
       items: [
         {
           href: "/villa-for-4-guests-bhurban",
@@ -10038,7 +10038,7 @@ export const article52: Article = {
 
     {
       type: "related",
-      heading: "📎 Internal Links",
+      heading: "📎 Explore More",
       items: [
         {
           href: "/villa-for-6-guests-bhurban",
@@ -10209,7 +10209,7 @@ export const article53: Article = {
 
     {
       type: "related",
-      heading: "📎 Internal Links",
+      heading: "📎 Explore More",
       items: [
         {
           href: "/villa-with-jacuzzi-bhurban",
@@ -10390,7 +10390,7 @@ export const article54: Article = {
 
     {
       type: "related",
-      heading: "📎 Internal Links",
+      heading: "📎 Explore More",
       items: [
         {
           href: "/pindi-point-murree-guide",
@@ -10558,7 +10558,7 @@ export const article57: Article = {
 
     {
       type: "related",
-      heading: "📎 Internal Links",
+      heading: "📎 Explore More",
       items: [
         {
           href: "/how-far-is-bhurban-from-islamabad",
@@ -10736,7 +10736,7 @@ export const article58: Article = {
 
     {
       type: "related",
-      heading: "📎 Internal Links",
+      heading: "📎 Explore More",
       items: [
         {
           href: "/how-far-is-bhurban-from-islamabad",
@@ -10907,7 +10907,7 @@ export const article61: Article = {
 
     {
       type: "related",
-      heading: "📎 Internal Links",
+      heading: "📎 Explore More",
       items: [
         {
           href: "/villa-for-10-guests-bhurban",
@@ -11063,7 +11063,7 @@ export const article62: Article = {
 
     {
       type: "related",
-      heading: "📎 Internal Links",
+      heading: "📎 Explore More",
       items: [
         {
           href: "/villa-for-20-guests-bhurban",
@@ -11219,7 +11219,7 @@ export const article63: Article = {
 
     {
       type: "related",
-      heading: "📎 Internal Links",
+      heading: "📎 Explore More",
       items: [
         {
           href: "/murree-in-january",
@@ -11380,7 +11380,7 @@ export const article64: Article = {
 
     {
       type: "related",
-      heading: "📎 Internal Links",
+      heading: "📎 Explore More",
       items: [
         {
           href: "/murree-in-autumn",
@@ -11526,7 +11526,7 @@ export const article65: Article = {
 
     {
       type: "related",
-      heading: "📎 Internal Links",
+      heading: "📎 Explore More",
       items: [
         {
           href: "/murree-in-spring",
@@ -11680,7 +11680,7 @@ export const article66: Article = {
 
     {
       type: "related",
-      heading: "📎 Internal Links",
+      heading: "📎 Explore More",
       items: [
         {
           href: "/luxury-villa-bhurban-murree",
@@ -11856,7 +11856,7 @@ export const article67: Article = {
 
     {
       type: "related",
-      heading: "📎 Internal Links",
+      heading: "📎 Explore More",
       items: [
         {
           href: "/in-villa-dining-bhurban",
@@ -12033,7 +12033,7 @@ export const article68: Article = {
 
     {
       type: "related",
-      heading: "📎 Internal Links",
+      heading: "📎 Explore More",
       items: [
         {
           href: "/wedding-venues-bhurban-murree",
@@ -12206,7 +12206,7 @@ export const article69: Article = {
 
     {
       type: "related",
-      heading: "📎 Internal Links",
+      heading: "📎 Explore More",
       items: [
         {
           href: "/villa-for-6-guests-bhurban",
@@ -12372,7 +12372,7 @@ export const article70: Article = {
 
     {
       type: "related",
-      heading: "📎 Internal Links",
+      heading: "📎 Explore More",
       items: [
         {
           href: "/murree-snowfall-season",
@@ -12496,7 +12496,7 @@ export const article71: Article = {
 
     {
       type: "related",
-      heading: "📎 Internal Links",
+      heading: "📎 Explore More",
       items: [
         { href: "/luxury-villa-bhurban-murree", label: "Estate overview" },
         { href: "/villas", label: "Browse villa options" },
@@ -12631,7 +12631,7 @@ export const article72: Article = {
 
     {
       type: "related",
-      heading: "📎 Internal Links",
+      heading: "📎 Explore More",
       items: [
         { href: "/bhurban-murree-complete-guide", label: "Complete Bhurban guide" },
         { href: "/best-time-to-visit-murree", label: "Seasonal guide" },
@@ -12792,7 +12792,7 @@ export const article73: Article = {
 
     {
       type: "related",
-      heading: "📎 Internal Links",
+      heading: "📎 Explore More",
       items: [
         { href: "/bhurban-murree-complete-guide", label: "Complete Bhurban guide" },
         { href: "/murree-vs-nathia-gali", label: "Murree vs Nathia Gali comparison" },
@@ -12890,7 +12890,7 @@ export const article74: Article = {
 
     {
       type: "related",
-      heading: "📎 Internal Links",
+      heading: "📎 Explore More",
       items: [
         { href: "/luxury-villa-bhurban-murree", label: "Estate overview" },
         { href: "/bhurban-for-couples-maldives-alternative", label: "Maldives alternative comparison" },
@@ -13002,7 +13002,7 @@ export const article75: Article = {
 
     {
       type: "related",
-      heading: "📎 Internal Links",
+      heading: "📎 Explore More",
       items: [
         { href: "/wedding-venues-bhurban-murree", label: "Full wedding venue guide" },
         { href: "/walima-venue-bhurban", label: "Walima guide" },
@@ -13124,7 +13124,7 @@ export const article76: Article = {
 
     {
       type: "related",
-      heading: "📎 Internal Links",
+      heading: "📎 Explore More",
       items: [
         { href: "/corporate-retreat-near-islamabad", label: "Full corporate retreat guide" },
         { href: "/corporate-team-building-bhurban", label: "Team building guide" },
@@ -13278,7 +13278,7 @@ export const article77: Article = {
 
     {
       type: "related",
-      heading: "📎 Internal Links",
+      heading: "📎 Explore More",
       items: [
         { href: "/family-villa-bhurban-murree", label: "Family villa guide" },
         { href: "/bhurban-for-elderly-guests", label: "Accessibility guide" },
@@ -13385,7 +13385,7 @@ export const article78: Article = {
 
     {
       type: "related",
-      heading: "📎 Internal Links",
+      heading: "📎 Explore More",
       items: [
         { href: "/in-villa-dining-bhurban", label: "Full in-villa dining guide" },
         { href: "/restaurants-near-bhurban-murree", label: "Dining guide" },
@@ -13523,7 +13523,7 @@ export const article79: Article = {
 
     {
       type: "related",
-      heading: "📎 Internal Links",
+      heading: "📎 Explore More",
       items: [
         { href: "/honeymoon-package-bhurban-murree", label: "Full honeymoon guide" },
         { href: "/villa-with-jacuzzi-bhurban", label: "Presidential Suite jacuzzi guide" },
@@ -13648,7 +13648,7 @@ export const article80: Article = {
 
     {
       type: "related",
-      heading: "📎 Internal Links",
+      heading: "📎 Explore More",
       items: [
         { href: "/murree-bhurban-diaspora-guide", label: "Full diaspora visitor guide" },
         { href: "/villa-near-islamabad-airport", label: "Airport-to-Bhurban guide" },
@@ -13754,7 +13754,7 @@ export const article81: Article = {
 
     {
       type: "related",
-      heading: "📎 Internal Links",
+      heading: "📎 Explore More",
       items: [
         { href: "/hiking-near-murree", label: "Full hiking guide" },
         { href: "/ayubia-national-park-from-bhurban", label: "Ayubia National Park guide" },
@@ -13874,7 +13874,7 @@ export const article82: Article = {
 
     {
       type: "related",
-      heading: "📎 Internal Links",
+      heading: "📎 Explore More",
       items: [
         { href: "/murree-bhurban-diaspora-guide", label: "Full diaspora visitor guide" },
         { href: "/villa-near-islamabad-airport", label: "Airport-to-Bhurban guide" },
@@ -13998,7 +13998,7 @@ export const article83: Article = {
 
     {
       type: "related",
-      heading: "📎 Internal Links",
+      heading: "📎 Explore More",
       items: [
         { href: "/bhurban-pine-forest-guide", label: "Forest ecology guide" },
         { href: "/best-time-to-visit-murree", label: "Off-peak seasonal guide" },
@@ -14112,7 +14112,7 @@ export const article84: Article = {
 
     {
       type: "related",
-      heading: "📎 Internal Links",
+      heading: "📎 Explore More",
       items: [
         { href: "/independent-travel-pakistan-bhurban", label: "Independent travel guide" },
         { href: "/villa-near-islamabad-airport", label: "Airport-to-Bhurban guide" },
@@ -14223,7 +14223,7 @@ export const article85: Article = {
 
     {
       type: "related",
-      heading: "📎 Internal Links",
+      heading: "📎 Explore More",
       items: [
         { href: "/luxury-villa-bhurban-murree", label: "Estate overview" },
         { href: "/bhurban-private-estate-vs-pc-hotel", label: "Private estate vs hotel comparison" },
@@ -14400,7 +14400,7 @@ export const article86: Article = {
 
     {
       type: "related",
-      heading: "📎 Internal Links",
+      heading: "📎 Explore More",
       items: [
         { href: "/bhurban-murree-complete-guide", label: "Complete Bhurban guide" },
         { href: "/murree-vs-nathia-gali", label: "Murree vs Nathia Gali comparison" },
@@ -14566,7 +14566,7 @@ export const article87: Article = {
 
     {
       type: "related",
-      heading: "📎 Internal Links",
+      heading: "📎 Explore More",
       items: [
         { href: "/murree-in-january", label: "January snowfall guide" },
         { href: "/murree-in-november", label: "November guide for comparison" },
@@ -14698,7 +14698,7 @@ export const article88: Article = {
 
     {
       type: "related",
-      heading: "📎 Internal Links",
+      heading: "📎 Explore More",
       items: [
         { href: "/villa-for-10-guests-bhurban", label: "10-guest guide" },
         { href: "/villa-for-15-guests-bhurban", label: "15-guest guide" },
@@ -14847,7 +14847,7 @@ export const article89: Article = {
 
     {
       type: "related",
-      heading: "📎 Internal Links",
+      heading: "📎 Explore More",
       items: [
         { href: "/how-far-is-bhurban-from-islamabad", label: "Bhurban distance guide" },
         { href: "/islamabad-to-murree-guide", label: "Full transport guide" },
@@ -14989,7 +14989,7 @@ export const article90: Article = {
 
     {
       type: "related",
-      heading: "📎 Internal Links",
+      heading: "📎 Explore More",
       items: [
         { href: "/nathia-gali-day-trip-from-bhurban", label: "Nathia Gali day trip guide" },
         { href: "/bhurban-vs-murree", label: "Bhurban vs Murree comparison" },
@@ -15129,7 +15129,7 @@ export const article91: Article = {
 
     {
       type: "related",
-      heading: "📎 Internal Links",
+      heading: "📎 Explore More",
       items: [
         { href: "/bhurban-murree-complete-guide", label: "Full Bhurban overview" },
         { href: "/best-time-to-visit-murree", label: "Seasonal guide" },
@@ -15249,7 +15249,7 @@ export const article92: Article = {
 
     {
       type: "related",
-      heading: "📎 Internal Links",
+      heading: "📎 Explore More",
       items: [
         { href: "/wedding-venues-bhurban-murree", label: "Full wedding venue guide" },
         { href: "/mehndi-dholki-venue-bhurban", label: "Mehndi and dholki functions" },
@@ -15369,7 +15369,7 @@ export const article93: Article = {
 
     {
       type: "related",
-      heading: "📎 Internal Links",
+      heading: "📎 Explore More",
       items: [
         { href: "/wedding-venues-bhurban-murree", label: "Full wedding venue guide" },
         { href: "/walima-venue-bhurban", label: "Walima reception guide" },
@@ -15503,7 +15503,7 @@ export const article94: Article = {
 
     {
       type: "related",
-      heading: "📎 Internal Links",
+      heading: "📎 Explore More",
       items: [
         { href: "/villa-with-mountain-view-bhurban", label: "Mountain view villa detail" },
         { href: "/villa-with-jacuzzi-bhurban", label: "Presidential Suite jacuzzi guide" },
@@ -15657,7 +15657,7 @@ export const article95: Article = {
 
     {
       type: "related",
-      heading: "📎 Internal Links",
+      heading: "📎 Explore More",
       items: [
         { href: "/villas", label: "Browse solo-friendly villa options" },
         { href: "/murree-in-october", label: "Best season for solo travel" },
@@ -15821,7 +15821,7 @@ export const article96: Article = {
 
     {
       type: "related",
-      heading: "📎 Internal Links",
+      heading: "📎 Explore More",
       items: [
         { href: "/in-villa-dining-bhurban", label: "Outdoor dining arrangements" },
         { href: "/villa-with-fireplace-bhurban", label: "Winter villa guide" },
@@ -15942,7 +15942,7 @@ export const article97: Article = {
 
     {
       type: "related",
-      heading: "📎 Internal Links",
+      heading: "📎 Explore More",
       items: [
         { href: "/murree-in-december", label: "December winter guide" },
         { href: "/murree-in-january", label: "January snowfall guide" },
@@ -16055,7 +16055,7 @@ export const article98: Article = {
 
     {
       type: "related",
-      heading: "📎 Internal Links",
+      heading: "📎 Explore More",
       items: [
         { href: "/in-villa-dining-bhurban", label: "Full in-villa dining guide" },
         { href: "/winter-bonfire-bhurban", label: "Fire pit experience guide" },
@@ -16195,7 +16195,7 @@ export const article99: Article = {
 
     {
       type: "related",
-      heading: "📎 Internal Links",
+      heading: "📎 Explore More",
       items: [
         { href: "/islamabad-to-murree-guide", label: "Islamabad route guide" },
         { href: "/how-far-is-bhurban-from-islamabad", label: "Bhurban distance guide" },
@@ -16348,7 +16348,7 @@ export const article100: Article = {
 
     {
       type: "related",
-      heading: "📎 Internal Links",
+      heading: "📎 Explore More",
       items: [
         { href: "/family-villa-bhurban-murree", label: "Family villa guide" },
         { href: "/villa-for-6-guests-bhurban", label: "Multi-generational group options" },
@@ -16479,7 +16479,7 @@ export const article101: Article = {
 
     {
       type: "related",
-      heading: "📎 Internal Links",
+      heading: "📎 Explore More",
       items: [
         { href: "/corporate-retreat-near-islamabad", label: "Full corporate retreat guide" },
         { href: "/corporate-annual-dinner-venue-bhurban", label: "Corporate annual dinner" },
@@ -16609,7 +16609,7 @@ export const article102: Article = {
 
     {
       type: "related",
-      heading: "📎 Internal Links",
+      heading: "📎 Explore More",
       items: [
         { href: "/honeymoon-package-bhurban-murree", label: "Honeymoon guide" },
         { href: "/murree-for-couples", label: "Couples guide" },
@@ -16730,7 +16730,7 @@ export const article103: Article = {
 
     {
       type: "related",
-      heading: "📎 Internal Links",
+      heading: "📎 Explore More",
       items: [
         { href: "/lahore-to-murree-guide", label: "Full Lahore-to-Murree guide" },
         { href: "/islamabad-to-murree-guide", label: "Islamabad route" },
@@ -16881,7 +16881,7 @@ export const article104: Article = {
 
     {
       type: "related",
-      heading: "📎 Internal Links",
+      heading: "📎 Explore More",
       items: [
         { href: "/things-to-do-in-murree", label: "Full Murree region activity guide" },
         { href: "/patriata-chairlift-murree-guide", label: "Chairlift guide" },
@@ -16985,7 +16985,7 @@ export const article105: Article = {
 
     {
       type: "related",
-      heading: "📎 Internal Links",
+      heading: "📎 Explore More",
       items: [
         { href: "/things-to-do-bhurban", label: "Full Bhurban activity guide" },
         { href: "/ayubia-national-park-from-bhurban", label: "Pipeline Track and forest guide" },
@@ -17167,7 +17167,7 @@ export const article106: Article = {
 
     {
       type: "related",
-      heading: "📎 Internal Links",
+      heading: "📎 Explore More",
       items: [
         { href: "/pc-hotel-bhurban-alternative", label: "PC Hotel detailed comparison" },
         { href: "/luxury-villa-bhurban-murree", label: "Full estate overview" },
@@ -17307,7 +17307,7 @@ export const article107: Article = {
 
     {
       type: "related",
-      heading: "📎 Internal Links",
+      heading: "📎 Explore More",
       items: [
         { href: "/villa-near-islamabad-airport", label: "Airport-to-Bhurban guide" },
         { href: "/islamabad-to-murree-guide", label: "Islamabad transport guide" },
@@ -17426,7 +17426,7 @@ export const article108: Article = {
 
     {
       type: "related",
-      heading: "📎 Internal Links",
+      heading: "📎 Explore More",
       items: [
         { href: "/murree-in-summer", label: "Full summer guide" },
         { href: "/best-time-to-visit-murree", label: "Seasonal comparison" },
@@ -17552,7 +17552,7 @@ export const article109: Article = {
 
     {
       type: "related",
-      heading: "📎 Internal Links",
+      heading: "📎 Explore More",
       items: [
         { href: "/events", label: "All events at Himalaya Villas" },
         { href: "/wedding-venues-bhurban-murree", label: "Full events guide" },
@@ -17678,7 +17678,7 @@ export const article110: Article = {
 
     {
       type: "related",
-      heading: "📎 Internal Links",
+      heading: "📎 Explore More",
       items: [
         { href: "/villa-with-mountain-view-bhurban", label: "View villas for landscape photography" },
         { href: "/ayubia-national-park-from-bhurban", label: "Pipeline Track photography guide" },
@@ -17812,7 +17812,7 @@ export const article111: Article = {
 
     {
       type: "related",
-      heading: "📎 Internal Links",
+      heading: "📎 Explore More",
       items: [
         { href: "/bhurban-to-naran-route", label: "Extended northern Pakistan trip guide" },
         { href: "/bhurban-murree-complete-guide", label: "Bhurban destination overview" },
@@ -17932,7 +17932,7 @@ export const article112: Article = {
 
     {
       type: "related",
-      heading: "📎 Internal Links",
+      heading: "📎 Explore More",
       items: [
         { href: "/murree-mall-road-guide", label: "Full Mall Road guide" },
         { href: "/nathia-gali-day-trip-from-bhurban", label: "Nathia Gali shopping and bazaar" },
@@ -18056,7 +18056,7 @@ export const article113: Article = {
 
     {
       type: "related",
-      heading: "📎 Internal Links",
+      heading: "📎 Explore More",
       items: [
         { href: "/murree-bhurban-diaspora-guide", label: "Full diaspora visitor guide" },
         { href: "/villa-near-islamabad-airport", label: "Airport-to-Bhurban guide" },
@@ -18181,7 +18181,7 @@ export const article114: Article = {
 
     {
       type: "related",
-      heading: "📎 Internal Links",
+      heading: "📎 Explore More",
       items: [
         { href: "/luxury-villa-bhurban-murree", label: "Full estate overview" },
         { href: "/villas", label: "Browse villa options for long stays" },
@@ -18310,7 +18310,7 @@ export const article115: Article = {
 
     {
       type: "related",
-      heading: "📎 Internal Links",
+      heading: "📎 Explore More",
       items: [
         { href: "/in-villa-dining-bhurban", label: "In-villa dining full guide" },
         { href: "/murree-mall-road-guide", label: "Mall Road food guide" },
@@ -18428,7 +18428,7 @@ export const article116: Article = {
 
     {
       type: "related",
-      heading: "📎 Internal Links",
+      heading: "📎 Explore More",
       items: [
         { href: "/murree-in-october", label: "October guide — best stargazing season" },
         { href: "/murree-in-january", label: "January clear-sky guide" },
@@ -18571,7 +18571,7 @@ export const article117: Article = {
 
     {
       type: "related",
-      heading: "📎 Internal Links",
+      heading: "📎 Explore More",
       items: [
         { href: "/murree-in-summer", label: "Full summer guide (June-August)" },
         { href: "/murree-weather-july", label: "July weather comparison" },
@@ -18698,7 +18698,7 @@ export const article118: Article = {
 
     {
       type: "related",
-      heading: "📎 Internal Links",
+      heading: "📎 Explore More",
       items: [
         { href: "/villas", label: "Full villa portfolio with rates" },
         { href: "/villa-for-4-guests-bhurban", label: "4-guest configuration guide" },
@@ -18832,7 +18832,7 @@ export const article119: Article = {
 
     {
       type: "related",
-      heading: "📎 Internal Links",
+      heading: "📎 Explore More",
       items: [
         { href: "/bhurban-to-naran-route", label: "Bhurban to Naran route guide" },
         { href: "/bhurban-murree-complete-guide", label: "Bhurban destination overview" },
@@ -18964,7 +18964,7 @@ export const article120: Article = {
 
     {
       type: "related",
-      heading: "📎 Internal Links",
+      heading: "📎 Explore More",
       items: [
         { href: "/corporate-retreat-near-islamabad", label: "Full corporate retreat guide" },
         { href: "/corporate-team-building-bhurban", label: "Team building guide" },
@@ -19132,7 +19132,7 @@ export const article121: Article = {
 
     {
       type: "related",
-      heading: "📎 Internal Links",
+      heading: "📎 Explore More",
       items: [
         { href: "/hiking-near-murree", label: "Full trail guide" },
         { href: "/ayubia-national-park-from-bhurban", label: "Ayubia forest and wildlife guide" },
@@ -19295,7 +19295,7 @@ export const article122: Article = {
 
     {
       type: "related",
-      heading: "📎 Internal Links",
+      heading: "📎 Explore More",
       items: [
         { href: "/bhurban-pine-forest-guide", label: "Forest ecology and wildlife guide" },
         { href: "/ayubia-national-park-from-bhurban", label: "Pipeline Track birding" },
@@ -19411,7 +19411,7 @@ export const article123: Article = {
 
     {
       type: "related",
-      heading: "📎 Internal Links",
+      heading: "📎 Explore More",
       items: [
         { href: "/winter-bonfire-bhurban", label: "Cedar garden fire pit" },
         { href: "/events", label: "Full events at Himalaya Villas" },
@@ -19542,7 +19542,7 @@ export const article124: Article = {
 
     {
       type: "related",
-      heading: "📎 Internal Links",
+      heading: "📎 Explore More",
       items: [
         { href: "/corporate-retreat-near-islamabad", label: "Full corporate retreat guide" },
         { href: "/corporate-wellness-retreat-bhurban", label: "Wellness retreat guide" },
@@ -19681,7 +19681,7 @@ export const article125: Article = {
 
     {
       type: "related",
-      heading: "📎 Internal Links",
+      heading: "📎 Explore More",
       items: [
         { href: "/villa-with-jacuzzi-bhurban", label: "Full Presidential Suite jacuzzi guide" },
         { href: "/murree-for-couples", label: "Romantic villa guide" },
@@ -19835,7 +19835,7 @@ export const article126: Article = {
 
     {
       type: "related",
-      heading: "📎 Internal Links",
+      heading: "📎 Explore More",
       items: [
         { href: "/ayubia-national-park-from-bhurban", label: "Pipeline Track for school ecology trips" },
         { href: "/hiking-near-murree", label: "Trail guide for school groups" },
@@ -19965,7 +19965,7 @@ export const article127: Article = {
 
     {
       type: "related",
-      heading: "📎 Internal Links",
+      heading: "📎 Explore More",
       items: [
         { href: "/corporate-retreat-near-islamabad", label: "Full corporate retreat guide" },
         { href: "/corporate-team-building-bhurban", label: "Team building guide" },
@@ -20098,7 +20098,7 @@ export const article128: Article = {
 
     {
       type: "related",
-      heading: "📎 Internal Links",
+      heading: "📎 Explore More",
       items: [
         { href: "/corporate-retreat-near-islamabad", label: "Corporate retreat guide" },
         { href: "/villa-for-30-guests-bhurban", label: "Full estate buyout" },
@@ -20209,7 +20209,7 @@ export const article129: Article = {
 
     {
       type: "related",
-      heading: "📎 Internal Links",
+      heading: "📎 Explore More",
       items: [
         { href: "/luxury-villa-bhurban-murree", label: "Estate overview" },
         { href: "/bhurban-accommodation-guide", label: "Accommodation market guide" },
@@ -20303,7 +20303,7 @@ export const article130: Article = {
 
     {
       type: "related",
-      heading: "📎 Internal Links",
+      heading: "📎 Explore More",
       items: [
         { href: "/villa-for-20-guests-bhurban", label: "Group accommodation" },
         { href: "/villas", label: "Browse villa options" },
@@ -20415,7 +20415,7 @@ export const article131: Article = {
 
     {
       type: "related",
-      heading: "📎 Internal Links",
+      heading: "📎 Explore More",
       items: [
         { href: "/luxury-villa-bhurban-murree", label: "Estate overview" },
         { href: "/bhurban-private-estate-vs-pc-hotel", label: "Private estate vs hotel comparison" },
@@ -20527,7 +20527,7 @@ export const article132: Article = {
 
     {
       type: "related",
-      heading: "📎 Internal Links",
+      heading: "📎 Explore More",
       items: [
         { href: "/corporate-retreat-near-islamabad", label: "Corporate retreat guide" },
         { href: "/corporate-team-building-bhurban", label: "Team building guide" },
@@ -20633,7 +20633,7 @@ export const article133: Article = {
 
     {
       type: "related",
-      heading: "📎 Internal Links",
+      heading: "📎 Explore More",
       items: [
         { href: "/rawalpindi-bhurban-mountain-guide", label: "Rawalpindi to Bhurban guide" },
         { href: "/villas", label: "Browse villa options" },
@@ -20737,7 +20737,7 @@ export const article134: Article = {
 
     {
       type: "related",
-      heading: "📎 Internal Links",
+      heading: "📎 Explore More",
       items: [
         { href: "/wedding-venues-bhurban-murree", label: "Full wedding venue guide" },
         { href: "/walima-venue-bhurban", label: "Walima guide" },
@@ -20834,7 +20834,7 @@ export const article135: Article = {
 
     {
       type: "related",
-      heading: "📎 Internal Links",
+      heading: "📎 Explore More",
       items: [
         { href: "/in-villa-dining-bhurban", label: "Full in-villa dining guide" },
         { href: "/restaurants-near-bhurban-murree", label: "Dining guide" },
@@ -20943,7 +20943,7 @@ export const article136: Article = {
 
     {
       type: "related",
-      heading: "📎 Internal Links",
+      heading: "📎 Explore More",
       items: [
         { href: "/luxury-villa-bhurban-murree", label: "Estate overview" },
         { href: "/villas", label: "Browse villa options" },
@@ -21100,7 +21100,7 @@ export const article137: Article = {
 
     {
       type: "related",
-      heading: "📎 Internal Links",
+      heading: "📎 Explore More",
       items: [
         { href: "/murree-in-spring", label: "Full spring guide (March-May)" },
         { href: "/best-time-to-visit-murree", label: "Complete seasonal comparison" },
@@ -21269,7 +21269,7 @@ export const article138: Article = {
 
     {
       type: "related",
-      heading: "📎 Internal Links",
+      heading: "📎 Explore More",
       items: [
         { href: "/bhurban-photography-guide", label: "General photography guide" },
         { href: "/murree-in-october", label: "October photography season" },
@@ -21400,7 +21400,7 @@ export const article139: Article = {
 
     {
       type: "related",
-      heading: "📎 Internal Links",
+      heading: "📎 Explore More",
       items: [
         { href: "/villa-for-30-guests-bhurban", label: "Full estate capacity guide" },
         { href: "/luxury-villa-bhurban-murree", label: "Estate overview" },
@@ -21556,7 +21556,7 @@ export const article140: Article = {
 
     {
       type: "related",
-      heading: "📎 Internal Links",
+      heading: "📎 Explore More",
       items: [
         { href: "/karachi-to-murree-guide", label: "Full Karachi route guide" },
         { href: "/villa-near-islamabad-airport", label: "Airport to Bhurban" },
@@ -21698,7 +21698,7 @@ export const article141: Article = {
 
     {
       type: "related",
-      heading: "📎 Internal Links",
+      heading: "📎 Explore More",
       items: [
         { href: "/villa-with-mountain-view-bhurban", label: "Mountain view villa guide" },
         { href: "/bhurban-photography-guide", label: "Photography guide" },
@@ -21825,7 +21825,7 @@ export const article142: Article = {
 
     {
       type: "related",
-      heading: "📎 Internal Links",
+      heading: "📎 Explore More",
       items: [
         { href: "/family-villa-bhurban-murree", label: "Family villa overview" },
         { href: "/villa-for-6-guests-bhurban", label: "6-guest Garden Villa configuration" },
@@ -21965,7 +21965,7 @@ export const article143: Article = {
 
     {
       type: "related",
-      heading: "📎 Internal Links",
+      heading: "📎 Explore More",
       items: [
         { href: "/eid-holiday-package-bhurban-murree", label: "Full Eid package guide (both Eids)" },
         { href: "/villa-for-30-guests-bhurban", label: "Full estate for large Eid gatherings" },
@@ -22084,7 +22084,7 @@ export const article144: Article = {
 
     {
       type: "related",
-      heading: "📎 Internal Links",
+      heading: "📎 Explore More",
       items: [
         { href: "/murree-for-couples", label: "Full couples guide" },
         { href: "/villa-with-jacuzzi-bhurban", label: "Presidential Suite jacuzzi guide" },
@@ -22228,7 +22228,7 @@ export const article145: Article = {
 
     {
       type: "related",
-      heading: "📎 Internal Links",
+      heading: "📎 Explore More",
       items: [
         { href: "/murree-bhurban-faq", label: "FAQ Volume 1" },
         { href: "/booking-villa-bhurban-faq", label: "Booking FAQ" },
@@ -22418,7 +22418,7 @@ export const article146: Article = {
 
     {
       type: "related",
-      heading: "📎 Internal Links",
+      heading: "📎 Explore More",
       items: [
         { href: "/blog/hotels-in-bhurban-murree", label: "Bhurban hotels overview" },
         { href: "/bhurban-private-estate-vs-pc-hotel", label: "Detailed HV vs PC comparison" },
@@ -22534,7 +22534,7 @@ export const article147: Article = {
 
     {
       type: "related",
-      heading: "📎 Internal Links",
+      heading: "📎 Explore More",
       items: [
         { href: "/bhurban-pine-forest-guide", label: "Bhurban pine forest ecology guide" },
         { href: "/ayubia-national-park-from-bhurban", label: "Ayubia National Park forest guide" },
@@ -22653,7 +22653,7 @@ export const article148: Article = {
 
     {
       type: "related",
-      heading: "📎 Internal Links",
+      heading: "📎 Explore More",
       items: [
         { href: "/murree-bhurban-diaspora-guide", label: "Full diaspora visitor guide" },
         { href: "/villa-near-islamabad-airport", label: "Airport-to-Bhurban guide" },
@@ -22763,7 +22763,7 @@ export const article149: Article = {
 
     {
       type: "related",
-      heading: "📎 Internal Links",
+      heading: "📎 Explore More",
       items: [
         { href: "/luxury-villa-bhurban-murree", label: "Full estate overview" },
         { href: "/villas", label: "Browse all 12 villa types" },
@@ -22868,7 +22868,7 @@ export const article150: Article = {
 
     {
       type: "related",
-      heading: "📎 Internal Links",
+      heading: "📎 Explore More",
       items: [
         { href: "/corporate-retreat-near-islamabad", label: "Full corporate retreat guide" },
         { href: "/corporate-team-building-bhurban", label: "Team building guide" },
@@ -22973,7 +22973,7 @@ export const article151: Article = {
 
     {
       type: "related",
-      heading: "📎 Internal Links",
+      heading: "📎 Explore More",
       items: [
         { href: "/corporate-wellness-retreat-bhurban", label: "Wellness retreat guide" },
         { href: "/bhurban-pine-forest-guide", label: "Forest ecology guide" },
@@ -23088,7 +23088,7 @@ export const article152: Article = {
 
     {
       type: "related",
-      heading: "📎 Internal Links",
+      heading: "📎 Explore More",
       items: [
         { href: "/events", label: "Events at Himalaya Villas" },
         { href: "/villa-for-20-guests-bhurban", label: "Group accommodation" },
@@ -23187,7 +23187,7 @@ export const article153: Article = {
 
     {
       type: "related",
-      heading: "📎 Internal Links",
+      heading: "📎 Explore More",
       items: [
         { href: "/hiking-near-murree", label: "Full hiking guide" },
         { href: "/ayubia-national-park-from-bhurban", label: "Ayubia National Park guide" },
@@ -23282,7 +23282,7 @@ export const article154: Article = {
 
     {
       type: "related",
-      heading: "📎 Internal Links",
+      heading: "📎 Explore More",
       items: [
         { href: "/corporate-retreat-near-islamabad", label: "Full corporate retreat guide" },
         { href: "/corporate-wellness-retreat-bhurban", label: "Wellness retreat guide" },
@@ -23407,7 +23407,7 @@ export const article155: Article = {
 
     {
       type: "related",
-      heading: "📎 Internal Links",
+      heading: "📎 Explore More",
       items: [
         { href: "/blog/best-hotels-in-murree-pakistan", label: "Full Murree accommodation guide" },
         { href: "/bhurban-accommodation-guide", label: "Bhurban accommodation guide" },
@@ -23508,7 +23508,7 @@ export const article156: Article = {
 
     {
       type: "related",
-      heading: "📎 Internal Links",
+      heading: "📎 Explore More",
       items: [
         { href: "/villas", label: "Browse villa options" },
         { href: "/luxury-villa-bhurban-murree", label: "Estate overview" },
@@ -23664,7 +23664,7 @@ export const article157: Article = {
 
     {
       type: "related",
-      heading: "📎 Internal Links",
+      heading: "📎 Explore More",
       items: [
         { href: "/murree-in-summer", label: "Full summer guide" },
         { href: "/best-time-to-visit-murree", label: "Seasonal comparison" },
@@ -23770,7 +23770,7 @@ export const article158: Article = {
 
     {
       type: "related",
-      heading: "📎 Internal Links",
+      heading: "📎 Explore More",
       items: [
         { href: "/villa-with-jacuzzi-bhurban", label: "Presidential Suite jacuzzi guide" },
         { href: "/murree-for-couples", label: "Full couples guide" },
@@ -23889,7 +23889,7 @@ export const article159: Article = {
 
     {
       type: "related",
-      heading: "📎 Internal Links",
+      heading: "📎 Explore More",
       items: [
         { href: "/corporate-retreat-near-islamabad", label: "Full corporate retreat guide" },
         { href: "/corporate-team-building-bhurban", label: "Team building guide" },
@@ -24021,7 +24021,7 @@ export const article160: Article = {
 
     {
       type: "related",
-      heading: "📎 Internal Links",
+      heading: "📎 Explore More",
       items: [
         { href: "/family-villa-bhurban-murree", label: "Family villa guide" },
         { href: "/nathia-gali-day-trip-from-bhurban", label: "Nathia Gali day trip" },
@@ -24178,7 +24178,7 @@ export const article161: Article = {
 
     {
       type: "related",
-      heading: "📎 Internal Links",
+      heading: "📎 Explore More",
       items: [
         { href: "/eid-holiday-package-bhurban-murree", label: "Eid ul Fitr guide" },
         { href: "/eid-ul-adha-bhurban", label: "Eid ul Adha guide" },
@@ -24285,7 +24285,7 @@ export const article162: Article = {
 
     {
       type: "related",
-      heading: "📎 Internal Links",
+      heading: "📎 Explore More",
       items: [
         { href: "/villa-with-jacuzzi-bhurban", label: "Presidential Suite terrace for spa treatment" },
         { href: "/murree-for-couples", label: "Romantic couples guide" },
@@ -24412,7 +24412,7 @@ export const article163: Article = {
 
     {
       type: "related",
-      heading: "📎 Internal Links",
+      heading: "📎 Explore More",
       items: [
         { href: "/murree-in-october", label: "Full October guide" },
         { href: "/family-villa-bhurban-murree", label: "Family villa options" },
@@ -24529,7 +24529,7 @@ export const article164: Article = {
 
     {
       type: "related",
-      heading: "📎 Internal Links",
+      heading: "📎 Explore More",
       items: [
         { href: "/family-villa-bhurban-murree", label: "Family villa overview" },
         { href: "/bhurban-for-elderly-guests", label: "Accessibility guide" },
@@ -24692,7 +24692,7 @@ export const article165: Article = {
 
     {
       type: "related",
-      heading: "📎 Internal Links",
+      heading: "📎 Explore More",
       items: [
         { href: "/affordable-villa-bhurban", label: "Budget villa options" },
         { href: "/booking-villa-bhurban-faq", label: "Booking FAQ" },
@@ -24859,7 +24859,7 @@ export const article166: Article = {
 
     {
       type: "related",
-      heading: "📎 Internal Links",
+      heading: "📎 Explore More",
       items: [
         { href: "/things-to-do-bhurban", label: "Full activity guide" },
         { href: "/murree-trip-planning-guide", label: "Full trip planning guide" },
@@ -24957,7 +24957,7 @@ export const article167: Article = {
 
     {
       type: "related",
-      heading: "📎 Internal Links",
+      heading: "📎 Explore More",
       items: [
         { href: "/in-villa-dining-bhurban", label: "Full in-villa dining guide" },
         { href: "/restaurants-near-bhurban-murree", label: "Dining guide" },
@@ -25055,7 +25055,7 @@ export const article168: Article = {
 
     {
       type: "related",
-      heading: "📎 Internal Links",
+      heading: "📎 Explore More",
       items: [
         { href: "/things-to-do-bhurban", label: "Weekend activity guide" },
         { href: "/murree-for-couples", label: "Couples weekend guide" },
@@ -25174,7 +25174,7 @@ export const article169: Article = {
 
     {
       type: "related",
-      heading: "📎 Internal Links",
+      heading: "📎 Explore More",
       items: [
         { href: "/luxury-villa-bhurban-murree", label: "Estate overview" },
         { href: "/villas", label: "Browse villa options" },
@@ -25285,7 +25285,7 @@ export const article170: Article = {
 
     {
       type: "related",
-      heading: "📎 Internal Links",
+      heading: "📎 Explore More",
       items: [
         { href: "/murree-bhurban-diaspora-guide", label: "Full diaspora visitor guide" },
         { href: "/bhurban-canadian-pakistani-guide", label: "Canadian-Pakistani guide" },
@@ -25387,7 +25387,7 @@ export const article171: Article = {
 
     {
       type: "related",
-      heading: "📎 Internal Links",
+      heading: "📎 Explore More",
       items: [
         { href: "/corporate-retreat-near-islamabad", label: "Full corporate retreat guide" },
         { href: "/corporate-wellness-retreat-bhurban", label: "Wellness retreat guide" },
@@ -25500,7 +25500,7 @@ export const article172: Article = {
 
     {
       type: "related",
-      heading: "📎 Internal Links",
+      heading: "📎 Explore More",
       items: [
         { href: "/villa-near-islamabad-airport", label: "Airport-to-Bhurban guide" },
         { href: "/things-to-do-bhurban", label: "Activity guide" },
@@ -25614,7 +25614,7 @@ export const article173: Article = {
 
     {
       type: "related",
-      heading: "📎 Internal Links",
+      heading: "📎 Explore More",
       items: [
         { href: "/bhurban-to-naran-route", label: "Bhurban to Naran route guide" },
         { href: "/islamabad-to-murree-guide", label: "Islamabad transport guide" },
@@ -25704,7 +25704,7 @@ export const article174: Article = {
 
     {
       type: "related",
-      heading: "📎 Internal Links",
+      heading: "📎 Explore More",
       items: [
         { href: "/in-villa-dining-bhurban", label: "In-villa dining guide" },
         { href: "/bhurban-local-market-guide", label: "Local market guide" },
@@ -25823,7 +25823,7 @@ export const article175: Article = {
 
     {
       type: "related",
-      heading: "📎 Internal Links",
+      heading: "📎 Explore More",
       items: [
         { href: "/corporate-wellness-retreat-bhurban", label: "Wellness retreat guide" },
         { href: "/murree-in-october", label: "Best month for restoration" },
@@ -25937,7 +25937,7 @@ export const article176: Article = {
 
     {
       type: "related",
-      heading: "📎 Internal Links",
+      heading: "📎 Explore More",
       items: [
         { href: "/villas", label: "Browse villa options" },
         { href: "/murree-in-january", label: "January snow guide" },
@@ -26081,7 +26081,7 @@ export const article177: Article = {
 
     {
       type: "related",
-      heading: "📎 Internal Links",
+      heading: "📎 Explore More",
       items: [
         { href: "/murree-in-april", label: "April comparison guide" },
         { href: "/murree-in-june", label: "June guide" },
@@ -26236,7 +26236,7 @@ export const article178: Article = {
 
     {
       type: "related",
-      heading: "📎 Internal Links",
+      heading: "📎 Explore More",
       items: [
         { href: "/long-stay-villa-bhurban", label: "Extended stay options" },
         { href: "/villa-with-mountain-view-bhurban", label: "Best view for working" },
@@ -26404,7 +26404,7 @@ export const article179: Article = {
 
     {
       type: "related",
-      heading: "📎 Internal Links",
+      heading: "📎 Explore More",
       items: [
         { href: "/bhurban-distance-from-lahore", label: "Full Lahore route guide" },
         { href: "/family-villa-bhurban-murree", label: "Family villa overview" },
@@ -26540,7 +26540,7 @@ export const article180: Article = {
 
     {
       type: "related",
-      heading: "📎 Internal Links",
+      heading: "📎 Explore More",
       items: [
         { href: "/murree-in-october", label: "October guide for comparison" },
         { href: "/murree-in-august", label: "August comparison" },
@@ -26670,7 +26670,7 @@ export const article181: Article = {
 
     {
       type: "related",
-      heading: "📎 Internal Links",
+      heading: "📎 Explore More",
       items: [
         { href: "/honeymoon-package-bhurban-murree", label: "Full honeymoon guide" },
         { href: "/murree-for-couples", label: "Couples guide" },
@@ -26775,7 +26775,7 @@ export const article182: Article = {
 
     {
       type: "related",
-      heading: "📎 Internal Links",
+      heading: "📎 Explore More",
       items: [
         { href: "/corporate-wellness-retreat-bhurban", label: "Wellness retreat guide" },
         { href: "/corporate-team-building-bhurban", label: "Team building guide" },
@@ -26924,7 +26924,7 @@ export const article183: Article = {
 
     {
       type: "related",
-      heading: "📎 Internal Links",
+      heading: "📎 Explore More",
       items: [
         { href: "/bhurban-photography-guide", label: "Full photography guide" },
         { href: "/murree-in-october", label: "Best content season" },
@@ -27057,7 +27057,7 @@ export const article184: Article = {
 
     {
       type: "related",
-      heading: "📎 Internal Links",
+      heading: "📎 Explore More",
       items: [
         { href: "/bhurban-accommodation-guide", label: "Full Bhurban accommodation comparison" },
         { href: "/luxury-villa-bhurban-murree", label: "Estate overview" },
@@ -27184,7 +27184,7 @@ export const article185: Article = {
 
     {
       type: "related",
-      heading: "📎 Internal Links",
+      heading: "📎 Explore More",
       items: [
         { href: "/anniversary-villa-bhurban", label: "Anniversary stays guide" },
         { href: "/murree-for-couples", label: "Full couples guide" },
@@ -27328,7 +27328,7 @@ export const article186: Article = {
 
     {
       type: "related",
-      heading: "📎 Internal Links",
+      heading: "📎 Explore More",
       items: [
         { href: "/wedding-venues-bhurban-murree", label: "Full wedding venue guide" },
         { href: "/murree-wedding-cost-guide", label: "Wedding cost breakdown" },
@@ -27447,7 +27447,7 @@ export const article187: Article = {
 
     {
       type: "related",
-      heading: "📎 Internal Links",
+      heading: "📎 Explore More",
       items: [
         { href: "/corporate-retreat-near-islamabad", label: "Full corporate retreat guide" },
         { href: "/corporate-team-building-bhurban", label: "Team building guide" },
@@ -27537,7 +27537,7 @@ export const article188: Article = {
 
     {
       type: "related",
-      heading: "📎 Internal Links",
+      heading: "📎 Explore More",
       items: [
         { href: "/bhurban-content-creator-location", label: "Content creator location guide" },
         { href: "/bhurban-photography-guide", label: "Photography guide" },
@@ -27632,7 +27632,7 @@ export const article189: Article = {
 
     {
       type: "related",
-      heading: "📎 Internal Links",
+      heading: "📎 Explore More",
       items: [
         { href: "/remote-work-villa-bhurban", label: "Remote work villa guide" },
         { href: "/corporate-retreat-near-islamabad", label: "Corporate retreat guide" },
@@ -27741,7 +27741,7 @@ export const article190: Article = {
 
     {
       type: "related",
-      heading: "📎 Internal Links",
+      heading: "📎 Explore More",
       items: [
         { href: "/independent-travel-pakistan-bhurban", label: "Independent travel guide" },
         { href: "/villa-near-islamabad-airport", label: "Airport-to-Bhurban guide" },
@@ -27854,7 +27854,7 @@ export const article191: Article = {
 
     {
       type: "related",
-      heading: "📎 Internal Links",
+      heading: "📎 Explore More",
       items: [
         { href: "/corporate-retreat-near-islamabad", label: "Corporate retreat guide" },
         { href: "/corporate-team-building-bhurban", label: "Team building guide" },
@@ -27965,7 +27965,7 @@ export const article192: Article = {
 
     {
       type: "related",
-      heading: "📎 Internal Links",
+      heading: "📎 Explore More",
       items: [
         { href: "/murree-in-april", label: "Spring guide" },
         { href: "/murree-in-summer", label: "Summer guide" },
@@ -28062,7 +28062,7 @@ export const article193: Article = {
 
     {
       type: "related",
-      heading: "📎 Internal Links",
+      heading: "📎 Explore More",
       items: [
         { href: "/corporate-retreat-near-islamabad", label: "Corporate retreat guide" },
         { href: "/villa-for-20-guests-bhurban", label: "Group accommodation" },
@@ -28148,7 +28148,7 @@ export const article194: Article = {
 
     {
       type: "related",
-      heading: "📎 Internal Links",
+      heading: "📎 Explore More",
       items: [
         { href: "/bhurban-pine-forest-guide", label: "Forest ecology guide" },
         { href: "/ayubia-national-park-from-bhurban", label: "Ayubia National Park guide" },
@@ -28256,7 +28256,7 @@ export const article195: Article = {
 
     {
       type: "related",
-      heading: "📎 Internal Links",
+      heading: "📎 Explore More",
       items: [
         { href: "/rawalpindi-to-murree-bhurban", label: "Rawalpindi route guide" },
         { href: "/villas", label: "Browse villa options" },
@@ -28364,7 +28364,7 @@ export const article196: Article = {
 
     {
       type: "related",
-      heading: "📎 Internal Links",
+      heading: "📎 Explore More",
       items: [
         { href: "/bhurban-accommodation-guide", label: "Bhurban accommodation guide" },
         { href: "/luxury-villa-bhurban-murree", label: "Estate overview" },
@@ -28505,7 +28505,7 @@ export const article197: Article = {
 
     {
       type: "related",
-      heading: "📎 Internal Links",
+      heading: "📎 Explore More",
       items: [
         { href: "/rawalpindi-to-murree-bhurban", label: "Rawalpindi to Murree transport guide" },
         { href: "/how-far-is-bhurban-from-islamabad", label: "Islamabad distance guide" },
@@ -28635,7 +28635,7 @@ export const article198: Article = {
 
     {
       type: "related",
-      heading: "📎 Internal Links",
+      heading: "📎 Explore More",
       items: [
         { href: "/anniversary-villa-bhurban", label: "Anniversary stays guide" },
         { href: "/villa-with-jacuzzi-bhurban", label: "Presidential Suite guide" },
@@ -28774,7 +28774,7 @@ export const article199: Article = {
 
     {
       type: "related",
-      heading: "📎 Internal Links",
+      heading: "📎 Explore More",
       items: [
         { href: "/bhurban-accommodation-guide", label: "Full accommodation guide" },
         { href: "/bhurban-private-estate-vs-pc-hotel", label: "PC Hotel vs Himalaya Villas" },
@@ -28924,7 +28924,7 @@ export const article200: Article = {
 
     {
       type: "related",
-      heading: "📎 Internal Links",
+      heading: "📎 Explore More",
       items: [
         { href: "/murree-in-january", label: "Full January snowfall guide" },
         { href: "/murree-in-december", label: "December guide" },
@@ -29043,7 +29043,7 @@ export const article201: Article = {
 
     {
       type: "related",
-      heading: "📎 Internal Links",
+      heading: "📎 Explore More",
       items: [
         { href: "/events", label: "All events at Himalaya Villas" },
         { href: "/birthday-party-venue-near-islamabad-mountains", label: "Birthday events" },
@@ -29161,7 +29161,7 @@ export const article202: Article = {
 
     {
       type: "related",
-      heading: "📎 Internal Links",
+      heading: "📎 Explore More",
       items: [
         { href: "/bhurban-for-elderly-guests", label: "Accessibility guide" },
         { href: "/anniversary-villa-bhurban", label: "Anniversary celebrations" },
@@ -29267,7 +29267,7 @@ export const article203: Article = {
 
     {
       type: "related",
-      heading: "📎 Internal Links",
+      heading: "📎 Explore More",
       items: [
         { href: "/birthday-party-venue-near-islamabad-mountains", label: "Birthday party guide" },
         { href: "/events", label: "All events at Himalaya Villas" },
@@ -29413,7 +29413,7 @@ export const article204: Article = {
 
     {
       type: "related",
-      heading: "📎 Internal Links",
+      heading: "📎 Explore More",
       items: [
         { href: "/murree-in-april", label: "Full April guide" },
         { href: "/birdwatching-bhurban-murree", label: "Spring birding alongside the wildflowers" },
@@ -29532,7 +29532,7 @@ export const article205: Article = {
 
     {
       type: "related",
-      heading: "📎 Internal Links",
+      heading: "📎 Explore More",
       items: [
         { href: "/corporate-retreat-near-islamabad", label: "Full corporate retreat guide" },
         { href: "/corporate-agm-venue-bhurban", label: "AGM venue guide" },
@@ -29698,7 +29698,7 @@ export const article206: Article = {
 
     {
       type: "related",
-      heading: "📎 Internal Links",
+      heading: "📎 Explore More",
       items: [
         { href: "/bhurban-accommodation-guide", label: "Full accommodation guide" },
         { href: "/things-to-do-bhurban", label: "Complete activity guide" },
@@ -29816,7 +29816,7 @@ export const article207: Article = {
 
     {
       type: "related",
-      heading: "📎 Internal Links",
+      heading: "📎 Explore More",
       items: [
         { href: "/bhurban-photography-guide", label: "Full photography guide" },
         { href: "/bhurban-content-creator-location", label: "Content creator location guide" },
@@ -29909,7 +29909,7 @@ export const article208: Article = {
 
     {
       type: "related",
-      heading: "📎 Internal Links",
+      heading: "📎 Explore More",
       items: [
         { href: "/in-villa-dining-bhurban", label: "Full in-villa dining guide" },
         { href: "/restaurants-near-bhurban-murree", label: "Dining guide" },
@@ -30026,7 +30026,7 @@ export const article209: Article = {
 
     {
       type: "related",
-      heading: "📎 Internal Links",
+      heading: "📎 Explore More",
       items: [
         { href: "/murree-bhurban-diaspora-guide", label: "Full diaspora visitor guide" },
         { href: "/pakistani-american-summer-return-bhurban", label: "Pakistani-American guide" },
@@ -30139,7 +30139,7 @@ export const article210: Article = {
 
     {
       type: "related",
-      heading: "📎 Internal Links",
+      heading: "📎 Explore More",
       items: [
         { href: "/corporate-retreat-near-islamabad", label: "Full corporate retreat guide" },
         { href: "/corporate-annual-dinner-venue-bhurban", label: "Annual dinner venue" },
@@ -30237,7 +30237,7 @@ export const article211: Article = {
 
     {
       type: "related",
-      heading: "📎 Internal Links",
+      heading: "📎 Explore More",
       items: [
         { href: "/corporate-retreat-near-islamabad", label: "Corporate retreat guide" },
         { href: "/villa-for-20-guests-bhurban", label: "Group accommodation" },
@@ -30340,7 +30340,7 @@ export const article212: Article = {
 
     {
       type: "related",
-      heading: "📎 Internal Links",
+      heading: "📎 Explore More",
       items: [
         { href: "/bhurban-murree-complete-guide", label: "Complete Bhurban guide" },
         { href: "/best-time-to-visit-murree", label: "Seasonal guide" },
@@ -30428,7 +30428,7 @@ export const article213: Article = {
 
     {
       type: "related",
-      heading: "📎 Internal Links",
+      heading: "📎 Explore More",
       items: [
         { href: "/corporate-retreat-near-islamabad", label: "Corporate retreat guide" },
         { href: "/mountain-retreat-medical-professionals", label: "Medical professionals guide" },
@@ -30526,7 +30526,7 @@ export const article214: Article = {
 
     {
       type: "related",
-      heading: "📎 Internal Links",
+      heading: "📎 Explore More",
       items: [
         { href: "/luxury-villa-bhurban-murree", label: "Estate overview" },
         { href: "/bhurban-accommodation-guide", label: "Accommodation market guide" },
@@ -30621,7 +30621,7 @@ export const article215: Article = {
 
     {
       type: "related",
-      heading: "📎 Internal Links",
+      heading: "📎 Explore More",
       items: [
         { href: "/corporate-retreat-near-islamabad", label: "Corporate retreat guide" },
         { href: "/corporate-team-building-bhurban", label: "Team building guide" },
@@ -30709,7 +30709,7 @@ export const article216: Article = {
 
     {
       type: "related",
-      heading: "📎 Internal Links",
+      heading: "📎 Explore More",
       items: [
         { href: "/luxury-villa-bhurban-murree", label: "Estate overview" },
         { href: "/villas", label: "Browse villa options" },
@@ -30875,7 +30875,7 @@ export const article217: Article = {
 
     {
       type: "related",
-      heading: "📎 Internal Links",
+      heading: "📎 Explore More",
       items: [
         { href: "/murree-in-january", label: "January snowfall guide" },
         { href: "/bhurban-snowfall-booking-guide", label: "Snowfall booking strategy" },
@@ -31121,7 +31121,7 @@ export const article218: Article = {
 
     {
       type: "related",
-      heading: "📎 Internal Links",
+      heading: "📎 Explore More",
       items: [
         { href: "/bhurban-murree-complete-guide", label: "Bhurban destination guide" },
         { href: "/murree-day-trip-from-islamabad", label: "Day trip vs overnight" },
@@ -31254,7 +31254,7 @@ export const article219: Article = {
 
     {
       type: "related",
-      heading: "📎 Internal Links",
+      heading: "📎 Explore More",
       items: [
         { href: "/murree-vs-swat-valley", label: "Murree vs Swat comparison" },
         { href: "/bhurban-vs-naran", label: "Bhurban vs Naran comparison" },
@@ -31391,7 +31391,7 @@ export const article220: Article = {
 
     {
       type: "related",
-      heading: "📎 Internal Links",
+      heading: "📎 Explore More",
       items: [
         { href: "/family-villa-bhurban-murree", label: "Family villa guide" },
         { href: "/bhurban-for-elderly-guests", label: "Accessibility for grandparents" },
@@ -31520,7 +31520,7 @@ export const article221: Article = {
 
     {
       type: "related",
-      heading: "📎 Internal Links",
+      heading: "📎 Explore More",
       items: [
         { href: "/corporate-wellness-retreat-bhurban", label: "Wellness retreat guide" },
         { href: "/corporate-retreat-near-islamabad", label: "Full corporate retreat guide" },
@@ -31649,7 +31649,7 @@ export const article222: Article = {
 
     {
       type: "related",
-      heading: "📎 Internal Links",
+      heading: "📎 Explore More",
       items: [
         { href: "/honeymoon-package-bhurban-murree", label: "Full honeymoon guide" },
         { href: "/bhurban-vs-naran", label: "Destination comparison" },
@@ -31796,7 +31796,7 @@ export const article223: Article = {
 
     {
       type: "related",
-      heading: "📎 Internal Links",
+      heading: "📎 Explore More",
       items: [
         { href: "/eid-holiday-package-bhurban-murree", label: "Eid ul Fitr (post-Ramadan)" },
         { href: "/in-villa-dining-bhurban", label: "In-villa dining for suhoor and iftar" },
@@ -31996,7 +31996,7 @@ export const article224: Article = {
 
     {
       type: "related",
-      heading: "📎 Internal Links",
+      heading: "📎 Explore More",
       items: [
         { href: "/bhurban-murree-complete-guide", label: "Full Bhurban destination guide" },
         { href: "/bhurban-accommodation-guide", label: "Accommodation comparison" },
@@ -32145,7 +32145,7 @@ export const article225: Article = {
 
     {
       type: "related",
-      heading: "📎 Internal Links",
+      heading: "📎 Explore More",
       items: [
         { href: "/murree-bhurban-faq", label: "FAQ Volume 1" },
         { href: "/murree-bhurban-faq-2", label: "FAQ Volume 2" },
@@ -32259,7 +32259,7 @@ export const article226: Article = {
 
     {
       type: "related",
-      heading: "📎 Internal Links",
+      heading: "📎 Explore More",
       items: [
         { href: "/corporate-retreat-near-islamabad", label: "Corporate retreat guide" },
         { href: "/villa-for-20-guests-bhurban", label: "Group accommodation" },
@@ -32347,7 +32347,7 @@ export const article227: Article = {
 
     {
       type: "related",
-      heading: "📎 Internal Links",
+      heading: "📎 Explore More",
       items: [
         { href: "/corporate-retreat-near-islamabad", label: "Corporate retreat guide" },
         { href: "/villa-for-20-guests-bhurban", label: "Group accommodation" },
@@ -32459,7 +32459,7 @@ export const article228: Article = {
 
     {
       type: "related",
-      heading: "📎 Internal Links",
+      heading: "📎 Explore More",
       items: [
         { href: "/independent-travel-pakistan-bhurban", label: "Independent travel guide" },
         { href: "/villa-near-islamabad-airport", label: "Airport-to-Bhurban guide" },
@@ -32547,7 +32547,7 @@ export const article229: Article = {
 
     {
       type: "related",
-      heading: "📎 Internal Links",
+      heading: "📎 Explore More",
       items: [
         { href: "/corporate-retreat-near-islamabad", label: "Corporate retreat guide" },
         { href: "/remote-work-villa-bhurban", label: "Remote work guide" },
@@ -32643,7 +32643,7 @@ export const article230: Article = {
 
     {
       type: "related",
-      heading: "📎 Internal Links",
+      heading: "📎 Explore More",
       items: [
         { href: "/bhurban-pine-forest-guide", label: "Forest ecology guide" },
         { href: "/ayubia-national-park-from-bhurban", label: "Ayubia National Park guide" },
@@ -32740,7 +32740,7 @@ export const article231: Article = {
 
     {
       type: "related",
-      heading: "📎 Internal Links",
+      heading: "📎 Explore More",
       items: [
         { href: "/bhurban-accommodation-guide", label: "Accommodation guide" },
         { href: "/bhurban-private-estate-vs-pc-hotel", label: "Private estate vs hotel comparison" },
@@ -32827,7 +32827,7 @@ export const article232: Article = {
 
     {
       type: "related",
-      heading: "📎 Internal Links",
+      heading: "📎 Explore More",
       items: [
         { href: "/bhurban-murree-complete-guide", label: "Complete Bhurban guide" },
         { href: "/luxury-villa-bhurban-murree", label: "Estate overview" },
@@ -32929,7 +32929,7 @@ export const article233: Article = {
 
     {
       type: "related",
-      heading: "📎 Internal Links",
+      heading: "📎 Explore More",
       items: [
         { href: "/corporate-retreat-near-islamabad", label: "Corporate retreat guide" },
         { href: "/villa-for-20-guests-bhurban", label: "Group accommodation" },
@@ -33009,7 +33009,7 @@ export const article234: Article = {
 
     {
       type: "related",
-      heading: "📎 Internal Links",
+      heading: "📎 Explore More",
       items: [
         { href: "/corporate-retreat-near-islamabad", label: "Corporate retreat guide" },
         { href: "/corporate-wellness-retreat-bhurban", label: "Wellness retreat guide" },
@@ -33099,7 +33099,7 @@ export const article235: Article = {
 
     {
       type: "related",
-      heading: "📎 Internal Links",
+      heading: "📎 Explore More",
       items: [
         { href: "/bhurban-pine-forest-guide", label: "Forest ecology guide" },
         { href: "/bhurban-murree-complete-guide", label: "Complete Bhurban guide" },
@@ -33233,7 +33233,7 @@ export const article236: Article = {
 
     {
       type: "related",
-      heading: "📎 Internal Links",
+      heading: "📎 Explore More",
       items: [
         { href: "/bhurban-accommodation-guide", label: "Full Bhurban accommodation guide" },
         { href: "/bhurban-private-estate-vs-pc-hotel", label: "PC Hotel vs Himalaya Villas" },
@@ -33353,7 +33353,7 @@ export const article237: Article = {
 
     {
       type: "related",
-      heading: "📎 Internal Links",
+      heading: "📎 Explore More",
       items: [
         { href: "/wedding-venues-bhurban-murree", label: "Full wedding guide" },
         { href: "/walima-venue-bhurban", label: "Walima venue guide" },
@@ -33488,7 +33488,7 @@ export const article238: Article = {
 
     {
       type: "related",
-      heading: "📎 Internal Links",
+      heading: "📎 Explore More",
       items: [
         { href: "/how-far-is-bhurban-from-islamabad", label: "Full distance and route guide" },
         { href: "/weekend-getaway-near-islamabad", label: "Best overnight options" },
@@ -33613,7 +33613,7 @@ export const article239: Article = {
 
     {
       type: "related",
-      heading: "📎 Internal Links",
+      heading: "📎 Explore More",
       items: [
         { href: "/murree-in-october", label: "October comparison" },
         { href: "/murree-in-december", label: "December guide" },
@@ -33750,7 +33750,7 @@ export const article240: Article = {
 
     {
       type: "related",
-      heading: "📎 Internal Links",
+      heading: "📎 Explore More",
       items: [
         { href: "/bhurban-accommodation-guide", label: "Full accommodation guide" },
         { href: "/bhurban-vs-shangrila-murree", label: "Shangrila comparison" },
@@ -33882,7 +33882,7 @@ export const article241: Article = {
 
     {
       type: "related",
-      heading: "📎 Internal Links",
+      heading: "📎 Explore More",
       items: [
         { href: "/villa-for-30-guests-bhurban", label: "30-guest configuration" },
         { href: "/villa-for-20-guests-bhurban", label: "20-guest guide" },
@@ -34012,7 +34012,7 @@ export const article242: Article = {
 
     {
       type: "related",
-      heading: "📎 Internal Links",
+      heading: "📎 Explore More",
       items: [
         { href: "/murree-in-april", label: "April spring guide" },
         { href: "/murree-in-february", label: "February winter guide" },
@@ -34144,7 +34144,7 @@ export const article243: Article = {
 
     {
       type: "related",
-      heading: "📎 Internal Links",
+      heading: "📎 Explore More",
       items: [
         { href: "/murree-in-october", label: "October stargazing season" },
         { href: "/murree-in-january", label: "January dark sky guide" },
@@ -34274,7 +34274,7 @@ export const article245: Article = {
 
     {
       type: "related",
-      heading: "📎 Internal Links",
+      heading: "📎 Explore More",
       items: [
         { href: "/murree-bhurban-faq", label: "FAQ Volume 1" },
         { href: "/murree-bhurban-faq-2", label: "FAQ Volume 2" },
@@ -34390,7 +34390,7 @@ export const article246: Article = {
 
     {
       type: "related",
-      heading: "📎 Internal Links",
+      heading: "📎 Explore More",
       items: [
         { href: "/murree-bhurban-diaspora-guide", label: "Full diaspora visitor guide" },
         { href: "/bhurban-canadian-pakistani-guide", label: "Canadian-Pakistani guide" },
@@ -34482,7 +34482,7 @@ export const article247: Article = {
 
     {
       type: "related",
-      heading: "📎 Internal Links",
+      heading: "📎 Explore More",
       items: [
         { href: "/corporate-wellness-retreat-bhurban", label: "Wellness retreat guide" },
         { href: "/corporate-retreat-near-islamabad", label: "Corporate retreat guide" },
@@ -34570,7 +34570,7 @@ export const article248: Article = {
 
     {
       type: "related",
-      heading: "📎 Internal Links",
+      heading: "📎 Explore More",
       items: [
         { href: "/winter-bonfire-bhurban", label: "Fire pit experience guide" },
         { href: "/things-to-do-bhurban", label: "Activity guide" },
@@ -34660,7 +34660,7 @@ export const article249: Article = {
 
     {
       type: "related",
-      heading: "📎 Internal Links",
+      heading: "📎 Explore More",
       items: [
         { href: "/sustainable-tourism-pakistan-hill-stations", label: "Sustainable tourism guide" },
         { href: "/bhurban-pine-forest-guide", label: "Forest ecology guide" },
@@ -34761,7 +34761,7 @@ export const article250: Article = {
 
     {
       type: "related",
-      heading: "📎 Internal Links",
+      heading: "📎 Explore More",
       items: [
         { href: "/murree-bhurban-trip-cost", label: "Budget planning guide" },
         { href: "/bhurban-accommodation-guide", label: "Accommodation guide" },
@@ -34847,7 +34847,7 @@ export const article251: Article = {
 
     {
       type: "related",
-      heading: "📎 Internal Links",
+      heading: "📎 Explore More",
       items: [
         { href: "/wedding-venues-bhurban-murree", label: "Full wedding venue guide" },
         { href: "/walima-venue-bhurban", label: "Walima guide" },
@@ -34936,7 +34936,7 @@ export const article252: Article = {
 
     {
       type: "related",
-      heading: "📎 Internal Links",
+      heading: "📎 Explore More",
       items: [
         { href: "/corporate-wellness-retreat-bhurban", label: "Wellness retreat guide" },
         { href: "/48-hour-mountain-rule-bhurban", label: "The 48-hour mountain rule" },
@@ -35026,7 +35026,7 @@ export const article253: Article = {
 
     {
       type: "related",
-      heading: "📎 Internal Links",
+      heading: "📎 Explore More",
       items: [
         { href: "/extended-family-reunion-bhurban", label: "Extended family reunion guide" },
         { href: "/family-villa-bhurban-murree", label: "Family villa guide" },
@@ -35113,7 +35113,7 @@ export const article254: Article = {
 
     {
       type: "related",
-      heading: "📎 Internal Links",
+      heading: "📎 Explore More",
       items: [
         { href: "/bhurban-murree-complete-guide", label: "Complete Bhurban guide" },
         { href: "/luxury-villa-bhurban-murree", label: "Estate overview" },
@@ -35213,7 +35213,7 @@ export const article255: Article = {
 
     {
       type: "related",
-      heading: "📎 Internal Links",
+      heading: "📎 Explore More",
       items: [
         { href: "/bhurban-murree-complete-guide", label: "Complete Bhurban guide" },
         { href: "/bhurban-pine-forest-guide", label: "Forest ecology guide" },
@@ -35423,7 +35423,7 @@ export const article257: Article = {
 
     {
       type: "related",
-      heading: "📎 Internal Links",
+      heading: "📎 Explore More",
       items: [
         { href: "/how-far-is-bhurban-from-islamabad", label: "Islamabad distance detail" },
         { href: "/bhurban-for-lahore-families", label: "Lahore family guide" },
@@ -35562,7 +35562,7 @@ export const article258: Article = {
 
     {
       type: "related",
-      heading: "📎 Internal Links",
+      heading: "📎 Explore More",
       items: [
         { href: "/villa-for-20-guests-bhurban", label: "20-guest guide" },
         { href: "/villa-for-30-guests-bhurban", label: "30-guest guide" },
@@ -35727,7 +35727,7 @@ export const article259: Article = {
 
     {
       type: "related",
-      heading: "📎 Internal Links",
+      heading: "📎 Explore More",
       items: [
         { href: "/murree-in-january", label: "January winter guide" },
         { href: "/hiking-near-murree", label: "Full trail guide" },
@@ -35862,7 +35862,7 @@ export const article260: Article = {
 
     {
       type: "related",
-      heading: "📎 Internal Links",
+      heading: "📎 Explore More",
       items: [
         { href: "/winter-bonfire-bhurban", label: "Winter bonfire guide" },
         { href: "/murree-in-january", label: "January winter guide" },
@@ -36003,7 +36003,7 @@ export const article262: Article = {
 
     {
       type: "related",
-      heading: "📎 Internal Links",
+      heading: "📎 Explore More",
       items: [
         { href: "/murree-trip-planning-guide", label: "Full trip planning guide" },
         { href: "/murree-bhurban-trip-cost", label: "Cost breakdown" },
@@ -36114,7 +36114,7 @@ export const article263: Article = {
 
     {
       type: "related",
-      heading: "📎 Internal Links",
+      heading: "📎 Explore More",
       items: [
         { href: "/corporate-wellness-retreat-bhurban", label: "Wellness retreat guide" },
         { href: "/corporate-retreat-near-islamabad", label: "Corporate retreat guide" },
@@ -36271,7 +36271,7 @@ export const article264: Article = {
 
     {
       type: "related",
-      heading: "📎 Internal Links",
+      heading: "📎 Explore More",
       items: [
         { href: "/things-to-do-bhurban", label: "Complete activity guide" },
         { href: "/ayubia-national-park-from-bhurban", label: "Pipeline Track guide" },
@@ -36447,7 +36447,7 @@ export const article265: Article = {
 
     {
       type: "related",
-      heading: "📎 Internal Links",
+      heading: "📎 Explore More",
       items: [
         { href: "/bhurban-murree-complete-guide", label: "Full destination guide" },
         { href: "/murree-trip-planning-guide", label: "Trip planning hub" },
@@ -36538,7 +36538,7 @@ export const article266: Article = {
 
     {
       type: "related",
-      heading: "📎 Internal Links",
+      heading: "📎 Explore More",
       items: [
         { href: "/islamabad-weekend-escapes-murree-hills", label: "Islamabad weekend escapes" },
         { href: "/weekend-getaway-near-islamabad", label: "Best weekend getaways" },
@@ -36647,7 +36647,7 @@ export const article267: Article = {
 
     {
       type: "related",
-      heading: "📎 Internal Links",
+      heading: "📎 Explore More",
       items: [
         { href: "/murree-bhurban-diaspora-guide", label: "Full diaspora visitor guide" },
         { href: "/gcc-pakistanis-bhurban-mountain-guide", label: "GCC diaspora guide" },
@@ -36734,7 +36734,7 @@ export const article268: Article = {
 
     {
       type: "related",
-      heading: "📎 Internal Links",
+      heading: "📎 Explore More",
       items: [
         { href: "/villas", label: "Browse villa options" },
         { href: "/corporate-retreat-near-islamabad", label: "Corporate retreat guide" },
@@ -36820,7 +36820,7 @@ export const article269: Article = {
 
     {
       type: "related",
-      heading: "📎 Internal Links",
+      heading: "📎 Explore More",
       items: [
         { href: "/pakistan-tourism-overnight-economy", label: "Tourism economy guide" },
         { href: "/bhurban-local-market-guide", label: "Local market guide" },
@@ -36911,7 +36911,7 @@ export const article270: Article = {
 
     {
       type: "related",
-      heading: "📎 Internal Links",
+      heading: "📎 Explore More",
       items: [
         { href: "/mountain-retreat-medical-professionals", label: "Medical professionals guide" },
         { href: "/corporate-wellness-retreat-bhurban", label: "Wellness retreat guide" },
@@ -37000,7 +37000,7 @@ export const article271: Article = {
 
     {
       type: "related",
-      heading: "📎 Internal Links",
+      heading: "📎 Explore More",
       items: [
         { href: "/bhurban-murree-complete-guide", label: "Complete Bhurban guide" },
         { href: "/villa-for-20-guests-bhurban", label: "Group accommodation" },
@@ -37086,7 +37086,7 @@ export const article272: Article = {
 
     {
       type: "related",
-      heading: "📎 Internal Links",
+      heading: "📎 Explore More",
       items: [
         { href: "/bhurban-murree-complete-guide", label: "Complete Bhurban guide" },
         { href: "/things-to-do-bhurban", label: "Activity guide" },
@@ -37189,7 +37189,7 @@ export const article273: Article = {
 
     {
       type: "related",
-      heading: "📎 Internal Links",
+      heading: "📎 Explore More",
       items: [
         { href: "/pakistan-tourism-overnight-economy", label: "Tourism economy analysis" },
         { href: "/bhurban-accommodation-guide", label: "Accommodation guide" },
@@ -37286,7 +37286,7 @@ export const article274: Article = {
 
     {
       type: "related",
-      heading: "📎 Internal Links",
+      heading: "📎 Explore More",
       items: [
         { href: "/pakistan-mountain-tourism-bhurban-case", label: "Mountain tourism case study" },
         { href: "/bhurban-murree-complete-guide", label: "Complete Bhurban guide" },
@@ -37387,7 +37387,7 @@ export const article275: Article = {
 
     {
       type: "related",
-      heading: "📎 Internal Links",
+      heading: "📎 Explore More",
       items: [
         { href: "/mountain-and-city-pakistan-identity", label: "Mountain and city essay" },
         { href: "/mountain-and-time-philosophical-essay", label: "Mountain and time essay" },
@@ -37522,7 +37522,7 @@ export const article276: Article = {
 
     {
       type: "related",
-      heading: "📎 Internal Links",
+      heading: "📎 Explore More",
       items: [
         { href: "/bhurban-private-estate-vs-pc-hotel", label: "Full PC Hotel vs Himalaya Villas comparison" },
         { href: "/bhurban-accommodation-guide", label: "Complete accommodation guide" },
@@ -37650,7 +37650,7 @@ export const article277: Article = {
 
     {
       type: "related",
-      heading: "📎 Internal Links",
+      heading: "📎 Explore More",
       items: [
         { href: "/nathia-gali-day-trip-from-bhurban", label: "Nathia Gali day trip guide" },
         { href: "/bhurban-murree-complete-guide", label: "Full Bhurban guide" },
@@ -37791,7 +37791,7 @@ export const article278: Article = {
 
     {
       type: "related",
-      heading: "📎 Internal Links",
+      heading: "📎 Explore More",
       items: [
         { href: "/bhurban-private-estate-vs-pc-hotel", label: "Full comparison" },
         { href: "/bhurban-hotel-rooms", label: "Hotel rooms guide" },
@@ -37927,7 +37927,7 @@ export const article279: Article = {
 
     {
       type: "related",
-      heading: "📎 Internal Links",
+      heading: "📎 Explore More",
       items: [
         { href: "/bhurban-accommodation-guide", label: "Full accommodation comparison" },
         { href: "/affordable-villa-bhurban", label: "Most affordable villa options" },
@@ -38052,7 +38052,7 @@ export const article280: Article = {
 
     {
       type: "related",
-      heading: "📎 Internal Links",
+      heading: "📎 Explore More",
       items: [
         { href: "/murree-in-october", label: "Full October seasonal guide" },
         { href: "/murree-october-half-term", label: "School holiday October guide" },
@@ -38159,7 +38159,7 @@ export const article281: Article = {
 
     {
       type: "related",
-      heading: "📎 Internal Links",
+      heading: "📎 Explore More",
       items: [
         { href: "/family-villa-bhurban-murree", label: "Full family villa guide" },
         { href: "/bhurban-vs-murree-mall-road", label: "Bhurban vs Mall Road comparison" },
@@ -38296,7 +38296,7 @@ export const article283: Article = {
 
     {
       type: "related",
-      heading: "📎 Internal Links",
+      heading: "📎 Explore More",
       items: [
         { href: "/best-time-to-visit-murree", label: "Full seasonal comparison" },
         { href: "/bhurban-snowfall-booking-guide", label: "Snowfall booking strategy" },
@@ -38434,7 +38434,7 @@ export const article284: Article = {
 
     {
       type: "related",
-      heading: "📎 Internal Links",
+      heading: "📎 Explore More",
       items: [
         { href: "/bhurban-murree-complete-guide", label: "Full Bhurban guide" },
         { href: "/bhurban-accommodation-guide", label: "Accommodation comparison" },
@@ -38579,7 +38579,7 @@ export const article285: Article = {
 
     {
       type: "related",
-      heading: "📎 Internal Links",
+      heading: "📎 Explore More",
       items: [
         { href: "/murree-bhurban-local-tips", label: "Local insider tips" },
         { href: "/bhurban-murree-reference-2026", label: "Key facts reference" },
@@ -38687,7 +38687,7 @@ export const article286: Article = {
 
     {
       type: "related",
-      heading: "📎 Internal Links",
+      heading: "📎 Explore More",
       items: [
         { href: "/corporate-retreat-near-islamabad", label: "Corporate retreat guide" },
         { href: "/bhurban-for-lahore-families", label: "Lahore to Bhurban guide" },
@@ -38784,7 +38784,7 @@ export const article287: Article = {
 
     {
       type: "related",
-      heading: "📎 Internal Links",
+      heading: "📎 Explore More",
       items: [
         { href: "/corporate-retreat-near-islamabad", label: "Corporate retreat guide" },
         { href: "/pakistan-fintech-leadership-retreat", label: "Fintech leadership retreat" },
@@ -38887,7 +38887,7 @@ export const article288: Article = {
 
     {
       type: "related",
-      heading: "📎 Internal Links",
+      heading: "📎 Explore More",
       items: [
         { href: "/islamabad-expat-community-bhurban", label: "Expat community guide" },
         { href: "/family-villa-bhurban-murree", label: "Family villa guide" },
@@ -38986,7 +38986,7 @@ export const article289: Article = {
 
     {
       type: "related",
-      heading: "📎 Internal Links",
+      heading: "📎 Explore More",
       items: [
         { href: "/murree-bhurban-diaspora-guide", label: "Full diaspora visitor guide" },
         { href: "/gcc-pakistanis-bhurban-mountain-guide", label: "GCC diaspora guide" },
@@ -39097,7 +39097,7 @@ export const article290: Article = {
 
     {
       type: "related",
-      heading: "📎 Internal Links",
+      heading: "📎 Explore More",
       items: [
         { href: "/bhurban-content-creator-location", label: "Content creator location guide" },
         { href: "/bhurban-photography-guide", label: "Photography guide" },
@@ -39200,7 +39200,7 @@ export const article291: Article = {
 
     {
       type: "related",
-      heading: "📎 Internal Links",
+      heading: "📎 Explore More",
       items: [
         { href: "/long-stay-villa-bhurban", label: "Long stay villa guide" },
         { href: "/remote-work-villa-bhurban", label: "Remote work guide" },
@@ -39298,7 +39298,7 @@ export const article292: Article = {
 
     {
       type: "related",
-      heading: "📎 Internal Links",
+      heading: "📎 Explore More",
       items: [
         { href: "/corporate-retreat-near-islamabad", label: "Corporate retreat guide" },
         { href: "/bhurban-for-lahore-families", label: "Lahore to Bhurban guide" },
@@ -39396,7 +39396,7 @@ export const article293: Article = {
 
     {
       type: "related",
-      heading: "📎 Internal Links",
+      heading: "📎 Explore More",
       items: [
         { href: "/corporate-wellness-retreat-bhurban", label: "Wellness retreat guide" },
         { href: "/48-hour-mountain-rule-bhurban", label: "The 48-hour mountain rule" },
@@ -39502,7 +39502,7 @@ export const article294: Article = {
 
     {
       type: "related",
-      heading: "📎 Internal Links",
+      heading: "📎 Explore More",
       items: [
         { href: "/pakistan-tech-startups-offsite-bhurban", label: "Tech startup offsite guide" },
         { href: "/corporate-team-building-bhurban", label: "Team building guide" },
@@ -39622,7 +39622,7 @@ export const article295: Article = {
 
     {
       type: "related",
-      heading: "📎 Internal Links",
+      heading: "📎 Explore More",
       items: [
         { href: "/private-mountain-travel-matters", label: "Why private mountain travel matters" },
         { href: "/mountain-and-time-philosophical-essay", label: "Mountain and time essay" },
@@ -39766,7 +39766,7 @@ export const article296: Article = {
 
     {
       type: "related",
-      heading: "📎 Internal Links",
+      heading: "📎 Explore More",
       items: [
         { href: "/bhurban-hotel-rooms", label: "Full Bhurban hotel room guide" },
         { href: "/bhurban-private-estate-vs-pc-hotel", label: "PC Hotel vs Himalaya Villas" },
@@ -39906,7 +39906,7 @@ export const article297: Article = {
 
     {
       type: "related",
-      heading: "📎 Internal Links",
+      heading: "📎 Explore More",
       items: [
         { href: "/bhurban-murree-complete-guide", label: "Full Bhurban destination guide" },
         { href: "/corporate-retreat-bhurban", label: "Corporate and golf retreat packages" },
@@ -40095,7 +40095,7 @@ export const article298: Article = {
 
     {
       type: "related",
-      heading: "📎 Internal Links",
+      heading: "📎 Explore More",
       items: [
         { href: "/bhurban-hotel-rooms", label: "Hotel room detail" },
         { href: "/bhurban-private-estate-vs-pc-hotel", label: "PC Hotel vs Himalaya Villas deep dive" },
@@ -40246,7 +40246,7 @@ export const article299: Article = {
 
     {
       type: "related",
-      heading: "📎 Internal Links",
+      heading: "📎 Explore More",
       items: [
         { href: "/hotels-in-bhurban-murree", label: "Full Bhurban hotel comparison" },
         { href: "/bhurban-vs-murree-mall-road", label: "Bhurban vs Mall Road guide" },
@@ -40478,7 +40478,7 @@ export const article300: Article = {
 
     {
       type: "related",
-      heading: "📎 Internal Links",
+      heading: "📎 Explore More",
       items: [
         { href: "/nathia-gali-resort-vs-bhurban", label: "Nathia Gali vs Bhurban guide" },
         { href: "/bhurban-hiking-trails", label: "Full trails guide" },
@@ -40613,7 +40613,7 @@ export const article301: Article = {
 
     {
       type: "related",
-      heading: "📎 Internal Links",
+      heading: "📎 Explore More",
       items: [
         { href: "/hotels-in-bhurban-murree", label: "Full Bhurban hotel comparison" },
         { href: "/bhurban-private-estate-vs-pc-hotel", label: "PC Hotel vs Himalaya Villas" },
@@ -40802,7 +40802,7 @@ export const article302: Article = {
 
     {
       type: "related",
-      heading: "📎 Internal Links",
+      heading: "📎 Explore More",
       items: [
         { href: "/hotels-in-bhurban-murree", label: "Full accommodation comparison" },
         { href: "/pc-bhurban-charges-per-night", label: "Per night charges guide" },
@@ -40928,7 +40928,7 @@ export const article303: Article = {
 
     {
       type: "related",
-      heading: "📎 Internal Links",
+      heading: "📎 Explore More",
       items: [
         { href: "/hotels-in-bhurban-murree", label: "Full accommodation comparison" },
         { href: "/bhurban-murree-complete-guide", label: "Full destination guide" },
@@ -41106,7 +41106,7 @@ export const article304: Article = {
 
     {
       type: "related",
-      heading: "📎 Internal Links",
+      heading: "📎 Explore More",
       items: [
         { href: "/booking-villa-bhurban-faq", label: "Full booking FAQ" },
         { href: "/hotels-in-bhurban-murree", label: "Accommodation comparison" },
@@ -41237,7 +41237,7 @@ export const article305: Article = {
 
     {
       type: "related",
-      heading: "📎 Internal Links",
+      heading: "📎 Explore More",
       items: [
         { href: "/murree-peak-season-vs-off-season", label: "Full seasonal guide" },
         { href: "/murree-in-january", label: "January snowfall guide" },
@@ -41331,7 +41331,7 @@ export const article306: Article = {
 
     {
       type: "related",
-      heading: "📎 Internal Links",
+      heading: "📎 Explore More",
       items: [
         { href: "/corporate-retreat-near-islamabad", label: "Corporate retreat guide" },
         { href: "/villa-near-islamabad-airport", label: "Airport-to-Bhurban guide" },
@@ -41422,7 +41422,7 @@ export const article307: Article = {
 
     {
       type: "related",
-      heading: "📎 Internal Links",
+      heading: "📎 Explore More",
       items: [
         { href: "/pakistan-media-editorial-retreat", label: "Media editorial retreat guide" },
         { href: "/corporate-retreat-near-islamabad", label: "Corporate retreat guide" },
@@ -41517,7 +41517,7 @@ export const article308: Article = {
 
     {
       type: "related",
-      heading: "📎 Internal Links",
+      heading: "📎 Explore More",
       items: [
         { href: "/murree-bhurban-diaspora-guide", label: "Full diaspora visitor guide" },
         { href: "/villa-near-islamabad-airport", label: "Airport-to-Bhurban guide" },
@@ -41608,7 +41608,7 @@ export const article309: Article = {
 
     {
       type: "related",
-      heading: "📎 Internal Links",
+      heading: "📎 Explore More",
       items: [
         { href: "/corporate-retreat-near-islamabad", label: "Corporate retreat guide" },
         { href: "/villa-for-20-guests-bhurban", label: "Group accommodation" },
@@ -41713,7 +41713,7 @@ export const article310: Article = {
 
     {
       type: "related",
-      heading: "📎 Internal Links",
+      heading: "📎 Explore More",
       items: [
         { href: "/bhurban-murree-complete-guide", label: "Complete Bhurban guide" },
         { href: "/luxury-villa-bhurban-murree", label: "Estate overview" },
@@ -41805,7 +41805,7 @@ export const article311: Article = {
 
     {
       type: "related",
-      heading: "📎 Internal Links",
+      heading: "📎 Explore More",
       items: [
         { href: "/in-villa-dining-bhurban", label: "Full in-villa dining guide" },
         { href: "/restaurants-near-bhurban-murree", label: "Dining guide" },
@@ -41892,7 +41892,7 @@ export const article312: Article = {
 
     {
       type: "related",
-      heading: "📎 Internal Links",
+      heading: "📎 Explore More",
       items: [
         { href: "/pakistan-real-estate-bhurban-investment", label: "Real estate investment guide" },
         { href: "/luxury-villa-bhurban-murree", label: "Estate overview" },
@@ -41999,7 +41999,7 @@ export const article313: Article = {
 
     {
       type: "related",
-      heading: "📎 Internal Links",
+      heading: "📎 Explore More",
       items: [
         { href: "/pakistan-women-entrepreneurs-retreat", label: "Women entrepreneurs retreat guide" },
         { href: "/womens-professional-retreats-pakistan", label: "Women's professional retreats" },
@@ -42078,7 +42078,7 @@ export const article314: Article = {
 
     {
       type: "related",
-      heading: "📎 Internal Links",
+      heading: "📎 Explore More",
       items: [
         { href: "/mountain-architecture-pakistan-private-estate", label: "Mountain architecture guide" },
         { href: "/luxury-villa-bhurban-murree", label: "Estate overview" },
@@ -42162,7 +42162,7 @@ export const article315: Article = {
 
     {
       type: "related",
-      heading: "📎 Internal Links",
+      heading: "📎 Explore More",
       items: [
         { href: "/corporate-retreat-near-islamabad", label: "Corporate retreat guide" },
         { href: "/teacher-retreat-near-islamabad", label: "Teacher retreat guide" },
@@ -42258,7 +42258,7 @@ export const article319: Article = {
     },
     {
       type: "related",
-      heading: "📎 Internal Links",
+      heading: "📎 Explore More",
       items: [
         { href: "/honeymoon-package-bhurban-murree", label: "Full honeymoon guide" },
         { href: "/villa-with-jacuzzi-bhurban", label: "Presidential Suite" },
@@ -42373,7 +42373,7 @@ export const article320: Article = {
     },
     {
       type: "related",
-      heading: "📎 Internal Links",
+      heading: "📎 Explore More",
       items: [
         { href: "/serene-valley-cabin-bhurban", label: "Serene Valley Cabin guide" },
         { href: "/bhurban-photography-guide", label: "Solo photography guide" },
@@ -42511,7 +42511,7 @@ export const article321: Article = {
     },
     {
       type: "related",
-      heading: "📎 Internal Links",
+      heading: "📎 Explore More",
       items: [
         { href: "/bhurban-pine-forest-guide", label: "Forest ecology guide" },
         { href: "/ayubia-national-park-from-bhurban", label: "Pipeline Track" },
@@ -42621,7 +42621,7 @@ export const article323: Article = {
     },
     {
       type: "related",
-      heading: "📎 Internal Links",
+      heading: "📎 Explore More",
       items: [
         { href: "/corporate-wellness-retreat-bhurban", label: "Wellness retreat" },
         { href: "/villa-with-jacuzzi-bhurban", label: "Presidential Suite jacuzzi" },
@@ -42731,7 +42731,7 @@ export const article324: Article = {
     },
     {
       type: "related",
-      heading: "📎 Internal Links",
+      heading: "📎 Explore More",
       items: [
         { href: "/anniversary-villa-bhurban", label: "Anniversary guide" },
         { href: "/wedding-venues-bhurban-murree", label: "Wedding events guide" },
@@ -42866,7 +42866,7 @@ export const article325: Article = {
     },
     {
       type: "related",
-      heading: "📎 Internal Links",
+      heading: "📎 Explore More",
       items: [
         { href: "/murree-in-july", label: "July guide" },
         { href: "/murree-in-august", label: "August guide" },
@@ -42946,7 +42946,7 @@ export const article326: Article = {
 
     {
       type: "related",
-      heading: "📎 Internal Links",
+      heading: "📎 Explore More",
       items: [
         { href: "/pakistan-legal-community-bar-retreat", label: "Legal community retreat guide" },
         { href: "/corporate-retreat-near-islamabad", label: "Corporate retreat guide" },
@@ -43033,7 +43033,7 @@ export const article327: Article = {
 
     {
       type: "related",
-      heading: "📎 Internal Links",
+      heading: "📎 Explore More",
       items: [
         { href: "/pakistan-youth-leadership-mountain-retreat", label: "Youth leadership guide" },
         { href: "/villa-for-20-guests-bhurban", label: "Group accommodation" },
@@ -43125,7 +43125,7 @@ export const article328: Article = {
 
     {
       type: "related",
-      heading: "📎 Internal Links",
+      heading: "📎 Explore More",
       items: [
         { href: "/qawwali-evening-bhurban", label: "Qawwali evening guide" },
         { href: "/events", label: "Events at Himalaya Villas" },
@@ -43198,7 +43198,7 @@ export const article329: Article = {
 
     {
       type: "related",
-      heading: "📎 Internal Links",
+      heading: "📎 Explore More",
       items: [
         { href: "/murree-bhurban-diaspora-guide", label: "Diaspora visitor guide" },
         { href: "/affordable-villa-bhurban", label: "Affordable villa options" },
@@ -43303,7 +43303,7 @@ export const article330: Article = {
 
     {
       type: "related",
-      heading: "📎 Internal Links",
+      heading: "📎 Explore More",
       items: [
         { href: "/bhurban-murree-complete-guide", label: "Complete Bhurban guide" },
         { href: "/luxury-villa-bhurban-murree", label: "Estate overview" },
@@ -43378,7 +43378,7 @@ export const article331: Article = {
 
     {
       type: "related",
-      heading: "📎 Internal Links",
+      heading: "📎 Explore More",
       items: [
         { href: "/pakistan-ngo-sector-burnout-retreat", label: "NGO sector retreat guide" },
         { href: "/corporate-wellness-retreat-bhurban", label: "Wellness retreat guide" },
@@ -43457,7 +43457,7 @@ export const article332: Article = {
 
     {
       type: "related",
-      heading: "📎 Internal Links",
+      heading: "📎 Explore More",
       items: [
         { href: "/pakistan-healthcare-workers-retreat", label: "Healthcare workers retreat" },
         { href: "/corporate-retreat-near-islamabad", label: "Corporate retreat guide" },
@@ -43531,7 +43531,7 @@ export const article333: Article = {
 
     {
       type: "related",
-      heading: "📎 Internal Links",
+      heading: "📎 Explore More",
       items: [
         { href: "/murree-school-group-bhurban", label: "School group guide" },
         { href: "/cedar-forest-educational-guide-bhurban", label: "Cedar forest education guide" },
@@ -43654,7 +43654,7 @@ export const article334: Article = {
 
     {
       type: "related",
-      heading: "📎 Internal Links",
+      heading: "📎 Explore More",
       items: [
         { href: "/bhurban-stargazing-night-sky", label: "Stargazing guide" },
         { href: "/murree-in-october", label: "October stargazing season" },
@@ -43753,7 +43753,7 @@ export const article335: Article = {
 
     {
       type: "related",
-      heading: "📎 Internal Links",
+      heading: "📎 Explore More",
       items: [
         { href: "/in-villa-dining-bhurban", label: "In-villa dining guide" },
         { href: "/restaurants-near-bhurban-murree", label: "Dining guide" },
@@ -43900,7 +43900,7 @@ export const article337: Article = {
     },
     {
       type: "related",
-      heading: "📎 Internal Links",
+      heading: "📎 Explore More",
       items: [
         { href: "/eid-ul-adha-bhurban", label: "Eid ul Adha specific guide" },
         { href: "/extended-family-reunion-bhurban", label: "Full estate booking" },
@@ -44040,7 +44040,7 @@ export const article338: Article = {
     },
     {
       type: "related",
-      heading: "📎 Internal Links",
+      heading: "📎 Explore More",
       items: [
         { href: "/family-villa-bhurban-murree", label: "Full family villa guide" },
         { href: "/bhurban-for-lahore-families", label: "Lahore family guide" },
@@ -44201,7 +44201,7 @@ export const article340: Article = {
     },
     {
       type: "related",
-      heading: "📎 Internal Links",
+      heading: "📎 Explore More",
       items: [
         { href: "/murree-bhurban-complete-guide", label: "Full Bhurban guide" },
         { href: "/nathia-gali-resort-vs-bhurban", label: "Nathia Gali vs Bhurban" },
@@ -44320,7 +44320,7 @@ export const article341: Article = {
     },
     {
       type: "related",
-      heading: "📎 Internal Links",
+      heading: "📎 Explore More",
       items: [
         { href: "/karachi-honeymoon-bhurban", label: "Karachi honeymoon guide" },
         { href: "/karachi-summer-escape-mountains", label: "Summer escape from Karachi" },
@@ -44410,7 +44410,7 @@ export const article346: Article = {
 
     {
       type: "related",
-      heading: "📎 Internal Links",
+      heading: "📎 Explore More",
       items: [
         { href: "/pakistan-ngo-sector-burnout-retreat", label: "NGO sector retreat guide" },
         { href: "/corporate-wellness-retreat-bhurban", label: "Wellness retreat guide" },
@@ -44484,7 +44484,7 @@ export const article347: Article = {
 
     {
       type: "related",
-      heading: "📎 Internal Links",
+      heading: "📎 Explore More",
       items: [
         { href: "/remote-work-villa-bhurban", label: "Remote work villa guide" },
         { href: "/pakistan-it-sector-mountain-retreat", label: "IT sector retreat guide" },
@@ -44553,7 +44553,7 @@ export const article348: Article = {
 
     {
       type: "related",
-      heading: "📎 Internal Links",
+      heading: "📎 Explore More",
       items: [
         { href: "/corporate-retreat-near-islamabad", label: "Corporate retreat guide" },
         { href: "/villas", label: "Browse villa options" },
@@ -44632,7 +44632,7 @@ export const article349: Article = {
 
     {
       type: "related",
-      heading: "📎 Internal Links",
+      heading: "📎 Explore More",
       items: [
         { href: "/pakistan-healthcare-workers-retreat", label: "Healthcare workers retreat" },
         { href: "/mountain-wellness-chronic-stress-bhurban", label: "Mountain wellness guide" },
@@ -44706,7 +44706,7 @@ export const article350: Article = {
 
     {
       type: "related",
-      heading: "📎 Internal Links",
+      heading: "📎 Explore More",
       items: [
         { href: "/corporate-retreat-near-islamabad", label: "Corporate retreat guide" },
         { href: "/government-official-retreat-bhurban", label: "Government officials guide" },
@@ -44775,7 +44775,7 @@ export const article351: Article = {
 
     {
       type: "related",
-      heading: "📎 Internal Links",
+      heading: "📎 Explore More",
       items: [
         { href: "/pakistan-defence-community-bhurban", label: "Defence community guide" },
         { href: "/corporate-retreat-near-islamabad", label: "Corporate retreat guide" },
@@ -44853,7 +44853,7 @@ export const article352: Article = {
 
     {
       type: "related",
-      heading: "📎 Internal Links",
+      heading: "📎 Explore More",
       items: [
         { href: "/corporate-retreat-near-islamabad", label: "Corporate retreat guide" },
         { href: "/villa-for-20-guests-bhurban", label: "Group accommodation" },
@@ -44928,7 +44928,7 @@ export const article353: Article = {
 
     {
       type: "related",
-      heading: "📎 Internal Links",
+      heading: "📎 Explore More",
       items: [
         { href: "/creative-writing-retreat-bhurban", label: "Creative writing retreat" },
         { href: "/corporate-retreat-near-islamabad", label: "Corporate retreat guide" },
@@ -45000,7 +45000,7 @@ export const article354: Article = {
 
     {
       type: "related",
-      heading: "📎 Internal Links",
+      heading: "📎 Explore More",
       items: [
         { href: "/pakistani-australian-diaspora-bhurban", label: "Pakistani-Australian guide" },
         { href: "/villa-near-islamabad-airport", label: "Airport-to-Bhurban guide" },
@@ -45086,7 +45086,7 @@ export const article355: Article = {
 
     {
       type: "related",
-      heading: "📎 Internal Links",
+      heading: "📎 Explore More",
       items: [
         { href: "/bhurban-photography-guide", label: "Bhurban photography guide" },
         { href: "/bhurban-content-creator-location", label: "Content creator location" },
@@ -45227,7 +45227,7 @@ export const article356: Article = {
     },
     {
       type: "related",
-      heading: "📎 Internal Links",
+      heading: "📎 Explore More",
       items: [
         { href: "/bhurban-october-activities", label: "Best Chairlift month" },
         { href: "/bhurban-photography-guide", label: "Photography spots" },
@@ -45349,7 +45349,7 @@ export const article358: Article = {
     },
     {
       type: "related",
-      heading: "📎 Internal Links",
+      heading: "📎 Explore More",
       items: [
         { href: "/murree-bhurban-complete-guide", label: "Full destination guide" },
         { href: "/hotels-in-bhurban-murree", label: "Bhurban hotel comparison" },
@@ -45479,7 +45479,7 @@ export const article359: Article = {
     },
     {
       type: "related",
-      heading: "📎 Internal Links",
+      heading: "📎 Explore More",
       items: [
         { href: "/bhurban-snowfall-booking-guide", label: "Full snowfall booking strategy" },
         { href: "/murree-in-january", label: "January guide" },
@@ -45604,7 +45604,7 @@ export const article360: Article = {
     },
     {
       type: "related",
-      heading: "📎 Internal Links",
+      heading: "📎 Explore More",
       items: [
         { href: "/bhurban-vs-naran-comparison", label: "Naran comparison" },
         { href: "/murree-bhurban-complete-guide", label: "Full Bhurban guide" },
@@ -45697,7 +45697,7 @@ export const article361: Article = {
     },
     {
       type: "related",
-      heading: "📎 Internal Links",
+      heading: "📎 Explore More",
       items: [
         { href: "/booking-villa-bhurban-faq", label: "Booking FAQ" },
         { href: "/villas", label: "Browse Himalaya Villas" },
@@ -45810,7 +45810,7 @@ export const article363: Article = {
     },
     {
       type: "related",
-      heading: "📎 Internal Links",
+      heading: "📎 Explore More",
       items: [
         { href: "/murree-bhurban-complete-guide", label: "Full destination guide" },
         { href: "/bhurban-photography-guide", label: "Photography timing guide" },
@@ -46004,7 +46004,7 @@ export const article364: Article = {
     },
     {
       type: "related",
-      heading: "📎 Internal Links",
+      heading: "📎 Explore More",
       items: [
         { href: "/bhurban-murree-reference-2026", label: "Full reference guide" },
         { href: "/murree-bhurban-complete-guide", label: "Complete guide" },
@@ -46127,7 +46127,7 @@ export const article365: Article = {
     },
     {
       type: "related",
-      heading: "📎 Internal Links",
+      heading: "📎 Explore More",
       items: [
         { href: "/extended-family-reunion-bhurban", label: "Full estate booking guide" },
         { href: "/corporate-retreat-near-islamabad", label: "Corporate group guide" },
@@ -46209,7 +46209,7 @@ export const article366: Article = {
 
     {
       type: "related",
-      heading: "📎 Internal Links",
+      heading: "📎 Explore More",
       items: [
         { href: "/pakistan-legal-community-bar-retreat", label: "Legal community retreat guide" },
         { href: "/pakistan-judiciary-leadership-retreat", label: "Judiciary retreat guide" },
@@ -46287,7 +46287,7 @@ export const article367: Article = {
 
     {
       type: "related",
-      heading: "📎 Internal Links",
+      heading: "📎 Explore More",
       items: [
         { href: "/pakistan-telecom-industry-retreat", label: "Telecom industry retreat guide" },
         { href: "/corporate-retreat-near-islamabad", label: "Corporate retreat guide" },
@@ -46348,7 +46348,7 @@ export const article368: Article = {
 
     {
       type: "related",
-      heading: "📎 Internal Links",
+      heading: "📎 Explore More",
       items: [
         { href: "/gcc-pakistanis-bhurban-mountain-guide", label: "GCC diaspora guide" },
         { href: "/villa-near-islamabad-airport", label: "Airport-to-Bhurban guide" },
@@ -46442,7 +46442,7 @@ export const article369: Article = {
 
     {
       type: "related",
-      heading: "📎 Internal Links",
+      heading: "📎 Explore More",
       items: [
         { href: "/womens-safety-mountain-travel-bhurban", label: "Women's safety guide" },
         { href: "/womens-professional-retreats-pakistan", label: "Women's professional retreats" },
@@ -46521,7 +46521,7 @@ export const article370: Article = {
 
     {
       type: "related",
-      heading: "📎 Internal Links",
+      heading: "📎 Explore More",
       items: [
         { href: "/pakistan-academic-research-retreat", label: "Academic retreat guide" },
         { href: "/creative-writing-retreat-bhurban", label: "Writing retreat guide" },
@@ -46599,7 +46599,7 @@ export const article371: Article = {
 
     {
       type: "related",
-      heading: "📎 Internal Links",
+      heading: "📎 Explore More",
       items: [
         { href: "/corporate-retreat-near-islamabad", label: "Corporate retreat guide" },
         { href: "/villa-for-20-guests-bhurban", label: "Group accommodation" },
@@ -46668,7 +46668,7 @@ export const article372: Article = {
 
     {
       type: "related",
-      heading: "📎 Internal Links",
+      heading: "📎 Explore More",
       items: [
         { href: "/pakistan-cricket-bhurban-retreat", label: "Cricket retreat guide" },
         { href: "/corporate-retreat-near-islamabad", label: "Corporate retreat guide" },
@@ -46746,7 +46746,7 @@ export const article373: Article = {
 
     {
       type: "related",
-      heading: "📎 Internal Links",
+      heading: "📎 Explore More",
       items: [
         { href: "/pakistan-hospitality-private-estate-model", label: "Private estate model guide" },
         { href: "/corporate-retreat-near-islamabad", label: "Corporate retreat guide" },
@@ -46818,7 +46818,7 @@ export const article374: Article = {
 
     {
       type: "related",
-      heading: "📎 Internal Links",
+      heading: "📎 Explore More",
       items: [
         { href: "/pakistan-climate-journalism-bhurban", label: "Climate journalism guide" },
         { href: "/bhurban-pine-forest-guide", label: "Forest ecology guide" },
@@ -46914,7 +46914,7 @@ export const article375: Article = {
 
     {
       type: "related",
-      heading: "📎 Internal Links",
+      heading: "📎 Explore More",
       items: [
         { href: "/halal-travel-pakistan-mountain-estates", label: "Halal travel guide" },
         { href: "/family-villa-bhurban-murree", label: "Family villa guide" },
@@ -47036,7 +47036,7 @@ export const article376: Article = {
     },
     {
       type: "related",
-      heading: "📎 Internal Links",
+      heading: "📎 Explore More",
       items: [
         { href: "/bhurban-distance-from-major-cities", label: "Distances from all cities" },
         { href: "/murree-bhurban-trip-cost", label: "Full trip cost" },
@@ -47200,7 +47200,7 @@ export const article377: Article = {
     },
     {
       type: "related",
-      heading: "📎 Internal Links",
+      heading: "📎 Explore More",
       items: [
         { href: "/bhurban-murree-reference-2026", label: "Key facts reference" },
         { href: "/murree-bhurban-faq", label: "Full FAQ" },
@@ -47297,7 +47297,7 @@ export const article379: Article = {
     },
     {
       type: "related",
-      heading: "📎 Internal Links",
+      heading: "📎 Explore More",
       items: [
         { href: "/wedding-venues-bhurban-murree", label: "Full wedding guide" },
         { href: "/bhurban-mehndi-walima-guide", label: "Mehndi and Walima" },
@@ -47379,7 +47379,7 @@ export const article380: Article = {
     },
     {
       type: "related",
-      heading: "📎 Internal Links",
+      heading: "📎 Explore More",
       items: [
         { href: "/bhurban-nikah-package", label: "Nikah ceremony guide" },
         { href: "/wedding-venues-bhurban-murree", label: "Full wedding venue guide" },
@@ -47505,7 +47505,7 @@ export const article381: Article = {
     },
     {
       type: "related",
-      heading: "📎 Internal Links",
+      heading: "📎 Explore More",
       items: [
         { href: "/ayubia-national-park-guide", label: "Full Ayubia guide" },
         { href: "/bhurban-birdwatching-guide", label: "Trail birdwatching" },
@@ -47615,7 +47615,7 @@ export const article384: Article = {
     },
     {
       type: "related",
-      heading: "📎 Internal Links",
+      heading: "📎 Explore More",
       items: [
         { href: "/murree-in-october", label: "Full October guide" },
         { href: "/murree-spring-wildflowers", label: "April comparison" },
@@ -47695,7 +47695,7 @@ export const article386: Article = {
 
     {
       type: "related",
-      heading: "📎 Internal Links",
+      heading: "📎 Explore More",
       items: [
         { href: "/corporate-retreat-near-islamabad", label: "Corporate retreat guide" },
         { href: "/luxury-villa-bhurban-murree", label: "Estate overview" },
@@ -47774,7 +47774,7 @@ export const article387: Article = {
 
     {
       type: "related",
-      heading: "📎 Internal Links",
+      heading: "📎 Explore More",
       items: [
         { href: "/pakistan-tv-film-production-bhurban", label: "TV and film production guide" },
         { href: "/pakistan-media-editorial-retreat-bhurban", label: "Media editorial retreat" },
@@ -47862,7 +47862,7 @@ export const article388: Article = {
 
     {
       type: "related",
-      heading: "📎 Internal Links",
+      heading: "📎 Explore More",
       items: [
         { href: "/pakistan-fintech-leadership-retreat", label: "Fintech leadership retreat" },
         { href: "/corporate-retreat-near-islamabad", label: "Corporate retreat guide" },
@@ -47953,7 +47953,7 @@ export const article389: Article = {
 
     {
       type: "related",
-      heading: "📎 Internal Links",
+      heading: "📎 Explore More",
       items: [
         { href: "/bhurban-content-creator-location", label: "Content creator location guide" },
         { href: "/bhurban-photography-guide", label: "Photography guide" },
@@ -48022,7 +48022,7 @@ export const article390: Article = {
 
     {
       type: "related",
-      heading: "📎 Internal Links",
+      heading: "📎 Explore More",
       items: [
         { href: "/pakistan-architecture-mountain-estate", label: "Architecture design case study" },
         { href: "/corporate-retreat-near-islamabad", label: "Corporate retreat guide" },
@@ -48096,7 +48096,7 @@ export const article391: Article = {
 
     {
       type: "related",
-      heading: "📎 Internal Links",
+      heading: "📎 Explore More",
       items: [
         { href: "/murree-bhurban-diaspora-guide", label: "Full diaspora visitor guide" },
         { href: "/villa-near-islamabad-airport", label: "Airport-to-Bhurban guide" },
@@ -48188,7 +48188,7 @@ export const article392: Article = {
 
     {
       type: "related",
-      heading: "📎 Internal Links",
+      heading: "📎 Explore More",
       items: [
         { href: "/bhurban-murree-complete-guide", label: "Complete Bhurban guide" },
         { href: "/nathia-gali-resort-vs-bhurban", label: "Nathia Gali vs Bhurban" },
@@ -48276,7 +48276,7 @@ export const article393: Article = {
 
     {
       type: "related",
-      heading: "📎 Internal Links",
+      heading: "📎 Explore More",
       items: [
         { href: "/islamabad-expat-community-bhurban", label: "Expat community guide" },
         { href: "/islamabad-international-school-bhurban", label: "International school guide" },
@@ -48372,7 +48372,7 @@ export const article394: Article = {
 
     {
       type: "related",
-      heading: "📎 Internal Links",
+      heading: "📎 Explore More",
       items: [
         { href: "/bhurban-for-elderly-guests", label: "Accessibility guide" },
         { href: "/murree-bhurban-couples-over-50", label: "Couples over 50 guide" },
@@ -48461,7 +48461,7 @@ export const article395: Article = {
 
     {
       type: "related",
-      heading: "📎 Internal Links",
+      heading: "📎 Explore More",
       items: [
         { href: "/private-mountain-travel-matters", label: "Why private mountain travel matters" },
         { href: "/mountain-and-time-philosophical-essay", label: "Mountain and time essay" },
@@ -48672,7 +48672,7 @@ export const article396: Article = {
     },
     {
       type: "related",
-      heading: "📎 Internal Links",
+      heading: "📎 Explore More",
       items: [
         { href: "/best-time-to-visit-murree", label: "Full seasonal guide" },
         { href: "/murree-snowfall-2026", label: "Snowfall tracker" },
@@ -48829,7 +48829,7 @@ export const article397: Article = {
     },
     {
       type: "related",
-      heading: "📎 Internal Links",
+      heading: "📎 Explore More",
       items: [
         { href: "/murree-temperature-guide", label: "Full temperature guide" },
         { href: "/bhurban-snowfall-booking-guide", label: "Snowfall booking strategy" },
@@ -49007,7 +49007,7 @@ export const article398: Article = {
     },
     {
       type: "related",
-      heading: "📎 Internal Links",
+      heading: "📎 Explore More",
       items: [
         { href: "/murree-resort-guide", label: "Murree resort overview" },
         { href: "/hotels-in-bhurban-murree", label: "Bhurban-specific hotel guide" },
@@ -49130,7 +49130,7 @@ export const article399: Article = {
     },
     {
       type: "related",
-      heading: "📎 Internal Links",
+      heading: "📎 Explore More",
       items: [
         { href: "/hotels-in-murree-pakistan", label: "Full Murree hotel guide" },
         { href: "/ramada-murree-alternative", label: "Ramada alternative" },
@@ -49213,7 +49213,7 @@ export const article400: Article = {
     },
     {
       type: "related",
-      heading: "📎 Internal Links",
+      heading: "📎 Explore More",
       items: [
         { href: "/hotels-in-murree-pakistan", label: "Full Murree hotel guide" },
         { href: "/murree-resort-guide", label: "Resort guide" },
@@ -49348,7 +49348,7 @@ export const article401: Article = {
     },
     {
       type: "related",
-      heading: "📎 Internal Links",
+      heading: "📎 Explore More",
       items: [
         { href: "/bhurban-vs-naran-comparison", label: "Naran comparison" },
         { href: "/bhurban-galyat-comparison", label: "Galyat comparison" },
@@ -49449,7 +49449,7 @@ export const article402: Article = {
     },
     {
       type: "related",
-      heading: "📎 Internal Links",
+      heading: "📎 Explore More",
       items: [
         { href: "/hotels-in-murree-pakistan", label: "Full hotel guide" },
         { href: "/murree-resort-guide", label: "Resort overview" },
@@ -49555,7 +49555,7 @@ export const article403: Article = {
     },
     {
       type: "related",
-      heading: "📎 Internal Links",
+      heading: "📎 Explore More",
       items: [
         { href: "/hotels-in-bhurban-murree", label: "Full Bhurban accommodation guide" },
         { href: "/murree-guest-house-vs-villa", label: "Guest house comparison" },
@@ -49657,7 +49657,7 @@ export const article404: Article = {
     },
     {
       type: "related",
-      heading: "📎 Internal Links",
+      heading: "📎 Explore More",
       items: [
         { href: "/hotels-in-murree-pakistan", label: "Full hotel guide" },
         { href: "/bhurban-private-estate-vs-pc-hotel", label: "PC Hotel comparison" },
@@ -49778,7 +49778,7 @@ export const article405: Article = {
     },
     {
       type: "related",
-      heading: "📎 Internal Links",
+      heading: "📎 Explore More",
       items: [
         { href: "/hotels-in-murree-pakistan", label: "Full Murree hotel guide" },
         { href: "/murree-guest-house-vs-villa", label: "Guesthouse comparison" },
@@ -49872,7 +49872,7 @@ export const article406: Article = {
 
     {
       type: "related",
-      heading: "📎 Internal Links",
+      heading: "📎 Explore More",
       items: [
         { href: "/pakistan-wedding-planners-venue-guide", label: "Complete wedding venue guide" },
         { href: "/event-venue-bhurban", label: "Event venue overview" },
@@ -49955,7 +49955,7 @@ export const article407: Article = {
 
     {
       type: "related",
-      heading: "📎 Internal Links",
+      heading: "📎 Explore More",
       items: [
         { href: "/honeymoon-pakistan-mountain-guide", label: "Mountain honeymoon guide" },
         { href: "/presidential-suite-bhurban", label: "Presidential Suite details" },
@@ -50043,7 +50043,7 @@ export const article408: Article = {
 
     {
       type: "related",
-      heading: "📎 Internal Links",
+      heading: "📎 Explore More",
       items: [
         { href: "/startup-founder-retreat-pakistan", label: "Founder retreat guide" },
         { href: "/corporate-retreat-near-islamabad", label: "Corporate retreat guide" },
@@ -50122,7 +50122,7 @@ export const article409: Article = {
 
     {
       type: "related",
-      heading: "📎 Internal Links",
+      heading: "📎 Explore More",
       items: [
         { href: "/altitude-training-pakistan-guide", label: "Altitude training guide" },
         { href: "/sports-recovery-bhurban", label: "Sports recovery guide" },
@@ -50206,7 +50206,7 @@ export const article410: Article = {
 
     {
       type: "related",
-      heading: "📎 Internal Links",
+      heading: "📎 Explore More",
       items: [
         { href: "/mental-health-professional-retreat-pakistan", label: "Therapist retreat guide" },
         { href: "/wellness-retreat-bhurban", label: "Wellness retreat overview" },
@@ -50290,7 +50290,7 @@ export const article411: Article = {
 
     {
       type: "related",
-      heading: "📎 Internal Links",
+      heading: "📎 Explore More",
       items: [
         { href: "/social-enterprise-retreat-pakistan", label: "Social enterprise retreat guide" },
         { href: "/corporate-retreat-near-islamabad", label: "Corporate retreat guide" },
@@ -50374,7 +50374,7 @@ export const article412: Article = {
 
     {
       type: "related",
-      heading: "📎 Internal Links",
+      heading: "📎 Explore More",
       items: [
         { href: "/medical-recovery-bhurban-guide", label: "Recovery stay guide" },
         { href: "/post-surgical-care-pakistan", label: "Post-surgical care guide" },
@@ -50458,7 +50458,7 @@ export const article413: Article = {
 
     {
       type: "related",
-      heading: "📎 Internal Links",
+      heading: "📎 Explore More",
       items: [
         { href: "/journalist-writing-retreat-pakistan", label: "Journalist retreat guide" },
         { href: "/writing-retreat-bhurban", label: "Writing retreat overview" },
@@ -50537,7 +50537,7 @@ export const article414: Article = {
 
     {
       type: "related",
-      heading: "📎 Internal Links",
+      heading: "📎 Explore More",
       items: [
         { href: "/islamic-spiritual-retreat-pakistan", label: "Islamic retreat guide" },
         { href: "/khalwa-mountain-guide", label: "Khalwa guide" },
@@ -50625,7 +50625,7 @@ export const article415: Article = {
 
     {
       type: "related",
-      heading: "📎 Internal Links",
+      heading: "📎 Explore More",
       items: [
         { href: "/mountain-tourism-entrepreneurship-pakistan", label: "Tourism entrepreneurship guide" },
         { href: "/galyat-investment-opportunity", label: "Galyat investment guide" },
@@ -50784,7 +50784,7 @@ export const article416: Article = {
     },
     {
       type: "related",
-      heading: "📎 Internal Links",
+      heading: "📎 Explore More",
       items: [
         { href: "/murree-snowfall-guide", label: "Snowfall complete guide" },
         { href: "/murree-temperature-guide", label: "Temperature guide" },
@@ -50923,7 +50923,7 @@ export const article417: Article = {
     },
     {
       type: "related",
-      heading: "📎 Internal Links",
+      heading: "📎 Explore More",
       items: [
         { href: "/bhurban-october-activities", label: "October activity guide" },
         { href: "/murree-temperature-guide", label: "Temperature guide" },
@@ -51040,7 +51040,7 @@ export const article419: Article = {
     },
     {
       type: "related",
-      heading: "📎 Internal Links",
+      heading: "📎 Explore More",
       items: [
         { href: "/murree-temperature-guide", label: "Temperature guide" },
         { href: "/bhurban-summer-activities", label: "Summer activity guide" },
@@ -51135,7 +51135,7 @@ export const article422: Article = {
     },
     {
       type: "related",
-      heading: "📎 Internal Links",
+      heading: "📎 Explore More",
       items: [
         { href: "/bhurban-for-lahore-families", label: "Lahore family guide" },
         { href: "/bhurban-distance-from-major-cities", label: "Full distance guide" },
@@ -51258,7 +51258,7 @@ export const article423: Article = {
     },
     {
       type: "related",
-      heading: "📎 Internal Links",
+      heading: "📎 Explore More",
       items: [
         { href: "/murree-bhurban-complete-guide", label: "Full destination guide" },
         { href: "/bhurban-murree-local-tips", label: "Insider tips" },
@@ -51390,7 +51390,7 @@ export const article425: Article = {
     },
     {
       type: "related",
-      heading: "📎 Internal Links",
+      heading: "📎 Explore More",
       items: [
         { href: "/honeymoon-package-bhurban-murree", label: "Honeymoon guide" },
         { href: "/anniversary-villa-bhurban", label: "Anniversary guide" },
@@ -51486,7 +51486,7 @@ export const article426: Article = {
 
     {
       type: "related",
-      heading: "📎 Internal Links",
+      heading: "📎 Explore More",
       items: [
         { href: "/pakistan-fashion-designer-retreat", label: "Designer retreat guide" },
         { href: "/luxury-villa-bhurban-murree", label: "Estate overview" },
@@ -51570,7 +51570,7 @@ export const article427: Article = {
 
     {
       type: "related",
-      heading: "📎 Internal Links",
+      heading: "📎 Explore More",
       items: [
         { href: "/pakistan-edtech-product-sprint", label: "EdTech product sprint guide" },
         { href: "/corporate-retreat-near-islamabad", label: "Corporate retreat guide" },
@@ -51649,7 +51649,7 @@ export const article428: Article = {
 
     {
       type: "related",
-      heading: "📎 Internal Links",
+      heading: "📎 Explore More",
       items: [
         { href: "/gcc-pakistani-summer-guide", label: "Summer return guide" },
         { href: "/family-villa-bhurban-murree", label: "Family villa options" },
@@ -51725,7 +51725,7 @@ export const article429: Article = {
 
     {
       type: "related",
-      heading: "📎 Internal Links",
+      heading: "📎 Explore More",
       items: [
         { href: "/womens-leadership-retreat-pakistan", label: "Women's leadership retreat guide" },
         { href: "/corporate-retreat-near-islamabad", label: "Corporate retreat guide" },
@@ -51800,7 +51800,7 @@ export const article430: Article = {
 
     {
       type: "related",
-      heading: "📎 Internal Links",
+      heading: "📎 Explore More",
       items: [
         { href: "/agribusiness-retreat-pakistan", label: "Agri-business retreat guide" },
         { href: "/corporate-retreat-near-islamabad", label: "Corporate retreat guide" },
@@ -51876,7 +51876,7 @@ export const article431: Article = {
 
     {
       type: "related",
-      heading: "📎 Internal Links",
+      heading: "📎 Explore More",
       items: [
         { href: "/logistics-leadership-retreat", label: "Logistics leadership retreat guide" },
         { href: "/corporate-retreat-near-islamabad", label: "Corporate retreat guide" },
@@ -51964,7 +51964,7 @@ export const article432: Article = {
 
     {
       type: "related",
-      heading: "📎 Internal Links",
+      heading: "📎 Explore More",
       items: [
         { href: "/creative-writing-retreat-bhurban", label: "Writing retreat guide" },
         { href: "/bhurban-solo-travel-guide", label: "Solo travel guide" },
@@ -52033,7 +52033,7 @@ export const article433: Article = {
 
     {
       type: "related",
-      heading: "📎 Internal Links",
+      heading: "📎 Explore More",
       items: [
         { href: "/pakistan-china-business-retreat", label: "Pakistan-China business guide" },
         { href: "/corporate-retreat-near-islamabad", label: "Corporate retreat guide" },
@@ -52108,7 +52108,7 @@ export const article434: Article = {
 
     {
       type: "related",
-      heading: "📎 Internal Links",
+      heading: "📎 Explore More",
       items: [
         { href: "/music-composition-retreat-pakistan", label: "Music composition retreat guide" },
         { href: "/performing-arts-retreat-bhurban", label: "Performing arts guide" },
@@ -52178,7 +52178,7 @@ export const article435: Article = {
 
     {
       type: "related",
-      heading: "📎 Internal Links",
+      heading: "📎 Explore More",
       items: [
         { href: "/pakistan-international-visitor-guide", label: "International visitor guide" },
         { href: "/bhurban-murree-complete-guide", label: "Complete Bhurban guide" },
@@ -52282,7 +52282,7 @@ export const article441: Article = {
 
     {
       type: "related",
-      heading: "📎 Internal Links",
+      heading: "📎 Explore More",
       items: [
         { href: "/bhurban-for-lahore-families", label: "Lahore family guide" },
         { href: "/bhurban-distance-from-major-cities", label: "Distance guide" },
@@ -52381,7 +52381,7 @@ export const article444: Article = {
 
     {
       type: "related",
-      heading: "📎 Internal Links",
+      heading: "📎 Explore More",
       items: [
         { href: "/murree-bhurban-complete-guide", label: "Full destination guide" },
         { href: "/bhurban-distance-from-major-cities", label: "Distance from ISB Airport" },
@@ -52472,7 +52472,7 @@ export const article445: Article = {
 
     {
       type: "related",
-      heading: "📎 Internal Links",
+      heading: "📎 Explore More",
       items: [
         { href: "/bhurban-photography-guide", label: "Full photography guide" },
         { href: "/bhurban-october-activities", label: "October conditions" },
@@ -52554,7 +52554,7 @@ export const article446: Article = {
 
     {
       type: "related",
-      heading: "📎 Internal Links",
+      heading: "📎 Explore More",
       items: [
         { href: "/pakistan-fintech-leadership-retreat", label: "Fintech leadership retreat" },
         { href: "/corporate-retreat-near-islamabad", label: "Corporate retreat guide" },
@@ -52633,7 +52633,7 @@ export const article447: Article = {
 
     {
       type: "related",
-      heading: "📎 Internal Links",
+      heading: "📎 Explore More",
       items: [
         { href: "/corporate-retreat-near-islamabad", label: "Corporate retreat guide" },
         { href: "/healthcare-leadership-retreat", label: "Healthcare leadership guide" },
@@ -52712,7 +52712,7 @@ export const article448: Article = {
 
     {
       type: "related",
-      heading: "📎 Internal Links",
+      heading: "📎 Explore More",
       items: [
         { href: "/women-in-tech-retreat-pakistan", label: "Women in tech guide" },
         { href: "/corporate-retreat-near-islamabad", label: "Corporate retreat guide" },
@@ -52782,7 +52782,7 @@ export const article449: Article = {
 
     {
       type: "related",
-      heading: "📎 Internal Links",
+      heading: "📎 Explore More",
       items: [
         { href: "/corporate-retreat-near-islamabad", label: "Corporate retreat guide" },
         { href: "/engineering-team-retreat", label: "Engineering team guide" },
@@ -52858,7 +52858,7 @@ export const article450: Article = {
 
     {
       type: "related",
-      heading: "📎 Internal Links",
+      heading: "📎 Explore More",
       items: [
         { href: "/real-estate-leadership-retreat", label: "Real estate leadership guide" },
         { href: "/corporate-retreat-near-islamabad", label: "Corporate retreat guide" },
@@ -52933,7 +52933,7 @@ export const article451: Article = {
 
     {
       type: "related",
-      heading: "📎 Internal Links",
+      heading: "📎 Explore More",
       items: [
         { href: "/consumer-internet-product-retreat", label: "Consumer internet guide" },
         { href: "/corporate-retreat-near-islamabad", label: "Corporate retreat guide" },
@@ -52993,7 +52993,7 @@ heroTagline:
 
     {
       type: "related",
-      heading: "📎 Internal Links",
+      heading: "📎 Explore More",
       items: [
         { href: "/international-development-retreat", label: "Development community guide" },
         { href: "/corporate-retreat-near-islamabad", label: "Corporate retreat guide" },
@@ -53069,7 +53069,7 @@ export const article453: Article = {
 
     {
       type: "related",
-      heading: "📎 Internal Links",
+      heading: "📎 Explore More",
       items: [
         { href: "/education-leadership-retreat", label: "Education leadership guide" },
         { href: "/corporate-retreat-near-islamabad", label: "Corporate retreat guide" },
@@ -53130,7 +53130,7 @@ export const article454: Article = {
 
     {
       type: "related",
-      heading: "📎 Internal Links",
+      heading: "📎 Explore More",
       items: [
         { href: "/defence-community-transition-retreat", label: "Defence community guide" },
         { href: "/corporate-retreat-near-islamabad", label: "Corporate retreat guide" },
@@ -53206,7 +53206,7 @@ export const article455: Article = {
 
     {
       type: "related",
-      heading: "📎 Internal Links",
+      heading: "📎 Explore More",
       items: [
         { href: "/research-scientist-retreat-pakistan", label: "Research scientist guide" },
         { href: "/solo-writing-retreat-bhurban", label: "Solo researcher retreat" },
@@ -53348,7 +53348,7 @@ export const article464: Article = {
 
     {
       type: "related",
-      heading: "📎 Internal Links",
+      heading: "📎 Explore More",
       items: [
         { href: "/booking-villa-bhurban-faq", label: "Full booking guide" },
         { href: "/bhurban-accommodation-guide", label: "Accommodation comparison" },
@@ -53434,7 +53434,7 @@ export const article466: Article = {
 
     {
       type: "related",
-      heading: "📎 Internal Links",
+      heading: "📎 Explore More",
       items: [
         { href: "/bhurban-architecture-design-reference", label: "Architecture and design guide" },
         { href: "/corporate-retreat-near-islamabad", label: "Corporate retreat guide" },
@@ -53509,7 +53509,7 @@ export const article467: Article = {
 
     {
       type: "related",
-      heading: "📎 Internal Links",
+      heading: "📎 Explore More",
       items: [
         { href: "/startup-founder-retreat-pakistan", label: "Founder retreat guide" },
         { href: "/corporate-retreat-near-islamabad", label: "Corporate retreat guide" },
@@ -53578,7 +53578,7 @@ export const article468: Article = {
 
     {
       type: "related",
-      heading: "📎 Internal Links",
+      heading: "📎 Explore More",
       items: [
         { href: "/bhurban-millennial-travel-guide", label: "Millennial travel guide" },
         { href: "/bhurban-murree-family-guide", label: "Family guide" },
@@ -53653,7 +53653,7 @@ export const article469: Article = {
 
     {
       type: "related",
-      heading: "📎 Internal Links",
+      heading: "📎 Explore More",
       items: [
         { href: "/bhurban-young-professionals-guide", label: "Young professionals guide" },
         { href: "/bhurban-group-travel-guide", label: "Group travel guide" },
@@ -53728,7 +53728,7 @@ export const article470: Article = {
 
     {
       type: "related",
-      heading: "📎 Internal Links",
+      heading: "📎 Explore More",
       items: [
         { href: "/bhurban-hiking-trails", label: "Full hiking guide" },
         { href: "/galyat-trail-running-guide", label: "Galyat trail running guide" },
@@ -53797,7 +53797,7 @@ export const article471: Article = {
 
     {
       type: "related",
-      heading: "📎 Internal Links",
+      heading: "📎 Explore More",
       items: [
         { href: "/bhurban-artist-residency-guide", label: "Artist residency guide" },
         { href: "/creative-retreat-bhurban", label: "Creative retreat overview" },
@@ -53866,7 +53866,7 @@ export const article472: Article = {
 
     {
       type: "related",
-      heading: "📎 Internal Links",
+      heading: "📎 Explore More",
       items: [
         { href: "/ngo-leadership-retreat-pakistan", label: "NGO leadership guide" },
         { href: "/corporate-retreat-near-islamabad", label: "Corporate retreat guide" },
@@ -53935,7 +53935,7 @@ export const article473: Article = {
 
     {
       type: "related",
-      heading: "📎 Internal Links",
+      heading: "📎 Explore More",
       items: [
         { href: "/policy-research-retreat-pakistan", label: "Policy research guide" },
         { href: "/academic-writing-retreat-bhurban", label: "Academic writing retreat" },
@@ -54004,7 +54004,7 @@ export const article474: Article = {
 
     {
       type: "related",
-      heading: "📎 Internal Links",
+      heading: "📎 Explore More",
       items: [
         { href: "/corporate-retreat-near-islamabad", label: "Corporate retreat guide" },
         { href: "/finance-sector-retreat-bhurban", label: "Finance sector guide" },
@@ -54088,7 +54088,7 @@ export const article475: Article = {
 
     {
       type: "related",
-      heading: "📎 Internal Links",
+      heading: "📎 Explore More",
       items: [
         { href: "/galyat-trail-running-guide", label: "Galyat trail running guide" },
         { href: "/bhurban-hiking-trails", label: "Full hiking guide" },
@@ -54220,7 +54220,7 @@ export const article476: Article = {
     },
     {
       type: "related",
-      heading: "📎 Internal Links",
+      heading: "📎 Explore More",
       items: [
         { href: "/nathia-gali-resort-guide", label: "Nathia Gali guide" },
         { href: "/bhurban-galyat-comparison", label: "Full Galyat comparison" },
@@ -54344,7 +54344,7 @@ export const article477: Article = {
     },
     {
       type: "related",
-      heading: "📎 Internal Links",
+      heading: "📎 Explore More",
       items: [
         { href: "/bhurban-distance-from-major-cities", label: "Distance guide" },
         { href: "/bhurban-summer-activities", label: "Summer activities" },
@@ -54467,7 +54467,7 @@ export const article478: Article = {
     },
     {
       type: "related",
-      heading: "📎 Internal Links",
+      heading: "📎 Explore More",
       items: [
         { href: "/hotels-in-murree-pakistan", label: "Full Murree hotel guide" },
         { href: "/5-star-hotels-murree-pakistan", label: "5-star guide" },
@@ -54565,7 +54565,7 @@ export const article479: Article = {
     },
     {
       type: "related",
-      heading: "📎 Internal Links",
+      heading: "📎 Explore More",
       items: [
         { href: "/extended-family-reunion-bhurban", label: "Large gatherings" },
         { href: "/bhurban-nikah-package", label: "Nikah celebration" },
@@ -54673,7 +54673,7 @@ export const article480: Article = {
     },
     {
       type: "related",
-      heading: "📎 Internal Links",
+      heading: "📎 Explore More",
       items: [
         { href: "/bhurban-murree-local-tips", label: "Insider tips" },
         { href: "/bhurban-insider-guide-2026", label: "Fire timing guide" },
@@ -54755,7 +54755,7 @@ export const article486: Article = {
 
     {
       type: "related",
-      heading: "📎 Internal Links",
+      heading: "📎 Explore More",
       items: [
         { href: "/corporate-governance-retreat", label: "Corporate governance guide" },
         { href: "/board-strategy-retreat-pakistan", label: "Board strategy retreat" },
@@ -54831,7 +54831,7 @@ export const article487: Article = {
 
     {
       type: "related",
-      heading: "📎 Internal Links",
+      heading: "📎 Explore More",
       items: [
         { href: "/technology-infrastructure-retreat", label: "Tech infrastructure guide" },
         { href: "/post-incident-team-recovery", label: "Post-incident recovery" },
@@ -54901,7 +54901,7 @@ export const article488: Article = {
 
     {
       type: "related",
-      heading: "📎 Internal Links",
+      heading: "📎 Explore More",
       items: [
         { href: "/full-estate-buyout-bhurban", label: "Full estate buyout guide" },
         { href: "/luxury-family-villa-bhurban", label: "Luxury family villa" },
@@ -54971,7 +54971,7 @@ export const article489: Article = {
 
     {
       type: "related",
-      heading: "📎 Internal Links",
+      heading: "📎 Explore More",
       items: [
         { href: "/knowledge-worker-retreat", label: "Knowledge worker guide" },
         { href: "/cognitive-bandwidth-restoration", label: "Cognitive restoration" },
@@ -55060,7 +55060,7 @@ export const article490: Article = {
 
     {
       type: "related",
-      heading: "📎 Internal Links",
+      heading: "📎 Explore More",
       items: [
         { href: "/galyat-tourism-pakistan-guide", label: "Galyat tourism guide" },
         { href: "/pakistan-mountain-economy", label: "Mountain economy essay" },
@@ -55136,7 +55136,7 @@ export const article491: Article = {
 
     {
       type: "related",
-      heading: "📎 Internal Links",
+      heading: "📎 Explore More",
       items: [
         { href: "/digital-nomad-bhurban-guide", label: "Digital nomad guide" },
         { href: "/remote-work-from-bhurban", label: "Remote work guide" },
@@ -55206,7 +55206,7 @@ export const article492: Article = {
 
     {
       type: "related",
-      heading: "📎 Internal Links",
+      heading: "📎 Explore More",
       items: [
         { href: "/alumni-reunion-bhurban-guide", label: "Alumni reunion guide" },
         { href: "/large-group-reunion-bhurban", label: "Large group reunion" },
@@ -55276,7 +55276,7 @@ export const article493: Article = {
 
     {
       type: "related",
-      heading: "📎 Internal Links",
+      heading: "📎 Explore More",
       items: [
         { href: "/extended-family-reunion-bhurban", label: "Extended family reunion" },
         { href: "/multi-generational-family-bhurban", label: "Multi-generational stay" },
@@ -55346,7 +55346,7 @@ export const article494: Article = {
 
     {
       type: "related",
-      heading: "📎 Internal Links",
+      heading: "📎 Explore More",
       items: [
         { href: "/family-villa-bhurban-murree", label: "Family villa guide" },
         { href: "/children-activities-bhurban", label: "Children's activities" },
@@ -55430,7 +55430,7 @@ export const article495: Article = {
 
     {
       type: "related",
-      heading: "📎 Internal Links",
+      heading: "📎 Explore More",
       items: [
         { href: "/pakistan-mountain-at-its-best-bhurban", label: "Volume 1 capstone" },
         { href: "/letter-to-cedar-forest-bhurban", label: "Letter to the cedar forest" },
@@ -55561,7 +55561,7 @@ export const article497: Article = {
     },
     {
       type: "related",
-      heading: "📎 Internal Links",
+      heading: "📎 Explore More",
       items: [
         { href: "/hotels-in-murree-pakistan", label: "Full Murree hotel guide" },
         { href: "/movenpick-murree-alternative", label: "Mövenpick comparison" },
@@ -55735,7 +55735,7 @@ export const article498: Article = {
     },
     {
       type: "related",
-      heading: "📎 Internal Links",
+      heading: "📎 Explore More",
       items: [
         { href: "/bhurban-accommodation-guide", label: "Full accommodation guide" },
         { href: "/booking-villa-bhurban-faq", label: "Villa booking FAQ" },
@@ -55879,7 +55879,7 @@ export const article499: Article = {
     },
     {
       type: "related",
-      heading: "📎 Internal Links",
+      heading: "📎 Explore More",
       items: [
         { href: "/bhurban-private-estate-vs-pc-hotel", label: "Full PC Hotel vs HV comparison" },
         { href: "/5-star-hotels-murree-pakistan", label: "5-star guide" },
@@ -55973,7 +55973,7 @@ export const article502: Article = {
     },
     {
       type: "related",
-      heading: "📎 Internal Links",
+      heading: "📎 Explore More",
       items: [
         { href: "/hotels-in-murree-pakistan", label: "Full Murree hotel guide" },
         { href: "/movenpick-murree-alternative", label: "Mövenpick comparison" },
@@ -56175,7 +56175,7 @@ export const article503: Article = {
     },
     {
       type: "related",
-      heading: "📎 Internal Links",
+      heading: "📎 Explore More",
       items: [
         { href: "/hotels-in-murree-pakistan", label: "Full hotel guide" },
         { href: "/murree-hotel-booking-guide", label: "Booking hub" },
@@ -56307,7 +56307,7 @@ export const article504: Article = {
     },
     {
       type: "related",
-      heading: "📎 Internal Links",
+      heading: "📎 Explore More",
       items: [
         { href: "/murree-bhurban-complete-guide", label: "Complete destination guide" },
         { href: "/hotels-in-murree-pakistan", label: "Full hotel guide" },
@@ -56446,7 +56446,7 @@ export const article505: Article = {
     },
     {
       type: "related",
-      heading: "📎 Internal Links",
+      heading: "📎 Explore More",
       items: [
         { href: "/murree-temperature-guide", label: "Full temperature guide" },
         { href: "/murree-snowfall-guide", label: "Snowfall guide" },
@@ -56602,7 +56602,7 @@ export const article506: Article = {
     },
     {
       type: "related",
-      heading: "📎 Internal Links",
+      heading: "📎 Explore More",
       items: [
         { href: "/bhurban-private-estate-vs-pc-hotel", label: "PC Hotel full comparison" },
         { href: "/hotels-in-bhurban-murree", label: "Full Bhurban hotel guide" },
@@ -56719,7 +56719,7 @@ export const article507: Article = {
     },
     {
       type: "related",
-      heading: "📎 Internal Links",
+      heading: "📎 Explore More",
       items: [
         { href: "/chinar-club-bhurban-guide", label: "Full Chinar Club guide" },
         { href: "/bhurban-accommodation-guide", label: "Full Bhurban accommodation guide" },
@@ -56868,7 +56868,7 @@ export const article508: Article = {
     },
     {
       type: "related",
-      heading: "📎 Internal Links",
+      heading: "📎 Explore More",
       items: [
         { href: "/bhurban-accommodation-guide", label: "Full Bhurban accommodation guide" },
         { href: "/hotels-in-bhurban-murree", label: "All Bhurban hotels" },
@@ -56984,7 +56984,7 @@ export const article509: Article = {
     },
     {
       type: "related",
-      heading: "📎 Internal Links",
+      heading: "📎 Explore More",
       items: [
         { href: "/bhurban-private-estate-vs-pc-hotel", label: "Full PC Hotel vs HV comparison" },
         { href: "/in-villa-dining-bhurban", label: "In-villa dining guide" },
@@ -57128,7 +57128,7 @@ export const article510: Article = {
     },
     {
       type: "related",
-      heading: "📎 Internal Links",
+      heading: "📎 Explore More",
       items: [
         { href: "/bhurban-accommodation-guide", label: "Full accommodation guide" },
         { href: "/cheap-hotels-murree-guide", label: "Budget accommodation" },
@@ -57225,7 +57225,7 @@ export const article512: Article = {
     },
     {
       type: "related",
-      heading: "📎 Internal Links",
+      heading: "📎 Explore More",
       items: [
         { href: "/bhurban-accommodation-guide", label: "Full accommodation guide" },
         { href: "/hotels-in-bhurban-murree", label: "All Bhurban hotels" },
@@ -57353,7 +57353,7 @@ export const article513: Article = {
     },
     {
       type: "related",
-      heading: "📎 Internal Links",
+      heading: "📎 Explore More",
       items: [
         { href: "/islamabad-to-bhurban-guide", label: "Getting there" },
         { href: "/murree-bhurban-itinerary", label: "2/3 day itinerary" },
@@ -57471,7 +57471,7 @@ export const article514: Article = {
     },
     {
       type: "related",
-      heading: "📎 Internal Links",
+      heading: "📎 Explore More",
       items: [
         { href: "/murree-bhurban-trip-cost", label: "Full trip cost breakdown" },
         { href: "/murree-hotel-booking-guide", label: "Booking guide" },
@@ -57574,7 +57574,7 @@ export const article515: Article = {
     },
     {
       type: "related",
-      heading: "📎 Internal Links",
+      heading: "📎 Explore More",
       items: [
         { href: "/chinar-club-bhurban-guide", label: "Chinar Club full guide" },
         { href: "/bhurban-private-estate-vs-pc-hotel", label: "PC Hotel comparison" },
@@ -57767,7 +57767,7 @@ export const article516: Article = {
     },
     {
       type: "related",
-      heading: "📎 Internal Links",
+      heading: "📎 Explore More",
       items: [
         { href: "/murree-temperature-guide", label: "Month-by-month temperature guide" },
         { href: "/murree-snowfall-guide", label: "Snowfall planning guide" },
@@ -57884,7 +57884,7 @@ export const article517: Article = {
     },
     {
       type: "related",
-      heading: "📎 Internal Links",
+      heading: "📎 Explore More",
       items: [
         { href: "/murree-weather-guide", label: "Full weather guide" },
         { href: "/murree-snowfall-guide", label: "Snowfall guide" },
@@ -58008,7 +58008,7 @@ export const article518: Article = {
     },
     {
       type: "related",
-      heading: "📎 Internal Links",
+      heading: "📎 Explore More",
       items: [
         { href: "/murree-weather-guide", label: "Full weather reference" },
         { href: "/murree-snowfall-guide", label: "Snowfall probability guide" },
@@ -58163,7 +58163,7 @@ export const article519: Article = {
     },
     {
       type: "related",
-      heading: "📎 Internal Links",
+      heading: "📎 Explore More",
       items: [
         { href: "/murree-weather-guide", label: "Full weather guide" },
         { href: "/murree-snowfall-guide", label: "Complete snowfall guide" },
@@ -58324,7 +58324,7 @@ export const article522: Article = {
     },
     {
       type: "related",
-      heading: "📎 Internal Links",
+      heading: "📎 Explore More",
       items: [
         { href: "/kashmir-point-murree-guide", label: "Kashmir Point guide" },
         { href: "/murree-mall-road-guide", label: "Mall Road guide" },
@@ -58474,7 +58474,7 @@ export const article524: Article = {
     },
     {
       type: "related",
-      heading: "📎 Internal Links",
+      heading: "📎 Explore More",
       items: [
         { href: "/murree-hill-station-guide", label: "Murree complete guide" },
         { href: "/bhurban-accommodation-guide", label: "Bhurban accommodation" },
@@ -58633,7 +58633,7 @@ export const article525: Article = {
     },
     {
       type: "related",
-      heading: "📎 Internal Links",
+      heading: "📎 Explore More",
       items: [
         { href: "/murree-hill-station-guide", label: "Hill station history and geography" },
         { href: "/murree-tourist-places-guide", label: "All tourist attractions" },
@@ -58747,7 +58747,7 @@ export const article526: Article = {
     },
     {
       type: "related",
-      heading: "📎 Internal Links",
+      heading: "📎 Explore More",
       items: [
         { href: "/murree-weather-guide", label: "Full weather guide" },
         { href: "/murree-weather-forecast", label: "10-day forecast guide" },
@@ -58894,7 +58894,7 @@ export const article527: Article = {
     },
     {
       type: "related",
-      heading: "📎 Internal Links",
+      heading: "📎 Explore More",
       items: [
         { href: "/hotels-in-murree-pakistan", label: "Full Murree hotel guide" },
         { href: "/murree-hotel-booking-guide", label: "Booking guide" },
@@ -59000,7 +59000,7 @@ export const article528: Article = {
     },
     {
       type: "related",
-      heading: "📎 Internal Links",
+      heading: "📎 Explore More",
       items: [
         { href: "/murree-weather-guide", label: "Full weather reference" },
         { href: "/murree-weather-today", label: "Today's conditions" },
@@ -59149,7 +59149,7 @@ export const article530: Article = {
     },
     {
       type: "related",
-      heading: "📎 Internal Links",
+      heading: "📎 Explore More",
       items: [
         { href: "/bhurban-for-lahore-families", label: "Long-drive planning" },
         { href: "/murree-bhurban-complete-guide", label: "Full destination guide" },
@@ -59275,7 +59275,7 @@ export const article532: Article = {
     },
     {
       type: "related",
-      heading: "📎 Internal Links",
+      heading: "📎 Explore More",
       items: [
         { href: "/bhurban-for-lahore-families", label: "Lahore visitor guide" },
         { href: "/bhurban-distance-from-major-cities", label: "Distance guide" },
@@ -59417,7 +59417,7 @@ export const article533: Article = {
     },
     {
       type: "related",
-      heading: "📎 Internal Links",
+      heading: "📎 Explore More",
       items: [
         { href: "/things-to-do-in-murree", label: "Full activity guide" },
         { href: "/murree-tourist-places-guide", label: "All Murree attractions" },
@@ -59527,7 +59527,7 @@ export const article534: Article = {
     },
     {
       type: "related",
-      heading: "📎 Internal Links",
+      heading: "📎 Explore More",
       items: [
         { href: "/bhurban-birdwatching-guide", label: "Forest wildlife guide" },
         { href: "/bhurban-photography-guide", label: "Forest photography guide" },
@@ -59660,7 +59660,7 @@ export const article536: Article = {
 
     {
       type: "related",
-      heading: "📎 Internal Links",
+      heading: "📎 Explore More",
       items: [
         { href: "/hotels-in-murree-pakistan", label: "Full Murree hotel guide" },
         { href: "/murree-mall-road-hotels-guide", label: "Mall Road hotel guide" },
@@ -59796,7 +59796,7 @@ export const article537: Article = {
 
     {
       type: "related",
-      heading: "📎 Internal Links",
+      heading: "📎 Explore More",
       items: [
         { href: "/nathia-gali-resort-guide", label: "Nathia Gali complete guide" },
         { href: "/bhurban-vs-naran-kaghan", label: "Area comparison" },
@@ -59916,7 +59916,7 @@ export const article543: Article = {
 
     {
       type: "related",
-      heading: "📎 Internal Links",
+      heading: "📎 Explore More",
       items: [
         { href: "/islamabad-to-bhurban-guide", label: "Getting to Bhurban" },
         { href: "/bhurban-accommodation-guide", label: "Full accommodation guide" },
@@ -60069,7 +60069,7 @@ export const article546: Article = {
 
     {
       type: "related",
-      heading: "📎 Internal Links",
+      heading: "📎 Explore More",
       items: [
         { href: "/hotels-in-murree-pakistan", label: "Full Murree hotel guide" },
         { href: "/bhurban-private-estate-vs-pc-hotel", label: "PC Hotel comparison" },
@@ -60196,7 +60196,7 @@ export const article547: Article = {
 
     {
       type: "related",
-      heading: "📎 Internal Links",
+      heading: "📎 Explore More",
       items: [
         { href: "/ramada-murree-guide", label: "Ramada comparison" },
         { href: "/hotels-in-murree-pakistan", label: "Full Murree hotels guide" },
@@ -60311,7 +60311,7 @@ export const article548: Article = {
 
     {
       type: "related",
-      heading: "📎 Internal Links",
+      heading: "📎 Explore More",
       items: [
         { href: "/murree-mall-road-hotels-guide", label: "Full Mall Road hotels guide" },
         { href: "/bhurban-vs-murree-mall-road", label: "Location comparison" },
@@ -60441,7 +60441,7 @@ export const article549: Article = {
 
     {
       type: "related",
-      heading: "📎 Internal Links",
+      heading: "📎 Explore More",
       items: [
         { href: "/ramada-murree-guide", label: "Ramada guide" },
         { href: "/hotels-in-murree-pakistan", label: "All Murree hotels" },
@@ -60602,7 +60602,7 @@ export const article550: Article = {
 
     {
       type: "related",
-      heading: "📎 Internal Links",
+      heading: "📎 Explore More",
       items: [
         { href: "/murree-weather-guide", label: "Full weather guide" },
         { href: "/murree-snowfall-guide", label: "Snowfall probability" },
@@ -60744,7 +60744,7 @@ export const article551: Article = {
 
     {
       type: "related",
-      heading: "📎 Internal Links",
+      heading: "📎 Explore More",
       items: [
         { href: "/murree-weather-guide", label: "Full Murree weather guide" },
         { href: "/ayubia-national-park-guide", label: "Pipeline Track guide" },
@@ -60890,7 +60890,7 @@ export const article552: Article = {
 
     {
       type: "related",
-      heading: "📎 Internal Links",
+      heading: "📎 Explore More",
       items: [
         { href: "/murree-weather-snowfall", label: "Snowfall weather guide" },
         { href: "/murree-temperature-guide", label: "Temperature guide" },
@@ -61009,7 +61009,7 @@ export const article553: Article = {
 
     {
       type: "related",
-      heading: "📎 Internal Links",
+      heading: "📎 Explore More",
       items: [
         { href: "/bhurban-distance-from-major-cities", label: "All city distances" },
         { href: "/murree-bhurban-trip-cost", label: "Full trip cost from Lahore" },
@@ -61128,7 +61128,7 @@ export const article554: Article = {
 
     {
       type: "related",
-      heading: "📎 Internal Links",
+      heading: "📎 Explore More",
       items: [
         { href: "/nathia-gali-weather-guide", label: "Nathia Gali weather" },
         { href: "/bhurban-hiking-trails", label: "All hiking options" },
@@ -61274,7 +61274,7 @@ export const article556: Article = {
     },
     {
       type: "related",
-      heading: "📎 Internal Links",
+      heading: "📎 Explore More",
       items: [
         { href: "/murree-snowfall-guide", label: "Full snowfall guide" },
         { href: "/murree-temperature-guide", label: "Temperature guide" },
@@ -61405,7 +61405,7 @@ export const article557: Article = {
     },
     {
       type: "related",
-      heading: "📎 Internal Links",
+      heading: "📎 Explore More",
       items: [
         { href: "/best-time-to-visit-murree", label: "All seasons guide" },
         { href: "/bhurban-hiking-trails", label: "October hiking" },
@@ -61503,7 +61503,7 @@ export const article558: Article = {
     },
     {
       type: "related",
-      heading: "📎 Internal Links",
+      heading: "📎 Explore More",
       items: [
         { href: "/murree-temperature-guide", label: "Temperature comparison" },
         { href: "/best-time-to-visit-murree", label: "All seasons guide" },
@@ -61589,7 +61589,7 @@ export const article559: Article = {
     },
     {
       type: "related",
-      heading: "📎 Internal Links",
+      heading: "📎 Explore More",
       items: [
         { href: "/best-time-to-visit-murree", label: "All seasons guide" },
         { href: "/ayubia-national-park-guide", label: "Rhododendron hike guide" },
@@ -61753,7 +61753,7 @@ export const article560: Article = {
     },
     {
       type: "related",
-      heading: "📎 Internal Links",
+      heading: "📎 Explore More",
       items: [
         { href: "/bhurban-cedar-pine-forest-guide", label: "Forest ecology guide" },
         { href: "/bhurban-hiking-trails", label: "Wildlife trail guide" },
@@ -61895,7 +61895,7 @@ export const article561: Article = {
     },
     {
       type: "related",
-      heading: "📎 Internal Links",
+      heading: "📎 Explore More",
       items: [
         { href: "/extended-family-reunion-bhurban", label: "Event gatherings" },
         { href: "/eid-holiday-package-bhurban-murree", label: "Eid events" },
@@ -62001,7 +62001,7 @@ export const article562: Article = {
     },
     {
       type: "related",
-      heading: "📎 Internal Links",
+      heading: "📎 Explore More",
       items: [
         { href: "/murree-pakistan-tourism-guide", label: "Full Murree guide" },
         { href: "/bhurban-cedar-pine-forest-guide", label: "Cedar forest ecology" },
@@ -62183,7 +62183,7 @@ export const article566: Article = {
 
     {
       type: "related",
-      heading: "📎 Internal Links",
+      heading: "📎 Explore More",
       items: [
         { href: "/islamabad-to-bhurban-guide", label: "Full Islamabad to Bhurban guide" },
         { href: "/murree-snowfall-guide", label: "Snowfall road conditions" },
@@ -62320,7 +62320,7 @@ export const article572: Article = {
 
     {
       type: "related",
-      heading: "📎 Internal Links",
+      heading: "📎 Explore More",
       items: [
         { href: "/bhurban-villa-pricing-guide", label: "Villa pricing for families" },
         { href: "/murree-bhurban-itinerary", label: "Family itinerary" },
@@ -62469,7 +62469,7 @@ export const article574: Article = {
 
     {
       type: "related",
-      heading: "📎 Internal Links",
+      heading: "📎 Explore More",
       items: [
         { href: "/extended-family-reunion-bhurban", label: "Extended family events" },
         { href: "/eid-holiday-package-bhurban-murree", label: "Eid at the estate" },
@@ -62634,7 +62634,7 @@ export const article576: Article = {
     },
     {
       type: "related",
-      heading: "📎 Internal Links",
+      heading: "📎 Explore More",
       items: [
         { href: "/galyat-ayubia-guide", label: "Galyat complete guide" },
         { href: "/murree-pakistan-tourism-guide", label: "Murree complete guide" },
@@ -62818,7 +62818,7 @@ export const article577: Article = {
     },
     {
       type: "related",
-      heading: "📎 Internal Links",
+      heading: "📎 Explore More",
       items: [
         { href: "/nathia-gali-pakistan-guide", label: "Nathia Gali complete guide" },
         { href: "/best-hotels-nathia-gali", label: "Nathia Gali hotel comparison" },
@@ -62940,7 +62940,7 @@ export const article578: Article = {
     },
     {
       type: "related",
-      heading: "📎 Internal Links",
+      heading: "📎 Explore More",
       items: [
         { href: "/hotels-in-nathia-gali-guide", label: "All Nathia Gali hotels" },
         { href: "/nathia-gali-pakistan-guide", label: "Nathia Gali complete guide" },
@@ -63062,7 +63062,7 @@ export const article579: Article = {
     },
     {
       type: "related",
-      heading: "📎 Internal Links",
+      heading: "📎 Explore More",
       items: [
         { href: "/hotels-in-nathia-gali-guide", label: "All Nathia Gali hotels" },
         { href: "/elites-hotel-nathiagali-guide", label: "Elites Hotel guide" },
@@ -63190,7 +63190,7 @@ export const article580: Article = {
     },
     {
       type: "related",
-      heading: "📎 Internal Links",
+      heading: "📎 Explore More",
       items: [
         { href: "/hotels-in-nathia-gali-guide", label: "All Nathia Gali hotels" },
         { href: "/nathia-gali-pakistan-guide", label: "Nathia Gali complete guide" },
@@ -63334,7 +63334,7 @@ export const article581: Article = {
     },
     {
       type: "related",
-      heading: "📎 Internal Links",
+      heading: "📎 Explore More",
       items: [
         { href: "/murree-snowfall-guide", label: "Full snowfall guide" },
         { href: "/murree-bhurban-in-january", label: "January guide" },
@@ -63434,7 +63434,7 @@ export const article582: Article = {
     },
     {
       type: "related",
-      heading: "📎 Internal Links",
+      heading: "📎 Explore More",
       items: [
         { href: "/galyat-ayubia-guide", label: "Galyat complete guide" },
         { href: "/nathia-gali-pakistan-guide", label: "Nathia Gali authority guide" },
@@ -63528,7 +63528,7 @@ export const article583: Article = {
     },
     {
       type: "related",
-      heading: "📎 Internal Links",
+      heading: "📎 Explore More",
       items: [
         { href: "/hotels-in-nathia-gali-guide", label: "All Nathia Gali hotels" },
         { href: "/nathia-gali-pakistan-guide", label: "Nathia Gali guide" },
@@ -63625,7 +63625,7 @@ export const article584: Article = {
     },
     {
       type: "related",
-      heading: "📎 Internal Links",
+      heading: "📎 Explore More",
       items: [
         { href: "/nathia-gali-things-to-do", label: "Nathia Gali activity guide" },
         { href: "/galyat-ayubia-guide", label: "Galyat guide" },
@@ -63766,7 +63766,7 @@ export const article585: Article = {
     },
     {
       type: "related",
-      heading: "📎 Internal Links",
+      heading: "📎 Explore More",
       items: [
         { href: "/hotels-in-nathia-gali-guide", label: "All Nathia Gali accommodation" },
         { href: "/nathia-gali-pakistan-guide", label: "Nathia Gali complete guide" },
@@ -63930,7 +63930,7 @@ export const article586: Article = {
 
     {
       type: "related",
-      heading: "📎 Internal Links",
+      heading: "📎 Explore More",
       items: [
         { href: "/nathia-gali-pakistan-guide", label: "Nathia Gali guide" },
         { href: "/galyat-ayubia-guide", label: "Galyat complete guide" },
@@ -64087,7 +64087,7 @@ export const article587: Article = {
 
     {
       type: "related",
-      heading: "📎 Internal Links",
+      heading: "📎 Explore More",
       items: [
         { href: "/murree-weather-guide", label: "Full Murree hills weather guide" },
         { href: "/galyat-ayubia-guide", label: "Galyat guide" },
@@ -64227,7 +64227,7 @@ export const article588: Article = {
 
     {
       type: "related",
-      heading: "📎 Internal Links",
+      heading: "📎 Explore More",
       items: [
         { href: "/murree-pakistan-tourism-guide", label: "Murree complete guide" },
         { href: "/nathia-gali-pakistan-guide", label: "Nathia Gali heritage" },
@@ -64372,7 +64372,7 @@ export const article589: Article = {
 
     {
       type: "related",
-      heading: "📎 Internal Links",
+      heading: "📎 Explore More",
       items: [
         { href: "/lahore-to-murree-bhurban-guide", label: "Full route guide" },
         { href: "/murree-bhurban-trip-cost", label: "Cost breakdown" },
@@ -64497,7 +64497,7 @@ export const article590: Article = {
 
     {
       type: "related",
-      heading: "📎 Internal Links",
+      heading: "📎 Explore More",
       items: [
         { href: "/islamabad-to-bhurban-guide", label: "Route guide" },
         { href: "/places-to-visit-near-islamabad", label: "Full near-ISB guide" },
@@ -64626,7 +64626,7 @@ export const article591: Article = {
 
     {
       type: "related",
-      heading: "📎 Internal Links",
+      heading: "📎 Explore More",
       items: [
         { href: "/bhurban-from-karachi", label: "Karachi visitors guide" },
         { href: "/bhurban-for-lahore-families", label: "Lahore guide" },
@@ -64755,7 +64755,7 @@ export const article592: Article = {
 
     {
       type: "related",
-      heading: "📎 Internal Links",
+      heading: "📎 Explore More",
       items: [
         { href: "/honeymoon-package-bhurban-murree", label: "Honeymoon packages" },
         { href: "/bhurban-villa-pricing-guide", label: "Villa pricing" },
@@ -64877,7 +64877,7 @@ export const article593: Article = {
 
     {
       type: "related",
-      heading: "📎 Internal Links",
+      heading: "📎 Explore More",
       items: [
         { href: "/murree-snowfall-guide", label: "Snowfall guide" },
         { href: "/murree-bhurban-in-january", label: "January guide" },
@@ -65001,7 +65001,7 @@ export const article594: Article = {
 
     {
       type: "related",
-      heading: "📎 Internal Links",
+      heading: "📎 Explore More",
       items: [
         { href: "/bhurban-photography-guide", label: "Detailed photography guide" },
         { href: "/bhurban-cedar-pine-forest-guide", label: "Cedar forest guide" },
@@ -65144,7 +65144,7 @@ export const article595: Article = {
 
     {
       type: "related",
-      heading: "📎 Internal Links",
+      heading: "📎 Explore More",
       items: [
         { href: "/bhurban-apartments-guide", label: "Apartment guide" },
         { href: "/bhurban-accommodation-guide", label: "Full accommodation guide" },
@@ -65481,7 +65481,7 @@ export const article596: Article = {
     },
     {
       type: "related",
-      heading: "📎 Internal Links",
+      heading: "📎 Explore More",
       items: [
         { href: "/nathia-gali-pakistan-guide", label: "Nathia Gali complete guide" },
         { href: "/mushkpuri-top-nathia-gali-guide", label: "Mushkpuri hiking guide" },
@@ -65666,7 +65666,7 @@ export const article597: Article = {
     },
     {
       type: "related",
-      heading: "📎 Internal Links",
+      heading: "📎 Explore More",
       items: [
         { href: "/hotels-in-murree-pakistan", label: "All Murree hotels" },
         { href: "/bhurban-accommodation-guide", label: "Bhurban accommodation" },
@@ -65807,7 +65807,7 @@ export const article601: Article = {
     },
     {
       type: "related",
-      heading: "📎 Internal Links",
+      heading: "📎 Explore More",
       items: [
         { href: "/ayubia-national-park-guide", label: "Ayubia National Park complete guide" },
         { href: "/nathia-gali-pakistan-guide", label: "Nathia Gali guide" },
@@ -65966,7 +65966,7 @@ export const article606: Article = {
 
     {
       type: "related",
-      heading: "📎 Internal Links",
+      heading: "📎 Explore More",
       items: [
         { href: "/bhurban-pakistan-guide", label: "Bhurban complete guide" },
         { href: "/patriata-chairlift-bhurban-guide", label: "Other Bhurban activities" },
@@ -66089,7 +66089,7 @@ export const article608: Article = {
 
     {
       type: "related",
-      heading: "📎 Internal Links",
+      heading: "📎 Explore More",
       items: [
         { href: "/bhurban-accommodation-guide", label: "All Bhurban accommodation" },
         { href: "/bhurban-private-estate-vs-pc-hotel", label: "vs PC Hotel" },
@@ -66234,7 +66234,7 @@ export const article610: Article = {
 
     {
       type: "related",
-      heading: "📎 Internal Links",
+      heading: "📎 Explore More",
       items: [
         { href: "/resort-near-islamabad", label: "Resorts near Islamabad" },
         { href: "/islamabad-to-bhurban-guide", label: "Route guide" },
@@ -66388,7 +66388,7 @@ export const article615: Article = {
 
     {
       type: "related",
-      heading: "📎 Internal Links",
+      heading: "📎 Explore More",
       items: [
         { href: "/nathia-gali-pakistan-guide", label: "Nathia Gali complete guide" },
         { href: "/bhurban-murree-pakistan-guide", label: "Bhurban complete guide" },
@@ -66638,7 +66638,7 @@ export const article616: Article = {
     },
     {
       type: "related",
-      heading: "📎 Internal Links",
+      heading: "📎 Explore More",
       items: [
         { href: "/bhurban-private-estate-vs-pc-hotel", label: "Detailed PC Hotel vs Himalaya Villas comparison" },
         { href: "/chinar-golf-club-bhurban-guide", label: "Chinar Golf Club guide" },
@@ -66797,7 +66797,7 @@ export const article617: Article = {
     },
     {
       type: "related",
-      heading: "📎 Internal Links",
+      heading: "📎 Explore More",
       items: [
         { href: "/pc-bhurban-pearl-continental-guide", label: "Full PC Bhurban guide" },
         { href: "/bhurban-private-estate-vs-pc-hotel", label: "Full comparison" },
@@ -66907,7 +66907,7 @@ export const article618: Article = {
     },
     {
       type: "related",
-      heading: "📎 Internal Links",
+      heading: "📎 Explore More",
       items: [
         { href: "/pc-bhurban-pearl-continental-guide", label: "Full PC Bhurban guide" },
         { href: "/chinar-golf-club-bhurban-guide", label: "Chinar Golf Club" },
@@ -67009,7 +67009,7 @@ export const article619: Article = {
     },
     {
       type: "related",
-      heading: "📎 Internal Links",
+      heading: "📎 Explore More",
       items: [
         { href: "/pc-bhurban-pearl-continental-guide", label: "Full PC Bhurban guide" },
         { href: "/pc-bhurban-room-rates-2026", label: "PC Bhurban rates" },
@@ -67181,7 +67181,7 @@ export const article623: Article = {
     },
     {
       type: "related",
-      heading: "📎 Internal Links",
+      heading: "📎 Explore More",
       items: [
         { href: "/bhurban-villa-pricing-guide", label: "Villa pricing" },
         { href: "/villas", label: "Browse all 12 villas" },
@@ -67278,7 +67278,7 @@ export const article624: Article = {
     },
     {
       type: "related",
-      heading: "📎 Internal Links",
+      heading: "📎 Explore More",
       items: [
         { href: "/islamabad-to-bhurban-guide", label: "Route from Islamabad" },
         { href: "/bhurban-distance-from-major-cities", label: "All city distances" },
@@ -67464,7 +67464,7 @@ export const article625: Article = {
     },
     {
       type: "related",
-      heading: "📎 Internal Links",
+      heading: "📎 Explore More",
       items: [
         { href: "/hotels-in-murree-pakistan", label: "Full Murree hotel guide" },
         { href: "/hotels-in-nathia-gali-guide", label: "Nathia Gali hotels" },
@@ -67579,7 +67579,7 @@ export const article626: Article = {
 
     {
       type: "related",
-      heading: "📎 Internal Links",
+      heading: "📎 Explore More",
       items: [
         { href: "/in-villa-dining-bhurban", label: "Himalaya Villas dining guide" },
         { href: "/murree-mall-road-guide", label: "Mall Road experience" },
@@ -67735,7 +67735,7 @@ export const article627: Article = {
 
     {
       type: "related",
-      heading: "📎 Internal Links",
+      heading: "📎 Explore More",
       items: [
         { href: "/murree-tourist-places-guide", label: "All attractions" },
         { href: "/bhurban-hiking-trails", label: "Hiking guide" },
@@ -67891,7 +67891,7 @@ export const article628: Article = {
 
     {
       type: "related",
-      heading: "📎 Internal Links",
+      heading: "📎 Explore More",
       items: [
         { href: "/murree-weather-guide", label: "Full weather authority guide" },
         { href: "/best-time-to-visit-murree", label: "Seasonal guide" },
@@ -68094,7 +68094,7 @@ export const article629: Article = {
 
     {
       type: "related",
-      heading: "📎 Internal Links",
+      heading: "📎 Explore More",
       items: [
         { href: "/about-himalaya-villas-bhurban", label: "About the estate" },
         { href: "/bhurban-villa-pricing-guide", label: "Pricing guide" },
@@ -68265,7 +68265,7 @@ export const article630: Article = {
 
     {
       type: "related",
-      heading: "📎 Internal Links",
+      heading: "📎 Explore More",
       items: [
         { href: "/about-himalaya-villas-bhurban", label: "About the estate" },
         { href: "/villas", label: "Browse all 12 villas" },
@@ -68399,7 +68399,7 @@ export const article631: Article = {
 
     {
       type: "related",
-      heading: "📎 Internal Links",
+      heading: "📎 Explore More",
       items: [
         { href: "/resort-near-islamabad", label: "Resort options near Islamabad" },
         { href: "/islamabad-to-bhurban-guide", label: "Route guide" },
@@ -68468,7 +68468,7 @@ export const article632: Article = {
 
     {
       type: "related",
-      heading: "📎 Internal Links",
+      heading: "📎 Explore More",
       items: [
         { href: "/about-himalaya-villas-bhurban", label: "About the estate" },
         { href: "/bhurban-cedar-estate-guide", label: "Full estate guide" },
@@ -68617,7 +68617,7 @@ export const article633: Article = {
 
     {
       type: "related",
-      heading: "📎 Internal Links",
+      heading: "📎 Explore More",
       items: [
         { href: "/bhurban-murree-pakistan-guide", label: "Bhurban complete guide" },
         { href: "/murree-bhurban-itinerary", label: "Weekend plan" },
@@ -68733,7 +68733,7 @@ export const article634: Article = {
 
     {
       type: "related",
-      heading: "📎 Internal Links",
+      heading: "📎 Explore More",
       items: [
         { href: "/destination-wedding-bhurban-murree", label: "Weddings and events" },
         { href: "/eid-holiday-package-bhurban-murree", label: "Eid at the estate" },
@@ -68877,7 +68877,7 @@ export const article635: Article = {
 
     {
       type: "related",
-      heading: "📎 Internal Links",
+      heading: "📎 Explore More",
       items: [
         { href: "/bhurban-murree-pakistan-guide", label: "Bhurban complete guide" },
         { href: "/bhurban-vs-naran-kaghan", label: "vs Naran Kaghan" },
@@ -69024,7 +69024,7 @@ export const article636: Article = {
     },
     {
       type: "related",
-      heading: "📎 Internal Links",
+      heading: "📎 Explore More",
       items: [
         { href: "/murree-bhurban-in-spring", label: "Spring guide overview" },
         { href: "/ayubia-national-park-guide", label: "Pipeline Track detail" },
@@ -69158,7 +69158,7 @@ export const article637: Article = {
     },
     {
       type: "related",
-      heading: "📎 Internal Links",
+      heading: "📎 Explore More",
       items: [
         { href: "/bhurban-cedar-estate-guide", label: "Cedar estate pillar page" },
         { href: "/in-villa-dining-bhurban", label: "Cedar garden dining" },
@@ -69287,7 +69287,7 @@ export const article638: Article = {
     },
     {
       type: "related",
-      heading: "📎 Internal Links",
+      heading: "📎 Explore More",
       items: [
         { href: "/destination-wedding-bhurban-murree", label: "Full wedding guide" },
         { href: "/eid-holiday-package-bhurban-murree", label: "Occasion packages" },
@@ -69413,7 +69413,7 @@ export const article639: Article = {
     },
     {
       type: "related",
-      heading: "📎 Internal Links",
+      heading: "📎 Explore More",
       items: [
         { href: "/extended-family-reunion-bhurban", label: "Group accommodation" },
         { href: "/bhurban-villa-pricing-guide", label: "Pricing" },
@@ -69528,7 +69528,7 @@ export const article640: Article = {
     },
     {
       type: "related",
-      heading: "📎 Internal Links",
+      heading: "📎 Explore More",
       items: [
         { href: "/islamabad-to-bhurban-guide", label: "Route guide" },
         { href: "/murree-bhurban-itinerary", label: "Full 3-night plan" },
@@ -69626,7 +69626,7 @@ export const article641: Article = {
     },
     {
       type: "related",
-      heading: "📎 Internal Links",
+      heading: "📎 Explore More",
       items: [
         { href: "/best-time-to-visit-murree", label: "All seasons ranked" },
         { href: "/murree-bhurban-in-spring", label: "Spring guide" },
@@ -69740,7 +69740,7 @@ export const article642: Article = {
     },
     {
       type: "related",
-      heading: "📎 Internal Links",
+      heading: "📎 Explore More",
       items: [
         { href: "/murree-bhurban-in-october", label: "October deep dive" },
         { href: "/best-time-to-visit-murree", label: "All seasons" },
@@ -69832,7 +69832,7 @@ export const article643: Article = {
     },
     {
       type: "related",
-      heading: "📎 Internal Links",
+      heading: "📎 Explore More",
       items: [
         { href: "/murree-bhurban-in-october", label: "October guide" },
         { href: "/murree-bhurban-in-december", label: "December guide" },
@@ -69924,7 +69924,7 @@ export const article644: Article = {
     },
     {
       type: "related",
-      heading: "📎 Internal Links",
+      heading: "📎 Explore More",
       items: [
         { href: "/bhurban-from-karachi", label: "Karachi travel guide" },
         { href: "/bhurban-cedar-estate-guide", label: "Cedar estate guide" },
@@ -70017,7 +70017,7 @@ export const article645: Article = {
     },
     {
       type: "related",
-      heading: "📎 Internal Links",
+      heading: "📎 Explore More",
       items: [
         { href: "/about-himalaya-villas-bhurban", label: "About the estate" },
         { href: "/bhurban-cedar-estate-guide", label: "Cedar estate pillar" },
@@ -70137,7 +70137,7 @@ export const article646: Article = {
 
     {
       type: "related",
-      heading: "📎 Internal Links",
+      heading: "📎 Explore More",
       items: [
         { href: "/bhurban-accommodation-guide", label: "Full Bhurban accommodation" },
         { href: "/bhurban-villa-pricing-guide", label: "Cedar estate pricing" },
@@ -70256,7 +70256,7 @@ export const article647: Article = {
 
     {
       type: "related",
-      heading: "📎 Internal Links",
+      heading: "📎 Explore More",
       items: [
         { href: "/bhurban-accommodation-guide", label: "All Bhurban accommodation" },
         { href: "/bhurban-cedar-estate-guide", label: "Cedar estate guide" },
@@ -70378,7 +70378,7 @@ export const article648: Article = {
 
     {
       type: "related",
-      heading: "📎 Internal Links",
+      heading: "📎 Explore More",
       items: [
         { href: "/bhurban-accommodation-guide", label: "All Bhurban accommodation" },
         { href: "/bhurban-cedar-estate-guide", label: "Cedar estate pillar" },
@@ -70517,7 +70517,7 @@ export const article649: Article = {
 
     {
       type: "related",
-      heading: "📎 Internal Links",
+      heading: "📎 Explore More",
       items: [
         { href: "/murree-weather-guide", label: "Full Murree weather guide" },
         { href: "/murree-snowfall-guide", label: "Snowfall planning" },
@@ -70660,7 +70660,7 @@ export const article650: Article = {
 
     {
       type: "related",
-      heading: "📎 Internal Links",
+      heading: "📎 Explore More",
       items: [
         { href: "/murree-bhurban-trip-cost", label: "Full trip cost guide" },
         { href: "/murree-bhurban-itinerary", label: "Itinerary planning" },
@@ -70783,7 +70783,7 @@ export const article651: Article = {
 
     {
       type: "related",
-      heading: "📎 Internal Links",
+      heading: "📎 Explore More",
       items: [
         { href: "/resort-near-islamabad", label: "Resort near Islamabad" },
         { href: "/islamabad-to-bhurban-guide", label: "Route guide" },
@@ -70916,7 +70916,7 @@ export const article652: Article = {
 
     {
       type: "related",
-      heading: "📎 Internal Links",
+      heading: "📎 Explore More",
       items: [
         { href: "/honeymoon-package-bhurban-murree", label: "Honeymoon package detail" },
         { href: "/bhurban-villa-pricing-guide", label: "Presidential Suite pricing" },
@@ -71016,7 +71016,7 @@ export const article653: Article = {
 
     {
       type: "related",
-      heading: "📎 Internal Links",
+      heading: "📎 Explore More",
       items: [
         { href: "/bhurban-for-pakistani-diaspora", label: "Diaspora guide" },
         { href: "/extended-family-reunion-bhurban", label: "Family reunions" },
@@ -71149,7 +71149,7 @@ export const article654: Article = {
 
     {
       type: "related",
-      heading: "📎 Internal Links",
+      heading: "📎 Explore More",
       items: [
         { href: "/murree-bhurban-itinerary", label: "Itinerary combining both" },
         { href: "/murree-mall-road-guide", label: "Mall Road guide" },
@@ -71282,7 +71282,7 @@ export const article655: Article = {
 
     {
       type: "related",
-      heading: "📎 Internal Links",
+      heading: "📎 Explore More",
       items: [
         { href: "/murree-bhurban-in-january", label: "January guide" },
         { href: "/murree-snowfall-guide", label: "Snowfall guide" },
@@ -71398,7 +71398,7 @@ export const article656: Article = {
 
     {
       type: "related",
-      heading: "📎 Internal Links",
+      heading: "📎 Explore More",
       items: [
         { href: "/bhurban-private-estate-vs-pc-hotel", label: "Full PC Hotel comparison" },
         { href: "/bhurban-accommodation-guide", label: "All Bhurban options" },
@@ -71564,7 +71564,7 @@ export const article657: Article = {
 
     {
       type: "related",
-      heading: "📎 Internal Links",
+      heading: "📎 Explore More",
       items: [
         { href: "/about-himalaya-villas-bhurban", label: "About the estate" },
         { href: "/bhurban-villa-pricing-guide", label: "Pricing guide" },
@@ -71772,7 +71772,7 @@ export const article658: Article = {
 
     {
       type: "related",
-      heading: "📎 Internal Links",
+      heading: "📎 Explore More",
       items: [
         { href: "/about-himalaya-villas-bhurban", label: "About the estate" },
         { href: "/villas", label: "Browse all villas" },
@@ -71894,7 +71894,7 @@ export const article659: Article = {
 
     {
       type: "related",
-      heading: "📎 Internal Links",
+      heading: "📎 Explore More",
       items: [
         { href: "/murree-bhurban-itinerary", label: "2-3 night plan" },
         { href: "/islamabad-to-bhurban-guide", label: "Route guide" },
@@ -72004,7 +72004,7 @@ export const article660: Article = {
 
     {
       type: "related",
-      heading: "📎 Internal Links",
+      heading: "📎 Explore More",
       items: [
         { href: "/about-himalaya-villas-bhurban", label: "About the estate" },
         { href: "/bhurban-cedar-estate-guide", label: "Cedar estate guide" },
@@ -72166,7 +72166,7 @@ export const article661: Article = {
 
     {
       type: "related",
-      heading: "📎 Internal Links",
+      heading: "📎 Explore More",
       items: [
         { href: "/honeymoon-package-bhurban-murree", label: "Honeymoon guide" },
         { href: "/bhurban-villa-pricing-guide", label: "Full pricing" },
@@ -72272,7 +72272,7 @@ export const article662: Article = {
 
     {
       type: "related",
-      heading: "📎 Internal Links",
+      heading: "📎 Explore More",
       items: [
         { href: "/bhurban-photography-guide", label: "Photography guide" },
         { href: "/himalayan-penthouse-bhurban", label: "Penthouse villa" },
@@ -72437,7 +72437,7 @@ export const article663: Article = {
 
     {
       type: "related",
-      heading: "📎 Internal Links",
+      heading: "📎 Explore More",
       items: [
         { href: "/destination-wedding-bhurban-murree", label: "Wedding guide" },
         { href: "/walima-bhurban-cedar-estate", label: "Walima guide" },
@@ -72564,7 +72564,7 @@ export const article664: Article = {
 
     {
       type: "related",
-      heading: "📎 Internal Links",
+      heading: "📎 Explore More",
       items: [
         { href: "/bhurban-murree-for-families", label: "Full families guide" },
         { href: "/garden-villa-retreat-bhurban", label: "Garden Villa detail" },
@@ -72752,7 +72752,7 @@ export const article665: Article = {
 
     {
       type: "related",
-      heading: "📎 Internal Links",
+      heading: "📎 Explore More",
       items: [
         { href: "/about-himalaya-villas-bhurban", label: "About the estate" },
         { href: "/bhurban-villa-pricing-guide", label: "Full pricing" },
@@ -72923,7 +72923,7 @@ export const article666: Article = {
 
     {
       type: "related",
-      heading: "📎 Internal Links",
+      heading: "📎 Explore More",
       items: [
         { href: "/hotels-in-murree-pakistan", label: "Full Murree hotel guide" },
         { href: "/hotel-one-bhurban-guide", label: "Hotel One Bhurban detail" },
@@ -73057,7 +73057,7 @@ export const article667: Article = {
 
     {
       type: "related",
-      heading: "📎 Internal Links",
+      heading: "📎 Explore More",
       items: [
         { href: "/murree-restaurants-guide", label: "Full Murree dining guide" },
         { href: "/in-villa-dining-bhurban", label: "Cedar garden dining guide" },
@@ -73222,7 +73222,7 @@ export const article668: Article = {
 
     {
       type: "related",
-      heading: "📎 Internal Links",
+      heading: "📎 Explore More",
       items: [
         { href: "/bhurban-birdwatching-wildlife", label: "Full birdwatching guide" },
         { href: "/bhurban-cedar-pine-forest-guide", label: "Forest ecology guide" },
@@ -73349,7 +73349,7 @@ export const article669: Article = {
 
     {
       type: "related",
-      heading: "📎 Internal Links",
+      heading: "📎 Explore More",
       items: [
         { href: "/honeymoon-package-bhurban-murree", label: "Honeymoon guide" },
         { href: "/destination-wedding-bhurban-murree", label: "Wedding guide" },
@@ -73476,7 +73476,7 @@ export const article670: Article = {
 
     {
       type: "related",
-      heading: "📎 Internal Links",
+      heading: "📎 Explore More",
       items: [
         { href: "/bhurban-cedar-pine-forest-guide", label: "Cedar forest ecology" },
         { href: "/bhurban-birdwatching-wildlife", label: "Wildlife guide" },
@@ -73616,7 +73616,7 @@ export const article671: Article = {
 
     {
       type: "related",
-      heading: "📎 Internal Links",
+      heading: "📎 Explore More",
       items: [
         { href: "/galyat-ayubia-guide", label: "Galyat complete guide" },
         { href: "/nathia-gali-pakistan-guide", label: "Nathia Gali guide" },
@@ -73733,7 +73733,7 @@ export const article672: Article = {
 
     {
       type: "related",
-      heading: "📎 Internal Links",
+      heading: "📎 Explore More",
       items: [
         { href: "/bhurban-murree-pakistan-guide", label: "Bhurban guide" },
         { href: "/murree-pakistan-tourism-guide", label: "Murree tourism" },
@@ -73875,7 +73875,7 @@ export const article673: Article = {
 
     {
       type: "related",
-      heading: "📎 Internal Links",
+      heading: "📎 Explore More",
       items: [
         { href: "/islamabad-to-bhurban-guide", label: "Route guide" },
         { href: "/murree-bhurban-faq", label: "Full FAQ" },
@@ -74060,7 +74060,7 @@ export const article674: Article = {
 
     {
       type: "related",
-      heading: "📎 Internal Links",
+      heading: "📎 Explore More",
       items: [
         { href: "/islamabad-to-bhurban-guide", label: "Full route guide" },
         { href: "/bhurban-distance-from-major-cities", label: "Major city distances" },
@@ -74202,7 +74202,7 @@ export const article675: Article = {
 
     {
       type: "related",
-      heading: "📎 Internal Links",
+      heading: "📎 Explore More",
       items: [
         { href: "/bhurban-murree-for-families", label: "Full family guide" },
         { href: "/bhurban-cedar-estate-with-children", label: "Children guide" },
@@ -74422,7 +74422,7 @@ export const article676: Article = {
 
     {
       type: "related",
-      heading: "📎 Internal Links",
+      heading: "📎 Explore More",
       items: [
         { href: "/islamabad-to-bhurban-guide", label: "Full route guide" },
         { href: "/bhurban-murree-all-distances", label: "All distances" },
@@ -74563,7 +74563,7 @@ export const article678: Article = {
 
     {
       type: "related",
-      heading: "📎 Internal Links",
+      heading: "📎 Explore More",
       items: [
         { href: "/bhurban-distance-from-major-cities", label: "All city distances" },
         { href: "/murree-bhurban-4-5-day-itinerary", label: "Extended itinerary" },
@@ -74668,7 +74668,7 @@ export const article679: Article = {
 
     {
       type: "related",
-      heading: "📎 Internal Links",
+      heading: "📎 Explore More",
       items: [
         { href: "/islamabad-to-bhurban-guide", label: "Full N-75 route guide" },
         { href: "/islamabad-murree-expressway-guide", label: "Expressway complete guide" },
@@ -74773,7 +74773,7 @@ export const article681: Article = {
 
     {
       type: "related",
-      heading: "📎 Internal Links",
+      heading: "📎 Explore More",
       items: [
         { href: "/bhurban-murree-pakistan-guide", label: "Bhurban complete guide" },
         { href: "/murree-hills-pakistan-geography", label: "Geographic guide" },
@@ -74906,7 +74906,7 @@ export const article682: Article = {
 
     {
       type: "related",
-      heading: "📎 Internal Links",
+      heading: "📎 Explore More",
       items: [
         { href: "/extended-family-reunion-bhurban", label: "Family reunion guide" },
         { href: "/destination-wedding-bhurban-murree", label: "Wedding guide" },
@@ -75040,7 +75040,7 @@ export const article683: Article = {
 
     {
       type: "related",
-      heading: "📎 Internal Links",
+      heading: "📎 Explore More",
       items: [
         { href: "/murree-bhurban-in-january", label: "January snowfall guide" },
         { href: "/murree-snowfall-guide", label: "Snowfall planning" },
@@ -75149,7 +75149,7 @@ export const article684: Article = {
 
     {
       type: "related",
-      heading: "📎 Internal Links",
+      heading: "📎 Explore More",
       items: [
         { href: "/bhurban-birdwatching-wildlife", label: "Wildlife photography" },
         { href: "/murree-bhurban-in-october", label: "October photography peak" },
@@ -75289,7 +75289,7 @@ export const article685: Article = {
 
     {
       type: "related",
-      heading: "📎 Internal Links",
+      heading: "📎 Explore More",
       items: [
         { href: "/extended-family-reunion-bhurban", label: "Family reunion guide" },
         { href: "/private-events-bhurban-cedar-estate", label: "Events guide" },
@@ -75408,7 +75408,7 @@ export const article686: Article = {
 
     {
       type: "related",
-      heading: "📎 Internal Links",
+      heading: "📎 Explore More",
       items: [
         { href: "/presidential-suite-himalaya-villas-bhurban", label: "Presidential Suite" },
         { href: "/bhurban-villa-pricing-guide", label: "Full pricing" },
@@ -75525,7 +75525,7 @@ export const article687: Article = {
 
     {
       type: "related",
-      heading: "📎 Internal Links",
+      heading: "📎 Explore More",
       items: [
         { href: "/bhurban-cedar-estate-with-children", label: "Children guide" },
         { href: "/bhurban-villa-pricing-guide", label: "Full pricing" },
@@ -75654,7 +75654,7 @@ export const article689: Article = {
 
     {
       type: "related",
-      heading: "📎 Internal Links",
+      heading: "📎 Explore More",
       items: [
         { href: "/bhurban-from-karachi", label: "From Karachi" },
         { href: "/bhurban-distance-from-major-cities", label: "All distances" },
@@ -75768,7 +75768,7 @@ export const article690: Article = {
 
     {
       type: "related",
-      heading: "📎 Internal Links",
+      heading: "📎 Explore More",
       items: [
         { href: "/honeymoon-package-bhurban-murree", label: "Honeymoon package" },
         { href: "/presidential-suite-himalaya-villas-bhurban", label: "Presidential Suite" },
@@ -75914,7 +75914,7 @@ export const article691: Article = {
 
     {
       type: "related",
-      heading: "📎 Internal Links",
+      heading: "📎 Explore More",
       items: [
         { href: "/himalaya-villas-booking-tips", label: "Booking tips" },
         { href: "/bhurban-villa-pricing-guide", label: "Pricing" },
@@ -76062,7 +76062,7 @@ export const article692: Article = {
 
     {
       type: "related",
-      heading: "📎 Internal Links",
+      heading: "📎 Explore More",
       items: [
         { href: "/best-time-to-visit-murree", label: "All seasons ranked" },
         { href: "/murree-weather-guide", label: "Weather guide" },
@@ -76201,7 +76201,7 @@ export const article693: Article = {
 
     {
       type: "related",
-      heading: "📎 Internal Links",
+      heading: "📎 Explore More",
       items: [
         { href: "/murree-bhurban-in-january", label: "January guide" },
         { href: "/presidential-suite-himalaya-villas-bhurban", label: "Jacuzzi in snow" },
@@ -76323,7 +76323,7 @@ export const article694: Article = {
 
     {
       type: "related",
-      heading: "📎 Internal Links",
+      heading: "📎 Explore More",
       items: [
         { href: "/bhurban-accommodation-guide", label: "All Bhurban accommodation" },
         { href: "/bhurban-resort-guide", label: "Bhurban resorts overview" },
@@ -76472,7 +76472,7 @@ export const article695: Article = {
 
     {
       type: "related",
-      heading: "📎 Internal Links",
+      heading: "📎 Explore More",
       items: [
         { href: "/bhurban-accommodation-guide", label: "All Bhurban accommodation" },
         { href: "/pc-bhurban-pearl-continental-guide", label: "PC Hotel Bhurban" },
@@ -76605,7 +76605,7 @@ export const article698: Article = {
 
     {
       type: "related",
-      heading: "📎 Internal Links",
+      heading: "📎 Explore More",
       items: [
         { href: "/himalayan-penthouse-bhurban", label: "Himalayan Penthouse vs Sunset Suite" },
         { href: "/presidential-suite-himalaya-villas-bhurban", label: "Presidential Suite" },
@@ -76725,7 +76725,7 @@ export const article699: Article = {
 
     {
       type: "related",
-      heading: "📎 Internal Links",
+      heading: "📎 Explore More",
       items: [
         { href: "/bhurban-villa-pricing-guide", label: "Full pricing comparison" },
         { href: "/why-private-villa-over-hotel-bhurban", label: "Villa vs hotel" },
@@ -76852,7 +76852,7 @@ export const article702: Article = {
 
     {
       type: "related",
-      heading: "📎 Internal Links",
+      heading: "📎 Explore More",
       items: [
         { href: "/murree-bhurban-in-october", label: "October definitive guide" },
         { href: "/murree-bhurban-in-september", label: "September guide" },
@@ -76986,7 +76986,7 @@ export const article703: Article = {
 
     {
       type: "related",
-      heading: "📎 Internal Links",
+      heading: "📎 Explore More",
       items: [
         { href: "/murree-bhurban-faq", label: "First 50 questions" },
         { href: "/about-himalaya-villas-bhurban", label: "About the estate" },
@@ -77113,7 +77113,7 @@ export const article705: Article = {
     },
     {
       type: "related",
-      heading: "📎 Internal Links",
+      heading: "📎 Explore More",
       items: [
         { href: "/bhurban-cedar-estate-pakistani-diaspora", label: "Full diaspora guide" },
         { href: "/bhurban-cedar-estate-from-uk-london", label: "From the UK" },
@@ -77252,7 +77252,7 @@ export const article706: Article = {
     },
     {
       type: "related",
-      heading: "📎 Internal Links",
+      heading: "📎 Explore More",
       items: [
         { href: "/bhurban-cedar-estate-pakistani-diaspora", label: "Full diaspora guide" },
         { href: "/bhurban-cedar-estate-from-dubai-uae", label: "From Dubai" },
@@ -77385,7 +77385,7 @@ export const article707: Article = {
     },
     {
       type: "related",
-      heading: "📎 Internal Links",
+      heading: "📎 Explore More",
       items: [
         { href: "/in-villa-dining-bhurban", label: "Full dining guide" },
         { href: "/cedar-estate-dawn-walk-himalaya-villas", label: "Morning context" },
@@ -77605,7 +77605,7 @@ export const article708: Article = {
     },
     {
       type: "related",
-      heading: "📎 Internal Links",
+      heading: "📎 Explore More",
       items: [
         { href: "/murree-bhurban-in-january", label: "January snowfall guide" },
         { href: "/murree-bhurban-in-april", label: "April rhododendron guide" },
@@ -77739,7 +77739,7 @@ export const article712: Article = {
     },
     {
       type: "related",
-      heading: "📎 Internal Links",
+      heading: "📎 Explore More",
       items: [
         { href: "/eid-at-bhurban-cedar-estate", label: "Eid guide" },
         { href: "/bhurban-murree-trip-planning-timeline", label: "Booking timeline" },
@@ -77897,7 +77897,7 @@ export const article713: Article = {
     },
     {
       type: "related",
-      heading: "📎 Internal Links",
+      heading: "📎 Explore More",
       items: [
         { href: "/bhurban-vs-islamabad-hotel-weekend", label: "Original comparison" },
         { href: "/why-private-villa-over-hotel-bhurban", label: "Villa vs hotel case" },
@@ -78008,7 +78008,7 @@ export const article714: Article = {
     },
     {
       type: "related",
-      heading: "📎 Internal Links",
+      heading: "📎 Explore More",
       items: [
         { href: "/himalaya-villas-not-a-hotel", label: "Not a hotel" },
         { href: "/himalaya-villas-unique-experiences", label: "Unique experiences" },
@@ -78126,7 +78126,7 @@ export const article718: Article = {
     },
     {
       type: "related",
-      heading: "📎 Internal Links",
+      heading: "📎 Explore More",
       items: [
         { href: "/bhurban-pakistan-history-heritage", label: "Bhurban history" },
         { href: "/bhurban-cedar-pine-forest-guide", label: "Cedar forest ecology" },
@@ -78147,14 +78147,14 @@ export const article719: Article = {
   slug: "corporate-retreat-bhurban-authority",
   title: "Corporate Retreats at Bhurban Cedar Estate — The Case for the Mountain Offsite",
   metaDescription:
-    "corporate retreat bhurban, bhurban corporate retreat islamabad, team offsite bhurban pakistan",
+    "Corporate retreat bhurban, bhurban corporate retreat islamabad, team offsite bhurban pakistan",
   keywords:
     "corporate retreat bhurban, bhurban corporate retreat islamabad, team offsite bhurban pakistan",
   eyebrow: "Guest Post | B2B Authority | Cluster 5: Events | ~800w",
   h1: "Corporate Retreats at Bhurban Cedar Estate — The Case for the Mountain Offsite",
-  heroTagline:
-    "Bhurban cedar estate (Himalaya Villas) vs Islamabad hotel conference room for corporate retreats: the 45-minute N-75 drive delivers the team to a cedar forest estate at 6,800 feet. The environmental contrast from the Islamabad office is immediate and complete — the cedar forest, the mountain air, the fire pit replacing the conference table. Research on nature and cognitive performance consistently demonstrates improved creative output, better strategic decisions, and higher interpersonal trust in natural settings vs urban interiors. The cedar estate fire pit at 7pm is the specific format for the informal leadership conversation that the boardroom prevents.",
-  heroImage: dummyImageTemp,
+ heroTagline:
+  "Learn why organizations are choosing mountain retreats over conventional meeting venues. This guide covers everything you need to know about planning a corporate retreat at Bhurban's cedar estate, from team experiences and strategic workshops to accommodation and logistics.",
+   heroImage: dummyImageTemp,
 
   blocks: [
     {
@@ -78172,7 +78172,7 @@ export const article719: Article = {
       ],
       image: {
         src: dummyImageTemp,
-        alt: "Corporate Retreat",
+         alt: "Corporate team retreat at a private cedar estate in Bhurban, Murree",
       },
     },
 
@@ -78189,7 +78189,7 @@ export const article719: Article = {
       ],
       image: {
         src: dummyImageTemp,
-        alt: "Science Behind Offsite",
+        alt: "Professionals collaborating in a natural cedar forest setting during a corporate offsite in Bhurban",
       },
     },
 
@@ -78302,7 +78302,7 @@ export const article719: Article = {
 
     {
       type: "related",
-      heading: "📎 Internal Links",
+      heading: "📎 Explore More",
       items: [
         { href: "/corporate-retreat-bhurban-planning-guide", label: "Retreat planning guide" },
         { href: "/himalaya-villas-full-estate-buyout", label: "Full estate for large retreats" },
@@ -78461,7 +78461,7 @@ export const article720: Article = {
 
     {
       type: "related",
-      heading: "📎 Internal Links",
+      heading: "📎 Explore More",
       items: [
         { href: "/bhurban-vs-nathia-gali", label: "vs Nathia Gali" },
         { href: "/bhurban-vs-naran-kaghan", label: "vs Naran Kaghan" },
@@ -78478,15 +78478,15 @@ export const article720: Article = {
 
 export const article722: Article = {
   slug: "bhurban-murree-outdoor-activities",
-  title: "Bhurban Murree Outdoor Activities — The Complete 2026 Guide",
+  title: "Bhurban Murree Outdoor Activities—Hikes, Views & More",
   metaDescription:
-    "bhurban murree outdoor activities, bhurban murree activities guide, outdoor activities bhurban 2026",
+    "Planning a Murree trip? Explore Bhurban's best outdoor activities—from easy walks to summit hikes—with timings, distances & the best months to visit.",
   keywords:
     "bhurban murree outdoor activities, bhurban murree activities guide, outdoor activities bhurban 2026",
   eyebrow: "Guest Post | Activity Authority | Cluster 3: Activities | ~900w",
   h1: "Bhurban Murree Outdoor Activities — The Complete 2026 Guide",
-  heroTagline:
-    "Bhurban Murree outdoor activities 2026: cedar estate dawn walk (Himalaya Villas guests, 5:45am, year-round); Patriata Chairlift gondola (3km, 8 min, 9am-5pm approx., ~PKR 700-1,000/person); Chinar Golf Club (0.5km, 9-hole cedar forest course, April-October); Murree Mall Road walk (11km, 20 min); Kashmir Point viewpoint (22km, 30 min); Pindi Point Chairlift (22km, 30 min); Ayubia Pipeline Track hike (30km, 40 min, 8km, 2.5-3.5 hrs); Nathia Gali walk (30km, 45 min); Mushkpuri Top summit hike (35km to trailhead, 6km, 4 hrs, 9,230 ft).",
+ heroTagline:
+  "Discover the best outdoor activities in Bhurban and Murree, from scenic hiking trails and chairlift rides to golf, panoramic viewpoints, and peaceful cedar forest walks. This complete 2026 guide covers the top attractions, distances, travel times, and practical tips to help you plan your mountain adventure.",
   heroImage: dummyImageTemp,
 
   blocks: [
@@ -78505,7 +78505,7 @@ export const article722: Article = {
       ],
       image: {
         src: dummyImageTemp,
-        alt: "Outdoor Activities",
+        alt: "Patriata Chairlift, Bhurban Murree",
       },
     },
 
@@ -78624,19 +78624,18 @@ export const article722: Article = {
       ],
     },
 
-    {
-      type: "cta",
-      eyebrow: "Book the Outdoor Activity Base",
-      heading: "WhatsApp +92 304 567 9000",
-      text: "Direct bookings receive the best available rate.",
-      buttonLabel: "WhatsApp: +92 304 567 9000",
-      buttonHref: "https://wa.me/923045679000",
-      footnote: "Direct bookings receive priority response and best available rate.",
-    },
-
+{
+  type: "cta",
+  eyebrow: "Plan Your Bhurban Adventure",
+  heading: "Stay close to Bhurban's top outdoor attractions",
+  text: "Use Himalaya Villas & Resorts as your base for exploring Bhurban and Murree. Our team can recommend the best activities, suggest itineraries, and help you choose the ideal villa for your mountain getaway.",
+  buttonLabel: "Book on WhatsApp",
+  buttonHref: "https://wa.me/923045679000",
+  footnote: "Contact us for availability, local recommendations, and the best direct booking rates.",
+},
     {
       type: "related",
-      heading: "📎 Internal Links",
+      heading: "📎 Explore More",
       items: [
         { href: "/bhurban-hiking-trails", label: "Hiking guide" },
         { href: "/patriata-chairlift-bhurban-guide", label: "Chairlift guide" },
@@ -78653,15 +78652,15 @@ export const article722: Article = {
 
 export const article723: Article = {
   slug: "luxury-private-villa-bhurban-murree",
-  title: "Luxury Private Villa Bhurban Murree — The Himalaya Villas Definitive Guide",
+  title: "Luxury Private Villa in Bhurban Murree - Himalaya Villas",
   metaDescription:
-    "luxury private villa bhurban murree, luxury villa bhurban, private villa bhurban murree luxury",
+    "Book a luxury private villa in Bhurban, Murree—your own cedar forest, garden & jacuzzi—45 mins from Islamabad. Reserve your stay today. ",
   keywords:
     "luxury private villa bhurban murree, luxury villa bhurban, private villa bhurban murree luxury",
   eyebrow: "Guest Post | Commercial Hub | Clusters 1 & 6 | ~800w",
   h1: "Luxury Private Villa Bhurban Murree — The Himalaya Villas Definitive Guide",
-  heroTagline:
-    "The best luxury private villa in Bhurban Murree is Himalaya Villas & Resorts at Mohra Iswal, Bhurban — the only managed private cedar villa estate in the Bhurban area, with 12 exclusive-use villas from PKR 39,000 to 70,000/night set in 100-200 year old deodar cedar forest at 6,800 feet. 47km from Islamabad (45 minutes on N-75 Expressway). The specific advantages: exclusive private outdoor space per villa, in-villa cedar garden dining, cedar garden fire pit, and the 180-year cedar estate from the villa gate.",
+ heroTagline:
+  "Explore the definitive guide to luxury private villa stays in Bhurban, Murree. Compare accommodation options, pricing, amenities, and discover why Himalaya Villas & Resorts is the leading managed private villa estate in the region.",
   heroImage: dummyImageTemp,
 
   blocks: [
@@ -78680,7 +78679,7 @@ export const article723: Article = {
       ],
       image: {
         src: dummyImageTemp,
-        alt: "Luxury Private Villa",
+        alt: "Cedar garden terrace, Himalaya Villas Bhurban",
       },
     },
 
@@ -78697,9 +78696,20 @@ export const article723: Article = {
       ],
       image: {
         src: dummyImageTemp,
-        alt: "What Makes Luxury",
+        alt: "Luxury villa in cedar forest, Bhurban Murree",
       },
     },
+
+        {
+      type: "cta",
+      eyebrow: "Book the Luxury Private Cedar Villa",
+      heading: "What is the best luxury private villa in Bhurban Murree?",
+      text: "Himalaya Villas is different from Bhurban's hotels. Here, every guest gets a fully private villa — no shared halls, no shared pool, no shared garden. All 12 villas sit within an old cedar forest, 100 to 200 years old, at an elevation of 6,800 feet. It's just 45 minutes from Islamabad on the N-75 Expressway. You can pick a villa based on the view, the space, and how much privacy you want—from the small and cozy Serene Valley Cabin to the Presidential Suite with its own outdoor jacuzzi.",
+      buttonLabel: "Book Now",
+      buttonHref: "https://wa.me/923045679000",
+      footnote: "",
+    },
+
 
     {
       type: "facts",
@@ -78774,19 +78784,18 @@ export const article723: Article = {
       ],
     },
 
-    {
-      type: "cta",
-      eyebrow: "Book the Luxury Private Cedar Villa",
-      heading: "WhatsApp +92 304 567 9000",
-      text: "Direct bookings receive the best available rate.",
-      buttonLabel: "WhatsApp: +92 304 567 9000",
-      buttonHref: "https://wa.me/923045679000",
-      footnote: "Direct bookings receive priority response and best available rate.",
-    },
-
+{
+  type: "cta",
+  eyebrow: "Plan Your Stay",
+  heading: "Ready to experience a luxury private villa in Bhurban, Murree?",
+  text: "Whether you're planning a romantic getaway, a family vacation, or a peaceful mountain retreat, our team can help you choose the perfect private villa. From cozy cedar cabins to spacious luxury suites with premium amenities, every stay is designed for complete privacy in the heart of Bhurban's historic deodar forest.",
+  buttonLabel: "Book on WhatsApp",
+  buttonHref: "https://wa.me/923045679000",
+  footnote: "Contact us for availability, villa recommendations, and the best direct booking rates.",
+},
     {
       type: "related",
-      heading: "📎 Internal Links",
+      heading: "📎 Explore More",
       items: [
         { href: "/presidential-suite-himalaya-villas-bhurban", label: "Presidential Suite" },
         { href: "/bhurban-villa-pricing-guide", label: "All villa pricing" },

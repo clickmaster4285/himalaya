@@ -12,9 +12,9 @@ import { absoluteUrl } from "@/lib/seo/site-config";
 export const dynamic = "force-dynamic";
 
 export const metadata: Metadata = createPageMetadata({
-  title: "Things to Do in Bhurban Murree | Luxury Experience Guide",
+  title: "Virtual Tour - Himalaya Villas & Resorts Bhurban Murree",
   description:
-    "Discover top things to do in Bhurban Murree including hiking, viewpoints, dining, family activities, and curated villa experiences near Himalaya Villas & Resorts.",
+    "Take a virtual tour of Himalaya Villas in Bhurban, Murree—explore luxury suites, mountain views & private terraces online before you book your stay. ",
   path: "/virtual-tour",
   keywords: [
     "things to do in Bhurban Murree",

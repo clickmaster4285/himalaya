@@ -12,13 +12,14 @@ import EventsHeroSlider from "@/components/EventsHeroSlider";
 import EventQuoteForm from "@/components/EventQuoteForm";
 import { createEventSlug } from "@/lib/slugify";
 import "./globals.css";
+import { buildWhatsAppBookingUrl } from "@/lib/whatsapp";
 
 export const dynamic = "force-dynamic";
 
 export const metadata: Metadata = createPageMetadata({
-  title: "Events & Experiences | Himalaya Villas & Resorts",
+  title: "Events at Himalaya Villas | Weddings & Celebrations ",
   description:
-    "Host weddings, corporate retreats, and social celebrations at Himalaya Villas & Resorts with curated decor, premium hospitality, and mountain views.",
+    "Host weddings, corporate events & celebrations at Himalaya Villas, Bhurban. Scenic mountain venues, indoor-outdoor spaces & full event support.",
   path: "/events",
   keywords: [
     "events Himalaya Villas & Resorts",
@@ -410,17 +411,21 @@ export default function EventsPage() {
           </p>
 
           <div className="mt-8 flex gap-3">
-            <a
-              href="#inquiry"
-              className="rounded-md bg-white px-6 py-3 text-center text-xs font-semibold uppercase tracking-wider text-neutral-900 transition hover:bg-white/90"
-            >
-              Get Event Quote
+           <a
+                       href={buildWhatsAppBookingUrl("a private villa tour")}
+                       target="_blank"
+                       rel="noopener noreferrer"
+                       className="inline-flex items-center justify-center px-2.5 sm:px-3 md:px-4 lg:px-5 py-1.5 sm:py-2 text-[8px] sm:text-[9px] md:text-[10px] lg:text-xs font-medium tracking-wider uppercase bg-primary text-primary-foreground hover:bg-primary/90 transition-all duration-300 whitespace-nowrap rounded-sm"
+                     >
+              Plan Your Event
             </a>
             <a
-              href="#explore"
+                    href={buildWhatsAppBookingUrl("a private villa tour")}
+                       target="_blank"
+                       rel="noopener noreferrer"
               className="rounded-md border border-white px-6 py-3 text-center text-xs font-semibold uppercase tracking-wider text-white transition hover:bg-white hover:text-neutral-900"
             >
-              Explore Events
+            Book Your Stay
             </a>
           </div>
         </div>

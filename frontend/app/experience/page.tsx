@@ -7,9 +7,9 @@ import ExperienceClient from "./ExperienceClient";
 
 // Metadata for the page
 export const metadata: Metadata = createPageMetadata({
-  title: "Things to Do in Bhurban Murree | Luxury Experience Guide",
+  title: "Luxury Experiences in Bhurban, Murree—Himalaya Villas ",
   description:
-    "Discover top things to do in Bhurban Murree including hiking, viewpoints, dining, family activities, and curated villa experiences near Himalaya Villas & Resorts.",
+    "Discover premium experiences at our Bhurban estate. Explore unique experiences at Himalaya Villas, Bhurban. Perfect for families & couples.",
   path: "/experience",
   keywords: [
     "things to do in Bhurban Murree",

@@ -192,11 +192,13 @@ function SectionBlock({ block, index }: BlockProps) {
   if (block.type !== "section") return null;
   
   const imageSrc = article11Images[index % article11Images.length];
-  const imageAlt = imageSrc
-  .split("/")
-  .pop()                // modern-villa-architectural-design.webp
-  ?.replace(/\.[^/.]+$/, "") // modern-villa-architectural-design
-  ?.replace(/-/g, " "); // modern villa architectural design
+ const imageAlt =
+  imageSrc
+    .split("/")
+    .pop()
+    ?.replace(/\.[^/.]+$/, "")
+    ?.replace(/-/g, " ") ?? "Article image";
+    
   const isReversed = index % 2 === 1;
 
   return (

@@ -14,11 +14,11 @@ import type { Article, Block } from "@/content/types";
 
 /* ================= TYPES ================= */
 const article11Images = [
-  "/images/articles/article-image3.jpg",
-  "/images/articles/article-image2.jpg",
-  "/images/articles/article-image6.jpg",
-  "/images/articles/article-image1.jpg",
-  "/images/articles/article-image10.jpg",
+  "/images/articles/modern-villa-architectural-design.webp",
+  "/images/articles/luxury-home-interior-design.webp",
+  "/images/articles/contemporary-architecture-exterior.webp",
+  "/images/articles/building-construction-progress.webp",
+  "/images/articles/residential-property-development.webp",
 ];
 
 type BlockProps = {
@@ -192,7 +192,11 @@ function SectionBlock({ block, index }: BlockProps) {
   if (block.type !== "section") return null;
   
   const imageSrc = article11Images[index % article11Images.length];
-  const imageAlt = `Article image ${index + 1}`;
+  const imageAlt = imageSrc
+  .split("/")
+  .pop()                // modern-villa-architectural-design.webp
+  ?.replace(/\.[^/.]+$/, "") // modern-villa-architectural-design
+  ?.replace(/-/g, " "); // modern villa architectural design
   const isReversed = index % 2 === 1;
 
   return (

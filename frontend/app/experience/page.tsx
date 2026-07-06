@@ -7,7 +7,7 @@ import ExperienceClient from "./ExperienceClient";
 
 // Metadata for the page
 export const metadata: Metadata = createPageMetadata({
-  title: "Luxury Experiences in Bhurban, Murree—Himalaya Villas ",
+  title: "Luxury Experiences in Bhurban, Murree—Himalaya Villas",
   description:
     "Discover premium experiences at our Bhurban estate. Explore unique experiences at Himalaya Villas, Bhurban. Perfect for families & couples.",
   path: "/experience",

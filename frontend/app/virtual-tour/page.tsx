@@ -14,7 +14,7 @@ export const dynamic = "force-dynamic";
 export const metadata: Metadata = createPageMetadata({
   title: "Virtual Tour - Himalaya Villas & Resorts Bhurban Murree",
   description:
-    "Take a virtual tour of Himalaya Villas in Bhurban, Murree—explore luxury suites, mountain views & private terraces online before you book your stay. ",
+    "Take a virtual tour of Himalaya Villas in Bhurban, Murree—explore luxury suites, mountain views & private terraces online before you book your stay.",
   path: "/virtual-tour",
   keywords: [
     "things to do in Bhurban Murree",

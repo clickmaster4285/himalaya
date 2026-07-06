@@ -12,9 +12,9 @@ import { absoluteUrl } from "@/lib/seo/site-config";
 import { getPublishedVillas } from "@/lib/villas-fetch";
 
 export const metadata: Metadata = createPageMetadata({
-  title: "Private Luxury Villas in Bhurban | Book Murree Stays",
+  title: "Private Luxury Villas Bhurban Murree - Book Now",
   description:
-    "Explore luxury villas in Bhurban Murree with private suites, family lodges, and scenic mountain stays. Compare amenities, pricing, and book direct.",
+    "Book private luxury villas in Bhurban, Murree—Presidential Suite, Family Residence & more. Mountain views, full privacy, premium amenities. Reserve now.",
   path: "/villas",
   keywords: [
     "luxury villas in Bhurban",
@@ -45,7 +45,7 @@ const VillasPage = async () => {
       <JsonLd items={[{ id: "hv-jsonld-villas-itemlist", data: itemListJsonLd }]} />
       <VillasHero />
       <section className="mx-auto max-w-[1200px] px-6 py-14 md:px-12 md:py-20">
-        <h1 className="font-display text-4xl text-neutral-900 md:text-5xl">Luxury Villas in Bhurban Murree</h1>
+        <h2 className="font-display text-4xl text-neutral-900 md:text-5xl">Luxury Villas in Bhurban Murree</h2>
         <p className="mt-6 max-w-4xl text-[15px] leading-8 text-neutral-700">
           Discover private luxury villas in Bhurban designed for travelers who want space, privacy, and personalized
           hospitality in the Murree hills. Unlike standard hotel rooms, our villas offer full-living layouts, scenic

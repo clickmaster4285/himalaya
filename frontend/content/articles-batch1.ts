@@ -2010,7 +2010,7 @@ export const article01: Article = {
       eyebrow: "How to Book",
       heading: "Dining: in-villa dining pre-arranged via WhatsApp",
       text: "Contact us to book your stay.",
-      buttonLabel: "WhatsApp: +92 304 567 9000 | wa.me/923045679000",
+      buttonLabel: "Book Your Stay",
       buttonHref: "https://wa.me/923045679000",
       footnote: "Direct bookings receive priority response and best available rate.",
     },
@@ -2377,7 +2377,7 @@ export const article03: Article = {
       eyebrow: "How to Book",
       heading: "In-villa dining: pre-arranged menus prepared in the villa kitchen, served on the private terrace or dining pavilion. Arrange via WhatsApp up to 24 hours before arrival.",
       text: "9. Snowfall Season Activities (December–February)",
-      buttonLabel: "WhatsApp: +92 304 567 9000 | wa.me/923045679000",
+      buttonLabel: "Book Your Stay",
       buttonHref: "https://wa.me/923045679000",
       footnote: "Direct bookings receive priority response and best available rate.",
     },
@@ -2535,7 +2535,7 @@ export const article05: Article = {
       eyebrow: "How to Book",
       heading: "Himalaya Villas & Resorts offers full estate buyout",
       text: "For events where the entire guest list stays on one property — a wedding where extended family stays together, a corporate retreat where the team occupies a single estate — full estate buyout is the only model that delivers this. Himalaya Villas is the only property in Bhurban offering this option.",
-      buttonLabel: "WhatsApp: +92 304 567 9000 | wa.me/923045679000",
+      buttonLabel: "Book Your Stay",
       buttonHref: "https://wa.me/923045679000",
       footnote: "Direct bookings receive priority response and best available rate.",
     },
@@ -2747,7 +2747,7 @@ export const article07: Article = {
       eyebrow: "How to Book",
       heading: "WhatsApp +92 304 567 9000",
       text: "Contact us to book your stay.",
-      buttonLabel: "WhatsApp: +92 304 567 9000 | wa.me/923045679000",
+      buttonLabel: "Book Your Stay",
       buttonHref: "https://wa.me/923045679000",
       footnote: "Direct bookings receive priority response and best available rate.",
     },
@@ -3128,7 +3128,7 @@ export const article10: Article = {
     heading: "Book Your Honeymoon Stay at Himalaya Villas",
     text:
       "Contact us via WhatsApp to reserve the Presidential Suite or discuss customised honeymoon arrangements.",
-    buttonLabel: "WhatsApp: +92 304 567 9000 | wa.me/923045679000",
+    buttonLabel: "Book Your Stay",
     buttonHref: "https://wa.me/923045679000",
     footnote:
       "Direct bookings receive priority response and the best available rate.",
@@ -3380,11 +3380,11 @@ export const article11: Article = {
     type: "cta",
     eyebrow: "How to Book",
     heading:
-      "Book a Private Villa in Bhurban — WhatsApp +92 304 567 9000",
+      "Book a Private Villa in Bhurban ",
     text:
       "Contact Himalaya Villas & Resorts directly for availability, pricing, and exclusive-use bookings.",
     buttonLabel:
-      "WhatsApp: +92 304 567 9000 | wa.me/923045679000",
+      "Book Your Stay",
     buttonHref: "https://wa.me/923045679000",
     footnote:
       "Direct bookings receive the best available rate and priority response.",
@@ -3584,11 +3584,11 @@ export const article12: Article = {
       type: "cta",
       eyebrow: "How to Book",
       heading:
-        "Book a Private Villa in Bhurban — WhatsApp +92 304 567 9000",
+        "Book a Private Villa in Bhurban ",
       text:
         "Contact Himalaya Villas & Resorts directly for availability, pricing, and exclusive-use bookings.",
       buttonLabel:
-        "WhatsApp: +92 304 567 9000 | wa.me/923045679000",
+        "Book Your Stay",
       buttonHref: "https://wa.me/923045679000",
       footnote:
         "Direct bookings receive the best available rate and priority response.",
@@ -3801,11 +3801,11 @@ export const article13: Article = {
       type: "cta",
       eyebrow: "How to Book",
       heading:
-        "Book Your Summer Stay in Bhurban — WhatsApp +92 304 567 9000",
+        "Book Your Summer Stay in Bhurban ",
       text:
         "Contact Himalaya Villas & Resorts directly for availability, pricing, and exclusive-use bookings.",
       buttonLabel:
-        "WhatsApp: +92 304 567 9000 | wa.me/923045679000",
+        "Book Your Stay",
       buttonHref: "https://wa.me/923045679000",
       footnote:
         "Direct bookings receive the best available rate and priority response.",
@@ -4025,7 +4025,7 @@ export const article14: Article = {
       text:
         "Contact Himalaya Villas & Resorts directly for availability, pricing, and exclusive-use bookings.",
       buttonLabel:
-        "WhatsApp: +92 304 567 9000 | wa.me/923045679000",
+        "Book Your Stay",
       buttonHref: "https://wa.me/923045679000",
       footnote:
         "Direct bookings receive the best available rate and priority response.",
@@ -4248,11 +4248,11 @@ export const article15: Article = {
       type: "cta",
       eyebrow: "How to Book",
       heading:
-        "Book Your Ideal Season at Himalaya Villas — WhatsApp +92 304 567 9000",
+        "Book Your Ideal Season at Himalaya Villas ",
       text:
         "Contact Himalaya Villas & Resorts directly for availability, pricing, and exclusive-use bookings.",
       buttonLabel:
-        "WhatsApp: +92 304 567 9000 | wa.me/923045679000",
+        "Book Your Stay",
       buttonHref: "https://wa.me/923045679000",
       footnote:
         "Direct bookings receive the best available rate and priority response.",
@@ -4444,11 +4444,11 @@ export const article16: Article = {
       type: "cta",
       eyebrow: "How to Book",
       heading:
-        "Book the Family Villa — WhatsApp +92 304 567 9000",
+        "Book the Family Villa ",
       text:
         "Contact Himalaya Villas & Resorts directly for availability, pricing, and exclusive-use bookings.",
       buttonLabel:
-        "WhatsApp: +92 304 567 9000 | wa.me/923045679000",
+        "Book Your Stay",
       buttonHref: "https://wa.me/923045679000",
       footnote:
         "Direct bookings receive the best available rate and priority response.",
@@ -4609,11 +4609,11 @@ export const article17: Article = {
       type: "cta",
       eyebrow: "How to Book",
       heading:
-        "Arrange Your Private Dining Experience — WhatsApp +92 304 567 9000",
+        "Arrange Your Private Dining Experience ",
       text:
         "Contact Himalaya Villas & Resorts directly to arrange your in-villa dining experience.",
       buttonLabel:
-        "WhatsApp: +92 304 567 9000 | wa.me/923045679000",
+        "Book Your Stay",
       buttonHref: "https://wa.me/923045679000",
       footnote:
         "Direct bookings receive the best available rate and priority response.",
@@ -4813,11 +4813,11 @@ export const article18: Article = {
       type: "cta",
       eyebrow: "How to Book",
       heading:
-        "Book a Snowfall Stay at Himalaya Villas — WhatsApp +92 304 567 9000",
+        "Book a Snowfall Stay at Himalaya Villas ",
       text:
         "Contact Himalaya Villas & Resorts directly for availability, pricing, and exclusive-use bookings.",
       buttonLabel:
-        "WhatsApp: +92 304 567 9000 | wa.me/923045679000",
+        "Book Your Stay",
       buttonHref: "https://wa.me/923045679000",
       footnote:
         "Direct bookings receive the best available rate and priority response.",
@@ -5024,7 +5024,7 @@ export const article19: Article = {
       text:
         "Contact Himalaya Villas & Resorts directly for availability, pricing, and exclusive-use bookings.",
       buttonLabel:
-        "WhatsApp: +92 304 567 9000 | wa.me/923045679000",
+        "Book Your Stay",
       buttonHref: "https://wa.me/923045679000",
       footnote:
         "Direct bookings receive the best available rate and priority response.",
@@ -5234,11 +5234,11 @@ export const article21: Article = {
       type: "cta",
       eyebrow: "How to Book",
       heading:
-        "Book a Private Villa in Bhurban — WhatsApp +92 304 567 9000",
+        "Book a Private Villa in Bhurban ",
       text:
         "Contact Himalaya Villas & Resorts directly for availability, pricing, and exclusive-use bookings.",
       buttonLabel:
-        "WhatsApp: +92 304 567 9000 | wa.me/923045679000",
+        "Book Your Stay",
       buttonHref: "https://wa.me/923045679000",
       footnote:
         "Direct bookings receive the best available rate and priority response.",
@@ -5418,11 +5418,11 @@ export const article22: Article = {
       type: "cta",
       eyebrow: "How to Book",
       heading:
-        "Book a Private Villa in Bhurban — WhatsApp +92 304 567 9000",
+        "Book a Private Villa in Bhurban ",
       text:
         "Contact Himalaya Villas & Resorts directly for availability, pricing, and exclusive-use bookings.",
       buttonLabel:
-        "WhatsApp: +92 304 567 9000 | wa.me/923045679000",
+        "Book Your Stay",
       buttonHref: "https://wa.me/923045679000",
       footnote:
         "Direct bookings receive the best available rate and priority response.",
@@ -5625,7 +5625,7 @@ export const article23: Article = {
       text:
         "Contact Himalaya Villas & Resorts directly for availability, pricing, and exclusive-use bookings.",
       buttonLabel:
-        "WhatsApp: +92 304 567 9000 | wa.me/923045679000",
+        "Book Your Stay",
       buttonHref: "https://wa.me/923045679000",
       footnote:
         "Direct bookings receive the best available rate and priority response.",
@@ -5864,7 +5864,7 @@ export const article24: Article = {
       text:
         "Contact Himalaya Villas & Resorts directly for availability, pricing, and exclusive-use bookings.",
       buttonLabel:
-        "WhatsApp: +92 304 567 9000 | wa.me/923045679000",
+        "Book Your Stay",
       buttonHref: "https://wa.me/923045679000",
       footnote:
         "Direct bookings receive the best available rate and priority response.",
@@ -6089,7 +6089,7 @@ export const article25: Article = {
       text:
         "Contact Himalaya Villas & Resorts directly for availability, pricing, and exclusive-use bookings.",
       buttonLabel:
-        "WhatsApp: +92 304 567 9000 | wa.me/923045679000",
+        "Book Your Stay",
       buttonHref: "https://wa.me/923045679000",
       footnote:
         "Direct bookings receive the best available rate and priority response.",
@@ -6241,11 +6241,11 @@ export const article26: Article = {
       type: "cta",
       eyebrow: "How to Book",
       heading:
-        "Book Group Accommodation in Bhurban — WhatsApp +92 304 567 9000",
+        "Book Group Accommodation in Bhurban ",
       text:
         "Contact Himalaya Villas & Resorts directly for availability, pricing, and exclusive-use bookings.",
       buttonLabel:
-        "WhatsApp: +92 304 567 9000 | wa.me/923045679000",
+        "Book Your Stay",
       buttonHref: "https://wa.me/923045679000",
       footnote:
         "Direct bookings receive the best available rate and priority response.",
@@ -6386,11 +6386,11 @@ export const article27: Article = {
       type: "cta",
       eyebrow: "How to Book",
       heading:
-        "Book a Villa for 4 in Bhurban — WhatsApp +92 304 567 9000",
+        "Book a Villa for 4 in Bhurban ",
       text:
         "Contact Himalaya Villas & Resorts directly for availability, pricing, and exclusive-use bookings.",
       buttonLabel:
-        "WhatsApp: +92 304 567 9000 | wa.me/923045679000",
+        "Book Your Stay",
       buttonHref: "https://wa.me/923045679000",
       footnote:
         "Direct bookings receive the best available rate and priority response.",
@@ -6571,11 +6571,11 @@ export const article28: Article = {
       type: "cta",
       eyebrow: "How to Book",
       heading:
-        "Book Your Eid Holiday at Himalaya Villas — WhatsApp +92 304 567 9000",
+        "Book Your Eid Holiday at Himalaya Villas ",
       text:
         "Contact Himalaya Villas & Resorts directly for availability, pricing, and exclusive-use bookings.",
       buttonLabel:
-        "WhatsApp: +92 304 567 9000 | wa.me/923045679000",
+        "Book Your Stay",
       buttonHref: "https://wa.me/923045679000",
       footnote:
         "Direct bookings receive the best available rate and priority response.",
@@ -6758,11 +6758,11 @@ export const article29: Article = {
       type: "cta",
       eyebrow: "How to Book",
       heading:
-        "Book a Private Mountain Estate — WhatsApp +92 304 567 9000",
+        "Book a Private Mountain Estate ",
       text:
         "Contact Himalaya Villas & Resorts directly for availability, pricing, and exclusive-use bookings.",
       buttonLabel:
-        "WhatsApp: +92 304 567 9000 | wa.me/923045679000",
+        "Book Your Stay",
       buttonHref: "https://wa.me/923045679000",
       footnote:
         "Direct bookings receive the best available rate and priority response.",
@@ -6971,11 +6971,11 @@ export const article30: Article = {
       type: "cta",
       eyebrow: "How to Book",
       heading:
-        "Book an Autumn Stay at Himalaya Villas — WhatsApp +92 304 567 9000",
+        "Book an Autumn Stay at Himalaya Villas ",
       text:
         "Contact Himalaya Villas & Resorts directly for availability, pricing, and exclusive-use bookings.",
       buttonLabel:
-        "WhatsApp: +92 304 567 9000 | wa.me/923045679000",
+        "Book Your Stay",
       buttonHref: "https://wa.me/923045679000",
       footnote:
         "Direct bookings receive the best available rate and priority response.",
@@ -7241,7 +7241,7 @@ export const article31: Article = {
       text:
         "Contact Himalaya Villas & Resorts directly for availability, pricing, and exclusive-use bookings.",
       buttonLabel:
-        "WhatsApp: +92 304 567 9000 | wa.me/923045679000",
+        "Book Your Stay",
       buttonHref: "https://wa.me/923045679000",
       footnote:
         "Direct bookings receive the best available rate and priority response.",
@@ -7435,7 +7435,7 @@ export const article32: Article = {
       text:
         "Contact Himalaya Villas & Resorts directly for availability, pricing, and exclusive-use bookings.",
       buttonLabel:
-        "WhatsApp: +92 304 567 9000 | wa.me/923045679000",
+        "Book Your Stay",
       buttonHref: "https://wa.me/923045679000",
       footnote:
         "Direct bookings receive the best available rate and priority response.",
@@ -7686,11 +7686,11 @@ export const article33: Article = {
       type: "cta",
       eyebrow: "How to Book",
       heading:
-        "Book Your Bhurban Stay Before You Drive — WhatsApp +92 304 567 9000",
+        "Book Your Bhurban Stay Before You Drive ",
       text:
         "Contact Himalaya Villas & Resorts directly for availability, pricing, and exclusive-use bookings.",
       buttonLabel:
-        "WhatsApp: +92 304 567 9000 | wa.me/923045679000",
+        "Book Your Stay",
       buttonHref: "https://wa.me/923045679000",
       footnote:
         "Direct bookings receive the best available rate and priority response.",
@@ -7730,9 +7730,9 @@ export const article33: Article = {
 // ============================================
 export const article34: Article = {
   slug: "lahore-to-murree-guide",
-  title: "Lahore to Murree — Complete Travel Guide 2026",
+  title: "Lahore to Murree Guide: Best Route, Travel Time & Tips",
   metaDescription:
-    "lahore to murree (1,000/mo), lahore to murree ticket price (880/mo), lahore to murree bus service, lahore to bhurban murree",
+    "Planning a trip from Lahore to Murree? Explore the best route, travel time, scenic stopovers, and expert tips, then relax in a private luxury villa in Bhurban.",
   keywords:
     "lahore to murree (1,000/mo), lahore to murree ticket price (880/mo), lahore to murree bus service, lahore to bhurban murree",
   eyebrow: "Template B — Location Spoke | Cluster 8: Location Guides",
@@ -7913,11 +7913,11 @@ export const article34: Article = {
       type: "cta",
       eyebrow: "How to Book",
       heading:
-        "Book Your Bhurban Stay Before You Leave Lahore — WhatsApp +92 304 567 9000",
+        "Book Your Bhurban Stay Before You Leave Lahore ",
       text:
         "Contact Himalaya Villas & Resorts directly for availability, pricing, and exclusive-use bookings.",
       buttonLabel:
-        "WhatsApp: +92 304 567 9000 | wa.me/923045679000",
+        "Book Your Stay",
       buttonHref: "https://wa.me/923045679000",
       footnote:
         "Direct bookings receive the best available rate and priority response.",
@@ -7957,9 +7957,9 @@ export const article34: Article = {
 // ============================================
 export const article35: Article = {
   slug: "murree-in-spring",
-  title: "Murree in Spring — March and April Travel Guide",
+  title: "Murree in Spring: Weather, Blooms & Best Time to Visit",
   metaDescription:
-    "murree in march, murree in april, murree spring, bhurban spring, best time visit murree spring, murree march april weather",
+    "Discover Murree in spring, with mild weather, blooming hillsides & fewer crowds. See the best places to visit, then unwind in a private luxury villa in Bhurban.",
   keywords:
     "murree in march, murree in april, murree spring, bhurban spring, best time visit murree spring, murree march april weather",
   eyebrow: "Template B — Seasonal Spoke | Cluster 7: Seasonal & Weather",
@@ -8140,11 +8140,11 @@ export const article35: Article = {
       type: "cta",
       eyebrow: "How to Book",
       heading:
-        "Book a Spring Stay at Himalaya Villas — WhatsApp +92 304 567 9000",
+        "Book a Spring Stay at Himalaya Villas ",
       text:
         "Contact Himalaya Villas & Resorts directly for availability, pricing, and exclusive-use bookings.",
       buttonLabel:
-        "WhatsApp: +92 304 567 9000 | wa.me/923045679000",
+        "Book Your Stay",
       buttonHref: "https://wa.me/923045679000",
       footnote:
         "Direct bookings receive the best available rate and priority response.",
@@ -8184,9 +8184,9 @@ export const article35: Article = {
 // ============================================
 export const article37: Article = {
   slug: "mehndi-dholki-venue-bhurban",
-  title: "Mehndi and Dholki Venue in Bhurban Murree — Mountain Pre-Wedding Functions",
+  title: "Mehndi & Dholki Venue in Bhurban, Murree—Himalaya Villas",
   metaDescription:
-    "mehndi venue bhurban, dholki venue bhurban murree, mehndi ceremony bhurban, pre wedding venue bhurban murree, mountain mehndi pakistan",
+    "Host an unforgettable Mehndi or Dholki in Bhurban, Murree. Private outdoor lawns, mountain views & full event support at Himalaya Villas & Resorts. Book now.",
   keywords:
     "mehndi venue bhurban, dholki venue bhurban murree, mehndi ceremony bhurban, pre wedding venue bhurban murree, mountain mehndi pakistan",
   eyebrow: "Template B — Events Spoke | Cluster 5: Weddings & Events",
@@ -8328,11 +8328,11 @@ export const article37: Article = {
       type: "cta",
       eyebrow: "How to Book",
       heading:
-        "Enquire About Your Mountain Mehndi — WhatsApp +92 304 567 9000",
+        "Enquire About Your Mountain Mehndi ",
       text:
         "Contact Himalaya Villas & Resorts directly for availability, pricing, and exclusive-use bookings.",
       buttonLabel:
-        "WhatsApp: +92 304 567 9000 | wa.me/923045679000",
+        "Book Your Stay",
       buttonHref: "https://wa.me/923045679000",
       footnote:
         "Direct bookings receive the best available rate and priority response.",
@@ -8372,9 +8372,9 @@ export const article37: Article = {
 // ============================================
 export const article39: Article = {
   slug: "3-day-murree-itinerary-bhurban",
-  title: "3-Day Murree Itinerary — Complete Plan Based from Bhurban",
+  title: "3-Day Murree Itinerary: Book Your Bhurban Villa Stay Today",
   metaDescription:
-    "murree itinerary 3 days, 3 day trip murree, murree trip plan, murree 3 day plan, things to do murree 3 days, bhurban itinerary",
+    "Book a 3-day Murree trip based in Bhurban—private luxury villa stay, curated sightseeing plan, and activities. Reserve your dates at Himalaya Villas today.",
   keywords:
     "murree itinerary 3 days, 3 day trip murree, murree trip plan, murree 3 day plan, things to do murree 3 days, bhurban itinerary",
   eyebrow: "Template B — Itinerary Spoke | Cluster 3: Activities",
@@ -8533,11 +8533,11 @@ export const article39: Article = {
       type: "cta",
       eyebrow: "How to Book",
       heading:
-        "Plan Your 3-Day Bhurban Stay — WhatsApp +92 304 567 9000",
+        "Plan Your 3-Day Bhurban Stay ",
       text:
         "Contact Himalaya Villas & Resorts directly for availability, pricing, and exclusive-use bookings.",
       buttonLabel:
-        "WhatsApp: +92 304 567 9000 | wa.me/923045679000",
+        "Book Your Stay",
       buttonHref: "https://wa.me/923045679000",
       footnote:
         "Direct bookings receive the best available rate and priority response.",
@@ -8581,9 +8581,9 @@ export const article39: Article = {
 // ============================================
 export const article41: Article = {
   slug: "places-to-visit-in-murree",
-  title: "Places to Visit in Murree Pakistan — Top 15 Destinations 2026",
+  title: "Best Places to Visit in Murree: Top Attractions & Views",
   metaDescription:
-    "places to visit in murree (1,900/mo), murree tourist places, murree visiting places, best places murree, murree places, murree beautiful places",
+    "Discover the best places to visit in Murree — from Mall Road and Pindi Point to quiet Bhurban forests. Plan your trip and stay in a private luxury villa nearby.",
   keywords:
     "places to visit in murree (1,900/mo), murree tourist places, murree visiting places, best places murree, murree places, murree beautiful places",
   eyebrow: "Template A — Informational Hub | Clusters 3 & 8: Activities + Location",
@@ -8848,7 +8848,7 @@ export const article41: Article = {
       text:
         "Contact Himalaya Villas & Resorts directly for availability, pricing, and exclusive-use bookings.",
       buttonLabel:
-        "WhatsApp: +92 304 567 9000 | wa.me/923045679000",
+        "Book Your Stay",
       buttonHref: "https://wa.me/923045679000",
       footnote:
         "Direct bookings receive the best available rate and priority response.",
@@ -8888,9 +8888,9 @@ export const article41: Article = {
 // ============================================
 export const article42: Article = {
   slug: "best-hotel-near-islamabad-mountains",
-  title: "Best Hotel Near Islamabad Mountains — Private Estate in Bhurban, 45 Minutes Away",
+  title: "Best Hotel Near Islamabad Mountains - Book a Stay Today",
   metaDescription:
-    "best hotel near islamabad mountains, mountain resort near islamabad, hotel near islamabad hills, luxury stay near islamabad, mountain hotel 1 hour islamabad",
+    "Best Hotel Near Islamabad Mountains - Book a Stay Today",
   keywords:
     "best hotel near islamabad mountains, mountain resort near islamabad, hotel near islamabad hills, luxury stay near islamabad, mountain hotel 1 hour islamabad",
   eyebrow: "Template B — Commercial Spoke | Cluster 1: Hotels & Accommodation",
@@ -9043,11 +9043,11 @@ export const article42: Article = {
       type: "cta",
       eyebrow: "How to Book",
       heading:
-        "Book Islamabad's Nearest Mountain Estate — WhatsApp +92 304 567 9000",
+        "Book Islamabad's Nearest Mountain Estate ",
       text:
         "Contact Himalaya Villas & Resorts directly for availability, pricing, and exclusive-use bookings.",
       buttonLabel:
-        "WhatsApp: +92 304 567 9000 | wa.me/923045679000",
+        "Book Your Stay",
       buttonHref: "https://wa.me/923045679000",
       footnote:
         "Direct bookings receive the best available rate and priority response.",
@@ -9087,9 +9087,9 @@ export const article42: Article = {
 // ============================================
 export const article43: Article = {
   slug: "murree-for-couples",
-  title: "Murree for Couples — Romantic Getaway Guide 2026",
+  title: "Murree for Couples - Book a Romantic Villa in Bhurban",
   metaDescription:
-    "murree for couples, romantic stay murree, couple trip murree, murree couples getaway, romantic hotel murree bhurban, couple villa bhurban",
+    "Escape to Murree for couples—book a private luxury villa in Bhurban with scenic views, complete privacy, and a romantic setting. Reserve your stay now.",
   keywords:
     "murree for couples, romantic stay murree, couple trip murree, murree couples getaway, romantic hotel murree bhurban, couple villa bhurban",
   eyebrow: "Template B — Romantic Spoke | Cluster 12: Honeymoon & Romance",
@@ -9271,11 +9271,11 @@ export const article43: Article = {
       type: "cta",
       eyebrow: "How to Book",
       heading:
-        "Book a Couples' Villa at Himalaya Villas — WhatsApp +92 304 567 9000",
+        "Book a Couples' Villa at Himalaya Villas ",
       text:
         "Contact Himalaya Villas & Resorts directly for availability, pricing, and exclusive-use bookings.",
       buttonLabel:
-        "WhatsApp: +92 304 567 9000 | wa.me/923045679000",
+        "Book Your Stay",
       buttonHref: "https://wa.me/923045679000",
       footnote:
         "Direct bookings receive the best available rate and priority response.",
@@ -9315,9 +9315,9 @@ export const article43: Article = {
 // ============================================
 export const article44: Article = {
   slug: "hiking-near-murree",
-  title: "Hiking Near Murree — Best Trails Guide from Bhurban 2026",
+  title: "Hiking Near Murree Trails, Views & Villa Stay - Book Now",
   metaDescription:
-    "hiking near murree, murree hiking trails, hiking murree bhurban, trekking murree, hiking trails bhurban murree pakistan",
+    "Planning to go hiking near Murree? Book a private luxury villa in Bhurban as your base, with scenic trails, comfort, and privacy nearby. Reserve today.  ",
   keywords:
     "hiking near murree, murree hiking trails, hiking murree bhurban, trekking murree, hiking trails bhurban murree pakistan",
   eyebrow: "Template A — Activity Hub | Cluster 3: Activities",
@@ -9529,11 +9529,11 @@ export const article44: Article = {
       type: "cta",
       eyebrow: "How to Book",
       heading:
-        "Base Your Murree Hiking Trip at Himalaya Villas — WhatsApp +92 304 567 9000",
+        "Base Your Murree Hiking Trip at Himalaya Villas ",
       text:
         "Contact Himalaya Villas & Resorts directly for availability, pricing, and exclusive-use bookings.",
       buttonLabel:
-        "WhatsApp: +92 304 567 9000 | wa.me/923045679000",
+        "Book Your Stay",
       buttonHref: "https://wa.me/923045679000",
       footnote:
         "Direct bookings receive the best available rate and priority response.",
@@ -9573,9 +9573,9 @@ export const article44: Article = {
 // ============================================
 export const article46: Article = {
   slug: "2-day-murree-itinerary",
-  title: "2-Day Murree Itinerary — The Perfect Short Trip from Islamabad",
+  title: "2-Day Murree Itinerary - Book Your Bhurban Villa Stay",
   metaDescription:
-    "2 day murree trip, murree 2 day itinerary, murree weekend itinerary, 2 days in murree, murree short trip plan, bhurban 2 day plan",
+    "Planning a 2-day Murree trip? Book a private luxury villa in Bhurban with a ready itinerary covering top sights and activities. Reserve your stay today.",
   keywords:
     "2 day murree trip, murree 2 day itinerary, murree weekend itinerary, 2 days in murree, murree short trip plan, bhurban 2 day plan",
   eyebrow: "Template B — Itinerary Spoke | Cluster 3: Activities",
@@ -9713,11 +9713,11 @@ export const article46: Article = {
       type: "cta",
       eyebrow: "How to Book",
       heading:
-        "Book Your 2-Night Bhurban Stay — WhatsApp +92 304 567 9000",
+        "Book Your 2-Night Bhurban Stay ",
       text:
         "Contact Himalaya Villas & Resorts directly for availability, pricing, and exclusive-use bookings.",
       buttonLabel:
-        "WhatsApp: +92 304 567 9000 | wa.me/923045679000",
+        "Book Your Stay",
       buttonHref: "https://wa.me/923045679000",
       footnote:
         "Direct bookings receive the best available rate and priority response.",
@@ -9758,9 +9758,9 @@ export const article46: Article = {
 // ============================================
 export const article51: Article = {
   slug: "villa-for-6-guests-bhurban",
-  title: "Private Villa for 6 Guests Bhurban Murree — Family & Friends Group",
+  title: "Villa for 6 Guests in Bhurban, Murree - Book Your Stay",
   metaDescription:
-    "villa for 6 guests bhurban, 6 person villa murree, accommodation 6 people bhurban murree, family villa 6 guests bhurban, group of 6 villa murree",
+    "Book a private villa for 6 guests in Bhurban, Murree—spacious rooms, mountain views, and full privacy for families or groups. Reserve your stay today.",
   keywords:
     "villa for 6 guests bhurban, 6 person villa murree, accommodation 6 people bhurban murree, family villa 6 guests bhurban, group of 6 villa murree",
   eyebrow: "Template C — pSEO Capacity Template | Cluster 4: Private Villas",
@@ -9873,11 +9873,11 @@ export const article51: Article = {
       type: "cta",
       eyebrow: "How to Book",
       heading:
-        "Book a Villa for 6 in Bhurban — WhatsApp +92 304 567 9000",
+        "Book a Villa for 6 in Bhurban ",
       text:
         "Contact Himalaya Villas & Resorts directly for availability, pricing, and exclusive-use bookings.",
       buttonLabel:
-        "WhatsApp: +92 304 567 9000 | wa.me/923045679000",
+        "Book Your Stay",
       buttonHref: "https://wa.me/923045679000",
       footnote:
         "Direct bookings receive the best available rate and priority response.",
@@ -9917,9 +9917,9 @@ export const article51: Article = {
 // ============================================
 export const article52: Article = {
   slug: "villa-for-8-guests-bhurban",
-  title: "Private Villa for 8 Guests Bhurban Murree — Extended Family & Groups",
+  title: "Villa for 8 Guests in Bhurban, Murree - Book Your Stay",
   metaDescription:
-    "villa for 8 guests bhurban, 8 person villa murree, accommodation 8 people bhurban, family villa 8 guests murree, group villa 8 bhurban",
+    "Book a private 8-guest villa in Bhurban Murree, with spacious rooms, scenic mountain views, and full privacy for larger families and groups. Reserve today. ",
   keywords:
     "villa for 8 guests bhurban, 8 person villa murree, accommodation 8 people bhurban, family villa 8 guests murree, group villa 8 bhurban",
   eyebrow: "Template C — pSEO Capacity Template | Cluster 4: Private Villas",
@@ -10026,11 +10026,11 @@ export const article52: Article = {
       type: "cta",
       eyebrow: "How to Book",
       heading:
-        "Book a Villa for 8 in Bhurban — WhatsApp +92 304 567 9000",
+        "Book a Villa for 8 in Bhurban ",
       text:
         "Contact Himalaya Villas & Resorts directly for availability, pricing, and exclusive-use bookings.",
       buttonLabel:
-        "WhatsApp: +92 304 567 9000 | wa.me/923045679000",
+        "Book Your Stay",
       buttonHref: "https://wa.me/923045679000",
       footnote:
         "Direct bookings receive the best available rate and priority response.",
@@ -10070,9 +10070,9 @@ export const article52: Article = {
 // ============================================
 export const article53: Article = {
   slug: "villa-with-mountain-view-bhurban",
-  title: "Villa with Mountain View Bhurban Murree — Panoramic Private Terraces",
+  title: "Villa with Mountain View in Bhurban, Murree - Book Now",
   metaDescription:
-    "villa with mountain view bhurban, mountain view villa murree, panoramic view villa bhurban, best view villa murree pakistan, villa scenic view bhurban",
+    "Book a private villa with mountain views in Bhurban, Murree—scenic terraces, dense pine forest surroundings, and full privacy. Reserve your stay today.",
   keywords:
     "villa with mountain view bhurban, mountain view villa murree, panoramic view villa bhurban, best view villa murree pakistan, villa scenic view bhurban",
   eyebrow: "Template C — pSEO Feature Template | Cluster 4: Private Villas",
@@ -10197,11 +10197,11 @@ export const article53: Article = {
       type: "cta",
       eyebrow: "How to Book",
       heading:
-        "Book the View Villa in Bhurban — WhatsApp +92 304 567 9000",
+        "Book the View Villa in Bhurban ",
       text:
         "Contact Himalaya Villas & Resorts directly for availability, pricing, and exclusive-use bookings.",
       buttonLabel:
-        "WhatsApp: +92 304 567 9000 | wa.me/923045679000",
+        "Book Your Stay",
       buttonHref: "https://wa.me/923045679000",
       footnote:
         "Direct bookings receive the best available rate and priority response.",
@@ -10241,9 +10241,9 @@ export const article53: Article = {
 // ============================================
 export const article54: Article = {
   slug: "hotels-near-pindi-point-murree",
-  title: "Hotels Near Pindi Point Murree — Accommodation Guide",
+  title: "Hotels Near Pindi Point, Murree - Book a Villa Nearby",
   metaDescription:
-    "hotels near pindi point murree, pindi point murree hotel, accommodation near pindi point, hotel near pindi point chairlift",
+    "Searching for hotels near Pindi Point, Murree? Book a private luxury villa in nearby Bhurban with mountain views and full privacy. Reserve your stay today. ",
   keywords:
     "hotels near pindi point murree, pindi point murree hotel, accommodation near pindi point, hotel near pindi point chairlift",
   eyebrow: "Template B — Location + Commercial Spoke | Cluster 1: Hotels & Accommodation",
@@ -10382,7 +10382,7 @@ export const article54: Article = {
       text:
         "Contact Himalaya Villas & Resorts directly for availability, pricing, and exclusive-use bookings.",
       buttonLabel:
-        "WhatsApp: +92 304 567 9000 | wa.me/923045679000",
+        "Book Your Stay",
       buttonHref: "https://wa.me/923045679000",
       footnote:
         "Direct bookings receive the best available rate and priority response.",
@@ -10420,9 +10420,9 @@ export const article54: Article = {
 
 export const article57: Article = {
   slug: "bhurban-to-naran-route",
-  title: "Bhurban to Naran — Route Guide for Extended Mountain Trips",
+  title: "Bhurban to Naran Route Distance, Time & Tips - Book Now ",
   metaDescription:
-    "bhurban to naran, murree to naran, naran from islamabad via bhurban, bhurban naran distance, murree naran road trip",
+    "Get route details, distance, and travel time from Bhurban to Naran, then book a private luxury villa in Bhurban as your comfortable starting point. Reserve now. ",
   keywords:
     "bhurban to naran, murree to naran, naran from islamabad via bhurban, bhurban naran distance, murree naran road trip",
   eyebrow: "Template C — Location Spoke | Cluster 8: Location Guides",
@@ -10546,11 +10546,11 @@ export const article57: Article = {
       type: "cta",
       eyebrow: "How to Book",
       heading:
-        "Start Your Northern Pakistan Trip at Bhurban — WhatsApp +92 304 567 9000",
+        "Start Your Northern Pakistan Trip at Bhurban ",
       text:
         "Contact Himalaya Villas & Resorts directly for availability, pricing, and exclusive-use bookings.",
       buttonLabel:
-        "WhatsApp: +92 304 567 9000 | wa.me/923045679000",
+        "Book Your Stay",
       buttonHref: "https://wa.me/923045679000",
       footnote:
         "Direct bookings receive the best available rate and priority response.",
@@ -10586,9 +10586,9 @@ export const article57: Article = {
 // ============================================
 export const article58: Article = {
   slug: "murree-bhurban-diaspora-guide",
-  title: "Murree and Bhurban for Pakistani Diaspora — UAE, UK, Saudi Visitor Guide",
+  title: "Overseas Pakistani's Guide to Murree & Bhurban | Book Now",
   metaDescription:
-    "murree for pakistanis abroad, bhurban for uk pakistanis, murree dubai visitors, pakistan trip from uae murree, overseas pakistani murree visit",
+    "Planning a trip back home to Murree & Bhurban? Get travel tips and top spots for the diaspora, then book a private luxury villa in Bhurban. Reserve now.",
   keywords:
     "murree for pakistanis abroad, bhurban for uk pakistanis, murree dubai visitors, pakistan trip from uae murree, overseas pakistani murree visit",
   eyebrow: "Template B — Diaspora Spoke | Cluster 8: Location Guides",
@@ -10724,11 +10724,11 @@ export const article58: Article = {
       type: "cta",
       eyebrow: "How to Book",
       heading:
-        "Book Your Family Gathering in Bhurban — WhatsApp +92 304 567 9000",
+        "Book Your Family Gathering in Bhurban ",
       text:
         "Contact Himalaya Villas & Resorts directly for availability, pricing, and exclusive-use bookings.",
       buttonLabel:
-        "WhatsApp: +92 304 567 9000 | wa.me/923045679000",
+        "Book Your Stay",
       buttonHref: "https://wa.me/923045679000",
       footnote:
         "Direct bookings receive the best available rate and priority response.",
@@ -10895,11 +10895,11 @@ export const article61: Article = {
       type: "cta",
       eyebrow: "How to Book",
       heading:
-        "Book a 15-Guest Estate Stay — WhatsApp +92 304 567 9000",
+        "Book a 15-Guest Estate Stay ",
       text:
         "Contact Himalaya Villas & Resorts directly for availability, pricing, and exclusive-use bookings.",
       buttonLabel:
-        "WhatsApp: +92 304 567 9000 | wa.me/923045679000",
+        "Book Your Stay",
       buttonHref: "https://wa.me/923045679000",
       footnote:
         "Direct bookings receive the best available rate and priority response.",
@@ -10939,9 +10939,9 @@ export const article61: Article = {
 // ============================================
 export const article62: Article = {
   slug: "villa-for-30-guests-bhurban",
-  title: "Private Estate for 30 Guests Bhurban Murree — Full Estate Buyout",
+  title: "Villa for 30 Guests in Bhurban - Book Your Event Stay",
   metaDescription:
-    "villa for 30 guests bhurban, full estate buyout murree, 30 person accommodation bhurban, large family reunion murree villa, estate buyout bhurban pakistan",
+    "Book a private villa for 30 guests in Bhurban—spacious lawns, multiple rooms, and full privacy, perfect for weddings or large group events. Reserve today.",
   keywords:
     "villa for 30 guests bhurban, full estate buyout murree, 30 person accommodation bhurban, large family reunion murree villa, estate buyout bhurban pakistan",
   eyebrow: "Template C — pSEO Capacity Template | Cluster 4: Private Villas",
@@ -10954,7 +10954,7 @@ export const article62: Article = {
       type: "callout-qa",
       question: "Can 30 guests stay at a single private estate in Bhurban?",
       answer:
-        "Yes. A full estate buyout of Himalaya Villas & Resorts — all 12 villas — accommodates 30–80 guests depending on sleeping configuration, making it suitable for groups of 30. At this size, the entire property (all villas, the cedar garden, fire pit, dining pavilion, and terraces) belongs exclusively to one group. This is the configuration used for large family reunions, multi-family Eid gatherings, destination weddings, and large corporate retreats. Direct enquiry only — WhatsApp +92 304 567 9000.",
+        "Yes. A full estate buyout of Himalaya Villas & Resorts — all 12 villas — accommodates 30–80 guests depending on sleeping configuration, making it suitable for groups of 30. At this size, the entire property (all villas, the cedar garden, fire pit, dining pavilion, and terraces) belongs exclusively to one group. This is the configuration used for large family reunions, multi-family Eid gatherings, destination weddings, and large corporate retreats. Direct enquiry only .",
     },
 
     {
@@ -11051,11 +11051,11 @@ export const article62: Article = {
       type: "cta",
       eyebrow: "How to Book",
       heading:
-        "Enquire About a Full Estate Buyout — WhatsApp +92 304 567 9000",
+        "Enquire About a Full Estate Buyout ",
       text:
         "Contact Himalaya Villas & Resorts directly for availability, pricing, and exclusive-use bookings.",
       buttonLabel:
-        "WhatsApp: +92 304 567 9000 | wa.me/923045679000",
+        "Book Your Stay",
       buttonHref: "https://wa.me/923045679000",
       footnote:
         "Direct bookings receive the best available rate and priority response.",
@@ -11207,11 +11207,11 @@ export const article63: Article = {
       type: "cta",
       eyebrow: "How to Book",
       heading:
-        "Book a Cosy Winter Stay at Himalaya Villas — WhatsApp +92 304 567 9000",
+        "Book a Cosy Winter Stay at Himalaya Villas ",
       text:
         "Contact Himalaya Villas & Resorts directly for availability, pricing, and exclusive-use bookings.",
       buttonLabel:
-        "WhatsApp: +92 304 567 9000 | wa.me/923045679000",
+        "Book Your Stay",
       buttonHref: "https://wa.me/923045679000",
       footnote:
         "Direct bookings receive the best available rate and priority response.",
@@ -11368,11 +11368,11 @@ export const article64: Article = {
       type: "cta",
       eyebrow: "How to Book",
       heading:
-        "Book Your October Stay at Himalaya Villas — WhatsApp +92 304 567 9000",
+        "Book Your October Stay at Himalaya Villas ",
       text:
         "Contact Himalaya Villas & Resorts directly for availability, pricing, and exclusive-use bookings.",
       buttonLabel:
-        "WhatsApp: +92 304 567 9000 | wa.me/923045679000",
+        "Book Your Stay",
       buttonHref: "https://wa.me/923045679000",
       footnote:
         "Direct bookings receive the best available rate and priority response.",
@@ -11514,11 +11514,11 @@ export const article65: Article = {
       type: "cta",
       eyebrow: "How to Book",
       heading:
-        "Book a March Stay at Himalaya Villas — WhatsApp +92 304 567 9000",
+        "Book a March Stay at Himalaya Villas ",
       text:
         "Contact Himalaya Villas & Resorts directly for availability, pricing, and exclusive-use bookings.",
       buttonLabel:
-        "WhatsApp: +92 304 567 9000 | wa.me/923045679000",
+        "Book Your Stay",
       buttonHref: "https://wa.me/923045679000",
       footnote:
         "Direct bookings receive the best available rate and priority response.",
@@ -11554,9 +11554,9 @@ export const article65: Article = {
 // ============================================
 export const article66: Article = {
   slug: "himalaya-villas-reviews-guide",
-  title: "Reviews of Himalaya Villas Bhurban — What Guests Say and Where to Read Them",
+  title: "Himalaya Villas Reviews: What Guests Say - Book Now",
   metaDescription:
-    "himalaya villas reviews, himalaya villas bhurban tripadvisor, himalaya villas testimonials, is himalaya villas good, himalaya villas guest feedback",
+    "Read real Himalaya Villas reviews from guests who stayed in Bhurban—comfort, privacy and mountain views. See why they'd happily book again. Reserve today.",
   keywords:
     "himalaya villas reviews, himalaya villas bhurban tripadvisor, himalaya villas testimonials, is himalaya villas good, himalaya villas guest feedback",
   eyebrow: "Template B — Trust/Reviews Spoke | Cluster 1: Hotels & Accommodation",
@@ -11668,11 +11668,11 @@ export const article66: Article = {
       type: "cta",
       eyebrow: "How to Book",
       heading:
-        "Book Your Stay and Experience It Yourself — WhatsApp +92 304 567 9000",
+        "Book Your Stay and Experience It Yourself ",
       text:
         "Contact Himalaya Villas & Resorts directly for availability, pricing, and exclusive-use bookings.",
       buttonLabel:
-        "WhatsApp: +92 304 567 9000 | wa.me/923045679000",
+        "Book Your Stay",
       buttonHref: "https://wa.me/923045679000",
       footnote:
         "Direct bookings receive the best available rate and priority response.",
@@ -11708,9 +11708,9 @@ export const article66: Article = {
 // ============================================
 export const article67: Article = {
   slug: "private-chef-bhurban-murree",
-  title: "Private Chef and Catering in Bhurban Murree — In-Villa Dining Service",
+  title: "Private Chef in Bhurban, Murree—Book Your Villa Stay ",
   metaDescription:
-    "private chef bhurban, catering bhurban murree, private chef murree pakistan, in villa catering bhurban, event catering murree villa",
+    "Enjoy a private chef during your stay in Bhurban, Murree—fresh, home-style meals cooked just for you in your own luxury villa. Book your stay!",
   keywords:
     "private chef bhurban, catering bhurban murree, private chef murree pakistan, in villa catering bhurban, event catering murree villa",
   eyebrow: "Template C — Dining Spoke | Cluster 11: Dining & In-Villa Experiences",
@@ -11844,11 +11844,11 @@ export const article67: Article = {
       type: "cta",
       eyebrow: "How to Book",
       heading:
-        "Arrange Your In-Villa Dining — WhatsApp +92 304 567 9000",
+        "Arrange Your In-Villa Dining ",
       text:
         "Contact Himalaya Villas & Resorts directly for availability, pricing, and exclusive-use bookings.",
       buttonLabel:
-        "WhatsApp: +92 304 567 9000 | wa.me/923045679000",
+        "Book Your Stay",
       buttonHref: "https://wa.me/923045679000",
       footnote:
         "Direct bookings receive the best available rate and priority response.",
@@ -11884,9 +11884,9 @@ export const article67: Article = {
 // ============================================
 export const article68: Article = {
   slug: "murree-wedding-cost-guide",
-  title: "Murree and Bhurban Wedding Cost Guide — Budgeting a Mountain Destination Wedding",
+  title: "Private Chef in Bhurban, Murree—Book Your Villa Stay ",
   metaDescription:
-    "murree wedding cost, bhurban wedding price, destination wedding cost murree, mountain wedding budget pakistan, wedding venue price bhurban",
+    "Enjoy a private chef during your stay in Bhurban, Murree—fresh, home-style meals cooked just for you in your own luxury villa. Book your stay!",
   keywords:
     "murree wedding cost, bhurban wedding price, destination wedding cost murree, mountain wedding budget pakistan, wedding venue price bhurban",
   eyebrow: "Template B — Events Commercial Spoke | Cluster 5: Weddings & Events",
@@ -12021,11 +12021,11 @@ export const article68: Article = {
       type: "cta",
       eyebrow: "How to Book",
       heading:
-        "Get a Wedding Quote — WhatsApp +92 304 567 9000",
+        "Get a Wedding Quote ",
       text:
         "Contact Himalaya Villas & Resorts directly for availability, pricing, and exclusive-use bookings.",
       buttonLabel:
-        "WhatsApp: +92 304 567 9000 | wa.me/923045679000",
+        "Book Your Stay",
       buttonHref: "https://wa.me/923045679000",
       footnote:
         "Direct bookings receive the best available rate and priority response.",
@@ -12194,11 +12194,11 @@ export const article69: Article = {
       type: "cta",
       eyebrow: "How to Book",
       heading:
-        "Plan Your Friends Trip to Bhurban — WhatsApp +92 304 567 9000",
+        "Plan Your Friends Trip to Bhurban ",
       text:
         "Contact Himalaya Villas & Resorts directly for availability, pricing, and exclusive-use bookings.",
       buttonLabel:
-        "WhatsApp: +92 304 567 9000 | wa.me/923045679000",
+        "Book Your Stay",
       buttonHref: "https://wa.me/923045679000",
       footnote:
         "Direct bookings receive the best available rate and priority response.",
@@ -12238,9 +12238,9 @@ export const article69: Article = {
 // ============================================
 export const article70: Article = {
   slug: "last-minute-murree-booking",
-  title: "Last Minute Murree and Bhurban Booking — What's Possible",
+  title: "Last-Minute Murree Booking: Bhurban Villas - Book Today",
   metaDescription:
-    "last minute murree booking, same day bhurban booking, last minute villa murree, murree booking tonight, bhurban availability today",
+    "Planning a last-minute trip to Murree? Check live availability for private luxury villas in Bhurban and confirm your stay within minutes. Reserve today.",
   keywords:
     "last minute murree booking, same day bhurban booking, last minute villa murree, murree booking tonight, bhurban availability today",
   eyebrow: "Template C — Booking Spoke | Cluster 9: Packages & Pricing",
@@ -12360,11 +12360,11 @@ export const article70: Article = {
       type: "cta",
       eyebrow: "How to Book",
       heading:
-        "Check Last-Minute Availability — WhatsApp +92 304 567 9000",
+        "Check Last-Minute Availability ",
       text:
         "Contact Himalaya Villas & Resorts directly for availability, pricing, and exclusive-use bookings.",
       buttonLabel:
-        "WhatsApp: +92 304 567 9000 | wa.me/923045679000",
+        "Book Your Stay",
       buttonHref: "https://wa.me/923045679000",
       footnote:
         "Direct bookings receive the best available rate and priority response.",
@@ -12401,10 +12401,10 @@ export const article70: Article = {
 // ============================================
 
 export const article71: Article = {
-  slug: "luxury-travel-pakistan-murree-hills",
+  slug: "Luxury Travel Pakistan: Murree Hills Retreat - Book Now",
   title: "Luxury Travel in Pakistan — Why the Murree Hills Are Finally Getting It Right",
   metaDescription:
-    "luxury travel pakistan, murree hills luxury, bhurban private villa, himalaya villas pakistan, luxury mountain stay pakistan",
+    "Discover luxury travel in the Murree Hills, Pakistan — private luxury villas with mountain views and complete privacy in Bhurban. Reserve your stay now.",
   keywords:
     "luxury travel pakistan, murree hills luxury, bhurban private villa, himalaya villas pakistan, luxury mountain stay pakistan",
   eyebrow: "Backlink Guest Post | Travel + Luxury | ~1,400 words",
@@ -12512,9 +12512,9 @@ export const article71: Article = {
 
 export const article72: Article = {
   slug: "islamabad-weekend-escapes-murree-hills",
-  title: "Islamabad Weekend Escapes — The Insider Guide to the Murree Hills",
+  title: "Weekend Escape from Islamabad to Murree Hills—Book Now",
   metaDescription:
-    "islamabad weekend escapes, murree hills weekend, bhurban weekend guide, islamabad to bhurban, weekend getaway islamabad",
+    "Planning an Islamabad weekend escape? Book a private luxury villa in the Murree Hills, just a short drive away, with privacy and mountain views. Reserve now.",
   keywords:
     "islamabad weekend escapes, murree hills weekend, bhurban weekend guide, islamabad to bhurban, weekend getaway islamabad",
   eyebrow: "Backlink Guest Post | Islamabad Lifestyle | ~1,300 words",
@@ -12647,10 +12647,10 @@ export const article72: Article = {
 // ============================================
 
 export const article73: Article = {
-  slug: "pakistan-hill-stations-honest-guide",
-  title: "Pakistan Hill Stations — An Honest Guide Beyond the Clichés",
+  slug: "pakistan-hill-stations-guide",
+  title: "Pakistan Hill Stations Guide - Book Your Murree Villa",
   metaDescription:
-    "pakistan hill stations, murree bhurban guide, nathia gali accommodation, ayubia national park, ziarat balochistan",
+    "Explore the best hill stations in Pakistan, from Murree and Bhurban to Nathiagali, then book a private luxury villa for your mountain escape. Reserve today.",
   keywords:
     "pakistan hill stations, murree bhurban guide, nathia gali accommodation, ayubia national park, ziarat balochistan",
   eyebrow: "Backlink Guest Post | Pakistan Tourism Authority | ~1,400 words",
@@ -12807,10 +12807,10 @@ export const article73: Article = {
 // ============================================
 
 export const article74: Article = {
-  slug: "luxury-villas-south-asia-emerging",
-  title: "Luxury Villas in South Asia — The Emerging Destinations Beyond the Obvious",
+  slug: "luxury-villas-south-asia-emerging-destinations",
+  title: "Luxury Villas South Asia: Emerging Destinations - Book Now",
   metaDescription:
-    "luxury villas south asia, pakistan luxury villas, bhurban private estate, south asia villa destinations, emerging luxury travel",
+    "Discover luxury villas in South Asia's emerging destinations, including Pakistan's scenic Murree Hills. Book a private estate in Bhurban for your next trip.",
   keywords:
     "luxury villas south asia, pakistan luxury villas, bhurban private estate, south asia villa destinations, emerging luxury travel",
   eyebrow: "Backlink Guest Post | International Luxury Travel | ~1,300 words",
@@ -12906,9 +12906,9 @@ export const article74: Article = {
 
 export const article75: Article = {
   slug: "mountain-weddings-pakistan-bhurban",
-  title: "Mountain Weddings in Pakistan — Why Bhurban is Becoming the Destination",
+  title: "Mountain Weddings in Bhurban, Pakistan—Enquire Now",
   metaDescription:
-    "mountain weddings pakistan, bhurban destination wedding, himalaya villas wedding, outdoor wedding murree, pakistan wedding venue",
+    "Host your mountain wedding in Bhurban, Pakistan—private lawns, scenic mountain views, and full event support at Himalaya Villas & Resorts. Enquire today.",
   keywords:
     "mountain weddings pakistan, bhurban destination wedding, himalaya villas wedding, outdoor wedding murree, pakistan wedding venue",
   eyebrow: "Backlink Guest Post | Wedding Industry / Lifestyle | ~1,400 words",
@@ -12985,7 +12985,7 @@ export const article75: Article = {
       type: "section",
       heading: "Getting Started",
       paragraphs: [
-        "Wedding enquiries at Himalaya Villas are handled directly — WhatsApp +92 304 567 9000 with guest count, proposed functions, and preferred dates. Given the 12-villa capacity limit and the lead time required for full estate bookings, couples and families planning a Bhurban wedding are advised to enquire 3-6 months in advance for peak dates, earlier for Eid-adjacent weekends.",
+        "Wedding enquiries at Himalaya Villas are handled directly  with guest count, proposed functions, and preferred dates. Given the 12-villa capacity limit and the lead time required for full estate bookings, couples and families planning a Bhurban wedding are advised to enquire 3-6 months in advance for peak dates, earlier for Eid-adjacent weekends.",
       ],
      
     },
@@ -13019,9 +13019,9 @@ export const article75: Article = {
 
 export const article76: Article = {
   slug: "corporate-retreats-pakistan-bhurban",
-  title: "Corporate Retreats in Pakistan — The Case for Getting Out of the Office",
+  title: "Corporate Retreats in Bhurban, Pakistan - Enquire Now",
   metaDescription:
-    "corporate retreats pakistan, bhurban corporate offsite, leadership retreat islamabad, team building bhurban, executive retreat pakistan",
+    "Bring your team to Bhurban, Pakistan, for a corporate retreat—with private venues, mountain views, and full event support. Enquire at Himalaya Villas today.",
   keywords:
     "corporate retreats pakistan, bhurban corporate offsite, leadership retreat islamabad, team building bhurban, executive retreat pakistan",
   eyebrow: "Backlink Guest Post | Business / HR / Corporate | ~1,300 words",
@@ -13145,9 +13145,9 @@ export const article76: Article = {
 
 export const article77: Article = {
   slug: "family-travel-murree-hills-bhurban",
-  title: "Family Travel in Pakistan — Why the Murree Hills Work Better Than You Think",
+  title: "Family Travel in Murree Hills: Bhurban Villa - Book Now",
   metaDescription:
-    "family travel murree hills, bhurban family accommodation, family weekend islamabad, murree with kids, family villa bhurban",
+    "Planning family travel to Murree Hills, Bhurban? Book a spacious private villa with mountain views, safety, and comfort for all ages. Reserve your stay today.",
   keywords:
     "family travel murree hills, bhurban family accommodation, family weekend islamabad, murree with kids, family villa bhurban",
   eyebrow: "Backlink Guest Post | Parenting / Family Travel | ~1,300 words",
@@ -13294,9 +13294,9 @@ export const article77: Article = {
 
 export const article78: Article = {
   slug: "pakistan-mountain-food-scene-bhurban",
-  title: "Pakistan's Mountain Food Scene — From Mall Road Bhutta to Private Villa Dining",
+  title: "Pakistan's Mountain Food Scene in Bhurban—Book Now",
   metaDescription:
-    "murree food scene, bhurban private dining, kashmiri chai murree, in villa dining bhurban, pakistan mountain food",
+    "Explore Pakistan's mountain food scene in Bhurban—local flavors, cozy cafes, and home-style dining—then book a private luxury villa nearby. Reserve today.",
   keywords:
     "murree food scene, bhurban private dining, kashmiri chai murree, in villa dining bhurban, pakistan mountain food",
   eyebrow: "Backlink Guest Post | Food & Hospitality | ~1,200 words",
@@ -13401,9 +13401,9 @@ export const article78: Article = {
 
 export const article79: Article = {
   slug: "honeymoon-pakistan-murree-hills",
-  title: "Honeymoon in Pakistan — Why the Murree Hills Deserve a Place on Your List",
+  title: "Romantic Honeymoon in Murree Hills, Pakistan - Book Now",
   metaDescription:
-    "honeymoon pakistan, murree hills honeymoon, bhurban presidential suite, honeymoon villa bhurban, romantic mountain getaway pakistan",
+    "Planning a honeymoon in Pakistan's Murree Hills? Book a private luxury villa in Bhurban with mountain views and complete privacy. Reserve your stay today.",
   keywords:
     "honeymoon pakistan, murree hills honeymoon, bhurban presidential suite, honeymoon villa bhurban, romantic mountain getaway pakistan",
   eyebrow: "Backlink Guest Post | Honeymoon / Wedding Travel | ~1,300 words",
@@ -13539,9 +13539,9 @@ export const article79: Article = {
 
 export const article80: Article = {
   slug: "pakistani-diaspora-return-trip-guide",
-  title: "The Pakistani Diaspora Return Trip — How to Do It Well",
+  title: "Return Trip Guide for the Pakistani Diaspora - Book Now",
   metaDescription:
-    "pakistani diaspora return trip, bhurban diaspora accommodation, overseas pakistanis bhurban, return visit pakistan guide, diaspora mountain stay",
+    "A practical guide for the Pakistani diaspora planning a return trip—what to expect, where to stay, and how to book a private luxury villa. Reserve today.",
   keywords:
     "pakistani diaspora return trip, bhurban diaspora accommodation, overseas pakistanis bhurban, return visit pakistan guide, diaspora mountain stay",
   eyebrow: "Backlink Guest Post | Diaspora / Pakistani Community Publications | ~1,300 words",
@@ -13664,9 +13664,9 @@ export const article80: Article = {
 
 export const article81: Article = {
   slug: "adventure-travel-near-islamabad-bhurban",
-  title: "Adventure Travel Near Islamabad — The Accessible Version",
+  title: "Adventure Travel Near Islamabad: Bhurban Villa - Book Now",
   metaDescription:
-    "adventure travel islamabad, murree hills hiking, pipeline track ayubia, miranjani summit, bhurban adventure base",
+    "Plan your adventure trip near Islamabad in Bhurban, with hiking and trekking trails close by, then book a private luxury villa. Reserve your stay today.",
   keywords:
     "adventure travel islamabad, murree hills hiking, pipeline track ayubia, miranjani summit, bhurban adventure base",
   eyebrow: "Backlink Guest Post | Adventure / Outdoor Travel | ~1,200 words",
@@ -13770,9 +13770,9 @@ export const article81: Article = {
 
 export const article82: Article = {
   slug: "gcc-pakistanis-bhurban-mountain-guide",
-  title: "From the Gulf to the Mountains — Why GCC-Based Pakistanis Are Rediscovering Home",
+  title: "Bhurban Mountain Guide for GCC Pakistanis—Book Now",
   metaDescription:
-    "gcc pakistanis bhurban, uae to bhurban, gulf diaspora pakistan, dubai to islamabad mountain, gcc return trip pakistan",
+    "Coming home from the Gulf? Discover Bhurban's cool mountains with this guide made for GCC-based Pakistanis, then book a private luxury villa. Reserve now.",
   keywords:
     "gcc pakistanis bhurban, uae to bhurban, gulf diaspora pakistan, dubai to islamabad mountain, gcc return trip pakistan",
   eyebrow: "Backlink Guest Post | GCC / Gulf Region Travel | ~1,200 words",
@@ -13890,9 +13890,9 @@ export const article82: Article = {
 
 export const article83: Article = {
   slug: "sustainable-tourism-pakistan-hill-stations",
-  title: "Sustainable Tourism in Pakistan's Hill Stations — What Responsible Travel Looks Like",
+  title: "Sustainable Tourism in Pakistan's Hill Stations—Book",
   metaDescription:
-    "sustainable tourism pakistan, responsible travel murree, eco tourism bhurban, hill station sustainability, low impact travel pakistan",
+    "Explore sustainable tourism in Pakistan's hill stations, including Bhurban's low-impact private villas with mountain views. Book a responsible stay today.",
   keywords:
     "sustainable tourism pakistan, responsible travel murree, eco tourism bhurban, hill station sustainability, low impact travel pakistan",
   eyebrow: "Backlink Guest Post | Sustainability / Responsible Travel | ~1,200 words",
@@ -14557,9 +14557,9 @@ export const article87: Article = {
     {
       type: "cta",
       eyebrow: "How to Book",
-      heading: "Book a December Winter Stay — WhatsApp +92 304 567 9000",
+      heading: "Book a December Winter Stay ",
       text: "Contact us to reserve your winter villa stay.",
-      buttonLabel: "WhatsApp: +92 304 567 9000 | wa.me/923045679000",
+      buttonLabel: "Book Your Stay",
       buttonHref: "https://wa.me/923045679000",
       footnote: "Direct bookings receive the best available rate.",
     },
@@ -14689,9 +14689,9 @@ export const article88: Article = {
     {
       type: "cta",
       eyebrow: "How to Book",
-      heading: "Book a 12-Guest Villa Stay — WhatsApp +92 304 567 9000",
+      heading: "Book a 12-Guest Villa Stay ",
       text: "Contact us to reserve your villa for 12 guests.",
-      buttonLabel: "WhatsApp: +92 304 567 9000 | wa.me/923045679000",
+      buttonLabel: "Book Your Stay",
       buttonHref: "https://wa.me/923045679000",
       footnote: "Direct bookings receive the best available rate.",
     },
@@ -14838,9 +14838,9 @@ export const article89: Article = {
     {
       type: "cta",
       eyebrow: "How to Book",
-      heading: "Book Your Airport-Adjacent Mountain Stay — WhatsApp +92 304 567 9000",
+      heading: "Book Your Airport-Adjacent Mountain Stay ",
       text: "Contact us to reserve your villa near Islamabad Airport.",
-      buttonLabel: "WhatsApp: +92 304 567 9000 | wa.me/923045679000",
+      buttonLabel: "Book Your Stay",
       buttonHref: "https://wa.me/923045679000",
       footnote: "Direct bookings receive the best available rate.",
     },
@@ -14980,9 +14980,9 @@ export const article90: Article = {
     {
       type: "cta",
       eyebrow: "How to Book",
-      heading: "Base in Bhurban, Explore Both — WhatsApp +92 304 567 9000",
+      heading: "Base in Bhurban, Explore Both ",
       text: "Contact us to book your Bhurban base for exploring Murree and Nathia Gali.",
-      buttonLabel: "WhatsApp: +92 304 567 9000 | wa.me/923045679000",
+      buttonLabel: "Book Your Stay",
       buttonHref: "https://wa.me/923045679000",
       footnote: "Direct bookings receive the best available rate.",
     },
@@ -15122,7 +15122,7 @@ export const article91: Article = {
       eyebrow: "How to Book",
       heading: "Stay at 6,800 Feet — Book Himalaya Villas, Bhurban",
       text: "Contact us to book your stay at 6,800 feet elevation.",
-      buttonLabel: "WhatsApp: +92 304 567 9000 | wa.me/923045679000",
+      buttonLabel: "Book Your Stay",
       buttonHref: "https://wa.me/923045679000",
       footnote: "Direct bookings receive the best available rate.",
     },
@@ -15240,9 +15240,9 @@ export const article92: Article = {
     {
       type: "cta",
       eyebrow: "How to Book",
-      heading: "Enquire About a Walima in Bhurban — WhatsApp +92 304 567 9000",
+      heading: "Enquire About a Walima in Bhurban ",
       text: "Contact us to plan your Walima in the mountains.",
-      buttonLabel: "WhatsApp: +92 304 567 9000 | wa.me/923045679000",
+      buttonLabel: "Book Your Stay",
       buttonHref: "https://wa.me/923045679000",
       footnote: "Direct bookings receive the best available rate.",
     },
@@ -15360,9 +15360,9 @@ export const article93: Article = {
     {
       type: "cta",
       eyebrow: "How to Book",
-      heading: "Enquire About a Bhurban Nikkah — WhatsApp +92 304 567 9000",
+      heading: "Enquire About a Bhurban Nikkah ",
       text: "Contact us to plan your Nikkah ceremony in the mountains.",
-      buttonLabel: "WhatsApp: +92 304 567 9000 | wa.me/923045679000",
+      buttonLabel: "Book Your Stay",
       buttonHref: "https://wa.me/923045679000",
       footnote: "Direct bookings receive the best available rate.",
     },
@@ -15494,9 +15494,9 @@ export const article94: Article = {
     {
       type: "cta",
       eyebrow: "How to Book",
-      heading: "Book the Best Mountain View in Bhurban — WhatsApp +92 304 567 9000",
+      heading: "Book the Best Mountain View in Bhurban ",
       text: "Contact us to book your mountain view villa.",
-      buttonLabel: "WhatsApp: +92 304 567 9000 | wa.me/923045679000",
+      buttonLabel: "Book Your Stay",
       buttonHref: "https://wa.me/923045679000",
       footnote: "Direct bookings receive the best available rate.",
     },
@@ -15648,9 +15648,9 @@ export const article95: Article = {
     {
       type: "cta",
       eyebrow: "How to Book",
-      heading: "Book a Solo Villa Stay in Bhurban — WhatsApp +92 304 567 9000",
+      heading: "Book a Solo Villa Stay in Bhurban ",
       text: "Contact us to book your solo villa stay.",
-      buttonLabel: "WhatsApp: +92 304 567 9000 | wa.me/923045679000",
+      buttonLabel: "Book Your Stay",
       buttonHref: "https://wa.me/923045679000",
       footnote: "Direct bookings receive the best available rate.",
     },
@@ -15812,9 +15812,9 @@ export const article96: Article = {
     {
       type: "cta",
       eyebrow: "How to Book",
-      heading: "Book the Cedar Garden Bonfire Evening — WhatsApp +92 304 567 9000",
+      heading: "Book the Cedar Garden Bonfire Evening ",
       text: "Contact us to arrange your fire pit evening.",
-      buttonLabel: "WhatsApp: +92 304 567 9000 | wa.me/923045679000",
+      buttonLabel: "Book Your Stay",
       buttonHref: "https://wa.me/923045679000",
       footnote: "Direct bookings receive the best available rate.",
     },
@@ -15933,9 +15933,9 @@ export const article97: Article = {
     {
       type: "cta",
       eyebrow: "How to Book",
-      heading: "Book New Year at Himalaya Villas — WhatsApp +92 304 567 9000",
+      heading: "Book New Year at Himalaya Villas ",
       text: "Contact us to reserve your New Year stay.",
-      buttonLabel: "WhatsApp: +92 304 567 9000 | wa.me/923045679000",
+      buttonLabel: "Book Your Stay",
       buttonHref: "https://wa.me/923045679000",
       footnote: "Direct bookings receive the best available rate.",
     },
@@ -16046,9 +16046,9 @@ export const article98: Article = {
     {
       type: "cta",
       eyebrow: "How to Book",
-      heading: "Arrange Your Outdoor BBQ Evening — WhatsApp +92 304 567 9000",
+      heading: "Arrange Your Outdoor BBQ Evening ",
       text: "Contact us to arrange your BBQ experience.",
-      buttonLabel: "WhatsApp: +92 304 567 9000 | wa.me/923045679000",
+      buttonLabel: "Book Your Stay",
       buttonHref: "https://wa.me/923045679000",
       footnote: "Direct bookings receive the best available rate.",
     },
@@ -16186,9 +16186,9 @@ export const article99: Article = {
     {
       type: "cta",
       eyebrow: "How to Book",
-      heading: "Book Your Bhurban Stay — WhatsApp +92 304 567 9000",
+      heading: "Book Your Bhurban Stay ",
       text: "Contact us to book your stay.",
-      buttonLabel: "WhatsApp: +92 304 567 9000 | wa.me/923045679000",
+      buttonLabel: "Book Your Stay",
       buttonHref: "https://wa.me/923045679000",
       footnote: "Direct bookings receive the best available rate.",
     },
@@ -16339,9 +16339,9 @@ export const article100: Article = {
     {
       type: "cta",
       eyebrow: "How to Book",
-      heading: "Book an Accessible Mountain Stay — WhatsApp +92 304 567 9000",
+      heading: "Book an Accessible Mountain Stay ",
       text: "Contact us to book your accessible stay.",
-      buttonLabel: "WhatsApp: +92 304 567 9000 | wa.me/923045679000",
+      buttonLabel: "Book Your Stay",
       buttonHref: "https://wa.me/923045679000",
       footnote: "Direct bookings receive the best available rate.",
     },
@@ -16470,9 +16470,9 @@ export const article101: Article = {
     {
       type: "cta",
       eyebrow: "How to Book",
-      heading: "Book a Corporate Team Retreat — WhatsApp +92 304 567 9000",
+      heading: "Book a Corporate Team Retreat ",
       text: "Contact us to plan your corporate retreat.",
-      buttonLabel: "WhatsApp: +92 304 567 9000 | wa.me/923045679000",
+      buttonLabel: "Book Your Stay",
       buttonHref: "https://wa.me/923045679000",
       footnote: "Direct bookings receive the best available rate.",
     },
@@ -16600,9 +16600,9 @@ export const article102: Article = {
     {
       type: "cta",
       eyebrow: "How to Book",
-      heading: "Book Your Anniversary Stay — WhatsApp +92 304 567 9000",
+      heading: "Book Your Anniversary Stay ",
       text: "Contact us to plan your anniversary celebration.",
-      buttonLabel: "WhatsApp: +92 304 567 9000 | wa.me/923045679000",
+      buttonLabel: "Book Your Stay",
       buttonHref: "https://wa.me/923045679000",
       footnote: "Direct bookings receive the best available rate.",
     },
@@ -16721,9 +16721,9 @@ export const article103: Article = {
     {
       type: "cta",
       eyebrow: "How to Book",
-      heading: "Book from Lahore — WhatsApp +92 304 567 9000",
+      heading: "Book from Lahore ",
       text: "Contact us to book your stay from Lahore.",
-      buttonLabel: "WhatsApp: +92 304 567 9000 | wa.me/923045679000",
+      buttonLabel: "Book Your Stay",
       buttonHref: "https://wa.me/923045679000",
       footnote: "Direct bookings receive the best available rate.",
     },
@@ -16872,9 +16872,9 @@ export const article104: Article = {
     {
       type: "cta",
       eyebrow: "How to Book",
-      heading: "Book Your Bhurban Base — WhatsApp +92 304 567 9000",
+      heading: "Book Your Bhurban Base ",
       text: "Contact us to book your Bhurban stay.",
-      buttonLabel: "WhatsApp: +92 304 567 9000 | wa.me/923045679000",
+      buttonLabel: "Book Your Stay",
       buttonHref: "https://wa.me/923045679000",
       footnote: "Direct bookings receive the best available rate.",
     },
@@ -16976,9 +16976,9 @@ export const article105: Article = {
     {
       type: "cta",
       eyebrow: "How to Book",
-      heading: "Explore Bhurban's Real Highlights — WhatsApp +92 304 567 9000",
+      heading: "Explore Bhurban's Real Highlights ",
       text: "Contact us to book your Bhurban stay.",
-      buttonLabel: "WhatsApp: +92 304 567 9000 | wa.me/923045679000",
+      buttonLabel: "Book Your Stay",
       buttonHref: "https://wa.me/923045679000",
       footnote: "Direct bookings receive the best available rate.",
     },
@@ -17158,9 +17158,9 @@ export const article106: Article = {
     {
       type: "cta",
       eyebrow: "How to Book",
-      heading: "Book the Private Estate Alternative — WhatsApp +92 304 567 9000",
+      heading: "Book the Private Estate Alternative ",
       text: "Contact us to book your private estate stay.",
-      buttonLabel: "WhatsApp: +92 304 567 9000 | wa.me/923045679000",
+      buttonLabel: "Book Your Stay",
       buttonHref: "https://wa.me/923045679000",
       footnote: "Direct bookings receive the best available rate.",
     },
@@ -17298,9 +17298,9 @@ export const article107: Article = {
     {
       type: "cta",
       eyebrow: "How to Book",
-      heading: "Book Bhurban Before Your Karachi Flight — WhatsApp +92 304 567 9000",
+      heading: "Book Bhurban Before Your Karachi Flight ",
       text: "Contact us to book your stay before your flight.",
-      buttonLabel: "WhatsApp: +92 304 567 9000 | wa.me/923045679000",
+      buttonLabel: "Book Your Stay",
       buttonHref: "https://wa.me/923045679000",
       footnote: "Direct bookings receive the best available rate.",
     },
@@ -17417,9 +17417,9 @@ export const article108: Article = {
     {
       type: "cta",
       eyebrow: "How to Book",
-      heading: "Book a July Stay at Himalaya Villas — WhatsApp +92 304 567 9000",
+      heading: "Book a July Stay at Himalaya Villas ",
       text: "Contact us to book your July stay.",
-      buttonLabel: "WhatsApp: +92 304 567 9000 | wa.me/923045679000",
+      buttonLabel: "Book Your Stay",
       buttonHref: "https://wa.me/923045679000",
       footnote: "Direct bookings receive the best available rate.",
     },
@@ -17543,9 +17543,9 @@ export const article109: Article = {
     {
       type: "cta",
       eyebrow: "How to Book",
-      heading: "Plan Your Birthday Celebration — WhatsApp +92 304 567 9000",
+      heading: "Plan Your Birthday Celebration ",
       text: "Contact us to plan your birthday celebration.",
-      buttonLabel: "WhatsApp: +92 304 567 9000 | wa.me/923045679000",
+      buttonLabel: "Book Your Stay",
       buttonHref: "https://wa.me/923045679000",
       footnote: "Direct bookings receive the best available rate.",
     },
@@ -17669,9 +17669,9 @@ export const article110: Article = {
     {
       type: "cta",
       eyebrow: "How to Book",
-      heading: "Book the Best Photography Base in Bhurban — WhatsApp +92 304 567 9000",
+      heading: "Book the Best Photography Base in Bhurban ",
       text: "Contact us to book your photography stay.",
-      buttonLabel: "WhatsApp: +92 304 567 9000 | wa.me/923045679000",
+      buttonLabel: "Book Your Stay",
       buttonHref: "https://wa.me/923045679000",
       footnote: "Direct bookings receive the best available rate.",
     },
@@ -17803,9 +17803,9 @@ export const article111: Article = {
     {
       type: "cta",
       eyebrow: "How to Book",
-      heading: "Start Your Mountain Trip in Bhurban — WhatsApp +92 304 567 9000",
+      heading: "Start Your Mountain Trip in Bhurban ",
       text: "Contact us to book your Bhurban base.",
-      buttonLabel: "WhatsApp: +92 304 567 9000 | wa.me/923045679000",
+      buttonLabel: "Book Your Stay",
       buttonHref: "https://wa.me/923045679000",
       footnote: "Direct bookings receive the best available rate.",
     },
@@ -17923,9 +17923,9 @@ export const article112: Article = {
     {
       type: "cta",
       eyebrow: "How to Book",
-      heading: "Stay in Bhurban — Mall Road is 20 Minutes Away — WhatsApp +92 304 567 9000",
+      heading: "Stay in Bhurban — Mall Road is 20 Minutes Away ",
       text: "Contact us to book your stay.",
-      buttonLabel: "WhatsApp: +92 304 567 9000 | wa.me/923045679000",
+      buttonLabel: "Book Your Stay",
       buttonHref: "https://wa.me/923045679000",
       footnote: "Direct bookings receive the best available rate.",
     },
@@ -18047,9 +18047,9 @@ export const article113: Article = {
     {
       type: "cta",
       eyebrow: "How to Book",
-      heading: "Book from Canada Before Your Pakistan Trip — WhatsApp +92 304 567 9000",
+      heading: "Book from Canada Before Your Pakistan Trip ",
       text: "Contact us to book your stay from Canada.",
-      buttonLabel: "WhatsApp: +92 304 567 9000 | wa.me/923045679000",
+      buttonLabel: "Book Your Stay",
       buttonHref: "https://wa.me/923045679000",
       footnote: "Direct bookings receive the best available rate.",
     },
@@ -18172,9 +18172,9 @@ export const article114: Article = {
     {
       type: "cta",
       eyebrow: "How to Book",
-      heading: "Enquire About Extended Stays — WhatsApp +92 304 567 9000",
+      heading: "Enquire About Extended Stays ",
       text: "Contact us to enquire about long stay rates.",
-      buttonLabel: "WhatsApp: +92 304 567 9000 | wa.me/923045679000",
+      buttonLabel: "Book Your Stay",
       buttonHref: "https://wa.me/923045679000",
       footnote: "Direct bookings receive the best available rate.",
     },
@@ -18301,9 +18301,9 @@ export const article115: Article = {
     {
       type: "cta",
       eyebrow: "How to Book",
-      heading: "Arrange Private Dining at Himalaya Villas — WhatsApp +92 304 567 9000",
+      heading: "Arrange Private Dining at Himalaya Villas ",
       text: "Contact us to arrange your private dining experience.",
-      buttonLabel: "WhatsApp: +92 304 567 9000 | wa.me/923045679000",
+      buttonLabel: "Book Your Stay",
       buttonHref: "https://wa.me/923045679000",
       footnote: "Direct bookings receive the best available rate.",
     },
@@ -18419,9 +18419,9 @@ export const article116: Article = {
     {
       type: "cta",
       eyebrow: "How to Book",
-      heading: "Book the Best Night Sky in the Murree Hills — WhatsApp +92 304 567 9000",
+      heading: "Book the Best Night Sky in the Murree Hills ",
       text: "Contact us to book your stargazing stay.",
-      buttonLabel: "WhatsApp: +92 304 567 9000 | wa.me/923045679000",
+      buttonLabel: "Book Your Stay",
       buttonHref: "https://wa.me/923045679000",
       footnote: "Direct bookings receive the best available rate.",
     },
@@ -18562,9 +18562,9 @@ export const article117: Article = {
     {
       type: "cta",
       eyebrow: "How to Book",
-      heading: "Book a Late August Stay at Himalaya Villas — WhatsApp +92 304 567 9000",
+      heading: "Book a Late August Stay at Himalaya Villas ",
       text: "Contact us to book your August stay.",
-      buttonLabel: "WhatsApp: +92 304 567 9000 | wa.me/923045679000",
+      buttonLabel: "Book Your Stay",
       buttonHref: "https://wa.me/923045679000",
       footnote: "Direct bookings receive the best available rate.",
     },
@@ -18689,9 +18689,9 @@ export const article118: Article = {
     {
       type: "cta",
       eyebrow: "How to Book",
-      heading: "Book the Most Affordable Bhurban Villa — WhatsApp +92 304 567 9000",
+      heading: "Book the Most Affordable Bhurban Villa ",
       text: "Contact us to book your affordable villa stay.",
-      buttonLabel: "WhatsApp: +92 304 567 9000 | wa.me/923045679000",
+      buttonLabel: "Book Your Stay",
       buttonHref: "https://wa.me/923045679000",
       footnote: "Direct bookings receive the best available rate.",
     },
@@ -18823,9 +18823,9 @@ export const article119: Article = {
     {
       type: "cta",
       eyebrow: "How to Book",
-      heading: "Start Your Mountain Trip at Bhurban — WhatsApp +92 304 567 9000",
+      heading: "Start Your Mountain Trip at Bhurban ",
       text: "Contact us to book your Bhurban base.",
-      buttonLabel: "WhatsApp: +92 304 567 9000 | wa.me/923045679000",
+      buttonLabel: "Book Your Stay",
       buttonHref: "https://wa.me/923045679000",
       footnote: "Direct bookings receive the best available rate.",
     },
@@ -18955,9 +18955,9 @@ export const article120: Article = {
     {
       type: "cta",
       eyebrow: "How to Book",
-      heading: "Book a Corporate Wellness Retreat — WhatsApp +92 304 567 9000",
+      heading: "Book a Corporate Wellness Retreat ",
       text: "Contact us to plan your corporate wellness retreat.",
-      buttonLabel: "WhatsApp: +92 304 567 9000 | wa.me/923045679000",
+      buttonLabel: "Book Your Stay",
       buttonHref: "https://wa.me/923045679000",
       footnote: "Direct bookings receive the best available rate.",
     },
@@ -19123,9 +19123,9 @@ export const article121: Article = {
     {
       type: "cta",
       eyebrow: "How to Book",
-      heading: "Book Your Forest Stay at Himalaya Villas — WhatsApp +92 304 567 9000",
+      heading: "Book Your Forest Stay at Himalaya Villas ",
       text: "Contact us to book your forest stay.",
-      buttonLabel: "WhatsApp: +92 304 567 9000 | wa.me/923045679000",
+      buttonLabel: "Book Your Stay",
       buttonHref: "https://wa.me/923045679000",
       footnote: "Direct bookings receive the best available rate.",
     },
@@ -19286,9 +19286,9 @@ export const article122: Article = {
     {
       type: "cta",
       eyebrow: "How to Book",
-      heading: "Book a Birding Base at Himalaya Villas — WhatsApp +92 304 567 9000",
+      heading: "Book a Birding Base at Himalaya Villas ",
       text: "Contact us to book your birding stay.",
-      buttonLabel: "WhatsApp: +92 304 567 9000 | wa.me/923045679000",
+      buttonLabel: "Book Your Stay",
       buttonHref: "https://wa.me/923045679000",
       footnote: "Direct bookings receive the best available rate.",
     },
@@ -19402,9 +19402,9 @@ export const article123: Article = {
     {
       type: "cta",
       eyebrow: "How to Book",
-      heading: "Arrange a Qawwali Evening at Himalaya Villas — WhatsApp +92 304 567 9000",
+      heading: "Arrange a Qawwali Evening at Himalaya Villas ",
       text: "Contact us to arrange your Qawwali evening.",
-      buttonLabel: "WhatsApp: +92 304 567 9000 | wa.me/923045679000",
+      buttonLabel: "Book Your Stay",
       buttonHref: "https://wa.me/923045679000",
       footnote: "Direct bookings receive the best available rate.",
     },
@@ -19533,9 +19533,9 @@ export const article124: Article = {
     {
       type: "cta",
       eyebrow: "How to Book",
-      heading: "Book a Medical Professionals Retreat — WhatsApp +92 304 567 9000",
+      heading: "Book a Medical Professionals Retreat ",
       text: "Contact us to plan your medical professionals retreat.",
-      buttonLabel: "WhatsApp: +92 304 567 9000 | wa.me/923045679000",
+      buttonLabel: "Book Your Stay",
       buttonHref: "https://wa.me/923045679000",
       footnote: "Direct bookings receive the best available rate.",
     },
@@ -19672,9 +19672,9 @@ export const article125: Article = {
     {
       type: "cta",
       eyebrow: "How to Book",
-      heading: "Book the Presidential Suite Jacuzzi Villa — WhatsApp +92 304 567 9000",
+      heading: "Book the Presidential Suite Jacuzzi Villa ",
       text: "Contact us to book your private jacuzzi villa.",
-      buttonLabel: "WhatsApp: +92 304 567 9000 | wa.me/923045679000",
+      buttonLabel: "Book Your Stay",
       buttonHref: "https://wa.me/923045679000",
       footnote: "Direct bookings receive the best available rate.",
     },
@@ -19826,9 +19826,9 @@ export const article126: Article = {
     {
       type: "cta",
       eyebrow: "How to Book",
-      heading: "Enquire About School Group Bookings — WhatsApp +92 304 567 9000",
+      heading: "Enquire About School Group Bookings ",
       text: "Contact us to enquire about school group bookings.",
-      buttonLabel: "WhatsApp: +92 304 567 9000 | wa.me/923045679000",
+      buttonLabel: "Book Your Stay",
       buttonHref: "https://wa.me/923045679000",
       footnote: "Direct bookings receive the best available rate.",
     },
@@ -21091,9 +21091,9 @@ export const article137: Article = {
     {
       type: "cta",
       eyebrow: "How to Book",
-      heading: "Book April at Himalaya Villas — WhatsApp +92 304 567 9000",
+      heading: "Book April at Himalaya Villas ",
       text: "Contact us to book your April stay.",
-      buttonLabel: "WhatsApp: +92 304 567 9000 | wa.me/923045679000",
+      buttonLabel: "Book Your Stay",
       buttonHref: "https://wa.me/923045679000",
       footnote: "Direct bookings receive the best available rate.",
     },
@@ -21260,9 +21260,9 @@ export const article138: Article = {
     {
       type: "cta",
       eyebrow: "How to Book",
-      heading: "Book Your Pre-Wedding Shoot Villa — WhatsApp +92 304 567 9000",
+      heading: "Book Your Pre-Wedding Shoot Villa ",
       text: "Contact us to book your pre-wedding shoot villa.",
-      buttonLabel: "WhatsApp: +92 304 567 9000 | wa.me/923045679000",
+      buttonLabel: "Book Your Stay",
       buttonHref: "https://wa.me/923045679000",
       footnote: "Direct bookings receive the best available rate.",
     },
@@ -21391,9 +21391,9 @@ export const article139: Article = {
     {
       type: "cta",
       eyebrow: "How to Book",
-      heading: "Enquire About Full Estate Exclusive Booking — WhatsApp +92 304 567 9000",
+      heading: "Enquire About Full Estate Exclusive Booking ",
       text: "Contact us to enquire about exclusive estate booking.",
-      buttonLabel: "WhatsApp: +92 304 567 9000 | wa.me/923045679000",
+      buttonLabel: "Book Your Stay",
       buttonHref: "https://wa.me/923045679000",
       footnote: "Direct bookings receive the best available rate.",
     },
@@ -21547,9 +21547,9 @@ export const article140: Article = {
     {
       type: "cta",
       eyebrow: "How to Book",
-      heading: "Book Bhurban Before Your Karachi Flight — WhatsApp +92 304 567 9000",
+      heading: "Book Bhurban Before Your Karachi Flight ",
       text: "Contact us to book your stay before your flight.",
-      buttonLabel: "WhatsApp: +92 304 567 9000 | wa.me/923045679000",
+      buttonLabel: "Book Your Stay",
       buttonHref: "https://wa.me/923045679000",
       footnote: "Direct bookings receive the best available rate.",
     },
@@ -21689,9 +21689,9 @@ export const article141: Article = {
     {
       type: "cta",
       eyebrow: "How to Book",
-      heading: "Book the Sunrise Balcony Villa — WhatsApp +92 304 567 9000",
+      heading: "Book the Sunrise Balcony Villa ",
       text: "Contact us to book your sunrise view stay.",
-      buttonLabel: "WhatsApp: +92 304 567 9000 | wa.me/923045679000",
+      buttonLabel: "Book Your Stay",
       buttonHref: "https://wa.me/923045679000",
       footnote: "Direct bookings receive the best available rate.",
     },
@@ -21816,9 +21816,9 @@ export const article142: Article = {
     {
       type: "cta",
       eyebrow: "How to Book",
-      heading: "Book the Private Garden Villa — WhatsApp +92 304 567 9000",
+      heading: "Book the Private Garden Villa ",
       text: "Contact us to book your private garden villa.",
-      buttonLabel: "WhatsApp: +92 304 567 9000 | wa.me/923045679000",
+      buttonLabel: "Book Your Stay",
       buttonHref: "https://wa.me/923045679000",
       footnote: "Direct bookings receive the best available rate.",
     },
@@ -21956,9 +21956,9 @@ export const article143: Article = {
     {
       type: "cta",
       eyebrow: "How to Book",
-      heading: "Book Eid ul Adha at Himalaya Villas — WhatsApp +92 304 567 9000",
+      heading: "Book Eid ul Adha at Himalaya Villas ",
       text: "Contact us to book your Eid stay.",
-      buttonLabel: "WhatsApp: +92 304 567 9000 | wa.me/923045679000",
+      buttonLabel: "Book Your Stay",
       buttonHref: "https://wa.me/923045679000",
       footnote: "Direct bookings receive the best available rate.",
     },
@@ -22075,9 +22075,9 @@ export const article144: Article = {
     {
       type: "cta",
       eyebrow: "How to Book",
-      heading: "Book the Romantic Mountain Alternative — WhatsApp +92 304 567 9000",
+      heading: "Book the Romantic Mountain Alternative ",
       text: "Contact us to book your romantic stay.",
-      buttonLabel: "WhatsApp: +92 304 567 9000 | wa.me/923045679000",
+      buttonLabel: "Book Your Stay",
       buttonHref: "https://wa.me/923045679000",
       footnote: "Direct bookings receive the best available rate.",
     },
@@ -22221,7 +22221,7 @@ export const article145: Article = {
       eyebrow: "How to Book",
       heading: "Have More Questions? WhatsApp +92 304 567 9000",
       text: "Contact us for any additional questions.",
-      buttonLabel: "WhatsApp: +92 304 567 9000 | wa.me/923045679000",
+      buttonLabel: "Book Your Stay",
       buttonHref: "https://wa.me/923045679000",
       footnote: "Direct bookings receive the best available rate.",
     },
@@ -22409,9 +22409,9 @@ export const article146: Article = {
     {
       type: "cta",
       eyebrow: "How to Book",
-      heading: "Book the Best Bhurban Accommodation for Your Stay — WhatsApp +92 304 567 9000",
+      heading: "Book the Best Bhurban Accommodation for Your Stay ",
       text: "Contact us to book your Bhurban accommodation.",
-      buttonLabel: "WhatsApp: +92 304 567 9000 | wa.me/923045679000",
+      buttonLabel: "Book Your Stay",
       buttonHref: "https://wa.me/923045679000",
       footnote: "Direct bookings receive the best available rate.",
     },
@@ -23655,9 +23655,9 @@ export const article157: Article = {
     {
       type: "cta",
       eyebrow: "How to Book",
-      heading: "Book June at Himalaya Villas — WhatsApp +92 304 567 9000",
+      heading: "Book June at Himalaya Villas ",
       text: "Contact us to book your June stay.",
-      buttonLabel: "WhatsApp: +92 304 567 9000 | wa.me/923045679000",
+      buttonLabel: "Book Your Stay",
       buttonHref: "https://wa.me/923045679000",
       footnote: "Direct bookings receive the best available rate.",
     },
@@ -23761,9 +23761,9 @@ export const article158: Article = {
     {
       type: "cta",
       eyebrow: "How to Book",
-      heading: "Book a Couple's Villa in Bhurban — WhatsApp +92 304 567 9000",
+      heading: "Book a Couple's Villa in Bhurban ",
       text: "Contact us to book your couples villa.",
-      buttonLabel: "WhatsApp: +92 304 567 9000 | wa.me/923045679000",
+      buttonLabel: "Book Your Stay",
       buttonHref: "https://wa.me/923045679000",
       footnote: "Direct bookings receive the best available rate.",
     },
@@ -23880,9 +23880,9 @@ export const article159: Article = {
     {
       type: "cta",
       eyebrow: "How to Book",
-      heading: "Book Your Corporate AGM Venue — WhatsApp +92 304 567 9000",
+      heading: "Book Your Corporate AGM Venue ",
       text: "Contact us to book your corporate AGM venue.",
-      buttonLabel: "WhatsApp: +92 304 567 9000 | wa.me/923045679000",
+      buttonLabel: "Book Your Stay",
       buttonHref: "https://wa.me/923045679000",
       footnote: "Direct bookings receive the best available rate.",
     },
@@ -24012,9 +24012,9 @@ export const article160: Article = {
     {
       type: "cta",
       eyebrow: "How to Book",
-      heading: "Book the Best Family Accommodation — WhatsApp +92 304 567 9000",
+      heading: "Book the Best Family Accommodation ",
       text: "Contact us to book your family stay.",
-      buttonLabel: "WhatsApp: +92 304 567 9000 | wa.me/923045679000",
+      buttonLabel: "Book Your Stay",
       buttonHref: "https://wa.me/923045679000",
       footnote: "Direct bookings receive the best available rate.",
     },
@@ -24169,9 +24169,9 @@ export const article161: Article = {
     {
       type: "cta",
       eyebrow: "How to Book",
-      heading: "Book Eid at Himalaya Villas — WhatsApp +92 304 567 9000",
+      heading: "Book Eid at Himalaya Villas ",
       text: "Contact us to book your Eid stay.",
-      buttonLabel: "WhatsApp: +92 304 567 9000 | wa.me/923045679000",
+      buttonLabel: "Book Your Stay",
       buttonHref: "https://wa.me/923045679000",
       footnote: "Direct bookings receive the best available rate.",
     },
@@ -24276,9 +24276,9 @@ export const article162: Article = {
     {
       type: "cta",
       eyebrow: "How to Book",
-      heading: "Arrange Your In-Villa Spa Experience — WhatsApp +92 304 567 9000",
+      heading: "Arrange Your In-Villa Spa Experience ",
       text: "Contact us to arrange your spa experience.",
-      buttonLabel: "WhatsApp: +92 304 567 9000 | wa.me/923045679000",
+      buttonLabel: "Book Your Stay",
       buttonHref: "https://wa.me/923045679000",
       footnote: "Direct bookings receive the best available rate.",
     },
@@ -24403,9 +24403,9 @@ export const article163: Article = {
     {
       type: "cta",
       eyebrow: "How to Book",
-      heading: "Book October Half Term at Himalaya Villas — WhatsApp +92 304 567 9000",
+      heading: "Book October Half Term at Himalaya Villas ",
       text: "Contact us to book your October half term stay.",
-      buttonLabel: "WhatsApp: +92 304 567 9000 | wa.me/923045679000",
+      buttonLabel: "Book Your Stay",
       buttonHref: "https://wa.me/923045679000",
       footnote: "Direct bookings receive the best available rate.",
     },
@@ -24520,9 +24520,9 @@ export const article164: Article = {
     {
       type: "cta",
       eyebrow: "How to Book",
-      heading: "Book the Multi-Generational Family Configuration — WhatsApp +92 304 567 9000",
+      heading: "Book the Multi-Generational Family Configuration ",
       text: "Contact us to book your multi-generational stay.",
-      buttonLabel: "WhatsApp: +92 304 567 9000 | wa.me/923045679000",
+      buttonLabel: "Book Your Stay",
       buttonHref: "https://wa.me/923045679000",
       footnote: "Direct bookings receive the best available rate.",
     },
@@ -24683,9 +24683,9 @@ export const article165: Article = {
     {
       type: "cta",
       eyebrow: "How to Book",
-      heading: "Plan Your Bhurban Budget — WhatsApp +92 304 567 9000",
+      heading: "Plan Your Bhurban Budget ",
       text: "Contact us to plan your budget.",
-      buttonLabel: "WhatsApp: +92 304 567 9000 | wa.me/923045679000",
+      buttonLabel: "Book Your Stay",
       buttonHref: "https://wa.me/923045679000",
       footnote: "Direct bookings receive the best available rate.",
     },
@@ -24852,7 +24852,7 @@ export const article166: Article = {
       eyebrow: "How to Book",
       heading: "Make the Most of Bhurban — Book Direct via WhatsApp +92 304 567 9000",
       text: "Contact us to book your stay.",
-      buttonLabel: "WhatsApp: +92 304 567 9000 | wa.me/923045679000",
+      buttonLabel: "Book Your Stay",
       buttonHref: "https://wa.me/923045679000",
       footnote: "Direct bookings receive the best available rate.",
     },
@@ -26072,9 +26072,9 @@ export const article177: Article = {
     {
       type: "cta",
       eyebrow: "How to Book",
-      heading: "Book May at Himalaya Villas — WhatsApp +92 304 567 9000",
+      heading: "Book May at Himalaya Villas ",
       text: "Contact us to book your May stay.",
-      buttonLabel: "WhatsApp: +92 304 567 9000 | wa.me/923045679000",
+      buttonLabel: "Book Your Stay",
       buttonHref: "https://wa.me/923045679000",
       footnote: "Direct bookings receive the best available rate.",
     },
@@ -26227,9 +26227,9 @@ export const article178: Article = {
     {
       type: "cta",
       eyebrow: "How to Book",
-      heading: "Book Your Mountain Workspace — WhatsApp +92 304 567 9000",
+      heading: "Book Your Mountain Workspace ",
       text: "Contact us to book your remote work stay.",
-      buttonLabel: "WhatsApp: +92 304 567 9000 | wa.me/923045679000",
+      buttonLabel: "Book Your Stay",
       buttonHref: "https://wa.me/923045679000",
       footnote: "Direct bookings receive the best available rate.",
     },
@@ -26395,9 +26395,9 @@ export const article179: Article = {
     {
       type: "cta",
       eyebrow: "How to Book",
-      heading: "Book Bhurban from Lahore — WhatsApp +92 304 567 9000",
+      heading: "Book Bhurban from Lahore ",
       text: "Contact us to book your Lahore family stay.",
-      buttonLabel: "WhatsApp: +92 304 567 9000 | wa.me/923045679000",
+      buttonLabel: "Book Your Stay",
       buttonHref: "https://wa.me/923045679000",
       footnote: "Direct bookings receive the best available rate.",
     },
@@ -26531,9 +26531,9 @@ export const article180: Article = {
     {
       type: "cta",
       eyebrow: "How to Book",
-      heading: "Book September at Himalaya Villas — WhatsApp +92 304 567 9000",
+      heading: "Book September at Himalaya Villas ",
       text: "Contact us to book your September stay.",
-      buttonLabel: "WhatsApp: +92 304 567 9000 | wa.me/923045679000",
+      buttonLabel: "Book Your Stay",
       buttonHref: "https://wa.me/923045679000",
       footnote: "Direct bookings receive the best available rate.",
     },
@@ -26661,9 +26661,9 @@ export const article181: Article = {
     {
       type: "cta",
       eyebrow: "How to Book",
-      heading: "Book Your Budget Mountain Honeymoon — WhatsApp +92 304 567 9000",
+      heading: "Book Your Budget Mountain Honeymoon ",
       text: "Contact us to book your honeymoon.",
-      buttonLabel: "WhatsApp: +92 304 567 9000 | wa.me/923045679000",
+      buttonLabel: "Book Your Stay",
       buttonHref: "https://wa.me/923045679000",
       footnote: "Direct bookings receive the best available rate.",
     },
@@ -26766,9 +26766,9 @@ export const article182: Article = {
     {
       type: "cta",
       eyebrow: "How to Book",
-      heading: "Book a Teacher Retreat in Bhurban — WhatsApp +92 304 567 9000",
+      heading: "Book a Teacher Retreat in Bhurban ",
       text: "Contact us to book your teacher retreat.",
-      buttonLabel: "WhatsApp: +92 304 567 9000 | wa.me/923045679000",
+      buttonLabel: "Book Your Stay",
       buttonHref: "https://wa.me/923045679000",
       footnote: "Direct bookings receive the best available rate.",
     },
@@ -26915,9 +26915,9 @@ export const article183: Article = {
     {
       type: "cta",
       eyebrow: "How to Book",
-      heading: "Book the Content Creator Location — WhatsApp +92 304 567 9000",
+      heading: "Book the Content Creator Location ",
       text: "Contact us to book your content creation stay.",
-      buttonLabel: "WhatsApp: +92 304 567 9000 | wa.me/923045679000",
+      buttonLabel: "Book Your Stay",
       buttonHref: "https://wa.me/923045679000",
       footnote: "Direct bookings receive the best available rate.",
     },
@@ -27048,9 +27048,9 @@ export const article184: Article = {
     {
       type: "cta",
       eyebrow: "How to Book",
-      heading: "Choose the Private Villa Over the Tent — WhatsApp +92 304 567 9000",
+      heading: "Choose the Private Villa Over the Tent ",
       text: "Contact us to book your private villa stay.",
-      buttonLabel: "WhatsApp: +92 304 567 9000 | wa.me/923045679000",
+      buttonLabel: "Book Your Stay",
       buttonHref: "https://wa.me/923045679000",
       footnote: "Direct bookings receive the best available rate.",
     },
@@ -27175,9 +27175,9 @@ export const article185: Article = {
     {
       type: "cta",
       eyebrow: "How to Book",
-      heading: "Plan the Birthday Escape — WhatsApp +92 304 567 9000",
+      heading: "Plan the Birthday Escape ",
       text: "Contact us to plan your birthday escape.",
-      buttonLabel: "WhatsApp: +92 304 567 9000 | wa.me/923045679000",
+      buttonLabel: "Book Your Stay",
       buttonHref: "https://wa.me/923045679000",
       footnote: "Direct bookings receive the best available rate.",
     },
@@ -27319,9 +27319,9 @@ export const article186: Article = {
     {
       type: "cta",
       eyebrow: "How to Book",
-      heading: "Discuss Your Wedding at Himalaya Villas — WhatsApp +92 304 567 9000",
+      heading: "Discuss Your Wedding at Himalaya Villas ",
       text: "Contact us to discuss your wedding.",
-      buttonLabel: "WhatsApp: +92 304 567 9000 | wa.me/923045679000",
+      buttonLabel: "Book Your Stay",
       buttonHref: "https://wa.me/923045679000",
       footnote: "Direct bookings receive the best available rate.",
     },
@@ -28496,9 +28496,9 @@ export const article197: Article = {
     {
       type: "cta",
       eyebrow: "How to Book",
-      heading: "The Nearest Mountain Estate from Rawalpindi — WhatsApp +92 304 567 9000",
+      heading: "The Nearest Mountain Estate from Rawalpindi ",
       text: "Contact us to book your Rawalpindi mountain getaway.",
-      buttonLabel: "WhatsApp: +92 304 567 9000 | wa.me/923045679000",
+      buttonLabel: "Book Your Stay",
       buttonHref: "https://wa.me/923045679000",
       footnote: "Direct bookings receive the best available rate.",
     },
@@ -28626,9 +28626,9 @@ export const article198: Article = {
     {
       type: "cta",
       eyebrow: "How to Book",
-      heading: "Celebrate 25 Years at the Cedar Estate — WhatsApp +92 304 567 9000",
+      heading: "Celebrate 25 Years at the Cedar Estate ",
       text: "Contact us to plan your silver anniversary celebration.",
-      buttonLabel: "WhatsApp: +92 304 567 9000 | wa.me/923045679000",
+      buttonLabel: "Book Your Stay",
       buttonHref: "https://wa.me/923045679000",
       footnote: "Direct bookings receive the best available rate.",
     },
@@ -28765,9 +28765,9 @@ export const article199: Article = {
     {
       type: "cta",
       eyebrow: "How to Book",
-      heading: "Book the Best First-Time Murree Experience — WhatsApp +92 304 567 9000",
+      heading: "Book the Best First-Time Murree Experience ",
       text: "Contact us to book your first Murree experience.",
-      buttonLabel: "WhatsApp: +92 304 567 9000 | wa.me/923045679000",
+      buttonLabel: "Book Your Stay",
       buttonHref: "https://wa.me/923045679000",
       footnote: "Direct bookings receive the best available rate.",
     },
@@ -28915,9 +28915,9 @@ export const article200: Article = {
     {
       type: "cta",
       eyebrow: "How to Book",
-      heading: "Book Your Snowfall Weekend — WhatsApp +92 304 567 9000",
+      heading: "Book Your Snowfall Weekend ",
       text: "Contact us to book your snowfall stay.",
-      buttonLabel: "WhatsApp: +92 304 567 9000 | wa.me/923045679000",
+      buttonLabel: "Book Your Stay",
       buttonHref: "https://wa.me/923045679000",
       footnote: "Direct bookings receive the best available rate.",
     },
@@ -29034,9 +29034,9 @@ export const article201: Article = {
     {
       type: "cta",
       eyebrow: "How to Book",
-      heading: "Plan Your Mountain Baby Shower — WhatsApp +92 304 567 9000",
+      heading: "Plan Your Mountain Baby Shower ",
       text: "Contact us to plan your baby shower.",
-      buttonLabel: "WhatsApp: +92 304 567 9000 | wa.me/923045679000",
+      buttonLabel: "Book Your Stay",
       buttonHref: "https://wa.me/923045679000",
       footnote: "Direct bookings receive the best available rate.",
     },
@@ -29152,9 +29152,9 @@ export const article202: Article = {
     {
       type: "cta",
       eyebrow: "How to Book",
-      heading: "Book a Peaceful Mountain Retreat — WhatsApp +92 304 567 9000",
+      heading: "Book a Peaceful Mountain Retreat ",
       text: "Contact us to book your mature travellers retreat.",
-      buttonLabel: "WhatsApp: +92 304 567 9000 | wa.me/923045679000",
+      buttonLabel: "Book Your Stay",
       buttonHref: "https://wa.me/923045679000",
       footnote: "Direct bookings receive the best available rate.",
     },
@@ -29258,9 +29258,9 @@ export const article203: Article = {
     {
       type: "cta",
       eyebrow: "How to Book",
-      heading: "Book the Graduation Mountain Celebration — WhatsApp +92 304 567 9000",
+      heading: "Book the Graduation Mountain Celebration ",
       text: "Contact us to plan your graduation celebration.",
-      buttonLabel: "WhatsApp: +92 304 567 9000 | wa.me/923045679000",
+      buttonLabel: "Book Your Stay",
       buttonHref: "https://wa.me/923045679000",
       footnote: "Direct bookings receive the best available rate.",
     },
@@ -29404,9 +29404,9 @@ export const article204: Article = {
     {
       type: "cta",
       eyebrow: "How to Book",
-      heading: "Book the April Wildflower Season — WhatsApp +92 304 567 9000",
+      heading: "Book the April Wildflower Season ",
       text: "Contact us to book your wildflower season stay.",
-      buttonLabel: "WhatsApp: +92 304 567 9000 | wa.me/923045679000",
+      buttonLabel: "Book Your Stay",
       buttonHref: "https://wa.me/923045679000",
       footnote: "Direct bookings receive the best available rate.",
     },
@@ -29523,9 +29523,9 @@ export const article205: Article = {
     {
       type: "cta",
       eyebrow: "How to Book",
-      heading: "Book the Mountain Annual Dinner — WhatsApp +92 304 567 9000",
+      heading: "Book the Mountain Annual Dinner ",
       text: "Contact us to plan your corporate annual dinner.",
-      buttonLabel: "WhatsApp: +92 304 567 9000 | wa.me/923045679000",
+      buttonLabel: "Book Your Stay",
       buttonHref: "https://wa.me/923045679000",
       footnote: "Direct bookings receive the best available rate.",
     },
@@ -29689,9 +29689,9 @@ export const article206: Article = {
     {
       type: "cta",
       eyebrow: "How to Book",
-      heading: "Book Bhurban's Private Estate — WhatsApp +92 304 567 9000",
+      heading: "Book Bhurban's Private Estate ",
       text: "Contact us to book your Bhurban experience.",
-      buttonLabel: "WhatsApp: +92 304 567 9000 | wa.me/923045679000",
+      buttonLabel: "Book Your Stay",
       buttonHref: "https://wa.me/923045679000",
       footnote: "Direct bookings receive the best available rate.",
     },
@@ -30866,9 +30866,9 @@ export const article217: Article = {
     {
       type: "cta",
       eyebrow: "How to Book",
-      heading: "Book February at Himalaya Villas — WhatsApp +92 304 567 9000",
+      heading: "Book February at Himalaya Villas ",
       text: "Contact us to book your February stay.",
-      buttonLabel: "WhatsApp: +92 304 567 9000 | wa.me/923045679000",
+      buttonLabel: "Book Your Stay",
       buttonHref: "https://wa.me/923045679000",
       footnote: "Direct bookings receive the best available rate.",
     },
@@ -31112,9 +31112,9 @@ export const article218: Article = {
     {
       type: "cta",
       eyebrow: "How to Book",
-      heading: "Book the Top-Ranked Islamabad Weekend Getaway — WhatsApp +92 304 567 9000",
+      heading: "Book the Top-Ranked Islamabad Weekend Getaway ",
       text: "Contact us to book your weekend getaway.",
-      buttonLabel: "WhatsApp: +92 304 567 9000 | wa.me/923045679000",
+      buttonLabel: "Book Your Stay",
       buttonHref: "https://wa.me/923045679000",
       footnote: "Direct bookings receive the best available rate.",
     },
@@ -31245,9 +31245,9 @@ export const article219: Article = {
     {
       type: "cta",
       eyebrow: "How to Book",
-      heading: "Book the Closer Mountain Alternative — WhatsApp +92 304 567 9000",
+      heading: "Book the Closer Mountain Alternative ",
       text: "Contact us to book your mountain stay.",
-      buttonLabel: "WhatsApp: +92 304 567 9000 | wa.me/923045679000",
+      buttonLabel: "Book Your Stay",
       buttonHref: "https://wa.me/923045679000",
       footnote: "Direct bookings receive the best available rate.",
     },
@@ -31382,9 +31382,9 @@ export const article220: Article = {
     {
       type: "cta",
       eyebrow: "How to Book",
-      heading: "Book the Family Mountain Escape — WhatsApp +92 304 567 9000",
+      heading: "Book the Family Mountain Escape ",
       text: "Contact us to book your family stay.",
-      buttonLabel: "WhatsApp: +92 304 567 9000 | wa.me/923045679000",
+      buttonLabel: "Book Your Stay",
       buttonHref: "https://wa.me/923045679000",
       footnote: "Direct bookings receive the best available rate.",
     },
@@ -31511,9 +31511,9 @@ export const article221: Article = {
     {
       type: "cta",
       eyebrow: "How to Book",
-      heading: "Book a Women's Leadership Retreat — WhatsApp +92 304 567 9000",
+      heading: "Book a Women's Leadership Retreat ",
       text: "Contact us to book your women's leadership retreat.",
-      buttonLabel: "WhatsApp: +92 304 567 9000 | wa.me/923045679000",
+      buttonLabel: "Book Your Stay",
       buttonHref: "https://wa.me/923045679000",
       footnote: "Direct bookings receive the best available rate.",
     },
@@ -31640,9 +31640,9 @@ export const article222: Article = {
     {
       type: "cta",
       eyebrow: "How to Book",
-      heading: "Book the Bhurban Honeymoon — WhatsApp +92 304 567 9000",
+      heading: "Book the Bhurban Honeymoon ",
       text: "Contact us to book your honeymoon.",
-      buttonLabel: "WhatsApp: +92 304 567 9000 | wa.me/923045679000",
+      buttonLabel: "Book Your Stay",
       buttonHref: "https://wa.me/923045679000",
       footnote: "Direct bookings receive the best available rate.",
     },
@@ -31787,9 +31787,9 @@ export const article223: Article = {
     {
       type: "cta",
       eyebrow: "How to Book",
-      heading: "Book a Ramadan Mountain Stay — WhatsApp +92 304 567 9000",
+      heading: "Book a Ramadan Mountain Stay ",
       text: "Contact us to book your Ramadan stay.",
-      buttonLabel: "WhatsApp: +92 304 567 9000 | wa.me/923045679000",
+      buttonLabel: "Book Your Stay",
       buttonHref: "https://wa.me/923045679000",
       footnote: "Direct bookings receive the best available rate.",
     },
@@ -31987,9 +31987,9 @@ export const article224: Article = {
     {
       type: "cta",
       eyebrow: "How to Book",
-      heading: "Start Your Bhurban Planning — WhatsApp +92 304 567 9000",
+      heading: "Start Your Bhurban Planning ",
       text: "Contact us to start planning your trip.",
-      buttonLabel: "WhatsApp: +92 304 567 9000 | wa.me/923045679000",
+      buttonLabel: "Book Your Stay",
       buttonHref: "https://wa.me/923045679000",
       footnote: "Direct bookings receive the best available rate.",
     },
@@ -32138,7 +32138,7 @@ export const article225: Article = {
       eyebrow: "How to Book",
       heading: "More Questions? WhatsApp +92 304 567 9000",
       text: "Contact us for any additional questions.",
-      buttonLabel: "WhatsApp: +92 304 567 9000 | wa.me/923045679000",
+      buttonLabel: "Book Your Stay",
       buttonHref: "https://wa.me/923045679000",
       footnote: "Direct bookings receive the best available rate.",
     },
@@ -33224,9 +33224,9 @@ export const article236: Article = {
     {
       type: "cta",
       eyebrow: "How to Book",
-      heading: "Book Bhurban's Private Estate Alternative — WhatsApp +92 304 567 9000",
+      heading: "Book Bhurban's Private Estate Alternative ",
       text: "Contact us to book your private estate stay.",
-      buttonLabel: "WhatsApp: +92 304 567 9000 | wa.me/923045679000",
+      buttonLabel: "Book Your Stay",
       buttonHref: "https://wa.me/923045679000",
       footnote: "Direct bookings receive the best available rate.",
     },
@@ -33344,9 +33344,9 @@ export const article237: Article = {
     {
       type: "cta",
       eyebrow: "How to Book",
-      heading: "Book the Mountain Nikkah — WhatsApp +92 304 567 9000",
+      heading: "Book the Mountain Nikkah ",
       text: "Contact us to plan your Nikkah ceremony.",
-      buttonLabel: "WhatsApp: +92 304 567 9000 | wa.me/923045679000",
+      buttonLabel: "Book Your Stay",
       buttonHref: "https://wa.me/923045679000",
       footnote: "Direct bookings receive the best available rate.",
     },
@@ -33479,9 +33479,9 @@ export const article238: Article = {
     {
       type: "cta",
       eyebrow: "How to Book",
-      heading: "Upgrade to the Overnight Experience — WhatsApp +92 304 567 9000",
+      heading: "Upgrade to the Overnight Experience ",
       text: "Contact us to book your overnight stay.",
-      buttonLabel: "WhatsApp: +92 304 567 9000 | wa.me/923045679000",
+      buttonLabel: "Book Your Stay",
       buttonHref: "https://wa.me/923045679000",
       footnote: "Direct bookings receive the best available rate.",
     },
@@ -33604,9 +33604,9 @@ export const article239: Article = {
     {
       type: "cta",
       eyebrow: "How to Book",
-      heading: "Book November Quiet at Himalaya Villas — WhatsApp +92 304 567 9000",
+      heading: "Book November Quiet at Himalaya Villas ",
       text: "Contact us to book your November stay.",
-      buttonLabel: "WhatsApp: +92 304 567 9000 | wa.me/923045679000",
+      buttonLabel: "Book Your Stay",
       buttonHref: "https://wa.me/923045679000",
       footnote: "Direct bookings receive the best available rate.",
     },
@@ -33741,9 +33741,9 @@ export const article240: Article = {
     {
       type: "cta",
       eyebrow: "How to Book",
-      heading: "Book the Private Estate Alternative — WhatsApp +92 304 567 9000",
+      heading: "Book the Private Estate Alternative ",
       text: "Contact us to book your private estate stay.",
-      buttonLabel: "WhatsApp: +92 304 567 9000 | wa.me/923045679000",
+      buttonLabel: "Book Your Stay",
       buttonHref: "https://wa.me/923045679000",
       footnote: "Direct bookings receive the best available rate.",
     },
@@ -33873,9 +33873,9 @@ export const article241: Article = {
     {
       type: "cta",
       eyebrow: "How to Book",
-      heading: "Plan Your Family Reunion at the Cedar Estate — WhatsApp +92 304 567 9000",
+      heading: "Plan Your Family Reunion at the Cedar Estate ",
       text: "Contact us to plan your family reunion.",
-      buttonLabel: "WhatsApp: +92 304 567 9000 | wa.me/923045679000",
+      buttonLabel: "Book Your Stay",
       buttonHref: "https://wa.me/923045679000",
       footnote: "Direct bookings receive the best available rate.",
     },
@@ -34003,9 +34003,9 @@ export const article242: Article = {
     {
       type: "cta",
       eyebrow: "How to Book",
-      heading: "Book Early Spring at Himalaya Villas — WhatsApp +92 304 567 9000",
+      heading: "Book Early Spring at Himalaya Villas ",
       text: "Contact us to book your March stay.",
-      buttonLabel: "WhatsApp: +92 304 567 9000 | wa.me/923045679000",
+      buttonLabel: "Book Your Stay",
       buttonHref: "https://wa.me/923045679000",
       footnote: "Direct bookings receive the best available rate.",
     },
@@ -34135,9 +34135,9 @@ export const article243: Article = {
     {
       type: "cta",
       eyebrow: "How to Book",
-      heading: "Book a Mountain Night Sky Stay — WhatsApp +92 304 567 9000",
+      heading: "Book a Mountain Night Sky Stay ",
       text: "Contact us to book your stargazing stay.",
-      buttonLabel: "WhatsApp: +92 304 567 9000 | wa.me/923045679000",
+      buttonLabel: "Book Your Stay",
       buttonHref: "https://wa.me/923045679000",
       footnote: "Direct bookings receive the best available rate.",
     },
@@ -34267,7 +34267,7 @@ export const article245: Article = {
       eyebrow: "How to Book",
       heading: "Any More Questions? WhatsApp +92 304 567 9000",
       text: "Contact us for any additional questions.",
-      buttonLabel: "WhatsApp: +92 304 567 9000 | wa.me/923045679000",
+      buttonLabel: "Book Your Stay",
       buttonHref: "https://wa.me/923045679000",
       footnote: "Direct bookings receive the best available rate.",
     },
@@ -35414,9 +35414,9 @@ export const article257: Article = {
     {
       type: "cta",
       eyebrow: "How to Book",
-      heading: "Book From Any City — WhatsApp +92 304 567 9000",
+      heading: "Book From Any City ",
       text: "Contact us to book your stay from any city.",
-      buttonLabel: "WhatsApp: +92 304 567 9000 | wa.me/923045679000",
+      buttonLabel: "Book Your Stay",
       buttonHref: "https://wa.me/923045679000",
       footnote: "Direct bookings receive the best available rate.",
     },
@@ -35553,9 +35553,9 @@ export const article258: Article = {
     {
       type: "cta",
       eyebrow: "How to Book",
-      heading: "Book the 25-Guest Group Configuration — WhatsApp +92 304 567 9000",
+      heading: "Book the 25-Guest Group Configuration ",
       text: "Contact us to book your 25-guest stay.",
-      buttonLabel: "WhatsApp: +92 304 567 9000 | wa.me/923045679000",
+      buttonLabel: "Book Your Stay",
       buttonHref: "https://wa.me/923045679000",
       footnote: "Direct bookings receive the best available rate.",
     },
@@ -35718,9 +35718,9 @@ export const article259: Article = {
     {
       type: "cta",
       eyebrow: "How to Book",
-      heading: "Book a Winter Walk Base at Himalaya Villas — WhatsApp +92 304 567 9000",
+      heading: "Book a Winter Walk Base at Himalaya Villas ",
       text: "Contact us to book your winter hiking stay.",
-      buttonLabel: "WhatsApp: +92 304 567 9000 | wa.me/923045679000",
+      buttonLabel: "Book Your Stay",
       buttonHref: "https://wa.me/923045679000",
       footnote: "Direct bookings receive the best available rate.",
     },
@@ -35853,9 +35853,9 @@ export const article260: Article = {
     {
       type: "cta",
       eyebrow: "How to Book",
-      heading: "Book the Winter Fire Experience — WhatsApp +92 304 567 9000",
+      heading: "Book the Winter Fire Experience ",
       text: "Contact us to book your winter fire stay.",
-      buttonLabel: "WhatsApp: +92 304 567 9000 | wa.me/923045679000",
+      buttonLabel: "Book Your Stay",
       buttonHref: "https://wa.me/923045679000",
       footnote: "Direct bookings receive the best available rate.",
     },
@@ -35994,9 +35994,9 @@ export const article262: Article = {
     {
       type: "cta",
       eyebrow: "How to Book",
-      heading: "Start Your Booking — WhatsApp +92 304 567 9000",
+      heading: "Start Your Booking ",
       text: "Contact us to start your booking.",
-      buttonLabel: "WhatsApp: +92 304 567 9000 | wa.me/923045679000",
+      buttonLabel: "Book Your Stay",
       buttonHref: "https://wa.me/923045679000",
       footnote: "Direct bookings receive the best available rate.",
     },
@@ -36105,9 +36105,9 @@ export const article263: Article = {
     {
       type: "cta",
       eyebrow: "How to Book",
-      heading: "Book the NGO Team Retreat — WhatsApp +92 304 567 9000",
+      heading: "Book the NGO Team Retreat ",
       text: "Contact us to book your NGO team retreat.",
-      buttonLabel: "WhatsApp: +92 304 567 9000 | wa.me/923045679000",
+      buttonLabel: "Book Your Stay",
       buttonHref: "https://wa.me/923045679000",
       footnote: "Direct bookings receive the best available rate.",
     },
@@ -36262,9 +36262,9 @@ export const article264: Article = {
     {
       type: "cta",
       eyebrow: "How to Book",
-      heading: "Book Your Summer Activity Base — WhatsApp +92 304 567 9000",
+      heading: "Book Your Summer Activity Base ",
       text: "Contact us to book your summer activity stay.",
-      buttonLabel: "WhatsApp: +92 304 567 9000 | wa.me/923045679000",
+      buttonLabel: "Book Your Stay",
       buttonHref: "https://wa.me/923045679000",
       footnote: "Direct bookings receive the best available rate.",
     },
@@ -36438,9 +36438,9 @@ export const article265: Article = {
     {
       type: "cta",
       eyebrow: "How to Book",
-      heading: "Book at Himalaya Villas Bhurban — WhatsApp +92 304 567 9000",
+      heading: "Book at Himalaya Villas Bhurban ",
       text: "Contact us to book your stay.",
-      buttonLabel: "WhatsApp: +92 304 567 9000 | wa.me/923045679000",
+      buttonLabel: "Book Your Stay",
       buttonHref: "https://wa.me/923045679000",
       footnote: "Direct bookings receive the best available rate.",
     },
@@ -37513,9 +37513,9 @@ export const article276: Article = {
     {
       type: "cta",
       eyebrow: "How to Book",
-      heading: "Book a Private Villa Instead of a Hotel Room — WhatsApp +92 304 567 9000",
+      heading: "Book a Private Villa Instead of a Hotel Room ",
       text: "Contact us to book your private villa.",
-      buttonLabel: "WhatsApp: +92 304 567 9000 | wa.me/923045679000",
+      buttonLabel: "Book Your Stay",
       buttonHref: "https://wa.me/923045679000",
       footnote: "Direct bookings receive the best available rate.",
     },
@@ -37641,9 +37641,9 @@ export const article277: Article = {
     {
       type: "cta",
       eyebrow: "How to Book",
-      heading: "Book the Bhurban Base for Your Galyat Exploration — WhatsApp +92 304 567 9000",
+      heading: "Book the Bhurban Base for Your Galyat Exploration ",
       text: "Contact us to book your Galyat base.",
-      buttonLabel: "WhatsApp: +92 304 567 9000 | wa.me/923045679000",
+      buttonLabel: "Book Your Stay",
       buttonHref: "https://wa.me/923045679000",
       footnote: "Direct bookings receive the best available rate.",
     },
@@ -37782,9 +37782,9 @@ export const article278: Article = {
     {
       type: "cta",
       eyebrow: "How to Book",
-      heading: "Compare with the Private Villa Alternative — WhatsApp +92 304 567 9000",
+      heading: "Compare with the Private Villa Alternative ",
       text: "Contact us to compare and book.",
-      buttonLabel: "WhatsApp: +92 304 567 9000 | wa.me/923045679000",
+      buttonLabel: "Book Your Stay",
       buttonHref: "https://wa.me/923045679000",
       footnote: "Direct bookings receive the best available rate.",
     },
@@ -37918,9 +37918,9 @@ export const article279: Article = {
     {
       type: "cta",
       eyebrow: "How to Book",
-      heading: "Book the Private Villa — WhatsApp +92 304 567 9000",
+      heading: "Book the Private Villa ",
       text: "Contact us to book your private villa.",
-      buttonLabel: "WhatsApp: +92 304 567 9000 | wa.me/923045679000",
+      buttonLabel: "Book Your Stay",
       buttonHref: "https://wa.me/923045679000",
       footnote: "Direct bookings receive the best available rate.",
     },
@@ -38043,9 +38043,9 @@ export const article280: Article = {
     {
       type: "cta",
       eyebrow: "How to Book",
-      heading: "Book October Before It Goes — WhatsApp +92 304 567 9000",
+      heading: "Book October Before It Goes ",
       text: "Contact us to book your October stay.",
-      buttonLabel: "WhatsApp: +92 304 567 9000 | wa.me/923045679000",
+      buttonLabel: "Book Your Stay",
       buttonHref: "https://wa.me/923045679000",
       footnote: "Direct bookings receive the best available rate.",
     },
@@ -38150,9 +38150,9 @@ export const article281: Article = {
     {
       type: "cta",
       eyebrow: "How to Book",
-      heading: "Book the Family Villa Near Murree — WhatsApp +92 304 567 9000",
+      heading: "Book the Family Villa Near Murree ",
       text: "Contact us to book your family villa.",
-      buttonLabel: "WhatsApp: +92 304 567 9000 | wa.me/923045679000",
+      buttonLabel: "Book Your Stay",
       buttonHref: "https://wa.me/923045679000",
       footnote: "Direct bookings receive the best available rate.",
     },
@@ -38287,9 +38287,9 @@ export const article283: Article = {
     {
       type: "cta",
       eyebrow: "How to Book",
-      heading: "Book in Your Chosen Season — WhatsApp +92 304 567 9000",
+      heading: "Book in Your Chosen Season ",
       text: "Contact us to book your seasonal stay.",
-      buttonLabel: "WhatsApp: +92 304 567 9000 | wa.me/923045679000",
+      buttonLabel: "Book Your Stay",
       buttonHref: "https://wa.me/923045679000",
       footnote: "Direct bookings receive the best available rate.",
     },
@@ -38425,9 +38425,9 @@ export const article284: Article = {
     {
       type: "cta",
       eyebrow: "How to Book",
-      heading: "Book Your Stay and Share the Experience — WhatsApp +92 304 567 9000",
+      heading: "Book Your Stay and Share the Experience ",
       text: "Contact us to book your stay and share your experience.",
-      buttonLabel: "WhatsApp: +92 304 567 9000 | wa.me/923045679000",
+      buttonLabel: "Book Your Stay",
       buttonHref: "https://wa.me/923045679000",
       footnote: "Direct bookings receive the best available rate.",
     },
@@ -38570,9 +38570,9 @@ export const article285: Article = {
     {
       type: "cta",
       eyebrow: "How to Book",
-      heading: "Book Your Return Visit — WhatsApp +92 304 567 9000",
+      heading: "Book Your Return Visit ",
       text: "Contact us to book your return visit.",
-      buttonLabel: "WhatsApp: +92 304 567 9000 | wa.me/923045679000",
+      buttonLabel: "Book Your Stay",
       buttonHref: "https://wa.me/923045679000",
       footnote: "Direct bookings receive the best available rate.",
     },
@@ -39757,9 +39757,9 @@ export const article296: Article = {
     {
       type: "cta",
       eyebrow: "How to Book",
-      heading: "Book a Private Villa Instead — WhatsApp +92 304 567 9000",
+      heading: "Book a Private Villa Instead ",
       text: "Contact us to book your private villa.",
-      buttonLabel: "WhatsApp: +92 304 567 9000 | wa.me/923045679000",
+      buttonLabel: "Book Your Stay",
       buttonHref: "https://wa.me/923045679000",
       footnote: "Direct bookings receive the best available rate.",
     },
@@ -39897,9 +39897,9 @@ export const article297: Article = {
     {
       type: "cta",
       eyebrow: "How to Book",
-      heading: "Book Your Bhurban Golf Base — WhatsApp +92 304 567 9000",
+      heading: "Book Your Bhurban Golf Base ",
       text: "Contact us to book your golf base.",
-      buttonLabel: "WhatsApp: +92 304 567 9000 | wa.me/923045679000",
+      buttonLabel: "Book Your Stay",
       buttonHref: "https://wa.me/923045679000",
       footnote: "Direct bookings receive the best available rate.",
     },
@@ -40086,9 +40086,9 @@ export const article298: Article = {
     {
       type: "cta",
       eyebrow: "How to Book",
-      heading: "Book the Right Bhurban Accommodation — WhatsApp +92 304 567 9000",
+      heading: "Book the Right Bhurban Accommodation ",
       text: "Contact us to book your Bhurban accommodation.",
-      buttonLabel: "WhatsApp: +92 304 567 9000 | wa.me/923045679000",
+      buttonLabel: "Book Your Stay",
       buttonHref: "https://wa.me/923045679000",
       footnote: "Direct bookings receive the best available rate.",
     },
@@ -40237,9 +40237,9 @@ export const article299: Article = {
     {
       type: "cta",
       eyebrow: "How to Book",
-      heading: "Book the Best Murree Hills Experience — WhatsApp +92 304 567 9000",
+      heading: "Book the Best Murree Hills Experience ",
       text: "Contact us to book your best Murree stay.",
-      buttonLabel: "WhatsApp: +92 304 567 9000 | wa.me/923045679000",
+      buttonLabel: "Book Your Stay",
       buttonHref: "https://wa.me/923045679000",
       footnote: "Direct bookings receive the best available rate.",
     },
@@ -40469,9 +40469,9 @@ export const article300: Article = {
     {
       type: "cta",
       eyebrow: "How to Book",
-      heading: "Book Your Bhurban Base for the Ayubia Day Trip — WhatsApp +92 304 567 9000",
+      heading: "Book Your Bhurban Base for the Ayubia Day Trip ",
       text: "Contact us to book your Ayubia day trip base.",
-      buttonLabel: "WhatsApp: +92 304 567 9000 | wa.me/923045679000",
+      buttonLabel: "Book Your Stay",
       buttonHref: "https://wa.me/923045679000",
       footnote: "Direct bookings receive the best available rate.",
     },
@@ -40604,9 +40604,9 @@ export const article301: Article = {
     {
       type: "cta",
       eyebrow: "How to Book",
-      heading: "Book the Private Estate — Above the Boutique Hotel Category — WhatsApp +92 304 567 9000",
+      heading: "Book the Private Estate — Above the Boutique Hotel Category ",
       text: "Contact us to book your private estate stay.",
-      buttonLabel: "WhatsApp: +92 304 567 9000 | wa.me/923045679000",
+      buttonLabel: "Book Your Stay",
       buttonHref: "https://wa.me/923045679000",
       footnote: "Direct bookings receive the best available rate.",
     },
@@ -40793,9 +40793,9 @@ export const article302: Article = {
     {
       type: "cta",
       eyebrow: "How to Book",
-      heading: "Compare Rates and Book Direct — WhatsApp +92 304 567 9000",
+      heading: "Compare Rates and Book Direct ",
       text: "Contact us to compare rates and book.",
-      buttonLabel: "WhatsApp: +92 304 567 9000 | wa.me/923045679000",
+      buttonLabel: "Book Your Stay",
       buttonHref: "https://wa.me/923045679000",
       footnote: "Direct bookings receive the best available rate.",
     },
@@ -40919,9 +40919,9 @@ export const article303: Article = {
     {
       type: "cta",
       eyebrow: "How to Book",
-      heading: "Book on the Bhurban Ridge — WhatsApp +92 304 567 9000",
+      heading: "Book on the Bhurban Ridge ",
       text: "Contact us to book your Bhurban ridge stay.",
-      buttonLabel: "WhatsApp: +92 304 567 9000 | wa.me/923045679000",
+      buttonLabel: "Book Your Stay",
       buttonHref: "https://wa.me/923045679000",
       footnote: "Direct bookings receive the best available rate.",
     },
@@ -41097,9 +41097,9 @@ export const article304: Article = {
     {
       type: "cta",
       eyebrow: "How to Book",
-      heading: "Book Direct for the Best Rate — WhatsApp +92 304 567 9000",
+      heading: "Book Direct for the Best Rate ",
       text: "Contact us to book directly.",
-      buttonLabel: "WhatsApp: +92 304 567 9000 | wa.me/923045679000",
+      buttonLabel: "Book Your Stay",
       buttonHref: "https://wa.me/923045679000",
       footnote: "Direct bookings receive the best available rate.",
     },
@@ -41228,9 +41228,9 @@ export const article305: Article = {
     {
       type: "cta",
       eyebrow: "How to Book",
-      heading: "Book Your December Bhurban Stay — WhatsApp +92 304 567 9000",
+      heading: "Book Your December Bhurban Stay ",
       text: "Contact us to book your December stay.",
-      buttonLabel: "WhatsApp: +92 304 567 9000 | wa.me/923045679000",
+      buttonLabel: "Book Your Stay",
       buttonHref: "https://wa.me/923045679000",
       footnote: "Direct bookings receive the best available rate.",
     },
@@ -42250,9 +42250,9 @@ export const article319: Article = {
     {
       type: "cta",
       eyebrow: "How to Book",
-      heading: "Book the Karachi-to-Mountain Honeymoon — WhatsApp +92 304 567 9000",
+      heading: "Book the Karachi-to-Mountain Honeymoon ",
       text: "Contact us to book your honeymoon villa.",
-      buttonLabel: "WhatsApp: +92 304 567 9000 | wa.me/923045679000",
+      buttonLabel: "Book Your Stay",
       buttonHref: "https://wa.me/923045679000",
       footnote: "Direct bookings receive the best available rate.",
     },
@@ -42365,9 +42365,9 @@ export const article320: Article = {
     {
       type: "cta",
       eyebrow: "How to Book",
-      heading: "Book the Solo Mountain Escape — WhatsApp +92 304 567 9000",
+      heading: "Book the Solo Mountain Escape ",
       text: "Contact us to book your solo villa.",
-      buttonLabel: "WhatsApp: +92 304 567 9000 | wa.me/923045679000",
+      buttonLabel: "Book Your Stay",
       buttonHref: "https://wa.me/923045679000",
       footnote: "Direct bookings receive the best available rate.",
     },
@@ -42503,9 +42503,9 @@ export const article321: Article = {
     {
       type: "cta",
       eyebrow: "How to Book",
-      heading: "Book the Birdwatcher's Bhurban Base — WhatsApp +92 304 567 9000",
+      heading: "Book the Birdwatcher's Bhurban Base ",
       text: "Contact us to book your birdwatching stay.",
-      buttonLabel: "WhatsApp: +92 304 567 9000 | wa.me/923045679000",
+      buttonLabel: "Book Your Stay",
       buttonHref: "https://wa.me/923045679000",
       footnote: "Direct bookings receive the best available rate.",
     },
@@ -42613,9 +42613,9 @@ export const article323: Article = {
     {
       type: "cta",
       eyebrow: "How to Book",
-      heading: "Arrange Your Mountain Wellness Stay — WhatsApp +92 304 567 9000",
+      heading: "Arrange Your Mountain Wellness Stay ",
       text: "Contact us to arrange your wellness experience.",
-      buttonLabel: "WhatsApp: +92 304 567 9000 | wa.me/923045679000",
+      buttonLabel: "Book Your Stay",
       buttonHref: "https://wa.me/923045679000",
       footnote: "Direct bookings receive the best available rate.",
     },
@@ -42723,9 +42723,9 @@ export const article324: Article = {
     {
       type: "cta",
       eyebrow: "How to Book",
-      heading: "Book the Milestone Birthday Mountain Celebration — WhatsApp +92 304 567 9000",
+      heading: "Book the Milestone Birthday Mountain Celebration ",
       text: "Contact us to plan your milestone celebration.",
-      buttonLabel: "WhatsApp: +92 304 567 9000 | wa.me/923045679000",
+      buttonLabel: "Book Your Stay",
       buttonHref: "https://wa.me/923045679000",
       footnote: "Direct bookings receive the best available rate.",
     },
@@ -42858,9 +42858,9 @@ export const article325: Article = {
     {
       type: "cta",
       eyebrow: "How to Book",
-      heading: "Book the Monsoon Mountain Base — WhatsApp +92 304 567 9000",
+      heading: "Book the Monsoon Mountain Base ",
       text: "Contact us to book your monsoon stay.",
-      buttonLabel: "WhatsApp: +92 304 567 9000 | wa.me/923045679000",
+      buttonLabel: "Book Your Stay",
       buttonHref: "https://wa.me/923045679000",
       footnote: "Direct bookings receive the best available rate.",
     },
@@ -43892,9 +43892,9 @@ export const article337: Article = {
     {
       type: "cta",
       eyebrow: "How to Book",
-      heading: "Book Your Eid Cedar Estate — WhatsApp +92 304 567 9000",
+      heading: "Book Your Eid Cedar Estate ",
       text: "Contact us to book your Eid villa.",
-      buttonLabel: "WhatsApp: +92 304 567 9000 | wa.me/923045679000",
+      buttonLabel: "Book Your Stay",
       buttonHref: "https://wa.me/923045679000",
       footnote: "Direct bookings receive the best available rate.",
     },
@@ -44032,9 +44032,9 @@ export const article338: Article = {
     {
       type: "cta",
       eyebrow: "How to Book",
-      heading: "Book the Family Villa — WhatsApp +92 304 567 9000",
+      heading: "Book the Family Villa ",
       text: "Contact us to book your family villa.",
-      buttonLabel: "WhatsApp: +92 304 567 9000 | wa.me/923045679000",
+      buttonLabel: "Book Your Stay",
       buttonHref: "https://wa.me/923045679000",
       footnote: "Direct bookings receive the best available rate.",
     },
@@ -44193,9 +44193,9 @@ export const article340: Article = {
     {
       type: "cta",
       eyebrow: "How to Book",
-      heading: "Book the Accessible Mountain Experience — WhatsApp +92 304 567 9000",
+      heading: "Book the Accessible Mountain Experience ",
       text: "Contact us to book your stay.",
-      buttonLabel: "WhatsApp: +92 304 567 9000 | wa.me/923045679000",
+      buttonLabel: "Book Your Stay",
       buttonHref: "https://wa.me/923045679000",
       footnote: "Direct bookings receive the best available rate.",
     },
@@ -44312,9 +44312,9 @@ export const article341: Article = {
     {
       type: "cta",
       eyebrow: "How to Book",
-      heading: "Plan Your Karachi to Bhurban Break — WhatsApp +92 304 567 9000",
+      heading: "Plan Your Karachi to Bhurban Break ",
       text: "Contact us to book your stay.",
-      buttonLabel: "WhatsApp: +92 304 567 9000 | wa.me/923045679000",
+      buttonLabel: "Book Your Stay",
       buttonHref: "https://wa.me/923045679000",
       footnote: "Direct bookings receive the best available rate.",
     },
@@ -45219,9 +45219,9 @@ export const article356: Article = {
     {
       type: "cta",
       eyebrow: "How to Book",
-      heading: "Book Your Bhurban Base Near Patriata — WhatsApp +92 304 567 9000",
+      heading: "Book Your Bhurban Base Near Patriata ",
       text: "Contact us to book your stay.",
-      buttonLabel: "WhatsApp: +92 304 567 9000 | wa.me/923045679000",
+      buttonLabel: "Book Your Stay",
       buttonHref: "https://wa.me/923045679000",
       footnote: "Direct bookings receive the best available rate.",
     },
@@ -45341,9 +45341,9 @@ export const article358: Article = {
     {
       type: "cta",
       eyebrow: "How to Book",
-      heading: "Book the Bhurban Cedar Estate Base — WhatsApp +92 304 567 9000",
+      heading: "Book the Bhurban Cedar Estate Base ",
       text: "Contact us to book your stay.",
-      buttonLabel: "WhatsApp: +92 304 567 9000 | wa.me/923045679000",
+      buttonLabel: "Book Your Stay",
       buttonHref: "https://wa.me/923045679000",
       footnote: "Direct bookings receive the best available rate.",
     },
@@ -45471,9 +45471,9 @@ export const article359: Article = {
     {
       type: "cta",
       eyebrow: "How to Book",
-      heading: "Book Your Snowfall Window — WhatsApp +92 304 567 9000",
+      heading: "Book Your Snowfall Window ",
       text: "Contact us to book your stay.",
-      buttonLabel: "WhatsApp: +92 304 567 9000 | wa.me/923045679000",
+      buttonLabel: "Book Your Stay",
       buttonHref: "https://wa.me/923045679000",
       footnote: "Direct bookings receive the best available rate.",
     },
@@ -45596,9 +45596,9 @@ export const article360: Article = {
     {
       type: "cta",
       eyebrow: "How to Book",
-      heading: "Book the Bhurban Mountain Hub — WhatsApp +92 304 567 9000",
+      heading: "Book the Bhurban Mountain Hub ",
       text: "Contact us to book your stay.",
-      buttonLabel: "WhatsApp: +92 304 567 9000 | wa.me/923045679000",
+      buttonLabel: "Book Your Stay",
       buttonHref: "https://wa.me/923045679000",
       footnote: "Direct bookings receive the best available rate.",
     },
@@ -45689,9 +45689,9 @@ export const article361: Article = {
     {
       type: "cta",
       eyebrow: "How to Book",
-      heading: "Book and Share Your Experience — WhatsApp +92 304 567 9000",
+      heading: "Book and Share Your Experience ",
       text: "Contact us to book your stay.",
-      buttonLabel: "WhatsApp: +92 304 567 9000 | wa.me/923045679000",
+      buttonLabel: "Book Your Stay",
       buttonHref: "https://wa.me/923045679000",
       footnote: "Direct bookings receive the best available rate.",
     },
@@ -45802,9 +45802,9 @@ export const article363: Article = {
     {
       type: "cta",
       eyebrow: "How to Book",
-      heading: "Book the Bhurban Insider Experience — WhatsApp +92 304 567 9000",
+      heading: "Book the Bhurban Insider Experience ",
       text: "Contact us to book your stay.",
-      buttonLabel: "WhatsApp: +92 304 567 9000 | wa.me/923045679000",
+      buttonLabel: "Book Your Stay",
       buttonHref: "https://wa.me/923045679000",
       footnote: "Direct bookings receive the best available rate.",
     },
@@ -45996,9 +45996,9 @@ export const article364: Article = {
     {
       type: "cta",
       eyebrow: "How to Book",
-      heading: "Book Your Bhurban Stay — WhatsApp +92 304 567 9000",
+      heading: "Book Your Bhurban Stay ",
       text: "Contact us to book your stay.",
-      buttonLabel: "WhatsApp: +92 304 567 9000 | wa.me/923045679000",
+      buttonLabel: "Book Your Stay",
       buttonHref: "https://wa.me/923045679000",
       footnote: "Direct bookings receive the best available rate.",
     },
@@ -46119,9 +46119,9 @@ export const article365: Article = {
     {
       type: "cta",
       eyebrow: "How to Book",
-      heading: "Book the 20-Guest Mountain Estate — WhatsApp +92 304 567 9000",
+      heading: "Book the 20-Guest Mountain Estate ",
       text: "Contact us to book your group stay.",
-      buttonLabel: "WhatsApp: +92 304 567 9000 | wa.me/923045679000",
+      buttonLabel: "Book Your Stay",
       buttonHref: "https://wa.me/923045679000",
       footnote: "Direct bookings receive the best available rate.",
     },
@@ -47028,9 +47028,9 @@ export const article376: Article = {
     {
       type: "cta",
       eyebrow: "How to Book",
-      heading: "Book Your Bhurban Stay — WhatsApp +92 304 567 9000",
+      heading: "Book Your Bhurban Stay ",
       text: "Contact us to book your stay.",
-      buttonLabel: "WhatsApp: +92 304 567 9000 | wa.me/923045679000",
+      buttonLabel: "Book Your Stay",
       buttonHref: "https://wa.me/923045679000",
       footnote: "Direct bookings receive the best available rate.",
     },
@@ -47192,9 +47192,9 @@ export const article377: Article = {
     {
       type: "cta",
       eyebrow: "How to Book",
-      heading: "Book Your Complete Bhurban Experience — WhatsApp +92 304 567 9000",
+      heading: "Book Your Complete Bhurban Experience ",
       text: "Contact us to book your stay.",
-      buttonLabel: "WhatsApp: +92 304 567 9000 | wa.me/923045679000",
+      buttonLabel: "Book Your Stay",
       buttonHref: "https://wa.me/923045679000",
       footnote: "Direct bookings receive the best available rate.",
     },
@@ -47289,9 +47289,9 @@ export const article379: Article = {
     {
       type: "cta",
       eyebrow: "How to Book",
-      heading: "Plan Your Cedar Estate Nikah — WhatsApp +92 304 567 9000",
+      heading: "Plan Your Cedar Estate Nikah ",
       text: "Contact us to plan your Nikah.",
-      buttonLabel: "WhatsApp: +92 304 567 9000 | wa.me/923045679000",
+      buttonLabel: "Book Your Stay",
       buttonHref: "https://wa.me/923045679000",
       footnote: "Direct bookings receive the best available rate.",
     },
@@ -47371,9 +47371,9 @@ export const article380: Article = {
     {
       type: "cta",
       eyebrow: "How to Book",
-      heading: "Plan Your Mountain Wedding Circuit — WhatsApp +92 304 567 9000",
+      heading: "Plan Your Mountain Wedding Circuit ",
       text: "Contact us to plan your Mehndi and Walima.",
-      buttonLabel: "WhatsApp: +92 304 567 9000 | wa.me/923045679000",
+      buttonLabel: "Book Your Stay",
       buttonHref: "https://wa.me/923045679000",
       footnote: "Direct bookings receive the best available rate.",
     },
@@ -47497,9 +47497,9 @@ export const article381: Article = {
     {
       type: "cta",
       eyebrow: "How to Book",
-      heading: "Book Your Hiking Base at Bhurban — WhatsApp +92 304 567 9000",
+      heading: "Book Your Hiking Base at Bhurban ",
       text: "Contact us to book your stay.",
-      buttonLabel: "WhatsApp: +92 304 567 9000 | wa.me/923045679000",
+      buttonLabel: "Book Your Stay",
       buttonHref: "https://wa.me/923045679000",
       footnote: "Direct bookings receive the best available rate.",
     },
@@ -47607,9 +47607,9 @@ export const article384: Article = {
     {
       type: "cta",
       eyebrow: "How to Book",
-      heading: "Book October at the Cedar Estate — WhatsApp +92 304 567 9000",
+      heading: "Book October at the Cedar Estate ",
       text: "Contact us to book your October stay.",
-      buttonLabel: "WhatsApp: +92 304 567 9000 | wa.me/923045679000",
+      buttonLabel: "Book Your Stay",
       buttonHref: "https://wa.me/923045679000",
       footnote: "Direct bookings receive the best available rate.",
     },
@@ -48664,9 +48664,9 @@ export const article396: Article = {
     {
       type: "cta",
       eyebrow: "How to Book",
-      heading: "Book Your Temperature Escape at Bhurban — WhatsApp +92 304 567 9000",
+      heading: "Book Your Temperature Escape at Bhurban ",
       text: "Contact us to book your stay.",
-      buttonLabel: "WhatsApp: +92 304 567 9000 | wa.me/923045679000",
+      buttonLabel: "Book Your Stay",
       buttonHref: "https://wa.me/923045679000",
       footnote: "Direct bookings receive the best available rate.",
     },
@@ -48821,9 +48821,9 @@ export const article397: Article = {
     {
       type: "cta",
       eyebrow: "How to Book",
-      heading: "Book Your Snowfall Stay at Bhurban — WhatsApp +92 304 567 9000",
+      heading: "Book Your Snowfall Stay at Bhurban ",
       text: "Contact us to book your stay.",
-      buttonLabel: "WhatsApp: +92 304 567 9000 | wa.me/923045679000",
+      buttonLabel: "Book Your Stay",
       buttonHref: "https://wa.me/923045679000",
       footnote: "Direct bookings receive the best available rate.",
     },
@@ -48999,9 +48999,9 @@ export const article398: Article = {
     {
       type: "cta",
       eyebrow: "How to Book",
-      heading: "Book the Murree Hills Private Estate — WhatsApp +92 304 567 9000",
+      heading: "Book the Murree Hills Private Estate ",
       text: "Contact us to book your stay.",
-      buttonLabel: "WhatsApp: +92 304 567 9000 | wa.me/923045679000",
+      buttonLabel: "Book Your Stay",
       buttonHref: "https://wa.me/923045679000",
       footnote: "Direct bookings receive the best available rate.",
     },
@@ -49122,9 +49122,9 @@ export const article399: Article = {
     {
       type: "cta",
       eyebrow: "How to Book",
-      heading: "Book the Private Cedar Estate — WhatsApp +92 304 567 9000",
+      heading: "Book the Private Cedar Estate ",
       text: "Contact us to book your stay.",
-      buttonLabel: "WhatsApp: +92 304 567 9000 | wa.me/923045679000",
+      buttonLabel: "Book Your Stay",
       buttonHref: "https://wa.me/923045679000",
       footnote: "Direct bookings receive the best available rate.",
     },
@@ -49198,16 +49198,16 @@ export const article400: Article = {
         },
         {
           q: "What are Grand Taj Hotel Murree rates?",
-          a: "For current Grand Taj Murree rates, check Booking.com directly. Himalaya Villas villa rates: PKR 39,000–70,000/villa/night — WhatsApp +92 304 567 9000 for availability.",
+          a: "For current Grand Taj Murree rates, check Booking.com directly. Himalaya Villas villa rates: PKR 39,000–70,000/villa/night  for availability.",
         },
       ],
     },
     {
       type: "cta",
       eyebrow: "How to Book",
-      heading: "Book the Private Estate Alternative — WhatsApp +92 304 567 9000",
+      heading: "Book the Private Estate Alternative ",
       text: "Contact us to book your stay.",
-      buttonLabel: "WhatsApp: +92 304 567 9000 | wa.me/923045679000",
+      buttonLabel: "Book Your Stay",
       buttonHref: "https://wa.me/923045679000",
       footnote: "Direct bookings receive the best available rate.",
     },
@@ -49340,9 +49340,9 @@ export const article401: Article = {
     {
       type: "cta",
       eyebrow: "How to Book",
-      heading: "Book Bhurban as Your Nathia Gali-Area Base — WhatsApp +92 304 567 9000",
+      heading: "Book Bhurban as Your Nathia Gali-Area Base ",
       text: "Contact us to book your stay.",
-      buttonLabel: "WhatsApp: +92 304 567 9000 | wa.me/923045679000",
+      buttonLabel: "Book Your Stay",
       buttonHref: "https://wa.me/923045679000",
       footnote: "Direct bookings receive the best available rate.",
     },
@@ -49441,9 +49441,9 @@ export const article402: Article = {
     {
       type: "cta",
       eyebrow: "How to Book",
-      heading: "Book the Private Cedar Estate Instead — WhatsApp +92 304 567 9000",
+      heading: "Book the Private Cedar Estate Instead ",
       text: "Contact us to book your stay.",
-      buttonLabel: "WhatsApp: +92 304 567 9000 | wa.me/923045679000",
+      buttonLabel: "Book Your Stay",
       buttonHref: "https://wa.me/923045679000",
       footnote: "Direct bookings receive the best available rate.",
     },
@@ -49547,9 +49547,9 @@ export const article403: Article = {
     {
       type: "cta",
       eyebrow: "How to Book",
-      heading: "Book the Private Villa Estate — WhatsApp +92 304 567 9000",
+      heading: "Book the Private Villa Estate ",
       text: "Contact us to book your stay.",
-      buttonLabel: "WhatsApp: +92 304 567 9000 | wa.me/923045679000",
+      buttonLabel: "Book Your Stay",
       buttonHref: "https://wa.me/923045679000",
       footnote: "Direct bookings receive the best available rate.",
     },
@@ -49649,9 +49649,9 @@ export const article404: Article = {
     {
       type: "cta",
       eyebrow: "How to Book",
-      heading: "Book the Private Estate Above the Hotel Tier — WhatsApp +92 304 567 9000",
+      heading: "Book the Private Estate Above the Hotel Tier ",
       text: "Contact us to book your stay.",
-      buttonLabel: "WhatsApp: +92 304 567 9000 | wa.me/923045679000",
+      buttonLabel: "Book Your Stay",
       buttonHref: "https://wa.me/923045679000",
       footnote: "Direct bookings receive the best available rate.",
     },
@@ -49770,9 +49770,9 @@ export const article405: Article = {
     {
       type: "cta",
       eyebrow: "How to Book",
-      heading: "Check the Private Villa Per-Person Rate for Your Group — WhatsApp +92 304 567 9000",
+      heading: "Check the Private Villa Per-Person Rate for Your Group ",
       text: "Contact us to book your stay.",
-      buttonLabel: "WhatsApp: +92 304 567 9000 | wa.me/923045679000",
+      buttonLabel: "Book Your Stay",
       buttonHref: "https://wa.me/923045679000",
       footnote: "Direct bookings receive the best available rate.",
     },
@@ -50778,7 +50778,7 @@ export const article416: Article = {
       eyebrow: "Book January at the Cedar Estate",
       heading: "WhatsApp +92 304 567 9000",
       text: "Book your January snowfall stay at Himalaya Villas & Resorts.",
-      buttonLabel: "WhatsApp: +92 304 567 9000 | wa.me/923045679000",
+      buttonLabel: "Book Your Stay",
       buttonHref: "https://wa.me/923045679000",
       footnote: "Direct bookings receive the best available rate.",
     },
@@ -50917,7 +50917,7 @@ export const article417: Article = {
       eyebrow: "Book October at the Cedar Estate",
       heading: "WhatsApp +92 304 567 9000",
       text: "Book your October autumn stay at Himalaya Villas & Resorts.",
-      buttonLabel: "WhatsApp: +92 304 567 9000 | wa.me/923045679000",
+      buttonLabel: "Book Your Stay",
       buttonHref: "https://wa.me/923045679000",
       footnote: "Direct bookings receive the best available rate.",
     },
@@ -51034,7 +51034,7 @@ export const article419: Article = {
       eyebrow: "Book Your July Heat Escape",
       heading: "WhatsApp +92 304 567 9000",
       text: "Book your July summer stay at Himalaya Villas & Resorts.",
-      buttonLabel: "WhatsApp: +92 304 567 9000 | wa.me/923045679000",
+      buttonLabel: "Book Your Stay",
       buttonHref: "https://wa.me/923045679000",
       footnote: "Direct bookings receive the best available rate.",
     },
@@ -51129,7 +51129,7 @@ export const article422: Article = {
       eyebrow: "Book the Twin Cities Mountain Weekend",
       heading: "WhatsApp +92 304 567 9000",
       text: "Book your family stay at Himalaya Villas & Resorts.",
-      buttonLabel: "WhatsApp: +92 304 567 9000 | wa.me/923045679000",
+      buttonLabel: "Book Your Stay",
       buttonHref: "https://wa.me/923045679000",
       footnote: "Direct bookings receive the best available rate.",
     },
@@ -51252,7 +51252,7 @@ export const article423: Article = {
       eyebrow: "Book Your Bhurban Itinerary Stay",
       heading: "WhatsApp +92 304 567 9000",
       text: "Book your Bhurban itinerary at Himalaya Villas & Resorts.",
-      buttonLabel: "WhatsApp: +92 304 567 9000 | wa.me/923045679000",
+      buttonLabel: "Book Your Stay",
       buttonHref: "https://wa.me/923045679000",
       footnote: "Direct bookings receive the best available rate.",
     },
@@ -51384,7 +51384,7 @@ export const article425: Article = {
       eyebrow: "Book the Presidential Suite",
       heading: "WhatsApp +92 304 567 9000",
       text: "Book the only private outdoor terrace jacuzzi in the Murree hills.",
-      buttonLabel: "WhatsApp: +92 304 567 9000 | wa.me/923045679000",
+      buttonLabel: "Book Your Stay",
       buttonHref: "https://wa.me/923045679000",
       footnote: "Direct bookings receive the best available rate.",
     },
@@ -52274,7 +52274,7 @@ export const article441: Article = {
       type: "cta",
       eyebrow: "Book the Faisalabad Mountain Escape",
       heading: "Himalaya Villas & Resorts",
-      text: "WhatsApp: +92 304 567 9000 | wa.me/923045679000",
+      text: "Book Your Stay",
       buttonLabel: "Visit himalayavillas.com",
       buttonHref: "https://himalayavillas.com",
       footnote: "Direct bookings receive the best available rate.",
@@ -52373,7 +52373,7 @@ export const article444: Article = {
       type: "cta",
       eyebrow: "Book for Your Pakistan Visit",
       heading: "Himalaya Villas & Resorts",
-      text: "WhatsApp: +92 304 567 9000 | wa.me/923045679000",
+      text: "Book Your Stay",
       buttonLabel: "Visit himalayavillas.com",
       buttonHref: "https://himalayavillas.com",
       footnote: "Direct bookings receive the best available rate.",
@@ -52464,7 +52464,7 @@ export const article445: Article = {
       type: "cta",
       eyebrow: "Book the Bhurban Content Retreat",
       heading: "Himalaya Villas & Resorts",
-      text: "WhatsApp: +92 304 567 9000 | wa.me/923045679000",
+      text: "Book Your Stay",
       buttonLabel: "Visit himalayavillas.com",
       buttonHref: "https://himalayavillas.com",
       footnote: "Direct bookings receive the best available rate.",
@@ -54214,7 +54214,7 @@ export const article476: Article = {
       eyebrow: "Book the Galyat Premium Estate",
       heading: "WhatsApp +92 304 567 9000",
       text: "Book your Galyat stay at Himalaya Villas & Resorts.",
-      buttonLabel: "WhatsApp: +92 304 567 9000 | wa.me/923045679000",
+      buttonLabel: "Book Your Stay",
       buttonHref: "https://wa.me/923045679000",
       footnote: "Direct bookings receive the best available rate.",
     },
@@ -54338,7 +54338,7 @@ export const article477: Article = {
       eyebrow: "Book the Multan Escape",
       heading: "WhatsApp +92 304 567 9000",
       text: "Book your Multan mountain escape at Himalaya Villas & Resorts.",
-      buttonLabel: "WhatsApp: +92 304 567 9000 | wa.me/923045679000",
+      buttonLabel: "Book Your Stay",
       buttonHref: "https://wa.me/923045679000",
       footnote: "Direct bookings receive the best available rate.",
     },
@@ -54461,7 +54461,7 @@ export const article478: Article = {
       eyebrow: "Book the Private Villa Estate",
       heading: "WhatsApp +92 304 567 9000",
       text: "Book your private villa stay at Himalaya Villas & Resorts.",
-      buttonLabel: "WhatsApp: +92 304 567 9000 | wa.me/923045679000",
+      buttonLabel: "Book Your Stay",
       buttonHref: "https://wa.me/923045679000",
       footnote: "Direct bookings receive the best available rate.",
     },
@@ -54559,7 +54559,7 @@ export const article479: Article = {
       eyebrow: "Arrange a Cedar Garden Qawwali Evening",
       heading: "WhatsApp +92 304 567 9000",
       text: "Arrange your mountain Qawwali experience at Himalaya Villas & Resorts.",
-      buttonLabel: "WhatsApp: +92 304 567 9000 | wa.me/923045679000",
+      buttonLabel: "Book Your Stay",
       buttonHref: "https://wa.me/923045679000",
       footnote: "Direct bookings receive the best available rate.",
     },
@@ -54667,7 +54667,7 @@ export const article480: Article = {
       eyebrow: "Book the Cedar Garden Fire Experience",
       heading: "WhatsApp +92 304 567 9000",
       text: "Book your fire pit experience at Himalaya Villas & Resorts.",
-      buttonLabel: "WhatsApp: +92 304 567 9000 | wa.me/923045679000",
+      buttonLabel: "Book Your Stay",
       buttonHref: "https://wa.me/923045679000",
       footnote: "Direct bookings receive the best available rate.",
     },
@@ -55555,7 +55555,7 @@ export const article497: Article = {
       eyebrow: "Book the Private Cedar Estate",
       heading: "WhatsApp +92 304 567 9000",
       text: "Book your private villa stay at Himalaya Villas & Resorts.",
-      buttonLabel: "WhatsApp: +92 304 567 9000 | wa.me/923045679000",
+      buttonLabel: "Book Your Stay",
       buttonHref: "https://wa.me/923045679000",
       footnote: "Direct bookings receive the best available rate.",
     },
@@ -55592,7 +55592,7 @@ export const article498: Article = {
       type: "callout-qa",
       question: "How do I book a hotel in Murree Pakistan?",
       answer:
-        "Murree hotel booking options 2026: (1) Himalaya Villas & Resorts (private villa estate, Bhurban) — WhatsApp +92 304 567 9000 or Airbnb/Booking.com; (2) PC Hotel Bhurban (Marriott 5-star) — pchotels.com or Marriott app; (3) Mövenpick Murree (Accor) — accor.com or Booking.com; (4) Ramada by Wyndham Murree — Booking.com or wyndhamhotels.com; (5) Shangrila Resort Murree — shangrila.com.pk; (6) Guesthouses and mid-range hotels — Booking.com search 'Murree Pakistan'. Best booking tip: for Himalaya Villas specifically, WhatsApp direct booking always delivers the best rate and pre-arrival concierge service.",
+        "Murree hotel booking options 2026: (1) Himalaya Villas & Resorts (private villa estate, Bhurban)  or Airbnb/Booking.com; (2) PC Hotel Bhurban (Marriott 5-star) — pchotels.com or Marriott app; (3) Mövenpick Murree (Accor) — accor.com or Booking.com; (4) Ramada by Wyndham Murree — Booking.com or wyndhamhotels.com; (5) Shangrila Resort Murree — shangrila.com.pk; (6) Guesthouses and mid-range hotels — Booking.com search 'Murree Pakistan'. Best booking tip: for Himalaya Villas specifically, WhatsApp direct booking always delivers the best rate and pre-arrival concierge service.",
     },
     {
       type: "section",
@@ -55729,7 +55729,7 @@ export const article498: Article = {
       eyebrow: "Book Himalaya Villas Direct",
       heading: "WhatsApp +92 304 567 9000",
       text: "Book directly for the best rate and pre-arrival concierge service.",
-      buttonLabel: "WhatsApp: +92 304 567 9000 | wa.me/923045679000",
+      buttonLabel: "Book Your Stay",
       buttonHref: "https://wa.me/923045679000",
       footnote: "Direct bookings receive the best available rate.",
     },
@@ -55873,7 +55873,7 @@ export const article499: Article = {
       eyebrow: "Book the Bhurban Private Estate",
       heading: "WhatsApp +92 304 567 9000",
       text: "Book your private villa stay at Himalaya Villas & Resorts.",
-      buttonLabel: "WhatsApp: +92 304 567 9000 | wa.me/923045679000",
+      buttonLabel: "Book Your Stay",
       buttonHref: "https://wa.me/923045679000",
       footnote: "Direct bookings receive the best available rate.",
     },
@@ -55967,7 +55967,7 @@ export const article502: Article = {
       eyebrow: "Book the Private Cedar Estate",
       heading: "WhatsApp +92 304 567 9000",
       text: "Book your private villa stay at Himalaya Villas & Resorts.",
-      buttonLabel: "WhatsApp: +92 304 567 9000 | wa.me/923045679000",
+      buttonLabel: "Book Your Stay",
       buttonHref: "https://wa.me/923045679000",
       footnote: "Direct bookings receive the best available rate.",
     },
@@ -56169,7 +56169,7 @@ export const article503: Article = {
       eyebrow: "Book the Best Private Villa in Murree Hills",
       heading: "WhatsApp +92 304 567 9000",
       text: "Book your private villa stay at Himalaya Villas & Resorts.",
-      buttonLabel: "WhatsApp: +92 304 567 9000 | wa.me/923045679000",
+      buttonLabel: "Book Your Stay",
       buttonHref: "https://wa.me/923045679000",
       footnote: "Direct bookings receive the best available rate.",
     },
@@ -56301,7 +56301,7 @@ export const article504: Article = {
       eyebrow: "Book the Bhurban Cedar Estate",
       heading: "WhatsApp +92 304 567 9000",
       text: "Pakistan's finest hill station private villa experience.",
-      buttonLabel: "WhatsApp: +92 304 567 9000 | wa.me/923045679000",
+      buttonLabel: "Book Your Stay",
       buttonHref: "https://wa.me/923045679000",
       footnote: "Direct bookings receive the best available rate.",
     },
@@ -56440,7 +56440,7 @@ export const article505: Article = {
       eyebrow: "Check In to the Cedar Estate",
       heading: "WhatsApp +92 304 567 9000",
       text: "Book your private villa stay at Himalaya Villas & Resorts.",
-      buttonLabel: "WhatsApp: +92 304 567 9000 | wa.me/923045679000",
+      buttonLabel: "Book Your Stay",
       buttonHref: "https://wa.me/923045679000",
       footnote: "Direct bookings receive the best available rate.",
     },
@@ -56596,7 +56596,7 @@ export const article506: Article = {
       eyebrow: "Book the Bhurban Cedar Estate",
       heading: "WhatsApp +92 304 567 9000",
       text: "Book your private villa stay near the Chinar Club.",
-      buttonLabel: "WhatsApp: +92 304 567 9000 | wa.me/923045679000",
+      buttonLabel: "Book Your Stay",
       buttonHref: "https://wa.me/923045679000",
       footnote: "Direct bookings receive the best available rate.",
     },
@@ -56713,7 +56713,7 @@ export const article507: Article = {
       eyebrow: "Book the Private Cedar Estate",
       heading: "WhatsApp +92 304 567 9000",
       text: "Book your private villa stay in the Bhurban cedar forest.",
-      buttonLabel: "WhatsApp: +92 304 567 9000 | wa.me/923045679000",
+      buttonLabel: "Book Your Stay",
       buttonHref: "https://wa.me/923045679000",
       footnote: "Direct bookings receive the best available rate.",
     },
@@ -56853,7 +56853,7 @@ export const article508: Article = {
         },
         {
           q: "Where is Insignia Resort Bhurban?",
-          a: "Confirm the exact location and current status of Insignia Resort Bhurban via Booking.com or Google Maps search. Himalaya Villas is at Mohra Iswal, Bhurban — WhatsApp +92 304 567 9000 for bookings.",
+          a: "Confirm the exact location and current status of Insignia Resort Bhurban via Booking.com or Google Maps search. Himalaya Villas is at Mohra Iswal, Bhurban  for bookings.",
         },
       ],
     },
@@ -56862,7 +56862,7 @@ export const article508: Article = {
       eyebrow: "Book the Premium Private Estate",
       heading: "WhatsApp +92 304 567 9000",
       text: "Book your private villa stay at Himalaya Villas & Resorts.",
-      buttonLabel: "WhatsApp: +92 304 567 9000 | wa.me/923045679000",
+      buttonLabel: "Book Your Stay",
       buttonHref: "https://wa.me/923045679000",
       footnote: "Direct bookings receive the best available rate.",
     },
@@ -56978,7 +56978,7 @@ export const article509: Article = {
       eyebrow: "Book an Overnight Cedar Estate Stay",
       heading: "WhatsApp +92 304 567 9000",
       text: "Book your private villa stay at Himalaya Villas & Resorts.",
-      buttonLabel: "WhatsApp: +92 304 567 9000 | wa.me/923045679000",
+      buttonLabel: "Book Your Stay",
       buttonHref: "https://wa.me/923045679000",
       footnote: "Direct bookings receive the best available rate.",
     },
@@ -57122,7 +57122,7 @@ export const article510: Article = {
       eyebrow: "Book the Private Villa Estate",
       heading: "WhatsApp +92 304 567 9000",
       text: "Book your private villa stay at Himalaya Villas & Resorts.",
-      buttonLabel: "WhatsApp: +92 304 567 9000 | wa.me/923045679000",
+      buttonLabel: "Book Your Stay",
       buttonHref: "https://wa.me/923045679000",
       footnote: "Direct bookings receive the best available rate.",
     },
@@ -57219,7 +57219,7 @@ export const article512: Article = {
       eyebrow: "Book the Private Villa Estate",
       heading: "WhatsApp +92 304 567 9000",
       text: "Book your private villa stay at Himalaya Villas & Resorts.",
-      buttonLabel: "WhatsApp: +92 304 567 9000 | wa.me/923045679000",
+      buttonLabel: "Book Your Stay",
       buttonHref: "https://wa.me/923045679000",
       footnote: "Direct bookings receive the best available rate.",
     },
@@ -57347,7 +57347,7 @@ export const article513: Article = {
       eyebrow: "Upgrade the Day Trip to an Overnight Cedar Estate Stay",
       heading: "WhatsApp +92 304 567 9000",
       text: "Book your private villa stay at Himalaya Villas & Resorts.",
-      buttonLabel: "WhatsApp: +92 304 567 9000 | wa.me/923045679000",
+      buttonLabel: "Book Your Stay",
       buttonHref: "https://wa.me/923045679000",
       footnote: "Direct bookings receive the best available rate.",
     },
@@ -57465,7 +57465,7 @@ export const article514: Article = {
       eyebrow: "Self-Arrange the Better Murree Trip",
       heading: "WhatsApp +92 304 567 9000",
       text: "Book your private villa stay at Himalaya Villas & Resorts.",
-      buttonLabel: "WhatsApp: +92 304 567 9000 | wa.me/923045679000",
+      buttonLabel: "Book Your Stay",
       buttonHref: "https://wa.me/923045679000",
       footnote: "Direct bookings receive the best available rate.",
     },
@@ -57568,7 +57568,7 @@ export const article515: Article = {
       eyebrow: "Book the Private Cedar Estate Near the Golf Club",
       heading: "WhatsApp +92 304 567 9000",
       text: "Book your private villa stay near the Chinar Golf Club.",
-      buttonLabel: "WhatsApp: +92 304 567 9000 | wa.me/923045679000",
+      buttonLabel: "Book Your Stay",
       buttonHref: "https://wa.me/923045679000",
       footnote: "Direct bookings receive the best available rate.",
     },
@@ -57761,7 +57761,7 @@ export const article516: Article = {
       eyebrow: "Plan Your Bhurban Stay Around the Weather",
       heading: "WhatsApp +92 304 567 9000",
       text: "Book your private villa stay at Himalaya Villas & Resorts.",
-      buttonLabel: "WhatsApp: +92 304 567 9000 | wa.me/923045679000",
+      buttonLabel: "Book Your Stay",
       buttonHref: "https://wa.me/923045679000",
       footnote: "Direct bookings receive the best available rate.",
     },
@@ -57878,7 +57878,7 @@ export const article517: Article = {
       eyebrow: "Book the Cedar Estate for Any Weather",
       heading: "WhatsApp +92 304 567 9000",
       text: "Book your private villa stay at Himalaya Villas & Resorts.",
-      buttonLabel: "WhatsApp: +92 304 567 9000 | wa.me/923045679000",
+      buttonLabel: "Book Your Stay",
       buttonHref: "https://wa.me/923045679000",
       footnote: "Direct bookings receive the best available rate.",
     },
@@ -58002,7 +58002,7 @@ export const article518: Article = {
       eyebrow: "Plan Your Cedar Estate Stay Around the Forecast",
       heading: "WhatsApp +92 304 567 9000",
       text: "Book your private villa stay at Himalaya Villas & Resorts.",
-      buttonLabel: "WhatsApp: +92 304 567 9000 | wa.me/923045679000",
+      buttonLabel: "Book Your Stay",
       buttonHref: "https://wa.me/923045679000",
       footnote: "Direct bookings receive the best available rate.",
     },
@@ -58157,7 +58157,7 @@ export const article519: Article = {
       eyebrow: "Book Your Snowfall Cedar Estate Experience",
       heading: "WhatsApp +92 304 567 9000",
       text: "Book your private villa stay at Himalaya Villas & Resorts.",
-      buttonLabel: "WhatsApp: +92 304 567 9000 | wa.me/923045679000",
+      buttonLabel: "Book Your Stay",
       buttonHref: "https://wa.me/923045679000",
       footnote: "Direct bookings receive the best available rate.",
     },
@@ -58318,7 +58318,7 @@ export const article522: Article = {
       eyebrow: "Book Your Murree Tourist Places Base",
       heading: "WhatsApp +92 304 567 9000",
       text: "Book your private villa stay at Himalaya Villas & Resorts.",
-      buttonLabel: "WhatsApp: +92 304 567 9000 | wa.me/923045679000",
+      buttonLabel: "Book Your Stay",
       buttonHref: "https://wa.me/923045679000",
       footnote: "Direct bookings receive the best available rate.",
     },
@@ -58468,7 +58468,7 @@ export const article524: Article = {
       eyebrow: "Book the Finest Near-Islamabad Experience",
       heading: "WhatsApp +92 304 567 9000",
       text: "Book your private villa stay at Himalaya Villas & Resorts.",
-      buttonLabel: "WhatsApp: +92 304 567 9000 | wa.me/923045679000",
+      buttonLabel: "Book Your Stay",
       buttonHref: "https://wa.me/923045679000",
       footnote: "Direct bookings receive the best available rate.",
     },
@@ -58627,7 +58627,7 @@ export const article525: Article = {
       eyebrow: "Book the Bhurban Cedar Estate",
       heading: "WhatsApp +92 304 567 9000",
       text: "Pakistan's finest mountain private estate.",
-      buttonLabel: "WhatsApp: +92 304 567 9000 | wa.me/923045679000",
+      buttonLabel: "Book Your Stay",
       buttonHref: "https://wa.me/923045679000",
       footnote: "Direct bookings receive the best available rate.",
     },
@@ -58741,7 +58741,7 @@ export const article526: Article = {
       eyebrow: "Book the Cedar Estate",
       heading: "WhatsApp +92 304 567 9000",
       text: "Book your private villa stay at Himalaya Villas & Resorts.",
-      buttonLabel: "WhatsApp: +92 304 567 9000 | wa.me/923045679000",
+      buttonLabel: "Book Your Stay",
       buttonHref: "https://wa.me/923045679000",
       footnote: "Direct bookings receive the best available rate.",
     },
@@ -58888,7 +58888,7 @@ export const article527: Article = {
       eyebrow: "Book the Private Cedar Estate 20 Min from Mall Road",
       heading: "WhatsApp +92 304 567 9000",
       text: "Book your private villa stay at Himalaya Villas & Resorts.",
-      buttonLabel: "WhatsApp: +92 304 567 9000 | wa.me/923045679000",
+      buttonLabel: "Book Your Stay",
       buttonHref: "https://wa.me/923045679000",
       footnote: "Direct bookings receive the best available rate.",
     },
@@ -58994,7 +58994,7 @@ export const article528: Article = {
       eyebrow: "Plan Your Cedar Estate Visit Around the Current Weather",
       heading: "WhatsApp +92 304 567 9000",
       text: "Book your private villa stay at Himalaya Villas & Resorts.",
-      buttonLabel: "WhatsApp: +92 304 567 9000 | wa.me/923045679000",
+      buttonLabel: "Book Your Stay",
       buttonHref: "https://wa.me/923045679000",
       footnote: "Direct bookings receive the best available rate.",
     },
@@ -59143,7 +59143,7 @@ export const article530: Article = {
       eyebrow: "Book the Bhurban Private Estate",
       heading: "WhatsApp +92 304 567 9000",
       text: "Book your private villa stay at Himalaya Villas & Resorts.",
-      buttonLabel: "WhatsApp: +92 304 567 9000 | wa.me/923045679000",
+      buttonLabel: "Book Your Stay",
       buttonHref: "https://wa.me/923045679000",
       footnote: "Direct bookings receive the best available rate.",
     },
@@ -59269,7 +59269,7 @@ export const article532: Article = {
       eyebrow: "Book for Your Karachi Visit to Bhurban",
       heading: "WhatsApp +92 304 567 9000",
       text: "Book your private villa stay at Himalaya Villas & Resorts.",
-      buttonLabel: "WhatsApp: +92 304 567 9000 | wa.me/923045679000",
+      buttonLabel: "Book Your Stay",
       buttonHref: "https://wa.me/923045679000",
       footnote: "Direct bookings receive the best available rate.",
     },
@@ -59411,7 +59411,7 @@ export const article533: Article = {
       eyebrow: "Book Bhurban as Your Chairlift Base",
       heading: "WhatsApp +92 304 567 9000",
       text: "Book your private villa stay at Himalaya Villas & Resorts.",
-      buttonLabel: "WhatsApp: +92 304 567 9000 | wa.me/923045679000",
+      buttonLabel: "Book Your Stay",
       buttonHref: "https://wa.me/923045679000",
       footnote: "Direct bookings receive the best available rate.",
     },
@@ -59521,7 +59521,7 @@ export const article534: Article = {
       eyebrow: "Book the Cedar Forest Estate",
       heading: "WhatsApp +92 304 567 9000",
       text: "Book your private villa stay at Himalaya Villas & Resorts.",
-      buttonLabel: "WhatsApp: +92 304 567 9000 | wa.me/923045679000",
+      buttonLabel: "Book Your Stay",
       buttonHref: "https://wa.me/923045679000",
       footnote: "Direct bookings receive the best available rate.",
     },
@@ -61268,7 +61268,7 @@ export const article556: Article = {
       eyebrow: "Book the January Snowfall Cedar Estate",
       heading: "WhatsApp +92 304 567 9000",
       text: "Book your private villa stay at Himalaya Villas & Resorts.",
-      buttonLabel: "WhatsApp: +92 304 567 9000 | wa.me/923045679000",
+      buttonLabel: "Book Your Stay",
       buttonHref: "https://wa.me/923045679000",
       footnote: "Direct bookings receive the best available rate.",
     },
@@ -61399,7 +61399,7 @@ export const article557: Article = {
       eyebrow: "Book October at the Cedar Estate",
       heading: "WhatsApp +92 304 567 9000",
       text: "Book your private villa stay at Himalaya Villas & Resorts.",
-      buttonLabel: "WhatsApp: +92 304 567 9000 | wa.me/923045679000",
+      buttonLabel: "Book Your Stay",
       buttonHref: "https://wa.me/923045679000",
       footnote: "Direct bookings receive the best available rate.",
     },
@@ -61497,7 +61497,7 @@ export const article558: Article = {
       eyebrow: "Book the Summer Cedar Estate",
       heading: "WhatsApp +92 304 567 9000",
       text: "Book your private villa stay at Himalaya Villas & Resorts.",
-      buttonLabel: "WhatsApp: +92 304 567 9000 | wa.me/923045679000",
+      buttonLabel: "Book Your Stay",
       buttonHref: "https://wa.me/923045679000",
       footnote: "Direct bookings receive the best available rate.",
     },
@@ -61583,7 +61583,7 @@ export const article559: Article = {
       eyebrow: "Book the Spring Cedar Estate",
       heading: "WhatsApp +92 304 567 9000",
       text: "Book your private villa stay at Himalaya Villas & Resorts.",
-      buttonLabel: "WhatsApp: +92 304 567 9000 | wa.me/923045679000",
+      buttonLabel: "Book Your Stay",
       buttonHref: "https://wa.me/923045679000",
       footnote: "Direct bookings receive the best available rate.",
     },
@@ -61747,7 +61747,7 @@ export const article560: Article = {
       eyebrow: "Book the Cedar Estate Dawn Wildlife Walk",
       heading: "WhatsApp +92 304 567 9000",
       text: "Book your private villa stay at Himalaya Villas & Resorts.",
-      buttonLabel: "WhatsApp: +92 304 567 9000 | wa.me/923045679000",
+      buttonLabel: "Book Your Stay",
       buttonHref: "https://wa.me/923045679000",
       footnote: "Direct bookings receive the best available rate.",
     },
@@ -61889,7 +61889,7 @@ export const article561: Article = {
       eyebrow: "Book the Corporate Cedar Estate",
       heading: "WhatsApp +92 304 567 9000",
       text: "Book your corporate retreat at Himalaya Villas & Resorts.",
-      buttonLabel: "WhatsApp: +92 304 567 9000 | wa.me/923045679000",
+      buttonLabel: "Book Your Stay",
       buttonHref: "https://wa.me/923045679000",
       footnote: "Direct bookings receive the best available rate.",
     },
@@ -61995,7 +61995,7 @@ export const article562: Article = {
       eyebrow: "Stay at the Cedar Estate That History Built",
       heading: "WhatsApp +92 304 567 9000",
       text: "Book your private villa stay at Himalaya Villas & Resorts.",
-      buttonLabel: "WhatsApp: +92 304 567 9000 | wa.me/923045679000",
+      buttonLabel: "Book Your Stay",
       buttonHref: "https://wa.me/923045679000",
       footnote: "Direct bookings receive the best available rate.",
     },
@@ -62272,7 +62272,7 @@ export const article572: Article = {
         },
         {
           label: "Multigenerational gathering of 20+",
-          value: "Multi-villa / full estate portion — WhatsApp +92 304 567 9000 for configuration",
+          value: "Multi-villa / full estate portion  for configuration",
         },
       ],
     },
@@ -62628,7 +62628,7 @@ export const article576: Article = {
       eyebrow: "Book Bhurban as Your Nathia Gali Day-Trip Base",
       heading: "WhatsApp +92 304 567 9000",
       text: "Book your private villa stay at Himalaya Villas & Resorts.",
-      buttonLabel: "WhatsApp: +92 304 567 9000 | wa.me/923045679000",
+      buttonLabel: "Book Your Stay",
       buttonHref: "https://wa.me/923045679000",
       footnote: "Direct bookings receive the best available rate.",
     },
@@ -62812,7 +62812,7 @@ export const article577: Article = {
       eyebrow: "Book the Premium Bhurban Alternative",
       heading: "WhatsApp +92 304 567 9000",
       text: "Book your private villa stay at Himalaya Villas & Resorts.",
-      buttonLabel: "WhatsApp: +92 304 567 9000 | wa.me/923045679000",
+      buttonLabel: "Book Your Stay",
       buttonHref: "https://wa.me/923045679000",
       footnote: "Direct bookings receive the best available rate.",
     },
@@ -62934,7 +62934,7 @@ export const article578: Article = {
       eyebrow: "Book the Private Cedar Estate 45 Min Away",
       heading: "WhatsApp +92 304 567 9000",
       text: "Book your private villa stay at Himalaya Villas & Resorts.",
-      buttonLabel: "WhatsApp: +92 304 567 9000 | wa.me/923045679000",
+      buttonLabel: "Book Your Stay",
       buttonHref: "https://wa.me/923045679000",
       footnote: "Direct bookings receive the best available rate.",
     },
@@ -63056,7 +63056,7 @@ export const article579: Article = {
       eyebrow: "Book the Bhurban Private Estate Alternative",
       heading: "WhatsApp +92 304 567 9000",
       text: "Book your private villa stay at Himalaya Villas & Resorts.",
-      buttonLabel: "WhatsApp: +92 304 567 9000 | wa.me/923045679000",
+      buttonLabel: "Book Your Stay",
       buttonHref: "https://wa.me/923045679000",
       footnote: "Direct bookings receive the best available rate.",
     },
@@ -63184,7 +63184,7 @@ export const article580: Article = {
       eyebrow: "Book the Bhurban Cedar Estate 30 Min Away",
       heading: "WhatsApp +92 304 567 9000",
       text: "Book your private villa stay at Himalaya Villas & Resorts.",
-      buttonLabel: "WhatsApp: +92 304 567 9000 | wa.me/923045679000",
+      buttonLabel: "Book Your Stay",
       buttonHref: "https://wa.me/923045679000",
       footnote: "Direct bookings receive the best available rate.",
     },
@@ -63328,7 +63328,7 @@ export const article581: Article = {
       eyebrow: "Book Your Snowfall Cedar Estate Stay",
       heading: "WhatsApp +92 304 567 9000",
       text: "Book your private villa stay at Himalaya Villas & Resorts.",
-      buttonLabel: "WhatsApp: +92 304 567 9000 | wa.me/923045679000",
+      buttonLabel: "Book Your Stay",
       buttonHref: "https://wa.me/923045679000",
       footnote: "Direct bookings receive the best available rate.",
     },
@@ -63428,7 +63428,7 @@ export const article582: Article = {
       eyebrow: "Book Bhurban as Your Nathia Gali Base",
       heading: "WhatsApp +92 304 567 9000",
       text: "Book your private villa stay at Himalaya Villas & Resorts.",
-      buttonLabel: "WhatsApp: +92 304 567 9000 | wa.me/923045679000",
+      buttonLabel: "Book Your Stay",
       buttonHref: "https://wa.me/923045679000",
       footnote: "Direct bookings receive the best available rate.",
     },
@@ -63522,7 +63522,7 @@ export const article583: Article = {
       eyebrow: "Book the Bhurban Private Estate Alternative",
       heading: "WhatsApp +92 304 567 9000",
       text: "Book your private villa stay at Himalaya Villas & Resorts.",
-      buttonLabel: "WhatsApp: +92 304 567 9000 | wa.me/923045679000",
+      buttonLabel: "Book Your Stay",
       buttonHref: "https://wa.me/923045679000",
       footnote: "Direct bookings receive the best available rate.",
     },
@@ -63619,7 +63619,7 @@ export const article584: Article = {
       eyebrow: "Book the Bhurban Hiking Base",
       heading: "WhatsApp +92 304 567 9000",
       text: "Book your private villa stay at Himalaya Villas & Resorts.",
-      buttonLabel: "WhatsApp: +92 304 567 9000 | wa.me/923045679000",
+      buttonLabel: "Book Your Stay",
       buttonHref: "https://wa.me/923045679000",
       footnote: "Direct bookings receive the best available rate.",
     },
@@ -63760,7 +63760,7 @@ export const article585: Article = {
       eyebrow: "Book the Premium Private Cedar Estate",
       heading: "WhatsApp +92 304 567 9000",
       text: "Book your private villa stay at Himalaya Villas & Resorts.",
-      buttonLabel: "WhatsApp: +92 304 567 9000 | wa.me/923045679000",
+      buttonLabel: "Book Your Stay",
       buttonHref: "https://wa.me/923045679000",
       footnote: "Direct bookings receive the best available rate.",
     },
@@ -64605,7 +64605,7 @@ export const article591: Article = {
       items: [
         {
           q: "Do I need to book in advance from overseas?",
-          a: "Yes — WhatsApp +92 304 567 9000 is the booking channel. The pre-arrival coordination (flowers, fire timing, in-villa dining, occasion setup) works smoothly via WhatsApp from any international number. Book 6–8 weeks in advance for peak season (July–August, Eid, January snowfall weekends).",
+          a: "Yes  is the booking channel. The pre-arrival coordination (flowers, fire timing, in-villa dining, occasion setup) works smoothly via WhatsApp from any international number. Book 6–8 weeks in advance for peak season (July–August, Eid, January snowfall weekends).",
         },
         {
           q: "Is Bhurban safe for diaspora families visiting Pakistan?",
@@ -65475,7 +65475,7 @@ export const article596: Article = {
       eyebrow: "Book Bhurban as Your Mushkpuri Base",
       heading: "WhatsApp +92 304 567 9000",
       text: "Book your private villa stay at Himalaya Villas & Resorts.",
-      buttonLabel: "WhatsApp: +92 304 567 9000 | wa.me/923045679000",
+      buttonLabel: "Book Your Stay",
       buttonHref: "https://wa.me/923045679000",
       footnote: "Direct bookings receive the best available rate.",
     },
@@ -65660,7 +65660,7 @@ export const article597: Article = {
       eyebrow: "Book the Bhurban Cedar Estate",
       heading: "WhatsApp +92 304 567 9000",
       text: "Book your private villa stay at Himalaya Villas & Resorts.",
-      buttonLabel: "WhatsApp: +92 304 567 9000 | wa.me/923045679000",
+      buttonLabel: "Book Your Stay",
       buttonHref: "https://wa.me/923045679000",
       footnote: "Direct bookings receive the best available rate.",
     },
@@ -65801,7 +65801,7 @@ export const article601: Article = {
       eyebrow: "Book the Bhurban Ayubia Day-Trip Base",
       heading: "WhatsApp +92 304 567 9000",
       text: "Book your private villa stay at Himalaya Villas & Resorts.",
-      buttonLabel: "WhatsApp: +92 304 567 9000 | wa.me/923045679000",
+      buttonLabel: "Book Your Stay",
       buttonHref: "https://wa.me/923045679000",
       footnote: "Direct bookings receive the best available rate.",
     },
@@ -65911,7 +65911,7 @@ export const article606: Article = {
         "'Chinar golf club rooms' draws 260 monthly searches — reflecting a specific accommodation query from golfers seeking to stay at the course itself. Chinar Golf Club has associated accommodation (huts/rooms on the course grounds) in addition to the main PC Hotel Bhurban building. Confirm current availability and rates for the course-side accommodation directly at pchotels.com or by calling PC Hotel Bhurban.",
         "PC Hotel Bhurban rooms: the main hotel building, 162 rooms, PKR 35,000–75,000/night — full hotel facilities including pool, spa, multiple restaurants",
         "Chinar Golf Club huts/rooms: on-course accommodation adjacent to the fairways — confirm availability and rates directly at pchotels.com",
-        "Himalaya Villas (0.5km): the private cedar villa estate alternative to PC Hotel, PKR 39,000–70,000/villa/night — WhatsApp +92 304 567 9000",
+        "Himalaya Villas (0.5km): the private cedar villa estate alternative to PC Hotel, PKR 39,000–70,000/villa/night ",
       ],
       image: {
         src: dummyImageTemp,
@@ -66632,7 +66632,7 @@ export const article616: Article = {
       eyebrow: "Book the Private Cedar Estate 0.5km Away",
       heading: "WhatsApp +92 304 567 9000",
       text: "Book your private villa stay at Himalaya Villas & Resorts.",
-      buttonLabel: "WhatsApp: +92 304 567 9000 | wa.me/923045679000",
+      buttonLabel: "Book Your Stay",
       buttonHref: "https://wa.me/923045679000",
       footnote: "Direct bookings receive the best available rate.",
     },
@@ -66791,7 +66791,7 @@ export const article617: Article = {
       eyebrow: "Book the Cedar Estate at Lower Per-Person Cost",
       heading: "WhatsApp +92 304 567 9000",
       text: "Book your private villa stay at Himalaya Villas & Resorts.",
-      buttonLabel: "WhatsApp: +92 304 567 9000 | wa.me/923045679000",
+      buttonLabel: "Book Your Stay",
       buttonHref: "https://wa.me/923045679000",
       footnote: "Direct bookings receive the best available rate.",
     },
@@ -66901,7 +66901,7 @@ export const article618: Article = {
       eyebrow: "Book the Cedar Estate",
       heading: "WhatsApp +92 304 567 9000",
       text: "Book your private villa stay at Himalaya Villas & Resorts.",
-      buttonLabel: "WhatsApp: +92 304 567 9000 | wa.me/923045679000",
+      buttonLabel: "Book Your Stay",
       buttonHref: "https://wa.me/923045679000",
       footnote: "Direct bookings receive the best available rate.",
     },
@@ -67003,7 +67003,7 @@ export const article619: Article = {
       eyebrow: "Book Himalaya Villas Directly",
       heading: "WhatsApp +92 304 567 9000",
       text: "Book your private villa stay at Himalaya Villas & Resorts.",
-      buttonLabel: "WhatsApp: +92 304 567 9000 | wa.me/923045679000",
+      buttonLabel: "Book Your Stay",
       buttonHref: "https://wa.me/923045679000",
       footnote: "Direct bookings receive the best available rate.",
     },
@@ -67175,7 +67175,7 @@ export const article623: Article = {
       eyebrow: "Book the Cedar Estate",
       heading: "WhatsApp +92 304 567 9000",
       text: "Book your private villa stay at Himalaya Villas & Resorts.",
-      buttonLabel: "WhatsApp: +92 304 567 9000 | wa.me/923045679000",
+      buttonLabel: "Book Your Stay",
       buttonHref: "https://wa.me/923045679000",
       footnote: "Direct bookings receive the best available rate.",
     },
@@ -67272,7 +67272,7 @@ export const article624: Article = {
       eyebrow: "Book from Rawalpindi",
       heading: "WhatsApp +92 304 567 9000",
       text: "Book your private villa stay at Himalaya Villas & Resorts.",
-      buttonLabel: "WhatsApp: +92 304 567 9000 | wa.me/923045679000",
+      buttonLabel: "Book Your Stay",
       buttonHref: "https://wa.me/923045679000",
       footnote: "Direct bookings receive the best available rate.",
     },
@@ -67458,7 +67458,7 @@ export const article625: Article = {
       eyebrow: "Book the Bhurban Cedar Estate",
       heading: "WhatsApp +92 304 567 9000",
       text: "Book your private villa stay at Himalaya Villas & Resorts.",
-      buttonLabel: "WhatsApp: +92 304 567 9000 | wa.me/923045679000",
+      buttonLabel: "Book Your Stay",
       buttonHref: "https://wa.me/923045679000",
       footnote: "Direct bookings receive the best available rate.",
     },
@@ -69018,7 +69018,7 @@ export const article636: Article = {
       eyebrow: "Book the April Rhododendron Season",
       heading: "WhatsApp +92 304 567 9000",
       text: "Book your private villa stay at Himalaya Villas & Resorts.",
-      buttonLabel: "WhatsApp: +92 304 567 9000 | wa.me/923045679000",
+      buttonLabel: "Book Your Stay",
       buttonHref: "https://wa.me/923045679000",
       footnote: "Direct bookings receive the best available rate.",
     },
@@ -69152,7 +69152,7 @@ export const article637: Article = {
       eyebrow: "Book the Cedar Garden Fire",
       heading: "WhatsApp +92 304 567 9000",
       text: "Book your private villa stay at Himalaya Villas & Resorts.",
-      buttonLabel: "WhatsApp: +92 304 567 9000 | wa.me/923045679000",
+      buttonLabel: "Book Your Stay",
       buttonHref: "https://wa.me/923045679000",
       footnote: "Direct bookings receive the best available rate.",
     },
@@ -69281,7 +69281,7 @@ export const article638: Article = {
       eyebrow: "Book the Cedar Estate Walima",
       heading: "WhatsApp +92 304 567 9000",
       text: "Book your Walima celebration at Himalaya Villas & Resorts.",
-      buttonLabel: "WhatsApp: +92 304 567 9000 | wa.me/923045679000",
+      buttonLabel: "Book Your Stay",
       buttonHref: "https://wa.me/923045679000",
       footnote: "Direct bookings receive the best available rate.",
     },
@@ -69407,7 +69407,7 @@ export const article639: Article = {
       eyebrow: "Plan Your Corporate Cedar Estate Retreat",
       heading: "WhatsApp +92 304 567 9000",
       text: "Book your corporate retreat at Himalaya Villas & Resorts.",
-      buttonLabel: "WhatsApp: +92 304 567 9000 | wa.me/923045679000",
+      buttonLabel: "Book Your Stay",
       buttonHref: "https://wa.me/923045679000",
       footnote: "Direct bookings receive the best available rate.",
     },
@@ -69522,7 +69522,7 @@ export const article640: Article = {
       eyebrow: "Book the Family 48-Hour Cedar Weekend",
       heading: "WhatsApp +92 304 567 9000",
       text: "Book your private villa stay at Himalaya Villas & Resorts.",
-      buttonLabel: "WhatsApp: +92 304 567 9000 | wa.me/923045679000",
+      buttonLabel: "Book Your Stay",
       buttonHref: "https://wa.me/923045679000",
       footnote: "Direct bookings receive the best available rate.",
     },
@@ -69620,7 +69620,7 @@ export const article641: Article = {
       eyebrow: "Book May or June at the Cedar Estate",
       heading: "WhatsApp +92 304 567 9000",
       text: "Book your private villa stay at Himalaya Villas & Resorts.",
-      buttonLabel: "WhatsApp: +92 304 567 9000 | wa.me/923045679000",
+      buttonLabel: "Book Your Stay",
       buttonHref: "https://wa.me/923045679000",
       footnote: "Direct bookings receive the best available rate.",
     },
@@ -69734,7 +69734,7 @@ export const article642: Article = {
       eyebrow: "Book the September Cedar Estate",
       heading: "WhatsApp +92 304 567 9000",
       text: "Book your private villa stay at Himalaya Villas & Resorts.",
-      buttonLabel: "WhatsApp: +92 304 567 9000 | wa.me/923045679000",
+      buttonLabel: "Book Your Stay",
       buttonHref: "https://wa.me/923045679000",
       footnote: "Direct bookings receive the best available rate.",
     },
@@ -69826,7 +69826,7 @@ export const article643: Article = {
       eyebrow: "Book the November Cedar Estate",
       heading: "WhatsApp +92 304 567 9000",
       text: "Book your private villa stay at Himalaya Villas & Resorts.",
-      buttonLabel: "WhatsApp: +92 304 567 9000 | wa.me/923045679000",
+      buttonLabel: "Book Your Stay",
       buttonHref: "https://wa.me/923045679000",
       footnote: "Direct bookings receive the best available rate.",
     },
@@ -69918,7 +69918,7 @@ export const article644: Article = {
       eyebrow: "Book from Karachi",
       heading: "WhatsApp +92 304 567 9000",
       text: "Book your private villa stay at Himalaya Villas & Resorts.",
-      buttonLabel: "WhatsApp: +92 304 567 9000 | wa.me/923045679000",
+      buttonLabel: "Book Your Stay",
       buttonHref: "https://wa.me/923045679000",
       footnote: "Direct bookings receive the best available rate.",
     },
@@ -70011,7 +70011,7 @@ export const article645: Article = {
       eyebrow: "Book Your Cedar Estate Experience",
       heading: "WhatsApp +92 304 567 9000",
       text: "Book your private villa stay at Himalaya Villas & Resorts.",
-      buttonLabel: "WhatsApp: +92 304 567 9000 | wa.me/923045679000",
+      buttonLabel: "Book Your Stay",
       buttonHref: "https://wa.me/923045679000",
       footnote: "Direct bookings receive the best available rate.",
     },
@@ -70881,7 +70881,7 @@ export const article652: Article = {
         "Cake: honeymoon cake with the couple's names, served at the cedar garden fire on the arrival evening",
         "Cedar garden dinner: the candle-lit long table in the cedar garden, fire pit beside it",
         "Kashmiri chai welcome: the traditional arrival chai on the private terrace",
-        "Complimentary setup: confirm specific complimentary elements at the booking stage — WhatsApp +92 304 567 9000",
+        "Complimentary setup: confirm specific complimentary elements at the booking stage ",
       ],
       image: {
         src: dummyImageTemp,
@@ -74587,7 +74587,7 @@ export const article679: Article = {
   eyebrow: "Template C — Planning | Cluster 11: Planning",
   h1: "Murree Expressway Restaurants — What's Available on the N-75 Journey",
   heroTagline:
-    "The Islamabad Murree Expressway (N-75) has a growing number of food and rest stop options along its 44km length. Key options: The Monal (at Viewpoint on the expressway approach to Murree) is the best-known restaurant with valley views; various dhaba and fast food stops along the route; Gloria Jeans coffee (confirmed location at km marker — check Google Maps). For the full meal experience: the in-villa cedar garden dinner at Himalaya Villas awaits at the journey end — WhatsApp +92 304 567 9000.",
+    "The Islamabad Murree Expressway (N-75) has a growing number of food and rest stop options along its 44km length. Key options: The Monal (at Viewpoint on the expressway approach to Murree) is the best-known restaurant with valley views; various dhaba and fast food stops along the route; Gloria Jeans coffee (confirmed location at km marker — check Google Maps). For the full meal experience: the in-villa cedar garden dinner at Himalaya Villas awaits at the journey end .",
   heroImage: article679Hero,
 
   blocks: [
@@ -74595,7 +74595,7 @@ export const article679: Article = {
       type: "callout-qa",
       question: "What restaurants are on the Murree Expressway (N-75)?",
       answer:
-        "The Islamabad Murree Expressway (N-75) has a growing number of food and rest stop options along its 44km length. Key options: The Monal (at Viewpoint on the expressway approach to Murree) is the best-known restaurant with valley views; various dhaba and fast food stops along the route; Gloria Jeans coffee (confirmed location at km marker — check Google Maps). For the full meal experience: the in-villa cedar garden dinner at Himalaya Villas awaits at the journey end — WhatsApp +92 304 567 9000.",
+        "The Islamabad Murree Expressway (N-75) has a growing number of food and rest stop options along its 44km length. Key options: The Monal (at Viewpoint on the expressway approach to Murree) is the best-known restaurant with valley views; various dhaba and fast food stops along the route; Gloria Jeans coffee (confirmed location at km marker — check Google Maps). For the full meal experience: the in-villa cedar garden dinner at Himalaya Villas awaits at the journey end .",
     },
 
     {
@@ -75637,7 +75637,7 @@ export const article689: Article = {
         },
         {
           q: "Can I book Himalaya Villas from abroad?",
-          a: "Yes — WhatsApp +92 304 567 9000 works globally. Diaspora families book from London, Dubai, Toronto, and elsewhere via WhatsApp. Payment coordination for international bookings is discussed at the booking stage.",
+          a: "Yes  works globally. Diaspora families book from London, Dubai, Toronto, and elsewhere via WhatsApp. Payment coordination for international bookings is discussed at the booking stage.",
         },
       ],
     },
@@ -76964,7 +76964,7 @@ export const article703: Article = {
         "Q: Does Himalaya Villas offer early check-in?",
         "A: Early check-in is subject to villa availability and is confirmed at the booking stage. WhatsApp +92 304 567 9000 to request early check-in for your specific arrival.",
         "Q: What is the latest I can check out at Himalaya Villas?",
-        "A: Standard checkout is 11am. Late checkout subject to availability — WhatsApp +92 304 567 9000 to request at the booking stage.",
+        "A: Standard checkout is 11am. Late checkout subject to availability  to request at the booking stage.",
         "Q: Is Himalaya Villas Bhurban on Instagram?",
         "A: Check Instagram with the search 'Himalaya Villas Bhurban' for current social media presence and guest-posted content. Guest-tagged content under #himalayavillas and #bhurban provides the most authentic visual reference for the cedar estate.",
       ],
@@ -77045,7 +77045,7 @@ export const article705: Article = {
       eyebrow: "How to Book",
       heading: "Dubai to Bhurban: fly Dubai to Islamabad (2h 30min — Emirates, PIA, flydubai, Air Arabia all serve this route multiple daily), then drive 60km from Islamabad Airport to Himalaya Villas (55-60 minutes)...",
       text: "The UAE Pakistani diaspora — particularly in Dubai, Abu Dhabi, and Sharjah — is one of Himalaya Villas' most important feeder markets. The 2h 30min Dubai-Islamabad flight is shorter than many domestic UAE road journeys, making Bhurban more accessible from Dubai than it might appear. A 5-7 day Bhurban trip from Dubai fits within a standard annual leave allocation.",
-      buttonLabel: "WhatsApp: +92 304 567 9000 | wa.me/923045679000",
+      buttonLabel: "Book Your Stay",
       buttonHref: "https://wa.me/923045679000",
       footnote: "Direct bookings receive priority response and best available rate.",
     },
@@ -77162,7 +77162,7 @@ export const article706: Article = {
       eyebrow: "How to Book",
       heading: "London to Bhurban: fly London Heathrow to Islamabad (PIA, British Airways, or via connecting hub — approximately 8-9 hours direct with PIA), then drive 60km from Islamabad Airport to Himalaya Villas (...",
       text: "The British-Pakistani diaspora is among the most loyal visitor segments at Himalaya Villas — families who return to Pakistan annually or biannually and for whom Bhurban is the specific 'this is Pakistan' experience that the Birmingham or London drawing room cannot produce. The 8-9 hour direct PIA flight from Heathrow to Islamabad places Bhurban at approximately 10-11 hours total journey from Londo...",
-      buttonLabel: "WhatsApp: +92 304 567 9000 | wa.me/923045679000",
+      buttonLabel: "Book Your Stay",
       buttonHref: "https://wa.me/923045679000",
       footnote: "Direct bookings receive priority response and best available rate.",
     },
@@ -77301,7 +77301,7 @@ export const article707: Article = {
       eyebrow: "How to Book",
       heading: "Himalaya Villas operates private in-villa and cedar garden dining — meals are arranged and served exclusively within the booked villa's private space (terrace, garden, or indoor). No shared restaurant...",
       text: "Private dining at the cedar estate is one of the three structural advantages of the private villa estate model (alongside exclusive outdoor space and the cedar forest from the gate). The hotel restaurant is shared, timed, and menus are fixed. The cedar estate private dining is exclusively the booked group's, timed to the group's preference, and the menu is coordinated at the booking stage.",
-      buttonLabel: "WhatsApp: +92 304 567 9000 | wa.me/923045679000",
+      buttonLabel: "Book Your Stay",
       buttonHref: "https://wa.me/923045679000",
       footnote: "Direct bookings receive priority response and best available rate.",
     },
@@ -77597,9 +77597,9 @@ export const article708: Article = {
     {
       type: "cta",
       eyebrow: "How to Book",
-      heading: "Book the February-March Cedar Estate — WhatsApp +92 304 567 9000",
+      heading: "Book the February-March Cedar Estate ",
       text: "Contact us to book your stay.",
-      buttonLabel: "WhatsApp: +92 304 567 9000 | wa.me/923045679000",
+      buttonLabel: "Book Your Stay",
       buttonHref: "https://wa.me/923045679000",
       footnote: "Direct bookings receive priority response and best available rate.",
     },
@@ -77733,7 +77733,7 @@ export const article712: Article = {
       eyebrow: "Plan Your Eid Cedar Estate Weekend",
       heading: "WhatsApp +92 304 567 9000",
       text: "Book your Eid stay at Himalaya Villas & Resorts.",
-      buttonLabel: "WhatsApp: +92 304 567 9000 | wa.me/923045679000",
+      buttonLabel: "Book Your Stay",
       buttonHref: "https://wa.me/923045679000",
       footnote: "Direct bookings receive the best available rate.",
     },
@@ -77891,7 +77891,7 @@ export const article713: Article = {
       eyebrow: "Book the Cedar Estate — 45 Minutes from Islamabad",
       heading: "WhatsApp +92 304 567 9000",
       text: "Book your private villa stay at Himalaya Villas & Resorts.",
-      buttonLabel: "WhatsApp: +92 304 567 9000 | wa.me/923045679000",
+      buttonLabel: "Book Your Stay",
       buttonHref: "https://wa.me/923045679000",
       footnote: "Direct bookings receive the best available rate.",
     },
@@ -78002,7 +78002,7 @@ export const article714: Article = {
       eyebrow: "Book the Cedar Estate",
       heading: "WhatsApp +92 304 567 9000",
       text: "Book your private villa stay at Himalaya Villas & Resorts.",
-      buttonLabel: "WhatsApp: +92 304 567 9000 | wa.me/923045679000",
+      buttonLabel: "Book Your Stay",
       buttonHref: "https://wa.me/923045679000",
       footnote: "Direct bookings receive the best available rate.",
     },
@@ -78120,7 +78120,7 @@ export const article718: Article = {
       eyebrow: "Be Part of the Cedar Estate Story",
       heading: "WhatsApp +92 304 567 9000",
       text: "Book your private villa stay at Himalaya Villas & Resorts.",
-      buttonLabel: "WhatsApp: +92 304 567 9000 | wa.me/923045679000",
+      buttonLabel: "Book Your Stay",
       buttonHref: "https://wa.me/923045679000",
       footnote: "Direct bookings receive the best available rate.",
     },

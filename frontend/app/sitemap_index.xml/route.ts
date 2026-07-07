@@ -8,7 +8,7 @@ export async function GET() {
   const sitemaps = [
     { loc: `${origin}/sitemap_pages.xml`, lastmod: new Date().toISOString().split("T")[0] },
     { loc: `${origin}/sitemap_villas.xml`, lastmod: new Date().toISOString().split("T")[0] },
-    { loc: `${origin}/sitemap_blog.xml`, lastmod: new Date().toISOString().split("T")[0] },
+    { loc: `${origin}/sitemap_blogs.xml`, lastmod: new Date().toISOString().split("T")[0] },
     { loc: `${origin}/sitemap_events.xml`, lastmod: new Date().toISOString().split("T")[0] },
     { loc: `${origin}/sitemap_weather.xml`, lastmod: new Date().toISOString().split("T")[0] },
   ];

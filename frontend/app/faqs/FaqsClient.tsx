@@ -412,7 +412,6 @@ function AccordionItem({
     </div>
   );
 }
-
 export default function FaqClient() {
   const [activeCategory, setActiveCategory] = useState<string | null>(null);
   const [query, setQuery] = useState("");
@@ -457,25 +456,25 @@ export default function FaqClient() {
         />
         <div className="absolute inset-0 hero-overlay" />
 
-        <div className="relative mx-auto w-full max-w-7xl px-5 pb-16 pt-32 sm:px-8">
+        <div className="relative mx-auto w-full max-w-7xl px-5 pb-20 pt-36 sm:px-10">
           <motion.div
             initial={{ opacity: 0, y: 24 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.7, ease: "easeOut" }}
-            className="mx-auto max-w-3xl text-center"
+            className="mx-auto max-w-4xl text-center"
           >
-            <div className="flex items-center justify-center gap-3">
-              <span className="h-px w-8 bg-primary"></span>
-              <span className="font-sans text-xs font-semibold uppercase tracking-[0.2em] text-primary">
+            <div className="flex items-center justify-center gap-4">
+              <span className="h-px w-10 bg-primary"></span>
+              <span className="font-sans text-sm font-semibold uppercase tracking-[0.2em] text-primary">
                 SUPPORT & INFO
               </span>
-              <span className="h-px w-8 bg-primary"></span>
+              <span className="h-px w-10 bg-primary"></span>
             </div>
-            <h1 className="mt-6 font-display text-4xl leading-[1.1] text-white sm:text-5xl md:text-6xl">
+            <h1 className="mt-8 font-display text-5xl leading-[1.1] text-white sm:text-6xl md:text-7xl">
               Frequently Asked
-              <span className="block italic text-primary font-light mt-1">Questions</span>
+              <span className="block italic text-primary font-light mt-2">Questions</span>
             </h1>
-            <p className="mt-5 max-w-2xl mx-auto text-base leading-relaxed text-white/75">
+            <p className="mt-6 max-w-3xl mx-auto text-xl leading-relaxed text-white/75">
               Select a category below to find answers to your questions about bookings, amenities, location, and the Himalaya Villas experience.
             </p>
           </motion.div>
@@ -484,24 +483,24 @@ export default function FaqClient() {
 
       {/* Controls */}
       <section className="bg-background">
-        <div className="mx-auto max-w-4xl px-5 py-14 sm:px-8">
+        <div className="mx-auto max-w-5xl px-5 py-16 sm:px-10">
           {/* Search */}
-          <div className="relative mx-auto max-w-xl">
-            <Search className="pointer-events-none absolute left-4 top-1/2 h-4 w-4 -translate-y-1/2 text-muted-foreground" />
+          <div className="relative mx-auto max-w-2xl">
+            <Search className="pointer-events-none absolute left-5 top-1/2 h-5 w-5 -translate-y-1/2 text-muted-foreground" />
             <input
               value={query}
               onChange={(e) => setQuery(e.target.value)}
               placeholder="Search questions…"
-              className="w-full rounded-full border border-border bg-card py-3.5 pl-11 pr-4 text-sm text-foreground outline-none transition-colors placeholder:text-muted-foreground focus:border-primary"
+              className="w-full rounded-full border border-border bg-card py-4 pl-14 pr-5 text-base text-foreground outline-none transition-colors placeholder:text-muted-foreground focus:border-primary"
             />
           </div>
 
           {/* Category pills */}
-          <div className="mt-8 flex flex-wrap justify-center gap-2.5">
+          <div className="mt-10 flex flex-wrap justify-center gap-3">
             <button
               onClick={() => setActiveCategory(null)}
               className={cn(
-                "rounded-full border px-4 py-2 font-sans text-xs font-semibold uppercase tracking-[0.18em] transition-all duration-300",
+                "rounded-full border px-5 py-2.5 font-sans text-sm font-semibold uppercase tracking-[0.18em] transition-all duration-300",
                 activeCategory === null
                   ? "border-foreground bg-foreground text-background"
                   : "border-border bg-transparent text-muted-foreground hover:border-primary hover:text-foreground"
@@ -514,7 +513,7 @@ export default function FaqClient() {
                 key={cat.id}
                 onClick={() => setActiveCategory(cat.id)}
                 className={cn(
-                  "rounded-full border px-4 py-2 font-sans text-xs font-semibold uppercase tracking-[0.18em] transition-all duration-300",
+                  "rounded-full border px-5 py-2.5 font-sans text-sm font-semibold uppercase tracking-[0.18em] transition-all duration-300",
                   activeCategory === cat.id
                     ? "border-foreground bg-foreground text-background"
                     : "border-border bg-transparent text-muted-foreground hover:border-primary hover:text-foreground"
@@ -526,7 +525,7 @@ export default function FaqClient() {
           </div>
 
           {/* Accordions */}
-          <div className="mt-12 space-y-10">
+          <div className="mt-16 space-y-12">
             <AnimatePresence mode="popLayout">
               {filtered.map((cat) => (
                 <motion.div
@@ -537,10 +536,10 @@ export default function FaqClient() {
                   exit={{ opacity: 0, y: -8 }}
                   transition={{ duration: 0.4, ease: "easeOut" }}
                 >
-                  <h2 className="mb-4 font-sans text-xs font-semibold uppercase tracking-[0.18em] text-primary">
+                  <h2 className="mb-5 font-sans text-sm font-semibold uppercase tracking-[0.18em] text-primary">
                     {cat.title}
                   </h2>
-                  <div className="space-y-3">
+                  <div className="space-y-4">
                     {cat.faqs.map((item, i) => {
                       const key = `${cat.id}-${i}`;
                       return (
@@ -560,7 +559,7 @@ export default function FaqClient() {
             </AnimatePresence>
 
             {filtered.length === 0 && (
-              <p className="py-16 text-center font-display text-2xl text-muted-foreground/50">
+              <p className="py-20 text-center font-display text-3xl text-muted-foreground/50">
                 No questions match your search.
               </p>
             )}
@@ -569,88 +568,42 @@ export default function FaqClient() {
       </section>
 
       {/* CTA Section */}
-      <section className="px-5 pb-24 sm:px-8">
+      <section className="px-5 pb-28 sm:px-10">
         <motion.div
           initial={{ opacity: 0, y: 24 }}
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true, margin: "-80px" }}
           transition={{ duration: 0.6, ease: "easeOut" }}
-          className="mx-auto max-w-6xl rounded-[2rem] bg-foreground px-8 py-16 text-center text-background sm:px-16"
+          className="mx-auto max-w-6xl rounded-[2rem] bg-foreground px-10 py-20 text-center text-background sm:px-20"
         >
-          <div className=" gap-12 items-center text-left">
+          <div className="gap-14 items-center text-left">
             {/* Left Content */}
             <div>
-              <div className="flex items-center gap-3">
-                <span className="h-px w-8 bg-primary"></span>
-                <span className="font-sans text-xs font-semibold uppercase tracking-[0.2em] text-primary">
+              <div className="flex items-center gap-4">
+                <span className="h-px w-10 bg-primary"></span>
+                <span className="font-sans text-sm font-semibold uppercase tracking-[0.2em] text-primary">
                   Still Have Questions?
                 </span>
-                <span className="h-px w-8 bg-primary"></span>
+                <span className="h-px w-10 bg-primary"></span>
               </div>
-              <h2 className="mt-6 font-display text-3xl leading-tight sm:text-4xl">
+              <h2 className="mt-8 font-display text-4xl leading-tight sm:text-5xl">
                 Can't Find What You're Looking For?
               </h2>
-              <p className="mt-5 text-base leading-relaxed text-background/70">
+              <p className="mt-6 text-xl leading-relaxed text-background/70">
                 Our team is here to help. Send us your question and we'll get back to you within 15 minutes during business hours (9 AM - 10 PM).
               </p>
-              <div className="mt-8 space-y-4">
-                {/* <div className="flex items-center gap-3 text-background/80">
-                  <PhoneCall className="h-5 w-5 text-primary" />
-                  <span className="text-sm">WhatsApp: +92 304 567 9000</span>
-                </div> */}
-                 <a
-                           href={buildWhatsAppBookingUrl("a private villa tour")}
-                           target="_blank"
-                           rel="noopener noreferrer"
-                           className="inline-flex items-center justify-center px-2.5 sm:px-3 md:px-4 lg:px-5 py-1.5 sm:py-2 text-[8px] sm:text-[9px] md:text-[10px] lg:text-xs font-medium tracking-wider uppercase bg-primary text-primary-foreground hover:bg-primary/90 transition-all duration-300 whitespace-nowrap rounded-sm"
-                         >
-                           <span className="hidden xs:inline">Request Private Tour</span>
-                           <span className="xs:hidden">Book Now</span>
-                         </a>
+              <div className="mt-10 space-y-5">
+                <a
+                  href={buildWhatsAppBookingUrl("a private villa tour")}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="inline-flex items-center justify-center px-4 sm:px-5 md:px-6 py-2.5 sm:py-3 text-xs sm:text-sm md:text-base font-medium tracking-wider uppercase bg-primary text-primary-foreground hover:bg-primary/90 transition-all duration-300 whitespace-nowrap rounded-sm"
+                >
+                  <span className="hidden xs:inline">Request Private Tour</span>
+                  <span className="xs:hidden">Book Now</span>
+                </a>
               </div>
             </div>
-
-            {/* Right Form */}
-            {/* <div className="rounded-2xl bg-background/10 backdrop-blur-sm border border-background/20 p-8">
-              <form className="space-y-4">
-                <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
-                  <input
-                    type="text"
-                    placeholder="Full Name"
-                    className="w-full rounded-lg border border-background/20 bg-background/10 px-4 py-3 text-background placeholder:text-background/50 focus:border-primary focus:bg-background/15 focus:outline-none transition"
-                  />
-                  <input
-                    type="tel"
-                    placeholder="Phone Number"
-                    className="w-full rounded-lg border border-background/20 bg-background/10 px-4 py-3 text-background placeholder:text-background/50 focus:border-primary focus:bg-background/15 focus:outline-none transition"
-                  />
-                </div>
-                <input
-                  type="email"
-                  placeholder="Email Address"
-                  className="w-full rounded-lg border border-background/20 bg-background/10 px-4 py-3 text-background placeholder:text-background/50 focus:border-primary focus:bg-background/15 focus:outline-none transition"
-                />
-                <select className="w-full rounded-lg border border-background/20 bg-background/10 px-4 py-3 text-background placeholder:text-background/50 focus:border-primary focus:bg-background/15 focus:outline-none transition">
-                  <option value="" className="bg-foreground text-background">Select Topic</option>
-                  <option value="booking" className="bg-foreground text-background">Booking Inquiry</option>
-                  <option value="villa" className="bg-foreground text-background">Villa Information</option>
-                  <option value="wedding" className="bg-foreground text-background">Wedding/Event</option>
-                  <option value="corporate" className="bg-foreground text-background">Corporate Retreat</option>
-                  <option value="other" className="bg-foreground text-background">Other Question</option>
-                </select>
-                <textarea
-                  placeholder="Type your question here..."
-                  rows={4}
-                  className="w-full rounded-lg border border-background/20 bg-background/10 px-4 py-3 text-background placeholder:text-background/50 focus:border-primary focus:bg-background/15 focus:outline-none transition resize-none"
-                />
-                <button
-                  type="submit"
-                  className="w-full rounded-lg bg-primary px-8 py-4 font-sans text-sm font-bold uppercase tracking-wider text-primary-foreground transition duration-300 hover:bg-primary/90 shadow-lg hover:shadow-xl"
-                >
-                  Send Your Question
-                </button>
-              </form>
-            </div> */}
           </div>
         </motion.div>
       </section>

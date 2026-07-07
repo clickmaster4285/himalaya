@@ -5,7 +5,7 @@ import FaqsClient from "./FaqsClient";
 
 export const metadata: Metadata = createPageMetadata({
   title: "FAQ — Himalaya Villas & Resort, Bhurban Murree",
-  description: "Answers about reservations, villas, dining, private events and getting to Himalaya Villas & Resort in Bhurban, Murree.",
+  description: "Answers abouts reservations, villas, dining, private events and getting to Himalaya Villas & Resort in Bhurban, Murree.",
   path: "/faqs",
   keywords: [
     "Murree luxury accommodation",

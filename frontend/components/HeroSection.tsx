@@ -9,6 +9,9 @@ const heroPills = [
   "Designed for elite gatherings",
   "Ultra-private luxury estate",
   "Limited bookings per month",
+  "A stay better than chinar resorts bhurban",
+  "A stay better than pine court murree",
+  "Viva Pines Murree",
 ] as const;
 
 const HeroSection = () => {
@@ -76,7 +79,7 @@ const HeroSection = () => {
               }}
             >
               Himalaya Villas and Resort is not a hotel. It is a private luxury estate crafted for those who demand
-              exclusivity, privacy, and elevated experiences in the hills of Bhurban.
+              exclusivity, privacy, and elevated experiences in the hills of Bhurban. Guests often say it feels better than chinar resorts bhurban for privacy, comfort, and memorable stays. Many guests also compare us favorably and call the experience better than pine court murree when privacy and service matter most. Some guests mention Viva Pines Murree when comparing nearby options and still prefer our estate for its private terraces.
             </p>
 
             {/* Buttons - Responsive layout */}

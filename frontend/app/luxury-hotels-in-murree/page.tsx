@@ -118,7 +118,7 @@ export default function LuxuryHotelsMurreePage() {
               </h1>
 
               <p className="mt-8 text-[14px] md:text-[15px] text-[#869986] leading-relaxed font-light">
-                When Pakistan's most discerning travellers search for luxury hotels in Murree, they end up here. Not a hotel — a private estate. Twelve villas, Himalayan panoramas, spa treatments, fine dining, adventure activities, and a team that exists solely to serve you. Sixty kilometres from Islamabad. A world apart from everything else.
+                When Pakistan&apos;s most discerning travellers search for luxury hotels in Murree, they end up here. For guests comparing murree 5 star hotels, this private estate offers a more personal experience than standard hotel rooms. Many travellers researching murree 5 star hotels are surprised by how much more private and personal the experience feels here. Twelve villas, Himalayan panoramas, spa treatments, fine dining, adventure activities, and a team that exists solely to serve you. Sixty kilometres from Islamabad. A world apart from everything else.
               </p>
 
               {/* Stats */}
@@ -300,7 +300,7 @@ export default function LuxuryHotelsMurreePage() {
             <div className="mb-16">
               <h2 className="font-display text-4xl md:text-5xl text-[#c9a55b] italic">What You Are Actually Choosing Between</h2>
               <p className="mt-6 text-[#8b8878] max-w-3xl text-[15px] leading-relaxed">
-                Not all luxury hotels in Murree deliver the same experience. Here is an honest comparison across the key factors that matter most to discerning guests.
+                Not all luxury hotels in Murree deliver the same experience. When travellers shortlist murree 5 star hotels, privacy, space, and service quality usually matter as much as the star label itself. Guests comparing murree 5 star hotels often discover that the real difference is in privacy, service, and outdoor space rather than just the official rating. Here is an honest comparison across the key factors that matter most to discerning guests.
               </p>
             </div>
             
@@ -356,7 +356,7 @@ export default function LuxuryHotelsMurreePage() {
                 <span className="text-[#c9a55b] italic">Himalaya Villas Apart</span>
               </h2>
               <p className="mt-6 text-[#8b8878] max-w-3xl text-[15px] leading-relaxed">
-                Every villa is fully equipped and individually serviced. No room tiers. No upgrades required. These are baseline inclusions every guest receives.
+                Every villa is fully equipped and individually serviced. For guests who want more than a room, this is a strong alternative to typical 5 star hotels in Murree. Many travellers searching murree 5 star hotels choose this style of stay because privacy matters more than a standard hotel experience. For families and couples comparing murree 5 star hotels, the difference is often immediate. No room tiers. No upgrades required. These are baseline inclusions every guest receives.
               </p>
             </div>
 
@@ -426,7 +426,7 @@ export default function LuxuryHotelsMurreePage() {
                 <span className="text-[#c9a55b] italic">What To Do in Murree</span>
               </h2>
               <p className="mt-6 text-[#869986] max-w-3xl text-[15px] leading-relaxed">
-                From spa and private dining to guided treks and cultural excursions — all private, all personalised, all arranged through your concierge team.
+                From spa and private dining to guided treks and cultural excursions — all private, all personalised, and far removed from ordinary murree 5 star hotels. Guests who compare murree 5 star hotels quickly see why this experience feels more considered and more personal. Everything is arranged through your concierge team.
               </p>
             </div>
 
@@ -495,7 +495,7 @@ export default function LuxuryHotelsMurreePage() {
                 <span className="text-[#c9a55b] italic">Choose Your Package</span>
               </h2>
               <p className="mt-6 text-[#8b8878] max-w-3xl text-[15px] leading-relaxed">
-                Every package is fully all-inclusive — accommodation, meals, spa, activities, and inbound transfers. No hidden charges. No extras to book separately.
+                Every package is fully all-inclusive — accommodation, meals, spa, activities, and inbound transfers. For travellers looking beyond the usual murree 5 star hotels, our stays are designed for privacy, comfort, and seamless service. Many guests compare murree 5 star hotels with private villa stays before booking, and the difference is often immediate. No hidden charges. No extras to book separately.
               </p>
             </div>
 
@@ -647,7 +647,7 @@ export default function LuxuryHotelsMurreePage() {
                 <span className="text-[#c9a55b] italic">Luxury Hotels in Murree — Answered</span>
               </h2>
               <p className="mt-6 text-[#8b8878] text-[15px] leading-relaxed">
-                Comprehensive answers to the questions guests ask most before choosing a luxury hotel in Murree or Bhurban for their stay.
+                Comprehensive answers to the questions guests ask most before choosing among murree 5 star hotels or a more private villa stay in Bhurban for their trip. Guests often compare murree 5 star hotels with villa estates to decide which experience feels more personal and worthwhile.
               </p>
             </div>
 
@@ -896,10 +896,10 @@ export default function LuxuryHotelsMurreePage() {
                   Murree is a broad geographic term. The town of Murree — Mall Road, Kashmir Point — is beautiful but crowded. The elevation is moderate and the experience, while charming, is distinctly urban for a hill station. <span className="text-white font-medium">Bhurban is different.</span>
                 </p>
                 <p>
-                  Eight kilometres beyond Murree town and 300 metres higher in elevation, Bhurban sits in a genuinely different microclimate. The pine forests are denser. The air is colder and cleaner. The views extend further. The road narrows. The noise fades. This is why Pakistan's most discerning families, corporate leaders, and most private guests choose Bhurban over Murree town when seeking luxury accommodation.
+                  Eight kilometres beyond Murree town and 300 metres higher in elevation, Bhurban sits in a genuinely different microclimate. The pine forests are denser. The air is colder and cleaner. The views extend further. The road narrows. The noise fades. This is why Pakistan&apos;s most discerning families, corporate leaders, and most private guests choose Bhurban over Murree town when seeking luxury accommodation.
                 </p>
                 <p>
-                  The question &quot;what is the best luxury hotel in Murree?&quot; almost always leads to Bhurban. And within Bhurban, the question of private estate luxury leads to <span className="text-white font-medium">Himalaya Villas</span> — the only property in the Murree Hills offering twelve individually designed private villas, in-villa spa, private dining, and genuine exclusivity at a competitive all-inclusive rate.
+                  The question &quot;what is the best luxury hotel in Murree?&quot; almost always leads to Bhurban. When travellers search murree 5 star hotels, that question usually points them here. And within Bhurban, the question of private estate luxury leads to <span className="text-white font-medium">Himalaya Villas</span> — the only property in the Murree Hills offering twelve individually designed private villas, in-villa spa, private dining, and genuine exclusivity at a competitive all-inclusive rate.
                 </p>
                 
                 <blockquote className="border-l-2 border-[#c9a55b] pl-6 my-10 py-2">
@@ -967,7 +967,7 @@ export default function LuxuryHotelsMurreePage() {
             <div className="grid grid-cols-1 lg:grid-cols-5 gap-16 items-start">
               <div className="lg:col-span-3 space-y-12">
                 <p className="text-[15px] text-[#1b261b] leading-relaxed font-light">
-                  Pakistan has 5-star hotels primarily in Islamabad, Lahore, and Karachi — including <span className="font-bold">Marriott Islamabad</span>, <span className="font-bold">Serena Hotels</span>, and the <span className="font-bold">Pearl Continental chain</span>. In the Murree Hills, the properties operating at 5-star standard are:
+                  Pakistan has 5-star hotels primarily in Islamabad, Lahore, and Karachi — including <span className="font-bold">Marriott Islamabad</span>, <span className="font-bold">Serena Hotels</span>, and the <span className="font-bold">Pearl Continental chain</span>. For guests searching murree 5 star hotels, the choice in the Murree Hills is far more selective. In the Murree Hills, the properties operating at 5-star standard are:
                 </p>
 
                 <div className="flex gap-6">
@@ -975,7 +975,7 @@ export default function LuxuryHotelsMurreePage() {
                   <div>
                     <h3 className="text-xl font-bold text-[#1b261b] mb-2">Himalaya Villas Bhurban</h3>
                     <p className="text-[14px] text-[#8b8878] leading-relaxed">
-                      A private luxury villa estate at 1,850m elevation — twelve individually appointed villas with in-villa spa, private dining, butler service, all-inclusive packages, and panoramic Himalayan views. Rated 4.8/5 across 127 verified reviews. Pakistan's highest-rated mountain luxury property for private and family stays.
+                      A private luxury villa estate at 1,850m elevation — twelve individually appointed villas with in-villa spa, private dining, butler service, all-inclusive packages, and panoramic Himalayan views. Rated 4.8/5 across 127 verified reviews. Pakistan&apos;s highest-rated mountain luxury property for private and family stays.
                     </p>
                   </div>
                 </div>

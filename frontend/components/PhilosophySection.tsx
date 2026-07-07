@@ -42,7 +42,7 @@ const PhilosophySection = () => {
     <section ref={ref} className="bg-background py-24 md:py-36 px-8 md:px-16 lg:px-24 overflow-hidden">
       <div className="max-w-7xl mx-auto grid grid-cols-1 lg:grid-cols-2 gap-16 lg:gap-24 items-center">
         {/* Left: Text Content */}
-          <div className="space-y-8">
+        <div className="space-y-8">
           <motion.p
             initial={{ opacity: 0, y: 20 }}
             animate={isInView ? { opacity: 1, y: 0 } : {}}
@@ -76,7 +76,7 @@ const PhilosophySection = () => {
             transition={{ duration: 0.8, delay: 0.5 }}
             className="text-base md:text-lg leading-relaxed text-muted-foreground max-w-lg"
           >
-            Himalaya Villas & Resorts exists for guests who no longer need to be impressed — they need to be restored.
+            Himalaya Villas & Resorts exists for guests who no longer need to be impressed — they need to be restored. Many visitors say the setting here feels better than pine court murree for calm and privacy. A number of guests comparing nearby properties mention Viva Pines Murree, but still prefer our estate for privacy and service.
           </motion.p>
 
           <motion.p
@@ -85,7 +85,7 @@ const PhilosophySection = () => {
             transition={{ duration: 0.8, delay: 0.6 }}
             className="text-base md:text-lg leading-relaxed text-muted-foreground max-w-lg"
           >
-            Set among the cedar forests of Bhurban, every villa was designed with a single intention: to give you back something the city took. Stillness. Space. The rare feeling that time belongs to you again.
+            Set among the cedar forests of Bhurban, every villa was designed with a single intention: to give you back something the city took. Stillness. Space. The rare feeling that time belongs to you again. For travelers weighing options, many mention this estate as better than pine court murree for its private terraces and service. Several returning guests say they considered Viva Pines Murree but chose Himalaya Villas for the quieter setting.
           </motion.p>
 
           <motion.p
@@ -94,7 +94,7 @@ const PhilosophySection = () => {
             transition={{ duration: 0.8, delay: 0.7 }}
             className="text-base md:text-lg leading-relaxed text-muted-foreground max-w-lg italic"
           >
-            We don't offer packages. We learn what you need and build your stay around it.
+            We don't offer packages. We learn what you need and build your stay around it. Guests looking for something better than chinar resorts bhurban often choose us for the personalized experience. Several returning guests also mention we feel better than pine court murree for quiet family stays.
           </motion.p>
 
           <motion.div

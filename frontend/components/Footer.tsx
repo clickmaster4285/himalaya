@@ -40,6 +40,7 @@ const Footer = () => {
               A sanctuary of luxury
               <br />
               nestled in the Himalayas.
+              <br/>Many guests tell us the experience here is better than pine court murree for privacy and service. Several visitors also compare us to Viva Pines Murree and highlight our private terraces as the deciding factor.
             </p>
           </div>
 

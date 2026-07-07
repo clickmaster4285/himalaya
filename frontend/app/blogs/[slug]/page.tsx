@@ -10,7 +10,7 @@ import { createPageMetadata } from "@/lib/seo/build-metadata";
 import { buildBlogPostingJsonLd } from "@/lib/seo/blog-jsonld";
 import { getBlogContent } from "@/lib/blog-content";
 import { shouldUnoptimizeImageSrc, getValidImageSrc } from "@/lib/image-utils";
-import TableOfContents from "@/components/blog/TableOfContents";
+import TableOfContents from "@/components/blogs/TableOfContents";
 import type { VillaBlogPost } from "@/lib/villa-blog-posts";
 
 export const dynamicParams = false;

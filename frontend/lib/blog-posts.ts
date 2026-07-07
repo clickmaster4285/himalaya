@@ -14,10 +14,10 @@ export function getBlogPostBySlug(slug: string): VillaBlogPost | undefined {
 }
 
 export function blogCanonicalPath(slug: string): string {
-  return `/blog/${normalizeSlug(slug)}`;
+  return `/blogs/${normalizeSlug(slug)}`;
 }
 
-/** When a legacy route matches `href`, canonical blog URL is `/blog/{slug}`. */
+/** When a legacy route matches `href`, canonical blog URL is `/blogs/{slug}`. */
 export function findBlogSlugByLegacyHref(href: string): string | undefined {
   const normalized = href.startsWith("/") ? href : `/${href}`;
   const match = VILLA_BLOG_POSTS.find((p) => p.href === normalized);

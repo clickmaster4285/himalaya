@@ -3,7 +3,7 @@ import { VILLA_BLOG_POSTS } from "@/lib/villa-blog-posts";
 import { blogCanonicalPath } from "@/lib/blog-posts";
 import { allArticles } from "@/content/allArticles";
 
-/** Legacy URLs that duplicate `/blog/{slug}` — omit from sitemap to avoid duplicate indexing. */
+/** Legacy URLs that duplicate `/blogs/{slug}` — omit from sitemap to avoid duplicate indexing. */
 const LEGACY_HREFS = new Set(
   VILLA_BLOG_POSTS.map((p) => p.href).filter((h): h is string => Boolean(h)),
 );

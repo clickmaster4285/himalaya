@@ -2062,8 +2062,8 @@ export const article01: Article = {
       heading: "📎 Related Pages — Explore More",
       items: [
         { href: "/villas", label: "Browse individual villa options at Himalaya Villas" },
-        { href: "/blog/hotels-in-bhurban-murree", label: "Complete guide to all hotels in Bhurban" },
-        { href: "/blog/best-hotels-in-murree-pakistan", label: "Murree's top accommodation options" },
+        { href: "/blogs/hotels-in-bhurban-murree", label: "Complete guide to all hotels in Bhurban" },
+        { href: "/blogs/best-hotels-in-murree-pakistan", label: "Murree's top accommodation options" },
         { href: "/book/stay", label: "Check availability and book your villa" },
         { href: "/events", label: "Weddings and corporate events at Himalaya Villas" },
       ],
@@ -2072,7 +2072,7 @@ export const article01: Article = {
 };
 
 // ============================================
-// ARTICLE 02 - Best Hotels in Murree Pakistan 2026 — Complete Guide with Rates /blog/best-hotel...
+// ARTICLE 02 - Best Hotels in Murree Pakistan 2026 — Complete Guide with Rates /blogs/best-hotel...
 // ============================================
 
 
@@ -2463,10 +2463,10 @@ export const article03: Article = {
       type: "related",
       heading: "📎 Related Pages — Explore More",
       items: [
-        { href: "/blog/best-places-to-visit-in-murree", label: "Murree's top destinations in detail" },
+        { href: "/blogs/best-places-to-visit-in-murree", label: "Murree's top destinations in detail" },
         { href: "/pc-hotel-bhurban-alternative", label: "Accommodation comparison guide for Bhurban" },
-        { href: "/blog/hotels-in-bhurban-murree", label: "Full Bhurban hotel and villa guide" },
-        { href: "/blog/seasons-in-the-hills", label: "When to book for each season" },
+        { href: "/blogs/hotels-in-bhurban-murree", label: "Full Bhurban hotel and villa guide" },
+        { href: "/blogs/seasons-in-the-hills", label: "When to book for each season" },
         { href: "/villas", label: "Browse private villas at Himalaya Villas & Resorts" },
       ],
     },
@@ -2575,7 +2575,7 @@ export const article05: Article = {
       label: "Private villa vs PC Hotel comparison",
     },
     {
-      href: "/blog/best-hotels-in-murree-pakistan",
+      href: "/blogs/best-hotels-in-murree-pakistan",
       label: "Murree's full accommodation guide",
     },
     {
@@ -2688,7 +2688,7 @@ export const article06: Article = {
         { href: "/events", label: "Full events overview including corporate and private celebrations" },
         { href: "/villas", label: "Guest accommodation options for the wedding party" },
         { href: "/luxury-villa-bhurban-murree", label: "Full villa estate information" },
-        { href: "/blog/best-hotels-in-murree-pakistan", label: "Accommodation options near the venue" },
+        { href: "/blogs/best-hotels-in-murree-pakistan", label: "Accommodation options near the venue" },
         { href: "/things-to-do-in-murree", label: "Activities for wedding weekend guests" },
       ],
     },
@@ -2808,7 +2808,7 @@ export const article07: Article = {
         { href: "/luxury-villa-bhurban-murree", label: "Full property details for corporate clients" },
         { href: "/villas", label: "Accommodation for team members" },
         { href: "/things-to-do-in-murree", label: "Team activities in Bhurban and Murree" },
-        { href: "/blog/best-hotels-in-murree-pakistan", label: "Accommodation comparison for planners" },
+        { href: "/blogs/best-hotels-in-murree-pakistan", label: "Accommodation comparison for planners" },
       ],
     },
   ],
@@ -2972,7 +2972,7 @@ export const article09: Article = {
     heading: "📎 Related Pages — Explore More",
     items: [
       {
-        href: "/blog/hotels-in-bhurban-murree",
+        href: "/blogs/hotels-in-bhurban-murree",
         label: "Complete accommodation guide for Bhurban",
       },
       {
@@ -3166,7 +3166,7 @@ export const article10: Article = {
         label: "Complete villa portfolio",
       },
       {
-        href: "/blog/hotels-in-bhurban-murree",
+        href: "/blogs/hotels-in-bhurban-murree",
         label: "Full Bhurban accommodation guide",
       },
       {
@@ -3399,11 +3399,11 @@ export const article11: Article = {
         label: "PC Hotel vs Himalaya Villas comparison",
       },
       {
-        href: "/blog/best-hotels-in-murree-pakistan",
+        href: "/blogs/best-hotels-in-murree-pakistan",
         label: "Full Murree accommodation guide",
       },
       {
-        href: "/blog/hotels-in-bhurban-murree",
+        href: "/blogs/hotels-in-bhurban-murree",
         label: "Complete Bhurban hotel guide",
       },
       {
@@ -3607,7 +3607,7 @@ export const article12: Article = {
           label: "Lockwood vs Himalaya Villas",
         },
         {
-          href: "/blog/best-hotels-in-murree-pakistan",
+          href: "/blogs/best-hotels-in-murree-pakistan",
           label: "Full Murree hotel guide",
         },
         {
@@ -3615,7 +3615,7 @@ export const article12: Article = {
           label: "Browse all villa types at Himalaya Villas",
         },
         {
-          href: "/blog/hotels-in-bhurban-murree",
+          href: "/blogs/hotels-in-bhurban-murree",
           label: "Bhurban accommodation guide",
         },
       ],
@@ -3820,7 +3820,7 @@ export const article13: Article = {
           label: "Winter and snowfall guide for Bhurban",
         },
         {
-          href: "/blog/seasons-in-the-hills",
+          href: "/blogs/seasons-in-the-hills",
           label: "Complete seasonal guide",
         },
         {
@@ -3832,7 +3832,7 @@ export const article13: Article = {
           label: "Browse summer-ready villa options",
         },
         {
-          href: "/blog/best-hotels-in-murree-pakistan",
+          href: "/blogs/best-hotels-in-murree-pakistan",
           label: "Full Murree accommodation guide",
         },
       ],
@@ -4040,7 +4040,7 @@ export const article14: Article = {
           label: "Full Murree and Bhurban activity guide",
         },
         {
-          href: "/blog/best-places-to-visit-in-murree",
+          href: "/blogs/best-places-to-visit-in-murree",
           label: "Top Murree destinations",
         },
         {
@@ -4279,7 +4279,7 @@ export const article15: Article = {
           label: "Browse available villas at Himalaya Villas",
         },
         {
-          href: "/blog/best-hotels-in-murree-pakistan",
+          href: "/blogs/best-hotels-in-murree-pakistan",
           label: "Full accommodation guide",
         },
       ],
@@ -4475,7 +4475,7 @@ export const article16: Article = {
           label: "Summer family travel guide",
         },
         {
-          href: "/blog/best-hotels-in-murree-pakistan",
+          href: "/blogs/best-hotels-in-murree-pakistan",
           label: "Full Murree accommodation comparison",
         },
       ],
@@ -5039,7 +5039,7 @@ export const article19: Article = {
           label: "Complete Murree activity guide",
         },
         {
-          href: "/blog/hotels-in-bhurban-murree",
+          href: "/blogs/hotels-in-bhurban-murree",
           label: "Why Bhurban beats Mall Road for accommodation",
         },
         {
@@ -5261,7 +5261,7 @@ export const article21: Article = {
           label: "Ramada vs Himalaya Villas",
         },
         {
-          href: "/blog/best-hotels-in-murree-pakistan",
+          href: "/blogs/best-hotels-in-murree-pakistan",
           label: "Full Murree hotel guide",
         },
         {
@@ -5437,7 +5437,7 @@ export const article22: Article = {
           label: "PC Hotel vs Himalaya Villas",
         },
         {
-          href: "/blog/best-hotels-in-murree-pakistan",
+          href: "/blogs/best-hotels-in-murree-pakistan",
           label: "Full Murree hotel comparison",
         },
         {
@@ -5648,7 +5648,7 @@ export const article23: Article = {
           label: "Pindi Point visitor guide",
         },
         {
-          href: "/blog/best-places-to-visit-in-murree",
+          href: "/blogs/best-places-to-visit-in-murree",
           label: "Top Murree destinations",
         },
         {
@@ -6100,7 +6100,7 @@ export const article25: Article = {
       heading: "📎 Explore More",
       items: [
         {
-          href: "/blog/hotels-in-bhurban-murree",
+          href: "/blogs/hotels-in-bhurban-murree",
           label: "Full Bhurban accommodation guide",
         },
         {
@@ -6785,7 +6785,7 @@ export const article29: Article = {
           label: "Mövenpick vs Himalaya Villas",
         },
         {
-          href: "/blog/best-hotels-in-murree-pakistan",
+          href: "/blogs/best-hotels-in-murree-pakistan",
           label: "Full Murree hotel guide",
         },
         {
@@ -7705,7 +7705,7 @@ export const article33: Article = {
           label: "Bhurban-specific distance guide",
         },
         {
-          href: "/blog/hotels-in-bhurban-murree",
+          href: "/blogs/hotels-in-bhurban-murree",
           label: "Accommodation options on arrival",
         },
         {
@@ -7936,7 +7936,7 @@ export const article34: Article = {
           label: "Distance and route specifics for Bhurban",
         },
         {
-          href: "/blog/hotels-in-bhurban-murree",
+          href: "/blogs/hotels-in-bhurban-murree",
           label: "Accommodation guide",
         },
         {
@@ -9058,7 +9058,7 @@ export const article42: Article = {
       heading: "📎 Explore More",
       items: [
         {
-          href: "/blog/hotels-in-bhurban-murree",
+          href: "/blogs/hotels-in-bhurban-murree",
           label: "Complete Bhurban accommodation guide",
         },
         {
@@ -10405,7 +10405,7 @@ export const article54: Article = {
           label: "Lockwood vs Himalaya Villas",
         },
         {
-          href: "/blog/best-hotels-in-murree-pakistan",
+          href: "/blogs/best-hotels-in-murree-pakistan",
           label: "Full Murree hotel guide",
         },
         {
@@ -17172,7 +17172,7 @@ export const article106: Article = {
         { href: "/pc-hotel-bhurban-alternative", label: "PC Hotel detailed comparison" },
         { href: "/luxury-villa-bhurban-murree", label: "Full estate overview" },
         { href: "/villas", label: "Browse all villa types" },
-        { href: "/blog/best-hotels-in-murree-pakistan", label: "Full Murree hotel guide" },
+        { href: "/blogs/best-hotels-in-murree-pakistan", label: "Full Murree hotel guide" },
       ],
     },
   ],
@@ -22420,9 +22420,9 @@ export const article146: Article = {
       type: "related",
       heading: "📎 Explore More",
       items: [
-        { href: "/blog/hotels-in-bhurban-murree", label: "Bhurban hotels overview" },
+        { href: "/blogs/hotels-in-bhurban-murree", label: "Bhurban hotels overview" },
         { href: "/bhurban-private-estate-vs-pc-hotel", label: "Detailed HV vs PC comparison" },
-        { href: "/blog/best-hotels-in-murree-pakistan", label: "Full Murree accommodation guide" },
+        { href: "/blogs/best-hotels-in-murree-pakistan", label: "Full Murree accommodation guide" },
         { href: "/villas", label: "Browse Himalaya Villas" },
       ],
     },
@@ -23409,7 +23409,7 @@ export const article155: Article = {
       type: "related",
       heading: "📎 Explore More",
       items: [
-        { href: "/blog/best-hotels-in-murree-pakistan", label: "Full Murree accommodation guide" },
+        { href: "/blogs/best-hotels-in-murree-pakistan", label: "Full Murree accommodation guide" },
         { href: "/bhurban-accommodation-guide", label: "Bhurban accommodation guide" },
         { href: "/villas", label: "Browse villa options" },
       ],
@@ -33237,7 +33237,7 @@ export const article236: Article = {
       items: [
         { href: "/bhurban-accommodation-guide", label: "Full Bhurban accommodation guide" },
         { href: "/bhurban-private-estate-vs-pc-hotel", label: "PC Hotel vs Himalaya Villas" },
-        { href: "/blog/hotels-in-bhurban-murree", label: "Bhurban hotels overview" },
+        { href: "/blogs/hotels-in-bhurban-murree", label: "Bhurban hotels overview" },
         { href: "/villas", label: "Browse Himalaya Villas" },
       ],
     },
@@ -33754,7 +33754,7 @@ export const article240: Article = {
       items: [
         { href: "/bhurban-accommodation-guide", label: "Full accommodation guide" },
         { href: "/bhurban-vs-shangrila-murree", label: "Shangrila comparison" },
-        { href: "/blog/hotels-in-bhurban-murree", label: "Hotels overview" },
+        { href: "/blogs/hotels-in-bhurban-murree", label: "Hotels overview" },
         { href: "/villas", label: "Browse Himalaya Villas options" },
       ],
     },

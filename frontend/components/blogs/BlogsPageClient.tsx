@@ -30,7 +30,7 @@ export default function BlogsPageClient({ villas }: { villas: Villa[] }) {
   const [featured, ...rest] = VILLA_BLOG_POSTS;
   const dur = reduceMotion ? 0 : 0.55;
   const getPostHref = (post: (typeof VILLA_BLOG_POSTS)[number]) =>
-    `/blog/${encodeURIComponent(post.slug)}`;
+    `/blogs/${encodeURIComponent(post.slug)}`;
 
   return (
     <>

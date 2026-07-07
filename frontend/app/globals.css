@@ -267,3 +267,129 @@
 .drop-shadow-lg {
   text-shadow: 0 6px 12px rgba(0, 0, 0, 0.5);
 }
+
+/* Add to the end of your global.css file */
+
+/* Snowflake Animation */
+@keyframes snowfall {
+  0% {
+    transform: translateY(-10vh) rotate(0deg) translateX(0);
+    opacity: var(--snow-opacity, 0.5);
+  }
+  25% {
+    transform: translateY(25vh) rotate(90deg) translateX(10px);
+  }
+  50% {
+    transform: translateY(50vh) rotate(180deg) translateX(-10px);
+  }
+  75% {
+    transform: translateY(75vh) rotate(270deg) translateX(10px);
+  }
+  100% {
+    transform: translateY(110vh) rotate(360deg) translateX(-5px);
+    opacity: 0.2;
+  }
+}
+
+.snowflake-char {
+  position: absolute;
+  top: -10vh;
+  animation: snowfall var(--snow-duration, 10s) linear infinite;
+  animation-delay: var(--snow-delay, 0s);
+  opacity: var(--snow-opacity, 0.5);
+  color: white;
+  text-shadow: 0 0 10px rgba(255, 255, 255, 0.3);
+  user-select: none;
+  pointer-events: none;
+}
+
+/* Fade Up Animation */
+@keyframes fade-up {
+  from {
+    opacity: 0;
+    transform: translateY(30px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.animate-fade-up {
+  animation: fade-up 0.8s cubic-bezier(0.16, 1, 0.3, 1) forwards;
+}
+
+/* Ken Burns Effect */
+@keyframes ken-burns {
+  0% {
+    transform: scale(1) rotate(0deg);
+  }
+  50% {
+    transform: scale(1.1) rotate(0.5deg);
+  }
+  100% {
+    transform: scale(1.05) rotate(0deg);
+  }
+}
+
+.animate-ken-burns {
+  animation: ken-burns 20s ease-in-out infinite alternate;
+}
+
+/* Gold Shimmer Text */
+.gold-shimmer {
+  background: linear-gradient(
+    135deg,
+    #c9a84c 0%,
+    #f5e6a3 25%,
+    #c9a84c 50%,
+    #f5e6a3 75%,
+    #c9a84c 100%
+  );
+  background-size: 200% 200%;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+  animation: shimmer 3s ease-in-out infinite;
+}
+
+@keyframes shimmer {
+  0% {
+    background-position: 0% 50%;
+  }
+  50% {
+    background-position: 100% 50%;
+  }
+  100% {
+    background-position: 0% 50%;
+  }
+}
+
+/* Float Slow Animation */
+@keyframes float-slow {
+  0% {
+    transform: translateY(0px) rotate(0deg);
+  }
+  50% {
+    transform: translateY(-10px) rotate(5deg);
+  }
+  100% {
+    transform: translateY(0px) rotate(0deg);
+  }
+}
+
+.animate-float-slow {
+  animation: float-slow 4s ease-in-out infinite;
+}
+
+/* Custom Variables for Winter Villas */
+:root {
+  --frost: #f0f4f8;
+  --navy: #1a2a3a;
+  --navy-deep: #0f1b3d;
+  --gold: #c9a84c;
+  --gold-soft: #e8d5a3;
+  --snow-duration: 10s;
+  --snow-delay: 0s;
+  --snow-opacity: 0.5;
+}

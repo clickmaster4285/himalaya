@@ -17,7 +17,7 @@ const FrequentlyVisitedPages = () => {
     {
       title: "Luxury Hotel in Murree",
       description: "Experience premium hospitality, scenic mountain views, and world-class amenities in the heart of Murree.",
-      href: "/luxury-hotels-in-muree"
+      href: "/luxury-hotels-in-murree"
     },
     {
       title: "Best Hotels in Murree Pakistan",

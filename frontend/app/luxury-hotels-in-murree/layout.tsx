@@ -1,24 +1,12 @@
 import type { Metadata } from "next";
+import { createPageMetadata } from "@/lib/seo/build-metadata";
 
-export const metadata: Metadata = {
-  title: "Luxury Hotels in Murree Pakistan | Top-Rated Resorts | Bhurban | Himalaya Villas",
-  description: "Top-rated luxury hotels in Murree Pakistan at Himalaya Villas Bhurban. Premium resorts with private villas, mountain views, fine dining. Discover the best luxury accommodations in Murree Hills.",
-  keywords: "luxury hotels in Murree Pakistan, top-rated resorts Bhurban, premium accommodations Murree Hills, luxury villas Pakistan, upscale resorts Himalaya Villas, deluxe hotels Murree, high-end accommodation Bhurban",
-  openGraph: {
-    title: "Luxury Hotels in Murree - Premium Accommodation at Himalaya Villas",
-    description: "Experience luxury at its finest in Murree with premium accommodation, private villas, and world-class amenities at Himalaya Villas Bhurban.",
-    type: "website",
-    url: "https://himalayavillas.com/luxury-hotels-in-murree",
-  },
-  alternates: {
-    canonical: "https://himalayavillas.com/luxury-hotels-in-murree",
-  },
-};
+export const metadata: Metadata = createPageMetadata({
+  title: "Luxury Hotels in Murree Pakistan | Himalaya Villas",
+  description: "When Pakistan's most discerning travellers search for luxury hotels in Murree, they end up here. Discover our private estate in Bhurban.",
+  path: "/luxury-hotels-in-muree",
+});
 
-export default function LuxuryHotelsLayout({
-  children,
-}: {
-  children: React.ReactNode;
-}) {
-  return children;
+export default function Layout({ children }: { children: React.ReactNode }) {
+  return <>{children}</>;
 }

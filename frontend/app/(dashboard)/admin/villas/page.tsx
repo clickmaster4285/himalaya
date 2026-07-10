@@ -44,7 +44,7 @@ export default function SuperadminVillasPage() {
           </p>
         </div>
         <Link
-          href="/superadmin/villas/new"
+          href="/admin/villas/new"
           className="inline-flex items-center justify-center gap-2 rounded-xl bg-[#1c1916] px-5 py-3 font-sans text-[13px] font-semibold text-white shadow-sm transition hover:bg-[#2a241c]"
         >
           <Plus className="h-4 w-4" strokeWidth={2} />
@@ -114,7 +114,7 @@ export default function SuperadminVillasPage() {
                       </td>
                       <td className="px-4 py-3 pr-6 text-right">
                         <Link
-                          href={`/superadmin/villas/${v.id}/edit`}
+                          href={`/admin/villas/${v.id}/edit`}
                           className="font-sans text-[13px] font-semibold text-[#9a7b3a] hover:underline"
                         >
                           Edit

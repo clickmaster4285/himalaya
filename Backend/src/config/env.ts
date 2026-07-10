@@ -12,7 +12,7 @@ export function getSuperadminPassword(): string {
 }
 
 export function getSuperadminName(): string {
-  return process.env.SUPERADMIN_NAME ?? "Super Admin";
+  return process.env.SUPERADMIN_NAME ?? "Admin";
 }
 
 export function getBookingManagerEmail(): string {

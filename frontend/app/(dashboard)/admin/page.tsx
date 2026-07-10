@@ -88,7 +88,7 @@ export default function SuperadminDashboardPage() {
         <div className="pointer-events-none absolute -right-20 -top-28 h-72 w-72 rounded-full bg-[#c9a55b]/15 blur-3xl" />
         <div className="pointer-events-none absolute bottom-0 left-1/4 h-48 w-48 rounded-full bg-[#c9a55b]/10 blur-3xl" />
         <div className="relative">
-          <p className="font-sans text-[11px] font-bold uppercase tracking-[0.24em] text-[#d4b87a]">Superadmin</p>
+          <p className="font-sans text-[11px] font-bold uppercase tracking-[0.24em] text-[#d4b87a]">Admin</p>
           <h1 className="font-display mt-2 text-3xl font-semibold tracking-tight text-[#fdf9f3] md:text-[2.2rem]">
             Estate control, {name}
           </h1>
@@ -100,7 +100,7 @@ export default function SuperadminDashboardPage() {
 
       <section className="grid gap-4 sm:grid-cols-3">
         <Link
-          href="/superadmin/users"
+          href="/admin/users"
           className="group flex flex-col rounded-2xl border border-[#e0d5c8] bg-white p-5 shadow-sm transition hover:border-[#c9a55b]/45 hover:shadow-md"
         >
           <div className="flex items-center gap-3">
@@ -113,7 +113,7 @@ export default function SuperadminDashboardPage() {
             </div>
           </div>
           <p className="mt-3 font-sans text-[13px] leading-relaxed text-[#6b655c]">
-            {userCount === null ? "Open list & roles" : `${userCount} account${userCount === 1 ? "" : "s"} · change guest / manager / superadmin`}
+            {userCount === null ? "Open list & roles" : `${userCount} account${userCount === 1 ? "" : "s"} · change guest / manager / admin`}
           </p>
           <span className="mt-4 font-sans text-[12px] font-semibold text-[#9a7b3a] group-hover:underline">Manage users →</span>
         </Link>
@@ -152,14 +152,14 @@ export default function SuperadminDashboardPage() {
           </p>
           <div className="mt-4 flex flex-wrap gap-2">
             <Link
-              href="/superadmin/villas/new"
+              href="/admin/villas/new"
               className="inline-flex flex-1 items-center justify-center gap-1.5 rounded-lg bg-[#1c1916] px-3 py-2 font-sans text-[12px] font-semibold text-white transition hover:bg-[#2a241c] min-[380px]:flex-none"
             >
               <Plus className="h-3.5 w-3.5" strokeWidth={2} aria-hidden />
               Add villa
             </Link>
             <Link
-              href="/superadmin/villas"
+              href="/admin/villas"
               className="inline-flex flex-1 items-center justify-center rounded-lg border border-[#ddd4c8] bg-[#faf8f5] px-3 py-2 font-sans text-[12px] font-semibold text-[#1a1816] transition hover:bg-[#f0ebe4] min-[380px]:flex-none"
             >
               View all

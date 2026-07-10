@@ -117,7 +117,7 @@ export default function ManagerExpensesPage() {
           Customer extras expenses
         </h1>
         <p className="mt-2 max-w-2xl font-sans text-[15px] leading-relaxed text-[#5c564c]">
-          If customer asks for something outside your stock, add it here so Booking Manager and Superadmin can track it.
+          If customer asks for something outside your stock, add it here so Booking Manager and Admin can track it.
         </p>
       </div>
 

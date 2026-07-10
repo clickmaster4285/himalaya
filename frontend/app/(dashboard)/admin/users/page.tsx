@@ -11,7 +11,7 @@ const ROLES = ["SUPERADMIN", "BOOKING_MANAGER", "USER"] as const;
 type Role = (typeof ROLES)[number];
 
 const ROLE_LABEL: Record<Role, string> = {
-  SUPERADMIN: "Superadmin",
+  SUPERADMIN: "Admin",
   BOOKING_MANAGER: "Booking manager",
   USER: "Guest",
 };

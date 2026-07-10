@@ -27,7 +27,7 @@ const FrequentlyVisitedPages = () => {
     {
       title: "Family Tour Murree",
       description: "Plan the perfect family getaway with our curated experiences and family-friendly villa accommodations.",
-      href: "/family-tour-murree-himalaya-villas"
+      href: "/blogs/family-tour-murree-himalaya-villas"
     },
     {
       title: "Wedding Venue Near Islamabad",

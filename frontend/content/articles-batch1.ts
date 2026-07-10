@@ -14014,9 +14014,9 @@ export const article83: Article = {
 
 export const article84: Article = {
   slug: "pakistan-first-time-international-visitor-guide",
-  title: "Pakistan for First-Time International Visitors — Where to Start",
+  title: "Pakistan Travel Guide for First-Time Visitors - Book Now",
   metaDescription:
-    "first time pakistan guide, international visitor pakistan, bhurban first visit, pakistan itinerary start, where to start pakistan trip",
+    "Planning your first trip to Pakistan? Explore practical travel tips and must-see spots, then book a private luxury villa in Bhurban. Reserve your stay today.",
   keywords:
     "first time pakistan guide, international visitor pakistan, bhurban first visit, pakistan itinerary start, where to start pakistan trip",
   eyebrow: "Backlink Guest Post | International Travel / Pakistan Tourism | ~1,300 words",
@@ -14239,9 +14239,9 @@ export const article85: Article = {
 
 export const article86: Article = {
   slug: "long-weekend-escapes-islamabad-ranked",
-  title: "Long Weekend Escapes from Islamabad — Ranked by Experience Quality",
+  title: "Long Weekend Escapes from Islamabad, Ranked - Book Now ",
   metaDescription:
-    "islamabad weekend escapes, long weekend from islamabad, bhurban top pick, murree hills weekend, best weekend getaways islamabad",
+    "See the top-ranked long weekend escapes near Islamabad, from Bhurban to beyond, then book a private luxury villa for your next short trip. Reserve now.",
   keywords:
     "islamabad weekend escapes, long weekend from islamabad, bhurban top pick, murree hills weekend, best weekend getaways islamabad",
   eyebrow: "Backlink Guest Post | Lifestyle / Travel Aggregator | ~1,200 words",
@@ -14422,9 +14422,9 @@ export const article86: Article = {
 
 export const article87: Article = {
   slug: "murree-in-december",
-  title: "Murree in December — Early Winter Guide 2026",
+  title: "Murree in December: Snow, Weather & Villa Stay - Book Now",
   metaDescription:
-    "Murree and Bhurban in December guide covering early winter weather, snowfall expectations, activities, and what to expect during Christmas and New Year period.",
+    "Planning a Murree trip in December? Check snowfall chances, weather and top spots, then book a cozy private villa in Bhurban. Reserve your stay today.",
   keywords:
     "murree in december, bhurban december, murree december weather, december bhurban trip, murree winter december",
   eyebrow: "Template C — Seasonal Spoke | Cluster 7: Seasonal & Weather",
@@ -14584,9 +14584,9 @@ export const article87: Article = {
 
 export const article88: Article = {
   slug: "villa-for-12-guests-bhurban",
-  title: "Private Villa for 12 Guests Bhurban Murree — Large Family Stay",
+  title: "Villa for 12 Guests in Bhurban, Murree - Book Now",
   metaDescription:
-    "villa for 12 guests bhurban, 12 person villa murree, accommodation 12 people bhurban, large family villa murree, group villa 12 bhurban",
+    "Book a private villa for 12 guests in Bhurban—spacious rooms, mountain views, and full privacy, perfect for extended family or friend groups. Reserve today.",
   keywords:
     "villa for 12 guests bhurban, 12 person villa murree, accommodation 12 people bhurban, large family villa murree, group villa 12 bhurban",
   eyebrow: "Template C — pSEO Capacity Template | Cluster 4: Private Villas",
@@ -14715,9 +14715,9 @@ export const article88: Article = {
 
 export const article89: Article = {
   slug: "villa-near-islamabad-airport",
-  title: "Private Villa Near Islamabad Airport — Mountain Stay on Arrival or Departure",
+  title: "Villa Near Islamabad Airport - Book Your Stay Today",
   metaDescription:
-    "villa near islamabad airport, accommodation near islamabad airport, luxury stay islamabad airport, mountain villa islamabad airport, bhurban from islamabad airport",
+    "Book a private luxury villa near Islamabad Airport in Bhurban — just a short scenic drive away, with mountain views and full privacy. Reserve your stay today.",
   keywords:
     "villa near islamabad airport, accommodation near islamabad airport, luxury stay islamabad airport, mountain villa islamabad airport, bhurban from islamabad airport",
   eyebrow: "Template C — Commercial Spoke | Cluster 1: Hotels",
@@ -14865,9 +14865,9 @@ export const article89: Article = {
 
 export const article90: Article = {
   slug: "murree-vs-nathia-gali",
-  title: "Murree vs Nathia Gali — Which Hill Station is Better for Your Trip?",
+  title: "Murree vs Nathia Gali: Full Comparison - Book a Villa",
   metaDescription:
-    "murree vs nathia gali, nathia gali or murree which is better, difference between murree and nathia gali, murree nathia gali comparison",
+    "Comparing Murree and Nathia Gali for your next trip? See the differences in weather, crowds and scenery, then book a private villa in Bhurban. Reserve now.",
   keywords:
     "murree vs nathia gali, nathia gali or murree which is better, difference between murree and nathia gali, murree nathia gali comparison",
   eyebrow: "Template B — Comparison Spoke | Cluster 8: Location Guides",
@@ -15007,9 +15007,9 @@ export const article90: Article = {
 
 export const article91: Article = {
   slug: "bhurban-altitude-climate-guide",
-  title: "Bhurban Altitude, Climate and Weather — Complete Reference Guide",
+  title: "Bhurban Altitude & Climate Guide: 6,000 ft - Book Now!",
   metaDescription:
-    "bhurban altitude, bhurban elevation, bhurban climate, bhurban weather, bhurban height above sea level, bhurban temperature",
+    "At 6,000 feet, Bhurban enjoys cool summers and snowy winters. Learn about its climate and altitude, then book a private luxury villa. Reserve your stay today.",
   keywords:
     "bhurban altitude, bhurban elevation, bhurban climate, bhurban weather, bhurban height above sea level, bhurban temperature",
   eyebrow: "Template C — GEO/AEO Authority | Cluster 8: Location Guides",
@@ -15147,9 +15147,8 @@ export const article91: Article = {
 
 export const article92: Article = {
   slug: "walima-venue-bhurban",
-  title: "Walima Venue in Bhurban Murree — Mountain Wedding Reception Guide",
-  metaDescription:
-    "walima venue bhurban, walima bhurban murree, mountain walima venue near islamabad, walima dinner bhurban, outdoor walima murree",
+  title: "Walima Venue in Bhurban - Himalaya Villas & Resorts",
+  metaDescription: "Host an elegant Walima reception in Bhurban, Murree. Private lawns, mountain views and full event support at Himalaya Villas & Resorts. Enquire today.",
   keywords:
     "walima venue bhurban, walima bhurban murree, mountain walima venue near islamabad, walima dinner bhurban, outdoor walima murree",
   eyebrow: "Template C — Events Spoke | Cluster 5: Weddings & Events",
@@ -15266,9 +15265,9 @@ export const article92: Article = {
 
 export const article93: Article = {
   slug: "nikkah-venue-bhurban",
-  title: "Nikkah Venue in Bhurban Murree — Outdoor Mountain Nikkah Ceremony",
+  title: "Bhurban Nikkah Venue: Intimate Ceremony Space - Enquir",
   metaDescription:
-    "nikkah venue bhurban, outdoor nikkah bhurban murree, nikkah ceremony bhurban, mountain nikkah near islamabad, nikkah venue murree hills",
+    "Host an intimate Nikkah ceremony in Bhurban, Murree. Private lawns, mountain views and dedicated event support at Himalaya Villas & Resorts. Enquire today.",
   keywords:
     "nikkah venue bhurban, outdoor nikkah bhurban murree, nikkah ceremony bhurban, mountain nikkah near islamabad, nikkah venue murree hills",
   eyebrow: "Template C — Events Spoke | Cluster 5: Weddings & Events",
@@ -15386,9 +15385,9 @@ export const article93: Article = {
 
 export const article94: Article = {
   slug: "best-mountain-view-hotel-near-islamabad",
-  title: "Best Mountain View Accommodation Near Islamabad — Bhurban Guide",
+  title: "Best Mountain View Stay Near Islamabad - Book Today",
   metaDescription:
-    "best mountain view hotel near islamabad, hotel mountain view islamabad, mountain view accommodation islamabad, best view hotel murree islamabad",
+    "Skip standard hotels near Islamabad — book a private luxury villa in Bhurban with the best mountain views and complete privacy instead. Reserve your stay now.",
   keywords:
     "best mountain view hotel near islamabad, hotel mountain view islamabad, mountain view accommodation islamabad, best view hotel murree islamabad",
   eyebrow: "Template C — Commercial Spoke | Cluster 1: Hotels",
@@ -15521,9 +15520,9 @@ export const article94: Article = {
 
 export const article95: Article = {
   slug: "murree-solo-traveller-guide",
-  title: "Murree and Bhurban for Solo Travellers — A Practical Guide",
+  title: "Solo Travel in Murree: A Complete Guide—Book Villa",
   metaDescription:
-    "murree solo travel, solo trip murree, solo traveller bhurban, murree alone, solo travel pakistan murree",
+    "Planning a solo trip to Murree? This guide covers safety tips, top spots, and where to stay privately and comfortably in Bhurban. Book your solo escape today. ",
   keywords:
     "murree solo travel, solo trip murree, solo traveller bhurban, murree alone, solo travel pakistan murree",
   eyebrow: "Template C — Audience Spoke | Clusters 3 & 8: Activities + Location",
@@ -15675,9 +15674,9 @@ export const article95: Article = {
 
 export const article96: Article = {
   slug: "winter-bonfire-bhurban",
-  title: "Winter Bonfire Experience in Bhurban — The Cedar Garden Fire Pit",
+  title: "Winter Bonfire Nights in Bhurban - Book Your Stay ",
   metaDescription:
-    "bonfire bhurban, fire pit bhurban murree, outdoor fire experience bhurban, bonfire cedar garden bhurban, winter evening bhurban bonfire",
+    "Enjoy cozy winter bonfire nights in Bhurban under a starlit mountain sky. Book a private luxury villa and add this experience. Reserve your stay today. ",
   keywords:
     "bonfire bhurban, fire pit bhurban murree, outdoor fire experience bhurban, bonfire cedar garden bhurban, winter evening bhurban bonfire",
   eyebrow: "Template C — Experience Feature | Cluster 11: Dining & Experiences",
@@ -15840,9 +15839,9 @@ export const article96: Article = {
 
 export const article97: Article = {
   slug: "new-year-bhurban-murree",
-  title: "New Year in Bhurban Murree — Celebrating the New Year at 6,800 Feet",
+  title: "New Year in Bhurban, Murree - Book Your Stay Now",
   metaDescription:
-    "new year murree, new year bhurban, new year celebration murree hills, murree new year trip, bhurban new year eve",
+    "Ring in the New Year in Bhurban, Murree—snow-capped mountains, cozy villas, and a peaceful escape from the city. Book your stay before dates fill up.",
   keywords:
     "new year murree, new year bhurban, new year celebration murree hills, murree new year trip, bhurban new year eve",
   eyebrow: "Template C — Seasonal Spoke | Cluster 7: Seasonal & Weather",
@@ -15959,9 +15958,9 @@ export const article97: Article = {
 
 export const article98: Article = {
   slug: "villa-with-bbq-bhurban",
-  title: "Villa with BBQ Facilities Bhurban Murree — Outdoor Grill and Fire Pit",
+  title: "Villa with BBQ Setup in Bhurban, Murree - Book Now",
   metaDescription:
-    "villa with bbq bhurban, barbecue bhurban murree, outdoor bbq villa murree, grill experience bhurban, outdoor cooking bhurban villa",
+    "Looking for a villa with BBQ in Bhurban? Enjoy outdoor grilling with scenic mountain views and full privacy for family or friends. Check availability now.",
   keywords:
     "villa with bbq bhurban, barbecue bhurban murree, outdoor bbq villa murree, grill experience bhurban, outdoor cooking bhurban villa",
   eyebrow: "Template C — Experience Feature | Cluster 11: Dining & Experiences",

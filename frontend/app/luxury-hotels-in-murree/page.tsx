@@ -6,6 +6,7 @@ import Link from "next/link";
 import Navbar from "@/components/Navbar";
 import Footer from "@/components/Footer";
 import { ChevronDown, Star, Plus, Minus, Check, MapPin } from "lucide-react";
+import { SITE_CONTACT} from "@/lib/site-contact";
 
 const luxuryHotelsSchema = {
   "@context": "https://schema.org",
@@ -1100,7 +1101,10 @@ export default function LuxuryHotelsMurreePage() {
             </div>
 
             <div className="mt-12 text-center">
-              <a href="#" className="inline-block bg-[#c9a55b] text-[#1b261b] px-8 py-4 text-[11px] font-bold uppercase tracking-widest hover:bg-[#ebd59f] transition-colors">
+              <a   href={SITE_CONTACT.googleMapsUrl}
+                      target="_blank"
+                      rel="noopener noreferrer"
+                       className="inline-block bg-[#c9a55b] text-[#1b261b] px-8 py-4 text-[11px] font-bold uppercase tracking-widest hover:bg-[#ebd59f] transition-colors">
                 OPEN IN GOOGLE MAPS
               </a>
             </div>

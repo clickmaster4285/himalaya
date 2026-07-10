@@ -1226,7 +1226,7 @@ export async function generateMetadata({ params }: { params: Promise<{ slug: str
   }
 
   return createPageMetadata({
-    title: `${event.title} | Himalaya Villas & Resorts`,
+    title: `${event.title} `,
     description: event.longDescription,
     path: `/events/${slug}`,
     keywords: [event.title, event.category, "Himalaya Villas", "Bhurban", "Murree"],

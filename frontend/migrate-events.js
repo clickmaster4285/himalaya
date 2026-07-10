@@ -79,7 +79,7 @@ for (const baseDir of baseDirs) {
       const layoutContent = `import { createPageMetadata } from "@/lib/seo/build-metadata";
 
 export const metadata = createPageMetadata({
-  title: "${h1Text} | Himalaya Villas & Resorts",
+  title: "${h1Text}",
   description: "${descriptionText.replace(/"/g, '&quot;')}",
   path: "/${path.basename(baseDir)}/${newSlug}",
 });

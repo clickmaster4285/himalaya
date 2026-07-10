@@ -6,7 +6,7 @@ export default function NewVillaPage() {
     <div className="mx-auto max-w-4xl space-y-6 pb-10">
       <div>
         <Link
-          href="/dashboard/superadmin/villas"
+          href="/superadmin/villas"
           className="font-sans text-[12px] font-semibold uppercase tracking-wide text-[#9a7b3a] hover:underline"
         >
           ← All villas

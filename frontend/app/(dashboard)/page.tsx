@@ -5,7 +5,7 @@ import { dashboardPathForRole } from "@/lib/dashboard-nav";
 export default async function DashboardIndexPage() {
   const user = await getCurrentUser();
   if (!user) {
-    redirect("/login?from=/dashboard");
+    redirect("/login?from=/");
   }
   redirect(dashboardPathForRole(user.role));
 }

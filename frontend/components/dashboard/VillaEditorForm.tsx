@@ -165,7 +165,7 @@ export default function VillaEditorForm({ mode, villaId, initial, className }: P
         setError(typeof data.error === "string" ? data.error : "Could not save villa.");
         return;
       }
-      router.push("/dashboard/superadmin/villas");
+      router.push("/superadmin/villas");
       router.refresh();
     } catch {
       setError("Something went wrong.");
@@ -185,7 +185,7 @@ export default function VillaEditorForm({ mode, villaId, initial, className }: P
         setError(typeof data.error === "string" ? data.error : "Could not delete.");
         return;
       }
-      router.push("/dashboard/superadmin/villas");
+      router.push("/superadmin/villas");
       router.refresh();
     } catch {
       setError("Could not delete.");
@@ -602,7 +602,7 @@ export default function VillaEditorForm({ mode, villaId, initial, className }: P
             type="button"
             variant="outline"
             className="rounded-xl border-[#e0d5c8]"
-            onClick={() => router.push("/dashboard/superadmin/villas")}
+            onClick={() => router.push("/superadmin/villas")}
             disabled={loading || deleting}
           >
             Cancel

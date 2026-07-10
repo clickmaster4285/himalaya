@@ -61,7 +61,7 @@ export default function UserDashboardPage() {
           </p>
         </div>
         <Link
-          href="/dashboard/user/new"
+          href="/user/new"
           className="inline-flex items-center justify-center gap-2 rounded-xl bg-[#9a7b3a] px-5 py-3 font-sans text-[14px] font-bold text-white shadow-md shadow-[#6b5428]/25 transition-colors hover:bg-[#856a32]"
         >
           <PlusCircle className="h-5 w-5" strokeWidth={2} aria-hidden />
@@ -187,7 +187,7 @@ export default function UserDashboardPage() {
                     <div className="px-6 py-12 text-center">
                       <p className="font-sans text-[15px] text-[#5c564c]">No bookings yet — start your first request.</p>
                       <Link
-                        href="/dashboard/user/new"
+                        href="/user/new"
                         className="mt-4 inline-flex rounded-xl bg-[#9a7b3a] px-5 py-2.5 font-sans text-[14px] font-semibold text-white hover:bg-[#856a32]"
                       >
                         New booking request

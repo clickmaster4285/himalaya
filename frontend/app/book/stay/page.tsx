@@ -1183,7 +1183,7 @@ function BookStayContent() {
                         {createdBooking?.status !== "CONFIRMED" ? (
                           <>
                             {" "}
-                            Open <Link href="/dashboard/user" className="underline font-medium">My bookings</Link> to
+                            Open <Link href="/user" className="underline font-medium">My bookings</Link> to
                             track status.
                           </>
                         ) : null}

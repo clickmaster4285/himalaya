@@ -124,7 +124,7 @@ export default function NewBookingPage() {
         setError(typeof data.error === "string" ? data.error : "Could not create booking");
         return;
       }
-      router.push("/dashboard/user");
+      router.push("/user");
       router.refresh();
     } catch {
       setError("Something went wrong.");

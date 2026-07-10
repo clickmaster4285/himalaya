@@ -100,7 +100,7 @@ export default function SuperadminDashboardPage() {
 
       <section className="grid gap-4 sm:grid-cols-3">
         <Link
-          href="/dashboard/superadmin/users"
+          href="/superadmin/users"
           className="group flex flex-col rounded-2xl border border-[#e0d5c8] bg-white p-5 shadow-sm transition hover:border-[#c9a55b]/45 hover:shadow-md"
         >
           <div className="flex items-center gap-3">
@@ -152,14 +152,14 @@ export default function SuperadminDashboardPage() {
           </p>
           <div className="mt-4 flex flex-wrap gap-2">
             <Link
-              href="/dashboard/superadmin/villas/new"
+              href="/superadmin/villas/new"
               className="inline-flex flex-1 items-center justify-center gap-1.5 rounded-lg bg-[#1c1916] px-3 py-2 font-sans text-[12px] font-semibold text-white transition hover:bg-[#2a241c] min-[380px]:flex-none"
             >
               <Plus className="h-3.5 w-3.5" strokeWidth={2} aria-hidden />
               Add villa
             </Link>
             <Link
-              href="/dashboard/superadmin/villas"
+              href="/superadmin/villas"
               className="inline-flex flex-1 items-center justify-center rounded-lg border border-[#ddd4c8] bg-[#faf8f5] px-3 py-2 font-sans text-[12px] font-semibold text-[#1a1816] transition hover:bg-[#f0ebe4] min-[380px]:flex-none"
             >
               View all

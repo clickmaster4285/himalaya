@@ -706,7 +706,7 @@ export default function SnowfallInMurreePage() {
               <Phone className="inline-block w-5 h-5 mr-2" />
               WhatsApp: +92-304-567-9000
             </Link>
-            <Link href="/snowfall-in-murree/winter-villas#villas" className="bg-white/20 backdrop-blur-sm hover:bg-white/30 text-white px-8 py-4 rounded-lg font-semibold transition-all border border-white/30">
+            <Link href="/snowfall-in-murree/winter-villas" className="bg-white/20 backdrop-blur-sm hover:bg-white/30 text-white px-8 py-4 rounded-lg font-semibold transition-all border border-white/30">
               View Winter Packages
             </Link>
           </div>

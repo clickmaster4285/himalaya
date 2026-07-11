@@ -10,6 +10,7 @@ import { JsonLd } from "@/components/seo/JsonLd";
 import { createPageMetadata } from "@/lib/seo/build-metadata";
 import { absoluteUrl } from "@/lib/seo/site-config";
 import { getPublishedVillas } from "@/lib/villas-fetch";
+import VillasAccommodations from "@/components/VillasAccommodations";
 
 export const metadata: Metadata = createPageMetadata({
   title: "Private Luxury Villas Bhurban Murree - Book Now",
@@ -85,8 +86,10 @@ const VillasPage = async () => {
           provides itinerary ideas, weather-aware planning tips, and seasonal recommendations.
         </p>
       </section>
-      <VillaConfigurations />
-      <VillasSection initialVillas={villas} />
+
+      <VillasAccommodations/>
+      {/* <VillaConfigurations />
+      <VillasSection initialVillas={villas} /> */}
       <MomentsSection />
       <ReserveSection />
       <Footer />

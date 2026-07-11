@@ -10,6 +10,10 @@ export const metadata = {
     title: "View Winter Villas — Himalaya Villas",
     description:
       "Private villas built for the Himalayan winter — snowfall views, fireplaces, and quiet mornings.",
+    url: "https://himalayavillas.com/snowfall-in-murree/winter-villas",
+  },
+  alternates: {
+    canonical: "https://himalayavillas.com/snowfall-in-murree/winter-villas",
   },
 };
 

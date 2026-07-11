@@ -130,17 +130,19 @@ export default function WinterVillasClient({ villas }: { villas: Villa[] }) {
             </p>
             <div className="mt-10 flex flex-wrap gap-4">
               <a
-                href="#villas"
+                href="/villas"
                 className="group inline-flex items-center gap-2 rounded-full bg-[color:var(--gold)] px-7 py-3.5 text-sm font-semibold text-[color:var(--navy-deep)] shadow-xl shadow-black/30 transition hover:brightness-110"
               >
                 Explore Villas
                 <ChevronRight className="h-4 w-4 transition group-hover:translate-x-1" />
               </a>
               <a
-                href="#book"
+                href={buildWhatsAppBookingUrl("a private villa tour")}
+            target="_blank"
+            rel="noopener noreferrer"
                 className="inline-flex items-center gap-2 rounded-full border border-white/30 bg-white/5 px-7 py-3.5 text-sm font-semibold text-white backdrop-blur transition hover:bg-white/10"
               >
-                Check Snow Dates
+                Book Now
               </a>
             </div>
           </div>
@@ -229,7 +231,9 @@ export default function WinterVillasClient({ villas }: { villas: Villa[] }) {
                       </div>
                     </div>
                     <a
-                      href="#book"
+                       href={buildWhatsAppBookingUrl("a private villa tour")}
+            target="_blank"
+            rel="noopener noreferrer"
                       className="group/btn inline-flex items-center gap-1.5 rounded-full bg-[color:var(--navy-deep)] px-5 py-2.5 text-sm font-semibold text-white transition hover:bg-[color:var(--navy)]"
                     >
                       Reserve
@@ -375,7 +379,9 @@ export default function WinterVillasClient({ villas }: { villas: Villa[] }) {
               <Phone className="h-4 w-4" /> Book Your Stay
             </a>
             <a
-              href="#villas"
+               href={buildWhatsAppBookingUrl("a private villa tour")}
+            target="_blank"
+            rel="noopener noreferrer"
               className="inline-flex items-center gap-2 rounded-full border border-white/30 bg-white/5 px-8 py-4 text-sm font-semibold text-white backdrop-blur transition hover:bg-white/10"
             >
               <Calendar className="h-4 w-4" /> Check Availability

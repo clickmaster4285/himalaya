@@ -30,7 +30,7 @@ const collections: Collection[] = [
         description:
           "A cozy luxury room with mountain-facing windows and warm interiors.",
         price: "27,000",
-        image: "/images/villas/apt-single.jpg",
+        image: "/images/villas/apt-single-room.jpg",
       },
       {
         tag: "APARTMENT",
@@ -38,7 +38,7 @@ const collections: Collection[] = [
         description:
           "Two luxury bedrooms with a shared living area — perfect for families.",
         price: "60,000",
-        image: "/images/villas/apt-complete.jpg",
+        image: "/images/villas/apt-complete-room.jpg",
       },
     ],
   },
@@ -53,7 +53,7 @@ const collections: Collection[] = [
         description:
           "Refined executive room with king bed and warm ambient lighting.",
         price: "16,500",
-        image: "/images/villas/rak-single.jpg",
+        image: "/images/villas/rak-single-room.jpg",
       },
       {
         tag: "SUITE",
@@ -61,7 +61,7 @@ const collections: Collection[] = [
         description:
           "Two rooms with a private TV lounge — space to gather and unwind.",
         price: "30,000",
-        image: "/images/villas/rak-suite.jpg",
+        image: "/images/villas/rak-private-suite.jpg",
       },
       {
         tag: "WHOLE VILLA",
@@ -69,7 +69,7 @@ const collections: Collection[] = [
         description:
           "The entire Rakaposhi Villa — five executive rooms for your group.",
         price: "70,000",
-        image: "/images/villas/rak-complete.jpg",
+        image: "/images/villas/rak-complete-villa.jpg",
       },
     ],
   },
@@ -84,7 +84,7 @@ const collections: Collection[] = [
         description:
           "A snug loft with sloped wooden ceilings and soft evening light.",
         price: "27,000",
-        image: "/images/villas/lux-attic.jpg",
+        image: "/images/villas/lux-attic-villa.jpg",
       },
       {
         tag: "LUXURY",
@@ -92,7 +92,7 @@ const collections: Collection[] = [
         description:
           "Marble accents, elegant lighting, and sweeping mountain views.",
         price: "27,000",
-        image: "/images/villas/lux-single.jpg",
+        image: "/images/villas/lux-single-villa.jpg",
       },
       {
         tag: "SUITE",
@@ -100,7 +100,7 @@ const collections: Collection[] = [
         description:
           "A bedroom paired with a private sitting area under a chandelier.",
         price: "50,000",
-        image: "/images/villas/lux-suite.jpg",
+        image: "/images/villas/lux-suite-villa.jpg",
       },
       {
         tag: "WHOLE VILLA",
@@ -108,7 +108,7 @@ const collections: Collection[] = [
         description:
           "Four bedrooms, private gardens, and mountain vistas — yours entirely.",
         price: "99,000",
-        image: "/images/villas/lux-complete.jpg",
+        image: "/images/villas/lux-complete-villa.jpg",
       },
     ],
   },

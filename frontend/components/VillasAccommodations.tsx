@@ -6,6 +6,7 @@ import { buildWhatsAppBookingUrl } from "@/lib/whatsapp";
 
 type Room = {
   tag: string;
+  href: string;
   name: string;
   description: string;
   price: string;
@@ -21,12 +22,14 @@ type Collection = {
 const collections: Collection[] = [
   {
     title: "Himalaya Apartments",
+    
     subtitle:
       "Warm, homely apartments for couples and small families — quiet nights, mountain-facing windows.",
     rooms: [
       {
         tag: "APARTMENT",
         name: "Single Luxury Room",
+         href: "apartment-single-luxury",
         description:
           "A cozy luxury room with mountain-facing windows and warm interiors.",
         price: "27,000",
@@ -35,6 +38,7 @@ const collections: Collection[] = [
       {
         tag: "APARTMENT",
         name: "Complete Apartment",
+                href: "apartment-complete",
         description:
           "Two luxury bedrooms with a shared living area — perfect for families.",
         price: "60,000",
@@ -50,6 +54,7 @@ const collections: Collection[] = [
       {
         tag: "EXECUTIVE",
         name: "Single Executive Room",
+        href: "rakaposhi-single-executive",
         description:
           "Refined executive room with king bed and warm ambient lighting.",
         price: "16,500",
@@ -58,6 +63,7 @@ const collections: Collection[] = [
       {
         tag: "SUITE",
         name: "Executive Suite",
+          href: "rakaposhi-executive-suite",
         description:
           "Two rooms with a private TV lounge — space to gather and unwind.",
         price: "30,000",
@@ -66,6 +72,7 @@ const collections: Collection[] = [
       {
         tag: "WHOLE VILLA",
         name: "Complete Villa",
+         href: "rakaposhi-complete-villa",
         description:
           "The entire Rakaposhi Villa — five executive rooms for your group.",
         price: "70,000",
@@ -81,6 +88,7 @@ const collections: Collection[] = [
       {
         tag: "COZY",
         name: "Attic Room",
+           href: "luxury-attic",
         description:
           "A snug loft with sloped wooden ceilings and soft evening light.",
         price: "27,000",
@@ -88,6 +96,7 @@ const collections: Collection[] = [
       },
       {
         tag: "LUXURY",
+            href: "luxury-single",
         name: "Single Luxury Room",
         description:
           "Marble accents, elegant lighting, and sweeping mountain views.",
@@ -97,6 +106,7 @@ const collections: Collection[] = [
       {
         tag: "SUITE",
         name: "Luxury Suite (1 & 2)",
+          href: "luxury-suite",
         description:
           "A bedroom paired with a private sitting area under a chandelier.",
         price: "50,000",
@@ -105,6 +115,7 @@ const collections: Collection[] = [
       {
         tag: "WHOLE VILLA",
         name: "Complete Villa",
+           href: "luxury-complete-villa",
         description:
           "Four bedrooms, private gardens, and mountain vistas — yours entirely.",
         price: "99,000",
@@ -139,27 +150,38 @@ function RoomCard({ room }: { room: Room }) {
       </div>
 
       {/* Body */}
-    <div className="flex flex-1 flex-col p-5">
-  <p className="text-sm text-[#6b6357] leading-relaxed">
-    {room.description}
-  </p>
+      <div className="flex flex-1 flex-col p-5">
+        <p className="text-sm text-[#6b6357] leading-relaxed">
+          {room.description}
+        </p>
 
-  <div className="mt-5 h-px w-full bg-[#ece5d3]" />
+        <div className="mt-5 h-px w-full bg-[#ece5d3]" />
 
-  <div className="mt-4 flex items-center justify-between text-xl">
-    <p className="font-serif italic text-[#2b2b2b]">
-      PKR {room.price}
-    </p>
-    <a
-      href={buildWhatsAppBookingUrl("a private villa tour")}
-      target="_blank"
-      rel="noopener noreferrer"
-      className="rounded-md border border-[#ece5d3] bg-[#fdfaf3] px-4 py-2 text-xs font-medium uppercase tracking-[0.2em] text-[#2b2b2b] transition hover:bg-[#f5efdf] hover:border-[#c9a24a]"
-    >
-      Book Now
-    </a>
-  </div>
-</div>
+        <div className="mt-4 flex flex-col gap-3">
+          {/* Price and View Detail row */}
+          <div className="flex items-center justify-between">
+            <p className="font-serif italic text-xl text-[#2b2b2b]">
+              PKR {room.price}
+            </p>
+            <a
+               href={`/villas/${room.href}`}
+              className="rounded-md border border-[#ece5d3] bg-[#fdfaf3] px-4 py-2 text-xs font-medium uppercase tracking-[0.2em] text-[#2b2b2b] transition hover:bg-[#f5efdf] hover:border-[#c9a24a]"
+            >
+              View Detail
+            </a>
+          </div>
+
+          {/* Book Now row */}
+          <a
+            href={buildWhatsAppBookingUrl("a private villa tour")}
+            target="_blank"
+            rel="noopener noreferrer"
+            className="w-full rounded-md border border-[#ece5d3] bg-[#fdfaf3] px-4 py-2 text-center text-xs font-medium uppercase tracking-[0.2em] text-[#2b2b2b] transition hover:bg-[#f5efdf] hover:border-[#c9a24a]"
+          >
+            Book Now
+          </a>
+        </div>
+      </div>
     </article>
   );
 }

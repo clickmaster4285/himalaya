@@ -1,3 +1,4 @@
+// components/VillaAmenitiesSection.tsx
 "use client";
 
 import Image from "next/image";
@@ -8,7 +9,7 @@ type Props = {
   title?: string;
   amenities: string[];
   className?: string;
-  imageByAmenity?: Record<string, string>;
+  imageByAmenity?: Record<string, string>; // Optional override
   defaultImage?: string;
 };
 
@@ -27,17 +28,17 @@ export default function VillaAmenitiesSection({
   title = "Amenities",
   amenities,
   className,
-  imageByAmenity,
-  defaultImage = "/assets/amenities-interior-real.jpg",
+  imageByAmenity = {},           // ← will receive from parent
+  defaultImage = "/images/amenities/default-amenity.svg",
 }: Props) {
   const items = useMemo(() => amenities.filter(Boolean), [amenities]);
+
   const images = useMemo(() => {
     const external = Object.fromEntries(
-      Object.entries(imageByAmenity ?? {}).map(([k, v]) => [normalizeKey(k), v]),
+      Object.entries(imageByAmenity).map(([k, v]) => [normalizeKey(k), v])
     );
     return { ...builtInAmenityImages, ...external };
   }, [imageByAmenity]);
-
 
   const initialActive = items[0] ?? "";
   const [active, setActive] = useState(initialActive);
@@ -58,6 +59,7 @@ export default function VillaAmenitiesSection({
           </h2>
 
           <div className="grid grid-cols-1 lg:grid-cols-12 gap-10 items-start">
+            {/* Amenity List */}
             <div className="lg:col-span-5 border border-white/15 p-6 md:p-8">
               <div className="space-y-0">
                 {items.map((item) => {
@@ -92,12 +94,13 @@ export default function VillaAmenitiesSection({
               </div>
             </div>
 
+            {/* Image Preview */}
             <div className="lg:col-span-7 border border-white/15 p-3 md:p-4">
-              <div className="relative w-full h-[320px] md:h-[420px] overflow-hidden">
+              <div className="relative w-full h-[320px] md:h-[420px] overflow-hidden rounded">
                 <Image
                   key={activeImage}
                   src={getValidImageSrc(activeImage)}
-                  alt={active ? `${active} image` : "Amenity image"}
+                  alt={active ? `${active} amenity` : "Amenity"}
                   fill
                   sizes="(max-width: 1024px) 100vw, 58vw"
                   className="object-cover"
@@ -112,4 +115,3 @@ export default function VillaAmenitiesSection({
     </section>
   );
 }
-

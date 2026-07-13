@@ -19,6 +19,7 @@ import ReserveSection from "@/components/ReserveSection";
 import Footer from "@/components/Footer";
 import { createPageMetadata } from "@/lib/seo/build-metadata";
 import { getPublishedVillas } from "@/lib/villas-fetch";
+import VillasAccommodations from "@/components/VillasAccommodations";
 
 export const metadata: Metadata = createPageMetadata({
   title: "Himalaya Villas and Resort | Private Luxury Estate Bhurban",
@@ -50,7 +51,8 @@ const Index = async () => {
       <HeroSection />
       <PhilosophySection />
       <LiveWeatherMurree />
-      <VillasSection initialVillas={villas} />
+      {/* <VillasSection initialVillas={villas} /> */}
+      <VillasAccommodations/>
       <ServicesSection />
       <AmenitiesSection />
       <MomentsSection />

@@ -44,6 +44,48 @@ const imagePaths: Record<string, string[]> = {
     '/images/villas/rak-complete9.jpg',
     '/images/villas/rak-complete10.jpg',
   ],
+  'serene-valley-cabin': [
+    '/assets/gallery-interior.jpg',
+    '/assets/gallery-reflection.jpg',
+    '/assets/gallery-exterior.jpg',
+    '/assets/gallery-sunlight.jpg',
+    '/assets/villa-honeymoon-real.jpg',
+  ],
+  'sunset-suite': [
+    '/assets/gallery-interior.jpg',
+    '/assets/gallery-exterior.jpg',
+    '/assets/gallery-reflection.jpg',
+    '/assets/gallery-sunlight.jpg',
+    '/assets/villa-presidential-real.jpg',
+  ],
+  'garden-villa-retreat': [
+    '/assets/gallery-garden.jpg',
+    '/assets/gallery-exterior.jpg',
+    '/assets/gallery-interior.jpg',
+    '/assets/gallery-sunlight.jpg',
+    '/assets/villa-alpine-real.jpg',
+  ],
+  'himalayan-penthouse': [
+    '/assets/villa-penthouse.jpg',
+    '/assets/gallery-exterior.jpg',
+    '/assets/gallery-sunlight.jpg',
+    '/assets/gallery-interior.jpg',
+    '/assets/villa-presidential-real.jpg',
+  ],
+  'presidential-suite': [
+    '/assets/villa-presidential-real.jpg',
+    '/assets/villa-presidential.jpg',
+    '/assets/gallery-exterior.jpg',
+    '/assets/gallery-interior.jpg',
+    '/assets/gallery-sunlight.jpg',
+  ],
+  'alpine-family-lodge': [
+    '/assets/gallery-garden.jpg',
+    '/assets/gallery-exterior.jpg',
+    '/assets/gallery-interior.jpg',
+    '/assets/gallery-sunlight.jpg',
+    '/assets/villa-alpine-real.jpg',
+  ],
   'luxury-attic': [
     '/images/villas/attic-room.jpg',
   ],
@@ -254,6 +296,180 @@ export const collections: Collection[] = [
     subtitle:
       "Our flagship residences — from cozy attic escapes to full four-bedroom villas designed for celebrations.",
     rooms: [
+      {
+        slug: "serene-valley-cabin",
+        tag: "CABIN",
+        name: "Serene Valley Cabin",
+        description:
+          "A serene cabin retreat with panoramic windows, a private terrace, and peaceful valley views.",
+        price: "45,000",
+        images: imagePaths['serene-valley-cabin'],
+        collection: "Himalaya Luxury Villas",
+        longDescription:
+          "Serene Valley Cabin is designed for quiet luxury and slow mountain mornings. Floor-to-ceiling windows open the cabin to the valley beyond, while the private terrace becomes the perfect place to enjoy tea, sunrise, or a peaceful evening under the stars. The interior balances warm wood tones, soft lighting, and refined textures to create a calm retreat that feels both elegant and intimate. It is ideal for couples, small families, or anyone looking for a private mountain hideaway with comfort at the center of the experience. Every detail has been shaped to feel restful — from the richly layered bedding to the open lounge area that invites you to linger and take in the changing landscape outside. Whether you are staying for a weekend escape or a longer break, this cabin offers a timeless setting for rest, conversation, and the kind of quiet that is hard to find elsewhere.",
+        highlights: [
+          "Panoramic valley-facing windows",
+          "Private terrace for sunrise and sunset",
+          "Warm cabin interiors with premium comfort",
+        ],
+        details: [
+          { label: "Max Guests", value: "4 adults" },
+          { label: "Bed", value: "2 Queen / 1 King" },
+          { label: "View", value: "Valley & pine-covered hills" },
+          { label: "Size", value: "~ 400 sq ft" },
+        ],
+        amenities: [
+          ...commonAmenities,
+          "Private terrace",
+          "Fireplace",
+          "Panoramic valley views",
+        ],
+      },
+      {
+        slug: "sunset-suite",
+        tag: "SUITE",
+        name: "Sunset Suite",
+        description:
+          "A warm suite with sunset-facing windows, cozy interiors, and a calm mountain atmosphere.",
+        price: "49,000",
+        images: imagePaths['sunset-suite'],
+        collection: "Himalaya Luxury Villas",
+        longDescription:
+          "Sunset Suite captures the softer side of mountain luxury: golden evening light, intimate interiors, and a peaceful setting that feels like a private retreat. The room is designed around comfort and calm, with spacious windows that frame the valley at different times of day and bring in the changing colors of the sky. Whether you are winding down after a day in Murree or enjoying a quiet evening in, the suite offers a balanced mix of elegance, warmth, and simplicity. Its cozy layout makes it ideal for couples who want more than a standard room, without needing the footprint of a full villa. The atmosphere is gentle and restorative, from the soft lighting to the curated textures that make the space feel welcoming from the first moment you step inside.",
+        highlights: [
+          "Sunset-facing windows",
+          "Cozy mountain retreat feel",
+          "Premium comfort and intimate layout",
+        ],
+        details: [
+          { label: "Max Guests", value: "2 adults" },
+          { label: "Bed", value: "1 King" },
+          { label: "View", value: "Valley sunset & pine hills" },
+          { label: "Size", value: "~ 360 sq ft" },
+        ],
+        amenities: [
+          ...commonAmenities,
+          "Sunset-facing windows",
+          "Cozy lounge corner",
+          "Private mountain retreat feel",
+        ],
+      },
+      {
+        slug: "garden-villa-retreat",
+        tag: "RETREAT",
+        name: "Garden Villa Retreat",
+        description:
+          "A spacious family-friendly villa with mountain views, a private garden, and room to breathe.",
+        price: "39,000",
+        images: imagePaths['garden-villa-retreat'],
+        collection: "Himalaya Luxury Villas",
+        longDescription:
+          "Garden Villa Retreat is designed for families and groups who want the feeling of a private mountain home without giving up comfort or style. With three bedrooms, a generous living space, and a private garden that opens up to the surrounding hills, the villa offers plenty of space for shared moments and quiet downtime alike. The layout suits families traveling together, groups of friends, or anyone who wants a more relaxed stay with room to gather, unwind, and enjoy the outdoors. The garden gives the villa a softer, more personal character, while the mountain views and open interiors keep the setting feeling expansive and welcoming. It is a home-like retreat where mornings can begin slowly with tea outside, afternoons can be spent together in the garden, and evenings can end with the cool mountain air and a calm sense of privacy.",
+        highlights: [
+          "Three-bedroom family layout",
+          "Private garden with mountain views",
+          "Ideal for groups and family stays",
+        ],
+        details: [
+          { label: "Max Guests", value: "6 adults" },
+          { label: "Bedrooms", value: "3 Bedrooms" },
+          { label: "View", value: "Mountain & garden panorama" },
+          { label: "Size", value: "~ 700 sq ft" },
+        ],
+        amenities: [
+          ...commonAmenities,
+          "Private garden",
+          "Family-friendly layout",
+          "Spacious living areas",
+        ],
+      },
+      {
+        slug: "himalayan-penthouse",
+        tag: "PENTHOUSE",
+        name: "Himalayan Penthouse",
+        description:
+          "A luxe penthouse stay with a broad balcony, skyline views, and refined mountain comfort.",
+        price: "70,000",
+        images: imagePaths['himalayan-penthouse'],
+        collection: "Himalaya Luxury Villas",
+        longDescription:
+          "Himalayan Penthouse brings elevated mountain living to a new level with sweeping views, elegant interiors, and a spacious balcony that turns every sunrise and sunset into part of the experience. Designed for guests who want a premium stay with a more dramatic sense of presence, it pairs contemporary comfort with the calm atmosphere that defines the villa experience. The open layout makes it ideal for couples seeking a more luxurious escape, or for travelers who want a high-end base from which to enjoy the surrounding hills and the atmosphere of Bhurban. Large windows and the expansive balcony ensure that the views remain the centerpiece, while soft textures and thoughtful finishes keep the space refined and restful rather than overly formal.",
+        highlights: [
+          "Expansive balcony with skyline views",
+          "Luxury penthouse setting",
+          "Elegant, airy interiors",
+        ],
+        details: [
+          { label: "Max Guests", value: "3 adults" },
+          { label: "Bed", value: "1 King + lounge" },
+          { label: "View", value: "Skyline & mountain panorama" },
+          { label: "Size", value: "~ 600 sq ft" },
+        ],
+        amenities: [
+          ...commonAmenities,
+          "Expansive balcony",
+          "Skyline views",
+          "Premium penthouse comfort",
+        ],
+      },
+      {
+        slug: "presidential-suite",
+        tag: "PRESIDENTIAL",
+        name: "Presidential Suite",
+        description:
+          "The flagship suite with a private terrace, jacuzzi, and elevated mountain views.",
+        price: "65,000",
+        images: imagePaths['presidential-suite'],
+        collection: "Himalaya Luxury Villas",
+        longDescription:
+          "The Presidential Suite is the signature expression of luxury in the villa collection — a grand, private retreat designed to feel both indulgent and deeply restful. With a private terrace, jacuzzi, and panoramic mountain views, it offers the kind of setting that turns a stay into a memorable experience from the moment you arrive. The suite balances rich comfort with elegant simplicity, giving you a spacious environment for slow mornings, long evenings, and quiet time taken in the view. It is the perfect choice for guests who want the most elevated experience in the property, whether for a special celebration, a romantic escape, or simply a luxurious break in the hills.",
+        highlights: [
+          "Private terrace and jacuzzi",
+          "Flagship luxury suite",
+          "Panoramic mountain views",
+        ],
+        details: [
+          { label: "Max Guests", value: "4 adults" },
+          { label: "Bed", value: "1 King + lounge" },
+          { label: "View", value: "Mountain panorama & terrace" },
+          { label: "Size", value: "~ 650 sq ft" },
+        ],
+        amenities: [
+          ...commonAmenities,
+          "Private terrace",
+          "Jacuzzi",
+          "Flagship luxury setting",
+        ],
+      },
+      {
+        slug: "alpine-family-lodge",
+        tag: "LODGE",
+        name: "Alpine Family Lodge",
+        description:
+          "A three-bedroom family lodge surrounded by cedar forests, mountain air, and open outdoor space.",
+        price: "39,000",
+        images: imagePaths['alpine-family-lodge'],
+        collection: "Himalaya Luxury Villas",
+        longDescription:
+          "Alpine Family Lodge is made for families who want a mountain stay that feels welcoming, spacious, and rooted in nature. With three bedrooms, generous shared areas, and a setting wrapped by cedar forest and open views, it offers the comfort of a private lodge with enough room for everyone to settle in. The design leans toward togetherness — morning coffee in the common areas, afternoon downtime with the family, and evenings spent enjoying the cool air and peaceful surroundings. It is a strong fit for multi-generational travel, family weekends, or anyone looking for a calm retreat where children, adults, and grandparents can all have space without feeling separated from the experience.",
+        highlights: [
+          "Three-bedroom family-friendly layout",
+          "Cedar forest surroundings",
+          "Open spaces for shared family time",
+        ],
+        details: [
+          { label: "Max Guests", value: "6 adults" },
+          { label: "Bedrooms", value: "3 Bedrooms" },
+          { label: "View", value: "Forest & mountain panorama" },
+          { label: "Size", value: "~ 760 sq ft" },
+        ],
+        amenities: [
+          ...commonAmenities,
+          "Family-friendly lodge",
+          "Cedar forest setting",
+          "Spacious shared living areas",
+        ],
+      },
       {
         slug: "luxury-attic",
         tag: "COZY",

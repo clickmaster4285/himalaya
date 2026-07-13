@@ -426,7 +426,7 @@ export const collections: Collection[] = [
         highlights: [
           "Private terrace and jacuzzi",
           "Flagship luxury suite",
-          "Panoramic mountain views",
+          "Panoramics mountain views",
         ],
         details: [
           { label: "Max Guests", value: "4 adults" },

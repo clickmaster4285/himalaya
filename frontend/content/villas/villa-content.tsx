@@ -14,6 +14,8 @@ const imagePaths: Record<string, string[]> = {
     '/images/villas/complete-apt4.jpg',
     '/images/villas/complete-apt5.jpg',
     '/images/villas/complete-apt6.jpg',
+    '/images/villas/complete-apt7.jpeg',
+    '/images/villas/complete-apt8.jpeg',
   ],
   'rakaposhi-single-executive': [
     '/images/villas/rak-single4.jpg',

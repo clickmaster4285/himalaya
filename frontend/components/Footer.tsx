@@ -12,7 +12,7 @@ const Footer = () => {
       >
       {/* Large background text */}
       <div
-        className="absolute inset-0 flex items-end justify-center pointer-events-none select-none overflow-hidden"
+        className="absolute inset-0 mb-8 flex items-end justify-center pointer-events-none select-none overflow-hidden"
         aria-hidden="true"
       >
         <span
@@ -200,7 +200,7 @@ const Footer = () => {
         
         {/* Bottom Bar */}
         <div
-          className="mt-16 pt-8 flex flex-col md:flex-row items-center justify-between gap-4"
+          className="mt-16 pt-8 mb-12 flex flex-col md:flex-row items-center justify-between gap-4"
           style={{ borderTop: "1px solid hsl(0 0% 100% / 0.1)" }}
         >
           <p

@@ -210,7 +210,7 @@ export default function VillasAccommodations() {
           {collections.map((c) => (
             <div key={c.title}>
               <div className="mb-8 flex flex-col gap-2 sm:flex-row sm:items-end sm:justify-between">
-                <div className="max-w-2xl">
+                <div className="max-w-4xl">
                   <h3 className="font-serif text-3xl text-[#2b2b2b] leading-tight">
                     {c.title}
                   </h3>
@@ -234,10 +234,10 @@ export default function VillasAccommodations() {
         </div>
 
         {/* Footnote */}
-        <p className="mt-14 text-center text-xs text-[#8a8071] max-w-xl mx-auto">
-          Max 3 persons per room with the option of 1 extra mattress (additional
+        <p className="mt-14 text-center text-sm text-[#8a8071] max-w-7xl mx-auto">
+          * Max 3 persons per room with the option of 1 extra mattress (additional
           charges apply). Rates include complimentary breakfast for 2 guests per
-          room.
+          room. *
         </p>
       </div>
     </section>

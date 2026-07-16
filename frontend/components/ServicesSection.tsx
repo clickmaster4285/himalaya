@@ -6,13 +6,37 @@ import { useState, useRef, useEffect } from "react";
 import { motion, useInView, AnimatePresence } from "framer-motion";
 import { Heart, UtensilsCrossed, Sparkles, PartyPopper, Mountain, Briefcase } from "lucide-react";
 
-const servicesImg = "/assets/services-events-real.jpg";
-const galleryDiningNight = "/assets/gallery-dining-night.jpg";
-const galleryBbq = "/assets/gallery-bbq.jpg";
-const galleryGarden = "/assets/gallery-garden.jpg";
-const gallerySunlight = "/assets/gallery-sunlight.jpg";
-const galleryInterior = "/assets/gallery-interior.jpg";
-const galleryBalcony = "/assets/gallery-balcony.jpg";
+
+
+
+const celebrationImg = "/assets/outdoor-celebrations.jpg";
+const celebrationImg2 = "/assets/celebration2.jpg";
+const celebrationImg3 = "/assets/celebrations3.jpg";
+
+const diningImg = "/assets/philosophy-3.jpg";
+const diningImg2 = "/assets/dining.jpg";
+const diningImg3 = "/assets/dining2.jpg";
+
+
+const getawaysImg = "/assets/outdoor-events.jpg";
+const getawaysImg2 = "/assets/philosophy-1.jpg";
+const getawaysImg3 = "/assets/getaway-apt.jpg";
+
+
+const momentsImg = "/assets/moments.jpg";
+const momentsImg2 = "/assets/moments2.jpg";
+const momentsImg3 = "/assets/moments3.jpg";
+
+
+const activitiesImg = "/assets/philosophy-5.jpg";
+const activitiesImg2 = "/assets/dining-outdoor.jpg";
+const activitiesImg3 = "/assets/philosophy-2.jpg";
+
+
+const retreatsImg = "/assets/philosophy-4.jpg";
+const retreatsImg2 = "/assets/hero-image.jpg";
+const retreatsImg3 = "/assets/retreat.jpg";
+
 
 const services = [
   {
@@ -22,7 +46,7 @@ const services = [
     description:
       "Create timeless memories in a setting designed for luxury outdoor celebrations — cedar forests, mountain air, and a team that treats your day as the only one that matters.",
     icon: Heart,
-    images: [servicesImg, galleryGarden, gallerySunlight],
+    images: [celebrationImg, celebrationImg2, celebrationImg3],
   },
   {
     number: "02",
@@ -31,7 +55,7 @@ const services = [
     description:
       "Private chefs and customized menus tailored for your event or stay — from terrace dinners to long lunches with the Murree hills before you.",
     icon: UtensilsCrossed,
-    images: [galleryDiningNight, galleryBbq, galleryInterior],
+    images: [diningImg, diningImg2, diningImg3],
   },
   {
     number: "03",
@@ -40,7 +64,7 @@ const services = [
     description:
       "Reserved only for a select few — a private estate where stillness, space, and the mountain replace the noise of the city.",
     icon: Sparkles,
-    images: [galleryInterior, gallerySunlight, galleryBalcony],
+    images: [getawaysImg, getawaysImg2, getawaysImg3],
   },
   {
     number: "04",
@@ -48,7 +72,7 @@ const services = [
     headline: "Some Moments Deserve More Than a Banquet Hall.",
     description: "We sit with you, understand what this occasion means, and build an experience around it — from the setting to the last toast. Entirely yours.",
     icon: PartyPopper,
-    images: [galleryGarden, servicesImg, galleryDiningNight],
+    images: [momentsImg, momentsImg2, momentsImg3],
   },
   {
     number: "05",
@@ -56,7 +80,7 @@ const services = [
     headline: "The Mountain Is Waiting.",
     description: "Forest walks at dawn. Guided trails through cedar groves. Stargazing sessions away from city light. Every activity curated — never rushed, always on your terms.",
     icon: Mountain,
-    images: [gallerySunlight, galleryGarden, galleryBbq],
+    images: [activitiesImg, activitiesImg2, activitiesImg3],
   },
   {
     number: "06",
@@ -65,7 +89,7 @@ const services = [
     description:
       "Impress your clients and team with a private executive environment away from the city — where focus comes naturally and the altitude shifts perspective.",
     icon: Briefcase,
-    images: [galleryInterior, galleryDiningNight, gallerySunlight],
+    images: [retreatsImg, retreatsImg2, retreatsImg3],
   },
 ];
 

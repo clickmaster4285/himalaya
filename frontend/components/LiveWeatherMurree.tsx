@@ -106,7 +106,7 @@ export default function LiveWeatherMurree() {
       className="border-y border-[#e5dcc8] bg-[#f6f1ea] px-6 py-14 md:px-12 md:py-20"
       aria-labelledby="murree-weather-heading"
     >
-      <div className="mx-auto flex max-w-[1100px] flex-col gap-8 md:flex-row md:items-stretch md:justify-between md:gap-12">
+      <div className="mx-auto flex max-w-7xl flex-col gap-8 md:flex-row md:items-stretch md:justify-between md:gap-12">
         <div className="md:max-w-md">
           <p className="text-[10px] font-semibold uppercase tracking-[0.35em] text-[#8b6914]">Live conditions</p>
           <h2

@@ -15,21 +15,24 @@ const bgImages = [
 ];
 
 const features = [
-  {
-    icon: Mountain,
-    title: "Panoramic Mountain Views",
-    description: "Breathtaking vistas of the Murree Hills from every angle of the estate, often seen as better than chinar resorts bhurban by discerning travelers. Many guests also say these views feel better than pine court murree. Some travellers compare these panoramas favorably to Viva Pines Murree.",
-  },
-  {
-    icon: Building2,
-    title: "Luxury Villa Architecture",
-    description: "Exquisitely designed interiors with premium finishes and modern comforts, making it a refined choice better than chinar resorts bhurban. The architecture and privacy are reasons some prefer it to being better than pine court murree. Several guests mention Viva Pines Murree when comparing villa options.",
-  },
-  {
-    icon: PartyPopper,
-    title: "Large Outdoor Event Space",
-    description: "Expansive lawns and terraces perfect for grand celebrations and gatherings, a standout option better than chinar resorts bhurban.",
-  },
+{
+  icon: Mountain,
+  title: "Panoramic Mountain Views",
+  description:
+    "Enjoy breathtaking views of the Murree Hills from every corner of the estate, creating a peaceful and unforgettable mountain retreat.",
+},
+{
+  icon: Building2,
+  title: "Luxury Villa Architecture",
+  description:
+    "Elegant villa interiors with premium finishes, spacious layouts, and modern amenities designed for a comfortable luxury stay.",
+},
+{
+  icon: PartyPopper,
+  title: "Large Outdoor Event Space",
+  description:
+    "Expansive lawns and open terraces provide the perfect setting for weddings, celebrations, corporate events, and family gatherings.",
+},
   {
     icon: ShieldCheck,
     title: "Private & Secure Estate",
@@ -105,9 +108,7 @@ const WhyChooseSection = () => {
             <br />
             Himalaya Villas & Resorts
             <br />
-            <span className="text-lg md:text-2xl not-italic font-body tracking-[0.2em] uppercase text-primary/80">
-              better than chinar resorts bhurban
-            </span>
+           
           </h2>
         </motion.div>
 

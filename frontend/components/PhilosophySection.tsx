@@ -5,12 +5,13 @@ import { useRef, useState, useEffect } from "react";
 import { motion, useInView, AnimatePresence } from "framer-motion";
 
 const philosophyImages = [
-  "/assets/villa-exterior.jpg",
-  "/assets/gallery-exterior.jpg",
-  "/assets/gallery-balcony.jpg",
-  "/assets/gallery-sunlight.jpg",
-  "/assets/gallery-interior.jpg",
-  "/assets/philosophy-interior.jpg",
+  "/assets/philosophy-1.jpg",
+  "/assets/philosophy-2.jpg",
+  "/assets/philosophy-3.jpg",
+  "/assets/philosophy-4.jpg",
+    "/assets/philosophy-5.jpg",
+  // "/assets/gallery-interior.jpg",
+  // "/assets/philosophy-interior.jpg",
 ];
 
 const PhilosophySection = () => {

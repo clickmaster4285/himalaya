@@ -5,7 +5,7 @@ import { useRef } from "react";
 import { motion, useInView } from "framer-motion";
 
 const images = [
-  { src: "/assets/journal-1.jpg", alt: "Grand staircase", className: "col-span-1 row-span-1" },
+  { src: "/assets/philosophy-2.jpg", alt: "Grand staircase", className: "col-span-1 row-span-1" },
   { src: "/assets/journal-group-new.jpg", alt: "Group at the resort", className: "col-span-1 row-span-1" },
   { src: "/assets/journal-bonfire.jpg", alt: "Bonfire night", className: "col-span-1 row-span-2" },
   { src: "/assets/journal-4.jpg", alt: "Outdoor terrace", className: "col-span-2 row-span-1" },

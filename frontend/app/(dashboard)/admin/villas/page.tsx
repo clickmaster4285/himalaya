@@ -33,7 +33,7 @@ export default function SuperadminVillasPage() {
   }, [load]);
 
   return (
-    <div className="mx-auto max-w-6xl space-y-8 pb-6">
+    <div className="mx-auto  space-y-8 pb-6">
       <header className="flex flex-col gap-4 sm:flex-row sm:items-end sm:justify-between">
         <div>
           <p className="font-sans text-[11px] font-bold uppercase tracking-[0.22em] text-[#9a7b3a]">Catalog</p>

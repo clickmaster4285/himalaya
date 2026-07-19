@@ -103,7 +103,7 @@ export default function ManagerPackagesPage() {
   }
 
   return (
-    <div className="mx-auto max-w-6xl space-y-8">
+    <div className="mx-auto space-y-8">
       <div>
         <p className="font-sans text-[11px] font-bold uppercase tracking-[0.2em] text-[#9a7b3a]">Packages</p>
         <h1 className="font-display text-3xl font-semibold tracking-tight text-[#1a1816] md:text-[2rem]">

@@ -46,3 +46,74 @@ export function buildBhurbanInquiryWhatsAppUrl(fields: {
 
   return `${SITE_CONTACT.whatsappUrl}?text=${encodeURIComponent(text)}`;
 }
+
+
+
+
+export function buildWhatsAppVillaBookingUrl(villa: {
+  name: string;
+  tag: string;
+  price: string;
+  href: string;
+}) {
+  const villaUrl = `https://himalayavillas.com/villas/${villa.href}`;
+
+  const message = `
+Hello,
+
+I would like to book the following accommodation at Himalaya Villas & Resorts.
+
+Villa/Room: ${villa.name}
+Category: ${villa.tag}
+Price: PKR ${villa.price} per night
+
+Villa Details:
+${villaUrl}
+
+Please let me know:
+• Availability
+• Booking process
+• Any current offers
+
+Thank you.
+  `.trim();
+
+  return `${SITE_CONTACT.whatsappUrl}?text=${encodeURIComponent(message)}`;
+}
+
+
+
+export function buildWhatsAppVillaEnquiryUrl(villa: {
+  name: string;
+  tag: string;
+  price: string;
+  slug?: string;
+  href?: string;
+}) {
+  const path = villa.slug || villa.href || "";
+
+  const villaUrl = `https://himalayavillas.com/villas/${path}`;
+
+  const message = `
+Hello,
+
+I would like to enquire about the following accommodation at Himalaya Villas & Resorts.
+
+Villa/Room: ${villa.name}
+Category: ${villa.tag}
+Price: PKR ${villa.price} per night
+
+Villa Details:
+${villaUrl}
+
+Could you please provide more information about:
+• Availability
+• Amenities
+• Booking policy
+• Any current offers
+
+Thank you.
+  `.trim();
+
+  return `${SITE_CONTACT.whatsappUrl}?text=${encodeURIComponent(message)}`;
+}

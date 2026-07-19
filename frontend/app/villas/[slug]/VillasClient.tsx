@@ -8,7 +8,7 @@ import { ArrowLeft, Check } from "lucide-react";
 import { type Room } from "@/content/villas/villa-content";
 import VillaAmenitiesSection from "@/components/VillaAmenitiesSection";
 import { amenityImages } from "@/content/villas/villa-content";
-import { buildWhatsAppBookingUrl } from "@/lib/whatsapp";
+import { buildWhatsAppBookingUrl, buildWhatsAppVillaBookingUrl, buildWhatsAppVillaEnquiryUrl } from "@/lib/whatsapp";
 
 interface VillasClientProps {
   room: Room;
@@ -161,7 +161,12 @@ export default function VillasClient({ room }: VillasClientProps) {
     {/* Buttons */}
     <div className="mt-7 space-y-3">
       <a
-        href={buildWhatsAppBookingUrl("a private villa tour")}
+      href={buildWhatsAppVillaBookingUrl({
+  name: room.name,
+  tag: room.tag,
+  price: room.price,
+  href: room.slug, // or room.href if that's what your Room type has
+})}
         target="_blank"
         rel="noopener noreferrer"
         className="flex w-full items-center justify-center rounded-lg bg-[#2b2b2b] px-5 py-3.5 text-sm font-semibold uppercase tracking-[0.2em] text-white transition duration-300 hover:bg-[#c9a24a]"
@@ -170,7 +175,12 @@ export default function VillasClient({ room }: VillasClientProps) {
       </a>
 
       <a
-        href={buildWhatsAppBookingUrl("a private villa tour")}
+     href={buildWhatsAppVillaEnquiryUrl({
+  name: room.name,
+  tag: room.tag,
+  price: room.price,
+  slug: room.slug,
+})}
         target="_blank"
         rel="noopener noreferrer"
         className="flex w-full items-center justify-center rounded-lg border border-[#e8deca] bg-[#faf7f1] px-5 py-3.5 text-sm font-semibold uppercase tracking-[0.2em] text-[#2b2b2b] transition duration-300 hover:border-[#c9a24a] hover:bg-[#f5efdf]"

@@ -2,7 +2,7 @@
 
 import Image from "next/image";
 import { ArrowRight } from "lucide-react";
-import { buildWhatsAppBookingUrl } from "@/lib/whatsapp";
+import { buildWhatsAppBookingUrl, buildWhatsAppVillaBookingUrl } from "@/lib/whatsapp";
 
 type Room = {
   tag: string;
@@ -173,7 +173,12 @@ function RoomCard({ room }: { room: Room }) {
 
           {/* Book Now row */}
           <a
-            href={buildWhatsAppBookingUrl("a private villa tour")}
+            href={buildWhatsAppVillaBookingUrl({
+  name: room.name,
+  tag: room.tag,
+  price: room.price,
+  href: room.href,
+})}
             target="_blank"
             rel="noopener noreferrer"
             className="w-full rounded-md border border-[#ece5d3] bg-[#fdfaf3] px-4 py-2 text-center text-xs font-medium uppercase tracking-[0.2em] text-[#2b2b2b] transition hover:bg-[#f5efdf] hover:border-[#c9a24a]"

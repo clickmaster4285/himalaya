@@ -48,7 +48,7 @@ export default function UserDashboardPage() {
   const hasConfirmed = bookings.some((b) => b.status === "CONFIRMED");
 
   return (
-    <div className="mx-auto max-w-4xl space-y-8">
+    <div className="mx-auto space-y-8">
       <div className="flex flex-col gap-4 sm:flex-row sm:items-end sm:justify-between">
         <div>
           <p className="font-sans text-[11px] font-bold uppercase tracking-[0.2em] text-[#9a7b3a]">Your estate dashboard</p>

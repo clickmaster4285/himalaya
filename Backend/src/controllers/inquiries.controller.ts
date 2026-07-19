@@ -6,10 +6,18 @@ import { findUserById } from "../services/user.service";
 import { canManageBookings } from "../utils/user-dto";
 
 const EMAIL_RE = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+const VALID_INQUIRY_STATUSES = ["pending", "contacted", "interested", "booked", "closed"] as const;
 
 function pick(value: unknown, max: number) {
   if (value == null) return "";
   return String(value).trim().slice(0, max);
+}
+
+function normalizeInquiryStatus(value: unknown) {
+  const raw = pick(value, 40).toLowerCase();
+  return VALID_INQUIRY_STATUSES.includes(raw as (typeof VALID_INQUIRY_STATUSES)[number])
+    ? raw
+    : "pending";
 }
 
 export async function listInquiries(req: Request, res: Response) {
@@ -33,6 +41,7 @@ export async function listInquiries(req: Request, res: Response) {
       numberOfGuests: r.numberOfGuests != null ? String(r.numberOfGuests) : null,
       message: r.message != null ? String(r.message) : null,
       source: r.source != null ? String(r.source) : null,
+      status: normalizeInquiryStatus(r.status),
       createdAt: r.createdAt ? new Date(r.createdAt as string | Date).toISOString() : null,
     }));
 
@@ -53,6 +62,7 @@ export async function createInquiry(req: Request, res: Response) {
     const numberOfGuests = pick(req.body?.numberOfGuests, 20);
     const message = pick(req.body?.message, 5000);
     const source = pick(req.body?.source, 120) || "hotels-in-bhurban";
+    const status = normalizeInquiryStatus(req.body?.status);
 
     if (!fullName) {
       return res.status(400).json({ error: "Full name is required." });
@@ -70,6 +80,7 @@ export async function createInquiry(req: Request, res: Response) {
       numberOfGuests: numberOfGuests || null,
       message: message || null,
       source,
+      status,
     });
 
     let emailResult = {
@@ -106,6 +117,7 @@ export async function createInquiry(req: Request, res: Response) {
       ok: true,
       id: doc._id,
       saved: true,
+      status,
       emailSent: emailResult.emailSent,
       staffEmailSent: emailResult.staffEmailSent,
       guestEmailSent: emailResult.guestEmailSent,
@@ -119,6 +131,33 @@ export async function createInquiry(req: Request, res: Response) {
       return res.status(503).json({ error: "Database is unavailable. Please try again shortly." });
     }
     return res.status(500).json({ error: "Could not save inquiry." });
+  }
+}
+
+export async function updateInquiry(req: Request, res: Response) {
+  try {
+    const session = await getSessionFromRequest(req);
+    if (!session) return res.status(401).json({ error: "Unauthorized." });
+
+    const me = await findUserById(session.userId);
+    if (!me?.isActive || !canManageBookings(me.role)) {
+      return res.status(403).json({ error: "Forbidden." });
+    }
+
+    const id = String(req.params.id ?? "").trim();
+    if (!id) return res.status(400).json({ error: "Inquiry id is required." });
+
+    const status = normalizeInquiryStatus(req.body?.status);
+    const updated = await InquiryM.findByIdAndUpdate(id, { $set: { status } }, { new: true, runValidators: true }).lean();
+
+    if (!updated) {
+      return res.status(404).json({ error: "Inquiry not found." });
+    }
+
+    return res.json({ ok: true, inquiry: { id: String(updated._id), status: normalizeInquiryStatus(updated.status) } });
+  } catch (err) {
+    console.error("[inquiries] update", err);
+    return res.status(500).json({ error: "Could not update inquiry." });
   }
 }
 

@@ -134,7 +134,7 @@ export default function NewBookingPage() {
   }
 
   return (
-    <div className="mx-auto max-w-2xl pb-10">
+    <div className="mx-auto  pb-10">
       {/* Ambient */}
       <div aria-hidden className="pointer-events-none fixed inset-0 -z-10 bg-[#fdf9f6]" />
       <div

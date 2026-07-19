@@ -83,7 +83,7 @@ export default function SuperadminDashboardPage() {
   const name = me?.fullName?.split(/\s+/)[0] ?? "Admin";
 
   return (
-    <div className="mx-auto max-w-6xl space-y-10 pb-4">
+    <div className="mx-auto space-y-10 pb-4">
       <header className="relative overflow-hidden rounded-3xl border border-[#2a241c] bg-gradient-to-br from-[#1c1916] via-[#231d18] to-[#181510] px-6 py-8 shadow-[0_28px_60px_-24px_rgba(0,0,0,0.45)] md:px-9 md:py-10">
         <div className="pointer-events-none absolute -right-20 -top-28 h-72 w-72 rounded-full bg-[#c9a55b]/15 blur-3xl" />
         <div className="pointer-events-none absolute bottom-0 left-1/4 h-48 w-48 rounded-full bg-[#c9a55b]/10 blur-3xl" />

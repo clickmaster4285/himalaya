@@ -4,6 +4,25 @@ import { forwardSetCookie } from "@/lib/api/proxy";
 
 type Ctx = { params: Promise<{ id: string }> };
 
+export async function PATCH(req: NextRequest, ctx: Ctx) {
+  const { id } = await ctx.params;
+  const url = `${getBackendInternalUrl()}/api/inquiries/${encodeURIComponent(id)}`;
+  const cookie = req.headers.get("cookie") ?? "";
+  const body = await req.text();
+  const res = await fetch(url, {
+    method: "PATCH",
+    headers: { cookie, "Content-Type": "application/json" },
+    body,
+    cache: "no-store",
+  });
+  const resBody = await res.text();
+  const nextRes = new NextResponse(resBody, { status: res.status });
+  const ct = res.headers.get("content-type");
+  if (ct) nextRes.headers.set("Content-Type", ct);
+  forwardSetCookie(res, nextRes);
+  return nextRes;
+}
+
 export async function DELETE(req: NextRequest, ctx: Ctx) {
   const { id } = await ctx.params;
   const url = `${getBackendInternalUrl()}/api/inquiries/${encodeURIComponent(id)}`;

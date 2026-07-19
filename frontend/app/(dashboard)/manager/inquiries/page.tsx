@@ -28,6 +28,8 @@ import {
   type DateFilterPreset,
 } from "@/lib/inquiries/inquiry-date-filters";
 
+type InquiryStatus = "pending" | "contacted" | "interested" | "booked" | "closed";
+
 type InquiryRow = {
   id: string;
   fullName: string;
@@ -38,6 +40,7 @@ type InquiryRow = {
   numberOfGuests: string | null;
   message: string | null;
   source: string | null;
+  status: InquiryStatus | null;
   createdAt: string | null;
 };
 
@@ -48,6 +51,22 @@ const FILTER_OPTIONS: { value: DateFilterPreset; label: string }[] = [
   { value: "month", label: "This month" },
   { value: "custom", label: "Custom range" },
 ];
+
+const INQUIRY_STATUS_OPTIONS: Array<{ value: InquiryStatus; label: string }> = [
+  { value: "pending", label: "Pending" },
+  { value: "contacted", label: "Contacted" },
+  { value: "interested", label: "Interested" },
+  { value: "booked", label: "Booked" },
+  { value: "closed", label: "Closed" },
+];
+
+const INQUIRY_STATUS_LABELS: Record<InquiryStatus, string> = {
+  pending: "Pending",
+  contacted: "Contacted",
+  interested: "Interested",
+  booked: "Booked",
+  closed: "Closed",
+};
 
 function formatSource(source: string | null) {
   if (!source) return "Website";
@@ -65,6 +84,21 @@ function formatWhen(iso: string | null) {
   });
 }
 
+function getStatusBadgeClass(status: InquiryStatus | null | undefined) {
+  switch (status) {
+    case "contacted":
+      return "bg-sky-100 text-sky-800";
+    case "interested":
+      return "bg-violet-100 text-violet-800";
+    case "booked":
+      return "bg-emerald-100 text-emerald-800";
+    case "closed":
+      return "bg-stone-100 text-stone-800";
+    default:
+      return "bg-amber-100 text-amber-800";
+  }
+}
+
 export default function ManagerInquiriesPage() {
   const [inquiries, setInquiries] = useState<InquiryRow[]>([]);
   const [loading, setLoading] = useState(true);
@@ -79,8 +113,8 @@ export default function ManagerInquiriesPage() {
   const [exportTo, setExportTo] = useState("");
   const [expandedId, setExpandedId] = useState<string | null>(null);
   const [deletingId, setDeletingId] = useState<string | null>(null);
-const [currentPage, setCurrentPage] = useState(1);
-const ITEMS_PER_PAGE = 5;
+  const [currentPage, setCurrentPage] = useState(1);
+  const ITEMS_PER_PAGE = 5;
 
 
 
@@ -152,18 +186,16 @@ const ITEMS_PER_PAGE = 5;
     });
   }, [dateFiltered, query]);
 
-// Pagination logic
-const totalPages = Math.ceil(filtered.length / ITEMS_PER_PAGE);
+  const totalPages = Math.ceil(filtered.length / ITEMS_PER_PAGE);
 
-const paginatedInquiries = useMemo(() => {
-  const start = (currentPage - 1) * ITEMS_PER_PAGE;
-  return filtered.slice(start, start + ITEMS_PER_PAGE);
-}, [filtered, currentPage]);
+  const paginatedInquiries = useMemo(() => {
+    const start = (currentPage - 1) * ITEMS_PER_PAGE;
+    return filtered.slice(start, start + ITEMS_PER_PAGE);
+  }, [filtered, currentPage]);
 
-// Reset to page 1 when filters change
-useEffect(() => {
-  setCurrentPage(1);
-}, [query, dateFilter, customFrom, customTo]);
+  useEffect(() => {
+    setCurrentPage(1);
+  }, [query, dateFilter, customFrom, customTo]);
 
 
 
@@ -187,6 +219,26 @@ useEffect(() => {
     return { total: inquiries.length, today, week, month, showing: dateFiltered.length };
   }, [inquiries, dateFiltered.length]);
 
+  async function updateInquiryStatus(id: string, status: InquiryStatus) {
+    setError(null);
+    try {
+      const res = await fetch(`/api/inquiries/${id}`, {
+        method: "PATCH",
+        credentials: "include",
+        headers: { "Content-Type": "application/json" },
+        body: JSON.stringify({ status }),
+      });
+      const data = await res.json().catch(() => ({}));
+      if (!res.ok) {
+        setError(typeof data.error === "string" ? data.error : "Could not update inquiry status.");
+        return;
+      }
+      setInquiries((prev) => prev.map((row) => (row.id === id ? { ...row, status } : row)));
+    } catch {
+      setError("Could not update inquiry status.");
+    }
+  }
+
   async function removeInquiry(id: string, fullName: string) {
     const ok = window.confirm(`Delete inquiry from "${fullName}"? This cannot be undone.`);
     if (!ok) return;
@@ -209,12 +261,11 @@ useEffect(() => {
 
 
   const handleClearFilters = () => {
-  setDateFilter("all");
-  setCustomFrom("");
-  setCustomTo("");
-  setQuery("");
-  // Add any other filters you want to reset
-};
+    setDateFilter("all");
+    setCustomFrom("");
+    setCustomTo("");
+    setQuery("");
+  };
 
   async function handleExport(format: "pdf" | "word") {
     if (!exportFrom || !exportTo) {
@@ -470,6 +521,9 @@ useEffect(() => {
                     <span className="rounded-full bg-[#f3eee4] px-2.5 py-0.5 font-sans text-[11px] font-semibold uppercase tracking-wide text-[#7a6129]">
                       {formatSource(row.source)}
                     </span>
+                    <span className={cn("rounded-full px-2.5 py-0.5 font-sans text-[11px] font-semibold uppercase tracking-wide", getStatusBadgeClass(row.status))}>
+                      {INQUIRY_STATUS_LABELS[(row.status ?? "pending").toLowerCase() as InquiryStatus]}
+                    </span>
                   </div>
                   <p className="mt-1 font-sans text-[13px] text-[#6b655c]">{formatWhen(row.createdAt)}</p>
                   <div className="mt-2 flex flex-wrap gap-x-4 gap-y-1 font-sans text-[13px] text-[#5c564c]">
@@ -489,11 +543,46 @@ useEffect(() => {
                   {open ? <ChevronUp className="h-5 w-5" /> : <ChevronDown className="h-5 w-5" />}
                 </span>
               </button>
-              {/* Delete button (commented) */}
+              {/* <Button
+                type="button"
+                variant="outline"
+                size="icon"
+                className="shrink-0 border-rose-200 text-rose-700 hover:bg-rose-50 hover:text-rose-800"
+                disabled={deletingId === row.id}
+                aria-label={`Delete inquiry from ${row.fullName}`}
+                onClick={() => removeInquiry(row.id, row.fullName)}
+              >
+                {deletingId === row.id ? (
+                  <Loader2 className="h-4 w-4 animate-spin" />
+                ) : (
+                  <Trash2 className="h-4 w-4" />
+                )}
+              </Button> */}
             </div>
 
             {open && (
               <div className="border-t border-[#f0ebe3] bg-[#faf8f5]/80 px-5 py-4">
+                <div className="mb-4 flex flex-wrap items-center gap-2">
+                  <span className="font-sans text-[11px] font-semibold uppercase tracking-[0.12em] text-[#7a6f62]">
+                    Update status
+                  </span>
+                  <Select
+                    value={(row.status ?? "pending").toLowerCase()}
+                    onValueChange={(value) => updateInquiryStatus(row.id, value as InquiryStatus)}
+                  >
+                    <SelectTrigger className="h-9 w-[180px] border-[#ebe4dc] bg-white font-sans text-[13px]">
+                      <SelectValue placeholder="Status" />
+                    </SelectTrigger>
+                    <SelectContent>
+                      {INQUIRY_STATUS_OPTIONS.map((option) => (
+                        <SelectItem key={option.value} value={option.value}>
+                          {option.label}
+                        </SelectItem>
+                      ))}
+                    </SelectContent>
+                  </Select>
+                </div>
+
                 <dl className="grid gap-3 font-sans text-[13px] sm:grid-cols-2">
                   {row.checkInDate && (
                     <div>

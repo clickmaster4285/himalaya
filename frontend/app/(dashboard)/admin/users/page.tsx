@@ -82,7 +82,7 @@ export default function SuperadminUsersPage() {
   }, [users, query]);
 
   return (
-    <div className="mx-auto max-w-5xl space-y-8 pb-4">
+    <div className="mx-auto  space-y-8 pb-4">
       <header className="relative overflow-hidden rounded-3xl border border-[#2a241c] bg-gradient-to-br from-[#1c1916] via-[#231d18] to-[#181510] px-6 py-8 shadow-[0_28px_60px_-24px_rgba(0,0,0,0.45)] md:px-9 md:py-9">
         <div className="pointer-events-none absolute -right-16 -top-24 h-56 w-56 rounded-full bg-[#c9a55b]/12 blur-3xl" />
         <div className="relative flex flex-col gap-6 md:flex-row md:items-end md:justify-between">

@@ -11,6 +11,7 @@ export type InquiryServerPayload = {
   numberOfGuests?: string | null;
   message?: string | null;
   source: string;
+  status?: string;
 };
 
 export type InquirySubmitResult = {

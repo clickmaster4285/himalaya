@@ -34,6 +34,7 @@ export async function POST(req: Request) {
     const numberOfGuests = pickString(body.numberOfGuests, 20);
     const message = pickString(body.message, 5000);
     const source = pickString(body.source, 120) || "website";
+    const status = pickString(body.status, 40);
 
     if (!fullName) {
       return NextResponse.json({ error: "Full name is required." }, { status: 400 });
@@ -51,6 +52,7 @@ export async function POST(req: Request) {
       numberOfGuests: numberOfGuests || null,
       message: message || null,
       source,
+      status: status || undefined,
     });
 
     return NextResponse.json({

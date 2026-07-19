@@ -131,6 +131,13 @@ const InquirySchema = new mongoose.Schema(
     numberOfGuests: { type: String, default: null },
     message: { type: String, default: null },
     source: { type: String, default: "hotels-in-bhurban" },
+    status: {
+      type: String,
+      enum: ["pending", "contacted", "interested", "booked", "closed"],
+      default: "pending",
+      trim: true,
+      lowercase: true,
+    },
   },
   { timestamps: true, collection: "Inquiry" },
 );

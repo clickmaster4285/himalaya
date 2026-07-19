@@ -1,7 +1,7 @@
 "use client";
 
 import { useCallback, useEffect, useMemo, useState } from "react";
-import { ChevronDown, ChevronUp, Loader2, Mail, Phone, RefreshCw, Search } from "lucide-react";
+import { ChevronDown, ChevronUp, Loader2, Mail, Phone, RefreshCw, Search, Trash2 } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { cn } from "@/lib/utils";
 import { DashboardStatCard } from "@/components/dashboard/DashboardStatCard";
@@ -42,6 +42,7 @@ export default function ManagerInquiriesPage() {
   const [error, setError] = useState<string | null>(null);
   const [query, setQuery] = useState("");
   const [expandedId, setExpandedId] = useState<string | null>(null);
+  const [deletingId, setDeletingId] = useState<string | null>(null);
 
   const load = useCallback(async (silent = false) => {
     if (!silent) setLoading(true);
@@ -111,6 +112,26 @@ export default function ManagerInquiriesPage() {
     });
   }, [inquiries, query]);
 
+  async function removeInquiry(id: string, fullName: string) {
+    const ok = window.confirm(`Delete inquiry from "${fullName}"? This cannot be undone.`);
+    if (!ok) return;
+
+    setDeletingId(id);
+    setError(null);
+    try {
+      const res = await fetch(`/api/inquiries/${id}`, { method: "DELETE", credentials: "include" });
+      const data = await res.json().catch(() => ({}));
+      if (!res.ok) {
+        setError(typeof data.error === "string" ? data.error : "Could not delete inquiry.");
+        return;
+      }
+      if (expandedId === id) setExpandedId(null);
+      await load(true);
+    } finally {
+      setDeletingId(null);
+    }
+  }
+
   return (
     <div className="mx-auto max-w-6xl space-y-8">
       <div className="flex flex-col gap-4 sm:flex-row sm:items-end sm:justify-between">
@@ -179,36 +200,53 @@ export default function ManagerInquiriesPage() {
                 key={row.id}
                 className="overflow-hidden rounded-2xl border border-[#ebe4dc] bg-white shadow-sm shadow-black/[0.03]"
               >
-                <button
-                  type="button"
-                  className="flex w-full items-start gap-4 px-5 py-4 text-left transition hover:bg-[#faf8f5]"
-                  onClick={() => setExpandedId(open ? null : row.id)}
-                >
-                  <div className="min-w-0 flex-1">
-                    <div className="flex flex-wrap items-center gap-2">
-                      <h2 className="font-display text-lg font-semibold text-[#1a1816]">{row.fullName}</h2>
-                      <span className="rounded-full bg-[#f3eee4] px-2.5 py-0.5 font-sans text-[11px] font-semibold uppercase tracking-wide text-[#7a6129]">
-                        {formatSource(row.source)}
-                      </span>
-                    </div>
-                    <p className="mt-1 font-sans text-[13px] text-[#6b655c]">{formatWhen(row.createdAt)}</p>
-                    <div className="mt-2 flex flex-wrap gap-x-4 gap-y-1 font-sans text-[13px] text-[#5c564c]">
-                      <span className="inline-flex items-center gap-1.5">
-                        <Mail className="h-3.5 w-3.5 text-[#9a7b3a]" />
-                        {row.email}
-                      </span>
-                      {row.phone && (
-                        <span className="inline-flex items-center gap-1.5">
-                          <Phone className="h-3.5 w-3.5 text-[#9a7b3a]" />
-                          {row.phone}
+                <div className="flex items-start gap-2 px-5 py-4">
+                  <button
+                    type="button"
+                    className="flex min-w-0 flex-1 items-start gap-4 text-left transition hover:opacity-90"
+                    onClick={() => setExpandedId(open ? null : row.id)}
+                  >
+                    <div className="min-w-0 flex-1">
+                      <div className="flex flex-wrap items-center gap-2">
+                        <h2 className="font-display text-lg font-semibold text-[#1a1816]">{row.fullName}</h2>
+                        <span className="rounded-full bg-[#f3eee4] px-2.5 py-0.5 font-sans text-[11px] font-semibold uppercase tracking-wide text-[#7a6129]">
+                          {formatSource(row.source)}
                         </span>
-                      )}
+                      </div>
+                      <p className="mt-1 font-sans text-[13px] text-[#6b655c]">{formatWhen(row.createdAt)}</p>
+                      <div className="mt-2 flex flex-wrap gap-x-4 gap-y-1 font-sans text-[13px] text-[#5c564c]">
+                        <span className="inline-flex items-center gap-1.5">
+                          <Mail className="h-3.5 w-3.5 text-[#9a7b3a]" />
+                          {row.email}
+                        </span>
+                        {row.phone && (
+                          <span className="inline-flex items-center gap-1.5">
+                            <Phone className="h-3.5 w-3.5 text-[#9a7b3a]" />
+                            {row.phone}
+                          </span>
+                        )}
+                      </div>
                     </div>
-                  </div>
-                  <span className="mt-1 shrink-0 text-[#9a9288]">
-                    {open ? <ChevronUp className="h-5 w-5" /> : <ChevronDown className="h-5 w-5" />}
-                  </span>
-                </button>
+                    <span className="mt-1 shrink-0 text-[#9a9288]">
+                      {open ? <ChevronUp className="h-5 w-5" /> : <ChevronDown className="h-5 w-5" />}
+                    </span>
+                  </button>
+                  <Button
+                    type="button"
+                    variant="outline"
+                    size="icon"
+                    className="shrink-0 border-rose-200 text-rose-700 hover:bg-rose-50 hover:text-rose-800"
+                    disabled={deletingId === row.id}
+                    aria-label={`Delete inquiry from ${row.fullName}`}
+                    onClick={() => removeInquiry(row.id, row.fullName)}
+                  >
+                    {deletingId === row.id ? (
+                      <Loader2 className="h-4 w-4 animate-spin" />
+                    ) : (
+                      <Trash2 className="h-4 w-4" />
+                    )}
+                  </Button>
+                </div>
 
                 {open && (
                   <div className="border-t border-[#f0ebe3] bg-[#faf8f5]/80 px-5 py-4">

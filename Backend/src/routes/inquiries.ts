@@ -5,3 +5,4 @@ export const inquiriesRouter = Router();
 
 inquiriesRouter.get("/", inquiriesController.listInquiries);
 inquiriesRouter.post("/", inquiriesController.createInquiry);
+inquiriesRouter.delete("/:id", inquiriesController.deleteInquiry);

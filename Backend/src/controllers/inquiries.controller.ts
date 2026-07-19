@@ -105,3 +105,28 @@ export async function createInquiry(req: Request, res: Response) {
     return res.status(500).json({ error: "Could not save inquiry." });
   }
 }
+
+export async function deleteInquiry(req: Request, res: Response) {
+  try {
+    const session = await getSessionFromRequest(req);
+    if (!session) return res.status(401).json({ error: "Unauthorized." });
+
+    const me = await findUserById(session.userId);
+    if (!me?.isActive || !canManageBookings(me.role)) {
+      return res.status(403).json({ error: "Forbidden." });
+    }
+
+    const id = String(req.params.id ?? "").trim();
+    if (!id) return res.status(400).json({ error: "Inquiry id is required." });
+
+    const result = await InquiryM.deleteOne({ _id: id });
+    if (result.deletedCount === 0) {
+      return res.status(404).json({ error: "Inquiry not found." });
+    }
+
+    return res.json({ ok: true });
+  } catch (err) {
+    console.error("[inquiries] delete", err);
+    return res.status(500).json({ error: "Could not delete inquiry." });
+  }
+}

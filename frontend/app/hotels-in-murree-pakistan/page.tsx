@@ -9,6 +9,7 @@ import {
   Tv, Shield, Users, Calendar, Map, MessageCircle
 } from "lucide-react";
 import { buildWhatsAppBookingUrl } from "@/lib/whatsapp";
+import { submitInquiry } from "@/lib/submit-inquiry-client";
 
 const MURREE_WHATSAPP_URL = buildWhatsAppBookingUrl(
   "a premium stay at Himalaya Villas in Murree"
@@ -897,18 +898,35 @@ function ContactForm() {
     guests: '1',
     message: ''
   });
+  const [isSubmitting, setIsSubmitting] = useState(false);
 
   const handleChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement | HTMLSelectElement>) => {
     const { name, value } = e.target;
     setFormData(prev => ({ ...prev, [name]: value }));
   };
 
-  const handleSubmit = (e: React.FormEvent<HTMLFormElement>) => {
+  const handleSubmit = async (e: React.FormEvent<HTMLFormElement>) => {
     e.preventDefault();
-    // Handle form submission here
-    console.log('Form submitted:', formData);
-    
-    // Reset form after submission
+    setIsSubmitting(true);
+
+    const result = await submitInquiry({
+      fullName: formData.name.trim(),
+      email: formData.email.trim(),
+      phone: formData.phone.trim() || null,
+      checkInDate: formData.checkIn.trim() || null,
+      checkOutDate: formData.checkOut.trim() || null,
+      numberOfGuests: formData.guests.trim() || null,
+      message: formData.message.trim() || null,
+      source: "hotels-in-murree",
+    });
+
+    setIsSubmitting(false);
+
+    if (!result.ok) {
+      alert(result.error);
+      return;
+    }
+
     setFormData({
       name: '',
       email: '',
@@ -918,7 +936,7 @@ function ContactForm() {
       guests: '1',
       message: ''
     });
-    
+
     alert('Thank you for your inquiry! We will contact you soon.');
   };
 
@@ -1019,10 +1037,10 @@ function ContactForm() {
                 </div>
                 <button
                   type="submit"
-                  className="bg-emerald-600 text-white w-full rounded-lg px-4 py-4 text-lg font-semibold transition-transform hover:scale-105 shadow-md min-h-[56px] hover:bg-emerald-700 active:scale-95 touch-manipulation"
-                  disabled={!formData.name || !formData.email}
+                  className="bg-emerald-600 text-white w-full rounded-lg px-4 py-4 text-lg font-semibold transition-transform hover:scale-105 shadow-md min-h-[56px] hover:bg-emerald-700 active:scale-95 touch-manipulation disabled:opacity-60"
+                  disabled={!formData.name || !formData.email || isSubmitting}
                 >
-                  Send Inquiry
+                  {isSubmitting ? "Sending…" : "Send Inquiry"}
                 </button>
               </form>
             </div>

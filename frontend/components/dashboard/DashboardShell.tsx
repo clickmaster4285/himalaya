@@ -12,6 +12,7 @@ import {
   ClipboardList,
   LayoutDashboard,
   Menu,
+  MessageSquare,
   ReceiptText,
   Package,
   Users,
@@ -28,6 +29,7 @@ const ICON_MAP = {
   building: Building2,
   box: Package,
   money: ReceiptText,
+  inquiries: MessageSquare,
 } as const;
 
 export type DashIcon = keyof typeof ICON_MAP;

@@ -9,6 +9,7 @@ import Footer from "@/components/Footer";
 import { ExternalLink, Mail, MapPin, Phone, Send, CheckCircle } from "lucide-react";
 import { SITE_CONTACT, mailtoHref, telHref } from "@/lib/site-contact";
 import { createPageMetadata } from "@/lib/seo/build-metadata";
+import { submitInquiry } from "@/lib/submit-inquiry-client";
 
 const heroImage = "/assets/journal-group-new.jpg";
 
@@ -37,19 +38,33 @@ export default function ContactPage() {
   const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
     setIsSubmitting(true);
-    // Simulate form submission - replace with actual API call
-    setTimeout(() => {
-      setIsSubmitting(false);
-      setIsSubmitted(true);
-      setFormData({
-        name: "",
-        email: "",
-        phone: "",
-        subject: "",
-        message: "",
-      });
-      setTimeout(() => setIsSubmitted(false), 5000);
-    }, 1500);
+    const message = formData.subject
+      ? `Subject: ${formData.subject}\n\n${formData.message}`
+      : formData.message;
+
+    const result = await submitInquiry({
+      fullName: formData.name.trim(),
+      email: formData.email.trim(),
+      phone: formData.phone.trim() || null,
+      message: message.trim() || null,
+      source: "contact-page",
+    });
+
+    setIsSubmitting(false);
+    if (!result.ok) {
+      alert(result.error);
+      return;
+    }
+
+    setIsSubmitted(true);
+    setFormData({
+      name: "",
+      email: "",
+      phone: "",
+      subject: "",
+      message: "",
+    });
+    setTimeout(() => setIsSubmitted(false), 5000);
   };
 
   return (

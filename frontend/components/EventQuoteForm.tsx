@@ -2,6 +2,7 @@
 
 import { useState } from "react";
 import { CheckCircle, AlertCircle } from "lucide-react";
+import { submitInquiry } from "@/lib/submit-inquiry-client";
 
 const EventQuoteForm = () => {
   const [formData, setFormData] = useState({
@@ -67,13 +68,22 @@ const EventQuoteForm = () => {
     setIsSubmitting(true);
     
     try {
-      // Simulate API call - replace with actual endpoint
-      await new Promise(resolve => setTimeout(resolve, 2000));
-      
-      // Here you would normally send the data to your backend
-      console.log('Form submitted:', formData);
-      
-      setSubmitStatus('success');
+      const result = await submitInquiry({
+        fullName: formData.fullName.trim(),
+        email: formData.email.trim(),
+        phone: formData.phoneNumber.trim(),
+        checkInDate: formData.eventDate.trim() || null,
+        message: `Event type: ${formData.eventType}\n\nVision: ${formData.vision.trim()}`,
+        source: "event-quote-form",
+      });
+
+      if (!result.ok) {
+        setSubmitStatus("error");
+        setErrors((prev) => ({ ...prev, form: result.error }));
+        return;
+      }
+
+      setSubmitStatus("success");
       setFormData({
         fullName: '',
         phoneNumber: '',

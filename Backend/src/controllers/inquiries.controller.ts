@@ -1,12 +1,46 @@
 import type { Request, Response } from "express";
 import { InquiryM } from "../models/schemas";
+import { getSessionFromRequest } from "../middleware/req-session";
 import { sendInquiryNotificationEmail } from "../services/inquiry-email.service";
+import { findUserById } from "../services/user.service";
+import { canManageBookings } from "../utils/user-dto";
 
 const EMAIL_RE = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
 
 function pick(value: unknown, max: number) {
   if (value == null) return "";
   return String(value).trim().slice(0, max);
+}
+
+export async function listInquiries(req: Request, res: Response) {
+  try {
+    const session = await getSessionFromRequest(req);
+    if (!session) return res.status(401).json({ error: "Unauthorized." });
+
+    const me = await findUserById(session.userId);
+    if (!me?.isActive || !canManageBookings(me.role)) {
+      return res.status(403).json({ error: "Forbidden." });
+    }
+
+    const rows = await InquiryM.find({}).sort({ createdAt: -1 }).lean();
+    const inquiries = (rows as Array<Record<string, unknown>>).map((r) => ({
+      id: String(r._id),
+      fullName: String(r.fullName ?? ""),
+      email: String(r.email ?? ""),
+      phone: r.phone != null ? String(r.phone) : null,
+      checkInDate: r.checkInDate != null ? String(r.checkInDate) : null,
+      checkOutDate: r.checkOutDate != null ? String(r.checkOutDate) : null,
+      numberOfGuests: r.numberOfGuests != null ? String(r.numberOfGuests) : null,
+      message: r.message != null ? String(r.message) : null,
+      source: r.source != null ? String(r.source) : null,
+      createdAt: r.createdAt ? new Date(r.createdAt as string | Date).toISOString() : null,
+    }));
+
+    return res.json({ inquiries });
+  } catch (err) {
+    console.error("[inquiries] list", err);
+    return res.status(500).json({ error: "Could not load inquiries." });
+  }
 }
 
 export async function createInquiry(req: Request, res: Response) {

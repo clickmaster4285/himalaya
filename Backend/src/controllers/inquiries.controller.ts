@@ -72,16 +72,28 @@ export async function createInquiry(req: Request, res: Response) {
       source,
     });
 
-    const emailResult = await sendInquiryNotificationEmail({
-      fullName,
-      email,
-      phone: phone || null,
-      checkInDate: checkInDate || null,
-      checkOutDate: checkOutDate || null,
-      numberOfGuests: numberOfGuests || null,
-      message: message || null,
-      source,
-    });
+    let emailResult = {
+      emailSent: false,
+      staffEmailSent: false,
+      guestEmailSent: false,
+      method: undefined as string | undefined,
+      detail: undefined as string | undefined,
+    };
+
+    try {
+      emailResult = await sendInquiryNotificationEmail({
+        fullName,
+        email,
+        phone: phone || null,
+        checkInDate: checkInDate || null,
+        checkOutDate: checkOutDate || null,
+        numberOfGuests: numberOfGuests || null,
+        message: message || null,
+        source,
+      });
+    } catch (emailErr) {
+      console.error("[inquiries] email step failed after save:", emailErr);
+    }
 
     if (!emailResult.staffEmailSent) {
       console.warn("[inquiries] Staff notification NOT sent.", emailResult.detail ?? "");
@@ -102,6 +114,10 @@ export async function createInquiry(req: Request, res: Response) {
     });
   } catch (err) {
     console.error("[inquiries]", err);
+    const message = err instanceof Error ? err.message : "";
+    if (message.includes("ECONNREFUSED") || message.includes("MongoServerSelectionError")) {
+      return res.status(503).json({ error: "Database is unavailable. Please try again shortly." });
+    }
     return res.status(500).json({ error: "Could not save inquiry." });
   }
 }

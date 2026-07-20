@@ -9,7 +9,7 @@ type TrackPayload = {
 const API_BASE_URL =
   process.env.NEXT_PUBLIC_BACKEND_URL ??
   process.env.BACKEND_INTERNAL_URL ??
-  "http://127.0.0.1:5051";
+  (typeof window !== "undefined" ? window.location.origin : "http://127.0.0.1:5051");
 
 function getOrCreateSessionId(): string | null {
   if (typeof window === "undefined") return null;

@@ -13,6 +13,7 @@ import { cn } from "@/lib/utils";
 import Navbar from "@/components/Navbar";
 import Footer from "@/components/Footer";
 import { buildWhatsAppBookingUrl } from "@/lib/whatsapp";
+import { trackAndOpen } from "@/lib/trackedClick";
 
 type Faq = { question: string; answer: string; cta?: string };
 type Category = { 
@@ -391,12 +392,25 @@ function AccordionItem({
                 {item.answer}
               </p>
           {item.cta && (
-  <a
-    href={buildWhatsAppBookingUrl("a private villa tour")}
-    target="_blank"
-    rel="noopener noreferrer"
-    className="mt-4 flex items-center gap-3 rounded-lg bg-muted p-4 border-l-2 border-primary hover:bg-muted/80 transition-colors"
-  >
+
+
+
+ <a
+  id="faq_whatsapp_cta"
+  href={buildWhatsAppBookingUrl("a private villa tour")}
+  target="_blank"
+  rel="noopener noreferrer"
+  data-event-type="faq_whatsapp_cta_click"
+  onClick={(e) =>
+    trackAndOpen(e, buildWhatsAppBookingUrl("a private villa tour"), {
+      pageType: "faq",
+    })
+  }
+  className="mt-4 flex items-center gap-3 rounded-lg bg-muted p-4 border-l-2 border-primary hover:bg-muted/80 transition-colors"
+>
+
+
+    
     <div className="flex h-8 w-8 shrink-0 items-center justify-center rounded-full bg-background shadow-sm">
       <PhoneCall className="h-3.5 w-3.5 text-primary" />
     </div>
@@ -445,7 +459,7 @@ export default function FaqClient() {
       <Navbar />
       
       {/* Hero */}
-      <section className="relative flex min-h-[62vh] items-end overflow-hidden bg-foreground">
+      <section id='faq-section' className="relative flex min-h-[62vh] items-end overflow-hidden bg-foreground">
         <Image
           src="/assets/faq-hero.jpg"
           alt="Misty Himalayan peaks at dawn above a pine forest"
@@ -587,21 +601,29 @@ export default function FaqClient() {
                 <span className="h-px w-10 bg-primary"></span>
               </div>
               <h2 className="mt-8 font-display text-4xl leading-tight sm:text-5xl">
-                Can't Find What You're Looking For?
+                Can not Find What You are Looking For?
               </h2>
               <p className="mt-6 text-xl leading-relaxed text-background/70">
-                Our team is here to help. Send us your question and we'll get back to you within 15 minutes during business hours (9 AM - 10 PM).
+                Our team is here to help. Send us your question and we will get back to you within 15 minutes during business hours (9 AM - 10 PM).
               </p>
               <div className="mt-10 space-y-5">
                 <a
-                  href={buildWhatsAppBookingUrl("a private villa tour")}
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className="inline-flex items-center justify-center px-4 sm:px-5 md:px-6 py-2.5 sm:py-3 text-xs sm:text-sm md:text-base font-medium tracking-wider uppercase bg-primary text-primary-foreground hover:bg-primary/90 transition-all duration-300 whitespace-nowrap rounded-sm"
-                >
-                  <span className="hidden xs:inline">Request Private Tour</span>
-                  <span className="xs:hidden">Book Now</span>
-                </a>
+  id="faq_request_private_tour"
+  href={buildWhatsAppBookingUrl("a private villa tour")}
+  target="_blank"
+  rel="noopener noreferrer"
+  data-event-type="faq_request_private_tour_click"
+  onClick={(e) =>
+    trackAndOpen(e, buildWhatsAppBookingUrl("a private villa tour"), {
+      pageType: "faq",
+    })
+  }
+  className="inline-flex items-center justify-center px-4 sm:px-5 md:px-6 py-2.5 sm:py-3 text-xs sm:text-sm md:text-base font-medium tracking-wider uppercase bg-primary text-primary-foreground hover:bg-primary/90 transition-all duration-300 whitespace-nowrap rounded-sm"
+>
+  <span className="hidden xs:inline">Request Private Tour</span>
+  <span className="xs:hidden">Book Now</span>
+</a>
+
               </div>
             </div>
           </div>

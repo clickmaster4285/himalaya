@@ -15,6 +15,7 @@ import {
   MessageSquare,
   ReceiptText,
   Package,
+  Logs,
   Users,
   X,
 } from "lucide-react";
@@ -30,6 +31,7 @@ const ICON_MAP = {
   box: Package,
   money: ReceiptText,
   inquiries: MessageSquare,
+    activity: Logs,
 } as const;
 
 export type DashIcon = keyof typeof ICON_MAP;
@@ -140,10 +142,10 @@ export default function DashboardShell({ title, links, children }: Props) {
   const closeMobile = () => setOpen(false);
 
   return (
-    <div className="min-h-dvh bg-[#fdf9f6]">
-      <div className="flex min-h-dvh flex-col md:flex-row">
+    <div className="min-h-screen bg-[#fdf9f6]">
+      <div className="flex min-h-screen">
         {/* Mobile top bar */}
-        <header className="flex items-center justify-between border-b border-[#1f1a15] bg-gradient-to-r from-[#1c1814] via-[#252018] to-[#1c1814] px-4 py-3.5 shadow-[0_4px_24px_-4px_rgba(0,0,0,0.35)] md:hidden">
+        <header className="fixed top-0 left-0 right-0 z-50 flex items-center justify-between border-b border-[#1f1a15] bg-gradient-to-r from-[#1c1814] via-[#252018] to-[#1c1814] px-4 py-3.5 shadow-[0_4px_24px_-4px_rgba(0,0,0,0.35)] md:hidden">
           <div>
             <p className="font-display text-[10px] font-semibold uppercase tracking-[0.28em] text-[#d4b87a]">Himalaya Villas & Resorts</p>
             <p className="font-display text-lg font-semibold leading-tight text-[#faf6f0]">{title}</p>
@@ -177,7 +179,7 @@ export default function DashboardShell({ title, links, children }: Props) {
               animate={{ height: "auto", opacity: 1 }}
               exit={{ height: 0, opacity: 0 }}
               transition={{ duration: reduceMotion ? 0 : 0.32, ease: [0.22, 1, 0.36, 1] }}
-              className="overflow-hidden border-b border-[#1f1a15] bg-gradient-to-b from-[#252018] to-[#1c1814] md:hidden"
+              className="fixed top-[72px] left-0 right-0 z-40 overflow-hidden border-b border-[#1f1a15] bg-gradient-to-b from-[#252018] to-[#1c1814] md:hidden"
             >
               <div className="px-2 py-5">
                 <NavLinks links={links} pathname={pathname} onNavigate={closeMobile} layoutId="dash-nav-mobile" reduceMotion={reduceMotion} />
@@ -186,13 +188,13 @@ export default function DashboardShell({ title, links, children }: Props) {
           )}
         </AnimatePresence>
 
-        {/* Desktop sidebar */}
-        <aside className="relative hidden w-[280px] shrink-0 flex-col md:flex">
+        {/* Desktop sidebar - fixed */}
+        <aside className="fixed top-0 left-0 bottom-0 hidden w-[280px] shrink-0 flex-col md:flex">
           <div className="pointer-events-none absolute inset-y-0 right-0 w-px bg-gradient-to-b from-transparent via-[#c9a55b]/25 to-transparent" aria-hidden />
           <div className="pointer-events-none absolute inset-0 bg-gradient-to-b from-[#2a231c] via-[#1f1b17] to-[#181410]" aria-hidden />
           <div className="pointer-events-none absolute left-0 top-0 h-32 w-full bg-gradient-to-b from-[#c9a55b]/[0.07] to-transparent" aria-hidden />
 
-          <div className="relative z-10 flex flex-1 flex-col border-r border-[#3d342c]/80">
+          <div className="relative z-10 flex h-full flex-col border-r border-[#3d342c]/80">
             <div className="px-7 pb-4 pt-10">
               <motion.div initial={reduceMotion ? false : { opacity: 0, y: -8 }} animate={{ opacity: 1, y: 0 }} transition={{ duration: 0.45, ease: [0.22, 1, 0.36, 1] }}>
                 <p className="font-display text-[10px] font-semibold uppercase tracking-[0.32em] text-[#d4b87a]">Himalaya Villas & Resorts</p>
@@ -207,18 +209,21 @@ export default function DashboardShell({ title, links, children }: Props) {
               />
             </div>
 
-            <div className="relative z-10 mt-1 flex-1 overflow-y-auto pb-10 [scrollbar-width:thin] [scrollbar-color:rgba(201,165,91,0.35)_transparent]">
+            <div className="relative z-10 flex-1 overflow-y-auto pb-10 [scrollbar-width:thin] [scrollbar-color:rgba(201,165,91,0.35)_transparent]">
               <NavLinks links={links} pathname={pathname} layoutId="dash-nav-desktop" reduceMotion={reduceMotion} />
             </div>
           </div>
         </aside>
 
+        {/* Main content with left padding for sidebar */}
         <motion.main
-          className="min-h-0 flex-1 overflow-auto px-5 py-8 md:px-10 md:py-10"
+          className="min-h-screen flex-1 overflow-auto px-5 py-8 md:ml-[280px] md:px-10 md:py-10"
           initial={reduceMotion ? false : { opacity: 0, y: 8 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.4, ease: [0.22, 1, 0.36, 1] }}
         >
+          {/* Add top padding for mobile header */}
+          <div className="md:hidden h-[72px]" />
           {children}
         </motion.main>
       </div>

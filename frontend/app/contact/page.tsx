@@ -10,6 +10,7 @@ import { ExternalLink, Mail, MapPin, Phone, Send, CheckCircle } from "lucide-rea
 import { SITE_CONTACT, mailtoHref, telHref } from "@/lib/site-contact";
 import { createPageMetadata } from "@/lib/seo/build-metadata";
 import { submitInquiry } from "@/lib/submit-inquiry-client";
+import { trackClick } from "@/lib/trackedClick";
 
 const heroImage = "/assets/journal-group-new.jpg";
 
@@ -92,7 +93,7 @@ export default function ContactPage() {
       </section>
 
       {/* Main Content Section */}
-      <section className="py-12 sm:py-16 md:py-20 lg:py-24">
+      <section id="contact-section" className="py-12 sm:py-16 md:py-20 lg:py-24">
         <div className="max-w-[1280px] mx-auto px-4 sm:px-6 md:px-8 lg:px-10">
           <div className="grid grid-cols-1 lg:grid-cols-12 gap-4 sm:gap-5 md:gap-6 bg-[#f5f2ed] border border-[#eadfce] p-4 sm:p-6 md:p-8">
             
@@ -217,7 +218,7 @@ export default function ContactPage() {
                   <CheckCircle className="h-10 w-10 sm:h-12 sm:w-12 text-green-500 mx-auto mb-3" />
                   <h3 className="text-lg sm:text-xl font-semibold text-green-800 mb-2">Message Sent!</h3>
                   <p className="text-sm text-green-700">
-                    Thank you for reaching out. We'll get back to you within 24 hours.
+                    Thank you for reaching out. We will get back to you within 24 hours.
                   </p>
                 </div>
               ) : (
@@ -310,23 +311,33 @@ export default function ContactPage() {
 
                   {/* Submit Button */}
                   <div className="flex justify-end">
-                    <button
-                      type="submit"
-                      disabled={isSubmitting}
-                      className="px-6 sm:px-8 md:px-10 py-2.5 sm:py-3 bg-[#1a201d] text-white text-[10px] sm:text-[11px] tracking-[0.2em] uppercase hover:bg-black transition-colors disabled:opacity-50 disabled:cursor-not-allowed flex items-center gap-2"
-                    >
-                      {isSubmitting ? (
-                        <>
-                          <div className="h-3 w-3 border-2 border-white border-t-transparent rounded-full animate-spin" />
-                          Sending...
-                        </>
-                      ) : (
-                        <>
-                          <Send className="h-3 w-3" />
-                          Send Message
-                        </>
-                      )}
-                    </button>
+                   <button
+  type="submit"
+  disabled={isSubmitting}
+  onClick={(e) =>
+    trackClick(e, {
+      eventType: "contact_form_submit_click",
+      elementId: "send_message",
+      elementText: "Send Message",
+      metadata: {
+        form: "contact",
+      },
+    })
+  }
+  className="px-6 sm:px-8 md:px-10 py-2.5 sm:py-3 bg-[#1a201d] text-white text-[10px] sm:text-[11px] tracking-[0.2em] uppercase hover:bg-black transition-colors disabled:opacity-50 disabled:cursor-not-allowed flex items-center gap-2"
+>
+  {isSubmitting ? (
+    <>
+      <div className="h-3 w-3 border-2 border-white border-t-transparent rounded-full animate-spin" />
+      Sending...
+    </>
+  ) : (
+    <>
+      <Send className="h-3 w-3" />
+      Send Message
+    </>
+  )}
+</button>
                   </div>
                 </form>
               )}

@@ -64,10 +64,33 @@ function formatEventType(eventType: string): string {
   return EVENT_TYPE_LABELS[eventType] || eventType.replace(/_/g, ' ').replace(/\b\w/g, l => l.toUpperCase());
 }
 
-function formatPage(page: string | null): string {
-  if (!page) return '—';
-  return page.split('/').filter(Boolean).join(' / ') || page;
-}
+
+ function formatPage(page: string | null): string {
+   if (!page || page === '/') return 'Landing Page';
+   if (page === '/events') return 'Events Page';
+   if (page === '/blogs') return 'Blog Page';
+    if (page === '/contact') return 'Contact Page';
+    if (page === '/virtual-tour') return 'Virtual Tour Page';
+   if (page === '/villas') return 'Villa Page';
+
+
+   if (page.startsWith("/villas/")) return "Villa Detail Page";
+
+   return page.split('/').filter(Boolean).join(' / ') || page;
+ }
+
+
+// function formatPage(page: string | null): string {
+//   if (!page) return '—';
+  
+//   if (page === '/' || page === '') {
+//     return 'Landing Page';
+//   }
+
+//   return page.split('/').filter(Boolean).join(' / ') || page;
+// }
+
+
 
 function getSessionDisplay(sessionId: string): string {
   return sessionId.slice(0, 8) + '...' + sessionId.slice(-4);
@@ -110,6 +133,16 @@ export default function ActivitiesClient({ activities }: { activities: Activity[
   // Deduplicate first
   const deduplicated = useMemo(() => deduplicateActivities(activities), [activities]);
 
+const timeFilters = [
+  { label: "All", value: "all" },
+  { label: "Today", value: "today" },
+  { label: "Tomorrow", value: "tomorrow" },
+  { label: "Last 7 Days", value: "week" },
+  { label: "Custom", value: "custom" },
+] as const;
+
+
+  
   // Then filter (search + time)
   const filteredActivities = useMemo(() => {
     let result = [...deduplicated];
@@ -164,7 +197,7 @@ export default function ActivitiesClient({ activities }: { activities: Activity[
   }, [deduplicated, searchTerm, timeFilter, customFrom, customTo]);
 
 
-  
+
   const totalEvents = filteredActivities.length;
   const totalPages = Math.ceil(totalEvents / ITEMS_PER_PAGE);
   const startIndex = (currentPage - 1) * ITEMS_PER_PAGE;
@@ -209,18 +242,12 @@ export default function ActivitiesClient({ activities }: { activities: Activity[
           </div>
 
           <div className="flex flex-wrap gap-2">
-            {[
-              { label: "All", value: "all" },
-              { label: "Today", value: "today" },
-              { label: "Tomorrow", value: "tomorrow" },
-              { label: "Last 7 Days", value: "week" },
-              { label: "Custom", value: "custom" },
-            ].map((f) => (
+            {timeFilters.map((f) => (
               <Button
                 key={f.value}
                 variant={timeFilter === f.value ? "default" : "outline"}
                 size="sm"
-                onClick={() => { setTimeFilter(f.value as any); resetPagination(); }}
+                onClick={() => { setTimeFilter(f.value ); resetPagination(); }}
                 className={timeFilter === f.value ? "bg-[#9a7b3a] text-white" : ""}
               >
                 {f.label}

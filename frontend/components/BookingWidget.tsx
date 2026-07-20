@@ -9,6 +9,7 @@ import "react-calendar/dist/Calendar.css";
 import { Popover, PopoverContent, PopoverTrigger } from "@/components/ui/popover";
 import { Select, SelectContent, SelectItem, SelectTrigger, SelectValue } from "@/components/ui/select";
 import { buildWhatsAppAvailabilityUrl } from "@/lib/whatsapp";
+import { trackAndOpen } from "@/lib/trackedClick";
 
 const BookingWidget = () => {
   // ✅ SINGLE RANGE STATE (correct way for react-calendar)
@@ -97,18 +98,41 @@ const BookingWidget = () => {
 
       {/* CTA */}
       <div className="flex w-full shrink-0 p-2 sm:max-w-[12.5rem] sm:flex-none">
-        <a
-         href={buildWhatsAppAvailabilityUrl(
-  checkIn ?? undefined,
-  checkOut ?? undefined,
-  guests
-)}
-          target="_blank"
-          rel="noopener noreferrer"
-          className="flex w-full items-center justify-center rounded-lg bg-neutral-950 px-2 py-2.5 text-[10px] font-semibold uppercase tracking-[0.14em] text-white hover:bg-neutral-900 sm:text-[11px]"
-        >
-          Check availability
-        </a>
+       
+       
+       
+       
+      <a
+  href={buildWhatsAppAvailabilityUrl(
+    checkIn ?? undefined,
+    checkOut ?? undefined,
+    guests
+  )}
+  target="_blank"
+  rel="noopener noreferrer"
+  data-event-type="booking_widget_check_availability_click"
+  onClick={(e) =>
+    trackAndOpen(
+      e,
+      buildWhatsAppAvailabilityUrl(
+        checkIn ?? undefined,
+        checkOut ?? undefined,
+        guests
+      ),
+      {
+        widget: "booking_widget",
+        checkIn: checkIn?.toISOString(),
+        checkOut: checkOut?.toISOString(),
+        guests,
+      }
+    )
+  }
+  className="flex w-full items-center justify-center rounded-lg bg-neutral-950 px-2 py-2.5 text-[10px] font-semibold uppercase tracking-[0.14em] text-white hover:bg-neutral-900 sm:text-[11px]"
+>
+  Check availability
+</a>
+
+        
       </div>
     </div>
   );

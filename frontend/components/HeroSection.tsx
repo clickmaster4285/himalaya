@@ -1,9 +1,17 @@
+
+"use client";
+
 import Navbar from "./Navbar";
 import BookingWidget from "./BookingWidget";
 import HeroMedia from "./HeroMedia";
 import ScrollIndicator from "./ScrollIndicator";
 import { ArrowRight } from "lucide-react";
+import type { MouseEvent } from "react";
 import { buildWhatsAppBookingUrl } from "@/lib/whatsapp";
+import { trackEvent } from "@/lib/track";
+import { trackAndOpen } from "@/lib/trackedClick";
+
+
 
 const heroPills = [
   "Luxury Event Venue",
@@ -12,9 +20,11 @@ const heroPills = [
  
 ] as const;
 
+
+
 const HeroSection = () => {
   return (
-    <section className="relative h-screen w-full overflow-hidden">
+    <section  id="hero-section"  className="relative h-screen w-full overflow-hidden">
       <div className="absolute inset-0">
         <HeroMedia />
       </div>
@@ -82,31 +92,75 @@ const HeroSection = () => {
 
             {/* Buttons - Responsive layout */}
             <div className="mt-6 sm:mt-7 md:mt-8 flex flex-col sm:flex-row gap-3 sm:gap-4 animate-fade-up-delay-2">
-              <a
-                href={buildWhatsAppBookingUrl()}
-                target="_blank"
-                rel="noopener noreferrer"
-                className="group inline-flex items-center justify-center gap-2 rounded-md bg-neutral-950 px-5 sm:px-6 md:px-7 py-3 sm:py-3.5 text-[11px] sm:text-xs font-semibold uppercase tracking-[0.18em] sm:tracking-[0.2em] text-white shadow-lg transition hover:bg-neutral-900 w-full sm:w-auto"
-              >
-                Check availability
-                <ArrowRight className="h-3.5 w-3.5 sm:h-4 sm:w-4 transition-transform text-white group-hover:translate-x-0.5" aria-hidden />
-              </a>
-              <a
-                href={buildWhatsAppBookingUrl("a private villa tour")}
-                target="_blank"
-                rel="noopener noreferrer"
-                className="inline-flex items-center justify-center rounded-md border-2 border-white/85 bg-white/5 px-5 sm:px-6 md:px-7 py-3 sm:py-3.5 text-[11px] sm:text-xs font-semibold uppercase tracking-[0.18em] sm:tracking-[0.2em] text-white shadow-md backdrop-blur-sm transition hover:bg-white/15 w-full sm:w-auto"
-              >
-                Request private tour
-              </a>
-              <a
-                href={buildWhatsAppBookingUrl()}
-                target="_blank"
-                rel="noopener noreferrer"
-                className="inline-flex items-center justify-center rounded-md border-2 border-white/85 bg-white/5 px-5 sm:px-6 md:px-7 py-3 sm:py-3.5 text-[11px] sm:text-xs font-semibold uppercase tracking-[0.18em] sm:tracking-[0.2em] text-white shadow-md backdrop-blur-sm transition hover:bg-white/15 w-full sm:w-auto"
-              >
-                Book Now
-              </a>
+            
+            
+            
+  <a
+  href={buildWhatsAppBookingUrl()}
+  target="_blank"
+  rel="noopener noreferrer"
+  data-event-type="check_availability_click"
+  onClick={(e) =>
+    trackAndOpen(e, buildWhatsAppBookingUrl(), {
+      button: "check_availability",
+    })
+  }
+  className="group inline-flex items-center justify-center gap-2 rounded-md bg-neutral-950 px-5 sm:px-6 md:px-7 py-3 sm:py-3.5 text-[11px] sm:text-xs font-semibold uppercase tracking-[0.18em] sm:tracking-[0.2em] text-white shadow-lg transition hover:bg-neutral-900 w-full sm:w-auto"
+>
+  Check availability
+  <ArrowRight
+    className="h-3.5 w-3.5 sm:h-4 sm:w-4 transition-transform text-white group-hover:translate-x-0.5"
+    aria-hidden
+  />
+</a>
+
+
+
+
+
+
+
+
+           <a
+  href={buildWhatsAppBookingUrl("a private villa tour")}
+  target="_blank"
+  rel="noopener noreferrer"
+  data-event-type="private_tour_click"
+  onClick={(e) =>
+    trackAndOpen(
+      e,
+      buildWhatsAppBookingUrl("a private villa tour"),
+      {
+        button: "request_private_tour",
+      }
+    )
+  }
+  className="inline-flex items-center justify-center rounded-md border-2 border-white/85 bg-white/5 px-5 sm:px-6 md:px-7 py-3 sm:py-3.5 text-[11px] sm:text-xs font-semibold uppercase tracking-[0.18em] sm:tracking-[0.2em] text-white shadow-md backdrop-blur-sm transition hover:bg-white/15 w-full sm:w-auto"
+>
+  Request private tour
+</a>
+
+
+
+
+
+             <a
+  href={buildWhatsAppBookingUrl()}
+  target="_blank"
+  rel="noopener noreferrer"
+  data-event-type="book_now_click"
+  onClick={(e) =>
+    trackAndOpen(e, buildWhatsAppBookingUrl(), {
+      button: "book_now",
+    })
+  }
+  className="inline-flex items-center justify-center rounded-md border-2 border-white/85 bg-white/5 px-5 sm:px-6 md:px-7 py-3 sm:py-3.5 text-[11px] sm:text-xs font-semibold uppercase tracking-[0.18em] sm:tracking-[0.2em] text-white shadow-md backdrop-blur-sm transition hover:bg-white/15 w-full sm:w-auto"
+>
+  Book Now
+</a>
+
+
+
             </div>
           </div>
 

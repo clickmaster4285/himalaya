@@ -13,6 +13,8 @@ import EventQuoteForm from "@/components/EventQuoteForm";
 import { createEventSlug } from "@/lib/slugify";
 import "./globals.css";
 import { buildWhatsAppBookingUrl } from "@/lib/whatsapp";
+import { trackAndOpen } from "@/lib/trackedClick";
+import EventsHero from "@/components/EventsHero";
 
 export const dynamic = "force-dynamic";
 
@@ -389,49 +391,10 @@ export default function EventsPage() {
 
   <Navbar />
 
-  <div className="relative z-10 w-full px-4 md:px-8 lg:px-10 pt-36 pb-14 md:pt-40 md:pb-20">
-    {/* Same max-w-7xl as your card sections */}
-    <div className="max-w-7xl">
-      {/* Full width content after removing form */}
-      <div className="max-w-3xl">
-        
-        {/* Content aligned left */}
-        <div>
-          <p className="inline-flex items-center gap-2 rounded-full border border-white/30 px-4 py-1 text-xs uppercase tracking-[0.2em] text-white/90">
-            <Heart className="h-4 w-4" />
-            Curated Destination Events
-          </p>
+     <EventsHero />
 
-          <h1 className="mt-5 font-display text-white text-4xl md:text-6xl leading-tight whitespace-nowrap">
-            Events That Look Premium, Feel Effortless
-          </h1>
 
-          <p className="mt-5 max-w-xl text-white/90 text-sm md:text-base leading-relaxed">
-            Plan your wedding, nikah, corporate retreat, or private celebration with end-to-end support in the heart of the Himalayas.
-          </p>
-
-          <div className="mt-8 flex gap-3">
-           <a
-                       href={buildWhatsAppBookingUrl("a private villa tour")}
-                       target="_blank"
-                       rel="noopener noreferrer"
-                       className="inline-flex items-center justify-center px-2.5 sm:px-3 md:px-4 lg:px-5 py-1.5 sm:py-2 text-[8px] sm:text-[9px] md:text-[10px] lg:text-xs font-medium tracking-wider uppercase bg-primary text-primary-foreground hover:bg-primary/90 transition-all duration-300 whitespace-nowrap rounded-sm"
-                     >
-              Plan Your Event
-            </a>
-            <a
-                    href={buildWhatsAppBookingUrl("a private villa tour")}
-                       target="_blank"
-                       rel="noopener noreferrer"
-              className="rounded-md border border-white px-6 py-3 text-center text-xs font-semibold uppercase tracking-wider text-white transition hover:bg-white hover:text-neutral-900"
-            >
-            Book Your Stay
-            </a>
-          </div>
-        </div>
-      </div>
-    </div>
-  </div>
+  
 </section>
 
 

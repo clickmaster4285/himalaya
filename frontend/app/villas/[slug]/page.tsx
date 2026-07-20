@@ -51,10 +51,12 @@ export default async function RoomDetail({ params }: { params: Promise<{ slug: s
   return (
     <>
       <Navbar />
-
+<section  id="villa-details-section">
       <RoomDetailClient room={room} />
 
       <VirtualExperienceSection />
+
+      </section>
       <Footer />
     </>
   );

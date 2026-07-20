@@ -56,7 +56,7 @@ const VillasHero = () => {
           Each villa is a masterpiece of design and comfort, offering unparalleled views of the Himalayas and personalized luxury experiences.
         </p>
 
-        <div className="mt-8 flex gap-3">
+        {/* <div className="mt-8 flex gap-3">
           <button
             onClick={() => setIndex((prev) => (prev - 1 + images.length) % images.length)}
             className="px-4 py-2 rounded-full border border-white/70 text-white bg-black/25 backdrop-blur transition hover:bg-black/40"
@@ -69,7 +69,7 @@ const VillasHero = () => {
           >
             Next
           </button>
-        </div>
+        </div> */}
       </div>
     </section>
   );

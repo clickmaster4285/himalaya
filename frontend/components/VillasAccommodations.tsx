@@ -3,6 +3,8 @@
 import Image from "next/image";
 import { ArrowRight } from "lucide-react";
 import { buildWhatsAppBookingUrl, buildWhatsAppVillaBookingUrl } from "@/lib/whatsapp";
+import { trackEvent } from "@/lib/track";
+import { trackAndOpen, trackClick } from "@/lib/trackedClick";
 
 type Room = {
   tag: string;
@@ -157,22 +159,58 @@ function RoomCard({ room }: { room: Room }) {
 
         <div className="mt-5 h-px w-full bg-[#ece5d3]" />
 
+
         <div className="mt-4 flex flex-col gap-3">
           {/* Price and View Detail row */}
           <div className="flex items-center justify-between">
             <p className="font-serif italic text-xl text-[#2b2b2b]">
               PKR {room.price}
             </p>
-            <a
-               href={`/villas/${room.href}`}
-              className="rounded-md border border-[#ece5d3] bg-[#fdfaf3] px-4 py-2 text-xs font-medium uppercase tracking-[0.2em] text-[#2b2b2b] transition hover:bg-[#f5efdf] hover:border-[#c9a24a]"
-            >
-              View Detail
-            </a>
+
+
+
+           <a
+  href={`/villas/${room.href}`}
+  onClick={(e) =>
+    trackClick(e, {
+      eventType: "villa_view_detail_click",
+      elementId: `view_detail_${room.href}`,
+      metadata: {
+        villa: room.name,
+        tag: room.tag,
+        price: room.price,
+        slug: room.href,
+      },
+    })
+  }
+>
+  View Detail
+</a>
+
+
+
           </div>
 
           {/* Book Now row */}
           <a
+          onClick={(e) =>
+  trackAndOpen(
+    e,
+    buildWhatsAppVillaBookingUrl({
+      name: room.name,
+      tag: room.tag,
+      price: room.price,
+      href: room.href,
+    }),
+    {
+      villa: room.name,
+      tag: room.tag,
+      price: room.price,
+      slug: room.href,
+      source: "villa_card",
+    }
+  )
+}
             href={buildWhatsAppVillaBookingUrl({
   name: room.name,
   tag: room.tag,
@@ -186,6 +224,9 @@ function RoomCard({ room }: { room: Room }) {
             Book Now
           </a>
         </div>
+
+
+
       </div>
     </article>
   );
@@ -193,7 +234,7 @@ function RoomCard({ room }: { room: Room }) {
 
 export default function VillasAccommodations() {
   return (
-    <section className="bg-[#e9e2d1] py-20 px-4 sm:px-6 lg:px-8">
+    <section id="villas-accommodations" className="bg-[#e9e2d1] py-20 px-4 sm:px-6 lg:px-8">
       <div className="mx-auto max-w-7xl">
         {/* Section header */}
         <div className="mb-14 max-w-3xl mx-auto text-center">

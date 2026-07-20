@@ -7,6 +7,8 @@ import { shouldUnoptimizeImageSrc, getValidImageSrc } from "@/lib/image-utils";
 import { motion, useInView, useReducedMotion } from "framer-motion";
 import type { Villa } from "@/lib/villa-types";
 import { VILLA_BLOG_POSTS } from "@/lib/villa-blog-posts";
+import { buildWhatsAppBookingUrl } from "@/lib/whatsapp";
+import { trackAndOpen } from "@/lib/trackedClick";
 
 const ease = [0.22, 1, 0.36, 1] as const;
 
@@ -118,7 +120,7 @@ export default function BlogsPageClient({ villas }: { villas: Villa[] }) {
         </div>
       </section>
 
-      <div className="relative mx-auto max-w-[1400px] px-6 py-16 md:px-12 md:py-20 lg:px-20">
+      <section id="bligs-section" className="relative mx-auto max-w-[1400px] px-6 py-16 md:px-12 md:py-20 lg:px-20">
         {/* Featured */}
         <div ref={gridRef} className="grid gap-10 lg:grid-cols-12 lg:gap-14">
           <div className="lg:col-span-8">
@@ -330,15 +332,30 @@ export default function BlogsPageClient({ villas }: { villas: Villa[] }) {
             >
               View villas
             </Link>
-            <Link
-              href="/book"
-              className="rounded-xl border-2 border-neutral-800 px-8 py-3.5 text-[11px] font-semibold uppercase tracking-[0.2em] text-neutral-900 transition hover:bg-neutral-900 hover:text-white"
-            >
-              Book a stay
-            </Link>
+
+
+
+            <a
+  id="blog_book_stay"
+  href={buildWhatsAppBookingUrl()}
+  target="_blank"
+  rel="noopener noreferrer"
+  data-event-type="blog_book_stay_click"
+  onClick={(e) =>
+    trackAndOpen(e, buildWhatsAppBookingUrl(), {
+      cta: "blog_bottom_cta",
+    })
+  }
+  className="rounded-xl border-2 border-neutral-800 px-8 py-3.5 text-[11px] font-semibold uppercase tracking-[0.2em] text-neutral-900 transition hover:bg-neutral-900 hover:text-white"
+>
+  Book a stay
+</a>
+
+
+
           </div>
         </motion.div>
-      </div>
+      </section>
     </>
   );
 }

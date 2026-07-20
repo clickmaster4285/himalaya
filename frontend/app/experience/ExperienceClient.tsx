@@ -16,6 +16,8 @@ import nightImg2 from "@/public/assets/experience4.jpg";
 
 import Navbar from "@/components/Navbar";
 import Footer from "@/components/Footer";
+import { buildWhatsAppBookingUrl } from "@/lib/whatsapp";
+import { trackAndOpen } from "@/lib/trackedClick";
 
 // Image mapping for client-side use
 const imageMap = {
@@ -154,7 +156,7 @@ export default function ExperienceClient({ chapters }: ExperienceClientProps) {
     
   <Navbar />
       {/* ============ HERO ============ */}
-      <section className="hero relative isolate h-screen min-h-[640px] overflow-hidden">
+      <section  id="experience-section" className="hero relative isolate h-screen min-h-[640px] overflow-hidden">
         <div className="hero-bg absolute inset-0 h-full w-full">
           <Image
             src={dawnImg}
@@ -403,12 +405,25 @@ export default function ExperienceClient({ chapters }: ExperienceClientProps) {
           <p className="mt-8 text-white/85 text-lg  leading-relaxed">
             Tell us when. We will light the fire and brew the first pot of tea.
           </p>
-          <a
-            href="https://wa.me/923045679000"
-            className="mt-12 inline-flex items-center justify-center gap-3 bg-primary px-10 py-4 text-sm tracking-[0.22em] uppercase font-medium hover:bg-primary/80 transition-colors duration-500"
-          >
-            Reserve your stay
-          </a>
+   
+   
+ <a
+  id="reserve_your_stay"
+  href={buildWhatsAppBookingUrl()}
+  target="_blank"
+  rel="noopener noreferrer"
+  data-event-type="experience_reserve_stay_click"
+  onClick={(e) =>
+    trackAndOpen(e, buildWhatsAppBookingUrl(), {
+      pageType: "experience",
+    })
+  }
+  className="mt-12 inline-flex items-center justify-center gap-3 bg-primary px-10 py-4 text-sm tracking-[0.22em] uppercase font-medium hover:bg-primary/80 transition-colors duration-500"
+>
+  Reserve your stay
+</a>
+
+
           <p className="mt-6 text-xs tracking-[0.2em] uppercase text-white/60">
             WhatsApp +92 304 567 9000
           </p>

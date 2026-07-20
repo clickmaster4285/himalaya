@@ -9,6 +9,7 @@ import { type Room } from "@/content/villas/villa-content";
 import VillaAmenitiesSection from "@/components/VillaAmenitiesSection";
 import { amenityImages } from "@/content/villas/villa-content";
 import { buildWhatsAppBookingUrl, buildWhatsAppVillaBookingUrl, buildWhatsAppVillaEnquiryUrl } from "@/lib/whatsapp";
+import { trackAndOpen } from "@/lib/trackedClick";
 
 interface VillasClientProps {
   room: Room;
@@ -160,33 +161,74 @@ export default function VillasClient({ room }: VillasClientProps) {
 
     {/* Buttons */}
     <div className="mt-7 space-y-3">
-      <a
-      href={buildWhatsAppVillaBookingUrl({
-  name: room.name,
-  tag: room.tag,
-  price: room.price,
-  href: room.slug, // or room.href if that's what your Room type has
-})}
-        target="_blank"
-        rel="noopener noreferrer"
-        className="flex w-full items-center justify-center rounded-lg bg-[#2b2b2b] px-5 py-3.5 text-sm font-semibold uppercase tracking-[0.2em] text-white transition duration-300 hover:bg-[#c9a24a]"
-      >
-        Book Now
-      </a>
+  <a
+  id="villa_book_now"
+  href={buildWhatsAppVillaBookingUrl({
+    name: room.name,
+    tag: room.tag,
+    price: room.price,
+    href: room.slug,
+  })}
+  target="_blank"
+  rel="noopener noreferrer"
+  data-event-type="villa_book_now_click"
+  onClick={(e) =>
+    trackAndOpen(
+      e,
+      buildWhatsAppVillaBookingUrl({
+        name: room.name,
+        tag: room.tag,
+        price: room.price,
+        href: room.slug,
+      }),
+      {
+        villa: room.name,
+        slug: room.slug,
+        tag: room.tag,
+        price: room.price,
+      }
+    )
+  }
+  className="flex w-full items-center justify-center rounded-lg bg-[#2b2b2b] px-5 py-3.5 text-sm font-semibold uppercase tracking-[0.2em] text-white transition duration-300 hover:bg-[#c9a24a]"
+>
+  Book Now
+</a>
 
-      <a
-     href={buildWhatsAppVillaEnquiryUrl({
-  name: room.name,
-  tag: room.tag,
-  price: room.price,
-  slug: room.slug,
-})}
-        target="_blank"
-        rel="noopener noreferrer"
-        className="flex w-full items-center justify-center rounded-lg border border-[#e8deca] bg-[#faf7f1] px-5 py-3.5 text-sm font-semibold uppercase tracking-[0.2em] text-[#2b2b2b] transition duration-300 hover:border-[#c9a24a] hover:bg-[#f5efdf]"
-      >
-        Enquire
-      </a>
+
+     <a
+  id="villa_enquire"
+  href={buildWhatsAppVillaEnquiryUrl({
+    name: room.name,
+    tag: room.tag,
+    price: room.price,
+    slug: room.slug,
+  })}
+  target="_blank"
+  rel="noopener noreferrer"
+  data-event-type="villa_enquiry_click"
+  onClick={(e) =>
+    trackAndOpen(
+      e,
+      buildWhatsAppVillaEnquiryUrl({
+        name: room.name,
+        tag: room.tag,
+        price: room.price,
+        slug: room.slug,
+      }),
+      {
+        villa: room.name,
+        slug: room.slug,
+        tag: room.tag,
+        price: room.price,
+      }
+    )
+  }
+  className="flex w-full items-center justify-center rounded-lg border border-[#e8deca] bg-[#faf7f1] px-5 py-3.5 text-sm font-semibold uppercase tracking-[0.2em] text-[#2b2b2b] transition duration-300 hover:border-[#c9a24a] hover:bg-[#f5efdf]"
+>
+  Enquire
+</a>
+
+
     </div>
 
     {/* Divider */}

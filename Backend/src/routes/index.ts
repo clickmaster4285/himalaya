@@ -7,6 +7,8 @@ import { adminUsersRouter } from "./admin-users";
 import { publicVillasRouter, adminVillasRouter } from "./villas";
 import { inquiriesRouter } from "./inquiries";
 import { uploadRouter } from "./upload";
+import { activityRouter } from "./activity";
+
 
 /** Mount every API router on the Express app. */
 export function registerRoutes(app: Express): void {
@@ -23,6 +25,7 @@ export function registerRoutes(app: Express): void {
   app.use("/api/admin/villas", adminVillasRouter);
   app.use("/api/inquiries", inquiriesRouter);
   app.use("/api/upload", uploadRouter);
+  app.use("/api/activity", activityRouter);
 }
 
 export const API_ROUTES = {

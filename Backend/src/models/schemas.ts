@@ -145,6 +145,55 @@ const InquirySchema = new mongoose.Schema(
 InquirySchema.index({ createdAt: -1 });
 InquirySchema.index({ email: 1 });
 
+
+
+
+const ActivitySchema = new mongoose.Schema(
+  {
+    _id: { type: String, default: () => createId() },
+
+    userId: {
+      type: String,
+      default: null,
+      index: true,
+    },
+
+   sessionId: {
+      type: String,
+      default: null,
+      index: true,
+    },
+
+    
+    eventType: {
+      type: String,
+      required: true,
+      index: true,
+    },
+
+    page: String,
+
+    elementId: String,
+
+    elementText: String,
+
+    metadata: {
+      type: mongoose.Schema.Types.Mixed,
+      default: {},
+    },
+
+    ipAddress: String,
+
+    userAgent: String,
+  },
+  {
+    timestamps: true, collection: "Activity",
+  }
+);
+
+ActivitySchema.index({ createdAt: -1 });
+
+export const ActivityM = mongoose.models.Activity ||  mongoose.model("Activity", ActivitySchema);
 export const UserM = mongoose.models.User || mongoose.model("User", UserSchema);
 export const BookingM = mongoose.models.Booking || mongoose.model("Booking", BookingSchema);
 export const VillaM = mongoose.models.Villa || mongoose.model("Villa", VillaSchema);

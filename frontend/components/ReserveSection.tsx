@@ -3,13 +3,14 @@
 import { useRef } from "react";
 import { motion, useInView } from "framer-motion";
 import { buildWhatsAppBookingUrl } from "@/lib/whatsapp";
+import { trackAndOpen } from "@/lib/trackedClick";
 
 const ReserveSection = () => {
   const ref = useRef(null);
   const isInView = useInView(ref, { once: true, margin: "-100px" });
 
   return (
-    <section ref={ref} className="relative bg-[#F3EEE3] py-24 md:py-32">
+    <section  id="reserve-section" ref={ref} className="relative bg-[#F3EEE3] py-24 md:py-32">
       <div className="mx-auto max-w-4xl px-6 text-center">
         <motion.p
           initial={{ opacity: 0, y: 20 }}
@@ -44,14 +45,26 @@ const ReserveSection = () => {
           transition={{ duration: 0.8, delay: 0.45 }}
           className="mt-10"
         >
-          <a
-            href={buildWhatsAppBookingUrl()}
-            target="_blank"
-            rel="noopener noreferrer"
-            className="inline-flex items-center justify-center rounded-sm border border-border bg-transparent px-6 py-3 text-sm font-medium tracking-wide text-foreground transition-colors duration-300 hover:bg-foreground hover:text-background"
-          >
-            Contact Us
-          </a>
+         <a
+  id="contact_us"
+  href={buildWhatsAppBookingUrl()}
+  target="_blank"
+  rel="noopener noreferrer"
+  data-event-type="contact_us_click"
+  onClick={(e) =>
+    trackAndOpen(
+      e,
+      buildWhatsAppBookingUrl(),
+      {
+        button: "contact_us",
+        cta: "reserve_section",
+      }
+    )
+  }
+  className="inline-flex items-center justify-center rounded-sm border border-border bg-transparent px-6 py-3 text-sm font-medium tracking-wide text-foreground transition-colors duration-300 hover:bg-foreground hover:text-background"
+>
+  Contact Us
+</a>
         </motion.div>
       </div>
     </section>

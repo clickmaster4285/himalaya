@@ -175,7 +175,7 @@ export default function ExperienceClient({ chapters }: ExperienceClientProps) {
             </p>
           </div>
 
-          <h1 className="hero-title mt-8 font-serif-display text-5xl md:text-7xl lg:text-[6.5rem] leading-[0.95]">
+          <h1 className="hero-title mt-8 font-display  text-5xl md:text-7xl lg:text-[6.5rem] leading-[0.95]">
             <span className="overflow-hidden inline-block">
               <span className="hero-word inline-block">The</span>
             </span>{" "}
@@ -221,7 +221,7 @@ export default function ExperienceClient({ chapters }: ExperienceClientProps) {
       <p className="reveal-line text-primary text-eyebrow tracking-[0.25em]">An Invitation</p>
     </div>
      */}
-    <div className="mt-10 space-y-4 font-serif-display text-3xl md:text-5xl lg:text-6xl leading-[1.1] text-ink">
+    <div className="mt-10 space-y-4 font-display  text-3xl md:text-5xl lg:text-6xl leading-[1.1] text-ink">
       <div className="overflow-hidden">
         <p className="reveal-line">Some places you visit.</p>
       </div>
@@ -248,19 +248,19 @@ export default function ExperienceClient({ chapters }: ExperienceClientProps) {
       <div className="grid grid-cols-1 md:grid-cols-3 gap-6 mt-8">
         <div className="overflow-hidden">
           <div className="reveal-line text-center">
-            <span className="block font-serif-display text-2xl text-primary">4</span>
+            <span className="block font-display  text-2xl text-primary">4</span>
             <span className="block text-[10px] tracking-[0.15em] uppercase text-ink-soft/60 mt-1">Private Villas</span>
           </div>
         </div>
         <div className="overflow-hidden">
           <div className="reveal-line text-center">
-            <span className="block font-serif-display text-2xl text-primary">∞</span>
+            <span className="block font-display  text-2xl text-primary">∞</span>
             <span className="block text-[10px] tracking-[0.15em] uppercase text-ink-soft/60 mt-1">Mountain Views</span>
           </div>
         </div>
         <div className="overflow-hidden">
           <div className="reveal-line text-center">
-            <span className="block font-serif-display text-2xl text-primary">24/7</span>
+            <span className="block font-display  text-2xl text-primary">24/7</span>
             <span className="block text-[10px] tracking-[0.15em] uppercase text-ink-soft/60 mt-1">Butler Service</span>
           </div>
         </div>
@@ -312,7 +312,7 @@ export default function ExperienceClient({ chapters }: ExperienceClientProps) {
                 {c.n}
               </p>
               <p className="chapter-eyebrow text-primary mt-6">{c.eyebrow}</p>
-              <h2 className="chapter-title mt-5 font-serif-display text-3xl md:text-5xl leading-[1.1] text-ink">
+              <h2 className="chapter-title mt-5 font-display  text-3xl md:text-5xl leading-[1.1] text-ink">
                 {c.title}
               </h2>
               <div className="gold-rule mt-6" />
@@ -345,7 +345,7 @@ export default function ExperienceClient({ chapters }: ExperienceClientProps) {
         <div className="mx-auto max-w-5xl px-6">
           <div className="text-center max-w-2xl mx-auto">
             <p className="text-eyebrow">By the Numbers</p>
-            <h2 className="mt-5 font-serif-display text-3xl md:text-5xl text-ink leading-[1.1]">
+            <h2 className="mt-5 font-display  text-3xl md:text-5xl text-ink leading-[1.1]">
               The quiet math of a stay
             </h2>
             <div className="gold-rule mx-auto mt-6" />
@@ -359,7 +359,7 @@ export default function ExperienceClient({ chapters }: ExperienceClientProps) {
               { to: 24, suffix: "/7", label: "On-call butler" },
             ].map((s, i) => (
               <div key={i} className="border-t border-rule pt-8">
-                <p className="font-serif-display text-5xl md:text-6xl text-primary leading-none">
+                <p className="font-display  text-5xl md:text-6xl text-primary leading-none">
                   {s.note ? (
                     <span>{s.note}</span>
                   ) : (
@@ -394,7 +394,7 @@ export default function ExperienceClient({ chapters }: ExperienceClientProps) {
           <p className="text-eyebrow text-primary" >
             Your Chapter
           </p>
-          <h2 className="mt-6 font-serif-display text-4xl md:text-6xl leading-[1.05]">
+          <h2 className="mt-6 font-display  text-4xl md:text-6xl leading-[1.05]">
             The villa is ready.
             <br />
             <span className="italic text-primary" >

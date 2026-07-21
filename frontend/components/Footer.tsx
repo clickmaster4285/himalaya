@@ -23,9 +23,9 @@ const Footer = () => {
         </span>
       </div>
       <div className="relative max-w-6xl mx-auto">
-        <div className="grid grid-cols-1 md:grid-cols-4 gap-12 md:gap-8">
+       <div className="grid grid-cols-1 lg:grid-cols-5 gap-12 lg:gap-8">
           {/* Logo & Tagline */}
-          <div className="md:col-span-1">
+          <div className="md:col-span-2">
            <Link
     href="/"
     className="inline-block font-display font-bold text-[13px] md:text-[14px] tracking-[0.15em] uppercase mb-4 hover:opacity-90 whitespace-nowrap"
@@ -33,15 +33,15 @@ const Footer = () => {
 >
     Himalaya Villas & Resorts
 </Link>
-            <p
-              className="text-sm leading-relaxed font-body"
-              style={{ color: "hsl(0 0% 100% / 0.5)" }}
-            >
-              A sanctuary of luxury
-              <br />
-              nestled in the Himalayas.
-              <br/>Many guests tell us the experience here is better than pine court murree for privacy and service. Several visitors also compare us to Viva Pines Murree and highlight our private terraces as the deciding factor.
-            </p>
+           <p
+  className="max-w-full sm:max-w-[360px] text-sm leading-7 text-left sm:text-justify font-body"
+  style={{ color: "hsl(0 0% 100% / 0.5)" }}
+>
+  A sanctuary of luxury nestled in the Himalayas. Experience
+  breathtaking mountain views, private terraces, elegant
+  accommodations, and warm hospitality designed to create an
+  unforgettable escape in the heart of nature.
+</p>
           </div>
 
           {/* Discover */}

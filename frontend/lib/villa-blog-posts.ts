@@ -197,7 +197,7 @@ export const VILLA_BLOG_POSTS: VillaBlogPost[] = [
     "Premium event venue at Himalaya Villas & Resorts offering wedding, corporate, and private event hosting in the heart of Bhurban Murree.",
   date: "2026-04-24",
   readMinutes: 10,
-  coverImage: "/assets/himalaya-events-venue.png",
+  coverImage: "/assets/himalaya-event.png",
 }
     
 ];

@@ -1,464 +1,648 @@
-import type { Metadata } from "next";
-import Script from "next/script";
+"use client";
+
+import { useEffect, useRef } from "react";
+import Image from "next/image";
+import Link from "next/link";
+import gsap from "gsap";
+import { ScrollTrigger } from "gsap/ScrollTrigger";
 import Navbar from "@/components/Navbar";
 import Footer from "@/components/Footer";
+import heroVilla from "@/public/assets/hero-villa.jpg";
+import villaInterior from "@/public/assets/villa-interior.jpg";
+import villaTerrace from "@/public/assets/villa-terrace.jpg";
+import villaSuite from "@/public/assets/villa-suite.jpg";
+import { BedDouble, Check, ConciergeBell, UtensilsCrossed } from "lucide-react";
 
-// Simple schema data
-const lodgingBusinessSchema = {
-  "@context": "https://schema.org",
-  "@type": ["LodgingBusiness", "Hotel"],
-  "name": "Himalaya Villas",
-  "description": "Luxury private villas and rest house in Bhurban, Murree Hills, Pakistan.",
-  "url": "https://himalayavillas.com/himalaya-villas-bhurban-murree-rest-house",
-  "telephone": "+92-304-567-9000",
-  "priceRange": "PKR 40,000 - PKR 180,000",
-  "address": { 
-    "@type": "PostalAddress", 
-    "addressLocality": "Bhurban", 
-    "addressRegion": "Murree Hills", 
-    "addressCountry": "PK" 
-  },
-  "geo": { 
-    "@type": "GeoCoordinates", 
-    "latitude": "33.9487", 
-    "longitude": "73.4739" 
-  },
-  "amenityFeature": [
-    { "@type": "LocationFeatureSpecification", "name": "Private Villa", "value": true }, 
-    { "@type": "LocationFeatureSpecification", "name": "Halal Food", "value": true }, 
-    { "@type": "LocationFeatureSpecification", "name": "Mountain Views", "value": true }
-  ],
-  "checkinTime": "15:00", 
-  "checkoutTime": "12:00"
-};
-
-export const metadata: Metadata = {
-  title: "Himalaya Villas Bhurban Murree | Luxury Rest House & Private Villas | Book Direct",
-  description: "Himalaya Villas is Bhurban Murree's premier luxury rest house - private mountain villas with panoramic Himalayan views, butler service & premium dining. 45 min from Islamabad. WhatsApp to book.",
-  keywords: "Himalaya Villas Bhurban Murree Rest House, luxury villas Bhurban, private villa Murree, rest house near Islamabad, luxury accommodation Bhurban, mountain villa Pakistan, premium rest house Murree Hills, villa rental Bhurban, family villa Murree, corporate retreat Bhurban",
-  openGraph: {
-    title: "Himalaya Villas Bhurban - Pakistan's Premier Luxury Mountain Rest House",
-    description: "Private luxury villas in Bhurban, Murree Hills. Escape the city. Book direct for the best rate.",
-    type: "website",
-    url: "https://himalayavillas.com/himalaya-villas-bhurban-murree-rest-house",
-    images: [
-      {
-        url: "https://himalayavillas.com/assets/gallery-exterior.jpg",
-        alt: "Himalaya Villas Bhurban - luxury rest house with panoramic Murree Hills mountain views",
-      },
-    ],
-  },
-  alternates: {
-    canonical: "https://himalayavillas.com/himalaya-villas-bhurban-murree-rest-house",
-  },
-};
+const galleryImages = [
+  heroVilla,
+  villaInterior,
+  villaTerrace,
+  villaSuite,
+];
 
 export default function HimalayaVillasBhurbanMurreeRestHouse() {
-  return (
-    <div className="min-h-screen bg-[#fcfbf8]">
-      {/* Schema Markup */}
-      <Script
-        id="lodging-business-schema"
-        type="application/ld+json"
-        dangerouslySetInnerHTML={{ __html: JSON.stringify(lodgingBusinessSchema) }}
-      />
+  const rootRef = useRef<HTMLDivElement>(null);
+  const heroRef = useRef<HTMLDivElement>(null);
 
+  useEffect(() => {
+    if (typeof window === "undefined") return;
+
+    gsap.registerPlugin(ScrollTrigger);
+
+    const ctx = gsap.context(() => {
+      // Hero animations
+      gsap.from(".hero-eyebrow", { opacity: 0, y: 14, duration: 0.9, delay: 0.15 });
+      gsap.from(".hero-tagline", { opacity: 0, y: 14, duration: 1, delay: 0.7 });
+      gsap.from(".hero-rule", {
+        scaleX: 0,
+        transformOrigin: "center",
+        duration: 1,
+        delay: 0.85,
+      });
+
+      // Parallax hero image
+      gsap.to(".hero-image", {
+        yPercent: 12,
+        ease: "none",
+        scrollTrigger: {
+          trigger: heroRef.current,
+          start: "top top",
+          end: "bottom top",
+          scrub: true,
+        },
+      });
+
+      // Reveal animations for sections
+      gsap.utils.toArray<HTMLElement>("[data-reveal]").forEach((el) => {
+        gsap.from(el, {
+          opacity: 0,
+          y: 36,
+          duration: 1,
+          scrollTrigger: {
+            trigger: el,
+            start: "top 85%",
+          },
+        });
+      });
+
+      // Staggered cards
+      gsap.utils.toArray<HTMLElement>("[data-stagger]").forEach((el) => {
+        const children = el.querySelectorAll(".stagger-item");
+        gsap.from(children, {
+          opacity: 0,
+          y: 30,
+          duration: 0.8,
+          stagger: 0.15,
+          scrollTrigger: {
+            trigger: el,
+            start: "top 85%",
+          },
+        });
+      });
+    }, rootRef);
+
+    return () => ctx.revert();
+  }, []);
+
+  return (
+    <>
       <Navbar />
 
-      {/* Hero Section */}
-      <section className="relative bg-[#1b261b] text-white py-24 px-6">
-        <div className="max-w-6xl mx-auto text-center">
-          <h1 className="text-4xl md:text-6xl font-bold mb-6 leading-tight">
-            Himalaya Villas Bhurban Murree - Pakistan's Premier Luxury Rest House
-          </h1>
-          <p className="text-xl md:text-2xl mb-8 text-[#c9a55b] font-semibold">
-            Private Mountain Villas | Bhurban, Murree Hills | 45 Minutes from Islamabad
-          </p>
-          <p className="text-lg mb-12 max-w-4xl mx-auto leading-relaxed">
-            Himalaya Villas is a private luxury villa compound set within the pine-covered heights of Bhurban, Murree Hills - designed for guests who expect exclusivity, privacy, and elevated experiences.
-          </p>
-          
-          {/* CTA Box */}
-          <div className="bg-[#c9a55b] text-[#1b261b] p-8 rounded-lg max-w-2xl mx-auto">
-            <h3 className="text-2xl font-bold mb-4">Check Availability</h3>
-            <p className="text-lg mb-6">Most weekends are fully reserved 2-3 weeks in advance.</p>
-            <div className="flex flex-col sm:flex-row gap-4 justify-center items-center">
-              <a 
-                href="https://wa.me/923045679000" 
-                className="bg-[#1b261b] text-white px-8 py-3 rounded-lg font-semibold hover:bg-[#2a342a] transition-colors"
-                target="_blank"
-                rel="noopener noreferrer"
-              >
-                WhatsApp: +92-304-567-9000
-              </a>
-              <span className="text-lg">| Instant Response</span>
-            </div>
-            <p className="mt-4">Or visit: <a href="/contact" className="underline hover:no-underline">himalayavillas.com/contact</a></p>
-          </div>
-        </div>
-      </section>
+      <div ref={rootRef} className="text-[#1b1b1b] min-h-screen">
+        {/* HERO */}
+        <header
+          ref={heroRef}
+          className="relative isolate overflow-hidden h-[88vh] min-h-[600px]"
+        >
+          <Image
+            src={heroVilla}
+            alt="Himalaya Villas Bhurban - Luxury mountain villa with panoramic views"
+            fill
+            priority
+            className="hero-image object-cover scale-110"
+          />
 
-      {/* Key Features */}
-      <section className="py-20 px-6">
-        <div className="max-w-6xl mx-auto">
-          <h2 className="text-3xl md:text-4xl font-bold text-[#1b261b] mb-8">
-            Why Choose Himalaya Villas?
-          </h2>
-          <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-6">
-            <div className="bg-white p-6 rounded-lg shadow-lg text-center">
-              <h3 className="text-xl font-bold text-[#c9a55b] mb-4">Complete Privacy</h3>
-              <p className="text-gray-700">Private villa exclusivity - no shared spaces with other guests</p>
-            </div>
-            <div className="bg-white p-6 rounded-lg shadow-lg text-center">
-              <h3 className="text-xl font-bold text-[#c9a55b] mb-4">Halal Certified</h3>
-              <p className="text-gray-700">100% Halal kitchen - all meals, all times</p>
-            </div>
-            <div className="bg-white p-6 rounded-lg shadow-lg text-center">
-              <h3 className="text-xl font-bold text-[#c9a55b] mb-4">Modern Amenities</h3>
-              <p className="text-gray-700">High-speed WiFi, AC, heating, fireplace</p>
-            </div>
-            <div className="bg-white p-6 rounded-lg shadow-lg text-center">
-              <h3 className="text-xl font-bold text-[#c9a55b] mb-4">Year-Round Access</h3>
-              <p className="text-gray-700">All seasons including winter with snow views</p>
-            </div>
-          </div>
-        </div>
-      </section>
+          <div className="absolute inset-0 bg-gradient-to-b from-black/60 via-black/30 to-black/70" />
 
-      {/* Property Overview */}
-      <section className="py-20 px-6 bg-gray-50">
-        <div className="max-w-6xl mx-auto">
-          <h2 className="text-3xl md:text-4xl font-bold text-[#1b261b] mb-8">
-            Property Overview
-          </h2>
-          <p className="text-lg mb-8 leading-relaxed text-gray-700">
-            Himalaya Villas is a premium luxury villa property located in Bhurban, Murree Hills, Pakistan - at an elevation that delivers cool mountain air, unobstructed Himalayan views, and natural pine forest surroundings year-round.
-          </p>
-          
-          <div className="grid md:grid-cols-2 gap-8">
-            <div className="bg-white p-6 rounded-lg shadow-lg">
-              <h3 className="text-xl font-bold text-[#c9a55b] mb-4">Location Details</h3>
-              <ul className="space-y-3 text-gray-700">
-                <li className="flex items-start">
-                  <span className="text-[#c9a55b] mr-2">-</span>
-                  <span>Bhurban, Murree Hills, Khyber Pakhtunkhwa, Pakistan</span>
-                </li>
-                <li className="flex items-start">
-                  <span className="text-[#c9a55b] mr-2">-</span>
-                  <span>Elevation: 6,500+ feet above sea level</span>
-                </li>
-                <li className="flex items-start">
-                  <span className="text-[#c9a55b] mr-2">-</span>
-                  <span>Setting: Pine forest, Himalayan foothills</span>
-                </li>
-                <li className="flex items-start">
-                  <span className="text-[#c9a55b] mr-2">-</span>
-                  <span>Best Seasons: Spring, Summer, Autumn, Winter</span>
-                </li>
-              </ul>
-            </div>
-            
-            <div className="bg-white p-6 rounded-lg shadow-lg">
-              <h3 className="text-xl font-bold text-[#c9a55b] mb-4">Property Information</h3>
-              <ul className="space-y-3 text-gray-700">
-                <li className="flex items-start">
-                  <span className="text-[#c9a55b] mr-2">-</span>
-                  <span>Property Type: Luxury Private Villas</span>
-                </li>
-                <li className="flex items-start">
-                  <span className="text-[#c9a55b] mr-2">-</span>
-                  <span>Check-In: 3:00 PM | Check-Out: 12:00 PM</span>
-                </li>
-                <li className="flex items-start">
-                  <span className="text-[#c9a55b] mr-2">-</span>
-                  <span>Minimum Stay: 2 nights (peak season)</span>
-                </li>
-                <li className="flex items-start">
-                  <span className="text-[#c9a55b] mr-2">-</span>
-                  <span>Food Policy: 100% Halal certified</span>
-                </li>
-              </ul>
-            </div>
-          </div>
-        </div>
-      </section>
+          <div className="absolute inset-0 flex items-center justify-center px-6">
+            <div className="max-w-4xl text-center text-white">
+              <p className="hero-eyebrow text-sm  tracking-widest  mb-4">
+                Luxury Mountain Retreat
+              </p>
 
-      {/* Villa Features & Amenities */}
-      <section className="py-20 px-6">
-        <div className="max-w-6xl mx-auto">
-          <h2 className="text-3xl md:text-4xl font-bold text-[#1b261b] mb-8">
-            Villa Features & Amenities
-          </h2>
-          <p className="text-lg mb-8 leading-relaxed text-gray-700">
-            Every feature at Himalaya Villas has been selected to provide world-class mountain retreat experiences.
-          </p>
-          
-          <div className="grid md:grid-cols-3 gap-8">
-            <div>
-              <h3 className="text-2xl font-bold text-[#c9a55b] mb-6">Accommodation</h3>
-              <ul className="space-y-3 text-gray-700">
-                <li className="flex items-start">
-                  <span className="text-[#c9a55b] mr-2">-</span>
-                  Private luxury villas with dedicated entrance
-                </li>
-                <li className="flex items-start">
-                  <span className="text-[#c9a55b] mr-2">-</span>
-                  Floor-to-ceiling mountain view windows
-                </li>
-                <li className="flex items-start">
-                  <span className="text-[#c9a55b] mr-2">-</span>
-                  Premium beds with luxury linen
-                </li>
-                <li className="flex items-start">
-                  <span className="text-[#c9a55b] mr-2">-</span>
-                  Modern kitchen in self-catering villas
-                </li>
-                <li className="flex items-start">
-                  <span className="text-[#c9a55b] mr-2">-</span>
-                  Fireplace and central heating
-                </li>
-              </ul>
-            </div>
-            
-            <div>
-              <h3 className="text-2xl font-bold text-[#c9a55b] mb-6">Dining</h3>
-              <ul className="space-y-3 text-gray-700">
-                <li className="flex items-start">
-                  <span className="text-[#c9a55b] mr-2">-</span>
-                  In-villa private dining service
-                </li>
-                <li className="flex items-start">
-                  <span className="text-[#c9a55b] mr-2">-</span>
-                  Pakistani & Continental menus
-                </li>
-                <li className="flex items-start">
-                  <span className="text-[#c9a55b] mr-2">-</span>
-                  Private BBQ terrace with mountain views
-                </li>
-                <li className="flex items-start">
-                  <span className="text-[#c9a55b] mr-2">-</span>
-                  Fresh breakfast & afternoon tea
-                </li>
-                <li className="flex items-start">
-                  <span className="text-[#c9a55b] mr-2">-</span>
-                  100% Halal certified kitchen
-                </li>
-              </ul>
-            </div>
-            
-            <div>
-              <h3 className="text-2xl font-bold text-[#c9a55b] mb-6">Services</h3>
-              <ul className="space-y-3 text-gray-700">
-                <li className="flex items-start">
-                  <span className="text-[#c9a55b] mr-2">-</span>
-                  Dedicated villa host service
-                </li>
-                <li className="flex items-start">
-                  <span className="text-[#c9a55b] mr-2">-</span>
-                  24-hour concierge assistance
-                </li>
-                <li className="flex items-start">
-                  <span className="text-[#c9a55b] mr-2">-</span>
-                  Guided mountain walks & trails
-                </li>
-                <li className="flex items-start">
-                  <span className="text-[#c9a55b] mr-2">-</span>
-                  Private bonfire evenings
-                </li>
-                <li className="flex items-start">
-                  <span className="text-[#c9a55b] mr-2">-</span>
-                  Airport transfers available
-                </li>
-              </ul>
-            </div>
-          </div>
-        </div>
-      </section>
+              <h1 className="text-4xl md:text-7xl font-display leading-tight">
+                Himalaya Villas
+                <span className="block text-2xl md:text-7xl font-light mt-2 text-[#c9a55b]">
+                  Bhurban, Murree Hills
+                </span>
+              </h1>
 
-      {/* Packages */}
-      <section className="py-20 px-6 bg-gray-50">
-        <div className="max-w-6xl mx-auto">
-          <h2 className="text-3xl md:text-4xl font-bold text-[#1b261b] mb-8">
-            Packages & Rates
-          </h2>
-          <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
-            <div className="bg-white p-6 rounded-lg shadow-lg">
-              <h3 className="text-xl font-bold text-[#c9a55b] mb-4">Family Mountain Escape</h3>
-              <p className="text-gray-700 mb-4">Families (4-8 guests) | 2-3 nights</p>
-              <p className="text-2xl font-bold text-[#1b261b] mb-4">PKR 80,000-150,000/stay</p>
-              <p className="text-gray-600 text-sm">Breakfast & dinner | Villa host | Kids' activities</p>
-            </div>
-            <div className="bg-white p-6 rounded-lg shadow-lg">
-              <h3 className="text-xl font-bold text-[#c9a55b] mb-4">Honeymoon Sanctuary</h3>
-              <p className="text-gray-700 mb-4">Couples | 2 nights</p>
-              <p className="text-2xl font-bold text-[#1b261b] mb-4">PKR 65,000-95,000/stay</p>
-              <p className="text-gray-600 text-sm">Suite with views | Romantic dinner | Bonfire</p>
-            </div>
-            <div className="bg-white p-6 rounded-lg shadow-lg">
-              <h3 className="text-xl font-bold text-[#c9a55b] mb-4">Corporate Retreat</h3>
-              <p className="text-gray-700 mb-4">Teams (10-50 guests) | 2 nights+</p>
-              <p className="text-2xl font-bold text-[#1b261b] mb-4">PKR 180,000+ (10 pax)</p>
-              <p className="text-gray-600 text-sm">Conference room | All meals | Team activities</p>
-            </div>
-          </div>
-        </div>
-      </section>
+              <p className="hero-tagline mt-6 text-lg text-white/85 max-w-2xl mx-auto">
+                Private luxury villas nestled in the pine forests of Murree Hills — 
+                where Himalayan views meet world-class hospitality
+              </p>
 
-      {/* FAQ */}
-      <section className="py-20 px-6">
-        <div className="max-w-6xl mx-auto">
-          <h2 className="text-3xl md:text-4xl font-bold text-[#1b261b] mb-8">
-            Frequently Asked Questions
-          </h2>
-          <div className="space-y-6">
-            <div className="bg-white p-6 rounded-lg shadow-lg">
-              <h3 className="text-xl font-bold text-[#c9a55b] mb-3">How far is Himalaya Villas from Islamabad?</h3>
-              <p className="text-gray-700">Approximately 45-60 minutes by road from central Islamabad via M-1 Motorway and Murree road.</p>
-            </div>
-            <div className="bg-white p-6 rounded-lg shadow-lg">
-              <h3 className="text-xl font-bold text-[#c9a55b] mb-3">Is the food fully Halal?</h3>
-              <p className="text-gray-700">Yes. All food preparation at Himalaya Villas is 100% Halal across all dining services.</p>
-            </div>
-            <div className="bg-white p-6 rounded-lg shadow-lg">
-              <h3 className="text-xl font-bold text-[#c9a55b] mb-3">Can you accommodate corporate retreats?</h3>
-              <p className="text-gray-700">Yes. We offer conference setup, AV equipment, group dining, and confidential private surroundings.</p>
-            </div>
-          </div>
-        </div>
-      </section>
+              {/* <div className="hero-rule mx-auto mt-8 h-px w-24 bg-[#c9a55b]" /> */}
 
-      {/* Location & Access */}
-      <section className="py-20 px-6 bg-gray-50">
-        <div className="max-w-6xl mx-auto">
-          <h2 className="text-3xl md:text-4xl font-bold text-[#1b261b] mb-8">
-            Location & Access
-          </h2>
-          <p className="text-lg mb-8 leading-relaxed text-gray-700">
-            Bhurban is located in the Murree Hills at approximately 6,500 feet above sea level - high enough for cool summer temperatures and reliable winter snowfall.
-          </p>
-          
-          <h3 className="text-2xl font-bold text-[#1b261b] mb-6">Driving Distances</h3>
-          <div className="bg-white rounded-lg shadow-lg overflow-hidden">
-            <table className="w-full">
-              <thead>
-                <tr className="bg-[#1b261b] text-white">
-                  <th className="p-4 text-left">From</th>
-                  <th className="p-4 text-left">Distance</th>
-                </tr>
-              </thead>
-              <tbody>
-                <tr className="border-b">
-                  <td className="p-4 font-semibold">Islamabad (F-6)</td>
-                  <td className="p-4 text-gray-700">45-60 minutes</td>
-                </tr>
-                <tr className="border-b bg-gray-50">
-                  <td className="p-4 font-semibold">Rawalpindi (Saddar)</td>
-                  <td className="p-4 text-gray-700">40-50 minutes</td>
-                </tr>
-                <tr className="border-b">
-                  <td className="p-4 font-semibold">Lahore (Gulberg)</td>
-                  <td className="p-4 text-gray-700">4-4.5 hours</td>
-                </tr>
-                <tr className="border-b bg-gray-50">
-                  <td className="p-4 font-semibold">Islamabad Airport</td>
-                  <td className="p-4 text-gray-700">55-70 minutes</td>
-                </tr>
-                <tr className="bg-gray-50">
-                  <td className="p-4 font-semibold">Abbottabad</td>
-                  <td className="p-4 text-gray-700">2.5-3 hours</td>
-                </tr>
-              </tbody>
-            </table>
-          </div>
-          
-          <div className="mt-8 p-6 bg-[#c9a55b] text-[#1b261b] rounded-lg">
-            <p className="font-semibold mb-2">Travel Tips:</p>
-            <p className="mb-2">Early departure recommended on Saturdays (before 8:00 AM)</p>
-            <p>Real-time traffic guidance available via WhatsApp</p>
-          </div>
-        </div>
-      </section>
+              <div className="mt-10 flex flex-col sm:flex-row gap-4 justify-center">
+                <a
+                  href="https://wa.me/923045679000"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="inline-block bg-[#c9a55b] hover:bg-[#b8944a] text-[#1b1b1b] font-semibold px-10 py-4 rounded-sm transition-colors"
+                >
+                  Book on WhatsApp
+                </a>
+                <a
+                  href="#packages"
+                  className="inline-block border border-white/40 hover:border-white text-white font-semibold px-10 py-4 rounded-sm transition-colors"
+                >
+                  View Packages
+                </a>
+              </div>
 
-      {/* Guest Profiles */}
-      <section className="py-20 px-6">
-        <div className="max-w-6xl mx-auto">
-          <h2 className="text-3xl md:text-4xl font-bold text-[#1b261b] mb-8">
-            Who Stays at Himalaya Villas
-          </h2>
-          <div className="grid md:grid-cols-2 gap-8">
-            <div className="bg-white p-6 rounded-lg shadow-lg">
-              <h3 className="text-xl font-bold text-[#c9a55b] mb-4">Affluent Families</h3>
-              <p className="text-gray-700 mb-4">From Islamabad, Rawalpindi, and Lahore seeking safe, luxurious mountain retreats for school holidays and weekends.</p>
-              <ul className="space-y-2 text-gray-600 text-sm">
-                <li>Safe environment for children</li>
-                <li>Spacious private villas</li>
-                <li>Family-friendly activities</li>
-              </ul>
-            </div>
-            
-            <div className="bg-white p-6 rounded-lg shadow-lg">
-              <h3 className="text-xl font-bold text-[#c9a55b] mb-4">Corporate Teams</h3>
-              <p className="text-gray-700 mb-4">HR directors and CEOs using Himalaya Villas for annual offsites, strategy retreats, and leadership meetings.</p>
-              <ul className="space-y-2 text-gray-600 text-sm">
-                <li>Conference facilities</li>
-                <li>Confidential environment</li>
-                <li>Team building activities</li>
-              </ul>
-            </div>
-            
-            <div className="bg-white p-6 rounded-lg shadow-lg">
-              <h3 className="text-xl font-bold text-[#c9a55b] mb-4">HNW Couples</h3>
-              <p className="text-gray-700 mb-4">High-net-worth couples and honeymooners valuing privacy and exclusive romantic mountain settings.</p>
-              <ul className="space-y-2 text-gray-600 text-sm">
-                <li>Private suites with views</li>
-                <li>Romantic dining experiences</li>
-                <li>Bonfire evenings</li>
-              </ul>
-            </div>
-            
-            <div className="bg-white p-6 rounded-lg shadow-lg">
-              <h3 className="text-xl font-bold text-[#c9a55b] mb-4">Diaspora Visitors</h3>
-              <p className="text-gray-700 mb-4">Families from UAE, UK, and Saudi Arabia including Bhurban in their Pakistan travel itinerary.</p>
-              <ul className="space-y-2 text-gray-600 text-sm">
-                <li>Premium mountain experience</li>
-                <li>Cultural familiarity</li>
-                <li>Group accommodations</li>
-              </ul>
+              <div className="mt-12 flex justify-center gap-12 text-sm">
+                <div className="text-center">
+                  <div className="text-2xl font-light text-[#c9a55b]">45</div>
+                  <div className="text-white/60">Minutes from Islamabad</div>
+                </div>
+                <div className="text-center">
+                  <div className="text-2xl font-light text-[#c9a55b]">6,500</div>
+                  <div className="text-white/60">Feet Above Sea Level</div>
+                </div>
+                <div className="text-center">
+  <div className="text-2xl font-light text-[#c9a55b]">24/7</div>
+  <div className="text-white/60">Guest Support</div>
+</div>
+              </div>
             </div>
           </div>
-        </div>
-      </section>
+        </header>
 
-      {/* Final CTA */}
-      <section className="py-20 px-6 bg-[#1b261b] text-white">
-        <div className="max-w-6xl mx-auto text-center">
-          <h2 className="text-3xl md:text-4xl font-bold mb-8 text-[#c9a55b]">
-            Ready to Book Your Stay?
-          </h2>
-          <p className="text-lg mb-8">Tell us your dates, group size, and occasion - we'll confirm availability instantly.</p>
-          <div className="bg-[#c9a55b] text-[#1b261b] p-8 rounded-lg max-w-3xl mx-auto">
-            <h3 className="text-2xl font-bold mb-6">Instant WhatsApp Response</h3>
-            <div className="flex flex-col sm:flex-row gap-4 justify-center items-center">
-              <a 
-                href="https://wa.me/923045679000" 
-                className="bg-[#1b261b] text-white px-8 py-3 rounded-lg font-semibold hover:bg-[#2a342a] transition-colors"
-                target="_blank"
-                rel="noopener noreferrer"
-              >
-                WhatsApp Now
-              </a>
-              <a 
-                href="/contact" 
-                className="bg-white text-[#1b261b] px-8 py-3 rounded-lg font-semibold hover:bg-gray-100 transition-colors"
-              >
-                Contact Form
-              </a>
+        {/* GALLERY */}
+        {/* <section className="py-24 bg-[#fbf7ee]">
+          <div className="max-w-7xl mx-auto px-6" data-reveal>
+            <div className="text-center mb-12">
+              <p className="text-sm uppercase tracking-widest text-[#a68b3b] mb-3">
+                Gallery
+              </p>
+              <h2 className="text-3xl md:text-4xl font-display text-[#1b1b1b]">
+                Experience the Luxury
+              </h2>
+            </div>
+
+            <div className="grid grid-cols-2 md:grid-cols-4 gap-4">
+              {galleryImages.map((img, i) => (
+                <div
+                  key={i}
+                  className={`relative overflow-hidden ${
+                    i === 0 ? "col-span-2 row-span-2" : ""
+                  }`}
+                >
+                  <div className="relative aspect-[4/3] md:aspect-auto md:h-[280px]">
+                    <Image
+                      src={img}
+                      alt={`Himalaya Villas gallery ${i + 1}`}
+                      fill
+                      className="object-cover hover:scale-105 transition-transform duration-700"
+                    />
+                  </div>
+                </div>
+              ))}
             </div>
           </div>
-        </div>
-      </section>
+        </section> */}
 
-      <Footer />
+        {/* WHY CHOOSE US */}
+        <section className="py-24">
+          <div className="max-w-7xl mx-auto px-6" data-reveal>
+            <div className="text-center mb-12">
+              <p className="text-sm uppercase tracking-widest text-[#a68b3b] mb-3">
+                Why Choose Us
+              </p>
+              <h2 className="text-3xl md:text-4xl font-display text-[#1b1b1b]">
+                The Himalaya Villas Difference
+              </h2>
+            </div>
+
+            <div data-stagger className="grid md:grid-cols-4 gap-8">
+              {[
+                {
+                  icon: "🔒",
+                  title: "Complete Privacy",
+                  description: "Exclusive villa ownership with no shared spaces"
+                },
+                {
+                  icon: "🍽️",
+                  title: "Halal Certified",
+                  description: "100% Halal kitchen with premium dining"
+                },
+                {
+                  icon: "🏔️",
+                  title: "Panoramic Views",
+                  description: "Unobstructed Himalayan mountain vistas"
+                },
+                {
+                  icon: "✨",
+                  title: "White Glove Service",
+                  description: "Dedicated villa host & concierge service"
+                }
+              ].map((feature, i) => (
+                <div key={i} className="stagger-item text-center">
+                  <div className="text-4xl mb-4">{feature.icon}</div>
+                  <h3 className="text-lg font-semibold text-[#1b1b1b] mb-2">
+                    {feature.title}
+                  </h3>
+                  <p className="text-gray-600 text-sm leading-relaxed">
+                    {feature.description}
+                  </p>
+                </div>
+              ))}
+            </div>
+          </div>
+        </section>
+
+        {/* PROPERTY OVERVIEW */}
+        <section className="py-24 bg-[#fbf7ee] border-y border-[#e5dfcf]">
+          <div className="max-w-7xl mx-auto px-6" data-reveal>
+            <div className="grid md:grid-cols-2 gap-16">
+              <div>
+                <p className="text-sm uppercase tracking-widest text-[#a68b3b] mb-3">
+                  Overview
+                </p>
+                <h2 className="text-3xl md:text-4xl font-display text-[#1b1b1b] mb-6">
+                  A Mountain Sanctuary
+                </h2>
+                <div className="space-y-4 text-gray-700 leading-relaxed">
+                  <p>
+                    Himalaya Villas is a premium luxury villa property located in Bhurban, 
+                    Murree Hills, Pakistan — at an elevation that delivers cool mountain air, 
+                    unobstructed Himalayan views, and natural pine forest surroundings year-round.
+                  </p>
+                  <p className="text-sm text-gray-500">
+                    <span className="font-semibold text-[#1b1b1b]">Check-In:</span> 3:00 PM &nbsp;|&nbsp; 
+                    <span className="font-semibold text-[#1b1b1b]"> Check-Out:</span> 12:00 PM &nbsp;|&nbsp;
+                    <span className="font-semibold text-[#1b1b1b]"> Minimum Stay:</span> 2 nights
+                  </p>
+                </div>
+              </div>
+
+              <div className="grid grid-cols-2 gap-6">
+                {[
+                  { label: "Elevation", value: "6,500+ feet" },
+                  { label: "Setting", value: "Pine forest" },
+                  { label: "Region", value: "Murree Hills" },
+                  { label: "Food", value: "100% Halal" },
+                ].map((item, i) => (
+                  <div key={i} className="border-l-2 border-[#c9a55b] pl-4">
+                    <div className="text-sm text-gray-500">{item.label}</div>
+                    <div className="text-[#1b1b1b] font-medium">{item.value}</div>
+                  </div>
+                ))}
+              </div>
+            </div>
+          </div>
+        </section>
+
+
+
+
+
+
+
+
+
+
+ {/* AMENITIES */}
+<section className="relative overflow-hidden py-28 bg-[#faf7f2]">
+  {/* Decorative Background */}
+  <div className="absolute -top-40 left-1/2 h-[500px] w-[500px] -translate-x-1/2 rounded-full bg-[#c9a55b]/10 blur-3xl" />
+
+  <div className="relative max-w-7xl mx-auto px-6">
+    <div className="text-center mb-16">
+      <p className="text-sm uppercase tracking-[0.35em] text-[#b8944a] mb-3">
+        Amenities
+      </p>
+
+      <h2 className="text-4xl md:text-5xl font-display text-[#1b1b1b]">
+        Villa Features & Services
+      </h2>
+
+      <p className="mt-5 max-w-2xl mx-auto text-gray-600 leading-relaxed">
+        Every stay is thoughtfully designed to deliver exceptional comfort,
+        personalized hospitality, and unforgettable mountain experiences.
+      </p>
     </div>
+
+    <div className="grid gap-8 md:grid-cols-2 xl:grid-cols-3">
+      {[
+        {
+          title: "Accommodation",
+          icon: BedDouble,
+          items: [
+            "Private villas with dedicated entrance",
+            "Floor-to-ceiling mountain view windows",
+            "Premium beds with luxury linen",
+            "Modern self-catering kitchen",
+            "Fireplace & central heating",
+          ],
+        },
+        {
+          title: "Dining",
+          icon: UtensilsCrossed,
+          items: [
+            "Private in-villa dining",
+            "Pakistani & Continental cuisine",
+            "Private BBQ terrace",
+            "Fresh breakfast & afternoon tea",
+            "100% Halal certified kitchen",
+          ],
+        },
+        {
+          title: "Services",
+          icon: ConciergeBell,
+          items: [
+            "Dedicated villa host",
+            "24/7 concierge assistance",
+            "Guided mountain walks",
+            "Private bonfire evenings",
+            "Airport transfer service",
+          ],
+        },
+      ].map((category, i) => {
+        const Icon = category.icon;
+
+        return (
+          <div
+            key={i}
+            className="rounded-3xl border border-[#e8dfcf] bg-white p-8 shadow-sm transition-all duration-300 hover:border-[#c9a55b] hover:shadow-xl"
+          >
+            <div className="mb-6 flex h-16 w-16 items-center justify-center rounded-2xl bg-[#f8f2e4]">
+              <Icon className="h-8 w-8 text-[#b8944a]" />
+            </div>
+
+            <h3 className="mb-6 text-2xl font-display text-[#1b1b1b]">
+              {category.title}
+            </h3>
+
+            <ul className="space-y-4">
+              {category.items.map((item, idx) => (
+                <li
+                  key={idx}
+                  className="flex items-start gap-3 text-gray-700"
+                >
+                  <div className="mt-0.5 flex h-6 w-6 shrink-0 items-center justify-center rounded-full bg-[#f8f2e4]">
+                    <Check className="h-3.5 w-3.5 text-[#c9a55b]" />
+                  </div>
+
+                  <span>{item}</span>
+                </li>
+              ))}
+            </ul>
+          </div>
+        );
+      })}
+    </div>
+  </div>
+</section>
+
+
+
+
+
+
+
+
+
+
+
+
+
+{/* PACKAGES */}
+<section id="packages" className="py-24 bg-[#fbf7ee] border-y border-[#e5dfcf] relative overflow-hidden">
+  {/* Decorative background element */}
+  <div className="absolute top-0 right-0 w-1/3 h-full opacity-5 bg-gradient-to-l from-[#c9a55b] to-transparent pointer-events-none"></div>
+  
+  <div className="max-w-7xl mx-auto px-6 relative z-10">
+    <div className="text-center mb-16">
+      <p className="text-sm uppercase tracking-[0.3em] text-[#a68b3b] mb-4 font-medium">
+        Packages
+      </p>
+      <h2 className="text-4xl md:text-5xl font-display text-[#1b1b1b] mb-3">
+        Choose Your Experience
+      </h2>
+     
+      <p className="text-[#4a4a4a] mt-4 max-w-md mx-auto">
+        Curated experiences designed for every occasion
+      </p>
+    </div>
+
+    <div className="grid md:grid-cols-3 gap-8 max-w-6xl mx-auto">
+      {[
+        {
+          name: "Family Mountain Escape",
+          guests: "4-8 Guests",
+          price: "PKR 80,000 - 150,000",
+          duration: "2-3 Nights",
+          features: ["Breakfast & Dinner", "Villa Host Service", "Kids Activities", "Private BBQ Terrace"],
+          popular: false,
+          icon: "👨‍👩‍👧‍👦"
+        },
+        {
+          name: "Honeymoon Sanctuary",
+          guests: "2 Guests",
+          price: "PKR 65,000 - 95,000",
+          duration: "2 Nights",
+          features: ["Suite with Views", "Romantic Dinner", "Private Bonfire", "Champagne Welcome"],
+          popular: true,
+          icon: "🛖"
+        },
+        {
+          name: "Corporate Retreat",
+          guests: "10-50 Guests",
+          price: "PKR 180,000+",
+          duration: "2+ Nights",
+          features: ["Conference Room", "All Meals", "Team Activities", "AV Equipment"],
+          popular: false,
+          icon: "🏔️"
+        }
+      ].map((pkg, i) => (
+        <div
+          key={i}
+          className={`relative bg-white rounded-2xl overflow-hidden ${
+            pkg.popular 
+              ? "shadow-2xl border-2 border-[#c9a55b] scale-105" 
+              : "shadow-lg border border-[#e5dfcf]"
+          }`}
+        >
+          {/* Popular badge */}
+          {pkg.popular && (
+            <div className="absolute top-0 right-0 z-10">
+              <div className="bg-[#c9a55b] text-[#1b1b1b] text-xs font-bold px-6 py-2 rotate-45 translate-x-8 translate-y-0 w-40 text-center">
+                MOST POPULAR
+              </div>
+            </div>
+          )}
+
+          {/* Card content */}
+          <div className="p-8 pt-10">
+            {/* Icon and header */}
+            <div className="flex items-center gap-3 mb-4">
+              <span className="text-3xl">{pkg.icon}</span>
+              <div>
+                <h3 className="text-xl font-semibold text-[#1b1b1b]">
+                  {pkg.name}
+                </h3>
+              </div>
+            </div>
+
+            {/* Details */}
+            <div className="flex items-center gap-3 text-sm text-gray-500 mb-1">
+              <span className="flex items-center gap-1">
+                <svg className="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M16 7a4 4 0 11-8 0 4 4 0 018 0zM12 14a7 7 0 00-7 7h14a7 7 0 00-7-7z" />
+                </svg>
+                {pkg.guests}
+              </span>
+              <span className="w-1 h-1 bg-gray-300 rounded-full"></span>
+              <span className="flex items-center gap-1">
+                <svg className="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z" />
+                </svg>
+                {pkg.duration}
+              </span>
+            </div>
+
+            {/* Price */}
+            <div className="my-4">
+              <span className="text-3xl font-bold text-[#c9a55b]">
+                {pkg.price}
+              </span>
+            </div>
+
+            <div className="h-px bg-gradient-to-r from-transparent via-[#e5dfcf] to-transparent my-4"></div>
+
+            {/* Features */}
+            <ul className="space-y-3 mb-8">
+              {pkg.features.map((feature, idx) => (
+                <li key={idx} className="flex items-center text-sm text-gray-700">
+                  <span className="inline-flex items-center justify-center w-5 h-5 rounded-full bg-[#fbf7ee] text-[#c9a55b] mr-3 text-xs font-bold flex-shrink-0">
+                    ✓
+                  </span>
+                  {feature}
+                </li>
+              ))}
+            </ul>
+
+            {/* CTA Button */}
+            <a
+              href="https://wa.me/923045679000"
+              target="_blank"
+              rel="noopener noreferrer"
+              className={`block w-full rounded-xl py-4 px-6 font-semibold text-center ${
+                pkg.popular
+                  ? "bg-[#c9a55b] hover:bg-[#b8944a] text-[#1b1b1b]"
+                  : "bg-[#1b1b1b] hover:bg-[#2a2a2a] text-white"
+              }`}
+            >
+              <span className="flex items-center justify-center gap-2">
+                Book Now
+              </span>
+            </a>
+          </div>
+        </div>
+      ))}
+    </div>
+  </div>
+</section>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+        {/* FAQ */}
+        <section className="py-24">
+          <div className="max-w-7xl mx-auto px-6" data-reveal>
+            <div className="text-center mb-12">
+              <p className="text-sm uppercase tracking-widest text-[#a68b3b] mb-3">
+                FAQ
+              </p>
+              <h2 className="text-3xl md:text-4xl font-display text-[#1b1b1b]">
+                Frequently Asked Questions
+              </h2>
+            </div>
+
+            <div className="space-y-6">
+              {[
+                {
+                  q: "How far is Himalaya Villas from Islamabad?",
+                  a: "Approximately 45-60 minutes by road from central Islamabad via M-1 Motorway and Murree road."
+                },
+                {
+                  q: "Is the food fully Halal?",
+                  a: "Yes. All food preparation at Himalaya Villas is 100% Halal across all dining services."
+                },
+                {
+                  q: "Can you accommodate corporate retreats?",
+                  a: "Yes. We offer conference setup, AV equipment, group dining, and confidential private surroundings."
+                }
+              ].map((faq, i) => (
+                <div key={i} className="border-l-2 border-[#c9a55b] pl-6">
+                  <h3 className="text-lg font-semibold text-[#1b1b1b] mb-2">
+                    {faq.q}
+                  </h3>
+                  <p className="text-gray-700 leading-relaxed">
+                    {faq.a}
+                  </p>
+                </div>
+              ))}
+            </div>
+          </div>
+        </section>
+
+        {/* CTA */}
+       <section
+  className="relative overflow-hidden py-28 bg-cover bg-center bg-no-repeat text-white"
+  style={{ backgroundImage: `url(${villaTerrace.src})` }}
+>
+  {/* Dark Overlay */}
+  <div className="absolute inset-0 bg-black/70" />
+
+
+  <div className="relative max-w-4xl mx-auto px-6 text-center">
+    <p className="text-sm uppercase tracking-[0.35em] text-[#d4b46a] mb-4">
+      Book Your Stay
+    </p>
+
+    <h2 className="text-4xl md:text-6xl font-display leading-tight mb-6">
+      Ready to Escape to the Mountains?
+    </h2>
+
+    <p className="text-white/80 text-lg leading-8 max-w-2xl mx-auto mb-10">
+      Tell us your dates, group size, and occasion. We'll confirm availability
+      quickly and help you plan an unforgettable mountain getaway.
+    </p>
+
+    <div className="flex flex-col sm:flex-row gap-5 justify-center">
+      <a
+        href="https://wa.me/923045679000"
+        target="_blank"
+        rel="noopener noreferrer"
+        className="rounded-xl bg-[#c9a55b] px-10 py-4 font-semibold text-[#1b1b1b] transition-all duration-300 hover:bg-[#b8944a] hover:shadow-[0_10px_30px_rgba(201,165,91,0.4)]"
+      >
+        WhatsApp Now
+      </a>
+
+      <a
+        href="/contact"
+        className="rounded-xl border border-white/30 bg-white/10 px-10 py-4 font-semibold text-white backdrop-blur-sm transition-all duration-300 hover:border-white hover:bg-white/20"
+      >
+        Contact Form
+      </a>
+    </div>
+
+    <div className="mt-10 flex flex-wrap items-center justify-center gap-6 text-sm text-white/70">
+      <span>✓ Instant Response</span>
+      <span>✓ Best Rate Guarantee</span>
+      <span>✓ 24/7 Support</span>
+    </div>
+  </div>
+</section>
+
+        <Footer />
+      </div>
+    </>
   );
 }

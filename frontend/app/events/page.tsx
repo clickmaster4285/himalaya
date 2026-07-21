@@ -176,7 +176,7 @@ const eventSections = [
         id: 16,
         title: "Conferences & Seminars",
         description: "Professional setup with presentation zones and hospitality.",
-        badge: "MICE",
+        badge: "MISE",
         slug: "conferences-seminars",
       },
       {
@@ -414,11 +414,15 @@ export default function EventsPage() {
       <section className="py-16 md:py-20 bg-white">
         <div className="mx-auto max-w-7xl px-6">
           <div className="text-center mb-10">
-            <h2 className="font-display text-3xl md:text-4xl text-neutral-900">Explore Our Event Categories</h2>
-            <p className="mt-3 text-sm md:text-base text-neutral-600">
-              Yehi cards se aap direct relevant page par ja sakte hain.
-            </p>
-          </div>
+  <h2 className="font-display text-3xl md:text-4xl text-neutral-900">
+    Explore Our Event Categories
+  </h2>
+  <p className="mt-3 mx-auto max-w-2xl text-sm md:text-base leading-relaxed text-neutral-600">
+    Explore our curated event experiences, from destination weddings and
+    corporate retreats to private celebrations, each thoughtfully designed to
+    create unforgettable memories in the heart of the Himalayas.
+  </p>
+</div>
 
           {eventSections.map((section) => (
             <div key={section.id} className="mb-12">
@@ -454,10 +458,16 @@ export default function EventsPage() {
 
       <section className="py-16 md:py-24">
         <div className="mx-auto max-w-7xl px-6">
-          <div className="mb-10 text-center">
-            <h2 className="font-display text-3xl md:text-4xl text-neutral-900">Featured Event Sections</h2>
-            <p className="mt-3 text-sm md:text-base text-neutral-600">Aap ke liye 3 clear visible sections add kiye gaye hain.</p>
-          </div>
+        <div className="mb-10 text-center">
+  <h2 className="font-display text-3xl md:text-4xl text-neutral-900">
+    Featured Event Sections
+  </h2>
+  <p className="mt-3 mx-auto max-w-2xl text-sm md:text-base leading-relaxed text-neutral-600">
+    Discover thoughtfully designed spaces for weddings, corporate gatherings,
+    private celebrations, and unforgettable moments surrounded by the beauty of
+    the Himalayas.
+  </p>
+</div>
 
           <div className="grid gap-8 md:grid-cols-3">
             {packages.map((pkg) => (

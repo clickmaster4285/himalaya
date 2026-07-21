@@ -366,16 +366,27 @@ function AccordionItem({
         >
           {item.question}
         </span>
-        <span
-          className={cn(
-            "ml-auto grid h-9 w-9 shrink-0 place-items-center rounded-full border transition-all duration-300",
-            isOpen
-              ? "rotate-45 border-primary bg-primary text-primary-foreground"
-              : "border-border text-foreground/60"
-          )}
-        >
-          {isOpen ? <Minus className="h-4 w-4" /> : <Plus className="h-4 w-4" />}
-        </span>
+     <span
+  className={cn(
+    "ml-auto relative grid h-9 w-9 shrink-0 place-items-center rounded-full border transition-colors duration-300",
+    isOpen
+      ? "border-primary bg-primary text-primary-foreground"
+      : "border-border text-foreground/60"
+  )}
+>
+  <Plus
+    className={cn(
+      "absolute h-4 w-4 transition-all duration-300",
+      isOpen ? "rotate-90 opacity-0 scale-75" : "rotate-0 opacity-100 scale-100"
+    )}
+  />
+  <Minus
+    className={cn(
+      "absolute h-4 w-4 transition-all duration-300",
+      isOpen ? "rotate-0 opacity-100 scale-100" : "-rotate-90 opacity-0 scale-75"
+    )}
+  />
+</span>
       </button>
 
       <AnimatePresence initial={false}>
@@ -478,11 +489,11 @@ export default function FaqClient() {
             className="mx-auto max-w-4xl text-center"
           >
             <div className="flex items-center justify-center gap-4">
-              <span className="h-px w-10 bg-primary"></span>
-              <span className="font-sans text-sm font-semibold uppercase tracking-[0.2em] text-primary">
+              <span className="h-px w-10 bg-white"></span>
+              <span className="font-sans text-white text-sm font-semibold uppercase tracking-[0.2em] ">
                 SUPPORT & INFO
               </span>
-              <span className="h-px w-10 bg-primary"></span>
+              <span className="h-px w-10 bg-white"></span>
             </div>
             <h1 className="mt-8 font-display text-5xl leading-[1.1] text-white sm:text-6xl md:text-7xl">
               Frequently Asked

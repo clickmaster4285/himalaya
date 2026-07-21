@@ -192,17 +192,18 @@ export default function ContactPage() {
                     allowFullScreen
                   />
                 </div>
-                <div className="px-3 sm:px-4 py-2.5 sm:py-3 text-center">
-                  <span>Himalaya Villas and Resort</span>
-                  <a
-                    href={SITE_CONTACT.googleMapsUrl}
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    className="text-[10px] sm:text-[11px] font-semibold uppercase tracking-[0.18em] text-[#8b6914] hover:underline"
-                  >
-                    Google Maps — directions & reviews
-                  </a>
-                </div>
+               <div className="px-3 sm:px-4 py-2.5 sm:py-3 text-center">
+  <span className="block">Himalaya Villas and Resort</span>
+
+  <a
+    href={SITE_CONTACT.googleMapsUrl}
+    target="_blank"
+    rel="noopener noreferrer"
+    className="block text-[10px] sm:text-[11px] font-semibold uppercase tracking-[0.18em] text-[#8b6914] hover:underline"
+  >
+    Google Maps — Directions & Reviews
+  </a>
+</div>
               </div>
             </div>
 

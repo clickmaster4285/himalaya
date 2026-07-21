@@ -12,9 +12,27 @@ const logo = "/assets/himalaya-logo.png";
 
 const navItems = ["Villas", "Experience", "Virtual Tour", "Events", "Blogs", "Contact" , 'FAQs'];
 
-const Navbar = () => {
+interface NavbarProps {
+  theme?: "light" | "dark";
+}
+
+const Navbar = ({ theme = "dark" }: NavbarProps) => {
   const [scrolled, setScrolled] = useState(false);
   const [mobileOpen, setMobileOpen] = useState(false);
+
+  // Determine text color based on theme
+  const isLight = theme === "light";
+  const textColor = isLight ? "text-gray-700" : "text-white";
+  const mobileTextColor = isLight ? "text-black/95" : "text-white/95";
+  const mobileHoverColor = isLight ? "hover:text-black" : "hover:text-white";
+  const backdropColor = isLight 
+    ? "bg-white/95 backdrop-blur-md shadow-lg" 
+    : "bg-foreground/95 backdrop-blur-md shadow-lg";
+  const transparentBg = "bg-transparent";
+  const mobileOverlayBg = isLight 
+    ? "bg-white/95 backdrop-blur-xl" 
+    : "bg-black/95 backdrop-blur-xl";
+  const dividerColor = isLight ? "bg-black/20" : "bg-white/20";
 
   useEffect(() => {
     const onScroll = () => setScrolled(window.scrollY > 50);
@@ -74,13 +92,13 @@ const Navbar = () => {
       <nav
         className={`fixed top-0 left-0 right-0 z-50 flex items-center justify-between px-3 sm:px-4 md:px-6 lg:px-8 xl:px-12 2xl:px-20 transition-all duration-500 ${
           scrolled || mobileOpen
-            ? "py-2 md:py-3 bg-foreground/95 backdrop-blur-md shadow-lg"
-            : "py-3 sm:py-4 md:py-5 bg-transparent"
+            ? `py-2 md:py-3 ${backdropColor}`
+            : `py-3 sm:py-4 md:py-5 ${transparentBg}`
         }`}
       >
         {/* Mobile & Tablet hamburger - visible on tablet too */}
         <button
-          className="lg:hidden z-50 text-white focus:outline-none active:scale-95 transition-transform flex-shrink-0"
+          className={`lg:hidden z-50 focus:outline-none active:scale-95 transition-transform flex-shrink-0 ${textColor}`}
           onClick={() => setMobileOpen(!mobileOpen)}
           aria-label={mobileOpen ? "Close menu" : "Open menu"}
         >
@@ -93,7 +111,7 @@ const Navbar = () => {
             <Link
               key={item}
               href={getHref(item)}
-              className="nav-link text-sm xl:text-base whitespace-nowrap transition-opacity hover:opacity-80 text-white"
+              className={`nav-link text-sm xl:text-base whitespace-nowrap transition-opacity hover:opacity-80 ${textColor}`}
             >
               {item}
             </Link>
@@ -138,12 +156,12 @@ const Navbar = () => {
         <div className="flex items-center gap-1 sm:gap-2 md:gap-3 flex-shrink-0">
           {/* Weather badge - visible on tablet and desktop */}
           <div className="hidden sm:block">
-            <LiveWeatherBadge variant="light" />
+            <LiveWeatherBadge variant={isLight ? "dark" : "light"} />
           </div>
           
           {/* NavAuth - visible on tablet and desktop */}
           <div className="hidden sm:block">
-            <NavAuth variant="hero" />
+            <NavAuth variant={isLight ? "dark" : "hero"} />
           </div>
           
           {/* Book button - responsive sizing */}
@@ -161,14 +179,14 @@ const Navbar = () => {
 
       {/* Mobile & Tablet Menu Overlay - visible on lg and below */}
       <div
-        className={`fixed inset-0 z-40 bg-black/95 backdrop-blur-xl flex flex-col items-center justify-center gap-4 sm:gap-5 lg:hidden transition-all duration-300 ${
+        className={`fixed inset-0 z-40 ${mobileOverlayBg} flex flex-col items-center justify-center gap-4 sm:gap-5 lg:hidden transition-all duration-300 ${
           mobileOpen ? "opacity-100 visible" : "opacity-0 invisible pointer-events-none"
         }`}
         style={{ top: 0, left: 0, right: 0, bottom: 0 }}
       >
         {/* Close button at top right */}
         <button
-          className="absolute top-3 right-3 sm:top-4 sm:right-4 text-white p-2"
+          className={`absolute top-3 right-3 sm:top-4 sm:right-4 ${textColor} p-2`}
           onClick={() => setMobileOpen(false)}
           aria-label="Close menu"
         >
@@ -181,21 +199,19 @@ const Navbar = () => {
             <Link
               key={item}
               href={getHref(item)}
-              className="font-sans text-base sm:text-lg md:text-xl font-semibold tracking-[0.12em] text-white/95 uppercase transition-all hover:text-white hover:scale-105 active:scale-95"
+              className={`font-sans text-base sm:text-lg md:text-xl font-semibold tracking-[0.12em] ${mobileTextColor} uppercase transition-all ${mobileHoverColor} hover:scale-105 active:scale-95`}
               onClick={() => setMobileOpen(false)}
             >
               {item}
             </Link>
           ))}
           
-        
-          
           {/* Divider */}
-          <div className="w-10 sm:w-12 h-px bg-white/20 my-1 sm:my-2" />
+          <div className={`w-10 sm:w-12 h-px ${dividerColor} my-1 sm:my-2`} />
           
           {/* Mobile NavAuth */}
           <div onClick={() => setMobileOpen(false)}>
-            <NavAuth variant="hero" />
+            <NavAuth variant={isLight ? "dark" : "hero"} />
           </div>
           
           {/* Mobile Book Button */}

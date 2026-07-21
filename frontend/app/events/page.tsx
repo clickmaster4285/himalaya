@@ -352,13 +352,13 @@ const packages = [
     title: "Corporate Retreats",
     text: "Offsite planning for teams with meeting spaces, catering, and stay options.",
     image: "/assets/event-hero-4.png",
-    href: "/events",
+    href: "/events/corporate-retreat-packages",
   },
   {
     title: "Social Celebrations",
     text: "Birthdays, anniversaries, and family events with curated themes and support.",
     image: "/assets/event-hero-2.png",
-    href: "/events",
+    href: "/events/farewells-send-offs",
   },
 ];
 

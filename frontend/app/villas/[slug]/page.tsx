@@ -50,7 +50,7 @@ export default async function RoomDetail({ params }: { params: Promise<{ slug: s
 
   return (
     <>
-      <Navbar />
+      <Navbar  theme="light"/>
 <section  id="villa-details-section">
       <RoomDetailClient room={room} />
 

@@ -25,13 +25,13 @@ export default function VillasClient({ room }: VillasClientProps) {
     <div className="min-h-screen bg-[#e9e2d1]">
       <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8 py-10 lg:pt-20">
         {/* Back link */}
-        <Link
+        {/* <Link
           href="/villas"
           className="inline-flex items-center gap-2 text-xs uppercase tracking-[0.25em] text-[#6b6357] transition hover:text-[#2b2b2b]"
         >
           <ArrowLeft className="h-3.5 w-3.5" strokeWidth={1.5} />
           Back to villas
-        </Link>
+        </Link> */}
 
         {/* Header */}
         <div className="mt-8 max-w-3xl">

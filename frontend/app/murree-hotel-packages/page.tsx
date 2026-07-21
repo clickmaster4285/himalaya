@@ -23,8 +23,17 @@ import {
   TreePine,
   Coffee,
   Sunset,
-  Sparkles
+  Sparkles,
+  ArrowRight,
+  Mountain,
+  Camera
 } from "lucide-react";
+
+import villaInterior from "@/public/assets/villa-interior.jpg";
+import villaTerrace from "@/public/images/villas/lux-complete4.jpg";
+import VillasAccommodations from "@/components/VillasAccommodations";
+import Navbar from "@/components/Navbar";
+import Footer from "@/components/Footer";
 
 const hotelPackagesSchema = {
   "@context": "https://schema.org",
@@ -188,7 +197,7 @@ export default function MurreeHotelPackagesPage() {
       description: "Beat the heat with our summer package including extra activities and extended stay options.",
       discount: "25% OFF",
       valid: "June - August",
-      image: "/assets/murree-summer.jpg"
+      image: "/assets/dining-outdoor.jpg"
     },
     {
       title: "Winter Wonderland",
@@ -202,7 +211,7 @@ export default function MurreeHotelPackagesPage() {
       description: "Enjoy spring flowers and pleasant weather with special outdoor activities and nature walks.",
       discount: "20% OFF",
       valid: "March - May",
-      image: "/assets/murree-spring.jpg"
+      image: "/assets/gallery-reflection.jpg"
     }
   ];
 
@@ -251,144 +260,131 @@ export default function MurreeHotelPackagesPage() {
   ];
 
   return (
-    <div className="min-h-screen bg-white">
+    <div className="min-h-screen bg-[#fbf7ee]">
       <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(hotelPackagesSchema) }} />
-      
-      {/* Hero Section */}
-      <section className="relative h-[700px] overflow-hidden">
-        <div className="absolute inset-0">
-          <Image 
-            src="/assets/murree-panoramic-view.jpg" 
-            alt="Murree Hotel Packages"
-            fill
-            className="object-cover"
-            priority
-          />
-          <div className="absolute inset-0 bg-gradient-to-r from-blue-900/80 via-blue-800/60 to-transparent" />
-        </div>
-        
-        <div className="relative z-10 h-full flex items-center px-6 md:px-12">
-          <div className="max-w-3xl">
-            <div className="flex items-center gap-2 mb-4">
-              <Package className="w-6 h-6 text-blue-300" />
-              <span className="text-blue-300 font-semibold tracking-wide">ALL-INCLUSIVE PACKAGES</span>
+      <Navbar />
+   
+   
+<section className="relative min-h-[780px] overflow-hidden pt-36 md:pt-44">
+  {/* Background */}
+  <div className="absolute inset-0">
+    <Image
+      src={villaTerrace}
+      alt="Himalaya Villas Terrace"
+      fill
+      priority
+      className="object-cover"
+    />
+
+    <div className="absolute inset-0 bg-black/55" />
+    <div className="absolute inset-0 bg-gradient-to-b from-black/15 via-black/25 to-black/55" />
+  </div>
+
+  {/* Content */}
+<div className="relative z-10 flex min-h-[780px] items-center justify-center px-6 pb-20">
+  <div className="mx-auto max-w-5xl text-center">
+    {/* Label */}
+    <div className="mb-8 flex items-center justify-center gap-4">
+      <div className="h-px w-16 bg-[#c9a55b]" />
+
+      <span className="text-xs font-medium uppercase tracking-[0.4em] text-[#d4b46a]">
+        Exclusive Hotel Packages
+      </span>
+
+      <div className="h-px w-16 bg-[#c9a55b]" />
+    </div>
+
+    {/* Heading */}
+    <h1 className="font-display text-4xl sm:text-5xl md:text-6xl lg:text-7xl leading-[1.08] text-white">
+      Luxury Packages{" "}
+      <span className="font-light text-[#c9a55b]">
+        in Murree Hills
+      </span>
+    </h1>
+
+    {/* Content */}
+    <div className="mx-auto mt-8 max-w-3xl">
+      {/* Description */}
+      <p className="text-base md:text-xl leading-8 text-white/80">
+        Discover thoughtfully curated stays featuring elegant villas,
+        breathtaking mountain views, private dining experiences, and
+        exceptional hospitality for every occasion.
+      </p>
+
+      {/* Buttons */}
+      <div className="mt-12 flex flex-col justify-center gap-5 sm:flex-row">
+        <a
+          href="#packages"
+          className="inline-flex items-center justify-center gap-2 rounded-xl bg-[#c9a55b] px-10 py-4 font-semibold text-[#1b1b1b] transition-all duration-300 hover:bg-[#b8944a]"
+        >
+          View Packages
+          <ArrowRight className="h-5 w-5" />
+        </a>
+
+        <a
+          href="#contact"
+          className="inline-flex items-center justify-center gap-2 rounded-xl border border-white/30 bg-white/10 px-10 py-4 font-semibold text-white backdrop-blur-sm transition-all duration-300 hover:bg-white/20"
+        >
+          <Phone className="h-5 w-5" />
+          Contact Us
+        </a>
+      </div>
+
+      {/* Stats */}
+      <div className="mt-16 grid grid-cols-2 gap-8 border-t border-white/15 pt-10 md:grid-cols-4">
+        {[
+          ["15+", "Luxury Villas"],
+          ["24/7", "Concierge"],
+          ["100%", "Private Stay"],
+          ["4.9★", "Guest Rating"],
+        ].map(([value, label]) => (
+          <div key={label} className="text-center">
+            <div className="text-3xl font-light text-[#c9a55b]">
+              {value}
             </div>
-            <h1 className="text-4xl md:text-6xl font-bold text-white mb-6 leading-tight">
-              Murree Hotel Packages
-            </h1>
-            <p className="text-xl text-white/90 mb-8">
-              Discover our curated all-inclusive packages with accommodation, dining, activities, and transport. 
-              Perfect for families, couples, corporate groups, and adventure seekers.
+
+            <p className="mt-2 text-xs uppercase tracking-[0.25em] text-white/60">
+              {label}
             </p>
-            <div className="flex flex-col sm:flex-row gap-4">
-              <button className="bg-blue-600 text-white px-8 py-4 rounded-lg font-semibold hover:bg-blue-700 transition">
-                View All Packages
-              </button>
-              <button className="border-2 border-white text-white px-8 py-4 rounded-lg font-semibold hover:bg-white hover:text-blue-600 transition">
-                Custom Package
-              </button>
-            </div>
           </div>
-        </div>
-      </section>
+        ))}
+      </div>
+    </div>
+  </div>
+</div>
 
-      {/* Package Stats */}
-      <section className="bg-blue-900 text-white py-12">
-        <div className="max-w-7xl mx-auto px-6 grid grid-cols-2 md:grid-cols-4 gap-8 text-center">
-          <div>
-            <div className="text-3xl font-bold text-blue-300 mb-2">6+</div>
-            <div className="text-sm">Package Options</div>
-          </div>
-          <div>
-            <div className="text-3xl font-bold text-blue-300 mb-2">35%</div>
-            <div className="text-sm">Average Savings</div>
-          </div>
-          <div>
-            <div className="text-3xl font-bold text-blue-300 mb-2">2000+</div>
-            <div className="text-sm">Happy Guests</div>
-          </div>
-          <div>
-            <div className="text-3xl font-bold text-blue-300 mb-2">4.9/5</div>
-            <div className="text-sm">Package Rating</div>
-          </div>
-        </div>
-      </section>
 
-      {/* Hotel Packages */}
-      <section className="py-16 bg-[#faf7f1]">
+  
+</section>
+
+
+
+
+
+    
+    
+<VillasAccommodations />
+
+
+      {/* Package Benefits with Primary Colors */}
+      <section className="py-20 bg-white">
         <div className="max-w-7xl mx-auto px-6">
-          <div className="text-center mb-12">
-            <h2 className="text-3xl md:text-4xl font-bold text-neutral-900 mb-4">All-Inclusive Hotel Packages</h2>
-            <p className="text-lg text-neutral-600">Choose the perfect package for your Murree getaway</p>
-          </div>
-          
-          <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
-            {hotelPackages.map((pkg) => (
-              <div 
-                key={pkg.id}
-                onClick={() => setSelectedPackage(pkg.id)}
-                className={`bg-white rounded-xl overflow-hidden cursor-pointer transition-all ${
-                  selectedPackage === pkg.id ? 'ring-2 ring-blue-500 shadow-lg transform scale-105' : 'shadow-md hover:shadow-lg'
-                }`}
-              >
-                <div className="relative h-48">
-                  <Image 
-                    src={pkg.image} 
-                    alt={pkg.name}
-                    fill
-                    className="object-cover"
-                  />
-                  <div className="absolute top-4 right-4 bg-white/90 backdrop-blur-sm px-3 py-1 rounded-full text-sm font-semibold">
-                    <span className="text-blue-600">Save {Math.round((1 - parseInt(pkg.price.replace(',', '')) / parseInt(pkg.originalPrice.replace(',', ''))) * 100)}%</span>
-                  </div>
-                </div>
-                <div className="p-6">
-                  <div className="flex items-center gap-3 mb-3">
-                    <div className="text-blue-500">{pkg.icon}</div>
-                    <h3 className="text-xl font-bold text-neutral-900">{pkg.name}</h3>
-                  </div>
-                  <div className="mb-4">
-                    <div className="text-2xl font-bold text-blue-600 mb-1">PKR {pkg.price}</div>
-                    <div className="text-sm text-neutral-500 line-through">{pkg.originalPrice}</div>
-                    <div className="text-xs text-blue-600 font-semibold">{pkg.duration}</div>
-                  </div>
-                  <p className="text-neutral-600 text-sm mb-4">{pkg.description}</p>
-                  <div className="mb-4">
-                    <div className="text-xs text-neutral-500 mb-2">Includes:</div>
-                    <ul className="space-y-1">
-                      {pkg.features.slice(0, 3).map((feature, index) => (
-                        <li key={index} className="flex items-center gap-2 text-xs text-neutral-600">
-                          <CheckCircle className="w-3 h-3 text-green-500" />
-                          {feature}
-                        </li>
-                      ))}
-                    </ul>
-                  </div>
-                  <div className="flex justify-between text-xs text-neutral-500 border-t pt-2">
-                    <span>{pkg.includes}</span>
-                    <span className="text-blue-600 font-semibold">{pkg.bestFor}</span>
-                  </div>
-                </div>
-              </div>
-            ))}
-          </div>
-        </div>
-      </section>
-
-      {/* Package Benefits */}
-      <section className="py-16 bg-white">
-        <div className="max-w-7xl mx-auto px-6">
-          <div className="text-center mb-12">
-            <h2 className="text-3xl md:text-4xl font-bold text-neutral-900 mb-4">Why Choose Our Packages</h2>
-            <p className="text-lg text-neutral-600">Benefits of our all-inclusive hotel packages</p>
+          <div className="text-center mb-16">
+            <p className="text-sm uppercase tracking-[0.3em] text-[#a68b3b] mb-3 font-medium">
+              Benefits
+            </p>
+            <h2 className="text-4xl md:text-5xl font-display text-[#1b1b1b] mb-4">
+              Why Choose Our Packages
+            </h2>
+            <div className="w-16 h-1 bg-[#c9a55b] mx-auto"></div>
           </div>
           
           <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
             {packageBenefits.map((benefit, index) => (
-              <div key={index} className="bg-blue-50 rounded-xl p-6 shadow-sm hover:shadow-lg transition">
-                <div className="text-blue-500 mb-4">{benefit.icon}</div>
-                <h3 className="text-xl font-bold text-neutral-900 mb-3">{benefit.title}</h3>
-                <p className="text-neutral-600 text-sm leading-relaxed">{benefit.description}</p>
+              <div key={index} className="bg-[#fbf7ee] rounded-2xl p-8 border border-[#e5dfcf] hover:border-[#c9a55b] transition">
+                <div className="text-[#c9a55b] mb-4">{benefit.icon}</div>
+                <h3 className="text-xl font-bold text-[#1b1b1b] mb-3">{benefit.title}</h3>
+                <p className="text-gray-600 text-sm leading-relaxed">{benefit.description}</p>
               </div>
             ))}
           </div>
@@ -396,35 +392,38 @@ export default function MurreeHotelPackagesPage() {
       </section>
 
       {/* Seasonal Offers */}
-      <section className="py-16 bg-[#faf7f1]">
+      <section className="py-20 bg-[#fbf7ee]">
         <div className="max-w-7xl mx-auto px-6">
-          <div className="text-center mb-12">
-            <h2 className="text-3xl md:text-4xl font-bold text-neutral-900 mb-4">Seasonal Special Offers</h2>
-            <p className="text-lg text-neutral-600">Limited-time packages with extra savings</p>
+          <div className="text-center mb-16">
+            <p className="text-sm uppercase tracking-[0.3em] text-[#a68b3b] mb-3 font-medium">
+              Special Offers
+            </p>
+            <h2 className="text-4xl md:text-5xl font-display text-[#1b1b1b] mb-4">
+              Seasonal Specials
+            </h2>
+            <div className="w-16 h-1 bg-[#c9a55b] mx-auto"></div>
           </div>
           
           <div className="grid md:grid-cols-3 gap-8">
             {seasonalOffers.map((offer, index) => (
-              <div key={index} className="bg-white rounded-xl overflow-hidden shadow-lg hover:shadow-xl transition">
-                <div className="relative h-48">
+              <div key={index} className="bg-white rounded-2xl overflow-hidden border border-[#e5dfcf] hover:shadow-xl transition">
+                <div className="relative h-56">
                   <Image 
                     src={offer.image} 
                     alt={offer.title}
                     fill
                     className="object-cover"
                   />
-                  <div className="absolute top-4 left-4 bg-red-500 text-white px-3 py-1 rounded-full text-sm font-bold">
+                  <div className="absolute top-4 left-4 bg-[#c9a55b] text-[#1b1b1b] px-4 py-1.5 rounded-lg text-sm font-bold">
                     {offer.discount}
                   </div>
                 </div>
                 <div className="p-6">
-                  <h3 className="text-xl font-bold text-neutral-900 mb-2">{offer.title}</h3>
-                  <p className="text-neutral-600 text-sm mb-4">{offer.description}</p>
+                  <h3 className="text-xl font-bold text-[#1b1b1b] mb-2">{offer.title}</h3>
+                  <p className="text-gray-600 text-sm mb-4">{offer.description}</p>
                   <div className="flex items-center justify-between">
-                    <span className="text-xs text-neutral-500">Valid: {offer.valid}</span>
-                    <button className="text-blue-600 font-semibold text-sm hover:underline">
-                      Learn More
-                    </button>
+                    <span className="text-xs text-gray-500">Valid: {offer.valid}</span>
+                  
                   </div>
                 </div>
               </div>
@@ -434,80 +433,94 @@ export default function MurreeHotelPackagesPage() {
       </section>
 
       {/* Perfect For Every Traveler */}
-      <section className="py-16 bg-white">
+      <section className="py-20 bg-white">
         <div className="max-w-7xl mx-auto px-6">
-          <div className="grid md:grid-cols-2 gap-12 items-center">
+          <div className="grid md:grid-cols-2 gap-16 items-center">
             <div>
-              <h2 className="text-3xl md:text-4xl font-bold text-neutral-900 mb-6">Perfect For Every Traveler</h2>
-              <p className="text-lg text-neutral-600 mb-8">
+              <p className="text-sm uppercase tracking-[0.3em] text-[#a68b3b] mb-3 font-medium">
+                For Everyone
+              </p>
+              <h2 className="text-4xl md:text-5xl font-display text-[#1b1b1b] mb-6">
+                Perfect For Every Traveler
+              </h2>
+              <div className="w-16 h-1 bg-[#c9a55b] mb-6"></div>
+              <p className="text-lg text-gray-600 mb-8 leading-relaxed">
                 Our packages are designed to meet different travel needs, ensuring everyone finds their perfect Murree experience.
               </p>
               
               <div className="space-y-6">
                 <div className="flex items-start gap-4">
-                  <div className="bg-blue-100 text-blue-600 p-3 rounded-lg">
+                  <div className="bg-[#fbf7ee] text-[#c9a55b] p-3 rounded-xl border border-[#e5dfcf]">
                     <Users className="w-6 h-6" />
                   </div>
                   <div>
-                    <h3 className="font-bold text-neutral-900 mb-2">Family Vacations</h3>
-                    <p className="text-neutral-600">Kid-friendly activities, family accommodations, and meals for all ages.</p>
+                    <h3 className="font-bold text-[#1b1b1b] mb-1">Family Vacations</h3>
+                    <p className="text-gray-600 text-sm">Kid-friendly activities, family accommodations, and meals for all ages.</p>
                   </div>
                 </div>
                 
                 <div className="flex items-start gap-4">
-                  <div className="bg-blue-100 text-blue-600 p-3 rounded-lg">
+                  <div className="bg-[#fbf7ee] text-[#c9a55b] p-3 rounded-xl border border-[#e5dfcf]">
                     <Heart className="w-6 h-6" />
                   </div>
                   <div>
-                    <h3 className="font-bold text-neutral-900 mb-2">Romantic Getaways</h3>
-                    <p className="text-neutral-600">Intimate settings, romantic dinners, and special experiences for couples.</p>
+                    <h3 className="font-bold text-[#1b1b1b] mb-1">Romantic Getaways</h3>
+                    <p className="text-gray-600 text-sm">Intimate settings, romantic dinners, and special experiences for couples.</p>
                   </div>
                 </div>
                 
                 <div className="flex items-start gap-4">
-                  <div className="bg-blue-100 text-blue-600 p-3 rounded-lg">
+                  <div className="bg-[#fbf7ee] text-[#c9a55b] p-3 rounded-xl border border-[#e5dfcf]">
                     <Shield className="w-6 h-6" />
                   </div>
                   <div>
-                    <h3 className="font-bold text-neutral-900 mb-2">Corporate Groups</h3>
-                    <p className="text-neutral-600">Business facilities, team activities, and professional services.</p>
+                    <h3 className="font-bold text-[#1b1b1b] mb-1">Corporate Groups</h3>
+                    <p className="text-gray-600 text-sm">Business facilities, team activities, and professional services.</p>
                   </div>
                 </div>
               </div>
             </div>
             
-            <div className="relative h-96">
+            <div className="relative h-[500px] rounded-2xl overflow-hidden border border-[#e5dfcf]">
               <Image 
-                src="/assets/team-dinner1.webp" 
-                alt="Group Enjoying Package"
+                src={villaInterior}
+                alt="Villa Interior Experience"
                 fill
-                className="object-cover rounded-xl"
+                className="object-cover"
               />
+              <div className="absolute bottom-0 left-0 right-0 p-6 bg-gradient-to-t from-black/70 to-transparent">
+                <p className="text-white text-sm font-semibold">Experience luxury in every detail</p>
+              </div>
             </div>
           </div>
         </div>
       </section>
 
       {/* Testimonials */}
-      <section className="py-16 bg-[#faf7f1]">
+      <section className="py-20 bg-[#fbf7ee]">
         <div className="max-w-7xl mx-auto px-6">
-          <div className="text-center mb-12">
-            <h2 className="text-3xl md:text-4xl font-bold text-neutral-900 mb-4">Package Experiences</h2>
-            <p className="text-lg text-neutral-600">What our guests say about our packages</p>
+          <div className="text-center mb-16">
+            <p className="text-sm uppercase tracking-[0.3em] text-[#a68b3b] mb-3 font-medium">
+              Testimonials
+            </p>
+            <h2 className="text-4xl md:text-5xl font-display text-[#1b1b1b] mb-4">
+              What Our Guests Say
+            </h2>
+            <div className="w-16 h-1 bg-[#c9a55b] mx-auto"></div>
           </div>
           
           <div className="grid md:grid-cols-3 gap-8">
             {testimonials.map((testimonial, index) => (
-              <div key={index} className="bg-white rounded-xl p-6 shadow-sm">
+              <div key={index} className="bg-white rounded-2xl p-8 border border-[#e5dfcf] hover:border-[#c9a55b] transition">
                 <div className="flex mb-4">
                   {[...Array(testimonial.rating)].map((_, i) => (
-                    <Star key={i} className="w-5 h-5 text-blue-500 fill-current" />
+                    <Star key={i} className="w-5 h-5 text-[#c9a55b] fill-current" />
                   ))}
                 </div>
-                <p className="text-neutral-700 mb-4 italic">"{testimonial.text}"</p>
+                <p className="text-gray-700 mb-6 italic leading-relaxed">"{testimonial.text}"</p>
                 <div>
-                  <div className="font-bold text-neutral-900">{testimonial.name}</div>
-                  <div className="text-sm text-neutral-500">{testimonial.package}</div>
+                  <div className="font-bold text-[#1b1b1b]">{testimonial.name}</div>
+                  <div className="text-sm text-gray-500">{testimonial.package}</div>
                 </div>
               </div>
             ))}
@@ -516,69 +529,72 @@ export default function MurreeHotelPackagesPage() {
       </section>
 
       {/* Booking Process */}
-      <section className="py-16 bg-white">
+      <section className="py-20 bg-white">
         <div className="max-w-7xl mx-auto px-6">
-          <div className="text-center mb-12">
-            <h2 className="text-3xl md:text-4xl font-bold text-neutral-900 mb-4">Simple Package Booking</h2>
-            <p className="text-lg text-neutral-600">Book your complete Murree experience in 4 easy steps</p>
+          <div className="text-center mb-16">
+            <p className="text-sm uppercase tracking-[0.3em] text-[#a68b3b] mb-3 font-medium">
+              How It Works
+            </p>
+            <h2 className="text-4xl md:text-5xl font-display text-[#1b1b1b] mb-4">
+              Simple Package Booking
+            </h2>
+            <div className="w-16 h-1 bg-[#c9a55b] mx-auto"></div>
+            <p className="text-gray-600 mt-4">Book your complete Murree experience in 4 easy steps</p>
           </div>
           
           <div className="grid md:grid-cols-4 gap-8">
-            <div className="text-center">
-              <div className="bg-blue-500 w-16 h-16 rounded-full flex items-center justify-center mx-auto mb-4">
-                <Calendar className="w-8 h-8 text-white" />
+            {[
+              { icon: <Calendar />, title: "Select Package", desc: "Choose your ideal package" },
+              { icon: <Users />, title: "Group Details", desc: "Provide guest information" },
+              { icon: <Package />, title: "Customize", desc: "Add special requests" },
+              { icon: <CheckCircle />, title: "Confirm", desc: "Receive confirmation" }
+            ].map((step, index) => (
+              <div key={index} className="text-center">
+                <div className="bg-[#fbf7ee] w-20 h-20 rounded-2xl flex items-center justify-center mx-auto mb-4 border border-[#e5dfcf] text-[#c9a55b]">
+                  {step.icon}
+                </div>
+                <h3 className="font-bold text-[#1b1b1b] mb-2">{step.title}</h3>
+                <p className="text-gray-600 text-sm">{step.desc}</p>
               </div>
-              <h3 className="font-bold mb-2">Select Package</h3>
-              <p className="text-neutral-600 text-sm">Choose your ideal package</p>
-            </div>
-            
-            <div className="text-center">
-              <div className="bg-blue-500 w-16 h-16 rounded-full flex items-center justify-center mx-auto mb-4">
-                <Users className="w-8 h-8 text-white" />
-              </div>
-              <h3 className="font-bold mb-2">Group Details</h3>
-              <p className="text-neutral-600 text-sm">Provide guest information</p>
-            </div>
-            
-            <div className="text-center">
-              <div className="bg-blue-500 w-16 h-16 rounded-full flex items-center justify-center mx-auto mb-4">
-                <Package className="w-8 h-8 text-white" />
-              </div>
-              <h3 className="font-bold mb-2">Customize</h3>
-              <p className="text-neutral-600 text-sm">Add special requests</p>
-            </div>
-            
-            <div className="text-center">
-              <div className="bg-blue-500 w-16 h-16 rounded-full flex items-center justify-center mx-auto mb-4">
-                <CheckCircle className="w-8 h-8 text-white" />
-              </div>
-              <h3 className="font-bold mb-2">Confirm & Enjoy</h3>
-              <p className="text-neutral-600 text-sm">Receive confirmation</p>
-            </div>
+            ))}
           </div>
         </div>
       </section>
 
       {/* Final CTA */}
-      <section className="py-20 bg-gradient-to-r from-blue-600 to-blue-800 text-white">
-        <div className="max-w-4xl mx-auto px-6 text-center">
-          <h2 className="text-3xl md:text-4xl font-bold mb-6">Ready for Your Murree Adventure?</h2>
-          <p className="text-xl text-white/90 mb-8">
-            Let our team help you choose the perfect package for an unforgettable Murree experience with significant savings.
+      <section className="py-24 bg-[#1b1b1b] text-white relative overflow-hidden">
+        <div className="absolute top-0 right-0 w-1/3 h-full opacity-10 bg-gradient-to-l from-[#c9a55b] to-transparent"></div>
+        <div className="max-w-4xl mx-auto px-6 text-center relative z-10">
+          <h2 className="text-4xl md:text-5xl font-display mb-6">
+            Ready for Your <span className="text-[#c9a55b]">Murree Adventure</span>?
+          </h2>
+          <p className="text-xl text-white/70 mb-10 leading-relaxed">
+            Let our team help you choose the perfect package for an unforgettable 
+            Murree experience with significant savings.
           </p>
           
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
-            <button className="bg-white text-blue-600 px-8 py-4 rounded-lg font-semibold hover:bg-neutral-100 transition flex items-center justify-center gap-2">
+            <a
+              href="https://wa.me/923045679000"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="bg-[#c9a55b] text-[#1b1b1b] px-8 py-4 rounded-lg font-semibold hover:bg-[#b8944a] transition flex items-center justify-center gap-3"
+            >
               <Phone className="w-5 h-5" />
               Call: +92 304 567 9000
-            </button>
-            <button className="border-2 border-white text-white px-8 py-4 rounded-lg font-semibold hover:bg-white hover:text-blue-600 transition flex items-center justify-center gap-2">
+            </a>
+            <a
+              href="mailto:info@himalayavillas.com"
+              className="border-2 border-white/30 text-white px-8 py-4 rounded-lg font-semibold hover:bg-white/10 transition flex items-center justify-center gap-3"
+            >
               <Mail className="w-5 h-5" />
               Email Packages
-            </button>
+            </a>
           </div>
         </div>
       </section>
+
+      <Footer />
     </div>
   );
 }

@@ -11,7 +11,7 @@ import { cn } from "@/lib/utils";
 
 type Props = {
   /** Light text on hero (home navbar) — auth controls sit on a dark/gold-backed pill for contrast */
-  variant?: "hero" | "cream";
+ variant?: "hero" | "cream" | "dark";
 };
 
 /** Hero: readable on bright clouds — cocoa glass bar + gold Sign in (matches estate CTA palette) */

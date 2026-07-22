@@ -176,7 +176,7 @@ const eventSections = [
         id: 16,
         title: "Conferences & Seminars",
         description: "Professional setup with presentation zones and hospitality.",
-        badge: "MISE",
+        badge: "Cooperate",
         slug: "conferences-seminars",
       },
       {
@@ -435,9 +435,17 @@ export default function EventsPage() {
                     className="event-card group rounded-xl border border-neutral-200/90 bg-white p-4 shadow-sm transition duration-300 hover:-translate-y-1.5 hover:border-[#d8c093] hover:shadow-[0_14px_34px_rgba(18,18,18,0.12)]"
                     style={{ animationDelay: `${cardIndex * 70}ms` }}
                   >
-                    <span className="mb-3 inline-block rounded-full border border-[#d6e8d7] bg-gradient-to-r from-[#eef9ef] to-[#def5e1] px-2.5 py-1 text-[10px] font-semibold uppercase tracking-wider text-[#2e7d32] transition group-hover:scale-105">
-                      {card.badge}
-                    </span>
+
+
+
+                  <span className="mb-3 inline-block rounded-full bg-[hsl(156,48%,14%)] px-2.5 py-1 text-[10px] font-semibold uppercase tracking-wider text-primary transition group-hover:scale-105">
+  {card.badge}
+</span>
+
+
+
+
+                    
                     <h4 className="text-sm font-semibold text-neutral-900 leading-snug min-h-[34px] transition-colors duration-300 group-hover:text-[#7a5a1d]">
                       {card.title}
                     </h4>

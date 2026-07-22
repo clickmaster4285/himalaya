@@ -248,19 +248,19 @@ export default function ExperienceClient({ chapters }: ExperienceClientProps) {
       <div className="grid grid-cols-1 md:grid-cols-3 gap-6 mt-8">
         <div className="overflow-hidden">
           <div className="reveal-line text-center">
-            <span className="block font-display  text-2xl text-primary">4</span>
+            <span className="block font-display  text-4xl text-primary">4</span>
             <span className="block text-[10px] tracking-[0.15em] uppercase text-ink-soft/60 mt-1">Private Villas</span>
           </div>
         </div>
         <div className="overflow-hidden">
           <div className="reveal-line text-center">
-            <span className="block font-display  text-2xl text-primary">∞</span>
+            <span className="block font-display  text-4xl text-primary">Infinity</span>
             <span className="block text-[10px] tracking-[0.15em] uppercase text-ink-soft/60 mt-1">Mountain Views</span>
           </div>
         </div>
         <div className="overflow-hidden">
           <div className="reveal-line text-center">
-            <span className="block font-display  text-2xl text-primary">24/7</span>
+            <span className="block font-display  text-4xl text-primary">24/7</span>
             <span className="block text-[10px] tracking-[0.15em] uppercase text-ink-soft/60 mt-1">Butler Service</span>
           </div>
         </div>
@@ -418,7 +418,7 @@ export default function ExperienceClient({ chapters }: ExperienceClientProps) {
       pageType: "experience",
     })
   }
-  className="mt-12 inline-flex items-center justify-center gap-3 bg-primary px-10 py-4 text-sm tracking-[0.22em] uppercase font-medium hover:bg-primary/80 transition-colors duration-500"
+  className="mt-12 rounded-sm inline-flex items-center justify-center gap-3 bg-primary px-10 py-4 text-sm tracking-[0.22em] uppercase font-medium hover:bg-primary/80 transition-colors duration-500"
 >
   Reserve your stay
 </a>

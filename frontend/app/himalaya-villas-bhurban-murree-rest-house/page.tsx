@@ -399,8 +399,8 @@ export default function HimalayaVillasBhurbanMurreeRestHouse() {
 
 
 {/* PACKAGES */}
-<section id="packages" className="py-24 bg-[#fbf7ee] border-y border-[#e5dfcf] relative overflow-hidden">
-  {/* Decorative background element */}
+{/* <section id="packages" className="py-24 bg-[#fbf7ee] border-y border-[#e5dfcf] relative overflow-hidden">
+
   <div className="absolute top-0 right-0 w-1/3 h-full opacity-5 bg-gradient-to-l from-[#c9a55b] to-transparent pointer-events-none"></div>
   
   <div className="max-w-7xl mx-auto px-6 relative z-10">
@@ -455,7 +455,7 @@ export default function HimalayaVillasBhurbanMurreeRestHouse() {
               : "shadow-lg border border-[#e5dfcf]"
           }`}
         >
-          {/* Popular badge */}
+         
           {pkg.popular && (
             <div className="absolute top-0 right-0 z-10">
               <div className="bg-[#c9a55b] text-[#1b1b1b] text-xs font-bold px-6 py-2 rotate-45 translate-x-8 translate-y-0 w-40 text-center">
@@ -464,9 +464,9 @@ export default function HimalayaVillasBhurbanMurreeRestHouse() {
             </div>
           )}
 
-          {/* Card content */}
+        
           <div className="p-8 pt-10">
-            {/* Icon and header */}
+            
             <div className="flex items-center gap-3 mb-4">
               <span className="text-3xl">{pkg.icon}</span>
               <div>
@@ -476,7 +476,7 @@ export default function HimalayaVillasBhurbanMurreeRestHouse() {
               </div>
             </div>
 
-            {/* Details */}
+           
             <div className="flex items-center gap-3 text-sm text-gray-500 mb-1">
               <span className="flex items-center gap-1">
                 <svg className="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
@@ -493,7 +493,7 @@ export default function HimalayaVillasBhurbanMurreeRestHouse() {
               </span>
             </div>
 
-            {/* Price */}
+            
             <div className="my-4">
               <span className="text-3xl font-bold text-[#c9a55b]">
                 {pkg.price}
@@ -502,7 +502,7 @@ export default function HimalayaVillasBhurbanMurreeRestHouse() {
 
             <div className="h-px bg-gradient-to-r from-transparent via-[#e5dfcf] to-transparent my-4"></div>
 
-            {/* Features */}
+  
             <ul className="space-y-3 mb-8">
               {pkg.features.map((feature, idx) => (
                 <li key={idx} className="flex items-center text-sm text-gray-700">
@@ -514,7 +514,7 @@ export default function HimalayaVillasBhurbanMurreeRestHouse() {
               ))}
             </ul>
 
-            {/* CTA Button */}
+       
             <a
               href="https://wa.me/923045679000"
               target="_blank"
@@ -534,7 +534,7 @@ export default function HimalayaVillasBhurbanMurreeRestHouse() {
       ))}
     </div>
   </div>
-</section>
+</section> */}
 
 
 

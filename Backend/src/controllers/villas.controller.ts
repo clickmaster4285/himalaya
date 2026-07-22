@@ -13,7 +13,7 @@ import {
   villaRowToPublic,
   type VillaWriteInput,
 } from "../services/villa.service";
-import { VILLA_CATEGORIES, type VillaCategory } from "../data/villa-types";
+import { normalizeVillaCategory, type VillaCategory } from "../data/villa-types";
 
 const SLUG_RE = /^[a-z0-9]+(?:-[a-z0-9]+)*$/;
 
@@ -33,7 +33,7 @@ function parseStringArray(v: unknown): string[] {
 function parseBody(body: Record<string, unknown>): VillaWriteInput | null {
   const slug = String(body.slug ?? "").trim().toLowerCase();
   const title = String(body.title ?? "").trim();
-  const category = String(body.category ?? "").trim() as VillaCategory;
+  const category = normalizeVillaCategory(String(body.category ?? "")) as VillaCategory | null;
   const description = String(body.description ?? "").trim();
   const price = String(body.price ?? "").trim();
   const image = String(body.image ?? "").trim();
@@ -46,7 +46,7 @@ function parseBody(body: Record<string, unknown>): VillaWriteInput | null {
   if (!slug || !SLUG_RE.test(slug)) return null;
   if (!title || !description || !price || !image || !size || !content) return null;
   if (!Number.isFinite(bedrooms) || bedrooms < 0 || !Number.isFinite(guests) || guests < 0) return null;
-  if (!VILLA_CATEGORIES.includes(category)) return null;
+  if (!category) return null;
 
   return {
     slug,
@@ -103,7 +103,9 @@ export async function createVilla(req: Request, res: Response) {
   }
   try {
     const body = req.body as Record<string, unknown>;
+
     const parsed = parseBody(body);
+  
     if (!parsed) {
       return res.status(400).json({ error: "Invalid villa data or slug format." });
     }

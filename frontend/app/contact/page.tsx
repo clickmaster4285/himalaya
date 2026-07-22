@@ -236,7 +236,7 @@ export default function ContactPage() {
                       onChange={handleChange}
                       required
                       placeholder="Your name"
-                      className="mt-2 w-full h-11 sm:h-12 px-3 sm:px-4 border border-[#eadfce] bg-[#f3efe7] text-xs sm:text-[13px] text-neutral-800 focus:outline-none focus:border-[#c9a55b] transition-colors"
+                      className="mt-2 rounded-sm w-full h-11 sm:h-12 px-3 sm:px-4 border border-[#eadfce] bg-[#f3efe7] text-xs sm:text-[13px] text-neutral-800 focus:outline-none focus:border-[#c9a55b] transition-colors"
                     />
                   </div>
 
@@ -246,7 +246,7 @@ export default function ContactPage() {
                       <label className="text-[10px] uppercase tracking-[0.28em] text-neutral-500">
                         Email Address <span className="text-[#c9a55b]">*</span>
                       </label>
-                      <div className="mt-2 h-11 sm:h-12 px-3 sm:px-4 border border-[#eadfce] bg-[#f3efe7] flex items-center gap-2">
+                      <div className="mt-2 h-11 sm:h-12 rounded-sm px-3 sm:px-4 border border-[#eadfce] bg-[#f3efe7] flex items-center gap-2">
                         <Mail className="h-3.5 w-3.5 sm:h-4 sm:w-4 text-[#c9a55b] flex-shrink-0" />
                         <input
                           type="email"
@@ -255,7 +255,7 @@ export default function ContactPage() {
                           onChange={handleChange}
                           required
                           placeholder={SITE_CONTACT.emails.bookings}
-                          className="w-full bg-transparent text-xs sm:text-[13px] text-neutral-700 focus:outline-none"
+                          className="w-full rounded-sm bg-transparent rounded-sm text-xs sm:text-[13px] text-neutral-700 focus:outline-none"
                         />
                       </div>
                     </div>
@@ -263,7 +263,7 @@ export default function ContactPage() {
                       <label className="text-[10px] uppercase tracking-[0.28em] text-neutral-500">
                         Phone Number <span className="text-[#c9a55b]">*</span>
                       </label>
-                      <div className="mt-2 h-11 sm:h-12 px-3 sm:px-4 border border-[#eadfce] bg-[#f3efe7] flex items-center gap-2">
+                      <div className="mt-2 h-11 rounded-sm sm:h-12 px-3 sm:px-4 border border-[#eadfce] bg-[#f3efe7] flex items-center gap-2">
                         <Phone className="h-3.5 w-3.5 sm:h-4 sm:w-4 text-[#c9a55b] flex-shrink-0" />
                         <input
                           type="tel"
@@ -272,7 +272,7 @@ export default function ContactPage() {
                           onChange={handleChange}
                           required
                           placeholder={SITE_CONTACT.phoneDisplay}
-                          className="w-full bg-transparent text-xs sm:text-[13px] text-neutral-700 focus:outline-none"
+                          className="w-full rounded-sm bg-transparent text-xs sm:text-[13px] text-neutral-700 focus:outline-none"
                         />
                       </div>
                     </div>
@@ -290,7 +290,7 @@ export default function ContactPage() {
                       onChange={handleChange}
                       required
                       placeholder="How can we help?"
-                      className="mt-2 w-full h-11 sm:h-12 px-3 sm:px-4 border border-[#eadfce] bg-[#f3efe7] text-xs sm:text-[13px] text-neutral-800 focus:outline-none focus:border-[#c9a55b] transition-colors"
+                      className="mt-2 w-full rounded-sm h-11 sm:h-12 px-3 sm:px-4 border border-[#eadfce] bg-[#f3efe7] text-xs sm:text-[13px] text-neutral-800 focus:outline-none focus:border-[#c9a55b] transition-colors"
                     />
                   </div>
 
@@ -306,7 +306,7 @@ export default function ContactPage() {
                       required
                       placeholder="Tell us more about your inquiry..."
                       rows={5}
-                      className="mt-2 w-full px-3 sm:px-4 py-3 sm:py-4 border border-[#eadfce] bg-[#f3efe7] text-xs sm:text-[13px] text-neutral-800 resize-none focus:outline-none focus:border-[#c9a55b] transition-colors"
+                      className="mt-2 w-full rounded-sm px-3 sm:px-4 py-3 sm:py-4 border border-[#eadfce] bg-[#f3efe7] text-xs sm:text-[13px] text-neutral-800 resize-none focus:outline-none focus:border-[#c9a55b] transition-colors"
                     />
                   </div>
 
@@ -325,7 +325,7 @@ export default function ContactPage() {
       },
     })
   }
-  className="px-6 sm:px-8 md:px-10 py-2.5 sm:py-3 bg-[#1a201d] text-white text-[10px] sm:text-[11px] tracking-[0.2em] uppercase hover:bg-black transition-colors disabled:opacity-50 disabled:cursor-not-allowed flex items-center gap-2"
+  className="px-6 sm:px-8 md:px-10 py-2.5 sm:py-3 rounded-sm bg-[#1a201d] text-white text-[10px] sm:text-[11px] tracking-[0.2em] uppercase hover:bg-black transition-colors disabled:opacity-50 disabled:cursor-not-allowed flex items-center gap-2"
 >
   {isSubmitting ? (
     <>

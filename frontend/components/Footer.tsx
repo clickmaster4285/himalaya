@@ -33,14 +33,14 @@ const Footer = () => {
 >
     Himalaya Villas & Resorts
 </Link>
-           <p
-  className="max-w-full sm:max-w-[360px] text-sm leading-7 text-left sm:text-justify font-body"
+<p
+  className="max-w-full sm:max-w-[360px] text-sm leading-6 text-left font-body"
   style={{ color: "hsl(0 0% 100% / 0.5)" }}
 >
-  A sanctuary of luxury nestled in the Himalayas. Experience
-  breathtaking mountain views, private terraces, elegant
-  accommodations, and warm hospitality designed to create an
-  unforgettable escape in the heart of nature.
+  A sanctuary of luxury nestled in the Himalayas. Experience breathtaking
+  mountain views, private terraces, elegant accommodations, and warm
+  hospitality designed to create an unforgettable escape in the heart of
+  nature.
 </p>
           </div>
 

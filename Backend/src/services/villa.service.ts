@@ -1,5 +1,5 @@
 import type { VillaCategory, VillaPublic } from "../data/villa-types";
-import { VILLA_CATEGORIES } from "../data/villa-types";
+import { normalizeVillaCategory } from "../data/villa-types";
 import { VillaM } from "../models/schemas";
 
 export type VillaWriteInput = {
@@ -40,11 +40,11 @@ export type VillaRow = {
 };
 
 function assertCategory(c: string): VillaCategory {
-  const t = c.trim();
-  if (!(VILLA_CATEGORIES as readonly string[]).includes(t)) {
+  const normalized = normalizeVillaCategory(c);
+  if (!normalized) {
     throw new Error("Invalid category.");
   }
-  return t as VillaCategory;
+  return normalized;
 }
 
 function mapRow(doc: {
@@ -89,7 +89,7 @@ function mapRow(doc: {
 
 export function villaRowToPublic(row: VillaRow): VillaPublic {
   const c = row.category.trim();
-  const category = (VILLA_CATEGORIES as readonly string[]).includes(c) ? (c as VillaCategory) : "Suite";
+  const category = normalizeVillaCategory(c) ?? "Suite";
   return {
     slug: row.slug,
     title: row.title,

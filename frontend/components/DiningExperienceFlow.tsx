@@ -112,10 +112,10 @@ export default function DiningExperienceFlow() {
 
   return (
     <div className="min-h-screen bg-[#F5F0E1]">
-      <Navbar   />
+      <Navbar theme="light"  />
 
       <section className="max-w-[1400px] mx-auto px-6 md:px-12 lg:px-20 py-10 md:py-14">
-        <div className="flex items-center gap-3 text-neutral-700">
+        <div className="flex mt-22 items-center gap-3 text-neutral-700">
           <span className="text-base">↩</span>
           <Link
             href={step === 6 ? "/book" : "/villas"}

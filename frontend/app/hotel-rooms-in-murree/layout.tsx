@@ -1,5 +1,4 @@
 import type { Metadata } from "next";
-import { HotelGraphStructuredData } from "@/components/seo/HotelGraphStructuredData";
 import { createPageMetadata } from "@/lib/seo/build-metadata";
 
 export const metadata: Metadata = createPageMetadata({
@@ -26,10 +25,5 @@ export const metadata: Metadata = createPageMetadata({
 });
 
 export default function Layout({ children }: { children: React.ReactNode }) {
-  return (
-    <>
-      <HotelGraphStructuredData />
-      {children}
-    </>
-  );
+  return <>{children}</>;
 }

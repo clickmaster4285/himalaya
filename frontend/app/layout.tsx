@@ -3,7 +3,7 @@ import { Cormorant_Garamond, DM_Sans, Geist_Mono } from "next/font/google";
 import Script from "next/script";
 import "./globals.css";
 import { cn } from "@/lib/utils";
-import { SiteStructuredData } from "@/components/seo/StructuredData";
+import { HotelGraphStructuredData } from "@/components/seo/HotelGraphStructuredData";
 import { BreadcrumbJsonLd } from "@/components/seo/BreadcrumbJsonLd";
 import { getSiteOrigin } from "@/lib/seo/site-config";
 
@@ -101,7 +101,7 @@ export default function RootLayout({
             gtag('config', 'AW-18162243267');
           `}
         </Script>
-        <SiteStructuredData />
+        <HotelGraphStructuredData />
         <BreadcrumbJsonLd />
       </head>
       <body className={`${geistMono.variable} min-h-dvh`} suppressHydrationWarning>

@@ -97,6 +97,12 @@ function staticMarketingRoutes(includeBookRoutes = true): SitemapRouteDef[] {
     { path: "/blogs", changeFrequency: "weekly", priority: 0.85 },
     { path: "/experience", changeFrequency: "monthly", priority: 0.85 },
     { path: "/thing-to-do-bhurban-murree2", changeFrequency: "monthly", priority: 0.65 },
+    { path: "/hotel-rooms-in-murree", changeFrequency: "monthly", priority: 0.85 },
+    { path: "/luxury-hotels-in-murree", changeFrequency: "monthly", priority: 0.85 },
+    { path: "/hotels-in-bhurban", changeFrequency: "monthly", priority: 0.85 },
+    { path: "/hotels-in-murree-pakistan", changeFrequency: "monthly", priority: 0.85 },
+    { path: "/best-hotels-murree-pakistan", changeFrequency: "monthly", priority: 0.85 },
+    { path: "/family-hotels-in-murree", changeFrequency: "monthly", priority: 0.8 },
   ];
 
   if (includeBookRoutes) {

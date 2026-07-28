@@ -37,7 +37,9 @@ export async function sendInquiryNotificationEmail(
         replyTo: payload.email,
       });
       staffSent = true;
-      console.info(`[inquiries] Staff notification sent → ${to}`);
+      // console.log("INQUIRY_TO_EMAIL:", process.env.INQUIRY_TO_EMAIL);
+      // console.log("Recipients:", staffRecipients);
+      // console.info(`[inquiries] Staff notification sent → ${to}`);
     } catch (e) {
       errors.push(`staff(${to}): ${e instanceof Error ? e.message : e}`);
       console.error(`[inquiries] Staff email failed for ${to}:`, e);

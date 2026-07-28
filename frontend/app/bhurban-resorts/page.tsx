@@ -148,7 +148,7 @@ export default function BhurbanResortsPage() {
             <h1 className="font-display text-white text-3xl sm:text-4xl md:text-5xl lg:text-6xl leading-tight">
               Bhurban Resorts:
               <br />
-              <span className="text-[#c9a55b]">The Complete 2026 Guide</span>
+              <span className="text-[#c9a55b]">2026 Guide to Every Tier & Rate | Himalaya Villas.</span>
             </h1>
             <p className="mt-3 sm:mt-4 md:mt-5 text-white/90 text-sm sm:text-base md:text-lg tracking-wide max-w-3xl mx-auto">
               Every resort tier compared — from Pearl Continental to cottage resorts

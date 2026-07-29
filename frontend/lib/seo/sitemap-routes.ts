@@ -98,6 +98,8 @@ function staticMarketingRoutes(includeBookRoutes = true): SitemapRouteDef[] {
     { path: "/experience", changeFrequency: "monthly", priority: 0.85 },
     { path: "/thing-to-do-bhurban-murree2", changeFrequency: "monthly", priority: 0.65 },
     { path: "/hotel-rooms-in-murree", changeFrequency: "monthly", priority: 0.85 },
+    { path: "/holiday-homes-murree", changeFrequency: "monthly", priority: 0.85 },
+    { path: "/guest-house-murree", changeFrequency: "monthly", priority: 0.85 },
     { path: "/luxury-hotels-in-murree", changeFrequency: "monthly", priority: 0.85 },
     { path: "/hotels-in-bhurban", changeFrequency: "monthly", priority: 0.85 },
     { path: "/hotels-in-murree-pakistan", changeFrequency: "monthly", priority: 0.85 },

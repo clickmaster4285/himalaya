@@ -1162,8 +1162,11 @@ export default function HotelRoomsInMurreeClient() {
                 still isn&apos;t private.
               </p>
               <p>
-                This is the point in planning where it is worth comparing the
-                whole-villa alternative. A private villa priced at the top of the
+                This is the point in planning where it is worth comparing{" "}
+                <Link href="/holiday-homes-murree" className="text-emerald-700 underline underline-offset-4">
+                  renting a whole holiday home instead
+                </Link>
+                . A private villa priced at the top of the
                 hotel-suite range sleeps the entire group under one roof, with its
                 own lounge, kitchen access, and outdoor space — and, in estate
                 settings, grounds that no one outside your group is using. For

@@ -7,6 +7,7 @@ const repoRoot =
   path.basename(cwd).toLowerCase() === "frontend" ? path.resolve(cwd, "..") : cwd;
 
 // Merge env so server/RSC see JWT_SECRET from backend or repo root (frontend/.env* can override).
+loadEnvConfig(path.join(repoRoot, "Backend"));
 loadEnvConfig(path.join(repoRoot, "backend"));
 loadEnvConfig(repoRoot);
 loadEnvConfig(cwd);
@@ -14,6 +15,11 @@ loadEnvConfig(cwd);
 const backend = (process.env.BACKEND_INTERNAL_URL ?? "http://127.0.0.1:5000").replace(/\/$/, "");
 
 const nextConfig: NextConfig = {
+  // Turbopack resolves CSS imports from the monorepo root — hoist deps via root workspaces.
+  turbopack: {
+    root: repoRoot,
+  },
+  outputFileTracingRoot: repoRoot,
   experimental: {
     // Next.js 16 proxy truncates multipart bodies above ~1MB without this (breaks iPhone photos).
     proxyClientMaxBodySize: "15mb",

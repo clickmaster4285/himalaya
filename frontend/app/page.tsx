@@ -22,7 +22,7 @@ import { getPublishedVillas } from "@/lib/villas-fetch";
 import VillasAccommodations from "@/components/VillasAccommodations";
 
 export const metadata: Metadata = createPageMetadata({
-  title: "Himalaya Villas and Resort | Private Luxury Estate Bhurban",
+  title: "Himalaya Villas and Resort | Luxury Hotel Bhurban Murree",
   description:
     "Private luxury estate in Bhurban for exclusive stays, destination weddings, and curated mountain experiences.",
   path: "/",

@@ -212,8 +212,8 @@ function HeroSection() {
         </div>
       ))}
 
-      <div className="relative z-10 mx-auto flex min-h-[100dvh] max-w-7xl flex-col gap-8 px-4 py-10 lg:min-h-screen lg:flex-row lg:items-center lg:gap-12 lg:px-8 lg:py-16">
-        <div className="flex-1 text-white">
+      <div className="relative z-10 mx-auto flex min-h-[100dvh] max-w-7xl flex-col gap-8 py-10 pl-1 pr-4 sm:pl-2 lg:min-h-screen lg:flex-row lg:items-center lg:gap-12 lg:py-16 lg:pl-2 lg:pr-10">
+        <div className="flex-1 text-white lg:-ml-3 xl:-ml-6">
           <Reveal>
             <p className="text-xs font-semibold uppercase tracking-[0.25em] text-amber-200/90">
               Bhurban · Murree · Pakistan
@@ -421,15 +421,17 @@ function HeroSection() {
 function AuthorBar() {
   return (
     <div className="border-b border-gray-200 bg-white py-4">
-      <div className="mx-auto flex max-w-4xl flex-wrap items-center gap-x-4 gap-y-2 px-4 text-sm hh-muted md:px-6">
-        <span>
-          By <strong className="text-gray-800">{AUTHOR.name}</strong>
-          <span className="hidden sm:inline"> — {AUTHOR.role}</span>
-        </span>
-        <span className="hidden h-4 w-px bg-gray-300 sm:block" />
-        <span>Published 29 July 2026</span>
-        <span className="hidden h-4 w-px bg-gray-300 sm:block" />
-        <span>Last reviewed: {AUTHOR.lastReviewed}</span>
+      <div className="mx-auto max-w-7xl pl-1 pr-4 sm:pl-2 lg:pl-2 lg:pr-10">
+        <div className="flex flex-wrap items-center gap-x-4 gap-y-2 text-sm hh-muted lg:-ml-3 xl:-ml-6">
+          <span>
+            By <strong className="text-gray-800">{AUTHOR.name}</strong>
+            <span className="hidden sm:inline"> — {AUTHOR.role}</span>
+          </span>
+          <span className="hidden h-4 w-px bg-gray-300 sm:block" />
+          <span>Published 29 July 2026</span>
+          <span className="hidden h-4 w-px bg-gray-300 sm:block" />
+          <span>Last reviewed: {AUTHOR.lastReviewed}</span>
+        </div>
       </div>
     </div>
   );

@@ -66,7 +66,7 @@ const HeroSection = () => {
                 textShadow: "0 2px 3px rgb(0 0 0 / 0.35), 0 12px 40px rgb(0 0 0 / 0.45)",
               }}
             >
-              Himalaya Villas and Resort <br/>   Bhurban Murree
+              Himalaya Villas and Resort <br/>  Hotel Bhurban Murree
             </h1>
 
              {/* <h1
@@ -86,8 +86,7 @@ const HeroSection = () => {
                 textShadow: "0 1px 2px rgb(0 0 0 / 0.5), 0 8px 24px rgb(0 0 0 / 0.35)",
               }}
             >
-              Himalaya Villas and Resort is not a hotel. It is a private luxury estate crafted for those who demand
-              exclusivity, privacy, and elevated experiences in the hills of Bhurban. Guests often say it feels better than chinar resorts bhurban for privacy, comfort, and memorable stays. 
+           Himalaya Villas & Resort is a luxury resort and private villa estate in Bhurban Murree, designed for guests who value exclusivity, privacy, and exceptional hospitality. Offering the comfort of a premium resort with the intimacy of private luxury villas, every stay is crafted to deliver an elevated mountain escape. Many guests choose Himalaya Villas & Resort for its peaceful setting, spacious accommodations, and personalized experience, making it one of the most sought-after luxury stays in Bhurban and Murree.
             </p>
 
             {/* Buttons - Responsive layout */}

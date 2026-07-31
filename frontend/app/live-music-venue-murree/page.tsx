@@ -800,7 +800,7 @@ export default function LiveMusicVenuePage() {
           </h2>
           <div className="space-y-4">
             <p className="text-sm sm:text-base md:text-lg text-neutral-700 leading-relaxed">
-              The corridor's climate divides the year into three usable states,
+              The corridor is climate divides the year into three usable states,
               and outdoor performance behaves differently in each.
             </p>
             <p className="text-sm sm:text-base md:text-lg text-neutral-700 leading-relaxed">
@@ -830,7 +830,7 @@ export default function LiveMusicVenuePage() {
             <p className="text-sm sm:text-base md:text-lg text-neutral-700 leading-relaxed bg-[#F6F1EA] p-6 rounded-lg border border-[#eadfce]">
               Whatever the season, build a wet-weather plan with a named indoor
               space and confirm that the property will let you move the
-              performance there at short notice. "We'll see on the night" is not
+              performance there at short notice. "We will see on the night" is not
               a plan, and the moment you need it is the moment nobody is
               available to authorise it.
             </p>
@@ -890,7 +890,7 @@ export default function LiveMusicVenuePage() {
             <p className="text-sm sm:text-base md:text-lg text-neutral-700 leading-relaxed">
               None of this is onerous. It is simply the difference between an
               event that runs to its own schedule and one that is ended by
-              somebody else's.
+              somebody elses.
             </p>
           </div>
         </div>
@@ -929,7 +929,7 @@ export default function LiveMusicVenuePage() {
               <strong>Brief.</strong> Send the act a written brief covering set
               times, the curfew if there is one, the power arrangement, the
               covered area, and what you actually want — because "play something
-              nice" produces a wedding-reception set at an event that wanted a
+              nice produces a wedding-reception set at an event that wanted a
               quiet acoustic evening. Specify the mood, name three or four
               reference artists, and state clearly whether you want the audience
               listening or dancing. The two are different jobs and require

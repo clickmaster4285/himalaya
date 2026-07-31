@@ -1,47 +1,80 @@
 import { getSiteOrigin } from "@/lib/seo/site-config";
-import { getArticleSitemapRouteDefs } from "@/lib/seo/sitemap-routes";
 
-const DEFAULT_LASTMOD = "2026-04-19";
+const DEFAULT_LASTMOD = "2026-07-31";
 
 export const revalidate = 300;
 
-// Event-related pages that should be in the events sitemap
-const eventRoutes = [
-  { path: "/book/event", priority: 0.95, changeFrequency: "weekly" as const },
-  { path: "/book/wedding", priority: 0.95, changeFrequency: "weekly" as const },
-  { path: "/book/dining", priority: 0.9, changeFrequency: "weekly" as const },
-  { path: "/book/stay", priority: 0.8, changeFrequency: "weekly" as const },
-  { path: "/book/activities", priority: 0.8, changeFrequency: "weekly" as const },
-  { path: "/book/meetings", priority: 0.8, changeFrequency: "weekly" as const },
-  { path: "/events", priority: 0.85, changeFrequency: "monthly" as const },
-  { path: "/experience", priority: 0.85, changeFrequency: "monthly" as const },
-  { path: "/weddings", priority: 0.85, changeFrequency: "monthly" as const },
-  { path: "/family-celebrations", priority: 0.8, changeFrequency: "monthly" as const },
-  { path: "/corporate-retreats", priority: 0.8, changeFrequency: "monthly" as const },
-  { path: "/corporate", priority: 0.8, changeFrequency: "monthly" as const },
-  { path: "/wedding-venue-near-islamabad", priority: 0.75, changeFrequency: "monthly" as const },
-];
+// All event slugs extracted from your eventDetails object
+// These match exactly what's in your events/[slug]/page.tsx
+function getEventSlugs(): string[] {
+  // This is the complete list from your eventDetails object
+  return [
+    "nikah-wedding-reception",
+    "mehndi",
+    "baraat",
+    "dholki-bridal-shower",
+    "valima-wedding-dinner",
+    "engagement-ceremonies",
+    "sufi-qawwali-evenings",
+    "private-musical-concerts",
+    "mushaira-poetry-evenings",
+    "dj-nights-music-parties",
+    "live-band-performances",
+    "cultural-shows-acts",
+    "corporate-retreat-packages",
+    "product-launches-brand-events",
+    "award-dinners-gala-nights",
+    "conferences-seminars",
+    "team-building-retreats",
+    "exhibitions-trade-meets",
+    "milestone-birthdays",
+    "eid-gatherings-family-reunions",
+    "baby-showers-gender-reveal",
+    "graduation-parties",
+    "retirement-celebrations",
+    "farewells-send-offs",
+    "bonfire-stargazing-nights",
+    "guided-trails-forest-walks",
+    "private-chef-dining-experiences",
+    "adventure-outdoor-activities",
+    "workshops-creative-sessions",
+    "photography-content-packages",
+    "yoga-meditation-retreats",
+    "digital-detox-experiences",
+    "spa-relaxation-escapes",
+    "health-fitness-camps",
+    "holistic-healing-programs",
+    "luxury-honeymoon-packages"
+  ];
+}
 
 export async function GET() {
   const origin = getSiteOrigin();
-  const articleDefs = getArticleSitemapRouteDefs("events");
+  const eventSlugs = getEventSlugs();
 
-  const entries = [...eventRoutes, ...articleDefs].map((route) => {
-    const lastmod = "lastModified" in route && route.lastModified
-      ? route.lastModified.toISOString().split("T")[0]
-      : DEFAULT_LASTMOD;
-
+  // Generate URLs for all events
+  const eventUrls = eventSlugs.map((slug) => {
     return `  <url>
-    <loc>${origin}${route.path}</loc>
-    <lastmod>${lastmod}</lastmod>
-    <changefreq>${route.changeFrequency}</changefreq>
-    <priority>${route.priority}</priority>
+    <loc>${origin}/events/${slug}</loc>
+    <lastmod>${DEFAULT_LASTMOD}</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.9</priority>
   </url>`;
   });
 
+  // Add the main events page
+  const mainEventsPage = `  <url>
+    <loc>${origin}/events</loc>
+    <lastmod>${DEFAULT_LASTMOD}</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.95</priority>
+  </url>`;
+
+  const allEntries = [mainEventsPage, ...eventUrls];
+
   const xml = `<?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
-${entries.join("\n")}
+${allEntries.join("\n")}
 </urlset>`;
 
   return new Response(xml, {

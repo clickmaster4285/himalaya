@@ -9,6 +9,7 @@ import { createPageMetadata } from "@/lib/seo/build-metadata";
 import { absoluteUrl } from "@/lib/seo/site-config";
 import EventQuoteForm from "@/components/EventQuoteForm";
 import EventFAQs from "@/components/EventFAQs";
+import NikahWeddingPage from "@/components/events/NikahWeddingPage";
 
 // Event data mapping
 const eventDetails: Record<string, {
@@ -18,6 +19,8 @@ const eventDetails: Record<string, {
   features: string[];
   image: string;
   category: string;
+  galleryImages?: string[];
+  sections?: { heading: string; paragraphs: string[] }[];
   faqs: Array<{
     question: string;
     answer: string;
@@ -29,13 +32,13 @@ const eventDetails: Record<string, {
     longDescription: "Experience the perfect blend of tradition and luxury with our comprehensive Nikah and Wedding Reception packages. From the sacred ceremony to the grand reception, we handle every detail with precision and care, ensuring your special day is nothing short of magical.",
     features: [
       "Sacred Nikah ceremony setup with traditional decor",
-      "Elegant reception hall with premium floral arrangements",
+      "Elegant reception stage with premium floral arches",
       "Professional photography and videography services",
-      "Luxury accommodation for wedding party",
+      "Luxury accommodation for the wedding party",
       "Gourmet catering with customizable menus",
-      "Dedicated event coordinator throughout"
+      "Dedicated event coordinator and guest hospitality"
     ],
-    image: "https://picsum.photos/seed/wedding1/800/600.jpg",
+    image: "/assets/nikah-hero-night.png",
     category: "Weddings & Ceremonies",
     faqs: [
       {
@@ -1275,6 +1278,35 @@ export default async function EventPage({ params }: { params: Promise<{ slug: st
     }
   };
 
+  if (slug === "nikah-wedding-reception") {
+    const related = Object.entries(eventDetails)
+      .filter(([eventSlug, details]) => details.category === event.category && eventSlug !== slug)
+      .slice(0, 3)
+      .map(([relatedSlug, details]) => ({
+        slug: relatedSlug,
+        title: details.title,
+        description: details.description,
+        image: details.image,
+      }));
+
+    return (
+      <>
+        <JsonLd items={[{ id: `event-${slug}`, data: jsonLd }]} />
+        <NikahWeddingPage
+          event={{
+            title: event.title,
+            description: event.description,
+            longDescription: event.longDescription,
+            features: event.features,
+            category: event.category,
+            faqs: event.faqs,
+          }}
+          related={related}
+        />
+      </>
+    );
+  }
+
   return (
     <div className="min-h-screen bg-white">
       <JsonLd items={[{ id: `event-${slug}`, data: jsonLd }]} />
@@ -1282,7 +1314,7 @@ export default async function EventPage({ params }: { params: Promise<{ slug: st
       <Navbar />
 
       {/* Hero Section */}
-      <section className="relative min-h-[600px] overflow-hidden">
+      <section className="relative min-h-150 overflow-hidden">
         <div className="absolute inset-0">
           <Image
             src={event.image}
@@ -1294,12 +1326,12 @@ export default async function EventPage({ params }: { params: Promise<{ slug: st
         </div>
         <div className="absolute inset-0 bg-black/50" />
         
-        <div className="relative z-10 flex items-center justify-center min-h-[600px] px-6">
+        <div className="relative z-10 flex items-center justify-center min-h-150 px-6">
           <div className="text-center text-white max-w-4xl">
             <div className="flex items-center justify-center gap-3 text-[#c9a55b] text-[10px] md:text-[11px] font-bold uppercase tracking-[0.2em] mb-6">
-              <span className="h-[1px] w-8 bg-[#c9a55b]"></span>
+              <span className="h-px w-8 bg-[#c9a55b]"></span>
               <span>{event.category}</span>
-              <span className="h-[1px] w-8 bg-[#c9a55b]"></span>
+              <span className="h-px w-8 bg-[#c9a55b]"></span>
             </div>
             <h1 className="font-display text-4xl md:text-6xl lg:text-7xl leading-tight mb-6">
               {event.title}
@@ -1331,7 +1363,7 @@ export default async function EventPage({ params }: { params: Promise<{ slug: st
                 <div className="grid grid-cols-1 md:grid-cols-2 gap-4 mb-12">
                   {event.features.map((feature, index) => (
                     <div key={index} className="flex items-start gap-3">
-                      <div className="w-6 h-6 rounded-full bg-[#c9a55b] flex items-center justify-center flex-shrink-0 mt-1">
+                      <div className="w-6 h-6 rounded-full bg-[#c9a55b] flex items-center justify-center shrink-0 mt-1">
                         <svg className="w-3 h-3 text-white" fill="currentColor" viewBox="0 0 20 20">
                           <path fillRule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clipRule="evenodd" />
                         </svg>
@@ -1340,6 +1372,34 @@ export default async function EventPage({ params }: { params: Promise<{ slug: st
                     </div>
                   ))}
                 </div>
+
+                {event.sections?.map((section, index) => (
+                  <div key={index} className="mt-14">
+                    <h3 className="font-display text-2xl text-neutral-900 mb-4">{section.heading}</h3>
+                    {section.paragraphs.map((paragraph, pindex) => (
+                      <p key={pindex} className="text-gray-600 leading-relaxed mb-4">{paragraph}</p>
+                    ))}
+                  </div>
+                ))}
+
+                {event.galleryImages && event.galleryImages.length > 0 && (
+                  <div className="mt-14">
+                    <h3 className="font-display text-2xl text-neutral-900 mb-6">Wedding Gallery</h3>
+                    <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
+                      {event.galleryImages.map((src, idx) => (
+                        <div key={idx} className="overflow-hidden rounded-3xl bg-gray-100">
+                          <Image
+                            src={src}
+                            alt={`${event.title} gallery ${idx + 1}`}
+                            width={800}
+                            height={600}
+                            className="h-full w-full object-cover transition-transform duration-500 hover:scale-105"
+                          />
+                        </div>
+                      ))}
+                    </div>
+                  </div>
+                )}
               </div>
             </div>
 

@@ -24,9 +24,9 @@ export const VILLA_BLOG_POSTS: VillaBlogPost[] = [
   },
 {
   slug: "best-hotels-in-murree-pakistan",
-  title: "Best hotels in Murree, Pakistan",
+  title: "Best Hotels in Murree, Pakistan - Himalaya Villas & Resort",
   excerpt:
-    "From luxury mountain resorts to cozy family guesthouses — explore the best hotels in Murree for a comfortable and scenic stay in Pakistan’s hill station.",
+    "Looking for the best hotels in Murree? Explore Himalaya Villas & Resort's luxury private villas, rates & amenities. Book your dream mountain stay today!",
   date: "2025-12-20",
   readMinutes: 6,
   coverImage: "/assets/murree-hotels.jpeg",

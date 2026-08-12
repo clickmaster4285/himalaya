@@ -28,6 +28,58 @@ const highlights = [
   { icon: Sparkles, label: "Full styling", text: "Floral arches, crystal drapes, gold seating" },
 ];
 
+const galleryImages = [
+  {
+    src: "/assets/nikah-hero-night.png",
+    alt: "Night nikah stage with floral arch and crystal curtain",
+    title: "Evening Stage",
+    subtitle: "Crystal drape & gold seating",
+    className: "md:col-span-2 md:row-span-2 md:min-h-[520px] min-h-[280px]",
+  },
+  {
+    src: "/assets/nikah-aerial-lawn.png",
+    alt: "Aerial view of nikah lawn with fountain and mountain backdrop at dusk",
+    title: "Venue Overview",
+    subtitle: "Fountain, lawn & terrace views",
+    className: "md:col-span-1 md:row-span-1 min-h-[240px]",
+  },
+  {
+    src: "/assets/nikah-ceremony-setup.png",
+    alt: "Daytime nikah ceremony setup with guest chairs and floral arch",
+    title: "Ceremony Setup",
+    subtitle: "Cross-back chairs on the lawn",
+    className: "md:col-span-1 md:row-span-1 min-h-[240px]",
+  },
+  {
+    src: "/assets/nikah-stage-close.png",
+    alt: "Close-up of tufted gold sofa and floral arch with mountain view",
+    title: "Stage Detail",
+    subtitle: "Premium floral arch styling",
+    className: "md:col-span-1 md:row-span-2 min-h-[320px]",
+  },
+  {
+    src: "/assets/nikah-lawn.png",
+    alt: "Guest seating arrangement facing the nikah stage",
+    title: "Guest Seating",
+    subtitle: "Lantern-lit lawn layout",
+    className: "md:col-span-1 md:row-span-1 min-h-[240px]",
+  },
+  {
+    src: "/assets/nikah-catering.png",
+    alt: "Wedding dessert and catering display with gold accents",
+    title: "Dessert Display",
+    subtitle: "Gold platters & candlelight",
+    className: "md:col-span-1 md:row-span-1 min-h-[240px]",
+  },
+  {
+    src: "/assets/nikah-buffet.png",
+    alt: "Traditional wedding buffet with desserts and warm evening lighting",
+    title: "Reception Buffet",
+    subtitle: "Curated dining spread",
+    className: "md:col-span-2 md:row-span-1 min-h-[260px]",
+  },
+];
+
 export default function NikahWeddingPage({
   event,
   related,
@@ -71,10 +123,10 @@ export default function NikahWeddingPage({
               Request a Quote
             </a>
             <a
-              href="#the-setting"
+              href="#gallery"
               className="rounded-md border border-white/80 px-6 py-3 text-xs font-semibold uppercase tracking-[0.16em] text-white transition hover:bg-white hover:text-neutral-900"
             >
-              Explore the Setting
+              View Gallery
             </a>
           </div>
         </div>
@@ -211,6 +263,41 @@ export default function NikahWeddingPage({
               From welcome drinks to the final sweet course, service stays discreet so family can stay present in the
               moment — not managing the floor.
             </p>
+          </div>
+        </div>
+      </section>
+
+      <section id="gallery" className="bg-[#f4ecde] py-16 md:py-24">
+        <div className="mx-auto max-w-7xl px-6">
+          <div className="mb-12 text-center md:mb-14">
+            <p className="text-[11px] font-bold uppercase tracking-[0.22em] text-[#9a7b3a]">Visual Gallery</p>
+            <h2 className="font-display mt-3 text-3xl text-neutral-900 md:text-5xl">Every moment, beautifully captured</h2>
+            <p className="mx-auto mt-4 max-w-2xl text-base text-neutral-600">
+              From the first glance at the lawn to the final dessert course — a complete look at how your nikah and
+              reception comes together at Himalaya Villas.
+            </p>
+          </div>
+
+          <div className="grid grid-cols-1 gap-4 md:grid-cols-4 md:auto-rows-[minmax(180px,auto)]">
+            {galleryImages.map((item) => (
+              <article
+                key={item.src}
+                className={`group relative overflow-hidden rounded-[24px] border border-[#e7dbc6] bg-white shadow-[0_20px_50px_rgba(40,30,15,0.08)] ${item.className}`}
+              >
+                <Image
+                  src={item.src}
+                  alt={item.alt}
+                  fill
+                  sizes="(max-width: 768px) 100vw, 25vw"
+                  className="object-cover transition duration-700 group-hover:scale-105"
+                />
+                <div className="absolute inset-0 bg-gradient-to-t from-black/75 via-black/20 to-transparent opacity-90 transition group-hover:from-black/85" />
+                <div className="absolute inset-x-0 bottom-0 p-5 md:p-6">
+                  <p className="text-[10px] font-bold uppercase tracking-[0.2em] text-[#e8c97a]">{item.subtitle}</p>
+                  <h3 className="font-display mt-1 text-xl text-white md:text-2xl">{item.title}</h3>
+                </div>
+              </article>
+            ))}
           </div>
         </div>
       </section>

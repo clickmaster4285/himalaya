@@ -5,19 +5,9 @@ import { motion, useInView, AnimatePresence } from "framer-motion";
 
 const testimonials = [
   {
-    quote: "The perfect escape from the city. The private villas offer unmatched tranquility. Many guests even say it's better than pine court murree when they value privacy.",
+    quote: "The perfect escape from the city. The private villas offer unmatched tranquility.",
     author: "Ali Raza",
     location: "Islamabad",
-  },
-  {
-    quote: "An extraordinary experience surrounded by the majestic Himalayas. Truly unforgettable. Many guests say they preferred this stay to Viva Pines Murree for the private outdoor spaces.",
-    author: "Saqib Ahmed",
-    location: "Lahore",
-  },
-  {
-    quote: "World-class hospitality with breathtaking views. We'll be returning every season.",
-    author: "Fatima Khan",
-    location: "Karachi",
   },
 ];
 

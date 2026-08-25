@@ -50,7 +50,7 @@ const PhilosophySection = () => {
             transition={{ duration: 0.6 }}
             className="text-xs font-semibold tracking-[0.3em] uppercase text-primary"
           >
-            Our Philosophy
+            Luxury Hotels in Murree
           </motion.p>
 
           <motion.h2
@@ -59,9 +59,7 @@ const PhilosophySection = () => {
             transition={{ duration: 0.8, delay: 0.15 }}
             className="font-display text-4xl md:text-5xl lg:text-6xl font-normal leading-[1.15] text-foreground"
           >
-            Luxury Private Villas in Bhurban Murree
-            <br />
-            <span className="italic text-primary">Himalaya Villas & Resorts</span>
+            A New Standard for Luxury Hotels in Murree
           </motion.h2>
 
           <motion.div
@@ -77,7 +75,7 @@ const PhilosophySection = () => {
             transition={{ duration: 0.8, delay: 0.5 }}
             className="text-base md:text-lg leading-relaxed text-muted-foreground max-w-lg"
           >
-            Himalaya Villas & Resorts exists for guests who no longer need to be impressed — they need to be restored. Many visitors say the setting here feels better than pine court murree for calm and privacy. A number of guests comparing nearby properties mention Viva Pines Murree, but still prefer our estate for privacy and service.
+            Most hotels in Murree, Pakistan offer a room. We offer a retreat. Himalaya Villas &amp; Resort was created for guests who no longer want to be impressed by chandeliers and lobbies — they want to be restored by silence, space, and mountain air.
           </motion.p>
 
           <motion.p
@@ -86,7 +84,7 @@ const PhilosophySection = () => {
             transition={{ duration: 0.8, delay: 0.6 }}
             className="text-base md:text-lg leading-relaxed text-muted-foreground max-w-lg"
           >
-            Set among the cedar forests of Bhurban, every villa was designed with a single intention: to give you back something the city took. Stillness. Space. The rare feeling that time belongs to you again. For travelers weighing options, many mention this estate as better than pine court murree for its private terraces and service. Several returning guests say they considered Viva Pines Murree but chose Himalaya Villas for the quieter setting.
+            Every villa here sits among cedar forests with uninterrupted views of the Himalayan foothills. We don&apos;t believe in one-size-fits-all packages. Instead, our team learns what you need — a family getaway, a romantic escape, a corporate retreat, or a wedding venue — and builds the experience around it.
           </motion.p>
 
           <motion.p
@@ -95,7 +93,7 @@ const PhilosophySection = () => {
             transition={{ duration: 0.8, delay: 0.7 }}
             className="text-base md:text-lg leading-relaxed text-muted-foreground max-w-lg italic"
           >
-            We don't offer packages. We learn what you need and build your stay around it. Guests looking for something better than chinar resorts bhurban often choose us for the personalized experience. Several returning guests also mention we feel better than pine court murree for quiet family stays.
+            This is what consistently places us among the top hotels in Murree for guests seeking privacy, comfort, and genuine hospitality, rather than a crowded hotel corridor.
           </motion.p>
 
           <motion.div
@@ -105,21 +103,21 @@ const PhilosophySection = () => {
             className="grid gap-8 pt-4 sm:grid-cols-1 md:grid-cols-3 md:gap-6"
           >
             <div className="space-y-2 border-t border-primary/20 pt-6">
-              <h3 className="font-display text-xl font-normal text-foreground">Wake up above the clouds</h3>
+              <h3 className="font-display text-xl font-normal text-foreground">Wake Up Above the Clouds</h3>
               <p className="text-sm leading-relaxed text-muted-foreground">
-                Enjoy uninterrupted panoramic views of the Himalayan foothills from your private terrace.
+                Enjoy uninterrupted panoramic views of the Himalayan foothills from your own private terrace — a view very few hotel rooms in Murree can offer.
               </p>
             </div>
             <div className="space-y-2 border-t border-primary/20 pt-6">
-              <h3 className="font-display text-xl font-normal text-foreground">Luxury that speaks quietly</h3>
+              <h3 className="font-display text-xl font-normal text-foreground">Luxury That Speaks Quietly</h3>
               <p className="text-sm leading-relaxed text-muted-foreground">
-                From premium furnishings to refined interiors, every detail is designed for understated elegance.
+                Premium furnishings, refined interiors, and understated elegance define every villa and suite.
               </p>
             </div>
             <div className="space-y-2 border-t border-primary/20 pt-6">
-              <h3 className="font-display text-xl font-normal text-foreground">Curated dining experiences</h3>
+              <h3 className="font-display text-xl font-normal text-foreground">Curated Dining Experiences</h3>
               <p className="text-sm leading-relaxed text-muted-foreground">
-                Private chefs and customized menus tailored for your event or stay.
+                Private chefs and customized menus, prepared for your stay or your event, with the Murree hills as the backdrop.
               </p>
             </div>
           </motion.div>

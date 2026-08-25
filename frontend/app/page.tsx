@@ -15,6 +15,7 @@ import GlimpseSection from "@/components/GlimpseSection";
 import JournalSection from "@/components/JournalSection";
 import WhyChooseSection from "@/components/WhyChooseSection";
 import FrequentlyVisitedPages from "@/components/FrequentlyVisitedPages";
+import HomeFAQSection from "@/components/HomeFAQSection";
 import ReserveSection from "@/components/ReserveSection";
 import Footer from "@/components/Footer";
 import { createPageMetadata } from "@/lib/seo/build-metadata";
@@ -22,9 +23,9 @@ import { getPublishedVillas } from "@/lib/villas-fetch";
 import VillasAccommodations from "@/components/VillasAccommodations";
 
 export const metadata: Metadata = createPageMetadata({
-  title: "Himalaya Villas and Resort | Luxury Hotel Bhurban Murree",
+  title: "Hotels in Murree - Himalaya Villas & Resort, Bhurban",
   description:
-    "Private luxury estate in Bhurban for exclusive stays, destination weddings, and curated mountain experiences.",
+    "Looking for luxury hotels in Murree? Himalaya Villas & Resort offers private villas, stunning views & top hospitality. Book now!",
   path: "/",
   ogImage: "/assets/gallery-exterior.jpg",
 });
@@ -61,6 +62,7 @@ const Index = async () => {
       <WhyChooseSection />
       <TestimonialsSection />
       <FrequentlyVisitedPages />
+      <HomeFAQSection />
       <ReserveSection />
       <Footer />
     </div>

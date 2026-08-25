@@ -50,10 +50,10 @@ const VillasHero = () => {
 
       <div className="relative z-10 flex flex-col items-center justify-center h-full px-6 md:px-20 text-center">
         <h1 className="font-display text-4xl md:text-6xl lg:text-7xl font-semibold text-white leading-tight drop-shadow-[0_16px_40px_rgba(0,0,0,0.5)]">
-          Our Villas
+          Luxury Villas in Bhurban, Murree
         </h1>
-        <p className="mt-6 max-w-3xl text-sm md:text-base text-white/90">
-          Each villa is a masterpiece of design and comfort, offering unparalleled views of the Himalayas and personalized luxury experiences.
+        <p className="mt-6 max-w-3xl text-sm md:text-base text-white/90 leading-relaxed">
+          Private stays with full mountain views — compare every villa, suite, and room category with current rates and inclusions.
         </p>
 
         {/* <div className="mt-8 flex gap-3">

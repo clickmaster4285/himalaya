@@ -1,6 +1,6 @@
 /** Canonical public origin (no trailing slash). */
 export function getSiteOrigin(): string {
-  return (process.env.NEXT_PUBLIC_SITE_URL ?? "https://himalayavillas.com").replace(/\/$/, "");
+  return (process.env.NEXT_PUBLIC_SITE_URL ?? "https://www.himalayavillas.com").replace(/\/$/, "");
 }
 
 export function absoluteUrl(path: string): string {

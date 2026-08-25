@@ -198,6 +198,15 @@ export const VILLA_BLOG_POSTS: VillaBlogPost[] = [
   date: "2026-04-24",
   readMinutes: 10,
   coverImage: "/assets/himalaya-event.png",
+},
+{
+  slug: "why-people-choose-himalaya-villas-resorts-in-murree",
+  title: "Why People Choose Himalaya Villas & Resorts in Murree",
+  excerpt:
+    "Book private luxury villas at Himalaya Villas & Resorts, Bhurban, Murree. Pine forest views, family-friendly stays & wedding venues. Reserve your escape today!",
+  date: "2026-04-25",
+  readMinutes: 14,
+  coverImage: "/assets/why-villa-private.jpg",
 }
     
 ];

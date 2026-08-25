@@ -1,6 +1,7 @@
 "use client";
 
 import Image from "next/image";
+import Link from "next/link";
 import { ArrowRight } from "lucide-react";
 import { buildWhatsAppBookingUrl, buildWhatsAppVillaBookingUrl } from "@/lib/whatsapp";
 import { trackEvent } from "@/lib/track";
@@ -26,7 +27,7 @@ const collections: Collection[] = [
     title: "Himalaya Apartments",
     
     subtitle:
-      "Warm, homely apartments for couples and small families — quiet nights, mountain-facing windows.",
+      "Warm, homely apartments ideal for couples and small families who want quiet nights and mountain-facing windows.",
     rooms: [
       {
         tag: "APARTMENT",
@@ -39,7 +40,7 @@ const collections: Collection[] = [
       },
       {
         tag: "APARTMENT",
-        name: "Complete Apartment",
+        name: "Complete Apartment (2 bedrooms + living area)",
                 href: "apartment-complete",
         description:
           "Two luxury bedrooms with a shared living area — perfect for families.",
@@ -51,7 +52,7 @@ const collections: Collection[] = [
   {
     title: "Rakaposhi Villa",
     subtitle:
-      "Signature villa with executive suites and a full-villa option for groups who want the whole place to themselves.",
+      "Our signature villa collection, with executive rooms and a full-villa option for groups.",
     rooms: [
       {
         tag: "EXECUTIVE",
@@ -64,7 +65,7 @@ const collections: Collection[] = [
       },
       {
         tag: "SUITE",
-        name: "Executive Suite",
+        name: "Executive Suite (2 rooms + private TV lounge)",
           href: "rakaposhi-executive-suite",
         description:
           "Two rooms with a private TV lounge — space to gather and unwind.",
@@ -73,7 +74,7 @@ const collections: Collection[] = [
       },
       {
         tag: "WHOLE VILLA",
-        name: "Complete Villa",
+        name: "Complete Villa (5 executive rooms)",
          href: "rakaposhi-complete-villa",
         description:
           "The entire Rakaposhi Villa — five executive rooms for your group.",
@@ -85,7 +86,7 @@ const collections: Collection[] = [
   {
     title: "Himalaya Luxury Villas",
     subtitle:
-      "Our flagship residences — from cozy attic escapes to full four-bedroom villas designed for celebrations.",
+      "Our flagship residences — ranging from a cozy attic escape to a full four-bedroom villa for celebrations — are why guests describe us as a genuine 5-star hotel experience in Murree.",
     rooms: [
       {
         tag: "COZY",
@@ -116,7 +117,7 @@ const collections: Collection[] = [
       },
       {
         tag: "WHOLE VILLA",
-        name: "Complete Villa",
+        name: "Complete Villa (4 bedrooms, private garden)",
            href: "luxury-complete-villa",
         description:
           "Four bedrooms, private gardens, and mountain vistas — yours entirely.",
@@ -239,15 +240,13 @@ export default function VillasAccommodations() {
         {/* Section header */}
         <div className="mb-14 max-w-3xl mx-auto text-center">
   <p className="text-xs uppercase tracking-[0.3em] text-[#a07c1f] mb-3">
-    Our Villas · Bhurban Murree
+    Accommodation · Bhurban Murree
   </p>
   <h2 className="font-serif text-4xl sm:text-5xl text-[#2b2b2b] leading-tight">
-    Rooms, suites & whole villas
+    Rooms, Suites &amp; Villas — Find the Right Stay for You
   </h2>
   <p className="mt-4 text-[#6b6357] leading-relaxed">
-    Three curated collections designed around how you like to stay — from a
-    single luxury room to an entire villa for your group. Every rate is per
-    night and includes complimentary breakfast for two guests per room.
+    One of the reasons Himalaya Villas &amp; Resort ranks among the best hotels in Murree for family trips and solo luxury getaways alike is our range of accommodation. We offer three curated collections, so whether you&apos;re looking for a cozy room or an entire villa for a group celebration, there&apos;s an option built for you. All rates are per night and include complimentary breakfast for two guests per room.
   </p>
 </div>
 
@@ -277,6 +276,21 @@ export default function VillasAccommodations() {
               </div>
             </div>
           ))}
+        </div>
+
+        {/* Budget note */}
+        <p className="mt-14 text-center text-sm text-[#6b6357] leading-relaxed max-w-3xl mx-auto">
+          If you&apos;re comparing cheap hotels in Murree, Pakistan against a full luxury stay, our Rakaposhi Executive Room at PKR 16,500/night is one of the most accessible low price hotel in Murree options that still gives you a genuine 5-star setting—private terrace, mountain views, and breakfast included, without the noise of a standard commercial hotel.
+        </p>
+
+        <div className="mt-8 text-center">
+          <Link
+            href="/villas"
+            className="inline-flex items-center gap-2 rounded-md border border-[#c9a24a] bg-[#fdfaf3] px-6 py-3 text-xs font-medium uppercase tracking-[0.2em] text-[#2b2b2b] transition hover:bg-[#f5efdf]"
+          >
+            View All Villas &amp; Room Rates
+            <ArrowRight className="h-4 w-4" aria-hidden />
+          </Link>
         </div>
 
         {/* Footnote */}

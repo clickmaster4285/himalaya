@@ -2,43 +2,34 @@
 
 import { useRef } from "react";
 import { motion, useInView } from "framer-motion";
-import Link from "next/link";
+import { buildWhatsAppBookingUrl } from "@/lib/whatsapp";
+import { trackAndOpen } from "@/lib/trackedClick";
 
 const FrequentlyVisitedPages = () => {
   const ref = useRef(null);
   const isInView = useInView(ref, { once: true, margin: "-100px" });
 
-  const pages = [
+  const travellers = [
     {
-      title: "Himalaya Villas Bhurban Murree Rest House",
-      description: "Pakistan's premier luxury rest house - private mountain villas with panoramic Himalayan views and personalized butler service.",
-      href: "/himalaya-villas-bhurban-murree-rest-house"
+      title: "Families",
+      description: "Spacious apartments, complimentary breakfast, and a safe, gated property make us one of the most recommended family hotels in Murree.",
     },
     {
-      title: "Luxury Hotel in Murree",
-      description: "Experience premium hospitality, scenic mountain views, and world-class amenities in the heart of Murree.",
-      href: "/luxury-hotels-in-murree"
+      title: "Couples",
+      description: "Private terraces, mountain views, and quiet evenings, away from the crowded hotel strips.",
     },
     {
-      title: "Best Hotels in Murree Pakistan",
-      description: "Discover the finest luxury accommodations and premium hospitality experiences in Murree's scenic hills.",
-      href: "/best-hotels-murree-pakistan"
+      title: "Wedding Planners & Event Hosts",
+      description: "Cedar forest backdrops and dedicated event teams for weddings and celebrations.",
     },
     {
-      title: "Family Tour Murree",
-      description: "Plan the perfect family getaway with our curated experiences and family-friendly villa accommodations.",
-      href: "/blogs/family-tour-murree-himalaya-villas"
+      title: "Corporate Groups",
+      description: "A distraction-free environment for retreats and offsites.",
     },
     {
-      title: "Wedding Venue Near Islamabad",
-      description: "Host your dream wedding in the mountains with breathtaking venues and luxury accommodations.",
-      href: "/wedding-venue-near-islamabad"
+      title: "Budget-Conscious Travellers",
+      description: "While we're positioned as a luxury hotel in Murree, our Executive Rooms starting at PKR 16,500/night make a premium mountain stay realistic even if you started your search looking for cheap hotels in Murree or a 3-star or 4-star hotel in Murree alternative.",
     },
-    {
-      title: "Snowfall in Murree",
-      description: "Complete snowfall guide with calendar, weather forecast, and winter stay packages.",
-      href: "/snowfall-in-murree"
-    }
   ];
 
   return (
@@ -51,38 +42,54 @@ const FrequentlyVisitedPages = () => {
           className="text-center mb-12"
         >
           <p className="text-xs font-semibold tracking-widest uppercase text-amber-600 mb-4">
-            Popular Pages
+            For Every Guest
           </p>
           <h2 className="font-display text-3xl md:text-4xl lg:text-5xl font-normal leading-tight text-foreground">
-            Frequently Visited Pages
+            A Stay for Every Traveller
           </h2>
         </motion.div>
 
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
-          {pages.map((page, index) => (
+          {travellers.map((item, index) => (
             <motion.div
-              key={page.href}
+              key={item.title}
               initial={{ opacity: 0, y: 30 }}
               animate={isInView ? { opacity: 1, y: 0 } : {}}
               transition={{ duration: 0.8, delay: 0.15 + index * 0.1 }}
+              className="h-full p-6 rounded-xl border border-border bg-card"
             >
-              <Link 
-                href={page.href}
-                className="block h-full p-6 rounded-xl transition-all duration-300 hover:-translate-y-1 group/card border border-border bg-card hover:shadow-lg"
-              >
-                <h3 className="text-lg font-semibold text-foreground transition-colors group-hover/card:text-primary">
-                  {page.title}
-                </h3>
-                <p className="text-sm mt-3 leading-relaxed text-muted-foreground">
-                  {page.description}
-                </p>
-                <span className="inline-block mt-4 text-xs uppercase tracking-widest text-primary transition-colors group-hover/card:text-primary/80">
-                  Explore →
-                </span>
-              </Link>
+              <h3 className="text-lg font-semibold text-foreground">
+                {item.title}
+              </h3>
+              <p className="text-sm mt-3 leading-relaxed text-muted-foreground">
+                {item.description}
+              </p>
             </motion.div>
           ))}
         </div>
+
+        <motion.div
+          initial={{ opacity: 0, y: 20 }}
+          animate={isInView ? { opacity: 1, y: 0 } : {}}
+          transition={{ duration: 0.8, delay: 0.6 }}
+          className="mt-12 text-center"
+        >
+          <a
+            href={buildWhatsAppBookingUrl()}
+            target="_blank"
+            rel="noopener noreferrer"
+            data-event-type="book_now_click"
+            onClick={(e) =>
+              trackAndOpen(e, buildWhatsAppBookingUrl(), {
+                button: "book_now",
+                cta: "travellers_section",
+              })
+            }
+            className="inline-flex items-center justify-center rounded-sm border border-border bg-transparent px-6 py-3 text-sm font-medium tracking-wide text-foreground transition-colors duration-300 hover:bg-foreground hover:text-background"
+          >
+            Book Your Stay on WhatsApp
+          </a>
+        </motion.div>
       </div>
     </section>
   );

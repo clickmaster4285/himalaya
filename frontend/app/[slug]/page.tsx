@@ -4,6 +4,7 @@ import { use } from "react";
 
 import ArticleClient from "./ArticleClient";
 import { articlesBySlug, allSlugs } from "@/content/allArticles";
+import { createPageMetadata } from "@/lib/seo/build-metadata";
 
 type PageProps = {
   params: Promise<{
@@ -44,33 +45,15 @@ export async function generateMetadata({
     };
   }
 
-  // Full canonical URL using your domain
-  const canonicalUrl = `https://himalayavillas.com/${slugKey}`;
-
-  return {
+  return createPageMetadata({
     title: article.title,
     description: article.metaDescription,
-    keywords: article.keywords,
-
-    // Canonical
-    alternates: {
-      canonical: canonicalUrl,
-    },
-
-    openGraph: {
-      title: article.title,
-      description: article.metaDescription,
-      images: [article.heroImage],
-      type: "article",
-      url: canonicalUrl,
-    },
-    twitter: {
-      card: "summary_large_image",
-      title: article.title,
-      description: article.metaDescription,
-      images: [article.heroImage],
-    },
-  };
+    path: `/${slugKey}`,
+    keywords: article.keywords?.split(",").map((k) => k.trim()).filter(Boolean),
+    ogImage: article.heroImage,
+    ogType: "article",
+    appendSiteBrand: false,
+  });
 }
 
 // ============================================

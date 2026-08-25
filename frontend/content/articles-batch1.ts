@@ -1,6 +1,8 @@
 // articles-batch1.ts
 // Guest Posts 1-723 - Complete TypeScript file with all content preserved
 
+import { article15 } from "./articles/article15-best-time-to-visit-murree";
+import { article498 } from "./articles/article498-murree-hotel-booking-guide";
 import type { Article } from "./types";
 
 // ============================================
@@ -1942,9 +1944,9 @@ const article723View = "/images/articles/article723-view.jpg";
 // ============================================
 export const article01: Article = {
   slug: "pc-hotel-bhurban-alternative",
-  title: "PC Hotel Bhurban Alternative — Private Villa Stays in Bhurban, Murree",
+  title: "Best PC Hotel Bhurban Alternatives in Murree",
   metaDescription:
-    "pc hotel bhurban (14,800/mo), alternatives to pc hotel bhurban, pc bhurban murree, pearl continental bhurban alternative, better than pc hotel bhurban",
+    "Looking for a PC Hotel Bhurban alternative? Explore top hotels in Murree offering similar luxury, breathtaking views, and world-class amenities at competitive prices. Book your stay today!",
   keywords:
     "pc hotel bhurban (14,800/mo), alternatives to pc hotel bhurban, pc bhurban murree, pearl continental bhurban alternative, better than pc hotel bhurban",
   eyebrow: "Template B — Intercept Spoke | Cluster 2: Competitor Intercept",
@@ -2287,9 +2289,9 @@ Add to your articles map:
 // ============================================
 export const article03: Article = {
   slug: "things-to-do-in-murree",
-  title: "/things-to-do-in-murree ~2,800 words",
+  title: "Top Things to Do in Murree - Himalayas Villas",
   metaDescription:
-    "things to do in murree (1,900/mo), things to do in murree pakistan, murree tourist attractions, places to visit in murree, murree visiting places, murree beautiful places, murree place to visit",
+    "Discover the best things to do in Murree! From scenic viewpoints and chairlift rides to local bazaars and snow activities, plan your perfect Murree trip today.",
   keywords:
     "things to do in murree (1,900/mo), things to do in murree pakistan, murree tourist attractions, places to visit in murree, murree visiting places, murree beautiful places, murree place to visit",
   eyebrow: "Template A — Hub/Pillar (enhance existing page) | Cluster 3: Activities",
@@ -2430,9 +2432,9 @@ export const article03: Article = {
 // ============================================
 export const article05: Article = {
   slug: "luxury-villa-bhurban-murree",
-  title: "Luxury Villas in Bhurban Murree — Private Estate Stays Near Islamabad",
+  title: "Luxury Villa in Bhurban Murree – Book Your Stay",
   metaDescription:
-    "luxury villas bhurban murree, luxury villa bhurban, villas in murree, private villa near islamabad, bhurban villas and apartments, villa bhurban",
+    "Experience the finest luxury villas in Bhurban Murree with stunning mountain views, premium amenities, and peaceful surroundings. Perfect for families and couples. Book your villa now!",
   keywords:
     "luxury villas bhurban murree, luxury villa bhurban, villas in murree, private villa near islamabad, bhurban villas and apartments, villa bhurban",
   eyebrow: "Template B — Spoke Page | Cluster 4: Private Villas",
@@ -2549,9 +2551,9 @@ export const article05: Article = {
 // ============================================
 export const article06: Article = {
   slug: "wedding-venues-bhurban-murree",
-  title: "Wedding Venues in Bhurban Murree — Private Mountain Celebrations",
+  title: "Top Wedding Venues in Bhurban, Murree – Book Today",
   metaDescription:
-    "wedding venues bhurban murree, outdoor wedding venue murree, destination wedding bhurban, wedding reception near islamabad mountains, mehndi venue bhurban, banquet hall bhurban",
+    "Planning your dream wedding? Explore stunning wedding venues in Bhurban Murree with breathtaking mountain views, luxury settings, and top-notch service. Book now!",
   keywords:
     "wedding venues bhurban murree, outdoor wedding venue murree, destination wedding bhurban, wedding reception near islamabad mountains, mehndi venue bhurban, banquet hall bhurban",
   eyebrow: "Template B — Spoke | Cluster 5: Weddings & Events",
@@ -2652,9 +2654,9 @@ export const article06: Article = {
 // ============================================
 export const article07: Article = {
   slug: "corporate-retreat-near-islamabad",
-  title: "/corporate-retreat-near-islamabad ~1,600 words",
+  title: "Corporate Retreat Near Islamabad - Himalaya Villas & Resorts",
   metaDescription:
-    "corporate retreat near islamabad, corporate retreat murree, team building bhurban, executive offsite pakistan, corporate offsite venue bhurban, annual dinner venue bhurban",
+    "Host your corporate retreat near Islamabad at Himalaya Villas, Bhurban. Private luxury estate with executive facilities, mountain views & curated experiences.",
   keywords:
     "corporate retreat near islamabad, corporate retreat murree, team building bhurban, executive offsite pakistan, corporate offsite venue bhurban, annual dinner venue bhurban",
   eyebrow: "Template B — Spoke | Cluster 6: Corporate Retreats",
@@ -2771,9 +2773,9 @@ export const article07: Article = {
 // ============================================
 export const article09: Article = {
   slug: "how-far-is-bhurban-from-islamabad",
-  title: "How Far is Bhurban from Islamabad — Distance, Route & Travel Guide",
+  title: "How Far Is Bhurban From Islamabad? - Himalaya Villas",
   metaDescription:
-    "how far is bhurban from islamabad, distance bhurban islamabad, islamabad to bhurban, bhurban murree distance islamabad, how to get to bhurban from islamabad",
+    "Wondering how far Bhurban is from Islamabad? Get distance, travel time, and route details, plus discover Himalaya Villas — a luxury mountain escape nearby.",
   keywords:
     "how far is bhurban from islamabad, distance bhurban islamabad, islamabad to bhurban, bhurban murree distance islamabad, how to get to bhurban from islamabad",
   eyebrow: "Template C — pSEO/FAQ Page | Cluster 8: Location Guides",
@@ -2949,9 +2951,9 @@ export const article09: Article = {
 // ============================================
 export const article10: Article = {
   slug: "honeymoon-package-bhurban-murree",
-  title: "Honeymoon Package Bhurban Murree — Private Suite, Mountain Views, Complete Seclusion",
+  title: "Honeymoon Package in Bhurban Murree - Himalaya Villas",
   metaDescription:
-    "honeymoon package bhurban murree, honeymoon murree bhurban, romantic getaway near islamabad, honeymoon suite bhurban pakistan, couple package bhurban murree, best honeymoon destination pakistan mounta...",
+    "Book a romantic honeymoon package in Bhurban Murree at Himalaya Villas — private luxury villas, stunning mountain views, and unforgettable curated experiences.",
   keywords:
     "honeymoon package bhurban murree, honeymoon murree bhurban, romantic getaway near islamabad, honeymoon suite bhurban pakistan, couple package bhurban murree, best honeymoon destination pakistan mounta...",
   eyebrow: "Template B — Spoke | Cluster 12: Honeymoon & Romance",
@@ -4013,231 +4015,8 @@ export const article14: Article = {
 };
 
 // ============================================
-// ARTICLE 15 - Best Time to Visit Murree Pakistan — Month-by-Month Guide 2026
+// ARTICLE 15 - imported from ./articles/article15-best-time-to-visit-murree.ts
 // ============================================
-export const article15: Article = {
-  slug: "best-time-to-visit-murree",
-  title: "Best Time to Visit Murree Pakistan — Month-by-Month Guide 2026",
-  metaDescription:
-    "best time to visit murree, best time murree pakistan, when to visit murree, murree weather by month, best season murree bhurban",
-  keywords:
-    "best time to visit murree, best time murree pakistan, when to visit murree, murree weather by month, best season murree bhurban",
-  eyebrow: "Template A — Hub/Pillar | Cluster 7: Seasonal & Weather",
-  h1: "Best Time to Visit Murree Pakistan — Month-by-Month Guide 2026",
-  heroTagline:
-    "best time to visit murree, best time murree pakistan, when to visit murree, murree weather by month, best season murree bhurban",
-  heroImage: article15Hero,
-  blocks: [
-    {
-      type: "callout-qa",
-      question: "What is the best time to visit Murree Pakistan?",
-      answer:
-        "The best times to visit Murree and Bhurban are Spring (March–April) and Autumn (September–October). Spring offers temperatures of 10–20°C, wildflower blooms, and clear skies with the lowest crowd levels of the warm months. Autumn offers the clearest air of the year, temperatures of 12–22°C, and forests beginning to turn amber — ideal for forest walks and viewpoints. Summer (June–August) is the peak season — warmest and most crowded. Winter (December–February) is recommended specifically for snowfall. Bhurban is open and bookable year-round.",
-    },
-
-    {
-      type: "section",
-      heading:
-        "Best Time to Visit Murree Pakistan — Month-by-Month Guide 2026",
-      paragraphs: [
-        "Murree and Bhurban are available in every season, and every season has a legitimate case. The common mistake is treating summer as the only correct time to visit — Pakistan's domestic tourism peak is driven by school holidays, not weather quality.",
-        "The mountain is at its most beautiful in October. The snowfall season in January is extraordinary. Spring in April is arguably the finest month of the year.",
-        "This guide covers every month with specific temperature data, crowd levels, activity availability, and a clear recommendation for what type of traveller each season suits. All data is for Bhurban specifically (6,800 feet elevation), which typically runs 2–3°C cooler than Murree Mall Road.",
-      ],
-      image: {
-        src: article15Villa,
-        alt: "Best Time to Visit Murree",
-      },
-    },
-
-    {
-      type: "comparison",
-      heading: "Season Overview — The Fast Answer",
-      columns: ["Season", "Months", "Temp (Bhurban)", "Crowds", "Best For"],
-      rows: [
-        {
-          feature: "Spring",
-          a: "March – May",
-          b: "8°C – 22°C",
-          c: "Low to Medium",
-          d: "Couples, families, walkers, photographers",
-        },
-        {
-          feature: "Summer (Peak)",
-          a: "June – August",
-          b: "18°C – 28°C",
-          c: "Very High",
-          d: "Escaping the heat — book 4–6 weeks ahead",
-        },
-        {
-          feature: "Autumn",
-          a: "September – October",
-          b: "10°C – 22°C",
-          c: "Medium",
-          d: "The best weather season — clear skies, low crowds",
-        },
-        {
-          feature: "Winter",
-          a: "November – February",
-          b: "-4°C – 14°C",
-          c: "Low (except snowfall weekends)",
-          d: "Snowfall experience — cosy villa stays",
-        },
-      ],
-    },
-
-    {
-      type: "callout-qa",
-      question: "Does it snow in Murree and Bhurban in January?",
-      answer:
-        "January is the peak snowfall month in Bhurban and Murree. Temperatures range from -4°C at night to 7°C during the day. Significant snowfall typically occurs 3–5 times in January, with each event leaving 5–20cm of snow on the ground. The pine and cedar forests of Bhurban hold snow for 3–5 days after each fall, creating the classic winter mountain landscape. Himalaya Villas & Resorts is fully operational in January with central heating in all 12 villas.",
-    },
-
-    {
-      type: "section",
-      heading: "Month-by-Month Guide",
-      paragraphs: [
-        "January — Snowfall Peak",
-        "January is the month for guests who specifically want snow. The snowfall weekends in January are the most sought-after bookings in the Bhurban calendar — they sell out 2–3 weeks in advance once the first snowfall is announced. The experience of waking in a private villa in the Bhurban hills with fresh snow on the cedar branches is what brings many guests back year after year. Weekdays in January are the quietest of any month.",
-        "",
-        "February — Late Winter",
-        "February maintains the winter weather pattern with slightly improving daytime temperatures (0°C to 9°C). Snowfall continues, typically 2–3 significant events in the month. Road access is reliable except during active snowfall. Crowds thin from the January peak. A solid choice for guests who want the winter experience without the January competition for availability.",
-        "",
-        "March — Early Spring",
-        "March is the transition month. Early March can still see occasional snowfall; late March sees the forest begin its spring growth. Temperatures climb from 4°C to 15°C through the month. By late March, the wildflowers that define Bhurban spring — particularly the rhododendron at higher elevations — are beginning to show. Crowd levels are low, availability is easy, and the weather is still jacket-wearing cool rather than warm.",
-        "",
-        "April — Best Month of the Year",
-        "April is the month that experienced Bhurban guests request consistently for return bookings. Temperature range of 10°C to 20°C — genuinely comfortable for walking, outdoor activities, and evening terrace time. The rhododendron and wild cherry are in full bloom along the forest paths. Sky clarity is at its annual peak — the pre-monsoon atmosphere gives the clearest long-distance views from viewpoints.",
-        "",
-        "May — Late Spring",
-        "May begins warm (12°C to 24°C) and ends approaching summer temperature levels. The forest is at full green, the trees in leaf and the paths well-shaded. Crowd levels start to build from school holiday bookings in the second half of May.",
-        "",
-        "June — Early Summer",
-        "June is a good time to visit Murree and Bhurban. Temperatures are 16–28°C — meaningfully cooler than Islamabad's 35–40°C. Pre-monsoon rain is possible but typically as afternoon showers rather than continuous rain. Crowd levels are building but have not yet reached the July–August peak. Best window is early June before school summer holidays begin.",
-        "",
-        "July–August — Peak Season",
-        "July and August are Pakistan's peak domestic tourism months for Murree. The school summer holiday drives family bookings at maximum volume. Mall Road is at its most crowded. Bhurban is busier than spring and autumn but significantly quieter than Mall Road. The monsoon brings afternoon rain — usually 1–3 hours of rain followed by clear skies and cooler temperatures.",
-        "Peak season requires 3–4 weeks advance booking for weekend stays at Himalaya Villas. Eid holiday dates (variable) require 6–8 weeks.",
-        "",
-        "September — The Transition Month",
-        "September is when the mountain exhales after summer. Crowd levels drop sharply. Temperatures settle at 14–22°C — similar to spring. The monsoon is ending; the sky begins its autumn clarity. Early September can still be warm and occasionally rainy. Late September is clean, cool, and almost empty of tourists relative to the summer peak.",
-        "",
-        "October — Best Autumn Month",
-        "October is the month that landscape photographers come to Bhurban for. The Murree hills in October have the clearest air of the year — the post-monsoon atmosphere that gives the longest sight lines from viewpoints. The forest is beginning to turn, with the deciduous trees at higher elevations going amber and gold against the evergreen pine. Temperatures of 10–20°C are ideal for walking.",
-        "",
-        "November — Early Winter",
-        "November transitions from autumn to winter. Temperatures drop from 5°C to 16°C through the month. The deciduous trees are bare by mid-November; the forest takes on the stark, clean character of pre-winter. This is the quietest month of the year for Bhurban tourism — easy availability, low rates, and a mountain that belongs almost entirely to those who came.",
-      ],
-      image: {
-        src: article15View,
-        alt: "Month-by-Month Guide",
-      },
-    },
-
-    {
-      type: "comparison",
-      heading: "Booking Patterns — When Availability Is Tightest",
-      columns: ["Period", "Advance Booking Required", "Notes"],
-      rows: [
-        {
-          feature: "January snowfall weekends",
-          a: "2–3 weeks after first snowfall",
-          b: "Fills within 48 hours of snowfall announcement",
-        },
-        {
-          feature: "Eid ul-Fitr",
-          a: "6–8 weeks",
-          b: "Peak family holiday — earliest and most competitive booking",
-        },
-        {
-          feature: "Eid ul-Adha",
-          a: "6–8 weeks",
-          b: "Second-highest demand period",
-        },
-        {
-          feature: "July–August peak weekends",
-          a: "3–4 weeks",
-          b: "School summer holidays drive demand",
-        },
-        {
-          feature: "April weekends",
-          a: "1–2 weeks",
-          b: "Underbooked relative to quality — easier than expected",
-        },
-        {
-          feature: "October weekends",
-          a: "1–2 weeks",
-          b: "Best weather month, surprisingly available",
-        },
-        {
-          feature: "Weekdays (any month)",
-          a: "1 week or less",
-          b: "Good availability year-round on weekdays",
-        },
-      ],
-    },
-
-    {
-      type: "faqs",
-      heading: "Frequently Asked Questions",
-      items: [
-        {
-          q: "Which is better — spring or autumn in Murree?",
-          a: "Both are excellent; the distinction is subtle. Spring (March–April) has the wildflowers and the rebirth atmosphere of the forest after winter. Autumn (September–October) has the clearest air and the turning forest colours. Both offer 10–22°C temperatures and lower crowds than summer. If forced to choose, October edges it for views and forest atmosphere; April edges it for flowers and freshness.",
-        },
-        {
-          q: "Can you visit Murree in winter without seeing snow?",
-          a: "Yes. Snowfall in Bhurban is not guaranteed on any specific date — it is most likely in January and February. A late November or early December booking is cold (2–12°C) but may or may not include snowfall. Guests who specifically want snow should target January weekends, when snowfall probability is highest.",
-        },
-        {
-          q: "What should I pack for a Murree trip in each season?",
-          a: "Spring and Autumn: light layers, a warm jacket for evenings, hiking shoes. Summer: light clothing, rain jacket for afternoon monsoon showers, sunscreen. Winter: thermal base layers, heavy winter jacket, waterproof mountain boots, gloves and hat. All seasons: the temperature in Bhurban can drop significantly after sunset — always bring a warm outer layer even in summer.",
-        },
-      ],
-    },
-
-    {
-      type: "cta",
-      eyebrow: "How to Book",
-      heading:
-        "Book Your Ideal Season at Himalaya Villas ",
-      text:
-        "Contact Himalaya Villas & Resorts directly for availability, pricing, and exclusive-use bookings.",
-      buttonLabel:
-        "Book Your Stay",
-      buttonHref: "https://wa.me/923045679000",
-      footnote:
-        "Direct bookings receive the best available rate and priority response.",
-    },
-
-    {
-      type: "related",
-      heading: "📎 Explore More",
-      items: [
-        {
-          href: "/murree-in-december",
-          label: "Winter and snowfall guide",
-        },
-        {
-          href: "/murree-in-summer",
-          label: "Summer guide for June, July, August",
-        },
-        {
-          href: "/things-to-do-in-murree",
-          label: "Activities by season",
-        },
-        {
-          href: "/villas",
-          label: "Browse available villas at Himalaya Villas",
-        },
-        {
-          href: "/blogs/best-hotels-in-murree-pakistan",
-          label: "Full accommodation guide",
-        },
-      ],
-    },
-  ],
-};
 
 // ============================================
 // ARTICLE 16 - Family Villa Bhurban Murree — Private Estate for Families of 6 to 20
@@ -14374,9 +14153,9 @@ export const article86: Article = {
 
 export const article87: Article = {
   slug: "murree-in-december",
-  title: "Murree in December: Snow, Weather & Villa Stay - Book Now",
+  title: "Murree in December - Snowfall & Winter Stays | Himalaya Villas",
   metaDescription:
-    "Planning a Murree trip in December? Check snowfall chances, weather and top spots, then book a cozy private villa in Bhurban. Reserve your stay today.",
+    "Planning a trip to Murree in December? Discover snowfall updates, winter weather, and cozy luxury villa stays at Himalaya Villas Bhurban this season.",
   keywords:
     "murree in december, bhurban december, murree december weather, december bhurban trip, murree winter december",
   eyebrow: "Template C — Seasonal Spoke | Cluster 7: Seasonal & Weather",
@@ -55524,178 +55303,8 @@ export const article497: Article = {
 };
 
 // ============================================
-// ARTICLE 498 - Murree Hotel Booking — The 2026 Complete Booking Guide
+// ARTICLE 498 - imported from ./articles/article498-murree-hotel-booking-guide.ts
 // ============================================
-export const article498: Article = {
-  slug: "murree-hotel-booking-guide",
-  title: "Murree Hotel Booking — The 2026 Complete Booking Guide",
-  metaDescription:
-    "murree hotel booking, murree hotel booking 2026, how to book hotel murree, murree hotel booking near mall road, booking murree hotel",
-  keywords:
-    "murree hotel booking, murree hotel booking 2026, how to book hotel murree, murree hotel booking near mall road, booking murree hotel",
-  eyebrow: "Commercial Hub | Cluster 2 | Template A — Commercial Hub",
-  h1: "Murree Hotel Booking — The 2026 Complete Guide",
-  heroTagline:
-    "All booking channels mapped: WhatsApp for Himalaya Villas, pchotels.com for PC Hotel, accor.com for Mövenpick, Booking.com for guesthouses.",
-  heroImage: article498Hero,
-  blocks: [
-    {
-      type: "callout-qa",
-      question: "How do I book a hotel in Murree Pakistan?",
-      answer:
-        "Murree hotel booking options 2026: (1) Himalaya Villas & Resorts (private villa estate, Bhurban)  or Airbnb/Booking.com; (2) PC Hotel Bhurban (Marriott 5-star) — pchotels.com or Marriott app; (3) Mövenpick Murree (Accor) — accor.com or Booking.com; (4) Ramada by Wyndham Murree — Booking.com or wyndhamhotels.com; (5) Shangrila Resort Murree — shangrila.com.pk; (6) Guesthouses and mid-range hotels — Booking.com search 'Murree Pakistan'. Best booking tip: for Himalaya Villas specifically, WhatsApp direct booking always delivers the best rate and pre-arrival concierge service.",
-    },
-    {
-      type: "section",
-      heading: "The Complete Murree Hotel Booking Map",
-      paragraphs: [
-        "Murree hotel booking draws 2,900 monthly searches — people who have decided on Murree as their destination and are now in the active booking phase. This guide maps every booking channel for every tier of the Murree hills accommodation market, with the specific process for each.",
-      ],
-      image: {
-        src: article498Villa,
-        alt: "Murree Hotel Booking Guide",
-      },
-    },
-    {
-      type: "comparison",
-      heading: "The Complete Murree Hotel Booking Map",
-      columns: ["Property", "Tier", "How to Book", "Best Rate Channel"],
-      rows: [
-        {
-          feature: "Himalaya Villas & Resorts",
-          a: "Private villa estate (Bhurban)",
-          b: "WhatsApp +92 304 567 9000 | Airbnb | Booking.com",
-          c: "WhatsApp direct — no OTA markup",
-        },
-        {
-          feature: "PC Hotel Bhurban (Marriott)",
-          a: "5-star chain (Bhurban)",
-          b: "pchotels.com | marriott.com | Marriott app",
-          c: "Marriott app for Bonvoy rate",
-        },
-        {
-          feature: "Mövenpick Murree (Accor)",
-          a: "International brand (Murree)",
-          b: "accor.com | Booking.com",
-          c: "Accor ALL member rate via accor.com",
-        },
-        {
-          feature: "Ramada by Wyndham Murree",
-          a: "Wyndham brand (Mall Road area)",
-          b: "wyndhamhotels.com | Booking.com",
-          c: "Wyndham Rewards member rate",
-        },
-        {
-          feature: "Shangrila Resort Murree",
-          a: "Domestic resort brand",
-          b: "shangrila.com.pk | Booking.com",
-          c: "Direct at shangrila.com.pk",
-        },
-        {
-          feature: "Cecil Hotel Murree",
-          a: "Established hill station hotel",
-          b: "Booking.com | direct call",
-          c: "Booking.com or direct",
-        },
-        {
-          feature: "Hotel One Bhurban",
-          a: "Mid-scale (Bhurban)",
-          b: "hotelsone.com.pk",
-          c: "Direct at hotelsone.com.pk",
-        },
-        {
-          feature: "Bhurban/Murree guesthouses",
-          a: "Budget self-catering",
-          b: "Airbnb | Booking.com",
-          c: "Airbnb for guest protection",
-        },
-        {
-          feature: "TDCP rest houses",
-          a: "Government tourism",
-          b: "tdcp.gop.pk",
-          c: "Direct at TDCP website only",
-        },
-      ],
-    },
-    {
-      type: "section",
-      heading: "Booking Lead Times — What You Actually Need",
-      paragraphs: [
-        "The single most important piece of Murree hotel booking information: booking lead time by season. Book too late and your preferred property is full. Book too early and you pay without flexibility.",
-        "July–August (peak heat escape season): 4–6 weeks minimum for Himalaya Villas; 2–3 weeks for other properties. Do NOT assume last-minute availability in July or August.",
-        "Eid ul Fitr and Eid ul Adha: 6–8 weeks minimum regardless of which month. The entire Murree hills books out for Eid.",
-        "January snowfall weekends: 6–8 weeks for Himalaya Villas Presidential Suite specifically. Snowfall creates a booking spike that fills the best properties fast.",
-        "December 22–31 (year-end): 6 weeks minimum. Christmas–New Year week is the year-end spike.",
-        "October: 2–3 weeks for Himalaya Villas. October is the finest month but has easier availability than peak summer.",
-        "April, March, November: 1–2 weeks or less. These are quiet months with easy availability.",
-      ],
-      image: {
-        src: article498View,
-        alt: "Booking Lead Times",
-      },
-    },
-    {
-      type: "section",
-      heading: "The Direct Booking Advantage — Himalaya Villas Specifically",
-      paragraphs: [
-        "For Himalaya Villas & Resorts, the direct WhatsApp booking channel (+92 304 567 9000) delivers three things that OTA booking cannot:",
-        "Best rate: no OTA platform commission (typically 15–25%) is built into the rate. The WhatsApp rate is always the lowest available.",
-        "Pre-arrival concierge: meal preferences, fire pit timing, occasion setup, villa-specific requests — all coordinated via the booking WhatsApp thread before arrival.",
-        "Direct communication: the team responds same-day during business hours. No chatbot, no platform interface, no delayed resolution.",
-      ],
-      image: {
-        src: article498Villa,
-        alt: "Direct Booking Advantage",
-      },
-    },
-    {
-      type: "section",
-      heading: "The OTA Search Process for Other Murree Properties",
-      paragraphs: [
-        "Booking.com: The most comprehensive Murree listing on any OTA. Search 'Murree Pakistan' or 'Bhurban Pakistan' filtered by your dates. Booking.com lists PC Hotel, Mövenpick, Ramada, Shangrila, and most guesthouses.",
-        "Airbnb: Best for Bhurban guesthouses and private rentals. Also lists Himalaya Villas individual villas. Search 'Bhurban, Pakistan'.",
-        "Agoda: Alternative OTA with strong South Asia coverage. Good for price comparison across Murree properties.",
-      ],
-      image: {
-        src: article498View,
-        alt: "OTA Search Process",
-      },
-    },
-    {
-      type: "faqs",
-      heading: "Frequently Asked Questions",
-      items: [
-        {
-          q: "Can I book Murree hotels same-day?",
-          a: "For guesthouses and some mid-range hotels: yes, same-day booking is possible in non-peak months. For Himalaya Villas and PC Hotel in peak season (July–August, Eid): same-day availability is unlikely. Always book ahead for peak dates.",
-        },
-        {
-          q: "Is it better to book directly or through an OTA for Murree hotels?",
-          a: "For Himalaya Villas: direct WhatsApp always wins (lower rate, better service). For international chain hotels (PC Hotel/Marriott, Mövenpick/Accor, Ramada/Wyndham): booking directly on the brand's own app or website earns loyalty points and often provides the brand rate. OTAs are useful for price comparison but rarely the cheapest final channel for premium properties.",
-        },
-      ],
-    },
-    {
-      type: "cta",
-      eyebrow: "Book Himalaya Villas Direct",
-      heading: "WhatsApp +92 304 567 9000",
-      text: "Book directly for the best rate and pre-arrival concierge service.",
-      buttonLabel: "Book Your Stay",
-      buttonHref: "https://wa.me/923045679000",
-      footnote: "Direct bookings receive the best available rate.",
-    },
-    {
-      type: "related",
-      heading: "📎 Explore More",
-      items: [
-        { href: "/bhurban-accommodation-guide", label: "Full accommodation guide" },
-        { href: "/booking-villa-bhurban-faq", label: "Villa booking FAQ" },
-        { href: "/hotels-in-murree-pakistan", label: "Full hotel guide" },
-        { href: "/villas", label: "Browse Himalaya Villas" },
-      ],
-    },
-  ],
-};
 
 // ============================================
 // ARTICLE 499 - PC Hotel Bhurban Contact Number and Booking Information

@@ -22,11 +22,20 @@ const JournalSection = () => {
           initial={{ opacity: 0, y: 30 }}
           animate={isInView ? { opacity: 1, y: 0 } : {}}
           transition={{ duration: 0.8 }}
-          className="text-4xl sm:text-5xl md:text-[60px] italic text-foreground mb-6 md:mb-12 text-center md:text-left"
+          className="text-3xl sm:text-4xl md:text-[48px] italic text-foreground mb-6 md:mb-8 text-center md:text-left leading-tight"
           style={{ fontFamily: "'Cormorant Garamond', serif", fontWeight: 500 }}
         >
-          The Journal
+          Location — Close to Murree Mall Road, Away from the Crowd
         </motion.h2>
+
+        <motion.p
+          initial={{ opacity: 0, y: 20 }}
+          animate={isInView ? { opacity: 1, y: 0 } : {}}
+          transition={{ duration: 0.8, delay: 0.15 }}
+          className="text-base md:text-lg text-muted-foreground leading-relaxed max-w-4xl mb-8 md:mb-12 text-center md:text-left"
+        >
+          Himalaya Villas &amp; Resort is located in Bhurban, just a short scenic drive from Murree Mall Road, giving you the best of both worlds — quick access to Murree&apos;s markets, viewpoints, and street food, and the peace of a private estate once you&apos;re back at the resort. If you&apos;re searching for the best hotel in Murree near Mall Road but don&apos;t want to compromise on privacy or parking hassle, Bhurban&apos;s quieter setting is often the better choice for families and couples alike.
+        </motion.p>
 
         {/* Mobile: Single column, Tablet: 2 columns, Desktop: 3 columns */}
         <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 auto-rows-[200px] sm:auto-rows-[220px] md:auto-rows-[250px] gap-3 md:gap-4">

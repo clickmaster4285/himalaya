@@ -42,52 +42,54 @@ const services = [
   {
     number: "01",
     title: "Destination Weddings",
-    headline: "Weddings in a setting built for luxury outdoor celebrations.",
+    headline: "Destination Weddings",
     description:
-      "Create timeless memories in a setting designed for luxury outdoor celebrations — cedar forests, mountain air, and a team that treats your day as the only one that matters.",
+      "Say yes in a setting made for luxury outdoor celebrations, surrounded by cedar forests and mountain air.",
     icon: Heart,
     images: [celebrationImg, celebrationImg2, celebrationImg3],
   },
   {
     number: "02",
-    title: "Dining",
-    headline: "Curated dining experiences",
+    title: "Curated Dining",
+    headline: "Curated Dining",
     description:
-      "Private chefs and customized menus tailored for your event or stay — from terrace dinners to long lunches with the Murree hills before you.",
+      "From terrace dinners to long lunches overlooking the Murree hills, our private chefs design menus around your stay or event.",
     icon: UtensilsCrossed,
     images: [diningImg, diningImg2, diningImg3],
   },
   {
     number: "03",
     title: "Private Getaways",
-    headline: "Escape into a serene, high-end retreat.",
+    headline: "Private Getaways",
     description:
-      "Reserved only for a select few — a private estate where stillness, space, and the mountain replace the noise of the city.",
+      "A reserved, high-end retreat where stillness replaces the noise of the city.",
     icon: Sparkles,
     images: [getawaysImg, getawaysImg2, getawaysImg3],
   },
   {
     number: "04",
-    title: "Celebrations",
-    headline: "Some Moments Deserve More Than a Banquet Hall.",
-    description: "We sit with you, understand what this occasion means, and build an experience around it — from the setting to the last toast. Entirely yours.",
+    title: "Celebrations & Events",
+    headline: "Celebrations & Events",
+    description:
+      "We sit with you, understand the occasion, and build the entire experience — from décor to the last toast.",
     icon: PartyPopper,
     images: [momentsImg, momentsImg2, momentsImg3],
   },
   {
     number: "05",
-    title: "Activities",
-    headline: "The Mountain Is Waiting.",
-    description: "Forest walks at dawn. Guided trails through cedar groves. Stargazing sessions away from city light. Every activity curated — never rushed, always on your terms.",
+    title: "Guided Mountain Activities",
+    headline: "Guided Mountain Activities",
+    description:
+      "Forest walks at dawn, guided trails through cedar groves, and stargazing sessions away from city lights.",
     icon: Mountain,
     images: [activitiesImg, activitiesImg2, activitiesImg3],
   },
   {
     number: "06",
     title: "Corporate Retreats",
-    headline: "A private executive environment away from the city.",
+    headline: "Corporate Retreats",
     description:
-      "Impress your clients and team with a private executive environment away from the city — where focus comes naturally and the altitude shifts perspective.",
+      "A private executive environment away from the city, ideal for teams that need focus and a change of altitude.",
     icon: Briefcase,
     images: [retreatsImg, retreatsImg2, retreatsImg3],
   },
@@ -228,7 +230,7 @@ const ServicesSection = () => {
             className="text-base md:text-lg leading-relaxed max-w-2xl mx-auto"
             style={{ color: "hsl(0 0% 60%)" }}
           >
-            There is no grander setting in Pakistan for the moments that matter most. We simply make sure everything else is perfect.
+            There&apos;s no grander setting in Pakistan for the moments that matter most. Here&apos;s what makes our resort more than just another name on the list of hotels in Murree, Pakistan.
           </motion.p>
         </div>
 

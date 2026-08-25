@@ -19,35 +19,35 @@ const features = [
   icon: Mountain,
   title: "Panoramic Mountain Views",
   description:
-    "Enjoy breathtaking views of the Murree Hills from every corner of the estate, creating a peaceful and unforgettable mountain retreat.",
+    "Every corner of the estate looks out over the Murree hills, creating a peaceful, unforgettable retreat.",
 },
 {
   icon: Building2,
   title: "Luxury Villa Architecture",
   description:
-    "Elegant villa interiors with premium finishes, spacious layouts, and modern amenities designed for a comfortable luxury stay.",
+    "Elegant interiors, premium finishes, and spacious layouts designed for real comfort, not just decoration.",
 },
 {
   icon: PartyPopper,
   title: "Large Outdoor Event Space",
   description:
-    "Expansive lawns and open terraces provide the perfect setting for weddings, celebrations, corporate events, and family gatherings.",
+    "Expansive lawns and open terraces, perfect for weddings, celebrations, and family gatherings.",
 },
   {
     icon: ShieldCheck,
     title: "Private & Secure Estate",
-    description: "Gated property with full privacy ensuring an exclusive experience.",
+    description: "A gated property with complete privacy, so your stay is genuinely exclusive.",
   },
   {
     icon: Heart,
     title: "Ideal for Destination Weddings",
-    description: "A magical mountain backdrop for your dream wedding celebration.",
+    description: "A mountain backdrop that turns a wedding into a memory nobody forgets.",
      link: "/wedding-venue-near-islamabad",
   },
   {
     icon: Settings,
-    title: "Professional Event Setup",
-    description: "End-to-end event management with decor, catering, and coordination options.",
+    title: "Professional Event Management",
+    description: "End-to-end coordination, from décor to catering.",
   },
 ];
 
@@ -106,10 +106,11 @@ const WhyChooseSection = () => {
           <h2 className="font-display text-4xl md:text-5xl lg:text-6xl font-normal italic text-primary-foreground">
             Why Guests Choose
             <br />
-            Himalaya Villas & Resorts
-            <br />
-           
+            Himalaya Villas &amp; Resort
           </h2>
+          <p className="mt-6 max-w-2xl mx-auto text-sm md:text-base leading-relaxed text-primary-foreground/70">
+            When travellers search for the best hotel in Murree, they&apos;re usually comparing three things — privacy, view, and service. Here&apos;s where we stand out.
+          </p>
         </motion.div>
 
         {/* Feature Grid */}

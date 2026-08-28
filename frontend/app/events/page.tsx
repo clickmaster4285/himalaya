@@ -57,8 +57,8 @@ const eventSections = [
     cards: [
       {
         id: 1,
-        title: "Nikah & Wedding Reception",
-        description: "Complete setup from sacred ceremony to elegant reception.",
+        title: "Nikkah & Wedding Reception",
+        description: "Halal catering, elegant halls & lawns, and expert event planning for your Nikkah.",
         badge: "Popular",
         slug: "nikah-wedding-reception",
       },

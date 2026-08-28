@@ -1,6 +1,7 @@
-/** Canonical public origin (no trailing slash). */
+/** Canonical public origin (no trailing slash). Always non-www. */
 export function getSiteOrigin(): string {
-  return (process.env.NEXT_PUBLIC_SITE_URL ?? "https://www.himalayavillas.com").replace(/\/$/, "");
+  const raw = (process.env.NEXT_PUBLIC_SITE_URL ?? "https://himalayavillas.com").replace(/\/$/, "");
+  return raw.replace(/^(https?:\/\/)www\./i, "$1");
 }
 
 export function absoluteUrl(path: string): string {

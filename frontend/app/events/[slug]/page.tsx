@@ -21,43 +21,130 @@ const eventDetails: Record<string, {
   category: string;
   galleryImages?: string[];
   sections?: { heading: string; paragraphs: string[] }[];
+  intro?: string[];
+  whyChoose?: { title: string; text: string }[];
+  venues?: { name: string; description: string }[];
+  timeline?: { phase: string; items: string[] }[];
   faqs: Array<{
     question: string;
     answer: string;
   }>;
 }> = {
   "nikah-wedding-reception": {
-    title: "Nikah & Wedding Reception",
-    description: "Complete setup from sacred ceremony to elegant reception.",
-    longDescription: "Experience the perfect blend of tradition and luxury with our comprehensive Nikah and Wedding Reception packages. From the sacred ceremony to the grand reception, we handle every detail with precision and care, ensuring your special day is nothing short of magical.",
+    title: "Nikkah & Wedding Reception Venue - Himalaya Villas & Resorts",
+    description: "Sacred Nikkah ceremonies and elegant wedding receptions in Bhurban, Murree.",
+    longDescription:
+      "Host your Nikkah & wedding reception at Himalaya Villas & Resorts. Halal catering, elegant halls & lawns, expert event planning. Book your date today!",
     features: [
-      "Sacred Nikah ceremony setup with traditional decor",
-      "Elegant reception stage with premium floral arches",
-      "Professional photography and videography services",
-      "Luxury accommodation for the wedding party",
-      "Gourmet catering with customizable menus",
-      "Dedicated event coordinator and guest hospitality"
+      "Venue rental for your chosen hall or lawn",
+      "Basic stage and seating setup",
+      "Sound system for the Nikkah ceremony and speeches",
+      "In-house catering menu options (halal-certified)",
+      "Event coordination staff on the day",
+      "Standard décor package, with upgrades available",
+      "Parking and guest assistance",
     ],
     image: "/assets/nikah-hero-night.png",
     category: "Weddings & Ceremonies",
+    intro: [
+      "A Nikkah marks the start of a new life together — a moment of faith, family, and celebration. At Himalaya Villas & Resorts, we've hosted Nikkah ceremonies and wedding receptions for couples who wanted their day to feel warm and personal, not just well-organized.",
+      "Whether you're planning a small Nikkah with close family or a large wedding reception with hundreds of guests, our team is with you every step of the way — from your first enquiry to the last goodbye.",
+    ],
+    whyChoose: [
+      {
+        title: "A venue built for both intimacy and scale",
+        text: "Our banquet halls and lawns can be configured for a private Nikkah of 50 guests or expanded for a reception of 500+, without losing the warmth of the setting.",
+      },
+      {
+        title: "In-house catering with halal-certified kitchens",
+        text: "Food is central to any Nikkah gathering. Our culinary team prepares traditional and continental menus in fully halal-certified kitchens, with tasting sessions available before you finalize your menu.",
+      },
+      {
+        title: "Dedicated event coordination",
+        text: "A single point of contact manages your booking — from décor and seating to sound system checks for the Nikkah khutbah (sermon) and vow exchange.",
+      },
+      {
+        title: "Flexible spaces for every part of the day",
+        text: "Many families host the Nikkah ceremony, a separate Walima or reception, and a Mehndi or Baraat, all within the same property — saving on logistics and guest travel.",
+      },
+      {
+        title: "Ample parking and guest accommodation",
+        text: "Out-of-town guests can stay on-site, and valet parking keeps arrivals smooth even for larger gatherings.",
+      },
+    ],
+    venues: [
+      {
+        name: "Grand Banquet Hall",
+        description:
+          "Our largest indoor space, suited for Nikkah ceremonies combined with a reception dinner. Climate-controlled, with a raised stage area for the couple and adjustable lighting for both the religious ceremony and the celebratory portion of the evening.",
+      },
+      {
+        name: "Garden Lawn",
+        description:
+          "For families who prefer an open-air Nikkah under string lights or daytime shade, our landscaped lawn offers a scenic backdrop with the flexibility to add a marquee for weather protection.",
+      },
+      {
+        name: "Private Hall (Intimate Nikkah)",
+        description:
+          "For smaller Nikkah ceremonies — close family, a handful of witnesses, and simple refreshments — this space offers a quieter, more personal setting without the cost of a full banquet hall booking.",
+      },
+    ],
+    timeline: [
+      {
+        phase: "3–6 Months Before",
+        items: [
+          "Confirm your date and guest count, book your hall, and finalize the catering menu through a tasting session.",
+        ],
+      },
+      {
+        phase: "1–2 Months Before",
+        items: [
+          "Finalize décor, confirm the Nazim/Imam or Qazi who will conduct the Nikkah, and share your seating plan with our coordinator.",
+        ],
+      },
+      {
+        phase: "1 Week Before",
+        items: ["Final headcount, menu confirmation, and a walkthrough of the venue with your event coordinator."],
+      },
+      {
+        phase: "On the Day",
+        items: [
+          "Our team handles setup, guest flow, and sound checks so your family can focus on the ceremony itself.",
+        ],
+      },
+    ],
     faqs: [
       {
-        question: "What is included in the Nikah ceremony setup?",
-        answer: "Our Nikah package includes a beautifully decorated ceremony area with traditional Islamic motifs, seating for guests, sound system for the Imam, and floral arrangements. We also provide a separate area for the bride and groom preparation."
+        question: "How many guests can Himalaya Villas & Resorts accommodate for a Nikkah?",
+        answer:
+          "Our spaces range from an intimate private hall for 50 guests to our Grand Banquet Hall and lawn, which together can host 500+ guests comfortably.",
       },
       {
-        question: "How many guests can you accommodate for the wedding reception?",
-        answer: "We can accommodate up to 300 guests for indoor receptions and up to 500 guests for outdoor receptions. Our flexible venue spaces allow for various seating arrangements and dining setups."
+        question: "Is the food served at Nikkah events halal?",
+        answer:
+          "Yes. All catering is prepared in-house in our halal-certified kitchens, covering both traditional South Asian dishes and continental options.",
       },
       {
-        question: "Do you provide catering services for the wedding events?",
-        answer: "Yes, we offer comprehensive catering services with customizable menus ranging from traditional Pakistani cuisine to international dishes. Our culinary team can accommodate dietary restrictions and special requests."
+        question: "Can we host the Nikkah and reception on the same day?",
+        answer:
+          "Yes, many families combine the Nikkah ceremony and Walima reception in one evening using our banquet hall, with the space reconfigured between the two segments.",
       },
       {
-        question: "What photography and videography services are included?",
-        answer: "Our package includes professional photography coverage for both Nikah and reception events, with unlimited high-resolution images, cinematic video coverage, and a dedicated online gallery for sharing with family and friends."
-      }
-    ]
+        question: "Do you allow outside caterers or decorators?",
+        answer:
+          "We offer full in-house catering and décor teams, and can also accommodate approved outside vendors — ask our events team about our vendor policy.",
+      },
+      {
+        question: "How far in advance should we book?",
+        answer:
+          "We recommend booking 3–6 months ahead for wedding season dates, though smaller Nikkah ceremonies can sometimes be arranged with shorter notice depending on availability.",
+      },
+      {
+        question: "Is accommodation available for out-of-town guests?",
+        answer:
+          "Yes, guests can book rooms directly at Himalaya Villas & Resorts, making it convenient for families traveling from other cities.",
+      },
+    ],
   },
   "mehndi": {
     title: "Mehndi",
@@ -1229,11 +1316,12 @@ export async function generateMetadata({ params }: { params: Promise<{ slug: str
   }
 
   return createPageMetadata({
-    title: `${event.title} `,
+    title: event.title,
     description: event.longDescription,
     path: `/events/${slug}`,
-    keywords: [event.title, event.category, "Himalaya Villas", "Bhurban", "Murree"],
+    keywords: [event.title, event.category, "Himalaya Villas", "Bhurban", "Murree", "Nikkah venue"],
     ogImage: event.image,
+    appendSiteBrand: false,
   });
 }
 
@@ -1297,6 +1385,10 @@ export default async function EventPage({ params }: { params: Promise<{ slug: st
             title: event.title,
             description: event.description,
             longDescription: event.longDescription,
+            intro: event.intro,
+            whyChoose: event.whyChoose,
+            venues: event.venues,
+            timeline: event.timeline,
             features: event.features,
             category: event.category,
             faqs: event.faqs,

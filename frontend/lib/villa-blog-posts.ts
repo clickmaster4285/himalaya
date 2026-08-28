@@ -207,6 +207,16 @@ export const VILLA_BLOG_POSTS: VillaBlogPost[] = [
   date: "2026-04-25",
   readMinutes: 14,
   coverImage: "/assets/why-villa-private.jpg",
+},
+{
+  slug: "villas-in-murree-pakistan-booking-guide",
+  title: "Villas in Murree, Pakistan — Complete Booking Guide (2026)",
+  excerpt:
+    "Looking for villas in Murree, Pakistan? Get real pricing, seasonal tips & a step-by-step booking guide for private mountain villas in Bhurban.",
+  date: "2026-04-26",
+  readMinutes: 18,
+  coverImage: "/assets/blog-villas-bhurban-murree-luxury-featured.png",
 }
+
     
 ];

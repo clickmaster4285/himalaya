@@ -1,6 +1,15 @@
 import Image from "next/image";
 import Link from "next/link";
-import { Flower2, Heart, MapPin, Sparkles, Users, UtensilsCrossed } from "lucide-react";
+import {
+  Building2,
+  CalendarCheck,
+  Car,
+  ChefHat,
+  Heart,
+  Leaf,
+  Sparkles,
+  Users,
+} from "lucide-react";
 import Navbar from "@/components/Navbar";
 import Footer from "@/components/Footer";
 import EventQuoteForm from "@/components/EventQuoteForm";
@@ -10,6 +19,10 @@ export type NikahEventData = {
   title: string;
   description: string;
   longDescription: string;
+  intro?: string[];
+  whyChoose?: { title: string; text: string }[];
+  venues?: { name: string; description: string }[];
+  timeline?: { phase: string; items: string[] }[];
   features: string[];
   category: string;
   faqs: Array<{ question: string; answer: string }>;
@@ -22,11 +35,7 @@ export type RelatedNikahEvent = {
   image: string;
 };
 
-const highlights = [
-  { icon: MapPin, label: "Bhurban Hills", text: "Private lawns with misty mountain views" },
-  { icon: Users, label: "Up to 500 guests", text: "Intimate nikah or grand outdoor reception" },
-  { icon: Sparkles, label: "Full styling", text: "Floral arches, crystal drapes, gold seating" },
-];
+const whyChooseIcons = [Users, ChefHat, Sparkles, Building2, Car];
 
 const galleryImages = [
   {
@@ -87,6 +96,11 @@ export default function NikahWeddingPage({
   event: NikahEventData;
   related: RelatedNikahEvent[];
 }) {
+  const intro = event.intro ?? [];
+  const whyChoose = event.whyChoose ?? [];
+  const venues = event.venues ?? [];
+  const timeline = event.timeline ?? [];
+
   return (
     <div className="min-h-screen bg-[#faf7f1] text-neutral-900">
       <section className="relative min-h-[88vh] overflow-hidden">
@@ -107,14 +121,13 @@ export default function NikahWeddingPage({
             {event.category}
           </p>
           <h1 className="font-display max-w-3xl text-4xl leading-[1.08] text-white md:text-6xl lg:text-7xl">
-            Nikah & Wedding
+            Nikkah &amp; Wedding
             <br />
             Reception
           </h1>
-          <p className="mt-5 max-w-xl text-base leading-relaxed text-white/90 md:text-lg">
-            A sacred ceremony and an elegant mountain reception — floral arches, vintage gold seating, and
-            hospitality styled for unforgettable family photographs.
-          </p>
+          {intro[0] && (
+            <p className="mt-5 max-w-2xl text-base leading-relaxed text-white/90 md:text-lg">{intro[0]}</p>
+          )}
           <div className="mt-8 flex flex-wrap gap-3">
             <a
               href="#inquiry"
@@ -132,140 +145,111 @@ export default function NikahWeddingPage({
         </div>
       </section>
 
-      <section className="border-b border-[#eadfcd] bg-white">
-        <div className="mx-auto grid max-w-7xl gap-8 px-6 py-10 md:grid-cols-3 md:py-12">
-          {highlights.map((item) => (
-            <div key={item.label} className="flex gap-4">
-              <div className="flex h-11 w-11 shrink-0 items-center justify-center rounded-full bg-[#f4ecde] text-[#9a7b3a]">
-                <item.icon className="h-5 w-5" />
-              </div>
-              <div>
-                <p className="font-semibold text-neutral-900">{item.label}</p>
-                <p className="mt-1 text-sm text-neutral-600">{item.text}</p>
-              </div>
-            </div>
-          ))}
-        </div>
-      </section>
+      {intro.length > 1 && (
+        <section className="border-b border-[#eadfcd] bg-white py-12 md:py-16">
+          <div className="mx-auto max-w-3xl px-6 text-center">
+            {intro.slice(1).map((paragraph) => (
+              <p key={paragraph.slice(0, 40)} className="text-base leading-relaxed text-neutral-600 md:text-lg">
+                {paragraph}
+              </p>
+            ))}
+          </div>
+        </section>
+      )}
 
-      <section id="the-setting" className="py-16 md:py-24">
-        <div className="mx-auto grid max-w-7xl items-center gap-10 px-6 lg:grid-cols-2 lg:gap-16">
-          <div>
-            <p className="text-[11px] font-bold uppercase tracking-[0.22em] text-[#9a7b3a]">The Setting</p>
-            <h2 className="font-display mt-3 text-3xl text-neutral-900 md:text-5xl">A private hilltop lawn for your nikah</h2>
-            <p className="mt-5 text-base leading-relaxed text-neutral-600">{event.longDescription}</p>
-            <p className="mt-4 text-base leading-relaxed text-neutral-600">
-              The circular white stage sits on open grass, framed by misty Murree hills. Guests arrive to fountain
-              views, terrace dining above, and a ceremony space designed for both daylight portraits and evening glow.
-            </p>
+      {whyChoose.length > 0 && (
+        <section className="border-b border-[#eadfcd] bg-white">
+          <div className="mx-auto grid max-w-7xl gap-8 px-6 py-10 md:grid-cols-3 md:py-12">
+            {whyChoose.slice(0, 3).map((item, index) => {
+              const Icon = whyChooseIcons[index] ?? Sparkles;
+              return (
+                <div key={item.title} className="flex gap-4">
+                  <div className="flex h-11 w-11 shrink-0 items-center justify-center rounded-full bg-[#f4ecde] text-[#9a7b3a]">
+                    <Icon className="h-5 w-5" />
+                  </div>
+                  <div>
+                    <p className="font-semibold text-neutral-900">{item.title}</p>
+                    <p className="mt-1 text-sm text-neutral-600">{item.text}</p>
+                  </div>
+                </div>
+              );
+            })}
           </div>
-          <div className="relative aspect-[3/4] overflow-hidden rounded-[28px] shadow-[0_30px_80px_rgba(40,30,15,0.18)]">
-            <Image
-              src="/assets/nikah-stage-close.png"
-              alt="Tufted gold sofa and floral arch on the nikah stage"
-              fill
-              sizes="(max-width: 1024px) 100vw, 50vw"
-              className="object-cover"
-            />
-          </div>
-        </div>
-      </section>
+        </section>
+      )}
 
-      <section className="bg-white py-16 md:py-24">
-        <div className="mx-auto grid max-w-7xl items-center gap-10 px-6 lg:grid-cols-2 lg:gap-16">
-          <div className="relative order-2 aspect-[4/5] overflow-hidden rounded-[28px] shadow-[0_30px_80px_rgba(40,30,15,0.16)] lg:order-1">
-            <Image
-              src="/assets/nikah-night-stage.png"
-              alt="Night-time nikah stage with crystal curtain and peach floral arch"
-              fill
-              sizes="(max-width: 1024px) 100vw, 50vw"
-              className="object-cover object-center"
-            />
-          </div>
-          <div className="order-1 lg:order-2">
-            <div className="mb-4 inline-flex items-center gap-2 text-[#9a7b3a]">
-              <Flower2 className="h-5 w-5" />
-              <span className="text-[11px] font-bold uppercase tracking-[0.22em]">Stage & Decor</span>
+      {whyChoose.length > 0 && (
+        <section className="py-16 md:py-24">
+          <div className="mx-auto max-w-7xl px-6">
+            <div className="mb-12 max-w-3xl">
+              <p className="text-[11px] font-bold uppercase tracking-[0.22em] text-[#9a7b3a]">Why Choose Us</p>
+              <h2 className="font-display mt-3 text-3xl text-neutral-900 md:text-5xl">
+                Why Couples Choose Himalaya Villas &amp; Resorts for their Nikkah Ceremony
+              </h2>
             </div>
-            <h2 className="font-display text-3xl text-neutral-900 md:text-5xl">Floral arch, crystal drape, gold seating</h2>
-            <p className="mt-5 text-base leading-relaxed text-neutral-600">
-              The nikah stage is built as a photography centrepiece: a dense white-and-peach rose arch, shimmering
-              crystal strands, and tufted cream sofas with antique-gold frames. Soft night lighting keeps the setup
-              warm without overpowering the mountain sky.
-            </p>
-            <ul className="mt-6 space-y-3 text-sm text-neutral-700">
-              {[
-                "Raised white circular platform on the lawn",
-                "Premium floral arch with lush greenery",
-                "Crystal bead curtain backdrop",
-                "Matching lounge sofa and armchairs",
-              ].map((item) => (
-                <li key={item} className="flex items-start gap-3">
-                  <span className="mt-1.5 h-1.5 w-1.5 shrink-0 rounded-full bg-[#c9a55b]" />
-                  {item}
-                </li>
+            <div className="grid gap-6 md:grid-cols-2 lg:gap-8">
+              {whyChoose.map((item, index) => {
+                const Icon = whyChooseIcons[index] ?? Sparkles;
+                return (
+                  <div
+                    key={item.title}
+                    className="rounded-2xl border border-[#eadfcd] bg-white p-6 shadow-sm md:p-8"
+                  >
+                    <div className="mb-4 flex h-11 w-11 items-center justify-center rounded-full bg-[#f4ecde] text-[#9a7b3a]">
+                      <Icon className="h-5 w-5" />
+                    </div>
+                    <h3 className="text-lg font-semibold text-neutral-900">{item.title}</h3>
+                    <p className="mt-3 text-sm leading-relaxed text-neutral-600 md:text-base">{item.text}</p>
+                  </div>
+                );
+              })}
+            </div>
+          </div>
+        </section>
+      )}
+
+      {venues.length > 0 && (
+        <section className="bg-white py-16 md:py-24">
+          <div className="mx-auto max-w-7xl px-6">
+            <div className="mb-12 text-center">
+              <p className="text-[11px] font-bold uppercase tracking-[0.22em] text-[#9a7b3a]">Our Venues</p>
+              <h2 className="font-display mt-3 text-3xl text-neutral-900 md:text-5xl">Our Nikkah &amp; Reception Venues</h2>
+            </div>
+            <div className="grid gap-8 md:grid-cols-3">
+              {venues.map((venue, index) => (
+                <article
+                  key={venue.name}
+                  className="overflow-hidden rounded-2xl border border-[#eadfcd] bg-[#faf7f1] shadow-sm"
+                >
+                  <div className="relative h-48">
+                    <Image
+                      src={
+                        index === 0
+                          ? "/assets/nikah-night-stage.png"
+                          : index === 1
+                            ? "/assets/nikah-aerial-lawn.png"
+                            : "/assets/nikah-ceremony-setup.png"
+                      }
+                      alt={venue.name}
+                      fill
+                      sizes="(max-width: 768px) 100vw, 33vw"
+                      className="object-cover"
+                    />
+                  </div>
+                  <div className="p-6">
+                    <div className="mb-3 inline-flex items-center gap-2 text-[#9a7b3a]">
+                      {index === 1 ? <Leaf className="h-4 w-4" /> : <Building2 className="h-4 w-4" />}
+                      <span className="text-[10px] font-bold uppercase tracking-[0.2em]">Venue</span>
+                    </div>
+                    <h3 className="font-display text-xl text-neutral-900 md:text-2xl">{venue.name}</h3>
+                    <p className="mt-3 text-sm leading-relaxed text-neutral-600 md:text-base">{venue.description}</p>
+                  </div>
+                </article>
               ))}
-            </ul>
-          </div>
-        </div>
-      </section>
-
-      <section className="py-16 md:py-24">
-        <div className="mx-auto grid max-w-7xl items-center gap-10 px-6 lg:grid-cols-2 lg:gap-16">
-          <div>
-            <p className="text-[11px] font-bold uppercase tracking-[0.22em] text-[#9a7b3a]">Guest Experience</p>
-            <h2 className="font-display mt-3 text-3xl text-neutral-900 md:text-5xl">Lawn seating facing the ceremony</h2>
-            <p className="mt-5 text-base leading-relaxed text-neutral-600">
-              White cross-back chairs are arranged on the grass toward the stage, with blush florals and glowing
-              lanterns along the aisle. The upper terrace remains open for family dining, so the ceremony feels
-              intimate while still welcoming a larger guest list.
-            </p>
-            <p className="mt-4 text-base leading-relaxed text-neutral-600">
-              Layouts can stay compact for a close family nikah or open out across the lawn for a full wedding
-              reception — without losing the villa’s private, unhurried atmosphere.
-            </p>
-          </div>
-          <div className="relative aspect-[3/4] overflow-hidden rounded-[28px] shadow-[0_30px_80px_rgba(40,30,15,0.16)]">
-            <Image
-              src="/assets/nikah-lawn.png"
-              alt="White guest chairs on the lawn facing the floral nikah stage"
-              fill
-              sizes="(max-width: 1024px) 100vw, 50vw"
-              className="object-cover"
-            />
-          </div>
-        </div>
-      </section>
-
-      <section className="bg-[#1c1914] py-16 text-white md:py-24">
-        <div className="mx-auto grid max-w-7xl items-center gap-10 px-6 lg:grid-cols-2 lg:gap-16">
-          <div className="relative aspect-[4/5] overflow-hidden rounded-[28px] border border-white/10">
-            <Image
-              src="/assets/nikah-catering.png"
-              alt="Wedding dessert and catering display with gold platters and candles"
-              fill
-              sizes="(max-width: 1024px) 100vw, 50vw"
-              className="object-cover"
-            />
-          </div>
-          <div>
-            <div className="mb-4 inline-flex items-center gap-2 text-[#c9a55b]">
-              <UtensilsCrossed className="h-5 w-5" />
-              <span className="text-[11px] font-bold uppercase tracking-[0.22em]">Reception Dining</span>
             </div>
-            <h2 className="font-display text-3xl md:text-5xl">Catering styled for a celebration</h2>
-            <p className="mt-5 text-base leading-relaxed text-white/80">
-              Reception tables are dressed with gold platters, candlelight, and a dessert display that photographs as
-              beautifully as it tastes. Menus can follow traditional Pakistani favourites or a mixed international
-              spread, with dietary notes handled in advance.
-            </p>
-            <p className="mt-4 text-base leading-relaxed text-white/80">
-              From welcome drinks to the final sweet course, service stays discreet so family can stay present in the
-              moment — not managing the floor.
-            </p>
           </div>
-        </div>
-      </section>
+        </section>
+      )}
 
       <section id="gallery" className="bg-[#f4ecde] py-16 md:py-24">
         <div className="mx-auto max-w-7xl px-6">
@@ -273,8 +257,8 @@ export default function NikahWeddingPage({
             <p className="text-[11px] font-bold uppercase tracking-[0.22em] text-[#9a7b3a]">Visual Gallery</p>
             <h2 className="font-display mt-3 text-3xl text-neutral-900 md:text-5xl">Every moment, beautifully captured</h2>
             <p className="mx-auto mt-4 max-w-2xl text-base text-neutral-600">
-              From the first glance at the lawn to the final dessert course — a complete look at how your nikah and
-              reception comes together at Himalaya Villas.
+              From the Nikkah ceremony to the Walima reception — a complete look at how your celebration comes
+              together at Himalaya Villas &amp; Resorts.
             </p>
           </div>
 
@@ -302,13 +286,14 @@ export default function NikahWeddingPage({
         </div>
       </section>
 
-      <section className="bg-white py-16 md:py-24">
+      <section id="inquiry" className="bg-white py-16 md:py-24">
         <div className="mx-auto max-w-7xl px-6">
           <div className="grid gap-12 lg:grid-cols-3">
             <div className="lg:col-span-2">
-              <p className="text-[11px] font-bold uppercase tracking-[0.22em] text-[#9a7b3a]">What’s Included</p>
-              <h2 className="font-display mt-3 text-3xl text-neutral-900 md:text-4xl">A complete nikah-to-reception plan</h2>
-              <p className="mt-4 max-w-2xl text-neutral-600">{event.description}</p>
+              <p className="text-[11px] font-bold uppercase tracking-[0.22em] text-[#9a7b3a]">Packages</p>
+              <h2 className="font-display mt-3 text-3xl text-neutral-900 md:text-4xl">
+                What&apos;s Included in Our Nikkah &amp; Wedding Packages
+              </h2>
               <div className="mt-8 grid gap-4 sm:grid-cols-2">
                 {event.features.map((feature) => (
                   <div key={feature} className="flex items-start gap-3 rounded-2xl border border-[#eadfcd] bg-[#faf7f1] p-4">
@@ -335,18 +320,77 @@ export default function NikahWeddingPage({
         </div>
       </section>
 
-      <section className="bg-[#faf7f1] py-16 md:py-24">
+      {timeline.length > 0 && (
+        <section className="bg-[#faf7f1] py-16 md:py-24">
+          <div className="mx-auto max-w-4xl px-6">
+            <div className="mb-12 text-center">
+              <p className="text-[11px] font-bold uppercase tracking-[0.22em] text-[#9a7b3a]">Planning Guide</p>
+              <h2 className="font-display mt-3 text-3xl text-neutral-900 md:text-4xl">
+                Planning Your Nikkah: A Simple Timeline
+              </h2>
+            </div>
+            <div className="space-y-6">
+              {timeline.map((step) => (
+                <div
+                  key={step.phase}
+                  className="rounded-2xl border border-[#eadfcd] bg-white p-6 shadow-sm md:p-8"
+                >
+                  <div className="flex items-start gap-4">
+                    <div className="flex h-10 w-10 shrink-0 items-center justify-center rounded-full bg-[#f4ecde] text-[#9a7b3a]">
+                      <CalendarCheck className="h-5 w-5" />
+                    </div>
+                    <div>
+                      <h3 className="text-lg font-semibold text-neutral-900">{step.phase}</h3>
+                      <ul className="mt-3 space-y-2">
+                        {step.items.map((item) => (
+                          <li key={item} className="flex items-start gap-3 text-sm leading-relaxed text-neutral-600 md:text-base">
+                            <span className="mt-2 h-1.5 w-1.5 shrink-0 rounded-full bg-[#c9a55b]" />
+                            {item}
+                          </li>
+                        ))}
+                      </ul>
+                    </div>
+                  </div>
+                </div>
+              ))}
+            </div>
+          </div>
+        </section>
+      )}
+
+      <section className="bg-[#1c1914] py-16 text-white md:py-24">
+        <div className="mx-auto max-w-3xl px-6 text-center">
+          <h2 className="font-display text-3xl md:text-4xl">Book Your Nikkah at Himalaya Villas &amp; Resorts</h2>
+          <p className="mt-5 text-base leading-relaxed text-white/80 md:text-lg">
+            Every Nikkah has its own rhythm — some quiet and reflective, others full of music and celebration. Our
+            team&apos;s job is to make sure the venue supports whichever version fits your family, not the other way
+            around.
+          </p>
+          <p className="mt-4 text-base leading-relaxed text-white/80 md:text-lg">
+            Contact our events team today to check availability, arrange a venue tour, or request a customized
+            quotation for your Nikkah or wedding reception.
+          </p>
+          <a
+            href="#inquiry"
+            className="mt-8 inline-block rounded-md bg-[#c9a55b] px-8 py-3.5 text-xs font-semibold uppercase tracking-[0.16em] text-white transition hover:bg-[#b08d45]"
+          >
+            Contact Events Team
+          </a>
+        </div>
+      </section>
+
+      <section className="bg-white py-16 md:py-24">
         <div className="mx-auto max-w-4xl px-6">
           <div className="mb-10 text-center">
-            <h2 className="font-display text-3xl text-neutral-900 md:text-4xl">Frequently Asked Questions</h2>
-            <p className="mt-3 text-neutral-600">Practical details for planning your nikah and reception at Himalaya Villas.</p>
+            <h2 className="font-display text-3xl text-neutral-900 md:text-4xl">FAQs</h2>
+            <p className="mt-3 text-neutral-600">Practical details for planning your Nikkah and reception.</p>
           </div>
           <EventFAQs faqs={event.faqs} />
         </div>
       </section>
 
       {related.length > 0 && (
-        <section className="bg-white py-16 md:py-24">
+        <section className="bg-[#faf7f1] py-16 md:py-24">
           <div className="mx-auto max-w-7xl px-6">
             <div className="mb-10 text-center">
               <h2 className="font-display text-3xl text-neutral-900 md:text-4xl">Related Celebrations</h2>

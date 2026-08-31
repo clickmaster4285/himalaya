@@ -2,7 +2,7 @@ import type { Metadata } from "next";
 import Navbar from "@/components/Navbar";
 import Footer from "@/components/Footer";
 import BlogsPageClient from "@/components/blogs/BlogsPageClient";
-import { getPublishedVillas } from "@/lib/villas-fetch";
+import { CATALOG_VILLAS } from "@/lib/villa-catalog";
 import { createPageMetadata } from "@/lib/seo/build-metadata";
 
 export const dynamic = "force-dynamic";
@@ -17,7 +17,7 @@ export const metadata: Metadata = createPageMetadata({
 });
 
 export default async function BlogsPage() {
-  const villas = await getPublishedVillas();
+  const villas = CATALOG_VILLAS;
 
   return (
     <div className="min-h-screen bg-[#F6F1EA]">

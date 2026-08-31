@@ -27,6 +27,12 @@ import {
 } from "lucide-react";
 import type { LucideIcon } from "lucide-react";
 import { computeStayTotalPkr, countStayNights, parseNightlyPkr } from "@/lib/stay-booking-compute";
+import { CATALOG_VILLAS, VILLA_CATALOG_SLUGS } from "@/lib/villa-catalog";
+
+function filterToCatalog(villas: Villa[]): Villa[] {
+  const allowed = new Set(VILLA_CATALOG_SLUGS);
+  return villas.filter((v) => allowed.has(v.slug));
+}
 
 const stayBookingSchema = {
   "@context": "https://schema.org",
@@ -177,17 +183,13 @@ function BookStayContent() {
         return r.json();
       })
       .then((d) => {
-        const next = Array.isArray(d.villas) ? d.villas : [];
-        setVillaCatalog(next);
-        if (next.length === 0) {
-          setBookingLoadError("Villa availability is temporarily unavailable.");
-          return;
-        }
+        const next = filterToCatalog(Array.isArray(d.villas) ? d.villas : []);
+        setVillaCatalog(next.length > 0 ? next : CATALOG_VILLAS);
         setBookingLoadError(null);
       })
       .catch(() => {
-        setVillaCatalog([]);
-        setBookingLoadError("Something went wrong while loading booking. Contact us on WhatsApp.");
+        setVillaCatalog(CATALOG_VILLAS);
+        setBookingLoadError(null);
       });
   }, []);
 
@@ -905,18 +907,18 @@ function BookStayContent() {
                     <div className="mt-8 overflow-hidden rounded-xl border-2 border-[#dccfb8] bg-[#faf8f4]">
                       <div className="p-5 sm:p-6 flex items-center gap-4">
                         <img
-                          src={(selectedVilla?.image ?? "/assets/villa-presidential-real.jpg")}
+                          src={(selectedVilla?.image ?? "/images/villas/lux-single-villa.jpg")}
                           alt={selectedVilla?.title ?? "Selected villa"}
                           className="h-16 w-24 shrink-0 rounded-lg object-cover border-2 border-[#e5d9c4]"
                         />
                         <div className="min-w-0 flex-1">
                           <p className="font-display text-base font-semibold text-neutral-900">
-                            {selectedVilla?.title ?? "Alpine Family Lodge"}
+                            {selectedVilla?.title ?? "Single Luxury Room"}
                           </p>
                           <p className="mt-1 text-sm text-neutral-600">
-                            {adults} adults, {children} children · {selectedVilla?.size ?? "450m²"}
+                            {adults} adults, {children} children · {selectedVilla?.size ?? "—"}
                           </p>
-                          <p className="mt-2 text-sm font-semibold text-[#8b6914]">{selectedVilla?.price ?? "PKR 39,000"}</p>
+                          <p className="mt-2 text-sm font-semibold text-[#8b6914]">{selectedVilla?.price ?? "PKR 27,000"}</p>
                         </div>
                         <span className="text-[#c9a55b] text-xl" aria-hidden>
                           ★
@@ -1393,7 +1395,7 @@ function BookStayContent() {
                       <div className="mt-5">
                         <p className="text-[10px] uppercase tracking-[0.2em] text-[#c9a55b]/90">Villa</p>
                         <p className="mt-2 text-[13px] font-semibold text-white">
-                          {selectedVilla?.title ?? "Presidential Suite"}
+                          {selectedVilla?.title ?? "Single Luxury Room"}
                         </p>
                       </div>
 
@@ -1507,18 +1509,13 @@ function BookStayFallback() {
         <div className="mt-8 rounded-lg border border-[#eadfce] bg-white p-6">
           <h2 className="text-xl font-semibold text-neutral-900">Available villas</h2>
           <ul className="mt-4 grid gap-3 sm:grid-cols-2">
-            <li className="rounded border border-[#dccfb8] bg-[#faf8f4] p-4">
-              <p className="font-semibold text-neutral-900">Presidential Suite</p>
-              <p className="mt-1 text-sm text-neutral-600">Ultra-private mountain-view suite for premium stays.</p>
-            </li>
-            <li className="rounded border border-[#dccfb8] bg-[#faf8f4] p-4">
-              <p className="font-semibold text-neutral-900">Alpine Family Lodge</p>
-              <p className="mt-1 text-sm text-neutral-600">Spacious villa ideal for families and group stays.</p>
-            </li>
-            <li className="rounded border border-[#dccfb8] bg-[#faf8f4] p-4">
-              <p className="font-semibold text-neutral-900">Honeymoon Chalet</p>
-              <p className="mt-1 text-sm text-neutral-600">Private, romantic retreat with scenic Himalayan views.</p>
-            </li>
+            {CATALOG_VILLAS.slice(0, 4).map((villa) => (
+              <li key={villa.slug} className="rounded border border-[#dccfb8] bg-[#faf8f4] p-4">
+                <p className="font-semibold text-neutral-900">{villa.title}</p>
+                <p className="mt-1 text-sm text-neutral-600">{villa.description}</p>
+                <p className="mt-2 text-sm font-medium text-[#8b6914]">{villa.price}/night</p>
+              </li>
+            ))}
           </ul>
           <p className="mt-5 text-sm text-neutral-600">
             The interactive booking form loads automatically. If JavaScript is disabled, browse all villas on the villas page.

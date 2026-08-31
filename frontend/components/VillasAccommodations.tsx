@@ -3,8 +3,8 @@
 import Image from "next/image";
 import Link from "next/link";
 import { ArrowRight } from "lucide-react";
-import { buildWhatsAppBookingUrl, buildWhatsAppVillaBookingUrl } from "@/lib/whatsapp";
-import { trackEvent } from "@/lib/track";
+import { getVillaCatalogCollections } from "@/lib/villa-catalog";
+import { buildWhatsAppVillaBookingUrl } from "@/lib/whatsapp";
 import { trackAndOpen, trackClick } from "@/lib/trackedClick";
 
 type Room = {
@@ -15,118 +15,6 @@ type Room = {
   price: string;
   image: string;
 };
-
-type Collection = {
-  title: string;
-  subtitle: string;
-  rooms: Room[];
-};
-
-const collections: Collection[] = [
-  {
-    title: "Himalaya Apartments",
-    
-    subtitle:
-      "Warm, homely apartments ideal for couples and small families who want quiet nights and mountain-facing windows.",
-    rooms: [
-      {
-        tag: "APARTMENT",
-        name: "Single Luxury Room",
-         href: "apartment-single-luxury",
-        description:
-          "A cozy luxury room with mountain-facing windows and warm interiors.",
-        price: "27,000",
-        image: "/images/villas/apt-single-room.jpg",
-      },
-      {
-        tag: "APARTMENT",
-        name: "Complete Apartment (2 bedrooms + living area)",
-                href: "apartment-complete",
-        description:
-          "Two luxury bedrooms with a shared living area — perfect for families.",
-        price: "60,000",
-        image: "/images/villas/apt-complete-room.jpg",
-      },
-    ],
-  },
-  {
-    title: "Rakaposhi Villa",
-    subtitle:
-      "Our signature villa collection, with executive rooms and a full-villa option for groups.",
-    rooms: [
-      {
-        tag: "EXECUTIVE",
-        name: "Single Executive Room",
-        href: "rakaposhi-single-executive",
-        description:
-          "Refined executive room with king bed and warm ambient lighting.",
-        price: "16,500",
-        image: "/images/villas/rak-single-room.jpg",
-      },
-      {
-        tag: "SUITE",
-        name: "Executive Suite (2 rooms + private TV lounge)",
-          href: "rakaposhi-executive-suite",
-        description:
-          "Two rooms with a private TV lounge — space to gather and unwind.",
-        price: "30,000",
-        image: "/images/villas/rak-private-suite.jpg",
-      },
-      {
-        tag: "WHOLE VILLA",
-        name: "Complete Villa (5 executive rooms)",
-         href: "rakaposhi-complete-villa",
-        description:
-          "The entire Rakaposhi Villa — five executive rooms for your group.",
-        price: "70,000",
-        image: "/images/villas/rak-complete-villa.jpg",
-      },
-    ],
-  },
-  {
-    title: "Himalaya Luxury Villas",
-    subtitle:
-      "Our flagship residences — ranging from a cozy attic escape to a full four-bedroom villa for celebrations — are why guests describe us as a genuine 5-star hotel experience in Murree.",
-    rooms: [
-      {
-        tag: "COZY",
-        name: "Attic Room",
-           href: "luxury-attic",
-        description:
-          "A snug loft with sloped wooden ceilings and soft evening light.",
-        price: "27,000",
-        image: "/images/villas/lux-attic-villa.jpg",
-      },
-      {
-        tag: "LUXURY",
-            href: "luxury-single",
-        name: "Single Luxury Room",
-        description:
-          "Marble accents, elegant lighting, and sweeping mountain views.",
-        price: "27,000",
-        image: "/images/villas/lux-single-villa.jpg",
-      },
-      {
-        tag: "SUITE",
-        name: "Luxury Suite (1 & 2)",
-          href: "luxury-suite",
-        description:
-          "A bedroom paired with a private sitting area under a chandelier.",
-        price: "50,000",
-        image: "/images/villas/lux-suite-villa.jpg",
-      },
-      {
-        tag: "WHOLE VILLA",
-        name: "Complete Villa (4 bedrooms, private garden)",
-           href: "luxury-complete-villa",
-        description:
-          "Four bedrooms, private gardens, and mountain vistas — yours entirely.",
-        price: "99,000",
-        image: "/images/villas/lux-complete-villa.jpg",
-      },
-    ],
-  },
-];
 
 function RoomCard({ room }: { room: Room }) {
   return (
@@ -233,7 +121,22 @@ function RoomCard({ room }: { room: Room }) {
   );
 }
 
-export default function VillasAccommodations() {
+export default function VillasAccommodations({ hideViewAllLink = false }: { hideViewAllLink?: boolean }) {
+  const collections = getVillaCatalogCollections().map((collection) => ({
+    title: collection.title,
+    subtitle: collection.subtitle,
+    rooms: collection.rooms.map(
+      (room): Room => ({
+        tag: room.tag,
+        href: room.slug,
+        name: room.name,
+        description: room.description,
+        price: room.price,
+        image: room.image,
+      }),
+    ),
+  }));
+
   return (
     <section id="villas-accommodations" className="bg-[#e9e2d1] py-20 px-4 sm:px-6 lg:px-8">
       <div className="mx-auto max-w-7xl">
@@ -283,15 +186,17 @@ export default function VillasAccommodations() {
           If you&apos;re comparing cheap hotels in Murree, Pakistan against a full luxury stay, our Rakaposhi Executive Room at PKR 16,500/night is one of the most accessible low price hotel in Murree options that still gives you a genuine 5-star setting—private terrace, mountain views, and breakfast included, without the noise of a standard commercial hotel.
         </p>
 
-        <div className="mt-8 text-center">
-          <Link
-            href="/villas"
-            className="inline-flex items-center gap-2 rounded-md border border-[#c9a24a] bg-[#fdfaf3] px-6 py-3 text-xs font-medium uppercase tracking-[0.2em] text-[#2b2b2b] transition hover:bg-[#f5efdf]"
-          >
-            View All Villas &amp; Room Rates
-            <ArrowRight className="h-4 w-4" aria-hidden />
-          </Link>
-        </div>
+        {!hideViewAllLink ? (
+          <div className="mt-8 text-center">
+            <Link
+              href="/villas"
+              className="inline-flex items-center gap-2 rounded-md border border-[#c9a24a] bg-[#fdfaf3] px-6 py-3 text-xs font-medium uppercase tracking-[0.2em] text-[#2b2b2b] transition hover:bg-[#f5efdf]"
+            >
+              View All Villas &amp; Room Rates
+              <ArrowRight className="h-4 w-4" aria-hidden />
+            </Link>
+          </div>
+        ) : null}
 
         {/* Footnote */}
         <p className="mt-14 text-center text-sm text-[#8a8071] max-w-7xl mx-auto">

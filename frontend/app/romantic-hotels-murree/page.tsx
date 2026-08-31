@@ -46,9 +46,9 @@ const romanticHotelSchema = {
   "serviceType": "Romantic Accommodation",
   "offers": {
     "@type": "Offer",
-    "price": "65000",
+    "price": "27000",
     "priceCurrency": "PKR",
-    "description": "Romantic honeymoon suites starting from PKR 65,000 per night"
+    "description": "Romantic suites and private villas starting from PKR 27,000 per night"
   },
   "areaServed": {
     "@type": "Place",
@@ -57,65 +57,65 @@ const romanticHotelSchema = {
 };
 
 export default function RomanticHotelsMurreePage() {
-  const [selectedSuite, setSelectedSuite] = useState("honeymoon");
+  const [selectedSuite, setSelectedSuite] = useState("luxury-suite");
 
   const romanticSuites = [
     {
-      id: "honeymoon",
-      name: "Honeymoon Sanctuary",
-      description: "Ultimate romantic retreat with private terrace, jacuzzi, and panoramic mountain views designed for newlyweds.",
-      price: "65,000",
-      originalPrice: "85,000",
-      image: "/assets/villa-honeymoon.jpg",
+      id: "luxury-suite",
+      name: "Luxury Suite (1 & 2)",
+      description: "Elegant suite with a private sitting area, chandelier lighting, and sweeping mountain views — perfect for couples.",
+      price: "50,000",
+      originalPrice: "60,000",
+      image: "/images/villas/lux-suite-villa.jpg",
       features: [
         "King Size Bed with Premium Linens",
-        "Private Jacuzzi & Spa Bath",
-        "Romantic Terrace Setup",
-        "Champagne & Chocolates Welcome",
-        "Couples Spa Treatment",
-        "Private Butler Service"
+        "Private Sitting Lounge",
+        "Chandelier Lighting",
+        "Mountain View Windows",
+        "Complimentary Breakfast for Two",
+        "24/7 Concierge"
       ],
       icon: <Heart className="w-6 h-6" />,
-      size: "550 sq ft",
-      capacity: "2 Adults"
+      size: "520 sq ft",
+      capacity: "2–3 Adults"
     },
     {
-      id: "deluxe",
-      name: "Deluxe Romance Suite",
-      description: "Elegant suite with fireplace, mountain views, and intimate dining area perfect for romantic getaways.",
-      price: "45,000",
-      originalPrice: "60,000",
-      image: "/assets/villa-alpine.jpg",
+      id: "luxury-single",
+      name: "Single Luxury Room",
+      description: "Marble accents, elegant lighting, and panoramic mountain views in a refined couples' retreat.",
+      price: "27,000",
+      originalPrice: "35,000",
+      image: "/images/villas/lux-single-villa.jpg",
       features: [
-        "Cozy Fireplace",
-        "Mountain View Balcony",
-        "In-Room Dining Area",
-        "Premium Mini Bar",
-        "Romantic Lighting",
+        "Marble Accents",
+        "Mountain View Terrace",
+        "Premium Bedding",
+        "Complimentary Breakfast",
+        "Private Bathroom",
         "24/7 Room Service"
       ],
       icon: <Sparkles className="w-6 h-6" />,
-      size: "450 sq ft",
+      size: "380 sq ft",
       capacity: "2 Adults"
     },
     {
-      id: "presidential",
-      name: "Presidential Romance Villa",
-      description: "Luxurious two-bedroom villa with garden, and exclusive services for the ultimate romantic escape.",
-      price: "95,000",
+      id: "luxury-complete-villa",
+      name: "Complete Luxury Villa (4 bedrooms)",
+      description: "Four-bedroom villa with private garden — the ultimate romantic escape for couples travelling with family or friends.",
+      price: "99,000",
       originalPrice: "120,000",
-      image: "/assets/villa-presidential.jpg",
+      image: "/images/villas/lux-complete-villa.jpg",
       features: [
-       
-        "Personal Garden",
-        "Two Master Suites",
-        "Private Kitchen",
-        "Home Theater System",
-        "Dedicated Staff"
+        "Private Garden",
+        "Four Luxury Bedrooms",
+        "Multiple Living Areas",
+        "Exclusive Villa Use",
+        "Complimentary Breakfast",
+        "Dedicated Event Support"
       ],
       icon: <Star className="w-6 h-6" />,
-      size: "1200 sq ft",
-      capacity: "2-4 Adults"
+      size: "Full Villa",
+      capacity: "2–8 Adults"
     },
     {
       id: "penthouse",

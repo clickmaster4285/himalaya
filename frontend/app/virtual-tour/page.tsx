@@ -3,7 +3,7 @@ import Image from "next/image";
 import Link from "next/link";
 import Navbar from "@/components/Navbar";
 import Footer from "@/components/Footer";
-import { getPublishedVillas } from "@/lib/villas-fetch";
+import { CATALOG_VILLAS } from "@/lib/villa-catalog";
 import { shouldUnoptimizeImageSrc, getValidImageSrc } from "@/lib/image-utils";
 import { JsonLd } from "@/components/seo/JsonLd";
 import { createPageMetadata } from "@/lib/seo/build-metadata";
@@ -33,8 +33,7 @@ const poolImg = "/assets/why-villa-private.jpg";
 const journeyBg = "/assets/why-villa-garden.jpg";
 
 export default async function ExperiencePage() {
-  const villas = await getPublishedVillas();
-  const villaCards = villas.slice(0, 6);
+  const villaCards = CATALOG_VILLAS.slice(0, 6);
   const experiencesJsonLd = {
     "@context": "https://schema.org",
     "@type": "ItemList",

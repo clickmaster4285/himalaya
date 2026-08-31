@@ -8,7 +8,7 @@ import {
 } from "@/components/ui/accordion";
 import { buildWhatsAppBookingUrl } from "@/lib/whatsapp";
 import { trackAndOpen } from "@/lib/trackedClick";
-import VillasExploreGrid from "@/components/villas/VillasExploreGrid";
+import VillasAccommodations from "@/components/VillasAccommodations";
 
 const villaBenefits = [
   "No shared corridors or lobby crowding — your unit is self-contained.",
@@ -103,7 +103,7 @@ export default function VillasPageContent() {
         </ul>
       </section>
 
-      <VillasExploreGrid />
+      <VillasAccommodations hideViewAllLink />
 
       <section className="mx-auto max-w-[1200px] px-6 pb-14 md:px-12 md:pb-20">
         <h2 className="font-display text-3xl text-neutral-900 md:text-4xl">

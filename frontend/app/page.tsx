@@ -6,7 +6,7 @@ import faqSchema from '@/public/himalayavillas-faq-schema.json';
 import HeroSection from "@/components/HeroSection";
 import PhilosophySection from "@/components/PhilosophySection";
 import LiveWeatherMurree from "@/components/LiveWeatherMurree";
-import VillasSection from "@/components/VillasSection";
+import VillasAccommodations from "@/components/VillasAccommodations";
 import ServicesSection from "@/components/ServicesSection";
 import AmenitiesSection from "@/components/AmenitiesSection";
 import MomentsSection from "@/components/MomentsSection";
@@ -19,8 +19,6 @@ import HomeFAQSection from "@/components/HomeFAQSection";
 import ReserveSection from "@/components/ReserveSection";
 import Footer from "@/components/Footer";
 import { createPageMetadata } from "@/lib/seo/build-metadata";
-import { getPublishedVillas } from "@/lib/villas-fetch";
-import VillasAccommodations from "@/components/VillasAccommodations";
 
 export const metadata: Metadata = createPageMetadata({
   title: "Hotels in Murree - Himalaya Villas & Resort, Bhurban",
@@ -33,8 +31,6 @@ export const metadata: Metadata = createPageMetadata({
 export const dynamic = "force-dynamic";
 
 const Index = async () => {
-  const villas = await getPublishedVillas();
-
   return (
     <div className="min-h-screen">
       <HomeStructuredData />
@@ -52,7 +48,6 @@ const Index = async () => {
       <HeroSection />
       <PhilosophySection />
       <LiveWeatherMurree />
-      {/* <VillasSection initialVillas={villas} /> */}
       <VillasAccommodations/>
       <ServicesSection />
       <AmenitiesSection />

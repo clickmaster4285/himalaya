@@ -1,7 +1,6 @@
 import type { Metadata } from "next";
 import VillasHero from "@/components/VillasHero";
 import VillasPageContent from "@/components/villas/VillasPageContent";
-import VillasExploreGrid from "@/components/villas/VillasExploreGrid";
 import MomentsSection from "@/components/MomentsSection";
 import ReserveSection from "@/components/ReserveSection";
 import Footer from "@/components/Footer";
@@ -30,14 +29,15 @@ const itemListJsonLd = {
   "@type": "ItemList",
   name: "Luxury Villas in Bhurban Murree",
   itemListElement: [
-    { "@type": "ListItem", position: 1, url: absoluteUrl("/villas/serene-valley-cabin") },
-    { "@type": "ListItem", position: 2, url: absoluteUrl("/villas/sunset-suite") },
-    { "@type": "ListItem", position: 3, url: absoluteUrl("/villas/garden-villa-retreat") },
-    { "@type": "ListItem", position: 4, url: absoluteUrl("/villas/himalayan-penthouse") },
-    { "@type": "ListItem", position: 5, url: absoluteUrl("/villas/presidential-suite") },
-    { "@type": "ListItem", position: 6, url: absoluteUrl("/villas/alpine-family-lodge") },
-    { "@type": "ListItem", position: 7, url: absoluteUrl("/villas/luxury-suite") },
-    { "@type": "ListItem", position: 8, url: absoluteUrl("/villas/luxury-single") },
+    { "@type": "ListItem", position: 1, url: absoluteUrl("/villas/apartment-single-luxury") },
+    { "@type": "ListItem", position: 2, url: absoluteUrl("/villas/apartment-complete") },
+    { "@type": "ListItem", position: 3, url: absoluteUrl("/villas/rakaposhi-single-executive") },
+    { "@type": "ListItem", position: 4, url: absoluteUrl("/villas/rakaposhi-executive-suite") },
+    { "@type": "ListItem", position: 5, url: absoluteUrl("/villas/rakaposhi-complete-villa") },
+    { "@type": "ListItem", position: 6, url: absoluteUrl("/villas/luxury-attic") },
+    { "@type": "ListItem", position: 7, url: absoluteUrl("/villas/luxury-single") },
+    { "@type": "ListItem", position: 8, url: absoluteUrl("/villas/luxury-suite") },
+    { "@type": "ListItem", position: 9, url: absoluteUrl("/villas/luxury-complete-villa") },
   ],
 };
 

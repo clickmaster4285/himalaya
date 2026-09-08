@@ -59131,107 +59131,206 @@ export const article536: Article = {
 };
 
 // ============================================
-// ARTICLE 543 - Luxury Villas Near Islamabad — Why Bhurban Is the Answer
+// ARTICLE 543 - Luxury Villas Near Islamabad — Himalaya Villas & Resorts, Bhurban
 // ============================================
 
 export const article543: Article = {
   slug: "luxury-villas-near-islamabad",
-  title: "Luxury Villas Near Islamabad — Why Bhurban Is the Answer",
+  title: "Luxury Villas Near Islamabad - Himalaya Villas, Bhurban",
   metaDescription:
-    "luxury villas near islamabad, luxury villa islamabad, private villa near islamabad, luxury villa murree bhurban",
+    "Looking for luxury villas near Islamabad? Himalaya Villas in Bhurban offers private, exclusive-use villas just 45 min from the capital. Reserve your villa now.",
   keywords:
     "luxury villas near islamabad, luxury villa islamabad, private villa near islamabad, luxury villa murree bhurban",
-  eyebrow: "Guest Post | Commercial | Clusters 1 & 4 | ~800w",
-  h1: "Luxury Villas Near Islamabad — Why Bhurban Is the Answer",
+  eyebrow: "Private Villa Estate | 45 Minutes from Islamabad",
+  h1: "Luxury Villas Near Islamabad — Himalaya Villas & Resorts, Bhurban",
   heroTagline:
-    "Yes. Himalaya Villas & Resorts in Bhurban (47km from Islamabad, 45 minutes) is the closest premium private villa estate to Pakistan's capital. 12 exclusive-use cedar forest villas at 6,800 feet. PKR 39,000-70,000/villa/night. The only property of its type within 1 hour of Islamabad.",
-  heroImage: dummyImageTemp,
+    "A private villa estate in Bhurban's cedar forest — 47 km from Islamabad, about 45 minutes by road. Exclusive-use villas with private outdoor space, in-villa dining, and pre-arrival concierge by WhatsApp.",
+  heroImage: "/assets/why-villa-private.jpg",
 
   blocks: [
     {
       type: "callout-qa",
       question: "Are there luxury private villas near Islamabad?",
       answer:
-        "Yes. Himalaya Villas & Resorts in Bhurban (47km from Islamabad, 45 minutes) is the closest premium private villa estate to Pakistan's capital. 12 exclusive-use cedar forest villas at 6,800 feet. PKR 39,000-70,000/villa/night. The only property of its type within 1 hour of Islamabad.",
+        "Yes. Himalaya Villas & Resorts in Bhurban is a private villa estate 47 km from Islamabad — roughly 45 minutes via the N-75 Murree Motorway. Each villa is booked exclusively by one group, with its own outdoor space, in-villa dining, and a concierge team that coordinates everything by WhatsApp before you arrive.",
     },
 
     {
       type: "section",
-      heading: "Luxury Villas Near Islamabad — Why Bhurban Is the Answer",
+      heading: "Luxury Villas Near Islamabad — What to Expect",
       paragraphs: [
-        "The search for 'luxury villas near Islamabad' reflects a specific unmet need in Pakistan's domestic premium accommodation market: the private villa within driving distance of the capital. The hotel market near Islamabad is well-developed (JW Marriott, Serena, Best Western Plus), but the private villa estate — the complete private property with exclusive outdoor space and in-villa dining — has one answer within 1 hour of Islamabad.",
+        "If you're searching for luxury villas near Islamabad, the short answer is Bhurban. It's a hill station 47 km from the capital, about 45 minutes by road on the N-75 Murree Motorway, and it's home to Himalaya Villas & Resorts – a private villa estate set in a cedar forest at 6,800 feet.",
+        "This isn't a hotel with rooms along a corridor. Each villa is a standalone unit booked exclusively by one group, with its own outdoor space, in-villa dining, and a concierge team that coordinates everything by WhatsApp before you even arrive. For travellers who want mountain scenery without giving up privacy, that's the difference between a hotel stay and a villa stay.",
+        "Below, we'll cover what \"luxury villa near Islamabad\" actually means in practice, what's included, how far it is, what it costs, and the questions people ask most before booking.",
       ],
-      image: {
-        src: dummyImageTemp,
-        alt: "Luxury Villas Near Islamabad",
-      },
     },
 
     {
       type: "section",
-      heading: "The Luxury Villa Market Near Islamabad",
+      heading: 'Why Bhurban Is the Answer to "Luxury Villas Near Islamabad"',
       paragraphs: [
-        "Within 1 hour of Islamabad, the premium accommodation options:",
-        "Himalaya Villas & Resorts, Bhurban (47km): the only private villa estate within this radius. 12 exclusive-use cedar forest villas.",
-        "PC Hotel Bhurban (48km): 5-star hotel — shared facilities, not private villas",
-        "Mövenpick Murree (~55km): international brand hotel — shared facilities",
-        "Various Murree guesthouses (~55km): budget to mid-scale — not premium private villas",
-        "Islamabad city hotels (JW Marriott, Serena, Margala): premium hotels — urban, not mountain, no private villa model",
-        "The conclusion: Himalaya Villas is the only luxury private villa within 1 hour of Islamabad. There is no competitor in this specific product category at this distance.",
+        "Islamabad has plenty of luxury hotels within the city. What it doesn't have is a private villa estate — and that's usually what people mean when they search for a \"luxury villa\" rather than a \"luxury hotel room\". A villa implies a whole building, private outdoor space, and no shared lobby or corridor with other guests.",
+        "Bhurban sits just past Murree on the N-75, in mature deodar-cedar forest, at a noticeably cooler altitude than Islamabad. It's close enough for a weekend trip — many guests leave the city after work on a Friday and are checked in before dinner — but far enough to feel like a proper mountain escape.",
+        "Himalaya Villas & Resorts is built specifically around that gap: exclusive-use villas within roughly an hour of the capital, rather than a resort room you share the building with strangers in.",
       ],
-      image: {
-        src: dummyImageTemp,
-        alt: "Luxury Villa Market",
-      },
     },
 
     {
       type: "facts",
-      heading: "What 'Luxury Villa' Means at Himalaya Villas",
+      heading: 'What "Luxury Villa" Means at Himalaya Villas & Resorts',
       items: [
         {
-          label: "Exclusive-use",
-          value: "The villa is a complete private building belonging only to the booked group — no shared corridors, no shared lobby, no strangers in the space",
+          label: "Exclusive use",
+          value:
+            "Each villa belongs only to the group that books it. There's no shared corridor, no shared lobby, and no other guests walking through your space. When you book a villa, the whole unit is yours for the stay.",
         },
         {
           label: "Private outdoor space",
-          value: "Every villa has an exclusive private terrace, balcony, or enclosed garden — the outdoor space that belongs only to the booked group",
+          value:
+            "Every villa comes with its own terrace, balcony, or enclosed garden. This is space that belongs only to your group — not a shared hotel garden or a common pool deck.",
         },
         {
-          label: "Cedar forest",
-          value: "The estate sits in a mature deodar cedar forest — the forest begins at the property gate",
+          label: "Cedar forest setting",
+          value:
+            "The estate is built inside a mature cedar forest. You don't have to drive somewhere to see trees — the forest starts at the property gate, and most rooms and villas face it directly.",
         },
         {
           label: "In-villa dining",
-          value: "Meals prepared and served in the villa at the group's timing — no restaurant queue, no fixed meal times",
+          value:
+            "Meals are prepared and served inside the villa, on your schedule. There's no restaurant queue and no fixed mealtime. You have to plan your day around it.",
         },
         {
           label: "Pre-arrival concierge",
-          value: "The estate team coordinates all requirements via WhatsApp before arrival — flowers, fire timing, occasion setup, dietary preferences",
+          value:
+            "Before you arrive, our team coordinates details over WhatsApp — flowers for an anniversary, fireplace timing on a cold evening, dietary requirements, or setup for a birthday or small celebration. Most of this is arranged before you even check in.",
+        },
+      ],
+    },
+
+    {
+      type: "comparison",
+      heading: "Villa Collections and Pricing",
+      columns: ["Collection", "Options", "Starting Rate"],
+      rows: [
+        {
+          feature: "Himalaya Apartments",
+          a: "Two options for couples and small families — luxury room or complete two-bedroom apartment with shared living area",
+          b: "From PKR 27,000/night (single room) · PKR 60,000/night (complete apartment)",
+        },
+        {
+          feature: "Rakaposhi Villa",
+          a: "Executive-style rooms — book a single room or the complete five-room villa",
+          b: "From PKR 16,500/night (single room) · PKR 70,000/night (complete villa)",
+        },
+        {
+          feature: "Himalaya Luxury Villas",
+          a: "Flagship collection — Attic Room to Complete Villa with four bedrooms, private gardens, and full mountain views",
+          b: "From PKR 27,000/night (Attic Room) · PKR 99,000/night (Complete Villa)",
+        },
+      ],
+    },
+
+    {
+      type: "paragraph",
+      text:
+        "All rates are per night and include complimentary breakfast for two guests per room, with a maximum of three guests per room (an extra mattress can be arranged for an additional charge). If you're planning an event or a full estate buyout, our team can walk you through single-villa bookings versus taking over the whole property — reach out on WhatsApp at +92 304 567 9000 for event pricing.",
+    },
+
+    {
+      type: "section",
+      heading: "How Far Is Bhurban From Islamabad?",
+      paragraphs: [
+        "Distance is usually the deciding factor between a \"villa near Islamabad\" search and an actual booking, so here's the practical breakdown:",
+        "By car: 47 km via the N-75 Murree Motorway, about 45 minutes in normal traffic. The motorway is a dual carriageway and well-signed from Islamabad's main entry points.",
+        "By ride-hailing: Careem or Uber intercity, roughly PKR 3,500–5,500 one way, 50–60 minutes. Enter \"Himalaya Villas, Mohra Iswal, Bhurban\" as your destination.",
+        "By hired car with driver: PKR 5,000–8,000 return, useful for groups travelling with luggage who want the driver to wait.",
+        "By bus: No direct bus runs from central Islamabad. The budget route is Islamabad to Rawalpindi's Pir Wadhai terminal, then a bus to Murree, then a short taxi (about 20 minutes) to Bhurban.",
+        "If you're driving yourself, avoid leaving Islamabad on Friday afternoon between 3 and 7 pm, which is the peak outbound window toward Murree. A Thursday evening or early Friday morning departure is noticeably quieter.",
+      ],
+    },
+
+    {
+      type: "audience",
+      heading: "Who Books Luxury Villas Near Islamabad",
+      items: [
+        {
+          title: "Couples on a private weekend",
+          text: "Looking for a quiet escape without the noise of a busy hotel — usually a single luxury room or a luxury suite.",
+        },
+        {
+          title: "Families who want space",
+          text: "Separate bedrooms and a shared living space rather than adjoining hotel rooms — the Complete Apartment or a full villa in the Himalaya Luxury Villas collection.",
+        },
+        {
+          title: "Groups celebrating an occasion",
+          text: "Anniversaries, birthdays, small private gatherings — where a full villa buyout and pre-arranged setup (flowers, fireplace, dietary requests) matter more than a standard hotel package.",
+        },
+        {
+          title: "Remote workers on a workcation",
+          text: "Taking a short mountain workcation who still need a quiet, private space rather than a shared coworking-style hotel lobby.",
+        },
+      ],
+    },
+
+    {
+      type: "facts",
+      heading: "When to Visit Bhurban",
+      items: [
+        {
+          label: "Spring (March–May)",
+          value: "New growth in the cedar forest, mild days, cool evenings.",
+        },
+        {
+          label: "Summer (June–August)",
+          value: "The main relief-from-heat season, since Bhurban stays significantly cooler than Islamabad during peak summer.",
+        },
+        {
+          label: "Autumn (September–November)",
+          value: "Clear skies and quieter roads, good for a weekend trip without holiday crowds.",
+        },
+        {
+          label: "Winter (December–February)",
+          value: "Occasional snowfall at this elevation, with fireplace evenings inside the villa. Book ahead if you specifically want snow, since timing varies year to year.",
         },
       ],
     },
 
     {
       type: "faqs",
-      heading: "FAQs About Luxury Villas Near Islamabad",
+      heading: "Frequently Asked Questions",
       items: [
         {
-          q: "Is there a luxury villa with a pool near Islamabad?",
-          a: "Himalaya Villas' Presidential Suite has a private outdoor jacuzzi rather than a pool. The nearest property with a hotel pool is PC Hotel Bhurban (0.5km from Himalaya Villas). No private villa with a pool exists within 1 hour of Islamabad in the current market.",
+          q: "Is there a luxury villa near Islamabad with a pool?",
+          a: "Not currently. The Presidential Suite at Himalaya Villas & Resorts has a private outdoor jacuzzi rather than a pool. If a private pool is a firm requirement, it's worth checking availability directly with our team, since layouts are updated periodically.",
         },
         {
-          q: "Can I rent a whole luxury villa near Islamabad for a private event?",
-          a: "Yes — Himalaya Villas accommodates private events at the villa and estate level. A single villa for a private occasion, or the full estate buyout for a large private event. Contact WhatsApp +92 304 567 9000 for event enquiries.",
+          q: "How far is Himalaya Villas & Resorts from Islamabad?",
+          a: "47 km, about 45 minutes by car via the N-75 Murree Motorway in normal traffic conditions.",
+        },
+        {
+          q: "Can I book an entire villa privately, not just a room?",
+          a: 'Yes. Both the Rakaposhi Villa and Himalaya Luxury Villas collections offer a "complete villa" option, where you book the entire building rather than an individual room.',
+        },
+        {
+          q: "Can I rent a villa for a private event or celebration?",
+          a: "Yes. We accommodate private events at both the single-villa level and full estate buyouts for larger gatherings. Contact us on WhatsApp at +92 304 567 9000 with your date and group size, and our team will walk you through options.",
+        },
+        {
+          q: "What's included in the nightly rate?",
+          a: "Every rate listed is per night and includes complimentary breakfast for two guests per room. Maximum occupancy is three guests per room, with an extra mattress available for an additional charge.",
+        },
+        {
+          q: "Is there a direct way to reach Bhurban without a car?",
+          a: "You can take a ride-hailing service like Careem or Uber directly to the property or use public transport via Rawalpindi and Murree with a short taxi for the final stretch. Full directions are available in our Islamabad to Bhurban transport guide.",
         },
       ],
     },
 
     {
       type: "cta",
-      eyebrow: "Book the Closest Luxury Private Villa to Islamabad",
+      eyebrow: "Book Your Stay",
       heading: "WhatsApp +92 304 567 9000",
-      text: "Direct bookings receive the best available rate.",
+      text: "Himalaya Villas & Resorts is a 45-minute drive from Islamabad, set in a cedar forest at 6,800 feet, with exclusive-use villas, private outdoor space, and in-villa dining. For availability, pricing on a specific villa, or event bookings, message us directly — direct bookings get a priority response and the best available rate.",
       buttonLabel: "WhatsApp: +92 304 567 9000",
       buttonHref: "https://wa.me/923045679000",
       footnote: "Direct bookings receive priority response and best available rate.",
@@ -59239,12 +59338,12 @@ export const article543: Article = {
 
     {
       type: "related",
-      heading: "📎 Explore More",
+      heading: "Explore More",
       items: [
-        { href: "/islamabad-to-bhurban-guide", label: "Getting to Bhurban" },
-        { href: "/bhurban-accommodation-guide", label: "Full accommodation guide" },
-        { href: "/bhurban-villa-pricing-guide", label: "Pricing guide" },
+        { href: "/islamabad-to-bhurban-guide", label: "Islamabad to Bhurban transport guide" },
         { href: "/villas", label: "Browse Himalaya Villas" },
+        { href: "/book/stay", label: "Book a stay" },
+        { href: "/blogs/best-family-hotels-in-murree", label: "Best family hotels in Murree" },
       ],
     },
   ],

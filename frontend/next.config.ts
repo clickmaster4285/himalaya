@@ -58,6 +58,8 @@ const nextConfig: NextConfig = {
       { source: "/booking", destination: "/book", permanent: true },
       { source: "/book-now", destination: "/book", permanent: true },
       { source: "/journal", destination: "/blogs", permanent: true },
+      // /blog (singular) → /blogs — fixes legacy/wrong links like /blog/private-tours-and-walkthroughs
+      { source: "/blog/:path*", destination: "/blogs/:path*", permanent: true },
       { source: "/luxury-hotels-in-muree", destination: "/luxury-hotels-in-murree", permanent: true },
       { source: "/about", destination: "/", permanent: true },
       { source: "/services", destination: "/", permanent: true },

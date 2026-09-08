@@ -1317,6 +1317,132 @@ const CONTENT_BY_SLUG: Record<string, BlogContent> = {
       },
     ],
   },
+  "best-family-hotels-in-murree": {
+    intro: [
+      "If you're planning a family trip to Murree, you've probably noticed the same problem everyone runs into: most hotel rooms simply aren't built for families. You end up booking two or three rooms, paying for each one separately, and still ending up with kids sleeping on a rollaway bed while you juggle keys, room service timings, and a shared hallway with strangers.",
+      "Himalaya Villas & Resorts takes a different approach. Instead of a room, your family gets an entire private villa — with its own bedrooms, living space, and terrace — set inside a pine forest in Bhurban, about 6,800 feet above sea level. This guide walks through what that actually means for a family stay, what it costs, who it suits, and what to expect before you book.",
+    ],
+    sections: [
+      {
+        heading: 'What Makes a Hotel "Family-Friendly" in Murree?',
+        paragraphs: [
+          "Before comparing anything, it helps to know what actually matters when you're travelling with kids. Based on what families consistently look for in Murree, the checklist usually comes down to:",
+          "Enough space for everyone to sleep comfortably, without cramming two families into one small room. A quiet, safe location away from heavy Mall Road traffic. Reliable parking, especially if you're driving up from Islamabad or Rawalpindi. Mountain views kids will actually remember. Food that's convenient and doesn't require driving out at night. Staff who are used to dealing with children, not just business travellers.",
+          "Himalaya Villas was built with most of these needs in mind, and that's really the reason it comes up so often in family travel searches for the Murree-Bhurban area.",
+        ],
+        image: "/assets/blog-family-tour-featured-banner.png",
+      },
+      {
+        heading: "Location: Bhurban, Not Mall Road — And That's the Point",
+        paragraphs: [
+          "Himalaya Villas sits in Bhurban, a quieter, higher-altitude area a short drive from central Murree. This matters more than people expect. Mall Road in peak season gets crowded, noisy, and hard to park in — not ideal when you're managing young children or elderly parents.",
+          "Bhurban, by contrast, is known for pine forests, cooler temperatures, and panoramic views of the surrounding valleys. In winter, the villa balconies look out over snow-capped peaks. In summer, the same view turns green, with mist rolling through the trees in the early morning — genuinely one of the more memorable parts of staying here.",
+          "If you're travelling from Islamabad, Bhurban is roughly an hour to 90 minutes away depending on traffic, making it an easy weekend escape without a long, winding drive through the busiest part of Murree town.",
+        ],
+        image: "/assets/gallery-reflection.jpg",
+      },
+      {
+        heading: "Accommodation Built for Families, Not Just Couples",
+        paragraphs: [
+          "This is where Himalaya Villas differs most from a typical Murree hotel. Rather than booking a single room, families book a villa — a self-contained unit with multiple bedrooms.",
+          "Standard villa layout: four bedrooms spread across two floors. Each bedroom has a king-size bed and its own en-suite bathroom. The master suite includes a private living room and a spacious private terrace. Shared living space for the whole family to gather in the evening.",
+          "For smaller families or two couples travelling together, there's also a two-bedroom apartment option — two king bedrooms connected by a shared living area, which works well when parents want their own space at night but a common area during the day for meals, cards, or simply keeping an eye on the kids.",
+          "This structure solves a real problem for larger families: instead of three separate hotel rooms on three separate floors, everyone stays under one roof, with privacy but no separation.",
+        ],
+        image: "/assets/villa-presidential-real.jpg",
+      },
+      {
+        heading: "Family Amenities That Actually Matter",
+        paragraphs: [
+          "The view is nice, but families need practicality. Here's what's included at Himalaya Villas that specifically supports a family stay:",
+          "Private outdoor space — each villa has its own terrace or balcony, so kids have room to be kids without disturbing other guests. In-villa dining — meals can be served directly in your villa or on the terrace, which is a genuine advantage with young children who don't always want to sit through a formal restaurant meal. All food served is halal, spanning Pakistani and continental options.",
+          "On-site activities — for families with older children or teenagers, the property offers light adventure activities, including a zipline and a rock wall. Personalised attendant service — rather than calling a front desk and waiting, each stay comes with a dedicated attendant for housekeeping, dining requests, and local arrangements. Parking — on-site parking is available, which removes one of the more common frustrations of a Murree trip.",
+        ],
+        image: "/assets/amenities-interior-real.jpg",
+      },
+      {
+        heading: "What Does a Family Stay at Himalaya Villas Cost?",
+        paragraphs: [
+          "Pricing at Himalaya Villas is per villa, per night — not per room and not per person. This is a meaningful difference for families, because a single villa rate covers everyone travelling together, rather than multiplying costs across multiple hotel rooms.",
+          "Complete Apartment (2 bedrooms): starting around PKR 45,000 per night — best for small families, or two couples travelling together.",
+          "Full Villa (4 bedrooms): roughly PKR 60,000–95,000 per night — best for larger or extended families, groups of 6–8.",
+          "Rates are seasonal. Peak periods — summer school holidays, Eid, and the last week of December — carry higher rates, while shoulder-season stays are noticeably more affordable. Because a villa is shared by the whole family, the effective cost per person is often lower than booking two or three separate hotel rooms for the same group.",
+          "Direct bookings through the property typically get priority allocation and the best available rate compared to third-party booking sites. Rates are indicative and change with availability, so it's worth confirming exact pricing for your travel dates before finalising plans — especially around peak weekends when demand in Bhurban rises sharply.",
+          "If you're comparing costs across a few nights, it's worth doing the math on a per-person basis rather than just looking at the nightly villa rate — for a family of six, it usually works out more reasonably than it first appears.",
+        ],
+        image: "/assets/why-villa-private.jpg",
+      },
+      {
+        heading: "Who Himalaya Villas Suits Best",
+        paragraphs: [
+          "Not every property fits every kind of family trip, so it's worth being upfront about who gets the most value here.",
+          "Best fit: families with 2 or more children who want space to spread out rather than being confined to one hotel room. Extended families or multi-generational trips (grandparents, parents, kids) who want to stay together but still have private rooms. Families planning a longer weekend or short holiday who want a quiet, scenic base rather than being in the middle of Murree's busiest commercial strip. Anyone driving up from Islamabad or Rawalpindi who wants secure, on-site parking.",
+          "Less suited to: solo travellers or couples on a very tight budget, since villa pricing is designed around group stays rather than single-occupancy rooms. Families who specifically want to be walking distance from Mall Road's markets and street food — Bhurban is quieter and slightly removed from that scene, which is a feature for some families and a drawback for others.",
+        ],
+        image: "/assets/why-villa-garden.jpg",
+      },
+      {
+        heading: "Things to Do Nearby With Kids",
+        paragraphs: [
+          "Part of choosing the right base in Murree is thinking about what's around it. Bhurban's location gives families reasonably easy access to a few well-known spots:",
+          "Kashmir Point — a popular viewpoint with panoramic valley views, a manageable outing even with younger kids. Patriata (New Murree) chairlift and cable car — a favourite with children, roughly a scenic drive from Bhurban. Pindi Point — another chairlift and viewpoint option for an easy half-day trip. Nathiagali — for families wanting to extend the trip slightly further into the hills.",
+          "Because Himalaya Villas is set away from the town centre, plan for a short drive to reach most of these attractions — but the trade-off is a quieter, more restful base to return to each evening, which matters more than people expect after a full day out with kids.",
+        ],
+        image: "/assets/blog-bhurban-patriata-chairlift.png",
+      },
+      {
+        heading: "How to Choose the Right Villa for Your Family",
+        paragraphs: [
+          "If you're trying to decide what to book, it helps to match the layout to your travel group:",
+          "Family with young children (toddlers to age 8): the two-bedroom apartment is often enough, especially if you want to keep everyone close for supervision. The shared living area means you're never far from the kids at night.",
+          "Family with older children or teenagers: the full four-bedroom villa gives everyone their own room and bathroom, which matters more once kids are past the age of sharing a bed with parents.",
+          "Extended or multi-generational family: the full villa, with its separate master suite and private terrace, works well for grandparents who want quiet, private space away from younger kids' energy.",
+          "Two families travelling together: splitting a full villa between two families is often more cost-effective than each booking a separate hotel room block, while still giving both families their own bedrooms and bathrooms.",
+          "Family without a car: confirm transport arrangements in advance, since Bhurban is a short drive from central attractions rather than walking distance.",
+        ],
+      },
+      {
+        heading: "Booking Tips From Experience",
+        paragraphs: [
+          "Book early for peak weeks. Summer holidays, Eid, and the New Year period fill up quickly in Bhurban, and villa-style accommodation has fewer total rooms than a large hotel, so availability tightens faster.",
+          "Confirm your exact group size before booking. Because pricing and layout are structured around the whole villa rather than individual rooms, it's worth messaging ahead with your family size so you get an accurate quote and the right configuration — most properties, including this one, respond to WhatsApp enquiries fairly quickly.",
+          "Ask about breakfast inclusions. Some room configurations include complimentary breakfast for a set number of guests, with additional charges for extra guests, so it's worth clarifying this if you're travelling with a larger group.",
+          "Pack for altitude. At nearly 6,800 feet, Bhurban is noticeably cooler than Islamabad, even in summer. Evenings can get cold year-round, which is worth knowing if you're travelling with young children.",
+        ],
+      },
+      {
+        heading: "Conclusion",
+        paragraphs: [
+          "For families weighing up where to stay in Murree, the decision usually comes down to a simple trade-off: shared hotel rooms in a busy, central location, or a private villa in a quieter setting with more space per person. Himalaya Villas is built specifically around the second option — multiple bedrooms under one roof, a private terrace, in-villa dining, and parking that doesn't require circling Mall Road twice.",
+          "It won't suit everyone — if you want to be in the middle of the market action or you're travelling solo, there are better-suited options elsewhere. But for a family of four to eight looking for a comfortable, scenic base in Bhurban with room to actually spread out, it's one of the more practical choices in the Murree-Bhurban area.",
+          "If you're planning dates, it's worth reaching out directly with your group size and travel window — villa availability in peak weeks moves quickly, and a direct enquiry usually gets you the most accurate rate for your specific stay.",
+        ],
+        image: "/assets/why-villa-view.jpg",
+      },
+    ],
+    faqs: [
+      {
+        q: "Are Himalaya Villas suitable for families with young children?",
+        a: "Yes. The villa-style layout gives families private space, an in-villa dining option, and a private terrace, which tends to work better for young children than a standard hotel room with shared hallways and public dining areas.",
+      },
+      {
+        q: "Where exactly are Himalaya Villas located?",
+        a: "It's in Bhurban, near Murree, at an altitude of approximately 6,800 feet, set within a pine forest with mountain views. It's a short drive from Murree's main town area and roughly 60–90 minutes from Islamabad depending on traffic.",
+      },
+      {
+        q: "How much does a family villa cost per night?",
+        a: "Rates typically range from around PKR 45,000 for a two-bedroom apartment up to roughly PKR 60,000–95,000 for a full four-bedroom villa, depending on season and configuration. Rates are per villa, not per room or per person, so the cost is shared across the whole family.",
+      },
+      {
+        q: "Do Himalaya Villas have parking?",
+        a: "Yes, on-site parking is available, which is a common concern for families driving up from Islamabad or Rawalpindi, especially compared to the parking challenges near Mall Road.",
+      },
+      {
+        q: "How many people can stay in one villa?",
+        a: "The full villa comfortably accommodates larger families, generally up to around 8 guests across its four bedrooms, with extra mattresses available for additional guests at an added cost. The two-bedroom apartment suits smaller families or two couples travelling together.",
+      },
+    ],
+  },
 };
 
 export function getBlogContent(post: VillaBlogPost): BlogContent {

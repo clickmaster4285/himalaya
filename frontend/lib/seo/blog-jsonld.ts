@@ -12,7 +12,7 @@ export function buildBlogPostingJsonLd(post: VillaBlogPost): JsonLdScript {
     data: {
       "@context": "https://schema.org",
       "@type": ["Article", "BlogPosting"],
-      headline: post.title,
+      headline: post.headline ?? post.title,
       description: post.excerpt,
       datePublished: post.date,
       image: [absoluteUrl(post.coverImage)],

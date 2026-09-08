@@ -2,6 +2,8 @@
 export type VillaBlogPost = {
   slug: string;
   title: string;
+  /** Optional on-page H1 when different from SEO `title`. */
+  headline?: string;
   excerpt: string;
   date: string;
   readMinutes: number;
@@ -87,6 +89,16 @@ export const VILLA_BLOG_POSTS: VillaBlogPost[] = [
       "Planning a family tour to Murree or Bhurban? Discover why Himalaya Premium Villas is the perfect family stay — private, safe, spacious & activities for all ages.",
     date: "2026-04-18",
     readMinutes: 12,
+    coverImage: "/assets/blog-family-tour-featured-banner.png",
+  },
+  {
+    slug: "best-family-hotels-in-murree",
+    title: "Best Family Hotels in Murree - Himalaya Villas & Resorts",
+    headline: "Best Family Hotels in Murree: Why Himalaya Villas in Bhurban Is Worth a Closer Look",
+    excerpt:
+      "Looking for the best family hotels in Murree? Stay at Himalaya Villas, Bhurban — private villas, mountain views & parking. Book direct, best rates.",
+    date: "2026-09-08",
+    readMinutes: 14,
     coverImage: "/assets/blog-family-tour-featured-banner.png",
   },
   {

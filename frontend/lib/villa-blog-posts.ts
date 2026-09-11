@@ -102,6 +102,76 @@ export const VILLA_BLOG_POSTS: VillaBlogPost[] = [
     coverImage: "/assets/blog-family-tour-featured-banner.png",
   },
   {
+    slug: "family-apartments-murree-booking-guide",
+    title: "Family Apartments in Murree – Booking Guide - Himalaya villas",
+    headline: "Apartments for Family Stay in Murree",
+    excerpt:
+      "Book family apartments in Murree at Himalaya Villas & Resorts, Bhurban. Private, gated villas with kitchen, parking & heating. Book now.",
+    date: "2026-09-11",
+    readMinutes: 9,
+    coverImage: "/assets/blog-family-tour-featured-banner.png",
+  },
+  {
+    slug: "hotels-in-murree-for-events-booking-guide",
+    title: "Hotels in Murree for Events — Booking Guide | Himalaya Villas",
+    headline: "Plan Your Event in Murree: Venue & Booking Guide",
+    excerpt:
+      "Planning a wedding, retreat, or celebration in Murree? Compare venue options, pricing & booking tips at Himalaya Villas & Resort, Bhurban. Book now.",
+    date: "2026-09-11",
+    readMinutes: 10,
+    coverImage: "/assets/gallery-garden.jpg",
+  },
+  {
+    slug: "budget-friendly-trip-to-murree",
+    title: "Budget Friendly Trip to Murree - Cost & Travel Guide",
+    headline: "Budget Friendly Trip to Murree: Affordable Travel Plan & Tips",
+    excerpt:
+      "Plan a budget-friendly trip to Murree with cheap transport, free attractions & stays from PKR 16,500/night at Himalaya Villas & Resort, Bhurban.",
+    date: "2026-09-11",
+    readMinutes: 10,
+    coverImage: "/assets/murree-valley-view.jpg",
+  },
+  {
+    slug: "hotel-room-rent-in-murree",
+    title: "Hotel Room Rent in Murree – Prices, Rates & Rooms",
+    headline: "Hotel Room Rent in Murree – Budget Rooms & Best Options",
+    excerpt:
+      "Looking for hotel room rent in Murree? See real prices for rooms, suites & villas near Mall Road, complimentary breakfast included. Book now on WhatsApp.",
+    date: "2026-09-11",
+    readMinutes: 8,
+    coverImage: "/assets/amenities-interior-real.jpg",
+  },
+  {
+    slug: "murree-bhurban-hotel",
+    title: "Hotels in Bhurban Murree - Family Villas & Resorts - Himalaya villas",
+    headline: "Best Hotel in Murree Bhurban: Himalaya Villas & Resorts",
+    excerpt:
+      "Looking for a hotel in Murree Bhurban? Himalaya Villas & Resorts offers family villas, mountain views, parking & Wi-Fi. Book your stay today.",
+    date: "2026-09-11",
+    readMinutes: 7,
+    coverImage: "/assets/gallery-reflection.jpg",
+  },
+  {
+    slug: "resorts-in-murree-for-couples",
+    title: "Resorts in Murree for Couples - Himalaya Villas & Resort",
+    headline: "Best Resorts in Murree for Couples: A Real Guide to Finding Privacy in the Hills",
+    excerpt:
+      "Searching for the perfect couples' resort in Murree? Himalaya Villas & Resort offers private terraces, Himalayan views & terrace dining in Bhurban. Reserve today!",
+    date: "2026-09-11",
+    readMinutes: 9,
+    coverImage: "/assets/blog-family-tour-balcony.png",
+  },
+  {
+    slug: "murree-resorts-for-rent",
+    title: "Murree Resorts for Rent: Rates & Booking Guide",
+    headline: "Murree Resorts for Rent — Booking Guide",
+    excerpt:
+      "Looking for Murree resorts for rent? Compare rates, top areas & booking tips. Private villas in Bhurban from PKR 16,500/night. Book today!",
+    date: "2026-09-11",
+    readMinutes: 8,
+    coverImage: "/assets/why-villa-garden.jpg",
+  },
+  {
     slug: "bhurban-mountain-escape",
     title: "Why Bhurban is Pakistan’s most sought-after mountain escape",
     excerpt:

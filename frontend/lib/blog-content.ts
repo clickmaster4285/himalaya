@@ -1,17 +1,41 @@
 import type { VillaBlogPost } from "@/lib/villa-blog-posts";
 
+export type BlogTable = {
+  headers: string[];
+  rows: string[][];
+};
+
 export type BlogSection = {
   heading: string;
   paragraphs: string[];
   image?: string;
+  /** Optional comparison table rendered as a styled HTML table. */
+  table?: BlogTable;
+  /** When true, the table renders after the paragraphs instead of before them. */
+  tableAfter?: boolean;
+  /** With tableAfter, render the table right after this paragraph index (defaults to after the last paragraph). */
+  tableAfterIndex?: number;
+  /** Inline internal links applied to this section's paragraphs. */
+  links?: BlogInlineLink[];
 };
 
 export type BlogFaq = { q: string; a: string };
+
+export type BlogInlineLink = {
+  /** Which paragraph (0-based) inside the section / intro contains the text to link. */
+  paragraph: number;
+  /** Exact text inside that paragraph that becomes clickable. */
+  text: string;
+  /** Internal path, e.g. /villas or /. */
+  href: string;
+};
 
 export type BlogContent = {
   intro: string[];
   sections: BlogSection[];
   faqs?: BlogFaq[];
+  /** Inline internal links applied to intro paragraphs. */
+  introLinks?: BlogInlineLink[];
 };
 
 const CONTENT_BY_SLUG: Record<string, BlogContent> = {
@@ -1440,6 +1464,930 @@ const CONTENT_BY_SLUG: Record<string, BlogContent> = {
       {
         q: "How many people can stay in one villa?",
         a: "The full villa comfortably accommodates larger families, generally up to around 8 guests across its four bedrooms, with extra mattresses available for additional guests at an added cost. The two-bedroom apartment suits smaller families or two couples travelling together.",
+      },
+    ],
+  },
+  "family-apartments-murree-booking-guide": {
+    intro: [
+      "Planning a family trip to Murree comes with more questions than most people expect. Will the apartment have a proper kitchen? Is the road safe for a car full of kids? Will there be heating if it snows? Is the property actually private, or will you be sharing walls with strangers?",
+      "This guide walks through everything a family should check before booking an apartment in Murree — location, size, amenities, season, and price — based on what actually matters once you're on the ground, not just what looks good in a listing photo.",
+    ],
+    sections: [
+      {
+        heading: "Why Choose an Apartment Over a Hotel Room for a Family Trip",
+        paragraphs: [
+          "A hotel room works fine for a couple. It rarely works well for a family of four or five. Apartments solve three problems hotel rooms don't:",
+          "Space. A family apartment typically separates sleeping areas from a living space, so parents and children aren't stacked into one room for the entire trip.",
+          "A kitchen. Even a basic kitchenette lets you make tea, warm milk for toddlers, or prepare a simple meal instead of relying on restaurant timings every day.",
+          "Privacy. Families with young children, elderly parents, or teenagers usually prefer a self-contained unit with its own bathroom and door, rather than a corridor-facing hotel room.",
+          "At Himalaya Villas & Resorts in Bhurban, this is exactly the gap our apartment category is built for. The Himalaya Apartments collection includes a Single Luxury Room at PKR 27,000 per night for smaller families, and a Complete Apartment with two bedrooms and a shared living area at PKR 60,000 per night for families who need more room to spread out. Both are set within a gated, private estate rather than a shared hotel corridor.",
+        ],
+        image: "/assets/amenities-interior-real.jpg",
+      },
+      {
+        heading: "Best Areas to Book a Family Apartment Near Murree",
+        paragraphs: [
+          "Location is the single biggest factor families underestimate. Two areas dominate the search:",
+          "Mall Road, Murree. Central, walkable, close to markets and food. The trade-off is traffic, noise, and very limited parking during peak season — a real problem if you're travelling with children or elderly family members.",
+          "Bhurban. A quieter area a short drive from Mall Road, known for pine and cedar forests, mountain views, and calmer roads. Families who want their children to actually sleep at night, and who don't want to fight for a parking spot every evening, tend to prefer this side of Murree.",
+          "Himalaya Villas & Resorts sits in Bhurban, close enough to Mall Road for an easy day trip, but away from the congestion. If your priority is \"near everything,\" Mall Road wins. If your priority is \"peaceful, safe, and still convenient,\" Bhurban is usually the better call — which is also why it shows up repeatedly in local recommendations for families and couples.",
+        ],
+        image: "/assets/blog-bhurban-sunset-mountains.png",
+      },
+      {
+        heading: "What Type and Size of Apartment Does Your Family Need",
+        paragraphs: [
+          "Not every family needs the same setup. A rough guide:",
+          "Couple or small family (2–3 people): A single luxury apartment room is usually enough — one bedroom, mountain-facing windows, and an attached bathroom.",
+          "Family of 4–5: Look for a two-bedroom apartment with a shared living area, so children and parents each get their own space without needing a second full unit.",
+          "Larger families or two families travelling together: A multi-room villa option, rather than a single apartment, generally works out more practical and often more cost-effective per person.",
+          "At Himalaya Villas & Resorts, the Single Luxury Room apartment suits couples or a parent with one or two children, while the Complete Apartment (two bedrooms plus a living area) is built specifically for families who need separate sleeping spaces under one roof. Every room allows a maximum of three persons, with the option of one extra mattress for an additional charge — worth checking before you book if you're travelling with more than three people per room.",
+        ],
+        image: "/assets/villa-presidential-real.jpg",
+      },
+      {
+        heading: "Essential Amenities to Check Before You Book",
+        paragraphs: [
+          "This is where most booking mistakes happen. Families rarely regret checking a photo too closely — they regret not asking about the things photos don't show.",
+          "Heating and Winter Readiness — If you're visiting between November and February, ask directly whether the apartment has room heaters or central heating, and whether extra quilts are provided. Murree nights get cold even when the day feels mild, and a family with children cannot afford to find this out after check-in.",
+          "Backup Electricity — Power cuts are common in the hills, especially during winter storms and peak season load. A property with a generator or UPS backup is a meaningful difference between a comfortable night and a cold, dark one.",
+          "Kitchen and Furnishing — Confirm whether the kitchen is fully equipped or just a kettle and a fridge. For families with toddlers, even a basic kitchen setup makes a noticeable difference.",
+          "Parking and Road Access — Ask specifically about on-site parking and whether the access road is paved and manageable in a family car, particularly in winter or after rain. Steep, unpaved approach roads are a common complaint in reviews of Murree accommodation, and they matter far more with children or elderly travellers in the car.",
+          "Security — A gated, private property is safer for families than a building with open, shared access. This is worth confirming, not assuming.",
+          "Himalaya Villas & Resorts is a gated private estate with on-site parking, and the property includes backup power and heating arrangements for the winter season — the exact checklist items families should be verifying wherever they book.",
+        ],
+        image: "/assets/gallery-interior.jpg",
+      },
+      {
+        heading: "Apartment vs Hotel Room — Which Suits Your Family?",
+        table: {
+          headers: ["Factor", "Hotel Room", "Family Apartment"],
+          rows: [
+            ["Space", "Limited, single room", "Separate bedrooms and living area"],
+            ["Kitchen", "Rarely available", "Often included"],
+            ["Privacy", "Shared corridors", "Self-contained unit"],
+            ["Cost for larger families", "Multiple rooms needed", "One unit can fit the whole family"],
+            ["Best for", "Solo travellers, couples", "Families, groups, longer stays"],
+          ],
+        },
+        paragraphs: [
+          "For a two- or three-night family trip with children, an apartment-style stay generally offers more comfort per rupee than booking two separate hotel rooms.",
+        ],
+      },
+      {
+        heading: "How Much Do Family Apartments in Murree Cost",
+        paragraphs: [
+          "Prices vary by season, location, and property type. As a general guide, family-sized apartments in Murree tend to fall in a wide range depending on facilities, privacy, and proximity to Mall Road, with prices rising noticeably during summer and snow season.",
+          "At Himalaya Villas & Resorts, current apartment rates are:",
+          "Single Luxury Room — PKR 27,000 per night",
+          "Complete Apartment (2 bedrooms + living area) — PKR 60,000 per night",
+          "Both rates include complimentary breakfast for two guests per room. If your family needs more flexibility, the resort also offers executive rooms starting from PKR 16,500 per night and larger multi-bedroom villa options for bigger groups — worth comparing if your family size sits between the two apartment categories.",
+          "Always confirm whether the quoted price is per night, per room, or per person, and whether breakfast, taxes, and extra-guest charges are included — this is where many families get caught off guard after booking.",
+        ],
+        image: "/assets/why-villa-view.jpg",
+      },
+      {
+        heading: "Visiting Murree With Family in Winter",
+        paragraphs: [
+          "Winter changes the equation. Snow season brings genuine beauty, but also steep, sometimes icy roads and higher demand for heated accommodation. Families visiting in winter should specifically confirm heating, road access to the property, and whether the resort or apartment has experience handling snow-season logistics — not every property does.",
+          "Bhurban's elevation and forest cover make it a popular snow-season destination, and a gated resort with reliable heating and backup power removes most of the risk that comes with a winter family trip.",
+        ],
+        image: "/assets/villa-winter.jpg",
+      },
+      {
+        heading: "How to Verify an Apartment Before Paying",
+        paragraphs: [
+          "Ask for recent, unedited photos of the exact unit you're booking, not the marketing gallery.",
+          "Confirm the exact address and check it against a map, rather than relying on \"near Mall Road\" claims.",
+          "Ask directly about parking, heating, and backup power — don't assume.",
+          "Check the cancellation and refund policy in writing before transferring any advance.",
+          "If possible, book through a direct channel (official website or WhatsApp) rather than a third-party listing with no direct contact.",
+        ],
+      },
+      {
+        heading: "Final Thoughts",
+        paragraphs: [
+          "Choosing the right family apartment in Murree isn't about finding the cheapest listing — it's about matching location, size, heating, parking, and privacy to how your family actually travels. A quieter, gated property in Bhurban with dependable heating and on-site parking will usually serve a family better than a cheaper room right on a congested strip.",
+          "Himalaya Villas & Resorts offers exactly that combination — private, gated apartments in Bhurban, a short drive from Murree Mall Road, with breakfast included and 24/7 concierge support for booking and planning your stay.",
+        ],
+      },
+    ],
+    faqs: [
+      {
+        q: "What is the best place to stay in Murree with your family?",
+        a: "Areas close to Mall Road offer convenience, while Bhurban offers a quieter, more private setting with easier parking — generally a better fit for families travelling with children or elderly relatives.",
+      },
+      {
+        q: "What is the average price for a family apartment in Murree?",
+        a: "Rates vary by property and season. At Himalaya Villas & Resorts, apartment rates start from PKR 27,000 per night for a single luxury room and PKR 60,000 per night for a two-bedroom complete apartment, both including breakfast for two.",
+      },
+      {
+        q: "How many guests are allowed per apartment?",
+        a: "Most family apartments allow a set number of guests per room, with an extra mattress available for an additional charge. At Himalaya Villas & Resorts, the limit is three persons per room, with one extra mattress option available.",
+      },
+      {
+        q: "Do I need to book in advance?",
+        a: "Yes — especially for summer weekends and snow season, when demand in Murree and Bhurban rises sharply and availability for family-sized apartments drops fast.",
+      },
+    ],
+  },
+  "hotels-in-murree-for-events-booking-guide": {
+    intro: [
+      "Murree hosts more weddings, corporate offsites, and family gatherings every year than most people realise — but not every hotel here is actually built for events. Some properties are great for an overnight stay and completely unworkable for a 100-guest wedding or a two-day corporate retreat.",
+      "This guide breaks down what actually matters when booking a hotel in Murree for an event, what it typically costs, and where Himalaya Villas & Resort in Bhurban fits into that picture.",
+    ],
+    sections: [
+      {
+        heading: "Why People Choose Murree for Events",
+        paragraphs: [
+          "Murree's biggest advantage is its location — roughly 90 minutes from Islamabad and Rawalpindi, which makes it realistic for a weekend event without asking guests to travel far or book flights. Add cedar forests, cooler weather, and mountain views, and you have a setting that a city banquet hall simply can't replicate.",
+          "The catch is that most hotels along Mall Road were built for tourists passing through, not for hosting a 4-hour wedding reception or a 2-day corporate retreat. Parking runs out fast, outdoor space is often a small courtyard at best, and noise restrictions can shut an evening celebration down early. This is part of why families and event planners increasingly look slightly outside the main Mall Road strip — toward areas like Bhurban, where properties tend to have more land, more privacy, and fewer restrictions on how late or how large an event can be.",
+        ],
+        image: "/assets/blog-bhurban-sunset-mountains.png",
+      },
+      {
+        heading: "What Actually Matters When Booking a Venue",
+        paragraphs: [
+          "A few things separate a genuine event venue in Murree from a hotel that simply happens to have a lawn.",
+          "Both Indoor and Outdoor Space — Weather in the hills changes quickly, especially in spring and monsoon season. A good venue needs a lawn or terrace for the ceremony itself, plus enough covered indoor space to move everyone if it rains. Venues that only offer one or the other put your entire event at the mercy of the forecast.",
+          "Somewhere Guests Can Actually Stay — If you're hosting a destination wedding, guests aren't just coming for a few hours — they're staying two or three nights. A venue that only rents you a hall, with no rooms attached, means booking a second hotel just for accommodation, which gets complicated fast when you're coordinating 20–50 people. A property with a genuine mix of rooms, suites, and full villas solves that in a single booking.",
+          "In-House Catering, Not Just Rented Space — There's a real difference between a hotel that hands you a fixed banquet menu and one with a private chef who builds a menu specifically around your event. This is worth asking about before you book, since it directly affects the guest experience — and it's often where budgets are quietly wasted on outside vendors that could have been avoided.",
+          "Someone Actually Coordinating the Day — A venue that just rents you a lawn is not the same as one that helps plan the layout, manages vendor timing, and has a team physically present on the day. This distinction is where a lot of otherwise nice-looking hotels in Murree fall short — the space looks good in photos, but nobody is actually running the event.",
+          "Privacy and Guest List Control — For a wedding or a corporate retreat, you don't want unrelated hotel guests walking past your ceremony or lounging near your dinner setup. A gated, private property matters more than most people plan for — until the day it becomes a problem.",
+          "Seasonal Timing — Spring (March–May) and autumn (September–October) are the most popular months for weddings and outdoor events in Murree, thanks to milder weather. Summer brings tourist crowds and traffic on Mall Road, which can affect guest arrival times. Winter is quieter and can work well for smaller, cosier events — think indoor receptions with mountain views rather than large outdoor ceremonies.",
+        ],
+        image: "/assets/gallery-interior.jpg",
+      },
+      {
+        heading: "Himalaya Villas & Resort as an Event Venue",
+        paragraphs: [
+          "Himalaya Villas & Resort sits in Bhurban, a short scenic drive from Murree's Mall Road — close enough that guests can still visit the markets and viewpoints but far enough that the event itself stays private, on a gated estate surrounded by cedar forest.",
+          "The property is organised into three accommodation collections, which is what makes it practical for events with mixed guest numbers:",
+          "Himalaya Apartments — Best for Small Families and Close Guests",
+          "Single Luxury Room — PKR 27,000/night",
+          "Complete Apartment (2 bedrooms + living area) — PKR 60,000/night",
+          "Good for close relatives or a small bridal party who want a private, homely space rather than standard hotel rooms.",
+          "Rakaposhi Villa — Best Value for Larger Groups",
+          "Single Executive Room — PKR 16,500/night",
+          "Executive Suite (2 rooms + private TV lounge) — PKR 30,000/night",
+          "Complete Villa (5 executive rooms) — PKR 70,000/night",
+          "This is often the most practical option for events on a budget — booking the complete Rakaposhi Villa at PKR 70,000/night houses an entire wedding party or a corporate team of 10–15 people under one roof, at a lower per-head cost than booking multiple individual hotel rooms across Murree.",
+          "Himalaya Luxury Villas — Flagship Option for the Main Event",
+          "Attic Room — PKR 27,000/night",
+          "Single Luxury Room — PKR 27,000/night",
+          "Luxury Suite (1 & 2) — PKR 50,000/night",
+          "Complete Villa (4 bedrooms, private garden) — PKR 99,000/night",
+          "The Complete Luxury Villa, with its private garden and four bedrooms, is typically booked by the couple or the host family for a wedding, while extended guests are accommodated across the apartments and the Rakaposhi collections.",
+          "All rates are per night and include complimentary breakfast for two guests per room. Maximum 3 persons per room, with the option of an extra mattress for an additional charge.",
+          "For a full event — say, a wedding with 30–40 overnight guests — a common setup looks like this: the host family books the Complete Luxury Villa, close relatives take a mix of Rakaposhi rooms and suites, and the wider guest list is split across the apartments. Because everything sits on one property, you avoid the logistics headache of guests staying at different hotels across Murree and arranging separate transport for the ceremony.",
+        ],
+        image: "/assets/villa-presidential-real.jpg",
+      },
+      {
+        heading: "Destination Weddings",
+        paragraphs: [
+          "The estate's lawns and cedar-forest backdrop are used for outdoor ceremonies, with mou2-day views as the natural backdrop — no additional décor needed to make the setting feel special. Instead of a fixed wedding \"package\", the team works directly with the couple on décor placement, seating layout, and timing, so the event actually reflects what the couple wants rather than a repeated template.",
+        ],
+        image: "/assets/gallery-garden.jpg",
+      },
+      {
+        heading: "Corporate Retreats",
+        paragraphs: [
+          "For companies planning a 1–2 day offsite, the appeal is straightforward: distance from the city, a quiet setting, and enough private rooms across the Rakaposhi and Apartments collections to keep the whole team together without splitting the group across separate Murree hotels. This suits strategy sessions, planning retreats, or year-end team gatherings where focus matters more than nightlife.",
+        ],
+      },
+      {
+        heading: "Family Celebrations and Private Events",
+        paragraphs: [
+          "Birthdays, anniversaries, and small reunions happen often here too — mostly because the villa-style setup lets an extended family stay together in one villa instead of being scattered across different floors of a conventional hotel.",
+        ],
+        image: "/assets/blog-family-tour-featured-banner.png",
+      },
+      {
+        heading: "Dining for Events",
+        paragraphs: [
+          "Private chefs design the menu around the occasion itself — a terrace dinner for a small family gathering or a full multi-course reception menu for a wedding — removing the need to coordinate outside catering separately.",
+        ],
+        image: "/assets/amenities-interior-real.jpg",
+      },
+      {
+        heading: "How Booking Actually Works",
+        paragraphs: [
+          "Peak wedding season (spring and autumn) and long weekends fill up fast across Murree, so starting the conversation early matters.",
+          "Send your date and guest count over WhatsApp, along with the type of event — wedding, corporate retreat, or family celebration.",
+          "Decide on the accommodation mix. Based on group size, the team will help you split guests across the Apartments, Rakaposhi Villa, and Luxury Villas — whether that means individual rooms, full villas, or a combination.",
+          "Sort catering and décor preferences with the team so the private chefs can put together a proposal specific to your event.",
+          "Confirm the booking and rates directly with the concierge team, including any extra-mattress or extended-stay requirements.",
+          "Show up and let the team run logistics — coordination is handled on the day, so you're managing your guests, not your vendors.",
+        ],
+      },
+    ],
+    faqs: [
+      {
+        q: "What does it cost to host a wedding in Murree?",
+        a: "There's no single fixed \"event package\" price — the cost depends on how many rooms or villas you need. As a reference, the Complete Rakaposhi Villa (5 rooms) is PKR 70,000/night, and the Complete Luxury Villa (4 bedrooms, private garden) is PKR 99,000/night, with additional rooms and suites bookable across the Apartments collection depending on the total guest count.",
+      },
+      {
+        q: "Is there accommodation for wedding guests at Himalaya Villas & Resort?",
+        a: "Yes. Guests can be booked across the Himalaya Apartments, Rakaposhi Villa, and Himalaya Luxury Villas, from single rooms starting at PKR 16,500/night to a full four-bedroom villa – so the whole wedding party can stay on one property.",
+      },
+      {
+        q: "Is it suitable for corporate retreats?",
+        a: "Yes. The gated, private setting in Bhurban keeps teams focused, and multiple rooms across the Rakaposhi and Apartments collections can be booked together for a group.",
+      },
+      {
+        q: "How far is it from Murree Mall Road?",
+        a: "A short scenic drive — close enough for easy access to the markets and viewpoints and far enough to keep the event itself private.",
+      },
+      {
+        q: "Does the resort handle catering for events?",
+        a: "Yes, through private chefs who design the menu specifically around the event rather than offering one fixed banquet option.",
+      },
+      {
+        q: "How early should I book for a wedding or large event?",
+        a: "A few months ahead is safest, particularly for spring and autumn dates, when Murree fills up quickly.",
+      },
+      {
+        q: "Can I book just a few rooms instead of the whole property?",
+        a: "Yes — individual rooms, suites, and full villas can all be booked separately depending on your guest count, so smaller events don't require booking out the entire estate.",
+      },
+      {
+        q: "Is breakfast included in the room rates?",
+        a: "Yes, complimentary breakfast for two guests is included per room across all three collections.",
+      },
+    ],
+  },
+  "budget-friendly-trip-to-murree": {
+    intro: [
+      "Murree remains Pakistan's most visited hill station, and for good reason — cool weather, pine-covered ridges, and a short drive from Islamabad and Rawalpindi make it an easy escape. The good news for budget travelers: a memorable Murree trip doesn't require a five-star bill. With smart planning around transport, food, and where you stay, you can enjoy Murree and nearby Bhurban comfortably without overspending.",
+      "This guide breaks down real costs, free and low-cost things to do, and practical 1, 2, and 3-day itineraries — plus where a mid-range stay at Himalaya Villas & Resorts in Bhurban fits into a budget-conscious plan.",
+    ],
+    sections: [
+      {
+        heading: "How Much Does a Budget Trip to Murree Cost?",
+        table: {
+          headers: ["Expense", "Typical Budget Range (per person/night)"],
+          rows: [
+            ["Transport (Islamabad/Rawalpindi to Murree)", "Low, especially by public bus or shared van"],
+            ["Accommodation", "Varies widely — guesthouses to luxury villas"],
+            ["Food", "Modest if you stick to local restaurants and street food"],
+            ["Attractions", "Mostly free; chairlift and rides are optional paid extras"],
+          ],
+        },
+        paragraphs: [
+          "The single biggest cost lever is accommodation, followed by transport. Getting these two right is what actually makes a trip \"budget-friendly\" — food and sightseeing in Murree are naturally affordable if you avoid the busiest tourist-facing spots on Mall Road.",
+        ],
+      },
+      {
+        heading: "Cheapest Way to Travel to Murree",
+        paragraphs: [
+          "From Islamabad or Rawalpindi — Murree sits roughly 60–70 km from Islamabad via the Murree Expressway, and public transport is the most economical option. Buses and coaster services run regularly from Pir Wadhai (Rawalpindi) and Faizabad (Islamabad) to Murree, and fares are a fraction of what a private taxi costs.",
+          "Shared Vans vs Private Car — Shared vans (also called \"wagons\" locally) fill up and depart from major stops, making them cheaper than hiring a private car but slightly less flexible on timing. If you're traveling as a family or small group of 4–5, splitting a private car fare can sometimes match the per-person cost of shared transport, while giving you more control over stops along the way.",
+          "Reducing Fuel and Toll Costs — If you're driving yourself, the Murree Expressway has tolls, so factor that into your budget. Traveling on weekdays avoids the traffic jams common on the old Murree Road during weekends, which also saves fuel and time.",
+        ],
+        image: "/assets/blog-bhurban-patriata-chairlift.png",
+      },
+      {
+        heading: "Where to Stay in Murree and Bhurban on a Budget",
+        paragraphs: [
+          "Accommodation is where most travelers either save the most or overspend the most. Staying directly on Mall Road means you're walking distance from everything, but rates there tend to run higher during peak season and weekends. Staying slightly outside the main strip — in areas like Bhurban — often gets you better value, more parking, and a quieter stay, with only a short drive back into Murree town.",
+          "This is exactly the trade-off worth understanding: convenience vs. cost. Mall Road accommodation saves you a commute but usually costs more. A short drive away, like Bhurban, typically means lower nightly rates and more space for the same money — the small trade-off being a 15–20 minute drive back to Mall Road for shopping or food.",
+          "A Realistic Mid-Budget Option: Himalaya Villas & Resort",
+          "Himalaya Villas & Resort is a private villa estate in Bhurban, a short scenic drive from Murree Mall Road. While the resort is positioned as a luxury property, its entry-level accommodation makes it a realistic option for travelers who want more comfort than a basic guesthouse without paying full luxury-hotel rates.",
+          "The Rakaposhi Single Executive Room, priced at PKR 16,500 per night, is the most accessible option — a private room with a king bed, mountain views, and complimentary breakfast for two included in the rate. For travelers comparing cheap hotels in Murree against something with real privacy and a proper mountain setting, this room bridges that gap.",
+          "For small families or groups who want to split costs, the Himalaya Apartments – Single Luxury Room (PKR 27,000/night) or the Complete Apartment with 2 bedrooms and a living area (PKR 60,000/night, sleeps a family across two rooms) can work out to a reasonable per-person cost when the bill is divided among 3–4 travelers. For larger groups or multi-family trips, the Complete Rakaposhi Villa (5 executive rooms, PKR 70,000/night) or the 4-bedroom Luxury Villa with private garden (PKR 99,000/night) spreads the cost further while giving everyone their own room.",
+          "A practical budget tip: all rates at Himalaya Villas & Resort include complimentary breakfast for two guests per room, which quietly saves on your daily food budget — one less meal to plan for each day.",
+        ],
+        image: "/assets/amenities-interior-real.jpg",
+      },
+      {
+        heading: "Cheap and Free Things to Do in Murree",
+        paragraphs: [
+          "The best part of a Murree trip is that most of the highlights cost nothing.",
+          "Walk Around Mall Road — Murree's main pedestrian street is free to explore, lined with shops, cafes, and viewpoints. Early morning or evening visits avoid the biggest crowds.",
+          "Visit GPO Chowk — A central landmark on Mall Road and a natural starting point for exploring on foot.",
+          "Walk to Kashmir Point — A scenic viewpoint with panoramic views of the surrounding hills, reachable on foot from Mall Road and free to visit.",
+          "Explore Pindi Point — Offers sweeping views and a chairlift ride for those who want a paid add-on; simply walking to the viewpoint costs nothing.",
+          "Hiking and Nature Walks — The pine forests around Murree and Bhurban offer quiet trails away from the tourist crowds, ideal for travelers who want scenery without spending anything.",
+        ],
+        table: {
+          headers: ["Attraction", "Free/Paid", "Budget Priority"],
+          rows: [
+            ["Mall Road walk", "Free", "High"],
+            ["Kashmir Point", "Free", "High"],
+            ["Pindi Point (viewpoint)", "Free", "High"],
+            ["Pindi Point chairlift", "Paid", "Optional"],
+            ["Shopping on Mall Road", "Paid", "Limit spending"],
+          ],
+        },
+        tableAfter: true,
+        image: "/assets/blog-bhurban-murree-activity-guide.png",
+      },
+      {
+        heading: "Eating in Murree on a Budget",
+        paragraphs: [
+          "Local restaurants just off the main Mall Road strip tend to charge less than the cafes directly facing the tourist crowd. Street food — corn on the cob, roasted chestnuts, and local snacks — is both affordable and part of the Murree experience. If you're staying at a property like Himalaya Villas & Resort where breakfast is already included, you effectively cut one meal a day from your food budget, leaving lunch and dinner to plan for.",
+        ],
+      },
+      {
+        heading: "1-Day Budget-Friendly Murree Itinerary",
+        paragraphs: [
+          "Morning: Travel from Islamabad/Rawalpindi by bus or shared van",
+          "Late morning: Walk Mall Road and GPO Chowk",
+          "Afternoon: Walk to Kashmir Point for the views, grab local street food",
+          "Evening: Optional Pindi Point chairlift, then head back",
+        ],
+      },
+      {
+        heading: "2-Day Budget-Friendly Murree Itinerary",
+        paragraphs: [
+          "Day 1: Travel to Murree, check into your accommodation, explore Mall Road and Kashmir Point in the afternoon",
+          "Day 2: Morning walk or short hike around Bhurban's pine forests, visit Pindi Point, shop briefly on Mall Road before heading back",
+        ],
+      },
+      {
+        heading: "3-Day Murree Budget Plan",
+        paragraphs: [
+          "Day 1: Arrive, settle in, evening walk on Mall Road",
+          "Day 2: Full day exploring Kashmir Point, Pindi Point, and nearby viewpoints",
+          "Day 3: Relaxed morning at your accommodation, short excursion toward Ayubia or Nathia Gali if time allows, then return",
+          "Spreading a trip across two or three days rather than rushing a single day also means you can split accommodation costs across more shared meals and activities, often lowering the per-day cost per person.",
+        ],
+      },
+      {
+        heading: "Budget Murree Trip for Couples",
+        paragraphs: [
+          "Couples looking for privacy without a high price tag often do well with a single executive room rather than a shared apartment. The Rakaposhi Single Executive Room at Himalaya Villas & Resort, for example, includes breakfast for two — covering one meal already — while still offering a private terrace and mountain views rather than a standard commercial hotel room.",
+        ],
+        image: "/assets/why-villa-view.jpg",
+      },
+      {
+        heading: "Budget Murree Trip for Families",
+        paragraphs: [
+          "For families, splitting the cost of a multi-room apartment or full villa across the group usually brings the per-person nightly rate down significantly compared to booking multiple separate hotel rooms elsewhere.",
+          "The Complete Apartment (2 bedrooms) or Complete Rakaposhi Villa (5 rooms) are built for exactly this — one gated, family-friendly property instead of scattered bookings.",
+        ],
+        image: "/assets/blog-family-tour-featured-banner.png",
+      },
+      {
+        heading: "Best Time to Visit Murree on a Budget",
+        paragraphs: [
+          "Weekday travel is consistently cheaper and less crowded than weekends, when Mall Road traffic and accommodation demand both spike. Off-peak months (outside the main summer and snow seasons) also tend to bring lower rates and shorter queues at popular viewpoints.",
+        ],
+        image: "/assets/villa-winter.jpg",
+      },
+      {
+        heading: "Murree Budget-Saving Tips",
+        paragraphs: [
+          "Travel by public bus or shared van instead of a private taxi",
+          "Choose accommodation slightly outside Mall Road, like Bhurban, for better value and parking",
+          "Look for stays that include breakfast to cut one meal from your daily food budget",
+          "Stick to free viewpoints (Kashmir Point, Pindi Point) and treat the chairlift as an optional extra",
+          "Visit on weekdays to avoid peak crowds and pricing",
+          "Eat at local restaurants just off the main tourist strip",
+          "Planning a budget-friendly trip to Murree is really about three decisions: how you get there, where you stay, and how you spend your time once you arrive. Public transport keeps travel costs low, free viewpoints like Kashmir Point and Pindi Point fill most of your itinerary at no cost, and choosing accommodation like an executive room at Himalaya Villas & Resort in Bhurban gives you a genuine mountain retreat — private terrace, breakfast included, gated privacy — without the price tag of a full luxury stay.",
+        ],
+      },
+    ],
+    faqs: [
+      {
+        q: "How much does a trip to Murree cost?",
+        a: "Your total depends mainly on transport and accommodation choices. Traveling by public transport and staying in a value-focused property like an executive room keeps costs down significantly compared to peak-season Mall Road hotels.",
+      },
+      {
+        q: "Which is the best time to visit Murree on a budget?",
+        a: "Weekdays and off-peak months generally offer lower accommodation rates and lighter crowds at attractions.",
+      },
+      {
+        q: "What are the cheapest places to visit in Murree?",
+        a: "Mall Road, GPO Chowk, and Kashmir Point are free to explore. Pindi Point is also free to walk to, with the chairlift as an optional paid activity.",
+      },
+      {
+        q: "Where should budget-conscious travelers stay near Murree?",
+        a: "Areas just outside the main Mall Road strip, such as Bhurban, often offer better value. Himalaya Villas & Resort's Rakaposhi Single Executive Room, for instance, is priced at PKR 16,500 per night with breakfast for two included — a practical middle ground between a basic guesthouse and a full luxury hotel.",
+      },
+      {
+        q: "Is Bhurban a good alternative to staying on Mall Road?",
+        a: "Bhurban is a short drive from Mall Road and tends to offer quieter, better-value accommodation with easier parking, while still keeping you close enough to walk into Murree's main attractions.",
+      },
+    ],
+  },
+  "hotel-room-rent-in-murree": {
+    intro: [
+      "If you're searching for hotel room rent in Murree, you've probably noticed that prices swing wildly depending on the season, the area, and the type of property you book. A basic room on a busy weekend can cost almost as much as a spacious apartment during the week.",
+      "This guide breaks down real, current room rates at Himalaya Villas & Resort in Bhurban, just minutes from Murree Mall Road, so you know exactly what you're paying for before you book.",
+      "Himalaya Villas & Resort isn't a standard commercial hotel with rows of identical rooms. It's a private luxury estate set in the cedar forests of Bhurban, built around villas, apartments, and executive suites rather than crowded hotel corridors. That distinction matters when you're comparing hotel room rent in Murree, because it changes what you actually get for your money.",
+    ],
+    sections: [
+      {
+        heading: "Average Hotel Room Rent in Murree at Himalaya Villas & Resort",
+        paragraphs: [
+          "All room rates below are per night and include complimentary breakfast for two guests per room. Each room also allows up to 3 persons, with the option of an extra mattress for an additional charge.",
+          "Rakaposhi Villa (Executive Collection)",
+          "Single Executive Room — PKR 16,500/night",
+          "Executive Suite (2 rooms + private TV lounge) — PKR 30,000/night",
+          "Complete Villa (5 executive rooms) — PKR 70,000/night",
+          "Himalaya Apartments",
+          "Single Luxury Room — PKR 27,000/night",
+          "Complete Apartment (2 bedrooms + living area) — PKR 60,000/night",
+          "Himalaya Luxury Villas",
+          "Attic Room — PKR 27,000/night",
+          "Single Luxury Room — PKR 27,000/night",
+          "Luxury Suite (1 & 2) — PKR 50,000/night",
+          "Complete Villa (4 bedrooms, private garden) — PKR 99,000/night",
+          "If you're comparing this against cheap hotels in Murree, the Rakaposhi Single Executive Room at PKR 16,500/night is the most accessible entry point. It still includes a private terrace, mountain views, and breakfast, so you're getting a genuinely upscale stay without paying for a full villa.",
+        ],
+        image: "/assets/villa-presidential-real.jpg",
+      },
+      {
+        heading: "Cheapest Room Option in Murree Area (Bhurban)",
+        paragraphs: [
+          "For travellers specifically searching for a low price hotel in Murree without dropping down to a bare-bones room, the Single Executive Room in Rakaposhi Villa is the starting rate at Himalaya Villas & Resort — PKR 16,500 per night. It comes with a king bed, warm ambient lighting, mountain views, and breakfast for two included. This is positioned as an alternative for guests who started their search looking for a 3-star or 4-star hotel in Murree but want the privacy and setting of a villa instead.",
+        ],
+      },
+      {
+        heading: "Murree Hotel Rent Per Day vs Per Night",
+        paragraphs: [
+          "Room rent at Himalaya Villas & Resort is charged per night rather than a flat daily rate, which is standard for hotel and resort bookings. If you're planning a multi-night stay, our concierge team can help you plan the right room combination — for example, booking the Complete Apartment for a family of four instead of two separate single rooms, which often works out more practical for groups.",
+        ],
+      },
+      {
+        heading: "Hotel Room Rent in Murree Mall Road — And Why Bhurban Is Worth Considering",
+        paragraphs: [
+          "A lot of searches for hotel room rent in Murree focus specifically on Mall Road, since that's where most of the markets, viewpoints, and street food are concentrated. Himalaya Villas & Resort is located in Bhurban, a short scenic drive from Murree Mall Road, which gives guests quick access to the main tourist strip while avoiding the parking hassle and noise that comes with staying directly on it.",
+          "For families and couples who want to walk to Mall Road in the evening but retreat to a quiet, private property at night, Bhurban is often the more practical choice. You get proximity without the congestion, and a gated estate rather than a shared hotel corridor.",
+        ],
+        image: "/assets/blog-bhurban-sunset-mountains.png",
+      },
+      {
+        heading: "Best Hotel in Murree for Families",
+        paragraphs: [
+          "Family travel is one of the biggest reasons people search for hotel room rent in Murree, and it shapes which rooms actually make sense to book. At Himalaya Villas & Resort, the Complete Apartment (2 bedrooms + living area) and the Complete Villa options are built for exactly this — separate sleeping spaces, a shared living area, and enough room that a family doesn't feel like they're stacked on top of each other.",
+          "Every room includes complimentary breakfast for two guests, and additional mattresses can be arranged for children or extra family members. The property is gated and private, which matters for parents who want their kids to be able to move around the grounds safely rather than staying confined to a single hotel room.",
+        ],
+        image: "/assets/blog-family-tour-featured-banner.png",
+      },
+      {
+        heading: "Monthly and Extended-Stay Bookings",
+        paragraphs: [
+          "If you're looking into hotel room rent in Murree on a monthly basis — for example, for a longer family stay, a remote work retreat, or an extended corporate booking — it's best to contact the Himalaya Villas & Resort team directly via WhatsApp. Extended stays can often be arranged with adjusted nightly rates depending on the season and the villa or apartment selected.",
+        ],
+      },
+      {
+        heading: "What Affects Hotel Room Rent in Murree?",
+        paragraphs: [
+          "Room rent in the Murree and Bhurban area moves based on a few consistent factors, and understanding them helps you plan a better-value stay.",
+          "Season. Summer vacation months and snowfall periods see the highest demand across the region, and rates typically rise accordingly. Booking during shoulder seasons — spring or early autumn — usually gets you better value in the same room.",
+          "Day of the week. Weekend stays are generally in higher demand than weekday stays, which can affect pricing and availability, especially for larger villas.",
+          "Room type. A single executive room and a full four-bedroom villa serve very different purposes, and the price difference reflects space, privacy, and exclusivity rather than just square footage.",
+          "Location within the region. Staying directly on Mall Road versus a short drive away in Bhurban comes with a trade-off between walkability and privacy. Bhurban properties like Himalaya Villas & Resort often offer more space and quiet for a comparable or better price than a cramped room right on the main strip.",
+          "Group size. Booking a single room for one couple costs less than booking a full villa for an event, but the per-person value often improves significantly when a group splits a larger villa.",
+        ],
+      },
+      {
+        heading: "Amenities That Affect Value, Not Just Price",
+        paragraphs: [
+          "When comparing hotel room rent in Murree, price alone doesn't tell the full story. At Himalaya Villas & Resort, every room rate includes:",
+          "Complimentary breakfast for two guests per room",
+          "Panoramic Himalayan mountain views",
+          "Private terraces (villa and suite categories)",
+          "Access to gated, private estate grounds",
+          "Option for an extra mattress (additional charges apply)",
+          "For events, weddings, or corporate retreats, the property also offers dedicated outdoor celebration spaces, curated private dining, and end-to-end event coordination — features that aren't part of a typical hotel room booking in the area.",
+        ],
+        image: "/assets/why-villa-private.jpg",
+      },
+      {
+        heading: "Luxury and Whole-Villa Options",
+        paragraphs: [
+          "If your trip is centered around a celebration, wedding, or larger family gathering rather than a standard room stay, whole-villa bookings are available:",
+          "Complete Villa, Rakaposhi (5 executive rooms) — PKR 70,000/night",
+          "Complete Villa, Himalaya Luxury Villas (4 bedrooms, private garden) — PKR 99,000/night",
+          "Both options give you exclusive use of the villa, including private gardens and gathering spaces, rather than sharing common areas with other guests.",
+        ],
+      },
+      {
+        heading: "How to Book a Room at Himalaya Villas & Resort",
+        paragraphs: [
+          "Booking is handled directly through the resort's concierge team, available via WhatsApp. You can check availability, ask about current rates for specific dates, and confirm room details before paying anything. This direct-booking approach also means you're getting rates straight from the property rather than a third-party markup.",
+          "To book, simply message the team with your preferred check-in and check-out dates, number of guests, and the room or villa you're interested in. The team is available to help you choose the right option, whether that's a single executive room for a couple or a full villa for a family celebration.",
+        ],
+      },
+    ],
+    faqs: [
+      {
+        q: "What is the average hotel room rent in Murree at Himalaya Villas & Resort?",
+        a: "Rates range from PKR 16,500/night for a single executive room up to PKR 99,000/night for a full four-bedroom luxury villa, depending on the category and size you choose.",
+      },
+      {
+        q: "Is Himalaya Villas & Resort close to Murree Mall Road?",
+        a: "Yes. The villas are located in Bhurban, a short scenic drive from Mall Road, offering quick access to the main tourist area while keeping guests away from the crowd and parking congestion.",
+      },
+      {
+        q: "Can I book an entire villa instead of a single room?",
+        a: "Yes. Both the Rakaposhi Complete Villa and the Himalaya Luxury Complete Villa can be booked in full, giving you exclusive use of multiple bedrooms and shared spaces — ideal for families, weddings, or group celebrations.",
+      },
+      {
+        q: "Are hotel room rents higher during snowfall or summer?",
+        a: "Yes, demand across the Murree and Bhurban region rises during summer vacations and snowfall periods, which typically affects pricing. Booking in advance or during shoulder seasons can help you get better rates.",
+      },
+      {
+        q: "Is Himalaya Villas & Resort suitable for corporate retreats?",
+        a: "Yes. The property offers a private, distraction-free environment specifically suited to corporate groups and offsites, separate from its family and wedding accommodation options.",
+      },
+    ],
+  },
+  "murree-bhurban-hotel": {
+    intro: [
+      "Choosing where to stay in Bhurban shapes your entire Murree trip. If you've been searching for the best villas in Murree, the right property gives you mountain views, comfortable rooms, and easy access to the area's best spots — without the guesswork. Himalaya Villas & Resorts is built around exactly that: a comfortable, well-located base in Bhurban for families, couples, and groups exploring Murree.",
+      "This guide covers everything you need before booking — location, room types, amenities, pricing guidance, and what makes Bhurban a smarter choice than staying in central Murree during peak season.",
+    ],
+    sections: [
+      {
+        heading: "Why Stay in Bhurban Instead of Central Murree",
+        paragraphs: [
+          "Murree's Mall Road area gets crowded fast, especially on weekends and during summer and winter holidays. Traffic jams, limited parking, and packed hotels are common complaints from visitors who book in the town center.",
+          "Bhurban sits a short drive from Murree but offers a quieter, more scenic alternative. You get:",
+          "Cleaner mountain air and forest views",
+          "Easier parking and less traffic congestion",
+          "A calmer environment, especially useful for families with young children",
+          "Quick access to Murree's main attractions when you want them",
+          "Himalaya Villas & Resorts is positioned in Bhurban specifically to give guests this balance — proximity to Murree's sights without the noise and congestion of staying directly on Mall Road.",
+        ],
+        image: "/assets/gallery-reflection.jpg",
+      },
+      {
+        heading: "About Himalaya Villas & Resorts",
+        paragraphs: [
+          "Himalaya Villas & Resorts offers villa-style accommodation in Bhurban, designed for travelers who want more space and privacy than a standard hotel room provides. Each villa is set up to accommodate families and groups comfortably, with living areas separate from sleeping spaces.",
+          "The property focuses on three things guests consistently look for when searching for a hotel in this area: comfortable rooms, dependable amenities, and a location that makes exploring Murree and Bhurban easy.",
+        ],
+        image: "/assets/gallery-exterior.jpg",
+      },
+      {
+        heading: "Room and Villa Types",
+        paragraphs: [
+          "Himalaya Villas & Resorts offers a range of accommodation types to suit different group sizes and budgets:",
+          "Family Villas — Multi-room villas suited to families traveling together. These typically include separate bedrooms, a shared living space, and enough room for children to move around comfortably — a common pain point at smaller hotel rooms in Murree.",
+          "Couple Suites — Compact, private rooms designed for couples who want a quieter stay with mountain or valley views, without the extra space of a full villa.",
+          "Group Accommodation — Larger villas or connected units for groups traveling together, such as friends on a trip or extended family gatherings.",
+          "For exact room availability, current rates, and seasonal offers, it's best to contact Himalaya Villas & Resorts directly, since pricing in Bhurban shifts with season and demand — more on that below.",
+        ],
+        image: "/assets/villa-presidential-real.jpg",
+      },
+      {
+        heading: "Amenities That Matter When Booking a Bhurban Hotel",
+        paragraphs: [
+          "When searching for a hotel in Murree Bhurban, most travelers are comparing the same set of features. Here's what Himalaya Villas & Resorts offers guests:",
+          "Parking — on-site parking, which matters more in Bhurban than in central Murree given the narrower roads near Mall Road",
+          "Wi-Fi — available for guests who need to stay connected during their stay",
+          "Mountain and valley views — a key reason travelers choose Bhurban over the town center",
+          "Family-friendly layout — villas designed with enough separation between living and sleeping areas for families traveling with kids",
+          "Proximity to attractions — short drive to Murree's main sights, including Mall Road, Patriata (New Murree), and Kashmir Point",
+          "If you're comparing properties before booking, these are the categories worth checking against any listing — not just the nightly rate.",
+        ],
+        image: "/assets/amenities-interior-real.jpg",
+      },
+      {
+        heading: "Bhurban Hotel Prices: What to Expect",
+        paragraphs: [
+          "Hotel prices in Bhurban and Murree change significantly by season, so it's worth understanding the pattern before you book:",
+          "Peak season (summer months and major holidays) — Rates rise noticeably, and availability drops fast. Booking villas or rooms in advance is strongly recommended if you're traveling in June, July, or during Eid holidays.",
+          "Winter and snowfall season — Bhurban sees strong demand when snowfall is expected, since it's a popular destination for snow trips from Islamabad and Rawalpindi. Weekend rates during this period tend to be higher than weekday rates.",
+          "Off-season (weekdays outside peak months) — This is generally the most affordable window to book, with more room availability and better rates.",
+          "Rather than quoting a fixed price that quickly becomes outdated, Himalaya Villas & Resorts recommends checking current rates directly, since actual pricing depends on villa type, number of guests, and dates. This also lets you confirm real-time availability instead of relying on a number that may no longer apply.",
+        ],
+        image: "/assets/villa-winter.jpg",
+      },
+      {
+        heading: "Who Himalaya Villas & Resorts Is Best For",
+        paragraphs: [
+          "Different travelers have different priorities when picking accommodation in Bhurban. Here's how the property fits common traveler types:",
+          "Villas with multiple rooms and shared living space work better for families than a single hotel room, especially with young children who need room to move.",
+          "Couples — Suite-style rooms offer privacy and views without paying for extra space you won't use.",
+          "Groups and friends — Larger villas or connected accommodation make it easier to stay together rather than splitting across separate hotel rooms.",
+          "Weekend and short-trip travelers — The Bhurban location cuts down travel time to Murree's main attractions while avoiding the traffic bottlenecks near Mall Road.",
+        ],
+        image: "/assets/blog-family-tour-featured-banner.png",
+      },
+      {
+        heading: "Things to Do Near Himalaya Villas & Resorts",
+        paragraphs: [
+          "Staying in Bhurban puts you close to several popular Murree-area spots:",
+          "Patriata (New Murree) — home to the chairlift and cable car, a common day trip from Bhurban",
+          "Kashmir Point — known for panoramic valley views",
+          "Mall Road, Murree — for shopping and local food, a short drive away",
+          "Pindi Point — another scenic lookout popular with visitors",
+          "Bhurban's own surroundings — pine forests and quieter walking areas right around the property",
+          "Because Bhurban sits between Murree and the Kotli Sattian road, it also works well as a stop if you're continuing on toward other parts of Galyat.",
+        ],
+        image: "/assets/blog-bhurban-murree-activity-guide.png",
+      },
+      {
+        heading: "Booking and Cancellation",
+        paragraphs: [
+          "Before confirming any hotel booking in Bhurban, check these three things:",
+          "Cancellation policy — confirm whether your booking is refundable and by what deadline, especially if you're booking during peak season when weather or plans can change",
+          "Check-in and check-out times — these vary by property, so confirm before you travel",
+          "Group size vs. room capacity — make sure your villa or room actually fits your group; this avoids surprises at check-in",
+          "Himalaya Villas & Resorts can confirm current booking terms and cancellation policy directly when you inquire — always worth doing before finalizing travel plans.",
+        ],
+      },
+      {
+        heading: "Murree vs. Bhurban: Where Should You Actually Stay?",
+        paragraphs: [
+          "This is one of the most common questions travelers have before booking, so it's worth answering directly.",
+          "Stay in central Murree if: you want to walk to Mall Road, prioritize nightlife or dense shopping access, and don't mind traffic and crowds, especially on weekends.",
+          "Stay in Bhurban if: you want a quieter environment, easier parking, mountain views, and villa-style accommodation with more space — while still being a short drive from everything Murree offers.",
+          "For most families and groups, Bhurban strikes a better balance: you're close enough to Murree's attractions to visit easily, but you're not dealing with the congestion of staying directly in the town center.",
+        ],
+        image: "/assets/why-villa-view.jpg",
+      },
+    ],
+    faqs: [
+      {
+        q: "Is Bhurban a good place to stay instead of Murree?",
+        a: "Yes. Bhurban offers a quieter setting with mountain views and easier parking, while still being a short drive from Murree's main attractions like Mall Road and Patriata.",
+      },
+      {
+        q: "Is parking available on-site?",
+        a: "Yes, on-site parking is available, which is especially useful given the limited parking near Murree's town center.",
+      },
+      {
+        q: "What's the best time to visit Bhurban?",
+        a: "Summer months (June–August) are popular for pleasant weather, while winter (especially December–February) draws visitors hoping to see snowfall. Weekdays outside these peak periods tend to have better availability and rates.",
+      },
+      {
+        q: "Can I book directly with Himalaya Villas & Resorts?",
+        a: "Yes, contacting the property directly is the best way to confirm current rates, villa availability, and cancellation terms for your specific travel dates.",
+      },
+    ],
+  },
+  "resorts-in-murree-for-couples": {
+    intro: [
+      "Most people searching for \"resorts in Murree for couples\" already know what they don't want — a crowded hotel corridor, a room facing a parking lot, or a lobby full of strangers. What they actually want is simpler: a quiet place, a view worth waking up to, and a stay that feels like it was made for two people, not fifty.",
+      "That's harder to find in Murree than you'd think. The town gets millions of visitors every year, and most hotels are built to handle that volume rather than offer any real privacy to a couple. If you're searching for Murree for couples, this guide breaks down what to actually look for and where Himalaya Villas & Resort in Bhurban fits into that picture.",
+    ],
+    sections: [
+      {
+        heading: "Why Murree Is Perfect for Couples Looking for a Romantic Getaway",
+        paragraphs: [
+          "Murree works for a couple's trip for a few straightforward reasons:",
+          "Easy to reach — just a two-to-three-hour drive from Islamabad or Rawalpindi, with no need for flights or complicated travel planning.",
+          "Cool weather almost year-round — pine-scented air in summer, snowfall in winter, both of which naturally suit a romantic setting.",
+          "A mix of activity and stillness — Mall Road for walking around and eating, and quieter forested areas like Bhurban for couples who'd rather disappear from the crowd for a few days.",
+          "The scenic drive itself is part of the experience — the road up through the hills, with viewpoints along the way, tends to set the mood before you've even checked in.",
+          "The problem isn't Murree itself — it's that most properties there are built for families, tour groups, or budget travellers passing through for a night. This is exactly why choosing the right resort in Murree for couples matters more than choosing the right town.",
+        ],
+        image: "/assets/blog-bhurban-sunset-mountains.png",
+      },
+      {
+        heading: "What Makes a Resort in Murree Genuinely Romantic (Not Just Marketed That Way)",
+        paragraphs: [
+          "A lot of listings in Murree use the word \"romantic\" without changing anything about how the property actually functions. Before booking a couple's resort, it helps to check a few specific things:",
+          "A gate, not just a front desk — a private, gated estate feels completely different from a hotel where anyone can walk through the lobby.",
+          "A mountain view, not a wall — a terrace facing the Himalayan foothills changes the entire stay compared to a window facing a corridor.",
+          "Distance from town done right — close enough for an easy drive to Mall Road, but far enough that the property itself stays quiet at night.",
+          "A room actually built for two — not a shrunk-down family suite with an extra bed squeezed in.",
+          "A way to eat outside a shared dining hall — even one private dinner on a terrace — changes how the whole trip feels.",
+        ],
+        image: "/assets/why-villa-private.jpg",
+      },
+      {
+        heading: "Himalaya Villas & Resort: A Private Couples Resort in Bhurban, Murree",
+        paragraphs: [
+          "Himalaya Villas & Resort sits in Bhurban, inside a stretch of cedar forest with a direct view of the Himalayan foothills. It's a short drive from Murree's Mall Road — close enough to visit without hassle, far enough that you're not dealing with the noise once you're back at the property.",
+          "A few things about the setup work specifically well for couples:",
+          "A private, gated estate. No shared hallways or unrelated guests passing through — the property is closed off, so the sense of privacy starts the moment you arrive.",
+          "Terraces that actually face the hills. Every room option comes with a view of the Murree hills, rather than the more common setup of a window facing another building.",
+          "Private dining, not a shared hall. The resort arranges private chefs and custom menus, so a terrace dinner for two is something you can actually set up in advance.",
+          "A team that plans around the stay, not a fixed package. Rather than one standard couple's package, the resort adjusts details — dinner timing, room choice, small extras — based on what the trip is actually for.",
+        ],
+        image: "/assets/gallery-reflection.jpg",
+      },
+      {
+        heading: "Best Rooms and Villas for Couples at Himalaya Villas & Resort",
+        paragraphs: [
+          "Choosing the right room comes down to how much space you want versus how private you want the stay to feel:",
+          "Rakaposhi Single Executive Room — PKR 16,500/night. A compact, private option with a proper king bed and warm lighting. Good for a short trip where you mainly want a comfortable base and a view.",
+          "Luxury Suite — PKR 50,000/night. Pairs a bedroom with its own separate sitting area, suited to a longer stay or a bigger occasion like an anniversary.",
+          "Attic Room — PKR 27,000/night. A small, self-contained loft with sloped ceilings and soft evening light — the option to pick if privacy matters more than square footage.",
+          "Single Luxury Room — PKR 27,000/night. Marble accents and elegant lighting, with the same mountain-facing setup, for a slightly more polished finish.",
+          "For most couples on a two- or three-night trip, either the Executive Room or the Attic Room covers what's needed. The suite makes more sense when the trip is longer or the occasion calls for more space.",
+        ],
+        image: "/assets/villa-presidential-real.jpg",
+      },
+      {
+        heading: "Romantic Things to Do Near Murree and Bhurban",
+        paragraphs: [
+          "Once you've settled in, there's enough around Bhurban and Murree to fill a couple of days without ever feeling rushed:",
+          "Walk Mall Road together — the classic Murree experience, with cafes, street food, and small shops along the way. Best done in the late afternoon or evening, when the crowd thins out and the lights come on.",
+          "Watch the sunrise from your terrace — one of the simplest but most memorable parts of staying somewhere with a real mountain view, and something you don't get at a standard hotel.",
+          "Take a guided forest walk — early morning walks through the cedar groves near Bhurban are quiet, cool, and a good way to spend time together without any real plan.",
+          "Stargazing away from city lights — Bhurban's distance from Murree's busier stretch means clearer night skies, especially useful in winter when the air is cooler and clearer.",
+          "A private terrace dinner — arranged in advance with the resort's chef, this tends to be the highlight of the trip for most couples, since it's not something available at a typical hotel.",
+          "A short drive to nearby viewpoints — spots like Patriata (New Murree) or Kashmir Point are close enough for a half-day trip if you want to add a bit of sightseeing to the stay.",
+        ],
+        image: "/assets/blog-bhurban-murree-activity-guide.png",
+      },
+      {
+        heading: "Best Time to Visit Murree for a Couple's Trip",
+        paragraphs: [
+          "Murree changes character with the seasons, and the best time to visit really depends on what kind of romantic trip you're after:",
+          "Summer (April–June) — Mild weather, green hills, and long daylight hours make this the easiest season for walks, outdoor dinners, and sightseeing. It's also the busiest period, so book well ahead.",
+          "Monsoon (July–August) — Rain brings dense fog and cooler temperatures, which some couples actually prefer for the atmosphere, though outdoor plans need more flexibility.",
+          "Autumn (September–November) — Fewer tourists, clearer skies, and comfortable temperatures — is often the most underrated time to visit for couples who want quiet without the winter cold.",
+          "Winter (December–February) — Snowfall transforms the hills completely, and while it's colder, it's also the quietest season, with far fewer visitors than in summer. This is often the top pick for couples chasing a snowy, private getaway.",
+          "If privacy is more important than convenience, autumn and early winter tend to offer the best balance — the scenery is still good, but the crowds have thinned out.",
+        ],
+        image: "/assets/murree-snowy-peaks.jpg",
+      },
+      {
+        heading: "Travel Tips for Couples Booking a Resort in Murree",
+        paragraphs: [
+          "A few practical things worth knowing before booking a couple's trip to Murree:",
+          "Book early during peak months (April–June and December–January for snow) — private rooms fill up faster than standard hotel rooms across Murree.",
+          "Confirm the room has a terrace or a mountain-facing window specifically, since not every \"view room\" actually delivers one.",
+          "Check if breakfast for two is included — most properties like this include it, but it's worth confirming before comparing prices.",
+          "Choose a midweek stay if privacy is the priority — weekends and holidays bring noticeably more visitors to the wider Murree area.",
+          "Pack for temperature swings — even in summer, evenings in the hills get noticeably cooler than during the day.",
+          "Mention any special occasion when booking — if it's an anniversary or a small celebration, resorts that offer private dining can usually plan small details around it if they know in advance.",
+          "Leave at least one day unplanned — the best part of a resort like this is often just being there, not driving somewhere else.",
+        ],
+      },
+    ],
+    faqs: [
+      {
+        q: "Is Himalaya Villas & Resort a good option for a honeymoon?",
+        a: "Yes. The private terraces and the option to arrange dinner separately make it a solid fit for a honeymoon or anniversary trip, rather than a standard family-style hotel stay.",
+      },
+      {
+        q: "How far is the resort from Murree Mall Road?",
+        a: "It's in Bhurban, a short drive away from Mall Road — close enough for an easy afternoon out, far enough that the property itself stays quiet.",
+      },
+      {
+        q: "Which room is best for maximum privacy?",
+        a: "The Attic Room or a Single Luxury Room, since both are smaller, self-contained spaces rather than multi-room units built for groups.",
+      },
+      {
+        q: "Can we arrange a private dinner instead of eating in a shared dining hall?",
+        a: "Yes — the resort offers private chefs and customised menus for guests who'd rather have a terrace dinner than a shared dining setup.",
+      },
+      {
+        q: "What's the best time of year for a couple's trip to Murree?",
+        a: "Summer offers greenery and mild weather, good for walks and outdoor dinners. Winter brings snowfall and fewer crowds, which many couples actually prefer for a quieter trip.",
+      },
+      {
+        q: "What's the price range for a couple's room at the resort?",
+        a: "Rooms start around PKR 16,500 a night and go up to PKR 50,000 for a suite, depending on the space and privacy level you want.",
+      },
+    ],
+  },
+  "murree-resorts-for-rent": {
+    intro: [
+      "If you're searching for Murree resorts for rent, you're probably trying to answer a few practical questions: Where should I stay? What will it cost? What should I check before booking? This guide walks through all of that, using real details from Himalaya Villas & Resort — widely considered among the best villas in Murree — a private luxury estate in Bhurban, just outside Murree.",
+    ],
+    introLinks: [
+      { paragraph: 0, text: "best villas in Murree", href: "/villas" },
+    ],
+    sections: [
+      {
+        heading: "Guide to Renting a Resort in Murree",
+        links: [
+          { paragraph: 1, text: "Himalaya Villas & Resort", href: "/" },
+        ],
+        paragraphs: [
+          "Murree accommodation generally falls into three categories: hotels, guest houses, and private villa resorts. Villa resorts sit in between a hotel and a vacation rental — you get hotel-style service (breakfast, staff, security) but with the privacy and space of renting an entire property or a private room within one.",
+          "Himalaya Villas & Resort in Bhurban offers this exact model. Rooms range from PKR 16,500 per night for a single executive room up to PKR 99,000 per night for a complete four-bedroom villa with a private garden. Every rate includes complimentary breakfast for two guests.",
+        ],
+        image: "/assets/gallery-exterior.jpg",
+      },
+      {
+        heading: "Resort vs Hotel vs Vacation Rental in Murree",
+        paragraphs: [
+          "These three terms get used interchangeably in searches, but they aren't the same thing.",
+          "Hotel: individual rooms in a shared building, standard hotel services, less privacy.",
+          "Vacation rental: an entire house or apartment rented independently, usually without daily staff or breakfast.",
+          "Villa resort: a private estate with individual villas or rooms, resort-style facilities (staff, dining, event space), and the option to book either one room or the whole property.",
+          "If you want the convenience of a hotel but don't want to share hallways and common areas with strangers, a villa resort is the better fit. That's the gap Himalaya Villas & Resort is built to fill in Bhurban.",
+        ],
+      },
+      {
+        heading: "Best Areas to Stay in Murree",
+        paragraphs: [
+          "Where you stay changes your entire trip. Here's how the main areas compare.",
+          "Mall Road — The commercial heart of Murree. Best for first-time visitors who want walkable restaurants, shopping, and street food. Downside: heavy traffic, limited parking, and higher noise, especially on weekends and during peak season.",
+          "Kashmir Point — Slightly removed from the main bazaar, known for scenic views and a quieter pace. Good for couples and families who still want reasonable access to Mall Road.",
+          "Bhurban — A few minutes' drive from Mall Road, Bhurban is where Murree's more upscale, resort-style properties are concentrated. It trades a small amount of walking convenience for privacy, space, and calmer surroundings. Himalaya Villas & Resort is located here — close enough for an easy trip into Murree's markets and viewpoints, but private enough that you're not dealing with crowd noise or parking hassles once you're back at the property.",
+          "Jhika Gali — Quiet and less commercial, often chosen for value and a slower pace, though it's further from central attractions.",
+          "Bottom line: if convenience to shops matters more than anything else, stay on or near Mall Road. If you want a calmer stay without giving up easy access to Murree, Bhurban is usually the better trade-off — particularly for families, couples, and anyone planning a wedding or event that needs open outdoor space.",
+        ],
+        image: "/assets/blog-bhurban-sunset-mountains.png",
+      },
+      {
+        heading: "Murree Resort Rates and What Affects the Price",
+        paragraphs: [
+          "A common search is \"Murree hotel rent per day,\" but a single number rarely tells the full story. Prices in Murree move based on several factors:",
+          "Season — May to August (summer) and December to February (snowfall) are peak periods with higher demand and higher rates.",
+          "Day of the week — weekends cost more than weekdays.",
+          "Room type — a single room, a suite, or an entire villa are priced very differently.",
+          "Number of guests — most Murree properties, including ours, cap standard occupancy and charge extra for additional mattresses.",
+          "Area — properties directly on Mall Road often charge a premium for location alone.",
+          "Here's what an actual rate sheet looks like, using Himalaya Villas & Resort as an example:",
+          "All rates include breakfast for two per room and allow a maximum of three people per room, with an extra mattress available for an additional charge. Because rates change with season and availability, always confirm the current price directly before booking rather than relying on figures you find elsewhere online.",
+        ],
+        table: {
+          headers: ["Room Type", "Category", "Price per Night"],
+          rows: [
+            ["Single Executive Room", "Rakaposhi Villa", "PKR 16,500"],
+            ["Executive Suite (2 rooms + TV lounge)", "Rakaposhi Villa", "PKR 30,000"],
+            ["Complete Rakaposhi Villa (5 rooms)", "Whole Villa", "PKR 70,000"],
+            ["Single Luxury Room", "Himalaya Luxury Villas", "PKR 27,000"],
+            ["Attic Room", "Himalaya Luxury Villas", "PKR 27,000"],
+            ["Luxury Suite", "Himalaya Luxury Villas", "PKR 50,000"],
+            ["Complete Luxury Villa (4 bedrooms)", "Whole Villa", "PKR 99,000"],
+            ["Single Apartment Room", "Himalaya Apartments", "PKR 27,000"],
+            ["Complete Apartment (2 bedrooms)", "Himalaya Apartments", "PKR 60,000"],
+          ],
+        },
+        tableAfter: true,
+        tableAfterIndex: 6,
+        image: "/assets/why-villa-private.jpg",
+      },
+      {
+        heading: "Facilities to Check Before Booking",
+        paragraphs: [
+          "Whichever property you choose in Murree, these are the details worth confirming before you pay anything:",
+          "Heating — essential from November through February.",
+          "Backup generator — Murree experiences occasional power outages, especially in winter.",
+          "Parking — central Murree gets congested; confirm secure, on-site parking.",
+          "Wi-Fi — useful for remote work stays or staying in touch.",
+          "Breakfast inclusion — check if it's included or charged separately.",
+          "Road access — some properties are harder to reach after snowfall.",
+          "Himalaya Villas & Resort includes complimentary breakfast for two guests per room across every category, and its Bhurban location means guests avoid the parking congestion that's common closer to Mall Road.",
+        ],
+        image: "/assets/amenities-interior-real.jpg",
+      },
+      {
+        heading: "Best Resorts in Murree for Different Types of Travelers",
+        paragraphs: [
+          "Best for Families — Families need space, safety, and enough room for kids to move without disturbing other guests. Himalaya Villas & Resort's apartment collection — particularly the two-bedroom Complete Apartment with a shared living area — is designed for exactly this, on a gated, private estate.",
+          "Best for Couples — Private terraces and mountain views matter more than square footage here. The Luxury Suite, with its private sitting area, is built for that kind of stay.",
+          "Best Budget Option — If you're comparing cheap hotels in Murree against a full luxury stay, the Rakaposhi Single Executive Room at PKR 16,500/night is worth a look — it's a genuine private-estate stay with mountain views and breakfast included, at a lower nightly rate than the flagship villas.",
+          "Best for Groups or Weddings — For larger groups, celebrations, or destination weddings, the Complete Luxury Villa (four bedrooms, private garden) or the Complete Rakaposhi Villa (five rooms) can be booked entirely, giving one group exclusive use of the space along with outdoor lawns for events.",
+        ],
+        image: "/assets/blog-family-tour-featured-banner.png",
+      },
+      {
+        heading: "Booking a Murree Resort in Winter",
+        paragraphs: [
+          "Snowfall season (December–February) is one of the two peak periods in Murree, and it comes with specific things to check that summer travel doesn't require:",
+          "Confirm heating is working, not just present.",
+          "Ask about backup power in case of outages during storms.",
+          "Check road access to the property — some areas become difficult to reach after heavy snow.",
+          "Book earlier than you think you need to. Snowfall weekends sell out fast, and last-minute options are usually the most expensive ones left.",
+          "Ask about cancellation flexibility in case weather affects your travel plans.",
+          "Bhurban's road access tends to hold up reasonably well compared to some of the narrower lanes around central Murree, which is worth factoring in if you're traveling during snow season.",
+        ],
+        image: "/assets/villa-winter.jpg",
+      },
+      {
+        heading: "When is the Best Time to Book a Murree Resort?",
+        paragraphs: [
+          "Summer (May–August): the busiest season for family trips and weekend getaways. Book at least a few weeks ahead for weekends.",
+          "Snowfall season (December–February): high demand, especially around public holidays. Book as early as possible.",
+          "Weekdays and off-season: generally easier to find availability and better rates.",
+        ],
+      },
+      {
+        heading: "How to Book a Resort in Murree",
+        paragraphs: [
+          "Decide which area fits your trip — central convenience (Mall Road) or a quieter, private stay (Bhurban).",
+          "Set your budget and match it to a room category rather than an entire property type.",
+          "Confirm the total price, including breakfast, extra guests, and any service charges.",
+          "Ask about heating, parking, and generator backup if you're traveling in winter.",
+          "Check the cancellation policy before paying anything.",
+          "Book directly with the property and keep your confirmation message.",
+          "At Himalaya Villas & Resort, booking is handled directly through WhatsApp, where the team can confirm availability, walk you through room options, and answer questions about current offers before you commit.",
+        ],
+      },
+    ],
+    faqs: [
+      {
+        q: "How much does it cost to rent a resort in Murree?",
+        a: "Rates vary by property, room type, and season. At Himalaya Villas & Resort, prices range from PKR 16,500 per night for a single executive room to PKR 99,000 per night for a complete four-bedroom villa.",
+      },
+      {
+        q: "Which area is best for staying near Murree — Mall Road or Bhurban?",
+        a: "Mall Road offers walkable shopping and street food but comes with traffic and parking pressure. Bhurban, where Himalaya Villas & Resort is located, is a short drive from Mall Road and offers a quieter, more private stay — often a better fit for families, couples, and events.",
+      },
+      {
+        q: "Is Bhurban good for families?",
+        a: "Yes. Its distance from the busiest parts of Murree means less noise and traffic, while still being close enough for day trips into town.",
+      },
+      {
+        q: "Can I book an entire villa instead of a single room?",
+        a: "Yes. Himalaya Villas & Resort offers full-villa bookings for groups and events, including a four-bedroom luxury villa with a private garden and a five-room Rakaposhi Villa.",
       },
     ],
   },

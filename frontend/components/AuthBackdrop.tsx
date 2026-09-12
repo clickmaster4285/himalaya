@@ -27,7 +27,7 @@ export function AuthBackdrop() {
         className="pointer-events-none fixed inset-0 z-[1] bg-[#2a2319]/72"
       />
       <div
-        aria-hidden
+        aria-hiddenflex-shrink-0
         className="pointer-events-none fixed inset-0 z-[1] bg-gradient-to-b from-black/50 via-[#1f1a14]/55 to-[#14110e]/88"
       />
       {!reduce ? (

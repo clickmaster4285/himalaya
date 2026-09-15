@@ -172,6 +172,16 @@ export const VILLA_BLOG_POSTS: VillaBlogPost[] = [
     coverImage: "/assets/why-villa-garden.jpg",
   },
   {
+    slug: "book-best-hotel-in-murree",
+    title: "Book the Best Hotel in Murree - Himalaya Villas",
+    headline: "Book the Best Hotel in Murree: Why Himalaya Villas & Resorts Should Be Your First Choice",
+    excerpt:
+      "Looking for the best hotel in Murree? Himalaya Villas & Resorts offers spacious villas, stunning views & family-friendly stays. Book today!",
+    date: "2026-09-11",
+    readMinutes: 8,
+    coverImage: "/assets/murree-hotels.jpeg",
+  },
+  {
     slug: "bhurban-mountain-escape",
     title: "Why Bhurban is Pakistan’s most sought-after mountain escape",
     excerpt:
@@ -182,10 +192,11 @@ export const VILLA_BLOG_POSTS: VillaBlogPost[] = [
   },
   {
     slug: "choosing-the-right-villa",
-    title: "Choosing the right villa: suites, family lodges, and presidential stays",
+    title: "Choose the Right Villa in Murree — Himalaya Villas",
+    headline: "Best Villas in Murree: A Complete Guide to Choosing the Right Stay",
     excerpt:
-      "Bedrooms, guest capacity, and layout — a practical guide to matching your group with the perfect residence.",
-    date: "2026-02-05",
+      "A complete guide to choosing the right villa in Murree — group size, budget, location & amenities covered, plus why Himalaya Villas & Resorts stands out.",
+    date: "2026-09-11",
     readMinutes: 8,
     coverImage: "/assets/villa-presidential-real.jpg",
   },

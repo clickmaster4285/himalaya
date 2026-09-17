@@ -20,8 +20,19 @@ const eventDetails: Record<string, {
   image: string;
   category: string;
   galleryImages?: string[];
-  sections?: { heading: string; paragraphs: string[] }[];
+  /** Optional H1 override for the hero (defaults to `title`). */
+  h1?: string;
+  sections?: {
+    heading: string;
+    paragraphs?: string[];
+    /** Paragraphs rendered AFTER the bullet list. */
+    paragraphsAfter?: string[];
+    bullets?: string[];
+    table?: { headers: string[]; rows: string[][] };
+  }[];
   intro?: string[];
+  /** Inline internal links inside intro paragraphs (blogs-style). */
+  introLinks?: { paragraph: number; text: string; href: string }[];
   whyChoose?: { title: string; text: string }[];
   venues?: { name: string; description: string }[];
   timeline?: { phase: string; items: string[] }[];
@@ -279,35 +290,189 @@ const eventDetails: Record<string, {
     ]
   },
   "engagement-ceremonies": {
-    title: "Engagement Ceremonies",
+    title: "Engagement Ceremony Venue in Bhurban, Murree | Himalaya Villas",
+    h1: "Engagement Ceremony Venue at Himalaya Villas",
     description: "Ring ceremony with floral stage, lights, and guest hospitality.",
-    longDescription: "Mark the beginning of your journey with a beautiful engagement ceremony. Our engagement packages create the perfect setting for this special milestone with elegant decor and warm hospitality.",
+    longDescription: "Host your engagement ceremony at Himalaya Villas, Bhurban. Private hall & lawn, on-site villas, custom decor & catering. Get a quote on WhatsApp today.",
     features: [
-      "Beautiful floral stage design",
-      "Professional lighting and sound setup",
-      "Ring ceremony coordination",
-      "Guest hospitality services",
-      "Photography and videography",
-      "Custom catering options"
+      "Private indoor hall and outdoor lawn space",
+      "On-site villa accommodation for guests",
+      "Dedicated event coordination team",
+      "Custom decor, catering, and photography options"
     ],
     image: "https://picsum.photos/seed/engagement6/800/600.jpg",
     category: "Weddings & Ceremonies",
+    intro: [
+      "Himalaya Villas & Resorts is a premier engagement ceremony venue in Bhurban, Murree, offering families a private, scenic, and fully managed setting for their ring ceremony. Surrounded by cedar forests and panoramic Himalayan views, our estate creates a beautiful and peaceful atmosphere for celebrating this special family occasion. Whether you are planning an intimate gathering or a larger engagement event, our elegant halls, spacious villas, and outdoor spaces provide flexible options for different guest counts and event styles.",
+      "We make your engagement celebration easy with support for venue setup, seating, decor, accommodation, and event management. Choose a hall or villa based on your guest count, space, and budget. With scenic mountain views, comfortable facilities, and professional service, Himalaya Villas & Resorts is an ideal setting for a memorable ring ceremony in Bhurban, Murree.",
+      "What you get with an engagement ceremony at Himalaya Villas:",
+    ],
+    introLinks: [
+      {
+        paragraph: 1,
+        text: "Himalaya Villas & Resorts",
+        href: "/",
+      },
+    ],
+    sections: [
+      {
+        heading: "Engagement Ceremony Hall and Villa Booking",
+        paragraphs: [
+          "Your engagement ceremony isn't limited to just a hall booking—it's a complete experience that includes accommodation for your family and guests. We offer combined bookings where the ceremony hall or lawn is reserved alongside private villas, so out-of-town guests don't need to arrange separate hotels.",
+          "This is especially useful for families hosting guests travelling from Islamabad, Rawalpindi, Lahore, or further. Guests can rest, get ready, and freshen up in a private villa just steps from the ceremony venue.",
+        ],
+        bullets: [
+          "Book the hall/lawn and villas together as one package.",
+          "Or reserve them separately based on your guest list and budget.",
+          "Our team helps match the right villa combination to your hall booking.",
+        ],
+      },
+      {
+        heading: "Engagement Venue Capacity and Guest Seating",
+        paragraphs: [
+          "We host engagement ceremonies across a range of sizes—from close-family gatherings to larger celebrations. Based on how we structure similar events at the property, group bookings generally fall into these ranges:",
+        ],
+        table: {
+          headers: ["Gathering Size", "Approx. Guest Count", "Suggested Setup"],
+          rows: [
+            ["Intimate", "Up to 50 guests", "Indoor hall only"],
+            ["Mid-size", "50–100 guests", "Hall + partial lawn use"],
+            ["Large", "100+ guests", "Hall + full outdoor lawn"],
+          ],
+        },
+        bullets: [
+          "Seating can be arranged in rounds, long family-style tables, or a mix of both.",
+          "For larger events, we separate close-family seating near the stage from general guest seating.",
+          "Exact hall/lawn capacity is confirmed during your venue visit, based on the current layout and season.",
+        ],
+      },
+      {
+        heading: "Engagement Hall Size and Seating Arrangements",
+        paragraphs: [
+          "Our hall is designed with an open floor plan that can be reconfigured for different ceremony styles:",
+        ],
+        bullets: [
+          "Stage-facing rows—traditional layout with a center aisle for the ring-exchange walk-in",
+          "Banquet-style rounds—better for larger guest lists with dining included",
+          "Lounge-style seating—a relaxed setup for smaller, informal gatherings",
+        ],
+        paragraphsAfter: [
+          "A stage area is set up at one end of the hall, with enough space for a small dance floor if your ceremony includes performances or a dholki segment. We recommend a site visit before finalizing seating, since the right layout often depends on whether you're planning speeches, performances, or simply a stage photo session.",
+        ],
+      },
+      {
+        heading: "Engagement Ceremony Decoration and Stage Setup",
+        paragraphs: [
+          "A well-designed stage sets the tone for the ceremony. Our decoration team specializes in:",
+        ],
+        bullets: [
+          "Floral or greenery backdrop stages",
+          "Matching sofa/chair seating for the couple",
+          "Aisle decor for formal ring-exchange walk-ins",
+          "Ambient lighting suited for both daytime and evening ceremonies",
+        ],
+        paragraphsAfter: [
+          "Color themes can be customized—from classic red and gold to pastel and modern white-and-greenery looks—to match your outfits or family preferences.",
+        ],
+      },
+      {
+        heading: "Engagement Ceremony Catering and Dining Options",
+        paragraphs: [
+          "Our in-house catering team offers customizable menus covering:",
+        ],
+        bullets: [
+          "Traditional Pakistani dishes",
+          "BBQ and live cooking stations",
+          "Continental options",
+          "Dessert and dessert-table setups",
+        ],
+        paragraphsAfter: [
+          "You can choose plated dinner service, buffet-style setup, or live counters depending on guest count and formality. Our staff manages timing so food is served after the ring exchange and photo session, keeping the celebration flowing smoothly.",
+        ],
+      },
+      {
+        heading: "Private Villas for Engagement Ceremony Guests",
+        paragraphs: [
+          "Beyond the ceremony itself, our villas give guests a proper retreat rather than a standard hotel room—useful for families needing space for hair, makeup, and outfit changes before the event.",
+        ],
+        bullets: [
+          "Complete villa options (4–5 bedrooms) work well as a \"getting-ready base\" for the bride's or groom's side.",
+          "Smaller executive rooms suit individual guest families.",
+          "Booking villas alongside your hall means zero travel time between getting ready and the ceremony.",
+        ],
+      },
+      {
+        heading: "Engagement Ceremony Facilities and Amenities",
+        paragraphs: [
+          "Practical amenities included for hosting your ceremony:",
+        ],
+        bullets: [
+          "On-site parking",
+          "Backup power",
+          "Sound and lighting equipment",
+          "Dedicated event coordination team",
+          "Guest washroom facilities",
+        ],
+        paragraphsAfter: [
+          "We also support external vendors—photographers, mehndi artists, or a specific decorator—while our team coordinates timing so everything runs on schedule.",
+        ],
+      },
+      {
+        heading: "Indoor and Outdoor Engagement Ceremony Spaces",
+        paragraphs: [
+          "Choose based on the season and the atmosphere you want:",
+        ],
+        table: {
+          headers: ["Space", "Best For", "Notes"],
+          rows: [
+            ["Outdoor lawn", "Daytime/early-evening ceremonies", "Pine forest and mountain backdrop, great for photos"],
+            ["Indoor hall", "Colder months, unpredictable weather", "Large windows with hillside views"],
+            ["Hybrid (both)", "Full-day celebrations", "Outdoor stage/photos + indoor seating and dining"],
+          ],
+        },
+      },
+      {
+        heading: "Engagement Ceremony Packages for Different Group Sizes",
+        paragraphs: [
+          "We structure packages around three general guest tiers:",
+        ],
+        bullets: [
+          "Intimate (up to 50 guests): single villa + compact hall setup",
+          "Mid-size (50–100 guests): hall + partial lawn, multiple rooms",
+          "Large (100+ guests): full hall + lawn, multiple villas for guest accommodation",
+        ],
+        paragraphsAfter: [
+          "Our events team recommends the right tier once you share your expected guest count.",
+        ],
+      },
+      {
+        heading: "Why Choose Himalaya Villas for Your Engagement Ceremony?",
+        paragraphs: [
+          "Himalaya Villas offers a scenic setting, indoor/outdoor spaces, and on-site villas—all in one property in Bhurban, Murree. Our experience hosting nikah, wedding, mehndi, and engagement ceremonies means we handle every detail smoothly, backed by transparent pricing and custom packages.",
+          "Contact us via WhatsApp or the inquiry form for availability and a quote.",
+        ],
+      },
+    ],
     faqs: [
       {
-        question: "What is included in the engagement ceremony package?",
-        answer: "Our engagement package includes a beautifully decorated stage, ring ceremony setup, floral arrangements, seating for guests, sound system, and coordination of the ring exchange ceremony."
+        question: "Is villa accommodation included in the package?",
+        answer: "No, it's booked separately from PKR 16,500/night. You can bundle it with your hall booking or book only the venue."
       },
       {
-        question: "How long do engagement ceremonies typically last?",
-        answer: "Engagement ceremonies usually last 2-3 hours, including guest arrival, ceremony, and celebration time. We can adjust the duration based on your preferences and planned activities."
+        question: "How early should I book?",
+        answer: "At least a few weeks ahead, especially for weekend dates in peak wedding season."
       },
       {
-        question: "Can you accommodate both traditional and modern engagement styles?",
-        answer: "Absolutely! We offer both traditional Pakistani engagement setups and modern contemporary styles. Our team can blend traditions or create a completely modern celebration based on your vision."
+        question: "Can the ceremony be held outdoors?",
+        answer: "Yes—an outdoor lawn, an indoor hall, or a hybrid of both, depending on season and weather."
       },
       {
-        question: "What photography and videography services are included?",
-        answer: "Our package includes professional photography coverage of the ring ceremony, candid shots of guests, and cinematic videography. We provide edited photos and video highlights for sharing with family and friends."
+        question: "Are outside vendors allowed?",
+        answer: "Yes, including photographers, mehndi artists, and decorators. Our team coordinates timing with them."
+      },
+      {
+        question: "What's the maximum guest capacity?",
+        answer: "From intimate gatherings of 50 up to 100+ guests, using the hall alone or combined with the lawn."
       }
     ]
   },
@@ -1426,7 +1591,7 @@ export default async function EventPage({ params }: { params: Promise<{ slug: st
               <span className="h-px w-8 bg-[#c9a55b]"></span>
             </div>
             <h1 className="font-display text-4xl md:text-6xl lg:text-7xl leading-tight mb-6">
-              {event.title}
+              {event.h1 ?? event.title}
             </h1>
             <p className="text-lg md:text-xl text-white/90 max-w-3xl mx-auto">
               {event.description}
@@ -1445,9 +1610,42 @@ export default async function EventPage({ params }: { params: Promise<{ slug: st
                 <h2 className="font-display text-3xl md:text-4xl text-neutral-900 mb-6">
                   About This Experience
                 </h2>
-                <p className="text-gray-600 leading-relaxed mb-8">
-                  {event.longDescription}
-                </p>
+                {event.intro ? (
+                  event.intro.map((paragraph, pindex) => {
+                    const link = event.introLinks?.find((l) => l.paragraph === pindex);
+                    if (!link) {
+                      return (
+                        <p key={pindex} className="text-gray-600 leading-relaxed mb-4">
+                          {paragraph}
+                        </p>
+                      );
+                    }
+                    const pos = paragraph.indexOf(link.text);
+                    if (pos < 0) {
+                      return (
+                        <p key={pindex} className="text-gray-600 leading-relaxed mb-4">
+                          {paragraph}
+                        </p>
+                      );
+                    }
+                    return (
+                      <p key={pindex} className="text-gray-600 leading-relaxed mb-4">
+                        {paragraph.slice(0, pos)}
+                        <Link
+                          href={link.href}
+                          className="font-medium text-[#8b6914] underline underline-offset-4 hover:text-[#6d5210] transition-colors"
+                        >
+                          {link.text}
+                        </Link>
+                        {paragraph.slice(pos + link.text.length)}
+                      </p>
+                    );
+                  })
+                ) : (
+                  <p className="text-gray-600 leading-relaxed mb-8">
+                    {event.longDescription}
+                  </p>
+                )}
                 
                 <h3 className="font-display text-2xl text-neutral-900 mb-6">
                   What's Included
@@ -1468,8 +1666,51 @@ export default async function EventPage({ params }: { params: Promise<{ slug: st
                 {event.sections?.map((section, index) => (
                   <div key={index} className="mt-14">
                     <h3 className="font-display text-2xl text-neutral-900 mb-4">{section.heading}</h3>
-                    {section.paragraphs.map((paragraph, pindex) => (
+                    {section.table && (
+                      <div className="mb-4 overflow-x-auto rounded-xl border border-gray-200 shadow-sm">
+                        <table className="w-full border-collapse text-left text-sm">
+                          <thead>
+                            <tr className="bg-[#faf7f1]">
+                              {section.table.headers.map((header) => (
+                                <th key={header} className="border-b border-gray-200 px-4 py-3 text-xs font-semibold uppercase tracking-[0.15em] text-[#8b6914]">
+                                  {header}
+                                </th>
+                              ))}
+                            </tr>
+                          </thead>
+                          <tbody>
+                            {section.table.rows.map((row, rowIndex) => (
+                              <tr key={rowIndex} className="border-b border-gray-100 last:border-b-0">
+                                {row.map((cell, cellIndex) => (
+                                  <td key={cellIndex} className="px-4 py-3 align-top leading-relaxed text-gray-600">
+                                    {cell}
+                                  </td>
+                                ))}
+                              </tr>
+                            ))}
+                          </tbody>
+                        </table>
+                      </div>
+                    )}
+                    {section.paragraphs?.map((paragraph, pindex) => (
                       <p key={pindex} className="text-gray-600 leading-relaxed mb-4">{paragraph}</p>
+                    ))}
+                    {section.bullets && (
+                      <ul className="space-y-2 mb-4">
+                        {section.bullets.map((item) => (
+                          <li key={item} className="flex items-start gap-3 text-gray-700">
+                            <div className="w-6 h-6 rounded-full bg-[#c9a55b] flex items-center justify-center shrink-0 mt-0.5">
+                              <svg className="w-3 h-3 text-white" fill="currentColor" viewBox="0 0 20 20">
+                                <path fillRule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clipRule="evenodd" />
+                              </svg>
+                            </div>
+                            <span>{item}</span>
+                          </li>
+                        ))}
+                      </ul>
+                    )}
+                    {section.paragraphsAfter?.map((paragraph, pindex) => (
+                      <p key={`after-${pindex}`} className="text-gray-600 leading-relaxed mb-4">{paragraph}</p>
                     ))}
                   </div>
                 ))}

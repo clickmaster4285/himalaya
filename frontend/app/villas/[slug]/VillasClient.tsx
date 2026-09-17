@@ -39,7 +39,7 @@ export default function VillasClient({ room }: VillasClientProps) {
             {room.collection} · {room.tag}
           </p>
           <h1 className="mt-3 font-serif text-4xl sm:text-5xl text-[#2b2b2b] leading-tight">
-            {room.name}
+            {room.h1 ?? room.name}
           </h1>
           <p className="mt-4 text-[#6b6357] leading-relaxed">
             {room.description}

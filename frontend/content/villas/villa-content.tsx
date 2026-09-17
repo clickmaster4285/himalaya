@@ -84,6 +84,14 @@ export type Room = {
   highlights: string[];
   details: { label: string; value: string }[];
   amenities: string[];
+  /** Optional H1 override for the detail page (defaults to `name`). */
+  h1?: string;
+  /** Optional SEO <title> override for the detail page. */
+  seoTitle?: string;
+  /** Optional meta description override for the detail page. */
+  metaDescription?: string;
+  /** Optional long-form SEO sections + FAQs rendered below the room details. */
+  seoContent?: RoomSeoContent;
 };
 
 export type Collection = {
@@ -91,6 +99,39 @@ export type Collection = {
   subtitle: string;
   rooms: Room[];
 };
+
+/** Sub-heading (h3) block inside a room SEO section. */
+export type RoomSeoSubsection = {
+  type: "subsection";
+  heading: string;
+  paragraphs: string[];
+};
+
+export type RoomSeoParagraph = {
+  type: "paragraph";
+  text: string;
+};
+
+export type RoomSeoBullets = {
+  type: "bullets";
+  items: string[];
+};
+
+export type RoomSeoBlock = RoomSeoSubsection | RoomSeoParagraph | RoomSeoBullets;
+
+export type RoomSeoSection = {
+  heading: string;
+  blocks: RoomSeoBlock[];
+};
+
+export type RoomSeoFaq = { q: string; a: string };
+
+/** Long-form SEO content rendered below the room details (per-room, optional). */
+export type RoomSeoContent = {
+  sections: RoomSeoSection[];
+  faqs?: RoomSeoFaq[];
+};
+
 
 const commonAmenities = [
   "Complimentary breakfast for 2",
@@ -115,6 +156,194 @@ export const amenityImages: Record<string, string> = {
 
 // Fallback image
 const AMENITY_FALLBACK = "/images/villas/amenities1.jpg";
+
+/** Long-form SEO content for the Rakaposhi Single Executive Room detail page. */
+const rakaposhiSingleExecutiveSeoContent: RoomSeoContent = {
+  sections: [
+    {
+      heading: "Rakaposhi Single Executive Room at Himalaya Villas",
+      blocks: [
+        {
+          type: "paragraph",
+          text: "The Rakaposhi Single Executive Room is an executive-category room inside Rakaposhi Villa at Himalaya Villas & Resorts, set in the Bhurban hills of Murree. It's built for guests who want a quiet, well-appointed room in Murree without the scale or noise of a full villa stay — ideal for a solo business trip, a short couple's getaway, or anyone who simply wants a comfortable room with a mountain view.",
+        },
+      ],
+    },
+    {
+      heading: "About the Rakaposhi Single Executive Room",
+      blocks: [
+        {
+          type: "paragraph",
+          text: "This room takes a restrained approach to luxury. Rather than filling the space with decoration, it leans on a plush king bed, executive-tier linens, and warm, layered lighting that can be dimmed for sleep or left on for evening reading. Windows open onto the villa garden and the mountains beyond, so even at roughly 280 sq ft, the room doesn't feel closed in.",
+        },
+        {
+          type: "paragraph",
+          text: "It's designed to work for two different kinds of stays: a business traveler who needs to reset after a long day of meetings, and a couple who wants a private base to explore Murree's trails and viewpoints. Either way, the room's job is to stay out of the way — comfortable, quiet, and reliably well-kept — while the view does the rest.",
+        },
+      ],
+    },
+    {
+      heading: "Room Features and Amenities",
+      blocks: [
+        {
+          type: "subsection",
+          heading: "Comfortable King Bed",
+          paragraphs: [
+            "The room is furnished with one king bed dressed in premium bedding and executive-tier linens, suitable for single occupancy or a couple. Guests needing a third person can request one extra mattress for an additional charge, up to a maximum of 3 persons per room.",
+          ],
+        },
+        {
+          type: "subsection",
+          heading: "Private Bathroom",
+          paragraphs: [
+            "Every Rakaposhi Single Executive Room comes with a private bathroom with hot water — a basic but essential expectation for any hotel room in Murree, especially given the hill station's cooler climate for much of the year.",
+          ],
+        },
+        {
+          type: "subsection",
+          heading: "Room Furnishings and Facilities",
+          paragraphs: [
+            "Beyond the bed and bathroom, the room includes daily housekeeping and 24/7 room service, so guests aren't limited to fixed meal or cleaning windows. The interiors use warm tones and clean lines, with mountain-facing windows that bring in natural light and views of the villa garden.",
+          ],
+        },
+        {
+          type: "subsection",
+          heading: "Wi-Fi and In-Room Amenities",
+          paragraphs: [
+            "Complimentary Wi-Fi is included, along with the ambient lighting setup that lets guests adjust the room's mood — dim for rest, warm for reading or working in the evening.",
+          ],
+        },
+      ],
+    },
+    {
+      heading: "What to Expect During Your Stay",
+      blocks: [
+        {
+          type: "paragraph",
+          text: "Guests can expect a calm, low-fuss stay: breakfast for two is included each morning, housekeeping runs daily, and room service is available at any hour. The room itself doesn't compete with the surroundings — it's designed so the garden and mountain view stay the visual focus, while the room quietly handles comfort and practicality. For a family-friendly accommodation option or a vacation stay with a partner, that combination of privacy and included breakfast covers most of what a short Murree trip needs.",
+        },
+      ],
+    },
+    {
+      heading: "Room Size, Capacity and Sleeping Arrangement",
+      blocks: [
+        {
+          type: "bullets",
+          items: [
+            "Size: ~280 sq ft",
+            "Bed: 1 king bed",
+            "Max guests: 2 adults (breakfast included for 2)",
+            "Max occupancy: 3 persons with one extra mattress (additional charges apply)",
+            "View: Villa garden and mountains",
+          ],
+        },
+        {
+          type: "paragraph",
+          text: "This makes it best suited to single occupancy or two guests sharing a bed, with the extra-mattress option available for a third guest, such as a child traveling with parents.",
+        },
+      ],
+    },
+    {
+      heading: "Why Choose Rakaposhi Single Executive Room?",
+      blocks: [
+        {
+          type: "paragraph",
+          text: "A few practical reasons this room stands out among executive rooms in Murree:",
+        },
+        {
+          type: "bullets",
+          items: [
+            "Breakfast for 2 is already built into the PKR 16,500 nightly rate, so there's no separate meal cost to plan for.",
+            "The king bed and executive linens put it a tier above a standard single room in Murree, without pricing it as a full suite.",
+            "Mountain and garden views come standard, not as a paid upgrade.",
+            "24/7 room service and daily housekeeping mean the room stays comfortable throughout the stay, not just at check-in.",
+          ],
+        },
+      ],
+    },
+    {
+      heading: "Stay in a Comfortable Room in Murree",
+      blocks: [
+        {
+          type: "paragraph",
+          text: "Murree's hill stations are known for cooler weather, pine forests, and mountain views, and Bhurban — where Himalaya Villas is located — is one of the quieter parts of that area. Choosing a comfortable room here means getting the scenery without the crowding that some of Murree's more central hotel strips can have. The Rakaposhi Single Executive Room fits that brief: a private room with a view, set slightly away from the busier tourist center.",
+        },
+      ],
+    },
+    {
+      heading: "Location and Nearby Attractions",
+      blocks: [
+        {
+          type: "subsection",
+          heading: "Places to Visit Near Himalaya Villas",
+          paragraphs: [
+            "Bhurban and the wider Murree hills area give guests easy access to viewpoints, pine forest trails, and the town of Murree itself, known for its Mall Road and colonial-era architecture. Guests often use Himalaya Villas as a base for day trips rather than staying in Murree's town center directly.",
+          ],
+        },
+        {
+          type: "subsection",
+          heading: "Exploring Murree From Your Stay",
+          paragraphs: [
+            "Because the villa sits in the Murree hills rather than in the town itself, guests get a quieter overnight base while still being a short drive from Murree's main attractions — useful for anyone who wants scenery and rest at the property, and sightseeing during the day.",
+          ],
+        },
+      ],
+    },
+    {
+      heading: "Dining and Guest Facilities at Himalaya Villas",
+      blocks: [
+        {
+          type: "paragraph",
+          text: "Breakfast for 2 guests is included with every night's stay in this room. Beyond that, Himalaya Villas offers on-site dining and 24/7 room service, so guests aren't dependent on nearby restaurants for every meal, particularly useful given Murree's hill-station roads and weather can make evening travel less convenient.",
+        },
+      ],
+    },
+    {
+      heading: "Who Is This Room Suitable For?",
+      blocks: [
+        {
+          type: "paragraph",
+          text: "This room suits:",
+        },
+        {
+          type: "bullets",
+          items: [
+            "Solo business travelers who need a quiet, well-equipped room in Murree for a night or two.",
+            "Couples looking for a private, comfortable room rather than a larger multi-room villa.",
+            "Small families, using the optional extra mattress for a third guest such as a child.",
+          ],
+        },
+      ],
+    },
+    {
+      heading: "Book Rakaposhi Single Executive Room in Murree",
+      blocks: [
+        {
+          type: "paragraph",
+          text: "The Rakaposhi Single Executive Room is priced at PKR 16,500 per night, breakfast for 2 included. Room booking can be done directly through Himalaya Villas via WhatsApp, where guests can confirm availability, ask about current offers, and review the booking process before paying.",
+        },
+      ],
+    },
+  ],
+  faqs: [
+    {
+      q: "How do I book the Rakaposhi Single Executive Room?",
+      a: "You can book directly through Himalaya Villas via WhatsApp, using the \"Book Now\" option on the room page. This sends your room selection, category, and rate directly to the property so they can confirm availability.",
+    },
+    {
+      q: "How many people can stay in this room?",
+      a: "Up to 2 adults are included in the standard rate. A third person can stay with an extra mattress, for an additional charge, up to a maximum of 3 persons per room.",
+    },
+    {
+      q: "Does the room include Wi-Fi and heating?",
+      a: "Yes, the room comes with complimentary Wi-Fi and heating arrangements, which is particularly useful given Murree's cold weather for most of the year.",
+    },
+    {
+      q: "Are single executive rooms often sold out during peak season?",
+      a: "Yes, single executive rooms are in high demand during Murree's summer season (May–August) and major holidays due to limited inventory. Booking in advance is strongly recommended to avoid last-minute unavailability.",
+    },
+  ],
+};
 
 export const collections: Collection[] = [
   {
@@ -181,6 +410,11 @@ export const collections: Collection[] = [
         slug: "rakaposhi-single-executive",
         tag: "EXECUTIVE",
         name: "Single Executive Room",
+        h1: "Rakaposhi Single Executive Room",
+        seoTitle:
+          "Rakaposhi Single Executive Room in Murree - Himalaya Villas & Resorts",
+        metaDescription:
+          "Book the Rakaposhi Single Executive Room at Himalaya Villas, Murree – private bathroom, free Wi-Fi & heating. Comfortable stay, best rates. Reserve now!",
         description:
           "Refined executive room with king bed and warm ambient lighting.",
         price: "16,500",
@@ -200,6 +434,7 @@ export const collections: Collection[] = [
           { label: "Size", value: "~ 280 sq ft" },
         ],
         amenities: commonAmenities,
+        seoContent: rakaposhiSingleExecutiveSeoContent,
       },
       {
         slug: "rakaposhi-executive-suite",

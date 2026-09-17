@@ -6,6 +6,7 @@ import Navbar from "@/components/Navbar";
 import Footer from "@/components/Footer";
 
 import VirtualExperienceSection from "@/components/VirtualExperienceSection";
+import VillaRoomSeoContent from "@/components/VillaRoomSeoContent";
 
 // Generate static params for all rooms
 export async function generateStaticParams() {
@@ -26,8 +27,8 @@ export async function generateMetadata({ params }: { params: Promise<{ slug: str
     };
   }
 
-  const title = `${room.name} — ${room.collection}`;
-  const desc = room.description ?? "Villa room details.";
+  const title = room.seoTitle ?? `${room.name} — ${room.collection}`;
+  const desc = room.metaDescription ?? room.description ?? "Villa room details.";
 
   return {
     title,
@@ -53,6 +54,8 @@ export default async function RoomDetail({ params }: { params: Promise<{ slug: s
       <Navbar  theme="light"/>
 <section  id="villa-details-section">
       <RoomDetailClient room={room} />
+
+      <VillaRoomSeoContent room={room} />
 
       <VirtualExperienceSection />
 

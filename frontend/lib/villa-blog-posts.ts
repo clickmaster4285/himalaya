@@ -45,11 +45,12 @@ export const VILLA_BLOG_POSTS: VillaBlogPost[] = [
   },
   {
     slug: "hotels-in-bhurban-murree-why-bhurban-is-best",
-    title: "Hotels in Bhurban Murree: Why Bhurban is Murree's Best-Kept Secret",
+    title: "Hotels in Bhurban Murree | Why Bhurban Is Best to Stay",
+    headline: "Hotels in Bhurban Murree: Why Bhurban Is a Better Choice for Your Stay",
     excerpt:
-      "Discover why travellers are choosing Bhurban over Mall Road for their Murree stay. Luxury villas, pine forests, panoramic views — the definitive guide to hotels and villas in Bhurban, Murree.",
+      "Looking for hotels in Bhurban, Murree? Discover why Bhurban offers quiet, mountain views, and easy access to Murree's attractions. Full guide with tips.",
     date: "2026-04-21",
-    readMinutes: 11,
+    readMinutes: 12,
     coverImage: "/assets/gallery-reflection.jpg",
   },
   {
@@ -211,11 +212,12 @@ export const VILLA_BLOG_POSTS: VillaBlogPost[] = [
   },
   {
     slug: "seasons-in-the-hills",
-    title: "Seasons in the hills: when to book your stay",
+    title: "Seasons in the Hills — Murree-Bhurban | Himalaya Villas",
+    headline: "Experience Every Season at Himalaya Villas & Resorts",
     excerpt:
-      "Spring blooms, summer cool, autumn gold, and winter quiet — planning dates around weather and local rhythm.",
+      "Planning to Murree-Bhurban? See what each season offers, from monsoon greenery to winter snow, and find your ideal stay at Himalaya Villas & Resorts.",
     date: "2026-01-18",
-    readMinutes: 7,
+    readMinutes: 11,
     coverImage: "/assets/why-villa-garden.jpg",
   },
   {
@@ -240,11 +242,12 @@ export const VILLA_BLOG_POSTS: VillaBlogPost[] = [
 
     {
   slug: "banquet-hall-in-murree-bhurban",
-  title: "Best Banquet Halls in Murree & Bhurban for Weddings and Events",
+  title: "Banquet Hall in Bhurban, Murree – Himalaya Villas",
+  headline: "Best Banquet Hall in Murree-Bhurban for Events",
   excerpt:
-    "Explore top banquet halls in Murree and Bhurban for weddings, receptions, and private events — venues, capacity, and booking details included.",
+    "Looking for a banquet hall in Murree-Bhurban? Himalaya Villas & Resorts offers scenic indoor & outdoor spaces, catering, and villa stays. Book now",
   date: "2026-04-24",
-  readMinutes: 10,
+  readMinutes: 14,
   coverImage: "/assets/banquet-hall-murree.png",
 },
 {
@@ -258,11 +261,12 @@ export const VILLA_BLOG_POSTS: VillaBlogPost[] = [
 },
 {
   slug: "resorts-in-murree-pakistan-2026-guide",
-  title: "Best Resorts in Murree, Pakistan: Complete 2026 Guide",
+  title: "Best Resorts in Murree Pakistan 2026 - Himalaya Villas & Resorts",
+  headline: "Best Resorts in Murree, Pakistan, in 2026",
   excerpt:
-    "Discover the top resorts in Murree offering luxury stays, scenic views, family-friendly amenities, and premium mountain experiences.",
+    "Stay in a private villa in Murree instead of a crowded hotel room. Space, privacy, and proper heating for families, couples, and groups in 2026",
   date: "2026-04-24",
-  readMinutes: 12,
+  readMinutes: 13,
   coverImage: "/assets/murree-resorts.png",
 },
 {

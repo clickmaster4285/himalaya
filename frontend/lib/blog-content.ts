@@ -39,6 +39,123 @@ export type BlogContent = {
 };
 
 const CONTENT_BY_SLUG: Record<string, BlogContent> = {
+  "seasons-in-the-hills": {
+    intro: [
+      "Murree-Bhurban is one of the few destinations in Pakistan where every season brings a completely different experience. Perched in the Galyat hills at an elevation of roughly 7,000–7,500 feet, Bhurban stays noticeably cooler than Islamabad and Rawalpindi year-round, which is exactly what makes it worth visiting in every month.",
+      "At Himalaya Villas & Resorts, we've watched these seasons shape our guests' stays for years, and this guide walks you through what to expect, month by month, so you can plan your visit around the season that suits you best."
+    ],
+    sections: [
+      {
+        heading: "Spring in Murree-Bhurban (March to May)",
+        paragraphs: [
+          "Blooming Hills and Mild Weather — Spring is when the hills wake up. Pine and oak forests flush with new growth, wildflowers appear along the hillside trails, and the harsh winter chill gives way to comfortable daytime temperatures.",
+          "Daytime temperatures: low teens to low twenties (Celsius) — Mornings and evenings: noticeably cooler, light jacket recommended — Forest cover: fresh green growth across pine and oak trees — Trails: wildflowers visible along hillside paths",
+          "Why Spring Works for Families and Couples — Spring is one of the quieter periods in Murree-Bhurban, making it a comfortable choice for both families and couples looking for a relaxed getaway.",
+          "Fewer crowds on Mall Road and at viewpoints like Kashmir Point — More reasonable accommodation rates compared to peak summer — Easier parking and shorter waits at popular spots",
+          "At Himalaya Villas & Resorts, outdoor spaces are especially pleasant this time of year — ideal for morning walks or breakfast with a view before the day's plans begin",
+          "What to Do in Spring — Spring is one of the best seasons for outdoor activities in the Galyat region, thanks to dry trails and clear skies.",
+          "Hiking trails around Bhurban and the wider Galyat region, at their best with dry ground and light forest cover — Photography, with clear skies and blossoming trees creating strong natural light — Morning walks in cooler temperatures before the day warms up — Short day trips to nearby viewpoints while crowds are still low"
+        ],
+        image: "/assets/why-villa-garden.jpg",
+      },
+      {
+        heading: "Summer in Murree-Bhurban (June to August)",
+        paragraphs: [
+          "Peak Season and Cooler Temperatures — Summer is the busiest season in Murree-Bhurban, and for good reason. While the plains of Punjab swelter, Bhurban stays comfortably cool — a welcome change for anyone escaping the heat.",
+          "Daytime temperatures: generally between 18°C and 28°C — Noticeably cooler than Islamabad, Rawalpindi, and Lahore — Popular with families specifically looking to escape the summer heat — Busiest season of the year across Murree-Bhurban",
+          "Monsoon Season: What to Expect — July and August bring the monsoon, changing the character of the hills for a few weeks each year.",
+          "Hills turn a deep, lush green during this period — More frequent rainfall, with occasional heavy downpours — Roads can occasionally be affected — worth checking conditions before day trips to spots like Patriata or Ayubia National Park — Evenings turn cool and atmospheric, well suited to staying in and enjoying the mountain views from your room or villa",
+          "Booking Ahead for Summer — Because summer is peak season, availability tightens up quickly across the region.",
+          "Weekends fill up fast at properties across Murree-Bhurban — July and August weekends are the busiest of the year — At Himalaya Villas & Resorts, we recommend booking a few weeks in advance for summer stays — Weekday visits offer more flexibility if you're looking to avoid the rush"
+        ],
+        image: "/assets/murree-valley-view.jpg",
+      },
+      {
+        heading: "Autumn in Murree-Bhurban (September to November)",
+        paragraphs: [
+          "Golden Foliage and Clear Skies — Autumn is often considered the best-kept secret of the Murree-Bhurban calendar, offering some of the year's most comfortable weather.",
+          "Monsoon clears out by September — Crisp air and drier trails throughout the season — Forests shift into gold and amber tones through October — Daytime temperatures: generally between 8°C and 20°C",
+          "Fewer Crowds, Better Views — With summer tourists gone and winter snow still weeks away, autumn brings a quieter, more scenic side of Murree-Bhurban.",
+          "Some of the clearest mountain views of the year — No competition for parking at popular spots — Shorter waits at restaurants and viewpoints — A peaceful, relaxed pace ideal for guests avoiding peak-season crowds",
+          "Ideal for Outdoor Activities — Dry trails and mild weather make autumn one of the best windows for spending time outdoors.",
+          "Hiking trails at their driest and most walkable — Day trips to Ayubia National Park with clear, cool conditions — Time outdoors at Himalaya Villas & Resorts without summer crowds or monsoon rain — Comfortable temperatures for both morning and afternoon activities"
+        ],
+        image: "/assets/gallery-sunlight.jpg",
+      },
+      {
+        heading: "Winter in Murree-Bhurban (December to February)",
+        paragraphs: [
+          "Snowfall and a Different Kind of Hill Station — Winter transforms Murree-Bhurban entirely, turning it into the classic hill station experience many visitors picture when they think of the region.",
+          "Temperatures drop below freezing overnight — Snowfall is usually heaviest in January and February — Pine forests and rooftops blanketed in snow — For many visitors, this is the season that defines Murree-Bhurban as a hill station",
+          "Planning a Winter Visit — Snow is beautiful, but it does affect travel, so a little extra planning goes a long way.",
+          "Roads into Bhurban can occasionally be temporarily closed during heavy snowfall — Vehicles without snow tyres or chains can struggle on steeper sections — Build some flexibility into your travel dates — Check road conditions before setting out from Islamabad or Rawalpindi",
+          "Cosy Stays at Himalaya Villas & Resorts — Winter is when our villas come into their own, offering an atmosphere that's hard to find anywhere near the capital.",
+          "Warm interiors set against snow-covered mountain views — A quieter, more intimate season compared to summer — Many guests choose winter specifically for the snow experience — Simple pleasures like hot tea, bonfires, and quiet walks in the snow"
+        ],
+        image: "/assets/villa-winter.jpg",
+      },
+      {
+        heading: "Choosing the Best Season for Your Visit",
+        paragraphs: [
+          "For Pleasant Weather and Fewer Crowds — Spring (April–May) and autumn (September–October) offer the most comfortable combination of mild weather and lighter crowds.",
+          "For a Classic Hill Station Escape — Summer (June–August) is the traditional choice for families escaping the heat, though it comes with more visitors and monsoon rain in July and August.",
+          "For Snow and Winter Scenery — December through February is the season to visit if snowfall is the main draw, with January and February typically offering the heaviest snow."
+        ],
+        image: "/assets/murree-snowy-peaks.jpg",
+      },
+      {
+        heading: "What to Pack for Each Season",
+        paragraphs: [
+          "Spring: Light jacket, comfortable walking shoes, layers for cool mornings",
+          "Summer: Light rain jacket or umbrella (for monsoon months), breathable clothing, a light sweater for evenings",
+          "Autumn: Medium jacket, layers for temperature swings between morning and afternoon",
+          "Winter: Heavy jacket, thermal layers, waterproof boots, and gloves"
+        ],
+      },
+      {
+        heading: "Travel Tips for Visiting Murree-Bhurban",
+        paragraphs: [
+          "Bhurban is roughly 60–70 kilometres from Islamabad, generally a 1.5 to 2-hour drive via the Murree Motorway under normal conditions. During peak summer weekends and winter snowfall, travel times can increase significantly, so it's worth leaving earlier than usual and checking current road conditions, particularly in December and January."
+        ],
+      },
+      {
+        heading: "Why Season Matters When Booking Your Stay",
+        paragraphs: [
+          "Choosing when to visit Murree-Bhurban shapes almost everything about your trip — the views from your room, the activities available nearby, and even the crowd levels on the roads. At Himalaya Villas & Resorts, our team regularly helps guests choose the right time of year based on what they're hoping to experience, whether that's a quiet spring getaway, a summer escape with the family, autumn photography, or a winter stay built around the snow."
+        ],
+        image: "/assets/villa-terrace.jpg",
+        links: [
+          { paragraph: 0, text: "Himalaya Villas & Resorts", href: "/villas" }
+        ]
+      },
+    ],
+    faqs: [
+      {
+        q: "What is the best month to visit Murree-Bhurban?",
+        a: "It depends on what you're after. April–May and September–October offer the most balanced weather with fewer crowds, while June–August is peak season for families, and December–February is best for snow."
+      },
+      {
+        q: "Does it snow in Bhurban every winter?",
+        a: "Snowfall is common in Bhurban between December and February, with January and February typically bringing the heaviest snow, though exact timing and amount vary year to year."
+      },
+      {
+        q: "Is Murree-Bhurban crowded in summer?",
+        a: "Yes, summer is the peak tourist season due to the cooler weather compared to the plains. Weekends in June, July, and August tend to be the busiest."
+      },
+      {
+        q: "Is it safe to travel to Bhurban during monsoon season?",
+        a: "Generally yes, though heavy rain in July and August can occasionally affect road conditions. It's worth checking local traffic updates before day trips during monsoon season."
+      },
+      {
+        q: "What should I pack for a winter trip to Bhurban?",
+        a: "Warm layers, a heavy jacket, waterproof boots, and gloves are essential, along with flexibility in your travel schedule in case of snowfall-related road delays."
+      },
+      {
+        q: "Which season is best for outdoor activities like hiking?",
+        a: "Spring and autumn generally offer the best hiking conditions, with dry trails and comfortable temperatures, though summer mornings before the monsoon rains are also workable."
+      },
+    ],
+  },
   "best-hotels-in-murree-pakistan-2026-guide": {
     intro: [
       "Murree is Pakistan's most iconic hill station — a destination that has drawn travellers from Islamabad, Lahore, and Rawalpindi for generations. But with so many accommodation options now available, choosing the right hotel can feel overwhelming. This guide cuts through the noise and gives you a clear picture of the best hotels in Murree in 2026 — organised by type, location, and what each segment of traveller actually needs.",
@@ -126,73 +243,161 @@ const CONTENT_BY_SLUG: Record<string, BlogContent> = {
   },
   "hotels-in-bhurban-murree-why-bhurban-is-best": {
     intro: [
-      "Ask any seasoned traveller from Islamabad or Lahore where they actually stay when they visit Murree, and a growing number will give you the same answer: Bhurban. Not Mall Road. Not the crowded town centre. Bhurban.",
-      "While Murree's Mall Road gets the tourist traffic and the social media mentions, Bhurban quietly hosts Pakistan's most discerning travellers in a completely different atmosphere. This guide explains exactly what makes Bhurban different — and why hotels and villas in Bhurban represent a fundamentally better experience for families, couples, and corporate groups who refuse to compromise.",
+      "Anyone who has visited central Murree during peak season knows the problem — cars stuck in long lines, no place to park, and Mall Road so crowded that walking is hard. Bhurban is different. It is close to Murree, so you don't feel far away. But it is also quiet, with clean mountain air, which is what most people really want from a trip to Murree.",
+      "This is exactly why places like Himalaya Villas & Resorts choose Bhurban — it gives guests peace and privacy while still keeping Murree's main spots close by. This guide explains what makes Bhurban special, what to look for in a hotel there, and how to plan a stay that feels calm and relaxing."
     ],
     sections: [
       {
-        heading: "What is Bhurban and Where is it Located?",
+        heading: "Why Choose Bhurban Over Central Murree?",
         paragraphs: [
-          "Bhurban is a hill station township located approximately 11 kilometres east of Murree on the Murree-Bhurban Road. Sitting at a slightly higher elevation than Murree town, it enjoys cooler temperatures, denser pine forest cover, and significantly less tourist foot traffic than Mall Road. The approach road from Murree is a scenic drive through tall pine trees — the journey itself sets the tone for what awaits.",
-          "Historically, Bhurban was known as an elite retreat for senior government officials, army brass, and Pakistan's old money families. The presence of Pearl Continental's flagship mountain property further cemented its reputation as the Murree Hills' most exclusive enclave. Today, that reputation is being enhanced by newer luxury properties that offer what the large chain hotels cannot: genuine privacy and personalisation.",
+          "Bhurban is about 10 kilometres from central Murree, on the road that goes toward Muzaffarabad. It sits a little higher up in the hills. This small change in distance and height makes a big difference to the experience.",
+          "Here are some simple reasons why travellers choose Bhurban over the Mall Road area:",
+          "Much less traffic, even on busy weekends — A quiet place that is better for relaxing, not fighting through crowds — Slightly cooler weather because it is higher up — Better, open views, since Bhurban is not as crowded with buildings as central Murree — Still close enough to drive into Murree town when you want to visit Mall Road",
+          "In simple words, Bhurban gives you all the beauty of Murree without the crowd problem."
         ],
-        image: "/assets/gallery-garden.jpg",
+        image: "/assets/why-villa-view.jpg",
       },
       {
-        heading: "Bhurban vs. Mall Road: The Honest Comparison",
+        heading: "Bhurban Weather and Mountain Views",
         paragraphs: [
-          "Mall Road offers convenient access to shops, restaurants, and the bustle of Murree town. If you want to walk to the bazaar, ride the chairlift to Pindi Point, and be in the centre of everything that makes Murree famous, Mall Road delivers. The tradeoff is significant noise and crowding during peak season, limited parking, smaller rooms in most properties, and a tourist-area atmosphere that makes genuine relaxation difficult.",
-          "Bhurban offers the opposite: space, quiet, and altitude. The pine forests of Bhurban are thicker and more dramatic. The views are broader. The roads are less congested. Families with children have room to breathe. Couples find the privacy they came for. Corporate groups can hold genuine off-site meetings without the distraction of tourist crowds.",
-          "The only thing Bhurban does not offer is walking access to the Mall Road bazaar — and for most premium travellers, that is precisely the point.",
+          "Because Bhurban sits higher than central Murree, it tends to run a few degrees cooler, which matters more than it sounds like in peak summer. Mornings and evenings can feel genuinely chilly even in June, and winter temperatures drop so that snowfall is common and often heavier than in the town centre.",
+          "The views are also part of the appeal. Much of Bhurban overlooks pine-covered slopes and, on clear days, distant valley views that central Murree's tighter, more built-up streets don't really offer. If mountain views are a priority for your trip, Bhurban generally delivers more consistently than properties squeezed into Murree's main strip."
         ],
-        image: "/assets/gallery-exterior.jpg",
+        image: "/assets/murree-valley-view.jpg",
       },
       {
-        heading: "Himalaya Villas & Resorts: Bhurban's Premier Luxury Villa Property",
+        heading: "Best Hotels in Bhurban, Murree, for Different Travellers",
         paragraphs: [
-          "Himalaya Villas & Resorts represents a new standard in Bhurban accommodation — one that goes beyond the traditional resort hotel model to offer true private villa living in the mountains. Where a hotel gives you a room, Himalaya Villas & Resorts gives you a private mountain sanctuary.",
-          "The property is specifically designed for the traveller who has stayed at every major hotel in Murree and Bhurban and is looking for something different — something that feels like a private mountain home rather than a commercial hospitality operation.",
+          "Not every stay in Bhurban serves the same purpose, so it helps to think about what you're actually there for before comparing options."
+        ],
+      },
+      {
+        heading: "Hotels in Bhurban With Mountain Views",
+        paragraphs: [
+          "Since Bhurban's biggest advantage is its openness, view quality is worth checking carefully. Not every property is built to take advantage of the terrain — some rooms face parking lots or neighbouring buildings instead of the valley. If a view genuinely matters to you, it's worth asking directly which direction your specific room faces rather than assuming from listing photos."
         ],
         image: "/assets/gallery-balcony.jpg",
       },
       {
-        heading: "What Makes Himalaya Villas & Resorts Different",
+        heading: "Family-Friendly Hotels in Bhurban",
         paragraphs: [
-          "Private villa units — no shared corridors, no lobby crowding — Personalised concierge for every booking, not just VIP guests — In-villa and terrace dining options available on request — Dedicated family suites with space for children to play — Honeymoon and couples packages with private terrace setup — Corporate retreat packages with meeting space and catering — Panoramic Himalayan views from every villa's private terrace — Central heating for year-round comfortable stays — Halal dining with multi-cuisine options",
-          "Experience Bhurban's finest villa stay. Contact Himalaya Villas & Resorts via WhatsApp or visit himalayavillas.com — personalised booking for every guest.",
+          "Families generally need more than a nice view — they need space and flexibility. Useful things to look for:",
+          "Multiple bedrooms or a villa-style layout instead of a single cramped room — A kitchen or dining setup that can handle different meal times for kids and elders — Safe outdoor areas without steep drop-offs or unguarded ledges, since Bhurban's terrain is hillier than flat parts of Murree — Easy parking access, especially with young children or elderly family members in tow"
         ],
-        image: "/assets/gallery-dining-night.jpg",
+        image: "/assets/blog-family-tour-featured-banner.png",
       },
       {
-        heading: "Best Things to Do Near Hotels in Bhurban",
+        heading: "Hotels in Bhurban for Couples and Weekend Getaways",
         paragraphs: [
-          "The Patriata New Murree chairlift is a 10-minute drive from Bhurban and offers a dramatic aerial perspective of the surrounding pine-forested valleys. It is a popular activity for families and should be visited on weekday mornings to avoid the weekend crowds.",
-          "The pine forests surrounding Bhurban are among the most scenic in the Murree Hills. Early morning and late afternoon walks through the forest paths offer cool temperatures, birdsong, and mountain light that is difficult to find closer to Mall Road. Himalaya Villas & Resorts can arrange guided forest walks for guests on request.",
-          "The wider Galyat region — including Ayubia National Park and the famous Nathia Gali village — is within a 30-45 minute drive from Bhurban. These destinations offer hiking trails, dense forest scenery, and cooler temperatures even in July and August.",
+          "For couples, Bhurban's quieter pace is honestly the main draw. A smaller villa away from any nearby road noise, with a real view and some privacy, tends to matter far more here than proximity to shops or restaurants. It's a genuinely good spot for a weekend that's actually about relaxing rather than sightseeing nonstop."
         ],
-        image: "/assets/gallery-sunlight.jpg",
+        image: "/assets/blog-family-tour-balcony.png",
+      },
+      {
+        heading: "Luxury Hotels and Resorts in Bhurban",
+        paragraphs: [
+          "As with most hill stations, \"luxury\" in Bhurban usually comes down to reliability rather than extravagance — heating that actually works through a winter night, hot water that doesn't run out, and staff who respond when you need something. Villa-style properties tend to hold up better here than large hotel blocks, mainly because there's less strain on shared systems during peak season."
+        ],
+        image: "/assets/why-villa-lounge.jpg",
+      },
+      {
+        heading: "Hotels Near Murree Attractions and Popular Places",
+        paragraphs: [
+          "Some people worry that Bhurban is too far from Murree's main places. But in real life, it is just a short drive. Mall Road, Kashmir Point, and Pindi Point are all only 20 to 30 minutes away, depending on traffic. Patriata (New Murree) is even closer to Bhurban than from some parts of central Murree.",
+          "So you are not really missing out on anything. You just spend a few extra minutes driving, and in return, you get a much quieter place to stay."
+        ],
+        image: "/assets/blog-bhurban-patriata-chairlift.png",
+      },
+      {
+        heading: "Hotel Rooms, Villas, and Accommodation Options in Bhurban",
+        paragraphs: [
+          "Accommodation in Bhurban generally falls into similar categories as the rest of Murree:",
+          "Standard rooms — functional and budget-friendly, but limited in space — Deluxe rooms — a bit more room and furnishing, sometimes with partial views — Private villas — separate bedrooms, a shared living area, and often a kitchenette, better suited to families or groups",
+          "Villas make more sense in Bhurban specifically because the whole appeal of the area is space and quiet — cramming into a small standard room somewhat defeats the purpose of choosing Bhurban over central Murree in the first place."
+        ],
+        image: "/assets/villa-exterior.jpg",
+        links: [
+          { paragraph: 0, text: "Accommodation in Bhurban", href: "/villas" }
+        ]
+      },
+      {
+        heading: "Hotel Facilities and Amenities to Look For",
+        paragraphs: [
+          "Regardless of how nice a property looks in photos, a few practical things determine whether your stay is actually comfortable:",
+          "Reliable heating, especially important given Bhurban's cooler, higher-elevation climate — Hot water that holds up during winter and snowfall periods — Adequate parking, since Bhurban's roads are narrower and hillier than central Murree — Backup power for outages, which aren't unusual in hill areas — Genuine responsiveness from staff once you're actually checked in",
+          "It's worth confirming these directly with the property rather than assuming from a listing page."
+        ],
+        image: "/assets/amenities-interior-real.jpg",
+      },
+      {
+        heading: "Hotels in Bhurban, Murree: Prices and What Affects the Cost",
+        paragraphs: [
+          "Pricing in Bhurban follows a similar pattern to the rest of Murree, but a few specific factors push rates up or down:",
+          "Season — peak summer and snowfall weekends command the highest prices — Room type — villas generally cost more upfront than standard rooms, but work out cheaper per person for groups — View quality — rooms with genuine open views are usually priced higher than interior-facing rooms — Weekday vs weekend — weekday stays are typically more affordable across most properties",
+          "Because rates shift with demand, it's best to confirm current pricing directly with the hotel or resort for your specific travel dates rather than relying on older listings."
+        ],
+        image: "/assets/why-villa-garden.jpg",
+      },
+      {
+        heading: "Why Stay at a Resort in Bhurban Instead of a Hotel?",
+        paragraphs: [
+          "Standard hotels work fine for a quick overnight stop, but resorts — particularly villa-style ones — tend to offer more for the kind of trip Bhurban is actually suited for. Instead of a single room with a shared corridor, you get more private space, often a proper living area, and a layout built around actually spending time there rather than just sleeping and leaving.",
+          "For families, couples wanting privacy, or groups travelling together, that difference tends to matter more in Bhurban than in a fast-paced spot like central Murree."
+        ],
+        image: "/assets/gallery-exterior.jpg",
+      },
+      {
+        heading: "Why Choose Himalaya Villas & Resorts in Bhurban?",
+        paragraphs: [
+          "Himalaya Villas & Resorts is built around exactly this idea — private villa stays instead of standard hotel rooms. Rather than competing on lobby size or buffet spreads, the focus stays on what actually affects a Bhurban stay:",
+          "Reliable heating suited to Bhurban's cooler climate, not just a token heater — Consistent upkeep and maintenance rather than one-time first-impression polish — A location that keeps you close to Bhurban's quiet, scenic surroundings while still leaving Murree's main attractions within easy reach",
+          "If you're planning a 2026 trip and want space, privacy, and an actual view rather than a standard hotel room, Himalaya Villas & Resorts is worth checking for availability on your travel dates."
+        ],
+        image: "/assets/why-villa-private.jpg",
+        links: [
+          { paragraph: 0, text: "Himalaya Villas & Resorts", href: "/" }
+        ]
+      },
+      {
+        heading: "What to Check Before Booking Hotels in Bhurban",
+        paragraphs: [
+          "Before confirming a booking, it's worth verifying directly with the property:",
+          "Cancellation policy, in case weather affects your travel plans — Whether heating and hot water are genuinely included, not treated as extras — Actual distance from Murree's main attractions, in minutes rather than vague terms — Whether your specific room has the view advertised in photos — Check-in and check-out timing, particularly during peak season"
+        ],
+        image: "/assets/gallery-interior.jpg",
+      },
+      {
+        heading: "How to Plan a Comfortable Bhurban Stay",
+        paragraphs: [
+          "A comfortable Bhurban trip usually comes down to a few basics: booking early during peak season, confirming heating and hot water directly rather than assuming, choosing a villa if you're travelling with family or a group, and building in a little flexibility for winter travel in case of temporary road issues. Beyond that, Bhurban does most of the work itself — the quiet and the views tend to speak for themselves once you're actually there."
+        ],
+        image: "/assets/villa-terrace.jpg",
       },
     ],
     faqs: [
       {
-        q: "Are there hotels in Bhurban Murree with mountain views?",
-        a: "Yes. Bhurban actually offers the best mountain views in the entire Murree Hills region, due to its ridge position and lower surrounding tree line. Himalaya Villas & Resorts is specifically designed to maximise these views — each villa has a private terrace facing the Himalayan range.",
+        q: "Is Bhurban better than staying in central Murree?",
+        a: "It depends on what you want. Bhurban offers more quiet and better views with less traffic, while central Murree puts you closer to Mall Road and its shops. Many travellers actually prefer Bhurban precisely because it avoids the crowds."
       },
       {
-        q: "How do I book hotels in Bhurban Murree online?",
-        a: "Himalaya Villas & Resorts can be booked directly through himalayavillas.com or via WhatsApp for personalised assistance. The property is also available on Booking.com, Google Hotels, and Airbnb for travellers who prefer OTA platforms. Direct booking typically offers the best rates and package flexibility.",
+        q: "How far is Bhurban from Murree's Mall Road?",
+        a: "Roughly 10 kilometers, usually a 20- to 30-minute drive depending on traffic conditions."
       },
       {
-        q: "What is the distance between Bhurban and Murree Mall Road?",
-        a: "Bhurban is 11 kilometres from Murree Mall Road — approximately 15–20 minutes by car. The road is well-maintained and highly scenic. Most guests at Bhurban properties make day trips to Mall Road during their stay rather than basing themselves there.",
+        q: "Does Bhurban get more snow than central Murree?",
+        a: "Generally yes, due to its higher elevation, which also makes winter stays there popular — but it's worth planning for possible road delays during heavy snowfall."
       },
       {
-        q: "Are there luxury villas in Murree Bhurban for families?",
-        a: "Himalaya Villas & Resorts offers dedicated family villa units with additional rooms, children-friendly spaces, and family-specific packages including all-meal plans, children's activities, and flexible check-in/check-out. The private villa layout is particularly well-suited to families who want space and privacy.",
+        q: "Are villas available in Bhurban, or mostly standard hotel rooms?",
+        a: "Both exist, but villa-style stays are increasingly common in Bhurban and tend to suit the area's quieter, space-focused appeal better than standard rooms."
       },
       {
-        q: "What are the best hotels in Bhurban for a corporate retreat?",
-        a: "Himalaya Villas & Resorts is the leading choice for corporate retreats in Bhurban. The property provides private meeting spaces, full-board catering for groups, team activity packages in the surrounding forest, and enough accommodation for groups of 10–50. All corporate retreats are handled through dedicated account management with a tailored quote.",
+        q: "What's the best time to visit Bhurban?",
+        a: "April to June and September to October offer the most comfortable weather. Winter is popular for snowfall but requires more flexibility around travel."
+      },
+      {
+        q: "Is Bhurban good for a family trip?",
+        a: "Yes — it's quieter surroundings and generally more spacious villa options make it a practical choice for families who want a relaxed stay rather than a fast-paced one."
       },
     ],
   },
@@ -639,76 +844,204 @@ const CONTENT_BY_SLUG: Record<string, BlogContent> = {
   
 "banquet-hall-in-murree-bhurban": {
   intro: [
-    "Murree and Bhurban have rapidly grown into some of the most sought-after destinations in Pakistan not only for leisure tourism but also for high-end weddings, corporate gatherings, and private celebrations. Their cool climate, lush green surroundings, and panoramic mountain views create a naturally luxurious atmosphere that city venues often cannot match.",
-    "This guide provides a detailed overview of the best banquet halls in Murree and Bhurban, helping you select the right venue based on ambiance, guest capacity, service quality, and overall event experience. Whether you are planning an intimate function or a large-scale wedding, these locations offer flexible and premium options.",
+    "Looking for a banquet hall in Murree-Bhurban that combines mountain scenery with a professional event setup? Himalaya Villas & Resorts offers a dedicated banquet hall in Bhurban designed for weddings, engagements, corporate functions, and family celebrations, all set against the pine-covered hills of the Murree region."
   ],
   sections: [
     {
-      heading: "Why Murree & Bhurban Are Popular for Events",
+      heading: "Why Choose a Banquet Hall in Murree-Bhurban?",
       paragraphs: [
-        "Murree and Bhurban offer an unmatched natural setting that significantly enhances the beauty and emotional impact of weddings and events. Surrounded by pine-covered hills, fresh mountain air, and breathtaking views, these locations naturally elevate any celebration into a memorable experience.",
-        "Unlike traditional city banquet halls that often feel enclosed and crowded, these hill stations provide a sense of openness, privacy, and exclusivity. The resort-style environment allows guests to relax and enjoy events in a peaceful atmosphere, making them ideal for both intimate family gatherings and large-scale celebrations.",
+        "Scenic Mountain Setting — Bhurban sits at a higher altitude than Murree's main Mall Road area, giving guests uninterrupted views of pine forests and the surrounding valley — a backdrop that photographs well and creates a memorable atmosphere for any function.",
+        "Peaceful Environment for Events — Away from the crowded tourist strip, Bhurban offers a quieter setting for indoor and outdoor events, which matters for functions where guests want to actually hear speeches, music, and conversation.",
+        "Easy Access From Murree and Bhurban — Bhurban lies just a short drive from Murree's Mall Road on the Kashmir Highway, making the venue easy to reach for guests coming from Rawalpindi, Islamabad, or Murree itself."
       ],
       image: "/assets/why-villa-view.jpg",
     },
     {
-      heading: "Banquet Halls in Bhurban — Premium Event Experience",
+      heading: "Types of Events Suitable for Banquet Halls in Murree",
       paragraphs: [
-        "Bhurban is widely recognized for its luxury resorts and villa-inspired event spaces that are specifically designed to host high-end weddings, corporate retreats, and private functions. These venues combine elegance with nature, offering guests a refined yet relaxed atmosphere.",
-        "Most banquet facilities in Bhurban feature a blend of indoor halls and spacious outdoor lawns, allowing event planners to design both traditional and contemporary setups. This flexibility makes them suitable for daytime ceremonies, evening receptions, and multi-day wedding events.",
+        "Engagement Ceremonies — The hall layout works well for engagement stages, ring ceremonies, and the seating arrangements these events typically require.",
+        "Family Gatherings — Reunions, milestone celebrations, and religious gatherings benefit from a private hall away from public spaces.",
+        "Birthday Celebrations — From children's parties to milestone birthdays, the space can be arranged for different age groups and guest counts.",
+        "Anniversaries and Private Parties — Smaller, more intimate setups suit anniversary dinners and private celebrations.",
+        "Corporate Events — Meetings, retreats, product launches, and staff functions can be hosted in a mountain setting that doubles as a change of environment for teams based in Islamabad or Rawalpindi."
       ],
-      image: "/assets/villa-honeymoon-real.jpg",
+      image: "/assets/himalaya-villas-function-hall.png",
     },
     {
-      heading: "Himalaya Villas & Resorts — Private Wedding & Event Venue",
+      heading: "Banquet Hall Capacity and Seating Arrangements",
       paragraphs: [
-        "Himalaya Villas & Resorts in Bhurban stands out as a premium destination for private weddings and exclusive celebrations. It is thoughtfully designed to provide complete privacy for families who want a personalized and uninterrupted event experience surrounded by natural beauty.",
-        "The venue offers villa-style accommodation along with dedicated event spaces, making it especially suitable for destination weddings where guests stay on-site. This creates a seamless experience where accommodation, dining, and celebrations all take place in one integrated location.",
-        "In addition to space and accommodation, the venue also provides essential event services including catering arrangements, décor support, seating customization, and full coordination assistance. This ensures that both small and large events are managed smoothly from start to finish.",
+        "Small Gatherings and Intimate Events — Smaller guest lists can be accommodated with a more personal, closer seating layout.",
+        "Medium-Sized Functions — Mid-sized events such as engagements or corporate dinners can use standard round-table or banquet seating.",
+        "Large Family and Corporate Events — For bigger weddings or company events, the hall can be reconfigured for higher guest counts with a stage and dining zone.",
+        "Round Table and Theatre Seating — Depending on the event type, seating can be arranged as round tables for dining functions or theatre-style rows for presentations and conferences."
       ],
+      image: "/assets/himalaya-banquet.png",
     },
     {
-      heading: "Banquet Hall Features to Expect in Murree",
+      heading: "Banquet Hall Size and Venue Layout Options",
       paragraphs: [
-        "Most banquet halls in Murree and Bhurban are designed to provide a complete event experience by combining indoor halls with outdoor scenic areas. These venues typically include mountain-facing views, well-maintained lawns, and flexible seating arrangements for different event types.",
-        "Premium venues also go beyond basic facilities by offering guest accommodation, ample parking space, heating systems for winter events, and customized décor setups. These features ensure comfort and convenience for guests throughout the event regardless of season or weather conditions.",
+        "Indoor Hall Layout — The indoor hall is designed to separate the stage area, dining space, and guest movement zones so events run smoothly.",
+        "Stage and Guest Seating — A dedicated stage area is positioned for visibility from most seating sections, useful for speeches, entertainment, or ceremony rituals.",
+        "Dining and Reception Areas — Reception and dining zones can be arranged separately or combined, depending on the event format.",
+        "Event Setup and Guest Flow — Entry points, seating, and buffet lines are planned to avoid congestion during peak serving times."
+      ],
+      image: "/assets/himalaya-event.png",
+    },
+    {
+      heading: "Banquet Hall Facilities and Amenities to Consider",
+      paragraphs: [
+        "Parking Facilities — On-site parking is an important factor for mountain venues, since street parking in Murree-Bhurban can be limited, especially during peak season.",
+        "Catering and Dining — In-house catering removes the need to coordinate outside vendors and ensures food quality is consistent with the venue's standards.",
+        "Sound and Lighting — Basic sound systems and lighting setups support speeches, music, and stage events.",
+        "Wi-Fi and Event Support — For corporate events, reliable internet access and on-ground event support staff are worth confirming in advance.",
+        "Restrooms and Guest Facilities — Clean, accessible restroom facilities are a basic but important consideration when comparing venues."
       ],
       image: "/assets/amenities-interior-real.jpg",
     },
     {
-      heading: "Best Events to Host in Murree & Bhurban",
+      heading: "Banquet Hall Decoration and Event Setup",
       paragraphs: [
-        "Murree and Bhurban are ideal destinations for a wide variety of events including weddings, engagements, corporate retreats, birthday celebrations, and family reunions. The scenic environment naturally enhances the mood and creates lasting memories for guests.",
-        "Destination weddings are especially popular in Bhurban because families can host multiple functions such as mehndi, baraat, and reception in one location. The availability of accommodation and event spaces in close proximity makes planning easier and more enjoyable for both hosts and guests.",
+        "Stage Decoration — Stage backdrops can be customized by theme — floral, traditional, or minimal — based on the event.",
+        "Table and Chair Arrangements — Table layouts are adjusted based on guest count and event format, from formal dinner seating to relaxed lounge-style setups.",
+        "Lighting and Floral Décor — Ambient lighting and floral arrangements are commonly used to enhance the hall for evening functions.",
+        "Customised Event Themes — Couples and event planners can request themed décor to match a specific color palette or cultural tradition."
+      ],
+      image: "/assets/nikah-stage-close.png",
+    },
+    {
+      heading: "Catering and Dining Options for Events",
+      paragraphs: [
+        "Buffet and Dining Arrangements — Buffet-style service is common for larger events, allowing guests to choose from multiple dishes at their own pace.",
+        "Menu Options — Menus typically include a mix of local Pakistani cuisine, continental dishes, and regional specialities, adjustable to the host's preference.",
+        "Refreshments and Beverages — Tea, coffee, and soft drink stations are standard additions for both daytime and evening events.",
+        "Special Dietary Requirements — Vegetarian options and requests for reduced-spice or allergy-conscious dishes can usually be arranged with advance notice."
       ],
       image: "/assets/gallery-dining-night.jpg",
     },
     {
-      heading: "Banquet Hall Pricing in Murree (2026 Guide)",
+      heading: "Banquet Halls With Accommodation in Murree-Bhurban",
       paragraphs: [
-        "The cost of booking banquet halls in Murree and Bhurban varies depending on venue size, guest count, season, and the level of services required. Basic packages may include hall rental and seating, while premium packages often include full event management.",
-        "Smaller private gatherings can start from PKR 150,000 to 300,000, while mid-range and luxury wedding setups in Bhurban may range significantly higher based on customization, décor, and catering requirements. Prices tend to increase during peak tourist and wedding seasons.",
-        "It is highly recommended to book venues well in advance, especially for spring and summer months when demand is at its highest. Early booking not only ensures availability but can also help secure better pricing and preferred setup options.",
+        "Guest Rooms and Private Villas — One advantage of hosting an event at Himalaya Villas & Resorts is that guest rooms and villas are available on-site, so out-of-town guests don't need to book separate hotels.",
+        "Accommodation for Families — Villas suit families or wedding parties who want private space beyond a standard hotel room.",
+        "Stay and Event Packages — Combining the hall booking with on-site accommodation can simplify logistics for multi-day events like weddings."
+      ],
+      image: "/assets/villa-exterior.jpg",
+      links: [
+        { paragraph: 0, text: "Himalaya Villas & Resorts", href: "/villas" }
+      ]
+    },
+    {
+      heading: "Indoor and Outdoor Event Spaces in Murree-Bhurban",
+      paragraphs: [
+        "Indoor Banquet Halls — The indoor hall is the primary choice for formal events, especially during Murree's unpredictable weather months.",
+        "Outdoor Event Areas — Where weather allows, outdoor lawn or terrace spaces can add a scenic element to daytime ceremonies or photo sessions.",
+        "Choosing a Venue Based on Weather — Since Bhurban experiences rain and occasional snowfall in winter, it's worth confirming indoor backup arrangements if you're planning any outdoor element."
+      ],
+      image: "/assets/nikah-aerial-lawn.png",
+    },
+    {
+      heading: "Banquet Hall Prices in Murree-Bhurban",
+      paragraphs: [
+        "Factors That Affect Venue Pricing — Pricing generally depends on guest count, event date (weekday versus weekend or peak season), catering menu, and decoration level.",
+        "Hall Rental and Event Packages — Hall-only rental and all-inclusive packages (hall, catering, and décor) are usually priced differently — worth clarifying when requesting a quote.",
+        "Catering and Decoration Costs — Catering is typically billed per head, while decoration costs vary based on theme complexity.",
+        "Additional Services and Charges — Sound systems, extended hours, and extra staff may carry additional charges beyond the base package.",
+        "For exact current rates, contact Himalaya Villas & Resorts directly, since pricing can change by season."
       ],
       image: "/assets/why-villa-garden.jpg",
+    },
+    {
+      heading: "Banquet Hall Packages and Booking Options",
+      paragraphs: [
+        "What Is Included in a Package? — Standard packages usually bundle hall rental, basic décor, and a set catering menu.",
+        "Custom Event Packages — Packages can often be customised for specific themes, guest counts, or added services like accommodation.",
+        "Advance Booking and Availability — Given Murree-Bhurban's popularity during summer and holiday seasons, booking well in advance is recommended to secure preferred dates."
+      ],
+      image: "/assets/outdoor-celebrations.jpg",
+    },
+    {
+      heading: "How to Choose the Right Banquet Hall in Murree-Bhurban",
+      paragraphs: [
+        "Choose Based on Guest Capacity — Match your expected guest count to the hall's seating capacity to avoid overcrowding or an underfilled space.",
+        "Consider Your Event Type — A wedding stage setup differs from a corporate seminar layout — confirm the hall can be configured for your specific event.",
+        "Compare Facilities and Amenities — Parking, catering, restrooms, and accommodation availability should all factor into your decision.",
+        "Set Your Event Budget — Get a full package breakdown early so there are no surprises on hall rental, catering, and décor costs.",
+        "Check Location and Accessibility — Confirm travel time and road conditions from Islamabad, Rawalpindi, or Murree, especially if guests are travelling during winter months."
+      ],
+      image: "/assets/murree-luxury-resort.jpg",
+    },
+    {
+      heading: "Things to Check Before Booking a Banquet Hall",
+      paragraphs: [
+        "Hall Capacity and Layout — Ask for a floor plan and confirm maximum seating for your event style.",
+        "Catering and Menu — Request a tasting session or sample menu before finalising your booking.",
+        "Parking and Accessibility — Confirm on-site parking capacity, particularly for larger weddings.",
+        "Decoration and Setup — Clarify whether décor is included or arranged through an outside vendor.",
+        "Cancellation and Booking Policies — Always confirm advance payment, cancellation terms, and rescheduling policies in writing before booking."
+      ],
+      image: "/assets/himalaya-events-venue.png",
+    },
+    {
+      heading: "Things to Do Near Murree-Bhurban After Your Event",
+      paragraphs: [
+        "Explore Local Attractions — Guests staying on after your event can visit Patriata (New Murree), known for its chairlift and cable car ride, or take in the views from Pindi Point and Kashmir Point on Murree's Mall Road.",
+        "Enjoy Mountain Views — Ayubia National Park, a short drive from Bhurban, is a popular stop for anyone wanting a walk through pine forest trails.",
+        "Family Activities and Sightseeing — Mall Road in Murree offers shopping and local food options, making it an easy add-on for families extending their trip beyond the event day."
+      ],
+      image: "/assets/blog-bhurban-patriata-chairlift.png",
+      links: [
+        { paragraph: 0, text: "Patriata (New Murree)", href: "/thing-to-do-bhurban-murree" }
+      ]
+    },
+    {
+      heading: "Why Choose Himalaya Villas & Resorts for Your Event?",
+      paragraphs: [
+        "Himalaya Villas & Resorts brings together a banquet hall, on-site villas, and a Bhurban location in one venue — reducing the coordination usually needed between a separate hall, hotel, and catering vendor. For hosts who want their guests to enjoy the mountain setting beyond just the event itself, having accommodation on the same property is a practical advantage."
+      ],
+      image: "/assets/himalaya-villas-function-hall.png",
+      links: [
+        { paragraph: 0, text: "Himalaya Villas & Resorts", href: "/" }
+      ]
+    },
+    {
+      heading: "How to Book a Banquet Hall in Murree-Bhurban",
+      paragraphs: [
+        "Check Hall Availability — Contact the resort with your preferred event date to confirm availability, especially during peak season.",
+        "Select Your Event Package — Choose between hall-only rental or a combined package with catering, décor, and accommodation.",
+        "Confirm Guest Capacity and Requirements — Share your expected guest count and any special requirements (dietary, seating style, stage setup) in advance.",
+        "Complete Your Booking — Finalise the booking with the required advance payment and get your package details confirmed in writing."
+      ],
+      image: "/assets/himalaya-event.png",
     },
   ],
   faqs: [
     {
-      q: "What is the best banquet hall in Bhurban Murree?",
-      a: "Himalaya Villas & Resorts is widely considered one of the top premium choices in Bhurban due to its private villa-style setup, scenic mountain surroundings, and complete event management support. It is especially popular for destination weddings and exclusive family events.",
+      q: "Does Himalaya Villas & Resorts offer both indoor and outdoor event spaces?",
+      a: "Yes, the property offers an indoor banquet hall along with outdoor areas that can be used depending on the event and weather conditions."
     },
     {
-      q: "Can I host a wedding in Murree or Bhurban?",
-      a: "Yes, Murree and Bhurban are among the most popular wedding destinations in Pakistan. They offer a wide range of options including banquet halls, luxury resorts, and private villa venues suitable for both small and large wedding events.",
+      q: "Can the banquet hall accommodate both small and large events?",
+      a: "The hall layout can typically be adjusted for smaller gatherings as well as larger weddings or corporate functions — confirm your guest count with the venue when booking."
     },
     {
-      q: "How much does a wedding in Bhurban cost?",
-      a: "Wedding costs in Bhurban vary based on guest count, venue selection, décor, and services included. On average, luxury destination weddings typically start from PKR 300,000 and can increase significantly depending on customization and duration of events.",
+      q: "Is accommodation available for guests attending the event?",
+      a: "Yes, on-site villas are available, which is useful for weddings or multi-day events with out-of-town guests."
     },
     {
-      q: "Do Murree banquet halls provide accommodation?",
-      a: "Yes, many premium banquet halls and resorts in Bhurban offer on-site accommodation for guests. This makes them ideal for multi-day destination weddings where guests can stay, attend events, and enjoy the surroundings in one location.",
+      q: "How far in advance should I book a banquet hall in Bhurban?",
+      a: "Booking several months ahead is recommended, particularly for weekend dates during summer and holiday seasons when demand is highest."
+    },
+    {
+      q: "Does the venue provide catering services?",
+      a: "In-house catering is available, with menu options that can be customised based on your event and guest preferences."
+    },
+    {
+      q: "Is parking available at the venue?",
+      a: "On-site parking is available — confirm capacity in advance if you're expecting a large number of guests with private vehicles."
+    },
+    {
+      q: "What is the best time of year to host an event in Murree-Bhurban?",
+      a: "Summer months are the most popular due to pleasant weather, though spring and early autumn also offer good conditions with fewer crowds."
     },
   ],
 },
@@ -808,87 +1141,136 @@ const CONTENT_BY_SLUG: Record<string, BlogContent> = {
 
  "resorts-in-murree-pakistan-2026-guide": {
   intro: [
-    "Murree is home to some of Pakistan’s most popular mountain resorts, offering everything from luxury stays in Bhurban to family-friendly accommodations near Mall Road. It has become a year-round destination for travelers from Islamabad, Lahore, and across the country.",
-    "This guide highlights the best resorts in Murree for 2026, helping you choose the right stay based on comfort, location, budget, and overall travel experience so you can avoid overcrowded or poorly matched properties.",
-    "Whether you are planning a short weekend escape or a longer mountain retreat, understanding the difference between Bhurban luxury resorts and Murree town properties is key to making the right booking decision.",
-    "If you search for a resort murree option, this guide points to the best choices across budgets and experiences.",
-    "Many visitors also look for 'holiday resorts murree' when planning seasonal trips, and this guide covers those options as well."
+    "If you've ever driven up from Islamabad on a Friday evening and hit that wall of traffic near Murree Motorway, you already know why picking the right resort matters here. It's not just about finding a bed — it's about deciding whether you spend your weekend stuck in a queue of cars or actually sitting somewhere quiet with a cup of tea and a view.",
+    "This guide walks through what to actually look for when booking a resort in Murree in 2026, based on how the town really works, not just what the brochures say."
   ],
-
   sections: [
     {
-      heading: "Why Murree Resorts Are So Popular",
+      heading: "Why Murree Attracts So Many Visitors Every Year",
       paragraphs: [
-        "Murree resorts are popular because they combine natural mountain scenery, cool weather, and easy accessibility from major cities like Islamabad and Lahore, making them one of the most convenient hill station escapes in Pakistan.",
-        "They offer a complete hospitality experience that includes accommodation, dining, and recreational facilities in a single location, which is especially valuable for families and groups who prefer convenience and comfort.",
-        "When deciding where to stay, many travelers simply type 'resort murree' in their search bar to compare options quickly.",
-        "Another common search is 'holiday resorts murree' which helps narrow down properties focused on leisure and seasonal activities.",
-        "Unlike standard hotels, resorts in Murree are often designed to provide a more immersive environment where guests can relax, enjoy nature, and spend quality time without needing to travel between multiple locations for basic services."
+        "Murree sits at around 7,500 feet, tucked into the Galyat hills, and it's close enough to Islamabad and Rawalpindi that people treat it almost like a weekend backyard. On a good day, the drive takes under two hours. On a bad day — Eid weekend, first snowfall, a public holiday — it can take four times that.",
+        "That closeness is both the appeal and the problem. Because it's so easy to reach, Murree gets crowded fast, especially around Mall Road. The town itself is small, so a resort's exact location changes the entire experience — five minutes can be the difference between hearing traffic all night and actually sleeping.",
+        "A few things that specifically drive the crowds year after year:",
+        "The short travel time from twin cities means even a single free day is enough to justify a trip — Cooler weather in summer makes it an easy escape from Islamabad's and Rawalpindi's heat — Snowfall in winter turns it into one of the most searched destinations in Pakistan almost overnight — It's become a default \"quick getaway\" for office weekends, family outings, and college trips alike"
+      ],
+      image: "/assets/murree-valley-view.jpg",
+    },
+    {
+      heading: "Types of Resorts in Murree for Different Travellers",
+      paragraphs: [
+        "Before comparing resorts, it's worth being honest about what you're actually going up there for."
       ],
     },
     {
-      heading: "Luxury Resorts in Bhurban",
+      heading: "Luxury Resorts in Murree",
       paragraphs: [
-        "Bhurban is the premium zone of Murree and is widely regarded as the most exclusive area for luxury resorts and private villa-style stays in the entire region.",
-        "These resorts focus heavily on privacy, scenic mountain views, and high-end hospitality standards, making them ideal for luxury travelers, honeymoon couples, and families seeking a quiet and refined environment.",
-        "If you search for 'resort murree' with a luxury filter, Bhurban listings usually appear at the top of the results.",
-        "Many luxury-focused travelers also search 'holiday resorts murree' to find seasonal packages and family-friendly luxury stays.",
-        "Many premium properties in Bhurban also offer personalized services, including private dining, concierge support, and customized stay experiences that elevate the overall comfort level beyond standard hotel offerings."
+        "Some travellers just want things to work properly — hot water that doesn't cut out, a room that's actually heated in January, staff who answer the phone. That's really what \"luxury\" means here more than chandeliers and marble.",
+        "Properties built with private villas tend to deliver this more consistently than large hotel blocks that are stretched thin during peak season."
       ],
       image: "/assets/why-villa-view.jpg",
     },
     {
       heading: "Family-Friendly Resorts in Murree",
       paragraphs: [
-        "Many resorts in Murree are specifically designed for families, offering larger rooms, safe environments, and open spaces where children can move freely and enjoy outdoor activities.",
-        "These properties often include landscaped gardens, indoor dining areas, and recreational facilities that make group stays more comfortable and enjoyable for all age groups.",
-        "Parents searching for 'resort murree' family options will often filter for play areas and on-site dining to simplify planning.",
-        "Search terms like 'holiday resorts murree family' are especially useful when seeking kid-friendly seasonal activities and packages.",
-        "Family-oriented resorts also focus on convenience, providing easy access to nearby attractions while ensuring a secure and peaceful environment within the property itself."
+        "Anyone who's travelled with kids and grandparents in the same car knows the real requirement isn't a fancy lobby — it's space. When you're comparing family options, look for:",
+        "Multiple bedrooms or connecting units instead of a single cramped room — A kitchen or dining area that doesn't force everyone onto the same meal schedule — Safe outdoor space where children can move around without stairs or ledges everywhere — Parking close to the room, especially useful with elderly family members",
+        "Villas usually solve this better than stacking a family into two adjoining hotel rooms, mostly because the layout is built for a group rather than for one or two people."
       ],
-      image: "/assets/blog-bhurban-forest-nature-walk.png",
+      image: "/assets/blog-family-tour-featured-banner.png",
     },
     {
-      heading: "What to Expect from Murree Resorts",
+      heading: "Resorts in Murree for Couples",
       paragraphs: [
-        "Most resorts in Murree offer scenic mountain views, central heating systems, in-house dining, and convenient access to nearby tourist attractions such as Mall Road, Patriata, and Kashmir Point.",
-        "Premium resorts in Bhurban go a step further by offering concierge services, private dining options, and event hosting facilities for weddings, corporate retreats, and private gatherings.",
-        "If you need quick recommendations, searching 'resort murree' plus the attraction name (for example 'resort murree Kashmir Point') returns nearby stay options.",
-        "Combining the query with 'holiday resorts murree' often surfaces properties with seasonal activities and holiday packages.",
-        "Guests should expect variations in service quality depending on location and pricing, with Bhurban generally offering a more premium and peaceful experience compared to central Murree properties."
+        "Couples usually want the opposite of what families need — fewer people around, not more. A smaller villa tucked slightly away from Mall Road's noise, with an actual view instead of a wall of the next building, tends to matter far more than a big buffet breakfast."
       ],
-      image: "/assets/amenities-interior-real.jpg",
+      image: "/assets/blog-family-tour-balcony.png",
     },
     {
-      heading: "Resort Prices in Murree (2026 Guide)",
+      heading: "Resorts With Mountain Views",
       paragraphs: [
-        "Resort pricing in Murree varies significantly depending on location, season, property type, and included services, with Bhurban typically representing the higher-end segment of the market.",
-        "Luxury resorts in Bhurban generally range from PKR 40,000–100,000 per night, offering premium amenities, privacy, and enhanced service quality.",
-        "For budgeting, a quick 'resort murree price' search tends to show season-based rate ranges for the area.",
-        "Many travelers also check 'holiday resorts murree rates' to compare package deals and seasonal discounts.",
-        "Mid-range resorts in Murree typically fall between PKR 12,000–30,000 per night, while budget stays can range from PKR 5,000–12,000 depending on availability and season.",
-        "During peak travel periods such as summer holidays and long weekends, prices can increase significantly, and early booking is strongly recommended to secure better options."
+        "Here's something worth knowing before you book: a lot of Murree properties advertise \"mountain view\" loosely. Half the town is built on a slope, so plenty of rooms technically face a hill — but that's not the same as an open valley view. If this actually matters to you, ask which direction the room faces before paying, not after checking in."
       ],
-      image: "/assets/why-villa-garden.jpg",
+      image: "/assets/why-villa-view.jpg",
+    },
+    {
+      heading: "Staying Near Mall Road vs. Staying Away From It",
+      paragraphs: [
+        "Mall Road is where everyone ends up eventually — the food stalls, the shops, the evening walk crowd. Staying within walking distance is convenient, but it also means noise late into the night and traffic jams pulling in and out during peak hours.",
+        "A short drive away, things quiet down considerably, and you still get to Mall Road, Kashmir Point, or Patriata in ten or fifteen minutes by car. Whether that trade-off is worth it really depends on whether you're going to Murree to be in the middle of things or to get away from them. As a rough guide:",
+        "Choose near Mall Road if you want to walk everywhere and don't mind noise at night — Choose a short drive away if you're prioritizing sleep, quiet, and a calmer atmosphere — Either works if you're only staying one night and plan to be out sightseeing most of the day anyway"
+      ],
+      image: "/assets/blog-bhurban-mall-road-night.png",
+    },
+    {
+      heading: "Rooms vs. Villas — What's Actually the Difference",
+      paragraphs: [
+        "Murree accommodation generally breaks down into standard hotel rooms, deluxe rooms with a bit more space and furnishing, and private villas. Villas are essentially self-contained units — separate bedrooms, a living area, sometimes a small kitchen — which make a real difference if you're not travelling solo.",
+        "Himalaya Villas & Resorts works specifically on this villa model rather than standard hotel rooms. The idea is straightforward: give guests their own private space instead of squeezing them into a room that opens onto a shared hallway with strangers."
+      ],
+      image: "/assets/why-villa-private.jpg",
+    },
+    {
+      heading: "Best Time to Book a Resort in Murree",
+      paragraphs: [
+        "April to June — cooler than the plains, extremely busy, book early",
+        "July to August — green and lush, but monsoon rain brings occasional landslides and road-closure risk",
+        "September to October — genuinely underrated; fewer crowds, better prices, still pleasant weather",
+        "December to February — the snowfall season everyone wants, but roads can shut with little warning, so heating and flexibility matter more here than anywhere else"
+      ],
+      image: "/assets/murree-snowy-peaks.jpg",
+    },
+    {
+      heading: "Things to Do Once You're There",
+      paragraphs: [
+        "Beyond the obvious Mall Road stroll, most people end up doing some combination of the following:",
+        "Riding the Patriata chairlift for a view over the valley — Stopping at Kashmir Point or Pindi Point, both are easy short visits — Taking a short drive out to Nathiagali if there's an extra day to spare — Simply spending time outdoors among the pine trees, away from any specific \"attraction\"",
+        "Honestly, a lot of the appeal isn't any single spot — it's just sitting somewhere with pine trees around you and air that doesn't feel like Rawalpindi in June. That alone is why people keep coming back year after year."
+      ],
+      image: "/assets/blog-bhurban-patriata-chairlift.png",
+    },
+    {
+      heading: "Before You Actually Book",
+      paragraphs: [
+        "A few things worth confirming directly with the resort, not assuming from the listing:",
+        "Cancellation policy, in case weather or road closures disrupt plans — Whether heating and hot water are actually included, not treated as an add-on — Real distance from Mall Road — not \"nearby\", an actual number in minutes or kilometres — Whether your specific room has the view shown in the photos — Check-in and check-out timing, which gets tight during peak weekends when turnover is high"
+      ],
+      image: "/assets/gallery-balcony.jpg",
+    },
+    {
+      heading: "Why People Choose Himalaya Villas & Resorts",
+      paragraphs: [
+        "Himalaya Villas & Resorts isn't trying to be everything to everyone — it's built around one idea: private villa stays instead of standard hotel rooms. For families who don't want to split up, couples who want actual privacy, or small groups travelling together, that layout just works better than a row of hotel doors along a corridor.",
+        "The focus stays on the details that actually affect a hill-station stay:",
+        "Proper heating during winter: not a single heater is expected to warm an entire villa — Consistent upkeep and housekeeping, rather than a one-time first-impression polish — A location that keeps Murree's main spots within reach without putting you right in the middle of the crowd",
+        "If a villa-style stay fits what you're looking for in 2026, it's worth getting in touch directly to check availability for your dates."
+      ],
+      image: "/assets/why-villa-private.jpg",
     },
   ],
-
   faqs: [
     {
-      q: "What are the best resorts in Murree?",
-      a: "The best resorts in Murree include luxury properties in Bhurban along with premium villa-style stays such as Himalaya Villas & Resorts, which offer privacy, scenic views, and high-end services. If you search 'resort murree best', these properties commonly appear in curated lists. Many curated lists also use 'holiday resorts murree' as a keyword to group seasonal recommendations."
+      q: "Is Murree a good choice for a family trip in 2026?",
+      a: "Yes — the short drive from Islamabad and Rawalpindi, combined with villa-style options, makes it practical for families without needing a long trip."
     },
     {
-      q: "Are Murree resorts good for families?",
-      a: "Yes, most resorts in Murree are family-friendly, offering spacious rooms, safe environments, and facilities designed for group comfort and relaxation. When booking, families often search 'resort murree family' to filter appropriate properties. Adding 'holiday resorts murree' to your search helps locate family packages and kid-friendly holiday programs."
+      q: "When's the best time to visit resorts in Murree?",
+      a: "April–June and September–October tend to offer the most comfortable weather. Winter brings snow but also a higher chance of road disruptions."
     },
     {
-      q: "Which area is best for resorts in Murree?",
-      a: "Bhurban is considered the best area for luxury resorts due to its peaceful environment, better views, and premium hospitality options compared to central Murree."
+      q: "How early should I book during peak season?",
+      a: "A few weeks ahead at minimum for holidays and snowfall weekends — good properties fill up fast."
     },
     {
-      q: "How much do resorts in Murree cost?",
-      a: "Resort prices in Murree range from PKR 5,000 to over PKR 100,000 depending on location, luxury level, season, and included amenities. Many people searching for 'holiday resorts murree' also compare package rates that bundle meals and activities, which can change the effective per-night cost."
+      q: "Do Murree resorts reliably have heating?",
+      a: "Not all of them, and not to the same standard. Always confirm heating and hot water directly before booking a winter stay."
+    },
+    {
+      q: "Are villas actually better than hotel rooms for families?",
+      a: "For most families and groups, yes — more space and privacy, though they cost more than a single standard room."
+    },
+    {
+      q: "Is Mall Road walkable from most resorts?",
+      a: "Some are within walking distance; others are a short drive. It varies from property to property, so check before assuming."
     },
   ],
 },

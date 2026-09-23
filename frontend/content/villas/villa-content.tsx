@@ -345,6 +345,144 @@ const rakaposhiSingleExecutiveSeoContent: RoomSeoContent = {
   ],
 };
 
+/** Long-form SEO content for the Luxury Complete Villa detail page. */
+const luxuryCompleteVillaSeoContent: RoomSeoContent = {
+  sections: [
+    {
+      heading: "Luxury Complete Villas in the Himalayas",
+      blocks: [
+        {
+          type: "paragraph",
+          text: "Tucked against the pine-covered slopes of the Himalayas, our Luxury Complete Villas are designed for travelers who want more than a hotel room — they want a private home in the mountains, fully staffed, fully stocked, and fully theirs for the duration of their stay.",
+        },
+        {
+          type: "paragraph",
+          text: "At Himalaya Villas & Resorts, \"complete\" isn't a marketing word. It means the villa comes with everything: private chef, housekeeping, heated interiors, a dedicated caretaker, and 24/7 support, so the only thing you plan is what time to wake up to the mountain view.",
+        },
+      ],
+    },
+    {
+      heading: "What Makes a Villa \"Complete\"",
+      blocks: [
+        {
+          type: "paragraph",
+          text: "Most villa rentals hand you a keyless entry code and a list of nearby restaurants. A Complete Villa experience is different. Every booking includes:",
+        },
+        {
+          type: "bullets",
+          items: [
+            "A private chef who prepares meals to your taste — local Himachali or Kumaoni dishes, North Indian classics, or continental menus on request",
+            "Full housekeeping during your stay, not just a checkout clean",
+            "In-house heating and hot water systems, essential at altitude where nights drop well below daytime temperatures",
+            "A dedicated villa manager who handles everything from grocery restocking to arranging a bonfire or a local guide",
+            "Private parking, backup power, and Wi-Fi, so remote work or a family emergency never becomes a logistics problem",
+          ],
+        },
+        {
+          type: "paragraph",
+          text: "This staffing model matters more in the mountains than almost anywhere else. Power cuts, water supply timing, and road access all behave differently at 6,000–8,000 feet than they do in a city. A property that's genuinely equipped to manage these realities — not just decorated to look luxurious in photos — is what separates a good villa stay from a frustrating one.",
+        },
+      ],
+    },
+    {
+      heading: "Who These Villas Are Built For",
+      blocks: [
+        {
+          type: "bullets",
+          items: [
+        "Multi-generational family trips. Complete Villas typically have 3–6 bedrooms with independent living areas, so grandparents get quiet and privacy while kids have room to run.",
+        "Destination celebrations. Anniversaries, proposals, and small milestone gatherings work well here because you get an entire property, not a shared hotel floor.",
+        "Remote workers extending a trip. With private Wi-Fi, a quiet workspace, and no shared common areas, a \"workation\" is genuinely workable, not just marketed as one.",
+        "Privacy-focused travelers. No lobby, no shared elevators, no other guests walking past your door — the villa is the only thing on the property during your stay.",
+          ],
+        },
+      ],
+    },
+    {
+      heading: "Location and Setting",
+      blocks: [
+        {
+          type: "paragraph",
+          text: "Our villas sit at elevations chosen for a balance of mountain views and accessibility — close enough to local markets and trekking trailheads to be convenient, far enough from the main road to stay quiet at night. Most units face either the valley or a forest ridge, and orientation is something worth asking about directly when booking, since it affects both the view and the amount of afternoon sun the villa gets.",
+        },
+        {
+          type: "paragraph",
+          text: "Nearby, guests typically have access to:",
+        },
+        {
+          type: "bullets",
+          items: [
+            "Short treks and nature walks starting within a 10–20 minute drive",
+            "Local markets for handicrafts, wool, and regional produce",
+            "Temples, viewpoints, and heritage sites specific to the region",
+            "Adventure activities such as paragliding, river rafting, or skiing, depending on season and altitude",
+          ],
+        },
+      ],
+    },
+    {
+      heading: "Amenities Inside the Villa",
+      blocks: [
+        {
+          type: "bullets",
+          items: [
+            "Fireplace or centrally heated living rooms",
+            "Fully equipped kitchen (used by the private chef, but available to guests too)",
+            "Private balconies or terraces with mountain-facing seating",
+            "En-suite bathrooms with hot water geysers in every room",
+            "Dining area suited for group meals",
+            "Optional bonfire and barbecue setup on request",
+          ],
+        },
+      ],
+    },
+    {
+      heading: "Best Time to Book a Himalayan Villa Stay",
+      blocks: [
+        {
+          type: "bullets",
+          items: [
+            "March to June: Pleasant daytime temperatures, clear mountain views, ideal for families and first-time hill visitors",
+            "July to September: Monsoon season — lush greenery but higher chances of road delays; good for travelers who don't mind rain and want fewer crowds",
+            "October to February: Crisp, clear air and (at higher elevations) snowfall; popular for New Year and winter getaways, but book heating and road-access details in advance",
+          ],
+        },
+        {
+          type: "paragraph",
+          text: "Because mountain weather shifts quickly, we recommend confirming road conditions with your villa manager 24–48 hours before arrival, especially between December and February.",
+        },
+      ],
+    },
+    {
+      heading: "Why Choose Himalaya Villas & Resorts",
+      blocks: [
+        {
+          type: "paragraph",
+          text: "We've operated in this region long enough to know that a beautiful villa photo means nothing if the heating fails on a cold night or the road access wasn't checked before a family arrives. Our Complete Villas are built around solving the problems that actually come up at altitude — staffing, weather, and access — not just around interior design.",
+        },
+        {
+          type: "paragraph",
+          text: "If you're planning a family trip, a private celebration, or an extended mountain stay, our team can help you pick the right villa for your group size, season, and view preference. Ready to book, or want help choosing between villas? Contact our reservations team for real-time availability and a personalized recommendation.",
+        },
+      ],
+    },
+  ],
+  faqs: [
+    {
+      q: "How many people can stay in one villa?",
+      a: "Most Complete Villas comfortably sleep 8–12 guests across multiple bedrooms. Larger groups can often be accommodated by booking adjoining villas — ask our team for group rates.",
+    },
+    {
+      q: "Do the villas have heating for winter stays?",
+      a: "Yes. All villas are equipped with central or room-level heating and insulated interiors, which matters significantly for December–February bookings when outdoor temperatures can drop below freezing.",
+    },
+    {
+      q: "Is it safe to drive up to the villa in winter?",
+      a: "Access roads are maintained, but heavy snowfall can occasionally cause short delays. Our team monitors conditions and will advise on the best route or alternate transport if needed.",
+    },
+  ],
+};
+
 export const collections: Collection[] = [
   {
     title: "Himalaya Apartments",
@@ -567,6 +705,10 @@ export const collections: Collection[] = [
         slug: "luxury-complete-villa",
         tag: "WHOLE VILLA",
         name: "Complete Villa",
+        h1: "Luxury Complete Villas in the Himalayas",
+        seoTitle: "Book Luxury Complete Villa - Himalaya Villas & Resorts",
+        metaDescription:
+          "Book Luxury Complete Villas in the Himalayas — private chef, 24/7 staff, mountain views. Limited villas available. Reserve yours today!",
         description:
           "Four bedrooms, private gardens, and mountain vistas — yours entirely.",
         price: "99,000",
@@ -586,6 +728,7 @@ export const collections: Collection[] = [
           { label: "Best For", value: "Celebrations & family gatherings" },
         ],
         amenities: commonAmenities,
+        seoContent: luxuryCompleteVillaSeoContent,
       },
     ],
   },

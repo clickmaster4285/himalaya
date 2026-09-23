@@ -155,7 +155,6 @@ export default async function BlogArticlePage({ params }: Props) {
               <h1 className="mt-3 font-display text-4xl font-bold leading-tight text-neutral-900 md:text-5xl">
                 {post.headline ?? post.title}
               </h1>
-              <p className="mt-5 text-lg leading-relaxed text-neutral-600">{post.excerpt}</p>
             </header>
 
             <div className="relative mt-10 aspect-[16/9] w-full overflow-hidden rounded-sm border border-[#eadfce] bg-neutral-100">

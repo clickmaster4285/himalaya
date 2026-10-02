@@ -487,6 +487,44 @@ export default function LuxuryHotelsMurreePage() {
           </div>
         </section>
 
+        {/* TOP-RATED LUXURY HOTELS IN MURREE */}
+<section className="py-20 md:py-28 bg-white px-6">
+  <div className="max-w-6xl mx-auto">
+    <div className="max-w-4xl">
+      <h2 className="font-display text-4xl md:text-5xl text-[#1b261b]">
+        Top-Rated Luxury Hotels in Murree
+      </h2>
+
+      <p className="mt-6 text-[#8b8878] text-[15px] leading-relaxed">
+        Luxury stays in Murree offer premium rooms, privacy, heating, quality
+        dining and beautiful valley views. Himalaya Villas &amp; Resorts
+        provides an upscale mountain experience in the calm setting of
+        Bhurban. Guests who want quiet, space and high-comfort hospitality
+        will find our villas a good fit. Private villa stays feel more
+        exclusive than a busy hotel, especially for couples, families and
+        special occasions. Luxury properties fill up fast during winter
+        snowfall, weekends and holidays.
+      </p>
+
+      <p className="mt-5 text-[#8b8878] text-[15px] leading-relaxed">
+        Book early with Himalaya Villas &amp; Resorts to secure your preferred
+        dates.
+      </p>
+
+      <div className="mt-8">
+        <a
+          href={`https://wa.me/${whatsappNumber}`}
+          target="_blank"
+          rel="noopener noreferrer"
+          className="inline-flex items-center justify-center bg-[#c9a55b] text-[#1b261b] px-8 py-4 text-[11px] font-bold uppercase tracking-widest hover:bg-[#ebd59f] transition-colors"
+        >
+          Contact Us on WhatsApp
+        </a>
+      </div>
+    </div>
+  </div>
+</section>
+
         {/* PACKAGES */}
         <section className="py-20 md:py-32 bg-[#fcfbf8] px-6">
           <div className="max-w-[1400px] mx-auto">
@@ -634,6 +672,11 @@ export default function LuxuryHotelsMurreePage() {
             </div>
           </div>
         </section>
+
+
+
+
+
 
         {/* EVERY QUESTION ANSWERED - FAQ */}
         <section className="py-20 md:py-32 bg-white px-6">

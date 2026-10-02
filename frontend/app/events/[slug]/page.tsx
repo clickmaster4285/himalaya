@@ -256,39 +256,211 @@ const eventDetails: Record<string, {
       }
     ]
   },
-  "valima-wedding-dinner": {
-    title: "Valima & Wedding Dinner",
-    description: "Refined dining and stage styling for post-nikah celebration.",
-    longDescription: "Celebrate your Valima with refined elegance and sophisticated dining. Our Valima packages combine traditional hospitality with modern luxury for the perfect post-nikah celebration.",
-    features: [
-      "Elegant dining hall with premium table settings",
-      "Sophisticated stage design and lighting",
-      "Gourmet multi-course dinner menu",
-      "Professional service staff",
-      "Decor coordination with wedding theme",
-      "Dedicated event management"
-    ],
-    image: "https://picsum.photos/seed/valima5/800/600.jpg",
-    category: "Weddings & Ceremonies",
-    faqs: [
-      {
-        question: "What makes your Valima celebrations special?",
-        answer: "Our Valima celebrations feature elegant dining setups, refined decor, and impeccable service. We create a sophisticated atmosphere perfect for hosting family and friends after your wedding ceremony."
+"valima-wedding-dinner": {
+  title: "Walima (Valima) Wedding in Murree",
+  description:
+    "Walima wedding in Murree with a view: private mountain venue, indoor & outdoor setups, villa accommodation and custom packages. Check dates & get a quote.",
+  metaTitle:
+    "Walima Wedding in Murree | Mountain Venue & Packages | Himalaya Villas",
+  metaDescription:
+    "Walima wedding in Murree with a view: private mountain venue, indoor & outdoor setups, villa accommodation and custom packages. Check dates & get a quote.",
+  longDescription:
+    "A Walima is the wedding reception hosted by the groom's family. It is a time to thank relatives and friends and to celebrate the marriage over a shared meal. Most families in Pakistan hold it at a banquet hall in the city. A growing number now choose the mountains instead, for the cool air, the pine forest and photographs no hall can match. At Himalaya Villas and Resorts, we host Walima and Valima weddings in the Murree Hills as a private, full-stay event. Your family, your guests and your celebration share one property, with no other event running beside you.",
+  features: [
+    "Elegant dining hall with premium table settings",
+    "Sophisticated stage design and lighting",
+    "Gourmet multi-course dinner menu",
+    "Professional service staff",
+    "Decor coordination with wedding theme",
+    "Dedicated event management"
+  ],
+  image: "https://picsum.photos/seed/valima5/800/600.jpg",
+  category: "Weddings & Ceremonies",
+  capacity: "20 – 120 guests [confirm exact indoor and outdoor limits]",
+  location: "Himalaya Villas and Resorts, near Bhurban, Murree Hills",
+  priceFrom: "[add starting price]",
+  sections: [
+    {
+      heading: "Why Choose Murree for a Walima",
+      paragraphs: [
+        "Murree suits Walima receptions for practical reasons as well as scenic ones.",
+        "Travel is manageable. Murree is roughly 60 to 70 km from Islamabad, and the drive typically takes about two hours depending on traffic and the route. Guests from Islamabad and Rawalpindi can arrive for the afternoon or evening and return the same night, or stay over.",
+        "The setting does the decorating. Pine forest and mountain views mean the venue needs less styling to look good on camera.",
+        "The climate is cooler. Summer Walimas are much more comfortable here than in the plains, which matters for elderly guests and for guests in formal clothes.",
+        "It works as a family trip. Many families turn the Walima into a two-day gathering, with arrival and settling in one day and the reception the next."
+      ]
+    },
+    {
+      heading: "Our Walima Venue",
+      paragraphs: [
+        "Himalaya Villas and Resorts is a private destination-wedding property near Bhurban in the Murree Hills. [Add one sentence on your exact location and setting, for example elevation or road access.]"
+      ],
+      bullets: [
+        "A private wedding space surrounded by pine forest and mountain views",
+        "Villa accommodation for the families and close guests",
+        "Indoor and outdoor arrangements for a Walima",
+        "In-house support for catering, décor and guest coordination"
+      ]
+    },
+    {
+      heading: "Indoor or Outdoor Walima: How to Decide",
+      paragraphs: [
+        "This is the question most families ask first. The right answer depends on your guest count, the month and your priorities."
+      ],
+      bullets: [
+        "Outdoor Walima with mountain views: an outdoor setup gives you open sky, forest backdrops and the best natural light for photographs. It works well from [months, e.g. April to September] when days are mild and rain is less likely. The trade-off is weather — mountain conditions change fast, so an outdoor reception needs a covered or indoor backup plan.",
+        "Indoor Walima: an indoor arrangement gives you control over heat, sound, lighting and stage design. It is the better choice for winter, for rainy weeks and for families who want a more formal look.",
+        "Combined setup: many families use both. Guests are received and photographed outside, then dinner is served indoors if the temperature drops after sunset. Ask us about this when you enquire, because the flow of the evening affects how we lay out the space."
+      ]
+    },
+    {
+      heading: "Walima Packages and What They Include",
+      paragraphs: [
+        "Package details vary with your guest count, dates and menu, so we quote for each event. A Walima package at Himalaya Villas may include:"
+      ],
+      bullets: [
+        "Venue hire for the reception",
+        "Wedding dinner catering",
+        "Stage and basic décor setup",
+        "Accommodation for the family",
+        "Guest coordination on the day"
+      ]
+    },
+    {
+      heading: "Catering and Wedding Dinner",
+      paragraphs: [
+        "Food is the centre of a Walima, and guests remember it. We can arrange traditional Pakistani wedding menus, including [examples, such as mutton karahi, biryani, qorma, naan, BBQ, desserts and tea].",
+        "Live BBQ and outdoor food stations work particularly well in the mountains, since guests tend to stay outside longer.",
+        "Two practical points from hosting mountain events:"
+      ],
+      bullets: [
+        "Plan for cold food risk. Buffet food cools quickly in the open air, so service style and heating equipment matter.",
+        "Confirm your menu early. Deliveries to hill areas take longer, especially in bad weather or peak tourist season."
+      ]
+    },
+    {
+      heading: "Décor and Stage Arrangements",
+      paragraphs: [
+        "A Walima stage in Murree does not need heavy styling. The backdrop already does much of the work, and the most effective setups tend to be simple: fresh flowers, soft lighting and seating that faces the view.",
+        "We can coordinate with your preferred décor vendor or arrange setup for you. [State which applies.]"
+      ]
+    },
+    {
+      heading: "Accommodation for Family and Guests",
+      paragraphs: [
+        "Villa accommodation is a major advantage for a destination Walima. Instead of driving guests back down the hill late at night, the family can stay on the property.",
+        "This helps in three ways. The bride and groom's families can prepare without travelling, elderly relatives can rest before the event, and everyone avoids night driving on mountain roads."
+      ]
+    },
+    {
+      heading: "Photography and Video",
+      paragraphs: [
+        "Mountain light is at its best in the early morning and the hour before sunset. If your ceremony schedule allows, book couple portraits around those times.",
+        "You are welcome to bring your own photographer. We can also suggest experienced wedding photographers who know the property. [Confirm this.] Tell your photographer about the location in advance, since low light under the pines can change the equipment they need."
+      ]
+    },
+    {
+      heading: "Planning Around Murree's Weather",
+      paragraphs: [
+        "Weather is the main planning risk for any mountain wedding, so it deserves honest treatment."
+      ],
+      table: {
+        headers: ["Season", "Conditions", "Planning Note"],
+        rows: [
+          [
+            "Summer (May – September)",
+            "Mild days, cool evenings",
+            "The monsoon, usually July and August, brings heavy rain, so an outdoor event needs a confirmed indoor or covered alternative."
+          ],
+          [
+            "Autumn (October – November)",
+            "Clear, pleasant, popular for photography",
+            "Evenings get cold, so plan for heating."
+          ],
+          [
+            "Winter (December – February)",
+            "Cold, with a real chance of snow",
+            "Snow is beautiful, but it can affect road access. Hold winter Walimas indoors, and advise guests to travel earlier in the day."
+          ],
+          [
+            "Spring (March – April)",
+            "Variable weather",
+            "Keep a backup plan."
+          ]
+        ]
       },
-      {
-        question: "How do you coordinate the Valima timing with other wedding events?",
-        answer: "Our team works seamlessly with your wedding schedule to ensure smooth transitions. We handle all logistics so you can focus on enjoying your special day with guests."
-      },
-      {
-        question: "What dining options are available for Valima?",
-        answer: "We offer multi-course fine dining menus with both traditional Pakistani and international cuisine options. Our chefs can create customized menus based on your preferences and guest dietary needs."
-      },
-      {
-        question: "Can you accommodate large guest lists for Valima dinners?",
-        answer: "Yes, our venues can accommodate 100-300 guests for Valima dinners. We offer flexible seating arrangements and can scale our services based on your guest count."
-      }
-    ]
+      paragraphsAfter: [
+        "Whatever the season, we recommend setting a weather decision deadline with us, for example 48 hours before the event, when you choose indoor or outdoor."
+      ]
+    },
+    {
+      heading: "How to Book Your Walima",
+      paragraphs: [
+        "Follow these steps to secure your date and finalise the details:"
+      ],
+      bullets: [
+        "Send an enquiry with your preferred date, guest count and indoor or outdoor preference.",
+        "Visit the property if you can. Seeing the space is the fastest way to decide.",
+        "Receive your quote covering venue, food, accommodation and extras.",
+        "Confirm your date with the booking amount. [State your deposit and cancellation policy.]",
+        "Finalise details including menu, seating, décor and arrival timing."
+      ]
+    }
+  ],
+  cta: {
+    heading: "Plan Your Walima in the Murree Hills",
+    body:
+      "A Walima works best when the setting supports the celebration instead of competing with it. If you would like to see the property, check dates or discuss a package, contact the Himalaya Villas and Resorts team, and we will help you plan around your guest list, season and budget.",
+    whatsapp: "[your WhatsApp number]"
   },
+  faqs: [
+    {
+      question: "What is the difference between Walima and Valima?",
+      answer:
+        "They are two spellings of the same word for the wedding reception hosted by the groom's family. Walima is closer to the Arabic pronunciation, while Valima is common in Pakistan and India."
+    },
+    {
+      question: "What makes your Valima celebrations special?",
+      answer:
+        "Our Valima celebrations feature elegant dining setups, refined decor, and impeccable service. We create a sophisticated atmosphere perfect for hosting family and friends after your wedding ceremony."
+    },
+    {
+      question: "How do you coordinate the Valima timing with other wedding events?",
+      answer:
+        "Our team works seamlessly with your wedding schedule to ensure smooth transitions. We handle all logistics so you can focus on enjoying your special day with guests."
+    },
+    {
+      question: "How many guests can you host for a Walima?",
+      answer:
+        "We host Walima events of roughly 20 to 120 guests. [Confirm exact indoor and outdoor limits.]"
+    },
+    {
+      question: "Can we hold the Walima outdoors?",
+      answer:
+        "Yes, in suitable weather. We recommend always having an indoor or covered backup, since mountain weather can change within hours."
+    },
+    {
+      question: "What dining options are available for Valima?",
+      answer:
+        "We offer multi-course fine dining menus with both traditional Pakistani and international cuisine options. Our chefs can create customized menus based on your preferences and guest dietary needs."
+    },
+    {
+      question: "Is accommodation available for the families?",
+      answer:
+        "Yes. Villa accommodation is available on the property. [Add number of rooms and how many guests can stay.]"
+    },
+    {
+      question: "Is Murree suitable for a winter Walima?",
+      answer:
+        "Yes, with planning. Use the indoor arrangement, arrange heating, and ask guests to travel earlier in the day because of possible snow or road delays."
+    },
+    {
+      question: "How far in advance should we book?",
+      answer:
+        "We recommend booking as early as possible for summer weekends and public holidays."
+    }
+  ]
+},
   "engagement-ceremonies": {
     title: "Engagement Ceremony Venue in Bhurban, Murree | Himalaya Villas",
     h1: "Engagement Ceremony Venue at Himalaya Villas",

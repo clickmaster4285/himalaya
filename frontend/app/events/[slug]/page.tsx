@@ -20,6 +20,16 @@ const eventDetails: Record<string, {
   image: string;
   category: string;
   galleryImages?: string[];
+    metaTitle?: string;
+  metaDescription?: string;
+  capacity?: string;
+  location?: string;
+  priceFrom?: string;
+  cta?: {
+    heading: string;
+    body: string;
+    whatsapp: string;
+  };
   /** Optional H1 override for the hero (defaults to `title`). */
   h1?: string;
   sections?: {
@@ -260,8 +270,7 @@ const eventDetails: Record<string, {
   title: "Walima (Valima) Wedding in Murree",
   description:
     "Walima wedding in Murree with a view: private mountain venue, indoor & outdoor setups, villa accommodation and custom packages. Check dates & get a quote.",
-  metaTitle:
-    "Walima Wedding in Murree | Mountain Venue & Packages | Himalaya Villas",
+  metaTitle:  "Walima Wedding in Murree | Mountain Venue & Packages | Himalaya Villas",
   metaDescription:
     "Walima wedding in Murree with a view: private mountain venue, indoor & outdoor setups, villa accommodation and custom packages. Check dates & get a quote.",
   longDescription:

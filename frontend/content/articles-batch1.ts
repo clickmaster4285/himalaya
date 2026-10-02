@@ -2180,6 +2180,15 @@ export const article02: Article = {
         "If privacy is your main priority, look specifically for a private terrace or balcony rather than an interior-facing room — this is one of the biggest differences between an average stay and a memorable one in Murree.",
       ],
     },
+    {
+  type: "section",
+  heading: "Best Hotels to Stay in Murree",
+  paragraphs: [
+    "The best places to stay in Murree offer clean rooms, a peaceful location and warm, reliable service.",
+    "Himalaya Villas & Resorts in Bhurban, Murree gives guests private villa-style stays surrounded by cedar and pine forest. Guests enjoy mountain views, quiet surroundings and more space than a standard hotel room. Bhurban is less crowded than central Murree, which makes it ideal for families, couples and groups.",
+    "Before booking anywhere, compare location, guest reviews and facilities. Himalaya Villas & Resorts is a strong choice for a comfortable and memorable mountain stay.",
+  ],
+},
 
     {
       type: "section",
@@ -49302,28 +49311,25 @@ export const article403: Article = {
 // ============================================
 export const article405: Article = {
   slug: "cheap-hotels-murree-guide",
-  title: "Cheap Hotels in Murree — Budget Accommodation and When to Upgrade",
+  title: "Cheap Hotels in Murree - Himalaya Villas & Resorts",
   metaDescription:
-    "cheap hotels in murree, cheap hotels in murree pakistan, low price hotels murree, cheap hotel in murree pakistan, cheap rooms murree",
+    "Looking for cheap hotels in Murree? Compare rates, best areas near Mall Road & family stays, plus a private villa option in Bhurban. Book Now!",
   keywords:
     "cheap hotels in murree, cheap hotels in murree pakistan, low price hotels murree, cheap hotel in murree pakistan, cheap rooms murree",
   eyebrow: "Commercial | Cluster 1 | ~800w",
-  h1: "Cheap Hotels in Murree — Budget Accommodation and When the Upgrade Makes Sense",
+  h1: "Cheap Hotels in Murree",
   heroTagline:
-    "Guesthouses: PKR 3,000–10,000. TDCP rest houses: PKR 2,000–8,000. Groups of 6+: private villa at PKR 7,500/person.",
+    "Looking for cheap hotels in Murree? Compare rates, best areas near Mall Road & family stays, plus a private villa option in Bhurban. Book Now! ",
   heroImage: article405Hero,
   blocks: [
-    {
-      type: "callout-qa",
-      question: "What are the cheapest hotels in Murree?",
-      answer:
-        "Cheapest Murree accommodation options 2026: guesthouses on and near Mall Road (PKR 3,000–10,000/night for 1-2 persons); TDCP rest houses (PKR 2,000–8,000 for eligible visitors); Bhurban guesthouses (PKR 5,000–15,000/night). For 6+ person groups, per-person economics shift: Himalaya Villas' most affordable family villa (Garden Villa Retreat, PKR 55,000-60,000/night for up to 8 people = PKR 7,500/person for 7 people) is not far above quality guesthouses per person while delivering a private villa estate. For solo travellers and budget couples, guesthouses remain the correct choice.",
-    },
+   
     {
       type: "section",
-      heading: "The cheap hotel in Murree search reflects the most budget-conscious segment of the Murree accommodation market",
+      heading: "Cheap Hotels in Murree: Budget Stays, Rates & Best Areas",
       paragraphs: [
-        "Visitors who need to minimise accommodation spend. This guide covers all the budget options honestly and, for groups where the per-person maths shifts, explains when the 'cheap hotel' calculation actually points toward the private villa.",
+        "Finding cheap hotels in Murree is not only about choosing the lowest room price. A good budget stay should also give you a practical location, suitable accommodation, clear booking information, and a comfortable base for exploring Murree.",
+        "Himalaya Villas & Resorts offers accommodation for travelers planning a stay in Murree and looking for value without making their trip unnecessarily expensive. Whether you are visiting with family, traveling as a couple, planning a short weekend break, or staying for several days, comparing the total value of your accommodation can help you make a better booking decision.",
+        "Hotel and accommodation prices in Murree can change depending on travel dates, season, demand, room type, and length of stay. For that reason, travelers should always check the current rate before confirming a booking.",
       ],
       image: {
         src: article405View,
@@ -49331,56 +49337,101 @@ export const article405: Article = {
       },
     },
     {
-      type: "comparison",
-      heading: "The Budget Accommodation Options in Murree and Bhurban",
-      columns: ["Option", "Rate", "Quality", "Best For"],
-      rows: [
-        {
-          feature: "Murree Mall Road guesthouses",
-          a: "PKR 3,000–10,000/night",
-          b: "Variable",
-          c: "Solo travellers, couples on tight budget, first-timers",
-        },
-        {
-          feature: "Bhurban guesthouses",
-          a: "PKR 5,000–15,000/night",
-          b: "Variable",
-          c: "Bhurban location on budget",
-        },
-        {
-          feature: "TDCP rest houses",
-          a: "PKR 2,000–8,000/night",
-          b: "Government standard",
-          c: "TDCP-eligible visitors (govt employees, etc.)",
-        },
-        {
-          feature: "Hotel One Bhurban",
-          a: "Confirm at hotelsone.com.pk",
-          b: "Mid-scale hotel standard",
-          c: "Budget travellers wanting hotel services in Bhurban",
-        },
-        {
-          feature: "Himalaya Villas (per person, group of 7)",
-          a: "PKR 7,500–8,500/person/night",
-          b: "Premium private villa",
-          c: "Groups of 6+ where per-person rate competes with guesthouses",
-        },
+      type: "section",
+      heading: "Looking for Cheap Hotels in Murree?",
+      paragraphs: [
+        "Murree is one of Pakistan's best-known hill destinations. Visitors travel here for its mountain scenery, cool weather, lively commercial areas, family attractions, and access to popular places such as Mall Road, Kashmir Point, and Pindi Point.",
+        "Because Murree attracts visitors throughout the year, accommodation is available across different price levels. Travelers searching for budget hotels in Murree usually want a balance between affordability and convenience.",
+        "Before booking, consider more than the advertised room rate. Think about your travel dates, the number of guests, your preferred area in Murree, the type of accommodation you need, the total length of your stay, available facilities, cancellation or booking conditions, and transportation and access to the places you plan to visit.",
+        "A slightly different location or room category can sometimes provide better overall value than choosing accommodation only because it appears to have the cheapest nightly rate.",
       ],
     },
     {
       type: "section",
-      heading: "The Group Per-Person Calculation",
+      heading: "Stay at Himalaya Villas & Resorts in Murree",
       paragraphs: [
-        "The per-person maths for groups:",
-        "Group of 7 at a Murree guesthouse: PKR 15,000/night guesthouse ÷ 7 = PKR 2,143/person. This is the cheapest option.",
-        "Group of 7 at 3 Murree hotel rooms (PKR 25,000/room × 3 = PKR 75,000/night) ÷ 7 = PKR 10,714/person.",
-        "Group of 7 at Himalaya Villas Garden Villa Retreat (PKR 58,000/night) ÷ 7 = PKR 8,286/person — less than 3 hotel rooms, private villa included.",
-        "The guesthouse remains the cheapest per-person option. But the jump from guesthouse to private villa is smaller than the jump from guesthouse to chain hotel rooms for large groups.",
+        "Himalaya Villas & Resorts is an accommodation option for visitors looking for a place to stay while exploring Murree.",
+        "Travelers searching for cheap accommodation in Murree often compare several factors before deciding where to stay. Price is important, but location, space, convenience, and suitability for the people traveling with you can be just as important.",
+        "Before confirming your stay at Himalaya Villas & Resorts, check the latest information about room or villa availability, current prices, occupancy limits, and included facilities. This helps you understand exactly what is included in your booking and avoids relying on outdated travel information.",
+        "For the best comparison, look at the total cost for your complete stay rather than only the headline nightly price.",
       ],
-      image: {
-        src: article405Villa,
-        alt: "Group Per-Person Calculation",
-      },
+    },
+    {
+      type: "section",
+      heading: "How Much Do Cheap Hotels in Murree Cost?",
+      paragraphs: [
+        "There is no single fixed price for a cheap hotel or budget stay in Murree. Accommodation rates rise and fall according to several factors, and understanding them helps you find better value.",
+        "The first is travel season. Murree sees higher demand during popular holiday periods, summer travel, weekends, and school vacations. When more visitors are searching for rooms at the same time, prices naturally increase. The second is the difference between weekdays and weekends — a weekday stay may be priced differently from a weekend stay, so if your dates are flexible, comparing several options can reveal which offers better value.",
+        "Length of stay matters just as much. The total cost depends heavily on how many nights you stay, so travelers planning several days in Murree should compare the complete booking cost rather than judging a property by a one-night rate. The number of guests also affects price: a room suitable for two people is priced differently from one meant for a larger family or group, and you should always enter the correct number of adults and children when asking for a rate.",
+        "Finally, the type of accommodation matters. Different categories have different prices, so confirm what kind of unit you are booking, how many guests it is designed for, and what is included. Because rates change, the safest approach is to contact Himalaya Villas & Resorts directly or use its current booking information to confirm the price for your exact travel dates.",
+      ],
+    },
+    {
+      type: "section",
+      heading: "Best Areas to Stay in Murree on a Budget",
+      paragraphs: [
+        "Where you stay affects your costs almost as much as the hotel itself. Prime spots are pricier, while quieter areas save money but add transport time.",
+        "Mall Road is the centre of Murree, with shops, restaurants and the main promenade. Staying here means you can walk to most things and avoid parking stress in the evening. The trade-off is price and noise — rooms cost more, and the area gets crowded on weekends. If you want Mall Road access on a budget, look for properties a short walk away rather than directly on the road.",
+        "Kashmir Point offers a calmer atmosphere and viewpoints across the hills. It suits travellers who prefer quiet evenings over shopping and street food, though you will usually need a car or taxi to reach Mall Road. Pindi Point is known for its views and chairlift, and accommodation nearby can be reasonably priced — it works well if you plan a day of sightseeing rather than staying on Mall Road.",
+        "Locations a little outside the centre, on the quieter stretches of outer Murree, often give you more space, better parking and lower rates. They suit families with their own vehicle. The trade-off is a longer drive into town, so factor in fuel and time when comparing.",
+      ],
+    },
+    {
+      type: "section",
+      heading: "Cheap Hotels in Murree Near Mall Road",
+      paragraphs: [
+        "Many travellers search for cheap hotels near Mall Road, and it makes sense. You can walk to dinner, shop and enjoy the evening atmosphere without arranging transport.",
+        "To keep costs down and still stay close, book a few minutes' walk away — a five- to ten-minute uphill walk can lower the rate noticeably. Check the road access, since some properties near Mall Road are difficult to reach by car, especially in snow. Ask about parking before you arrive, because parking near Mall Road is limited. And avoid peak weekends, since prices near Mall Road rise fastest during snowfall and holidays.",
+      ],
+    },
+    {
+      type: "section",
+      heading: "Cheap Hotels in Murree for Families",
+      paragraphs: [
+        "Families need more than a low price. A cheap room that fits four people badly is not a bargain.",
+        "When choosing a family stay, confirm room capacity so you know how many adults and children the room can legally hold. Check heating, because winter nights in Murree get cold and a working heater matters more than a TV. Look at parking and road access, especially if you travel with luggage and children, and confirm that restaurants are close or that the property can provide meals. Check cancellation terms too, since weather can change travel plans quickly.",
+        "For larger families or groups, a villa often works out better than two or three separate hotel rooms. You get shared living space, more privacy and usually a lower cost per person.",
+      ],
+    },
+    {
+      type: "section",
+      heading: "Cheap Hotels in Murree for Couples",
+      paragraphs: [
+        "Couples usually care about privacy, a quiet setting and a comfortable room more than extra space. Look for a location away from crowded weekend traffic, a clean and well-heated private room, views or a quiet outdoor area, and clear check-in and check-out policies.",
+        "Always confirm the property's policies directly before booking, since rules can differ between hotels and guest houses. A quick call or message removes any doubt on arrival.",
+      ],
+    },
+    {
+      type: "section",
+      heading: "Monthly and Long-Stay Rooms",
+      paragraphs: [
+        "Some travellers, students and remote workers look for monthly accommodation in Murree. Availability varies, and not every property offers a monthly rate. If you need a longer stay, contact the property directly and ask for a discount for extended nights. Villas can be a practical option here because they often include kitchen space, which cuts food costs over weeks.",
+      ],
+    },
+   
+   
+    {
+      type: "section",
+      heading: "How to Find Budget-Friendly Lodging in Murree",
+      paragraphs: [
+        "The easiest way to save on lodging in Murree is to travel on weekdays or during the off-season. Compare rates across several properties and check exactly what each price includes. Staying in Bhurban instead of central Murree can give you more space and a quieter stay for your budget.",
+        "Booking directly with the property often gives clearer pricing and easier communication. Himalaya Villas & Resorts offers comfortable stays at a range of rates for different group sizes. Contact us for current offers before you confirm your dates.",
+      ],
+    },
+    {
+      type: "section",
+      heading: "How to Find Cheap Hotel Deals in Murree",
+      paragraphs: [
+        "A few habits save money without lowering quality. Compare before you book — check the property's own contact details as well as booking platforms, because direct booking sometimes gets you a better rate or extra inclusions. Ask about total cost so you confirm the final price, including taxes and any service charges, and nothing surprises you at check-in.",
+        "Travel in a group to split a villa or a large family room, which lowers the cost per person. Be flexible with dates, since shifting one night from Saturday to Wednesday can change the price significantly. Read recent reviews from the last few months rather than just the overall score, because cleanliness, heating and staff behaviour can change over time. And book cancellable rates when possible — weather in the hills is unpredictable, and flexibility protects your money.",
+      ],
+    },
+    {
+      type: "section",
+      heading: "Book Your Stay with Himalaya Villas & Resorts",
+      paragraphs: [
+        "If you want a comfortable stay in Murree without paying for several separate rooms, Himalaya Villas & Resorts offers a practical option for families and groups. Contact us to check availability and current rates for your dates.",
+      ],
     },
     {
       type: "faqs",
@@ -49394,12 +49445,28 @@ export const article405: Article = {
           q: "Are Murree guesthouses safe?",
           a: "Murree guesthouses are generally safe — the area is a domestic family tourism destination with a 150-year hill station history. Quality varies; read reviews carefully before booking. Himalaya Villas is a private gated estate with a single access point and a full property team.",
         },
+        {
+          q: "How can I find cheap hotels in Murree?",
+          a: "Travel on weekdays, avoid holiday periods and compare rates across booking platforms and direct contacts. Consider a villa or shared room if you are travelling in a group, because the cost per person is often lower.",
+        },
+        {
+          q: "Are cheap hotels available near Mall Road in Murree?",
+          a: "Yes, but they are limited and fill up quickly. You can often find better value by staying a short walk from Mall Road instead of directly on it.",
+        },
+        {
+          q: "Are there cheap hotels in Murree for families?",
+          a: "Budget accommodation options can be suitable for families, but travelers should confirm guest capacity, accommodation type, facilities, and total price before booking.",
+        },
+        {
+          q: "Is it better to book Murree accommodation early?",
+          a: "Booking early can provide more choice for busy dates, especially when visitor demand is high. However, prices depend on several factors, so travelers should compare current rates rather than assume that one booking period is always cheaper.",
+        },
       ],
     },
     {
       type: "cta",
       eyebrow: "How to Book",
-      heading: "Check the Private Villa Per-Person Rate for Your Group ",
+      heading: "Check the Private Villa Per-Person Rate for Your Group",
       text: "Contact us to book your stay.",
       buttonLabel: "Book Your Stay",
       buttonHref: "https://wa.me/923045679000",

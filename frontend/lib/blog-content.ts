@@ -1747,16 +1747,15 @@ const CONTENT_BY_SLUG: Record<string, BlogContent> = {
         ],
         image: "/assets/gallery-reflection.jpg",
       },
-      {
-        heading: "Accommodation Built for Families, Not Just Couples",
-        paragraphs: [
-          "This is where Himalaya Villas differs most from a typical Murree hotel. Rather than booking a single room, families book a villa — a self-contained unit with multiple bedrooms.",
-          "Standard villa layout: four bedrooms spread across two floors. Each bedroom has a king-size bed and its own en-suite bathroom. The master suite includes a private living room and a spacious private terrace. Shared living space for the whole family to gather in the evening.",
-          "For smaller families or two couples travelling together, there's also a two-bedroom apartment option — two king bedrooms connected by a shared living area, which works well when parents want their own space at night but a common area during the day for meals, cards, or simply keeping an eye on the kids.",
-          "This structure solves a real problem for larger families: instead of three separate hotel rooms on three separate floors, everyone stays under one roof, with privacy but no separation.",
-        ],
-        image: "/assets/villa-presidential-real.jpg",
-      },
+  {
+  heading: "Affordable Hotel Options in Murree for Families",
+  paragraphs: [
+    "An affordable family stay combines spacious rooms, a safe environment and fair pricing. Himalaya Villas & Resorts offers villa-style accommodation where the whole family can stay together comfortably.",
+    "Shared living spaces give children room to play and elders room to relax. Staying together in one villa can also be better value than booking several separate hotel rooms. Rates change with season and group size, so it helps to confirm details in advance.",
+    "Contact Himalaya Villas & Resorts for current family rates and available options.",
+  ],
+
+},
       {
         heading: "Family Amenities That Actually Matter",
         paragraphs: [
@@ -2309,6 +2308,15 @@ const CONTENT_BY_SLUG: Record<string, BlogContent> = {
         ],
         image: "/assets/blog-family-tour-featured-banner.png",
       },
+      {
+  heading: "Compare Room Rates for Hotels in Murree",
+  paragraphs: [
+    "Room rates in Murree change with the season, weekday versus weekend, room type and public holidays. Prices are usually highest during winter snowfall, Eid and long weekends.",
+    "When comparing hotels, look at what is included, such as breakfast, heating, parking and room size, not only the price. Read recent guest reviews to judge real value for money.",
+    "Villa stays can be better value for families and groups because everyone shares one private space. For current Himalaya Villas & Resorts rates, check our pricing page or contact us directly.",
+  ],
+
+},
       {
         heading: "Monthly and Extended-Stay Bookings",
         paragraphs: [
@@ -2958,6 +2966,17 @@ const CONTENT_BY_SLUG: Record<string, BlogContent> = {
         ],
         image: "/assets/blog-bhurban-sunset-mountains.png",
       },
+
+      {
+  heading: "Book a Hotel Stay in Murree for Next Month",
+  paragraphs: [
+    "If you are visiting Murree next month, book as early as possible, especially for weekends and public holidays. Popular dates fill quickly, and early booking gives you better availability and more choice.",
+    "Himalaya Villas & Resorts lets you confirm your stay online, by phone or on WhatsApp. Share your dates, number of guests and any special requests when you contact us. Our team will confirm availability and guide you through the booking steps.",
+    "Reserve your stay with Himalaya Villas & Resorts and plan your mountain trip with confidence.",
+  ],
+
+},
+
       {
         heading: "Why Choose Himalaya Villas & Resorts in Murree",
         paragraphs: [

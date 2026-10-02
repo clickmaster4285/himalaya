@@ -6,7 +6,7 @@ const view = "/images/articles/article498-view.jpg";
 
 export const article498: Article = {
   slug: "murree-hotel-booking-guide",
-  title: "Murree Hotel Booking Guide 2026: Best Rates & Areas",
+  title: "Murree Hotel Booking Guide - Himalaya Villas & Resorts",
   metaDescription:
     "Compare Murree hotel rates, Mall Road vs Bhurban locations & booking tips for 2026. Find budget, family & luxury villa stays before you book.",
   keywords:
@@ -25,17 +25,13 @@ export const article498: Article = {
       ],
       image: { src: hero, alt: "Murree hotel booking guide" },
     },
-    {
-      type: "section",
-      heading: "How to Book a Hotel in Murree",
-      paragraphs: [
-        "There are three main ways to book a room in Murree, and each suits a different kind of traveler.",
-        "Booking directly with the hotel. Most Murree properties, including boutique resorts and private villa estates, now handle bookings through phone or WhatsApp rather than a traditional reservation desk. This is often the fastest way to confirm a room, ask specific questions (extra beds, dietary needs, early check-in), and negotiate rates during off-peak weekdays. Direct booking also means you're speaking to the people who will actually host you, which matters more in a hill station where communication can be inconsistent.",
-        "Booking through online travel agencies (OTAs). Platforms such as Booking.com, Agoda, and Expedia list a wide range of Murree hotels with visible pricing, guest reviews, and instant confirmation. They're useful for comparing multiple properties quickly, but the listed rate isn't always final — some platforms add service fees, and availability shown online doesn't always match what a hotel can actually offer for larger groups.",
-        "Comparing prices before you commit. Tools like Skyscanner and KAYAK aggregate rates across multiple booking sites for the same hotel. Before finalizing anything, it's worth checking whether the hotel's own WhatsApp or website rate beats the OTA price — for private estates and villa-style properties in particular, direct rates are frequently lower because there's no commission built in.",
-      ],
-    },
-    {
+{
+  type: "section",
+  heading: "How to Book a Hotel in Murree",
+  paragraphs: [
+    "You can book a stay in Murree through the property's official website, by phone or WhatsApp, or through a trusted booking platform. On the Himalaya Villas & Resorts website, start by choosing your travel dates and group size. Then select the villa or room that suits you and submit your booking request. Our team will confirm availability and share the next steps with you. Keep your booking confirmation and payment details safe for check-in. Booking directly with Himalaya Villas & Resorts gives you clear pricing and direct communication with the property.",
+  ],
+},    {
       type: "comparison",
       heading: "Murree Hotel Rates Per Night",
       columns: ["Hotel Type", "Typical Rate (PKR/night)", "Best For"],

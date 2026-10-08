@@ -3303,7 +3303,7 @@ const CONTENT_BY_SLUG: Record<string, BlogContent> = {
         "- Wi-Fi availability",
         "- Meal or breakfast options",
       ],
-        image: "/images/blogs/best-weekend-trip.jpg",
+     
     },
     {
       heading: "Which Area of Murree Is Best for a Weekend Stay?",

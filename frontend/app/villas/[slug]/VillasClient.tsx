@@ -1,269 +1,156 @@
 // app/villas/[slug]/VillasClient.tsx
 "use client";
 
-import { useState } from "react";
-import Image from "next/image";
-import Link from "next/link";
-import { ArrowLeft, Check } from "lucide-react";
+import { Check } from "lucide-react";
 import { type Room } from "@/content/villas/villa-content";
-import VillaAmenitiesSection from "@/components/VillaAmenitiesSection";
-import { amenityImages } from "@/content/villas/villa-content";
-import { buildWhatsAppBookingUrl, buildWhatsAppVillaBookingUrl, buildWhatsAppVillaEnquiryUrl } from "@/lib/whatsapp";
+import { buildWhatsAppVillaBookingUrl, buildWhatsAppVillaEnquiryUrl } from "@/lib/whatsapp";
 import { trackAndOpen } from "@/lib/trackedClick";
+import VillaRoomSeoContent from "@/components/VillaRoomSeoContent";
 
 interface VillasClientProps {
   room: Room;
 }
 
 export default function VillasClient({ room }: VillasClientProps) {
-  const [active, setActive] = useState(0);
-
-  // Use the new images array from the room data
-  const gallery = room.images;
-
   return (
-    <div className="min-h-screen bg-[#e9e2d1]">
-      <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8 py-10 lg:pt-20">
-        {/* Back link */}
-        {/* <Link
-          href="/villas"
-          className="inline-flex items-center gap-2 text-xs uppercase tracking-[0.25em] text-[#6b6357] transition hover:text-[#2b2b2b]"
-        >
-          <ArrowLeft className="h-3.5 w-3.5" strokeWidth={1.5} />
-          Back to villas
-        </Link> */}
+    <div className="max-w-7xl mx-auto px-6 my-16">
+      <div className="grid grid-cols-1 lg:grid-cols-3 gap-12">
+        {/* LEFT: content */}
+        <div className="lg:col-span-2 ">
+          <div className="prose prose-lg max-w-none">
+            <h2 className="font-display text-3xl md:text-4xl text-neutral-900 mb-6">
+              About This Stay
+            </h2>
+            <p className="text-gray-600 leading-relaxed mb-8">
+              {room.longDescription}
+            </p>
 
-        {/* Header */}
-        <div className="mt-8 max-w-3xl">
-          <p className="text-xs uppercase tracking-[0.3em] text-[#a07c1f]">
-            {room.collection} · {room.tag}
-          </p>
-          <h1 className="mt-3 font-serif text-4xl sm:text-5xl text-[#2b2b2b] leading-tight">
-            {room.h1 ?? room.name}
-          </h1>
-          <p className="mt-4 text-[#6b6357] leading-relaxed">
-            {room.description}
-          </p>
+            <h3 className="font-display text-2xl text-neutral-900 mb-6">
+              Highlights
+            </h3>
+            <div className="grid grid-cols-1 md:grid-cols-2 gap-4 mb-12">
+              {room.highlights.map((h) => (
+                <div key={h} className="flex items-start gap-3">
+                  <div className="w-6 h-6 rounded-full bg-[#c9a55b] flex items-center justify-center shrink-0 mt-1">
+                    <Check className="w-3 h-3 text-white" strokeWidth={3} />
+                  </div>
+                  <span className="text-gray-700">{h}</span>
+                </div>
+              ))}
+            </div>
+
+            {/* Amenities + SEO sections + FAQs */}
+            <VillaRoomSeoContent room={room} />
+          </div>
         </div>
 
-        {/* Gallery */}
-<div className="mt-10 grid gap-4 lg:grid-cols-[1fr_auto]">
-  <div className="relative aspect-[16/10] overflow-hidden rounded-lg bg-white shadow-[0_1px_2px_rgba(0,0,0,0.04),0_20px_40px_-28px_rgba(31,51,82,0.18)]">
-    <Image
-      src={gallery[active] || "/assets/villas/placeholder.jpg"}
-      alt={room.name}
-      fill
-      className="object-cover"
-      sizes="(max-width: 768px) 100vw, 70vw"
-      priority
-    />
-  </div>
+        {/* RIGHT: booking sidebar */}
+        <div className="lg:col-span-1">
+          <div className="sticky top-24 rounded-2xl border border-gray-200 bg-white p-7 shadow-[0_10px_35px_rgba(0,0,0,0.08)]">
+            <p className="text-[11px] font-semibold uppercase tracking-[0.3em] text-[#c9a55b]">
+              Per Night
+            </p>
 
-  <div className="flex gap-4">
-    {/* First column - first 5 images */}
-    <div className="flex flex-col gap-4">
-      {gallery.slice(0, 5).map((src, i) => (
-        <button
-          key={i}
-          onClick={() => setActive(i)}
-          className={`relative shrink-0 w-27 h-27 overflow-hidden rounded-md transition ${
-            active === i
-              ? "ring-2 ring-[#c9a24a]"
-              : "opacity-80 hover:opacity-100"
-          }`}
-        >
-          <Image
-            src={src}
-            alt={`${room.name} view ${i + 1}`}
-            fill
-            className="object-cover"
-            sizes="96px"
-          />
-        </button>
-      ))}
-    </div>
+            <h3 className="mt-2 font-display text-4xl italic leading-none text-neutral-900">
+              PKR {room.price}
+            </h3>
 
-    {/* Second column - remaining images */}
-    {gallery.length > 5 && (
-      <div className="flex flex-col gap-4">
-        {gallery.slice(5).map((src, i) => (
-          <button
-            key={i + 5}
-            onClick={() => setActive(i + 5)}
-            className={`relative shrink-0 w-27 h-27 overflow-hidden rounded-md transition ${
-              active === i + 5
-                ? "ring-2 ring-[#c9a24a]"
-                : "opacity-80 hover.opacity-100"
-            }`}
-          >
-            <Image
-              src={src}
-              alt={`${room.name} view ${i + 6}`}
-              fill
-              className="object-cover"
-              sizes="96px"
-            />
-          </button>
-        ))}
-      </div>
-    )}
-  </div>
-</div>
+            <p className="mt-2 text-sm text-gray-500">
+              Includes breakfast for 2 guests
+            </p>
 
-        {/* Content grid */}
-        <div className="mt-12 grid gap-10 lg:grid-cols-3">
-          {/* Left: description + highlights + amenities */}
-          <div className="lg:col-span-2 space-y-10">
-            <section>
-              <h2 className="font-serif text-2xl text-[#2b2b2b]">
-                About this stay
-              </h2>
-              <div className="mt-3 h-px w-16 bg-[#c9a24a]" />
-              <p className="mt-5 text-[#5b5347] leading-relaxed">
-                {room.longDescription}
-              </p>
-            </section>
+            <div className="mt-7 space-y-3">
+              <a
+                id="villa_book_now"
+                href={buildWhatsAppVillaBookingUrl({
+                  name: room.name,
+                  tag: room.tag,
+                  price: room.price,
+                  href: room.slug,
+                })}
+                target="_blank"
+                rel="noopener noreferrer"
+                data-event-type="villa_book_now_click"
+                onClick={(e) =>
+                  trackAndOpen(
+                    e,
+                    buildWhatsAppVillaBookingUrl({
+                      name: room.name,
+                      tag: room.tag,
+                      price: room.price,
+                      href: room.slug,
+                    }),
+                    {
+                      villa: room.name,
+                      slug: room.slug,
+                      tag: room.tag,
+                      price: room.price,
+                    }
+                  )
+                }
+                className="flex w-full items-center justify-center rounded-lg bg-[#c9a55b] px-5 py-3.5 text-sm font-semibold uppercase tracking-[0.2em] text-white transition duration-300 hover:bg-[#a98741]"
+              >
+                Book Now
+              </a>
 
-            <section>
-              <h2 className="font-serif text-2xl text-[#2b2b2b]">Highlights</h2>
-              <div className="mt-3 h-px w-16 bg-[#c9a24a]" />
-              <ul className="mt-5 grid gap-3 sm:grid-cols-2">
-                {room.highlights.map((h) => (
-                  <li
-                    key={h}
-                    className="flex items-start gap-3 text-sm text-[#5b5347]"
-                  >
-                    <span className="mt-0.5 flex h-5 w-5 shrink-0 items-center justify-center rounded-full bg-[#fdfaf3] text-[#a07c1f] ring-1 ring-[#ece5d3]">
-                      <Check className="h-3 w-3" strokeWidth={2} />
-                    </span>
-                    {h}
-                  </li>
-                ))}
-              </ul>
-            </section>
+              <a
+                id="villa_enquire"
+                href={buildWhatsAppVillaEnquiryUrl({
+                  name: room.name,
+                  tag: room.tag,
+                  price: room.price,
+                  slug: room.slug,
+                })}
+                target="_blank"
+                rel="noopener noreferrer"
+                data-event-type="villa_enquiry_click"
+                onClick={(e) =>
+                  trackAndOpen(
+                    e,
+                    buildWhatsAppVillaEnquiryUrl({
+                      name: room.name,
+                      tag: room.tag,
+                      price: room.price,
+                      slug: room.slug,
+                    }),
+                    {
+                      villa: room.name,
+                      slug: room.slug,
+                      tag: room.tag,
+                      price: room.price,
+                    }
+                  )
+                }
+                className="flex w-full items-center justify-center rounded-lg border border-gray-300 bg-white px-5 py-3.5 text-sm font-semibold uppercase tracking-[0.2em] text-neutral-900 transition duration-300 hover:border-[#c9a55b] hover:bg-[#faf7f1]"
+              >
+                Enquire
+              </a>
+            </div>
+
+            <div className="my-7 h-px bg-gray-200" />
+
+            <dl className="space-y-4">
+              {room.details.map((d) => (
+                <div
+                  key={d.label}
+                  className="flex items-start justify-between gap-4 border-b border-gray-100 pb-3 last:border-0 last:pb-0"
+                >
+                  <dt className="text-sm text-gray-500">{d.label}</dt>
+                  <dd className="text-right text-sm font-medium text-neutral-900">
+                    {d.value}
+                  </dd>
+                </div>
+              ))}
+            </dl>
           </div>
 
-          {/* Right: booking card + details */}
-        <aside className="lg:col-span-1">
-  <div className="sticky top-8 rounded-2xl border border-[#eee5d6] bg-white p-7 shadow-[0_10px_35px_rgba(0,0,0,0.08)]">
-    {/* Price */}
-    <p className="text-[11px] font-semibold uppercase tracking-[0.3em] text-[#b58a1d]">
-      PER NIGHT
-    </p>
-
-    <h3 className="mt-2 font-serif text-4xl italic leading-none text-[#2b2b2b]">
-      PKR {room.price}
-    </h3>
-
-    <p className="mt-2 text-sm text-[#8a8071]">
-      Includes breakfast for 2 guests
-    </p>
-
-    {/* Buttons */}
-    <div className="mt-7 space-y-3">
-  <a
-  id="villa_book_now"
-  href={buildWhatsAppVillaBookingUrl({
-    name: room.name,
-    tag: room.tag,
-    price: room.price,
-    href: room.slug,
-  })}
-  target="_blank"
-  rel="noopener noreferrer"
-  data-event-type="villa_book_now_click"
-  onClick={(e) =>
-    trackAndOpen(
-      e,
-      buildWhatsAppVillaBookingUrl({
-        name: room.name,
-        tag: room.tag,
-        price: room.price,
-        href: room.slug,
-      }),
-      {
-        villa: room.name,
-        slug: room.slug,
-        tag: room.tag,
-        price: room.price,
-      }
-    )
-  }
-  className="flex w-full items-center justify-center rounded-lg bg-[#2b2b2b] px-5 py-3.5 text-sm font-semibold uppercase tracking-[0.2em] text-white transition duration-300 hover:bg-[#c9a24a]"
->
-  Book Now
-</a>
-
-
-     <a
-  id="villa_enquire"
-  href={buildWhatsAppVillaEnquiryUrl({
-    name: room.name,
-    tag: room.tag,
-    price: room.price,
-    slug: room.slug,
-  })}
-  target="_blank"
-  rel="noopener noreferrer"
-  data-event-type="villa_enquiry_click"
-  onClick={(e) =>
-    trackAndOpen(
-      e,
-      buildWhatsAppVillaEnquiryUrl({
-        name: room.name,
-        tag: room.tag,
-        price: room.price,
-        slug: room.slug,
-      }),
-      {
-        villa: room.name,
-        slug: room.slug,
-        tag: room.tag,
-        price: room.price,
-      }
-    )
-  }
-  className="flex w-full items-center justify-center rounded-lg border border-[#e8deca] bg-[#faf7f1] px-5 py-3.5 text-sm font-semibold uppercase tracking-[0.2em] text-[#2b2b2b] transition duration-300 hover:border-[#c9a24a] hover:bg-[#f5efdf]"
->
-  Enquire
-</a>
-
-
-    </div>
-
-    {/* Divider */}
-    <div className="my-7 h-px bg-[#ece5d3]" />
-
-    {/* Details */}
-    <dl className="space-y-4">
-      {room.details.map((d) => (
-        <div
-          key={d.label}
-          className="flex items-start justify-between gap-4 border-b border-[#f5f0e5] pb-3 last:border-0 last:pb-0"
-        >
-          <dt className="text-sm text-[#8a8071]">{d.label}</dt>
-          <dd className="text-right text-sm font-medium text-[#2b2b2b]">
-            {d.value}
-          </dd>
+          <p className="mt-6 text-center text-xs text-gray-500 max-w-xl mx-auto">
+            Max 3 persons per room with the option of 1 extra mattress
+            (additional charges apply). Rates include complimentary breakfast for
+            2 guests per room.
+          </p>
         </div>
-      ))}
-    </dl>
-  </div>
-</aside>
-        </div>
-
-     
-
-        <p className="mt-16 text-center text-xs text-[#8a8071] max-w-xl mx-auto">
-          Max 3 persons per room with the option of 1 extra mattress (additional
-          charges apply). Rates include complimentary breakfast for 2 guests per
-          room.
-        </p>
       </div>
-        <VillaAmenitiesSection 
-  amenities={room.amenities} 
-  imageByAmenity={amenityImages}   // ← Pass the mapping from villa-content
-/>
     </div>
   );
 }

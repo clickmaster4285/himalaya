@@ -1,9 +1,12 @@
 // components/VillaRoomSeoContent.tsx
+import Image from "next/image";
 import { JsonLd } from "@/components/seo/JsonLd";
 import {
   type Room,
   type RoomSeoBlock,
 } from "@/content/villas/villa-content";
+import { amenityImages } from "@/content/villas/villa-content";
+import VillaAmenitiesSection from "@/components/VillaAmenitiesSection";
 
 function slugify(text: string): string {
   return text
@@ -15,21 +18,29 @@ function slugify(text: string): string {
 
 function SeoBlockView({ block }: { block: RoomSeoBlock }) {
   if (block.type === "paragraph") {
-    return <p className="mt-4 leading-relaxed text-[#6b6357]">{block.text}</p>;
+    return (
+      <p className="text-gray-600 leading-relaxed mb-4">{block.text}</p>
+    );
   }
 
   if (block.type === "bullets") {
     return (
-      <ul className="mt-4 space-y-2">
+      <ul className="space-y-2 mb-4">
         {block.items.map((item) => (
-          <li
-            key={item}
-            className="flex items-start gap-3 leading-relaxed text-[#6b6357]"
-          >
-            <span
-              aria-hidden="true"
-              className="mt-2.5 h-1.5 w-1.5 shrink-0 rounded-full bg-[#a07c1f]"
-            />
+          <li key={item} className="flex items-start gap-3 text-gray-700">
+            <div className="w-6 h-6 rounded-full bg-[#c9a55b] flex items-center justify-center shrink-0 mt-0.5">
+              <svg
+                className="w-3 h-3 text-white"
+                fill="currentColor"
+                viewBox="0 0 20 20"
+              >
+                <path
+                  fillRule="evenodd"
+                  d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z"
+                  clipRule="evenodd"
+                />
+              </svg>
+            </div>
             <span>{item}</span>
           </li>
         ))}
@@ -39,9 +50,11 @@ function SeoBlockView({ block }: { block: RoomSeoBlock }) {
 
   return (
     <div className="mt-6">
-      <h3 className="font-serif text-xl text-[#2b2b2b]">{block.heading}</h3>
+      <h4 className="font-display text-xl text-neutral-900 mb-2">
+        {block.heading}
+      </h4>
       {block.paragraphs.map((paragraph) => (
-        <p key={paragraph} className="mt-3 leading-relaxed text-[#6b6357]">
+        <p key={paragraph} className="text-gray-600 leading-relaxed mb-4">
           {paragraph}
         </p>
       ))}
@@ -49,75 +62,90 @@ function SeoBlockView({ block }: { block: RoomSeoBlock }) {
   );
 }
 
+export function getUsedSectionImages(room: Room): string[] {
+  if (!room.seoContent) return [];
+  return room.seoContent.sections
+    .map((s) => s.image)
+    .filter((img): img is string => Boolean(img));
+}
+
 export default function VillaRoomSeoContent({ room }: { room: Room }) {
   const content = room.seoContent;
 
-  if (!content) return null;
-
-  const faqJsonLd = {
-    id: `hv-jsonld-room-faq-${room.slug}`,
-    data: {
-      "@context": "https://schema.org",
-      "@type": "FAQPage",
-      mainEntity: (content.faqs ?? []).map((faq) => ({
-        "@type": "Question",
-        name: faq.q,
-        acceptedAnswer: {
-          "@type": "Answer",
-          text: faq.a,
+  const faqJsonLd = content?.faqs?.length
+    ? {
+        id: `hv-jsonld-room-faq-${room.slug}`,
+        data: {
+          "@context": "https://schema.org",
+          "@type": "FAQPage",
+          mainEntity: content.faqs.map((faq) => ({
+            "@type": "Question",
+            name: faq.q,
+            acceptedAnswer: { "@type": "Answer", text: faq.a },
+          })),
         },
-      })),
-    },
-  };
+      }
+    : null;
 
   return (
     <>
-      {content.faqs && content.faqs.length > 0 && (
-        <JsonLd items={[faqJsonLd]} />
-      )}
-      <section className="bg-[#e9e2d1] pb-16 lg:pb-20">
-        <div className="mx-auto max-w-3xl px-4 sm:px-6 lg:px-8">
-          <article className="rounded-2xl border border-[#eee5d6] bg-white p-7 shadow-[0_10px_35px_rgba(0,0,0,0.08)] sm:p-10">
-            {content.sections.map((section) => (
-              <section
-                key={section.heading}
-                id={slugify(section.heading)}
-                className="mt-12 first:mt-0"
-              >
-                <h2 className="font-serif text-2xl text-[#2b2b2b] leading-snug sm:text-3xl">
-                  {section.heading}
-                </h2>
-                {section.blocks.map((block, i) => (
-                  <SeoBlockView key={i} block={block} />
-                ))}
-              </section>
-            ))}
+      {faqJsonLd && <JsonLd items={[faqJsonLd]} />}
 
-            {content.faqs && content.faqs.length > 0 && (
-              <section className="mt-12">
-                <h2 className="font-serif text-2xl text-[#2b2b2b] leading-snug sm:text-3xl">
-                  FAQs
-                </h2>
-                <div className="mt-6 space-y-4">
-                  {content.faqs.map((faq) => (
-                    <article
-                      key={faq.q}
-                      className="rounded-lg border border-[#f0e6d6] bg-[#faf7f1] p-5"
-                    >
-                      <h3 className="font-serif text-lg text-[#2b2b2b]">
-                        {faq.q}
-                      </h3>
-                      <p className="mt-2 text-sm leading-relaxed text-[#6b6357]">
-                        {faq.a}
-                      </p>
-                    </article>
-                  ))}
-                </div>
-              </section>
-            )}
-          </article>
+     
+      
+
+      {/* SEO sections */}
+      {content?.sections.map((section) => (
+        <div
+          key={section.heading}
+          id={slugify(section.heading)}
+          className="mt-14"
+        >
+          <h3 className="font-display text-2xl text-neutral-900 mb-4">
+            {section.heading}
+          </h3>
+
+          {section.image && (
+            <div className="relative aspect-[16/9] w-full overflow-hidden rounded-3xl bg-gray-100 mb-6">
+              <Image
+                src={section.image}
+                alt={section.heading}
+                fill
+                className="object-cover"
+                sizes="(max-width: 1024px) 100vw, 800px"
+              />
+            </div>
+          )}
+
+          {section.blocks.map((block, i) => (
+            <SeoBlockView key={i} block={block} />
+          ))}
         </div>
-      </section>
+      ))}
+
+      {/* FAQs — bg-gray-50 card style */}
+      {content?.faqs && content.faqs.length > 0 && (
+        <div className="mt-14">
+          <h3 className="font-display text-2xl text-neutral-900 mb-6">
+            Frequently Asked Questions
+          </h3>
+          <div className="space-y-4">
+            {content.faqs.map((faq) => (
+              <article
+                key={faq.q}
+                className="rounded-xl border border-gray-200 bg-gray-50 p-5"
+              >
+                <h4 className="font-display text-lg text-neutral-900">
+                  {faq.q}
+                </h4>
+                <p className="mt-2 text-sm leading-relaxed text-gray-600">
+                  {faq.a}
+                </p>
+              </article>
+            ))}
+          </div>
+        </div>
+      )}
     </>
   );
 }

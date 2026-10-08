@@ -53,7 +53,7 @@ export default function VillaAmenitiesSection({
   return (
     <section className={className}>
       <div className="bg-[#1E2421] text-white py-16 md:py-20">
-        <div className="max-w-[1200px] mx-auto px-6 md:px-20 lg:px-28">
+        <div className="max-w-7xl mx-auto ">
           <h2 className="font-display text-5xl md:text-6xl italic mb-10">
             {title}
           </h2>

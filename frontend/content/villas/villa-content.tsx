@@ -122,6 +122,8 @@ export type RoomSeoBlock = RoomSeoSubsection | RoomSeoParagraph | RoomSeoBullets
 export type RoomSeoSection = {
   heading: string;
   blocks: RoomSeoBlock[];
+  /** Optional inline image shown right after the section heading. */
+  image?: string;
 };
 
 export type RoomSeoFaq = { q: string; a: string };
@@ -162,6 +164,7 @@ const rakaposhiSingleExecutiveSeoContent: RoomSeoContent = {
   sections: [
     {
       heading: "Rakaposhi Single Executive Room at Himalaya Villas",
+      image: imagePaths['rakaposhi-single-executive'][1],
       blocks: [
         {
           type: "paragraph",
@@ -171,6 +174,7 @@ const rakaposhiSingleExecutiveSeoContent: RoomSeoContent = {
     },
     {
       heading: "About the Rakaposhi Single Executive Room",
+      image: imagePaths['rakaposhi-single-executive'][2],
       blocks: [
         {
           type: "paragraph",
@@ -184,6 +188,7 @@ const rakaposhiSingleExecutiveSeoContent: RoomSeoContent = {
     },
     {
       heading: "Room Features and Amenities",
+      image: imagePaths['rakaposhi-single-executive'][3],
       blocks: [
         {
           type: "subsection",
@@ -350,6 +355,7 @@ const luxuryCompleteVillaSeoContent: RoomSeoContent = {
   sections: [
     {
       heading: "Luxury Complete Villas in the Himalayas",
+      image: imagePaths['luxury-complete-villa'][1],
       blocks: [
         {
           type: "paragraph",
@@ -363,6 +369,7 @@ const luxuryCompleteVillaSeoContent: RoomSeoContent = {
     },
     {
       heading: "What Makes a Villa \"Complete\"",
+      image: imagePaths['luxury-complete-villa'][2],
       blocks: [
         {
           type: "paragraph",
@@ -386,20 +393,22 @@ const luxuryCompleteVillaSeoContent: RoomSeoContent = {
     },
     {
       heading: "Who These Villas Are Built For",
+      image: imagePaths['luxury-complete-villa'][3],
       blocks: [
         {
           type: "bullets",
           items: [
-        "Multi-generational family trips. Complete Villas typically have 3–6 bedrooms with independent living areas, so grandparents get quiet and privacy while kids have room to run.",
-        "Destination celebrations. Anniversaries, proposals, and small milestone gatherings work well here because you get an entire property, not a shared hotel floor.",
-        "Remote workers extending a trip. With private Wi-Fi, a quiet workspace, and no shared common areas, a \"workation\" is genuinely workable, not just marketed as one.",
-        "Privacy-focused travelers. No lobby, no shared elevators, no other guests walking past your door — the villa is the only thing on the property during your stay.",
+            "Multi-generational family trips. Complete Villas typically have 3–6 bedrooms with independent living areas, so grandparents get quiet and privacy while kids have room to run.",
+            "Destination celebrations. Anniversaries, proposals, and small milestone gatherings work well here because you get an entire property, not a shared hotel floor.",
+            "Remote workers extending a trip. With private Wi-Fi, a quiet workspace, and no shared common areas, a \"workation\" is genuinely workable, not just marketed as one.",
+            "Privacy-focused travelers. No lobby, no shared elevators, no other guests walking past your door — the villa is the only thing on the property during your stay.",
           ],
         },
       ],
     },
     {
       heading: "Location and Setting",
+      image: imagePaths['luxury-complete-villa'][4],
       blocks: [
         {
           type: "paragraph",
@@ -422,6 +431,7 @@ const luxuryCompleteVillaSeoContent: RoomSeoContent = {
     },
     {
       heading: "Amenities Inside the Villa",
+      image: imagePaths['luxury-complete-villa'][5],
       blocks: [
         {
           type: "bullets",

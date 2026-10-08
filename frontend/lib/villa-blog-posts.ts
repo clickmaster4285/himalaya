@@ -202,6 +202,16 @@ export const VILLA_BLOG_POSTS: VillaBlogPost[] = [
     coverImage: "/assets/villa-presidential-real.jpg",
   },
   {
+  slug: "best-resorts-in-murree-for-2-day-weekend-trip",
+  title: "Best Resorts in Murree for 2-Day Weekend Trip - Himalaya Villas & Resorts",
+  headline: "Resorts in Murree for 2-Day Weekend Trip",
+  excerpt:
+    "Planning a quick Murree getaway? Learn how to choose where to stay, what to see in two days, what it costs, and why Himalaya Villas & Resorts suits a weekend escape.",
+  date: "2026-04-24",
+  readMinutes: 9,
+  coverImage: "/images/blogs/best-weekend-trip.jpg",
+},
+  {
     slug: "amenities-that-matter",
     title: "Amenities that matter: what sets a luxury villa apart from a hotel",
     excerpt:
@@ -268,6 +278,16 @@ export const VILLA_BLOG_POSTS: VillaBlogPost[] = [
   date: "2026-04-24",
   readMinutes: 13,
   coverImage: "/assets/murree-resorts.png",
+},
+{
+  slug: "where-to-stay-in-murree-with-family",
+  title: "Where to Stay in Murree With Family: Best Areas & Accommodation Guide",
+  headline: "Stay in Murree With Family: Compare Areas, Stays & Villas",
+  excerpt:
+    "Not sure where to stay in Murree with family? See which area suits your kids, parents and budget, and pick the right villa, resort or hotel with confidence.",
+  date: "2026-04-24",
+  readMinutes: 11,
+  coverImage: "/images/blogs/murree-family-stay.jpg",
 },
 {
   slug: "himalaya-villas-function-hall-bhurban-murree",

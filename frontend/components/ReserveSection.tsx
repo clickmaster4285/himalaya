@@ -27,7 +27,7 @@ const ReserveSection = () => {
           transition={{ duration: 0.8, delay: 0.15 }}
           className="mt-4 font-display text-4xl md:text-5xl lg:text-6xl font-normal leading-tight text-foreground"
         >
-          Book Your Stay at Himalaya Villas &amp; Resort
+         Book Your Stay at Himalaya Villas and Resort Hotel
         </motion.h2>
 
         <motion.p
@@ -36,8 +36,17 @@ const ReserveSection = () => {
           transition={{ duration: 0.8, delay: 0.3 }}
           className="mt-6 text-sm md:text-base text-muted-foreground max-w-2xl mx-auto"
         >
-          Whether you were searching for top hotels in Murree, luxury hotels in Murree, or simply a low price hotel in Murree with real comfort, Himalaya Villas &amp; Resort brings all of it together — panoramic views, private villas, and genuine hospitality in the heart of Bhurban. Our concierge team is available 24/7 to help you choose the right room and plan your stay.
-        </motion.p>
+          Enjoy comfortable accommodation in Bhurban, Murree, with rooms, suites, apartments, and complete villas available for different guest needs. Whether you are arranging an individual stay, a family visit, a group booking, or a private event, our team can help you explore the available options.
+ </motion.p>
+
+  <motion.p
+          initial={{ opacity: 0, y: 30 }}
+          animate={isInView ? { opacity: 1, y: 0 } : {}}
+          transition={{ duration: 0.8, delay: 0.3 }}
+          className="mt-6 text-sm md:text-base text-muted-foreground max-w-2xl mx-auto"
+        >
+          Contact us with your dates and requirements to check accommodation availability, confirm rates, and arrange your booking.
+</motion.p>
 
         <motion.div
           initial={{ opacity: 0, y: 30 }}
@@ -82,7 +91,7 @@ const ReserveSection = () => {
   }
   className="inline-flex items-center justify-center rounded-sm border border-border bg-transparent px-6 py-3 text-sm font-medium tracking-wide text-foreground transition-colors duration-300 hover:bg-foreground hover:text-background w-full sm:w-auto"
 >
-  Contact Us on WhatsApp
+  Book on WhatsApp
 </a>
         </motion.div>
       </div>

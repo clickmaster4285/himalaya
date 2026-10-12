@@ -31,14 +31,14 @@ export const STATIC_VILLAS: VillaPublic[] = [
     title: "The Presidential Suite",
     category: "Presidential",
     description:
-      "The flagship. A private terrace, jacuzzi with mountain views, and the kind of stillness Islamabad cannot offer. For guests who want the best of what the mountain has.",
+      "The flagship. A private terrace, with mountain views, and the kind of stillness Islamabad cannot offer. For guests who want the best of what the mountain has.",
     price: "PKR 65,000",
     image: "/assets/villa-presidential-real.jpg",
     gallery: ["/assets/gallery-interior.jpg", "/assets/gallery-dining-night.jpg", "/assets/gallery-exterior.jpg"],
     bedrooms: 5,
     guests: 8,
     size: "530m²",
-    highlights: ["Private terrace and jacuzzi", "Panoramic glass living room", "Master lounge"],
+    highlights: ["Private terrace and", "Panoramic glass living room", "Master lounge"],
     amenities: [
       
       "Butler Service",

@@ -1,6 +1,7 @@
 "use client";
 
 import Image from "next/image";
+import Link from "next/link";
 import { useRef, useState, useEffect } from "react";
 import { motion, useScroll, useTransform, AnimatePresence } from "framer-motion";
 
@@ -13,25 +14,21 @@ const amenityImages = [
 ];
 
 const amenities = [
-  { 
-    title: "Panoramic Himalayan Views", 
-    desc: "Breathtaking scenery surrounding the private estate." 
+  {
+    title: "Comfortable Rooms & Living Areas",
+    desc: "Enjoy furnished bedrooms, spacious suites, comfortable seating areas, and shared living spaces in selected accommodation options.",
   },
-  { 
-    title: "Luxury Designer Interiors", 
-    desc: "Elegant spaces designed for comfort and sophistication." 
+  {
+    title: "Mountain Views & Outdoor Spaces",
+    desc: "Take in the surrounding hills from selected rooms and outdoor areas, with spaces to sit, relax, and spend time with family.",
   },
-  { 
-    title: "Gourmet Dining", 
-    desc: "Exceptional culinary experiences for guests and events." 
+  {
+    title: "Dining & Meal Arrangements",
+    desc: "Guests can enquire about available meal services, dining arrangements, and customized menus for private gatherings.",
   },
-  { 
-    title: "Outdoor Celebration Spaces", 
-    desc: "Perfect settings for weddings and private gatherings." 
-  },
-  { 
-    title: "Corporate Retreat Facilities", 
-    desc: "Private venue for executive meetings and retreats." 
+  {
+    title: "Spaces for Private Gatherings",
+    desc: "Our property offers areas for family celebrations, weddings, and corporate gatherings, with arrangements based on your event requirements.",
   },
 ];
 
@@ -87,7 +84,7 @@ function NavItem({
   );
 }
 
-// Mobile Navigation Dots Component
+// Mobile / Tablet Navigation Dots Component
 function MobileDots({
   total,
   active,
@@ -115,10 +112,25 @@ function MobileDots({
   );
 }
 
+// CTA Button — shared between layouts
+function ExploreFacilitiesCTA({ className = "" }: { className?: string }) {
+  return (
+    <Link
+      href="/villas"
+      className={`inline-flex items-center gap-2 rounded-md border border-[#c9a24a] bg-[#fdfaf3] px-6 py-3 text-xs font-medium uppercase tracking-[0.2em] text-[#2b2b2b] transition hover:bg-[#f5efdf] ${className}`}
+    >
+      Explore Our Facilities
+      <span aria-hidden>→</span>
+    </Link>
+  );
+}
+
 const AmenitiesSection = () => {
   const sectionRef = useRef<HTMLDivElement>(null);
   const [active, setActive] = useState(0);
-  const [isMobile, setIsMobile] = useState(false);
+  // Default to true so SSR / first paint doesn't flash the desktop layout on tablets.
+  // We'll immediately correct this on mount.
+  const [useCompactLayout, setUseCompactLayout] = useState(true);
 
   const { scrollYProgress } = useScroll({
     target: sectionRef,
@@ -126,12 +138,14 @@ const AmenitiesSection = () => {
   });
 
   useEffect(() => {
-    const checkMobile = () => {
-      setIsMobile(window.innerWidth < 768);
+    const checkLayout = () => {
+      // Compact layout for anything below `lg` (mobile + tablet).
+      // Two-column layout only on lg and up (≥1024px).
+      setUseCompactLayout(window.innerWidth < 1024);
     };
-    checkMobile();
-    window.addEventListener("resize", checkMobile);
-    return () => window.removeEventListener("resize", checkMobile);
+    checkLayout();
+    window.addEventListener("resize", checkLayout);
+    return () => window.removeEventListener("resize", checkLayout);
   }, []);
 
   // Track which item is active based on scroll progress
@@ -160,7 +174,7 @@ const AmenitiesSection = () => {
     >
       <div className="sticky top-0 h-screen flex items-center">
         <div className="max-w-7xl mx-auto w-full px-4 md:px-8 lg:px-16">
-          
+
           {/* Header */}
           <div className="mb-6 md:mb-8 lg:mb-12">
             <motion.h2
@@ -170,15 +184,15 @@ const AmenitiesSection = () => {
               className="text-3xl md:text-[40px] lg:text-[60px] italic text-foreground"
               style={{ fontFamily: "'Cormorant Garamond', serif", fontWeight: 500 }}
             >
-              Refined Amenities
+              Facilities & Amenities for a Comfortable Stay
             </motion.h2>
           </div>
 
-          {/* Mobile Layout */}
-          {isMobile ? (
-            <div className="space-y-6">
+          {/* Mobile + Tablet: Compact single-column layout */}
+          {useCompactLayout ? (
+            <div className="space-y-6 md:space-y-8 max-w-2xl md:mx-auto">
               {/* Image */}
-              <div className="relative w-full aspect-[4/3] overflow-hidden border border-border p-2">
+              <div className="relative w-full aspect-[4/3] md:aspect-[16/10] overflow-hidden border border-border p-2">
                 <AnimatePresence mode="wait">
                   <motion.div
                     key={amenities[active].title}
@@ -192,7 +206,7 @@ const AmenitiesSection = () => {
                       src={amenityImages[active % amenityImages.length]}
                       alt={amenities[active].title}
                       fill
-                      sizes="100vw"
+                      sizes="(max-width: 768px) 100vw, 672px"
                       className="object-cover"
                       priority
                     />
@@ -200,8 +214,8 @@ const AmenitiesSection = () => {
                 </AnimatePresence>
               </div>
 
-              {/* Active Title & Description - Only shows the current one */}
-              <div className="space-y-3">
+              {/* Active Title & Description */}
+              <div className="space-y-3 md:space-y-4">
                 <AnimatePresence mode="wait">
                   <motion.h3
                     key={amenities[active].title}
@@ -209,7 +223,7 @@ const AmenitiesSection = () => {
                     animate={{ opacity: 1, y: 0 }}
                     exit={{ opacity: 0, y: -10 }}
                     transition={{ duration: 0.4 }}
-                    className="text-xl font-medium text-foreground"
+                    className="text-xl md:text-2xl font-medium text-foreground"
                   >
                     {amenities[active].title}
                   </motion.h3>
@@ -222,7 +236,7 @@ const AmenitiesSection = () => {
                     animate={{ opacity: 1, y: 0 }}
                     exit={{ opacity: 0, y: -8 }}
                     transition={{ duration: 0.45, delay: 0.1 }}
-                    className="text-sm text-muted-foreground leading-relaxed"
+                    className="text-sm md:text-base text-muted-foreground leading-relaxed"
                   >
                     {amenities[active].desc}
                   </motion.p>
@@ -234,12 +248,17 @@ const AmenitiesSection = () => {
                   active={active}
                   onClick={handleDotClick}
                 />
+
+                {/* CTA */}
+                <div className="pt-2 flex justify-center">
+                  <ExploreFacilitiesCTA />
+                </div>
               </div>
             </div>
           ) : (
-            /* Tablet & Desktop: Original Layout */
+            /* Desktop: Two-column layout */
             <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 md:gap-12 items-start">
-              
+
               {/* Left: Points List */}
               <div>
                 <ul className="space-y-0">
@@ -278,6 +297,11 @@ const AmenitiesSection = () => {
                       {amenities[active].desc}
                     </motion.p>
                   </AnimatePresence>
+
+                  {/* CTA */}
+                  <div className="mt-6 md:mt-8">
+                    <ExploreFacilitiesCTA />
+                  </div>
                 </div>
               </div>
 

@@ -16,48 +16,85 @@ const JournalSection = () => {
   const isInView = useInView(ref, { once: true, margin: "-100px" });
 
   return (
-    <section ref={ref} className="py-12 md:py-20 lg:py-28 px-4 sm:px-6 md:px-8 !bg-[#EAE2D7]">
+    <section
+      ref={ref}
+      className="py-20 md:py-28 px-5 sm:px-6 md:px-8"
+      style={{ background: "#EAE2D7" }}
+    >
       <div className="max-w-6xl mx-auto">
-        <motion.h2
-          initial={{ opacity: 0, y: 30 }}
-          animate={isInView ? { opacity: 1, y: 0 } : {}}
-          transition={{ duration: 0.8 }}
-          className="text-3xl sm:text-4xl md:text-[48px] italic text-foreground mb-6 md:mb-8 text-center md:text-left leading-tight"
-          style={{ fontFamily: "'Cormorant Garamond', serif", fontWeight: 500 }}
-        >
-          Location — Close to Murree Mall Road, Away from the Crowd
-        </motion.h2>
+        {/* Header */}
+        <div className="text-center mb-10 md:mb-14 max-w-3xl mx-auto">
+          <motion.p
+            initial={{ opacity: 0, y: 20 }}
+            animate={isInView ? { opacity: 1, y: 0 } : {}}
+            transition={{ duration: 0.6 }}
+            className="text-[10px] sm:text-xs tracking-[0.3em] uppercase mb-3 sm:mb-4"
+            style={{ color: "#a07c1f" }}
+          >
+            Bhurban · Murree
+          </motion.p>
 
-        <motion.p
-          initial={{ opacity: 0, y: 20 }}
-          animate={isInView ? { opacity: 1, y: 0 } : {}}
-          transition={{ duration: 0.8, delay: 0.15 }}
-          className="text-base md:text-lg text-muted-foreground leading-relaxed max-w-4xl mb-8 md:mb-12 text-center md:text-left"
-        >
-          Himalaya Villas &amp; Resort is located in Bhurban, just a short scenic drive from Murree Mall Road, giving you the best of both worlds — quick access to Murree&apos;s markets, viewpoints, and street food, and the peace of a private estate once you&apos;re back at the resort. If you&apos;re searching for the best hotel in Murree near Mall Road but don&apos;t want to compromise on privacy or parking hassle, Bhurban&apos;s quieter setting is often the better choice for families and couples alike.
-        </motion.p>
+          <motion.h2
+            initial={{ opacity: 0, y: 30 }}
+            animate={isInView ? { opacity: 1, y: 0 } : {}}
+            transition={{ duration: 0.8, delay: 0.1 }}
+            className="font-display text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-normal leading-tight"
+            style={{ color: "#2b2b2b" }}
+          >
+            Stay at Our Resort Hotel in Bhurban, Murree
+          </motion.h2>
 
-        {/* Mobile: Single column, Tablet: 2 columns, Desktop: 3 columns */}
+          
+        </div>
+
+        {/* Intro paragraphs */}
+        <div className="max-w-4xl mx-auto mb-10 md:mb-14 space-y-4 text-center">
+          <motion.p
+            initial={{ opacity: 0, y: 20 }}
+            animate={isInView ? { opacity: 1, y: 0 } : {}}
+            transition={{ duration: 0.8, delay: 0.35 }}
+            className="text-sm sm:text-base md:text-lg leading-relaxed"
+            style={{ color: "#6b6357" }}
+          >
+            Himalaya Villas and Resort Hotel is located in Bhurban, a well-known
+            mountain destination in the Murree region. Our location provides a
+            relaxing setting for guests who want comfortable accommodation while
+            exploring the surrounding hills and nearby attractions.
+          </motion.p>
+
+          <motion.p
+            initial={{ opacity: 0, y: 20 }}
+            animate={isInView ? { opacity: 1, y: 0 } : {}}
+            transition={{ duration: 0.8, delay: 0.45 }}
+            className="text-sm sm:text-base md:text-lg leading-relaxed"
+            style={{ color: "#6b6357" }}
+          >
+            Visitors travelling from Islamabad, Rawalpindi, and other cities can
+            plan short stays, family visits, and private gatherings at the
+            property.
+          </motion.p>
+        </div>
+
+        {/* Gallery grid */}
         <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 auto-rows-[200px] sm:auto-rows-[220px] md:auto-rows-[250px] gap-3 md:gap-4">
           {images.map((img, i) => {
-            // Adjust className based on screen size
             let responsiveClassName = img.className;
-            
-            // On mobile, override complex grid placements to simple spans
+
             if (img.className.includes("row-span-2")) {
               responsiveClassName = "sm:row-span-2 col-span-1";
             }
             if (img.className.includes("col-span-2")) {
               responsiveClassName = "sm:col-span-2 col-span-1";
             }
-            
+
             return (
               <motion.div
                 key={i}
                 initial={{ opacity: 0, scale: 0.95 }}
                 animate={isInView ? { opacity: 1, scale: 1 } : {}}
-                transition={{ duration: 0.6, delay: i * 0.15 }}
-                className={`${responsiveClassName} relative overflow-hidden rounded-sm group`}
+                transition={{ duration: 0.6, delay: 0.55 + i * 0.12 }}
+                className={`${responsiveClassName} relative overflow-hidden rounded-lg group`}
+                style={{ border: "1px solid rgba(201, 162, 74, 0.25)" }}
               >
                 <Image
                   src={img.src}
@@ -66,6 +103,16 @@ const JournalSection = () => {
                   sizes="(max-width: 640px) 90vw, (max-width: 1024px) 45vw, 30vw"
                   className="object-cover transition-transform duration-700 group-hover:scale-105"
                   priority={i === 0}
+                />
+
+                {/* Soft gold vignette on hover */}
+                <div
+                  aria-hidden
+                  className="absolute inset-0 opacity-0 group-hover:opacity-100 transition-opacity duration-500 pointer-events-none"
+                  style={{
+                    background:
+                      "linear-gradient(to top, rgba(201, 162, 74, 0.15), transparent 60%)",
+                  }}
                 />
               </motion.div>
             );

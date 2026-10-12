@@ -1076,7 +1076,7 @@ const article423Hero = "/images/articles/article423-hero.jpg";
 const article423Villa = "/images/articles/article423-villa.jpg";
 const article423View = "/images/articles/article423-view.jpg";
 
-// Article 425 - Villa with Jacuzzi at Bhurban — The Presidential S
+// Article 425 - Villa with at Bhurban — The Presidential S
 const article425Hero = "/images/articles/article425-hero.jpg";
 const article425Villa = "/images/articles/article425-villa.jpg";
 const article425View = "/images/articles/article425-view.jpg";
@@ -2458,7 +2458,7 @@ export const article05: Article = {
     {
       type: "callout-qa",
       question: "Is there a luxury private villa in Bhurban Murree?",
-      answer: "Yes. Himalaya Villas & Resorts in Mohra Iswal, Bhurban, is the only fully private luxury villa estate in the Bhurban area. The property has 12 individually designed villas — ranging from the Serene Valley Cabin (PKR 39,000/night) to the Presidential Suite with private jacuzzi (PKR 70,000/night). The estate operates on exclusive-use terms: no other guests are on the property during your stay. It is 47km from Islamabad (45 minutes), 0.5km from Pearl Continental Bhurban. The demand for private villa accommodation near Islamabad has grown as a specific category of Pakistani traveller has emerged: guests who have outgrown the hotel model, who want the mountain experience but not the hotel corrido...",
+      answer: "Yes. Himalaya Villas & Resorts in Mohra Iswal, Bhurban, is the only fully private luxury villa estate in the Bhurban area. The property has 12 individually designed villas — ranging from the Serene Valley Cabin (PKR 39,000/night) to the Presidential Suite with private (PKR 70,000/night). The estate operates on exclusive-use terms: no other guests are on the property during your stay. It is 47km from Islamabad (45 minutes), 0.5km from Pearl Continental Bhurban. The demand for private villa accommodation near Islamabad has grown as a specific category of Pakistani traveller has emerged: guests who have outgrown the hotel model, who want the mountain experience but not the hotel corrido...",
     },
     {
       type: "section",
@@ -2466,8 +2466,8 @@ export const article05: Article = {
       paragraphs: [
         "Rate: PKR 65,000–70,000 per night",
         "Capacity: 2 guests primary — up to 4",
-        "Defining feature: Private terrace jacuzzi with 270-degree mountain view",
-        "The Presidential Suite is the property's most requested villa. The private terrace jacuzzi — positioned above the hillside with views extending across the Murree ridge — is what guests describe first on return. The terrace captures morning light from the northeast; by 8am, with the jacuzzi at 40°C and the Bhurban air at 12°C, the experience is singular in the Murree hills.",
+        "Defining feature: Private terrace with 270-degree mountain view",
+        "The Presidential Suite is the property's most requested villa. The private terrace — positioned above the hillside with views extending across the Murree ridge — is what guests describe first on return. The terrace captures morning light from the northeast; by 8am, with the at 40°C and the Bhurban air at 12°C, the experience is singular in the Murree hills.",
       ],
       image: {
         src: article05Villa,
@@ -2978,7 +2978,7 @@ export const article10: Article = {
     question:
       "Is there a honeymoon package at a private villa in Bhurban Murree?",
     answer:
-      "Yes. Himalaya Villas & Resorts offers a honeymoon experience centred around the Presidential Suite — the property's most private accommodation featuring a terrace jacuzzi, mountain views, premium bedding, and complete seclusion. Located just 45 minutes from Islamabad, it is designed for couples seeking privacy rather than a conventional hotel stay.",
+      "Yes. Himalaya Villas & Resorts offers a honeymoon experience centred around the Presidential Suite — the property's most private accommodation featuring a terrace, mountain views, premium bedding, and complete seclusion. Located just 45 minutes from Islamabad, it is designed for couples seeking privacy rather than a conventional hotel stay.",
   },
 
   {
@@ -3001,8 +3001,8 @@ export const article10: Article = {
     heading: "Presidential Suite Details",
     items: [
       {
-        label: "Private Jacuzzi",
-        value: "Terrace jacuzzi with 270-degree mountain views",
+        label: "Private",
+        value: "Terrace with 270-degree mountain views",
       },
       {
         label: "Bedrooms",
@@ -3079,7 +3079,7 @@ export const article10: Article = {
       "Spring (March–April): wildflowers and clear skies.",
       "Summer (June–August): cool mountain temperatures and green landscapes.",
       "Autumn (September–October): golden forests and crisp mountain air.",
-      "Winter (December–February): snowfall and jacuzzi experiences in cold mountain weather.",
+      "Winter (December–February): snowfall and experiences in cold mountain weather.",
     ],
     image: {
       src: article10Villa,
@@ -3109,7 +3109,7 @@ export const article10: Article = {
       },
       {
         q: "Is the Presidential Suite suitable for a winter honeymoon?",
-        a: "Yes. The suite features central heating, heavy winter bedding, and a heated outdoor jacuzzi operating year-round.",
+        a: "Yes. The suite features central heating, heavy winter bedding, and a heated outdoor operating year-round.",
       },
       {
         q: "Is Bhurban better than Nathia Gali for a honeymoon?",
@@ -4503,7 +4503,7 @@ export const article18: Article = {
       paragraphs: [
         "The First Morning",
         "A significant snowfall event (20cm+) typically begins in the afternoon and continues through the night. Guests in the villas wake to a transformed property: the cedar garden under 15–25cm of fresh snow, the terrace railings built into white ridges, the valley below completely invisible under cloud and snow fog.",
-        "At this point, Islamabad is at 10°C and traffic is normal. The Bhurban hills are in a different world. The Presidential Suite jacuzzi at 40°C, surrounded by fresh snow on every surface, with the Murree ridge entirely white above — this is the image that the property is associated with in January social media.",
+        "At this point, Islamabad is at 10°C and traffic is normal. The Bhurban hills are in a different world. The Presidential Suite at 40°C, surrounded by fresh snow on every surface, with the Murree ridge entirely white above — this is the image that the property is associated with in January social media.",
         "",
         "Forest Walks in Snow",
         "The cedar forest paths accessible directly from Himalaya Villas are the best snow-walking in the Bhurban area. The paths are maintained and navigable even under 15–20cm of snow. The canopy holds additional snow above the path. The silence of a snowed-in forest — the muffled quality of sound, the absence of bird calls in the cold, the crunch of fresh snow underfoot — is an atmospheric experience that most Pakistanis who grow up in the plains do not encounter until a Bhurban winter stay.",
@@ -8844,7 +8844,7 @@ export const article43: Article = {
       type: "callout-qa",
       question: "Is Murree a good destination for couples?",
       answer:
-        "Yes. Murree and Bhurban offer a genuinely romantic mountain setting — pine forests at 6,800 feet, panoramic views, cool mountain air, and private estate accommodation that city hotels cannot replicate. The best couples' accommodation in the Murree region is Himalaya Villas & Resorts in Bhurban: the Presidential Suite (private terrace jacuzzi, 270° mountain views, PKR 65,000–70,000/night) and the Himalayan Penthouse (panoramic balcony, PKR 60,000–65,000/night) are specifically suited for couples wanting privacy, views, and an experience distinct from any hotel.",
+        "Yes. Murree and Bhurban offer a genuinely romantic mountain setting — pine forests at 6,800 feet, panoramic views, cool mountain air, and private estate accommodation that city hotels cannot replicate. The best couples' accommodation in the Murree region is Himalaya Villas & Resorts in Bhurban: the Presidential Suite (private terrace, 270° mountain views, PKR 65,000–70,000/night) and the Himalayan Penthouse (panoramic balcony, PKR 60,000–65,000/night) are specifically suited for couples wanting privacy, views, and an experience distinct from any hotel.",
     },
 
     {
@@ -8852,7 +8852,7 @@ export const article43: Article = {
       heading: "Murree for Couples — Romantic Getaway Guide 2026",
       paragraphs: [
         "Murree for couples divides into two categories. The first category is Mall Road Murree — the bazaar, the chairlifts, the street food, the hill station energy. It is romantic in the casual sense: cold mountain air, a hot cup of chai, walking a ridgeline road together. It is also shared with everyone else who made the same trip that weekend.",
-        "The second category is Bhurban — where the romance of the mountains happens at a private estate level. A terrace with 270-degree mountain views at dawn. A jacuzzi at 40°C in -2°C January air. A candlelit dinner on a private cedar terrace with the valley fog below. These experiences are available at one property in the Bhurban hills: Himalaya Villas & Resorts.",
+        "The second category is Bhurban — where the romance of the mountains happens at a private estate level. A terrace with 270-degree mountain views at dawn. A at 40°C in -2°C January air. A candlelit dinner on a private cedar terrace with the valley fog below. These experiences are available at one property in the Bhurban hills: Himalaya Villas & Resorts.",
       ],
       image: {
         src: article43Villa,
@@ -8865,7 +8865,7 @@ export const article43: Article = {
       heading: "The Presidential Suite — The Couples' Villa",
       paragraphs: [
         "The Presidential Suite is the flagship couples' accommodation at Himalaya Villas. Every element of its design serves the specific experience of two people in a private mountain space:",
-        "Private terrace jacuzzi: the suite's defining feature. Positioned on the hillside with views extending across the Murree ridge, the jacuzzi operates at 40°C year-round. In summer, the contrast between warm water and mountain air (18–22°C) is pleasant. In winter, the same contrast at -2°C is extraordinary.",
+        "Private terrace: the suite's defining feature. Positioned on the hillside with views extending across the Murree ridge, the operates at 40°C year-round. In summer, the contrast between warm water and mountain air (18–22°C) is pleasant. In winter, the same contrast at -2°C is extraordinary.",
         "270-degree mountain views: the suite's terrace orientation captures the morning light from the northeast and the afternoon sky to the west. There is no time of day when the view is ordinary.",
         "King-size bedrooms: two bedrooms for couples who want the option of private space within the suite, with the shared terrace and living area as the gathering point.",
         "Floor-to-ceiling windows: the internal view from the bedroom matches the terrace view — the mountain is present whether you step outside or not.",
@@ -8881,7 +8881,7 @@ export const article43: Article = {
       type: "section",
       heading: "The Himalayan Penthouse — For Couples Who Prefer Breadth",
       paragraphs: [
-        "Where the Presidential Suite offers the jacuzzi and the elevated hillside position, the Himalayan Penthouse offers the broadest private terrace on the estate — approximately 8 metres of mountain-facing balcony at the highest point of the property. For couples whose primary activity is sitting together and watching the mountain, this is the correct villa.",
+        "Where the Presidential Suite offers the and the elevated hillside position, the Himalayan Penthouse offers the broadest private terrace on the estate — approximately 8 metres of mountain-facing balcony at the highest point of the property. For couples whose primary activity is sitting together and watching the mountain, this is the correct villa.",
         "Rate: PKR 60,000–65,000 per night",
         "Best for: Couples wanting maximum outdoor terrace space and the widest panorama",
       ],
@@ -8996,11 +8996,11 @@ export const article43: Article = {
       items: [
         {
           q: "What is the most romantic villa at Himalaya Villas?",
-          a: "The Presidential Suite is the most requested romantic villa — the private terrace jacuzzi with 270-degree mountain views is its defining feature. The Himalayan Penthouse is preferred by couples who prioritise a broad outdoor terrace over the jacuzzi. The Sunset Suite is the most accessible premium option for couples with a slightly lower rate.",
+          a: "The Presidential Suite is the most requested romantic villa — the private terrace with 270-degree mountain views is its defining feature. The Himalayan Penthouse is preferred by couples who prioritise a broad outdoor terrace over the. The Sunset Suite is the most accessible premium option for couples with a slightly lower rate.",
         },
         {
           q: "Is Bhurban good for a honeymoon?",
-          a: "Yes — see the dedicated honeymoon guide at /honeymoon-package-bhurban-murree for full details. Bhurban is 45 minutes from Islamabad, making it the ideal post-wedding retreat that requires no flight and no airport. The Presidential Suite's jacuzzi terrace, in-villa dining, and estate privacy create the honeymoon experience without the logistical overhead of an international destination.",
+          a: "Yes — see the dedicated honeymoon guide at /honeymoon-package-bhurban-murree for full details. Bhurban is 45 minutes from Islamabad, making it the ideal post-wedding retreat that requires no flight and no airport. The Presidential Suite's terrace, in-villa dining, and estate privacy create the honeymoon experience without the logistical overhead of an international destination.",
         },
         {
           q: "Can I arrange a surprise dinner at Himalaya Villas?",
@@ -9827,7 +9827,7 @@ export const article53: Article = {
       type: "callout-qa",
       question: "Which villa in Bhurban has the best mountain view?",
       answer:
-        "The Himalayan Penthouse at Himalaya Villas & Resorts has the best mountain view in Bhurban — a private balcony approximately 8 metres wide on the highest point of the estate, offering a panoramic view of the Murree ridge and, on clear days, sight lines toward the Islamabad plain. Rate: PKR 60,000–65,000 per night. The Presidential Suite (PKR 65,000–70,000/night) offers a 270-degree view from its terrace jacuzzi. Both are at Mohra Iswal, Bhurban, 47km from Islamabad.",
+        "The Himalayan Penthouse at Himalaya Villas & Resorts has the best mountain view in Bhurban — a private balcony approximately 8 metres wide on the highest point of the estate, offering a panoramic view of the Murree ridge and, on clear days, sight lines toward the Islamabad plain. Rate: PKR 60,000–65,000 per night. The Presidential Suite (PKR 65,000–70,000/night) offers a 270-degree view from its terrace. Both are at Mohra Iswal, Bhurban, 47km from Islamabad.",
     },
 
     {
@@ -9866,10 +9866,10 @@ export const article53: Article = {
       heading: "The Presidential Suite — The 270-Degree View",
       paragraphs: [
         "Rate: PKR 65,000–70,000 per night",
-        "Position: Upper hillside, terrace jacuzzi",
-        "View: 270 degrees — the broadest angular view of any villa, combined with the jacuzzi feature",
+        "Position: Upper hillside, terrace",
+        "View: 270 degrees — the broadest angular view of any villa, combined with the feature",
         "",
-        "Where the Himalayan Penthouse offers the widest single-direction view, the Presidential Suite's terrace wraps around the villa's hillside position to offer a 270-degree view — morning light from the northeast, midday views across the valley, and evening light from the west all visible from different points on the terrace without moving far. Combined with the private jacuzzi, this is the villa for guests who want to experience the view across different times of day from one location.",
+        "Where the Himalayan Penthouse offers the widest single-direction view, the Presidential Suite's terrace wraps around the villa's hillside position to offer a 270-degree view — morning light from the northeast, midday views across the valley, and evening light from the west all visible from different points on the terrace without moving far. Combined with the private, this is the villa for guests who want to experience the view across different times of day from one location.",
       ],
       image: {
         src: article53Villa,
@@ -9885,7 +9885,7 @@ export const article53: Article = {
         {
           feature: "Dawn (6–8am)",
           a: "Excellent — northeast light on the ridge",
-          b: "Excellent — jacuzzi terrace catches first light",
+          b: "Excellent — terrace catches first light",
         },
         {
           feature: "Midday",
@@ -9900,7 +9900,7 @@ export const article53: Article = {
         {
           feature: "Night (clear sky)",
           a: "Excellent — unobstructed sky view",
-          b: "Excellent — jacuzzi under stars",
+          b: "Excellent — under stars",
         },
       ],
     },
@@ -9954,8 +9954,8 @@ export const article53: Article = {
       heading: "📎 Explore More",
       items: [
         {
-          href: "/villa-with-jacuzzi-bhurban",
-          label: "Presidential Suite jacuzzi guide",
+          href: "/villa-with-bhurban",
+          label: "Presidential Suite guide",
         },
         {
           href: "/villas",
@@ -10906,7 +10906,7 @@ export const article63: Article = {
         {
           feature: "Presidential Suite",
           a: "Short walk",
-          b: "Private terrace jacuzzi at 40°C complements the fire pit evening",
+          b: "Private terrace at 40°C complements the fire pit evening",
         },
         {
           feature: "Alpine Family Lodge",
@@ -10972,8 +10972,8 @@ export const article63: Article = {
           label: "Snowfall season guide",
         },
         {
-          href: "/villa-with-jacuzzi-bhurban",
-          label: "Presidential Suite jacuzzi guide",
+          href: "/villa-with-bhurban",
+          label: "Presidential Suite guide",
         },
         {
           href: "/villas",
@@ -11347,7 +11347,7 @@ export const article66: Article = {
       heading: "Recurring Themes in Guest Feedback",
       paragraphs: [
         "The Private Terraces and Views",
-        "Across platforms, the private terraces — particularly the Presidential Suite's jacuzzi terrace and the Himalayan Penthouse's panoramic balcony — are the most frequently mentioned highlight. Guests describe the experience of having a mountain view that belongs entirely to them, without other hotel guests sharing the same vantage point.",
+        "Across platforms, the private terraces — particularly the Presidential Suite's terrace and the Himalayan Penthouse's panoramic balcony — are the most frequently mentioned highlight. Guests describe the experience of having a mountain view that belongs entirely to them, without other hotel guests sharing the same vantage point.",
         "",
         "In-Villa Dining",
         "The in-villa dining arrangement — meals prepared and served within the villa on the group's schedule — is consistently highlighted as differentiating the property from a standard hotel stay. Guests note the flexibility of timing (early breakfasts before activities, late dinners after evening excursions) and the quality of Pakistani cuisine prepared for in-villa service.",
@@ -12199,7 +12199,7 @@ export const article71: Article = {
       type: "section",
       heading: "What the Property Actually Delivers",
       paragraphs: [
-        "The villas at Himalaya Villas range from the Serene Valley Cabin (PKR 39,000-45,000 per night, ground floor, floor-to-ceiling windows, cedar forest views) to the Presidential Suite (PKR 65,000-70,000 per night, private terrace jacuzzi, 270-degree mountain views). Between them: the Himalayan Penthouse with its panoramic balcony, the Sunset Suite with its west-facing aspect and evening light sequence, the Alpine Family Lodge configured for multi-generational groups.",
+        "The villas at Himalaya Villas range from the Serene Valley Cabin (PKR 39,000-45,000 per night, ground floor, floor-to-ceiling windows, cedar forest views) to the Presidential Suite (PKR 65,000-70,000 per night, private terrace, 270-degree mountain views). Between them: the Himalayan Penthouse with its panoramic balcony, the Sunset Suite with its west-facing aspect and evening light sequence, the Alpine Family Lodge configured for multi-generational groups.",
         "The property sits at 6,800 feet — high enough to deliver the 15-20°C temperature differential from Islamabad that drives the summer tourism economy of the Murree hills, with the added advantage of being in Bhurban rather than on the Mall Road, which means the forest setting is intact rather than the developed, commercial character of Murree town.",
         "In-villa dining operates on a pre-arranged basis: guests specify meals and timing via WhatsApp before arrival, and food is prepared and served within the villa. There is no restaurant; there is no other table. The dining arrangement is exclusively for the booked group.",
       ],
@@ -12566,7 +12566,7 @@ export const article74: Article = {
       type: "callout-qa",
       question: "What are the emerging luxury villa destinations in South Asia beyond the obvious?",
       answer:
-        "Pakistan's Murree hills offer sub-alpine forest at 6,800 feet, 15-20°C temperature relief from Islamabad's summer heat, within 45 minutes of an international airport. Himalaya Villas & Resorts provides 12 private villas on exclusive-use terms — the Presidential Suite's private jacuzzi terrace at 40°C against -2°C January air, the Himalayan Penthouse's panoramic balcony over pine forest and mountain ridge. Sri Lanka's tea country offers plantation bungalows at USD 250-600/night. India's Nilgiris offer colonial bungalows at USD 150-400/night. Pakistan's Murree hills represent what Sri Lanka's tea country and India's Nilgiris represented 15-20 years ago: a destination of genuine quality at an early point in its discovery curve.",
+        "Pakistan's Murree hills offer sub-alpine forest at 6,800 feet, 15-20°C temperature relief from Islamabad's summer heat, within 45 minutes of an international airport. Himalaya Villas & Resorts provides 12 private villas on exclusive-use terms — the Presidential Suite's private terrace at 40°C against -2°C January air, the Himalayan Penthouse's panoramic balcony over pine forest and mountain ridge. Sri Lanka's tea country offers plantation bungalows at USD 250-600/night. India's Nilgiris offer colonial bungalows at USD 150-400/night. Pakistan's Murree hills represent what Sri Lanka's tea country and India's Nilgiris represented 15-20 years ago: a destination of genuine quality at an early point in its discovery curve.",
     },
 
     {
@@ -12584,7 +12584,7 @@ export const article74: Article = {
       heading: "Pakistan — The Murree Hills",
       paragraphs: [
         "The case for Pakistan as a luxury travel destination rests on a straightforward fact: the Karakoram Highway gives access to mountain scenery that has no competitor in South Asia outside the high Himalayas of Nepal, and the infrastructure around Islamabad has improved dramatically. The Murree hills — 47 kilometres from Islamabad — offer a specific proposition that neither Nepal nor India's hill stations can match: sub-alpine forest, 6,800-foot elevation, and 15-20°C temperature relief from Islamabad's summer heat, within 45 minutes of an international airport served by Emirates, Turkish Airlines, and multiple Gulf carriers.",
-        "The accommodation story in the Murree hills has historically been dominated by Pearl Continental Hotel Bhurban — a credible 5-star property that has served as the benchmark for mountain luxury in Pakistan for decades. The new entry is Himalaya Villas & Resorts: 12 private villas on exclusive-use terms in Mohra Iswal, Bhurban, operating as a private mountain estate rather than a hotel. The Presidential Suite's private jacuzzi terrace at 40°C against -2°C January air, the Himalayan Penthouse's panoramic balcony over 50 kilometres of pine forest and mountain ridge, the cedar garden fire pit in a private estate where the only other people present are the people you came with — this is a different experience from a hotel room with a mountain view.",
+        "The accommodation story in the Murree hills has historically been dominated by Pearl Continental Hotel Bhurban — a credible 5-star property that has served as the benchmark for mountain luxury in Pakistan for decades. The new entry is Himalaya Villas & Resorts: 12 private villas on exclusive-use terms in Mohra Iswal, Bhurban, operating as a private mountain estate rather than a hotel. The Presidential Suite's private terrace at 40°C against -2°C January air, the Himalayan Penthouse's panoramic balcony over 50 kilometres of pine forest and mountain ridge, the cedar garden fire pit in a private estate where the only other people present are the people you came with — this is a different experience from a hotel room with a mountain view.",
         "For diaspora Pakistani travellers and GCC-based HNW guests planning a Pakistan itinerary, Himalaya Villas represents the kind of private estate accommodation that normalises Pakistan as a luxury destination in the same conversation as Sri Lanka or Bhutan. The 45-minute airport drive is a practical detail that matters: door to estate under an hour from landing at Islamabad International Airport.",
         "Key property: Himalaya Villas & Resorts, Bhurban (himalayavillas.com) | Rate range: PKR 39,000-70,000/night (USD 140-250 at current rates) | Best season: April (spring) and October (autumn); January for snowfall",
       ],
@@ -13159,7 +13159,7 @@ export const article79: Article = {
       type: "callout-qa",
       question: "Why should couples consider the Murree hills for their honeymoon?",
       answer:
-        "For couples who want a private mountain environment within driving distance of their families, who want the post-wedding exhaustion managed by proximity rather than airport logistics, and who want an accommodation experience that is genuinely intimate rather than hotel-scale luxury — the Murree hills offer something international destinations structurally cannot: a private mountain estate, 45 minutes from Islamabad, where the couple has the property to themselves. The Presidential Suite at Himalaya Villas (PKR 65,000-70,000/night) offers a private terrace jacuzzi at 40°C, 270-degree mountain views, and two king-size bedrooms. Pre-coordination via WhatsApp arranges arrival flowers, welcome setup, in-villa dinner on the first evening, and romantic breakfast on the private terrace.",
+        "For couples who want a private mountain environment within driving distance of their families, who want the post-wedding exhaustion managed by proximity rather than airport logistics, and who want an accommodation experience that is genuinely intimate rather than hotel-scale luxury — the Murree hills offer something international destinations structurally cannot: a private mountain estate, 45 minutes from Islamabad, where the couple has the property to themselves. The Presidential Suite at Himalaya Villas (PKR 65,000-70,000/night) offers a private terrace at 40°C, 270-degree mountain views, and two king-size bedrooms. Pre-coordination via WhatsApp arranges arrival flowers, welcome setup, in-villa dinner on the first evening, and romantic breakfast on the private terrace.",
     },
 
     {
@@ -13178,7 +13178,7 @@ export const article79: Article = {
       heading: "The Private Estate Argument",
       paragraphs: [
         "The standard hotel honeymoon, regardless of star rating, involves a shared building. The lobby is shared, the pool is shared, the beach (if there is one) is shared. The couple is private within their room and not private anywhere else.",
-        "Himalaya Villas & Resorts in Bhurban operates differently. A couple booking the Presidential Suite books a villa — the suite's private terrace jacuzzi, the 270-degree mountain views, the private living space — within an estate where, unless other villas are simultaneously occupied by other guests, they have the outdoor garden, the fire pit, and the terraces to themselves. This level of outdoor privacy is not available in any hotel format at any price point.",
+        "Himalaya Villas & Resorts in Bhurban operates differently. A couple booking the Presidential Suite books a villa — the suite's private terrace, the 270-degree mountain views, the private living space — within an estate where, unless other villas are simultaneously occupied by other guests, they have the outdoor garden, the fire pit, and the terraces to themselves. This level of outdoor privacy is not available in any hotel format at any price point.",
       ],
      
     },
@@ -13192,7 +13192,7 @@ export const article79: Article = {
           value: "PKR 65,000-70,000 per night",
         },
         {
-          label: "Private terrace jacuzzi",
+          label: "Private terrace",
           value: "40°C, operational year-round — the defining feature. In January, -2°C air against 40°C water. In autumn, the cedar canopy above and the mountain ridge visible beyond.",
         },
         {
@@ -13229,7 +13229,7 @@ export const article79: Article = {
         "First evening: arrival to a prepared villa, in-villa dinner served on the private terrace, fire pit garden access if desired",
         "First morning: sunrise on the terrace — the Presidential Suite's northeast orientation catches the first light on the Murree ridge",
         "Second day: day excursion options — Patriata Chairlift, Nathia Gali, or a full day at the estate",
-        "Second evening: the jacuzzi evening — the primary experience that returning honeymoon guests name when asked what they remember most",
+        "Second evening: the evening — the primary experience that returning honeymoon guests name when asked what they remember most",
       ],
      
     },
@@ -13240,7 +13240,7 @@ export const article79: Article = {
       items: [
         {
           label: "Best season",
-          value: "October (clear skies, autumn colour, comfortable temperatures) and April (spring flowers, mild weather). January for couples specifically wanting the snowfall jacuzzi experience.",
+          value: "October (clear skies, autumn colour, comfortable temperatures) and April (spring flowers, mild weather). January for couples specifically wanting the snowfall experience.",
         },
         {
           label: "How to book",
@@ -13256,7 +13256,7 @@ export const article79: Article = {
     {
       type: "cta",
       eyebrow: "Himalaya Villas & Resorts — Honeymoon Enquiries",
-      heading: "Presidential Suite with private jacuzzi terrace and 270-degree mountain views. Bhurban, 47km from Islamabad.",
+      heading: "Presidential Suite with private terrace and 270-degree mountain views. Bhurban, 47km from Islamabad.",
       text: "Plan your mountain honeymoon.",
       buttonLabel: "Visit himalayavillas.com",
       buttonHref: "https://himalayavillas.com",
@@ -13268,7 +13268,7 @@ export const article79: Article = {
       heading: "📎 Explore More",
       items: [
         { href: "/honeymoon-package-bhurban-murree", label: "Full honeymoon guide" },
-        { href: "/villa-with-jacuzzi-bhurban", label: "Presidential Suite jacuzzi guide" },
+        { href: "/villa-with-bhurban", label: "Presidential Suite guide" },
         { href: "/murree-for-couples", label: "Couples guide" },
       ],
     },
@@ -15168,7 +15168,7 @@ export const article94: Article = {
         },
         {
           label: "Presidential Suite",
-          value: "Rate: PKR 65,000-70,000/night | View: 270-degree panorama from the jacuzzi terrace — the broadest angular view on the estate | Unique feature: Private terrace jacuzzi with mountain view — the only jacuzzi-with-panorama combination in Bhurban",
+          value: "Rate: PKR 65,000-70,000/night | View: 270-degree panorama from the terrace — the broadest angular view on the estate | Unique feature: Private terrace with mountain view — the only-with-panorama combination in Bhurban",
         },
         {
           label: "Sunset Suite",
@@ -15200,9 +15200,9 @@ export const article94: Article = {
           b: "No other guests, no shared outdoor space — the view is exclusively yours",
         },
         {
-          feature: "Private jacuzzi terrace view",
+          feature: "Private terrace view",
           a: "Presidential Suite, Himalaya Villas",
-          b: "270-degree view from outdoor jacuzzi",
+          b: "270-degree view from outdoor",
         },
         {
           feature: "Private villa terrace",
@@ -15247,7 +15247,7 @@ export const article94: Article = {
       heading: "📎 Explore More",
       items: [
         { href: "/villa-with-mountain-view-bhurban", label: "Mountain view villa detail" },
-        { href: "/villa-with-jacuzzi-bhurban", label: "Presidential Suite jacuzzi guide" },
+        { href: "/villa-with-bhurban", label: "Presidential Suite guide" },
         { href: "/villas", label: "Full villa portfolio" },
         { href: "/pc-hotel-bhurban-alternative", label: "PC Hotel comparison" },
         { href: "/luxury-villa-bhurban-murree", label: "Estate overview" },
@@ -16245,7 +16245,7 @@ export const article102: Article = {
   eyebrow: "Template C — Romance/Events Spoke | Cluster 12: Honeymoon & Romance",
   h1: "Anniversary Celebration at Himalaya Villas Bhurban — Private Mountain Getaway",
   heroTagline:
-    "Himalaya Villas & Resorts in Bhurban accommodates anniversary celebrations across any of its 12 private villas. The Presidential Suite (private terrace jacuzzi, 270° mountain views, PKR 65,000-70,000/night) and Himalayan Penthouse (panoramic balcony, PKR 60,000-65,000/night) are the most requested for anniversary stays.",
+    "Himalaya Villas & Resorts in Bhurban accommodates anniversary celebrations across any of its 12 private villas. The Presidential Suite (private terrace, 270° mountain views, PKR 65,000-70,000/night) and Himalayan Penthouse (panoramic balcony, PKR 60,000-65,000/night) are the most requested for anniversary stays.",
   heroImage: article102Hero,
 
   blocks: [
@@ -16253,7 +16253,7 @@ export const article102: Article = {
       type: "callout-qa",
       question: "Can I book a private anniversary celebration at a villa in Bhurban Murree?",
       answer:
-        "Yes. Himalaya Villas & Resorts in Bhurban accommodates anniversary celebrations across any of its 12 private villas. The Presidential Suite (private terrace jacuzzi, 270° mountain views, PKR 65,000-70,000/night) and Himalayan Penthouse (panoramic balcony, PKR 60,000-65,000/night) are the most requested for anniversary stays. Specific arrangements — arrival flowers, candlelit dinner on the private terrace, celebration setup — are coordinated directly via WhatsApp (+92 304 567 9000) before arrival.",
+        "Yes. Himalaya Villas & Resorts in Bhurban accommodates anniversary celebrations across any of its 12 private villas. The Presidential Suite (private terrace, 270° mountain views, PKR 65,000-70,000/night) and Himalayan Penthouse (panoramic balcony, PKR 60,000-65,000/night) are the most requested for anniversary stays. Specific arrangements — arrival flowers, candlelit dinner on the private terrace, celebration setup — are coordinated directly via WhatsApp (+92 304 567 9000) before arrival.",
     },
 
     {
@@ -16299,8 +16299,8 @@ export const article102: Article = {
       type: "section",
       heading: "Recommended Villa for Anniversaries",
       paragraphs: [
-        "The Presidential Suite is the most-requested anniversary villa: the private jacuzzi terrace (40°C year-round) is the signature experience, the 270-degree mountain view is the backdrop, and the two king-size bedrooms give the flexibility of private sleeping space if desired. At PKR 65,000-70,000/night, it is the property's most complete romantic configuration.",
-        "The Himalayan Penthouse (PKR 60,000-65,000/night) suits couples who prioritise the broadest mountain view and the largest private balcony over the jacuzzi. The Sunset Suite (PKR 50,000-55,000/night) suits couples specifically wanting the evening light sequence at a more accessible rate.",
+        "The Presidential Suite is the most-requested anniversary villa: the private terrace (40°C year-round) is the signature experience, the 270-degree mountain view is the backdrop, and the two king-size bedrooms give the flexibility of private sleeping space if desired. At PKR 65,000-70,000/night, it is the property's most complete romantic configuration.",
+        "The Himalayan Penthouse (PKR 60,000-65,000/night) suits couples who prioritise the broadest mountain view and the largest private balcony over the. The Sunset Suite (PKR 50,000-55,000/night) suits couples specifically wanting the evening light sequence at a more accessible rate.",
       ],
       image: {
         src: article102View,
@@ -16354,7 +16354,7 @@ export const article102: Article = {
       items: [
         { href: "/honeymoon-package-bhurban-murree", label: "Honeymoon guide" },
         { href: "/murree-for-couples", label: "Couples guide" },
-        { href: "/villa-with-jacuzzi-bhurban", label: "Presidential Suite jacuzzi" },
+        { href: "/villa-with-bhurban", label: "Presidential Suite" },
         { href: "/in-villa-dining-bhurban", label: "Candlelit dinner arrangements" },
       ],
     },
@@ -16528,7 +16528,7 @@ export const article104: Article = {
         },
         {
           label: "Private Terrace and Estate Time",
-          value: "The private terraces at Himalaya Villas — particularly the Himalayan Penthouse's panoramic balcony and the Presidential Suite's jacuzzi terrace — are themselves destinations. Morning tea watching the light change on the Murree ridge. Afternoon reading in a private outdoor space at 6,800 feet. Sunset from the west-facing terrace. These are not activities that require planning; they are the ambient experience of a private mountain estate.",
+          value: "The private terraces at Himalaya Villas — particularly the Himalayan Penthouse's panoramic balcony and the Presidential Suite's terrace — are themselves destinations. Morning tea watching the light change on the Murree ridge. Afternoon reading in a private outdoor space at 6,800 feet. Sunset from the west-facing terrace. These are not activities that require planning; they are the ambient experience of a private mountain estate.",
         },
         {
           label: "Cedar Garden Fire Pit Evening",
@@ -16589,7 +16589,7 @@ export const article104: Article = {
         },
         {
           feature: "Winter (January)",
-          a: "Post-snowfall cedar garden walk; jacuzzi in snowfall",
+          a: "Post-snowfall cedar garden walk; in snowfall",
           b: "Murree Mall Road in snow",
         },
       ],
@@ -17350,8 +17350,8 @@ export const article110: Article = {
           value: "The widest private mountain-facing balcony on the estate. Best at: dawn in any season (northeast light on the Murree ridge, 6-8am); October mornings (clearest air, maximum sight distance — the Islamabad plain visible on exceptional days); post-snowfall morning (white forest below the ridge, low winter light through the cedar canopy above). This is the estate's primary landscape photography position.",
         },
         {
-          label: "Presidential Suite Terrace — Wide Angle and Jacuzzi",
-          value: "The 270-degree terrace gives a wider compositional range than the Penthouse's single-direction balcony. The jacuzzi as a foreground element in winter photography — steam rising from 40°C water against the cold cedar and snow — is the estate's most social-media-shared image. Best with a wide-angle lens; foreground interest provided by the terrace itself.",
+          label: "Presidential Suite Terrace — Wide Angle and",
+          value: "The 270-degree terrace gives a wider compositional range than the Penthouse's single-direction balcony. The as a foreground element in winter photography — steam rising from 40°C water against the cold cedar and snow — is the estate's most social-media-shared image. Best with a wide-angle lens; foreground interest provided by the terrace itself.",
         },
         {
           label: "Cedar Garden — Fire and Forest at Dusk",
@@ -17384,7 +17384,7 @@ export const article110: Article = {
       heading: "Seasonal Photography Calendar",
       columns: ["Season", "Best Subject", "Location"],
       rows: [
-        { feature: "January", a: "Cedar forest under snow; Presidential Suite jacuzzi in snowfall", b: "Estate; Presidential Suite terrace" },
+        { feature: "January", a: "Cedar forest under snow; Presidential Suite in snowfall", b: "Estate; Presidential Suite terrace" },
         { feature: "April", a: "Rhododendron bloom in forest", b: "Ayubia Pipeline Track" },
         { feature: "October", a: "Clear-air ridge views; autumn forest colour", b: "Himalayan Penthouse; Pipeline Track" },
         { feature: "Any season, dawn", a: "First light on the Murree ridge", b: "Himalayan Penthouse balcony" },
@@ -18375,7 +18375,7 @@ export const article118: Article = {
           feature: "Couple, 2 nights",
           a: "PKR 20,000-45,000/night x 2",
           b: "PKR 39,000-65,000/night x 2",
-          c: "HV premium: ~50% more — buys exclusive-use, private terrace, jacuzzi",
+          c: "HV premium: ~50% more — buys exclusive-use, private terrace,",
         },
       ],
     },
@@ -19308,7 +19308,7 @@ export const article125: Article = {
   eyebrow: "Template C — Commercial Spoke | Cluster 1: Hotels",
   h1: "Private Pool Villa Near Islamabad — What's Available in Bhurban",
   heroTagline:
-    "Private pool villas in the traditional sense (outdoor swimming pool) are uncommon in the Bhurban hills due to the mountain climate — outdoor pools are impractical for most of the year at 6,800 feet. The closest equivalent in Bhurban is the Presidential Suite at Himalaya Villas & Resorts, which features a private terrace jacuzzi (hot tub) — the mountain equivalent of a private pool, operating at 40°C year-round.",
+    "Private pool villas in the traditional sense (outdoor swimming pool) are uncommon in the Bhurban hills due to the mountain climate — outdoor pools are impractical for most of the year at 6,800 feet. The closest equivalent in Bhurban is the Presidential Suite at Himalaya Villas & Resorts, which features a private terrace (hot tub) — the mountain equivalent of a private pool, operating at 40°C year-round.",
   heroImage: article125Hero,
 
   blocks: [
@@ -19316,14 +19316,14 @@ export const article125: Article = {
       type: "callout-qa",
       question: "Is there a private pool villa near Islamabad?",
       answer:
-        "Private pool villas in the traditional sense (outdoor swimming pool) are uncommon in the Bhurban hills due to the mountain climate — outdoor pools are impractical for most of the year at 6,800 feet. The closest equivalent in Bhurban is the Presidential Suite at Himalaya Villas & Resorts, which features a private terrace jacuzzi (hot tub) — the mountain equivalent of a private pool, operating at 40°C year-round. PC Hotel Bhurban has a hotel swimming pool (shared facility). For a heated private water feature near Islamabad's mountains, the Presidential Suite jacuzzi is the specific available option.",
+        "Private pool villas in the traditional sense (outdoor swimming pool) are uncommon in the Bhurban hills due to the mountain climate — outdoor pools are impractical for most of the year at 6,800 feet. The closest equivalent in Bhurban is the Presidential Suite at Himalaya Villas & Resorts, which features a private terrace (hot tub) — the mountain equivalent of a private pool, operating at 40°C year-round. PC Hotel Bhurban has a hotel swimming pool (shared facility). For a heated private water feature near Islamabad's mountains, the Presidential Suite is the specific available option.",
     },
 
     {
       type: "section",
       heading: "Private Pool Villa Near Islamabad — What's Available in Bhurban",
       paragraphs: [
-        "Guests searching for a 'private pool villa near Islamabad' are typically looking for the private water feature experience — the ability to use a pool or hot tub without sharing it with other hotel guests. The mountain context of Bhurban makes a traditional outdoor swimming pool impractical for most of the year (water temperatures and climate make an unheated pool unusable October-May). The heated jacuzzi in the Presidential Suite addresses this need in the mountain context.",
+        "Guests searching for a 'private pool villa near Islamabad' are typically looking for the private water feature experience — the ability to use a pool or hot tub without sharing it with other hotel guests. The mountain context of Bhurban makes a traditional outdoor swimming pool impractical for most of the year (water temperatures and climate make an unheated pool unusable October-May). The heated in the Presidential Suite addresses this need in the mountain context.",
       ],
       image: {
         src: article125Villa,
@@ -19333,11 +19333,11 @@ export const article125: Article = {
 
     {
       type: "facts",
-      heading: "The Presidential Suite Jacuzzi — The Mountain Pool Equivalent",
+      heading: "The Presidential Suite — The Mountain Pool Equivalent",
       items: [
         {
           label: "Feature",
-          value: "Private terrace jacuzzi — exclusive to the Presidential Suite occupants",
+          value: "Private terrace — exclusive to the Presidential Suite occupants",
         },
         {
           label: "Temperature",
@@ -19349,7 +19349,7 @@ export const article125: Article = {
         },
         {
           label: "Exclusivity",
-          value: "No other guests share the jacuzzi — it belongs to the suite occupants for the duration of the booking",
+          value: "No other guests share the — it belongs to the suite occupants for the duration of the booking",
         },
         {
           label: "Rate",
@@ -19360,14 +19360,14 @@ export const article125: Article = {
 
     {
       type: "section",
-      heading: "The Jacuzzi Experience by Season",
+      heading: "The Experience by Season",
       paragraphs: [
-        "The jacuzzi in winter conditions (January-February, -2°C to 5°C air temperature) is the most dramatic version of the experience — 40°C water against mountain winter air, snow possibly on the terrace, the cedar forest white around the property. This combination is what the Presidential Suite is most known for in guest reviews and social media posts from the property.",
-        "In summer (June-August, 18-26°C air temperature), the jacuzzi functions as a warm evening amenity — pleasant rather than dramatically contrasted. The most requested season for the jacuzzi experience is autumn (October, 10-18°C) and winter (December-February), when the temperature differential creates the most compelling experience.",
+        "The in winter conditions (January-February, -2°C to 5°C air temperature) is the most dramatic version of the experience — 40°C water against mountain winter air, snow possibly on the terrace, the cedar forest white around the property. This combination is what the Presidential Suite is most known for in guest reviews and social media posts from the property.",
+        "In summer (June-August, 18-26°C air temperature), the functions as a warm evening amenity — pleasant rather than dramatically contrasted. The most requested season for the experience is autumn (October, 10-18°C) and winter (December-February), when the temperature differential creates the most compelling experience.",
       ],
       image: {
         src: article125View,
-        alt: "The Jacuzzi Experience by Season",
+        alt: "The Experience by Season",
       },
     },
 
@@ -19387,7 +19387,7 @@ export const article125: Article = {
       type: "section",
       heading: "The Private Water Feature in Context",
       paragraphs: [
-        "For guests who want a private water feature near Islamabad in a mountain setting, the Presidential Suite jacuzzi at Himalaya Villas is the specific available product — the only private heated water feature on the Bhurban road. The combination of the private terrace, the 270-degree mountain view, the cedar forest surrounding the property, and the 40°C water makes the jacuzzi experience at Himalaya Villas qualitatively distinct from any hotel pool setting.",
+        "For guests who want a private water feature near Islamabad in a mountain setting, the Presidential Suite at Himalaya Villas is the specific available product — the only private heated water feature on the Bhurban road. The combination of the private terrace, the 270-degree mountain view, the cedar forest surrounding the property, and the 40°C water makes the experience at Himalaya Villas qualitatively distinct from any hotel pool setting.",
       ],
       image: {
         src: article125View,
@@ -19401,11 +19401,11 @@ export const article125: Article = {
       items: [
         {
           q: "Is there a swimming pool at Himalaya Villas?",
-          a: "No outdoor swimming pool. The Presidential Suite has a private terrace jacuzzi (40°C). PC Hotel Bhurban, 0.5km away, has a hotel swimming pool (shared).",
+          a: "No outdoor swimming pool. The Presidential Suite has a private terrace (40°C). PC Hotel Bhurban, 0.5km away, has a hotel swimming pool (shared).",
         },
         {
-          q: "Can I use the jacuzzi at night?",
-          a: "Yes. The Presidential Suite's private terrace jacuzzi is accessible at any time of the day or night for suite occupants. The most popular usage time is evening and night — the combination of warm water and mountain night sky above is the experience that guests photograph and describe most.",
+          q: "Can I use the at night?",
+          a: "Yes. The Presidential Suite's private terrace is accessible at any time of the day or night for suite occupants. The most popular usage time is evening and night — the combination of warm water and mountain night sky above is the experience that guests photograph and describe most.",
         },
       ],
     },
@@ -19413,8 +19413,8 @@ export const article125: Article = {
     {
       type: "cta",
       eyebrow: "How to Book",
-      heading: "Book the Presidential Suite Jacuzzi Villa ",
-      text: "Contact us to book your private jacuzzi villa.",
+      heading: "Book the Presidential Suite Villa ",
+      text: "Contact us to book your private villa.",
       buttonLabel: "Book Your Stay",
       buttonHref: "https://wa.me/923045679000",
       footnote: "Direct bookings receive the best available rate.",
@@ -19424,7 +19424,7 @@ export const article125: Article = {
       type: "related",
       heading: "📎 Explore More",
       items: [
-        { href: "/villa-with-jacuzzi-bhurban", label: "Full Presidential Suite jacuzzi guide" },
+        { href: "/villa-with-bhurban", label: "Full Presidential Suite guide" },
         { href: "/murree-for-couples", label: "Romantic villa guide" },
         { href: "/luxury-villa-bhurban-murree", label: "Estate overview" },
         { href: "/villas", label: "Browse all villa options" },
@@ -20904,7 +20904,7 @@ export const article138: Article = {
         },
         {
           label: "The Presidential Suite Terrace",
-          value: "The private jacuzzi terrace with 270-degree mountain views. For couples who want the mountain panorama as the primary backdrop — not the forest interior — this terrace position, elevated above the estate, gives the clearest sky and the widest mountain composition.",
+          value: "The private terrace with 270-degree mountain views. For couples who want the mountain panorama as the primary backdrop — not the forest interior — this terrace position, elevated above the estate, gives the clearest sky and the widest mountain composition.",
         },
         {
           label: "The Forest Paths",
@@ -20944,7 +20944,7 @@ export const article138: Article = {
         {
           feature: "January-February",
           a: "Snow on cedar canopy; white forest floor",
-          b: "Couple in snow-covered garden; Presidential Suite jacuzzi",
+          b: "Couple in snow-covered garden; Presidential Suite",
           c: "Dawn and mid-morning",
         },
         {
@@ -21731,7 +21731,7 @@ export const article144: Article = {
   eyebrow: "Template C — Romance Commercial Spoke | Cluster 12: Honeymoon & Romance",
   h1: "Bhurban for Couples Who Have Done the Maldives — The Mountain Alternative",
   heroTagline:
-    "Bhurban and the Maldives are not the same experience — they are deliberately different. Bhurban offers a mountain private estate at 6,800 feet (cedar forest, panoramic ridge views, private jacuzzi terrace) vs the Maldives' overwater bungalow (lagoon, sand, ocean horizon). For Pakistani couples who have done the Maldives and want a domestic alternative that is genuinely different rather than merely similar, Bhurban provides a private estate experience that has no local equivalent — and is 45 minutes from Islamabad rather than a 3-hour flight.",
+    "Bhurban and the Maldives are not the same experience — they are deliberately different. Bhurban offers a mountain private estate at 6,800 feet (cedar forest, panoramic ridge views, private terrace) vs the Maldives' overwater bungalow (lagoon, sand, ocean horizon). For Pakistani couples who have done the Maldives and want a domestic alternative that is genuinely different rather than merely similar, Bhurban provides a private estate experience that has no local equivalent — and is 45 minutes from Islamabad rather than a 3-hour flight.",
   heroImage: article144Hero,
 
   blocks: [
@@ -21739,7 +21739,7 @@ export const article144: Article = {
       type: "callout-qa",
       question: "Is Bhurban a good alternative to the Maldives for a romantic getaway?",
       answer:
-        "Bhurban and the Maldives are not the same experience — they are deliberately different. Bhurban offers a mountain private estate at 6,800 feet (cedar forest, panoramic ridge views, private jacuzzi terrace) vs the Maldives' overwater bungalow (lagoon, sand, ocean horizon). For Pakistani couples who have done the Maldives and want a domestic alternative that is genuinely different rather than merely similar, Bhurban provides a private estate experience that has no local equivalent — and is 45 minutes from Islamabad rather than a 3-hour flight.",
+        "Bhurban and the Maldives are not the same experience — they are deliberately different. Bhurban offers a mountain private estate at 6,800 feet (cedar forest, panoramic ridge views, private terrace) vs the Maldives' overwater bungalow (lagoon, sand, ocean horizon). For Pakistani couples who have done the Maldives and want a domestic alternative that is genuinely different rather than merely similar, Bhurban provides a private estate experience that has no local equivalent — and is 45 minutes from Islamabad rather than a 3-hour flight.",
     },
 
     {
@@ -21763,7 +21763,7 @@ export const article144: Article = {
         { feature: "Environment", a: "Ocean lagoon, sand, tropical heat", b: "Cedar forest, mountain ridge, cool air" },
         { feature: "Elevation", a: "Sea level", b: "6,800 feet" },
         { feature: "Temperature", a: "28-33°C", b: "10-25°C depending on season" },
-        { feature: "Private outdoor space", a: "Overwater bungalow deck, lagoon", b: "Private terrace jacuzzi, cedar garden" },
+        { feature: "Private outdoor space", a: "Overwater bungalow deck, lagoon", b: "Private terrace, cedar garden" },
         { feature: "Exclusive feature", a: "Private water villa, ocean access", b: "Private mountain estate, no other guests" },
         { feature: "Journey time (from Islamabad)", a: "~5-6 hours total (flight + boat)", b: "45 minutes by car" },
         { feature: "Rate (approx)", a: "USD 400-1,200/night", b: "USD 140-250/night (PKR 39,000-70,000)" },
@@ -21775,7 +21775,7 @@ export const article144: Article = {
       heading: "What Bhurban Has That the Maldives Cannot",
       paragraphs: [
         "The private mountain forest: cedar and pine at 6,800 feet is an environment the Maldives cannot provide. The specific smell, sound, and visual character of a sub-alpine forest is categorically different from any beach resort setting.",
-        "The seasonal experience: Bhurban in January — snow on the cedar canopy, the private jacuzzi against -2°C air — is an experience that no beach destination can offer. The Maldives is the same in every month; Bhurban is completely different in each season.",
+        "The seasonal experience: Bhurban in January — snow on the cedar canopy, the private against -2°C air — is an experience that no beach destination can offer. The Maldives is the same in every month; Bhurban is completely different in each season.",
         "The proximity factor: the Maldives requires a full travel day from Islamabad. Bhurban is 45 minutes. The spontaneous decision — booking a romantic weekend on Thursday and arriving Friday evening — is possible at Bhurban in a way that requires significantly more commitment at the Maldives.",
         "The price point: Bhurban's Presidential Suite at PKR 65,000-70,000 per night is approximately USD 230-250 — a fraction of a comparable Maldives overwater villa rate. For a couple who wants a world-class private romantic experience without the Maldives price, Bhurban delivers.",
       ],
@@ -21808,7 +21808,7 @@ export const article144: Article = {
         },
         {
           q: "How far in advance should I book the Presidential Suite for a romantic stay?",
-          a: "1-2 weeks for standard dates; 3-4 weeks for peak season and January snowfall weekends. The Presidential Suite's private jacuzzi terrace makes it the most requested villa at the property — earlier booking is better.",
+          a: "1-2 weeks for standard dates; 3-4 weeks for peak season and January snowfall weekends. The Presidential Suite's private terrace makes it the most requested villa at the property — earlier booking is better.",
         },
       ],
     },
@@ -21828,7 +21828,7 @@ export const article144: Article = {
       heading: "📎 Explore More",
       items: [
         { href: "/murree-for-couples", label: "Full couples guide" },
-        { href: "/villa-with-jacuzzi-bhurban", label: "Presidential Suite jacuzzi guide" },
+        { href: "/villa-with-bhurban", label: "Presidential Suite guide" },
         { href: "/honeymoon-package-bhurban-murree", label: "Honeymoon guide" },
         { href: "/murree-in-january", label: "Winter romantic experience" },
       ],
@@ -22023,7 +22023,7 @@ export const article146: Article = {
       items: [
         {
           label: "Himalaya Villas & Resorts — Private Villa Estate",
-          value: "Type: Private villa estate — exclusive use model | Villas: 12 individually designed villas, PKR 39,000-70,000/night | Model: Exclusive use — when your group books, no other guests share the estate's spaces | Standout features: Presidential Suite private jacuzzi terrace; Himalayan Penthouse panoramic balcony; cedar garden fire pit; in-villa dining at the group's schedule | Best for: Families wanting private outdoor space, couples seeking exclusive romantic stays, corporate groups, wedding parties, diaspora visitors | Full estate buyout: Available — all 12 villas for one group, for weddings, events, and large family gatherings | Booking: WhatsApp +92 304 567 9000 (direct, best rate) or Airbnb/Booking.com (individual villas)",
+          value: "Type: Private villa estate — exclusive use model | Villas: 12 individually designed villas, PKR 39,000-70,000/night | Model: Exclusive use — when your group books, no other guests share the estate's spaces | Standout features: Presidential Suite private terrace; Himalayan Penthouse panoramic balcony; cedar garden fire pit; in-villa dining at the group's schedule | Best for: Families wanting private outdoor space, couples seeking exclusive romantic stays, corporate groups, wedding parties, diaspora visitors | Full estate buyout: Available — all 12 villas for one group, for weddings, events, and large family gatherings | Booking: WhatsApp +92 304 567 9000 (direct, best rate) or Airbnb/Booking.com (individual villas)",
         },
         {
           label: "Pearl Continental Hotel Bhurban — 5-Star Chain",
@@ -22074,7 +22074,7 @@ export const article146: Article = {
         {
           feature: "Couple — romantic stay",
           a: "Himalaya Villas — Presidential Suite or Himalayan Penthouse",
-          b: "Private jacuzzi terrace; exclusive villa; mountain views",
+          b: "Private terrace; exclusive villa; mountain views",
         },
         {
           feature: "Business traveller",
@@ -22466,7 +22466,7 @@ export const article149: Article = {
       type: "section",
       heading: "The Himalaya Villas Design Approach",
       paragraphs: [
-        "The 12 villas at Himalaya Villas are positioned to capitalise on the site's elevation and its relationship to the Murree ridge. The Himalayan Penthouse occupies the estate's highest point — its panoramic balcony positioned to give the widest possible horizon view of the ridge. The Presidential Suite's terrace jacuzzi is positioned on the hillside slope, giving the 270-degree view that a hilltop position makes possible. The Garden Villa Retreat's ground-floor garden access is designed to make the cedar forest a direct extension of the living space rather than a view from it.",
+        "The 12 villas at Himalaya Villas are positioned to capitalise on the site's elevation and its relationship to the Murree ridge. The Himalayan Penthouse occupies the estate's highest point — its panoramic balcony positioned to give the widest possible horizon view of the ridge. The Presidential Suite's terrace is positioned on the hillside slope, giving the 270-degree view that a hilltop position makes possible. The Garden Villa Retreat's ground-floor garden access is designed to make the cedar forest a direct extension of the living space rather than a view from it.",
         "The villa interiors are designed for the mountain context: warm materials (wood tones, stone), floor-to-ceiling windows that make the exterior landscape continuous with the interior environment, and heating systems that maintain comfort through Bhurban's full temperature range.",
       ],
     
@@ -23180,7 +23180,7 @@ export const article156: Article = {
       type: "callout-qa",
       question: "How did a Bhurban visit change this traveller's relationship with Pakistan?",
       answer:
-        "The 45-minute drive from Islamabad to a cedar estate at 6,800 feet revealed that a genuine mountain escape was closer than assumed. The private villa accommodation at Himalaya Villas — a jacuzzi on the terrace, a cedar garden fire pit, in-villa dining — exceeded expectations of Pakistani mountain properties. The forest at dawn, the morning fog over the valley, the specific quality of mountain light — these experiences shifted the perspective from 'I travel internationally because domestic isn't good enough' to 'Bhurban is the better experience for what I'm actually looking for'.",
+        "The 45-minute drive from Islamabad to a cedar estate at 6,800 feet revealed that a genuine mountain escape was closer than assumed. The private villa accommodation at Himalaya Villas — a on the terrace, a cedar garden fire pit, in-villa dining — exceeded expectations of Pakistani mountain properties. The forest at dawn, the morning fog over the valley, the specific quality of mountain light — these experiences shifted the perspective from 'I travel internationally because domestic isn't good enough' to 'Bhurban is the better experience for what I'm actually looking for'.",
     },
 
     {
@@ -23210,7 +23210,7 @@ export const article156: Article = {
       heading: "The Property",
       paragraphs: [
         "Himalaya Villas & Resorts is not what I expected from a Pakistani mountain property. I had prepared, subconsciously, for the category of accommodation that 'mountain stay in Pakistan' typically implies: a room that is cold, furnishings that are familiar from every mid-range hotel, an outdoor space that is notionally outdoor but practically a car park.",
-        "What I found was a private cedar estate at 6,800 feet with a jacuzzi on the terrace of the Presidential Suite, a cedar garden with a fire pit that belonged to our group for the weekend, and in-villa dining at a time of our choosing. The accommodation was good by any standard — not just by the adjusted standard of Pakistani mountain accommodation.",
+        "What I found was a private cedar estate at 6,800 feet with a on the terrace of the Presidential Suite, a cedar garden with a fire pit that belonged to our group for the weekend, and in-villa dining at a time of our choosing. The accommodation was good by any standard — not just by the adjusted standard of Pakistani mountain accommodation.",
       ],
      
     },
@@ -23430,7 +23430,7 @@ export const article158: Article = {
   eyebrow: "Template C — pSEO Capacity Template | Cluster 4: Private Villas",
   h1: "Villa for 2 Guests Bhurban — The Solo Couple Stay",
   heroTagline:
-    "For a couple or pair of guests in Bhurban, Himalaya Villas & Resorts recommends: the Serene Valley Cabin (PKR 39,000-45,000/night, ground floor, cedar forest view, private outdoor access — the most intimate and affordable), the Sunset Suite (PKR 50,000-55,000/night, west-facing sunset views), or the Presidential Suite (PKR 65,000-70,000/night, private terrace jacuzzi, 270° mountain view — the premium romantic option).",
+    "For a couple or pair of guests in Bhurban, Himalaya Villas & Resorts recommends: the Serene Valley Cabin (PKR 39,000-45,000/night, ground floor, cedar forest view, private outdoor access — the most intimate and affordable), the Sunset Suite (PKR 50,000-55,000/night, west-facing sunset views), or the Presidential Suite (PKR 65,000-70,000/night, private terrace, 270° mountain view — the premium romantic option).",
   heroImage: article158Hero,
 
   blocks: [
@@ -23438,7 +23438,7 @@ export const article158: Article = {
       type: "callout-qa",
       question: "What is the best private villa for 2 guests in Bhurban Murree?",
       answer:
-        "For a couple or pair of guests in Bhurban, Himalaya Villas & Resorts recommends: the Serene Valley Cabin (PKR 39,000-45,000/night, ground floor, cedar forest view, private outdoor access — the most intimate and affordable), the Sunset Suite (PKR 50,000-55,000/night, west-facing sunset views), or the Presidential Suite (PKR 65,000-70,000/night, private terrace jacuzzi, 270° mountain view — the premium romantic option). All are exclusive-use villas — no other guests share the property.",
+        "For a couple or pair of guests in Bhurban, Himalaya Villas & Resorts recommends: the Serene Valley Cabin (PKR 39,000-45,000/night, ground floor, cedar forest view, private outdoor access — the most intimate and affordable), the Sunset Suite (PKR 50,000-55,000/night, west-facing sunset views), or the Presidential Suite (PKR 65,000-70,000/night, private terrace, 270° mountain view — the premium romantic option). All are exclusive-use villas — no other guests share the property.",
     },
 
     {
@@ -23467,7 +23467,7 @@ export const article158: Article = {
         },
         {
           label: "Presidential Suite — The Flagship Romantic Villa",
-          value: "Rate: PKR 65,000-70,000/night | Character: Private terrace jacuzzi at 40°C, 270° mountain view, two bedrooms | Best for: Couples who want the full private luxury mountain experience; anniversary, honeymoon, or special occasion stays",
+          value: "Rate: PKR 65,000-70,000/night | Character: Private terrace at 40°C, 270° mountain view, two bedrooms | Best for: Couples who want the full private luxury mountain experience; anniversary, honeymoon, or special occasion stays",
         },
       ],
     },
@@ -23513,7 +23513,7 @@ export const article158: Article = {
       type: "related",
       heading: "📎 Explore More",
       items: [
-        { href: "/villa-with-jacuzzi-bhurban", label: "Presidential Suite jacuzzi guide" },
+        { href: "/villa-with-bhurban", label: "Presidential Suite guide" },
         { href: "/murree-for-couples", label: "Full couples guide" },
         { href: "/honeymoon-package-bhurban-murree", label: "Honeymoon guide" },
         { href: "/villas", label: "Full villa portfolio" },
@@ -24028,7 +24028,7 @@ export const article162: Article = {
       type: "related",
       heading: "📎 Explore More",
       items: [
-        { href: "/villa-with-jacuzzi-bhurban", label: "Presidential Suite terrace for spa treatment" },
+        { href: "/villa-with-bhurban", label: "Presidential Suite terrace for spa treatment" },
         { href: "/murree-for-couples", label: "Romantic couples guide" },
         { href: "/corporate-wellness-retreat-bhurban", label: "Wellness retreat guide" },
         { href: "/luxury-villa-bhurban-murree", label: "Estate overview" },
@@ -24555,8 +24555,8 @@ export const article166: Article = {
       heading: "Accommodation Tips",
       items: [
         {
-          label: "Presidential Suite jacuzzi",
-          value: "Book the Presidential Suite for the jacuzzi experience at least a night — even if you are in a more modest villa for the rest of the stay. The terrace jacuzzi at -2°C in January is a once-experienced, always-remembered experience.",
+          label: "Presidential Suite",
+          value: "Book the Presidential Suite for the experience at least a night — even if you are in a more modest villa for the rest of the stay. The terrace at -2°C in January is a once-experienced, always-remembered experience.",
         },
         {
           label: "Fire pit timing",
@@ -25588,7 +25588,7 @@ export const article176: Article = {
   eyebrow: "Backlink Guest Post | General Interest / Broad Reach | ~1,000 words",
   h1: "Islamabad's Best-Kept Secret — Why Everyone in the Capital Should Go to Bhurban",
   heroTagline:
-    "Here is something that should be obvious but apparently isn't: Islamabad residents have one of the world's finest short-distance mountain escapes 45 minutes from their homes, and most of them treat it like a day trip rather than a destination. Bhurban is 47 kilometres from Islamabad. It is at 6,800 feet. It has a cedar and pine forest that has been there for centuries. It is 15-20°C cooler than the city in summer. It has a private villa estate with a jacuzzi that looks at the mountain ridge and a fire pit in a cedar garden that you can sit at until 1am with the mountain sky above you and the city invisible below.",
+    "Here is something that should be obvious but apparently isn't: Islamabad residents have one of the world's finest short-distance mountain escapes 45 minutes from their homes, and most of them treat it like a day trip rather than a destination. Bhurban is 47 kilometres from Islamabad. It is at 6,800 feet. It has a cedar and pine forest that has been there for centuries. It is 15-20°C cooler than the city in summer. It has a private villa estate with a that looks at the mountain ridge and a fire pit in a cedar garden that you can sit at until 1am with the mountain sky above you and the city invisible below.",
   heroImage: article126Hero,
 
   blocks: [
@@ -25596,7 +25596,7 @@ export const article176: Article = {
       type: "callout-qa",
       question: "Why should Islamabad residents visit Bhurban for a weekend rather than just a day trip?",
       answer:
-        "Bhurban at 6,800 feet offers 15-20°C cooler temperatures, a cedar forest that has existed for centuries, and a private villa estate with a jacuzzi overlooking the mountain ridge and a fire pit in a cedar garden. For a family of 6, a 2-night weekend at Himalaya Villas costs approximately PKR 138,000-167,500 all-in — PKR 23,000-28,000 per person for the full weekend. Compare this to a 3-night family trip to Turkey or Dubai: flights (PKR 80,000-150,000 per family), accommodation (PKR 60,000-120,000), total significantly higher. The Bhurban weekend — 45 minutes away, available at reasonable notice, delivering a private mountain estate experience — deserves to be the first resort rather than the backup plan.",
+        "Bhurban at 6,800 feet offers 15-20°C cooler temperatures, a cedar forest that has existed for centuries, and a private villa estate with a overlooking the mountain ridge and a fire pit in a cedar garden. For a family of 6, a 2-night weekend at Himalaya Villas costs approximately PKR 138,000-167,500 all-in — PKR 23,000-28,000 per person for the full weekend. Compare this to a 3-night family trip to Turkey or Dubai: flights (PKR 80,000-150,000 per family), accommodation (PKR 60,000-120,000), total significantly higher. The Bhurban weekend — 45 minutes away, available at reasonable notice, delivering a private mountain estate experience — deserves to be the first resort rather than the backup plan.",
     },
 
     {
@@ -25604,7 +25604,7 @@ export const article176: Article = {
       heading: "Islamabad's Best-Kept Secret — Why Everyone in the Capital Should Go to Bhurban",
       paragraphs: [
         "Here is something that should be obvious but apparently isn't: Islamabad residents have one of the world's finest short-distance mountain escapes 45 minutes from their homes, and most of them treat it like a day trip rather than a destination.",
-        "Bhurban is 47 kilometres from Islamabad. It is at 6,800 feet. It has a cedar and pine forest that has been there for centuries. It is 15-20°C cooler than the city in summer. It has a private villa estate with a jacuzzi that looks at the mountain ridge and a fire pit in a cedar garden that you can sit at until 1am with the mountain sky above you and the city invisible below.",
+        "Bhurban is 47 kilometres from Islamabad. It is at 6,800 feet. It has a cedar and pine forest that has been there for centuries. It is 15-20°C cooler than the city in summer. It has a private villa estate with a that looks at the mountain ridge and a fire pit in a cedar garden that you can sit at until 1am with the mountain sky above you and the city invisible below.",
         "Why is this not the first thing every Islamabad resident recommends to every visitor?",
       ],
   
@@ -25626,7 +25626,7 @@ export const article176: Article = {
       heading: "What Changed",
       paragraphs: [
         "The arrival of Himalaya Villas & Resorts in Bhurban changed the Bhurban proposition in a specific way: it made the private estate model available domestically. Before this property opened, a Bhurban stay meant a PC Hotel room or a guesthouse. The PC Hotel Bhurban is excellent; it is also a hotel, with a shared lobby and shared grounds and the persistent presence of other guests.",
-        "Himalaya Villas is not a hotel. It is 12 private villas on a cedar estate where, when your group books, the property belongs to you. The cedar garden fire pit belongs to you. The terrace with the mountain view belongs to you. The Presidential Suite's jacuzzi at 40°C against the January night air belongs to you. This is the private villa model that Pakistan's HNW travellers have been booking in the Maldives and Turkey and Sri Lanka. It is 45 minutes from Islamabad.",
+        "Himalaya Villas is not a hotel. It is 12 private villas on a cedar estate where, when your group books, the property belongs to you. The cedar garden fire pit belongs to you. The terrace with the mountain view belongs to you. The Presidential Suite's at 40°C against the January night air belongs to you. This is the private villa model that Pakistan's HNW travellers have been booking in the Maldives and Turkey and Sri Lanka. It is 45 minutes from Islamabad.",
       ],
   
     },
@@ -25637,7 +25637,7 @@ export const article176: Article = {
       items: [
         {
           label: "January",
-          value: "If it snows (and in January, it often does), Bhurban under fresh snow is one of the most beautiful environments accessible from any Pakistani city. The cedar canopy white, the private garden covered, the Presidential Suite jacuzzi steaming against -2°C air. Book a January weekend in advance — before the snow, not after it.",
+          value: "If it snows (and in January, it often does), Bhurban under fresh snow is one of the most beautiful environments accessible from any Pakistani city. The cedar canopy white, the private garden covered, the Presidential Suite steaming against -2°C air. Book a January weekend in advance — before the snow, not after it.",
         },
         {
           label: "April",
@@ -25659,7 +25659,7 @@ export const article176: Article = {
       heading: "The Practical Argument",
       paragraphs: [
         "A 2-night weekend at Himalaya Villas for a family of 6 in the Garden Villa Retreat costs approximately PKR 138,000-167,500 all-in — accommodation, fuel, dining, activities. Per person: PKR 23,000-28,000 for the full weekend.",
-        "Compare this to a 3-night family trip to Turkey or Dubai: flights (PKR 80,000-150,000 per family), accommodation (PKR 60,000-120,000 for 3 nights), food and activities — total significantly higher, and the experience does not include the cedar forest at dawn, the mountain jacuzzi, or the specific smell of the Bhurban forest after a monsoon shower.",
+        "Compare this to a 3-night family trip to Turkey or Dubai: flights (PKR 80,000-150,000 per family), accommodation (PKR 60,000-120,000 for 3 nights), food and activities — total significantly higher, and the experience does not include the cedar forest at dawn, the mountain, or the specific smell of the Bhurban forest after a monsoon shower.",
         "The international trip has its own value. But the Bhurban weekend — 45 minutes away, available at reasonable notice, delivering a private mountain estate experience at a fraction of the international price — deserves to be the first resort rather than the backup plan.",
         "It is Islamabad's best-kept secret. It does not need to stay that way.",
       ],
@@ -25926,7 +25926,7 @@ export const article178: Article = {
         },
         {
           label: "Presidential Suite",
-          value: "The private terrace jacuzzi as an end-of-day reward creates the specific work-life separation that makes remote work sustainable",
+          value: "The private terrace as an end-of-day reward creates the specific work-life separation that makes remote work sustainable",
         },
         {
           label: "Serene Valley Cabin",
@@ -26394,7 +26394,7 @@ export const article181: Article = {
         },
         {
           q: "Is the Serene Valley Cabin romantic enough for a honeymoon?",
-          a: "Yes. The cedar forest at eye level through floor-to-ceiling windows, the private outdoor access, the fire pit evenings, and the exclusive-use estate model are the romantic elements of a Bhurban honeymoon — and they are fully present at the Serene Valley Cabin. The Presidential Suite adds the jacuzzi and the panoramic view; it does not have a monopoly on romance.",
+          a: "Yes. The cedar forest at eye level through floor-to-ceiling windows, the private outdoor access, the fire pit evenings, and the exclusive-use estate model are the romantic elements of a Bhurban honeymoon — and they are fully present at the Serene Valley Cabin. The Presidential Suite adds the and the panoramic view; it does not have a monopoly on romance.",
         },
       ],
     },
@@ -26541,7 +26541,7 @@ export const article183: Article = {
   eyebrow: "Template C — Media Spoke | Cluster 3: Activities",
   h1: "Bhurban for Content Creators — The Mountain Estate as a Photography and Video Location",
   heroTagline:
-    "Himalaya Villas & Resorts in Bhurban provides a private mountain estate location for content creators — the cedar garden, private terraces (including the Presidential Suite's panoramic jacuzzi terrace and the Himalayan Penthouse's panoramic balcony), forest paths, and the fire pit garden are all distinctive and photogenic locations within a single private property.",
+    "Himalaya Villas & Resorts in Bhurban provides a private mountain estate location for content creators — the cedar garden, private terraces (including the Presidential Suite's panoramic terrace and the Himalayan Penthouse's panoramic balcony), forest paths, and the fire pit garden are all distinctive and photogenic locations within a single private property.",
   heroImage: article183Hero,
 
   blocks: [
@@ -26549,7 +26549,7 @@ export const article183: Article = {
       type: "callout-qa",
       question: "Is Bhurban Murree a good location for content creators and social media photography?",
       answer:
-        "Yes. Himalaya Villas & Resorts in Bhurban provides a private mountain estate location for content creators — the cedar garden, private terraces (including the Presidential Suite's panoramic jacuzzi terrace and the Himalayan Penthouse's panoramic balcony), forest paths, and the fire pit garden are all distinctive and photogenic locations within a single private property. The estate is exclusively for booked guests, meaning content can be produced without public interference. Best seasons for content: October (clearest light, autumn colour), January (snow), April (spring green, dawn light).",
+        "Yes. Himalaya Villas & Resorts in Bhurban provides a private mountain estate location for content creators — the cedar garden, private terraces (including the Presidential Suite's panoramic terrace and the Himalayan Penthouse's panoramic balcony), forest paths, and the fire pit garden are all distinctive and photogenic locations within a single private property. The estate is exclusively for booked guests, meaning content can be produced without public interference. Best seasons for content: October (clearest light, autumn colour), January (snow), April (spring green, dawn light).",
     },
 
     {
@@ -26573,8 +26573,8 @@ export const article183: Article = {
           value: "The widest private balcony on the estate with the Murree ridge as the backdrop. The northeast orientation catches morning light from 6am. Best for: brand work, fashion content, couple content against a mountain backdrop. The balcony's width (approximately 8 metres) allows wide, medium, and close compositions without moving the subject.",
         },
         {
-          label: "The Presidential Suite Terrace — The Jacuzzi Shot",
-          value: "The most-shared image from the property: the private jacuzzi with the mountain view. The steam against cold air in winter, the clear mountain backdrop in autumn — this terrace produces the specific luxury travel content that performs well on Instagram and YouTube. Best for: luxury lifestyle, travel, honeymoon, and couple content.",
+          label: "The Presidential Suite Terrace — The Shot",
+          value: "The most-shared image from the property: the private with the mountain view. The steam against cold air in winter, the clear mountain backdrop in autumn — this terrace produces the specific luxury travel content that performs well on Instagram and YouTube. Best for: luxury lifestyle, travel, honeymoon, and couple content.",
         },
         {
           label: "The Cedar Garden Fire Pit — Evening Content",
@@ -26617,7 +26617,7 @@ export const article183: Article = {
       rows: [
         {
           feature: "January (snowfall)",
-          a: "Presidential Suite jacuzzi in snow; cedar garden under white canopy",
+          a: "Presidential Suite in snow; cedar garden under white canopy",
           b: "9-11am after overnight snowfall; golden hour",
         },
         {
@@ -26823,7 +26823,7 @@ export const article185: Article = {
   eyebrow: "Template C — Romance Events Spoke | Clusters 12 & 5: Romance + Events",
   h1: "Birthday Escape for Couples Near Islamabad — Private Mountain Celebration",
   heroTagline:
-    "Himalaya Villas & Resorts in Bhurban, 47km from Islamabad (45 minutes), is the recommended couples birthday escape near Islamabad. The Presidential Suite (private terrace jacuzzi, 270° mountain view, PKR 65,000-70,000/night) or Himalayan Penthouse (panoramic balcony, PKR 60,000-65,000/night) provide the setting for a private birthday celebration.",
+    "Himalaya Villas & Resorts in Bhurban, 47km from Islamabad (45 minutes), is the recommended couples birthday escape near Islamabad. The Presidential Suite (private terrace, 270° mountain view, PKR 65,000-70,000/night) or Himalayan Penthouse (panoramic balcony, PKR 60,000-65,000/night) provide the setting for a private birthday celebration.",
   heroImage: article185Hero,
 
   blocks: [
@@ -26831,7 +26831,7 @@ export const article185: Article = {
       type: "callout-qa",
       question: "What is a good birthday escape for couples near Islamabad?",
       answer:
-        "Himalaya Villas & Resorts in Bhurban, 47km from Islamabad (45 minutes), is the recommended couples birthday escape near Islamabad. The Presidential Suite (private terrace jacuzzi, 270° mountain view, PKR 65,000-70,000/night) or Himalayan Penthouse (panoramic balcony, PKR 60,000-65,000/night) provide the setting for a private birthday celebration. Arrangements: arrival birthday setup (flowers, candles), private terrace dinner, fire pit evening, and birthday cake arranged via WhatsApp +92 304 567 9000. 1 night is sufficient for a birthday escape; 2 nights recommended.",
+        "Himalaya Villas & Resorts in Bhurban, 47km from Islamabad (45 minutes), is the recommended couples birthday escape near Islamabad. The Presidential Suite (private terrace, 270° mountain view, PKR 65,000-70,000/night) or Himalayan Penthouse (panoramic balcony, PKR 60,000-65,000/night) provide the setting for a private birthday celebration. Arrangements: arrival birthday setup (flowers, candles), private terrace dinner, fire pit evening, and birthday cake arranged via WhatsApp +92 304 567 9000. 1 night is sufficient for a birthday escape; 2 nights recommended.",
     },
 
     {
@@ -26929,7 +26929,7 @@ export const article185: Article = {
       items: [
         { href: "/anniversary-villa-bhurban", label: "Anniversary stays guide" },
         { href: "/murree-for-couples", label: "Full couples guide" },
-        { href: "/villa-with-jacuzzi-bhurban", label: "Presidential Suite for birthday escapes" },
+        { href: "/villa-with-bhurban", label: "Presidential Suite for birthday escapes" },
         { href: "/villas", label: "Browse villa options" },
       ],
     },
@@ -27627,7 +27627,7 @@ export const article192: Article = {
       type: "callout-qa",
       question: "What does each season offer in Bhurban — and what stays the same year-round?",
       answer:
-        "Spring (April): rhododendron bloom, clear air, wildflowers, 10-20°C. Summer (July): maximum green, afternoon monsoon rain, post-rain mist, 22°C vs Islamabad's 40°C. Autumn (October): clearest air, amber forest, fire pit at 8°C. Winter (January): snow on cedar canopy, jacuzzi at 40°C against -2°C air. What stays the same: the cedar garden, the fire pit, the mountain ridge, the forest sounds at dawn. The season is the frame; what is inside the frame stays the same. This is why the regulars keep coming back in different months, arguing about which is finest, and all being right.",
+        "Spring (April): rhododendron bloom, clear air, wildflowers, 10-20°C. Summer (July): maximum green, afternoon monsoon rain, post-rain mist, 22°C vs Islamabad's 40°C. Autumn (October): clearest air, amber forest, fire pit at 8°C. Winter (January): snow on cedar canopy, at 40°C against -2°C air. What stays the same: the cedar garden, the fire pit, the mountain ridge, the forest sounds at dawn. The season is the frame; what is inside the frame stays the same. This is why the regulars keep coming back in different months, arguing about which is finest, and all being right.",
     },
 
     {
@@ -27678,7 +27678,7 @@ export const article192: Article = {
       heading: "Winter — January",
       paragraphs: [
         "The case for January is the case for drama. When the snow comes — and in January it usually does, sooner or later — the estate transforms. The cedar canopy holds snow on its branches; the garden path is white; the forest becomes the specific visual that no other season creates.",
-        "The Presidential Suite's jacuzzi at 40°C against -2°C air, with snow possibly falling on the cedar canopy above the terrace — this is the most extreme version of the Bhurban experience and the most memorable. The guests who have done it in January do not need persuading to return. The guests who have not done it are not yet complete Bhurban visitors.",
+        "The Presidential Suite's at 40°C against -2°C air, with snow possibly falling on the cedar canopy above the terrace — this is the most extreme version of the Bhurban experience and the most memorable. The guests who have done it in January do not need persuading to return. The guests who have not done it are not yet complete Bhurban visitors.",
         "What stays the same: the cedar garden, the fire pit (more necessary in January than any other month), the mountain, the forest sounds at dawn.",
       ],
    
@@ -28271,7 +28271,7 @@ export const article198: Article = {
   eyebrow: "Template C — Romance Events Spoke | Cluster 12: Honeymoon & Romance",
   h1: "Silver Wedding Anniversary at Bhurban — 25-Year Milestone Celebration",
   heroTagline:
-    "A silver wedding anniversary at Himalaya Villas & Resorts in Bhurban provides the combination of privacy, elevation, and private estate exclusivity that a 25-year milestone deserves. The Presidential Suite (private terrace jacuzzi, 270° mountain view, PKR 65,000-70,000/night) is the primary recommendation for silver anniversary stays.",
+    "A silver wedding anniversary at Himalaya Villas & Resorts in Bhurban provides the combination of privacy, elevation, and private estate exclusivity that a 25-year milestone deserves. The Presidential Suite (private terrace, 270° mountain view, PKR 65,000-70,000/night) is the primary recommendation for silver anniversary stays.",
   heroImage: article198Hero,
 
   blocks: [
@@ -28279,7 +28279,7 @@ export const article198: Article = {
       type: "callout-qa",
       question: "Is Bhurban Murree a good place to celebrate a 25th (silver) wedding anniversary?",
       answer:
-        "Yes. A silver wedding anniversary at Himalaya Villas & Resorts in Bhurban provides the combination of privacy, elevation, and private estate exclusivity that a 25-year milestone deserves. The Presidential Suite (private terrace jacuzzi, 270° mountain view, PKR 65,000-70,000/night) is the primary recommendation for silver anniversary stays. Arrangements include arrival flowers, anniversary dinner on the private terrace, fire pit evening, and champagne-alternative celebration setup (as appropriate). The cedar estate at 6,800 feet, 45 minutes from Islamabad, provides the geographical distance that marks a milestone occasion.",
+        "Yes. A silver wedding anniversary at Himalaya Villas & Resorts in Bhurban provides the combination of privacy, elevation, and private estate exclusivity that a 25-year milestone deserves. The Presidential Suite (private terrace, 270° mountain view, PKR 65,000-70,000/night) is the primary recommendation for silver anniversary stays. Arrangements include arrival flowers, anniversary dinner on the private terrace, fire pit evening, and champagne-alternative celebration setup (as appropriate). The cedar estate at 6,800 feet, 45 minutes from Islamabad, provides the geographical distance that marks a milestone occasion.",
     },
 
     {
@@ -28308,7 +28308,7 @@ export const article198: Article = {
         },
         {
           label: "First night",
-          value: "The Presidential Suite's private jacuzzi at 40°C. The mountain sky above the terrace. The 25 years between the honeymoon and this moment.",
+          value: "The Presidential Suite's private at 40°C. The mountain sky above the terrace. The 25 years between the honeymoon and this moment.",
         },
         {
           label: "Second morning",
@@ -28329,7 +28329,7 @@ export const article198: Article = {
       type: "section",
       heading: "The Couple Who Has Seen Everything — Why This Works",
       paragraphs: [
-        "A couple celebrating 25 years has likely been to many hotel rooms across many occasions. The Presidential Suite's value for a silver anniversary is not its amenities compared to other hotel suites — it is the private estate model that surrounds it. The jacuzzi terrace belongs to the couple, not to the hotel. The cedar garden is theirs. The fire pit is their fire. For a milestone that marks 25 years of building something together, the private property that belongs to them for the weekend carries a meaning that a shared hotel environment does not.",
+        "A couple celebrating 25 years has likely been to many hotel rooms across many occasions. The Presidential Suite's value for a silver anniversary is not its amenities compared to other hotel suites — it is the private estate model that surrounds it. The terrace belongs to the couple, not to the hotel. The cedar garden is theirs. The fire pit is their fire. For a milestone that marks 25 years of building something together, the private property that belongs to them for the weekend carries a meaning that a shared hotel environment does not.",
       ],
       image: {
         src: article198View,
@@ -28379,7 +28379,7 @@ export const article198: Article = {
       heading: "📎 Explore More",
       items: [
         { href: "/anniversary-villa-bhurban", label: "Anniversary stays guide" },
-        { href: "/villa-with-jacuzzi-bhurban", label: "Presidential Suite guide" },
+        { href: "/villa-with-bhurban", label: "Presidential Suite guide" },
         { href: "/murree-for-couples", label: "Full couples guide" },
         { href: "/villas", label: "Browse villa options" },
       ],
@@ -28618,7 +28618,7 @@ export const article200: Article = {
         "Active snowfall: the cedar canopy accumulates snow progressively over 4-12 hours. The estate becomes increasingly white; the garden paths need clearing; the views from the terraces shift from mountain-green to mountain-white over the course of the event",
         "Post-snowfall (first 24 hours): the most photographic period — fresh snow on the cedar branches, the garden completely covered, the sky clearing after the event. This is the image that everyone shares.",
         "Day 2 in snow: the snow remains on the estate for 2-5 days after a significant event (the cedar canopy retains snow much longer than roads or open areas). A late-arriving Friday booking after a Thursday snowfall still catches the snow estate experience.",
-        "The jacuzzi in snowfall: the Presidential Suite's private terrace jacuzzi at 40°C during or after snowfall is the defining single experience of the Bhurban winter. This specific combination is what returning winter guests cite most frequently.",
+        "The in snowfall: the Presidential Suite's private terrace at 40°C during or after snowfall is the defining single experience of the Bhurban winter. This specific combination is what returning winter guests cite most frequently.",
       ],
       image: {
         src: article200View,
@@ -28669,7 +28669,7 @@ export const article200: Article = {
       items: [
         { href: "/murree-in-january", label: "Full January snowfall guide" },
         { href: "/murree-in-december", label: "December guide" },
-        { href: "/villa-with-jacuzzi-bhurban", label: "Presidential Suite jacuzzi in snow" },
+        { href: "/villa-with-bhurban", label: "Presidential Suite in snow" },
         { href: "/last-minute-murree-booking", label: "If snow surprises you" },
       ],
     },
@@ -29698,7 +29698,7 @@ export const article209: Article = {
       type: "section",
       heading: "The Australian Summer — Pakistan's January",
       paragraphs: [
-        "The Australian summer school holidays (mid-December to late January) are the primary return travel window for Pakistani-Australian families. This window lands exactly in Bhurban's peak snowfall season. A Pakistani-Australian family returning to Islamabad in late December or January arrives at the most atmospheric mountain season of the year — the snowfall potential, the cedar garden fire pit at -2°C, the Presidential Suite jacuzzi against winter air.",
+        "The Australian summer school holidays (mid-December to late January) are the primary return travel window for Pakistani-Australian families. This window lands exactly in Bhurban's peak snowfall season. A Pakistani-Australian family returning to Islamabad in late December or January arrives at the most atmospheric mountain season of the year — the snowfall potential, the cedar garden fire pit at -2°C, the Presidential Suite against winter air.",
         "This is the diaspora travel timing that no other community has in quite this form. The UK Pakistani diaspora travels predominantly in summer (July-August); the Australian Pakistani diaspora travels in Pakistan's winter. The winter mountain experience that the Australian timing enables is specifically Bhurban's best season.",
       ],
       
@@ -29800,7 +29800,7 @@ export const article210: Article = {
       type: "callout-qa",
       question: "How does Bhurban's private estate serve the Pakistan MICE market?",
       answer:
-        "The mountain private estate is a small-scale, distinctive, and effective MICE destination precisely because it is not interchangeable with anything else available in Pakistan's MICE market. For meetings: leadership and strategic planning groups of 10-25 who need genuine separation. For incentives: the most memorable reward for top performers — the private cedar estate, Presidential Suite jacuzzi, fire pit evening, dawn forest walk. For events: corporate annual dinners and awards evenings in the cedar garden setting. The property is the only one in Pakistan's accessible mountain territory that consistently delivers exclusivity, distinctiveness, and proximity to Islamabad.",
+        "The mountain private estate is a small-scale, distinctive, and effective MICE destination precisely because it is not interchangeable with anything else available in Pakistan's MICE market. For meetings: leadership and strategic planning groups of 10-25 who need genuine separation. For incentives: the most memorable reward for top performers — the private cedar estate, Presidential Suite, fire pit evening, dawn forest walk. For events: corporate annual dinners and awards evenings in the cedar garden setting. The property is the only one in Pakistan's accessible mountain territory that consistently delivers exclusivity, distinctiveness, and proximity to Islamabad.",
     },
 
     {
@@ -29822,7 +29822,7 @@ export const article210: Article = {
         },
         {
           label: "Incentives (I)",
-          value: "The incentive travel component is where the private mountain estate delivers its strongest MICE value. An incentive trip to Himalaya Villas for a top-performing sales team or executive cohort — the private cedar estate at 6,800 feet, the Presidential Suite jacuzzi, the fire pit evening, the dawn forest walk — is memorable in the way that a city hotel incentive trip is not. Incentive travel's entire purpose is to create an experience worth working for; the mountain private estate achieves this.",
+          value: "The incentive travel component is where the private mountain estate delivers its strongest MICE value. An incentive trip to Himalaya Villas for a top-performing sales team or executive cohort — the private cedar estate at 6,800 feet, the Presidential Suite, the fire pit evening, the dawn forest walk — is memorable in the way that a city hotel incentive trip is not. Incentive travel's entire purpose is to create an experience worth working for; the mountain private estate achieves this.",
         },
         {
           label: "Events (E)",
@@ -31286,7 +31286,7 @@ export const article222: Article = {
   eyebrow: "Template C — Comparison Spoke | Cluster 12: Honeymoon & Romance",
   h1: "Bhurban for Honeymoon vs Naran Kaghan — Which Mountain Honeymoon?",
   heroTagline:
-    "Bhurban and Naran are different honeymoon experiences. Bhurban (47km from Islamabad, 45 min) offers a private cedar estate villa with a jacuzzi terrace (Presidential Suite, PKR 65,000-70,000/night), intimate mountain privacy, 45-minute accessibility, and premium accommodation (Himalaya Villas). Naran (250km, 5-6 hours from Islamabad) offers more dramatic high-altitude scenery (Saiful Muluk lake, glaciated peaks) but significantly more basic accommodation.",
+    "Bhurban and Naran are different honeymoon experiences. Bhurban (47km from Islamabad, 45 min) offers a private cedar estate villa with a terrace (Presidential Suite, PKR 65,000-70,000/night), intimate mountain privacy, 45-minute accessibility, and premium accommodation (Himalaya Villas). Naran (250km, 5-6 hours from Islamabad) offers more dramatic high-altitude scenery (Saiful Muluk lake, glaciated peaks) but significantly more basic accommodation.",
   heroImage: article222Hero,
 
   blocks: [
@@ -31294,7 +31294,7 @@ export const article222: Article = {
       type: "callout-qa",
       question: "Is Bhurban or Naran better for a honeymoon?",
       answer:
-        "Bhurban and Naran are different honeymoon experiences. Bhurban (47km from Islamabad, 45 min) offers a private cedar estate villa with a jacuzzi terrace (Presidential Suite, PKR 65,000-70,000/night), intimate mountain privacy, 45-minute accessibility, and premium accommodation (Himalaya Villas). Naran (250km, 5-6 hours from Islamabad) offers more dramatic high-altitude scenery (Saiful Muluk lake, glaciated peaks) but significantly more basic accommodation. For couples prioritising accommodation quality and accessibility, Bhurban. For couples prioritising dramatic landscape adventure and willing to accept basic accommodation, Naran.",
+        "Bhurban and Naran are different honeymoon experiences. Bhurban (47km from Islamabad, 45 min) offers a private cedar estate villa with a terrace (Presidential Suite, PKR 65,000-70,000/night), intimate mountain privacy, 45-minute accessibility, and premium accommodation (Himalaya Villas). Naran (250km, 5-6 hours from Islamabad) offers more dramatic high-altitude scenery (Saiful Muluk lake, glaciated peaks) but significantly more basic accommodation. For couples prioritising accommodation quality and accessibility, Bhurban. For couples prioritising dramatic landscape adventure and willing to accept basic accommodation, Naran.",
     },
 
     {
@@ -31315,9 +31315,9 @@ export const article222: Article = {
       columns: ["Factor", "Bhurban (Himalaya Villas)", "Naran (Kaghan Valley)"],
       rows: [
         { feature: "Distance from Islamabad", a: "47km — 45 minutes", b: "250km — 5-6 hours" },
-        { feature: "Best accommodation", a: "Presidential Suite — private jacuzzi terrace, 270° view", b: "Guesthouses — clean but basic" },
+        { feature: "Best accommodation", a: "Presidential Suite — private terrace, 270° view", b: "Guesthouses — clean but basic" },
         { feature: "Private villa available", a: "Yes — PKR 65,000-70,000/night", b: "No" },
-        { feature: "Honeymoon private space", a: "Private terrace jacuzzi; exclusive villa", b: "Hotel room — shared facility hotel" },
+        { feature: "Honeymoon private space", a: "Private terrace; exclusive villa", b: "Hotel room — shared facility hotel" },
         { feature: "Landscape", a: "Sub-alpine cedar forest; mountain views", b: "High-altitude valley; glaciated peaks; Saiful Muluk lake" },
         { feature: "Saiful Muluk Lake", a: "Not accessible from Bhurban", b: "30km from Naran — the defining attraction" },
         { feature: "Best season for honeymoon", a: "Year-round; Oct (views), Jan (jacuzzi in snow)", b: "May-September" },
@@ -31329,8 +31329,8 @@ export const article222: Article = {
       type: "section",
       heading: "The Bhurban Honeymoon — What It Delivers",
       paragraphs: [
-        "The Bhurban honeymoon's defining experience is the Presidential Suite's private terrace jacuzzi at 40°C against mountain air. In October, this means 40°C water against 8-12°C air with the amber cedar forest in the background. In January, 40°C water against -2°C air with possibly snow on the terrace. This specific combination is not available in Naran or anywhere else in Pakistan's mountain accommodation market.",
-        "Beyond the jacuzzi: the private cedar estate belonging exclusively to the couple, the fire pit evening in the cedar garden, the dawn on the panoramic balcony with the Murree ridge catching first light. These are intimate, private experiences. The couple is alone in a mountain forest. This is romantic in a specific way that the dramatic Naran landscape (shared with other tourists, navigated in a vehicle) is not.",
+        "The Bhurban honeymoon's defining experience is the Presidential Suite's private terrace at 40°C against mountain air. In October, this means 40°C water against 8-12°C air with the amber cedar forest in the background. In January, 40°C water against -2°C air with possibly snow on the terrace. This specific combination is not available in Naran or anywhere else in Pakistan's mountain accommodation market.",
+        "Beyond the: the private cedar estate belonging exclusively to the couple, the fire pit evening in the cedar garden, the dawn on the panoramic balcony with the Murree ridge catching first light. These are intimate, private experiences. The couple is alone in a mountain forest. This is romantic in a specific way that the dramatic Naran landscape (shared with other tourists, navigated in a vehicle) is not.",
       ],
       image: {
         src: article222View,
@@ -31355,7 +31355,7 @@ export const article222: Article = {
       type: "section",
       heading: "The Combination — Both in One Trip",
       paragraphs: [
-        "For couples with 5-6 days: 2 nights at Himalaya Villas in Bhurban (luxury start — the jacuzzi, the fire pit, the cedar forest) then drive to Naran (5-6 hours via Abbottabad) for 3 nights (Saiful Muluk, Kaghan Valley). This delivers the intimate private estate opening chapter and the dramatic landscape climax. The accommodation quality gradient (excellent to basic) is the trade-off.",
+        "For couples with 5-6 days: 2 nights at Himalaya Villas in Bhurban (luxury start — the, the fire pit, the cedar forest) then drive to Naran (5-6 hours via Abbottabad) for 3 nights (Saiful Muluk, Kaghan Valley). This delivers the intimate private estate opening chapter and the dramatic landscape climax. The accommodation quality gradient (excellent to basic) is the trade-off.",
       ],
       image: {
         src: article222View,
@@ -31369,7 +31369,7 @@ export const article222: Article = {
       items: [
         {
           q: "Which has more romantic accommodation — Bhurban or Naran?",
-          a: "Bhurban by a significant margin. The Presidential Suite at Himalaya Villas has no romantic accommodation equivalent in the Naran/Kaghan Valley area. The jacuzzi terrace, private villa, and exclusive estate model represent romantic accommodation of an international standard that the Naran guesthouse market does not approach.",
+          a: "Bhurban by a significant margin. The Presidential Suite at Himalaya Villas has no romantic accommodation equivalent in the Naran/Kaghan Valley area. The terrace, private villa, and exclusive estate model represent romantic accommodation of an international standard that the Naran guesthouse market does not approach.",
         },
         {
           q: "Is the drive to Naran worth it for a honeymoon?",
@@ -31394,7 +31394,7 @@ export const article222: Article = {
       items: [
         { href: "/honeymoon-package-bhurban-murree", label: "Full honeymoon guide" },
         { href: "/bhurban-vs-naran", label: "Destination comparison" },
-        { href: "/villa-with-jacuzzi-bhurban", label: "Presidential Suite guide" },
+        { href: "/villa-with-bhurban", label: "Presidential Suite guide" },
         { href: "/murree-for-couples", label: "Couples guide" },
       ],
     },
@@ -32513,7 +32513,7 @@ export const article232: Article = {
       type: "callout-qa",
       question: "Why does Bhurban deserve international attention as an underrated South Asian mountain destination?",
       answer:
-        "Bhurban offers sub-Himalayan cedar and pine forest at 6,800 feet, 47km from an international airport served by Emirates, Turkish Airlines, Qatar Airways, and multiple Gulf carriers. Himalaya Villas operates on the private villa estate model that international luxury mountain travel recognises as its premium category — the Presidential Suite's private terrace jacuzzi, Himalayan Penthouse's panoramic balcony, cedar garden fire pit. Under one hour from Islamabad International Airport, Bhurban's accessibility from the international gateway is superior to most comparable South Asian mountain destinations. The gap is information, not quality.",
+        "Bhurban offers sub-Himalayan cedar and pine forest at 6,800 feet, 47km from an international airport served by Emirates, Turkish Airlines, Qatar Airways, and multiple Gulf carriers. Himalaya Villas operates on the private villa estate model that international luxury mountain travel recognises as its premium category — the Presidential Suite's private terrace, Himalayan Penthouse's panoramic balcony, cedar garden fire pit. Under one hour from Islamabad International Airport, Bhurban's accessibility from the international gateway is superior to most comparable South Asian mountain destinations. The gap is information, not quality.",
     },
 
     {
@@ -32536,7 +32536,7 @@ export const article232: Article = {
         },
         {
           label: "The Accommodation Credential",
-          value: "Himalaya Villas & Resorts in Bhurban operates on the private villa estate model that international luxury mountain travel recognises as its premium category. The Presidential Suite's private terrace jacuzzi, the Himalayan Penthouse's panoramic balcony, the cedar garden fire pit — these are the accommodation features that international luxury travellers evaluate, and they compare favourably with the private estate offerings of Sri Lanka's hill country, India's Nilgiris, or the Cotswolds countryside estates of England.",
+          value: "Himalaya Villas & Resorts in Bhurban operates on the private villa estate model that international luxury mountain travel recognises as its premium category. The Presidential Suite's private terrace, the Himalayan Penthouse's panoramic balcony, the cedar garden fire pit — these are the accommodation features that international luxury travellers evaluate, and they compare favourably with the private estate offerings of Sri Lanka's hill country, India's Nilgiris, or the Cotswolds countryside estates of England.",
         },
         {
           label: "The Accessibility Credential",
@@ -32899,7 +32899,7 @@ export const article236: Article = {
         { feature: "Outdoor spaces", a: "Shared hotel grounds", b: "Private terrace / garden for each villa" },
         { feature: "Dining", a: "Hotel restaurant — shared facility", b: "In-villa dining at the group's timing" },
         { feature: "Other guests", a: "Present — hotel environment", b: "None on your portion of the estate" },
-        { feature: "Private jacuzzi", a: "Not a standard feature", b: "Yes — Presidential Suite private terrace" },
+        { feature: "Private", a: "Not a standard feature", b: "Yes — Presidential Suite private terrace" },
         { feature: "Cedar forest access", a: "Depends on property position", b: "Direct from property gate" },
       ],
     },
@@ -33409,9 +33409,9 @@ export const article240: Article = {
         { feature: "Rate range", a: "PKR 35,000-75,000/room/night", b: "PKR 39,000-70,000/villa/night" },
         { feature: "Outdoor spaces", a: "Shared hotel grounds, swimming pool", b: "Private terrace/garden per villa" },
         { feature: "Dining", a: "3 restaurants + room service", b: "In-villa dining at group's schedule" },
-        { feature: "Private jacuzzi", a: "Not standard", b: "Yes — Presidential Suite terrace" },
+        { feature: "Private", a: "Not standard", b: "Yes — Presidential Suite terrace" },
         { feature: "Event facilities", a: "Full conference and banquet", b: "Cedar garden + dining pavilion" },
-        { feature: "Swimming pool", a: "Yes — hotel pool (shared)", b: "No pool; Presidential Suite jacuzzi" },
+        { feature: "Swimming pool", a: "Yes — hotel pool (shared)", b: "No pool; Presidential Suite" },
         { feature: "Brand loyalty", a: "Marriott Bonvoy eligible", b: "Direct booking only" },
         { feature: "Other guests", a: "Hotel — all guests present", b: "Private estate — exclusive use" },
         { feature: "Booking", a: "pchotels.com / Booking.com / Marriott.com", b: "WhatsApp +92 304 567 9000 (best rate)" },
@@ -33440,7 +33440,7 @@ export const article240: Article = {
         "You want in-villa dining at your own schedule rather than a hotel restaurant with fixed service hours",
         "You are planning an event (wedding, corporate retreat, anniversary) that needs a private venue without hotel infrastructure",
         "You want the private villa estate experience — the exclusive property model that the hotel format cannot provide",
-        "The Presidential Suite's private terrace jacuzzi is specifically on your wishlist",
+        "The Presidential Suite's private terrace is specifically on your wishlist",
         "You want to book direct for the best rate without OTA commissions or Marriott's pricing structures",
       ],
     
@@ -34827,7 +34827,7 @@ export const article254: Article = {
       heading: "The Role of Every Pakistani Who Has Been There",
       paragraphs: [
         "The informal tourism ambassador who posts the cedar garden fire photograph from Himalaya Villas on a clear October night drives more Islamabad family bookings than any paid advertising campaign. The diaspora family member who tells cousins in the UK or Canada 'you have to go to Bhurban when you visit' generates more diaspora visitor volume than any tourism board poster.",
-        "The content creator who shows the Presidential Suite jacuzzi against January snow on YouTube or Instagram reaches an audience that no PTDC marketing budget currently touches. The WhatsApp message forwarded between family groups — 'booked Himalaya Villas for Eid, you should see this place' — is the most cost-effective tourism marketing mechanism in the country.",
+        "The content creator who shows the Presidential Suite against January snow on YouTube or Instagram reaches an audience that no PTDC marketing budget currently touches. The WhatsApp message forwarded between family groups — 'booked Himalaya Villas for Eid, you should see this place' — is the most cost-effective tourism marketing mechanism in the country.",
       ],
    
     },
@@ -35547,7 +35547,7 @@ export const article260: Article = {
       items: [
         {
           label: "Presidential Suite",
-          value: "The private terrace jacuzzi + central heating + the cedar garden fire pit creates the full winter sensory experience — warm water outdoors, warm villa indoors, fire in the garden",
+          value: "The private terrace + central heating + the cedar garden fire pit creates the full winter sensory experience — warm water outdoors, warm villa indoors, fire in the garden",
         },
         {
           label: "Alpine Family Lodge",
@@ -35607,7 +35607,7 @@ export const article260: Article = {
       items: [
         { href: "/winter-bonfire-bhurban", label: "Winter bonfire guide" },
         { href: "/murree-in-january", label: "January winter guide" },
-        { href: "/villa-with-jacuzzi-bhurban", label: "Jacuzzi and fire combination" },
+        { href: "/villa-with-bhurban", label: "Jacuzzi and fire combination" },
         { href: "/villas", label: "Browse winter villas" },
       ],
     },
@@ -36311,7 +36311,7 @@ export const article267: Article = {
       type: "callout-qa",
       question: "Why should Gulf-based Pakistani families include Bhurban in their Pakistan summer visit?",
       answer:
-        "Bhurban at 6,800 feet in July is the most dramatic temperature environment available on the trip: 20-24°C versus Islamabad's 38-42°C and the Gulf's 45-50°C. The cedar forest private estate at Himalaya Villas is a quality of accommodation that matches or exceeds the Gulf's better hotels at a fraction of the Dubai rate. Children who have been kept indoors in the Gulf's summer heat rediscover outdoor activity at Bhurban. The Presidential Suite's private jacuzzi terrace and mountain view is comparable to the best Dubai hotel suites at PKR 65,000-70,000/night (approximately AED 850-900 — less than a standard Dubai 5-star room on a summer weekend).",
+        "Bhurban at 6,800 feet in July is the most dramatic temperature environment available on the trip: 20-24°C versus Islamabad's 38-42°C and the Gulf's 45-50°C. The cedar forest private estate at Himalaya Villas is a quality of accommodation that matches or exceeds the Gulf's better hotels at a fraction of the Dubai rate. Children who have been kept indoors in the Gulf's summer heat rediscover outdoor activity at Bhurban. The Presidential Suite's private terrace and mountain view is comparable to the best Dubai hotel suites at PKR 65,000-70,000/night (approximately AED 850-900 — less than a standard Dubai 5-star room on a summer weekend).",
     },
 
     {
@@ -36344,7 +36344,7 @@ export const article267: Article = {
         },
         {
           label: "The accommodation standard",
-          value: "The Presidential Suite's private jacuzzi terrace and mountain view is comparable to the best Dubai hotel suites at PKR 65,000-70,000/night (approximately AED 850-900 — less than a standard Dubai 5-star room on a summer weekend).",
+          value: "The Presidential Suite's private terrace and mountain view is comparable to the best Dubai hotel suites at PKR 65,000-70,000/night (approximately AED 850-900 — less than a standard Dubai 5-star room on a summer weekend).",
         },
         {
           label: "The Pakistan experience",
@@ -36773,7 +36773,7 @@ export const article272: Article = {
       type: "callout-qa",
       question: "What do South Asian millennial travellers want from Pakistan — and how does Bhurban deliver?",
       answer:
-        "Millennial travellers value experience premium over product premium (a private cedar estate at 6,800 feet commands a premium because the experience is richer, not because thread count is higher), authentic over branded (the Himalaya Villas cedar estate is itself — nothing else like it exists in Pakistan's mountain accommodation market), and shareable distinctive visuals (the cedar garden fire at midnight, the Presidential Suite jacuzzi against January snow, the dawn cedar forest — visuals that perform distinctively on social media because they are specific to this place). The Pakistani millennial professional (28-40, urban, dual income, internationally educated, digitally literate) is the core domestic market for Himalaya Villas.",
+        "Millennial travellers value experience premium over product premium (a private cedar estate at 6,800 feet commands a premium because the experience is richer, not because thread count is higher), authentic over branded (the Himalaya Villas cedar estate is itself — nothing else like it exists in Pakistan's mountain accommodation market), and shareable distinctive visuals (the cedar garden fire at midnight, the Presidential Suite against January snow, the dawn cedar forest — visuals that perform distinctively on social media because they are specific to this place). The Pakistani millennial professional (28-40, urban, dual income, internationally educated, digitally literate) is the core domestic market for Himalaya Villas.",
     },
 
     {
@@ -36792,7 +36792,7 @@ export const article272: Article = {
       items: [
         {
           label: "Experience Premium Over Product Premium",
-          value: "The millennial traveller pays more for experiences and less for products. A private cedar estate at 6,800 feet — where the experience of the dawn forest walk, the fire in the cedar garden, the private mountain jacuzzi — commands a premium over a hotel room because the experience is richer, not because the thread count is higher. Himalaya Villas is priced on the experience premium, not the amenity specification.",
+          value: "The millennial traveller pays more for experiences and less for products. A private cedar estate at 6,800 feet — where the experience of the dawn forest walk, the fire in the cedar garden, the private mountain — commands a premium over a hotel room because the experience is richer, not because the thread count is higher. Himalaya Villas is priced on the experience premium, not the amenity specification.",
         },
         {
           label: "Authentic Over Branded",
@@ -36800,7 +36800,7 @@ export const article272: Article = {
         },
         {
           label: "Shareable Distinctive Visuals",
-          value: "The cedar garden fire at midnight, the Presidential Suite jacuzzi against January snow, the dawn cedar forest from the property gate, the autumn amber forest from the Himalayan Penthouse balcony — these are visuals that perform distinctively on social media because they are specific to this place and cannot be recreated anywhere else. The hotel room, regardless of star rating, cannot generate this specificity.",
+          value: "The cedar garden fire at midnight, the Presidential Suite against January snow, the dawn cedar forest from the property gate, the autumn amber forest from the Himalayan Penthouse balcony — these are visuals that perform distinctively on social media because they are specific to this place and cannot be recreated anywhere else. The hotel room, regardless of star rating, cannot generate this specificity.",
         },
       ],
     },
@@ -37213,7 +37213,7 @@ export const article276: Article = {
       heading: "When the Villa Is the Better Choice",
       paragraphs: [
         "Families of 4-12: a single villa accommodates the group at a rate significantly below multiple hotel rooms, with private outdoor space included",
-        "Couples wanting a romantic stay: the private villa's exclusive terrace, jacuzzi (Presidential Suite), and no shared spaces deliver an experience the hotel room cannot",
+        "Couples wanting a romantic stay: the private villa's exclusive terrace, (Presidential Suite), and no shared spaces deliver an experience the hotel room cannot",
         "Groups celebrating events: the villa's private estate model is necessary for weddings, corporate retreats, anniversaries, and birthday gatherings",
         "Guests who have stayed at PC Hotel Bhurban before and want to try something different — the private estate model is categorically different from any hotel stay",
       ],
@@ -37343,7 +37343,7 @@ export const article277: Article = {
       type: "section",
       heading: "The Accommodation Gap",
       paragraphs: [
-        "The definitive factor in the Bhurban vs Nathia Gali decision is accommodation. Nathia Gali's resort accommodation consists primarily of TDCP huts and small private guesthouses — functional, sometimes characterful, but without the private villa estate model that Himalaya Villas provides. There is no Nathia Gali equivalent of the Presidential Suite's private jacuzzi terrace, or the cedar garden fire pit, or the private family villa with enclosed garden.",
+        "The definitive factor in the Bhurban vs Nathia Gali decision is accommodation. Nathia Gali's resort accommodation consists primarily of TDCP huts and small private guesthouses — functional, sometimes characterful, but without the private villa estate model that Himalaya Villas provides. There is no Nathia Gali equivalent of the Presidential Suite's private terrace, or the cedar garden fire pit, or the private family villa with enclosed garden.",
         "For guests who prioritise accommodation quality, this gap is decisive. For guests who specifically want to base at the closest possible point to the Miranjani trail and are comfortable in guesthouse accommodation, Nathia Gali makes logistical sense.",
       ],
       image: {
@@ -37470,7 +37470,7 @@ export const article278: Article = {
         {
           feature: "PKR 60,000-70,000/night",
           a: "1 junior suite or suite",
-          b: "Presidential Suite — jacuzzi terrace, panoramic view",
+          b: "Presidential Suite — terrace, panoramic view",
         },
         {
           feature: "PKR 110,000-130,000/night (group budget)",
@@ -38094,8 +38094,8 @@ export const article284: Article = {
           value: "Consistently described as the defining evening experience — the private fire in the cedar grove at mountain temperature",
         },
         {
-          label: "The Presidential Suite terrace and jacuzzi",
-          value: "The winter jacuzzi-against-cold-air experience is the single most described specific feature across reviews",
+          label: "The Presidential Suite terrace and",
+          value: "The winter-against-cold-air experience is the single most described specific feature across reviews",
         },
         {
           label: "The dawn forest walk",
@@ -38116,7 +38116,7 @@ export const article284: Article = {
       type: "section",
       heading: "Why Reviews Matter for Future Guests",
       paragraphs: [
-        "A guest searching 'bhurban villa' or 'himalaya villas bhurban' who finds detailed, authentic reviews from previous guests makes a more confident booking decision. The specific nature of the private estate experience — what the cedar garden feels like at midnight, what the Presidential Suite jacuzzi delivers in January, what the dawn forest walk is actually like — is best communicated by guests who have experienced it.",
+        "A guest searching 'bhurban villa' or 'himalaya villas bhurban' who finds detailed, authentic reviews from previous guests makes a more confident booking decision. The specific nature of the private estate experience — what the cedar garden feels like at midnight, what the Presidential Suite delivers in January, what the dawn forest walk is actually like — is best communicated by guests who have experienced it.",
         "Reviews are also the mechanism by which the property appears in OTA search results and in Google's local pack. Properties with more reviews and higher ratings appear higher in search results, making them visible to guests who are at the beginning of their accommodation search rather than already committed to a specific property.",
       ],
       image: {
@@ -38154,7 +38154,7 @@ export const article284: Article = {
       items: [
         {
           q: "Can I trust online reviews of Himalaya Villas?",
-          a: "Reviews on Google Maps, TripAdvisor, and OTA platforms (Airbnb, Booking.com) are from guests who completed verified stays. The review content reflects genuine guest experiences — positive and critical feedback both appear. Reviews that describe the cedar garden, the jacuzzi, the fire pit, and the forest walk in specific detail are the most reliable indicators of authentic stay experiences.",
+          a: "Reviews on Google Maps, TripAdvisor, and OTA platforms (Airbnb, Booking.com) are from guests who completed verified stays. The review content reflects genuine guest experiences — positive and critical feedback both appear. Reviews that describe the cedar garden, the, the fire pit, and the forest walk in specific detail are the most reliable indicators of authentic stay experiences.",
         },
         {
           q: "Does leaving a review after a WhatsApp direct booking help the property?",
@@ -38208,7 +38208,7 @@ export const article285: Article = {
       type: "callout-qa",
       question: "What are the insider tips for repeat visitors to Bhurban?",
       answer:
-        "The six micro-decisions that determine your Bhurban experience: (1) Choose the right villa — Serene Valley Cabin for forest immersion, Presidential Suite for jacuzzi and drama, Garden Villa Retreat for families. (2) Request the fire pit at the right time — 8pm in summer, 7pm in autumn, 5:30pm in winter. (3) Do the forest walk first, chairlift second. (4) Visit Mall Road on weekday mornings. (5) Do Ayubia on Day 2, not Day 1. (6) Pre-arrange significant details — in-villa dining, fire timing, anniversary setup, massage. The repeat visitor's seasonal rotation: January for snow, April week 3 for rhododendron, October week 3 for autumn clarity, one summer visit for monsoon forest.",
+        "The six micro-decisions that determine your Bhurban experience: (1) Choose the right villa — Serene Valley Cabin for forest immersion, Presidential Suite for and drama, Garden Villa Retreat for families. (2) Request the fire pit at the right time — 8pm in summer, 7pm in autumn, 5:30pm in winter. (3) Do the forest walk first, chairlift second. (4) Visit Mall Road on weekday mornings. (5) Do Ayubia on Day 2, not Day 1. (6) Pre-arrange significant details — in-villa dining, fire timing, anniversary setup, massage. The repeat visitor's seasonal rotation: January for snow, April week 3 for rhododendron, October week 3 for autumn clarity, one summer visit for monsoon forest.",
     },
 
     {
@@ -38229,7 +38229,7 @@ export const article285: Article = {
       items: [
         {
           label: "1. Which Villa for Your Group",
-          value: "The most consequential decision after the dates. The villa choice determines the character of the entire stay: Cedar forest immersion at ground level: Serene Valley Cabin. The forest at eye level through floor-to-ceiling windows — for couples and small groups who want the forest, not the view. The sunset and mountain view: Sunset Suite. West-facing, the full afternoon light sequence, best in October. The panoramic balcony and dawn: Himalayan Penthouse. Northeast-facing, the ridge at first light, the widest balcony on the estate. The jacuzzi and all-season drama: Presidential Suite. The only private jacuzzi terrace on the estate — justifies its rate most fully in October and January. Private garden for children: Garden Villa Retreat. The enclosed garden is irreplaceable for families with young children. Maximum group indoor space: Alpine Family Lodge. The largest single-villa living area — when the group wants to be together inside.",
+          value: "The most consequential decision after the dates. The villa choice determines the character of the entire stay: Cedar forest immersion at ground level: Serene Valley Cabin. The forest at eye level through floor-to-ceiling windows — for couples and small groups who want the forest, not the view. The sunset and mountain view: Sunset Suite. West-facing, the full afternoon light sequence, best in October. The panoramic balcony and dawn: Himalayan Penthouse. Northeast-facing, the ridge at first light, the widest balcony on the estate. The and all-season drama: Presidential Suite. The only private terrace on the estate — justifies its rate most fully in October and January. Private garden for children: Garden Villa Retreat. The enclosed garden is irreplaceable for families with young children. Maximum group indoor space: Alpine Family Lodge. The largest single-villa living area — when the group wants to be together inside.",
         },
         {
           label: "2. The Fire Request Timing",
@@ -38259,7 +38259,7 @@ export const article285: Article = {
       heading: "The Repeat Visitor's Seasonal Rotation",
       paragraphs: [
         "The experienced Bhurban regular who visits multiple times per year typically structures their rotation around the four distinct seasonal experiences that cannot be replicated across months:",
-        "January: the snowfall experience. The jacuzzi against the snow. Non-negotiable for the full Bhurban calendar.",
+        "January: the snowfall experience. The against the snow. Non-negotiable for the full Bhurban calendar.",
         "April (week 3): the rhododendron bloom. The Ayubia Pipeline Track in full spring flower. Available only in this 10-day window each year.",
         "October (week 3): the autumn clarity and colour. The panoramic balcony at maximum visibility. The finest general-purpose Bhurban week.",
         "One summer visit (July or August): the maximum temperature escape and the monsoon forest. For the specific experience of the saturated green and the post-rain cedar — different from any other season.",
@@ -38299,7 +38299,7 @@ export const article285: Article = {
       items: [
         {
           q: "Which villa have repeat guests found most worth upgrading to?",
-          a: "The Presidential Suite. Guests who visit first in the Serene Valley Cabin or Sunset Suite consistently describe their Presidential Suite visit as the 'proper' Bhurban experience — the jacuzzi on the terrace is the specific upgrade that changes the experience most significantly.",
+          a: "The Presidential Suite. Guests who visit first in the Serene Valley Cabin or Sunset Suite consistently describe their Presidential Suite visit as the 'proper' Bhurban experience — the on the terrace is the specific upgrade that changes the experience most significantly.",
         },
         {
           q: "What do Bhurban regulars recommend most to first-timers?",
@@ -39912,7 +39912,7 @@ export const article299: Article = {
         {
           feature: "Best for couples (romantic)",
           a: "Himalaya Villas Presidential Suite",
-          b: "Private jacuzzi terrace, 270° views, no shared spaces — PKR 65,000–70,000/night",
+          b: "Private terrace, 270° views, no shared spaces — PKR 65,000–70,000/night",
         },
         {
           feature: "Best for business travel",
@@ -40317,7 +40317,7 @@ export const article301: Article = {
       heading: "What 'Private' Actually Means at Himalaya Villas",
       paragraphs: [
         "The private villa estate model at Himalaya Villas is not a marketing term — it is a structural fact. Each villa occupies its own building on the 12-villa estate. The terrace belongs to your villa alone. The garden belongs to your villa alone. Your outdoor spaces are not visible from or accessible to other villas. This is the structural difference that no hotel — boutique or otherwise — can replicate.",
-        "The Presidential Suite's jacuzzi terrace: yours alone — not a shared rooftop or communal spa",
+        "The Presidential Suite's terrace: yours alone — not a shared rooftop or communal spa",
         "The Serene Valley Cabin's floor-to-ceiling cedar forest windows: private, not a hotel lobby view",
         "The Garden Villa Retreat's enclosed garden: completely private — no shared garden with other guests",
       ],
@@ -40484,7 +40484,7 @@ export const article302: Article = {
         {
           feature: "Presidential Suite",
           a: "PKR 65,000–70,000/night",
-          b: "Private jacuzzi terrace, 270° views — the estate's pinnacle villa",
+          b: "Private terrace, 270° views — the estate's pinnacle villa",
         },
       ],
     },
@@ -40930,7 +40930,7 @@ export const article305: Article = {
         "Cedar estate fire pit evenings: December's cold makes the fire pit an essential rather than optional amenity — the Himalaya Villas cedar garden fire at 5:30pm in December is the estate's best version of itself",
         "Patriata Chairlift: cold-clear days (common in early December) deliver the finest chairlift visibility of the year — the valley below in winter clarity",
         "Ayubia Pipeline Track: early December on the Pipeline Track is the quietest and coldest walk of the year — the bare deciduous forest, the cedar still evergreen, the cold air clean and still",
-        "Presidential Suite jacuzzi: the most compelling use of the jacuzzi terrace outside of January snowfall — the outdoor jacuzzi at 40°C against the December cold",
+        "Presidential Suite: the most compelling use of the terrace outside of January snowfall — the outdoor at 40°C against the December cold",
       ],
       image: {
         src: dummyImageTemp,
@@ -41381,7 +41381,7 @@ export const article310: Article = {
       type: "callout-qa",
       question: "Why is Bhurban the most accessible and best mountain stay in Pakistan?",
       answer:
-        "Himalaya Villas & Resorts in Bhurban requires a 47-kilometre drive from Islamabad and results in a private cedar estate at 6,800 feet with a private jacuzzi terrace and a cedar garden fire pit. Twelve private villas in a mature deodar cedar forest. The temperature is 15-20°C cooler than Islamabad in summer. The property model is exclusive-use private villas — no shared facilities. The Presidential Suite has a private outdoor terrace jacuzzi at 40°C with a 270° mountain view. From Islamabad International Airport: 60km, under 1 hour by car. From Lahore: 330km via M-2 Motorway, approximately 3.5 hours.",
+        "Himalaya Villas & Resorts in Bhurban requires a 47-kilometre drive from Islamabad and results in a private cedar estate at 6,800 feet with a private terrace and a cedar garden fire pit. Twelve private villas in a mature deodar cedar forest. The temperature is 15-20°C cooler than Islamabad in summer. The property model is exclusive-use private villas — no shared facilities. The Presidential Suite has a private outdoor terrace at 40°C with a 270° mountain view. From Islamabad International Airport: 60km, under 1 hour by car. From Lahore: 330km via M-2 Motorway, approximately 3.5 hours.",
     },
 
     {
@@ -41389,7 +41389,7 @@ export const article310: Article = {
       heading: "Why Pakistan's Most Accessible Mountain Stay Is Also Its Best",
       paragraphs: [
         "The travel writing about Pakistan's mountains tends toward the heroic: the 14-hour jeep track to the Karakoram base camp, the glacial crossing at 4,000 metres, the first foreign tourist in a particular valley. This is real and worth writing about — Pakistan's extreme mountain terrain is genuinely extraordinary and genuinely remote.",
-        "But it creates a distorted impression. The distortion is this: that Pakistan's mountain experiences require expedition-level commitment and tolerance of difficult conditions. This is not true. Pakistan also has a mountain experience that requires a 47-kilometre drive from its capital city, results in a private cedar estate at 6,800 feet, and includes a private jacuzzi terrace and a cedar garden fire pit.",
+        "But it creates a distorted impression. The distortion is this: that Pakistan's mountain experiences require expedition-level commitment and tolerance of difficult conditions. This is not true. Pakistan also has a mountain experience that requires a 47-kilometre drive from its capital city, results in a private cedar estate at 6,800 feet, and includes a private terrace and a cedar garden fire pit.",
         "Himalaya Villas & Resorts in Bhurban is that experience. It is not the heroic Pakistan mountain story. It is, however, an excellent one.",
       ],
       image: {
@@ -41415,7 +41415,7 @@ export const article310: Article = {
       type: "section",
       heading: "The Presidential Suite — The Mountain's Headline Accommodation",
       paragraphs: [
-        "The headline accommodation: the Presidential Suite (PKR 65,000-70,000/night) has a private outdoor terrace jacuzzi at 40°C with a 270° mountain view. In January, this means a 40°C soak against -2°C air with snow on the cedar terrace. In October, 40°C water against 10°C air with the amber cedar canopy above. There is no equivalent to this specific amenity anywhere else in Pakistan's mountain accommodation market.",
+        "The headline accommodation: the Presidential Suite (PKR 65,000-70,000/night) has a private outdoor terrace at 40°C with a 270° mountain view. In January, this means a 40°C soak against -2°C air with snow on the cedar terrace. In October, 40°C water against 10°C air with the amber cedar canopy above. There is no equivalent to this specific amenity anywhere else in Pakistan's mountain accommodation market.",
       ],
       image: {
         src: dummyImageTemp,
@@ -41772,7 +41772,7 @@ export const article314: Article = {
       type: "callout-qa",
       question: "What are the key design principles at Himalaya Villas that make it a mountain architecture case study?",
       answer:
-        "The relationship to forest: each villa is positioned to maximise the forest visual from multiple interior positions — the Serene Valley Cabin's floor-to-ceiling windows bring the forest to eye level; the Himalayan Penthouse balcony positions the occupant above the canopy. The private outdoor threshold: the Presidential Suite's terrace jacuzzi is the design statement — the built (hot water, stone terrace, privacy screen) in direct dialogue with the natural (cedar canopy, mountain air). Materials in the mountain context: local stone, timber detailing, and cedar wood detailing that references the cedar forest outside. The building is a device for experiencing the forest, not a destination that happens to have a forest nearby.",
+        "The relationship to forest: each villa is positioned to maximise the forest visual from multiple interior positions — the Serene Valley Cabin's floor-to-ceiling windows bring the forest to eye level; the Himalayan Penthouse balcony positions the occupant above the canopy. The private outdoor threshold: the Presidential Suite's terrace is the design statement — the built (hot water, stone terrace, privacy screen) in direct dialogue with the natural (cedar canopy, mountain air). Materials in the mountain context: local stone, timber detailing, and cedar wood detailing that references the cedar forest outside. The building is a device for experiencing the forest, not a destination that happens to have a forest nearby.",
     },
 
     {
@@ -41798,7 +41798,7 @@ export const article314: Article = {
         },
         {
           label: "The Private Outdoor Threshold",
-          value: "The private terrace of each villa is the critical design element — the threshold between the protected interior and the forest environment. The Presidential Suite's terrace jacuzzi on this threshold is the design statement: the built (hot water, stone terrace, privacy screen) in direct dialogue with the natural (cedar canopy, mountain air, mountain ridge above). This threshold design is what distinguishes the villa from the hotel room — the hotel room has no equivalent outdoor threshold belonging to a single occupant.",
+          value: "The private terrace of each villa is the critical design element — the threshold between the protected interior and the forest environment. The Presidential Suite's terrace on this threshold is the design statement: the built (hot water, stone terrace, privacy screen) in direct dialogue with the natural (cedar canopy, mountain air, mountain ridge above). This threshold design is what distinguishes the villa from the hotel room — the hotel room has no equivalent outdoor threshold belonging to a single occupant.",
         },
         {
           label: "Materials in the Mountain Context",
@@ -41932,7 +41932,7 @@ export const article319: Article = {
       type: "callout-qa",
       question: "Is Bhurban a good honeymoon destination for couples from Karachi?",
       answer:
-        "Yes. Karachi to Islamabad flight: 1 hour 45 minutes (multiple daily flights). ISB to Bhurban: 60km, under 1 hour. Total Karachi to cedar estate: under 4 hours. Himalaya Villas' Presidential Suite (private jacuzzi terrace, 270° mountain view, PKR 65,000-70,000/night) is the specific honeymoon villa. For Karachi couples seeking an escape from coastal heat (35-40°C) to 6,800-foot mountain cedar forest (18-25°C in summer, -2-10°C in winter), the temperature and landscape contrast is as dramatic as any international destination.",
+        "Yes. Karachi to Islamabad flight: 1 hour 45 minutes (multiple daily flights). ISB to Bhurban: 60km, under 1 hour. Total Karachi to cedar estate: under 4 hours. Himalaya Villas' Presidential Suite (private terrace, 270° mountain view, PKR 65,000-70,000/night) is the specific honeymoon villa. For Karachi couples seeking an escape from coastal heat (35-40°C) to 6,800-foot mountain cedar forest (18-25°C in summer, -2-10°C in winter), the temperature and landscape contrast is as dramatic as any international destination.",
     },
     {
       type: "section",
@@ -41967,7 +41967,7 @@ export const article319: Article = {
       type: "section",
       heading: "The Presidential Suite Honeymoon",
       paragraphs: [
-        "The Presidential Suite at Himalaya Villas (PKR 65,000-70,000/night) is the honeymoon villa of choice for couples from Karachi and Lahore who want the complete mountain private estate experience: the 270° panoramic mountain view from the private terrace, the outdoor jacuzzi at 40°C against the mountain air, the fire pit evening in the cedar garden. For a couple who has lived in Karachi's flat coastal heat, this specific sensory environment — mountain cold, cedar forest, the jacuzzi steam against cold air — is unlike anything accessible from the coast.",
+        "The Presidential Suite at Himalaya Villas (PKR 65,000-70,000/night) is the honeymoon villa of choice for couples from Karachi and Lahore who want the complete mountain private estate experience: the 270° panoramic mountain view from the private terrace, the outdoor at 40°C against the mountain air, the fire pit evening in the cedar garden. For a couple who has lived in Karachi's flat coastal heat, this specific sensory environment — mountain cold, cedar forest, the steam against cold air — is unlike anything accessible from the coast.",
       ],
       image: {
         src: article319View,
@@ -41980,7 +41980,7 @@ export const article319: Article = {
       items: [
         {
           q: "What is the best season for a Karachi couple's honeymoon at Bhurban?",
-          a: "October (clear mountain air, amber forest, comfortable temperatures) and January (the jacuzzi-against-snow experience, maximum romance) are the top recommendations for Karachi couples. Summer (July-August) delivers the maximum temperature contrast from Karachi's heat.",
+          a: "October (clear mountain air, amber forest, comfortable temperatures) and January (the-against-snow experience, maximum romance) are the top recommendations for Karachi couples. Summer (July-August) delivers the maximum temperature contrast from Karachi's heat.",
         },
         {
           q: "Is the Bhurban mountain drive safe for a couple arriving from Karachi?",
@@ -42002,7 +42002,7 @@ export const article319: Article = {
       heading: "📎 Explore More",
       items: [
         { href: "/honeymoon-package-bhurban-murree", label: "Full honeymoon guide" },
-        { href: "/villa-with-jacuzzi-bhurban", label: "Presidential Suite" },
+        { href: "/villa-with-bhurban", label: "Presidential Suite" },
         { href: "/karachi-summer-escape-mountains", label: "Karachi summer guide" },
         { href: "/villas", label: "Browse honeymoon villas" },
       ],
@@ -42309,8 +42309,8 @@ export const article323: Article = {
           value: "Arranged via the concierge network — in-villa massage therapists visiting the property. Deep tissue, Swedish, and traditional Pakistani head massage available through the network. 48-72 hours advance notice required.",
         },
         {
-          label: "The Presidential Suite jacuzzi as hydrotherapy",
-          value: "The private outdoor jacuzzi (40°C water against mountain air at whatever the ambient temperature is) functions as the property's signature hydrotherapy feature — soak before or after any massage arrangement.",
+          label: "The Presidential Suite as hydrotherapy",
+          value: "The private outdoor (40°C water against mountain air at whatever the ambient temperature is) functions as the property's signature hydrotherapy feature — soak before or after any massage arrangement.",
         },
         {
           label: "Yoga and stretching in the cedar garden",
@@ -42329,7 +42329,7 @@ export const article323: Article = {
         "Arrive Thursday evening. In-villa dinner.",
         "Friday 6am: dawn forest walk (forest therapy).",
         "Friday 10am: in-villa massage (pre-arranged).",
-        "Friday afternoon: Presidential Suite jacuzzi (if booked) or private terrace rest.",
+        "Friday afternoon: Presidential Suite (if booked) or private terrace rest.",
         "Friday evening: cedar garden fire. The natural end to the wellness day.",
       ],
       image: {
@@ -42343,7 +42343,7 @@ export const article323: Article = {
       items: [
         {
           q: "Is there a full spa facility at Himalaya Villas?",
-          a: "No — Himalaya Villas does not operate an on-site spa facility. In-villa wellness services (massage) are arranged via the concierge network with advance notice. The Presidential Suite's private terrace jacuzzi is the property's dedicated hydrotherapy amenity.",
+          a: "No — Himalaya Villas does not operate an on-site spa facility. In-villa wellness services (massage) are arranged via the concierge network with advance notice. The Presidential Suite's private terrace is the property's dedicated hydrotherapy amenity.",
         },
         {
           q: "How far in advance should I book the in-villa massage?",
@@ -42365,7 +42365,7 @@ export const article323: Article = {
       heading: "📎 Explore More",
       items: [
         { href: "/corporate-wellness-retreat-bhurban", label: "Wellness retreat" },
-        { href: "/villa-with-jacuzzi-bhurban", label: "Presidential Suite jacuzzi" },
+        { href: "/villa-with-bhurban", label: "Presidential Suite" },
         { href: "/bhurban-stargazing-night-sky", label: "Evening activities" },
         { href: "/villas", label: "Browse Himalaya Villas" },
       ],
@@ -43927,7 +43927,7 @@ export const article340: Article = {
         },
         {
           q: "Is Bhurban or Naran better for a honeymoon?",
-          a: "Bhurban — by a significant margin. The private cedar estate at Himalaya Villas, the Presidential Suite jacuzzi, and the exclusive outdoor spaces create the romantic private atmosphere that a guesthouse in Naran cannot approach. Naran is a shared adventure; Bhurban is private luxury.",
+          a: "Bhurban — by a significant margin. The private cedar estate at Himalaya Villas, the Presidential Suite, and the exclusive outdoor spaces create the romantic private atmosphere that a guesthouse in Naran cannot approach. Naran is a shared adventure; Bhurban is private luxury.",
         },
       ],
     },
@@ -44773,7 +44773,7 @@ export const article355: Article = {
       type: "callout-qa",
       question: "What photographic subjects does Bhurban offer for the mountain photography community?",
       answer:
-        "Estate dawn: the cedar forest path at 5:45am — directional light through the cedar canopy, the path floor in early light, the forest waking up. Penthouse balcony panorama: the mountain ridge at dawn from the Himalayan Penthouse balcony — the long-exposure morning light on the Murree ridge. Presidential Suite terrace: the jacuzzi against the mountain ridge — lifestyle luxury photography with a distinctly Pakistani mountain background. Cedar garden fire: the fire at dusk, the cedar canopy lit from below. Pipeline Track autumn (October week 3): the amber deciduous canopy against the evergreen cedar — the most dramatic natural colour photography available near Islamabad.",
+        "Estate dawn: the cedar forest path at 5:45am — directional light through the cedar canopy, the path floor in early light, the forest waking up. Penthouse balcony panorama: the mountain ridge at dawn from the Himalayan Penthouse balcony — the long-exposure morning light on the Murree ridge. Presidential Suite terrace: the against the mountain ridge — lifestyle luxury photography with a distinctly Pakistani mountain background. Cedar garden fire: the fire at dusk, the cedar canopy lit from below. Pipeline Track autumn (October week 3): the amber deciduous canopy against the evergreen cedar — the most dramatic natural colour photography available near Islamabad.",
     },
 
     {
@@ -44802,7 +44802,7 @@ export const article355: Article = {
         },
         {
           label: "Presidential Suite terrace",
-          value: "The jacuzzi against the mountain ridge — lifestyle luxury photography with a distinctly Pakistani mountain background.",
+          value: "The against the mountain ridge — lifestyle luxury photography with a distinctly Pakistani mountain background.",
         },
         {
           label: "Cedar garden fire",
@@ -45224,7 +45224,7 @@ export const article359: Article = {
       items: [
         { href: "/bhurban-snowfall-booking-guide", label: "Full snowfall booking strategy" },
         { href: "/murree-in-january", label: "January guide" },
-        { href: "/villa-with-jacuzzi-bhurban", label: "Presidential Suite snowfall experience" },
+        { href: "/villa-with-bhurban", label: "Presidential Suite snowfall experience" },
         { href: "/villas", label: "Browse winter villas" },
       ],
     },
@@ -45368,14 +45368,14 @@ export const article361: Article = {
   eyebrow: "Trust | Cluster 2 | ~800w",
   h1: "Himalaya Villas Bhurban Reviews — What Guests Actually Say",
   heroTagline:
-    "Recurring themes: cedar garden fire pit, Presidential Suite jacuzzi, dawn forest walk, responsive WhatsApp communication.",
+    "Recurring themes: cedar garden fire pit, Presidential Suite, dawn forest walk, responsive WhatsApp communication.",
   heroImage: article361Hero,
   blocks: [
     {
       type: "callout-qa",
       question: "What do guests say about Himalaya Villas Bhurban?",
       answer:
-        "Himalaya Villas & Resorts receives consistently positive reviews on Google Maps, Booking.com, TripAdvisor, and Airbnb. Recurring themes: the private cedar garden fire pit as the standout evening experience; the Presidential Suite jacuzzi in cold/snowfall weather; the dawn cedar forest walk; the WhatsApp communication process described as the most responsive hospitality in Pakistan; the exclusive private estate model — 'felt like the entire mountain was ours'. Search 'Himalaya Villas Bhurban' on Google Maps or TripAdvisor for current reviews.",
+        "Himalaya Villas & Resorts receives consistently positive reviews on Google Maps, Booking.com, TripAdvisor, and Airbnb. Recurring themes: the private cedar garden fire pit as the standout evening experience; the Presidential Suite in cold/snowfall weather; the dawn cedar forest walk; the WhatsApp communication process described as the most responsive hospitality in Pakistan; the exclusive private estate model — 'felt like the entire mountain was ours'. Search 'Himalaya Villas Bhurban' on Google Maps or TripAdvisor for current reviews.",
     },
     {
       type: "facts",
@@ -45386,8 +45386,8 @@ export const article361: Article = {
           value: "The most frequently mentioned single feature. Guests describe: the fire as the evening centrepiece, the cedar canopy above at night, the group gathered without any other guests present. Families consistently mention children who did not want to leave the fire.",
         },
         {
-          label: "2. The Presidential Suite Jacuzzi in Cold Weather",
-          value: "The jacuzzi-against-cold-air experience is described in Presidential Suite reviews as 'unlike anything available in Pakistan.' January snowfall reviews that include the jacuzzi experience are the most effusive in the portfolio.",
+          label: "2. The Presidential Suite in Cold Weather",
+          value: "The-against-cold-air experience is described in Presidential Suite reviews as 'unlike anything available in Pakistan.' January snowfall reviews that include the experience are the most effusive in the portfolio.",
         },
         {
           label: "3. The Dawn Cedar Forest Walk",
@@ -45666,7 +45666,7 @@ export const article364: Article = {
         },
         {
           q: "Which villa is best for a honeymoon?",
-          a: "The Presidential Suite — private jacuzzi terrace, 270° mountain view, PKR 65,000–70,000 per night.",
+          a: "The Presidential Suite — private terrace, 270° mountain view, PKR 65,000–70,000 per night.",
         },
       ],
     },
@@ -46876,7 +46876,7 @@ export const article377: Article = {
         "Cedar garden fire pit evening at Himalaya Villas — the estate's signature social experience",
         "In-villa dining in the cedar garden — dinner served alongside the fire pit",
         "Nathia Gali drive (30km, 45 min) — the Galyat's quietest hill station",
-        "Presidential Suite jacuzzi at dusk or dawn — the estate's most distinctive amenity",
+        "Presidential Suite at dusk or dawn — the estate's most distinctive amenity",
         "Ghora Gali and Changla Gali scenic drive — the Galyat road connecting Bhurban to Nathia Gali",
         "Wildlife observation — Koklass Pheasant dawn call, Himalayan Monal on upper forest sections",
       ],
@@ -46906,7 +46906,7 @@ export const article377: Article = {
           feature: "January",
           a: "2-8°C",
           b: "Medium to High (snowfall weekends)",
-          c: "Snowfall possible, jacuzzi-against-snow, fire pit",
+          c: "Snowfall possible,-against-snow, fire pit",
         },
         {
           feature: "July-August",
@@ -47635,7 +47635,7 @@ export const article389: Article = {
       type: "callout-qa",
       question: "Why is Bhurban the ideal content creator retreat in Pakistan?",
       answer:
-        "Visual distinctiveness: the Himalaya Villas cedar estate produces images categorically different from anything available in Pakistan's urban content landscape — the forest paths at dawn, the Presidential Suite jacuzzi terrace, the cedar garden fire at midnight. Private estate exclusivity: no other hotel guests in the background, no public access disrupting the shot. The estate photographic portfolio: dawn light through the cedar canopy, amber autumn or snow-covered winter cedar, jacuzzi steam against mountain cold, the fire in the garden — each a distinctly shareable visual. Collaboration retreats: 3-4 content creators booking the estate together for a 2-night content production retreat — the collaborative shoot that produces cross-posting content across multiple channels.",
+        "Visual distinctiveness: the Himalaya Villas cedar estate produces images categorically different from anything available in Pakistan's urban content landscape — the forest paths at dawn, the Presidential Suite terrace, the cedar garden fire at midnight. Private estate exclusivity: no other hotel guests in the background, no public access disrupting the shot. The estate photographic portfolio: dawn light through the cedar canopy, amber autumn or snow-covered winter cedar, steam against mountain cold, the fire in the garden — each a distinctly shareable visual. Collaboration retreats: 3-4 content creators booking the estate together for a 2-night content production retreat — the collaborative shoot that produces cross-posting content across multiple channels.",
     },
 
     {
@@ -47656,7 +47656,7 @@ export const article389: Article = {
       items: [
         {
           label: "Visual distinctiveness",
-          value: "The Himalaya Villas cedar estate produces images categorically different from anything available in Pakistan's urban content landscape — the forest paths at dawn, the Presidential Suite jacuzzi terrace, the cedar garden fire at midnight",
+          value: "The Himalaya Villas cedar estate produces images categorically different from anything available in Pakistan's urban content landscape — the forest paths at dawn, the Presidential Suite terrace, the cedar garden fire at midnight",
         },
         {
           label: "Private estate exclusivity",
@@ -47664,7 +47664,7 @@ export const article389: Article = {
         },
         {
           label: "The estate photographic portfolio",
-          value: "Dawn light through the cedar canopy, amber autumn or snow-covered winter cedar, jacuzzi steam against mountain cold, the fire in the garden — each a distinctly shareable visual that performs well on Instagram and YouTube",
+          value: "Dawn light through the cedar canopy, amber autumn or snow-covered winter cedar, steam against mountain cold, the fire in the garden — each a distinctly shareable visual that performs well on Instagram and YouTube",
         },
         {
           label: "Collaboration retreats",
@@ -47817,7 +47817,7 @@ export const article391: Article = {
       heading: "The 2-Night Bhurban Addition to the Return Visit",
       paragraphs: [
         "The diaspora visitor who adds 2 nights at Himalaya Villas Bhurban to their Pakistan return visit changes the trip significantly. The family visits happen; the city obligations are met; and within it, the 2-night cedar estate provides the encounter with a dimension of Pakistan that the diaspora visitor's children — born in London, Toronto, Dubai, or Sydney — have almost never accessed: the forest, the cold, the mountain, the fire in the private cedar garden at midnight.",
-        "This is the part of the trip that the diaspora visitor describes to non-Pakistani colleagues: I was in a private cedar estate at 6,800 feet with a mountain view, an outdoor jacuzzi, and a fire pit in the garden. It was extraordinary. It was in Pakistan.",
+        "This is the part of the trip that the diaspora visitor describes to non-Pakistani colleagues: I was in a private cedar estate at 6,800 feet with a mountain view, an outdoor, and a fire pit in the garden. It was extraordinary. It was in Pakistan.",
       ],
       image: {
         src: dummyImageTemp,
@@ -48180,7 +48180,7 @@ export const article395: Article = {
       type: "section",
       heading: "What Pakistan's Mountain Actually Is",
       paragraphs: [
-        "Pakistan's mountain is not only the heroic northern narrative. It is also this: 47 kilometres from the capital, a cedar forest at 6,800 feet, a private villa estate with an outdoor fire pit in a private garden, a private jacuzzi terrace with a 270 degree mountain view, and a sunrise at 6am that nobody in Islamabad who stays at home ever sees.",
+        "Pakistan's mountain is not only the heroic northern narrative. It is also this: 47 kilometres from the capital, a cedar forest at 6,800 feet, a private villa estate with an outdoor fire pit in a private garden, a private terrace with a 270 degree mountain view, and a sunrise at 6am that nobody in Islamabad who stays at home ever sees.",
         "The people who see the Bhurban sunrise from the Himalayan Penthouse balcony in October, with the mountain ridge catching the first horizontal light and the amber cedar canopy below them, understand something about Pakistan that the news does not convey and the economic data does not capture.",
         "Pakistan has this. It is 47 kilometres from the capital. The cedar forest will be there in the morning.",
       ],
@@ -48510,7 +48510,7 @@ export const article397: Article = {
       type: "section",
       heading: "The Best Snowfall Experience — What Himalaya Villas Guests Describe",
       paragraphs: [
-        "The Presidential Suite in Snowfall: The Presidential Suite at Himalaya Villas (PKR 65,000–70,000/night) in active snowfall: the private outdoor jacuzzi terrace at 40°C water temperature, fresh snow accumulating on the cedar branches above, the mountain ridge visible through the falling snow. This specific experience — the specific juxtaposition of the 40°C soak and the -2°C snowfall — is the most described single experience across all Himalaya Villas reviews and the most requested booking scenario at the property.",
+        "The Presidential Suite in Snowfall: The Presidential Suite at Himalaya Villas (PKR 65,000–70,000/night) in active snowfall: the private outdoor terrace at 40°C water temperature, fresh snow accumulating on the cedar branches above, the mountain ridge visible through the falling snow. This specific experience — the specific juxtaposition of the 40°C soak and the -2°C snowfall — is the most described single experience across all Himalaya Villas reviews and the most requested booking scenario at the property.",
         "The Cedar Garden Fire in Snow: The cedar garden fire lit in fresh snowfall: the fire melts a circle of the fresh cedar-terrace snow, the family or couple sits at the fire in the snow, the cedar branches dropping snow as the temperature hovers at 0°C. There is no equivalent accessible experience to this one within 2 hours of Islamabad.",
         "The Dawn Cedar Walk After Fresh Snowfall: The cedar forest at 6am after fresh overnight snowfall: the path covered in fresh white, the cedar branches weighted with snow, the footprints of the first walk on an unmarked white path, the forest in the specific stillness that heavy snow creates. First-time snowfall experiences for Pakistani families who have lived their entire lives in Karachi, Lahore, or Islamabad's 35°C summers consistently produce the reactions that guests describe as transformative.",
       ],
@@ -48921,7 +48921,7 @@ export const article400: Article = {
       paragraphs: [
         "Grand Taj Hotel Murree, like all Murree hotel properties, operates on the shared-building hotel model: guests rent rooms within a building shared with all other guests, use common outdoor areas, and dine in the hotel restaurant. Himalaya Villas & Resorts is structurally different: each villa booking is an exclusive private building with private outdoor space belonging only to the booked group.",
         "The difference for families: a family of 6 at Grand Taj Murree needs 2-3 rooms. The same family at Himalaya Villas books one 3-bedroom family villa (PKR 55,000-60,000) and receives a private property with private garden — often at comparable or lower total cost.",
-        "The difference for couples: a couple at Grand Taj has a hotel room. A couple at the Himalaya Villas Presidential Suite has a private villa with outdoor jacuzzi terrace overlooking the mountain ridge.",
+        "The difference for couples: a couple at Grand Taj has a hotel room. A couple at the Himalaya Villas Presidential Suite has a private villa with outdoor terrace overlooking the mountain ridge.",
         "The difference for events: Grand Taj's shared venues cannot replicate the private cedar garden estate for a birthday celebration, anniversary dinner, or small Nikah ceremony.",
       ],
       image: {
@@ -49263,7 +49263,7 @@ export const article403: Article = {
       type: "section",
       heading: "The Private Villa Alternative",
       paragraphs: [
-        "For travellers whose primary requirement is the lowest possible rate in the Murree hills, TDCP rest houses are the correct answer. For travellers who want the premium private estate experience — the cedar garden, the exclusive outdoor space, the in-villa dining, the Presidential Suite jacuzzi — Himalaya Villas is the specific alternative that serves a completely different market segment.",
+        "For travellers whose primary requirement is the lowest possible rate in the Murree hills, TDCP rest houses are the correct answer. For travellers who want the premium private estate experience — the cedar garden, the exclusive outdoor space, the in-villa dining, the Presidential Suite — Himalaya Villas is the specific alternative that serves a completely different market segment.",
         "The two options do not compete: TDCP serves the budget government-connected market; Himalaya Villas serves the HNW private estate market. Both are in Bhurban; neither poaches the other's core customer.",
       ],
       image: {
@@ -49592,7 +49592,7 @@ export const article407: Article = {
   eyebrow: "Guest Post | Pakistan Honeymoon / Newly Married Community | ~900w",
   h1: "Pakistan's Newlyweds — The Mountain Honeymoon That Doesn't Require a Passport",
   heroTagline:
-    "Pakistan's newlywed community has a consistent honeymoon preference hierarchy: international destinations (Dubai, Turkey, Maldives, Malaysia) at the top, followed by domestic mountain options. The international honeymoon is aspirational but not always accessible — visa timelines, international flight costs, and the immediate post-wedding budget reality all constrain the international option. The specific case for the Bhurban honeymoon: 47km from Islamabad International Airport, 45 minutes by car, the Presidential Suite at Himalaya Villas (private outdoor jacuzzi terrace, 270-degree mountain view, PKR 65,000-70,000/night), and the complete private estate experience.",
+    "Pakistan's newlywed community has a consistent honeymoon preference hierarchy: international destinations (Dubai, Turkey, Maldives, Malaysia) at the top, followed by domestic mountain options. The international honeymoon is aspirational but not always accessible — visa timelines, international flight costs, and the immediate post-wedding budget reality all constrain the international option. The specific case for the Bhurban honeymoon: 47km from Islamabad International Airport, 45 minutes by car, the Presidential Suite at Himalaya Villas (private outdoor terrace, 270-degree mountain view, PKR 65,000-70,000/night), and the complete private estate experience.",
   heroImage: dummyImageTemp,
 
   blocks: [
@@ -49600,7 +49600,7 @@ export const article407: Article = {
       type: "callout-qa",
       question: "Why is Bhurban the ideal domestic honeymoon destination?",
       answer:
-        "For newly married couples in Islamabad, Rawalpindi, or visiting Pakistan for the wedding from abroad — this is the honeymoon that competes on experience with any international option at a fraction of the cost. Private outdoor jacuzzi terrace at 40 degrees C with the mountain ridge visible above: the honeymoon's centrepiece — private, dramatic, uniquely Pakistani. In-villa romantic dinner arrangement: cedar garden dinner setup with candles and flowers, pre-arranged via WhatsApp before arrival. Late checkout and dawn cedar walk: the private morning of the first full day as a married couple — the cedar forest at 6am, the private terrace breakfast, the full estate before the crowds wake.",
+        "For newly married couples in Islamabad, Rawalpindi, or visiting Pakistan for the wedding from abroad — this is the honeymoon that competes on experience with any international option at a fraction of the cost. Private outdoor terrace at 40 degrees C with the mountain ridge visible above: the honeymoon's centrepiece — private, dramatic, uniquely Pakistani. In-villa romantic dinner arrangement: cedar garden dinner setup with candles and flowers, pre-arranged via WhatsApp before arrival. Late checkout and dawn cedar walk: the private morning of the first full day as a married couple — the cedar forest at 6am, the private terrace breakfast, the full estate before the crowds wake.",
     },
 
     {
@@ -49608,7 +49608,7 @@ export const article407: Article = {
       heading: "Pakistan's Newlyweds — The Mountain Honeymoon That Doesn't Require a Passport",
       paragraphs: [
         "Pakistan's newlywed community has a consistent honeymoon preference hierarchy: international destinations (Dubai, Turkey, Maldives, Malaysia) at the top, followed by domestic mountain options. The international honeymoon is aspirational but not always accessible — visa timelines, international flight costs, and the immediate post-wedding budget reality all constrain the international option.",
-        "The specific case for the Bhurban honeymoon: 47km from Islamabad International Airport, 45 minutes by car, the Presidential Suite at Himalaya Villas (private outdoor jacuzzi terrace, 270-degree mountain view, PKR 65,000-70,000/night), and the complete private estate experience. For newly married couples in Islamabad, Rawalpindi, or visiting Pakistan for the wedding from abroad — this is the honeymoon that competes on experience with any international option at a fraction of the cost.",
+        "The specific case for the Bhurban honeymoon: 47km from Islamabad International Airport, 45 minutes by car, the Presidential Suite at Himalaya Villas (private outdoor terrace, 270-degree mountain view, PKR 65,000-70,000/night), and the complete private estate experience. For newly married couples in Islamabad, Rawalpindi, or visiting Pakistan for the wedding from abroad — this is the honeymoon that competes on experience with any international option at a fraction of the cost.",
       ],
       image: {
         src: dummyImageTemp,
@@ -49621,7 +49621,7 @@ export const article407: Article = {
       heading: "The Presidential Suite Honeymoon — Specifically",
       items: [
         {
-          label: "Private outdoor jacuzzi terrace",
+          label: "Private outdoor terrace",
           value: "At 40 degrees C with the mountain ridge visible above: the honeymoon's centrepiece — private, dramatic, uniquely Pakistani",
         },
         {
@@ -50352,13 +50352,13 @@ export const article416: Article = {
       type: "callout-qa",
       question: "Is January a good time to visit Murree and Bhurban?",
       answer:
-        "January is one of the best months to visit Bhurban — and the most unpredictable. Temperature: -3 to 8 degrees C daytime, -5 to 0 degrees overnight. Snowfall probability: 60-70% in the last 2 weeks of January — the highest of any month. The cedar estate at Himalaya Villas in January: the fire pit at its most necessary, the Presidential Suite jacuzzi against the cold, the possible snowfall dawn walk on unmarked white cedar paths. Book 6-8 weeks ahead for January weekends.",
+        "January is one of the best months to visit Bhurban — and the most unpredictable. Temperature: -3 to 8 degrees C daytime, -5 to 0 degrees overnight. Snowfall probability: 60-70% in the last 2 weeks of January — the highest of any month. The cedar estate at Himalaya Villas in January: the fire pit at its most necessary, the Presidential Suite against the cold, the possible snowfall dawn walk on unmarked white cedar paths. Book 6-8 weeks ahead for January weekends.",
     },
     {
       type: "section",
       heading: "January in Bhurban — The Month of Maximum Weather Drama",
       paragraphs: [
-        "January in Bhurban is the month of maximum weather drama and maximum booking competition. The combination of the snowfall possibility, the private terrace jacuzzi experience, and the cedar estate in full winter character creates demand that exceeds supply at Himalaya Villas and every other Bhurban property on prime weekend dates.",
+        "January in Bhurban is the month of maximum weather drama and maximum booking competition. The combination of the snowfall possibility, the private terrace experience, and the cedar estate in full winter character creates demand that exceeds supply at Himalaya Villas and every other Bhurban property on prime weekend dates.",
       ],
       image: {
         src: article416Villa,
@@ -50413,13 +50413,13 @@ export const article416: Article = {
     },
     {
       type: "section",
-      heading: "The Presidential Suite Jacuzzi in January",
+      heading: "The Presidential Suite in January",
       paragraphs: [
-        "The Presidential Suite's outdoor jacuzzi at 40 degrees C water temperature in January conditions (-2 to 5 degrees C ambient, possible snowfall) is the experience that generates the most described moments in Himalaya Villas reviews. The steam rising from the hot water against the cold mountain air, the cedar forest above the terrace under possible snow, the mountain ridge visible beyond: there is no equivalent accessible experience within 2 hours of Islamabad.",
+        "The Presidential Suite's outdoor at 40 degrees C water temperature in January conditions (-2 to 5 degrees C ambient, possible snowfall) is the experience that generates the most described moments in Himalaya Villas reviews. The steam rising from the hot water against the cold mountain air, the cedar forest above the terrace under possible snow, the mountain ridge visible beyond: there is no equivalent accessible experience within 2 hours of Islamabad.",
       ],
       image: {
         src: article416Villa,
-        alt: "Presidential Suite Jacuzzi in January",
+        alt: "Presidential Suite in January",
       },
     },
     {
@@ -50484,7 +50484,7 @@ export const article416: Article = {
       items: [
         { href: "/murree-snowfall-guide", label: "Snowfall complete guide" },
         { href: "/murree-temperature-guide", label: "Temperature guide" },
-        { href: "/villa-with-jacuzzi-bhurban", label: "Presidential Suite" },
+        { href: "/villa-with-bhurban", label: "Presidential Suite" },
         { href: "/villas", label: "Browse winter villas" },
       ],
     },
@@ -50966,36 +50966,36 @@ export const article423: Article = {
 };
 
 // ============================================
-// ARTICLE 425 - Villa with Jacuzzi at Bhurban — The Presidential Suite Guide
+// ARTICLE 425 - Villa with at Bhurban — The Presidential Suite Guide
 // ============================================
 export const article425: Article = {
-  slug: "villa-with-jacuzzi-bhurban",
-  title: "Villa with Jacuzzi at Bhurban — The Presidential Suite Guide",
+  slug: "villa-with-bhurban",
+  title: "Villa with at Bhurban — The Presidential Suite Guide",
   metaDescription:
-    "villa with jacuzzi bhurban, bhurban villa jacuzzi, presidential suite bhurban, jacuzzi bhurban murree, private jacuzzi bhurban",
+    "villa with bhurban, bhurban villa, presidential suite bhurban, bhurban murree, private bhurban",
   keywords:
-    "villa with jacuzzi bhurban, bhurban villa jacuzzi, presidential suite bhurban, jacuzzi bhurban murree, private jacuzzi bhurban",
+    "villa with bhurban, bhurban villa, presidential suite bhurban, bhurban murree, private bhurban",
   eyebrow: "Commercial | Cluster 4 | Template C — Specific Feature",
-  h1: "Villa with Jacuzzi at Bhurban — The Presidential Suite Guide",
+  h1: "Villa with at Bhurban — The Presidential Suite Guide",
   heroTagline:
-    "The only private outdoor terrace jacuzzi in the Murree hills area. Presidential Suite: PKR 65,000-70,000/night.",
+    "The only private outdoor terrace in the Murree hills area. Presidential Suite: PKR 65,000-70,000/night.",
   heroImage: article425Hero,
   blocks: [
     {
       type: "callout-qa",
-      question: "Is there a villa with a private jacuzzi at Bhurban Murree?",
+      question: "Is there a villa with a private at Bhurban Murree?",
       answer:
-        "Yes. The Presidential Suite at Himalaya Villas & Resorts in Bhurban has a private outdoor terrace jacuzzi — the only private jacuzzi available in any accommodation in the Murree hills area. Rate: PKR 65,000-70,000 per night. The jacuzzi is on the private outdoor terrace with a 270-degree panoramic mountain view. In January snowfall conditions, the 40-degree water temperature against subzero mountain air and falling snow creates the experience that Presidential Suite reviews describe as Pakistan's finest single accommodation moment.",
+        "Yes. The Presidential Suite at Himalaya Villas & Resorts in Bhurban has a private outdoor terrace — the only private available in any accommodation in the Murree hills area. Rate: PKR 65,000-70,000 per night. The is on the private outdoor terrace with a 270-degree panoramic mountain view. In January snowfall conditions, the 40-degree water temperature against subzero mountain air and falling snow creates the experience that Presidential Suite reviews describe as Pakistan's finest single accommodation moment.",
     },
     {
       type: "section",
       heading: "The Presidential Suite — The Defining Feature",
       paragraphs: [
-        "The private jacuzzi is the Presidential Suite's defining feature — and the most specifically described and requested amenity across all Himalaya Villas guest communications. No other property in the Murree hills market offers a private outdoor jacuzzi as a standard feature.",
+        "The private is the Presidential Suite's defining feature — and the most specifically described and requested amenity across all Himalaya Villas guest communications. No other property in the Murree hills market offers a private outdoor as a standard feature.",
       ],
       image: {
         src: article425Villa,
-        alt: "Presidential Suite Jacuzzi",
+        alt: "Presidential Suite",
       },
     },
     {
@@ -51003,7 +51003,7 @@ export const article425: Article = {
       heading: "The Presidential Suite — Complete Description",
       items: [
         {
-          label: "Private Outdoor Terrace Jacuzzi",
+          label: "Private Outdoor Terrace",
           value: "Hot tub on suite's exclusive terrace. Water temperature adjustable (38-42°C). Terrace belongs exclusively to suite occupants — no shared spa area.",
         },
         {
@@ -51012,11 +51012,11 @@ export const article425: Article = {
         },
         {
           label: "Capacity",
-          value: "2-4 guests comfortably. Suite designed for couples; 4 is generous maximum for the jacuzzi.",
+          value: "2-4 guests comfortably. Suite designed for couples; 4 is generous maximum for the.",
         },
         {
           label: "Privacy",
-          value: "Private terrace is screened — jacuzzi experience not visible from other villas or estate paths.",
+          value: "Private terrace is screened — experience not visible from other villas or estate paths.",
         },
         {
           label: "Rate",
@@ -51026,7 +51026,7 @@ export const article425: Article = {
     },
     {
       type: "comparison",
-      heading: "The Jacuzzi Experience by Season",
+      heading: "The Experience by Season",
       columns: ["Season", "Water Temperature", "Ambient Air", "The Specific Experience"],
       rows: [
         {
@@ -51039,7 +51039,7 @@ export const article425: Article = {
           feature: "January (dry)",
           a: "40°C",
           b: "0 to 5°C",
-          c: "Steam rising from the jacuzzi into the cold mountain night. Stars above if clear.",
+          c: "Steam rising from the into the cold mountain night. Stars above if clear.",
         },
         {
           feature: "October",
@@ -51051,13 +51051,13 @@ export const article425: Article = {
           feature: "July-August",
           a: "40°C",
           b: "16-20°C",
-          c: "The monsoon evening jacuzzi: the rain has just cleared, the forest smell is saturated",
+          c: "The monsoon evening: the rain has just cleared, the forest smell is saturated",
         },
         {
           feature: "April",
           a: "40°C",
           b: "8-14°C",
-          c: "Spring morning jacuzzi: wild cherry blossom visible from the terrace edge above the cedar",
+          c: "Spring morning: wild cherry blossom visible from the terrace edge above the cedar",
         },
       ],
     },
@@ -51066,8 +51066,8 @@ export const article425: Article = {
       heading: "Frequently Asked Questions",
       items: [
         {
-          q: "Is the Presidential Suite jacuzzi indoors or outdoors?",
-          a: "The jacuzzi is on the suite's outdoor private terrace — not indoors. It is on a screened private terrace so it is functionally private but exposed to the mountain air. This is what makes the experience in cold weather (October through February) particularly dramatic.",
+          q: "Is the Presidential Suite indoors or outdoors?",
+          a: "The is on the suite's outdoor private terrace — not indoors. It is on a screened private terrace so it is functionally private but exposed to the mountain air. This is what makes the experience in cold weather (October through February) particularly dramatic.",
         },
         {
           q: "What is the Presidential Suite rate at Himalaya Villas?",
@@ -51079,7 +51079,7 @@ export const article425: Article = {
       type: "cta",
       eyebrow: "Book the Presidential Suite",
       heading: "WhatsApp +92 304 567 9000",
-      text: "Book the only private outdoor terrace jacuzzi in the Murree hills.",
+      text: "Book the only private outdoor terrace in the Murree hills.",
       buttonLabel: "Book Your Stay",
       buttonHref: "https://wa.me/923045679000",
       footnote: "Direct bookings receive the best available rate.",
@@ -52102,7 +52102,7 @@ export const article445: Article = {
   eyebrow: "Social/Commercial | Cluster 3 | ~900w",
   h1: "Bhurban Murree Photography Spots for Instagram — The Definitive Shot List",
   heroTagline:
-    "Top Instagram photography spots at Bhurban: (1) Himalaya Villas cedar estate dawn path (5:45am, directional light through cedar canopy — most viral Bhurban image); (2) Presidential Suite jacuzzi terrace (mountain backdrop lifestyle shot); (3) Cedar garden fire at night (firelight and cedar canopy); (4) Patriata Chairlift gondola interior (aerial cedar forest below through glass); (5) Ayubia Pipeline Track October amber walk; (6) Himalayan Penthouse balcony (360-degree mountain ridge panorama); (7) Mall Road kashmiri chai setup (the Murree food culture shot); (8) Sunset Suite west-facing mountain sunset (the golden hour vista).",
+    "Top Instagram photography spots at Bhurban: (1) Himalaya Villas cedar estate dawn path (5:45am, directional light through cedar canopy — most viral Bhurban image); (2) Presidential Suite terrace (mountain backdrop lifestyle shot); (3) Cedar garden fire at night (firelight and cedar canopy); (4) Patriata Chairlift gondola interior (aerial cedar forest below through glass); (5) Ayubia Pipeline Track October amber walk; (6) Himalayan Penthouse balcony (360-degree mountain ridge panorama); (7) Mall Road kashmiri chai setup (the Murree food culture shot); (8) Sunset Suite west-facing mountain sunset (the golden hour vista).",
   heroImage: dummyImageTemp,
 
   blocks: [
@@ -52110,7 +52110,7 @@ export const article445: Article = {
       type: "callout-qa",
       question: "What are the best Bhurban Murree photography spots for Instagram?",
       answer:
-        "Top Instagram photography spots at Bhurban: (1) Himalaya Villas cedar estate dawn path (5:45am, directional light through cedar canopy — most viral Bhurban image); (2) Presidential Suite jacuzzi terrace (mountain backdrop lifestyle shot); (3) Cedar garden fire at night (firelight and cedar canopy); (4) Patriata Chairlift gondola interior (aerial cedar forest below through glass); (5) Ayubia Pipeline Track October amber walk; (6) Himalayan Penthouse balcony (360-degree mountain ridge panorama); (7) Mall Road kashmiri chai setup (the Murree food culture shot); (8) Sunset Suite west-facing mountain sunset (the golden hour vista).",
+        "Top Instagram photography spots at Bhurban: (1) Himalaya Villas cedar estate dawn path (5:45am, directional light through cedar canopy — most viral Bhurban image); (2) Presidential Suite terrace (mountain backdrop lifestyle shot); (3) Cedar garden fire at night (firelight and cedar canopy); (4) Patriata Chairlift gondola interior (aerial cedar forest below through glass); (5) Ayubia Pipeline Track October amber walk; (6) Himalayan Penthouse balcony (360-degree mountain ridge panorama); (7) Mall Road kashmiri chai setup (the Murree food culture shot); (8) Sunset Suite west-facing mountain sunset (the golden hour vista).",
     },
 
     {
@@ -52130,7 +52130,7 @@ export const article445: Article = {
       heading: "The Shot List — What the Best Bhurban Instagram Content Looks Like",
       paragraphs: [
         "The Cedar Path Dawn Shot: horizontal morning light through the cedar canopy onto the forest path. Shoot at 5:45-6:15am from the Himalaya Villas cedar estate paths. Settings: f/2.8, ISO 1200-1600, 1/160s. The path stretches away from the camera, the cedar trunks frame left and right, the directional light creates the dappled pattern on the path floor. 95% of Bhurban cedar forest Instagram posts use this composition.",
-        "The Jacuzzi-Mountain Shot: the Presidential Suite terrace. Person in the jacuzzi, mountain ridge visible above the terrace railing behind them. Best shot at dawn (mountain in the first light, golden from the east) or at sunset (mountain in the last warm light from the west). In January snowfall: the steam rising from the jacuzzi against falling snow with the cedar branches above — the most engaged Bhurban post type.",
+        "The-Mountain Shot: the Presidential Suite terrace. Person in the, mountain ridge visible above the terrace railing behind them. Best shot at dawn (mountain in the first light, golden from the east) or at sunset (mountain in the last warm light from the west). In January snowfall: the steam rising from the against falling snow with the cedar branches above — the most engaged Bhurban post type.",
         "The Fire and Cedar Canopy: cedar garden fire at 9pm (fire fully established, cedar canopy lit from below). Shoot from the side of the fire, 2-3 metres back, with the cedar canopy as the background. The fire should be the primary light source (turn off all other estate lighting). Long exposure (ISO 3200, f/2.8, 1/60s) produces the specific fire-lit-cedar-night image.",
         "The Gondola Window: Patriata Chairlift ascending. Shoot through the gondola window downward at the cedar canopy. Best in October (amber deciduous visible below). Settings: f/4, ISO 400-800, 1/500s (enough shutter speed to freeze the motion through the glass). The aerial cedar forest perspective is unusual in Pakistani Instagram content — distinctive.",
         "The Pipeline Track Amber Walk: Ayubia Pipeline Track, October week 3. The path leading into the amber deciduous canopy, the evergreen cedar framing each side, the hiker (or empty path) as the scale reference. 9-10am light from the east into the canopy. This is the image that makes the mountain travel account.",
@@ -52144,16 +52144,16 @@ export const article445: Article = {
 
     {
       type: "callout-qa",
-      question: "Do I need to book the Presidential Suite specifically for the jacuzzi shot?",
+      question: "Do I need to book the Presidential Suite specifically for the shot?",
       answer:
-        "Yes — the jacuzzi is exclusively on the Presidential Suite's private terrace. It is not accessible from any other villa or as a day-use facility. Book the Presidential Suite via WhatsApp +92 304 567 9000.",
+        "Yes — the is exclusively on the Presidential Suite's private terrace. It is not accessible from any other villa or as a day-use facility. Book the Presidential Suite via WhatsApp +92 304 567 9000.",
     },
 
     {
       type: "callout-qa",
       question: "What is the best time of year for Instagram-quality Bhurban content?",
       answer:
-        "October week 3 (amber autumn canopy — the most distinctive seasonal content); January snowfall (the jacuzzi and snow combination — the highest engagement post type); and April weeks 2-4 at Ayubia (rhododendron bloom — the most distinctive wildflower content near Islamabad).",
+        "October week 3 (amber autumn canopy — the most distinctive seasonal content); January snowfall (the and snow combination — the highest engagement post type); and April weeks 2-4 at Ayubia (rhododendron bloom — the most distinctive wildflower content near Islamabad).",
     },
 
     {
@@ -52172,7 +52172,7 @@ export const article445: Article = {
       items: [
         { href: "/bhurban-photography-guide", label: "Full photography guide" },
         { href: "/bhurban-october-activities", label: "October conditions" },
-        { href: "/villa-with-jacuzzi-bhurban", label: "Presidential Suite" },
+        { href: "/villa-with-bhurban", label: "Presidential Suite" },
         { href: "/villas", label: "Browse Himalaya Villas" },
       ],
     },
@@ -52510,7 +52510,7 @@ export const article450: Article = {
       type: "callout-qa",
       question: "How does the Bhurban mountain estate serve Pakistan's real estate sector?",
       answer:
-        "The private villa estate at 6,800 feet, the cedar garden, the jacuzzi terrace, the in-villa dining at the guest's timing: every element of the Himalaya Villas experience is a product decision that the real estate professional immediately reads. This is the specific value of the real estate sector stay at Himalaya Villas: the developer or investor stays in a premium property that their own professional eye evaluates at every moment. They return to their own projects with a calibrated reference point that no site visit to a competitor development provides. The developer team retreat: the property development company's leadership at the cedar estate — the project portfolio review in the mountain environment, followed by the estate itself as the product reference standard. The international investor hosting: the real estate investment fund hosting its international investors at the cedar estate dinner — the Pakistan property investment relationship built in the mountain.",
+        "The private villa estate at 6,800 feet, the cedar garden, the terrace, the in-villa dining at the guest's timing: every element of the Himalaya Villas experience is a product decision that the real estate professional immediately reads. This is the specific value of the real estate sector stay at Himalaya Villas: the developer or investor stays in a premium property that their own professional eye evaluates at every moment. They return to their own projects with a calibrated reference point that no site visit to a competitor development provides. The developer team retreat: the property development company's leadership at the cedar estate — the project portfolio review in the mountain environment, followed by the estate itself as the product reference standard. The international investor hosting: the real estate investment fund hosting its international investors at the cedar estate dinner — the Pakistan property investment relationship built in the mountain.",
     },
 
     {
@@ -52518,7 +52518,7 @@ export const article450: Article = {
       heading: "Pakistan's Real Estate Sector — The Mountain Site Visit That Isn't a Site Visit",
       paragraphs: [
         "Pakistan's real estate sector — the residential developers, the commercial property developers, the real estate investment companies, and the property consultancies — is one of Pakistan's largest and most dynamic industries. The sector's leadership has a specific understanding of the value of exceptional property: the texture of the materials, the quality of the space, the experience of arriving and inhabiting a premium property.",
-        "The real estate developer who stays at Himalaya Villas & Resorts is not taking a holiday — they are conducting an involuntary product audit. The private villa estate at 6,800 feet, the cedar garden, the jacuzzi terrace, the in-villa dining at the guest's timing: every element of the Himalaya Villas experience is a product decision that the real estate professional immediately reads.",
+        "The real estate developer who stays at Himalaya Villas & Resorts is not taking a holiday — they are conducting an involuntary product audit. The private villa estate at 6,800 feet, the cedar garden, the terrace, the in-villa dining at the guest's timing: every element of the Himalaya Villas experience is a product decision that the real estate professional immediately reads.",
         "This is the specific value of the real estate sector stay at Himalaya Villas: the developer or investor stays in a premium property that their own professional eye evaluates at every moment. They return to their own projects with a calibrated reference point that no site visit to a competitor development provides.",
       ],
       image: {
@@ -52997,7 +52997,7 @@ export const article464: Article = {
       feature: "Presidential Suite",
       a: "2-4 guests",
       b: "PKR 65,000-70,000",
-      c: "Private outdoor jacuzzi terrace",
+      c: "Private outdoor terrace",
       d: "PKR 16,250-17,500 (4 guests)",
     },
   ],
@@ -53306,7 +53306,7 @@ export const article469: Article = {
       type: "callout-qa",
       question: "Why is Himalaya Villas the ideal first private mountain stay for young professionals?",
       answer:
-        "The Himalaya Villas cedar estate needs to pass the 'would I post this?' test — and the cedar forest at dawn, the fire pit in the cedar garden, and the Presidential Suite terrace jacuzzi all pass this test definitively. The specific entry point: the group of 4-6 young professionals sharing the Himalaya Villas Sunset Suite or Himalayan Penthouse (PKR 50,000-65,000/villa, 4-6 people = PKR 8,000-16,000/person/night) for a long weekend. This is not the most affordable accommodation option for young professionals — but it is the one that delivers the experience they will describe for years.",
+        "The Himalaya Villas cedar estate needs to pass the 'would I post this?' test — and the cedar forest at dawn, the fire pit in the cedar garden, and the Presidential Suite terrace all pass this test definitively. The specific entry point: the group of 4-6 young professionals sharing the Himalaya Villas Sunset Suite or Himalayan Penthouse (PKR 50,000-65,000/villa, 4-6 people = PKR 8,000-16,000/person/night) for a long weekend. This is not the most affordable accommodation option for young professionals — but it is the one that delivers the experience they will describe for years.",
     },
 
     {
@@ -53314,7 +53314,7 @@ export const article469: Article = {
       heading: "Pakistan's Young Professionals — The First Private Mountain Stay",
       paragraphs: [
         "Pakistan's young professional generation — the 24-34 year olds working in the country's tech companies, investment banks, consultancies, and creative industries — is the emerging premium consumer segment that the domestic luxury market is beginning to understand.",
-        "The young professional's approach to the mountain stay is different from previous generations: they research the experience before they book it, they share it on Instagram while they are there, and they measure it against the international travel they have either done or aspire to. The Himalaya Villas cedar estate needs to pass the 'would I post this?' test — and the cedar forest at dawn, the fire pit in the cedar garden, and the Presidential Suite terrace jacuzzi all pass this test definitively.",
+        "The young professional's approach to the mountain stay is different from previous generations: they research the experience before they book it, they share it on Instagram while they are there, and they measure it against the international travel they have either done or aspire to. The Himalaya Villas cedar estate needs to pass the 'would I post this?' test — and the cedar forest at dawn, the fire pit in the cedar garden, and the Presidential Suite terrace all pass this test definitively.",
       ],
       image: {
         src: dummyImageTemp,
@@ -54144,7 +54144,7 @@ export const article478: Article = {
       items: [
         {
           q: "Which Murree resort has a swimming pool?",
-          a: "PC Hotel Bhurban (Marriott) is the only property in the Murree hills with a conventional hotel swimming pool. The pool is seasonal and subject to hotel policy for non-resident use. Himalaya Villas' Presidential Suite has a private outdoor jacuzzi (not a pool).",
+          a: "PC Hotel Bhurban (Marriott) is the only property in the Murree hills with a conventional hotel swimming pool. The pool is seasonal and subject to hotel policy for non-resident use. Himalaya Villas' Presidential Suite has a private outdoor (not a pool).",
         },
         {
           q: "What is the best resort in Murree for a family?",
@@ -55356,7 +55356,7 @@ export const article499: Article = {
         {
           feature: "Pool",
           a: "Yes (seasonal)",
-          b: "No (Presidential Suite jacuzzi only)",
+          b: "No (Presidential Suite only)",
         },
         {
           feature: "Loyalty",
@@ -55548,7 +55548,7 @@ export const article503: Article = {
       type: "section",
       heading: "Best for Private Outdoor Space: Himalaya Villas & Resorts, Bhurban",
       paragraphs: [
-        "The only property in the Murree hills with exclusive-use private outdoor spaces per booking. 12 private villas, each with a private terrace, enclosed garden, or outdoor terrace jacuzzi. Rate: PKR 39,000–70,000/villa/night. For families of 4+, groups celebrating occasions, honeymooners, and anyone for whom the private outdoor space is non-negotiable: this is the unambiguous answer.",
+        "The only property in the Murree hills with exclusive-use private outdoor spaces per booking. 12 private villas, each with a private terrace, enclosed garden, or outdoor terrace. Rate: PKR 39,000–70,000/villa/night. For families of 4+, groups celebrating occasions, honeymooners, and anyone for whom the private outdoor space is non-negotiable: this is the unambiguous answer.",
         "Book: WhatsApp +92 304 567 9000 | himalayavillas.com",
       ],
       image: {
@@ -55912,7 +55912,7 @@ export const article505: Article = {
         {
           feature: "0–8°C",
           a: "−1 to 6°C",
-          b: "Classic Bhurban winter. Cedar paths frost-covered at dawn. Fire pit is the evening centrepiece. Presidential Suite jacuzzi at its most dramatic.",
+          b: "Classic Bhurban winter. Cedar paths frost-covered at dawn. Fire pit is the evening centrepiece. Presidential Suite at its most dramatic.",
         },
         {
           feature: "8–15°C",
@@ -57180,7 +57180,7 @@ export const article516: Article = {
           a: "Dec–Feb",
           b: "−5 to 10°C",
           c: "Snowfall possible (Jan peak). Cold nights.",
-          d: "Best for fire pit + jacuzzi + snowfall experience",
+          d: "Best for fire pit + + snowfall experience",
         },
         {
           feature: "Spring",
@@ -57231,7 +57231,7 @@ export const article516: Article = {
         {
           feature: "−5 to 5°C",
           a: "Cedar paths frost-covered at dawn. Fire pit essential by 5pm.",
-          b: "Presidential Suite jacuzzi, cedar garden fire, snowfall dawn walk",
+          b: "Presidential Suite, cedar garden fire, snowfall dawn walk",
         },
         {
           feature: "5 to 12°C",
@@ -57378,7 +57378,7 @@ export const article517: Article = {
       type: "section",
       heading: "Today's Snowfall Check — The Specific Query",
       paragraphs: [
-        "'Murree weather today snowfall' is searched 2,900 times monthly by visitors specifically checking whether snowfall is occurring right now. The fastest check: search 'murree snowfall today' on Twitter/X for real-time on-ground reports from current visitors. Then check PMD or AccuWeather for the forecast continuation. The cedar estate fire pit is available regardless of snowfall — but the Presidential Suite jacuzzi in active snowfall is the specific experience that makes January bookings months in advance worthwhile.",
+        "'Murree weather today snowfall' is searched 2,900 times monthly by visitors specifically checking whether snowfall is occurring right now. The fastest check: search 'murree snowfall today' on Twitter/X for real-time on-ground reports from current visitors. Then check PMD or AccuWeather for the forecast continuation. The cedar estate fire pit is available regardless of snowfall — but the Presidential Suite in active snowfall is the specific experience that makes January bookings months in advance worthwhile.",
       ],
       image: {
         src: article517View,
@@ -57657,7 +57657,7 @@ export const article519: Article = {
       type: "section",
       heading: "Snowfall and the Cedar Estate — What Changes",
       paragraphs: [
-        "Active snowfall transforms the Himalaya Villas cedar estate experience in specific ways: the cedar paths become white and silent; the garden fire pit against snowfall is the most described single experience in all Himalaya Villas reviews; the Presidential Suite jacuzzi at 40°C against subzero air with falling snow overhead is the experience that books the Presidential Suite months in advance; and the dawn cedar walk after overnight snowfall on unmarked white paths is the specific experience guests describe as their reason for returning.",
+        "Active snowfall transforms the Himalaya Villas cedar estate experience in specific ways: the cedar paths become white and silent; the garden fire pit against snowfall is the most described single experience in all Himalaya Villas reviews; the Presidential Suite at 40°C against subzero air with falling snow overhead is the experience that books the Presidential Suite months in advance; and the dawn cedar walk after overnight snowfall on unmarked white paths is the specific experience guests describe as their reason for returning.",
       ],
       image: {
         src: article519View,
@@ -58228,7 +58228,7 @@ export const article526: Article = {
         {
           feature: "Snow forecast, sub-zero",
           a: "Chains, heavy winter gear",
-          b: "Drive before snow starts — chains on approach road — Presidential Suite jacuzzi evening",
+          b: "Drive before snow starts — chains on approach road — Presidential Suite evening",
         },
         {
           feature: "All-day rain",
@@ -59368,7 +59368,7 @@ export const article543: Article = {
       items: [
         {
           q: "Is there a luxury villa near Islamabad with a pool?",
-          a: "Not currently. The Presidential Suite at Himalaya Villas & Resorts has a private outdoor jacuzzi rather than a pool. If a private pool is a firm requirement, it's worth checking availability directly with our team, since layouts are updated periodically.",
+          a: "Not currently. The Presidential Suite at Himalaya Villas & Resorts has a private outdoor rather than a pool. If a private pool is a firm requirement, it's worth checking availability directly with our team, since layouts are updated periodically.",
         },
         {
           q: "How far is Himalaya Villas & Resorts from Islamabad?",
@@ -60074,7 +60074,7 @@ export const article550: Article = {
         },
         {
           q: "How cold is Bhurban in January?",
-          a: "Bhurban in January: -4 to 8°C daytime, -8 to 0°C at night. Feels significantly colder with windchill — the perceived temperature can be -10 to -15°C on exposed ridge locations. Inside the cedar garden with the fire pit: the microclimate is considerably warmer. The Presidential Suite jacuzzi at 40°C against -5°C air is the specific January experience.",
+          a: "Bhurban in January: -4 to 8°C daytime, -8 to 0°C at night. Feels significantly colder with windchill — the perceived temperature can be -10 to -15°C on exposed ridge locations. Inside the cedar garden with the fire pit: the microclimate is considerably warmer. The Presidential Suite at 40°C against -5°C air is the specific January experience.",
         },
       ],
     },
@@ -60258,7 +60258,7 @@ export const article552: Article = {
   eyebrow: "Guest Post | Authority Guide | Cluster 7: Seasonal | ~900w",
   h1: "Murree Snowfall Guide — When, What to Expect, and the Cedar Estate in Snow",
   heroTagline:
-    "Murree and Bhurban snowfall season: November (light, 15-25% probability), December (moderate, 20-40%), January (peak — 60-70% probability weeks 3-4, heaviest accumulation), February (decreasing, 30-45%), March (rare). The most reliable single snowfall window: January weeks 3-4. Bhurban cedar estate in snowfall: the cedar trees hold snow on their branches creating the classic cedar-in-snow aesthetic. The Himalaya Villas Presidential Suite jacuzzi in active snowfall (40°C water vs subzero air) is the most-requested January experience.",
+    "Murree and Bhurban snowfall season: November (light, 15-25% probability), December (moderate, 20-40%), January (peak — 60-70% probability weeks 3-4, heaviest accumulation), February (decreasing, 30-45%), March (rare). The most reliable single snowfall window: January weeks 3-4. Bhurban cedar estate in snowfall: the cedar trees hold snow on their branches creating the classic cedar-in-snow aesthetic. The Himalaya Villas Presidential Suite in active snowfall (40°C water vs subzero air) is the most-requested January experience.",
   heroImage: dummyImageTemp,
 
   blocks: [
@@ -60266,7 +60266,7 @@ export const article552: Article = {
       type: "callout-qa",
       question: "When does Murree and Bhurban get snowfall?",
       answer:
-        "Murree and Bhurban snowfall season: November (light, 15-25% probability), December (moderate, 20-40%), January (peak — 60-70% probability weeks 3-4, heaviest accumulation), February (decreasing, 30-45%), March (rare). The most reliable single snowfall window: January weeks 3-4. Bhurban cedar estate in snowfall: the cedar trees hold snow on their branches creating the classic cedar-in-snow aesthetic. The Himalaya Villas Presidential Suite jacuzzi in active snowfall (40°C water vs subzero air) is the most-requested January experience.",
+        "Murree and Bhurban snowfall season: November (light, 15-25% probability), December (moderate, 20-40%), January (peak — 60-70% probability weeks 3-4, heaviest accumulation), February (decreasing, 30-45%), March (rare). The most reliable single snowfall window: January weeks 3-4. Bhurban cedar estate in snowfall: the cedar trees hold snow on their branches creating the classic cedar-in-snow aesthetic. The Himalaya Villas Presidential Suite in active snowfall (40°C water vs subzero air) is the most-requested January experience.",
     },
 
     {
@@ -60299,7 +60299,7 @@ export const article552: Article = {
         },
         {
           label: "Jan 1-14",
-          value: "Probability: 50-60% | Depth: 10-40 cm | Road: Chains required | Experience: Deep snowfall likely. Jacuzzi peak season.",
+          value: "Probability: 50-60% | Depth: 10-40 cm | Road: Chains required | Experience: Deep snowfall likely. peak season.",
         },
         {
           label: "Jan 15-31",
@@ -60644,14 +60644,14 @@ export const article556: Article = {
   eyebrow: "Seasonal Authority | Cluster 7 | Template B — Seasonal Authority",
   h1: "Murree and Bhurban in January — The Snowfall Month",
   heroTagline:
-    "January: -4 to 8°C, 60-70% snowfall probability in weeks 3-4. Presidential Suite jacuzzi against subzero air. Book 8-12 weeks ahead.",
+    "January: -4 to 8°C, 60-70% snowfall probability in weeks 3-4. Presidential Suite against subzero air. Book 8-12 weeks ahead.",
   heroImage: article556Hero,
   blocks: [
     {
       type: "callout-qa",
       question: "What is Murree and Bhurban like in January?",
       answer:
-        "January in Bhurban: -4 to 8°C daytime, -8 to 0°C at night. The peak snowfall month — 60-70% probability of significant snowfall in weeks 3-4. The Cedar estate in January: the Presidential Suite jacuzzi at 40°C against subzero air with snowfall above, the cedar fire pit as a daily necessity from 5pm, the dawn cedar walk on fresh snow paths, and the specific silence of a snowbound forest at 6am. January is the most in-demand month of the year for Himalaya Villas — book 8-12 weeks in advance. WhatsApp +92 304 567 9000.",
+        "January in Bhurban: -4 to 8°C daytime, -8 to 0°C at night. The peak snowfall month — 60-70% probability of significant snowfall in weeks 3-4. The Cedar estate in January: the Presidential Suite at 40°C against subzero air with snowfall above, the cedar fire pit as a daily necessity from 5pm, the dawn cedar walk on fresh snow paths, and the specific silence of a snowbound forest at 6am. January is the most in-demand month of the year for Himalaya Villas — book 8-12 weeks in advance. WhatsApp +92 304 567 9000.",
     },
     {
       type: "section",
@@ -60680,13 +60680,13 @@ export const article556: Article = {
     },
     {
       type: "section",
-      heading: "The Presidential Suite Jacuzzi in January",
+      heading: "The Presidential Suite in January",
       paragraphs: [
-        "The Presidential Suite's private outdoor jacuzzi — the 40°C water temperature against the -4 to 0°C outdoor air — is the most specific single experience that January at Himalaya Villas produces. The steam rising from the jacuzzi against the cold cedar canopy, the snowfall landing on the hot water surface, the cedar garden white around the jacuzzi perimeter. This is why the Presidential Suite in January books months in advance.",
+        "The Presidential Suite's private outdoor — the 40°C water temperature against the -4 to 0°C outdoor air — is the most specific single experience that January at Himalaya Villas produces. The steam rising from the against the cold cedar canopy, the snowfall landing on the hot water surface, the cedar garden white around the perimeter. This is why the Presidential Suite in January books months in advance.",
       ],
       image: {
         src: article556Villa,
-        alt: "Presidential Suite Jacuzzi in January",
+        alt: "Presidential Suite in January",
       },
     },
     {
@@ -60716,7 +60716,7 @@ export const article556: Article = {
         },
         {
           feature: "Activities",
-          a: "Dawn snow walk, jacuzzi, fire pit, in-villa snow day, Patriata Chairlift if open",
+          a: "Dawn snow walk,, fire pit, in-villa snow day, Patriata Chairlift if open",
         },
         {
           feature: "Chairlift status",
@@ -60729,9 +60729,9 @@ export const article556: Article = {
       heading: "January vs October — The Two Best Months",
       paragraphs: [
         "January and October are the two peak experience months at the Bhurban cedar estate, and they deliver fundamentally different experiences:",
-        "January: fire-and-ice. The sub-zero cedar forest, the jacuzzi in the snow, the silence of a snowbound estate, the raw physical intensity of the mountain winter. The experience that feels earned.",
+        "January: fire-and-ice. The sub-zero cedar forest, the in the snow, the silence of a snowbound estate, the raw physical intensity of the mountain winter. The experience that feels earned.",
         "October: the golden month. The amber canopy, the crystal 15°C air, every outdoor activity simultaneously optimal, the fire pit in perfect cool evening conditions. The experience that feels like the mountain at its most benevolent.",
-        "If forced to choose: October is the better month for most visitors. January is the better month for guests who specifically want the snowfall, the jacuzzi-in-snow, and the winter cedar estate experience.",
+        "If forced to choose: October is the better month for most visitors. January is the better month for guests who specifically want the snowfall, the-in-snow, and the winter cedar estate experience.",
       ],
       image: {
         src: article556View,
@@ -62766,7 +62766,7 @@ export const article581: Article = {
         },
         {
           feature: "Heavy snow (20cm+) — active",
-          a: "Deep estate snow. Presidential Suite jacuzzi peak conditions.",
+          a: "Deep estate snow. Presidential Suite peak conditions.",
           b: "Only drive with chains. Check NHMP status.",
         },
         {
@@ -63965,7 +63965,7 @@ export const article590: Article = {
       items: [
         {
           q: "Is there a resort with a swimming pool near Islamabad?",
-          a: "PC Hotel Bhurban (Marriott, 48km, 45 minutes) has an outdoor pool. Himalaya Villas has the Presidential Suite private outdoor jacuzzi (the only private jacuzzi property in Bhurban). No private villa resort with a swimming pool exists within 1 hour of Islamabad currently.",
+          a: "PC Hotel Bhurban (Marriott, 48km, 45 minutes) has an outdoor pool. Himalaya Villas has the Presidential Suite private outdoor (the only private property in Bhurban). No private villa resort with a swimming pool exists within 1 hour of Islamabad currently.",
         },
         {
           q: "Can I go to a resort near Islamabad for the day?",
@@ -64140,7 +64140,7 @@ export const article592: Article = {
   eyebrow: "Guest Post | Audience Guide | Cluster 10: Audience Geo | ~800w",
   h1: "Bhurban for Couples — The Private Cedar Estate Romantic Weekend Guide",
   heroTagline:
-    "Bhurban's private villa estate model is specifically well-suited to couples: the exclusive-use villa delivers a private outdoor space (terrace, balcony, or jacuzzi) that belongs only to the two of you, in-villa dining at your own timing, and the cedar forest as the environment. The Sunset Suite (PKR 50,000–55,000/night), Himalayan Penthouse (panoramic balcony), or Presidential Suite (private jacuzzi) are the recommended villas for couples. Cedar garden fire pit as the evening centrepiece.",
+    "Bhurban's private villa estate model is specifically well-suited to couples: the exclusive-use villa delivers a private outdoor space (terrace, balcony, or) that belongs only to the two of you, in-villa dining at your own timing, and the cedar forest as the environment. The Sunset Suite (PKR 50,000–55,000/night), Himalayan Penthouse (panoramic balcony), or Presidential Suite (private) are the recommended villas for couples. Cedar garden fire pit as the evening centrepiece.",
   heroImage: dummyImageTemp,
 
   blocks: [
@@ -64148,7 +64148,7 @@ export const article592: Article = {
       type: "callout-qa",
       question: "Is Bhurban good for couples?",
       answer:
-        "Bhurban's private villa estate model is specifically well-suited to couples: the exclusive-use villa delivers a private outdoor space (terrace, balcony, or jacuzzi) that belongs only to the two of you, in-villa dining at your own timing, and the cedar forest as the environment. The Sunset Suite (PKR 50,000–55,000/night), Himalayan Penthouse (panoramic balcony), or Presidential Suite (private jacuzzi) are the recommended villas for couples. Cedar garden fire pit as the evening centrepiece.",
+        "Bhurban's private villa estate model is specifically well-suited to couples: the exclusive-use villa delivers a private outdoor space (terrace, balcony, or) that belongs only to the two of you, in-villa dining at your own timing, and the cedar forest as the environment. The Sunset Suite (PKR 50,000–55,000/night), Himalayan Penthouse (panoramic balcony), or Presidential Suite (private) are the recommended villas for couples. Cedar garden fire pit as the evening centrepiece.",
     },
 
     {
@@ -64177,7 +64177,7 @@ export const article592: Article = {
         },
         {
           label: "Presidential Suite",
-          value: "Rate/Night: PKR 65,000–70,000 | Romantic Feature: Private outdoor jacuzzi — the only such facility in Bhurban | Best For: The signature romantic villa — jacuzzi in October or January snow",
+          value: "Rate/Night: PKR 65,000–70,000 | Romantic Feature: Private outdoor — the only such facility in Bhurban | Best For: The signature romantic villa — in October or January snow",
         },
       ],
     },
@@ -64193,7 +64193,7 @@ export const article592: Article = {
         "5:45am: cedar estate dawn walk — the two of you on the maintained cedar paths before the world is awake. The Koklass Pheasant calling at 6am. Back to the villa by 7am. Terrace breakfast as the valley below emerges from the morning mist. Drive to the Patriata Chairlift at 9am (8 min). Aerial cedar forest. Return by 11am. In-villa lunch. Afternoon terrace rest or drive to Murree Mall Road for kashmiri chai. Cedar garden fire at 6:30pm. In-villa dinner with the fire visible from the dining window.",
         "",
         "Saturday (The Nathia Gali Option or Full Rest Day)",
-        "Option A: Nathia Gali day trip — the Pipeline Track through the forest, the quietest hill station in the area, the Ayubia cedar canopy walk. Option B: full cedar estate day — the terrace in the morning, the estate path walk in the afternoon, the jacuzzi evening (Presidential Suite guests), the fire at sunset.",
+        "Option A: Nathia Gali day trip — the Pipeline Track through the forest, the quietest hill station in the area, the Ayubia cedar canopy walk. Option B: full cedar estate day — the terrace in the morning, the estate path walk in the afternoon, the evening (Presidential Suite guests), the fire at sunset.",
       ],
       image: {
         src: dummyImageTemp,
@@ -64223,7 +64223,7 @@ export const article592: Article = {
       items: [
         {
           q: "Which Bhurban villa is best for a romantic couple?",
-          a: "The Presidential Suite (private outdoor jacuzzi) for the most dramatic romantic feature. The Sunset Suite for the evening valley view. The Himalayan Penthouse for the panoramic mountain balcony. All three are appropriate couple villas — the choice depends on which outdoor feature is the priority.",
+          a: "The Presidential Suite (private outdoor) for the most dramatic romantic feature. The Sunset Suite for the evening valley view. The Himalayan Penthouse for the panoramic mountain balcony. All three are appropriate couple villas — the choice depends on which outdoor feature is the priority.",
         },
         {
           q: "Is Bhurban romantic in all seasons?",
@@ -66014,7 +66014,7 @@ export const article616: Article = {
         {
           feature: "Pool",
           a: "Yes — outdoor (heated in winter)",
-          b: "No pool (Presidential Suite private jacuzzi)",
+          b: "No pool (Presidential Suite private)",
         },
         {
           feature: "Spa",
@@ -66529,7 +66529,7 @@ export const article623: Article = {
       type: "callout-qa",
       question: "What is Himalaya Villas & Resorts Bhurban?",
       answer:
-        "Himalaya Villas & Resorts is a private villa estate at Mohra Iswal, Bhurban, Murree Hills 47190, Pakistan — 47km from Islamabad (45 minutes on the N-75 Expressway). 12 exclusive-use deodar cedar villas ranging from PKR 39,000 to 70,000/night. The estate occupies mature deodar cedar forest at 6,800 feet. It is Pakistan's only private cedar estate within 1 hour of Islamabad. Not a hotel — each villa is a private building with its own exclusive outdoor space (terrace, garden, or jacuzzi), the cedar forest from the gate, and in-villa dining at the guest's timing. Book: WhatsApp +92 304 567 9000 | reservations@himalayavillas.com | himalayavillas.com.",
+        "Himalaya Villas & Resorts is a private villa estate at Mohra Iswal, Bhurban, Murree Hills 47190, Pakistan — 47km from Islamabad (45 minutes on the N-75 Expressway). 12 exclusive-use deodar cedar villas ranging from PKR 39,000 to 70,000/night. The estate occupies mature deodar cedar forest at 6,800 feet. It is Pakistan's only private cedar estate within 1 hour of Islamabad. Not a hotel — each villa is a private building with its own exclusive outdoor space (terrace, garden, or), the cedar forest from the gate, and in-villa dining at the guest's timing. Book: WhatsApp +92 304 567 9000 | reservations@himalayavillas.com | himalayavillas.com.",
     },
     {
       type: "section",
@@ -66581,7 +66581,7 @@ export const article623: Article = {
           feature: "Presidential Suite",
           a: "PKR 65,000–70,000",
           b: "2–4 persons",
-          c: "Private outdoor jacuzzi — Bhurban's only private jacuzzi accommodation",
+          c: "Private outdoor — Bhurban's only private accommodation",
         },
       ],
     },
@@ -66600,7 +66600,7 @@ export const article623: Article = {
       type: "section",
       heading: "What the Private Villa Estate Model Means",
       paragraphs: [
-        "Exclusive Use: When a villa at Himalaya Villas is booked, it is exclusively yours for the duration of the stay. No other guests enter the villa's building or use its outdoor space. The private garden, the terrace, or the jacuzzi belongs to your group.",
+        "Exclusive Use: When a villa at Himalaya Villas is booked, it is exclusively yours for the duration of the stay. No other guests enter the villa's building or use its outdoor space. The private garden, the terrace, or the belongs to your group.",
         "The Cedar Forest: The Himalaya Villas estate sits within mature deodar cedar forest — trees 100–200 years old, the forest established during the British hill station era. The cedar estate paths are maintained and accessible from the villa gate. The cedar estate dawn walk (5:45am) is the specific experience that villa guests describe most consistently.",
         "In-Villa Dining: No hotel restaurant. No shared dining room. Meals are served at the guest's timing in the private villa or cedar garden — breakfast on the terrace at 7:30am, the cedar garden fire dinner at 8pm. All dining is arranged and coordinated via WhatsApp at the booking stage.",
         "The Cedar Garden Fire: The cedar garden fire pit is available at every villa — lit at the guest's requested timing, typically 6:30pm as the default. The cedar garden fire is the centrepiece of the Himalaya Villas evening: the fire burning in the cedar forest, the family gathered around it, the cedar canopy above. No hotel lobby, no strangers, no shared common area.",
@@ -67456,7 +67456,7 @@ export const article629: Article = {
         "Q: What is the cheapest villa at Himalaya Villas?",
         "A: The Serene Valley Cabin at PKR 39,000-45,000/night — the entry-level cedar estate villa for 2-4 persons.",
         "Q: Does Himalaya Villas have a swimming pool?",
-        "A: No pool. The Presidential Suite has a private outdoor jacuzzi — the only private jacuzzi accommodation in Bhurban. PC Hotel Bhurban (0.5km) has a shared pool.",
+        "A: No pool. The Presidential Suite has a private outdoor — the only private accommodation in Bhurban. PC Hotel Bhurban (0.5km) has a shared pool.",
         "Q: Does Himalaya Villas have a restaurant?",
         "A: No shared restaurant. In-villa dining is pre-arranged via WhatsApp at the booking stage — meals served in the private villa or cedar garden at the guest's timing.",
         "Q: How do I book Himalaya Villas?",
@@ -67608,7 +67608,7 @@ export const article630: Article = {
   eyebrow: "Guest Post | Pillar Page | All Clusters | ~1,000w",
   h1: "Bhurban Cedar Estate — The Complete Himalaya Villas Private Villa Experience",
   heroTagline:
-    "Himalaya Villas & Resorts is a private cedar villa estate at Mohra Iswal, Bhurban, Murree Hills — 47km from Islamabad (45 minutes). 12 exclusive-use deodar cedar villas (PKR 39,000-70,000/night) set in 100-200 year old cedar forest at 6,800 feet. The estate is characterised by three experiences unavailable elsewhere within 1 hour of Islamabad: the exclusive private outdoor space per villa (terrace, garden, or jacuzzi), the mature deodar cedar forest from the estate gate, and in-villa dining at the guest's own timing.",
+    "Himalaya Villas & Resorts is a private cedar villa estate at Mohra Iswal, Bhurban, Murree Hills — 47km from Islamabad (45 minutes). 12 exclusive-use deodar cedar villas (PKR 39,000-70,000/night) set in 100-200 year old cedar forest at 6,800 feet. The estate is characterised by three experiences unavailable elsewhere within 1 hour of Islamabad: the exclusive private outdoor space per villa (terrace, garden, or), the mature deodar cedar forest from the estate gate, and in-villa dining at the guest's own timing.",
   heroImage: dummyImageTemp,
 
   blocks: [
@@ -67616,7 +67616,7 @@ export const article630: Article = {
       type: "callout-qa",
       question: "What is the Himalaya Villas cedar estate at Bhurban?",
       answer:
-        "Himalaya Villas & Resorts is a private cedar villa estate at Mohra Iswal, Bhurban, Murree Hills — 47km from Islamabad (45 minutes). 12 exclusive-use deodar cedar villas (PKR 39,000-70,000/night) set in 100-200 year old cedar forest at 6,800 feet. The estate is characterised by three experiences unavailable elsewhere within 1 hour of Islamabad: the exclusive private outdoor space per villa (terrace, garden, or jacuzzi), the mature deodar cedar forest from the estate gate, and in-villa dining at the guest's own timing.",
+        "Himalaya Villas & Resorts is a private cedar villa estate at Mohra Iswal, Bhurban, Murree Hills — 47km from Islamabad (45 minutes). 12 exclusive-use deodar cedar villas (PKR 39,000-70,000/night) set in 100-200 year old cedar forest at 6,800 feet. The estate is characterised by three experiences unavailable elsewhere within 1 hour of Islamabad: the exclusive private outdoor space per villa (terrace, garden, or), the mature deodar cedar forest from the estate gate, and in-villa dining at the guest's own timing.",
     },
 
     {
@@ -67645,7 +67645,7 @@ export const article630: Article = {
         "Garden Villa Retreat (PKR 55,000-60,000): enclosed private garden, ideal for families with young children, 4-8 persons",
         "Himalayan Penthouse (PKR 60,000-65,000): 360° panoramic balcony, the widest mountain view on the estate, 4-6 persons",
         "Alpine Family Lodge (PKR 60,000-70,000): largest single-villa capacity, private cedar terrace, 6-10 persons",
-        "Presidential Suite (PKR 65,000-70,000): private outdoor jacuzzi, Bhurban's only private jacuzzi accommodation, 2-4 persons",
+        "Presidential Suite (PKR 65,000-70,000): private outdoor, Bhurban's only private accommodation, 2-4 persons",
         "",
         "The Cedar Garden",
         "The cedar garden is the shared outdoor space of the estate — the cedar-canopied ground between the villas where the fire pit stands. The fire is lit at the guest's requested timing (typically 6:30pm). The cedar garden fire at the estate is the experience that defines the Himalaya Villas stay: the family gathered around the cedar fire in the 100-year cedar forest at 6,800 feet, the cedar canopy above, the mountain air at 15-20°C.",
@@ -67717,7 +67717,7 @@ export const article630: Article = {
         "The question that every potential guest asks implicitly — why choose the private cedar villa estate over PC Hotel Bhurban 0.5km away, or any other Bhurban hotel. The answer is not quality comparison — it is model comparison:",
         "A hotel room gives you access to shared hotel facilities. A cedar villa gives you an exclusive private building and an exclusive outdoor space.",
         "A hotel restaurant serves you at fixed times in a shared dining room. In-villa dining serves you in your private space at your own timing.",
-        "A hotel pool is shared with other guests. The Presidential Suite jacuzzi is private — you and your group.",
+        "A hotel pool is shared with other guests. The Presidential Suite is private — you and your group.",
         "The hotel's grounds are shared. The cedar garden fire pit is lit for your group.",
         "For a family of 6+: the math tilts sharply — three hotel rooms at PC Bhurban cost PKR 135,000+/night vs one Himalaya Villas villa at PKR 55,000-70,000, with the villa adding the private garden and fire pit that the hotel rooms cannot.",
       ],
@@ -67828,7 +67828,7 @@ export const article631: Article = {
         },
         {
           label: "Pool",
-          value: "Islamabad City Hotel: Yes — shared | Himalaya Villas: Presidential Suite private jacuzzi only",
+          value: "Islamabad City Hotel: Yes — shared | Himalaya Villas: Presidential Suite private only",
         },
         {
           label: "Restaurant",
@@ -67927,8 +67927,8 @@ export const article632: Article = {
         "2. The Cedar Trunk at 6:15am",
         "The horizontal dawn light at 6:15am on the cedar estate hits the 100-200 year old cedar trunks at 10-15 degrees from horizontal — the specific light angle that photographers chase and rarely find without a studio. In the cedar estate at 6:15am on a clear morning: the furrowed grey-brown bark of the mature trunks lit from the side, the lichen patches catching the light, the forest floor still in shadow below. This specific image requires three things that cannot be manufactured: a 100-year cedar trunk, a clear morning, and 6:15am. Himalaya Villas guests have all three from the estate gate.",
         "",
-        "3. The Presidential Suite Jacuzzi in January Snowfall",
-        "The Presidential Suite's private outdoor jacuzzi at 40°C against the January air at -4°C — with active snowfall falling on the water surface and the cedar forest white around the jacuzzi perimeter. The steam rising from the water against the cold cedar canopy. The snowflakes landing and dissolving on the 40°C surface. This is a specific sensory combination that requires: a private outdoor jacuzzi, the cedar forest, snowfall, and sub-zero air. It exists in one place within 1 hour of Islamabad.",
+        "3. The Presidential Suite in January Snowfall",
+        "The Presidential Suite's private outdoor at 40°C against the January air at -4°C — with active snowfall falling on the water surface and the cedar forest white around the perimeter. The steam rising from the water against the cold cedar canopy. The snowflakes landing and dissolving on the 40°C surface. This is a specific sensory combination that requires: a private outdoor, the cedar forest, snowfall, and sub-zero air. It exists in one place within 1 hour of Islamabad.",
         "",
         "4. The Cedar Garden Fire in October at 7pm",
         "October 15-21. The cedar estate in peak amber colour. 8°C outside. The fire lit at 6:30pm. The family in the cedar garden as the cedar canopy transitions from the last amber light of the day to darkness above the fire. The cedar smoke rising through the cedar-and-oak canopy. The mountain air cooling from 14°C to 8°C as the evening progresses. The fire at peak heat. This specific convergence of temperature, colour, and cedar fire — available for approximately 10 days per year at the cedar estate — is the experience that October visitors describe with the most consistent emotional intensity in reviews.",
@@ -68988,7 +68988,7 @@ export const article640: Article = {
         {
           feature: "Occasion (anniversary)",
           a: "Presidential Suite",
-          b: "Private outdoor jacuzzi — the single most distinct villa",
+          b: "Private outdoor — the single most distinct villa",
         },
       ],
     },
@@ -69471,7 +69471,7 @@ export const article645: Article = {
       heading: "What Guests Would Change",
       paragraphs: [
         "The honest guest feedback also includes the consistent requests and observations that reflect genuine gaps:",
-        "Pool: the most-requested missing facility. The Presidential Suite jacuzzi partially addresses this but the absence of a shared pool is the most-mentioned comparison point with PC Hotel Bhurban",
+        "Pool: the most-requested missing facility. The Presidential Suite partially addresses this but the absence of a shared pool is the most-mentioned comparison point with PC Hotel Bhurban",
         "More villa proximity to the cedar trail: guests who specifically came for the dawn walk sometimes mention wanting the cedar estate trails to extend further from the villa",
         "Earlier fire lighting: some guests prefer a 5:30-6pm fire start on the coldest winter evenings — this can be coordinated via WhatsApp",
         "Entertainment for older children (teenagers): the cedar estate and the Chairlift are excellent for younger children but teenagers sometimes want more activity variety — the Golf Club and the Galyat day trips address this",
@@ -69850,7 +69850,7 @@ export const article648: Article = {
         },
         {
           q: "Are there any villa rentals in Bhurban with a private pool?",
-          a: "No villa property in Bhurban currently offers a private pool. PC Hotel Bhurban has a shared hotel pool. The Presidential Suite at Himalaya Villas has a private outdoor jacuzzi — the only private jacuzzi accommodation in Bhurban.",
+          a: "No villa property in Bhurban currently offers a private pool. PC Hotel Bhurban has a shared hotel pool. The Presidential Suite at Himalaya Villas has a private outdoor — the only private accommodation in Bhurban.",
         },
       ],
     },
@@ -70297,7 +70297,7 @@ export const article652: Article = {
   eyebrow: "Guest Post | Commercial | Clusters 5 & 6 | ~800w",
   h1: "Honeymoon in Pakistan — Why Bhurban Cedar Estate is the Finest Choice",
   heroTagline:
-    "Best honeymoon destinations Pakistan 2026: (1) Bhurban cedar estate, Himalaya Villas & Resorts (47km from Islamabad) — the only private cedar villa with exclusive outdoor jacuzzi, in-villa dining, and cedar forest from the gate within 1 hour of any Pakistani city; (2) Naran Kaghan — dramatic northern scenery, Saiful Muluk lake, for adventurous couples with 5+ days; (3) Hunza — the premium northern Pakistan experience, significant travel time. For a honeymoon within 1-2 hours of Islamabad, Lahore, or any major Pakistani city: Bhurban cedar estate is the definitive answer.",
+    "Best honeymoon destinations Pakistan 2026: (1) Bhurban cedar estate, Himalaya Villas & Resorts (47km from Islamabad) — the only private cedar villa with exclusive outdoor, in-villa dining, and cedar forest from the gate within 1 hour of any Pakistani city; (2) Naran Kaghan — dramatic northern scenery, Saiful Muluk lake, for adventurous couples with 5+ days; (3) Hunza — the premium northern Pakistan experience, significant travel time. For a honeymoon within 1-2 hours of Islamabad, Lahore, or any major Pakistani city: Bhurban cedar estate is the definitive answer.",
   heroImage: dummyImageTemp,
 
   blocks: [
@@ -70305,7 +70305,7 @@ export const article652: Article = {
       type: "callout-qa",
       question: "What are the best honeymoon destinations in Pakistan?",
       answer:
-        "Best honeymoon destinations Pakistan 2026: (1) Bhurban cedar estate, Himalaya Villas & Resorts (47km from Islamabad) — the only private cedar villa with exclusive outdoor jacuzzi, in-villa dining, and cedar forest from the gate within 1 hour of any Pakistani city; (2) Naran Kaghan — dramatic northern scenery, Saiful Muluk lake, for adventurous couples with 5+ days; (3) Hunza — the premium northern Pakistan experience, significant travel time. For a honeymoon within 1-2 hours of Islamabad, Lahore, or any major Pakistani city: Bhurban cedar estate is the definitive answer.",
+        "Best honeymoon destinations Pakistan 2026: (1) Bhurban cedar estate, Himalaya Villas & Resorts (47km from Islamabad) — the only private cedar villa with exclusive outdoor, in-villa dining, and cedar forest from the gate within 1 hour of any Pakistani city; (2) Naran Kaghan — dramatic northern scenery, Saiful Muluk lake, for adventurous couples with 5+ days; (3) Hunza — the premium northern Pakistan experience, significant travel time. For a honeymoon within 1-2 hours of Islamabad, Lahore, or any major Pakistani city: Bhurban cedar estate is the definitive answer.",
     },
 
     {
@@ -70351,9 +70351,9 @@ export const article652: Article = {
       type: "section",
       heading: "The Presidential Suite for Honeymoon — The Specific Recommendation",
       paragraphs: [
-        "For a Bhurban honeymoon: the Presidential Suite (PKR 65,000-70,000/night) is the specific villa recommendation. The private outdoor jacuzzi — the only such facility in Bhurban — combined with the cedar forest and the cedar garden fire delivers the honeymoon experience that no other Pakistan accommodation can replicate at this accessibility from Islamabad:",
-        "January: the jacuzzi at 40°C against sub-zero air and potential snowfall — the most dramatic honeymoon setting available in Pakistan within a half-day journey from any major city",
-        "October: the amber cedar forest around the jacuzzi, the evening fire lit in the cedar garden, the crystal mountain air at 12-15°C",
+        "For a Bhurban honeymoon: the Presidential Suite (PKR 65,000-70,000/night) is the specific villa recommendation. The private outdoor — the only such facility in Bhurban — combined with the cedar forest and the cedar garden fire delivers the honeymoon experience that no other Pakistan accommodation can replicate at this accessibility from Islamabad:",
+        "January: the at 40°C against sub-zero air and potential snowfall — the most dramatic honeymoon setting available in Pakistan within a half-day journey from any major city",
+        "October: the amber cedar forest around the, the evening fire lit in the cedar garden, the crystal mountain air at 12-15°C",
         "July: the cedar forest monsoon smell, the private terrace breakfast as the valley emerges from morning mist, the cedar garden fire in the warm mountain evening",
       ],
       image: {
@@ -70384,11 +70384,11 @@ export const article652: Article = {
       items: [
         {
           q: "Is Bhurban good for a Pakistan honeymoon?",
-          a: "For Pakistani couples who want the private mountain estate honeymoon within driving distance: Bhurban is the finest currently available option in Pakistan. The private cedar estate model — exclusive-use villa, private outdoor jacuzzi (Presidential Suite), cedar garden fire, in-villa dining — is the specific honeymoon format that the domestic Pakistan market has not previously had accessible within 45 minutes of Islamabad.",
+          a: "For Pakistani couples who want the private mountain estate honeymoon within driving distance: Bhurban is the finest currently available option in Pakistan. The private cedar estate model — exclusive-use villa, private outdoor (Presidential Suite), cedar garden fire, in-villa dining — is the specific honeymoon format that the domestic Pakistan market has not previously had accessible within 45 minutes of Islamabad.",
         },
         {
           q: "Is Naran Kaghan or Bhurban better for honeymoon?",
-          a: "Different experiences. Naran Kaghan offers dramatic high-altitude scenery but requires 6-7 hours of mountain driving and has limited premium accommodation. Bhurban offers the private cedar estate, the jacuzzi, in-villa dining, and a 45-minute drive. For a romantic private cedar estate experience: Bhurban. For a dramatic northern mountain journey: Naran Kaghan.",
+          a: "Different experiences. Naran Kaghan offers dramatic high-altitude scenery but requires 6-7 hours of mountain driving and has limited premium accommodation. Bhurban offers the private cedar estate, the, in-villa dining, and a 45-minute drive. For a romantic private cedar estate experience: Bhurban. For a dramatic northern mountain journey: Naran Kaghan.",
         },
       ],
     },
@@ -70467,7 +70467,7 @@ export const article653: Article = {
         "The Islamabad-based company's senior team doing the 2-3 night cedar estate offsite. The format: informal strategic conversations at the cedar garden fire replacing the hotel conference room. The cedar estate as the environment that produces better decisions. These groups typically book 2-3 adjacent villas.",
         "",
         "4. The Honeymooning Couple",
-        "Pakistani honeymooners from across the country who specifically chose Bhurban for the private cedar mountain estate honeymoon. The Presidential Suite jacuzzi and the cedar garden dinner are the specific elements they name. Frequently booked after someone they know has stayed and shared the experience.",
+        "Pakistani honeymooners from across the country who specifically chose Bhurban for the private cedar mountain estate honeymoon. The Presidential Suite and the cedar garden dinner are the specific elements they name. Frequently booked after someone they know has stayed and shared the experience.",
         "",
         "5. The Extended Family Reunion",
         "The 20-40 person extended family from multiple cities (Islamabad, Lahore, Rawalpindi branches of one family) gathering at the cedar estate for Eid, a birthday milestone, or an annual reunion. This group books 3-6 villas and uses the cedar garden as the family gathering space.",
@@ -70663,7 +70663,7 @@ export const article655: Article = {
   eyebrow: "Guest Post | Seasonal Experiential | Cluster 7: Seasonal | ~800w",
   h1: "Bhurban Cedar Estate in Winter — The Sub-Zero Cedar Forest Experience",
   heroTagline:
-    "Winter at the Himalaya Villas cedar estate (December-February): sub-zero temperatures (−2 to 8°C day; −8 to 0°C night in January), probable snowfall on the cedar branches in January weeks 3-4, the fire pit essential from 4pm, and the specific winter experience unavailable in any other season — the cedar estate in white, the Presidential Suite jacuzzi at 40°C against −4°C air, the cedar silhouettes at midnight against a starred winter sky. Winter at the cedar estate is the experience that summer guests plan to return for.",
+    "Winter at the Himalaya Villas cedar estate (December-February): sub-zero temperatures (−2 to 8°C day; −8 to 0°C night in January), probable snowfall on the cedar branches in January weeks 3-4, the fire pit essential from 4pm, and the specific winter experience unavailable in any other season — the cedar estate in white, the Presidential Suite at 40°C against −4°C air, the cedar silhouettes at midnight against a starred winter sky. Winter at the cedar estate is the experience that summer guests plan to return for.",
   heroImage: dummyImageTemp,
 
   blocks: [
@@ -70671,14 +70671,14 @@ export const article655: Article = {
       type: "callout-qa",
       question: "What is the Himalaya Villas cedar estate like in winter?",
       answer:
-        "Winter at the Himalaya Villas cedar estate (December-February): sub-zero temperatures (−2 to 8°C day; −8 to 0°C night in January), probable snowfall on the cedar branches in January weeks 3-4, the fire pit essential from 4pm, and the specific winter experience unavailable in any other season — the cedar estate in white, the Presidential Suite jacuzzi at 40°C against −4°C air, the cedar silhouettes at midnight against a starred winter sky. Winter at the cedar estate is the experience that summer guests plan to return for.",
+        "Winter at the Himalaya Villas cedar estate (December-February): sub-zero temperatures (−2 to 8°C day; −8 to 0°C night in January), probable snowfall on the cedar branches in January weeks 3-4, the fire pit essential from 4pm, and the specific winter experience unavailable in any other season — the cedar estate in white, the Presidential Suite at 40°C against −4°C air, the cedar silhouettes at midnight against a starred winter sky. Winter at the cedar estate is the experience that summer guests plan to return for.",
     },
 
     {
       type: "section",
       heading: "Bhurban Cedar Estate in Winter — The Sub-Zero Cedar Forest Experience",
       paragraphs: [
-        "Winter at the Himalaya Villas cedar estate is the season that produces the most intense guest reactions — both in terms of emotional engagement during the stay and in terms of return visit motivation. The specific winter cedar experience is qualitatively different from any other season: the cold makes the fire necessary rather than optional, the potential snowfall transforms the cedar garden, and the sub-zero jacuzzi delivers an experience that no summer or autumn visit provides.",
+        "Winter at the Himalaya Villas cedar estate is the season that produces the most intense guest reactions — both in terms of emotional engagement during the stay and in terms of return visit motivation. The specific winter cedar experience is qualitatively different from any other season: the cold makes the fire necessary rather than optional, the potential snowfall transforms the cedar garden, and the sub-zero delivers an experience that no summer or autumn visit provides.",
       ],
       image: {
         src: dummyImageTemp,
@@ -70696,8 +70696,8 @@ export const article655: Article = {
         "The Fire from 4pm",
         "The winter cedar estate is defined by the fire pit: lit at 4pm (earlier than the standard 6:30pm summer timing), the fire is necessary warmth from the afternoon. The cedar garden at 4pm in January: the temperature already at 0-4°C, the cedar canopy dimming earlier, the fire the light source and heat source simultaneously. The family gathered by 4:30pm, the fire the centre of the afternoon into the evening.",
         "",
-        "The Presidential Suite Jacuzzi in Sub-Zero",
-        "The specific winter Presidential Suite experience: the jacuzzi at 40°C fills slowly as the outdoor temperature descends below zero. At -4°C with the jacuzzi at temperature: the steam rising from the water into the cold cedar air, visible as dense white cloud. The cedar branches surrounding the jacuzzi, potentially with snow. The specific contrast of sub-zero air against 40°C water — the most physically dramatic single experience available at any Pakistan mountain accommodation within driving distance of Islamabad.",
+        "The Presidential Suite in Sub-Zero",
+        "The specific winter Presidential Suite experience: the at 40°C fills slowly as the outdoor temperature descends below zero. At -4°C with the at temperature: the steam rising from the water into the cold cedar air, visible as dense white cloud. The cedar branches surrounding the, potentially with snow. The specific contrast of sub-zero air against 40°C water — the most physically dramatic single experience available at any Pakistan mountain accommodation within driving distance of Islamabad.",
       ],
       image: {
         src: dummyImageTemp,
@@ -70731,7 +70731,7 @@ export const article655: Article = {
         },
         {
           label: "Jacuzzi",
-          value: "Book Presidential Suite if the sub-zero jacuzzi is a priority — confirm at WhatsApp +92 304 567 9000",
+          value: "Book Presidential Suite if the sub-zero is a priority — confirm at WhatsApp +92 304 567 9000",
         },
         {
           label: "Book ahead",
@@ -70806,7 +70806,7 @@ export const article656: Article = {
       type: "callout-qa",
       question: "Why should I choose a private villa over a hotel at Bhurban?",
       answer:
-        "Private villa vs hotel at Bhurban: the hotel gives you a room in a shared building with shared facilities. The private villa (Himalaya Villas) gives you an exclusive private building, an exclusive outdoor space (cedar garden, terrace, or jacuzzi), in-villa dining at your own timing, and the cedar estate from the villa gate. For families of 4+: the villa is frequently less expensive per person AND delivers the private outdoor space that multiple hotel rooms cannot. The specific private outdoor space is the thing the hotel cannot structurally replicate.",
+        "Private villa vs hotel at Bhurban: the hotel gives you a room in a shared building with shared facilities. The private villa (Himalaya Villas) gives you an exclusive private building, an exclusive outdoor space (cedar garden, terrace, or), in-villa dining at your own timing, and the cedar estate from the villa gate. For families of 4+: the villa is frequently less expensive per person AND delivers the private outdoor space that multiple hotel rooms cannot. The specific private outdoor space is the thing the hotel cannot structurally replicate.",
     },
 
     {
@@ -70823,7 +70823,7 @@ export const article656: Article = {
       heading: "The Five Structural Advantages of the Private Villa",
       paragraphs: [
         "1. The Outdoor Space is Exclusively Yours",
-        "A hotel's outdoor space — the pool deck, the garden, the terrace — is shared with every other guest simultaneously. The Himalaya Villas cedar garden, terrace, or private jacuzzi belongs only to the booked villa's group. No strangers, no shared space, no closing time. The fire pit is yours until the last ember at 10pm.",
+        "A hotel's outdoor space — the pool deck, the garden, the terrace — is shared with every other guest simultaneously. The Himalaya Villas cedar garden, terrace, or private belongs only to the booked villa's group. No strangers, no shared space, no closing time. The fire pit is yours until the last ember at 10pm.",
         "",
         "2. Meals at Your Timing, Not the Restaurant's",
         "The hotel restaurant serves at fixed times, in a shared room, with a fixed menu. In-villa dining at Himalaya Villas serves at the guest's timing — breakfast at 7:30am or 9am, the choice is yours. Cedar garden dinner at 7pm or 9pm, your decision. In-villa lunch on the private terrace while the rain falls in the cedar garden. The timing flexibility is the specific advantage of in-villa dining that has no hotel equivalent.",
@@ -71441,7 +71441,7 @@ export const article660: Article = {
         "Hotel room service is on-demand from a hotel kitchen — call the number, food arrives. In-villa dining at Himalaya Villas is pre-arranged: the meal timing and menu are confirmed via WhatsApp at the booking stage. This requires planning ahead rather than spontaneity — a different model that rewards the guest who engages with it at the booking stage.",
         "",
         "There is no swimming pool",
-        "Himalaya Villas does not have a hotel pool. The Presidential Suite has a private outdoor jacuzzi — private to the booked group. For guests whose priority is shared pool access: PC Hotel Bhurban (0.5km) has a hotel pool.",
+        "Himalaya Villas does not have a hotel pool. The Presidential Suite has a private outdoor — private to the booked group. For guests whose priority is shared pool access: PC Hotel Bhurban (0.5km) has a hotel pool.",
       ],
       image: {
         src: article660View,
@@ -71511,13 +71511,13 @@ export const article661: Article = {
   slug: "presidential-suite-himalaya-villas-bhurban",
   title: "The Presidential Suite at Himalaya Villas Bhurban — The Complete Guide",
   metaDescription:
-    "presidential suite bhurban, himalaya villas presidential suite, jacuzzi villa bhurban, private jacuzzi bhurban",
+    "presidential suite bhurban, himalaya villas presidential suite, villa bhurban, private bhurban",
   keywords:
-    "presidential suite bhurban, himalaya villas presidential suite, jacuzzi villa bhurban, private jacuzzi bhurban",
+    "presidential suite bhurban, himalaya villas presidential suite, villa bhurban, private bhurban",
   eyebrow: "Template A — Conversion | Cluster 6: Villas",
   h1: "The Presidential Suite at Himalaya Villas Bhurban — The Complete Guide",
   heroTagline:
-    "The Presidential Suite is the flagship villa at Himalaya Villas & Resorts, Bhurban — the only private outdoor jacuzzi accommodation in Bhurban at PKR 65,000-70,000/night. Features: private outdoor jacuzzi on the villa terrace, panoramic mountain views, cedar forest setting, in-villa dining pre-arranged. Best for: honeymoon couples, January snowfall season (jacuzzi at 40°C against sub-zero air), October (jacuzzi with amber cedar canopy view). Capacity: 2-4 persons. Book: WhatsApp +92 304 567 9000.",
+    "The Presidential Suite is the flagship villa at Himalaya Villas & Resorts, Bhurban — the only private outdoor accommodation in Bhurban at PKR 65,000-70,000/night. Features: private outdoor on the villa terrace, panoramic mountain views, cedar forest setting, in-villa dining pre-arranged. Best for: honeymoon couples, January snowfall season (jacuzzi at 40°C against sub-zero air), October (jacuzzi with amber cedar canopy view). Capacity: 2-4 persons. Book: WhatsApp +92 304 567 9000.",
   heroImage: article661Hero,
 
   blocks: [
@@ -71525,12 +71525,12 @@ export const article661: Article = {
       type: "callout-qa",
       question: "What is the Presidential Suite at Himalaya Villas Bhurban?",
       answer:
-        "The Presidential Suite is the flagship villa at Himalaya Villas & Resorts, Bhurban — the only private outdoor jacuzzi accommodation in Bhurban at PKR 65,000-70,000/night. Features: private outdoor jacuzzi on the villa terrace, panoramic mountain views, cedar forest setting, in-villa dining pre-arranged. Best for: honeymoon couples, January snowfall season (jacuzzi at 40°C against sub-zero air), October (jacuzzi with amber cedar canopy view). Capacity: 2-4 persons. Book: WhatsApp +92 304 567 9000.",
+        "The Presidential Suite is the flagship villa at Himalaya Villas & Resorts, Bhurban — the only private outdoor accommodation in Bhurban at PKR 65,000-70,000/night. Features: private outdoor on the villa terrace, panoramic mountain views, cedar forest setting, in-villa dining pre-arranged. Best for: honeymoon couples, January snowfall season (jacuzzi at 40°C against sub-zero air), October (jacuzzi with amber cedar canopy view). Capacity: 2-4 persons. Book: WhatsApp +92 304 567 9000.",
     },
 
     {
       type: "section",
-      heading: "The Presidential Suite is the most distinctive single accommodation option in the Bhurban area — the private outdoor jacuzzi at a mountain villa in the cedar forest is unique to this villa in the entire Bhurban-Murree hills market. No other property within 1 hour of Islamabad offers a private outdoor jacuzzi in this mountain forest setting.",
+      heading: "The Presidential Suite is the most distinctive single accommodation option in the Bhurban area — the private outdoor at a mountain villa in the cedar forest is unique to this villa in the entire Bhurban-Murree hills market. No other property within 1 hour of Islamabad offers a private outdoor in this mountain forest setting.",
       image: {
         src: article661Villa,
         alt: "Presidential Suite Overview",
@@ -71543,7 +71543,7 @@ export const article661: Article = {
   columns: ["Feature", "Details"],
   rows: [
     {
-      feature: "Private outdoor jacuzzi",
+      feature: "Private outdoor",
       a: "The defining feature—private to the villa, located on the outdoor terrace.",
     },
     {
@@ -71552,7 +71552,7 @@ export const article661: Article = {
     },
     {
       feature: "Cedar forest setting",
-      a: "Mature deodar cedar trees surrounding the villa and jacuzzi terrace.",
+      a: "Mature deodar cedar trees surrounding the villa and terrace.",
     },
     {
       feature: "Rate",
@@ -71572,7 +71572,7 @@ export const article661: Article = {
     },
     {
       feature: "Best season",
-      a: "January (snowfall + jacuzzi), October (amber forest + jacuzzi), and December 24–31 (year-end jacuzzi experience).",
+      a: "January (snowfall +), October (amber forest +), and December 24–31 (year-end experience).",
     },
   ],
 },
@@ -71581,7 +71581,7 @@ export const article661: Article = {
       type: "section",
       heading: "January — The Peak Presidential Suite Season",
       paragraphs: [
-        "The Presidential Suite's defining experience is the January configuration: the jacuzzi filled and at 40°C, the outdoor air at -4 to 0°C, potential snowfall landing on the water surface and the cedar garden white around the terrace. The steam rising from the 40°C water into the sub-zero cedar air. The specific contrast between the thermal water and the mountain winter that no hotel spa can replicate — because no hotel spa is in an outdoor private jacuzzi in a cedar forest at sub-zero.",
+        "The Presidential Suite's defining experience is the January configuration: the filled and at 40°C, the outdoor air at -4 to 0°C, potential snowfall landing on the water surface and the cedar garden white around the terrace. The steam rising from the 40°C water into the sub-zero cedar air. The specific contrast between the thermal water and the mountain winter that no hotel spa can replicate — because no hotel spa is in an outdoor private in a cedar forest at sub-zero.",
       ],
       image: {
         src: article661View,
@@ -71593,7 +71593,7 @@ export const article661: Article = {
       type: "section",
       heading: "October — The Second-Best Presidential Suite Season",
       paragraphs: [
-        "October weeks 2-4: the amber cedar and oak canopy visible from the Presidential Suite terrace, the 8-15°C outdoor temperature, the jacuzzi as a warm optional addition to the cedar garden evening. The jacuzzi with the amber forest below and around it — the specific October configuration that guests name as the most aesthetically beautiful of the year.",
+        "October weeks 2-4: the amber cedar and oak canopy visible from the Presidential Suite terrace, the 8-15°C outdoor temperature, the as a warm optional addition to the cedar garden evening. The with the amber forest below and around it — the specific October configuration that guests name as the most aesthetically beautiful of the year.",
       ],
       image: {
         src: article661Villa,
@@ -71603,13 +71603,13 @@ export const article661: Article = {
 
     {
       type: "section",
-      heading: "Year-Round — The Jacuzzi in Summer",
+      heading: "Year-Round — The in Summer",
       paragraphs: [
-        "July-August: the cedar garden at 18-22°C, the jacuzzi as a cool evening option (not sub-zero contrast, but the cedar forest setting remains). The monsoon cedar smell in the July evening, the jacuzzi with the cedar canopy above in the warm mountain air. A different experience from the winter contrast — more relaxed than dramatic.",
+        "July-August: the cedar garden at 18-22°C, the as a cool evening option (not sub-zero contrast, but the cedar forest setting remains). The monsoon cedar smell in the July evening, the with the cedar canopy above in the warm mountain air. A different experience from the winter contrast — more relaxed than dramatic.",
       ],
       image: {
         src: article661View,
-        alt: "Summer Jacuzzi",
+        alt: "Summer",
       },
     },
 
@@ -71620,7 +71620,7 @@ export const article661: Article = {
         "• WhatsApp +92 304 567 9000 — state 'Presidential Suite' and your preferred dates",
         "• Book January weeks 3-4 a minimum of 10-12 weeks in advance — the Presidential Suite in snowfall season is the most competed single villa booking of the year",
         "• Book October weeks 2-3 at least 4-5 weeks in advance — also high demand",
-        "• Pre-arrival coordination: specify honeymoon flowers, anniversary setup, jacuzzi timing preferences at the booking stage",
+        "• Pre-arrival coordination: specify honeymoon flowers, anniversary setup, timing preferences at the booking stage",
       ],
       image: {
         src: article661Villa,
@@ -71633,12 +71633,12 @@ export const article661: Article = {
       heading: "Frequently Asked Questions",
       items: [
         {
-          q: "Is the Presidential Suite jacuzzi heated?",
-          a: "Yes — the Presidential Suite jacuzzi is an outdoor heated jacuzzi. The temperature is maintained at approximately 38-40°C. The outdoor setting means the jacuzzi operates in any weather — including sub-zero January conditions.",
+          q: "Is the Presidential Suite heated?",
+          a: "Yes — the Presidential Suite is an outdoor heated. The temperature is maintained at approximately 38-40°C. The outdoor setting means the operates in any weather — including sub-zero January conditions.",
         },
         {
           q: "Is the Presidential Suite good for a honeymoon?",
-          a: "The Presidential Suite is the specific recommendation for honeymoon couples at Himalaya Villas — the private outdoor jacuzzi, the panoramic mountain balcony, and the cedar forest setting create the specific honeymoon environment. The January snowfall configuration or October amber forest configuration are the two peak honeymoon scenarios.",
+          a: "The Presidential Suite is the specific recommendation for honeymoon couples at Himalaya Villas — the private outdoor, the panoramic mountain balcony, and the cedar forest setting create the specific honeymoon environment. The January snowfall configuration or October amber forest configuration are the two peak honeymoon scenarios.",
         },
       ],
     },
@@ -71835,7 +71835,7 @@ export const article663: Article = {
     },
     {
       feature: "Anniversary Celebration",
-      a: "Presidential Suite jacuzzi + cedar garden",
+      a: "Presidential Suite + cedar garden",
       b: "1–2 villas",
       c: "2–8 persons",
     },
@@ -72193,7 +72193,7 @@ export const article665: Article = {
       feature: "Presidential Suite",
       a: "PKR 65,000–70,000",
       b: "2–4",
-      c: "Private outdoor jacuzzi",
+      c: "Private outdoor",
     },
   ],
 },
@@ -72782,7 +72782,7 @@ export const article669: Article = {
       items: [
         {
           label: "Anniversary (couple)",
-          value: "Best Villa: Presidential Suite | Why: Private outdoor jacuzzi — the most romantic configuration",
+          value: "Best Villa: Presidential Suite | Why: Private outdoor — the most romantic configuration",
         },
         {
           label: "Milestone birthday (solo/couple)",
@@ -74419,7 +74419,7 @@ export const article683: Article = {
   eyebrow: "Template B — Seasonal | Cluster 7: Seasonal",
   h1: "Bhurban Murree in December and New Year — The Winter Cedar Estate Guide",
   heroTagline:
-    "December at Bhurban: 0-10°C daytime, -4 to 3°C overnight. Snowfall probability increasing through the month: December 1-15 (25-35%), December 16-31 (35-45%). The New Year period (December 25-January 2) is the most competed booking window of the year — book 10-12 weeks in advance. The cedar estate fire is essential from 4pm. The Presidential Suite jacuzzi in December is the specific experience that December bookings are built around. WhatsApp +92 304 567 9000.",
+    "December at Bhurban: 0-10°C daytime, -4 to 3°C overnight. Snowfall probability increasing through the month: December 1-15 (25-35%), December 16-31 (35-45%). The New Year period (December 25-January 2) is the most competed booking window of the year — book 10-12 weeks in advance. The cedar estate fire is essential from 4pm. The Presidential Suite in December is the specific experience that December bookings are built around. WhatsApp +92 304 567 9000.",
   heroImage: article683Hero,
 
   blocks: [
@@ -74427,7 +74427,7 @@ export const article683: Article = {
       type: "callout-qa",
       question: "What is Bhurban Murree like in December and at New Year?",
       answer:
-        "December at Bhurban: 0-10°C daytime, -4 to 3°C overnight. Snowfall probability increasing through the month: December 1-15 (25-35%), December 16-31 (35-45%). The New Year period (December 25-January 2) is the most competed booking window of the year — book 10-12 weeks in advance. The cedar estate fire is essential from 4pm. The Presidential Suite jacuzzi in December is the specific experience that December bookings are built around. WhatsApp +92 304 567 9000.",
+        "December at Bhurban: 0-10°C daytime, -4 to 3°C overnight. Snowfall probability increasing through the month: December 1-15 (25-35%), December 16-31 (35-45%). The New Year period (December 25-January 2) is the most competed booking window of the year — book 10-12 weeks in advance. The cedar estate fire is essential from 4pm. The Presidential Suite in December is the specific experience that December bookings are built around. WhatsApp +92 304 567 9000.",
     },
 
     {
@@ -74553,7 +74553,7 @@ export const article684: Article = {
   eyebrow: "Template B — Activity | Cluster 3: Activities",
   h1: "Bhurban Murree Photography Guide — The Cedar Estate Shots and Best Locations",
   heroTagline:
-    "Best photography locations at Bhurban Murree: (1) Cedar estate trunks at 6:15am — the horizontal dawn light on 100-200 year cedar bark; (2) Himalayan Penthouse panoramic balcony — 360° mountain view with cedar in foreground; (3) Patriata Chairlift gondola descent — downward through cedar canopy; (4) Kashmir Point at 7:30am — northward Kashmir view in morning clarity; (5) Cedar garden fire pit at 7pm in October — the amber cedar canopy above, the fire below; (6) Ayubia Pipeline Track October — the amber forest walk; (7) Presidential Suite jacuzzi in January snowfall — the steam against the cedar in winter.",
+    "Best photography locations at Bhurban Murree: (1) Cedar estate trunks at 6:15am — the horizontal dawn light on 100-200 year cedar bark; (2) Himalayan Penthouse panoramic balcony — 360° mountain view with cedar in foreground; (3) Patriata Chairlift gondola descent — downward through cedar canopy; (4) Kashmir Point at 7:30am — northward Kashmir view in morning clarity; (5) Cedar garden fire pit at 7pm in October — the amber cedar canopy above, the fire below; (6) Ayubia Pipeline Track October — the amber forest walk; (7) Presidential Suite in January snowfall — the steam against the cedar in winter.",
   heroImage: article684Hero,
 
   blocks: [
@@ -74561,7 +74561,7 @@ export const article684: Article = {
       type: "callout-qa",
       question: "What are the best photography spots at Bhurban Murree?",
       answer:
-        "Best photography locations at Bhurban Murree: (1) Cedar estate trunks at 6:15am — the horizontal dawn light on 100-200 year cedar bark; (2) Himalayan Penthouse panoramic balcony — 360° mountain view with cedar in foreground; (3) Patriata Chairlift gondola descent — downward through cedar canopy; (4) Kashmir Point at 7:30am — northward Kashmir view in morning clarity; (5) Cedar garden fire pit at 7pm in October — the amber cedar canopy above, the fire below; (6) Ayubia Pipeline Track October — the amber forest walk; (7) Presidential Suite jacuzzi in January snowfall — the steam against the cedar in winter.",
+        "Best photography locations at Bhurban Murree: (1) Cedar estate trunks at 6:15am — the horizontal dawn light on 100-200 year cedar bark; (2) Himalayan Penthouse panoramic balcony — 360° mountain view with cedar in foreground; (3) Patriata Chairlift gondola descent — downward through cedar canopy; (4) Kashmir Point at 7:30am — northward Kashmir view in morning clarity; (5) Cedar garden fire pit at 7pm in October — the amber cedar canopy above, the fire below; (6) Ayubia Pipeline Track October — the amber forest walk; (7) Presidential Suite in January snowfall — the steam against the cedar in winter.",
     },
 
     {
@@ -74880,7 +74880,7 @@ export const article686: Article = {
         },
         {
           q: "What is the difference between the Himalayan Penthouse and the Presidential Suite?",
-          a: "The Himalayan Penthouse: panoramic 360° view, no jacuzzi. The Presidential Suite: private outdoor jacuzzi, focused mountain view from the jacuzzi terrace. Choose the Penthouse for the widest panorama and photography; choose the Presidential Suite for the jacuzzi experience.",
+          a: "The Himalayan Penthouse: panoramic 360° view, no. The Presidential Suite: private outdoor, focused mountain view from the terrace. Choose the Penthouse for the widest panorama and photography; choose the Presidential Suite for the experience.",
         },
       ],
     },
@@ -75168,7 +75168,7 @@ export const article690: Article = {
   eyebrow: "Guest Post | Audience | Clusters 5 & 6 | ~700w",
   h1: "Bhurban Cedar Estate for Couples — The Romantic Mountain Guide",
   heroTagline:
-    "Yes — Bhurban and Himalaya Villas are specifically well-suited for couples. The private villa model (exclusive-use building, private outdoor space, in-villa dining at the couple's timing) creates the specific romantic configuration that hotel rooms structurally cannot. Best villas for couples: Presidential Suite (private outdoor jacuzzi, PKR 65,000-70,000), Sunset Suite (west-facing private balcony and valley sunset, PKR 50,000-55,000), Himalayan Penthouse (360° panoramic balcony, PKR 60,000-65,000).",
+    "Yes — Bhurban and Himalaya Villas are specifically well-suited for couples. The private villa model (exclusive-use building, private outdoor space, in-villa dining at the couple's timing) creates the specific romantic configuration that hotel rooms structurally cannot. Best villas for couples: Presidential Suite (private outdoor, PKR 65,000-70,000), Sunset Suite (west-facing private balcony and valley sunset, PKR 50,000-55,000), Himalayan Penthouse (360° panoramic balcony, PKR 60,000-65,000).",
   heroImage: dummyImageTemp,
 
   blocks: [
@@ -75176,7 +75176,7 @@ export const article690: Article = {
       type: "callout-qa",
       question: "Is Bhurban Murree good for couples?",
       answer:
-        "Yes — Bhurban and Himalaya Villas are specifically well-suited for couples. The private villa model (exclusive-use building, private outdoor space, in-villa dining at the couple's timing) creates the specific romantic configuration that hotel rooms structurally cannot. Best villas for couples: Presidential Suite (private outdoor jacuzzi, PKR 65,000-70,000), Sunset Suite (west-facing private balcony and valley sunset, PKR 50,000-55,000), Himalayan Penthouse (360° panoramic balcony, PKR 60,000-65,000).",
+        "Yes — Bhurban and Himalaya Villas are specifically well-suited for couples. The private villa model (exclusive-use building, private outdoor space, in-villa dining at the couple's timing) creates the specific romantic configuration that hotel rooms structurally cannot. Best villas for couples: Presidential Suite (private outdoor, PKR 65,000-70,000), Sunset Suite (west-facing private balcony and valley sunset, PKR 50,000-55,000), Himalayan Penthouse (360° panoramic balcony, PKR 60,000-65,000).",
     },
 
     {
@@ -75197,7 +75197,7 @@ export const article690: Article = {
       items: [
         {
           label: "Presidential Suite",
-          value: "Rate/Night: PKR 65,000-70,000 | Romantic Feature: Private outdoor jacuzzi — the most intimate configuration | Best For: Honeymoon, anniversary, special occasion",
+          value: "Rate/Night: PKR 65,000-70,000 | Romantic Feature: Private outdoor — the most intimate configuration | Best For: Honeymoon, anniversary, special occasion",
         },
         {
           label: "Sunset Suite",
@@ -75236,11 +75236,11 @@ export const article690: Article = {
       items: [
         {
           q: "Is Bhurban good for a couple's anniversary?",
-          a: "Yes — the Himalaya Villas cedar estate is specifically recommended for anniversaries. The pre-arrival setup (flowers in the villa, anniversary cake at the cedar garden fire, private candle dinner) is coordinated via WhatsApp at the booking stage. The Presidential Suite jacuzzi is the specific anniversary villa for milestone occasions.",
+          a: "Yes — the Himalaya Villas cedar estate is specifically recommended for anniversaries. The pre-arrival setup (flowers in the villa, anniversary cake at the cedar garden fire, private candle dinner) is coordinated via WhatsApp at the booking stage. The Presidential Suite is the specific anniversary villa for milestone occasions.",
         },
         {
           q: "What is the most romantic season for a couples' Bhurban trip?",
-          a: "October weeks 2-3 is the most romantically atmospheric season at the cedar estate: the amber cedar and deciduous colour, the 8-15°C temperature (fire needed, perfect for two people and a cedar fire), and the post-monsoon crystal air. January is second: the sub-zero air + 40°C jacuzzi combination is the most dramatically romantic single experience at Bhurban.",
+          a: "October weeks 2-3 is the most romantically atmospheric season at the cedar estate: the amber cedar and deciduous colour, the 8-15°C temperature (fire needed, perfect for two people and a cedar fire), and the post-monsoon crystal air. January is second: the sub-zero air + 40°C combination is the most dramatically romantic single experience at Bhurban.",
         },
       ],
     },
@@ -75673,7 +75673,7 @@ export const article693: Article = {
         },
         {
           q: "What is the cedar estate like during active snowfall?",
-          a: "Active snowfall at the cedar estate: the cedar branches accumulate snow on their needles, the estate paths become white, visibility through the forest reduces. The cedar garden fire becomes essential from 3pm rather than 6:30pm. The Presidential Suite jacuzzi in active snowfall is the most dramatic single experience at the cedar estate — the steam against the falling snow in the private cedar garden.",
+          a: "Active snowfall at the cedar estate: the cedar branches accumulate snow on their needles, the estate paths become white, visibility through the forest reduces. The cedar garden fire becomes essential from 3pm rather than 6:30pm. The Presidential Suite in active snowfall is the most dramatic single experience at the cedar estate — the steam against the falling snow in the private cedar garden.",
         },
       ],
     },
@@ -75895,7 +75895,7 @@ export const article695: Article = {
         "A resort (in the traditional sense) is a shared property: shared pool, shared grounds, shared restaurant, shared common areas. The resort experience is defined by the facilities available to all guests — the infrastructure that justifies the resort designation. PC Hotel Bhurban is the definitive Bhurban resort by this definition: 162 rooms, shared pool, spa, multiple restaurants, golf course, amphitheatre.",
         "",
         "The Private Villa Estate",
-        "Himalaya Villas is not a resort in the traditional sense — it is a private villa estate. The distinction: the cedar garden, the fire pit, and the terrace or jacuzzi of your villa belong exclusively to your group. The 'resort' facilities are private, not shared. This is the specific model that families of 4+ who value privacy consistently prefer over the shared resort.",
+        "Himalaya Villas is not a resort in the traditional sense — it is a private villa estate. The distinction: the cedar garden, the fire pit, and the terrace or of your villa belong exclusively to your group. The 'resort' facilities are private, not shared. This is the specific model that families of 4+ who value privacy consistently prefer over the shared resort.",
       ],
       image: {
         src: dummyImageTemp,
@@ -76062,7 +76062,7 @@ export const article698: Article = {
         },
         {
           label: "Jacuzzi",
-          value: "Sunset Suite: No | Himalayan Penthouse: No (Presidential Suite for jacuzzi)",
+          value: "Sunset Suite: No | Himalayan Penthouse: No (Presidential Suite for)",
         },
       ],
     },
@@ -76134,7 +76134,7 @@ export const article699: Article = {
       type: "section",
       heading: "The Serene Valley Cabin at Himalaya Villas — The Cedar Estate's Intimate Entry Villa",
       paragraphs: [
-        "The Serene Valley Cabin is the entry point to the Himalaya Villas cedar estate experience — the villa for couples or small families who want the cedar estate in its most intimate, close-to-the-forest format. Where the Himalayan Penthouse looks out across the panorama and the Presidential Suite has the jacuzzi platform, the Serene Valley Cabin is embedded in the cedar forest — the private terrace close to the cedar trunks, the forest floor immediately adjacent.",
+        "The Serene Valley Cabin is the entry point to the Himalaya Villas cedar estate experience — the villa for couples or small families who want the cedar estate in its most intimate, close-to-the-forest format. Where the Himalayan Penthouse looks out across the panorama and the Presidential Suite has the platform, the Serene Valley Cabin is embedded in the cedar forest — the private terrace close to the cedar trunks, the forest floor immediately adjacent.",
       ],
       image: {
         src: dummyImageTemp,
@@ -76391,7 +76391,7 @@ export const article703: Article = {
         "Q: Is there a gym at Himalaya Villas?",
         "A: Himalaya Villas does not have a gym. PC Hotel Bhurban (0.5km) has fitness facilities. The cedar estate dawn walk (45-90 minutes) and the Patriata Chairlift trail are the estate's natural fitness activities.",
         "Q: Does Himalaya Villas have a spa?",
-        "A: Himalaya Villas does not have a spa. PC Hotel Bhurban (0.5km) has full spa facilities. The Presidential Suite private outdoor jacuzzi is the in-villa wellness experience at Himalaya Villas.",
+        "A: Himalaya Villas does not have a spa. PC Hotel Bhurban (0.5km) has full spa facilities. The Presidential Suite private outdoor is the in-villa wellness experience at Himalaya Villas.",
         "Q: Are pets allowed at Himalaya Villas?",
         "A: Confirm current pet policy at the booking stage via WhatsApp +92 304 567 9000.",
       ],
@@ -77295,7 +77295,7 @@ export const article713: Article = {
         {
           feature: "Swimming pool",
           a: "Yes — shared",
-          b: "Presidential Suite private jacuzzi only",
+          b: "Presidential Suite private only",
         },
         {
           feature: "Restaurant",
@@ -77894,7 +77894,7 @@ export const article720: Article = {
         "Private cedar villa estate accommodation is the priority — Himalaya Villas is unique in Pakistan",
         "Proximity to Islamabad is a constraint — 45 minutes beats any alternative by 1-8 hours",
         "October amber season is the objective — the Bhurban cedar forest colour is the finest accessible from Islamabad",
-        "January snowfall experience is the objective — Bhurban at 6,800 feet with the Presidential Suite jacuzzi",
+        "January snowfall experience is the objective — Bhurban at 6,800 feet with the Presidential Suite",
         "A 2-3 night weekend trip is the format — the short journey supports short stays",
         "",
         "Choose Nathia Gali if:",
@@ -78073,7 +78073,7 @@ export const article722: Article = {
       items: [
         {
           label: "January",
-          value: "Best Activity: Cedar estate dawn walk + Presidential Suite jacuzzi | Specific Reason: Sub-zero cedar + snowfall possible | Notes: Chains for car; heavy clothing",
+          value: "Best Activity: Cedar estate dawn walk + Presidential Suite | Specific Reason: Sub-zero cedar + snowfall possible | Notes: Chains for car; heavy clothing",
         },
         {
           label: "April",
@@ -78143,7 +78143,7 @@ export const article723: Article = {
   slug: "luxury-private-villa-bhurban-murree",
   title: "Luxury Private Villa in Bhurban Murree - Himalaya Villas",
   metaDescription:
-    "Book a luxury private villa in Bhurban, Murree—your own cedar forest, garden & jacuzzi—45 mins from Islamabad. Reserve your stay today. ",
+    "Book a luxury private villa in Bhurban, Murree—your own cedar forest, garden &—45 mins from Islamabad. Reserve your stay today. ",
   keywords:
     "luxury private villa bhurban murree, luxury villa bhurban, private villa bhurban murree luxury",
   eyebrow: "Guest Post | Commercial Hub | Clusters 1 & 6 | ~800w",
@@ -78177,7 +78177,7 @@ export const article723: Article = {
       heading: "What Makes a Private Villa 'Luxury' in Bhurban",
       paragraphs: [
         "The word 'luxury' in the Bhurban villa context has a specific meaning that is worth defining precisely. It is not about gold fixtures or marble bathrooms. The luxury of the Himalaya Villas cedar estate is:",
-        "The exclusive private outdoor space: the cedar garden, terrace, or jacuzzi that no other guest enters during your stay — this is the specific luxury that the hotel room model cannot provide",
+        "The exclusive private outdoor space: the cedar garden, terrace, or that no other guest enters during your stay — this is the specific luxury that the hotel room model cannot provide",
         "The cedar forest: 180-year deodar cedar trees from the villa gate — this is a natural luxury that cannot be created by any development budget. It took 180 years to produce and exists in one location",
         "The service timing: meals served at the guest's timing in the private space — not the restaurant's timing in the shared room",
         "The privacy: no strangers visible in the guest's outdoor space, no hotel corridor sounds, no other guests at the pool or the fire pit",
@@ -78193,7 +78193,7 @@ export const article723: Article = {
       type: "cta",
       eyebrow: "Book the Luxury Private Cedar Villa",
       heading: "What is the best luxury private villa in Bhurban Murree?",
-      text: "Himalaya Villas is different from Bhurban's hotels. Here, every guest gets a fully private villa — no shared halls, no shared pool, no shared garden. All 12 villas sit within an old cedar forest, 100 to 200 years old, at an elevation of 6,800 feet. It's just 45 minutes from Islamabad on the N-75 Expressway. You can pick a villa based on the view, the space, and how much privacy you want—from the small and cozy Serene Valley Cabin to the Presidential Suite with its own outdoor jacuzzi.",
+      text: "Himalaya Villas is different from Bhurban's hotels. Here, every guest gets a fully private villa — no shared halls, no shared pool, no shared garden. All 12 villas sit within an old cedar forest, 100 to 200 years old, at an elevation of 6,800 feet. It's just 45 minutes from Islamabad on the N-75 Expressway. You can pick a villa based on the view, the space, and how much privacy you want—from the small and cozy Serene Valley Cabin to the Presidential Suite with its own outdoor.",
       buttonLabel: "Book Now",
       buttonHref: "https://wa.me/923045679000",
       footnote: "",
@@ -78226,7 +78226,7 @@ export const article723: Article = {
         },
         {
           label: "Presidential Suite",
-          value: "The Luxury Specific to This Villa: The private outdoor jacuzzi in the cedar forest — Pakistan's unique combination | Rate: PKR 65,000-70,000 | Capacity: 2-4",
+          value: "The Luxury Specific to This Villa: The private outdoor in the cedar forest — Pakistan's unique combination | Rate: PKR 65,000-70,000 | Capacity: 2-4",
         },
       ],
     },
@@ -78237,7 +78237,7 @@ export const article723: Article = {
       items: [
         {
           label: "Himalaya Villas (Presidential Suite)",
-          value: "Type: Private cedar villa | Private Outdoor Space: Private jacuzzi + cedar garden | Rate: PKR 65,000-70,000/villa | Book Via: WhatsApp +92 304 567 9000",
+          value: "Type: Private cedar villa | Private Outdoor Space: Private + cedar garden | Rate: PKR 65,000-70,000/villa | Book Via: WhatsApp +92 304 567 9000",
         },
         {
           label: "Himalaya Villas (Himalayan Penthouse)",
@@ -78264,11 +78264,11 @@ export const article723: Article = {
       items: [
         {
           q: "Is there a private pool villa in Bhurban Murree?",
-          a: "No private pool villa exists in Bhurban Murree currently. The only private outdoor water facility is the Himalaya Villas Presidential Suite private outdoor jacuzzi (PKR 65,000-70,000/night). PC Hotel Bhurban has a shared hotel pool.",
+          a: "No private pool villa exists in Bhurban Murree currently. The only private outdoor water facility is the Himalaya Villas Presidential Suite private outdoor (PKR 65,000-70,000/night). PC Hotel Bhurban has a shared hotel pool.",
         },
         {
           q: "What is the most luxurious private villa in Bhurban?",
-          a: "The Himalaya Villas Presidential Suite is the most distinctively luxurious private villa in Bhurban — combining private outdoor jacuzzi, the 180-year cedar estate, and the in-villa cedar garden dining in a single private building. No other Bhurban property provides this specific combination.",
+          a: "The Himalaya Villas Presidential Suite is the most distinctively luxurious private villa in Bhurban — combining private outdoor, the 180-year cedar estate, and the in-villa cedar garden dining in a single private building. No other Bhurban property provides this specific combination.",
         },
       ],
     },
@@ -79128,7 +79128,7 @@ export const articlesBySlugBatch1 = {
   "murree-in-july": article419,
   "bhurban-for-rawalpindi-families": article422,
   "murree-bhurban-itinerary": article423,
-  "villa-with-jacuzzi-bhurban": article425,
+  "villa-with-bhurban": article425,
 
 "pakistan-fashion-industry-mountain-retreat": article426,
 "pakistan-edtech-mountain-build-sprint": article427,

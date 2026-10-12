@@ -1,10 +1,10 @@
 "use client";
 
 import Image from "next/image";
+import Link from "next/link";
 import { useRef, useState, useEffect } from "react";
 import { motion, useInView, AnimatePresence } from "framer-motion";
-import { Mountain, Building2, PartyPopper, ShieldCheck, BedDouble, Heart, Settings } from "lucide-react";
-import { useRouter } from "next/navigation";
+import { Mountain, Building2, PartyPopper, Heart, Sparkles, Settings } from "lucide-react";
 
 
 const bgImages = [
@@ -15,46 +15,45 @@ const bgImages = [
 ];
 
 const features = [
-{
-  icon: Mountain,
-  title: "Panoramic Mountain Views",
-  description:
-    "Every corner of the estate looks out over the Murree hills, creating a peaceful, unforgettable retreat.",
-},
-{
-  icon: Building2,
-  title: "Luxury Villa Architecture",
-  description:
-    "Elegant interiors, premium finishes, and spacious layouts designed for real comfort, not just decoration.",
-},
-{
-  icon: PartyPopper,
-  title: "Large Outdoor Event Space",
-  description:
-    "Expansive lawns and open terraces, perfect for weddings, celebrations, and family gatherings.",
-},
   {
-    icon: ShieldCheck,
-    title: "Private & Secure Estate",
-    description: "A gated property with complete privacy, so your stay is genuinely exclusive.",
+    icon: Building2,
+    title: "Multiple Accommodation Options",
+    description:
+      "Choose from rooms, suites, apartments, and complete villas based on your preferred stay arrangement.",
   },
   {
     icon: Heart,
+    title: "Privacy for Families & Groups",
+    description:
+      "Book a complete villa with multiple bedrooms and shared living areas for your family or group.",
+  },
+  {
+    icon: Mountain,
+    title: "Mountain Setting in Bhurban",
+    description:
+      "Enjoy a stay surrounded by the scenic hills of Bhurban, with access to attractions across the Murree region.",
+  },
+  {
+    icon: PartyPopper,
+    title: "Accommodation & Events at One Property",
+    description:
+      "Arrange private stays, family gatherings, weddings, and corporate events without needing separate locations for accommodation and celebrations.",
+  },
+  {
+    icon: Sparkles,
     title: "Ideal for Destination Weddings",
-    description: "A mountain backdrop that turns a wedding into a memory nobody forgets.",
-     link: "/wedding-venue-near-islamabad",
+    description:
+      "A mountain backdrop that turns a wedding into a memory nobody forgets.",
   },
   {
     icon: Settings,
     title: "Professional Event Management",
-    description: "End-to-end coordination, from décor to catering.",
+    description:
+      "End-to-end coordination, from décor to catering.",
   },
 ];
 
 const WhyChooseSection = () => {
-
-  const router = useRouter();
-
 
   const ref = useRef(null);
   const isInView = useInView(ref, { once: true, margin: "-80px" });
@@ -101,16 +100,16 @@ const WhyChooseSection = () => {
           className="text-center mb-16 md:mb-20"
         >
           <p className="text-xs tracking-[0.3em] uppercase font-body mb-4 text-primary/70">
-            The Difference
+           Why Choose Us
           </p>
           <h2 className="font-display text-4xl md:text-5xl lg:text-6xl font-normal italic text-primary-foreground">
-            Why Guests Choose
+           Why Choose Himalaya Villas
             <br />
-            Himalaya Villas &amp; Resort
+          and Resort Hotel?
           </h2>
           <p className="mt-6 max-w-2xl mx-auto text-sm md:text-base leading-relaxed text-primary-foreground/70">
-            When travellers search for the best hotel in Murree, they&apos;re usually comparing three things — privacy, view, and service. Here&apos;s where we stand out.
-          </p>
+         Finding the right hotel or resort in Murree means choosing a property that suits your accommodation needs, guest requirements, and travel plans. We offer different ways to stay, from individual room bookings to complete private villas, along with spaces for family gatherings and special events.
+   </p>
         </motion.div>
 
         {/* Feature Grid */}
@@ -123,7 +122,6 @@ const WhyChooseSection = () => {
                 initial={{ opacity: 0, y: 40 }}
                 animate={isInView ? { opacity: 1, y: 0 } : {}}
                 transition={{ duration: 0.7, delay: 0.2 + i * 0.1 }}
-                 onClick={() => feature.link && router.push(feature.link)}
                 className="group text-center px-4"
               >
                 {/* Icon */}
@@ -156,6 +154,22 @@ const WhyChooseSection = () => {
             );
           })}
         </div>
+
+        {/* CTA — Book Your Stay */}
+        <motion.div
+          initial={{ opacity: 0, y: 24 }}
+          animate={isInView ? { opacity: 1, y: 0 } : {}}
+          transition={{ duration: 0.7, delay: 0.8 }}
+          className="mt-16 md:mt-20 flex justify-center"
+        >
+          <Link
+            href="/booking"
+            className="inline-flex items-center gap-2 rounded-md border border-[#c9a24a] bg-[#fdfaf3] px-6 py-3 text-xs font-medium uppercase tracking-[0.2em] text-[#2b2b2b] transition hover:bg-[#f5efdf]"
+          >
+            Book Your Stay
+            <span aria-hidden>→</span>
+          </Link>
+        </motion.div>
       </div>
     </section>
   );

@@ -6,24 +6,52 @@ import { useRef } from "react";
 
 const homeFaqs = [
   {
-    q: "Which is the best hotel in Murree for a family trip?",
-    a: "Himalaya Villas & Resort is well suited for families, thanks to our spacious apartments, gated and secure property, complimentary breakfast, and quiet, mountain-facing rooms away from crowded tourist strips.",
+    q: "Where is Himalaya Villas and Resort Hotel located?",
+    a: "Himalaya Villas and Resort Hotel is located in Bhurban, Murree, Pakistan. Guests can stay at the property while visiting Bhurban and exploring nearby attractions in the Murree region.",
   },
   {
-    q: "Are there any cheap hotels in Murree with good quality?",
-    a: "Yes. While we're a luxury resort overall, our Rakaposhi Single Executive Room starts at PKR 16,500 per night, making it one of the more accessible options for travellers who still want a genuine luxury experience without the highest price tag.",
+    q: "Is Himalaya Villas and Resort Hotel suitable for families?",
+    a: "Yes. We offer different accommodation options for families, including individual rooms, suites, a complete two-bedroom apartment, and private villas with multiple bedrooms.",
   },
   {
-    q: "Does Himalaya Villas & Resort qualify as a 5-star hotel in Murree?",
-    a: "Our Himalaya Luxury Villas collection — with designer interiors, private terraces, panoramic views, and curated dining — is built to match a 5-star experience, even though we operate as a private villa estate rather than a branded hotel chain.",
+    q: "What accommodation options are available?",
+    a: "Guests can choose luxury rooms, executive rooms, suites, apartments, and complete villas across our three accommodation collections: Himalaya Apartments, Rakaposhi Villa, and Himalaya Luxury Villas.",
   },
   {
-    q: "How far is Himalaya Villas & Resort from Murree Mall Road?",
-    a: "We're located in Bhurban, a short scenic drive from Murree Mall Road — close enough for easy day trips into the market, but private and quiet enough to avoid the tourist crowd.",
+    q: "Can I book a single room without booking an entire villa?",
+    a: "Yes. Guests can book individual luxury rooms, executive rooms, and suites, subject to availability.",
   },
   {
-    q: "Can I book a whole villa instead of a single room?",
-    a: 'Yes. All three of our collections — Himalaya Apartments, Rakaposhi Villa, and Himalaya Luxury Villas — offer a "Complete Villa" option, ideal for large families or group celebrations.',
+    q: "Can I book a complete private villa?",
+    a: "Yes. Rakaposhi Villa and Himalaya Luxury Villas offer complete-villa booking options for families and groups who prefer additional space and privacy.",
+  },
+  {
+    q: "How many people can stay in a complete villa?",
+    a: "Guest capacity depends on the selected villa and its bedroom configuration. Contact our team with your group size to confirm the available accommodation and sleeping arrangements.",
+  },
+  {
+    q: "Does Himalaya Villas and Resort Hotel offer dining arrangements?",
+    a: "Guests can enquire about available dining services and meal arrangements. Breakfast inclusions and additional dining charges should be confirmed when making a reservation.",
+  },
+  {
+    q: "Can I arrange a wedding or private event at the property?",
+    a: "Yes. Our property accommodates weddings, nikah ceremonies, family celebrations, corporate gatherings, and other private events, subject to venue availability and event requirements.",
+  },
+  {
+    q: "What is the difference between an individual room and a complete villa booking?",
+    a: "An individual room booking provides accommodation in your selected room or suite. A complete villa booking provides exclusive use of the booked villa, including its bedrooms and designated shared living spaces.",
+  },
+  {
+    q: "How can I check accommodation prices and availability?",
+    a: "Contact our reservations team with your check-in and check-out dates, number of guests, and preferred accommodation to confirm current rates and availability.",
+  },
+  {
+    q: "Can I view the property before booking?",
+    a: "Yes. Visit our Virtual Tour page to explore our accommodation collections, room interiors, and property surroundings before booking.",
+  },
+  {
+    q: "How do I make a reservation?",
+    a: "Select your accommodation, provide your travel dates and guest requirements, and contact our team through the website or WhatsApp to confirm your booking.",
   },
 ];
 

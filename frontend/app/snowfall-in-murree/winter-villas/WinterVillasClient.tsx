@@ -85,7 +85,7 @@ const amenities = [
 
 const experienceItems = [
   { icon: Flame, t: "In-villa fireplace", d: "Wood-burning stone hearths in every villa" },
-  { icon: Bath, t: "Hot showers & jacuzzis", d: "Round-the-clock hot water even in -2°C nights" },
+  { icon: Bath, t: "Hot showers", d: "Round-the-clock hot water even in -2°C nights" },
   { icon: Utensils, t: "Chef-served meals", d: "Kashmiri, continental, and BBQ options on request" },
   { icon: Car, t: "4x4 pickup available", d: "Snow-day pickup from Bhurban gate arranged on booking" },
 ];
@@ -129,13 +129,13 @@ export default function WinterVillasClient({ villas }: { villas: Villa[] }) {
               lobby can offer.
             </p>
             <div className="mt-10 flex flex-wrap gap-4">
-              <a
-                href="/villas"
-                className="group inline-flex items-center gap-2 rounded-full bg-[color:var(--gold)] px-7 py-3.5 text-sm font-semibold text-[color:var(--navy-deep)] shadow-xl shadow-black/30 transition hover:brightness-110"
-              >
-                Explore Villas
-                <ChevronRight className="h-4 w-4 transition group-hover:translate-x-1" />
-              </a>
+             <Link
+  href="/villas"
+  className="group inline-flex items-center gap-2 rounded-full bg-[color:var(--gold)] px-7 py-3.5 text-sm font-semibold text-[color:var(--navy-deep)] shadow-xl shadow-black/30 transition hover:brightness-110"
+>
+  Explore Villas
+  <ChevronRight className="h-4 w-4 transition group-hover:translate-x-1" />
+</Link>
               <a
                 href={buildWhatsAppBookingUrl("a private villa tour")}
             target="_blank"

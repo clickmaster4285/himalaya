@@ -95,6 +95,8 @@ const services = [
   },
 ];
 
+
+
 const ServiceCard = ({ service, index, isInView }: { service: typeof services[0]; index: number; isInView: boolean }) => {
   const [imgIndex, setImgIndex] = useState(0);
   const Icon = service.icon;
@@ -214,7 +216,7 @@ const ServicesSection = () => {
             className="font-display text-4xl md:text-5xl lg:text-6xl font-normal leading-tight mb-3"
             style={{ color: "hsl(0 0% 95%)" }}
           >
-            The Mountain as <span className="italic" style={{ color: "hsl(var(--primary))" }}>Your Venue</span>
+           Family and Group Stays at Our Resort Hotel
           </motion.h2>
           <motion.div
             initial={{ scaleX: 0 }}
@@ -230,7 +232,21 @@ const ServicesSection = () => {
             className="text-base md:text-lg leading-relaxed max-w-2xl mx-auto"
             style={{ color: "hsl(0 0% 60%)" }}
           >
-            There&apos;s no grander setting in Pakistan for the moments that matter most. Here&apos;s what makes our resort more than just another name on the list of hotels in Murree, Pakistan.
+
+         Himalaya Villas and Resort Hotel offers accommodation for families and groups who want to spend time together in a comfortable mountain setting. Choose from individual rooms, suites, apartments, and complete villas based on the number of guests and your preferred level of privacy.
+
+         
+          </motion.p>
+           <motion.p
+            initial={{ opacity: 0, y: 20 }}
+            animate={isInView ? { opacity: 1, y: 0 } : {}}
+            transition={{ duration: 0.6, delay: 0.3 }}
+            className="text-base md:text-lg leading-relaxed max-w-2xl mx-auto"
+            style={{ color: "hsl(0 0% 60%)" }}
+          >
+Whether you are visiting for a family reunion, a weekend stay, or a group gathering, our different accommodation options make it easier to choose the right space.
+
+         
           </motion.p>
         </div>
 
@@ -240,6 +256,27 @@ const ServicesSection = () => {
             <ServiceCard key={service.title} service={service} index={index} isInView={isInView} />
           ))}
         </div>
+
+        {/* Accommodation for Every Group Size */}
+        <motion.div
+          initial={{ opacity: 0, y: 30 }}
+          animate={isInView ? { opacity: 1, y: 0 } : {}}
+          transition={{ duration: 0.7, delay: 0.4 }}
+          className="mt-20 md:mt-28"
+        >
+      
+          {/* CTA */}
+          <div className="flex justify-center ">
+            <Link
+              href="/contact"
+              className="inline-flex max-w-full bg-primary text-primary-foreground hover:bg-primary/90 flex-wrap items-center justify-center gap-2 rounded-md px-6 py-3 text-center text-xs font-medium uppercase leading-relaxed tracking-[0.08em] transition-colors duration-300 sm:tracking-[0.2em]"
+             
+            >
+              <span className="min-w-0">Check Family &amp; Group Availability</span>
+              <span aria-hidden>→</span>
+            </Link>
+          </div>
+        </motion.div>
       </div>
     </section>
   );

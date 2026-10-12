@@ -50,33 +50,62 @@ const TestimonialsSection = () => {
           </p>
         </motion.div>
 
-        {/* Video + Caption — grouped tightly, centered */}
+        {/* Two videos side by side, with caption below on mobile / beside on desktop */}
         <div className="flex flex-col items-center gap-6 sm:gap-8 md:gap-10 lg:flex-row lg:justify-center lg:items-center lg:gap-12">
-          {/* Video */}
-          <motion.div
-            initial={{ opacity: 0, y: 30 }}
-            animate={isInView ? { opacity: 1, y: 0 } : {}}
-            transition={{ duration: 0.7, delay: 0.2 }}
-            className="flex-shrink-0"
-          >
-            <div
-              className="relative rounded-2xl overflow-hidden shadow-2xl"
-              style={{
-                aspectRatio: "9 / 16",
-                width: "280px",
-                maxWidth: "80vw",
-                border: "1px solid rgba(201, 162, 74, 0.35)",
-              }}
+          {/* Videos group */}
+          <div className="flex flex-row justify-center items-center gap-3 sm:gap-4 md:gap-5">
+            {/* Video 1 */}
+            <motion.div
+              initial={{ opacity: 0, y: 30 }}
+              animate={isInView ? { opacity: 1, y: 0 } : {}}
+              transition={{ duration: 0.7, delay: 0.2 }}
+              className="flex-shrink-0"
             >
-              <TestimonialVideo isInView={isInView} />
-            </div>
-          </motion.div>
+              <div
+                className="relative rounded-2xl overflow-hidden shadow-2xl"
+                style={{
+                  aspectRatio: "9 / 16",
+                  width: "clamp(140px, 22vw, 220px)",
+                  border: "1px solid rgba(201, 162, 74, 0.35)",
+                }}
+              >
+                <TestimonialVideo
+                  src="/videos/testimonial-video.mp4"
+                  isInView={isInView}
+                  delay={200}
+                />
+              </div>
+            </motion.div>
+
+            {/* Video 2 */}
+            <motion.div
+              initial={{ opacity: 0, y: 30 }}
+              animate={isInView ? { opacity: 1, y: 0 } : {}}
+              transition={{ duration: 0.7, delay: 0.32 }}
+              className="flex-shrink-0"
+            >
+              <div
+                className="relative rounded-2xl overflow-hidden shadow-2xl"
+                style={{
+                  aspectRatio: "9 / 16",
+                  width: "clamp(140px, 22vw, 220px)",
+                  border: "1px solid rgba(201, 162, 74, 0.35)",
+                }}
+              >
+                <TestimonialVideo
+                  src="/videos/testimonial-video2.mp4"
+                  isInView={isInView}
+                  delay={320}
+                />
+              </div>
+            </motion.div>
+          </div>
 
           {/* Caption */}
           <motion.div
             initial={{ opacity: 0, y: 30 }}
             animate={isInView ? { opacity: 1, y: 0 } : {}}
-            transition={{ duration: 0.7, delay: 0.35 }}
+            transition={{ duration: 0.7, delay: 0.45 }}
             className="text-center lg:text-left lg:max-w-md"
           >
             <p
@@ -104,7 +133,15 @@ const TestimonialsSection = () => {
 };
 
 /** Vertical video: autoplay muted in view, with a tap-to-unmute button. */
-function TestimonialVideo({ isInView }: { isInView: boolean }) {
+function TestimonialVideo({
+  src,
+  isInView,
+  delay = 0,
+}: {
+  src: string;
+  isInView: boolean;
+  delay?: number;
+}) {
   const videoRef = useRef<HTMLVideoElement>(null);
   const [isMuted, setIsMuted] = useState(true);
 
@@ -113,16 +150,20 @@ function TestimonialVideo({ isInView }: { isInView: boolean }) {
     if (!video) return;
 
     if (isInView) {
-      const playPromise = video.play();
-      if (playPromise !== undefined) {
-        playPromise.catch(() => {
-          /* Autoplay blocked — silently ignore */
-        });
-      }
+      // Stagger starts so the two videos don't fire their audio at the exact same moment
+      const timeout = setTimeout(() => {
+        const playPromise = video.play();
+        if (playPromise !== undefined) {
+          playPromise.catch(() => {
+            /* Autoplay blocked — silently ignore */
+          });
+        }
+      }, delay);
+      return () => clearTimeout(timeout);
     } else {
       video.pause();
     }
-  }, [isInView]);
+  }, [isInView, delay]);
 
   const toggleMute = () => {
     const video = videoRef.current;
@@ -136,8 +177,7 @@ function TestimonialVideo({ isInView }: { isInView: boolean }) {
     <>
       <video
         ref={videoRef}
-        src="/videos/testimonial-video.mp4"
-        poster="/assets/testimonial-poster.jpg"
+        src={src}
         muted
         loop
         playsInline
@@ -149,7 +189,7 @@ function TestimonialVideo({ isInView }: { isInView: boolean }) {
         type="button"
         onClick={toggleMute}
         aria-label={isMuted ? "Unmute video" : "Mute video"}
-        className="absolute bottom-3 right-3 sm:bottom-4 sm:right-4 flex items-center gap-1.5 sm:gap-2 rounded-full px-3 sm:px-3.5 py-1.5 sm:py-2 text-[9px] sm:text-[10px] font-medium uppercase tracking-[0.15em] backdrop-blur-sm transition hover:brightness-110"
+        className="absolute bottom-2 right-2 sm:bottom-3 sm:right-3 flex items-center gap-1 sm:gap-1.5 rounded-full px-2 sm:px-2.5 py-1 sm:py-1.5 text-[8px] sm:text-[9px] font-medium uppercase tracking-[0.12em] backdrop-blur-sm transition hover:brightness-110"
         style={{
           background: "rgba(0, 0, 0, 0.5)",
           color: "#fdfaf3",
@@ -158,13 +198,13 @@ function TestimonialVideo({ isInView }: { isInView: boolean }) {
       >
         {isMuted ? (
           <>
-            <VolumeX className="w-3 h-3 sm:w-3.5 sm:h-3.5" />
-            Tap for sound
+            <VolumeX className="w-2.5 h-2.5 sm:w-3 sm:h-3" />
+            Sound
           </>
         ) : (
           <>
-            <Volume2 className="w-3 h-3 sm:w-3.5 sm:h-3.5" />
-            Sound on
+            <Volume2 className="w-2.5 h-2.5 sm:w-3 sm:h-3" />
+            On
           </>
         )}
       </button>

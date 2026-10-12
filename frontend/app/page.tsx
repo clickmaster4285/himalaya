@@ -30,6 +30,15 @@ export const metadata: Metadata = createPageMetadata({
     "Enjoy a comfortable stay at Himalaya Villas and Resort Hotel in Bhurban, Murree. Choose from rooms, suites, apartments and private villas. Book Now!",
   path: "/",
   ogImage: "/assets/gallery-exterior.jpg",
+    keywords: [
+    "Resort",
+    "Resort Hotel",
+    "Villas",
+    "Resort in Bhurban",
+    "Resort in Murree",
+    "Hotel in Murree",
+    "Hotel in Bhurban",
+  ],
 });
 
 export const dynamic = "force-dynamic";
@@ -61,7 +70,7 @@ const Index = async () => {
 
       <HeroSection />
       <PhilosophySection />
-      <LiveWeatherMurree />
+      
       <VillasAccommodations />
       <ServicesSection />
       <AmenitiesSection />

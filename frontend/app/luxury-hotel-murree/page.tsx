@@ -69,7 +69,7 @@ export default function LuxuryHotelMurreePage() {
       features: [
         "Private Butler Service",
         "360° Mountain Views",
-        "Private Jacuzzi & Spa",
+        "Private & Spa",
         "Home Theater System",
         "Personal Chef Available",
         "Helicopter Transfer Option"

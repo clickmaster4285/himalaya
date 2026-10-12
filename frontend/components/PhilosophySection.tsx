@@ -3,13 +3,14 @@
 import Image from "next/image";
 import { useRef, useState, useEffect } from "react";
 import { motion, useInView, AnimatePresence } from "framer-motion";
+import Link from "next/link";
 
 const philosophyImages = [
   "/assets/philosophy-1.jpg",
   "/assets/philosophy-2.jpg",
   "/assets/philosophy-3.jpg",
   "/assets/philosophy-4.jpg",
-    "/assets/philosophy-5.jpg",
+  "/assets/philosophy-5.jpg",
   // "/assets/gallery-interior.jpg",
   // "/assets/philosophy-interior.jpg",
 ];
@@ -59,7 +60,7 @@ const PhilosophySection = () => {
             transition={{ duration: 0.8, delay: 0.15 }}
             className="font-display text-4xl md:text-5xl lg:text-6xl font-normal leading-[1.15] text-foreground"
           >
-            A New Standard for Luxury Hotels in Murree
+          Experience Comfort and Hospitality in Bhurban, Murree
           </motion.h2>
 
           <motion.div
@@ -75,7 +76,8 @@ const PhilosophySection = () => {
             transition={{ duration: 0.8, delay: 0.5 }}
             className="text-base md:text-lg leading-relaxed text-muted-foreground max-w-lg"
           >
-            Most hotels in Murree, Pakistan offer a room. We offer a retreat. Himalaya Villas &amp; Resort was created for guests who no longer want to be impressed by chandeliers and lobbies — they want to be restored by silence, space, and mountain air.
+Himalaya Villas and Resort Hotel combines comfortable accommodation, mountain surroundings, and spaces for private gatherings. Our resort hotel welcomes guests for personal stays, family trips, business visits, and special occasions, with different booking options available at one property.
+         
           </motion.p>
 
           <motion.p
@@ -84,43 +86,37 @@ const PhilosophySection = () => {
             transition={{ duration: 0.8, delay: 0.6 }}
             className="text-base md:text-lg leading-relaxed text-muted-foreground max-w-lg"
           >
-            Every villa here sits among cedar forests with uninterrupted views of the Himalayan foothills. We don&apos;t believe in one-size-fits-all packages. Instead, our team learns what you need — a family getaway, a romantic escape, a corporate retreat, or a wedding venue — and builds the experience around it.
+
+         From individual rooms and apartments to complete private villas, guests can choose the space and privacy they need. We also accommodate weddings, family celebrations, and corporate gatherings, bringing accommodation and event arrangements together in Bhurban.
           </motion.p>
 
-          <motion.p
-            initial={{ opacity: 0, y: 20 }}
-            animate={isInView ? { opacity: 1, y: 0 } : {}}
-            transition={{ duration: 0.8, delay: 0.7 }}
-            className="text-base md:text-lg leading-relaxed text-muted-foreground max-w-lg italic"
-          >
-            This is what consistently places us among the top hotels in Murree for guests seeking privacy, comfort, and genuine hospitality, rather than a crowded hotel corridor.
-          </motion.p>
+         
 
-          <motion.div
-            initial={{ opacity: 0, y: 24 }}
-            animate={isInView ? { opacity: 1, y: 0 } : {}}
-            transition={{ duration: 0.8, delay: 0.85 }}
-            className="grid gap-8 pt-4 sm:grid-cols-1 md:grid-cols-3 md:gap-6"
-          >
-            <div className="space-y-2 border-t border-primary/20 pt-6">
-              <h3 className="font-display text-xl font-normal text-foreground">Wake Up Above the Clouds</h3>
-              <p className="text-sm leading-relaxed text-muted-foreground">
-                Enjoy uninterrupted panoramic views of the Himalayan foothills from your own private terrace — a view very few hotel rooms in Murree can offer.
-              </p>
-            </div>
-            <div className="space-y-2 border-t border-primary/20 pt-6">
-              <h3 className="font-display text-xl font-normal text-foreground">Luxury That Speaks Quietly</h3>
-              <p className="text-sm leading-relaxed text-muted-foreground">
-                Premium furnishings, refined interiors, and understated elegance define every villa and suite.
-              </p>
-            </div>
-            <div className="space-y-2 border-t border-primary/20 pt-6">
-              <h3 className="font-display text-xl font-normal text-foreground">Curated Dining Experiences</h3>
-              <p className="text-sm leading-relaxed text-muted-foreground">
-                Private chefs and customized menus, prepared for your stay or your event, with the Murree hills as the backdrop.
-              </p>
-            </div>
-          </motion.div>
+<motion.div
+  initial={{ opacity: 0, y: 24 }}
+  animate={isInView ? { opacity: 1, y: 0 } : {}}
+  transition={{ duration: 0.8, delay: 0.85 }}
+  className="grid gap-8 pt-4 sm:grid-cols-1 md:grid-cols-3 md:gap-6"
+>
+  <div className="space-y-2 border-t border-primary/20 pt-6">
+    <h3 className="font-display text-xl font-normal text-foreground">Comfortable Accommodation</h3>
+    <p className="text-sm leading-relaxed text-muted-foreground">
+      Choose from furnished rooms, spacious suites, apartments, and complete villas suited to different guest requirements.
+    </p>
+  </div>
+  <div className="space-y-2 border-t border-primary/20 pt-6">
+    <h3 className="font-display text-xl font-normal text-foreground">Private Family &amp; Group Stays</h3>
+    <p className="text-sm leading-relaxed text-muted-foreground">
+      Enjoy multiple bedrooms, shared living areas, and the privacy of complete villa accommodation.
+    </p>
+  </div>
+  <div className="space-y-2 border-t border-primary/20 pt-6">
+    <h3 className="font-display text-xl font-normal text-foreground">Weddings &amp; Special Events</h3>
+    <p className="text-sm leading-relaxed text-muted-foreground">
+      Arrange wedding ceremonies, family celebrations, and corporate gatherings with accommodation options for your guests.
+    </p>
+  </div>
+</motion.div>
         </div>
 
         {/* Right: Rotating Images */}
@@ -159,6 +155,22 @@ const PhilosophySection = () => {
           />
         </motion.div>
       </div>
+
+    {/* Centered Button */}
+<motion.div
+  initial={{ opacity: 0, y: 24 }}
+  animate={isInView ? { opacity: 1, y: 0 } : {}}
+  transition={{ duration: 0.8, delay: 1 }}
+  className="flex justify-center mt-16 md:mt-20"
+>
+  <Link
+    href="/villas"
+    className="inline-flex items-center gap-2 rounded-md border border-[#c9a24a] bg-[#fdfaf3] px-6 py-3 text-xs font-medium uppercase tracking-[0.2em] text-[#2b2b2b] transition hover:bg-[#f5efdf]"
+  >
+   Discover Our Property
+    <span aria-hidden>→</span>
+  </Link>
+</motion.div>
     </section>
   );
 };

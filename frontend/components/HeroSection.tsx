@@ -66,7 +66,7 @@ const HeroSection = () => {
                 textShadow: "0 2px 3px rgb(0 0 0 / 0.35), 0 12px 40px rgb(0 0 0 / 0.45)",
               }}
             >
-              Himalaya Villas &amp; Resort — Luxury Hotel in Murree, Bhurban
+             Luxury Villas and Resort Hotel in Bhurban, Murree
             </h1>
 
              {/* <h1
@@ -75,7 +75,7 @@ const HeroSection = () => {
                 textShadow: "0 2px 3px rgb(0 0 0 / 0.35), 0 12px 40px rgb(0 0 0 / 0.45)",
               }}
             >
-              Bhurban Murree
+              Bhurban, Murree
             </h1> */}
 
 
@@ -86,16 +86,17 @@ const HeroSection = () => {
                 textShadow: "0 1px 2px rgb(0 0 0 / 0.5), 0 8px 24px rgb(0 0 0 / 0.35)",
               }}
             >
-              Looking for the best hotels in Murree? Himalaya Villas &amp; Resort is a private luxury estate nestled in the cedar forests of Bhurban, offering the comfort of a premium resort with the privacy of an exclusive villa. Whether you&apos;re planning a family holiday, a destination wedding, or a quiet mountain escape, our resort is built around one idea—giving you back the stillness the city took away.
+Welcome to Himalaya Villas and Resort Hotel, surrounded by the scenic hills of Bhurban, Murree. Our property offers comfortable rooms, spacious suites, apartments, and private villas for individuals, couples, families, and groups. Whether you're booking a short stay, spending time with family, or arranging a special event, enjoy welcoming hospitality, mountain views, and accommodation that suits your needs.
+
             </p>
-            <p
+            {/* <p
               className="mt-3 sm:mt-4 max-w-xl animate-fade-up-delay text-[13px] sm:text-[14px] md:text-[15px] lg:text-base font-light leading-[1.6] sm:leading-[1.65] text-white/85"
               style={{
                 textShadow: "0 1px 2px rgb(0 0 0 / 0.5), 0 8px 24px rgb(0 0 0 / 0.35)",
               }}
             >
               Set among panoramic Himalayan views, Himalaya Villas &amp; Resort has become one of the most searched luxury hotels in Murree for travellers who want more than a standard hotel room—they want an experience. From spacious villas to curated dining, every detail here is designed to make your stay unforgettable.
-            </p>
+            </p> */}
 
             {/* Buttons - Responsive layout */}
             <div className="mt-6 sm:mt-7 md:mt-8 flex flex-col sm:flex-row gap-3 sm:gap-4 animate-fade-up-delay-2">
@@ -121,13 +122,6 @@ const HeroSection = () => {
   />
 </a>
 
-
-
-
-
-
-
-
              <a
   href={buildWhatsAppBookingUrl()}
   target="_blank"
@@ -140,7 +134,7 @@ const HeroSection = () => {
   }
   className="inline-flex items-center justify-center rounded-md border-2 border-white/85 bg-white/5 px-5 sm:px-6 md:px-7 py-3 sm:py-3.5 text-[11px] sm:text-xs font-semibold uppercase tracking-[0.18em] sm:tracking-[0.2em] text-white shadow-md backdrop-blur-sm transition hover:bg-white/15 w-full sm:w-auto"
 >
-  Book Now on WhatsApp
+  Book Your Stay
 </a>
 
 

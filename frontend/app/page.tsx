@@ -1,8 +1,10 @@
 import type { Metadata } from "next";
+
 import { HomeStructuredData } from "@/components/seo/StructuredData";
 import Script from "next/script";
 import localBusinessSchema from '@/public/himalayavillas-localbusiness-schema.json';
 import faqSchema from '@/public/himalayavillas-faq-schema.json';
+import { buildHomepageJsonLd } from "@/lib/seo/homepage-schema";
 import HeroSection from "@/components/HeroSection";
 import PhilosophySection from "@/components/PhilosophySection";
 import LiveWeatherMurree from "@/components/LiveWeatherMurree";
@@ -19,11 +21,13 @@ import HomeFAQSection from "@/components/HomeFAQSection";
 import ReserveSection from "@/components/ReserveSection";
 import Footer from "@/components/Footer";
 import { createPageMetadata } from "@/lib/seo/build-metadata";
+import EventsSection from "@/components/EventsSection";
+import VirtualTourSection from "@/components/VirtualTourSection";
 
 export const metadata: Metadata = createPageMetadata({
-  title: "Hotels in Murree - Himalaya Villas & Resort, Bhurban",
+  title: "Himalaya Villas & Resort Hotel in Bhurban, Murree",
   description:
-    "Looking for luxury hotels in Murree? Himalaya Villas & Resort offers private villas, stunning views & top hospitality. Book now!",
+    "Enjoy a comfortable stay at Himalaya Villas and Resort Hotel in Bhurban, Murree. Choose from rooms, suites, apartments and private villas. Book Now!",
   path: "/",
   ogImage: "/assets/gallery-exterior.jpg",
 });
@@ -31,6 +35,8 @@ export const metadata: Metadata = createPageMetadata({
 export const dynamic = "force-dynamic";
 
 const Index = async () => {
+  const homepageSchema = buildHomepageJsonLd();
+
   return (
     <div className="min-h-screen">
       <HomeStructuredData />
@@ -44,18 +50,30 @@ const Index = async () => {
         type="application/ld+json"
         dangerouslySetInnerHTML={{ __html: JSON.stringify(faqSchema) }}
       />
- 
+      {/* ✅ New connected graph: LodgingBusiness + WebSite + WebPage + FAQPage */}
+      <Script
+        id={homepageSchema.id}
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{
+          __html: JSON.stringify(homepageSchema.data),
+        }}
+      />
+
       <HeroSection />
       <PhilosophySection />
       <LiveWeatherMurree />
-      <VillasAccommodations/>
+      <VillasAccommodations />
       <ServicesSection />
       <AmenitiesSection />
       <MomentsSection />
       <GlimpseSection />
       <JournalSection />
+
+      <EventsSection />
       <WhyChooseSection />
       <TestimonialsSection />
+
+      <VirtualTourSection />
       <FrequentlyVisitedPages />
       <HomeFAQSection />
       <ReserveSection />

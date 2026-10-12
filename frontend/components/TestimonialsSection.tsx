@@ -1,57 +1,175 @@
 'use client';
 
-import { useRef, useState } from "react";
-import { motion, useInView, AnimatePresence } from "framer-motion";
-
-const testimonials = [
-  {
-    quote: "The perfect escape from the city. The private villas offer unmatched tranquility.",
-    author: "Ali Raza",
-    location: "Islamabad",
-  },
-];
+import Link from "next/link";
+import { useRef, useState, useEffect } from "react";
+import { motion, useInView } from "framer-motion";
+import { Volume2, VolumeX } from "lucide-react";
 
 const TestimonialsSection = () => {
-  const ref = useRef(null);
-  const isInView = useInView(ref, { once: true, margin: "-100px" });
-  const [current, setCurrent] = useState(0);
+  const ref = useRef<HTMLDivElement>(null);
+  const isInView = useInView(ref, { margin: "-100px" });
 
   return (
-    <section ref={ref} className="py-24 md:py-32 bg-background">
-      <div className="max-w-3xl mx-auto px-8 text-center">
-        <AnimatePresence mode="wait">
-          <motion.div
-            key={current}
-            initial={{ opacity: 0, y: 20 }}
-            animate={{ opacity: 1, y: 0 }}
-            exit={{ opacity: 0, y: -20 }}
-            transition={{ duration: 0.6 }}
+    <section
+      ref={ref}
+      className="relative py-20 sm:py-24 md:py-32 px-5 sm:px-6 md:px-8"
+      style={{ background: "#EAE2D7" }}
+    >
+      <div className="max-w-6xl mx-auto">
+        {/* Header */}
+        <motion.div
+          initial={{ opacity: 0, y: 20 }}
+          animate={isInView ? { opacity: 1, y: 0 } : {}}
+          transition={{ duration: 0.6 }}
+          className="text-center mb-10 sm:mb-12 md:mb-16 max-w-3xl mx-auto"
+        >
+          <p
+            className="text-[10px] sm:text-xs tracking-[0.3em] uppercase mb-3 sm:mb-4"
+            style={{ color: "#a07c1f" }}
           >
-            <p className="font-display text-xl md:text-2xl lg:text-3xl italic leading-relaxed text-foreground/90">
-              "{testimonials[current].quote}"
-            </p>
-            <p className="mt-6 text-xs tracking-[0.3em] uppercase text-muted-foreground font-body">
-              {testimonials[current].author} — {testimonials[current].location}
-            </p>
-          </motion.div>
-        </AnimatePresence>
+            Guest Reviews
+          </p>
+          <h2
+            className="font-display text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-normal leading-tight"
+            style={{ color: "#2b2b2b" }}
+          >
+            What Our Guests Say
+          </h2>
+          <div
+            className="w-14 sm:w-16 h-[2px] mx-auto mt-5 sm:mt-6"
+            style={{ background: "#c9a24a" }}
+          />
+          <p
+            className="mt-5 sm:mt-6 text-sm md:text-base leading-relaxed"
+            style={{ color: "#6b6357" }}
+          >
+            Learn about the experiences of guests who have stayed at Himalaya
+            Villas and Resort Hotel. Explore genuine reviews and feedback about
+            our accommodation, hospitality, and property surroundings to help
+            you make an informed decision.
+          </p>
+        </motion.div>
 
-        <div className="flex justify-center gap-2 mt-8">
-          {testimonials.map((_, i) => (
-            <button
-              key={i}
-              onClick={() => setCurrent(i)}
-              className={`w-2 h-2 rounded-full transition-all duration-300 ${
-                i === current
-                  ? "bg-foreground scale-125"
-                  : "bg-foreground/25 hover:bg-foreground/50"
-              }`}
-            />
-          ))}
+        {/* Video + Caption — grouped tightly, centered */}
+        <div className="flex flex-col items-center gap-6 sm:gap-8 md:gap-10 lg:flex-row lg:justify-center lg:items-center lg:gap-12">
+          {/* Video */}
+          <motion.div
+            initial={{ opacity: 0, y: 30 }}
+            animate={isInView ? { opacity: 1, y: 0 } : {}}
+            transition={{ duration: 0.7, delay: 0.2 }}
+            className="flex-shrink-0"
+          >
+            <div
+              className="relative rounded-2xl overflow-hidden shadow-2xl"
+              style={{
+                aspectRatio: "9 / 16",
+                width: "280px",
+                maxWidth: "80vw",
+                border: "1px solid rgba(201, 162, 74, 0.35)",
+              }}
+            >
+              <TestimonialVideo isInView={isInView} />
+            </div>
+          </motion.div>
+
+          {/* Caption */}
+          <motion.div
+            initial={{ opacity: 0, y: 30 }}
+            animate={isInView ? { opacity: 1, y: 0 } : {}}
+            transition={{ duration: 0.7, delay: 0.35 }}
+            className="text-center lg:text-left lg:max-w-md"
+          >
+            <p
+              className="font-display text-xl sm:text-2xl md:text-3xl italic leading-relaxed"
+              style={{ color: "#2b2b2b" }}
+            >
+              &ldquo;The perfect escape from the city. The private villas
+              offer unmatched tranquility.&rdquo;
+            </p>
+
+            <div className="mt-8 sm:mt-10 flex justify-center lg:justify-start">
+              <Link
+                href="/contact"
+                className="inline-flex items-center gap-2 rounded-md border border-[#c9a24a] bg-[#fdfaf3] px-6 py-3 text-xs font-medium uppercase tracking-[0.2em] text-[#2b2b2b] transition hover:bg-[#f5efdf]"
+              >
+                Book Now
+                <span aria-hidden>→</span>
+              </Link>
+            </div>
+          </motion.div>
         </div>
       </div>
     </section>
   );
 };
+
+/** Vertical video: autoplay muted in view, with a tap-to-unmute button. */
+function TestimonialVideo({ isInView }: { isInView: boolean }) {
+  const videoRef = useRef<HTMLVideoElement>(null);
+  const [isMuted, setIsMuted] = useState(true);
+
+  useEffect(() => {
+    const video = videoRef.current;
+    if (!video) return;
+
+    if (isInView) {
+      const playPromise = video.play();
+      if (playPromise !== undefined) {
+        playPromise.catch(() => {
+          /* Autoplay blocked — silently ignore */
+        });
+      }
+    } else {
+      video.pause();
+    }
+  }, [isInView]);
+
+  const toggleMute = () => {
+    const video = videoRef.current;
+    if (!video) return;
+    const next = !isMuted;
+    video.muted = next;
+    setIsMuted(next);
+  };
+
+  return (
+    <>
+      <video
+        ref={videoRef}
+        src="/videos/testimonial-video.mp4"
+        poster="/assets/testimonial-poster.jpg"
+        muted
+        loop
+        playsInline
+        preload="metadata"
+        className="absolute inset-0 w-full h-full object-cover"
+      />
+
+      <button
+        type="button"
+        onClick={toggleMute}
+        aria-label={isMuted ? "Unmute video" : "Mute video"}
+        className="absolute bottom-3 right-3 sm:bottom-4 sm:right-4 flex items-center gap-1.5 sm:gap-2 rounded-full px-3 sm:px-3.5 py-1.5 sm:py-2 text-[9px] sm:text-[10px] font-medium uppercase tracking-[0.15em] backdrop-blur-sm transition hover:brightness-110"
+        style={{
+          background: "rgba(0, 0, 0, 0.5)",
+          color: "#fdfaf3",
+          border: "1px solid rgba(201, 162, 74, 0.55)",
+        }}
+      >
+        {isMuted ? (
+          <>
+            <VolumeX className="w-3 h-3 sm:w-3.5 sm:h-3.5" />
+            Tap for sound
+          </>
+        ) : (
+          <>
+            <Volume2 className="w-3 h-3 sm:w-3.5 sm:h-3.5" />
+            Sound on
+          </>
+        )}
+      </button>
+    </>
+  );
+}
 
 export default TestimonialsSection;

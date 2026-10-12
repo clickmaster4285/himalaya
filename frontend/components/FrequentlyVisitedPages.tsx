@@ -9,70 +9,102 @@ const FrequentlyVisitedPages = () => {
   const ref = useRef(null);
   const isInView = useInView(ref, { once: true, margin: "-100px" });
 
-  const travellers = [
+  const groupSizes = [
     {
-      title: "Families",
-      description: "Spacious apartments, complimentary breakfast, and a safe, gated property make us one of the most recommended family hotels in Murree.",
+      title: "Individual Guests & Couples",
+      description: "Comfortable rooms and suites for personal stays.",
     },
     {
-      title: "Couples",
-      description: "Private terraces, mountain views, and quiet evenings, away from the crowded hotel strips.",
+      title: "Small Families",
+      description: "Two-bedroom apartment accommodation with shared living space.",
     },
     {
-      title: "Wedding Planners & Event Hosts",
-      description: "Cedar forest backdrops and dedicated event teams for weddings and celebrations.",
+      title: "Large Families",
+      description: "Complete villa options with multiple bedrooms.",
     },
     {
-      title: "Corporate Groups",
-      description: "A distraction-free environment for retreats and offsites.",
-    },
-    {
-      title: "Budget-Conscious Travellers",
-      description: "While we're positioned as a luxury hotel in Murree, our Executive Rooms starting at PKR 16,500/night make a premium mountain stay realistic even if you started your search looking for cheap hotels in Murree or a 3-star or 4-star hotel in Murree alternative.",
+      title: "Group Gatherings",
+      description: "Accommodation arrangements for families, friends, and event guests.",
     },
   ];
 
   return (
-    <section ref={ref} className="relative py-20 md:py-24 bg-background">
-      <div className="mx-auto max-w-6xl px-6">
-        <motion.div
-          initial={{ opacity: 0, y: 20 }}
-          animate={isInView ? { opacity: 1, y: 0 } : {}}
-          transition={{ duration: 0.8 }}
-          className="text-center mb-12"
-        >
-          <p className="text-xs font-semibold tracking-widest uppercase text-amber-600 mb-4">
+    <section
+      ref={ref}
+      className="relative py-20 md:py-28 px-8 md:px-16"
+      style={{ background: "#EAE2D7" }}
+    >
+      <div className="max-w-7xl mx-auto">
+        {/* Header */}
+        <div className="text-center mb-14 md:mb-18">
+          <motion.p
+            initial={{ opacity: 0, y: 20 }}
+            animate={isInView ? { opacity: 1, y: 0 } : {}}
+            transition={{ duration: 0.6 }}
+            className="text-xs tracking-[0.3em] uppercase mb-4"
+            style={{ color: "#a07c1f" }}
+          >
             For Every Guest
-          </p>
-          <h2 className="font-display text-3xl md:text-4xl lg:text-5xl font-normal leading-tight text-foreground">
-            A Stay for Every Traveller
-          </h2>
-        </motion.div>
+          </motion.p>
 
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
-          {travellers.map((item, index) => (
+          <motion.h2
+            initial={{ opacity: 0, y: 30 }}
+            animate={isInView ? { opacity: 1, y: 0 } : {}}
+            transition={{ duration: 0.8, delay: 0.1 }}
+            className="font-display text-3xl md:text-4xl lg:text-5xl font-normal leading-tight"
+            style={{ color: "#2b2b2b" }}
+          >
+            Accommodation for Every Group Size
+          </motion.h2>
+
+          <motion.div
+            initial={{ scaleX: 0 }}
+            animate={isInView ? { scaleX: 1 } : {}}
+            transition={{ duration: 0.6, delay: 0.3 }}
+            className="w-16 h-[2px] mx-auto mt-6"
+            style={{ background: "#c9a24a" }}
+          />
+        </div>
+
+        {/* Cards Grid */}
+        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
+          {groupSizes.map((item, index) => (
             <motion.div
               key={item.title}
               initial={{ opacity: 0, y: 30 }}
               animate={isInView ? { opacity: 1, y: 0 } : {}}
-              transition={{ duration: 0.8, delay: 0.15 + index * 0.1 }}
-              className="h-full p-6 rounded-xl border border-border bg-card"
+              transition={{ duration: 0.6, delay: 0.2 + index * 0.1 }}
+              className="group rounded-xl p-6 bg-white shadow-[0_1px_2px_rgba(0,0,0,0.04),0_20px_40px_-28px_rgba(31,51,82,0.18)] transition hover:-translate-y-0.5"
+              style={{ border: "1px solid #ece5d3" }}
             >
-              <h3 className="text-lg font-semibold text-foreground">
+              <p
+                className="text-xs font-mono tracking-[0.2em] mb-3"
+                style={{ color: "#a07c1f" }}
+              >
+                {String(index + 1).padStart(2, "0")}
+              </p>
+              <h3
+                className="font-display text-lg md:text-xl font-normal leading-snug mb-2 transition-colors duration-300 group-hover:text-[#a07c1f]"
+                style={{ color: "#2b2b2b" }}
+              >
                 {item.title}
               </h3>
-              <p className="text-sm mt-3 leading-relaxed text-muted-foreground">
+              <p
+                className="text-sm leading-relaxed"
+                style={{ color: "#6b6357" }}
+              >
                 {item.description}
               </p>
             </motion.div>
           ))}
         </div>
 
+        {/* CTA */}
         <motion.div
           initial={{ opacity: 0, y: 20 }}
           animate={isInView ? { opacity: 1, y: 0 } : {}}
-          transition={{ duration: 0.8, delay: 0.6 }}
-          className="mt-12 text-center"
+          transition={{ duration: 0.6, delay: 0.8 }}
+          className="mt-12 md:mt-16 flex justify-center"
         >
           <a
             href={buildWhatsAppBookingUrl()}
@@ -82,12 +114,13 @@ const FrequentlyVisitedPages = () => {
             onClick={(e) =>
               trackAndOpen(e, buildWhatsAppBookingUrl(), {
                 button: "book_now",
-                cta: "travellers_section",
+                cta: "group_sizes_section",
               })
             }
-            className="inline-flex items-center justify-center rounded-sm border border-border bg-transparent px-6 py-3 text-sm font-medium tracking-wide text-foreground transition-colors duration-300 hover:bg-foreground hover:text-background"
+            className="inline-flex items-center gap-2 rounded-md border border-[#c9a24a] bg-[#fdfaf3] px-6 py-3 text-xs font-medium uppercase tracking-[0.2em] text-[#2b2b2b] transition hover:bg-[#f5efdf]"
           >
-            Book Your Stay on WhatsApp
+            Check Family &amp; Group Availability
+            <span aria-hidden>→</span>
           </a>
         </motion.div>
       </div>

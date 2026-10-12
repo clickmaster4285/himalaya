@@ -3,21 +3,21 @@ import type { Villa } from "@/lib/villa-types";
 /** Public villa listings — single source of truth (matches homepage / VillasAccommodations). */
 export const VILLA_CATALOG_LISTINGS = [
   {
-    collection: "Himalaya Apartments",
+    collection: "Himalaya Rooms & Suites",
     collectionSubtitle:
       "Warm, homely apartments ideal for couples and small families who want quiet nights and mountain-facing windows.",
     slug: "apartment-single-luxury",
-    tag: "APARTMENT",
+    tag: "COZY",
     name: "Single Luxury Room",
     description: "A cozy luxury room with mountain-facing windows and warm interiors.",
     price: "27,000",
     image: "/images/villas/apt-single-room.jpg",
-    category: "Apartment" as const,
+    category: "Suite" as const,
     bedrooms: 1,
     guests: 2,
   },
   {
-    collection: "Himalaya Apartments",
+    collection: "Himalaya Rooms & Suites",
     collectionSubtitle:
       "Warm, homely apartments ideal for couples and small families who want quiet nights and mountain-facing windows.",
     slug: "apartment-complete",
@@ -31,7 +31,7 @@ export const VILLA_CATALOG_LISTINGS = [
     guests: 4,
   },
   {
-    collection: "Rakaposhi Villa",
+    collection: "Himalaya Apartments",
     collectionSubtitle:
       "Our signature villa collection, with executive rooms and a full-villa option for groups.",
     slug: "rakaposhi-single-executive",
@@ -45,7 +45,7 @@ export const VILLA_CATALOG_LISTINGS = [
     guests: 2,
   },
   {
-    collection: "Rakaposhi Villa",
+    collection: "Himalaya Apartments",
     collectionSubtitle:
       "Our signature villa collection, with executive rooms and a full-villa option for groups.",
     slug: "rakaposhi-executive-suite",
@@ -59,7 +59,7 @@ export const VILLA_CATALOG_LISTINGS = [
     guests: 4,
   },
   {
-    collection: "Rakaposhi Villa",
+    collection: "Himalaya Apartments",
     collectionSubtitle:
       "Our signature villa collection, with executive rooms and a full-villa option for groups.",
     slug: "rakaposhi-complete-villa",
@@ -73,7 +73,7 @@ export const VILLA_CATALOG_LISTINGS = [
     guests: 10,
   },
   {
-    collection: "Himalaya Luxury Villas",
+    collection: "Himalaya Private Villas",
     collectionSubtitle:
       "Our flagship residences — ranging from a cozy attic escape to a full four-bedroom villa for celebrations.",
     slug: "luxury-attic",
@@ -87,7 +87,7 @@ export const VILLA_CATALOG_LISTINGS = [
     guests: 2,
   },
   {
-    collection: "Himalaya Luxury Villas",
+    collection: "Himalaya Private Villas",
     collectionSubtitle:
       "Our flagship residences — ranging from a cozy attic escape to a full four-bedroom villa for celebrations.",
     slug: "luxury-single",
@@ -101,7 +101,7 @@ export const VILLA_CATALOG_LISTINGS = [
     guests: 2,
   },
   {
-    collection: "Himalaya Luxury Villas",
+    collection: "Himalaya Private Villas",
     collectionSubtitle:
       "Our flagship residences — ranging from a cozy attic escape to a full four-bedroom villa for celebrations.",
     slug: "luxury-suite",
@@ -115,7 +115,7 @@ export const VILLA_CATALOG_LISTINGS = [
     guests: 3,
   },
   {
-    collection: "Himalaya Luxury Villas",
+    collection: "Himalaya Private Villas",
     collectionSubtitle:
       "Our flagship residences — ranging from a cozy attic escape to a full four-bedroom villa for celebrations.",
     slug: "luxury-complete-villa",

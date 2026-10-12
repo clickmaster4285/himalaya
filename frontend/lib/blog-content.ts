@@ -1515,7 +1515,7 @@ const CONTENT_BY_SLUG: Record<string, BlogContent> = {
         heading: "The Villas Themselves",
         paragraphs: [
           "Guest listings and the property's own details point to a range of villa types, generally built across two floors, with king-size beds in each bedroom and en-suite tiled bathrooms; recently built or renovated interiors, tastefully finished rather than dated; private terraces and balconies — several units positioned specifically for wide valley views that stretch for kilometers on clear days.",
-          "A flagship master villa with its own private terrace, a jacuzzi with mountain views, and extra living space for guests who want the top-tier option. Family-configured villas with three or four bedrooms, suited to groups of 8–12 people sharing one property.",
+          "A flagship master villa with its own private terrace, a with mountain views, and extra living space for guests who want the top-tier option. Family-configured villas with three or four bedrooms, suited to groups of 8–12 people sharing one property.",
           "Free WiFi and free on-site private parking are standard across the property, and staff are on-site to handle check-in, housekeeping, and guest requests throughout the stay.",
         ],
         image: "/assets/villa-presidential-real.jpg",
@@ -1526,7 +1526,7 @@ const CONTENT_BY_SLUG: Record<string, BlogContent> = {
           "Families and multi-generational groups — private bedrooms, shared living space, and no need to coordinate around other hotel guests make this a natural fit for families traveling with kids or elderly relatives. The four-bedroom villa configurations in particular are designed around this.",
           "Wedding parties and small events — the property markets itself directly as a wedding venue, with the pine-forest backdrop and private outdoor space (bonfire terrace, BBQ pavilion) giving it a setting that's hard to replicate in a hotel banquet hall.",
           "Groups of friends or corporate retreats — booking an entire villa estate for one group works well for company offsites or friend groups who want to actually spend time together rather than scatter across separate hotel floors.",
-          "Couples looking for a quieter, more private escape — the flagship villa with its private terrace and jacuzzi is aimed at guests who want something closer to a private retreat than a standard hotel room.",
+          "Couples looking for a quieter, more private escape — the flagship villa with its private terrace and is aimed at guests who want something closer to a private retreat than a standard hotel room.",
           "Who it's less suited to: solo travelers on a tight budget, or guests who specifically want hotel amenities like a 24-hour front desk, an on-site gym, or a large multi-restaurant setup. Those are hotel-category features, and a private villa estate isn't built around them.",
         ],
       },

@@ -193,13 +193,13 @@ export const VILLA_BLOG_POSTS: VillaBlogPost[] = [
   },
   {
     slug: "choosing-the-right-villa",
-    title: "Choose the Right Villa in Murree — Himalaya Villas",
-    headline: "Best Villas in Murree: A Complete Guide to Choosing the Right Stay",
+    title: "Choose the Right Villa in Murree — Himalaya Villas & Resorts",
+    headline: "Choosing the Right Villa: Complete Guide",
     excerpt:
-      "A complete guide to choosing the right villa in Murree — group size, budget, location & amenities covered, plus why Himalaya Villas & Resorts stands out.",
+      "Choosing the right villa for your next getaway? Explore essential tips on location, budget, privacy, amenities, safety, and comfort with Himalaya Villas & Resorts.",
     date: "2026-09-11",
     readMinutes: 8,
-    coverImage: "/assets/villa-presidential-real.jpg",
+    coverImage: "/images/blogs/choose-villa-1.jpg",
   },
   {
   slug: "best-resorts-in-murree-for-2-day-weekend-trip",
@@ -211,6 +211,20 @@ export const VILLA_BLOG_POSTS: VillaBlogPost[] = [
   readMinutes: 9,
   coverImage: "/images/blogs/best-weekend-trip.jpg",
 },
+
+{
+  slug: "what-makes-a-resort-family-friendly-in-murree",
+  title: "What Makes a Resort Family-Friendly in Murree ",
+  headline: "Best Family-Friendly Resort in Murree for a Comfortable and Memorable Stay",
+  excerpt:
+    "Discover what makes a resort family-friendly in Murree, from spacious rooms and child safety to fun activities, mountain views, dining, and family comfort.",
+  date: "2026-09-11",
+  
+  readMinutes: 10,
+  coverImage: "/images/blogs/family-1.webp",
+},
+
+
   {
     slug: "amenities-that-matter",
     title: "Amenities that matter: what sets a luxury villa apart from a hotel",

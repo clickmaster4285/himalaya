@@ -223,7 +223,26 @@ export const VILLA_BLOG_POSTS: VillaBlogPost[] = [
   readMinutes: 10,
   coverImage: "/images/blogs/family-1.webp",
 },
-
+{
+  slug: "how-to-book-villa-large-family-murree",
+  title: "How to Book a Large Family Villa in Murree | Himalaya Villas & Resorts",
+  headline: "How to Book a Large Family Villa in Murree",
+  excerpt:
+    "Learn how to book a villa for a large family in Murree. Explore room capacity, amenities, budgets, booking tips, and family stays at Himalaya Villas & Resorts.",
+  date: "2026-09-11",
+  readMinutes: 10,
+  coverImage: "/images/blogs/family-villa-1.webp",
+},
+{
+  slug: "winter-villa-stay-in-murree",
+  title: "Winter Villa Stay in Murree: Booking Guide",
+  headline: "Winter Villa Stay in Murree: A Complete Booking Guide",
+  excerpt:
+    "Plan a winter villa stay in Murree with tips on snowfall, villa prices, heating, locations, and booking. Explore winter accommodation with Himalaya Villas & Resorts.",
+  date: "2026-09-11",
+  readMinutes: 10,
+  coverImage: "/images/blogs/winter-villa-1.webp",
+},
 
   {
     slug: "amenities-that-matter",

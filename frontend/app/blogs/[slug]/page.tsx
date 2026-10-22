@@ -9,9 +9,10 @@ import { JsonLd } from "@/components/seo/JsonLd";
 import { blogCanonicalPath, getAllBlogSlugs, getBlogPostBySlug } from "@/lib/blog-posts";
 import { createPageMetadata } from "@/lib/seo/build-metadata";
 import { buildBlogPostingJsonLd } from "@/lib/seo/blog-jsonld";
-import { getBlogContent, type BlogTable, type BlogInlineLink } from "@/lib/blog-content";
+import { getBlogContent, type BlogTable } from "@/lib/blog-content";
 import { shouldUnoptimizeImageSrc, getValidImageSrc } from "@/lib/image-utils";
 import TableOfContents from "@/components/blogs/TableOfContents";
+import { autoLinkParagraph } from "@/lib/internal-links";
 import type { VillaBlogPost } from "@/lib/villa-blog-posts";
 
 export const dynamicParams = false;
@@ -26,25 +27,6 @@ function slugify(text: string): string {
     .replace(/[^\w\s-]/g, "")
     .replace(/\s+/g, "-")
     .trim();
-}
-
-function paragraphWithLinks(text: string, links: BlogInlineLink[], index: number) {
-  const link = links.find((l) => l.paragraph === index);
-  if (!link) return <p key={index}>{text}</p>;
-  const pos = text.indexOf(link.text);
-  if (pos < 0) return <p key={index}>{text}</p>;
-  return (
-    <p key={index}>
-      {text.slice(0, pos)}
-      <Link
-        href={link.href}
-        className="font-medium text-[#8b6914] underline underline-offset-4 hover:text-[#6d5210] transition-colors"
-      >
-        {link.text}
-      </Link>
-      {text.slice(pos + link.text.length)}
-    </p>
-  );
 }
 
 function BlogTableView({ table }: { table: BlogTable }) {
@@ -170,7 +152,9 @@ export default async function BlogArticlePage({ params }: Props) {
             </div>
 
             <div className="prose prose-neutral mt-12 max-w-none prose-p:text-[15px] prose-p:leading-7 prose-p:text-neutral-600">
-              {content.intro.map((paragraph, i) => paragraphWithLinks(paragraph, content.introLinks ?? [], i))}
+              {content.intro.map((paragraph, i) =>
+                autoLinkParagraph(paragraph, i, { slug: post.slug })
+              )}
               {content.sections.map((section, i) => (
                 <section key={i} className="mt-10">
                   <h2 id={slugify(section.heading)} className="font-bold text-neutral-900">
@@ -190,13 +174,14 @@ export default async function BlogArticlePage({ params }: Props) {
                   )}
                   {section.table && !section.tableAfter && <BlogTableView table={section.table} />}
                   {section.paragraphs.map((paragraph, j) => {
+                    const node = autoLinkParagraph(paragraph, j, { slug: post.slug });
                     const table = section.table;
                     if (!table || !section.tableAfter || (section.tableAfterIndex ?? section.paragraphs.length - 1) !== j) {
-                      return paragraphWithLinks(paragraph, section.links ?? [], j);
+                      return node;
                     }
                     return (
                       <Fragment key={j}>
-                        {paragraphWithLinks(paragraph, section.links ?? [], j)}
+                        {node}
                         <BlogTableView table={table} />
                       </Fragment>
                     );
@@ -211,7 +196,13 @@ export default async function BlogArticlePage({ params }: Props) {
                 {content.faqs?.map((faq, i) => (
                   <article key={i} className="rounded-md border border-[#efe3d2] bg-[#fbf8f2] p-4">
                     <h3 className="text-base font-semibold text-neutral-900">{faq.q}</h3>
-                    <p className="mt-2 text-sm leading-relaxed text-neutral-700">{faq.a}</p>
+                    <p className="mt-2 text-sm leading-relaxed text-neutral-700">
+                      {autoLinkParagraph(faq.a, i, {
+                        slug: post.slug,
+                        maxLinks: 1,
+                        wrapper: "span",
+                      })}
+                    </p>
                   </article>
                 ))}
               </div>

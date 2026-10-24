@@ -114,6 +114,10 @@ export default async function BlogArticlePage({ params }: Props) {
     },
   };
 
+  // Page-wide tracker: ensures each internal-link keyword is linked only ONCE per page.
+  // Created once here so it persists across intro, sections, etc.
+  const usedKeywords = new Set<string>();
+
   return (
     <div className="min-h-screen bg-[#F6F1EA]">
       <JsonLd items={[jsonLd, faqJsonLd]} />
@@ -153,7 +157,7 @@ export default async function BlogArticlePage({ params }: Props) {
 
             <div className="prose prose-neutral mt-12 max-w-none prose-p:text-[15px] prose-p:leading-7 prose-p:text-neutral-600">
               {content.intro.map((paragraph, i) =>
-                autoLinkParagraph(paragraph, i, { slug: post.slug })
+                autoLinkParagraph(paragraph, i, { slug: post.slug, usedKeywords })
               )}
               {content.sections.map((section, i) => (
                 <section key={i} className="mt-10">
@@ -174,7 +178,10 @@ export default async function BlogArticlePage({ params }: Props) {
                   )}
                   {section.table && !section.tableAfter && <BlogTableView table={section.table} />}
                   {section.paragraphs.map((paragraph, j) => {
-                    const node = autoLinkParagraph(paragraph, j, { slug: post.slug });
+                    const node = autoLinkParagraph(paragraph, j, {
+                      slug: post.slug,
+                      usedKeywords,
+                    });
                     const table = section.table;
                     if (!table || !section.tableAfter || (section.tableAfterIndex ?? section.paragraphs.length - 1) !== j) {
                       return node;
@@ -197,11 +204,7 @@ export default async function BlogArticlePage({ params }: Props) {
                   <article key={i} className="rounded-md border border-[#efe3d2] bg-[#fbf8f2] p-4">
                     <h3 className="text-base font-semibold text-neutral-900">{faq.q}</h3>
                     <p className="mt-2 text-sm leading-relaxed text-neutral-700">
-                      {autoLinkParagraph(faq.a, i, {
-                        slug: post.slug,
-                        maxLinks: 1,
-                        wrapper: "span",
-                      })}
+                      {faq.a}
                     </p>
                   </article>
                 ))}

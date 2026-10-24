@@ -70,12 +70,26 @@ function isInternalHref(href: string) {
   }
 }
 
+/** Normalize a keyword so casing differences don't defeat deduplication. */
+function normalizeKey(keyword: string): string {
+  return keyword.trim().toLowerCase();
+}
+
 type Match = { start: number; end: number; link: InternalLink };
 
+/**
+ * Finds up to `max` keyword matches in `text`.
+ *
+ * If `usedKeywords` is provided:
+ *   - Any keyword already in the set is SKIPPED (left as plain text).
+ *   - Any keyword linked by this call is ADDED to the set, so later calls
+ *     on the same page will skip it.
+ */
 function findMatches(
   text: string,
   slug: string | undefined,
-  max: number
+  max: number,
+  usedKeywords?: Set<string>
 ): Match[] {
   const candidates = INTERNAL_LINKS.filter((l) => {
     if (slug && l.slugs && !l.slugs.includes(slug)) return false;
@@ -84,16 +98,37 @@ function findMatches(
   }).sort((a, b) => b.text.length - a.text.length); // longest phrase first
 
   const matches: Match[] = [];
+
   for (const link of candidates) {
     if (matches.length >= max) break;
-    const re = new RegExp(escapeRegex(link.text), "i");
+
+    // If this keyword was already linked somewhere on the page, skip it.
+    const key = normalizeKey(link.text);
+    if (usedKeywords?.has(key)) continue;
+
+    // Word-boundary-aware, case-insensitive match.
+    // Prevents "villas" from matching inside "villasite" and
+    // "experience" from matching inside "experienced".
+    const re = new RegExp(
+      `(^|[^A-Za-z0-9])(${escapeRegex(link.text)})(?=[^A-Za-z0-9]|$)`,
+      "i"
+    );
     const m = re.exec(text);
     if (!m) continue;
-    const start = m.index;
-    const end = start + m[0].length;
-    if (matches.some((x) => start < x.end && end > x.start)) continue; // overlap
+
+    const prefixLen = m[1].length;
+    const start = m.index + prefixLen;
+    const end = start + m[2].length;
+
+    // Skip if overlapping an earlier match
+    if (matches.some((x) => start < x.end && end > x.start)) continue;
+
     matches.push({ start, end, link });
+
+    // Mark as used for the rest of the page
+    usedKeywords?.add(key);
   }
+
   return matches.sort((a, b) => a.start - b.start);
 }
 
@@ -109,10 +144,15 @@ export function autoLinkParagraph(
     maxLinks?: number;
     /** "p" (default) for paragraph blocks, "span" for inline (e.g. FAQ answers) */
     wrapper?: "p" | "span";
+    /**
+     * Page-wide set of keywords already linked. Pass the SAME Set instance
+     * to every call on the page so each keyword is linked only ONCE per page.
+     */
+    usedKeywords?: Set<string>;
   }
 ): ReactNode {
   const max = opts?.maxLinks ?? MAX_LINKS_PER_PARAGRAPH;
-  const matches = findMatches(text, opts?.slug, max);
+  const matches = findMatches(text, opts?.slug, max, opts?.usedKeywords);
 
   let children: ReactNode = text;
   if (matches.length > 0) {
@@ -151,11 +191,19 @@ export function autoLinkParagraph(
  * inside an <a> tag, inside headings/scripts/styles, and inside
  * attribute values.
  *
+ * Pass `usedKeywords` to deduplicate across multiple HTML blocks
+ * (e.g. all sections of one article).
+ *
  * Usage: render with `dangerouslySetInnerHTML={{ __html: linkedHtml }}`
  */
 export function autoLinkHtml(
   html: string,
-  opts?: { slug?: string; maxLinksPerBlock?: number }
+  opts?: {
+    slug?: string;
+    maxLinksPerBlock?: number;
+    /** Shared set so each keyword is linked only once per page. */
+    usedKeywords?: Set<string>;
+  }
 ): string {
   if (!html) return html;
   const max = opts?.maxLinksPerBlock ?? MAX_LINKS_PER_PARAGRAPH;
@@ -167,7 +215,12 @@ export function autoLinkHtml(
   return html.replace(blockTagRe, (full, openTag, _tag, inner) => {
     // Skip if inner already contains an anchor
     if (/<a\b/i.test(inner)) return full;
-    const linkedInner = autoLinkHtmlFragment(inner, opts?.slug, max);
+    const linkedInner = autoLinkHtmlFragment(
+      inner,
+      opts?.slug,
+      max,
+      opts?.usedKeywords
+    );
     return openTag + linkedInner + `</${_tag}>`;
   });
 }
@@ -175,7 +228,8 @@ export function autoLinkHtml(
 function autoLinkHtmlFragment(
   fragment: string,
   slug: string | undefined,
-  max: number
+  max: number,
+  usedKeywords?: Set<string>
 ): string {
   // Tokenise fragment into tags and text so we never rewrite tag attributes.
   const tokenRe = /(<[^>]+>)/g;
@@ -189,7 +243,12 @@ function autoLinkHtmlFragment(
     if (part.startsWith("<")) continue; // tag token, skip
     if (!part.trim()) continue;
 
-    const matches = findMatches(part, slug, max - linksPlaced);
+    const matches = findMatches(
+      part,
+      slug,
+      max - linksPlaced,
+      usedKeywords
+    );
     if (matches.length === 0) continue;
 
     let cursor = 0;

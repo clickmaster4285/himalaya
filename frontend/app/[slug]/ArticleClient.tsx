@@ -202,7 +202,7 @@ function CalloutQA({ block, slug, usedKeywords }: BlockProps) {
 }
 
 function ParagraphBlock({ block, slug, usedKeywords }: BlockProps) {
-  if (block.type !== "paragraph") return null;
+  if (block.type !== "paragraph" || block.text === undefined) return null;
 
   return (
     <section className="pt-6 pb-16 bg-[#fbf7ee]">
@@ -340,11 +340,13 @@ function FAQBlock({ block, slug, usedKeywords }: BlockProps) {
                   {item.q}
                 </h3>
                 <p className="mt-2 text-sm leading-relaxed text-[#4a4a4a]">
-                  {autoLinkParagraph(item.a, `faq-${i}`, {
-                    slug,
-                    usedKeywords,
-                    wrapper: "span",
-                  })}
+                  {item.a === undefined
+                    ? null
+                    : autoLinkParagraph(item.a, `faq-${i}`, {
+                        slug,
+                        usedKeywords,
+                        wrapper: "span",
+                      })}
                 </p>
               </article>
             ))}
@@ -373,11 +375,13 @@ function FactsBlock({ block, slug, usedKeywords }: BlockProps) {
                 {item.label}
               </div>
               <div>
-                {autoLinkParagraph(item.value, `fact-${i}`, {
-                  slug,
-                  usedKeywords,
-                  wrapper: "span",
-                })}
+                {item.value === undefined
+                  ? null
+                  : autoLinkParagraph(item.value, `fact-${i}`, {
+                      slug,
+                      usedKeywords,
+                      wrapper: "span",
+                    })}
               </div>
             </div>
           ))}
@@ -484,11 +488,13 @@ function AudienceBlock({ block, slug, usedKeywords }: BlockProps) {
             <div key={i} className="border-l-2 border-primary pl-6">
               <h3 className="text-xl font-semibold mb-2">{item.title}</h3>
               <p className="text-gray-700">
-                {autoLinkParagraph(item.text, `aud-${i}`, {
-                  slug,
-                  usedKeywords,
-                  wrapper: "span",
-                })}
+                {item.text === undefined
+                  ? null
+                  : autoLinkParagraph(item.text, `aud-${i}`, {
+                      slug,
+                      usedKeywords,
+                      wrapper: "span",
+                    })}
               </p>
             </div>
           ))}

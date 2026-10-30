@@ -1,5 +1,6 @@
 import Link from "next/link";
 import type { ReactNode, Key } from "react";
+import { buildWhatsAppBookingUrl } from "./whatsapp";
 
 /* ------------------------------------------------------------------ */
 /* 1. Link map                                                         */
@@ -41,6 +42,104 @@ export const INTERNAL_LINKS: InternalLink[] = [
   { text: "booking", href: "https://himalayavillas.com/murree-hotel-booking-guide" },
   { text: "accommodation", href: "https://himalayavillas.com/bhurban-accommodation-guide" },
   { text: "villas", href: "https://himalayavillas.com/villas" },
+  { text: "Explore Villas & Check Latest Prices at Himalaya Villas & Resorts", href: "https://himalayavillas.com/villas" },
+   { text: "explore the villas at Himalaya Villas & Resorts", href: "https://himalayavillas.com/villas" },
+   {
+  text: "Message us on WhatsApp",
+  href: buildWhatsAppBookingUrl(),
+},
+{text: "family accommodation in Murree", href: "https://himalayavillas.com/blogs/family-apartments-murree-booking-guide"},
+   {
+  text: "accommodation options at Himalaya Villas & Resorts",
+  href: "https://himalayavillas.com/villas",
+},
+
+{
+  text: "Rakaposhi complete villa",
+  href: "https://himalayavillas.com/villas/rakaposhi-complete-villa",
+},
+{
+  text: "Hotel prices in Murree",
+  href: "https://himalayavillas.com/blogs/hotel-room-rent-in-murree",
+},
+{
+  text: "budget-friendly Murree trip guide",
+  href: "https://himalayavillas.com/blogs/budget-friendly-trip-to-murree",
+},
+{
+  text: "family tour in Murree guide",
+  href: "https://himalayavillas.com/blogs/family-tour-murree-himalaya-villas",
+},
+{
+  text: "guide to seasons in the hills",
+  href: "https://himalayavillas.com/blogs/seasons-in-the-hills",
+},
+{
+  text: "Contact Himalaya Villas & Resorts",
+  href: "https://himalayavillas.com/contact",
+},
+{
+  text: "available stay options",
+  href: "https://himalayavillas.com/villas",
+},
+{
+  text: "Contact the reservations team",
+  href: "https://himalayavillas.com/contact",
+},
+{
+  text: "Murree villa booking guide",
+  href: "https://himalayavillas.com/blogs/villas-in-murree-pakistan-booking-guide",
+},
+{
+  text: "review the property's current accommodation details",
+  href: "https://himalayavillas.com/villas",
+},
+{
+  text: "currently available room or villa options",
+  href: "https://himalayavillas.com/villas",
+},
+{
+  text: "Contact Himalaya Villas & Resorts",
+  href: "https://himalayavillas.com/contact",
+},
+{
+  text: "booking in advance",
+  href: "https://himalayavillas.com/book",
+},
+{
+  text: "official contact details",
+  href: "https://himalayavillas.com/contact",
+},
+{
+  text: "booking channel",
+  href: "https://himalayavillas.com/book",
+},
+{
+  text: "explore the villa listings",
+  href: "https://himalayavillas.com/villas",
+},
+{
+  text: "guide to places to visit in Murree",
+  href: "https://himalayavillas.com/blogs/best-places-to-visit-in-murree",
+},
+{
+  text: "guide to things to do near Bhurban and Murree",
+  href: "https://himalayavillas.com/blogs/thing-to-do-bhurban-murree",
+},
+
+{
+  text: "family accommodation guide for Murree",
+  href: "https://himalayavillas.com/blogs/where-to-stay-in-murree-with-family",
+},
+{
+  text: "luxury private villas in Bhurban",
+  href: "https://himalayavillas.com/luxury-private-villa-bhurban-murree",
+},
+{
+  text: "Explore the property's current accommodation options",
+  href: "https://himalayavillas.com/villas",
+},
+
 ];
 
 /* ------------------------------------------------------------------ */

@@ -33,6 +33,11 @@ export const metadata: Metadata = {
     default: "Himalaya Premium Villas | Private Luxury Estate Bhurban",
     template: "%s ",
   },
+    icons: {
+    icon: '/favicon.ico',
+    shortcut: '/favicon.ico',
+    apple: '/favicon.ico',
+  },
   description:
     "Himalaya Premium Villas is not a hotel. It is a private luxury estate in Bhurban crafted for those who demand exclusivity, privacy, and elevated experiences in the Himalayan foothills. Ultra-private villas, limited bookings, destination weddings, corporate retreats, and curated stays.",
   keywords: [

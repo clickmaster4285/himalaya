@@ -366,7 +366,36 @@ export const VILLA_BLOG_POSTS: VillaBlogPost[] = [
   date: "2026-04-26",
   readMinutes: 18,
   coverImage: "/assets/blog-villas-bhurban-murree-luxury-featured.png",
-}
+},
+{
+  slug: "how-much-does-villa-cost-in-murree",
+  title: "How Much Does a Villa Cost in Murree | Himalaya Villas & Resorts",
+  headline: "How Much Does a Villa Cost in Murree?",
+  excerpt:
+    "Discover how much a villa costs in Murree at Himalaya Villas & Resorts. Explore nightly rates, seasonal factors, group budgets, and tips before booking.",
+  date: "2026-10-30",
+  readMinutes: 12,
+  coverImage: "/images/blogs/villa-cost-in-murree-1.webp",
+},
 
-    
+  {
+  slug: "best-hotel-in-murree-for-family-vacations",
+  title: "Best Hotel in Murree for Family Vacations | Himalaya Villas & Resorts",
+  headline: "Where to Stay in Murree With Family: A Complete Vacation Guide",
+  excerpt:
+    "Planning a family vacation in Murree? Discover how to choose a comfortable stay, compare room needs, and plan your visit with Himalaya Villas & Resorts.",
+  date: "2026-10-30",
+  readMinutes: 14,
+  coverImage: "/images/blogs/best-hotels-family-vacation-1.webp",
+},
+{
+  slug: "best-hotel-in-nathiagali-booking-guide",
+  title: "Best Hotel in Nathiagali - Himalaya Villas Booking Guide | Himalaya Villas & Resorts",
+  headline: "Where to Stay in Nathiagali: Complete Guide",
+  excerpt:
+    "Looking for the best hotel in Nathiagali? Explore booking tips, room selection, seasonal advice and must-check amenities with Himalaya Villas & Resorts.",
+  date: "2026-10-30",
+  readMinutes: 15,
+  coverImage: "/images/blogs/best-hotels-in-nathia-gali-1.webp",
+} 
 ];

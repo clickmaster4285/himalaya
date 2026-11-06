@@ -5,25 +5,8 @@ const creativeServiceSchema = {
   "@type": "Service",
   "name": "Workshops & Creative Sessions at Himalaya Villas",
   "description": "Hands-on workshops for teams, families, and creators. Unleash your creativity in a beautiful, inspiring environment with guest instructors and artists.",
-  "provider": {
-    "@type": "Organization",
-    "name": "Himalaya Villas and Resort",
-    "telephone": "+92 304 567 9000",
-    "address": {
-      "@type": "PostalAddress",
-      "streetAddress": "Bhurban",
-      "addressLocality": "Murree",
-      "addressRegion": "Punjab",
-      "addressCountry": "PK"
-    }
-  },
+  "provider": { "@id": "https://himalayavillas.com/#organization" },
   "serviceType": "Creative Workshops",
-  "offers": {
-    "@type": "Offer",
-    "price": "15000",
-    "priceCurrency": "PKR",
-    "description": "Creative workshop sessions starting from PKR 15,000"
-  },
   "areaServed": {
     "@type": "Place",
     "name": "Murree Hills, Bhurban"
@@ -44,7 +27,7 @@ export default function CreativeExperience() {
           <li>Family and kids’ activities</li>
           <li>Guest instructors and artists</li>
         </ul>
-        <Link href="/experiences" className="inline-block mt-4 text-[#c9a55b] font-semibold hover:underline">← Back to Experiences</Link>
+        <Link href="/experience" className="inline-block mt-4 text-[#c9a55b] font-semibold hover:underline">← Back to Experiences</Link>
       </div>
     </div>
   );

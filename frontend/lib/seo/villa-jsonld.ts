@@ -14,7 +14,7 @@ export function buildVillaVacationRentalJsonLd(villa: Villa): JsonLdScript {
     id: `hv-jsonld-villa-${villa.slug}`,
     data: {
       "@context": "https://schema.org",
-      "@type": ["VacationRental", "LodgingBusiness"],
+      "@type": "VacationRental",
       "@id": `${url}#villa`,
       name: villa.title,
       description: villa.description,
@@ -35,9 +35,12 @@ export function buildVillaVacationRentalJsonLd(villa: Villa): JsonLdScript {
       },
       hasMap: SITE_CONTACT.googleMapsUrl,
       containedInPlace: {
-        "@type": "Place",
-        name: "Himalaya Premium Villas",
-        url: `${origin}/`,
+        "@id": `${origin}/#lodging`,
+      },
+      geo: {
+        "@type": "GeoCoordinates",
+        latitude: SITE_CONTACT.geo.latitude,
+        longitude: SITE_CONTACT.geo.longitude,
       },
       offers: {
         "@type": "Offer",

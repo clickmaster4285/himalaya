@@ -1,5 +1,7 @@
 "use client";
 
+import { BookingTermsSection } from "@/components/BookingTerms";
+import EmailLink from "@/components/EmailLink";
 import Link from "next/link";
 import { useState } from "react";
 import Navbar from "@/components/Navbar";
@@ -567,7 +569,7 @@ export default function DestinationWeddingFlow() {
                       <div className="mt-6 space-y-3 text-[13px]">
                         <p className="flex items-center gap-3">
                           <Mail className="h-4 w-4 text-white/80 shrink-0" />
-                          bookings@himalayavillas.com
+                          <EmailLink user="bookings" />
                         </p>
                         <p className="flex items-center gap-3">
                           <Phone className="h-4 w-4 text-white/80 shrink-0" />
@@ -578,7 +580,7 @@ export default function DestinationWeddingFlow() {
 
                     <div className="mt-10 flex justify-center">
                       <Link
-                        href="/book-now"
+                        href="/book"
                         className="text-[11px] uppercase tracking-widest text-neutral-600 hover:underline"
                       >
                         Back to Book Now
@@ -658,6 +660,7 @@ export default function DestinationWeddingFlow() {
         </div>
       </section>
 
+      <BookingTermsSection className="bg-white" />
       <Footer />
     </div>
   );

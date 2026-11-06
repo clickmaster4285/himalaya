@@ -56,10 +56,18 @@ const Footer = () => {
               {[
                 { label: "Home", href: "/" },
                 { label: "Our Villas", href: "/villas" },
+                { label: "Accommodations", href: "/accommodations" },
+                { label: "About the Estate", href: "/about-himalaya-villas-bhurban" },
                 { label: "Experiences", href: "/experience" },
                 { label: "Dining", href: "/book/dining" },
                 { label: "FAQs", href: "/faqs" },
                 { label: "Blog", href: "/blogs" },
+                { label: "Travel Guides", href: "/guides" },
+                { label: "Plan Your Trip", href: "/guides/plan-your-trip" },
+                { label: "Weather and Seasons", href: "/guides/weather-and-seasons" },
+                { label: "Getting Here", href: "/guides/getting-here" },
+                { label: "Events and Celebrations", href: "/guides/events-and-celebrations" },
+                { label: "Where to Stay", href: "/guides/stays" },
                               ].map((item) => (
                 <li key={item.label}>
                   <Link

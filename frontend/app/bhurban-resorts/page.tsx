@@ -111,10 +111,7 @@ const articleSchema = {
   },
   "datePublished": "2026-07-28",
   "dateModified": "2026-07-28",
-  "publisher": {
-    "@type": "Organization",
-    "name": "Himalaya Villas"
-  },
+  "publisher": { "@id": "https://himalayavillas.com/#organization" },
   "mainEntityOfPage": {
     "@type": "WebPage",
     "@id": absoluteUrl("/bhurban-resorts")

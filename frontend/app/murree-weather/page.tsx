@@ -1,13 +1,15 @@
 import type { Metadata } from "next";
 import Navbar from "@/components/Navbar";
 import Footer from "@/components/Footer";
+import { ContentReviewNote } from "@/components/seo/ContentReviewNote";
 
 export const metadata: Metadata = {
-  title: "Murree Weather Guide 2024 | Current Conditions & Seasonal Forecast",
-  description: "Complete Murree weather guide with current conditions, seasonal patterns, monthly breakdown, and best time to visit. Real-time weather updates for travelers planning trips to Murree Hills.",
+  title: "Murree Weather by Season and Month | Himalaya Villas & Resorts",
+  description: "Murree weather guide with seasonal patterns, a monthly breakdown, and the best time to visit. Check the Pakistan Meteorological Department for the latest forecast before you travel.",
+  authors: [{ name: "Himalaya Villas & Resorts" }],
   keywords: "Murree weather, Murree climate, Murree temperature, best time to visit Murree, Murree weather forecast, Murree seasonal weather, Murree rainfall, Murree snowfall",
   openGraph: {
-    title: "Murree Weather Guide - Current Conditions & Seasonal Forecast",
+    title: "Murree Weather Guide - Seasonal Conditions & Forecast",
     description: "Complete weather guide for Murree with current conditions, seasonal patterns, and travel tips for planning your perfect mountain getaway.",
     type: "website",
     url: "https://himalayavillas.com/murree-weather",
@@ -31,13 +33,14 @@ export default function MurreeWeatherPage() {
           <p className="text-xl md:text-2xl mb-8 font-semibold">
             Current Conditions • Seasonal Patterns • Best Time to Visit
           </p>
-          <p className="text-lg mb-12 max-w-4xl mx-auto leading-relaxed">
+          <p className="text-lg mb-6 max-w-4xl mx-auto leading-relaxed">
             Complete weather information for Murree Hills - from summer breezes to winter snowfalls. Plan your perfect mountain getaway with our comprehensive weather guide.
           </p>
+          <ContentReviewNote className="mb-12 text-sm text-white/80" />
           
           {/* Current Weather Widget */}
           <div className="bg-white/20 backdrop-blur-sm text-white p-8 rounded-lg max-w-2xl mx-auto">
-            <h3 className="text-2xl font-bold mb-4">Current Weather in Murree</h3>
+            <h3 className="text-2xl font-bold mb-4">Typical conditions in Murree</h3>
             <div className="grid grid-cols-2 md:grid-cols-4 gap-4 text-center">
               <div>
                 <p className="text-3xl font-bold">18°C</p>
@@ -64,10 +67,10 @@ export default function MurreeWeatherPage() {
       <section className="py-20 px-6">
         <div className="max-w-6xl mx-auto">
           <h2 className="text-3xl md:text-4xl font-bold text-[#1b261b] mb-8">
-            Current Weather Conditions
+            Seasonal snapshot, not a live feed
           </h2>
           <p className="text-lg mb-8 leading-relaxed text-gray-700">
-            Real-time weather data for Murree Hills, updated every hour to help you plan your activities and packing accordingly.
+            Seasonal guidance for Murree Hills, last reviewed 6 November 2026. These figures are typical conditions, not a live feed. Check the Pakistan Meteorological Department before you travel.
           </p>
           
           <div className="grid md:grid-cols-3 gap-8">
@@ -302,29 +305,21 @@ export default function MurreeWeatherPage() {
       <section className="py-20 px-6 bg-gray-50">
         <div className="max-w-6xl mx-auto">
           <h2 className="text-3xl md:text-4xl font-bold text-[#1b261b] mb-8">
-            7-Day Weather Forecast
+            Today, tomorrow, July, and snowfall
           </h2>
-          <p className="text-lg mb-8 leading-relaxed text-gray-700">
-            Plan your week ahead with our detailed 7-day weather forecast for Murree Hills.
-          </p>
-          
-          <div className="grid grid-cols-2 md:grid-cols-4 lg:grid-cols-7 gap-4">
-            {[
-              { day: 'Mon', temp: '20°', condition: 'Sunny', icon: '☀️' },
-              { day: 'Tue', temp: '18°', condition: 'Partly Cloudy', icon: '⛅' },
-              { day: 'Wed', temp: '16°', condition: 'Rainy', icon: '🌧️' },
-              { day: 'Thu', temp: '17°', condition: 'Cloudy', icon: '☁️' },
-              { day: 'Fri', temp: '19°', condition: 'Sunny', icon: '☀️' },
-              { day: 'Sat', temp: '21°', condition: 'Partly Cloudy', icon: '⛅' },
-              { day: 'Sun', temp: '22°', condition: 'Sunny', icon: '☀️' },
-            ].map((day, index) => (
-              <div key={index} className="bg-white p-4 rounded-lg shadow-lg text-center">
-                <p className="font-semibold text-[#1b261b] mb-2">{day.day}</p>
-                <div className="text-3xl mb-2">{day.icon}</div>
-                <p className="text-xl font-bold text-[#c9a55b] mb-1">{day.temp}</p>
-                <p className="text-xs text-gray-600">{day.condition}</p>
-              </div>
-            ))}
+          <div className="space-y-6 text-lg leading-relaxed text-gray-700 max-w-3xl">
+            <p>
+              There is no live Murree forecast on this page. For today and tomorrow, use the Pakistan Meteorological Department before you travel. Roads into Murree can close after heavy snow even when the morning looks clear.
+            </p>
+            <p>
+              July is monsoon season. Days are cool compared with the plains, often in the mid-teens to low twenties Celsius, with rain likely. Pack a light rain jacket.
+            </p>
+            <p>
+              Snowfall usually starts in late December and is most reliable in January, tapering through February. It is weather, not a date you can book.
+            </p>
+            <p>
+              Bhurban, about 8 km above Murree town, follows the same seasons and is often a degree or two cooler. Mushkpuri Top is higher and more exposed, so wind and cloud arrive sooner than they do on Mall Road.
+            </p>
           </div>
         </div>
       </section>
@@ -549,7 +544,7 @@ export default function MurreeWeatherPage() {
                 Check Weather & Book
               </a>
               <a 
-                href="/rooms-villas" 
+                href="/villas" 
                 className="bg-white text-[#1b261b] px-8 py-3 rounded-lg font-semibold hover:bg-gray-100 transition-colors"
               >
                 View Villas

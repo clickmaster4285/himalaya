@@ -37,18 +37,7 @@ const corporateHotelSchema = {
   "@type": "Service",
   "name": "Corporate Hotels in Murree Bhurban - Himalaya Villas",
   "description": "Premium corporate hotels in Murree Bhurban with business facilities, conference rooms, executive accommodations, and professional services for corporate events and meetings.",
-  "provider": {
-    "@type": "Organization",
-    "name": "Himalaya Villas and Resort",
-    "telephone": "+92 304 567 9000",
-    "address": {
-      "@type": "PostalAddress",
-      "streetAddress": "Bhurban",
-      "addressLocality": "Murree",
-      "addressRegion": "Punjab",
-      "addressCountry": "PK"
-    }
-  },
+  "provider": { "@id": "https://himalayavillas.com/#organization" },
   "serviceType": "Corporate Accommodation",
   "offers": {
     "@type": "Offer",
@@ -276,8 +265,8 @@ export default function CorporateHotelsMurreeBhurbanPage() {
             <div className="text-sm">Corporate Events</div>
           </div>
           <div>
-            <div className="text-3xl font-bold text-blue-300 mb-2">4.8/5</div>
-            <div className="text-sm">Business Rating</div>
+            <div className="text-3xl font-bold text-blue-300 mb-2">1</div>
+            <div className="text-sm">Group at a Time</div>
           </div>
           <div>
             <div className="text-3xl font-bold text-blue-300 mb-2">24/7</div>
@@ -342,7 +331,6 @@ export default function CorporateHotelsMurreeBhurbanPage() {
                   <div className="mb-4">
                     <div className="text-2xl font-bold text-blue-600 mb-1">PKR {hotel.price}</div>
                     <div className="text-sm text-neutral-500 line-through">{hotel.originalPrice}</div>
-                    <div className="text-xs text-blue-600 font-semibold">{hotel.rating}</div>
                   </div>
                   <p className="text-neutral-600 text-sm mb-4">{hotel.description}</p>
                   <div className="flex justify-between text-xs text-neutral-500">

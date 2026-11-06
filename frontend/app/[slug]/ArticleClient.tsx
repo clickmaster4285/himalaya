@@ -12,6 +12,7 @@ import heroImage from "@/public/images/blogs/visit-murree.jpg";
 
 import { autoLinkParagraph } from "@/lib/internal-links";
 import type { Article, Block } from "@/content/types";
+import { ContentReviewNote } from "@/components/seo/ContentReviewNote";
 
 /* ================= TYPES ================= */
 const article11Images = [
@@ -31,7 +32,13 @@ type BlockProps = {
 
 /* ================= MAIN COMPONENT ================= */
 
-export default function ArticleClient({ article }: { article: Article }) {
+export default function ArticleClient({
+  article,
+  children,
+}: {
+  article: Article;
+  children?: React.ReactNode;
+}) {
   const rootRef = useRef<HTMLDivElement>(null);
   const heroRef = useRef<HTMLDivElement>(null);
 
@@ -115,6 +122,10 @@ export default function ArticleClient({ article }: { article: Article }) {
                 </p>
               )}
 
+              {article.lastReviewed && (
+                <ContentReviewNote className="mt-6 text-sm text-white/75" />
+              )}
+
               <div className="hero-rule mx-auto mt-8 h-px w-24 bg-primary" />
             </div>
           </div>
@@ -133,6 +144,8 @@ export default function ArticleClient({ article }: { article: Article }) {
           ))}
         </main>
       </div>
+
+      {children}
 
       <Footer />
     </>

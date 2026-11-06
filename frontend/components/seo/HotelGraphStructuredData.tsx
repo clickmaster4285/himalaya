@@ -1,4 +1,4 @@
-import { HOTEL_GRAPH_JSON_LD } from "@/lib/seo/hotel-graph-schema";
+import { buildHotelGraphJsonLd } from "@/lib/seo/hotel-graph-schema";
 
 function serializeJsonLd(data: Record<string, unknown>): string {
   return JSON.stringify(data).replace(/</g, "\\u003c");
@@ -12,9 +12,7 @@ export function HotelGraphStructuredData() {
       type="application/ld+json"
       suppressHydrationWarning
       dangerouslySetInnerHTML={{
-        __html: serializeJsonLd(
-          HOTEL_GRAPH_JSON_LD as unknown as Record<string, unknown>,
-        ),
+        __html: serializeJsonLd(buildHotelGraphJsonLd() as unknown as Record<string, unknown>),
       }}
     />
   );

@@ -240,14 +240,7 @@ export const ARTICLE_SCHEMA = {
     jobTitle: AUTHOR.role,
     url: "https://himalayavillas.com/about/amjad-khan",
   },
-  publisher: {
-    "@type": "Organization",
-    name: "Himalaya Villas",
-    logo: {
-      "@type": "ImageObject",
-      url: "https://himalayavillas.com/assets/himalaya-logo.png",
-    },
-  },
+  publisher: { "@id": "https://himalayavillas.com/#organization" },
   datePublished: "2026-07-29",
   dateModified: "2026-07-29",
   mainEntityOfPage: {
@@ -270,7 +263,7 @@ export const BREADCRUMB_SCHEMA = {
       "@type": "ListItem",
       position: 2,
       name: "Murree Travel Guides",
-      item: "https://himalayavillas.com/best-hotels-murree-pakistan",
+      item: "https://himalayavillas.com/luxury-hotels-in-murree",
     },
     {
       "@type": "ListItem",

@@ -9,24 +9,40 @@ import VirtualExperienceSection from "@/components/VirtualExperienceSection";
 import { getUsedSectionImages } from "@/components/VillaRoomSeoContent";
 import VillaImageGallery from "@/components/VillaImageGallery";
 import VillaAmenitiesSection from "@/components/VillaAmenitiesSection";
+import { createPageMetadata } from "@/lib/seo/build-metadata";
+import { RelatedGuides } from "@/components/seo/RelatedGuides";
+import { featuredGuides, guideHubPath } from "@/lib/guides";
+import type { Room } from "@/content/villas/villa-content";
 
 export async function generateStaticParams() {
   return Object.keys(roomsBySlug).map((slug) => ({ slug }));
 }
 
+function villaDocumentTitle(room: Room): string {
+  const beds = room.details.find((item) => /^beds?$/i.test(item.label))?.value ?? "private stay";
+  const guests = room.details.find((item) => /guest/i.test(item.label))?.value ?? "";
+  const sleeps = guests.replace(/\s*\([^)]*\)\s*$/, "").trim();
+  const sleepPart = sleeps ? `, sleeps ${sleeps}` : "";
+  const shared = Object.values(roomsBySlug).filter((other) => other.name === room.name).length > 1;
+  const name = shared ? `${room.name}, ${room.collection}` : room.name;
+  return `${name} – ${beds}${sleepPart} | Himalaya Villas & Resorts`;
+}
+
 export async function generateMetadata({ params }: { params: Promise<{ slug: string }> }) {
   const { slug } = await params;
   const room = roomsBySlug[slug];
-  if (!room) return { title: "Room not found", description: "Villa room details." };
+  if (!room) return { title: "Room not found | Himalaya Villas Bhurban", description: "Villa details." };
 
-  const title = room.seoTitle ?? `${room.name} — ${room.collection}`;
-  const desc = room.metaDescription ?? room.description ?? "Villa room details.";
+  const title = villaDocumentTitle(room);
+  const description = room.metaDescription ?? room.description ?? "A villa stay at Himalaya Villas, Bhurban.";
 
-  return {
+  return createPageMetadata({
     title,
-    description: desc,
-    openGraph: { title, description: desc, images: room.images },
-  };
+    description,
+    path: `/villas/${slug}`,
+    appendSiteBrand: false,
+    ogImage: room.images[0],
+  });
 }
 
 export default async function RoomDetail({ params }: { params: Promise<{ slug: string }> }) {
@@ -89,6 +105,11 @@ export default async function RoomDetail({ params }: { params: Promise<{ slug: s
          
         />
       <VirtualExperienceSection />
+      <RelatedGuides
+        heading="Before you book"
+        guides={featuredGuides(["stays", "getting-here", "weather-and-seasons"], slug)}
+        hub={{ href: guideHubPath("getting-here"), title: "Getting Here" }}
+      />
       <Footer />
     </div>
   );

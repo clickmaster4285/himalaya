@@ -1,7 +1,7 @@
 import type { Metadata } from "next";
 
 export const metadata: Metadata = {
-  title: "Romantic Hotels Murree | Couples Retreat | Honeymoon Hotels | Himalaya Villas",
+  title: "Romantic Hotels in Murree for Couples and Honeymoons | Himalaya Villas & Resorts",
   description: "Romantic hotels in Murree for couples and honeymoon at Himalaya Villas Bhurban. Private suites, romantic dining, couples spa services, intimate settings. Perfect for romantic getaways and anniversaries.",
   keywords: "romantic hotels Murree, couples retreat Bhurban, honeymoon hotels Murree Hills, romantic getaways Pakistan, couples spa services, intimate hotels Himalaya Villas, anniversary packages Murree, romantic dining Bhurban",
   openGraph: {

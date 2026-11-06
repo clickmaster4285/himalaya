@@ -133,10 +133,7 @@ const articleSchema = {
   },
   datePublished: "2026-07-30",
   dateModified: "2026-07-30",
-  publisher: {
-    "@type": "Organization",
-    name: "Himalaya Villas",
-  },
+  publisher: { "@id": "https://himalayavillas.com/#organization" },
   mainEntityOfPage: {
     "@type": "WebPage",
     "@id": absoluteUrl("/live-music-venue-murree"),
@@ -390,7 +387,7 @@ export default function LiveMusicVenuePage() {
                 <p className="text-sm sm:text-base text-neutral-700">
                   <span className="font-medium">Related:</span>{" "}
                   <Link
-                    href="/marriage-halls-murree"
+                    href="/weddings"
                     className="text-[#8b6914] underline underline-offset-4 hover:text-[#6d5210] transition-colors"
                   >
                     Marriage halls and wedding venues

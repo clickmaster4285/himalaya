@@ -8,10 +8,10 @@ export const metadata: Metadata = {
     title: "Luxury Hotel Murree - 5-Star Premium Accommodation at Himalaya Villas",
     description: "Experience ultimate luxury at our 5-star hotel in Murree with premium suites, fine dining, and world-class amenities at Himalaya Villas Bhurban.",
     type: "website",
-    url: "https://himalayavillas.com/luxury-hotel-murree",
+    url: "https://himalayavillas.com/luxury-hotels-in-murree",
   },
   alternates: {
-    canonical: "https://himalayavillas.com/luxury-hotel-murree",
+    canonical: "https://himalayavillas.com/luxury-hotels-in-murree",
   },
 };
 

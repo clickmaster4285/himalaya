@@ -200,7 +200,7 @@ const CATEGORIES: Category[] = [
       },
       {
         question: "Where can I find contact and reservation details for Himalaya Villas?",
-        answer: "Himalaya Villas reservations are available 7 days a week between 9:00 AM and 10:00 PM. WhatsApp / Phone: +92 304 567 9000 | Email: reservations@himalayavillas.com.pk | Website: www.himalayavillas.com | Location: Bhurban, Murree, Rawalpindi District, Punjab, Pakistan. For corporate enquiries, event bookings, or full-property exclusive reservations, direct your message to the WhatsApp number above and specify the nature of your enquiry. Our team responds within 15 minutes during business hours.",
+        answer: "Himalaya Villas reservations are available 7 days a week between 9:00 AM and 10:00 PM. WhatsApp / Phone: +92 304 567 9000 | Email: reservations [at] himalayavillas.com | Website: www.himalayavillas.com | Location: Bhurban, Murree, Rawalpindi District, Punjab, Pakistan. For corporate enquiries, event bookings, or full-property exclusive reservations, direct your message to the WhatsApp number above and specify the nature of your enquiry. Our team responds within 15 minutes during business hours.",
         cta: "Contact us now — WhatsApp: +92 304 567 9000"
       }
     ]

@@ -6,7 +6,13 @@ import { useRef } from "react";
 import { shouldUnoptimizeImageSrc, getValidImageSrc } from "@/lib/image-utils";
 import { motion, useInView, useReducedMotion } from "framer-motion";
 import type { Villa } from "@/lib/villa-types";
-import { VILLA_BLOG_POSTS } from "@/lib/villa-blog-posts";
+import { VILLA_BLOG_POSTS as ALL_VILLA_BLOG_POSTS } from "@/lib/villa-blog-posts";
+import { isRedirectedDuplicate } from "@/lib/seo/intent-canonicals";
+
+/** Posts merged into an intent survivor redirect away, so the listing leaves them out. */
+const VILLA_BLOG_POSTS = ALL_VILLA_BLOG_POSTS.filter(
+  (post) => !isRedirectedDuplicate(`/blogs/${post.slug.toLowerCase()}`),
+);
 import { buildWhatsAppBookingUrl } from "@/lib/whatsapp";
 import { trackAndOpen } from "@/lib/trackedClick";
 
@@ -32,7 +38,7 @@ export default function BlogsPageClient({ villas }: { villas: Villa[] }) {
   const [featured, ...rest] = VILLA_BLOG_POSTS;
   const dur = reduceMotion ? 0 : 0.55;
   const getPostHref = (post: (typeof VILLA_BLOG_POSTS)[number]) =>
-    `/blogs/${encodeURIComponent(post.slug)}`;
+    `/blogs/${encodeURIComponent(post.slug.toLowerCase())}`;
 
   return (
     <>

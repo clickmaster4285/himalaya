@@ -33,7 +33,7 @@ export type HomeStructuredDataProps = {
   config?: HimalayaJsonLdConfig;
 };
 
-/** LodgingBusiness/Hotel, Service, Reservation, FAQPage — home route only. */
+/** Service and reservation intent — home route only. Lodging lives in the sitewide graph. */
 export function HomeStructuredData({ config }: HomeStructuredDataProps) {
   return <JsonLd items={homePageJsonLdScripts(config)} />;
 }

@@ -5,6 +5,8 @@ import { use } from "react";
 import ArticleClient from "./ArticleClient";
 import { articlesBySlug, allSlugs } from "@/content/allArticles";
 import { createPageMetadata } from "@/lib/seo/build-metadata";
+import { RelatedGuides } from "@/components/seo/RelatedGuides";
+import { GUIDE_TOPICS, guideHubPath, guideTopicFor, relatedGuidesFor } from "@/lib/guides";
 
 type PageProps = {
   params: Promise<{
@@ -53,6 +55,9 @@ export async function generateMetadata({
     ogImage: article.heroImage,
     ogType: "article",
     appendSiteBrand: false,
+    authorName: article.author,
+    publishedTime: article.lastReviewed,
+    modifiedTime: article.lastReviewed,
   });
 }
 
@@ -67,5 +72,15 @@ export default function ArticlePage({ params }: PageProps) {
 
   if (!article) notFound();
 
-  return <ArticleClient article={article} />;
+  const topicId = guideTopicFor(slugKey);
+  const topic = GUIDE_TOPICS.find((item) => item.id === topicId)!;
+
+  return (
+    <ArticleClient article={article}>
+      <RelatedGuides
+        guides={relatedGuidesFor(slugKey)}
+        hub={{ href: guideHubPath(topicId), title: topic.title }}
+      />
+    </ArticleClient>
+  );
 }

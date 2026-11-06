@@ -6,11 +6,11 @@ import { useRef } from "react";
 
 const homeFaqs = [
   {
-    q: "Where is Himalaya Villas and Resort Hotel located?",
-    a: "Himalaya Villas and Resort Hotel is located in Bhurban, Murree, Pakistan. Guests can stay at the property while visiting Bhurban and exploring nearby attractions in the Murree region.",
+    q: "Where is Himalaya Villas & Resorts located?",
+    a: "Himalaya Villas & Resorts is located in Bhurban, Murree, Pakistan. Guests can stay at the property while visiting Bhurban and exploring nearby attractions in the Murree region.",
   },
   {
-    q: "Is Himalaya Villas and Resort Hotel suitable for families?",
+    q: "Is Himalaya Villas & Resorts suitable for families?",
     a: "Yes. We offer different accommodation options for families, including individual rooms, suites, a complete two-bedroom apartment, and private villas with multiple bedrooms.",
   },
   {
@@ -30,7 +30,7 @@ const homeFaqs = [
     a: "Guest capacity depends on the selected villa and its bedroom configuration. Contact our team with your group size to confirm the available accommodation and sleeping arrangements.",
   },
   {
-    q: "Does Himalaya Villas and Resort Hotel offer dining arrangements?",
+    q: "Does Himalaya Villas & Resorts offer dining arrangements?",
     a: "Guests can enquire about available dining services and meal arrangements. Breakfast inclusions and additional dining charges should be confirmed when making a reservation.",
   },
   {

@@ -108,7 +108,7 @@ const EventQuoteForm = () => {
   return (
     <div id="inquiry" className="w-full max-w-2xl rounded-2xl bg-white p-6 md:p-8 shadow-2xl lg:mr-0">
       <h2 className="font-display text-2xl text-neutral-900">Get Event Quote</h2>
-      <p className="mt-2 text-sm text-neutral-600">Form ab clear aur visible hai - details share karein, team jaldi contact karegi.</p>
+      <p className="mt-2 text-sm text-neutral-600">Share the date, guest count and what you want to host. The events team will reply with a quote.</p>
 
       <form onSubmit={handleSubmit} className="mt-6 space-y-4">
         {/* Success Message */}

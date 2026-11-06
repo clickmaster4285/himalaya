@@ -1,3 +1,5 @@
+import { pushConversion } from "@/lib/conversion";
+
 export type InquiryPayload = {
   fullName: string;
   email: string;
@@ -42,6 +44,7 @@ export async function submitInquiry(
     };
   }
 
+  pushConversion("enquiry_submit", { form: payload.source });
   return {
     ok: true,
     saved: Boolean(data.saved),

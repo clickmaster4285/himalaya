@@ -12,7 +12,7 @@ import { BedDouble, Users, Maximize, Check } from "lucide-react";
 export const metadata: Metadata = createPageMetadata({
   title: "Luxury Accommodation in Bhurban, Murree | Himalaya Villas",
   description:
-    "Explore rooms, suites, apartments and private villas at Himalaya Villas and Resort Hotel. Compare accommodation options, check availability and book now!",
+    "Explore rooms, suites, apartments and private villas at Himalaya Villas & Resorts. Compare accommodation options, check availability and book now!",
   path: "/accommodations",
   keywords: [
     "Luxury Accommodation Bhurban",
@@ -181,7 +181,7 @@ const bookingChecklist = [
 const faqs = [
   {
     question:
-      "What types of accommodation are available at Himalaya Villas and Resort Hotel?",
+      "What types of accommodation are available at Himalaya Villas & Resorts?",
     answer:
       "We offer luxury rooms, executive rooms, suites, a two-bedroom apartment, and complete private villas in Bhurban, Murree.",
   },
@@ -206,7 +206,7 @@ const faqs = [
       "Choose your preferred accommodation and contact our reservations team to confirm current rates and availability for your travel dates.",
   },
   {
-    question: "How can I book accommodation at Himalaya Villas and Resort Hotel?",
+    question: "How can I book accommodation at Himalaya Villas & Resorts?",
     answer:
       "Select your preferred room, suite, apartment, or villa and share your travel dates and guest count with our team to arrange your reservation.",
   },
@@ -263,7 +263,7 @@ export default function AccommodationsPage() {
               Luxury Accommodation in Bhurban, Murree
             </h1>
             <p className="text-lg md:text-xl text-white/90 max-w-3xl mx-auto mb-8">
-              Enjoy a comfortable stay at Himalaya Villas and Resort Hotel. Choose from luxury
+              Enjoy a comfortable stay at Himalaya Villas & Resorts. Choose from luxury
               rooms, spacious suites, apartments, and private villas — whether travelling as a
               couple, with family, or in a group.
             </p>
@@ -418,7 +418,7 @@ export default function AccommodationsPage() {
               Choose Between Individual Rooms and Complete Villas
             </h2>
             <p className="text-gray-600 leading-relaxed mb-4">
-              At Himalaya Villas and Resort Hotel, you do not have to book an entire villa to enjoy
+              At Himalaya Villas & Resorts, you do not have to book an entire villa to enjoy
               your stay. Choose an individual room or suite for a personal visit, or select a
               complete apartment or private villa when travelling with family or a larger group.
             </p>
@@ -492,7 +492,7 @@ export default function AccommodationsPage() {
               Frequently Asked Questions
             </h2>
             <p className="text-gray-600 max-w-3xl mx-auto">
-              Common questions about staying at Himalaya Villas and Resort Hotel.
+              Common questions about staying at Himalaya Villas & Resorts.
             </p>
           </div>
 
@@ -527,7 +527,7 @@ export default function AccommodationsPage() {
             <span className="h-px w-8 bg-[#c9a55b]" />
           </div>
           <h2 className="font-display text-3xl md:text-4xl text-white mb-6">
-            Book Your Stay at Himalaya Villas and Resort Hotel
+            Book Your Stay at Himalaya Villas & Resorts
           </h2>
           <p className="text-white/80 leading-relaxed mb-8 max-w-2xl mx-auto">
             Find accommodation that suits your travel plans, from individual rooms and suites to

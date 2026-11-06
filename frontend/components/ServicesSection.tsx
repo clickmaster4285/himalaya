@@ -233,7 +233,7 @@ const ServicesSection = () => {
             style={{ color: "hsl(0 0% 60%)" }}
           >
 
-         Himalaya Villas and Resort Hotel offers accommodation for families and groups who want to spend time together in a comfortable mountain setting. Choose from individual rooms, suites, apartments, and complete villas based on the number of guests and your preferred level of privacy.
+         Himalaya Villas & Resorts offers accommodation for families and groups who want to spend time together in a comfortable mountain setting. Choose from individual rooms, suites, apartments, and complete villas based on the number of guests and your preferred level of privacy.
 
          
           </motion.p>

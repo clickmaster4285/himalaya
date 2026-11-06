@@ -6,10 +6,14 @@ import Footer from "@/components/Footer";
 import { Calendar, MapPin, Users, Sparkles, Heart } from "lucide-react";
 import { JsonLd } from "@/components/seo/JsonLd";
 import { createPageMetadata } from "@/lib/seo/build-metadata";
-import { absoluteUrl } from "@/lib/seo/site-config";
+import { absoluteUrl, getSiteOrigin } from "@/lib/seo/site-config";
+import { SITE_CONTACT } from "@/lib/site-contact";
 import EventQuoteForm from "@/components/EventQuoteForm";
 import EventFAQs from "@/components/EventFAQs";
 import NikahWeddingPage from "@/components/events/NikahWeddingPage";
+import { RelatedGuides } from "@/components/seo/RelatedGuides";
+import { featuredGuides, guideHubPath } from "@/lib/guides";
+import { isLegacyRedirectSource } from "@/lib/seo/legacy-redirects";
 
 // Event data mapping
 const eventDetails: Record<string, {
@@ -74,7 +78,7 @@ const eventDetails: Record<string, {
     whyChoose: [
       {
         title: "A venue built for both intimacy and scale",
-        text: "Our banquet halls and lawns can be configured for a private Nikkah of 50 guests or expanded for a reception of 500+, without losing the warmth of the setting.",
+        text: "The estate is booked for one celebration at a time. Most Nikkah gatherings are planned for about 20 to 120 guests, using the hall, the lawn, or both.",
       },
       {
         title: "In-house catering with halal-certified kitchens",
@@ -138,7 +142,7 @@ const eventDetails: Record<string, {
       {
         question: "How many guests can Himalaya Villas & Resorts accommodate for a Nikkah?",
         answer:
-          "Our spaces range from an intimate private hall for 50 guests to our Grand Banquet Hall and lawn, which together can host 500+ guests comfortably.",
+          "Most Nikkah gatherings are planned for about 20 to 120 guests. The indoor and lawn limit for your date is confirmed in the quote.",
       },
       {
         question: "Is the food served at Nikkah events halal?",
@@ -179,7 +183,7 @@ const eventDetails: Record<string, {
       "Catering with festive menu options",
       "Dedicated event management team"
     ],
-    image: "https://picsum.photos/seed/mehndi2/800/600.jpg",
+    image: "/assets/mehndi-hero-1.png",
     category: "Weddings & Ceremonies",
     faqs: [
       {
@@ -212,7 +216,7 @@ const eventDetails: Record<string, {
       "Professional photography coverage",
       "Coordinated event timing and management"
     ],
-    image: "https://picsum.photos/seed/baraat3/800/600.jpg",
+    image: "/assets/barat-hero-1.png",
     category: "Weddings & Ceremonies",
     faqs: [
       {
@@ -245,7 +249,7 @@ const eventDetails: Record<string, {
       "Professional event coordination",
       "Photography and videography services"
     ],
-    image: "https://picsum.photos/seed/dholki4/800/600.jpg",
+    image: "/assets/dholki-hero-1.jpg",
     category: "Weddings & Ceremonies",
     faqs: [
       {
@@ -274,7 +278,7 @@ const eventDetails: Record<string, {
   metaDescription:
     "Walima wedding in Murree with a view: private mountain venue, indoor & outdoor setups, villa accommodation and custom packages. Check dates & get a quote.",
   longDescription:
-    "A Walima is the wedding reception hosted by the groom's family. It is a time to thank relatives and friends and to celebrate the marriage over a shared meal. Most families in Pakistan hold it at a banquet hall in the city. A growing number now choose the mountains instead, for the cool air, the pine forest and photographs no hall can match. At Himalaya Villas and Resorts, we host Walima and Valima weddings in the Murree Hills as a private, full-stay event. Your family, your guests and your celebration share one property, with no other event running beside you.",
+    "A Walima is the wedding reception hosted by the groom's family. It is a time to thank relatives and friends and to celebrate the marriage over a shared meal. Most families in Pakistan hold it at a banquet hall in the city. A growing number now choose the mountains instead, for the cool air, the pine forest and photographs no hall can match. At Himalaya Villas & Resorts, we host Walima and Valima weddings in the Murree Hills as a private, full-stay event. Your family, your guests and your celebration share one property, with no other event running beside you.",
   features: [
     "Elegant dining hall with premium table settings",
     "Sophisticated stage design and lighting",
@@ -283,11 +287,11 @@ const eventDetails: Record<string, {
     "Decor coordination with wedding theme",
     "Dedicated event management"
   ],
-  image: "https://picsum.photos/seed/valima5/800/600.jpg",
+  image: "/assets/valima-hero-1.jpg",
   category: "Weddings & Ceremonies",
-  capacity: "20 – 120 guests [confirm exact indoor and outdoor limits]",
-  location: "Himalaya Villas and Resorts, near Bhurban, Murree Hills",
-  priceFrom: "[add starting price]",
+  capacity: "About 20 to 120 guests. The estate is booked for one group at a time. The indoor and lawn limit is confirmed with the date.",
+  location: "Himalaya Villas & Resorts, near Bhurban, Murree Hills",
+  priceFrom: "Quoted for the event. There is no catalogue price.",
   sections: [
     {
       heading: "Why Choose Murree for a Walima",
@@ -302,7 +306,7 @@ const eventDetails: Record<string, {
     {
       heading: "Our Walima Venue",
       paragraphs: [
-        "Himalaya Villas and Resorts is a private destination-wedding property near Bhurban in the Murree Hills. [Add one sentence on your exact location and setting, for example elevation or road access.]"
+        "Himalaya Villas is a private villa estate at Mohra Iswal near Kashmiri Bazar, Bhurban, about 60 km from Islamabad."
       ],
       bullets: [
         "A private wedding space surrounded by pine forest and mountain views",
@@ -317,7 +321,7 @@ const eventDetails: Record<string, {
         "This is the question most families ask first. The right answer depends on your guest count, the month and your priorities."
       ],
       bullets: [
-        "Outdoor Walima with mountain views: an outdoor setup gives you open sky, forest backdrops and the best natural light for photographs. It works well from [months, e.g. April to September] when days are mild and rain is less likely. The trade-off is weather — mountain conditions change fast, so an outdoor reception needs a covered or indoor backup plan.",
+        "Outdoor Walima with mountain views: an outdoor setup gives you open sky, forest backdrops and the best natural light for photographs. It works best from April to September, outside the heavier July and August rain. Mountain weather changes quickly, so an outdoor reception needs an indoor backup.",
         "Indoor Walima: an indoor arrangement gives you control over heat, sound, lighting and stage design. It is the better choice for winter, for rainy weeks and for families who want a more formal look.",
         "Combined setup: many families use both. Guests are received and photographed outside, then dinner is served indoors if the temperature drops after sunset. Ask us about this when you enquire, because the flow of the evening affects how we lay out the space."
       ]
@@ -338,7 +342,7 @@ const eventDetails: Record<string, {
     {
       heading: "Catering and Wedding Dinner",
       paragraphs: [
-        "Food is the centre of a Walima, and guests remember it. We can arrange traditional Pakistani wedding menus, including [examples, such as mutton karahi, biryani, qorma, naan, BBQ, desserts and tea].",
+        "Food is the centre of a Walima. The quote sets a Pakistani wedding menu, such as karahi, biryani, BBQ and dessert, once the guest count is known.",
         "Live BBQ and outdoor food stations work particularly well in the mountains, since guests tend to stay outside longer.",
         "Two practical points from hosting mountain events:"
       ],
@@ -351,7 +355,7 @@ const eventDetails: Record<string, {
       heading: "Décor and Stage Arrangements",
       paragraphs: [
         "A Walima stage in Murree does not need heavy styling. The backdrop already does much of the work, and the most effective setups tend to be simple: fresh flowers, soft lighting and seating that faces the view.",
-        "We can coordinate with your preferred décor vendor or arrange setup for you. [State which applies.]"
+        "You may bring an approved décor vendor, or ask the events team to arrange the setup."
       ]
     },
     {
@@ -411,7 +415,7 @@ const eventDetails: Record<string, {
         "Send an enquiry with your preferred date, guest count and indoor or outdoor preference.",
         "Visit the property if you can. Seeing the space is the fastest way to decide.",
         "Receive your quote covering venue, food, accommodation and extras.",
-        "Confirm your date with the booking amount. [State your deposit and cancellation policy.]",
+        "Confirm the date once the quote, booking amount and cancellation terms are agreed.",
         "Finalise details including menu, seating, décor and arrival timing."
       ]
     }
@@ -419,8 +423,8 @@ const eventDetails: Record<string, {
   cta: {
     heading: "Plan Your Walima in the Murree Hills",
     body:
-      "A Walima works best when the setting supports the celebration instead of competing with it. If you would like to see the property, check dates or discuss a package, contact the Himalaya Villas and Resorts team, and we will help you plan around your guest list, season and budget.",
-    whatsapp: "[your WhatsApp number]"
+      "A Walima works best when the setting supports the celebration instead of competing with it. If you would like to see the property, check dates or discuss a package, contact the Himalaya Villas & Resorts team, and we will help you plan around your guest list, season and budget.",
+    whatsapp: "+92 304 567 9000"
   },
   faqs: [
     {
@@ -441,7 +445,7 @@ const eventDetails: Record<string, {
     {
       question: "How many guests can you host for a Walima?",
       answer:
-        "We host Walima events of roughly 20 to 120 guests. [Confirm exact indoor and outdoor limits.]"
+        "About 20 to 120 guests. The indoor and lawn limit for your date is confirmed in the quote."
     },
     {
       question: "Can we hold the Walima outdoors?",
@@ -456,7 +460,7 @@ const eventDetails: Record<string, {
     {
       question: "Is accommodation available for the families?",
       answer:
-        "Yes. Villa accommodation is available on the property. [Add number of rooms and how many guests can stay.]"
+        "Yes. The estate has twelve villas. How many guests can stay depends on which villas are booked with the event."
     },
     {
       question: "Is Murree suitable for a winter Walima?",
@@ -481,7 +485,7 @@ const eventDetails: Record<string, {
       "Dedicated event coordination team",
       "Custom decor, catering, and photography options"
     ],
-    image: "https://picsum.photos/seed/engagement6/800/600.jpg",
+    image: "/assets/engagement-hero-1.jpg",
     category: "Weddings & Ceremonies",
     intro: [
       "Himalaya Villas & Resorts is a premier engagement ceremony venue in Bhurban, Murree, offering families a private, scenic, and fully managed setting for their ring ceremony. Surrounded by cedar forests and panoramic Himalayan views, our estate creates a beautiful and peaceful atmosphere for celebrating this special family occasion. Whether you are planning an intimate gathering or a larger engagement event, our elegant halls, spacious villas, and outdoor spaces provide flexible options for different guest counts and event styles.",
@@ -669,7 +673,7 @@ const eventDetails: Record<string, {
       "Professional sound system",
       "Atmospheric lighting"
     ],
-    image: "https://picsum.photos/seed/sufi7/800/600.jpg",
+    image: "/assets/qawwali.jpg",
     category: "Music, Culture & Entertainment",
     faqs: [
       {
@@ -700,9 +704,10 @@ const eventDetails: Record<string, {
       "Intimate venue arrangement",
       "Premium seating for guests",
       "Catering services available",
-      "Technical support and equipment"
+      "Technical support and equipment",
+      "A live band can be arranged as part of the same private concert"
     ],
-    image: "https://picsum.photos/seed/concert8/800/600.jpg",
+    image: "/assets/concert1.webp",
     category: "Music, Culture & Entertainment",
     faqs: [
       {
@@ -735,7 +740,7 @@ const eventDetails: Record<string, {
       "Refreshments and tea service",
       "Professional event coordination"
     ],
-    image: "https://picsum.photos/seed/poetry9/800/600.jpg",
+    image: "/assets/mushira.webp",
     category: "Music, Culture & Entertainment",
     faqs: [
       {
@@ -768,7 +773,7 @@ const eventDetails: Record<string, {
       "Bar and catering services",
       "Security and event management"
     ],
-    image: "https://picsum.photos/seed/dj10/800/600.jpg",
+    image: "/assets/dj1.jpg",
     category: "Music, Culture & Entertainment",
     faqs: [
       {
@@ -801,7 +806,7 @@ const eventDetails: Record<string, {
       "Guest accommodation options",
       "Catering and bar services"
     ],
-    image: "https://picsum.photos/seed/band11/800/600.jpg",
+    image: "/assets/band1.jpg",
     category: "Music, Culture & Entertainment",
     faqs: [
       {
@@ -834,7 +839,7 @@ const eventDetails: Record<string, {
       "Guest engagement activities",
       "Traditional catering options"
     ],
-    image: "https://picsum.photos/seed/cultural12/800/600.jpg",
+    image: "/assets/culture1.webp",
     category: "Music, Culture & Entertainment",
     faqs: [
       {
@@ -867,7 +872,7 @@ const eventDetails: Record<string, {
       "Catering for all meals",
       "Recreational facilities"
     ],
-    image: "https://picsum.photos/seed/corporate13/800/600.jpg",
+    image: "/assets/retreat1.webp",
     category: "Corporate Events",
     faqs: [
       {
@@ -900,7 +905,7 @@ const eventDetails: Record<string, {
       "Catering and hospitality",
       "Event coordination services"
     ],
-    image: "https://picsum.photos/seed/launch14/800/600.jpg",
+    image: "/assets/product-launch1.webp",
     category: "Corporate Events",
     faqs: [
       {
@@ -933,7 +938,7 @@ const eventDetails: Record<string, {
       "Formal catering services",
       "Security and guest management"
     ],
-    image: "https://picsum.photos/seed/award15/800/600.jpg",
+    image: "/assets/award1.webp",
     category: "Corporate Events",
     faqs: [
       {
@@ -966,7 +971,7 @@ const eventDetails: Record<string, {
       "Registration and reception area",
       "Technical support staff"
     ],
-    image: "https://picsum.photos/seed/conference16/800/600.jpg",
+    image: "/assets/conference1.webp",
     category: "Corporate Events",
     faqs: [
       {
@@ -999,7 +1004,7 @@ const eventDetails: Record<string, {
       "Accommodation for teams",
       "Catering and meals"
     ],
-    image: "https://picsum.photos/seed/team17/800/600.jpg",
+    image: "/assets/team.webp",
     category: "Corporate Events",
     faqs: [
       {
@@ -1032,7 +1037,7 @@ const eventDetails: Record<string, {
       "Registration facilities",
       "Catering services"
     ],
-    image: "https://picsum.photos/seed/exhibition18/800/600.jpg",
+    image: "/assets/exibition1.webp",
     category: "Corporate Events",
     faqs: [
       {
@@ -1065,7 +1070,7 @@ const eventDetails: Record<string, {
       "Photography services",
       "Gift coordination services"
     ],
-    image: "https://picsum.photos/seed/birthday19/800/600.jpg",
+    image: "/assets/celebrations3.jpg",
     category: "Family & Social Celebrations",
     faqs: [
       {
@@ -1098,7 +1103,7 @@ const eventDetails: Record<string, {
       "Children's activity areas",
       "Transportation coordination"
     ],
-    image: "https://picsum.photos/seed/eid20/800/600.jpg",
+    image: "/assets/outdoor-celebrations.jpg",
     category: "Family & Social Celebrations",
     faqs: [
       {
@@ -1131,7 +1136,7 @@ const eventDetails: Record<string, {
       "Catering for guests",
       "Photography services"
     ],
-    image: "https://picsum.photos/seed/baby21/800/600.jpg",
+    image: "/assets/journal-group-new.jpg",
     category: "Family & Social Celebrations",
     faqs: [
       {
@@ -1164,7 +1169,7 @@ const eventDetails: Record<string, {
       "Entertainment options",
       "Gift presentation coordination"
     ],
-    image: "https://picsum.photos/seed/graduation22/800/600.jpg",
+    image: "/assets/services-events-real.jpg",
     category: "Family & Social Celebrations",
     faqs: [
       {
@@ -1197,7 +1202,7 @@ const eventDetails: Record<string, {
       "Memory lane displays",
       "Guest coordination services"
     ],
-    image: "https://picsum.photos/seed/retirement23/800/600.jpg",
+    image: "/assets/himalaya-villas-function-hall.png",
     category: "Family & Social Celebrations",
     faqs: [
       {
@@ -1230,7 +1235,7 @@ const eventDetails: Record<string, {
       "Catering for comfort food",
       "Guest book and mementos"
     ],
-    image: "https://picsum.photos/seed/farewell24/800/600.jpg",
+    image: "/assets/himalaya-banquet.png",
     category: "Family & Social Celebrations",
     faqs: [
       {
@@ -1263,7 +1268,7 @@ const eventDetails: Record<string, {
       "Storytelling sessions",
       "Photography opportunities"
     ],
-    image: "https://picsum.photos/seed/bonfire25/800/600.jpg",
+    image: "/assets/journal-bonfire.jpg",
     category: "Experiences & Activities",
     faqs: [
       {
@@ -1296,7 +1301,7 @@ const eventDetails: Record<string, {
       "Refreshments during walks",
       "Flexible difficulty levels"
     ],
-    image: "https://picsum.photos/seed/trails26/800/600.jpg",
+    image: "/assets/murree-forest-pines.jpg",
     category: "Experiences & Activities",
     faqs: [
       {
@@ -1329,7 +1334,7 @@ const eventDetails: Record<string, {
       "Tableside service",
       "Dietary accommodations"
     ],
-    image: "https://picsum.photos/seed/chef27/800/600.jpg",
+    image: "/assets/gallery-dining-night.jpg",
     category: "Experiences & Activities",
     faqs: [
       {
@@ -1362,7 +1367,7 @@ const eventDetails: Record<string, {
       "First aid support",
       "Weather contingency plans"
     ],
-    image: "https://picsum.photos/seed/adventure28/800/600.jpg",
+    image: "/assets/experience4.jpg",
     category: "Experiences & Activities",
     faqs: [
       {
@@ -1395,7 +1400,7 @@ const eventDetails: Record<string, {
       "Take-home creations",
       "Photography of process"
     ],
-    image: "https://picsum.photos/seed/workshop29/800/600.jpg",
+    image: "/assets/gallery-interior.jpg",
     category: "Experiences & Activities",
     faqs: [
       {
@@ -1428,7 +1433,7 @@ const eventDetails: Record<string, {
       "Same-day preview options",
       "Online gallery delivery"
     ],
-    image: "https://picsum.photos/seed/photography30/800/600.jpg",
+    image: "/assets/gallery-exterior.jpg",
     category: "Experiences & Activities",
     faqs: [
       {
@@ -1454,14 +1459,14 @@ const eventDetails: Record<string, {
     description: "Mindful sessions with serene mountain environments.",
     longDescription: "Find inner peace with our yoga and meditation retreats. Experience mindful sessions in the serene mountain environment that promotes relaxation and spiritual wellness.",
     features: [
-      "Certified yoga instructors",
-      "Meditation guidance",
-      "Serene mountain locations",
-      "Wellness amenities",
-      "Healthy meal options",
-      "Personalized sessions"
+      "Quiet time on the estate for the group in residence",
+      "A low-screen routine when you ask for one",
+      "Lawn or villa space for yoga",
+      "Meal times arranged with the stay",
+      "Weather backup if the lawn is not usable",
+      "An enquiry before any outside instructor is booked"
     ],
-    image: "https://picsum.photos/seed/yoga31/800/600.jpg",
+    image: "/assets/experience-morning.jpg",
     category: "Wellness & Retreats",
     faqs: [
       {
@@ -1494,7 +1499,7 @@ const eventDetails: Record<string, {
       "Healthy meal plans",
       "Reading and reflection spaces"
     ],
-    image: "https://picsum.photos/seed/digital32/800/600.jpg",
+    image: "/assets/experience-dawn.jpg",
     category: "Wellness & Retreats",
     faqs: [
       {
@@ -1520,14 +1525,14 @@ const eventDetails: Record<string, {
     description: "Rejuvenating body and mind with holistic comfort.",
     longDescription: "Rejuvenate your body and mind with our spa and relaxation escapes. Experience holistic comfort through professional spa treatments and wellness therapies.",
     features: [
-      "Professional spa treatments",
-      "Massage therapy options",
-      "Aromatherapy sessions",
-      "Relaxation lounges",
-      "Wellness consultations",
-      "Organic product usage"
+      "In-villa relaxation for the group in residence",
+      "A quiet lawn and villa setting",
+      "Meal times arranged with the stay",
+      "One group on the estate at a time",
+      "Fitness camps and healing courses are not a standing service",
+      "Ask in the enquiry if you want an outside therapist"
     ],
-    image: "https://picsum.photos/seed/spa33/800/600.jpg",
+    image: "/assets/amenities-interior-real.jpg",
     category: "Wellness & Retreats",
     faqs: [
       {
@@ -1560,7 +1565,7 @@ const eventDetails: Record<string, {
       "Group exercise classes",
       "Recovery facilities"
     ],
-    image: "https://picsum.photos/seed/fitness34/800/600.jpg",
+    image: "/assets/villa-terrace.jpg",
     category: "Wellness & Retreats",
     faqs: [
       {
@@ -1593,7 +1598,7 @@ const eventDetails: Record<string, {
       "Nutritional counseling",
       "Mind-body integration"
     ],
-    image: "https://picsum.photos/seed/healing35/800/600.jpg",
+    image: "/assets/philosophy-interior.jpg",
     category: "Wellness & Retreats",
     faqs: [
       {
@@ -1626,7 +1631,7 @@ const eventDetails: Record<string, {
       "Romantic excursions",
       "Butler service available"
     ],
-    image: "https://picsum.photos/seed/honeymoon36/800/600.jpg",
+    image: "/assets/villa-honeymoon-real.jpg",
     category: "Wellness & Retreats",
     faqs: [
       {
@@ -1693,28 +1698,48 @@ export default async function EventPage({ params }: { params: Promise<{ slug: st
     );
   }
 
+  const origin = getSiteOrigin();
+  const capacity =
+    event.capacity && !event.capacity.includes("[")
+      ? event.capacity
+      : event.category.startsWith("Corporate") || event.category.startsWith("Music")
+        ? "One group at a time, typically up to about 120 guests. This is a villa estate, not a convention hall or a public venue."
+        : "One group at a time. Most gatherings are planned for about 20 to 120 guests. The indoor and lawn limit for the date is confirmed in the quote.";
+  const seasonalLimits = [
+    "May to September: mild days and cool evenings. July and August can bring heavy rain, so an outdoor plan needs an indoor backup.",
+    "October and November: clear days and cold evenings. Plan heating after sunset.",
+    "December to February: hold the gathering indoors. Snow can slow the road, so ask guests to travel earlier in the day.",
+    "March and April: the weather changes quickly. Keep a backup plan.",
+  ];
+  const enquiryUrl = `${SITE_CONTACT.whatsappUrl}?text=${encodeURIComponent(
+    `Event enquiry: ${event.title}. Date, guest count, and indoor or outdoor preference.`,
+  )}`;
   const jsonLd = {
     "@context": "https://schema.org",
-    "@type": "Event",
+    "@type": "Service",
     name: event.title,
+    serviceType: event.category,
     description: event.longDescription,
     image: absoluteUrl(event.image),
     url: absoluteUrl(`/events/${slug}`),
-    location: {
-      "@type": "Place",
-      name: "Himalaya Villas & Resorts",
-      address: "Bhurban, Murree, Pakistan"
+    provider: { "@id": `${origin}/#organization` },
+    areaServed: {
+      "@type": "AdministrativeArea",
+      name: "Bhurban, Murree, Pakistan",
     },
-    offers: {
-      "@type": "Offer",
-      price: "Contact for pricing",
-      priceCurrency: "PKR"
-    }
   };
+
+  const eventGuides = (
+    <RelatedGuides
+      heading="Planning guides"
+      guides={featuredGuides(["events-and-celebrations"], slug)}
+      hub={{ href: guideHubPath("events-and-celebrations"), title: "Events and Celebrations" }}
+    />
+  );
 
   if (slug === "nikah-wedding-reception") {
     const related = Object.entries(eventDetails)
-      .filter(([eventSlug, details]) => details.category === event.category && eventSlug !== slug)
+      .filter(([eventSlug, details]) => details.category === event.category && eventSlug !== slug && !isLegacyRedirectSource(`/events/${eventSlug}`))
       .slice(0, 3)
       .map(([relatedSlug, details]) => ({
         slug: relatedSlug,
@@ -1740,7 +1765,9 @@ export default async function EventPage({ params }: { params: Promise<{ slug: st
             faqs: event.faqs,
           }}
           related={related}
-        />
+        >
+          {eventGuides}
+        </NikahWeddingPage>
       </>
     );
   }
@@ -1842,6 +1869,39 @@ export default async function EventPage({ params }: { params: Promise<{ slug: st
                       <span className="text-gray-700">{feature}</span>
                     </div>
                   ))}
+                </div>
+
+                <div className="mt-12 space-y-8 rounded-2xl border border-[#e5e1d8] bg-[#faf7f1] p-6 md:p-8">
+                  <div>
+                    <h3 className="font-display text-2xl text-neutral-900 mb-3">Capacity</h3>
+                    <p className="text-gray-600 leading-relaxed">{capacity}</p>
+                  </div>
+                  <div>
+                    <h3 className="font-display text-2xl text-neutral-900 mb-3">Facilities</h3>
+                    <p className="text-gray-600 leading-relaxed">
+                      The gathering uses the villa estate at Mohra Iswal, Bhurban: the lawn, indoor space, villa rooms for guests who stay, and in-house coordination. Sound, décor and catering are confirmed in the quote rather than sold as a fixed package.
+                    </p>
+                  </div>
+                  <div>
+                    <h3 className="font-display text-2xl text-neutral-900 mb-3">Seasonal limits</h3>
+                    <ul className="space-y-2">
+                      {seasonalLimits.map((item) => (
+                        <li key={item} className="text-gray-600 leading-relaxed">{item}</li>
+                      ))}
+                    </ul>
+                  </div>
+                  <div>
+                    <h3 className="font-display text-2xl text-neutral-900 mb-3">Enquire</h3>
+                    <p className="text-gray-600 leading-relaxed mb-4">
+                      Send the date, guest count and whether you want the lawn or an indoor setup. The price is quoted for that event. This page does not publish a catalogue rate.
+                    </p>
+                    <a
+                      href={enquiryUrl}
+                      className="inline-flex items-center rounded-lg bg-[#c9a55b] px-5 py-3 text-sm font-semibold text-[#1b261b] hover:bg-[#ebd59f]"
+                    >
+                      WhatsApp {SITE_CONTACT.phoneDisplay}
+                    </a>
+                  </div>
                 </div>
 
                 {event.sections?.map((section, index) => (
@@ -1957,7 +2017,7 @@ export default async function EventPage({ params }: { params: Promise<{ slug: st
           
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
             {Object.entries(eventDetails)
-              .filter(([eventSlug, details]) => details.category === event.category && eventSlug !== slug)
+              .filter(([eventSlug, details]) => details.category === event.category && eventSlug !== slug && !isLegacyRedirectSource(`/events/${eventSlug}`))
               .slice(0, 3)
               .map(([slug, details]) => (
                 <Link
@@ -1991,6 +2051,7 @@ export default async function EventPage({ params }: { params: Promise<{ slug: st
         </div>
       </section>
 
+      {eventGuides}
       <Footer />
     </div>
   );

@@ -1,5 +1,6 @@
 "use client";
 
+import EmailLink from "@/components/EmailLink";
 import { useEffect, useRef, useState, ReactNode } from "react";
 import {
   Mountain, Sparkles, Home, Star, Utensils, Briefcase, Clock,
@@ -11,11 +12,11 @@ import {
 import { buildWhatsAppBookingUrl } from "@/lib/whatsapp";
 
 const MURREE_FAMILY_WHATSAPP_URL = buildWhatsAppBookingUrl(
-  "a private family stay at Himalaya Premium Villas in Murree"
+  "a private family stay at Himalaya Villas & Resorts in Murree"
 );
 
 /* ============================================================
-   FAMILY HOTELS IN MURREE - Himalaya Premium Villas
+   FAMILY HOTELS IN MURREE - Himalaya Villas & Resorts
    ============================================================ */
 const PAGE_STYLES = `
 @import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Playfair+Display:wght@600;700;900&display=swap');
@@ -128,8 +129,11 @@ function Hero() {
               Family Hotels in <span className="family-murree-text-gold">Murree</span>
             </h1>
             <h2 className="text-3xl font-light italic md:text-4xl mb-4" style={{ color: "hsl(42 95% 75%)" }}>
-              Himalaya Premium Villas, Where Families Belong
+              Himalaya Villas & Resorts, Where Families Belong
             </h2>
+            <p className="text-sm" style={{ color: "hsl(40 38% 97% / .8)" }}>
+              Written by Himalaya Villas & Resorts. Reviewed by the Himalaya Villas editorial team. Last reviewed 6 November 2026.
+            </p>
           </Reveal>
           
           <Reveal delay={300}>
@@ -307,11 +311,11 @@ function Introduction() {
               </p>
               
               <p className="text-lg md:text-xl leading-relaxed mb-6" style={{ color: "hsl(165 35% 12%)" }}>
-                Families deserve better. And Himalaya Premium Villas was built to deliver it.
+                Families deserve better. And Himalaya Villas & Resorts was built to deliver it.
               </p>
               
               <p className="text-lg md:text-xl leading-relaxed mb-6" style={{ color: "hsl(165 35% 12%)" }}>
-                Located in Bhurban — the most prestigious and scenic enclave within the greater Murree Hills region — Himalaya Premium Villas is not a family hotel. It is a private luxury estate, reserved exclusively for one family at a time. When you book, the entire property is yours. Every bedroom, every living space, every terrace, every outdoor area — all of it, shared only with the people you brought.
+                Located in Bhurban — the most prestigious and scenic enclave within the greater Murree Hills region — Himalaya Villas & Resorts is not a family hotel. It is a private luxury estate, reserved exclusively for one family at a time. When you book, the entire property is yours. Every bedroom, every living space, every terrace, every outdoor area — all of it, shared only with the people you brought.
               </p>
               
               <p className="text-xl md:text-2xl font-semibold text-center mt-8 family-murree-text-emerald">
@@ -331,7 +335,7 @@ function WhyPerfectForFamilies() {
     {
       icon: Home,
       title: "The Entire Estate — Just Your Family",
-      description: "No other guests. No shared corridors or lobbies. No strangers by the pool. When you book Himalaya Premium Villas, the full estate belongs exclusively to your family."
+      description: "No other guests. No shared corridors or lobbies. No strangers by the pool. When you book Himalaya Villas & Resorts, the full estate belongs exclusively to your family."
     },
     {
       icon: Bed,
@@ -341,7 +345,7 @@ function WhyPerfectForFamilies() {
     {
       icon: Utensils,
       title: "Eat Together, Your Way",
-      description: "Families do not eat on hotel restaurant schedules. At Himalaya Premium Villas, the fully equipped private kitchen and bespoke in-villa dining mean your family eats what you want, when you want."
+      description: "Families do not eat on hotel restaurant schedules. At Himalaya Villas & Resorts, the fully equipped private kitchen and bespoke in-villa dining mean your family eats what you want, when you want."
     },
     {
       icon: Mountain,
@@ -356,7 +360,7 @@ function WhyPerfectForFamilies() {
     {
       icon: Clock,
       title: "Your Schedule, Not the Hotel's",
-      description: "Checkout times, restaurant hours, pool schedules — family hotels in Murree run on their timetable. At Himalaya Premium Villas, your family sets the pace."
+      description: "Checkout times, restaurant hours, pool schedules — family hotels in Murree run on their timetable. At Himalaya Villas & Resorts, your family sets the pace."
     }
   ];
 
@@ -365,7 +369,7 @@ function WhyPerfectForFamilies() {
       <Container>
         <SectionHeader 
           kicker="FAMILY PERFECTION" 
-          title="Why Himalaya Premium Villas is the Ultimate Family Stay in Murree" 
+          title="Why Himalaya Villas & Resorts is the Ultimate Family Stay in Murree" 
           sub="Family travel has unique demands — space, safety, flexibility, and the freedom to move at your own pace" 
         />
         <div className="grid gap-8 md:grid-cols-2 lg:grid-cols-3">
@@ -474,7 +478,7 @@ function EstateFacilities() {
         <SectionHeader 
           kicker="COMPLETE FACILITIES" 
           title="Everything Your Family Needs — All in One Private Estate" 
-          sub="Himalaya Premium Villas provides every facility a family could need — thoughtfully designed, spaciously laid out, and entirely private" 
+          sub="Himalaya Villas & Resorts provides every facility a family could need — thoughtfully designed, spaciously laid out, and entirely private" 
         />
         <Reveal>
           <div className="family-murree-card family-murree-shadow-lux p-8">
@@ -488,7 +492,7 @@ function EstateFacilities() {
             </div>
             <div className="mt-8 pt-6 border-t" style={{ borderColor: "hsl(165 15% 86%)" }}>
               <p className="text-center text-lg font-medium" style={{ color: "hsl(165 60% 18%)" }}>
-                Whether your family is five people or fifty, Himalaya Premium Villas scales to your needs — providing the space, the privacy, and the service that turns a good trip into an extraordinary one.
+                Whether your family is five people or fifty, Himalaya Villas & Resorts scales to your needs — providing the space, the privacy, and the service that turns a good trip into an extraordinary one.
               </p>
             </div>
           </div>
@@ -508,7 +512,7 @@ function CouplesSection() {
           <SectionHeader 
             kicker="ROMANTIC ESCAPES" 
             title="The Best Hotel in Murree for Couples — A Private Estate Just for Two" 
-            sub="Himalaya Premium Villas is equally extraordinary for couples — whether you are newlyweds on your honeymoon, celebrating an anniversary, or simply carving out time together" 
+            sub="Himalaya Villas & Resorts is equally extraordinary for couples — whether you are newlyweds on your honeymoon, celebrating an anniversary, or simply carving out time together" 
             light 
           />
           <div className="grid gap-12 md:grid-cols-2">
@@ -518,7 +522,7 @@ function CouplesSection() {
                   Most hotels marketed as romantic in Murree offer a decorated room, a candlelit dinner in a shared restaurant, and a view that a hundred other guests are looking at simultaneously. That is not intimacy. That is a stage set for romance, not the real thing.
                 </p>
                 <p className="text-lg leading-relaxed">
-                  At Himalaya Premium Villas, a couple's stay means the entire estate is yours. A candlelit dinner on a private terrace overlooking the Himalayas. Morning tea in total silence, with nothing but mountain air and birdsong around you. Evenings spent exactly as you choose — no noise from neighbouring rooms, no hotel schedules to follow, no world intruding on yours.
+                  At Himalaya Villas & Resorts, a couple's stay means the entire estate is yours. A candlelit dinner on a private terrace overlooking the Himalayas. Morning tea in total silence, with nothing but mountain air and birdsong around you. Evenings spent exactly as you choose — no noise from neighbouring rooms, no hotel schedules to follow, no world intruding on yours.
                 </p>
               </div>
             </Reveal>
@@ -587,7 +591,7 @@ function LocationSection() {
           <Reveal>
             <div className="space-y-6">
               <p className="text-lg leading-relaxed">
-                Located just 50 kilometres from Islamabad and easily accessible from Lahore and Rawalpindi, Bhurban offers the full beauty of the Murree Hills without the crowds and congestion that come with the town centre. The Himalayan views are wider. The pine forests are denser. The air is cooler and cleaner. And at Himalaya Premium Villas, you experience all of it from the privacy of your own estate.
+                Located just 50 kilometres from Islamabad and easily accessible from Lahore and Rawalpindi, Bhurban offers the full beauty of the Murree Hills without the crowds and congestion that come with the town centre. The Himalayan views are wider. The pine forests are denser. The air is cooler and cleaner. And at Himalaya Villas & Resorts, you experience all of it from the privacy of your own estate.
               </p>
               <div className="family-murree-card family-murree-shadow-lux p-6">
                 <h4 className="mb-4 text-xl font-bold" style={{ color: "hsl(165 60% 18%)" }}>Why Bhurban is Perfect</h4>
@@ -643,27 +647,27 @@ function FAQSection() {
   const faqs = [
     {
       question: "What is the best family hotel in Murree?",
-      answer: "For families who want genuine privacy, space, and luxury, Himalaya Premium Villas in Bhurban is the finest option in the Murree Hills region. Unlike standard family hotels in Murree, the entire estate is reserved exclusively for one family at a time — providing multiple bedrooms, private outdoor spaces, bespoke dining, and complete privacy that no hotel can match."
+      answer: "For families who want genuine privacy, space, and luxury, Himalaya Villas & Resorts in Bhurban is the finest option in the Murree Hills region. Unlike standard family hotels in Murree, the entire estate is reserved exclusively for one family at a time — providing multiple bedrooms, private outdoor spaces, bespoke dining, and complete privacy that no hotel can match."
     },
     {
-      question: "Is Himalaya Premium Villas suitable for large families and extended family groups?",
-      answer: "Absolutely. The estate is designed to comfortably accommodate large families and extended family groups. With multiple bedrooms, grand shared living spaces, a fully equipped private kitchen, and expansive outdoor grounds, Himalaya Premium Villas is the ideal setting for multigenerational family stays and family reunions in Murree."
+      question: "Is Himalaya Villas & Resorts suitable for large families and extended family groups?",
+      answer: "Absolutely. The estate is designed to comfortably accommodate large families and extended family groups. With multiple bedrooms, grand shared living spaces, a fully equipped private kitchen, and expansive outdoor grounds, Himalaya Villas & Resorts is the ideal setting for multigenerational family stays and family reunions in Murree."
     },
     {
-      question: "Is Himalaya Premium Villas good for couples and honeymoon stays in Murree?",
-      answer: "Yes. Himalaya Premium Villas is one of the most romantic and private settings in the Murree Hills — perfect for honeymoons, anniversaries, and couples seeking a truly intimate mountain escape. With the entire estate reserved exclusively for your stay, bespoke dining experiences, and panoramic Himalayan views, it offers a level of romance and privacy that no hotel in Murree can provide."
+      question: "Is Himalaya Villas & Resorts good for couples and honeymoon stays in Murree?",
+      answer: "Yes. Himalaya Villas & Resorts is one of the most romantic and private settings in the Murree Hills — perfect for honeymoons, anniversaries, and couples seeking a truly intimate mountain escape. With the entire estate reserved exclusively for your stay, bespoke dining experiences, and panoramic Himalayan views, it offers a level of romance and privacy that no hotel in Murree can provide."
     },
     {
-      question: "Where exactly is Himalaya Premium Villas located in Murree?",
-      answer: "Himalaya Premium Villas is located in Bhurban — the most prestigious and scenic enclave within the Murree Hills region of Pakistan. Bhurban is approximately 50 kilometres from Islamabad and is widely regarded as the most exclusive address in the greater Murree area."
+      question: "Where exactly is Himalaya Villas & Resorts located in Murree?",
+      answer: "Himalaya Villas & Resorts is located in Bhurban — the most prestigious and scenic enclave within the Murree Hills region of Pakistan. Bhurban is approximately 50 kilometres from Islamabad and is widely regarded as the most exclusive address in the greater Murree area."
     },
     {
       question: "What is the best time for a family trip to Murree?",
       answer: "The Murree Hills are beautiful year-round, but summer (May–August) is most popular season for family trips — offering cool weather and lush mountain greenery. Winter (December–February) is magical for families with children who want to experience snowfall in Bhurban. Spring and autumn offer quieter, equally stunning experiences for families who prefer to avoid peak season crowds."
     },
     {
-      question: "Can we celebrate a family event or milestone at Himalaya Premium Villas?",
-      answer: "Yes. The estate is fully equipped to host family celebrations — from birthday parties and anniversary dinners to Eid gatherings and family reunions. With a dedicated event setup team, bespoke catering options, and one of the most beautiful natural settings in the Murree Hills, Himalaya Premium Villas turns every family milestone into an extraordinary memory."
+      question: "Can we celebrate a family event or milestone at Himalaya Villas & Resorts?",
+      answer: "Yes. The estate is fully equipped to host family celebrations — from birthday parties and anniversary dinners to Eid gatherings and family reunions. With a dedicated event setup team, bespoke catering options, and one of the most beautiful natural settings in the Murree Hills, Himalaya Villas & Resorts turns every family milestone into an extraordinary memory."
     }
   ];
 
@@ -673,7 +677,7 @@ function FAQSection() {
         <SectionHeader 
           kicker="FREQUENTLY ASKED QUESTIONS" 
           title="Family Hotels in Murree" 
-          sub="Everything you need to know about Himalaya Premium Villas and your family stay in the Murree Hills" 
+          sub="Everything you need to know about Himalaya Villas & Resorts and your family stay in the Murree Hills" 
         />
         <div className="space-y-6">
           {faqs.map((faq, k) => (
@@ -752,7 +756,7 @@ function FinalCTA() {
                 Give Your Family the Murree Trip They Will Never Stop Talking About
               </h2>
               <p className="text-xl mb-8 max-w-3xl mx-auto leading-relaxed">
-                Stop settling for hotel rooms when your family deserves an entire private estate. Himalaya Premium Villas offers families something the Murree Hills have never seen before — complete exclusivity, breathtaking Himalayan views, and the kind of space and freedom that transforms a holiday into a memory that stays with your family forever.
+                Stop settling for hotel rooms when your family deserves an entire private estate. Himalaya Villas & Resorts offers families something the Murree Hills have never seen before — complete exclusivity, breathtaking Himalayan views, and the kind of space and freedom that transforms a holiday into a memory that stays with your family forever.
               </p>
               <div className="mb-8">
                 <p className="text-lg font-medium mb-4">
@@ -768,14 +772,14 @@ function FinalCTA() {
                   <Phone className="h-5 w-5" />
                   +92 304 567 9000
                 </a>
-                <a 
-                  href="mailto:info@himalayavillas.com" 
+                <EmailLink
+                  user="info"
                   className="rounded-full px-8 py-4 text-base font-semibold transition-all hover:scale-105 inline-flex items-center gap-2 border-2"
                   style={{ borderColor: "hsl(42 95% 65%)", color: "hsl(42 95% 65%)" }}
                 >
                   <Mail className="h-5 w-5" />
-                  info@himalayavillas.com
-                </a>
+                  <EmailLink user="info" plain />
+                </EmailLink>
               </div>
               <div className="mt-6 flex items-center justify-center gap-2">
                 <MapPin className="h-5 w-5" />
@@ -838,7 +842,7 @@ function SectionCTA() {
 /* ----------------------------- Page ----------------------------- */
 export default function Index() {
   useEffect(() => {
-    document.title = "Family Hotels in Murree — Himalaya Premium Villas, Where Families Belong";
+    document.title = "Family Hotels in Murree — Himalaya Villas & Resorts, Where Families Belong";
   }, []);
   return (
     <>

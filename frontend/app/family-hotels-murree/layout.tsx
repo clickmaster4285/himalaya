@@ -8,10 +8,10 @@ export const metadata: Metadata = {
     title: "Family Hotels Murree - Kid-Friendly Hotels at Himalaya Villas",
     description: "Family-friendly hotels in Murree with kids' activities, family suites, and safe environment. Perfect family vacation at Himalaya Villas Bhurban.",
     type: "website",
-    url: "https://himalayavillas.com/family-hotels-murree",
+    url: "https://himalayavillas.com/family-hotels-in-murree",
   },
   alternates: {
-    canonical: "https://himalayavillas.com/family-hotels-murree",
+    canonical: "https://himalayavillas.com/family-hotels-in-murree",
   },
 };
 

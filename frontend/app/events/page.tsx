@@ -16,7 +16,8 @@ import { buildWhatsAppBookingUrl } from "@/lib/whatsapp";
 import { trackAndOpen } from "@/lib/trackedClick";
 import EventsHero from "@/components/EventsHero";
 
-export const dynamic = "force-dynamic";
+// HIM-TECH-0010: cacheable HTML, regenerated every five minutes.
+export const revalidate = 300;
 
 export const metadata: Metadata = createPageMetadata({
   title: "Events at Himalaya Villas | Weddings & Celebrations ",
@@ -113,7 +114,7 @@ const eventSections = [
       {
         id: 8,
         title: "Private Musical Concerts",
-        description: "Exclusive classical and acoustic performances for private guests.",
+        description: "Private concerts, including a live band when you ask for one.",
         badge: "Featured",
         slug: "private-musical-concerts",
       },
@@ -132,13 +133,6 @@ const eventSections = [
         slug: "dj-nights-music-parties",
       },
       {
-        id: 11,
-        title: "Live Band Performances",
-        description: "Modern or fusion live band options for high-energy events.",
-        badge: "Concert",
-        slug: "live-band-performances",
-      },
-      {
         id: 12,
         title: "Cultural Shows & Acts",
         description: "Traditional performances to enrich your celebration vibe.",
@@ -154,7 +148,7 @@ const eventSections = [
       {
         id: 13,
         title: "Corporate Retreat Packages",
-        description: "Strategic offsite planning with accommodation and activities.",
+        description: "An offsite for one company, including team sessions on the estate.",
         badge: "Business",
         slug: "corporate-retreat-packages",
       },
@@ -178,13 +172,6 @@ const eventSections = [
         description: "Professional setup with presentation zones and hospitality.",
         badge: "Cooperate",
         slug: "conferences-seminars",
-      },
-      {
-        id: 17,
-        title: "Team Building Retreats",
-        description: "Outdoor + indoor team activities for stronger collaboration.",
-        badge: "Teams",
-        slug: "team-building-retreats",
       },
       {
         id: 18,
@@ -298,37 +285,16 @@ const eventSections = [
       {
         id: 31,
         title: "Yoga & Meditation Retreats",
-        description: "Mindful sessions with serene mountain environments.",
+        description: "A quiet stay, including a low-screen routine when you ask for one.",
         badge: "Wellness",
         slug: "yoga-meditation-retreats",
       },
       {
-        id: 32,
-        title: "Digital Detox Experiences",
-        description: "Low-screen peaceful stays with curated routines.",
-        badge: "Detox",
-        slug: "digital-detox-experiences",
-      },
-      {
         id: 33,
         title: "Spa & Relaxation Escapes",
-        description: "Rejuvenating body and mind with holistic comfort.",
+        description: "In-villa relaxation for the group in residence. Camps and healing courses are not a standing service.",
         badge: "Relax",
         slug: "spa-relaxation-escapes",
-      },
-      {
-        id: 34,
-        title: "Health & Fitness Camps",
-        description: "Active wellness programs with guided outdoor workouts.",
-        badge: "Fitness",
-        slug: "health-fitness-camps",
-      },
-      {
-        id: 35,
-        title: "Holistic Healing Programs",
-        description: "Balanced healing experiences for stress-free recovery.",
-        badge: "Healing",
-        slug: "holistic-healing-programs",
       },
       {
         id: 36,

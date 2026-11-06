@@ -4,59 +4,26 @@ import Link from "next/link";
 import Navbar from "@/components/Navbar";
 import Footer from "@/components/Footer";
 import { Check, X, Building, TreePine, MapPin, Coffee, Star } from "lucide-react";
+import { ContentReviewNote } from "@/components/seo/ContentReviewNote";
 
 export const metadata: Metadata = {
-  title: "Best Hotels in Murree Pakistan 2026 | Himalaya Villas",
+  title: "Best Hotels in Murree, Pakistan | Himalaya Villas",
   description:
     "Looking for the best hotels in Murree Pakistan? Discover why discerning guests choose Himalaya Villas in Bhurban — private villas, panoramic views, in-villa dining. 1 hour from Islamabad.",
+  authors: [{ name: "Himalaya Villas & Resorts" }],
   alternates: {
-    canonical: "https://himalayavillas.com/best-hotels-murree-pakistan",
+    canonical: "https://himalayavillas.com/luxury-hotels-in-murree",
   },
   openGraph: {
     title: "Best Hotels in Murree Pakistan | Himalaya Villas, Bhurban",
     description: "The definitive guide to staying in Murree — hotel comparisons, decision framework, and why private villa accommodation in Bhurban is the choice serious travellers make.",
     type: "website",
-    url: "https://himalayavillas.com/best-hotels-murree-pakistan",
+    url: "https://himalayavillas.com/luxury-hotels-in-murree",
   }
 };
 
 const whatsappNumber = "+923045679000"; // Replace with actual
 const buildWhatsAppBookingUrl = (message: string) => `https://wa.me/${whatsappNumber.replace(/[^0-9]/g, "")}?text=${encodeURIComponent(message)}`;
-
-const lodgingSchema = {
-  "@context": "https://schema.org",
-  "@type": "LodgingBusiness",
-  "name": "Himalaya Villas",
-  "description": "Luxury private villa accommodation in Bhurban, Murree Hills, Pakistan. Mountain views, in-villa dining, personalised concierge service.",
-  "url": "https://himalayavillas.com",
-  "telephone": "+92 304 567 9000",
-  "address": {
-    "@type": "PostalAddress",
-    "streetAddress": "Bhurban",
-    "addressLocality": "Murree",
-    "addressRegion": "Punjab",
-    "addressCountry": "PK"
-  },
-  "geo": {
-    "@type": "GeoCoordinates",
-    "latitude": "33.9346",
-    "longitude": "73.4592"
-  },
-  "starRating": { "@type": "Rating", "ratingValue": "5" },
-  "priceRange": "PKR 40,000 - PKR 95,000",
-  "amenityFeature": [
-    {"@type": "LocationFeatureSpecification", "name": "Private Terrace", "value": true},
-    {"@type": "LocationFeatureSpecification", "name": "In-Villa Dining", "value": true},
-    {"@type": "LocationFeatureSpecification", "name": "Mountain View", "value": true},
-    {"@type": "LocationFeatureSpecification", "name": "Concierge Service", "value": true},
-    {"@type": "LocationFeatureSpecification", "name": "Halal Food", "value": true}
-  ],
-  "aggregateRating": {
-    "@type": "AggregateRating",
-    "ratingValue": "4.7",
-    "reviewCount": "87"
-  }
-};
 
 const faqSchema = {
   "@context": "https://schema.org",
@@ -94,14 +61,13 @@ const breadcrumbSchema = {
   "@type": "BreadcrumbList",
   "itemListElement": [
     {"@type": "ListItem", "position": 1, "name": "Home", "item": "https://himalayavillas.com"},
-    {"@type": "ListItem", "position": 2, "name": "Murree Hotels Guide", "item": "https://himalayavillas.com/best-hotels-murree-pakistan"}
+    {"@type": "ListItem", "position": 2, "name": "Murree Hotels Guide", "item": "https://himalayavillas.com/luxury-hotels-in-murree"}
   ]
 };
 
 export default function BestHotelsMurreePage() {
   return (
     <div className="min-h-screen bg-[#F6F1EA] selection:bg-[#c9a55b] selection:text-white">
-      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(lodgingSchema) }} />
       <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(faqSchema) }} />
       <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumbSchema) }} />
       
@@ -131,6 +97,7 @@ export default function BestHotelsMurreePage() {
         <p className="mt-4 text-base md:text-lg text-white/90 max-w-2xl font-light leading-relaxed">
             A direct, comparative guide to every serious option in the area — with pricing, honest assessments, and the decision framework that tells you which choice fits your stay.
         </p>
+        <ContentReviewNote className="mt-4 text-sm text-white/75" />
         <div className="mt-6 flex flex-wrap gap-4">
             {/* Optional: Add your CTA button here if needed */}
         </div>
@@ -158,7 +125,7 @@ export default function BestHotelsMurreePage() {
             Every year, hundreds of thousands of travellers search for hotels in Murree. Most find the same results: a ranked list, a star rating, an OTA booking link. What they don't find is an honest comparison of what each property actually delivers — and more importantly, which type of accommodation is correct for their specific situation.
           </p>
           <p>
-            The truth about Murree hotels in 2026 is this: the best accommodation in the area is not in Murree town. It is in Bhurban — 8 km above Murree, at higher elevation, with better views, cooler air, and a quieter environment. And the best accommodation in Bhurban is increasingly villa-based, not hotel-based.
+            The truth about Murree hotels is this: the best accommodation in the area is not in Murree town. It is in Bhurban — 8 km above Murree, at higher elevation, with better views, cooler air, and a quieter environment. And the best accommodation in Bhurban is increasingly villa-based, not hotel-based.
           </p>
           <p className="font-medium text-neutral-800 border-l-4 border-[#c9a55b] pl-4">
             This page is a direct, comparative guide to every serious option in the area — with pricing, honest assessments, and a framework that tells you which choice is correct for your group.
@@ -216,7 +183,7 @@ export default function BestHotelsMurreePage() {
           </p>
 
           <div className="mt-10 flex flex-wrap justify-center gap-6">
-            <Link href="/luxury-hotel-murree" className="text-[#c9a55b] font-medium hover:underline flex items-center gap-2">
+            <Link href="/luxury-hotels-in-murree" className="text-[#c9a55b] font-medium hover:underline flex items-center gap-2">
               → View Himalaya Villas room and villa types
             </Link>
             <Link href="/murree-hotel-packages" className="text-[#c9a55b] font-medium hover:underline flex items-center gap-2">
@@ -368,7 +335,7 @@ export default function BestHotelsMurreePage() {
           </div>
 
           <div className="mt-16 flex flex-wrap justify-center gap-8">
-            <Link href="/family-hotels-murree" className="text-white/90 hover:text-[#c9a55b] font-medium transition flex items-center gap-2">
+            <Link href="/family-hotels-in-murree" className="text-white/90 hover:text-[#c9a55b] font-medium transition flex items-center gap-2">
               → Himalaya Villas Family Retreat
             </Link>
             <Link href="/romantic-hotels-murree" className="text-white/90 hover:text-[#c9a55b] font-medium transition flex items-center gap-2">

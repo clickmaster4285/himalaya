@@ -1,5 +1,7 @@
 "use client";
 
+import { BookingTermsSection } from "@/components/BookingTerms";
+import { pushConversion } from "@/lib/conversion";
 import Link from "next/link";
 import { Suspense, useCallback, useEffect, useMemo, useRef, useState } from "react";
 import { usePathname, useRouter, useSearchParams } from "next/navigation";
@@ -39,29 +41,8 @@ const stayBookingSchema = {
   "@type": "ReservationPackage",
   "name": "Villa Stay Booking at Himalaya Villas",
   "description": "Book luxury villa stays in Bhurban, Murree Hills with private accommodation, mountain views, and premium amenities.",
-  "provider": {
-    "@type": "Organization",
-    "name": "Himalaya Villas and Resort",
-    "telephone": "+92 304 567 9000",
-    "address": {
-      "@type": "PostalAddress",
-      "streetAddress": "Bhurban",
-      "addressLocality": "Murree",
-      "addressRegion": "Punjab",
-      "addressCountry": "PK"
-    }
-  },
-  "offers": {
-    "@type": "Offer",
-    "price": "40000",
-    "priceCurrency": "PKR",
-    "description": "Luxury villa accommodation per night",
-    "availability": "https://schema.org/InStock"
-  },
-  "bookingAgent": {
-    "@type": "Organization",
-    "name": "Himalaya Villas and Resort"
-  }
+  "provider": { "@id": "https://himalayavillas.com/#organization" },
+  "bookingAgent": { "@id": "https://himalayavillas.com/#organization" }
 };
 
 const faqSchema = {
@@ -359,6 +340,7 @@ function BookStayContent() {
       }
       const b = data.booking;
       if (b?.reference && b?.id) {
+        pushConversion("enquiry_submit", { form: "book-stay", unit: selectedVilla.slug });
         setCreatedBooking({
           id: b.id,
           reference: b.reference,
@@ -1493,6 +1475,7 @@ function BookStayContent() {
         </div>
       </section>
 
+      <BookingTermsSection className="bg-white" />
       <Footer />
     </div>
   );
@@ -1528,6 +1511,7 @@ function BookStayFallback() {
           </Link>
         </div>
       </div>
+      <BookingTermsSection className="mt-12 bg-white" />
     </div>
   );
 }

@@ -132,7 +132,7 @@ export default function CorporateRetreatsPage() {
             data: {
               "@context": "https://schema.org",
               "@type": "Service",
-              name: "Corporate retreats at Himalaya Villas and Resort",
+              name: "Corporate retreats at Himalaya Villas & Resorts",
               serviceType: "Executive offsite and retreat hosting",
               areaServed: "Bhurban, Murree, Pakistan",
             },

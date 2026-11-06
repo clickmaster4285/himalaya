@@ -205,7 +205,7 @@ export const article498: Article = {
       heading: "📎 Explore More",
       items: [
         { href: "/best-time-to-visit-murree", label: "Best time to visit Murree" },
-        { href: "/hotels-in-murree-pakistan", label: "Full Murree hotel guide" },
+        { href: "/luxury-hotels-in-murree", label: "Full Murree hotel guide" },
         { href: "/villas", label: "Browse Himalaya Villas" },
         { href: "/pc-hotel-bhurban-alternative", label: "PC Hotel Bhurban alternatives" },
         { href: "/book/stay", label: "Check availability" },

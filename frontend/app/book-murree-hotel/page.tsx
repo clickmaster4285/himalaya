@@ -33,25 +33,8 @@ const hotelBookingSchema = {
   "@type": "Service",
   "name": "Book Murree Hotel - Himalaya Villas & Resorts",
   "description": "Luxury hotel booking in Murree with premium accommodations, world-class amenities, and breathtaking mountain views.",
-  "provider": {
-    "@type": "Organization",
-    "name": "Himalaya Villas and Resort",
-    "telephone": "+92 304 567 9000",
-    "address": {
-      "@type": "PostalAddress",
-      "streetAddress": "Bhurban",
-      "addressLocality": "Murree",
-      "addressRegion": "Punjab",
-      "addressCountry": "PK"
-    }
-  },
+  "provider": { "@id": "https://himalayavillas.com/#organization" },
   "serviceType": "Hotel Accommodation Booking",
-  "offers": {
-    "@type": "Offer",
-    "price": "25000",
-    "priceCurrency": "PKR",
-    "description": "Luxury hotel rooms starting from PKR 25,000 per night"
-  },
   "areaServed": {
     "@type": "Place",
     "name": "Murree Hills, Bhurban"

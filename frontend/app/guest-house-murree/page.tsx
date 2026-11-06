@@ -111,10 +111,7 @@ const articleSchema = {
   },
   "datePublished": "2026-07-27",
   "dateModified": "2026-07-27",
-  "publisher": {
-    "@type": "Organization",
-    "name": "Himalaya Villas"
-  },
+  "publisher": { "@id": "https://himalayavillas.com/#organization" },
   "mainEntityOfPage": {
     "@type": "WebPage",
     "@id": absoluteUrl("/guest-house-murree")
@@ -252,7 +249,7 @@ export default function GuestHouseMurreePage() {
                 <Link href="/pc-hotel-bhurban-alternative" className="text-sm sm:text-base text-[#8b6914] underline underline-offset-4 hover:text-[#6d5210] transition-colors">
                   PC Hotel Bhurban alternative →
                 </Link>
-                <Link href="/bhurban" className="text-sm sm:text-base text-[#8b6914] underline underline-offset-4 hover:text-[#6d5210] transition-colors">
+                <Link href="/hotels-in-bhurban" className="text-sm sm:text-base text-[#8b6914] underline underline-offset-4 hover:text-[#6d5210] transition-colors">
                   Bhurban area guide →
                 </Link>
               </div>

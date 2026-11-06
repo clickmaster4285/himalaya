@@ -1,6 +1,7 @@
 // app/villas/[slug]/VillasClient.tsx
 "use client";
 
+import { BookingTermsCompact } from "@/components/BookingTerms";
 import { Check } from "lucide-react";
 import { type Room } from "@/content/villas/villa-content";
 import { buildWhatsAppVillaBookingUrl, buildWhatsAppVillaEnquiryUrl } from "@/lib/whatsapp";
@@ -56,8 +57,10 @@ export default function VillasClient({ room }: VillasClientProps) {
             </h3>
 
             <p className="mt-2 text-sm text-gray-500">
-              Includes breakfast for 2 guests
+              Per night for the unit. Includes breakfast for 2 guests.
             </p>
+
+            <BookingTermsCompact className="mt-4" />
 
             <div className="mt-7 space-y-3">
               <a

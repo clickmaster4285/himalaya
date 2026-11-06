@@ -26,9 +26,9 @@ export const VILLA_BLOG_POSTS: VillaBlogPost[] = [
   },
 {
   slug: "best-hotels-in-murree-pakistan",
-  title: "Best Hotels in Murree, Pakistan - Himalaya Villas & Resort",
+  title: "Best Hotels in Murree, Pakistan - Himalaya Villas & Resorts",
   excerpt:
-    "Looking for the best hotels in Murree? Explore Himalaya Villas & Resort's luxury private villas, rates & amenities. Book your dream mountain stay today!",
+    "Looking for the best hotels in Murree? Explore Himalaya Villas & Resorts' luxury private villas, rates & amenities. Book your dream mountain stay today!",
   date: "2025-12-20",
   readMinutes: 6,
   coverImage: "/assets/murree-hotels.jpeg",
@@ -64,7 +64,7 @@ export const VILLA_BLOG_POSTS: VillaBlogPost[] = [
   },
   {
     slug: "thing-to-do-bhurban-murree",
-    href: "/thing-to-do-bhurban-murree",
+    href: "/things-to-do-in-murree",
     title: "Things to Do Near Bhurban Murree — A Complete Activity Guide",
     excerpt:
       "Patriata, Ayubia, Mall Road, hiking trails, and scenic viewpoints — the essential travel guide for families and guests staying at Himalaya Villas & Resorts.",
@@ -74,7 +74,7 @@ export const VILLA_BLOG_POSTS: VillaBlogPost[] = [
   },
   {
     slug: "Why-Villas-are-the-ultimate-luxury-stays-in-bhurban",
-    href: "/Why-Villas-are-the-ultimate-luxury-stays-in-bhurban",
+    href: "/blogs/why-villas-are-the-ultimate-luxury-stays-in-bhurban",
     title: "Why Villas Are the Ultimate Luxury Stay in Bhurban & Murree",
     excerpt:
       "Discover why private villas in Bhurban Murree deliver unmatched privacy, space, and exclusivity compared to hotels.",
@@ -84,10 +84,10 @@ export const VILLA_BLOG_POSTS: VillaBlogPost[] = [
   },
   {
     slug: "family-tour-murree-himalaya-villas",
-    href: "/family-tour-murree-himalaya-villas",
-    title: "Why Himalaya Villas & Resorts & Resorts in Murree Are Best for a Family Tour",
+    href: "/family-hotels-in-murree",
+    title: "Why Himalaya Villas & Resorts in Murree Is Best for a Family Tour",
     excerpt:
-      "Planning a family tour to Murree or Bhurban? Discover why Himalaya Premium Villas is the perfect family stay — private, safe, spacious & activities for all ages.",
+      "Planning a family tour to Murree or Bhurban? Discover why Himalaya Villas & Resorts is the perfect family stay — private, safe, spacious & activities for all ages.",
     date: "2026-04-18",
     readMinutes: 12,
     coverImage: "/assets/blog-family-tour-featured-banner.png",
@@ -117,7 +117,7 @@ export const VILLA_BLOG_POSTS: VillaBlogPost[] = [
     title: "Hotels in Murree for Events — Booking Guide | Himalaya Villas",
     headline: "Plan Your Event in Murree: Venue & Booking Guide",
     excerpt:
-      "Planning a wedding, retreat, or celebration in Murree? Compare venue options, pricing & booking tips at Himalaya Villas & Resort, Bhurban. Book now.",
+      "Planning a wedding, retreat, or celebration in Murree? Compare venue options, pricing & booking tips at Himalaya Villas & Resorts, Bhurban. Book now.",
     date: "2026-09-11",
     readMinutes: 10,
     coverImage: "/assets/gallery-garden.jpg",
@@ -127,7 +127,7 @@ export const VILLA_BLOG_POSTS: VillaBlogPost[] = [
     title: "Budget Friendly Trip to Murree - Cost & Travel Guide",
     headline: "Budget Friendly Trip to Murree: Affordable Travel Plan & Tips",
     excerpt:
-      "Plan a budget-friendly trip to Murree with cheap transport, free attractions & stays from PKR 16,500/night at Himalaya Villas & Resort, Bhurban.",
+      "Plan a budget-friendly trip to Murree with cheap transport, free attractions & stays from PKR 16,500/night at Himalaya Villas & Resorts, Bhurban.",
     date: "2026-09-11",
     readMinutes: 10,
     coverImage: "/assets/murree-valley-view.jpg",
@@ -154,10 +154,10 @@ export const VILLA_BLOG_POSTS: VillaBlogPost[] = [
   },
   {
     slug: "resorts-in-murree-for-couples",
-    title: "Resorts in Murree for Couples - Himalaya Villas & Resort",
+    title: "Resorts in Murree for Couples - Himalaya Villas & Resorts",
     headline: "Best Resorts in Murree for Couples: A Real Guide to Finding Privacy in the Hills",
     excerpt:
-      "Searching for the perfect couples' resort in Murree? Himalaya Villas & Resort offers private terraces, Himalayan views & terrace dining in Bhurban. Reserve today!",
+      "Searching for the perfect couples' resort in Murree? Himalaya Villas & Resorts offers private terraces, Himalayan views & terrace dining in Bhurban. Reserve today!",
     date: "2026-09-11",
     readMinutes: 9,
     coverImage: "/assets/blog-family-tour-balcony.png",

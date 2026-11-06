@@ -30,18 +30,7 @@ const luxuryHotelSchema = {
   "@type": "Service",
   "name": "Luxury Hotel in Murree - Himalaya Villas",
   "description": "Ultra-luxury accommodations in Murree with premium suites, butler service, fine dining, and exclusive amenities for discerning travelers.",
-  "provider": {
-    "@type": "Organization",
-    "name": "Himalaya Villas and Resort",
-    "telephone": "+92 304 567 9000",
-    "address": {
-      "@type": "PostalAddress",
-      "streetAddress": "Bhurban",
-      "addressLocality": "Murree",
-      "addressRegion": "Punjab",
-      "addressCountry": "PK"
-    }
-  },
+  "provider": { "@id": "https://himalayavillas.com/#organization" },
   "serviceType": "Luxury Accommodation",
   "offers": {
     "@type": "Offer",

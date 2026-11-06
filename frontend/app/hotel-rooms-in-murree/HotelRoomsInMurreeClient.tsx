@@ -1,5 +1,6 @@
 "use client";
 
+import EmailLink from "@/components/EmailLink";
 import { useEffect, useRef, useState, type ReactNode } from "react";
 import Link from "next/link";
 import {
@@ -219,11 +220,7 @@ const ARTICLE_SCHEMA = {
   },
   datePublished: "2026-07-01",
   dateModified: "2026-07-23",
-  publisher: {
-    "@type": "Organization",
-    name: "Himalaya Villas & Resorts",
-    url: "https://himalayavillas.com",
-  },
+  publisher: { "@id": "https://himalayavillas.com/#organization" },
   mainEntityOfPage: {
     "@type": "WebPage",
     "@id": "https://himalayavillas.com/hotel-rooms-in-murree",
@@ -752,13 +749,10 @@ function PageFooter() {
           </Link>
         </div>
         <div className="mt-10 flex flex-wrap items-center justify-center gap-6 text-sm text-white/60">
-          <a
-            href={`mailto:${SITE_CONTACT.emails.info}`}
-            className="inline-flex items-center gap-1 hover:text-white"
-          >
+          <EmailLink user="info" className="inline-flex items-center gap-1 hover:text-white">
             <Mail className="h-4 w-4" />
-            {SITE_CONTACT.emails.info}
-          </a>
+            <EmailLink user="info" plain />
+          </EmailLink>
           <span>{SITE_CONTACT.addressLines.join(", ")}</span>
         </div>
       </div>
@@ -812,7 +806,7 @@ export default function HotelRoomsInMurreeClient() {
                   abroad. Rates are quoted in PKR and reflect what properties
                   actually charge, not what rate cards claim. For a broader view
                   of the market, see our{" "}
-                  <Link href="/best-hotels-murree-pakistan">
+                  <Link href="/luxury-hotels-in-murree">
                     best hotels in Murree Pakistan
                   </Link>{" "}
                   guide.
@@ -833,7 +827,7 @@ export default function HotelRoomsInMurreeClient() {
               and the same budget buys a very different room depending on which
               one you choose. Before comparing rooms, decide which Murree you
               are booking. See also our{" "}
-              <Link href="/best-hotels-murree-pakistan">
+              <Link href="/luxury-hotels-in-murree">
                 Murree hotel room rates
               </Link>{" "}
               hub for area-by-area comparisons.

@@ -1,4 +1,7 @@
-﻿"use client";
+"use client";
+import { ContentReviewNote } from "@/components/seo/ContentReviewNote";
+import EmailLink from "@/components/EmailLink";
+import { pushConversion } from "@/lib/conversion";
 
 import { useEffect, useRef, useState, ReactNode } from "react";
 import {
@@ -10,7 +13,7 @@ import { Coffee, Car, Accessibility, Ban, Shirt, ConciergeBell, Baby, ChefHat, B
 import { buildBhurbanInquiryWhatsAppUrl, buildWhatsAppBookingUrl } from "@/lib/whatsapp";
 
 const BHBURBAN_WHATSAPP_URL = buildWhatsAppBookingUrl(
-  "a private stay at Himalaya Premium Villas in Bhurban"
+  "a private stay at Himalaya Villas & Resorts in Bhurban"
 );
 
 /* ============================================================
@@ -181,6 +184,7 @@ function HeroSlider() {
       );
       return;
     }
+    pushConversion("enquiry_submit", { form: payload.source });
 
     setSubmitStatus("success");
     if (data.guestEmailSent) {
@@ -253,12 +257,13 @@ function HeroSlider() {
           <Reveal>
             <h1 className="text-3xl font-bold leading-snug sm:text-4xl md:text-5xl lg:text-6xl">
               <span className="bh-text-gold">Hotels in Bhurban</span>
-              <span className="text-white"> | Himalaya Premium Villas</span>
+              <span className="text-white"> | Himalaya Villas & Resorts</span>
               <br />
               <span className="mt-2 block text-2xl font-semibold text-white/95 sm:text-3xl md:text-4xl lg:text-5xl">
                 — Private Luxury Hotel Bhurban Murree
               </span>
             </h1>
+            <ContentReviewNote className="mt-4 text-sm text-white/75" />
           </Reveal>
           <Reveal delay={300}>
             <p className="mt-4 text-2xl font-light italic md:text-3xl" style={{ color: "hsl(42 95% 75%)" }}>
@@ -581,22 +586,22 @@ function WhyStandApart() {
     { 
       icon: Mountain, 
       title: "Panoramic Himalayan Views", 
-      desc: "Every window, terrace, and outdoor space at Himalaya Premium Villas has been positioned to frame the most spectacular Himalayan vistas. Wake up every morning to a view that reminds you why you came to Bhurban in the first place."
+      desc: "Every window, terrace, and outdoor space at Himalaya Villas & Resorts has been positioned to frame the most spectacular Himalayan vistas. Wake up every morning to a view that reminds you why you came to Bhurban in the first place."
     },
     { 
       icon: Utensils, 
       title: "Curated In-Villa Dining", 
-      desc: "Forget fixed menus and restaurant queues. Dining at Himalaya Premium Villas is a bespoke experience — from intimate candlelit in-villa meals to open-air barbecue evenings under the mountain sky, every meal is crafted around your preferences and schedule."
+      desc: "Forget fixed menus and restaurant queues. Dining at Himalaya Villas & Resorts is a bespoke experience — from intimate candlelit in-villa meals to open-air barbecue evenings under the mountain sky, every meal is crafted around your preferences and schedule."
     },
     { 
       icon: Heart, 
       title: "Destination Weddings & Corporate Retreats", 
-      desc: "Dreaming of a royal destination wedding in Bhurban? Planning an executive retreat away from the city? Himalaya Premium Villas provides a breathtaking backdrop, world-class event infrastructure, and a dedicated team committed to making every occasion flawless and unforgettable."
+      desc: "Dreaming of a royal destination wedding in Bhurban? Planning an executive retreat away from the city? Himalaya Villas & Resorts provides a breathtaking backdrop, world-class event infrastructure, and a dedicated team committed to making every occasion flawless and unforgettable."
     },
     { 
       icon: Sparkles, 
       title: "Absolute Privacy, Always", 
-      desc: "Privacy is not an upgrade at Himalaya Premium Villas — it is the foundation. No lobbies. No shared pools. No random guests wandering past. From arrival to departure, the entire estate belongs to you and those you choose to bring."
+      desc: "Privacy is not an upgrade at Himalaya Villas & Resorts — it is the foundation. No lobbies. No shared pools. No random guests wandering past. From arrival to departure, the entire estate belongs to you and those you choose to bring."
     },
     { 
       icon: Clock, 
@@ -611,7 +616,7 @@ function WhyStandApart() {
         <SectionHeader 
           kicker="What Makes Us Different" 
           title={<>Why Bhurban Murree Is Pakistan&apos;s <span className="bh-text-emerald">Premier Mountain Destination</span></>}
-          sub="Among the bhurban best hotels travellers research, Himalaya Premium Villas stands apart — not because of star ratings, but because the entire estate is yours. The difference is not just room quality; it is how a stay should feel when nothing is shared with strangers." 
+          sub="Among the bhurban best hotels travellers research, Himalaya Villas & Resorts stands apart — not because of star ratings, but because the entire estate is yours. The difference is not just room quality; it is how a stay should feel when nothing is shared with strangers." 
         />
         <div className="grid gap-8 md:grid-cols-2 lg:grid-cols-3">
           {features.map((feature, k) => (
@@ -668,8 +673,8 @@ function IdealFor() {
         <Container>
           <SectionHeader 
             kicker="Perfect For" 
-            title={<>Who Is Himalaya Premium Villas <span className="bh-text-emerald">Perfect For?</span></>}
-            sub="Himalaya Premium Villas is crafted for guests who value quality over quantity — those who know the difference between a stay and an experience." 
+            title={<>Who Is Himalaya Villas & Resorts <span className="bh-text-emerald">Perfect For?</span></>}
+            sub="Himalaya Villas & Resorts is crafted for guests who value quality over quantity — those who know the difference between a stay and an experience." 
           />
           <div className="grid gap-8 md:grid-cols-2 lg:grid-cols-3">
             {guestTypes.map((type, k) => (
@@ -710,7 +715,7 @@ function TheEstate() {
         <Container>
           <SectionHeader 
             kicker="Estate Features" 
-            title={<>Inside <span className="bh-text-gold">Himalaya Premium Villas</span></>}
+            title={<>Inside <span className="bh-text-gold">Himalaya Villas & Resorts</span></>}
             sub="Every detail exceeds what guests expect from typical bhurban hotels and chain stays — a private estate where the mountain, not the lobby, defines your experience." 
             light 
           />
@@ -752,7 +757,7 @@ function AnimatedGallery() {
         <SectionHeader 
           kicker="Visual Journey" 
           title={<>Moments at <span className="bh-text-emerald">Himalaya Villas</span></>}
-          sub="See why families searching for the best hotels in Bhurban Murree choose a private estate over crowded lobbies — every corner of Himalaya Premium Villas is yours to explore." 
+          sub="See why families searching for the best hotels in Bhurban Murree choose a private estate over crowded lobbies — every corner of Himalaya Villas & Resorts is yours to explore." 
         />
       </Container>
       
@@ -846,7 +851,7 @@ function BhurbanDestination() {
           <SectionHeader 
             kicker="Location" 
             title={<>Why Bhurban Is Pakistan's <span className="bh-text-emerald">Premier Mountain Destination</span></>}
-            sub="Bhurban sits among the most sought-after hotels in Bhurban Pakistan destinations — pine forest, cool air, and Himalayan views year-round. Whatever the season, Himalaya Premium Villas places you at the centre of it, minutes above Murree town." 
+            sub="Bhurban sits among the most sought-after hotels in Bhurban Pakistan destinations — pine forest, cool air, and Himalayan views year-round. Whatever the season, Himalaya Villas & Resorts places you at the centre of it, minutes above Murree town." 
           />
           <div className="grid gap-8 md:grid-cols-2 lg:grid-cols-4">
             {seasons.map((season, k) => (
@@ -884,7 +889,7 @@ function FinalCTA() {
             </Reveal>
             <Reveal delay={150}>
               <p className="mx-auto mt-5 max-w-3xl text-lg" style={{ color: "hsl(40 38% 97% / .85)" }}>
-                Compared with typical bhurban best hotels and shared resorts, Himalaya Premium Villas is a fully private luxury estate — every detail designed around your group. Limited monthly bookings; secure your exclusive stay before peak season fills.
+                Compared with typical bhurban best hotels and shared resorts, Himalaya Villas & Resorts is a fully private luxury estate — every detail designed around your group. Limited monthly bookings; secure your exclusive stay before peak season fills.
               </p>
             </Reveal>
             <Reveal delay={300}>
@@ -919,7 +924,7 @@ function FinalCTA() {
                   </div>
                   <div className="flex items-center gap-2">
                     <Mail className="h-5 w-5" />
-                    <span>info@himalayavillas.com</span>
+                    <EmailLink user="info" plain />
                   </div>
                   <div className="flex items-center gap-2">
                     <MapPin className="h-5 w-5" />
@@ -977,7 +982,7 @@ const KEYWORD_GUIDE_TOPICS = [
   {
     phrase: "hotels in bhurban",
     copy:
-      "Most hotels in bhurban sell rooms; few sell exclusivity. When you compare hotels in bhurban online, filter for entire-property bookings — that is where Himalaya Premium Villas sits.",
+      "Most hotels in bhurban sell rooms; few sell exclusivity. When you compare hotels in bhurban online, filter for entire-property bookings — that is where Himalaya Villas & Resorts sits.",
   },
   {
     phrase: "best hotel in bhurban",
@@ -1067,44 +1072,44 @@ function BhurbanKeywordGuide() {
 function FAQ() {
   const faqs = [
     {
-      q: "What makes Himalaya Premium Villas the best hotel in Bhurban?",
-      a: "Himalaya Premium Villas is not ranked among the best hotels in Bhurban — it sits above that category entirely. As a private luxury estate rather than a hotel, you get exclusive use of the entire property, personalised butler service, and curated dining — none of which any hotel in Bhurban offers. For guests who want the best, this is the only address.",
+      q: "What makes Himalaya Villas & Resorts the best hotel in Bhurban?",
+      a: "Himalaya Villas & Resorts is not ranked among the best hotels in Bhurban — it sits above that category entirely. As a private luxury estate rather than a hotel, you get exclusive use of the entire property, personalised butler service, and curated dining — none of which any hotel in Bhurban offers. For guests who want the best, this is the only address.",
     },
     {
       q: "Are there luxury villas in Bhurban Murree?",
-      a: "Yes. Himalaya Premium Villas is the only dedicated private luxury villa estate in Bhurban Murree. Unlike serviced apartments or guesthouses marketed as villas, this is a fully staffed, purpose-built private estate with panoramic Himalayan views, in-villa dining, and complete exclusivity.",
+      a: "Yes. Himalaya Villas & Resorts is the only dedicated private luxury villa estate in Bhurban Murree. Unlike serviced apartments or guesthouses marketed as villas, this is a fully staffed, purpose-built private estate with panoramic Himalayan views, in-villa dining, and complete exclusivity.",
     },
     {
-      q: "What makes Himalaya Premium Villas different from other hotels in Bhurban?",
-      a: "Himalaya Premium Villas is not a hotel — it is a fully private luxury estate in Bhurban, the most prestigious enclave of the Murree Hills. Unlike any hotel in Bhurban, the entire estate is reserved exclusively for one booking at a time, ensuring complete privacy, bespoke service, and a level of luxury that shared hotel environments simply cannot offer."
+      q: "What makes Himalaya Villas & Resorts different from other hotels in Bhurban?",
+      a: "Himalaya Villas & Resorts is not a hotel — it is a fully private luxury estate in Bhurban, the most prestigious enclave of the Murree Hills. Unlike any hotel in Bhurban, the entire estate is reserved exclusively for one booking at a time, ensuring complete privacy, bespoke service, and a level of luxury that shared hotel environments simply cannot offer."
     },
     {
-      q: "Where exactly is Himalaya Premium Villas located?",
+      q: "Where exactly is Himalaya Villas & Resorts located?",
       a: "The estate is located in Bhurban, Murree, Pakistan — approximately 50 kilometres from Islamabad. Bhurban is widely regarded as the most exclusive and scenic enclave within the greater Murree Hills region."
     },
     {
-      q: "Is Himalaya Premium Villas suitable for destination weddings?",
+      q: "Is Himalaya Villas & Resorts suitable for destination weddings?",
       a: "Absolutely. The estate is one of the most sought-after destination wedding venues in the Bhurban region. With panoramic Himalayan views, dedicated event infrastructure, and a full planning and concierge team, it is designed to host extraordinary weddings and celebrations."
     },
     {
       q: "What is the best time to visit Bhurban?",
-      a: "The Bhurban region is beautiful year-round. Summer (May–August) offers cool weather and lush greenery; winter (December–February) brings snowfall and magical landscapes; autumn and spring offer quieter, equally stunning experiences. Himalaya Premium Villas is available for exclusive bookings across all seasons."
+      a: "The Bhurban region is beautiful year-round. Summer (May–August) offers cool weather and lush greenery; winter (December–February) brings snowfall and magical landscapes; autumn and spring offer quieter, equally stunning experiences. Himalaya Villas & Resorts is available for exclusive bookings across all seasons."
     },
     {
-      q: "Can corporate groups book Himalaya Premium Villas for retreats?",
+      q: "Can corporate groups book Himalaya Villas & Resorts for retreats?",
       a: "Yes. The estate is fully equipped to host executive corporate retreats, strategy sessions, and leadership off-sites. With high-speed connectivity, private meeting spaces, bespoke catering, and an inspiring natural environment, it offers a setting that no hotel conference room in Bhurban can match."
     },
     {
       q: "How does a private estate compare to chain hotels in Bhurban?",
-      a: "Chain hotels in Bhurban offer shared lobbies and standard room categories. Himalaya Premium Villas is a private estate — the entire property, terraces, and dining are reserved for your booking party only, with personalised service from enquiry to checkout.",
+      a: "Chain hotels in Bhurban offer shared lobbies and standard room categories. Himalaya Villas & Resorts is a private estate — the entire property, terraces, and dining are reserved for your booking party only, with personalised service from enquiry to checkout.",
     },
     {
       q: "What are the best hotels in Bhurban Murree for families who need space?",
-      a: "Families comparing the best hotels in Bhurban Murree often outgrow multi-room hotel bookings. Private villas in Bhurban Murree at Himalaya Premium Villas give children room to move, in-villa meals on your schedule, and no shared corridors — the format most families prefer after one stay.",
+      a: "Families comparing the best hotels in Bhurban Murree often outgrow multi-room hotel bookings. Private villas in Bhurban Murree at Himalaya Villas & Resorts give children room to move, in-villa meals on your schedule, and no shared corridors — the format most families prefer after one stay.",
     },
     {
       q: "Is a private villa better than booking multiple rooms at bhurban hotels?",
-      a: "For groups of four or more, yes. Standard bhurban hotels charge per room and still share restaurants, lifts, and public areas. One booking at Himalaya Premium Villas covers the full estate — often at a lower per-person cost than three or four hotel rooms at the same standard.",
+      a: "For groups of four or more, yes. Standard bhurban hotels charge per room and still share restaurants, lifts, and public areas. One booking at Himalaya Villas & Resorts covers the full estate — often at a lower per-person cost than three or four hotel rooms at the same standard.",
     },
   ];
 
@@ -1150,13 +1155,13 @@ function Footer() {
       <Container>
         <div className="grid gap-10 py-16 md:grid-cols-4">
           <div>
-            <h3 className="bh-text-gold text-2xl font-bold">Himalaya Premium Villas</h3>
+            <h3 className="bh-text-gold text-2xl font-bold">Himalaya Villas & Resorts</h3>
             <p className="mt-3 text-sm" style={{ color: "hsl(40 38% 97% / .7)" }}>
               Not just a stay — a private luxury estate nestled in the heart of the Himalayan foothills. Experience Bhurban's most exclusive retreat.
             </p>
           </div>
           {[
-            { h: "Quick Links", items: ["About Himalaya Premium Villas", "Private Estate Experience", "Destination Weddings", "Corporate Retreats"] },
+            { h: "Quick Links", items: ["About Himalaya Villas & Resorts", "Private Estate Experience", "Destination Weddings", "Corporate Retreats"] },
             { h: "Support", items: ["Reserve Your Estate", "Contact Concierge", "Travel Guide", "Privacy Policy"] },
           ].map((c) => (
             <div key={c.h}>
@@ -1169,9 +1174,9 @@ function Footer() {
           <div>
             <h4 className="mb-4 text-lg font-bold">Contact Information</h4>
             <div className="space-y-3 text-sm" style={{ color: "hsl(40 38% 97% / .7)" }}>
-              <p>­ƒô× +92 304 567 9000</p>
-              <p>­ƒôº info@himalayavillas.com</p>
-              <p>­ƒôì Bhurban, Murree, Pakistan</p>
+              <p>Phone: +92 304 567 9000</p>
+              <p>Email: <EmailLink user="info" plain /></p>
+              <p>Address: Bhurban, Murree, Pakistan</p>
             </div>
             <div className="mt-6 flex gap-3">
               {[Facebook, Twitter, Linkedin].map((Icon, k) => (
@@ -1185,7 +1190,7 @@ function Footer() {
           </div>
         </div>
         <div className="py-6 text-center text-sm" style={{ borderTop: "1px solid hsl(40 38% 97% / .15)", color: "hsl(40 38% 97% / .6)" }}>
-          ┬® {new Date().getFullYear()} Himalaya Premium Villas. All rights reserved. | Private Luxury Estate in Bhurban | Hotels in Bhurban
+          ┬® {new Date().getFullYear()} Himalaya Villas & Resorts. All rights reserved. | Private Luxury Estate in Bhurban | Hotels in Bhurban
         </div>
       </Container>
     </footer>

@@ -1,7 +1,7 @@
 import type { Metadata } from "next";
 
 export const metadata: Metadata = {
-  title: "Snowfall in Murree 2026 — When It Snows, What to Expect & Luxury Winter Stays | Himalaya Villas",
+  title: "Snowfall in Murree: When It Snows and What to Expect | Himalaya Villas & Resorts",
   description: "Complete guide to snowfall in Murree — monthly snowfall calendar, weather forecast, snowfall pics from Bhurban, and when to book a luxury winter villa stay. Updated for 2026 season.",
   keywords: "snowfall in Murree, snowfall Murree, snowfall weather forecast, snowfall expected in Murree, snowfall pics, snow in Bhurban, Murree snowfall season, when does it snow in Murree, Murree winter, snowfall update Murree, Murree snow today",
   openGraph: {

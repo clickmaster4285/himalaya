@@ -7,43 +7,7 @@ import Navbar from "@/components/Navbar";
 import Footer from "@/components/Footer";
 import { ChevronDown, Star, Plus, Minus, Check, MapPin } from "lucide-react";
 import { SITE_CONTACT} from "@/lib/site-contact";
-
-const luxuryHotelsSchema = {
-  "@context": "https://schema.org",
-  "@type": "LodgingBusiness",
-  "name": "Himalaya Villas - Luxury Hotels in Murree",
-  "description": "Premium private villa accommodation in Bhurban, Murree Hills. Luxury alternative to hotels with private villas, panoramic Himalayan views, in-villa spa treatments, and personalized service.",
-  "url": "https://himalayavillas.com/luxury-hotels-in-muree",
-  "telephone": "+92 304 567 9000",
-  "address": {
-    "@type": "PostalAddress",
-    "streetAddress": "Bhurban",
-    "addressLocality": "Murree",
-    "addressRegion": "Punjab",
-    "addressCountry": "PK"
-  },
-  "geo": {
-    "@type": "GeoCoordinates",
-    "latitude": "33.9346",
-    "longitude": "73.4592"
-  },
-  "starRating": { "@type": "Rating", "ratingValue": "5" },
-  "priceRange": "PKR 40,000 - PKR 95,000",
-  "amenityFeature": [
-    {"@type": "LocationFeatureSpecification", "name": "Private Villa", "value": true},
-    {"@type": "LocationFeatureSpecification", "name": "In-Villa Spa", "value": true},
-    {"@type": "LocationFeatureSpecification", "name": "Panoramic Himalayan Views", "value": true},
-    {"@type": "LocationFeatureSpecification", "name": "Private Chef", "value": true},
-    {"@type": "LocationFeatureSpecification", "name": "24/7 Concierge", "value": true}
-  ],
-  "servesCuisine": ["Pakistani", "Continental", "Halal"],
-  "aggregateRating": {
-    "@type": "AggregateRating",
-    "ratingValue": "4.8",
-    "reviewCount": "127",
-    "bestRating": "5"
-  }
-};
+import { ContentReviewNote } from "@/components/seo/ContentReviewNote";
 
 const faqSchema = {
   "@context": "https://schema.org",
@@ -55,22 +19,6 @@ const faqSchema = {
       "acceptedAnswer": {
         "@type": "Answer",
         "text": "Contact us via WhatsApp with your preferred dates, number of guests, and requirements. Our team responds within 15 minutes during business hours (9 AM – 10 PM). Direct bookings receive best rate guarantee and complimentary inclusions."
-      }
-    },
-    {
-      "@type": "Question", 
-      "name": "What makes Himalaya Villas different from other luxury hotels in Murree?",
-      "acceptedAnswer": {
-        "@type": "Answer",
-        "text": "We offer private villa estates instead of hotel rooms, complete privacy with no shared corridors, in-villa personalized spa treatments, private gourmet dining, and dedicated villa attendants throughout your stay."
-      }
-    },
-    {
-      "@type": "Question",
-      "name": "Are meals included at Himalaya Villas?",
-      "acceptedAnswer": {
-        "@type": "Answer", 
-        "text": "All packages include daily halal gourmet breakfast. Most packages include additional meals like private dinners. In-villa dining service is available 24/7 with personalized chef service."
       }
     }
   ]
@@ -97,7 +45,6 @@ export default function LuxuryHotelsMurreePage() {
 
   return (
     <div className="min-h-screen bg-[#fcfbf8] flex flex-col font-sans">
-      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(luxuryHotelsSchema) }} />
       <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(faqSchema) }} />
       <Navbar />
       
@@ -109,7 +56,7 @@ export default function LuxuryHotelsMurreePage() {
             <div className="max-w-xl text-left">
               <div className="flex items-center gap-3 text-[#c9a55b] text-[10px] md:text-[11px] font-bold uppercase tracking-[0.2em] mb-8">
                 <span className="h-[1px] w-8 bg-[#c9a55b]"></span>
-                <span>BHURBAN · MURREE HILLS · 5-STAR PRIVATE ESTATE</span>
+                <span>BHURBAN · MURREE HILLS · PRIVATE VILLA ESTATE</span>
               </div>
 
               <h1 className="font-display text-5xl md:text-6xl lg:text-[72px] text-white leading-[1.05] tracking-tight">
@@ -125,16 +72,16 @@ export default function LuxuryHotelsMurreePage() {
               {/* Stats */}
               <div className="mt-12 grid grid-cols-2 md:grid-cols-4 gap-6 md:gap-4">
                 <div>
-                  <p className="text-[#c9a55b] font-display text-2xl md:text-3xl mb-1 flex items-center">4.8<span className="text-xl ml-1 text-[#c9a55b]">★</span></p>
-                  <p className="text-[10px] text-white/40 uppercase tracking-widest font-semibold">AVERAGE RATING</p>
+                  <p className="text-[#c9a55b] font-display text-2xl md:text-3xl mb-1">14:00</p>
+                  <p className="text-[10px] text-white/40 uppercase tracking-widest font-semibold">CHECK-IN</p>
                 </div>
                 <div>
-                  <p className="text-[#c9a55b] font-display text-2xl md:text-3xl mb-1">127+</p>
-                  <p className="text-[10px] text-white/40 uppercase tracking-widest font-semibold">VERIFIED REVIEWS</p>
+                  <p className="text-[#c9a55b] font-display text-2xl md:text-3xl mb-1">60 km</p>
+                  <p className="text-[10px] text-white/40 uppercase tracking-widest font-semibold">FROM ISLAMABAD</p>
                 </div>
                 <div>
-                  <p className="text-[#c9a55b] font-display text-2xl md:text-3xl mb-1">#1</p>
-                  <p className="text-[10px] text-white/40 uppercase tracking-widest font-semibold">BHURBAN LUXURY</p>
+                  <p className="text-[#c9a55b] font-display text-2xl md:text-3xl mb-1">1</p>
+                  <p className="text-[10px] text-white/40 uppercase tracking-widest font-semibold">GROUP AT A TIME</p>
                 </div>
                 <div>
                   <p className="text-[#c9a55b] font-display text-2xl md:text-3xl mb-1">12</p>
@@ -295,6 +242,18 @@ export default function LuxuryHotelsMurreePage() {
           </div>
         </section>
 
+        <section className="bg-[#fcfbf8] px-6 py-16">
+          <div className="max-w-3xl mx-auto">
+            <h2 className="font-display text-3xl md:text-4xl text-[#1b261b]">
+              Best hotels, 5-star hotels, and resorts in Murree
+            </h2>
+            <p className="mt-6 text-[15px] leading-relaxed text-[#3d4a3d]">
+              This is the single guide for that search. The properties travellers compare are Pearl Continental Bhurban, Cecil by Pearl Continental, and Himalaya Villas in Bhurban. For privacy, in-villa dining, and mountain views, the villa estate is the alternative to a hotel room. Bhurban sits about 8 km above Murree town, higher, cooler, and quieter than Mall Road. Resort stays in the same hills are the same decision: hotel corridor, or a private villa.
+            </p>
+            <ContentReviewNote className="mt-6 text-sm text-[#6d746d]" />
+          </div>
+        </section>
+
         {/* COMPARISON TABLE */}
         <section className="py-20 md:py-32 bg-white px-6">
           <div className="max-w-6xl mx-auto">
@@ -329,7 +288,7 @@ export default function LuxuryHotelsMurreePage() {
                     { label: "Halal Certified", hv: "✓ 100% halal — all meals", b1: "Halal options available", b2: "Varies" },
                     { label: "Eco Practices", hv: "✓ Solar heating, no-plastic policy, local sourcing", b1: "Limited", b2: "Minimal" },
                     { label: "24-Hour Room Service", hv: "✓ In-villa round-the-clock service", b1: "Standard room service", b2: "Limited hours" },
-                    { label: "Avg Guest Rating", hv: "✓ 4.8 / 5 (127 reviews)", b1: "4.2 - 4.5 / 5", b2: "3.5 - 4.2 / 5" }
+                    { label: "Formal star rating", hv: "No formal classification — private villa estate", b1: "PC Bhurban is a recognised 5-star hotel", b2: "Often self-described" }
                   ].map((row, i) => (
                     <tr key={i} className="border-b border-[#e5e1d8] last:border-0 hover:bg-[#fcfbf8] transition">
                       <td className="p-5 font-semibold text-[#8b8878]">{row.label}</td>
@@ -1011,7 +970,7 @@ export default function LuxuryHotelsMurreePage() {
             <div className="grid grid-cols-1 lg:grid-cols-5 gap-16 items-start">
               <div className="lg:col-span-3 space-y-12">
                 <p className="text-[15px] text-[#1b261b] leading-relaxed font-light">
-                  Pakistan has 5-star hotels primarily in Islamabad, Lahore, and Karachi — including <span className="font-bold">Marriott Islamabad</span>, <span className="font-bold">Serena Hotels</span>, and the <span className="font-bold">Pearl Continental chain</span>. For guests searching murree 5 star hotels, the choice in the Murree Hills is far more selective. In the Murree Hills, the properties operating at 5-star standard are:
+                  Pakistan has classified 5-star hotels primarily in Islamabad, Lahore, and Karachi — including <span className="font-bold">Marriott Islamabad</span>, <span className="font-bold">Serena Hotels</span>, and the <span className="font-bold">Pearl Continental chain</span>. For guests searching murree 5 star hotels, the Murree Hills comparison is narrower. Himalaya Villas does not carry a formal star rating. Guests usually compare these properties:
                 </p>
 
                 <div className="flex gap-6">
@@ -1019,7 +978,7 @@ export default function LuxuryHotelsMurreePage() {
                   <div>
                     <h3 className="text-xl font-bold text-[#1b261b] mb-2">Himalaya Villas Bhurban</h3>
                     <p className="text-[14px] text-[#8b8878] leading-relaxed">
-                      A private luxury villa estate at 1,850m elevation — twelve individually appointed villas with in-villa spa, private dining, butler service, all-inclusive packages, and panoramic Himalayan views. Rated 4.8/5 across 127 verified reviews. Pakistan&apos;s highest-rated mountain luxury property for private and family stays.
+                      A private villa estate at 1,850m elevation — twelve villas with in-villa spa, private dining, and panoramic Himalayan views. It does not carry a formal star rating. The stay is booked for one group at a time.
                     </p>
                   </div>
                 </div>
@@ -1076,8 +1035,8 @@ export default function LuxuryHotelsMurreePage() {
                     <div className="flex items-start gap-4">
                       <span className="text-[#c9a55b] mt-1">✓</span>
                       <div>
-                        <h4 className="text-[13px] font-bold text-[#1b261b] mb-1">Higher guest review scores</h4>
-                        <p className="text-[13px] text-[#8b8878] leading-relaxed">4.8/5 across 127 verified reviews — above chain hotel averages in the area.</p>
+                        <h4 className="text-[13px] font-bold text-[#1b261b] mb-1">One group at a time</h4>
+                        <p className="text-[13px] text-[#8b8878] leading-relaxed">The estate is reserved for a single group, rather than a shared hotel floor.</p>
                       </div>
                     </div>
                   </li>

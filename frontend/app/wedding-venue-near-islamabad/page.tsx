@@ -6,7 +6,7 @@ import Footer from "@/components/Footer";
 import { Check, X, MapPin, Users, Camera, Shield, Heart, Clock, Utensils, BedDouble, Mountain } from "lucide-react";
 
 export const metadata: Metadata = {
-    title: "Wedding Venue Near Islamabad | Mountain Wedding | Bhurban | Himalaya Villas",
+    title: "Wedding Venue Near Islamabad in Bhurban | Himalaya Villas & Resorts",
     description: "Wedding venue near Islamabad at Himalaya Villas Bhurban. Mountain wedding venue with pine forest setting, full catering, on-site accommodation. Perfect destination wedding 60 minutes from Islamabad. Book your dream wedding!",
     keywords: "wedding venue near Islamabad, mountain wedding Bhurban, destination wedding Murree Hills, outdoor wedding venue Pakistan, wedding resort Himalaya Villas, wedding ceremony Bhurban, wedding reception near Islamabad",
     openGraph: {
@@ -63,15 +63,19 @@ const eventVenueSchema = {
     "telephone": "+92 304 567 9000",
     "address": {
         "@type": "PostalAddress",
-        "streetAddress": "Bhurban",
-        "addressLocality": "Murree",
-        "addressRegion": "Punjab",
+        "streetAddress": "Mohra Iswal near Kashmiri Bazar",
+        "addressLocality": "Bhurban",
+        "addressRegion": "Murree",
+        "postalCode": "47190",
         "addressCountry": "PK"
     },
     "geo": {
         "@type": "GeoCoordinates",
-        "latitude": "33.9346",
-        "longitude": "73.4592"
+        "latitude": "33.9562",
+        "longitude": "73.385"
+    },
+    "containedInPlace": {
+        "@id": "https://himalayavillas.com/#lodging"
     },
     "maximumAttendeeCapacity": 120,
     "amenityFeature": [
@@ -81,8 +85,7 @@ const eventVenueSchema = {
         { "@type": "LocationFeatureSpecification", "name": "Event Coordinator", "value": true },
         { "@type": "LocationFeatureSpecification", "name": "Exclusive Venue Hire", "value": true },
         { "@type": "LocationFeatureSpecification", "name": "Halal Catering", "value": true }
-    ],
-    "priceRange": "PKR 150,000 - PKR 1,200,000"
+    ]
 };
 
 const breadcrumbSchema = {
@@ -243,7 +246,7 @@ export default function WeddingVenuePage() {
                 </p>
 
                 <div className="mt-12 flex flex-wrap justify-center gap-6">
-                    <Link href="/luxury-hotel-murree" className="text-[#c9a55b] font-medium hover:underline flex items-center gap-2">
+                    <Link href="/luxury-hotels-in-murree" className="text-[#c9a55b] font-medium hover:underline flex items-center gap-2">
                         → View Himalaya Villas accommodation
                     </Link>
                     <Link href="/murree-hotel-packages" className="text-[#c9a55b] font-medium hover:underline flex items-center gap-2">
@@ -383,7 +386,7 @@ export default function WeddingVenuePage() {
                     <Link href="/romantic-hotels-murree" className="text-[#c9a55b] font-medium hover:underline flex items-center gap-2">
                         → Honeymoon and romantic stays post-wedding
                     </Link>
-                    <Link href="/family-hotels-murree" className="text-[#c9a55b] font-medium hover:underline flex items-center gap-2">
+                    <Link href="/family-hotels-in-murree" className="text-[#c9a55b] font-medium hover:underline flex items-center gap-2">
                         → Accommodation for wedding guests
                     </Link>
                     <Link href="/corporate-hotels-murree-bhurban" className="text-[#c9a55b] font-medium hover:underline flex items-center gap-2">

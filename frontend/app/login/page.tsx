@@ -9,18 +9,7 @@ const loginPageSchema = {
   "name": "Sign In | Himalaya Villas & Resorts",
   "description": "Sign in to your Himalaya Villas account to manage bookings, view reservations, and access exclusive member benefits.",
   "url": "https://himalayavillas.com/login",
-  "provider": {
-    "@type": "Organization",
-    "name": "Himalaya Villas and Resort",
-    "telephone": "+92 304 567 9000",
-    "address": {
-      "@type": "PostalAddress",
-      "streetAddress": "Bhurban",
-      "addressLocality": "Murree",
-      "addressRegion": "Punjab",
-      "addressCountry": "PK"
-    }
-  },
+  "provider": { "@id": "https://himalayavillas.com/#organization" },
   "dateModified": "2024-01-01"
 };
 

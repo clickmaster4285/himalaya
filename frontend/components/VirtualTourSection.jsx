@@ -92,7 +92,7 @@ const VirtualTourSection = () => {
             className="text-base md:text-lg leading-relaxed max-w-3xl mx-auto mb-4"
             style={{ color: "hsl(0 0% 60%)" }}
           >
-            Discover Himalaya Villas and Resort Hotel through our virtual tour.
+            Discover Himalaya Villas & Resorts through our virtual tour.
             View the accommodation collections, room interiors, living spaces,
             and outdoor surroundings to get a better understanding of the
             property before making a reservation.

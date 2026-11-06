@@ -2,6 +2,7 @@ import type { Article } from "@/content/types";
 import { VILLA_BLOG_POSTS } from "@/lib/villa-blog-posts";
 import { blogCanonicalPath } from "@/lib/blog-posts";
 import { allArticles } from "@/content/allArticles";
+import { isExcludedFromSitemap } from "@/lib/seo/sitemap-filter";
 
 /** Legacy URLs that duplicate `/blogs/{slug}` — omit from sitemap to avoid duplicate indexing. */
 const LEGACY_HREFS = new Set(
@@ -64,6 +65,7 @@ export function getArticleSitemapRouteDefs(categoryName: string): SitemapRouteDe
       path: `/${article.slug}`,
     }))
     .filter((item) => item.category === category)
+    .filter((item) => !isExcludedFromSitemap(item.path))
     .map((item) => ({
       path: item.path,
       changeFrequency: "monthly" as const,
@@ -72,11 +74,13 @@ export function getArticleSitemapRouteDefs(categoryName: string): SitemapRouteDe
 }
 
 export function getAllArticleSitemapRouteDefs(): SitemapRouteDef[] {
-  return allArticles.map((article) => ({
-    path: `/${article.slug}`,
-    changeFrequency: "monthly" as const,
-    priority: 0.65,
-  }));
+  return allArticles
+    .filter((article) => !isExcludedFromSitemap(`/${article.slug}`))
+    .map((article) => ({
+      path: `/${article.slug}`,
+      changeFrequency: "monthly" as const,
+      priority: 0.65,
+    }));
 }
 
 export type SitemapRouteDef = {
@@ -117,7 +121,7 @@ function staticMarketingRoutes(includeBookRoutes = true): SitemapRouteDef[] {
     }
   }
 
-  return core.filter((r) => !LEGACY_HREFS.has(r.path));
+  return core.filter((r) => !LEGACY_HREFS.has(r.path) && !isExcludedFromSitemap(r.path));
 }
 
 export function getStaticSitemapRouteDefs(options?: { includeBookRoutes?: boolean }): SitemapRouteDef[] {
@@ -125,7 +129,7 @@ export function getStaticSitemapRouteDefs(options?: { includeBookRoutes?: boolea
 }
 
 export function getBlogSitemapRouteDefs(): SitemapRouteDef[] {
-  return VILLA_BLOG_POSTS.map((post) => ({
+  return VILLA_BLOG_POSTS.filter((post) => !isExcludedFromSitemap(blogCanonicalPath(post.slug))).map((post) => ({
     path: blogCanonicalPath(post.slug),
     changeFrequency: "monthly" as const,
     priority: 0.75,

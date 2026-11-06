@@ -31,18 +31,7 @@ const romanticHotelSchema = {
   "@type": "Service",
   "name": "Romantic Hotels in Murree - Himalaya Villas",
   "description": "Luxury romantic accommodations in Murree with private suites, mountain views, and intimate dining experiences perfect for couples and honeymooners.",
-  "provider": {
-    "@type": "Organization",
-    "name": "Himalaya Villas and Resort",
-    "telephone": "+92 304 567 9000",
-    "address": {
-      "@type": "PostalAddress",
-      "streetAddress": "Bhurban",
-      "addressLocality": "Murree",
-      "addressRegion": "Punjab",
-      "addressCountry": "PK"
-    }
-  },
+  "provider": { "@id": "https://himalayavillas.com/#organization" },
   "serviceType": "Romantic Accommodation",
   "offers": {
     "@type": "Offer",
@@ -236,9 +225,12 @@ export default function RomanticHotelsMurreePage() {
               <Heart className="w-6 h-6 text-pink-300" />
               <span className="text-pink-300 font-semibold tracking-wide">ROMANTIC ESCAPES</span>
             </div>
-            <h1 className="text-4xl md:text-6xl font-bold text-white mb-6 leading-tight">
+            <h1 className="text-4xl md:text-6xl font-bold text-white mb-4 leading-tight">
               Romantic Hotels in Murree
             </h1>
+            <p className="text-sm text-white/75 mb-6">
+              Written by Himalaya Villas & Resorts. Reviewed by the Himalaya Villas editorial team. Last reviewed 6 November 2026.
+            </p>
             <p className="text-xl text-white/90 mb-8">
               Discover intimate luxury suites with mountain views, private terraces, and personalized service. 
               Perfect for honeymoons, anniversaries, and romantic getaways in the heart of the Himalayas.

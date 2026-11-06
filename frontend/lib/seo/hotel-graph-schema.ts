@@ -1,57 +1,66 @@
-/** Site-wide Organization + LodgingBusiness + WebSite @graph JSON-LD. */
-export const HOTEL_GRAPH_JSON_LD = {
-  "@context": "https://schema.org",
-  "@graph": [
-    {
-      "@type": "Organization",
-      "@id": "https://himalayavillas.com/#organization",
-      name: "Himalaya Premium Villas",
-      alternateName: "Himalaya Villas & Resorts",
-      url: "https://himalayavillas.com/",
-      logo: {
-        "@type": "ImageObject",
-        "@id": "https://himalayavillas.com/#logo",
-        url: "https://himalayavillas.com/assets/himalaya-logo.png",
+import { BRAND, getSiteOrigin } from "@/lib/seo/site-config";
+import { SITE_CONTACT } from "@/lib/site-contact";
+
+/** One Organization and one lodging entity for the whole site. No star or review rating. */
+export function buildHotelGraphJsonLd() {
+  const origin = getSiteOrigin();
+  const lodgingId = `${origin}/#lodging`;
+  const organizationId = `${origin}/#organization`;
+
+  return {
+    "@context": "https://schema.org",
+    "@graph": [
+      {
+        "@type": "Organization",
+        "@id": organizationId,
+        name: BRAND.name,
+        alternateName: [...BRAND.alternateNames],
+        url: `${origin}/`,
+        logo: {
+          "@type": "ImageObject",
+          "@id": `${origin}/#logo`,
+          url: `${origin}/assets/himalaya-logo.png`,
+        },
+        telephone: SITE_CONTACT.phoneDisplay,
+        address: {
+          "@type": "PostalAddress",
+          ...SITE_CONTACT.address,
+        },
       },
-      telephone: "+92 304 567 9000",
-    },
-    {
-      "@type": "LodgingBusiness",
-      "@id": "https://himalayavillas.com/#lodgingbusiness",
-      name: "Himalaya Premium Villas",
-      alternateName: "Himalaya Villas & Resorts",
-      url: "https://himalayavillas.com/",
-      logo: {
-        "@id": "https://himalayavillas.com/#logo",
+      {
+        "@type": ["VacationRental", "LodgingBusiness"],
+        "@id": lodgingId,
+        name: BRAND.name,
+        description:
+          "Private villa estate in Bhurban, Murree Hills. Twelve villas booked for stays, weddings, and gatherings. Himalaya Villas does not carry a formal star rating.",
+        url: `${origin}/`,
+        telephone: SITE_CONTACT.phoneDisplay,
+        image: `${origin}/assets/gallery-exterior.jpg`,
+        logo: { "@id": `${origin}/#logo` },
+        priceRange: SITE_CONTACT.priceRange,
+        currenciesAccepted: "PKR",
+        numberOfRooms: 12,
+        address: {
+          "@type": "PostalAddress",
+          ...SITE_CONTACT.address,
+        },
+        geo: {
+          "@type": "GeoCoordinates",
+          latitude: SITE_CONTACT.geo.latitude,
+          longitude: SITE_CONTACT.geo.longitude,
+        },
+        hasMap: SITE_CONTACT.googleMapsUrl,
+        checkinTime: "14:00",
+        checkoutTime: "12:00",
+        parentOrganization: { "@id": organizationId },
       },
-      image: "https://himalayavillas.com/assets/himalaya-logo.png",
-      telephone: "+92 304 567 9000",
-      priceRange: "$$",
-      hasMap: "https://maps.app.goo.gl/SzyHVXrCLic2CuvH8",
-      address: {
-        "@type": "PostalAddress",
-        streetAddress: "Mohra Iswal near Kashmiri Bazar",
-        addressLocality: "Bhurban",
-        addressRegion: "Murree",
-        postalCode: "47190",
-        addressCountry: "PK",
+      {
+        "@type": "WebSite",
+        "@id": `${origin}/#website`,
+        url: `${origin}/`,
+        name: BRAND.name,
+        publisher: { "@id": organizationId },
       },
-      areaServed: {
-        "@type": "Place",
-        name: "Murree",
-      },
-      parentOrganization: {
-        "@id": "https://himalayavillas.com/#organization",
-      },
-    },
-    {
-      "@type": "WebSite",
-      "@id": "https://himalayavillas.com/#website",
-      url: "https://himalayavillas.com/",
-      name: "Himalaya Premium Villas",
-      publisher: {
-        "@id": "https://himalayavillas.com/#organization",
-      },
-    },
-  ],
-} as const;
+    ],
+  };
+}

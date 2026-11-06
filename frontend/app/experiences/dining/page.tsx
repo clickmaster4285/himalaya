@@ -5,25 +5,8 @@ const diningServiceSchema = {
   "@type": "Service",
   "name": "Private Chef & Dining Experiences at Himalaya Villas",
   "description": "Personalized dining themes and curated food journeys with gourmet meals prepared by top chefs in a stunning mountain setting.",
-  "provider": {
-    "@type": "Organization",
-    "name": "Himalaya Villas and Resort",
-    "telephone": "+92 304 567 9000",
-    "address": {
-      "@type": "PostalAddress",
-      "streetAddress": "Bhurban",
-      "addressLocality": "Murree",
-      "addressRegion": "Punjab",
-      "addressCountry": "PK"
-    }
-  },
+  "provider": { "@id": "https://himalayavillas.com/#organization" },
   "serviceType": "Private Dining Services",
-  "offers": {
-    "@type": "Offer",
-    "price": "25000",
-    "priceCurrency": "PKR",
-    "description": "Private dining experiences starting from PKR 25,000"
-  },
   "areaServed": {
     "@type": "Place",
     "name": "Murree Hills, Bhurban"
@@ -44,7 +27,7 @@ export default function DiningExperience() {
           <li>Live cooking stations and chef’s table</li>
           <li>Locally sourced, fresh ingredients</li>
         </ul>
-        <Link href="/experiences" className="inline-block mt-4 text-[#c9a55b] font-semibold hover:underline">← Back to Experiences</Link>
+        <Link href="/experience" className="inline-block mt-4 text-[#c9a55b] font-semibold hover:underline">← Back to Experiences</Link>
       </div>
     </div>
   );

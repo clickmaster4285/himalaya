@@ -1,5 +1,6 @@
 "use client";
 
+import EmailLink from "@/components/EmailLink";
 import { useEffect, useRef, useState, ReactNode } from "react";
 import {
   Mountain, Sparkles, Home, Star, Utensils, Briefcase, Clock,
@@ -225,7 +226,7 @@ function HeroSlider() {
           </Reveal>
           <Reveal delay={150}>
             <h1 className="text-4xl font-bold leading-tight sm:text-5xl md:text-8xl">
-              <span className="murree-hotels-text-gold">Hotels in Murree Pakistan</span> — <span className="text-3xl sm:text-4xl md:text-6xl">Discover Himalaya Premium Villas</span>
+              <span className="murree-hotels-text-gold">Hotels in Murree Pakistan</span> — <span className="text-3xl sm:text-4xl md:text-6xl">Discover Himalaya Villas & Resorts</span>
             </h1>
           </Reveal>
           <Reveal delay={300}>
@@ -430,7 +431,7 @@ function Introduction() {
                   Standard hotels in Murree, no matter how decorated, share a fundamental limitation: they are built for volume. Hundreds of guests. Shared facilities. Corridors full of strangers. Fixed menus. Rigid schedules. The moment you step outside your room, the escape you came for begins to dissolve.
                 </p>
                 <p className="mb-6 text-lg leading-relaxed font-semibold">
-                  Himalaya Premium Villas was built on a completely different premise.
+                  Himalaya Villas & Resorts was built on a completely different premise.
                 </p>
                 <div className="bg-white/80 backdrop-blur-sm rounded-2xl p-8 my-8 murree-hotels-shadow-lux">
                   <p className="text-xl font-semibold text-center mb-4" style={{ color: "hsl(165 60% 18%)" }}>
@@ -455,7 +456,7 @@ function WhyPerfectForFamilies() {
     { 
       icon: Home, 
       title: "Entire Estate — Exclusively Yours", 
-      desc: "Unlike any hotel in Murree Pakistan, Himalaya Premium Villas accepts strictly limited bookings each month. When you arrive, the entire estate belongs to you and your guests — every room, every terrace, every outdoor space. No strangers. No shared amenities. Pure exclusivity."
+      desc: "Unlike any hotel in Murree Pakistan, Himalaya Villas & Resorts accepts strictly limited bookings each month. When you arrive, the entire estate belongs to you and your guests — every room, every terrace, every outdoor space. No strangers. No shared amenities. Pure exclusivity."
     },
     { 
       icon: Mountain, 
@@ -465,7 +466,7 @@ function WhyPerfectForFamilies() {
     { 
       icon: Utensils, 
       title: "Bespoke In-Villa Dining", 
-      desc: "Forget crowded hotel restaurants and fixed breakfast hours. At Himalaya Premium Villas, every meal is an experience crafted entirely around your preferences — from private candlelit dinners to open-air barbecue evenings under a sky full of stars above the Murree Hills."
+      desc: "Forget crowded hotel restaurants and fixed breakfast hours. At Himalaya Villas & Resorts, every meal is an experience crafted entirely around your preferences — from private candlelit dinners to open-air barbecue evenings under a sky full of stars above the Murree Hills."
     },
     { 
       icon: Star, 
@@ -475,7 +476,7 @@ function WhyPerfectForFamilies() {
     { 
       icon: Shield, 
       title: "Privacy as a Standard — Not an Upgrade", 
-      desc: "At Himalaya Premium Villas, privacy is not a premium add-on — it is the foundation of every stay. From the secured estate entrance to the private outdoor terraces, every inch of the property is designed to keep your world exactly where you want it: completely your own."
+      desc: "At Himalaya Villas & Resorts, privacy is not a premium add-on — it is the foundation of every stay. From the secured estate entrance to the private outdoor terraces, every inch of the property is designed to keep your world exactly where you want it: completely your own."
     },
     { 
       icon: Phone, 
@@ -489,8 +490,8 @@ function WhyPerfectForFamilies() {
       <Container>
         <SectionHeader 
           kicker="What Makes It Different" 
-          title={<>Why Himalaya Premium Villas <span className="murree-hotels-text-emerald">Redefines Luxury Hotels</span> in Murree Pakistan</>}
-          sub="When every detail of your stay matters — when you want more than four walls and a view — Himalaya Premium Villas delivers an experience that sets a new standard for accommodation in the Murree Hills." 
+          title={<>Why Himalaya Villas & Resorts <span className="murree-hotels-text-emerald">Redefines Luxury Hotels</span> in Murree Pakistan</>}
+          sub="When every detail of your stay matters — when you want more than four walls and a view — Himalaya Villas & Resorts delivers an experience that sets a new standard for accommodation in the Murree Hills." 
         />
         <div className="grid gap-8 md:grid-cols-2 lg:grid-cols-3">
           {features.map((feature, k) => (
@@ -534,7 +535,7 @@ function EstateDetail() {
                 Inside the Estate — <span className="text-yellow-300">Everything a Luxury Stay Should Be</span>
               </h2>
               <p className="text-xl text-center mb-12 max-w-4xl mx-auto" style={{ color: "hsl(40 38% 85%)" }}>
-                Himalaya Premium Villas is not just a place to sleep. It is a complete private world — every element curated to the highest standard, every space designed to make the most of its extraordinary natural setting in the Murree Hills of Pakistan.
+                Himalaya Villas & Resorts is not just a place to sleep. It is a complete private world — every element curated to the highest standard, every space designed to make the most of its extraordinary natural setting in the Murree Hills of Pakistan.
               </p>
             </Reveal>
             
@@ -619,8 +620,8 @@ function IdealGuests() {
       <div className="relative" style={{ zIndex: 1 }}>
         <Container>
           <SectionHeader 
-            kicker="Who Chooses Himalaya Premium Villas" 
-            title={<>Who Chooses Himalaya Premium Villas <span className="murree-hotels-text-emerald">Over a Hotel in Murree?</span></>}
+            kicker="Who Chooses Himalaya Villas & Resorts" 
+            title={<>Who Chooses Himalaya Villas & Resorts <span className="murree-hotels-text-emerald">Over a Hotel in Murree?</span></>}
             sub="Travellers who value quality over quantity. Those who understand the difference between a stay and an experience. Guests who know exactly what they want — and will not settle for less." 
           />
           <div className="grid gap-8 md:grid-cols-2 lg:grid-cols-3">
@@ -689,7 +690,7 @@ function MurreeBhurbanLocation() {
             <Reveal>
               <div className="bg-white/80 backdrop-blur-sm rounded-2xl p-8 my-8 murree-hotels-shadow-lux">
                 <p className="text-lg font-semibold leading-relaxed mb-4" style={{ color: "hsl(165 60% 18%)" }}>
-                  Within the wider Murree region, Bhurban stands out as its most prestigious enclave — quieter, more elevated, and more exclusive than Murree's busy main ridge. It is here, in Bhurban, that Himalaya Premium Villas is located — placing you at the very best address the Murree Pakistan region has to offer.
+                  Within the wider Murree region, Bhurban stands out as its most prestigious enclave — quieter, more elevated, and more exclusive than Murree's busy main ridge. It is here, in Bhurban, that Himalaya Villas & Resorts is located — placing you at the very best address the Murree Pakistan region has to offer.
                 </p>
               </div>
             </Reveal>
@@ -721,23 +722,23 @@ function MurreeBhurbanLocation() {
 function FAQ() {
   const faqs = [
     {
-      q: "What makes Himalaya Premium Villas different from other hotels in Murree Pakistan?",
-      a: "Himalaya Premium Villas is not a hotel — it is a fully private luxury estate in Bhurban, the most prestigious enclave of the Murree Hills. Unlike any hotel in Murree Pakistan, the entire estate is reserved exclusively for one booking at a time, ensuring complete privacy, bespoke service, and a level of luxury that shared hotel environments simply cannot offer."
+      q: "What makes Himalaya Villas & Resorts different from other hotels in Murree Pakistan?",
+      a: "Himalaya Villas & Resorts is not a hotel — it is a fully private luxury estate in Bhurban, the most prestigious enclave of the Murree Hills. Unlike any hotel in Murree Pakistan, the entire estate is reserved exclusively for one booking at a time, ensuring complete privacy, bespoke service, and a level of luxury that shared hotel environments simply cannot offer."
     },
     {
-      q: "Where exactly is Himalaya Premium Villas located?",
+      q: "Where exactly is Himalaya Villas & Resorts located?",
       a: "The estate is located in Bhurban, Murree, Pakistan — approximately 50 kilometres from Islamabad. Bhurban is widely regarded as the most exclusive and scenic enclave within the greater Murree Hills region."
     },
     {
-      q: "Is Himalaya Premium Villas suitable for destination weddings?",
+      q: "Is Himalaya Villas & Resorts suitable for destination weddings?",
       a: "Absolutely. The estate is one of the most sought-after destination wedding venues in the Murree Pakistan region. With panoramic Himalayan views, dedicated event infrastructure, and a full planning and concierge team, it is designed to host extraordinary weddings and celebrations."
     },
     {
       q: "What is the best time to visit Murree Pakistan?",
-      a: "The Murree Hills region is beautiful year-round. Summer (May–August) offers cool weather and lush greenery; winter (December–February) brings snowfall and magical landscapes; autumn and spring offer quieter, equally stunning experiences. Himalaya Premium Villas is available for exclusive bookings across all seasons."
+      a: "The Murree Hills region is beautiful year-round. Summer (May–August) offers cool weather and lush greenery; winter (December–February) brings snowfall and magical landscapes; autumn and spring offer quieter, equally stunning experiences. Himalaya Villas & Resorts is available for exclusive bookings across all seasons."
     },
     {
-      q: "Can corporate groups book Himalaya Premium Villas for retreats?",
+      q: "Can corporate groups book Himalaya Villas & Resorts for retreats?",
       a: "Yes. The estate is fully equipped to host executive corporate retreats, strategy sessions, and leadership off-sites. With high-speed connectivity, private meeting spaces, bespoke catering, and an inspiring natural environment, it offers a setting that no hotel conference room in Murree can match."
     }
   ];
@@ -748,7 +749,7 @@ function FAQ() {
         <SectionHeader 
                 kicker="Frequently Asked Questions" 
                 title={<>Hotels in Murree Pakistan — <span className="murree-hotels-text-emerald">SEO Rich Snippets</span></>}
-                sub="Get answers to common questions about Himalaya Premium Villas and luxury accommodation in Murree" 
+                sub="Get answers to common questions about Himalaya Villas & Resorts and luxury accommodation in Murree" 
               />
           <div className="max-w-4xl mx-auto">
             <div className="space-y-8">
@@ -841,7 +842,7 @@ function FinalCTA() {
             </Reveal>
             <Reveal delay={150}>
               <p className="mx-auto mt-5 max-w-3xl text-lg" style={{ color: "hsl(40 38% 97% / .85)" }}>
-                Stop searching for hotels in Murree Pakistan. Himalaya Premium Villas offers something the Murree Hills have never seen before — a fully private luxury estate where every detail, every space, and every moment is designed exclusively around you.
+                Stop searching for hotels in Murree Pakistan. Himalaya Villas & Resorts offers something the Murree Hills have never seen before — a fully private luxury estate where every detail, every space, and every moment is designed exclusively around you.
               </p>
             </Reveal>
             <Reveal delay={300}>
@@ -870,7 +871,7 @@ function FinalCTA() {
                   </div>
                   <div className="flex items-center gap-2">
                     <Mail className="h-5 w-5" style={{ color: "hsl(42 95% 75%)" }} />
-                    <span>info@himalayavillas.com</span>
+                    <EmailLink user="info" plain />
                   </div>
                   <div className="flex items-center gap-2">
                     <MapPin className="h-5 w-5" style={{ color: "hsl(42 95% 75%)" }} />
@@ -1051,7 +1052,7 @@ function ContactForm() {
               <div className="space-y-5">
                 {[
                   { icon: Phone, label: "Phone", value: "+92 304 567 9000" },
-                  { icon: Mail, label: "Email", value: "info@himalayavillas.com" },
+                  { icon: Mail, label: "Email", value: <EmailLink user="info" plain /> },
                   { icon: MapPin, label: "Location", value: "Murree, Punjab, Pakistan" },
                 ].map((c) => (
                   <div key={c.label} className="flex items-center gap-4">
@@ -1271,7 +1272,7 @@ function SectionCTA() {
 /* ----------------------------- Page ----------------------------- */
 export default function Index() {
   useEffect(() => {
-    document.title = "Family Hotels in Murree — Himalaya Premium Villas, Where Families Belong";
+    document.title = "Family Hotels in Murree — Himalaya Villas & Resorts, Where Families Belong";
   }, []);
   return (
     <>

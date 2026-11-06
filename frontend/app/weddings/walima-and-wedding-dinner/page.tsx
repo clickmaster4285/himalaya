@@ -8,66 +8,14 @@ import { CheckCircle2, Crown, HelpCircle } from "lucide-react";
 
 const walimaEventSchema = {
   "@context": "https://schema.org",
-  "@type": "Event",
+  "@type": "Service",
   "name": "Walima and Wedding Dinner at Himalaya Villas",
   "description": "Luxury walima reception and wedding dinner services with premium stage themes, banquet hall ambiance, and professional guest flow management in Bhurban, Murree Hills.",
   "url": "https://himalayavillas.com/weddings/walima-and-wedding-dinner",
-  "startDate": "2024-01-01",
-  "endDate": "2024-12-31",
-  "location": {
-    "@type": "Place",
-    "name": "Himalaya Villas and Resort",
-    "address": {
-      "@type": "PostalAddress",
-      "streetAddress": "Bhurban",
-      "addressLocality": "Murree",
-      "addressRegion": "Punjab",
-      "addressCountry": "PK"
-    }
-  },
-  "organizer": {
-    "@type": "Organization",
-    "name": "Himalaya Villas and Resort",
-    "telephone": "+92 304 567 9000"
-  },
-  "offers": {
-    "@type": "Offer",
-    "price": "150000",
-    "priceCurrency": "PKR",
-    "description": "Premium walima dinner package with stage decoration and banquet service"
-  }
+  "provider": { "@id": "https://himalayavillas.com/#organization" }
 };
 
-const faqSchema = {
-  "@context": "https://schema.org",
-  "@type": "FAQPage",
-  "mainEntity": [
-    {
-      "@type": "Question",
-      "name": "Can we customize stage colors for walima?",
-      "acceptedAnswer": {
-        "@type": "Answer",
-        "text": "Yes. Colors, floral density, sofa style, and lighting are customizable for your walima ceremony."
-      }
-    },
-    {
-      "@type": "Question",
-      "name": "Do you manage dinner flow during walima?",
-      "acceptedAnswer": {
-        "@type": "Answer",
-        "text": "Yes. Seating and service movement is planned for smooth hospitality during your walima reception."
-      }
-    },
-    {
-      "@type": "Question",
-      "name": "Can you arrange photo lighting for walima?",
-      "acceptedAnswer": {
-        "@type": "Answer",
-        "text": "Yes. We can add balanced stage lighting for better photos and videos during your walima ceremony."
-      }
-    }
-  ]
-};
+
 
 const heroSlides = [
   "/assets/valima-hero-1.jpg",
@@ -120,7 +68,6 @@ export default function ValimaPage() {
   return (
     <div className="min-h-screen bg-white">
       <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(walimaEventSchema) }} />
-      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(faqSchema) }} />
       <section className="relative min-h-[720px] overflow-hidden">
         <div className="absolute inset-0">
           {heroSlides.map((slide, idx) => (

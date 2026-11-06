@@ -1,7 +1,7 @@
 import type { Metadata } from "next";
 
 export const metadata: Metadata = {
-  title: "Adventure Games Murree | Mountain Activities | Himalaya Villas Bhurban",
+  title: "Adventure Games and Mountain Activities in Murree | Himalaya Villas & Resorts",
   description: "Adventure games and mountain activities in Murree at Himalaya Villas Bhurban. Enjoy thrilling outdoor adventures, guided hikes, zip-lining, rock climbing, and nature experiences for all ages. Book your adventure today!",
   keywords: "adventure games Murree, mountain activities Bhurban, outdoor adventures Murree Hills, Himalaya Villas adventure activities, zip-lining Murree, rock climbing Bhurban, hiking trails Murree, nature activities Pakistan",
   openGraph: {

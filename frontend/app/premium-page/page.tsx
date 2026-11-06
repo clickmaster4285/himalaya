@@ -1,5 +1,6 @@
 "use client";
 
+import EmailLink from "@/components/EmailLink";
 import { useState, useEffect, useRef } from "react";
 import { motion, useScroll, useTransform, useInView } from "framer-motion";
 import { 
@@ -25,18 +26,7 @@ const premiumServiceSchema = {
   "@type": "Service",
   "name": "Premium Luxury Experience at Himalaya Villas",
   "description": "Exclusive premium luxury villa experience with personalized service, private accommodations, and world-class amenities in Bhurban, Murree Hills.",
-  "provider": {
-    "@type": "Organization",
-    "name": "Himalaya Villas and Resort",
-    "telephone": "+92 304 567 9000",
-    "address": {
-      "@type": "PostalAddress",
-      "streetAddress": "Bhurban",
-      "addressLocality": "Murree",
-      "addressRegion": "Punjab",
-      "addressCountry": "PK"
-    }
-  },
+  "provider": { "@id": "https://himalayavillas.com/#organization" },
   "serviceType": "Premium Luxury Accommodation",
   "offers": {
     "@type": "Offer",
@@ -127,14 +117,14 @@ const PremiumLandingPage = () => {
 
   // Gallery images
   const galleryImages = [
-    { id: 1, title: "Mountain View Villa", category: "Accommodation", image: "https://picsum.photos/seed/villa1/400/300.jpg" },
-    { id: 2, title: "Luxury Suite", category: "Accommodation", image: "https://picsum.photos/seed/suite2/400/300.jpg" },
-    { id: 3, title: "Wedding Ceremony", category: "Events", image: "https://picsum.photos/seed/wedding3/400/300.jpg" },
-    { id: 4, title: "Corporate Meeting", category: "Events", image: "https://picsum.photos/seed/meeting4/400/300.jpg" },
-    { id: 5, title: "Spa Treatment", category: "Wellness", image: "https://picsum.photos/seed/spa5/400/300.jpg" },
-    { id: 6, title: "Fine Dining", category: "Dining", image: "https://picsum.photos/seed/dining6/400/300.jpg" },
-    { id: 7, title: "Pool Area", category: "Recreation", image: "https://picsum.photos/seed/pool7/400/300.jpg" },
-    { id: 8, title: "Garden View", category: "Nature", image: "https://picsum.photos/seed/garden8/400/300.jpg" }
+    { id: 1, title: "Mountain View Villa", category: "Accommodation", image: "/assets/gallery-exterior.jpg" },
+    { id: 2, title: "Luxury Suite", category: "Accommodation", image: "/assets/gallery-interior.jpg" },
+    { id: 3, title: "Wedding Ceremony", category: "Events", image: "/assets/barat-hero-1.png" },
+    { id: 4, title: "Corporate Meeting", category: "Events", image: "/assets/conference1.webp" },
+    { id: 5, title: "Villa Interior", category: "Accommodation", image: "/assets/amenities-interior-real.jpg" },
+    { id: 6, title: "Fine Dining", category: "Dining", image: "/assets/gallery-dining-night.jpg" },
+    { id: 7, title: "Villa Terrace", category: "Accommodation", image: "/assets/villa-terrace.jpg" },
+    { id: 8, title: "Garden View", category: "Nature", image: "/assets/murree-forest-pines.jpg" }
   ];
 
   // Testimonials
@@ -641,7 +631,7 @@ const PremiumLandingPage = () => {
                     </div>
                     <div>
                       <p className="text-white/60 text-sm">Email</p>
-                      <p className="text-white font-semibold">info@himalayavillas.com</p>
+                      <p className="text-white font-semibold"><EmailLink user="info" plain /></p>
                     </div>
                   </div>
                   <div className="flex items-center gap-4">

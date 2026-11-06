@@ -2,7 +2,6 @@ import type { Metadata } from "next";
 
 import { HomeStructuredData } from "@/components/seo/StructuredData";
 import Script from "next/script";
-import localBusinessSchema from '@/public/himalayavillas-localbusiness-schema.json';
 import faqSchema from '@/public/himalayavillas-faq-schema.json';
 import { buildHomepageJsonLd } from "@/lib/seo/homepage-schema";
 import HeroSection from "@/components/HeroSection";
@@ -25,9 +24,9 @@ import EventsSection from "@/components/EventsSection";
 import VirtualTourSection from "@/components/VirtualTourSection";
 
 export const metadata: Metadata = createPageMetadata({
-  title: "Himalaya Villas & Resort Hotel in Bhurban, Murree",
+  title: "Himalaya Villas & Resorts in Bhurban, Murree",
   description:
-    "Enjoy a comfortable stay at Himalaya Villas and Resort Hotel in Bhurban, Murree. Choose from rooms, suites, apartments and private villas. Book Now!",
+    "Enjoy a comfortable stay at Himalaya Villas & Resorts in Bhurban, Murree. Choose from rooms, suites, apartments and private villas. Book Now!",
   path: "/",
   ogImage: "/assets/gallery-exterior.jpg",
     keywords: [
@@ -41,7 +40,8 @@ export const metadata: Metadata = createPageMetadata({
   ],
 });
 
-export const dynamic = "force-dynamic";
+// HIM-TECH-0010: cacheable HTML, regenerated every five minutes.
+export const revalidate = 300;
 
 const Index = async () => {
   const homepageSchema = buildHomepageJsonLd();
@@ -50,16 +50,11 @@ const Index = async () => {
     <div className="min-h-screen">
       <HomeStructuredData />
       <Script
-        id="local-business-schema"
-        type="application/ld+json"
-        dangerouslySetInnerHTML={{ __html: JSON.stringify(localBusinessSchema) }}
-      />
-      <Script
         id="faq-schema"
         type="application/ld+json"
         dangerouslySetInnerHTML={{ __html: JSON.stringify(faqSchema) }}
       />
-      {/* ✅ New connected graph: LodgingBusiness + WebSite + WebPage + FAQPage */}
+      {/* WebSite, WebPage, and FAQ. The lodging entity is the sitewide graph. */}
       <Script
         id={homepageSchema.id}
         type="application/ld+json"

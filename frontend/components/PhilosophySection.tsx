@@ -76,7 +76,7 @@ const PhilosophySection = () => {
             transition={{ duration: 0.8, delay: 0.5 }}
             className="text-base md:text-lg leading-relaxed text-muted-foreground max-w-lg"
           >
-Himalaya Villas and Resort Hotel combines comfortable accommodation, mountain surroundings, and spaces for private gatherings. Our resort hotel welcomes guests for personal stays, family trips, business visits, and special occasions, with different booking options available at one property.
+Himalaya Villas & Resorts combines comfortable accommodation, mountain surroundings, and spaces for private gatherings. Our resort hotel welcomes guests for personal stays, family trips, business visits, and special occasions, with different booking options available at one property.
          
           </motion.p>
 

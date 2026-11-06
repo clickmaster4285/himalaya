@@ -1,5 +1,4 @@
 import { getSiteOrigin } from "@/lib/seo/site-config";
-import { SITE_CONTACT } from "@/lib/site-contact";
 
 export type JsonLdScript = {
   id: string;
@@ -11,7 +10,7 @@ const SCRIPT_ID = "hv-jsonld-homepage";
 /**
  * Homepage JSON-LD graph.
  * Emits a single connected @graph with:
- *   - LodgingBusiness (#business)
+ *   - the sitewide lodging entity (#lodging), referenced, not redefined
  *   - WebSite (#website)
  *   - WebPage (#webpage)
  *   - FAQPage (#faq)
@@ -27,51 +26,15 @@ export function buildHomepageJsonLd(): JsonLdScript {
       "@context": "https://schema.org",
       "@graph": [
         {
-          "@type": "LodgingBusiness",
-          "@id": `${origin}/#business`,
-          name: "Himalaya Villas and Resort Hotel",
-          url,
-          description:
-            "Himalaya Villas and Resort Hotel is a hospitality property in Bhurban, Murree, Pakistan, offering rooms, suites, apartments, private villas, complete-villa bookings, and spaces for weddings and private events.",
-          telephone: SITE_CONTACT.phoneDisplay,
-          address: {
-            "@type": "PostalAddress",
-            addressLocality: "Bhurban",
-            addressRegion: "Punjab",
-            addressCountry: "PK",
-          },
-          areaServed: [
-            { "@type": "Place", name: "Bhurban, Murree, Pakistan" },
-            { "@type": "Place", name: "Murree, Pakistan" },
-          ],
-          hasOfferCatalog: {
-            "@type": "OfferCatalog",
-            name: "Accommodation Options",
-            itemListElement: [
-              { "@type": "OfferCatalog", name: "Rooms and Suites" },
-              { "@type": "OfferCatalog", name: "Apartments" },
-              { "@type": "OfferCatalog", name: "Private and Complete Villas" },
-            ],
-          },
-        },
-        {
-          "@type": "WebSite",
-          "@id": `${origin}/#website`,
-          url,
-          name: "Himalaya Villas and Resort Hotel",
-          publisher: { "@id": `${origin}/#business` },
-          inLanguage: "en",
-        },
-        {
           "@type": "WebPage",
           "@id": `${origin}/#webpage`,
           url,
-          name: "Himalaya Villas and Resort Hotel | Bhurban, Murree",
+          name: "Himalaya Villas & Resorts | Bhurban, Murree",
           description:
-            "Enjoy a comfortable stay at Himalaya Villas and Resort Hotel in Bhurban, Murree. Choose from rooms, suites, apartments and private villas. Book Now!",
+            "Enjoy a comfortable stay at Himalaya Villas & Resorts in Bhurban, Murree. Choose from rooms, suites, apartments and private villas. Book Now!",
           isPartOf: { "@id": `${origin}/#website` },
-          about: { "@id": `${origin}/#business` },
-          mainEntity: { "@id": `${origin}/#business` },
+          about: { "@id": `${origin}/#lodging` },
+          mainEntity: { "@id": `${origin}/#lodging` },
           inLanguage: "en",
         },
         {
@@ -81,10 +44,10 @@ export function buildHomepageJsonLd(): JsonLdScript {
           mainEntity: [
             {
               "@type": "Question",
-              name: "Where is Himalaya Villas and Resort Hotel located?",
+              name: "Where is Himalaya Villas & Resorts located?",
               acceptedAnswer: {
                 "@type": "Answer",
-                text: "Himalaya Villas and Resort Hotel is located in Bhurban, Murree, Pakistan. The property offers rooms, suites, apartments and private villas.",
+                text: "Himalaya Villas & Resorts is located in Bhurban, Murree, Pakistan. The property offers rooms, suites, apartments and private villas.",
               },
             },
             {

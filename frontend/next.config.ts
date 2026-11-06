@@ -1,6 +1,8 @@
 import path from "path";
 import type { NextConfig } from "next";
 import { loadEnvConfig } from "@next/env";
+import { intentRedirects } from "./lib/seo/intent-canonicals";
+import { legacyRedirects, legacyRedirects301 } from "./lib/seo/legacy-redirects";
 
 const cwd = process.cwd();
 const repoRoot =
@@ -14,7 +16,16 @@ loadEnvConfig(cwd);
 
 const backend = (process.env.BACKEND_INTERNAL_URL ?? "http://127.0.0.1:5000").replace(/\/$/, "");
 
+/** HIM-TECH-0010: transport and referrer headers on every response. */
+const SECURITY_HEADERS = [
+  { key: "Strict-Transport-Security", value: "max-age=31536000; includeSubDomains" },
+  { key: "Referrer-Policy", value: "strict-origin-when-cross-origin" },
+  { key: "X-Content-Type-Options", value: "nosniff" },
+  { key: "X-Frame-Options", value: "SAMEORIGIN" },
+];
+
 const nextConfig: NextConfig = {
+  poweredByHeader: false,
   // Turbopack resolves CSS imports from the monorepo root — hoist deps via root workspaces.
   turbopack: {
     root: repoRoot,
@@ -29,7 +40,6 @@ const nextConfig: NextConfig = {
     deviceSizes: [640, 750, 828, 1080, 1200, 1920, 2048],
     imageSizes: [16, 32, 48, 64, 96, 128, 256, 384],
     minimumCacheTTL: 60 * 60 * 24 * 30,
-    domains: ["picsum.photos"],
   },
   async rewrites() {
     return {
@@ -47,27 +57,15 @@ const nextConfig: NextConfig = {
       ],
     };
   },
+  async headers() {
+    return [{ source: "/:path*", headers: SECURITY_HEADERS }];
+  },
   async redirects() {
     return [
-      {
-        source: "/villas-in-bhurban-murree",
-        destination: "/Why-Villas-are-the-ultimate-luxury-stays-in-Bhurban",
-        permanent: true,
-      },
-      // Legacy public URLs from sitemap → current App Router paths
-      { source: "/booking", destination: "/book", permanent: true },
-      { source: "/book-now", destination: "/book", permanent: true },
-      { source: "/journal", destination: "/blogs", permanent: true },
-      // /blog (singular) → /blogs — fixes legacy/wrong links like /blog/private-tours-and-walkthroughs
+      ...legacyRedirects301,
       { source: "/blog/:path*", destination: "/blogs/:path*", permanent: true },
-      { source: "/luxury-hotels-in-muree", destination: "/luxury-hotels-in-murree", permanent: true },
-      { source: "/about", destination: "/", permanent: true },
-      { source: "/services", destination: "/", permanent: true },
-      { source: "/gallery", destination: "/", permanent: true },
-      { source: "/Why-Villas-are-the-ultimate-luxury-stays-in-Bhurban", destination: "/blogs/Why-Villas-are-the-ultimate-luxury-stays-in-Bhurban", permanent: true },
-      { source: "/family-tour-murree-himalaya-villas", destination: "/blogs/family-tour-murree-himalaya-villas", permanent: true },
-      { source: "/thing-to-do-bhurban-murree", destination: "/blogs/thing-to-do-bhurban-murree", permanent: true },
-      { source: "/thing-to-do-bhurban-murree2", destination: "/blogs/thing-to-do-bhurban-murree", permanent: true },
+      ...legacyRedirects,
+      ...intentRedirects,
     ];
   },
 };

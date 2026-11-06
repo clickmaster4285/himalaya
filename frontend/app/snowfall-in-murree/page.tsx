@@ -32,8 +32,8 @@ const snowfallSchema = {
   "@type": "Article",
   "headline": "Snowfall in Murree — Complete Guide for 2025 & 2026",
   "description": "Monthly snowfall calendar, weather forecast guide, snowfall pics and luxury winter stays in Bhurban, Murree Hills.",
-  "author": { "@type": "Organization", "name": "Himalaya Villas" },
-  "publisher": { "@type": "Organization", "name": "Himalaya Villas", "url": "https://himalayavillas.com" },
+  "author": { "@id": "https://himalayavillas.com/#organization" },
+  "publisher": { "@id": "https://himalayavillas.com/#organization" },
   "about": { "@type": "Place", "name": "Murree Hills", "geo": { "@type": "GeoCoordinates", "latitude": "33.9032", "longitude": "73.3932" } },
   "dateModified": "2025-11-01"
 };

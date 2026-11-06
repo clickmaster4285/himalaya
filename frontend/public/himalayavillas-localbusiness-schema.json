@@ -1,25 +1,28 @@
 {
   "@context": "https://schema.org",
-  "@type": ["LocalBusiness", "LodgingBusiness"],
+  "@type": ["VacationRental", "LodgingBusiness"],
+  "@id": "https://himalayavillas.com/#lodging",
   "name": "Himalaya Villas & Resorts",
+  "alternateName": "Himalaya Villas & Resorts",
   "description": "A private luxury estate in Bhurban crafted for guests who demand exclusivity, privacy, and elevated experiences in the cedar forests of the Murree hills.",
   "url": "https://himalayavillas.com",
   "telephone": "+923045679000",
-  "email": "",
+  "email": "bookings@himalayavillas.com",
   "priceRange": "PKR 16,500 - PKR 99,000",
   "currenciesAccepted": "PKR",
   "paymentAccepted": "Cash, Bank Transfer",
   "address": {
     "@type": "PostalAddress",
-    "streetAddress": "Bhurban",
+    "streetAddress": "Mohra Iswal near Kashmiri Bazar",
     "addressLocality": "Bhurban",
     "addressRegion": "Murree",
+    "postalCode": "47190",
     "addressCountry": "PK"
   },
   "geo": {
     "@type": "GeoCoordinates",
-    "latitude": "33.91",
-    "longitude": "73.39"
+    "latitude": "33.9562",
+    "longitude": "73.385"
   },
   "hasMap": "https://maps.app.goo.gl/SzyHVXrCLic2CuvH8",
   "openingHoursSpecification": {
@@ -126,18 +129,5 @@
       "url": "https://himalayavillas.com/villas/luxury-complete-villa"
     }
   ],
-  "review": {
-    "@type": "Review",
-    "reviewBody": "The perfect escape from the city. The private villas offer unmatched tranquility.",
-    "author": {
-      "@type": "Person",
-      "name": "Ali Raza"
-    },
-    "reviewRating": {
-      "@type": "Rating",
-      "ratingValue": "5",
-      "bestRating": "5"
-    }
-  },
   "keywords": "luxury villas Bhurban, private estate Murree, wedding venue Islamabad, corporate retreat Pakistan, luxury hotel Murree"
 }

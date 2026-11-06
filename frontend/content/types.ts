@@ -10,6 +10,9 @@ export interface Article {
   heroTagline: string;
   heroImage: string;
   sitemapCategory?: string;
+  author?: string;
+  reviewer?: string;
+  lastReviewed?: string;
   blocks: Block[];
 }
 

@@ -5,25 +5,8 @@ const mediaServiceSchema = {
   "@type": "Service",
   "name": "Photography & Content Packages at Himalaya Villas",
   "description": "Professional photography and media services for weddings and brand campaigns. Expert coverage with drone aerial shots and video production.",
-  "provider": {
-    "@type": "Organization",
-    "name": "Himalaya Villas and Resort",
-    "telephone": "+92 304 567 9000",
-    "address": {
-      "@type": "PostalAddress",
-      "streetAddress": "Bhurban",
-      "addressLocality": "Murree",
-      "addressRegion": "Punjab",
-      "addressCountry": "PK"
-    }
-  },
+  "provider": { "@id": "https://himalayavillas.com/#organization" },
   "serviceType": "Photography and Media Services",
-  "offers": {
-    "@type": "Offer",
-    "price": "75000",
-    "priceCurrency": "PKR",
-    "description": "Professional photography and media packages starting from PKR 75,000"
-  },
   "areaServed": {
     "@type": "Place",
     "name": "Murree Hills, Bhurban"
@@ -44,7 +27,7 @@ export default function MediaExperience() {
           <li>Video production and editing</li>
           <li>Drone and aerial coverage</li>
         </ul>
-        <Link href="/experiences" className="inline-block mt-4 text-[#c9a55b] font-semibold hover:underline">← Back to Experiences</Link>
+        <Link href="/experience" className="inline-block mt-4 text-[#c9a55b] font-semibold hover:underline">← Back to Experiences</Link>
       </div>
     </div>
   );

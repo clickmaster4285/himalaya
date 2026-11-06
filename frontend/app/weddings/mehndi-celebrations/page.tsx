@@ -8,58 +8,14 @@ import { CheckCircle2, HelpCircle, Music, Sparkles } from "lucide-react";
 
 const mehndiEventSchema = {
   "@context": "https://schema.org",
-  "@type": "Event",
+  "@type": "Service",
   "name": "Mehndi Celebrations at Himalaya Villas",
   "description": "Vibrant mehndi celebrations with traditional yellow-orange themes, floral hangings, live dhol music, and family event coordination in Bhurban, Murree Hills.",
   "url": "https://himalayavillas.com/weddings/mehndi-celebrations",
-  "startDate": "2024-01-01",
-  "endDate": "2024-12-31",
-  "location": {
-    "@type": "Place",
-    "name": "Himalaya Villas and Resort",
-    "address": {
-      "@type": "PostalAddress",
-      "streetAddress": "Bhurban",
-      "addressLocality": "Murree",
-      "addressRegion": "Punjab",
-      "addressCountry": "PK"
-    }
-  },
-  "organizer": {
-    "@type": "Organization",
-    "name": "Himalaya Villas and Resort",
-    "telephone": "+92 304 567 9000"
-  },
-  "offers": {
-    "@type": "Offer",
-    "price": "80000",
-    "priceCurrency": "PKR",
-    "description": "Mehndi celebration package with stage styling and music arrangements"
-  }
+  "provider": { "@id": "https://himalayavillas.com/#organization" }
 };
 
-const faqSchema = {
-  "@context": "https://schema.org",
-  "@type": "FAQPage",
-  "mainEntity": [
-    {
-      "@type": "Question",
-      "name": "What themes are available for mehndi celebrations?",
-      "acceptedAnswer": {
-        "@type": "Answer",
-        "text": "We offer vibrant yellow-orange themes, floral hangings, and traditional seating setups that can be customized to your preferences."
-      }
-    },
-    {
-      "@type": "Question",
-      "name": "Do you provide music and dhol for mehndi?",
-      "acceptedAnswer": {
-        "@type": "Answer",
-        "text": "Yes, we arrange live dhol and curated playlists to create high-energy family celebration vibes for your mehndi event."
-      }
-    }
-  ]
-};
+
 
 const heroSlides = [
   "/assets/mehndi-hero-1.png",
@@ -124,7 +80,6 @@ export default function MehndiPage() {
   return (
     <div className="min-h-screen bg-white">
       <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(mehndiEventSchema) }} />
-      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(faqSchema) }} />
       <section className="relative min-h-[720px] overflow-hidden">
         <div className="absolute inset-0">
           {heroSlides.map((slide, idx) => (

@@ -27,7 +27,7 @@ const ReserveSection = () => {
           transition={{ duration: 0.8, delay: 0.15 }}
           className="mt-4 font-display text-4xl md:text-5xl lg:text-6xl font-normal leading-tight text-foreground"
         >
-         Book Your Stay at Himalaya Villas and Resort Hotel
+         Book Your Stay at Himalaya Villas & Resorts
         </motion.h2>
 
         <motion.p

@@ -23,12 +23,12 @@ export function buildBlogPostingJsonLd(post: VillaBlogPost): JsonLdScript {
       },
       author: {
         "@type": "Organization",
-        name: "Himalaya Premium Villas",
+        name: "Himalaya Villas & Resorts",
         url: `${origin}/`,
       },
       publisher: {
         "@type": "Organization",
-        name: "Himalaya Premium Villas",
+        name: "Himalaya Villas & Resorts",
         url: `${origin}/`,
         logo: {
           "@type": "ImageObject",

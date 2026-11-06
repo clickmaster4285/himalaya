@@ -30,18 +30,7 @@ const familyHotelSchema = {
   "@type": "Service",
   "name": "Family Hotels in Murree - Himalaya Villas",
   "description": "Family-friendly accommodations in Murree with spacious villas, kids activities, and family dining options perfect for family vacations and getaways.",
-  "provider": {
-    "@type": "Organization",
-    "name": "Himalaya Villas and Resort",
-    "telephone": "+92 304 567 9000",
-    "address": {
-      "@type": "PostalAddress",
-      "streetAddress": "Bhurban",
-      "addressLocality": "Murree",
-      "addressRegion": "Punjab",
-      "addressCountry": "PK"
-    }
-  },
+  "provider": { "@id": "https://himalayavillas.com/#organization" },
   "serviceType": "Family Accommodation",
   "offers": {
     "@type": "Offer",
@@ -262,8 +251,8 @@ export default function FamilyHotelsMurreePage() {
             <div className="text-sm">Happy Families</div>
           </div>
           <div>
-            <div className="text-3xl font-bold text-green-300 mb-2">4.8/5</div>
-            <div className="text-sm">Family Rating</div>
+            <div className="text-3xl font-bold text-green-300 mb-2">12</div>
+            <div className="text-sm">Private Villas</div>
           </div>
           <div>
             <div className="text-3xl font-bold text-green-300 mb-2">20+</div>

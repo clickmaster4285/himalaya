@@ -92,9 +92,11 @@ const galleryImages = [
 export default function NikahWeddingPage({
   event,
   related,
+  children,
 }: {
   event: NikahEventData;
   related: RelatedNikahEvent[];
+  children?: React.ReactNode;
 }) {
   const intro = event.intro ?? [];
   const whyChoose = event.whyChoose ?? [];
@@ -424,6 +426,8 @@ export default function NikahWeddingPage({
           </div>
         </section>
       )}
+
+      {children}
 
       <Footer />
     </div>

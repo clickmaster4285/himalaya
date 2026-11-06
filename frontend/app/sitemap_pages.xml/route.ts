@@ -1,4 +1,6 @@
 import { getSiteOrigin } from "@/lib/seo/site-config";
+import { isExcludedFromSitemap } from "@/lib/seo/sitemap-filter";
+import { GUIDE_TOPICS, guideHubPath } from "@/lib/guides";
 import fs from "fs";
 import path from "path";
 
@@ -141,7 +143,8 @@ export async function GET() {
   const allPages = getAllPages(appDir, "", EXCLUDED_PATHS);
 
   // Remove duplicates and sort
-  const uniquePages = [...new Set(allPages)].sort();
+  const guideHubs = GUIDE_TOPICS.map((topic) => guideHubPath(topic.id));
+  const uniquePages = [...new Set([...allPages, ...guideHubs])].filter((pagePath) => !isExcludedFromSitemap(pagePath)).sort();
 
   // Generate priority and changefreq based on path
   const getPriority = (path: string): number => {

@@ -10,7 +10,7 @@ import LiveWeatherBadge from "@/components/LiveWeatherBadge";
 
 const logo = "/assets/himalaya-logo.png";
 
-const navItems = ["Villas", "Experience", "Virtual Tour", "Events", "Blogs", "Contact" , 'FAQs'];
+const navItems = ["Villas", "Experience", "Virtual Tour", "Events", "Guides", "Blogs", "Contact", "FAQs"];
 
 interface NavbarProps {
   theme?: "light" | "dark";
@@ -70,6 +70,7 @@ const Navbar = ({ theme = "dark" }: NavbarProps) => {
     if (item === "Experience") return "/experience";
     if (item === "Virtual Tour") return "/virtual-tour";
     if (item === "Events") return "/events";
+    if (item === "Guides") return "/guides";
     if (item === "Blogs") return "/blogs";
     if (item === "Contact") return "/contact";
     if (item === "FAQs") return "/faqs";

@@ -5,6 +5,8 @@ import { notFound } from "next/navigation";
 import { Fragment } from "react";
 import Navbar from "@/components/Navbar";
 import Footer from "@/components/Footer";
+import { RelatedGuides } from "@/components/seo/RelatedGuides";
+import { featuredGuides, guideHubPath } from "@/lib/guides";
 import { JsonLd } from "@/components/seo/JsonLd";
 import { blogCanonicalPath, getAllBlogSlugs, getBlogPostBySlug } from "@/lib/blog-posts";
 import { createPageMetadata } from "@/lib/seo/build-metadata";
@@ -231,6 +233,10 @@ export default async function BlogArticlePage({ params }: Props) {
         </div>
       </div>
 
+      <RelatedGuides
+        guides={featuredGuides(["plan-your-trip", "weather-and-seasons", "stays"], slug)}
+        hub={{ href: guideHubPath("plan-your-trip"), title: "Plan Your Trip" }}
+      />
       <Footer />
     </div>
   );

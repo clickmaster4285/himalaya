@@ -1,4 +1,6 @@
+import EmailLink from "@/components/EmailLink";
 import type { Metadata } from "next";
+import { createPageMetadata } from "@/lib/seo/build-metadata";
 import Navbar from "@/components/Navbar";
 import Footer from "@/components/Footer";
 
@@ -8,25 +10,16 @@ const privacySchema = {
   "name": "Privacy Policy | Himalaya Villas & Resorts",
   "description": "Privacy Policy for Himalaya Villas & Resorts - Learn how we protect your personal information.",
   "url": "https://himalayavillas.com/privacy-policy",
-  "provider": {
-    "@type": "Organization",
-    "name": "Himalaya Villas and Resort",
-    "telephone": "+92 304 567 9000",
-    "address": {
-      "@type": "PostalAddress",
-      "streetAddress": "Bhurban",
-      "addressLocality": "Murree",
-      "addressRegion": "Punjab",
-      "addressCountry": "PK"
-    }
-  },
+  "provider": { "@id": "https://himalayavillas.com/#organization" },
   "dateModified": "2024-01-01"
 };
 
-export const metadata: Metadata = {
+export const metadata: Metadata = createPageMetadata({
   title: "Privacy Policy | Himalaya Villas & Resorts",
-  description: "Privacy Policy for Himalaya Villas & Resorts - Learn how we protect your personal information.",
-};
+  description: "Privacy Policy for Himalaya Villas & Resorts. How the estate handles personal information.",
+  path: "/privacy-policy",
+  appendSiteBrand: false,
+});
 
 export default function PrivacyPolicyPage() {
   return (
@@ -120,9 +113,7 @@ export default function PrivacyPolicyPage() {
               </h2>
               <p>
                 If you have any questions about this Privacy Policy, please contact us at{" "}
-                <a href="mailto:info@himalayavillas.com" className="underline" style={{ color: "hsl(36 45% 55%)" }}>
-                  info@himalayavillas.com
-                </a>
+                <EmailLink user="info" className="underline" style={{ color: "hsl(36 45% 55%)" }} />
               </p>
             </section>
 

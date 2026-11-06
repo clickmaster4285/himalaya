@@ -1,5 +1,6 @@
 "use client";
 
+import EmailLink from "@/components/EmailLink";
 import type { Metadata } from "next";
 import Link from "next/link";
 import { useState } from "react";
@@ -7,7 +8,7 @@ import { ContactStructuredData } from "@/components/seo/StructuredData";
 import Navbar from "@/components/Navbar";
 import Footer from "@/components/Footer";
 import { ExternalLink, Mail, MapPin, Phone, Send, CheckCircle } from "lucide-react";
-import { SITE_CONTACT, mailtoHref, telHref } from "@/lib/site-contact";
+import { SITE_CONTACT, telHref } from "@/lib/site-contact";
 import { createPageMetadata } from "@/lib/seo/build-metadata";
 import { submitInquiry } from "@/lib/submit-inquiry-client";
 import { trackClick } from "@/lib/trackedClick";
@@ -165,13 +166,9 @@ export default function ContactPage() {
                   <div>
                     <p className="font-display text-2xl sm:text-3xl text-neutral-900">Email Us</p>
                     <p className="mt-2 sm:mt-3 text-xs sm:text-[13px] leading-6 sm:leading-7 text-neutral-600">
-                      <a href={mailtoHref("info")} className="hover:text-[#8b6914] block sm:inline break-all">
-                        {SITE_CONTACT.emails.info}
-                      </a>
+                      <EmailLink user="info" className="hover:text-[#8b6914] block sm:inline break-all" />
                       <br className="hidden sm:block" />
-                      <a href={mailtoHref("bookings")} className="hover:text-[#8b6914] block sm:inline break-all">
-                        {SITE_CONTACT.emails.bookings}
-                      </a>
+                      <EmailLink user="bookings" className="hover:text-[#8b6914] block sm:inline break-all" />
                     </p>
                   </div>
                 </div>
@@ -184,7 +181,7 @@ export default function ContactPage() {
                 </p>
                 <div className="aspect-video w-full bg-[#e8e4dc]">
                   <iframe
-                    title="Himalaya Villas and Resort on Google Maps"
+                    title="Himalaya Villas & Resorts on Google Maps"
                     src="https://www.google.com/maps?q=33.9562%2C73.3850&z=15&output=embed"
                     className="h-full w-full border-0"
                     loading="lazy"
@@ -193,7 +190,7 @@ export default function ContactPage() {
                   />
                 </div>
                <div className="px-3 sm:px-4 py-2.5 sm:py-3 text-center">
-  <span className="block">Himalaya Villas and Resort</span>
+  <span className="block">Himalaya Villas & Resorts</span>
 
   <a
     href={SITE_CONTACT.googleMapsUrl}
@@ -254,7 +251,7 @@ export default function ContactPage() {
                           value={formData.email}
                           onChange={handleChange}
                           required
-                          placeholder={SITE_CONTACT.emails.bookings}
+                          placeholder="you@example.com"
                           className="w-full rounded-sm bg-transparent rounded-sm text-xs sm:text-[13px] text-neutral-700 focus:outline-none"
                         />
                       </div>

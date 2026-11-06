@@ -1,4 +1,6 @@
+import EmailLink from "@/components/EmailLink";
 import type { Metadata } from "next";
+import { createPageMetadata } from "@/lib/seo/build-metadata";
 import Navbar from "@/components/Navbar";
 import Footer from "@/components/Footer";
 
@@ -8,25 +10,16 @@ const termsSchema = {
   "name": "Terms & Conditions | Himalaya Villas & Resorts",
   "description": "Terms and Conditions for Himalaya Villas & Resorts - Understand our booking terms and guest policies.",
   "url": "https://himalayavillas.com/terms-and-conditions",
-  "provider": {
-    "@type": "Organization",
-    "name": "Himalaya Villas and Resort",
-    "telephone": "+92 304 567 9000",
-    "address": {
-      "@type": "PostalAddress",
-      "streetAddress": "Bhurban",
-      "addressLocality": "Murree",
-      "addressRegion": "Punjab",
-      "addressCountry": "PK"
-    }
-  },
+  "provider": { "@id": "https://himalayavillas.com/#organization" },
   "dateModified": "2024-01-01"
 };
 
-export const metadata: Metadata = {
-  title: "Terms & Conditions | Himalaya Villas & Resorts",
-  description: "Terms and Conditions for Himalaya Villas & Resorts - Understand our booking terms and guest policies.",
-};
+export const metadata: Metadata = createPageMetadata({
+  title: "Terms and Conditions | Himalaya Villas & Resorts",
+  description: "Terms and Conditions for Himalaya Villas & Resorts. Booking terms and guest policies.",
+  path: "/terms-and-conditions",
+  appendSiteBrand: false,
+});
 
 export default function TermsAndConditionsPage() {
   return (
@@ -138,9 +131,7 @@ export default function TermsAndConditionsPage() {
               </h2>
               <p>
                 For questions or concerns about these Terms and Conditions, please contact us at{" "}
-                <a href="mailto:info@himalayavillas.com" className="underline" style={{ color: "hsl(36 45% 55%)" }}>
-                  info@himalayavillas.com
-                </a>
+                <EmailLink user="info" className="underline" style={{ color: "hsl(36 45% 55%)" }} />
               </p>
             </section>
 

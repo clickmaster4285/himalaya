@@ -5,7 +5,8 @@ import "./globals.css";
 import { cn } from "@/lib/utils";
 import { HotelGraphStructuredData } from "@/components/seo/HotelGraphStructuredData";
 import { BreadcrumbJsonLd } from "@/components/seo/BreadcrumbJsonLd";
-import { getSiteOrigin } from "@/lib/seo/site-config";
+import ConversionTracking from "@/components/ConversionTracking";
+import { BRAND, getSiteOrigin } from "@/lib/seo/site-config";
 
 /** Clean UI type for body, forms, and nav */
 const dmSans = DM_Sans({
@@ -30,43 +31,31 @@ const geistMono = Geist_Mono({
 export const metadata: Metadata = {
   metadataBase: new URL(getSiteOrigin()),
   title: {
-    default: "Himalaya Premium Villas | Private Luxury Estate Bhurban",
-    template: "%s ",
+    default: `${BRAND.name} | Private Villa Estate in Bhurban, Murree`,
+    template: "%s",
   },
-    icons: {
-    icon: '/favicon.ico',
-    shortcut: '/favicon.ico',
-    apple: '/favicon.ico',
+  // Resolved per route at build time, so every page carries a self-referencing canonical.
+  alternates: { canonical: "./" },
+  icons: {
+    icon: "/favicon.ico",
+    shortcut: "/favicon.ico",
+    apple: "/favicon.ico",
   },
   description:
-    "Himalaya Premium Villas is not a hotel. It is a private luxury estate in Bhurban crafted for those who demand exclusivity, privacy, and elevated experiences in the Himalayan foothills. Ultra-private villas, limited bookings, destination weddings, corporate retreats, and curated stays.",
-  keywords: [
-    "Himalaya Premium Villas",
-    "Bhurban luxury estate",
-    "private villa Pakistan",
-    "Murree hills retreat",
-    "exclusive mountain villas",
-    "destination wedding Bhurban",
-    "corporate retreat Pakistan",
-  ],
+    "Himalaya Villas & Resorts is a private villa estate in Bhurban, Murree Hills: twelve villas for family stays, weddings and company offsites, booked for one group at a time.",
   openGraph: {
-    title: "Himalaya Premium Villas — Private Luxury Estate, Bhurban",
+    title: `${BRAND.name} | Private Villa Estate in Bhurban`,
     description:
-      "Not a hotel — a private luxury estate for elite gatherings, with panoramic Himalayan views, curated dining, and limited monthly bookings.",
-    url: "/",
+      "A private villa estate in Bhurban, Murree Hills, for stays, weddings and gatherings.",
+    url: "./",
+    siteName: BRAND.name,
     type: "website",
-    images: [
-      {
-        url: "/assets/gallery-exterior.jpg",
-        alt: "Himalaya Premium Villas in Bhurban",
-      },
-    ],
+    images: [{ url: "/assets/gallery-exterior.jpg", alt: `${BRAND.name}, Bhurban` }],
   },
   twitter: {
     card: "summary_large_image",
-    title: "Himalaya Premium Villas — Private Luxury Estate, Bhurban",
-    description:
-      "Not a hotel — a private luxury estate for elite gatherings, with panoramic Himalayan views, curated dining, and limited monthly bookings.",
+    title: `${BRAND.name} | Private Villa Estate in Bhurban`,
+    description: "A private villa estate in Bhurban, Murree Hills, for stays, weddings and gatherings.",
     images: ["/assets/gallery-exterior.jpg"],
   },
   verification: {
@@ -123,6 +112,7 @@ export default function RootLayout({
           />
         </noscript>
         {/* End Google Tag Manager (noscript) */}
+        <ConversionTracking />
         {children}
       </body>
     </html>

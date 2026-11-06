@@ -1,7 +1,7 @@
 import type { Metadata } from "next";
 
 export const metadata: Metadata = {
-  title: "Murree Hotel Packages | All-Inclusive Deals | Holiday Packages | Himalaya Villas",
+  title: "Murree Hotel Packages and Holiday Deals | Himalaya Villas & Resorts",
   description: "Murree hotel packages with all-inclusive deals, holiday packages, and special offers at Himalaya Villas Bhurban. Family packages, honeymoon deals, corporate retreats. Best rates guaranteed!",
   keywords: "Murree hotel packages, all-inclusive hotel deals Murree, holiday packages Bhurban, family vacation packages Murree Hills, honeymoon packages Himalaya Villas, corporate retreat packages Pakistan, weekend getaways Murree",
   openGraph: {

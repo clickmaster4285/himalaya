@@ -56,7 +56,7 @@ const JournalSection = () => {
             className="text-sm sm:text-base md:text-lg leading-relaxed"
             style={{ color: "#6b6357" }}
           >
-            Himalaya Villas and Resort Hotel is located in Bhurban, a well-known
+            Himalaya Villas & Resorts is located in Bhurban, a well-known
             mountain destination in the Murree region. Our location provides a
             relaxing setting for guests who want comfortable accommodation while
             exploring the surrounding hills and nearby attractions.

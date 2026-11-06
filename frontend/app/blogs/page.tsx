@@ -5,7 +5,8 @@ import BlogsPageClient from "@/components/blogs/BlogsPageClient";
 import { CATALOG_VILLAS } from "@/lib/villa-catalog";
 import { createPageMetadata } from "@/lib/seo/build-metadata";
 
-export const dynamic = "force-dynamic";
+// HIM-TECH-0010: cacheable HTML, regenerated every five minutes.
+export const revalidate = 300;
 
 export const metadata: Metadata = createPageMetadata({
   title: "Journal — villa stories & Bhurban guides",

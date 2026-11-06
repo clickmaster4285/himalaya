@@ -1,5 +1,6 @@
 "use client";
 
+import EmailLink from "@/components/EmailLink";
 import { useEffect, useRef, useState, ReactNode } from "react";
 import {
   Mountain, Sparkles, Home, Star, Utensils, Briefcase, Clock,
@@ -603,10 +604,10 @@ function BookingCTA() {
                 <a href="tel:+923045679000" className="murree-grad-gold murree-shadow-gold rounded-full px-8 py-4 font-semibold transition hover:scale-105" style={{ color: "hsl(165 60% 18%)" }}>
                   Call to Book
                 </a>
-                <a href="mailto:info@himalayavillas.com" className="rounded-full px-8 py-4 font-semibold backdrop-blur-md transition"
+                <EmailLink user="info" className="rounded-full px-8 py-4 font-semibold backdrop-blur-md transition"
                   style={{ border: "2px solid hsl(40 38% 97% / .4)", background: "hsl(40 38% 97% / .1)", color: "hsl(40 38% 97%)" }}>
                   Email Inquiry
-                </a>
+                </EmailLink>
               </div>
             </Reveal>
             <Reveal delay={450}>
@@ -631,7 +632,7 @@ function BookingCTA() {
 function Contact() {
   const contacts = [
     { icon: Phone, label: "Phone", value: "+92 304 567 9000" },
-    { icon: Mail, label: "Email", value: "info@himalayavillas.com" },
+    { icon: Mail, label: "Email", value: <EmailLink user="info" plain /> },
     { icon: MapPin, label: "Location", value: "Murree, Punjab, Pakistan" },
   ];
   const links = ["About Murree Hotels", "Travel Guide", "Special Packages", "Cancellation Policy", "Terms & Conditions", "Privacy Policy"];

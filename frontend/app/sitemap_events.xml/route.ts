@@ -19,13 +19,11 @@ function getEventSlugs(): string[] {
     "private-musical-concerts",
     "mushaira-poetry-evenings",
     "dj-nights-music-parties",
-    "live-band-performances",
     "cultural-shows-acts",
     "corporate-retreat-packages",
     "product-launches-brand-events",
     "award-dinners-gala-nights",
     "conferences-seminars",
-    "team-building-retreats",
     "exhibitions-trade-meets",
     "milestone-birthdays",
     "eid-gatherings-family-reunions",
@@ -40,10 +38,7 @@ function getEventSlugs(): string[] {
     "workshops-creative-sessions",
     "photography-content-packages",
     "yoga-meditation-retreats",
-    "digital-detox-experiences",
     "spa-relaxation-escapes",
-    "health-fitness-camps",
-    "holistic-healing-programs",
     "luxury-honeymoon-packages"
   ];
 }

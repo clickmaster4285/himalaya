@@ -82,14 +82,14 @@ function defaults(): Required<
 > &
   Pick<HimalayaJsonLdConfig, "searchUrlTemplate"> {
   return {
-    organizationName: "Himalaya Premium Villas",
+    organizationName: "Himalaya Villas & Resorts",
     siteName: "Himalaya Villas & Resorts",
     telephone: SITE_CONTACT.phoneDisplay,
     bookingPath: "/book",
     contactPath: "/contact",
     logoPath: "/assets/himalaya-logo.png",
     lodgingImagePaths: ["/assets/gallery-exterior.jpg", "/assets/gallery-balcony.jpg", "/assets/journal-group-new.jpg"],
-    priceRange: "$$$",
+    priceRange: SITE_CONTACT.priceRange,
     lodgingDescription:
       "Luxury private villas in Bhurban, Murree Hills — premium stays, destination weddings, dining, and corporate retreats with mountain views.",
     lodgingType: "LodgingBusiness",
@@ -104,8 +104,8 @@ function defaults(): Required<
     addressRegion: "Murree",
     postalCode: "47190",
     addressCountry: "PK",
-    latitude: 33.9562,
-    longitude: 73.385,
+    latitude: SITE_CONTACT.geo.latitude,
+    longitude: SITE_CONTACT.geo.longitude,
     checkinTime: "14:00",
     checkoutTime: "12:00",
     searchUrlTemplate: undefined,
@@ -183,10 +183,7 @@ export function buildOrganizationJsonLd(cfg?: HimalayaJsonLdConfig): JsonLdScrip
 export function buildLodgingJsonLd(cfg?: HimalayaJsonLdConfig): JsonLdScript {
   const c = mergeConfig(cfg);
   const origin = getSiteOrigin();
-  const types: string[] =
-    c.lodgingType === "Hotel"
-      ? ["Hotel", "LodgingBusiness", "LocalBusiness"]
-      : ["LodgingBusiness", "Hotel", "LocalBusiness"];
+  const types = ["VacationRental", "LodgingBusiness"];
 
   const images = c.lodgingImagePaths.map((p) => absoluteUrl(p));
 
@@ -204,12 +201,6 @@ export function buildLodgingJsonLd(cfg?: HimalayaJsonLdConfig): JsonLdScript {
     paymentAccepted: "Cash, Credit Card, Bank Transfer, JazzCash, Easypaisa",
     petsAllowed: false,
     numberOfRooms: 12,
-    starRating: {
-      "@type": "Rating",
-      ratingValue: "5",
-      bestRating: "5",
-      worstRating: "1",
-    },
     description: c.lodgingDescription,
     address: {
       "@type": "PostalAddress",
@@ -254,9 +245,7 @@ export function buildServiceJsonLd(cfg?: HimalayaJsonLdConfig): JsonLdScript {
         name: c.serviceArea,
       },
       provider: {
-        "@type": "Organization",
-        name: c.organizationName,
-        url: `${origin}/`,
+        "@id": `${origin}/#organization`,
       },
       offers: {
         "@type": "Offer",
@@ -279,15 +268,10 @@ export function buildReservationJsonLd(cfg?: HimalayaJsonLdConfig): JsonLdScript
       name: c.reservationName,
       url: absoluteUrl(c.bookingPath),
       reservationFor: {
-        "@type": "LodgingBusiness",
         "@id": `${origin}/#lodging`,
-        name: c.organizationName,
-        url: `${origin}/`,
       },
       broker: {
-        "@type": "Organization",
-        name: c.organizationName,
-        url: `${origin}/`,
+        "@id": `${origin}/#organization`,
       },
     },
   };
@@ -331,19 +315,7 @@ export function buildContactPageJsonLd(cfg?: HimalayaJsonLdConfig): JsonLdScript
         url: `${getSiteOrigin()}/`,
       },
       mainEntity: {
-        "@type": "LodgingBusiness",
-        name: c.organizationName,
-        telephone: SITE_CONTACT.phoneDisplay,
-        email: SITE_CONTACT.emails.bookings,
-        address: {
-          "@type": "PostalAddress",
-          streetAddress: c.streetAddress,
-          addressLocality: c.addressLocality,
-          addressRegion: c.addressRegion,
-          postalCode: c.postalCode,
-          addressCountry: c.addressCountry,
-        },
-        hasMap: SITE_CONTACT.googleMapsUrl,
+        "@id": `${getSiteOrigin()}/#lodging`,
       },
     },
   };
@@ -354,13 +326,9 @@ export function globalJsonLdScripts(cfg?: HimalayaJsonLdConfig): JsonLdScript[] 
   return [buildWebSiteJsonLd(cfg), buildOrganizationJsonLd(cfg)];
 }
 
-/** Home page: lodging, service, reservation intent, FAQ (matches visible FAQ copy). */
+/** Home page extras. The lodging entity itself is the sitewide graph in the root layout. */
 export function homePageJsonLdScripts(cfg?: HimalayaJsonLdConfig): JsonLdScript[] {
-  return [
-    buildLodgingJsonLd(cfg),
-    buildServiceJsonLd(cfg),
-    buildReservationJsonLd(cfg),
-  ];
+  return [buildServiceJsonLd(cfg), buildReservationJsonLd(cfg)];
 }
 
 export function contactPageJsonLdScripts(cfg?: HimalayaJsonLdConfig): JsonLdScript[] {

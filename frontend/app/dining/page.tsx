@@ -155,7 +155,7 @@ export default function DiningPage() {
             data: {
               "@context": "https://schema.org",
               "@type": "Service",
-              name: "Private dining at Himalaya Villas and Resort",
+              name: "Private dining at Himalaya Villas & Resorts",
               serviceType: "Curated in-villa dining and event catering",
               areaServed: "Bhurban, Murree, Pakistan",
             },

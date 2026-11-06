@@ -30,20 +30,20 @@ export default function BookingHero() {
           {/* Stats */}
           <div className="mt-12 grid grid-cols-2 md:grid-cols-4 gap-6 md:gap-4 border-t border-white/10 pt-8">
             <div>
-              <p className="text-[#c9a55b] font-display text-2xl md:text-3xl mb-1">4.8</p>
-              <p className="text-[10px] text-white/60 uppercase tracking-widest font-semibold">GUEST RATING</p>
+              <p className="text-[#c9a55b] font-display text-2xl md:text-3xl mb-1">14:00</p>
+              <p className="text-[10px] text-white/60 uppercase tracking-widest font-semibold">CHECK-IN</p>
             </div>
             <div>
-              <p className="text-[#c9a55b] font-display text-2xl md:text-3xl mb-1">127+</p>
-              <p className="text-[10px] text-white/60 uppercase tracking-widest font-semibold">VERIFIED REVIEWS</p>
+              <p className="text-[#c9a55b] font-display text-2xl md:text-3xl mb-1">60 km</p>
+              <p className="text-[10px] text-white/60 uppercase tracking-widest font-semibold">FROM ISLAMABAD</p>
             </div>
             <div>
               <p className="text-[#c9a55b] font-display text-2xl md:text-3xl mb-1">12</p>
               <p className="text-[10px] text-white/60 uppercase tracking-widest font-semibold">PRIVATE VILLAS</p>
             </div>
             <div>
-              <p className="text-[#c9a55b] font-display text-2xl md:text-3xl mb-1 flex items-center">5<span className="text-xl ml-1 text-[#c9a55b]">★</span></p>
-              <p className="text-[10px] text-white/60 uppercase tracking-widest font-semibold">MOUNTAIN LUXURY</p>
+              <p className="text-[#c9a55b] font-display text-2xl md:text-3xl mb-1">1</p>
+              <p className="text-[10px] text-white/60 uppercase tracking-widest font-semibold">GROUP AT A TIME</p>
             </div>
           </div>
 

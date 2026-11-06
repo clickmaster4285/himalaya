@@ -8,58 +8,14 @@ import { CheckCircle2, HelpCircle, Sparkles } from "lucide-react";
 
 const engagementEventSchema = {
   "@context": "https://schema.org",
-  "@type": "Event",
+  "@type": "Service",
   "name": "Engagement Ceremonies at Himalaya Villas",
   "description": "Romantic engagement ceremonies with elegant ring ceremony styling, premium lighting and backdrop, smooth guest flow management, and memorable family photo moments in Bhurban, Murree Hills.",
   "url": "https://himalayavillas.com/weddings/engagement-ceremonies",
-  "startDate": "2024-01-01",
-  "endDate": "2024-12-31",
-  "location": {
-    "@type": "Place",
-    "name": "Himalaya Villas and Resort",
-    "address": {
-      "@type": "PostalAddress",
-      "streetAddress": "Bhurban",
-      "addressLocality": "Murree",
-      "addressRegion": "Punjab",
-      "addressCountry": "PK"
-    }
-  },
-  "organizer": {
-    "@type": "Organization",
-    "name": "Himalaya Villas and Resort",
-    "telephone": "+92 304 567 9000"
-  },
-  "offers": {
-    "@type": "Offer",
-    "price": "60000",
-    "priceCurrency": "PKR",
-    "description": "Engagement ceremony package with ring ceremony styling and guest hospitality"
-  }
+  "provider": { "@id": "https://himalayavillas.com/#organization" }
 };
 
-const faqSchema = {
-  "@context": "https://schema.org",
-  "@type": "FAQPage",
-  "mainEntity": [
-    {
-      "@type": "Question",
-      "name": "What is included in your engagement ceremony package?",
-      "acceptedAnswer": {
-        "@type": "Answer",
-        "text": "Our engagement ceremony package includes elegant ring ceremony styling, premium lighting and backdrop, smooth guest flow management, and memorable family photo moments."
-      }
-    },
-    {
-      "@type": "Question",
-      "name": "Can you accommodate large guest counts for engagement?",
-      "acceptedAnswer": {
-        "@type": "Answer",
-        "text": "Yes, we can accommodate various guest counts with flexible seating arrangements and smooth guest flow management for your engagement ceremony."
-      }
-    }
-  ]
-};
+
 
 const heroSlides = [
   "/assets/engagement-hero-1.jpg",
@@ -112,7 +68,6 @@ export default function EngagementPage() {
   return (
     <div className="min-h-screen bg-white">
       <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(engagementEventSchema) }} />
-      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(faqSchema) }} />
       <section className="relative min-h-[720px] overflow-hidden">
         <div className="absolute inset-0">
           {heroSlides.map((slide, idx) => (

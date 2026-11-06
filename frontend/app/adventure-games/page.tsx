@@ -29,25 +29,8 @@ const adventureServiceSchema = {
   "@type": "Service",
   "name": "Adventure & Outdoor Activities at Himalaya Villas",
   "description": "Thrilling mountain activities designed for safe fun. Explore the outdoors with guided adventures for all ages and skill levels in Bhurban, Murree Hills.",
-  "provider": {
-    "@type": "Organization",
-    "name": "Himalaya Villas and Resort",
-    "telephone": "+92 304 567 9000",
-    "address": {
-      "@type": "PostalAddress",
-      "streetAddress": "Bhurban",
-      "addressLocality": "Murree",
-      "addressRegion": "Punjab",
-      "addressCountry": "PK"
-    }
-  },
+  "provider": { "@id": "https://himalayavillas.com/#organization" },
   "serviceType": "Adventure Activities",
-  "offers": {
-    "@type": "Offer",
-    "price": "10000",
-    "priceCurrency": "PKR",
-    "description": "Adventure activities starting from PKR 10,000"
-  },
   "areaServed": {
     "@type": "Place",
     "name": "Murree Hills, Bhurban"
@@ -553,7 +536,7 @@ export default function AdventureGamesPage() {
       {/* Back Navigation */}
       <section className="py-8 bg-white border-t">
         <div className="max-w-7xl mx-auto px-6">
-          <Link href="/experiences" className="inline-flex items-center gap-2 text-[#c9a55b] font-semibold hover:text-[#6e5527] transition">
+          <Link href="/experience" className="inline-flex items-center gap-2 text-[#c9a55b] font-semibold hover:text-[#6e5527] transition">
             <ChevronRight className="w-4 h-4 rotate-180" />
             Back to Experiences
           </Link>

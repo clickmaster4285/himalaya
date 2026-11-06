@@ -1,5 +1,6 @@
 "use client";
 
+import EmailLink from "@/components/EmailLink";
 import type { Metadata } from "next";
 import Image from "next/image";
 import Link from "next/link";
@@ -40,25 +41,8 @@ const hotelPackagesSchema = {
   "@type": "Service",
   "name": "Murree Hotel Packages - Himalaya Villas",
   "description": "All-inclusive hotel packages in Murree with accommodation, dining, activities, and transport options for families, couples, and corporate groups.",
-  "provider": {
-    "@type": "Organization",
-    "name": "Himalaya Villas and Resort",
-    "telephone": "+92 304 567 9000",
-    "address": {
-      "@type": "PostalAddress",
-      "streetAddress": "Bhurban",
-      "addressLocality": "Murree",
-      "addressRegion": "Punjab",
-      "addressCountry": "PK"
-    }
-  },
+  "provider": { "@id": "https://himalayavillas.com/#organization" },
   "serviceType": "Hotel Packages",
-  "offers": {
-    "@type": "Offer",
-    "price": "45000",
-    "priceCurrency": "PKR",
-    "description": "All-inclusive packages starting from PKR 45,000 per night"
-  },
   "areaServed": {
     "@type": "Place",
     "name": "Murree Hills, Bhurban"
@@ -583,13 +567,13 @@ export default function MurreeHotelPackagesPage() {
               <Phone className="w-5 h-5" />
               Call: +92 304 567 9000
             </a>
-            <a
-              href="mailto:info@himalayavillas.com"
+            <EmailLink
+              user="info"
               className="border-2 border-white/30 text-white px-8 py-4 rounded-lg font-semibold hover:bg-white/10 transition flex items-center justify-center gap-3"
             >
               <Mail className="w-5 h-5" />
               Email Packages
-            </a>
+            </EmailLink>
           </div>
         </div>
       </section>

@@ -4,8 +4,8 @@ import type { Metadata } from "next";
 import FaqsClient from "./FaqsClient";
 
 export const metadata: Metadata = createPageMetadata({
-  title: "FAQ — Himalaya Villas & Resort, Bhurban Murree",
-  description: "Answers abouts reservations, villas, dining, private events and getting to Himalaya Villas & Resort in Bhurban, Murree.",
+  title: "FAQ — Himalaya Villas & Resorts, Bhurban Murree",
+  description: "Answers abouts reservations, villas, dining, private events and getting to Himalaya Villas & Resorts in Bhurban, Murree.",
   path: "/faqs",
   keywords: [
     "Murree luxury accommodation",

@@ -1,5 +1,7 @@
 "use client";
 
+import { BookingTermsSection } from "@/components/BookingTerms";
+import EmailLink from "@/components/EmailLink";
 import Link from "next/link";
 import { useMemo, useState } from "react";
 import Navbar from "@/components/Navbar";
@@ -746,7 +748,7 @@ export default function MeetingBookingFlow() {
                       <div className="mt-6 space-y-3 text-[13px]">
                         <p className="flex items-center gap-3">
                           <Mail className="h-4 w-4 text-white/80 shrink-0" />
-                          bookings@himalayavillas.com
+                          <EmailLink user="bookings" />
                         </p>
                         <p className="flex items-center gap-3">
                           <Phone className="h-4 w-4 text-white/80 shrink-0" />
@@ -838,6 +840,7 @@ export default function MeetingBookingFlow() {
         </div>
       </section>
 
+      <BookingTermsSection className="bg-white" />
       <Footer />
     </div>
   );

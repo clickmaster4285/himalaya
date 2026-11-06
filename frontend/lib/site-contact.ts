@@ -1,6 +1,6 @@
 /** Single source of truth for NAP + maps (use everywhere in UI + JSON-LD). */
 export const SITE_CONTACT = {
-  businessName: "Himalaya Villas and Resort",
+  businessName: "Himalaya Villas & Resorts",
   /** Google Maps listing / directions */
   googleMapsUrl: "https://maps.app.goo.gl/SzyHVXrCLic2CuvH8",
   phoneDisplay: "+92 304 567 9000",
@@ -15,6 +15,20 @@ export const SITE_CONTACT = {
     "Bhurban, Murree Hills",
     "Punjab 47190, Pakistan",
   ] as const,
+  /** Pin embedded on the contact page. Confirm this matches the Google Business Profile. */
+  geo: {
+    latitude: 33.9562,
+    longitude: 73.385,
+  },
+  /** Published room-to-villa rate card. Not a star classification. */
+  priceRange: "PKR 16,500 - PKR 99,000",
+  address: {
+    streetAddress: "Mohra Iswal near Kashmiri Bazar",
+    addressLocality: "Bhurban",
+    addressRegion: "Murree",
+    postalCode: "47190",
+    addressCountry: "PK",
+  },
 } as const;
 
 export function telHref(): string {

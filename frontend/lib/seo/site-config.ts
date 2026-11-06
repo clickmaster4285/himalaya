@@ -5,6 +5,7 @@ export function getSiteOrigin(): string {
 }
 
 export function absoluteUrl(path: string): string {
+  if (/^https?:\/\//i.test(path)) return path;
   const p = path.startsWith("/") ? path : `/${path}`;
   return `${getSiteOrigin()}${p}`;
 }
@@ -19,3 +20,13 @@ export function orgSameAsFromEnv(): string[] | undefined {
   const urls = raw.split(",").map((s) => s.trim()).filter(Boolean);
   return urls.length ? urls : undefined;
 }
+
+/**
+ * HIM-TRUST-0007: one trading name everywhere (titles, schema, copy).
+ * The other names the business has used are declared once, as aliases, in the Organization node.
+ */
+export const BRAND = {
+  name: "Himalaya Villas & Resorts",
+  titleSuffix: " | Himalaya Villas & Resorts",
+  alternateNames: ["Himalaya Villas", "Himalaya Premium Villas"],
+} as const;

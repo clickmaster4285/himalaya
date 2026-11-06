@@ -1,5 +1,5 @@
 import type { Metadata } from "next";
-import { absoluteUrl, getSiteOrigin } from "@/lib/seo/site-config";
+import { BRAND, absoluteUrl, getSiteOrigin } from "@/lib/seo/site-config";
 
 export type OgType = "website" | "article";
 
@@ -16,6 +16,7 @@ export type PageSeoInput = {
   ogType?: OgType;
   publishedTime?: string;
   modifiedTime?: string;
+  authorName?: string;
   /** If true, emits noindex,follow (dashboard, drafts, etc.) */
   noindex?: boolean;
   /**
@@ -30,10 +31,19 @@ function resolveImageUrl(src: string): string {
   return absoluteUrl(src.startsWith("/") ? src : `/${src}`);
 }
 
-function formatTitle(title: string, appendSiteBrand: boolean): string {
-  if (!appendSiteBrand) return title;
-  if (/himalaya/i.test(title)) return title;
-  return `${title} | Himalaya Villas & Resorts`;
+const TRAILING_BRAND = /\s*[|\-—–:]\s*Himalaya Villas(?:\s*(?:&|and|&amp;)\s*Resorts?)?(?:,?\s*Bhurban(?:,?\s*Murree)?)?\s*$/i;
+
+/**
+ * HIM-TRUST-0007: one brand suffix on every title.
+ * A trailing brand in any older form is rewritten to the standard suffix; a title that names the
+ * brand mid-sentence is left alone; any other title gets the suffix appended.
+ */
+export function formatTitle(title: string, _appendSiteBrand = true): string {
+  const trimmed = title.trim();
+  const base = trimmed.replace(TRAILING_BRAND, "").trim();
+  if (base !== trimmed) return `${base}${BRAND.titleSuffix}`;
+  if (/himalaya villas/i.test(trimmed)) return trimmed;
+  return `${trimmed}${BRAND.titleSuffix}`;
 }
 
 /**
@@ -54,7 +64,7 @@ export function createPageMetadata(input: PageSeoInput): Metadata {
     title: input.title,
     description: input.description,
     url: canonical,
-    siteName: "Himalaya Villas & Resorts",
+    siteName: BRAND.name,
     locale: "en_PK",
     type: input.ogType === "article" ? "article" : "website",
     images: ogImages,
@@ -77,6 +87,7 @@ export function createPageMetadata(input: PageSeoInput): Metadata {
       description: input.description,
       images: ogImages.map((i) => i.url),
     },
+    authors: input.authorName ? [{ name: input.authorName }] : undefined,
     robots: input.noindex ? { index: false, follow: true, googleBot: { index: false, follow: true } } : undefined,
     metadataBase: new URL(getSiteOrigin()),
   };

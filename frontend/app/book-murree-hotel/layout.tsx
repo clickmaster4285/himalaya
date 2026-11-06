@@ -1,7 +1,7 @@
 import type { Metadata } from "next";
 
 export const metadata: Metadata = {
-  title: "Book Murree Hotel | Online Hotel Booking Murree | Himalaya Villas",
+  title: "Book a Murree Hotel Online | Himalaya Villas & Resorts",
   description: "Book Murree hotel online at Himalaya Villas Bhurban. Easy hotel booking with best rates, secure payment, instant confirmation. Luxury rooms, suites, and villas available. Reserve your stay today!",
   keywords: "book Murree hotel, online hotel booking Murree, Murree hotel reservation, Bhurban hotel booking, luxury hotel Murree, Himalaya Villas booking, hotel rooms Murree, suite booking Bhurban",
   openGraph: {

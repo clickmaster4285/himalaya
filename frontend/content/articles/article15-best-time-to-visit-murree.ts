@@ -234,9 +234,9 @@ export const article15: Article = {
       items: [
         { href: "/murree-in-december", label: "Winter and snowfall guide" },
         { href: "/things-to-do-in-murree", label: "Activities by season" },
-        { href: "/how-far-is-bhurban-from-islamabad", label: "Distance from Islamabad" },
+        { href: "/bhurban-murree-all-distances", label: "Distance from Islamabad" },
         { href: "/villas", label: "Browse villas at Himalaya Villas" },
-        { href: "/best-hotels-murree-pakistan", label: "Accommodation guide" },
+        { href: "/luxury-hotels-in-murree", label: "Accommodation guide" },
       ],
     },
   ],

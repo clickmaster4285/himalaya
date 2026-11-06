@@ -1,5 +1,6 @@
 "use client";
 
+import EmailLink from "@/components/EmailLink";
 import { useEffect, useRef, useState, type ReactNode } from "react";
 import Link from "next/link";
 import {
@@ -603,7 +604,7 @@ export default function HolidayHomesMurreeClient() {
                     Pakhtunkhwa, but people book them on the same trip. Higher,
                     colder, greener, and considerably less developed. The{" "}
                     <Link
-                      href="/blogs/thing-to-do-bhurban-murree"
+                      href="/things-to-do-in-murree"
                       className="hh-link"
                     >
                       Pipeline Track
@@ -1051,12 +1052,7 @@ export default function HolidayHomesMurreeClient() {
                     {SITE_CONTACT.phoneDisplay}
                   </a>
                   {" · "}
-                  <a
-                    href={`mailto:${SITE_CONTACT.emails.bookings}`}
-                    className="underline underline-offset-4"
-                  >
-                    {SITE_CONTACT.emails.bookings}
-                  </a>
+                  <EmailLink user="bookings" className="underline underline-offset-4" />
                 </p>
                 <a
                   href={SITE_CONTACT.googleMapsUrl}

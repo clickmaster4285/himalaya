@@ -224,7 +224,7 @@ const timeFilters = [
       <div className="flex flex-col gap-4 sm:flex-row sm:items-end sm:justify-between">
         <div>
           <p className="font-sans text-[11px] font-bold uppercase tracking-[0.2em] text-[#9a7b3a]">Analytics</p>
-          <h1 className="font-display text-3xl font-semibold tracking-tight text-[#1a1816] md:text-[2rem]">Activity Tracker</h1>
+          <h1 className="font-display text-3xl font-semibold tracking-tight text-[#1a1816] md:text-[2rem]">Activity Trackers</h1>
         </div>
       </div>
 

@@ -8,7 +8,7 @@ import { useEffect } from "react";
 // ---- configuration (developer) ----
 const WA_NUMBER = "923045679000";
 const WA_REDIRECT = ""; // set to "/go/school-whatsapp" once the tracked route is live and tested
-const FORM_ENDPOINT = ""; // set to the API route (e.g. "/api/school-trips") that e-mails reservations@ and appends the leads sheet
+const FORM_ENDPOINT = "/api/school-trips"; // e-mails reservations@ via the shared Backend inquiry pipeline
 const SOURCE = "landing";
 
 type Params = Record<string, string>;

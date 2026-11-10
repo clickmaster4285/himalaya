@@ -124,7 +124,7 @@ const InquirySchema = new mongoose.Schema(
   {
     _id: { type: String, default: () => createId() },
     fullName: { type: String, required: true, trim: true },
-    email: { type: String, required: true, lowercase: true, trim: true },
+    email: { type: String, default: "", lowercase: true, trim: true },
     phone: { type: String, default: null },
     checkInDate: { type: String, default: null },
     checkOutDate: { type: String, default: null },

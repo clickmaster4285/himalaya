@@ -67,7 +67,8 @@ export async function createInquiry(req: Request, res: Response) {
     if (!fullName) {
       return res.status(400).json({ error: "Full name is required." });
     }
-    if (!email || !EMAIL_RE.test(email)) {
+    // Email is required unless a phone number is given (e.g. the /school-trips form, where email is optional).
+    if (email ? !EMAIL_RE.test(email) : !phone) {
       return res.status(400).json({ error: "A valid email address is required." });
     }
 

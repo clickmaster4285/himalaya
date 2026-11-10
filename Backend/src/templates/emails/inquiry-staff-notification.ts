@@ -25,6 +25,11 @@ export function buildInquiryStaffNotificationEmail(payload: InquiryEmailPayload)
   });
   const source = payload.source ?? "hotels-in-bhurban";
   const name = payload.fullName.trim();
+  const emailLabel = payload.email?.trim() || "—";
+  const waDigits = (payload.phone || "").replace(/\D/g, "").replace(/^0(?=3)/, "92");
+  const replyHref = payload.email?.trim()
+    ? `mailto:${escapeHtml(payload.email)}?subject=${encodeURIComponent("Re: Your Himalaya Villas inquiry")}`
+    : `https://wa.me/${waDigits}`;
 
   const subject = `New inquiry: ${name} — ${source}`;
 
@@ -33,7 +38,7 @@ export function buildInquiryStaffNotificationEmail(payload: InquiryEmailPayload)
     "========================================",
     "",
     `Full name:     ${name}`,
-    `Email:         ${payload.email}`,
+    `Email:         ${emailLabel}`,
     `Phone:         ${payload.phone || "—"}`,
     `Check-in:      ${formatDateLabel(payload.checkInDate)}`,
     `Check-out:     ${formatDateLabel(payload.checkOutDate)}`,
@@ -45,7 +50,7 @@ export function buildInquiryStaffNotificationEmail(payload: InquiryEmailPayload)
     `Source page:   ${source}`,
     `Submitted:     ${submittedAt}`,
     "",
-    `Reply to guest: ${payload.email}`,
+    `Reply to guest: ${payload.email?.trim() || payload.phone || "—"}`,
   ].join("\n");
 
   const messageHtml = payload.message?.trim()
@@ -59,7 +64,7 @@ export function buildInquiryStaffNotificationEmail(payload: InquiryEmailPayload)
     </p>
     <table role="presentation" width="100%" cellspacing="0" cellpadding="0" style="margin:0 0 24px;background:#f9f6f1;border-radius:8px;padding:8px 20px;">
       ${row("Full name", name)}
-      ${row("Email", payload.email)}
+      ${row("Email", emailLabel)}
       ${row("Phone", payload.phone?.trim() || "—")}
       ${row("Check-in", formatDateLabel(payload.checkInDate))}
       ${row("Check-out", formatDateLabel(payload.checkOutDate))}
@@ -72,7 +77,7 @@ export function buildInquiryStaffNotificationEmail(payload: InquiryEmailPayload)
       ${messageHtml}
     </div>
     <p style="margin:0;">
-      <a href="mailto:${escapeHtml(payload.email)}?subject=${encodeURIComponent("Re: Your Himalaya Villas inquiry")}" 
+      <a href="${replyHref}" 
          style="display:inline-block;background:#1a3d2e;color:#ffffff;text-decoration:none;padding:12px 24px;border-radius:6px;font-size:15px;">
         Reply to ${escapeHtml(name)}
       </a>

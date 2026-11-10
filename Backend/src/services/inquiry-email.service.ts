@@ -34,7 +34,7 @@ export async function sendInquiryNotificationEmail(
         subject: staffMail.subject,
         text: staffMail.text,
         html: staffMail.html,
-        replyTo: payload.email,
+        replyTo: payload.email || undefined,
       });
       staffSent = true;
       // console.log("INQUIRY_TO_EMAIL:", process.env.INQUIRY_TO_EMAIL);
@@ -46,8 +46,8 @@ export async function sendInquiryNotificationEmail(
     }
   }
 
-  // Guest confirmation
-  try {
+  // Guest confirmation (skipped when the guest left no email, e.g. phone-only inquiries)
+  if (payload.email) try {
     const guestMail = buildInquiryConfirmationEmail(payload);
     await sendMailMessage({
       to: payload.email,

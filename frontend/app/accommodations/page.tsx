@@ -327,6 +327,14 @@ export default function AccommodationsPage() {
                   {collection.name}
                 </h2>
                 <p className="text-gray-600 leading-relaxed mb-8">{collection.intro}</p>
+                {collection.id === "himalaya-apartments" && (
+                  <Link
+                    href="/accommodations/apartments"
+                    className="inline-block -mt-4 mb-8 text-sm font-medium text-[#8b6914] underline underline-offset-4 hover:text-[#6d5210] transition-colors"
+                  >
+                    View all apartments in Murree →
+                  </Link>
+                )}
                 <div className="relative h-64 md:h-80 overflow-hidden rounded-3xl bg-gray-100">
                   <Image
                     src={collection.image}
@@ -424,7 +432,21 @@ export default function AccommodationsPage() {
             </p>
             <p className="text-gray-600 leading-relaxed mb-8">
               Our accommodation options allow you to choose based on your guest count, preferred
-              space, and booking requirements.
+              space, and booking requirements. Compare all{" "}
+              <Link
+                href="/accommodations/rooms"
+                className="font-medium text-[#8b6914] underline underline-offset-4 hover:text-[#6d5210] transition-colors"
+              >
+                rooms in Murree
+              </Link>{" "}
+              or browse our{" "}
+              <Link
+                href="/accommodations/apartments"
+                className="font-medium text-[#8b6914] underline underline-offset-4 hover:text-[#6d5210] transition-colors"
+              >
+                apartments in Bhurban
+              </Link>
+              .
             </p>
             <Link
               href="#himalaya-apartments"

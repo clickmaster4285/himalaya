@@ -16,6 +16,7 @@ import { shouldUnoptimizeImageSrc, getValidImageSrc } from "@/lib/image-utils";
 import TableOfContents from "@/components/blogs/TableOfContents";
 import { autoLinkParagraph } from "@/lib/internal-links";
 import type { VillaBlogPost } from "@/lib/villa-blog-posts";
+import { withEditedPageSeo } from "@/lib/erp-edits";
 
 export const dynamicParams = false;
 
@@ -70,7 +71,7 @@ function BlogTableView({ table }: { table: BlogTable }) {
 
 type Props = { params: Promise<{ slug: string }> };
 
-export async function generateMetadata({ params }: Props): Promise<Metadata> {
+async function baseMetadata({ params }: Props): Promise<Metadata> {
   const { slug } = await params;
   const post = getBlogPostBySlug(slug);
   if (!post) return {};
@@ -84,6 +85,12 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
     ogType: "article",
     publishedTime: `${post.date}T12:00:00+05:00`,
   });
+}
+
+/** Route metadata with any SEO fields published from ERP Page Editing overlaid. */
+export async function generateMetadata(props: { params: Promise<{ slug: string }> }): Promise<Metadata> {
+  const { slug } = await props.params;
+  return withEditedPageSeo(`/blogs/${slug}`, await baseMetadata(props));
 }
 
 export default async function BlogArticlePage({ params }: Props) {

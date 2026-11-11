@@ -20,10 +20,11 @@ import HomeFAQSection from "@/components/HomeFAQSection";
 import ReserveSection from "@/components/ReserveSection";
 import Footer from "@/components/Footer";
 import { createPageMetadata } from "@/lib/seo/build-metadata";
+import { withEditedPageSeo } from "@/lib/erp-edits";
 import EventsSection from "@/components/EventsSection";
 import VirtualTourSection from "@/components/VirtualTourSection";
 
-export const metadata: Metadata = createPageMetadata({
+const baseMetadata: Metadata = createPageMetadata({
   title: "Himalaya Villas & Resorts in Bhurban, Murree",
   description:
     "Enjoy a comfortable stay at Himalaya Villas & Resorts in Bhurban, Murree. Choose from rooms, suites, apartments and private villas. Book Now!",
@@ -85,5 +86,10 @@ const Index = async () => {
     </div>
   );
 };
+
+/** Homepage metadata with any SEO fields published from ERP Page Editing overlaid. */
+export async function generateMetadata(): Promise<Metadata> {
+  return withEditedPageSeo("/", baseMetadata);
+}
 
 export default Index;

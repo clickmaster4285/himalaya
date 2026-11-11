@@ -1,9 +1,11 @@
+import type { Metadata } from "next";
 import Link from "next/link";
 import { notFound } from "next/navigation";
 import Navbar from "@/components/Navbar";
 import Footer from "@/components/Footer";
 import { createPageMetadata } from "@/lib/seo/build-metadata";
 import { GUIDE_TOPICS, GUIDES_BY_TOPIC, guideHubPath, guideTopic } from "@/lib/guides";
+import { withEditedPageSeo } from "@/lib/erp-edits";
 
 export const dynamicParams = false;
 
@@ -11,7 +13,7 @@ export function generateStaticParams() {
   return GUIDE_TOPICS.map((topic) => ({ topic: topic.id }));
 }
 
-export async function generateMetadata({ params }: { params: Promise<{ topic: string }> }) {
+async function baseMetadata({ params }: { params: Promise<{ topic: string }> }) {
   const { topic: id } = await params;
   const topic = guideTopic(id);
   if (!topic) return {};
@@ -20,6 +22,12 @@ export async function generateMetadata({ params }: { params: Promise<{ topic: st
     description: topic.intro,
     path: guideHubPath(topic.id),
   });
+}
+
+/** Route metadata with any SEO fields published from ERP Page Editing overlaid. */
+export async function generateMetadata(props: { params: Promise<{ topic: string }> }): Promise<Metadata> {
+  const { topic } = await props.params;
+  return withEditedPageSeo(`/guides/${topic}`, await baseMetadata(props));
 }
 
 export default async function GuideHubPage({ params }: { params: Promise<{ topic: string }> }) {

@@ -14,6 +14,7 @@ import NikahWeddingPage from "@/components/events/NikahWeddingPage";
 import { RelatedGuides } from "@/components/seo/RelatedGuides";
 import { featuredGuides, guideHubPath } from "@/lib/guides";
 import { isLegacyRedirectSource } from "@/lib/seo/legacy-redirects";
+import { withEditedPageSeo } from "@/lib/erp-edits";
 
 // Event data mapping
 const eventDetails: Record<string, {
@@ -1654,7 +1655,7 @@ const eventDetails: Record<string, {
   }
 };
 
-export async function generateMetadata({ params }: { params: Promise<{ slug: string }> }): Promise<Metadata> {
+async function baseMetadata({ params }: { params: Promise<{ slug: string }> }): Promise<Metadata> {
   const { slug } = await params;
   const event = eventDetails[slug];
   
@@ -1674,6 +1675,12 @@ export async function generateMetadata({ params }: { params: Promise<{ slug: str
     ogImage: event.image,
     appendSiteBrand: false,
   });
+}
+
+/** Route metadata with any SEO fields published from ERP Page Editing overlaid. */
+export async function generateMetadata(props: { params: Promise<{ slug: string }> }): Promise<Metadata> {
+  const { slug } = await props.params;
+  return withEditedPageSeo(`/events/${slug}`, await baseMetadata(props));
 }
 
 export default async function EventPage({ params }: { params: Promise<{ slug: string }> }) {

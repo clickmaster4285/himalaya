@@ -6,6 +6,7 @@ import { cn } from "@/lib/utils";
 import { HotelGraphStructuredData } from "@/components/seo/HotelGraphStructuredData";
 import { BreadcrumbJsonLd } from "@/components/seo/BreadcrumbJsonLd";
 import ConversionTracking from "@/components/ConversionTracking";
+import ErpPageEdits from "@/components/cms/ErpPageEdits";
 import { BRAND, getSiteOrigin } from "@/lib/seo/site-config";
 
 /** Clean UI type for body, forms, and nav */
@@ -113,6 +114,8 @@ export default function RootLayout({
         </noscript>
         {/* End Google Tag Manager (noscript) */}
         <ConversionTracking />
+        {/* Applies published ERP Page Editing changes; renders nothing. Must stay before {children}. */}
+        <ErpPageEdits />
         {children}
       </body>
     </html>

@@ -1,4 +1,5 @@
 // app/villas/[slug]/page.tsx
+import type { Metadata } from "next";
 import { notFound } from "next/navigation";
 import Image from "next/image";
 import { amenityImages, roomsBySlug } from "@/content/villas/villa-content";
@@ -13,6 +14,7 @@ import { createPageMetadata } from "@/lib/seo/build-metadata";
 import { RelatedGuides } from "@/components/seo/RelatedGuides";
 import { featuredGuides, guideHubPath } from "@/lib/guides";
 import type { Room } from "@/content/villas/villa-content";
+import { withEditedPageSeo } from "@/lib/erp-edits";
 
 export async function generateStaticParams() {
   return Object.keys(roomsBySlug).map((slug) => ({ slug }));
@@ -28,7 +30,7 @@ function villaDocumentTitle(room: Room): string {
   return `${name} – ${beds}${sleepPart} | Himalaya Villas & Resorts`;
 }
 
-export async function generateMetadata({ params }: { params: Promise<{ slug: string }> }) {
+async function baseMetadata({ params }: { params: Promise<{ slug: string }> }) {
   const { slug } = await params;
   const room = roomsBySlug[slug];
   if (!room) return { title: "Room not found | Himalaya Villas Bhurban", description: "Villa details." };
@@ -43,6 +45,12 @@ export async function generateMetadata({ params }: { params: Promise<{ slug: str
     appendSiteBrand: false,
     ogImage: room.images[0],
   });
+}
+
+/** Route metadata with any SEO fields published from ERP Page Editing overlaid. */
+export async function generateMetadata(props: { params: Promise<{ slug: string }> }): Promise<Metadata> {
+  const { slug } = await props.params;
+  return withEditedPageSeo(`/villas/${slug}`, await baseMetadata(props));
 }
 
 export default async function RoomDetail({ params }: { params: Promise<{ slug: string }> }) {

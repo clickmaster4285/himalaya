@@ -308,65 +308,6 @@ export default function ApartmentsPage() {
         </div>
       </section>
 
-      {/* Intro */}
-      <section className="py-16 md:py-24">
-        <div className="max-w-7xl mx-auto px-6 grid grid-cols-1 lg:grid-cols-12 gap-10 items-center">
-          <div className="lg:col-span-7">
-            <div className="flex items-center gap-3 text-[#8b6914] text-[10px] font-bold uppercase tracking-[0.2em] mb-4">
-              <span className="h-px w-6 bg-[#8b6914]" />
-              <span>Stay in Bhurban</span>
-            </div>
-            <h2 className="font-display text-3xl md:text-4xl text-neutral-900 mb-6">
-              Apartment Accommodation in Bhurban, Murree
-            </h2>
-            <p className="text-gray-600 leading-relaxed mb-4">
-              Our apartment accommodation in Bhurban provides a comfortable place to stay while
-              visiting Murree. Browse our wider{" "}
-              <Link
-                href="/accommodations"
-                className="font-medium text-[#8b6914] underline underline-offset-4 hover:text-[#6d5210] transition-colors"
-              >
-                accommodation options
-              </Link>
-              , or view the available apartments below to check guest capacity, amenities, photos,
-              nightly rates and availability for your travel dates.
-            </p>
-            <div className="flex flex-wrap gap-3 mt-8">
-              <Link
-                href="#our-apartments"
-                className="inline-block px-6 py-3 bg-[#c9a55b] text-white text-sm font-semibold rounded-lg hover:bg-[#a98741] transition-colors"
-              >
-                View Apartments
-              </Link>
-              <Link
-                href={bookHref()}
-                className="inline-block px-6 py-3 border border-[#c9a55b] text-[#8b6914] text-sm font-semibold rounded-lg hover:bg-[#faf7f1] transition-colors"
-              >
-                Check Availability
-              </Link>
-            </div>
-          </div>
-          <div className="lg:col-span-5 grid grid-cols-2 gap-4">
-            <div className="relative h-64 md:h-80 rounded-3xl overflow-hidden bg-gray-100">
-              <Image
-                src="/images/villas/single-apt2.jpg"
-                alt="Bedroom in a Himalya apartment, Bhurban"
-                fill
-                className="object-cover"
-              />
-            </div>
-            <div className="relative h-64 md:h-80 rounded-3xl overflow-hidden bg-gray-100 mt-10">
-              <Image
-                src="/images/villas/complete-apt5.jpg"
-                alt="Living area in a Himalya apartment, Murree"
-                fill
-                className="object-cover"
-              />
-            </div>
-          </div>
-        </div>
-      </section>
-
       {/* Our Apartments */}
       <section id="our-apartments" className="py-16 md:py-24 bg-gray-50 scroll-mt-20">
         <div className="max-w-7xl mx-auto px-6">

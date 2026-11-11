@@ -295,23 +295,38 @@ export default function RoomsPage() {
 
             <div className="flex items-center justify-center gap-3 text-[#c9a55b] text-[10px] md:text-[11px] font-bold uppercase tracking-[0.2em] mb-6">
               <span className="h-px w-8 bg-[#c9a55b]" />
-              <span>Guest Rooms</span>
+              <span>Stay in Bhurban</span>
               <span className="h-px w-8 bg-[#c9a55b]" />
             </div>
             <h1 className="font-display text-4xl md:text-6xl leading-tight mb-6">
-              Rooms in Murree at Himalya Villas and Resort
+              Guest Rooms in Bhurban, Murree
             </h1>
-            <p className="text-lg md:text-xl text-white/90 max-w-3xl mx-auto mb-8">
-              Book a comfortable room in Murree at Himalya Villas and Resort, located in Bhurban and
-              suitable for solo travellers, couples, families and guests looking for a comfortable
-              short stay in the Murree Hills.
+            <p className="text-lg md:text-xl text-white/90 leading-relaxed max-w-3xl mx-auto mb-10">
+              Our guest rooms provide comfortable accommodation with room-specific space,
+              facilities and views. Explore our wider{" "}
+              <Link
+                href="/accommodations"
+                className="font-medium text-[#e3c88a] underline underline-offset-4 hover:text-white transition-colors"
+              >
+                accommodation options
+              </Link>
+              , or view the available rooms below to compare guest capacity, amenities, nightly
+              rates and availability.
             </p>
-            <Link
-              href={bookHref()}
-              className="inline-block px-8 py-3 bg-[#c9a55b] text-white text-sm font-semibold rounded-lg hover:bg-[#a98741] transition-colors"
-            >
-              Check Availability
-            </Link>
+            <div className="flex flex-wrap items-center justify-center gap-4">
+              <Link
+                href="#our-rooms"
+                className="inline-block px-8 py-3 bg-[#c9a55b] text-white text-sm font-semibold rounded-lg hover:bg-[#a98741] transition-colors"
+              >
+                View Rooms
+              </Link>
+              <Link
+                href={bookHref()}
+                className="inline-block px-8 py-3 border border-white/70 text-white text-sm font-semibold rounded-lg hover:bg-white/10 transition-colors"
+              >
+                Check Availability
+              </Link>
+            </div>
           </div>
         </div>
       </section>
@@ -328,65 +343,6 @@ export default function RoomsPage() {
               </div>
             </div>
           ))}
-        </div>
-      </section>
-
-      {/* Intro */}
-      <section className="py-16 md:py-24">
-        <div className="max-w-7xl mx-auto px-6 grid grid-cols-1 lg:grid-cols-12 gap-10 items-center">
-          <div className="lg:col-span-7">
-            <div className="flex items-center gap-3 text-[#8b6914] text-[10px] font-bold uppercase tracking-[0.2em] mb-4">
-              <span className="h-px w-6 bg-[#8b6914]" />
-              <span>Stay in Bhurban</span>
-            </div>
-            <h2 className="font-display text-3xl md:text-4xl text-neutral-900 mb-6">
-              Guest Rooms in Bhurban, Murree
-            </h2>
-            <p className="text-gray-600 leading-relaxed">
-              Our guest rooms provide comfortable accommodation with room-specific space,
-              facilities and views. Explore our wider{" "}
-              <Link
-                href="/accommodations"
-                className="font-medium text-[#8b6914] underline underline-offset-4 hover:text-[#6d5210] transition-colors"
-              >
-                accommodation options
-              </Link>
-              , or view the available rooms below to compare guest capacity, amenities, nightly
-              rates and availability.
-            </p>
-            <div className="flex flex-wrap gap-3 mt-8">
-              <Link
-                href="#our-rooms"
-                className="inline-block px-6 py-3 bg-[#c9a55b] text-white text-sm font-semibold rounded-lg hover:bg-[#a98741] transition-colors"
-              >
-                View Rooms
-              </Link>
-              <Link
-                href={bookHref()}
-                className="inline-block px-6 py-3 border border-[#c9a55b] text-[#8b6914] text-sm font-semibold rounded-lg hover:bg-[#faf7f1] transition-colors"
-              >
-                Check Availability
-              </Link>
-            </div>
-          </div>
-          <div className="lg:col-span-5 grid grid-cols-2 gap-4">
-            <div className="relative h-64 md:h-80 rounded-3xl overflow-hidden bg-gray-100">
-              <Image
-                src="/images/villas/rak-single2.jpg"
-                alt="Executive room interior at Himalya Villas and Resort"
-                fill
-                className="object-cover"
-              />
-            </div>
-            <div className="relative h-64 md:h-80 rounded-3xl overflow-hidden bg-gray-100 mt-10">
-              <Image
-                src="/images/villas/lux-single3.jpg"
-                alt="Luxury room with mountain views in Bhurban, Murree"
-                fill
-                className="object-cover"
-              />
-            </div>
-          </div>
         </div>
       </section>
 

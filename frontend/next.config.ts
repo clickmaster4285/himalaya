@@ -63,7 +63,8 @@ const nextConfig: NextConfig = {
   async redirects() {
     return [
       ...legacyRedirects301,
-      { source: "/blog/:path*", destination: "/blogs/:path*", permanent: true },
+      // "/blog" itself (app/blog/page.tsx) and "/blog/..." (app/blog/[...path])
+      // redirect to /blogs unless the ERP CMS has a page at that path.
       ...legacyRedirects,
       ...intentRedirects,
     ];

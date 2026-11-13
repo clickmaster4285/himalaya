@@ -1,7 +1,6 @@
 import type { Metadata } from "next";
 import Image from "next/image";
 import Link from "next/link";
-import { notFound } from "next/navigation";
 import { Fragment } from "react";
 import Navbar from "@/components/Navbar";
 import Footer from "@/components/Footer";
@@ -17,8 +16,11 @@ import TableOfContents from "@/components/blogs/TableOfContents";
 import { autoLinkParagraph } from "@/lib/internal-links";
 import type { VillaBlogPost } from "@/lib/villa-blog-posts";
 import { withEditedPageSeo } from "@/lib/erp-edits";
+import CmsRoute, { cmsRouteMetadata } from "@/components/cms/CmsRoute";
 
-export const dynamicParams = false;
+// Slugs the code does not own fall back to pages created in the ERP CMS
+// (rendered on demand). Publishes refresh instantly via /api/erp-revalidate.
+export const revalidate = 300;
 
 export function generateStaticParams() {
   return getAllBlogSlugs().map((slug) => ({ slug }));
@@ -90,13 +92,14 @@ async function baseMetadata({ params }: Props): Promise<Metadata> {
 /** Route metadata with any SEO fields published from ERP Page Editing overlaid. */
 export async function generateMetadata(props: { params: Promise<{ slug: string }> }): Promise<Metadata> {
   const { slug } = await props.params;
+  if (!getBlogPostBySlug(slug)) return cmsRouteMetadata(`/blogs/${slug.toLowerCase()}`);
   return withEditedPageSeo(`/blogs/${slug}`, await baseMetadata(props));
 }
 
 export default async function BlogArticlePage({ params }: Props) {
   const { slug } = await params;
   const post = getBlogPostBySlug(slug);
-  if (!post) notFound();
+  if (!post) return <CmsRoute path={`/blogs/${slug.toLowerCase()}`} />;
 
   const cover = getValidImageSrc(post.coverImage);
   const jsonLd = buildBlogPostingJsonLd(post);

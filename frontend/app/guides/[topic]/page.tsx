@@ -1,13 +1,15 @@
 import type { Metadata } from "next";
 import Link from "next/link";
-import { notFound } from "next/navigation";
 import Navbar from "@/components/Navbar";
 import Footer from "@/components/Footer";
 import { createPageMetadata } from "@/lib/seo/build-metadata";
 import { GUIDE_TOPICS, GUIDES_BY_TOPIC, guideHubPath, guideTopic } from "@/lib/guides";
 import { withEditedPageSeo } from "@/lib/erp-edits";
+import CmsRoute, { cmsRouteMetadata } from "@/components/cms/CmsRoute";
 
-export const dynamicParams = false;
+// Slugs the code does not own fall back to pages created in the ERP CMS
+// (rendered on demand). Publishes refresh instantly via /api/erp-revalidate.
+export const revalidate = 300;
 
 export function generateStaticParams() {
   return GUIDE_TOPICS.map((topic) => ({ topic: topic.id }));
@@ -27,13 +29,14 @@ async function baseMetadata({ params }: { params: Promise<{ topic: string }> }) 
 /** Route metadata with any SEO fields published from ERP Page Editing overlaid. */
 export async function generateMetadata(props: { params: Promise<{ topic: string }> }): Promise<Metadata> {
   const { topic } = await props.params;
+  if (!guideTopic(topic)) return cmsRouteMetadata(`/guides/${topic.toLowerCase()}`);
   return withEditedPageSeo(`/guides/${topic}`, await baseMetadata(props));
 }
 
 export default async function GuideHubPage({ params }: { params: Promise<{ topic: string }> }) {
   const { topic: id } = await params;
   const topic = guideTopic(id);
-  if (!topic) notFound();
+  if (!topic) return <CmsRoute path={`/guides/${id.toLowerCase()}`} />;
   const guides = GUIDES_BY_TOPIC[topic.id];
 
   return (

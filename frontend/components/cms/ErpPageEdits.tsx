@@ -20,6 +20,8 @@ const CACHE_TTL_MS = 60_000;
 const MAX_HIDE_MS = 1500;
 const MAX_WAIT_FOR_DOM_MS = 1500;
 const API = '/api/erp-edits';
+// How often an open page checks the ERP for newly published edits.
+const LIVE_POLL_MS = Math.max(2000, Number(process.env.NEXT_PUBLIC_ERP_LIVE_POLL_MS) || 5000);
 
 const warn = (...args: unknown[]) => {
   if (process.env.NODE_ENV !== 'production') console.warn('[erp-edits]', ...args);
@@ -326,6 +328,11 @@ export default function ErpPageEdits() {
     const session = new EditSession();
     let cancelled = false;
     let reveal = () => {};
+    // Live updates: what is currently applied, so a background check can tell
+    // when the ERP published something new for this page.
+    let applied = '[]';
+    let ready = false;
+    let checking = false;
 
     // When the list is already known (client navigations), hide before paint
     // so the unedited page never flashes. On a first load the list is still
@@ -344,12 +351,46 @@ export default function ErpPageEdits() {
       // recorded <main> style never includes the temporary opacity.
       reveal();
       session.apply(resolved);
+      applied = JSON.stringify(edits);
     })()
       .catch((error) => warn('could not apply edits', error))
-      .finally(() => reveal());
+      .finally(() => {
+        reveal();
+        ready = true;
+      });
+
+    // Ask the ERP again in the background (only while the tab is visible) and
+    // swap in the new edits when they changed, so a publish shows on an open
+    // page without a refresh. Asks per path, so a page that had no edits on
+    // load picks up its first ones too.
+    const check = async () => {
+      if (!ready || checking || cancelled || document.visibilityState !== 'visible') return;
+      checking = true;
+      try {
+        const edits = await pageEdits(path);
+        const signature = JSON.stringify(edits);
+        if (cancelled || signature === applied) return;
+        // Revert first, then resolve against the original DOM and re-apply in
+        // the same task: the page never paints half-updated.
+        session.revert();
+        if (edits.length) session.apply(resolveAll(edits).resolved);
+        applied = signature;
+      } catch (error) {
+        warn('could not check for new edits', error);
+      } finally {
+        checking = false;
+      }
+    };
+    const timer = setInterval(check, LIVE_POLL_MS);
+    const onVisible = () => void check();
+    document.addEventListener('visibilitychange', onVisible);
+    window.addEventListener('focus', onVisible);
 
     return () => {
       cancelled = true;
+      clearInterval(timer);
+      document.removeEventListener('visibilitychange', onVisible);
+      window.removeEventListener('focus', onVisible);
       reveal();
       session.revert();
     };

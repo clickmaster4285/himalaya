@@ -20,9 +20,9 @@ import {
 } from "lucide-react";
 
 const PAGE_PATH = "/accommodations/apartments";
-const META_TITLE = "Apartments in Murree, Bhurban | Himalya Villas and Resort";
+const META_TITLE = "Apartments in Murree, Bhurban | Himalaya Villas and Resort";
 const META_DESCRIPTION =
-  "Book apartments in Murree at Himalya Villas and Resort, Bhurban. Check rates, amenities and availability, then reserve your stay.";
+  "Book apartments in Murree at Himalaya Villas and Resort, Bhurban. Check rates, amenities and availability, then reserve your stay.";
 
 const baseMetadata = createPageMetadata({
   title: META_TITLE,
@@ -32,13 +32,12 @@ const baseMetadata = createPageMetadata({
     "Apartments in Murree",
     "Apartments in Bhurban",
     "Murree apartment booking",
-    "Himalya Villas and Resort",
+    "Himalaya Villas and Resort",
   ],
   ogImage: "/images/villas/complete-apt3.jpeg",
   appendSiteBrand: false,
 });
 
-// Title is already branded — emit it exactly as written (no site suffix).
 export const metadata: Metadata = {
   ...baseMetadata,
   title: { absolute: META_TITLE },
@@ -94,16 +93,6 @@ const highlights = [
 
 const faqs = [
   {
-    question: "Where are Himalya Apartments located?",
-    answer:
-      "Himalya Apartments are located at Himalya Villas and Resort in Bhurban, Murree, Pakistan.",
-  },
-  {
-    question: "Are the apartments available for short stays?",
-    answer:
-      "Yes. The apartments are offered as short-stay accommodation for guests visiting Bhurban and Murree, subject to availability for the selected travel dates.",
-  },
-  {
     question: "Are the apartments for sale?",
     answer:
       "No. The apartments on this page are offered for temporary guest accommodation and are not listed for property sale, investment or permanent ownership.",
@@ -112,11 +101,6 @@ const faqs = [
     question: "Are the apartments suitable for families?",
     answer:
       "Yes, depending on the guest capacity, bedroom arrangement and facilities of the available apartment. Review the apartment details before booking for your family.",
-  },
-  {
-    question: "Can couples stay in the apartments?",
-    answer:
-      "Yes. Couples can book an available apartment that suits their space and accommodation requirements.",
   },
   {
     question: "Can small groups book an apartment?",
@@ -142,6 +126,11 @@ const faqs = [
     answer:
       "Review the apartment details, check the current rate and availability for your travel dates, and use the booking option to reserve your stay.",
   },
+  {
+    question: "Do the rooms have mountain views?",
+    answer:
+      "Views can vary by room. Check the individual room description and photos to confirm whether your selected room offers mountain or surrounding Bhurban views.",
+  },
 ];
 
 /* ------------------------------------------------------------------ */
@@ -157,9 +146,10 @@ const jsonLd = {
     {
       "@type": "Hotel",
       "@id": `${SITE}/#hotel`,
-      name: "Himalya Villas and Resort",
+      name: "Himalaya Villas and Resort",
       url: `${SITE}/`,
-      description: "Himalya Villas and Resort provides short-stay accommodation in Bhurban, Murree.",
+      description:
+        "Himalaya Villas and Resort provides short-stay accommodation in Bhurban, Murree.",
       address: {
         "@type": "PostalAddress",
         addressLocality: "Bhurban",
@@ -170,19 +160,19 @@ const jsonLd = {
     {
       "@type": "CollectionPage",
       "@id": `${PAGE_URL}/#webpage`,
-      url: PAGE_URL,
-      name: "Apartments in Murree at Himalya Villas and Resort",
+      url: `${PAGE_URL}/`,
+      name: "Apartments in Murree for Short Stays at Himalaya Villas and Resort",
       description: META_DESCRIPTION,
-      isPartOf: { "@id": `${SITE}/accommodations/#webpage` },
+      isPartOf: { "@id": `${SITE}/accommodations#webpage` },
       about: { "@id": `${SITE}/#hotel` },
       breadcrumb: { "@id": `${PAGE_URL}/#breadcrumb` },
       hasPart: { "@id": `${PAGE_URL}/#faq` },
     },
     {
       "@type": "CollectionPage",
-      "@id": `${SITE}/accommodations/#webpage`,
+      "@id": `${SITE}/accommodations#webpage`,
       url: `${SITE}/accommodations`,
-      name: "Accommodations at Himalya Villas and Resort",
+      name: "Accommodations at Himalaya Villas and Resort",
       about: { "@id": `${SITE}/#hotel` },
     },
     {
@@ -190,8 +180,13 @@ const jsonLd = {
       "@id": `${PAGE_URL}/#breadcrumb`,
       itemListElement: [
         { "@type": "ListItem", position: 1, name: "Home", item: `${SITE}/` },
-        { "@type": "ListItem", position: 2, name: "Accommodations", item: `${SITE}/accommodations` },
-        { "@type": "ListItem", position: 3, name: "Apartments", item: PAGE_URL },
+        {
+          "@type": "ListItem",
+          position: 2,
+          name: "Accommodations",
+          item: `${SITE}/accommodations`,
+        },
+        { "@type": "ListItem", position: 3, name: "Apartments", item: `${PAGE_URL}/` },
       ],
     },
     {
@@ -210,7 +205,7 @@ const jsonLd = {
 /*  Page                                                               */
 /* ------------------------------------------------------------------ */
 
-const bookHref = (slug?: string) => (slug ? `/book/stay?villa=${slug}` : "/book/stay");
+const BOOK_HREF = "/book/stay";
 
 export default function ApartmentsPage() {
   return (
@@ -218,63 +213,87 @@ export default function ApartmentsPage() {
       <JsonLd items={[{ id: "apartments-schema", data: jsonLd }]} />
       <Navbar />
 
-      {/* Hero */}
-      <section className="relative min-h-150 overflow-hidden">
-        <div className="absolute inset-0">
+      {/* Hero — full-bleed background, left-aligned content aligned to max-w-7xl */}
+      <section className="relative min-h-[60vh] md:min-h-[68vh] lg:min-h-[72vh] overflow-hidden">
+        {/* Background image — slow zoom */}
+        <div className="absolute inset-0 animate-[heroZoom_18s_ease-out_forwards]">
           <Image
-            src="/images/villas/complete-apt.jpeg"
-            alt="Apartment accommodation at Himalya Villas and Resort, Bhurban, Murree"
+            src="/images/villas/apt-complete-room.jpg"
+            alt="Apartment accommodation at Himalaya Villas and Resort, Bhurban, Murree"
             fill
             className="object-cover"
             priority
           />
         </div>
-        <div className="absolute inset-0 bg-linear-to-b from-black/60 via-black/45 to-black/70" />
 
-        <div className="relative z-10 flex items-center justify-center min-h-150 px-6 py-24">
-          <div className="text-center text-white max-w-4xl">
-            {/* Breadcrumb */}
-            <nav aria-label="Breadcrumb" className="mb-8">
-              <ol className="flex items-center justify-center gap-2 text-xs text-white/70">
-                <li>
-                  <Link href="/" className="hover:text-white transition-colors">Home</Link>
-                </li>
-                <li aria-hidden="true">/</li>
-                <li>
-                  <Link href="/accommodations" className="hover:text-white transition-colors">
-                    Accommodations
-                  </Link>
-                </li>
-                <li aria-hidden="true">/</li>
-                <li className="text-[#c9a55b]" aria-current="page">Apartments</li>
-              </ol>
-            </nav>
+        {/* Black overlay — kept on theme for text legibility */}
+        <div className="absolute inset-0 bg-linear-to-b from-black/70 via-black/55 to-black/75" />
 
-            <div className="flex items-center justify-center gap-3 text-[#c9a55b] text-[10px] md:text-[11px] font-bold uppercase tracking-[0.2em] mb-6">
+        <div className="relative z-10 max-w-7xl mx-auto px-6 py-20 md:py-24 min-h-[60vh] md:min-h-[68vh] lg:min-h-[72vh] flex items-center justify-start">
+          <div className="text-left text-white max-w-4xl mr-auto w-full">
+            {/* Eyebrow */}
+            <div className="flex items-center justify-start gap-3 text-[#c9a55b] text-[10px] md:text-[11px] font-bold uppercase tracking-[0.2em] mb-6 animate-[fadeUp_0.7s_ease-out_both]">
               <span className="h-px w-8 bg-[#c9a55b]" />
-              <span>Himalya Apartments</span>
+              <span>Himalaya Apartments</span>
               <span className="h-px w-8 bg-[#c9a55b]" />
             </div>
-            <h1 className="font-display text-4xl md:text-6xl leading-tight mb-6">
-              Apartments in Murree at Himalya Villas and Resort
+
+            {/* H1 */}
+            <h1 className="font-display text-4xl md:text-6xl leading-tight mb-6 animate-[fadeUp_0.8s_ease-out_0.1s_both]">
+              Apartments in Murree for Short Stays at Himalaya Villas and Resort
             </h1>
-            <p className="text-lg md:text-xl text-white/90 max-w-3xl mx-auto mb-8">
-              Book a comfortable apartment in Murree at Himalya Villas and Resort, located in
+
+            {/* Paragraph 1 */}
+            <p className="text-lg md:text-xl text-white/90 max-w-3xl mb-6 animate-[fadeUp_0.8s_ease-out_0.2s_both]">
+              Book a comfortable apartment in Murree at Himalaya Villas and Resort, located in
               Bhurban and suitable for short stays with families, couples and small groups looking
               for more space, privacy and a peaceful mountain setting.
             </p>
-            <Link
-              href={bookHref()}
-              className="inline-block px-8 py-3 bg-[#c9a55b] text-white text-sm font-semibold rounded-lg hover:bg-[#a98741] transition-colors"
-            >
-              Check Availability
-            </Link>
+
+            {/* Paragraph 2 */}
+            <p className="text-base md:text-lg text-white/80 max-w-3xl mb-8 animate-[fadeUp_0.8s_ease-out_0.3s_both]">
+Our apartment accommodation in Bhurban provides a comfortable place to stay while
+visiting Murree. Browse our{" "}
+<Link href="/accommodations" className="text-[#c9a55b] underline underline-offset-4 hover:text-white transition-colors">
+  accommodation
+</Link>
+{" "}options, or view the available apartments below to check guest capacity, amenities, photos, nightly rates and availability for your travel dates.
+            </p>
+
+            {/* CTA */}
+            <div className="animate-[fadeUp_0.8s_ease-out_0.4s_both]">
+              <Link
+                href={BOOK_HREF}
+                className="inline-block px-8 py-3 bg-[#c9a55b] text-white text-sm font-semibold rounded-lg hover:bg-[#a98741] transition-colors"
+              >
+                Check Availability
+              </Link>
+            </div>
           </div>
         </div>
+
+        {/* Keyframes scoped to the page */}
+        <style>{`
+          @keyframes fadeUp {
+            from { opacity: 0; transform: translateY(16px); }
+            to   { opacity: 1; transform: translateY(0); }
+          }
+          @keyframes heroZoom {
+            from { transform: scale(1.06); }
+            to   { transform: scale(1); }
+          }
+          @keyframes fadeIn {
+            from { opacity: 0; }
+            to   { opacity: 1; }
+          }
+          @media (prefers-reduced-motion: reduce) {
+            [class*="animate-"] { animation: none !important; }
+          }
+        `}</style>
       </section>
 
-      {/* Highlights strip */}
-      <section className="bg-neutral-900">
+      {/* Highlights strip — soft fade in */}
+      <section className="bg-neutral-900 animate-[fadeIn_0.9s_ease-out_0.5s_both]">
         <div className="max-w-7xl mx-auto px-6 grid grid-cols-2 lg:grid-cols-4 divide-x divide-white/10">
           {highlights.map(({ icon: Icon, title, text }) => (
             <div key={title} className="flex items-center gap-4 py-6 px-4 lg:px-8">
@@ -300,7 +319,7 @@ export default function ApartmentsPage() {
               Our Apartments
             </h2>
             <p className="text-gray-600 leading-relaxed mb-3">
-              Choose apartment accommodation at Himalya Villas and Resort in Bhurban, Murree.
+              Choose apartment accommodation at Himalaya Villas and Resort in Bhurban, Murree.
             </p>
             <p className="text-gray-600 leading-relaxed">
               Each available apartment displays the important details you need before booking,
@@ -326,7 +345,7 @@ export default function ApartmentsPage() {
                   <div className="relative h-64 md:h-72 bg-gray-100 overflow-hidden">
                     <Image
                       src={apt.image}
-                      alt={`${apt.name} at Himalya Villas and Resort, Bhurban`}
+                      alt={`${apt.name} at Himalaya Villas and Resort, Bhurban`}
                       fill
                       sizes="(min-width: 1024px) 50vw, 100vw"
                       className="object-cover group-hover:scale-105 transition-transform duration-700"
@@ -393,7 +412,7 @@ export default function ApartmentsPage() {
                           View Details
                         </Link>
                         <Link
-                          href={bookHref(apt.slug)}
+                          href={BOOK_HREF}
                           className="inline-block px-5 py-2.5 bg-[#c9a55b] text-white text-xs font-semibold rounded-lg hover:bg-[#a98741] transition-colors"
                         >
                           Book Now
@@ -456,36 +475,38 @@ export default function ApartmentsPage() {
           />
         </div>
         <div className="absolute inset-0 bg-neutral-900/80" />
-        <div className="relative z-10 max-w-4xl mx-auto px-6 text-center">
-          <div className="flex items-center justify-center gap-3 text-[#c9a55b] text-[10px] md:text-[11px] font-bold uppercase tracking-[0.2em] mb-6">
-            <span className="h-px w-8 bg-[#c9a55b]" />
-            <span>Reserve Your Stay</span>
-            <span className="h-px w-8 bg-[#c9a55b]" />
-          </div>
-          <h2 className="font-display text-3xl md:text-4xl text-white mb-6">
-            Book Your Apartment in Murree
-          </h2>
-          <p className="text-white/85 leading-relaxed mb-4 max-w-2xl mx-auto">
-            Book your stay at Himalya Villas and Resort in Bhurban, Murree and enjoy comfortable
-            apartment accommodation for your visit.
-          </p>
-          <p className="text-white/85 leading-relaxed mb-8 max-w-2xl mx-auto">
-            Check the current rate and availability for your preferred travel dates, then reserve
-            your stay.
-          </p>
-          <div className="flex flex-col sm:flex-row items-center justify-center gap-3">
-            <Link
-              href={bookHref()}
-              className="inline-block px-8 py-3 bg-[#c9a55b] text-white text-sm font-semibold rounded-lg hover:bg-[#a98741] transition-colors"
-            >
-              Check Availability
-            </Link>
-            <Link
-              href={bookHref()}
-              className="inline-block px-8 py-3 border border-white/70 text-white text-sm font-semibold rounded-lg hover:bg-white/10 transition-colors"
-            >
-              Book Your Stay
-            </Link>
+        <div className="relative z-10 max-w-7xl mx-auto px-6 text-center">
+          <div className="max-w-2xl mx-auto">
+            <div className="flex items-center justify-center gap-3 text-[#c9a55b] text-[10px] md:text-[11px] font-bold uppercase tracking-[0.2em] mb-6">
+              <span className="h-px w-8 bg-[#c9a55b]" />
+              <span>Reserve Your Stay</span>
+              <span className="h-px w-8 bg-[#c9a55b]" />
+            </div>
+            <h2 className="font-display text-3xl md:text-4xl text-white mb-6">
+              Book Your Apartment in Murree
+            </h2>
+            <p className="text-white/85 leading-relaxed mb-4">
+              Book your stay at Himalaya Villas and Resort in Bhurban, Murree and enjoy comfortable
+              apartment accommodation for your visit.
+            </p>
+            <p className="text-white/85 leading-relaxed mb-8">
+              Check the current rate and availability for your preferred travel dates, then reserve
+              your stay.
+            </p>
+            <div className="flex flex-col sm:flex-row items-center justify-center gap-3">
+              <Link
+                href={BOOK_HREF}
+                className="inline-block px-8 py-3 bg-[#c9a55b] text-white text-sm font-semibold rounded-lg hover:bg-[#a98741] transition-colors"
+              >
+                Check Availability
+              </Link>
+              <Link
+                href={BOOK_HREF}
+                className="inline-block px-8 py-3 border border-white/70 text-white text-sm font-semibold rounded-lg hover:bg-white/10 transition-colors"
+              >
+                Book Your Stay
+              </Link>
+            </div>
           </div>
         </div>
       </section>

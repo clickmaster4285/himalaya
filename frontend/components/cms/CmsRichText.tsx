@@ -37,6 +37,30 @@ function tagClasses(onDark: boolean): Record<string, string> {
     a: "text-[#c9a55b] underline underline-offset-4 hover:text-[#b8944a] transition-colors",
   };
 }
+/** The site's own blog article typography (app/blogs/[slug]). */
+function articleClasses(): Record<string, string> {
+  const base = tagClasses(false);
+  return {
+    ...base,
+    h1: "mt-10 mb-2 font-bold text-lg text-neutral-900 first:mt-0 scroll-mt-28",
+    h2: "mt-10 mb-2 font-bold text-neutral-900 first:mt-0 scroll-mt-28",
+    h3: "mt-8 mb-2 font-semibold text-neutral-900 first:mt-0",
+    h4: "mt-6 mb-2 font-semibold text-neutral-900 first:mt-0",
+    p: "mt-3 text-[15px] leading-7 text-neutral-600 first:mt-0",
+    ul: "list-disc pl-6 mt-3 space-y-1 text-[15px] leading-7 text-neutral-600 marker:text-[#8b6914]",
+    ol: "list-decimal pl-6 mt-3 space-y-1 text-[15px] leading-7 text-neutral-600 marker:text-[#8b6914]",
+    blockquote: "border-l-2 border-[#c9a55b] pl-5 my-8 font-display italic text-xl text-neutral-800",
+    strong: "font-semibold text-neutral-900",
+    b: "font-semibold text-neutral-900",
+    a: "text-[#8b6914] underline underline-offset-2 hover:text-[#6f5410]",
+  };
+}
+
+/** Same ids as components/blogs/TableOfContents' slugify. */
+export function headingId(text: string): string {
+  return text.toLowerCase().replace(/[^\w\s-]/g, "").trim().replace(/\s+/g, "-");
+}
+
 const ALLOWED_TAGS = new Set(Object.keys(tagClasses(false)));
 const VOID_TAGS = new Set(["br", "hr"]);
 const BLOCK_TAGS = new Set(["p", "h1", "h2", "h3", "h4", "h5", "h6", "ul", "ol", "blockquote", "pre", "hr", "div", "table"]);
@@ -46,6 +70,21 @@ const DROP_TAGS = new Set([
 ]);
 
 type Node = { tag: string; href?: string; children: (Node | string)[] };
+
+function textOf(node: Node | string): string {
+  return typeof node === "string" ? node : node.children.map(textOf).join("");
+}
+
+/** The h2 headings of an HTML body (text + anchor id), for a table of contents. */
+export function richTextHeadings(html: string): { id: string; text: string }[] {
+  return parse(html)
+    .children.filter((n): n is Node => typeof n !== "string" && (n.tag === "h2" || n.tag === "h1"))
+    .map((n) => {
+      const text = textOf(n).replace(/\s+/g, " ").trim();
+      return { id: headingId(text), text };
+    })
+    .filter((h) => h.id);
+}
 
 const ENTITIES: Record<string, string> = { amp: "&", lt: "<", gt: ">", quot: '"', apos: "'", nbsp: " " };
 
@@ -116,9 +155,9 @@ function parse(html: string): Node {
   return root;
 }
 
-function render(node: Node | string, key: number, classes: Record<string, string>): ReactNode {
+function render(node: Node | string, key: number, classes: Record<string, string>, anchors = false): ReactNode {
   if (typeof node === "string") return node;
-  const children = node.children.map((child, i) => render(child, i, classes));
+  const children = node.children.map((child, i) => render(child, i, classes, anchors));
   const className = classes[node.tag];
 
   switch (node.tag) {
@@ -140,13 +179,26 @@ function render(node: Node | string, key: number, classes: Record<string, string
       );
     default: {
       const Tag = node.tag as "p";
-      return <Tag key={key} className={className}>{children}</Tag>;
+      const id = anchors && (node.tag === "h2" || node.tag === "h1") ? headingId(textOf(node).replace(/\s+/g, " ")) || undefined : undefined;
+      return <Tag key={key} id={id} className={className}>{children}</Tag>;
     }
   }
 }
 
-export default function CmsRichText({ html, className, onDark = false }: { html: string; className?: string; onDark?: boolean }) {
+export default function CmsRichText({
+  html,
+  className,
+  onDark = false,
+  variant = "section",
+}: {
+  html: string;
+  className?: string;
+  onDark?: boolean;
+  /** "article": the site's blog post typography, with anchor ids on h2. */
+  variant?: "section" | "article";
+}) {
   if (!html.trim()) return null;
-  const classes = tagClasses(onDark);
-  return <div className={className}>{parse(html).children.map((child, i) => render(child, i, classes))}</div>;
+  const article = variant === "article";
+  const classes = article ? articleClasses() : tagClasses(onDark);
+  return <div className={className}>{parse(html).children.map((child, i) => render(child, i, classes, article))}</div>;
 }

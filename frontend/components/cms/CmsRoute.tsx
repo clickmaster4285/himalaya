@@ -10,6 +10,7 @@ import Footer from "@/components/Footer";
 import { buildCmsMetadata, getCmsPage } from "@/lib/cms";
 import { withEditedPageSeo } from "@/lib/erp-edits";
 import CmsSectionRenderer, { renderableSections } from "./CmsSectionRenderer";
+import CmsArticle, { isArticlePage } from "./CmsArticle";
 import { heroIsDark } from "./CmsHero";
 import { safeImage, sectionLayout } from "./cmsContent";
 
@@ -25,6 +26,8 @@ export async function cmsRouteMetadata(path: string): Promise<Metadata> {
 export default async function CmsRoute({ path }: { path: string }) {
   const page = await getCmsPage(path);
   if (!page) notFound();
+  // Blog pages use the site's own blog article layout (app/blogs/[slug]).
+  if (isArticlePage(page)) return <CmsArticle page={page} />;
 
   const sections = renderableSections(page);
   const first = sections[0]?.section;

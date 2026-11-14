@@ -65,7 +65,7 @@ function formatDate(iso: string) {
     : d.toLocaleDateString("en-GB", { year: "numeric", month: "long", day: "numeric", timeZone: "Asia/Karachi" });
 }
 
-function postCards(section: CmsSection, page: CmsPage): CmsPostCard[] {
+export function postCards(section: CmsSection, page: CmsPage): CmsPostCard[] {
   const c = section.content;
   const cards: CmsPostCard[] =
     c.mode === "manual"

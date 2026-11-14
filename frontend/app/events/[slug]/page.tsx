@@ -15,6 +15,7 @@ import { RelatedGuides } from "@/components/seo/RelatedGuides";
 import { featuredGuides, guideHubPath } from "@/lib/guides";
 import { isLegacyRedirectSource } from "@/lib/seo/legacy-redirects";
 import { withEditedPageSeo } from "@/lib/erp-edits";
+import CmsRoute, { cmsRouteMetadata } from "@/components/cms/CmsRoute";
 
 // Event data mapping
 const eventDetails: Record<string, {
@@ -1680,6 +1681,7 @@ async function baseMetadata({ params }: { params: Promise<{ slug: string }> }): 
 /** Route metadata with any SEO fields published from ERP Page Editing overlaid. */
 export async function generateMetadata(props: { params: Promise<{ slug: string }> }): Promise<Metadata> {
   const { slug } = await props.params;
+  if (!eventDetails[slug]) return cmsRouteMetadata(`/events/${slug.toLowerCase()}`);
   return withEditedPageSeo(`/events/${slug}`, await baseMetadata(props));
 }
 
@@ -1687,23 +1689,7 @@ export default async function EventPage({ params }: { params: Promise<{ slug: st
   const { slug } = await params;
   const event = eventDetails[slug];
 
-  if (!event) {
-    return (
-      <div className="min-h-screen bg-white">
-        <Navbar />
-        <div className="flex items-center justify-center min-h-[60vh]">
-          <div className="text-center">
-            <h1 className="text-4xl font-bold text-gray-900 mb-4">Event Not Found</h1>
-            <p className="text-gray-600 mb-8">The requested event could not be found.</p>
-            <Link href="/events" className="inline-block px-6 py-3 bg-[#c9a55b] text-white rounded-lg hover:bg-[#a98741] transition">
-              Back to Events
-            </Link>
-          </div>
-        </div>
-        <Footer />
-      </div>
-    );
-  }
+  if (!event) return <CmsRoute path={`/events/${slug.toLowerCase()}`} />;
 
   const origin = getSiteOrigin();
   const capacity =

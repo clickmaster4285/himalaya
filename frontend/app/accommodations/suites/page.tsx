@@ -275,6 +275,7 @@ const jsonLd = {
 
 const BOOK_HREF = "/book/stay";
 
+
 export default function SuitesPage() {
   return (
     <div className="min-h-screen bg-white">

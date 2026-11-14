@@ -1,6 +1,5 @@
 // app/villas/[slug]/page.tsx
 import type { Metadata } from "next";
-import { notFound } from "next/navigation";
 import Image from "next/image";
 import { amenityImages, roomsBySlug } from "@/content/villas/villa-content";
 import Navbar from "@/components/Navbar";
@@ -15,6 +14,11 @@ import { RelatedGuides } from "@/components/seo/RelatedGuides";
 import { featuredGuides, guideHubPath } from "@/lib/guides";
 import type { Room } from "@/content/villas/villa-content";
 import { withEditedPageSeo } from "@/lib/erp-edits";
+import CmsRoute, { cmsRouteMetadata } from "@/components/cms/CmsRoute";
+
+// Slugs the code does not own fall back to pages created in the ERP CMS
+// (rendered on demand). Publishes refresh instantly via /api/erp-revalidate.
+export const revalidate = 300;
 
 export async function generateStaticParams() {
   return Object.keys(roomsBySlug).map((slug) => ({ slug }));
@@ -50,13 +54,14 @@ async function baseMetadata({ params }: { params: Promise<{ slug: string }> }) {
 /** Route metadata with any SEO fields published from ERP Page Editing overlaid. */
 export async function generateMetadata(props: { params: Promise<{ slug: string }> }): Promise<Metadata> {
   const { slug } = await props.params;
+  if (!roomsBySlug[slug]) return cmsRouteMetadata(`/villas/${slug.toLowerCase()}`);
   return withEditedPageSeo(`/villas/${slug}`, await baseMetadata(props));
 }
 
 export default async function RoomDetail({ params }: { params: Promise<{ slug: string }> }) {
   const { slug } = await params;
   const room = roomsBySlug[slug];
-  if (!room) notFound();
+  if (!room) return <CmsRoute path={`/villas/${slug.toLowerCase()}`} />;
 
   const usedInline = getUsedSectionImages(room);
   const heroImage = room.images[0];

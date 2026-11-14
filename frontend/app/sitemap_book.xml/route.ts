@@ -6,7 +6,6 @@ export const revalidate = 300;
 
 // All static book routes from your folder structure
 const bookRoutes = [
-  { path: "/book", priority: 0.9, changeFrequency: "weekly" as const },
   { path: "/book/stay", priority: 0.95, changeFrequency: "weekly" as const },
   { path: "/book/activities", priority: 0.85, changeFrequency: "weekly" as const },
   { path: "/book/dining", priority: 0.85, changeFrequency: "weekly" as const },

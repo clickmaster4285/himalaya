@@ -57,15 +57,8 @@ export async function GET() {
   </url>`;
   });
 
-  // Add the main events page
-  const mainEventsPage = `  <url>
-    <loc>${origin}/events</loc>
-    <lastmod>${DEFAULT_LASTMOD}</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.95</priority>
-  </url>`;
-
-  const allEntries = [mainEventsPage, ...eventUrls];
+  // The main /events page is listed in sitemap_pages.xml.
+  const allEntries = eventUrls;
 
   const xml = `<?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">

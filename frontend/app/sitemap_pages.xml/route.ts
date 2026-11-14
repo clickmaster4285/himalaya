@@ -24,6 +24,9 @@ const EXCLUDED_PATHS = new Set([
   "/dashboard",
 ]);
 
+// Homepage and section hub pages. Their child pages stay in their own sitemaps.
+const HUB_PAGES = ["/", "/villas", "/blogs", "/book", "/events"];
+
 // File patterns to ignore
 const IGNORED_FILES = new Set([
   "layout.tsx",
@@ -151,13 +154,18 @@ export async function GET() {
   const cmsPages = (await getCmsPages())
     .filter((page) => !page.noindex && isCmsSlug(page.slug) && !codeOwned.has(page.slug))
     .filter((page) => !EXCLUDED_PATHS.has(`/${page.slug.split("/")[1]}`));
-  const uniquePages = [...new Set([...allPages, ...guideHubs, ...cmsPages.map((page) => page.slug)])]
+  // getAllPages skips the app root and the EXCLUDED_PATHS sections, so the homepage and the
+  // section hub pages are added explicitly. They still pass through isExcludedFromSitemap below.
+  const uniquePages = [...new Set([...HUB_PAGES, ...allPages,...guideHubs,...cmsPages.map((page) => page.slug)])]
     .filter((pagePath) => !isExcludedFromSitemap(pagePath))
     .sort();
 
   // Generate priority and changefreq based on path
   const getPriority = (path: string): number => {
     if (path === "/") return 1.0;
+    if (path === "/villas" || path === "/events") return 0.95;
+    if (path === "/book") return 0.9;
+    if (path === "/blogs") return 0.85;
     if (path === "/experience") return 0.9;
     if (path === "/contact") return 0.85;
     if (path === "/faqs") return 0.8;
@@ -173,6 +181,7 @@ export async function GET() {
 
   const getChangeFrequency = (path: string): string => {
     if (path === "/") return "daily";
+    if (["/villas", "/blogs", "/book", "/events"].includes(path)) return "weekly";
     if (path === "/experience") return "weekly";
     if (path.startsWith("/weddings")) return "weekly";
     if (path.startsWith("/corporate")) return "monthly";

@@ -23,6 +23,7 @@ import { createPageMetadata } from "@/lib/seo/build-metadata";
 import { withEditedPageSeo } from "@/lib/erp-edits";
 import EventsSection from "@/components/EventsSection";
 import VirtualTourSection from "@/components/VirtualTourSection";
+import ArchGallery from "@/components/ArchGallery";
 
 const baseMetadata: Metadata = createPageMetadata({
   title: "Himalaya Villas & Resorts in Bhurban, Murree",
@@ -66,9 +67,11 @@ const Index = async () => {
 
       <HeroSection />
       <PhilosophySection />
-      
+     
       <VillasAccommodations />
+            <ArchGallery />
       <ServicesSection />
+      
       <AmenitiesSection />
       <MomentsSection />
       <GlimpseSection />

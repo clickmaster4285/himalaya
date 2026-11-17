@@ -169,7 +169,7 @@ const AmenitiesSection = () => {
   return (
     <section
       ref={sectionRef}
-      className="relative !bg-[#EAE2D7]"
+      className="relative bg-background"
       style={{ height: `${amenities.length * 100}vh` }}
     >
       <div className="sticky top-0 h-screen flex items-center">

@@ -213,6 +213,7 @@ const AmenitiesSection = () => {
                   </motion.div>
                 </AnimatePresence>
               </div>
+              
 
               {/* Active Title & Description */}
               <div className="space-y-3 md:space-y-4">

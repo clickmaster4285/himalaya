@@ -9,7 +9,7 @@ import type { Metadata } from "next";
 import { unstable_cache } from "next/cache";
 import { CMS_API_URL, CMS_SITE_DOMAIN, cmsBaseUrl } from "@/lib/cms";
 import { absoluteUrl, getSiteOrigin } from "@/lib/seo/site-config";
-import { normalizeEditPath, parseErpSections, type ErpEdit } from "@/lib/erp-edits-shared";
+import { normalizeEditPath, parsePageEdits, type ErpEdit } from "@/lib/erp-edits-shared";
 
 export const EDITS_CACHE_TAG = "erp-edited-pages";
 // Safety net only: publishes expire the cache immediately via /api/erp-revalidate.
@@ -60,28 +60,28 @@ async function fetchEditedPaths(): Promise<string[]> {
   return [...new Set(paths)];
 }
 
+// The loader format ({ title, seo, patches, operations }): the same data the
+// ERP's page-edits.js applies, including added sections, rich text and images.
+// `data: null` means the page has no published edits.
 async function fetchEditedPage(slug: string): Promise<EditedPage | null> {
-  const url =
-    slug === "/"
-      ? `${cmsBaseUrl()}/edited-page?slug=${encodeURIComponent("/")}`
-      : `${cmsBaseUrl()}/edited-pages${slug.split("/").map(encodeURIComponent).join("/")}`;
-  const json = await getJson(url);
-  if (json === null) return null;
-  const page = obj(obj(obj(json).data).page);
+  const json = await getJson(`${cmsBaseUrl()}/page-edits?path=${encodeURIComponent(slug)}`);
+  const data = json === null ? null : obj(json).data;
+  if (!data || typeof data !== "object") return null;
+  const page = obj(data);
   const seo = obj(page.seo);
   return {
     slug,
     version: typeof page.version === "number" ? page.version : 0,
     seo: {
-      title: str(seo.title),
-      metaDescription: str(seo.metaDescription),
+      title: str(page.title),
+      metaDescription: str(seo.description) || str(seo.metaDescription),
       canonicalUrl: str(seo.canonicalUrl),
       robots: str(seo.robots),
       ogTitle: str(seo.ogTitle),
       ogDescription: str(seo.ogDescription),
       ogImage: str(seo.ogImage),
     },
-    edits: parseErpSections(page.sections),
+    edits: parsePageEdits(page),
   };
 }
 

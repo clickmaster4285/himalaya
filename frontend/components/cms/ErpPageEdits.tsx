@@ -1,7 +1,9 @@
 'use client';
 // components/cms/ErpPageEdits.tsx
-// Applies published ERP "edited page" instructions (text, styles, section
-// moves/removals/duplicates) to the current route's DOM in the browser. Mounted once in
+// Applies published ERP "edited page" instructions (text, rich text, images,
+// styles, section moves/removals/duplicates and added sections) to the current
+// route's DOM in the browser, the same way the ERP's page-edits.js loader does
+// (ERP backend services/digitalOperations/externalPageEdits.service.js). Mounted once in
 // the root layout so it covers code-owned and CMS pages, on first load and on
 // every client-side navigation. Renders nothing.
 //
@@ -10,11 +12,20 @@
 // component sits before <main> in <body>, so the DOM is back to the shape React
 // expects before React patches or removes the old route's nodes. Removals only
 // hide (display: none), moved nodes go back to their original parent and
-// sibling, and copies (data-erp-clone) are removed, so React's tree is never
-// left inconsistent and no copy leaks into the next page.
+// sibling, and copies and added sections (data-erp-clone) are removed, so
+// React's tree is never left inconsistent and nothing leaks into the next page.
 import { usePathname } from 'next/navigation';
 import { useLayoutEffect } from 'react';
-import { isCopySelector, isSafeStyle, normalizeEditPath, type ErpEdit } from '@/lib/erp-edits-shared';
+import {
+  isCopyId,
+  isCopySelector,
+  isSafeImageUrl,
+  isSafeStyle,
+  isSafeThemeStyle,
+  normalizeEditPath,
+  type ErpEdit,
+} from '@/lib/erp-edits-shared';
+import { sanitizeErpHtml } from '@/components/cms/erp-html';
 
 const CACHE_TTL_MS = 60_000;
 const MAX_HIDE_MS = 1500;
@@ -152,6 +163,97 @@ function waitForTargets(edits: ErpEdit[], isCancelled: () => boolean): Promise<R
 const SLIDER_CLASS = /swiper|slick|carousel|owl-|splide|flickity|glide/i;
 const MAX_ROOM_DEPTH = 12;
 
+// Text/border settings on a table, its body or a row also go on its cells.
+// Mirrors targetsFor in the ERP styleUtils.js.
+const TABLE_PART = /^(TABLE|THEAD|TBODY|TFOOT|TR)$/;
+const CELL_PROPERTY =
+  /^(font-family|font-size|font-weight|font-style|line-height|letter-spacing|text-transform|text-align|border-color)$/;
+
+// Responsive/lazy image attributes that would bring the old file back.
+const LAZY_SRC = ['data-src', 'data-lazy-src', 'data-original', 'data-lazy', 'data-ll-src', 'data-orig-src'];
+const LAZY_SRCSET = ['data-srcset', 'data-lazy-srcset', 'data-ll-srcset'];
+const LAZY_BACKGROUND = ['data-bg', 'data-background', 'data-bg-image', 'data-background-image'];
+
+/*
+ * Sections added in the ERP editor ("insert"). The layout rules mirror
+ * INSERTED_SECTION_CSS in the ERP (insertedSections.js / page-edits.js), so the
+ * live page matches the editor preview; typography comes from each section's
+ * `theme` (the site's own fonts, sampled by the editor). Tables, rules and
+ * quotes use this site's warm gold palette, as on the site's own tables.
+ * Tailwind's preflight resets lists, headings and tables, so they are restored.
+ */
+const SECTION_STYLE_ID = 'erp-section-style';
+const SECTION_CSS = [
+  '.erp-section{box-sizing:border-box;width:100%;max-width:1200px;margin:48px auto;padding:0 20px}',
+  '.erp-section>*:first-child{margin-top:0}',
+  '.erp-section>*:last-child{margin-bottom:0}',
+  '.erp-section p{margin:0 0 12px}',
+  '.erp-section h1,.erp-section h2,.erp-section h3,.erp-section h4{margin:24px 0 12px}',
+  '.erp-section h2{font-size:2.25rem;line-height:1.15}',
+  '.erp-section h3{font-size:1.5rem;line-height:1.25}',
+  '.erp-section h4{font-size:1.25rem;line-height:1.3}',
+  '.erp-section ul,.erp-section ol{margin:12px 0;padding-left:1.5em}',
+  '.erp-section ul{list-style:disc}',
+  '.erp-section ol{list-style:decimal}',
+  '.erp-section li{margin:4px 0}',
+  '.erp-section li::marker{color:#c9a55b}',
+  '.erp-section a{color:#8b6914;text-decoration:underline;text-underline-offset:4px}',
+  '.erp-section strong,.erp-section b{font-weight:600}',
+  '.erp-section blockquote{margin:16px 0;padding-left:16px;border-left:4px solid #c9a55b}',
+  '.erp-section hr{margin:24px 0;border:0;border-top:1px solid #eadfce}',
+  '.erp-section img{display:block;max-width:100%;height:auto;margin:16px 0;border-radius:16px}',
+  '.erp-section figcaption{margin-top:8px;font-size:.875rem;color:#737373}',
+  '.erp-section table{width:100%;border-collapse:separate;border-spacing:0;margin:16px 0;border:1px solid #eadfce;border-radius:16px;overflow:hidden;background:#fff;box-shadow:0 20px 25px -5px rgba(0,0,0,.06),0 8px 10px -6px rgba(0,0,0,.06)}',
+  '.erp-section th,.erp-section td{border:0 solid #f0e8dc;border-right-width:1px;border-bottom-width:1px;padding:14px 18px;text-align:left;vertical-align:top}',
+  '.erp-section tr>:last-child{border-right-width:0}',
+  '.erp-section tr:last-child>*{border-bottom-width:0}',
+  '.erp-section th{font-weight:600;background:rgba(201,165,91,.1);color:#1b1b1b}',
+  '.erp-section td p,.erp-section th p{margin:0}',
+  '.erp-section.erp-layout-image-left,.erp-section.erp-layout-image-right{display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1fr);grid-template-rows:repeat(var(--erp-text-rows,1),auto) 1fr;column-gap:40px;align-items:start}',
+  '.erp-layout-image-left>*{grid-column:2}',
+  '.erp-layout-image-left>img:first-of-type{grid-column:1;grid-row:1/-1}',
+  '.erp-layout-image-right>*{grid-column:1}',
+  '.erp-layout-image-right>img:first-of-type{grid-column:2;grid-row:1/-1}',
+  '.erp-layout-image-left>img:first-of-type,.erp-layout-image-right>img:first-of-type{width:100%;height:auto;margin:0;align-self:center}',
+  '@media (max-width:767px){',
+  '.erp-section{margin:32px auto}',
+  '.erp-section h2{font-size:1.875rem}',
+  '.erp-section table{display:block;overflow-x:auto}',
+  '.erp-section.erp-layout-image-left,.erp-section.erp-layout-image-right{display:block}',
+  '.erp-layout-image-left>img:first-of-type,.erp-layout-image-right>img:first-of-type{margin:16px 0}',
+  '}',
+].join('');
+
+// Text in cells and list items is wrapped in <p> by the editor; it follows the cell.
+const INHERIT_INNER_PARAGRAPH =
+  'font-family:inherit;font-size:inherit;font-weight:inherit;font-style:inherit;' +
+  'line-height:inherit;letter-spacing:inherit;text-transform:inherit;color:inherit';
+
+function ensureSectionStyle() {
+  if (document.getElementById(SECTION_STYLE_ID)) return;
+  const style = document.createElement('style');
+  style.id = SECTION_STYLE_ID;
+  style.textContent = SECTION_CSS;
+  document.head.appendChild(style);
+}
+
+/** CSS for one added section's typography, scoped to that section. */
+function sectionThemeCss(edit: Extract<ErpEdit, { type: 'sectionInsert' }>): string {
+  if (!isCopyId(edit.id)) return '';
+  const scope = `.erp-section[data-erp-clone="${edit.id}"]`;
+  const rules = edit.theme
+    .map(([tag, styles]) => {
+      const declarations = styles
+        .filter(([property, value]) => isSafeThemeStyle(property, value))
+        .map(([property, value]) => `${property}:${value}`)
+        .join(';');
+      return declarations ? `${scope} ${tag}{${declarations}}` : '';
+    })
+    .join('');
+  if (!rules) return '';
+  return `${rules}${scope} th p,${scope} td p,${scope} li p{${INHERIT_INNER_PARAGRAPH}}`;
+}
+
 class EditSession {
   // Original style attribute of every element touched (restored last).
   private styles = new Map<Styled, string | null>();
@@ -169,21 +271,101 @@ class EditSession {
     return el?.isConnected ? el : null;
   }
 
+  /** Sets (or removes, for null) an attribute; revert puts the previous value back. */
+  private setAttr(el: Element, name: string, value: string | null) {
+    const original = el.getAttribute(name);
+    this.undo.push(() => {
+      if (original === null) el.removeAttribute(name);
+      else el.setAttribute(name, original);
+    });
+    if (value === null) el.removeAttribute(name);
+    else el.setAttribute(name, value);
+  }
+
+  private replaceContent(el: Styled, content: Node[] | DocumentFragment) {
+    const nodes = Array.from(el.childNodes);
+    this.undo.push(() => el.replaceChildren(...nodes));
+    if (content instanceof DocumentFragment) el.replaceChildren(content);
+    else el.replaceChildren(...content);
+  }
+
+  private editImage(el: Styled, edit: Extract<ErpEdit, { type: 'elementEdit' }>) {
+    const { image, backgroundImage } = edit;
+    if (image && el.tagName === 'IMG') {
+      if (isSafeImageUrl(image.src)) {
+        this.setAttr(el, 'src', image.src);
+        // next/image and lazy loaders would load the old file from these.
+        for (const name of ['srcset', 'sizes', ...LAZY_SRCSET]) if (el.hasAttribute(name)) this.setAttr(el, name, null);
+        for (const name of LAZY_SRC) if (el.hasAttribute(name)) this.setAttr(el, name, image.src);
+        el.closest('picture')
+          ?.querySelectorAll('source')
+          .forEach((source) => {
+            if (source.hasAttribute('srcset')) this.setAttr(source, 'srcset', null);
+          });
+      }
+      if (typeof image.alt === 'string') this.setAttr(el, 'alt', image.alt);
+    }
+    if (isSafeImageUrl(backgroundImage)) {
+      this.setStyle(el, 'background-image', `url("${backgroundImage}")`);
+      for (const name of LAZY_BACKGROUND) if (el.hasAttribute(name)) this.setAttr(el, name, null);
+    }
+  }
+
   private editElement(el: Styled, edit: Extract<ErpEdit, { type: 'elementEdit' }>) {
-    if (typeof edit.text === 'string') {
-      const nodes = Array.from(el.childNodes);
-      this.undo.push(() => el.replaceChildren(...nodes));
-      el.textContent = edit.text;
+    this.editImage(el, edit);
+    if (typeof edit.html === 'string') {
+      // Rich text (links, paragraphs, bold…), sanitized again here.
+      this.replaceContent(el, sanitizeErpHtml(edit.html));
+    } else if (typeof edit.text === 'string') {
+      // Plain text: every line break shows as a new line.
+      const content: Node[] = [];
+      edit.text.split('\n').forEach((line, i) => {
+        if (i) content.push(document.createElement('br'));
+        content.push(document.createTextNode(line));
+      });
+      this.replaceContent(el, content);
     }
     for (const [property, value] of edit.styles) {
       if (!isSafeStyle(property, value)) continue;
       this.setStyle(el, property, value);
-      if (property === 'color' || property === 'text-decoration') {
-        el.querySelectorAll('*').forEach((child) => {
-          if ('style' in child) this.setStyle(child as Styled, property, value);
-        });
-      }
+      const descendants =
+        property === 'color' || property === 'text-decoration'
+          ? el.querySelectorAll('*')
+          : TABLE_PART.test(el.tagName) && CELL_PROPERTY.test(property)
+            ? el.querySelectorAll('th,td')
+            : null;
+      descendants?.forEach((child) => {
+        if ('style' in child) this.setStyle(child as Styled, property, value);
+      });
     }
+  }
+
+  /** New section written in the ERP editor, placed before/after the anchor. */
+  private insert(anchor: Styled, edit: Extract<ErpEdit, { type: 'sectionInsert' }>) {
+    if (!isCopyId(edit.id) || document.querySelector(`[data-erp-clone="${edit.id}"]`)) return;
+    ensureSectionStyle();
+    const section = document.createElement('section');
+    section.className = 'erp-section';
+    section.setAttribute('data-erp-clone', edit.id);
+    if (edit.layout) section.classList.add(`erp-layout-${edit.layout}`);
+    section.append(sanitizeErpHtml(edit.html));
+    // Image left/right: the image spans every text row.
+    const textRows = section.children.length - (section.querySelector(':scope > img') ? 1 : 0);
+    section.style.setProperty('--erp-text-rows', String(Math.max(textRows, 1)));
+    if (edit.position === 'before') anchor.before(section);
+    else anchor.after(section);
+    // React doesn't know about added sections: always take them out on cleanup.
+    this.undo.push(() => section.remove());
+
+    const css = sectionThemeCss(edit);
+    if (css) {
+      const theme = document.createElement('style');
+      theme.setAttribute('data-erp-theme', edit.id);
+      theme.textContent = css;
+      document.head.appendChild(theme);
+      this.undo.push(() => theme.remove());
+    }
+    this.makeRoomForCopy(section);
   }
 
   private move(el: Styled, target: Styled, position: 'before' | 'after') {
@@ -264,7 +446,8 @@ class EditSession {
       const live = this.live(edit.selector, el);
       if (live) this.editElement(live, edit);
     }
-    // 2. Moves, removals and duplicates, in order. Copy selectors resolve now.
+    // 2. Moves, removals, duplicates and added sections, in order. Copy
+    //    selectors (copies and added sections) resolve now.
     for (const { edit, el, target } of resolved) {
       if (edit.type === 'elementEdit') continue;
       const live = this.live(edit.selector, el);
@@ -276,9 +459,11 @@ class EditSession {
         if (liveTarget) this.move(live, liveTarget, edit.position);
       } else if (edit.type === 'sectionDuplicate') {
         this.duplicate(live, edit.id);
+      } else if (edit.type === 'sectionInsert') {
+        this.insert(live, edit);
       }
     }
-    // 3. Last: element edits on copies (their own text and colours).
+    // 3. Last: element edits on copies and added sections (their own text and colours).
     for (const { edit } of resolved) {
       if (edit.type !== 'elementEdit' || !isCopySelector(edit.selector)) continue;
       const live = this.live(edit.selector, null);

@@ -1,4 +1,5 @@
 // app/accommodations/page.tsx
+// Content supplied by the SEO team (meta, H1, body copy, FAQ and schema).
 import type { Metadata } from "next";
 import Image from "next/image";
 import Link from "next/link";
@@ -6,517 +7,508 @@ import Navbar from "@/components/Navbar";
 import Footer from "@/components/Footer";
 import { JsonLd } from "@/components/seo/JsonLd";
 import { createPageMetadata } from "@/lib/seo/build-metadata";
-import { absoluteUrl } from "@/lib/seo/site-config";
-import { BedDouble, Users, Maximize, Check } from "lucide-react";
+import { Users, LayoutGrid, Lock, Sparkles, CalendarCheck, ArrowRight } from "lucide-react";
 
-export const metadata: Metadata = createPageMetadata({
-  title: "Luxury Accommodation in Bhurban, Murree | Himalaya Villas",
-  description:
-    "Explore rooms, suites, apartments and private villas at Himalaya Villas & Resorts. Compare accommodation options, check availability and book now!",
-  path: "/accommodations",
+const PAGE_PATH = "/accommodations";
+const META_TITLE = "Accommodation in Murree | Himalaya Villas and Resort";
+const META_DESCRIPTION =
+  "Book accommodation in Murree at Himalaya Villas and Resort, Bhurban. Compare rooms, apartments, suites and villas, check availability and reserve your stay.";
+const HERO_IMAGE = "/images/villas/lux-complete5.jpg";
+
+const baseMetadata = createPageMetadata({
+  title: META_TITLE,
+  description: META_DESCRIPTION,
+  path: PAGE_PATH,
   keywords: [
-    "Luxury Accommodation Bhurban",
-    "Murree Hotels",
-    "Private Villas Murree",
-    "Himalaya Villas",
+    "Accommodation in Murree",
+    "Rooms in Murree",
+    "Apartments in Murree",
+    "Suites in Murree",
+    "Villas in Murree",
+    "Himalaya Villas and Resort",
   ],
-  ogImage: "/assets/accommodations-hero.jpg",
+  ogImage: HERO_IMAGE,
   appendSiteBrand: false,
 });
 
-/* ------------------------------------------------------------------ */
-/*  Content config — single source of truth for the collections        */
-/* ------------------------------------------------------------------ */
-
-type Accommodation = {
-  name: string;
-  blurb: string;
-  image: string;
-  beds?: string;
-  guests?: string;
-  size?: string;
-  href: string;
+// Title is already branded: emit it exactly as the SEO team wrote it (no site suffix).
+export const metadata: Metadata = {
+  ...baseMetadata,
+  title: { absolute: META_TITLE },
 };
 
-type Collection = {
+/* ------------------------------------------------------------------ */
+/*  Content                                                            */
+/* ------------------------------------------------------------------ */
+
+type AccommodationType = {
   id: string;
   name: string;
-  intro: string;
+  paragraphs: string[];
+  cta: string;
+  href: string;
   image: string;
-  options: Accommodation[];
+  alt: string;
 };
 
-const collections: Collection[] = [
+const accommodationTypes: AccommodationType[] = [
   {
-    id: "himalaya-apartments",
-    name: "Himalaya Apartments",
-    intro:
-      "Comfortable accommodation for individuals, couples, and families. Choose an individual luxury room or book the complete two-bedroom apartment when you need additional space.",
-    image: "/images/villas/attic-room.jpg",
-    options: [
-      {
-        name: "Single Luxury Room",
-        blurb:
-          "Relax in a comfortable room featuring warm interiors and mountain-facing windows. A suitable option for guests who prefer an individual room with essential comforts.",
-         image: "/images/villas/lux-single-villa.jpg",
-        beds: "1 King Bed",
-        guests: "2 Guests",
-        href: "/villas/apartment-single-luxury",
-      },
-      {
-        name: "Complete Two-Bedroom Apartment",
-        blurb:
-          "Two bedrooms and a shared living area in one apartment — ideal for families and small groups who want to stay together with additional space.",
-          image: "/images/villas/rak-suite4.jpg",
-        
-        beds: "2 Bedrooms",
-        guests: "4–6 Guests",
-        href: "/villas/apartment-complete",
-      },
+    id: "rooms",
+    name: "Rooms in Murree",
+    paragraphs: [
+      "Book a private room for a comfortable short stay at Himalaya Villas and Resort. Rooms are suitable for solo travellers, couples and smaller bookings that do not require the additional space of an apartment, suite or complete villa.",
+      "View the available rooms to check guest capacity, bed arrangement, features, photos, rates and availability.",
     ],
+    cta: "View Rooms",
+    href: "/accommodations/rooms",
+    image: "/images/villas/lux-single.jpg",
+    alt: "Private room at Himalaya Villas and Resort, Murree",
   },
   {
-    id: "rakaposhi-villa",
-    name: "Rakaposhi Villa",
-    intro:
-      "Executive rooms, spacious suites, and a complete villa booking option. Whether you're staying individually or travelling with a group, choose accommodation that matches your requirements.",
-     image: "/images/villas/lux-suite-villa.jpg",
-    options: [
-      {
-        name: "Single Executive Room",
-        blurb:
-          "A furnished executive room with a king-sized bed and comfortable interiors, offering a relaxing setting during your stay.",
-         image: "/images/villas/rak-complete10.jpg",
-
-        beds: "1 King Bed",
-        guests: "2 Guests",
-        href: "/villas/rakaposhi-single-executive",
-      },
-      {
-        name: "Executive Suite",
-        blurb:
-          "A spacious executive suite featuring separate rooms and a private TV lounge, providing additional comfort and living space.",
-        image: "/images/villas/rak-private-suite.jpg",
-        beds: "1 Bedroom + Lounge",
-        guests: "2–3 Guests",
-        href: "/villas/rakaposhi-executive-suite",
-      },
-      {
-        name: "Complete Rakaposhi Villa",
-        blurb:
-          "Book the complete five-room Rakaposhi Villa for your family or group. Multiple bedrooms and shared living areas make it a practical choice for private accommodation.",
-        image: "/images/villas/rak-complete-villa.jpg",
-        beds: "5 Bedrooms",
-        guests: "10+ Guests",
-        href: "/villas/rakaposhi-complete-villa",
-      },
+    id: "apartments",
+    name: "Apartments in Murree",
+    paragraphs: [
+      "Choose an apartment when you want additional space for a family or small group staying together.",
+      "Compare the available apartment options by layout, guest capacity, features, photos, current rates and availability for your travel dates.",
     ],
+    cta: "View Apartments",
+    href: "/accommodations/apartments",
+    image: "/images/villas/complete-apt3.jpeg",
+    alt: "Apartment at Himalaya Villas and Resort, Murree",
   },
   {
-    id: "himalaya-luxury-villas",
-    name: "Himalaya Luxury Villas",
-    intro:
-      "Elegant rooms, spacious suites, and complete villa accommodation. Choose an individual room or reserve an entire four-bedroom villa for a private stay with family or friends.",
-    image: "/images/villas/lux-complete6.jpg",
-    options: [
-      {
-        name: "Attic Room",
-        blurb:
-          "A cosy attic room featuring sloped wooden ceilings and warm interiors — a comfortable place to relax.",
-         image: "/images/villas/lux-attic-villa.jpg",
-        beds: "1 Bed",
-        guests: "2 Guests",
-        href: "/villas/luxury-attic",
-      },
-      {
-        name: "Single Luxury Room",
-        blurb:
-          "A well-furnished luxury room featuring comfortable interiors and mountain views for a relaxing visit.",
-        image: "/images/villas/lux-single.jpg",
-        beds: "1 King Bed",
-        guests: "2 Guests",
-        href: "/villas/luxury-single",
-      },
-      {
-        name: "Luxury Suite",
-        blurb:
-          "Additional space with a separate sitting area and comfortable bedroom accommodation.",
-         image: "/images/villas/lux-suite1.jpg",
-        beds: "1 Bedroom + Sitting Area",
-        guests: "2–3 Guests",
-        href: "/villas/luxury-suite",
-      },
-      {
-        name: "Complete Four-Bedroom Villa",
-        blurb:
-          "A complete luxury villa with four bedrooms, shared living spaces, and outdoor areas — ideal for families and groups looking for additional privacy and space.",
-       image: "/images/villas/complete-apt3.jpeg",
-        beds: "4 Bedrooms",
-        guests: "8–10 Guests",
-        href: "/villas/luxury-complete-villa",
-      },
+    id: "suites",
+    name: "Suites in Murree",
+    paragraphs: [
+      "Book a suite when you prefer more space than a standard room during your short stay in Murree.",
+      "Depending on the suite, the accommodation may include additional sitting or living space. Review each available suite for its layout, guest capacity, features, photos, rates and availability.",
     ],
+    cta: "View Suites",
+    href: "/accommodations/suites",
+    image: "/images/villas/lux-suite1.jpg",
+    alt: "Suite with sitting area at Himalaya Villas and Resort, Murree",
+  },
+  {
+    id: "villas",
+    name: "Villas in Murree",
+    paragraphs: [
+      "Book a complete villa when your family or group wants more privacy and space to stay together.",
+      "Complete villas provide multiple private and shared spaces under one booking, making them suitable for guests travelling together for a short stay in Murree.",
+      "Check each villa for its layout, guest capacity, features, photos, current rates and availability.",
+    ],
+    cta: "View Villas",
+    href: "/villas",
+    image: "/images/villas/rak-complete-villa.jpg",
+    alt: "Complete villa at Himalaya Villas and Resort, Murree",
   },
 ];
 
-const bookingChecklist = [
+const comparisonRows = [
+  {
+    type: "Rooms",
+    suitableFor: "Solo travellers, couples and smaller bookings",
+    style: "Private room accommodation",
+    stay: "Short stays",
+  },
+  {
+    type: "Apartments",
+    suitableFor: "Families and small groups",
+    style: "Additional space for guests staying together",
+    stay: "Short stays",
+  },
+  {
+    type: "Suites",
+    suitableFor: "Couples, families and guests wanting extra space",
+    style: "Private suite with additional space depending on the layout",
+    stay: "Short stays",
+  },
+  {
+    type: "Villas",
+    suitableFor: "Families and larger groups",
+    style: "Complete villa with multiple private and shared spaces",
+    stay: "Short stays",
+  },
+];
+
+const choosingFactors = [
   {
     title: "Guest Capacity",
-    text: "Check the number of guests allowed in your selected accommodation.",
+    text: "Check how many guests the accommodation can accommodate before making your reservation.",
+    icon: Users,
   },
   {
-    title: "Room Features",
-    text: "Review the available beds, living areas, and included facilities.",
+    title: "Space and Layout",
+    text: "Consider whether you need a private room, additional living space or a complete villa for everyone to stay together.",
+    icon: LayoutGrid,
   },
   {
-    title: "Rates & Availability",
-    text: "Confirm current accommodation prices and availability for your dates.",
+    title: "Privacy",
+    text: "Rooms and suites provide individual accommodation, while apartments and complete villas can provide more space for families and groups.",
+    icon: Lock,
   },
   {
-    title: "Booking Conditions",
-    text: "Review breakfast arrangements, additional charges, and reservation policies.",
+    title: "Features and Amenities",
+    text: "Review the individual accommodation page to confirm the features and amenities included with your selected option.",
+    icon: Sparkles,
+  },
+  {
+    title: "Rates and Availability",
+    text: "Check the current rate and availability for your travel dates before confirming your booking.",
+    icon: CalendarCheck,
   },
 ];
 
 const faqs = [
   {
-    question:
-      "What types of accommodation are available at Himalaya Villas & Resorts?",
+    question: "What types of accommodation are available at Himalaya Villas and Resort?",
     answer:
-      "We offer luxury rooms, executive rooms, suites, a two-bedroom apartment, and complete private villas in Bhurban, Murree.",
+      "Himalaya Villas and Resort offers rooms, apartments, suites and complete villas for short stays in Bhurban, Murree. Each accommodation type differs in space, layout, guest capacity and level of privacy.",
   },
   {
-    question: "Can I book an individual room instead of an entire villa?",
+    question: "Which accommodation is suitable for solo travellers?",
     answer:
-      "Yes. You can book individual rooms and suites without reserving a complete villa, subject to availability.",
+      "Rooms are generally the most practical option for solo travellers looking for private accommodation for a short stay in Murree.",
   },
   {
-    question: "Do you offer private villas for families and groups?",
+    question: "Which accommodation is suitable for couples?",
     answer:
-      "Yes. Guests can book complete villas with multiple bedrooms and shared living areas for family and group stays.",
+      "Couples can choose from available rooms or suites depending on their preferred space, layout and availability.",
   },
   {
-    question: "What is the difference between booking a room and a complete villa?",
+    question: "Which accommodation is suitable for families?",
     answer:
-      "An individual room provides private bedroom accommodation, while a complete villa offers multiple bedrooms and shared spaces under one reservation.",
+      "Families can compare rooms, suites, apartments and complete villas depending on their number of guests and space requirements.",
   },
   {
-    question: "How can I check accommodation prices and availability?",
+    question: "Which accommodation is suitable for groups?",
     answer:
-      "Choose your preferred accommodation and contact our reservations team to confirm current rates and availability for your travel dates.",
+      "Small groups can consider apartments or suitable suites, while complete villas provide more space for larger groups wanting to stay together.",
   },
   {
-    question: "How can I book accommodation at Himalaya Villas & Resorts?",
+    question: "Can I book a room or suite separately?",
     answer:
-      "Select your preferred room, suite, apartment, or villa and share your travel dates and guest count with our team to arrange your reservation.",
+      "Yes. Available rooms and suites can be booked as individual accommodation options, subject to current availability.",
+  },
+  {
+    question: "Are the rooms, apartments, suites and villas available for short stays?",
+    answer:
+      "Yes. The accommodation options listed on the website are available for short stays, subject to availability and applicable booking conditions.",
+  },
+  {
+    question: "Where is Himalaya Villas and Resort located?",
+    answer: "Himalaya Villas and Resort is located in Bhurban, Murree, Pakistan.",
+  },
+  {
+    question: "How can I check current rates and availability?",
+    answer:
+      "Open your preferred room, apartment, suite or villa to review its current details, then check the rate and availability for your travel dates before booking.",
   },
 ];
+
+/* ------------------------------------------------------------------ */
+/*  Schema (as supplied by the SEO team; FAQ built from `faqs` above)  */
+/* ------------------------------------------------------------------ */
+
+const jsonLd = {
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@type": "Resort",
+      "@id": "https://himalayavillas.com/#resort",
+      name: "Himalaya Villas and Resort",
+      url: "https://himalayavillas.com/",
+      address: {
+        "@type": "PostalAddress",
+        addressLocality: "Bhurban",
+        addressRegion: "Murree",
+        addressCountry: "PK",
+      },
+    },
+    {
+      "@type": "WebSite",
+      "@id": "https://himalayavillas.com/#website",
+      url: "https://himalayavillas.com/",
+      name: "Himalaya Villas and Resort",
+      publisher: { "@id": "https://himalayavillas.com/#resort" },
+      inLanguage: "en-GB",
+    },
+    {
+      "@type": "CollectionPage",
+      "@id": "https://himalayavillas.com/accommodations#webpage",
+      url: "https://himalayavillas.com/accommodations",
+      name: "Accommodation in Murree at Himalaya Villas and Resort",
+      description: META_DESCRIPTION,
+      isPartOf: { "@id": "https://himalayavillas.com/#website" },
+      about: { "@id": "https://himalayavillas.com/#resort" },
+      mainEntity: { "@id": "https://himalayavillas.com/accommodations#itemlist" },
+      breadcrumb: { "@id": "https://himalayavillas.com/accommodations#breadcrumb" },
+      inLanguage: "en-GB",
+    },
+    {
+      "@type": "ItemList",
+      "@id": "https://himalayavillas.com/accommodations#itemlist",
+      name: "Accommodation Types at Himalaya Villas and Resort",
+      numberOfItems: 4,
+      itemListOrder: "https://schema.org/ItemListOrderAscending",
+      itemListElement: [
+        ["Rooms in Murree", "https://himalayavillas.com/accommodations/rooms/"],
+        ["Apartments in Murree", "https://himalayavillas.com/accommodations/apartments/"],
+        ["Suites in Murree", "https://himalayavillas.com/accommodations/suites/"],
+        ["Villas in Murree", "https://himalayavillas.com/villas"],
+      ].map(([name, url], i) => ({
+        "@type": "ListItem",
+        position: i + 1,
+        name,
+        item: { "@type": "CollectionPage", "@id": url, url, name },
+      })),
+    },
+    {
+      "@type": "BreadcrumbList",
+      "@id": "https://himalayavillas.com/accommodations#breadcrumb",
+      itemListElement: [
+        { "@type": "ListItem", position: 1, name: "Home", item: "https://himalayavillas.com/" },
+        {
+          "@type": "ListItem",
+          position: 2,
+          name: "Accommodation",
+          item: "https://himalayavillas.com/accommodations",
+        },
+      ],
+    },
+    {
+      "@type": "FAQPage",
+      "@id": "https://himalayavillas.com/accommodations#faq",
+      mainEntity: faqs.map((faq) => ({
+        "@type": "Question",
+        name: faq.question,
+        acceptedAnswer: { "@type": "Answer", text: faq.answer },
+      })),
+    },
+  ],
+};
 
 /* ------------------------------------------------------------------ */
 /*  Page                                                               */
 /* ------------------------------------------------------------------ */
 
-export default function AccommodationsPage() {
-  const jsonLd = {
-    "@context": "https://schema.org",
-    "@type": "ItemList",
-    name: "Accommodation at Himalaya Villas & Resorts",
-    itemListElement: collections.flatMap((collection) =>
-      collection.options.map((option, i) => ({
-        "@type": "ListItem",
-        position: i + 1,
-        name: option.name,
-        description: option.blurb,
-        url: absoluteUrl(option.href),
-      }))
-    ),
-  };
+const primaryButton =
+  "inline-block px-8 py-3 bg-[#c9a55b] text-white text-sm font-semibold rounded-lg hover:bg-[#a98741] transition-colors";
+const outlineLightButton =
+  "inline-block px-8 py-3 border border-white/70 text-white text-sm font-semibold rounded-lg hover:bg-white/10 transition-colors";
 
+function Eyebrow({ children, light = false }: { children: string; light?: boolean }) {
+  const color = light ? "text-[#c9a55b]" : "text-[#8b6914]";
+  const line = light ? "bg-[#c9a55b]" : "bg-[#8b6914]";
+  return (
+    <div className={`flex items-center justify-center gap-3 ${color} text-[10px] md:text-[11px] font-bold uppercase tracking-[0.2em] mb-5`}>
+      <span className={`h-px w-8 ${line}`} />
+      <span>{children}</span>
+      <span className={`h-px w-8 ${line}`} />
+    </div>
+  );
+}
+
+export default function AccommodationsPage() {
   return (
     <div className="min-h-screen bg-white">
-      <JsonLd items={[{ id: "accommodations", data: jsonLd }]} />
+      <JsonLd items={[{ id: "accommodations-schema", data: jsonLd }]} />
       <Navbar />
 
-      {/* ----------------------------------------------------------- */}
-      {/* Hero                                                        */}
-      {/* ----------------------------------------------------------- */}
+      {/* Hero */}
       <section className="relative min-h-150 overflow-hidden">
         <div className="absolute inset-0">
           <Image
-            src="/images/villas/lux-complete5.jpg"
-            alt="Luxury accommodation at Himalaya Villas & Resorts, Bhurban"
+            src={HERO_IMAGE}
+            alt="Accommodation in Murree at Himalaya Villas and Resort, Bhurban"
             fill
             className="object-cover"
             priority
           />
         </div>
-        <div className="absolute inset-0 bg-black/50" />
+        <div className="absolute inset-0 bg-black/55" />
 
-        <div className="relative z-10 flex items-center justify-center min-h-150 px-6">
+        <div className="relative z-10 flex items-center justify-center min-h-150 px-6 py-24">
           <div className="text-center text-white max-w-4xl">
-            <div className="flex items-center justify-center gap-3 text-[#c9a55b] text-[10px] md:text-[11px] font-bold uppercase tracking-[0.2em] mb-6">
-              <span className="h-px w-8 bg-[#c9a55b]" />
-              <span>Stay With Us</span>
-              <span className="h-px w-8 bg-[#c9a55b]" />
-            </div>
-            <h1 className="font-display text-4xl md:text-6xl lg:text-7xl leading-tight mb-6">
-              Luxury Accommodation in Bhurban, Murree
+            <Eyebrow light>Bhurban, Murree</Eyebrow>
+            <h1 className="font-display text-4xl md:text-6xl leading-tight mb-6">
+              Accommodation in Murree at Himalaya Villas and Resort
             </h1>
-            <p className="text-lg md:text-xl text-white/90 max-w-3xl mx-auto mb-8">
-              Enjoy a comfortable stay at Himalaya Villas & Resorts. Choose from luxury
-              rooms, spacious suites, apartments, and private villas — whether travelling as a
-              couple, with family, or in a group.
+            <p className="text-lg md:text-xl text-white/90 max-w-3xl mx-auto mb-4">
+              Find comfortable accommodation in Murree at Himalaya Villas and Resort, located in
+              Bhurban and offering short-stay options for solo travellers, couples, families and
+              groups.
             </p>
-            <div className="flex flex-col sm:flex-row items-center justify-center gap-3">
-              <Link
-                href="/contact"
-                className="inline-block px-8 py-3 bg-[#c9a55b] text-white text-sm font-semibold rounded-lg hover:bg-[#a98741] transition-colors"
-              >
-                Check Availability
-              </Link>
-              <Link
-                href="/contact"
-                className="inline-block px-8 py-3 border border-white/70 text-white text-sm font-semibold rounded-lg hover:bg-white/10 transition-colors"
-              >
-                Book Your Stay
-              </Link>
-            </div>
+            <p className="text-base md:text-lg text-white/80 max-w-3xl mx-auto mb-8">
+              Choose from rooms, apartments, suites and complete villas based on your number of
+              guests, preferred space and privacy. Compare the available accommodation below, check
+              current rates and availability, and book the option that best suits your stay.
+            </p>
+            <Link href="/contact" className={primaryButton}>
+              Check Availability
+            </Link>
           </div>
         </div>
       </section>
 
-      {/* ----------------------------------------------------------- */}
-      {/* Intro — "Our Accommodation Options"                         */}
-      {/* ----------------------------------------------------------- */}
-      <section className="py-16 md:py-24">
+      {/* Choose Your Accommodation */}
+      <section id="accommodation-types" className="py-16 md:py-24 bg-white">
         <div className="max-w-7xl mx-auto px-6">
-          <div className="max-w-3xl">
-            <h2 className="font-display text-3xl md:text-4xl text-neutral-900 mb-6">
-              Our Accommodation Options
+          <div className="text-center mb-12 md:mb-16">
+            <Eyebrow>Stay With Us</Eyebrow>
+            <h2 className="font-display text-3xl md:text-4xl text-neutral-900">
+              Choose Your Accommodation in Murree
             </h2>
-            <p className="text-gray-600 leading-relaxed mb-4">
-              Choose accommodation that suits your comfort, privacy, and space requirements. From
-              individual rooms and suites to complete apartments and villas, we offer flexible
-              options for different guest needs.
-            </p>
-            <p className="text-gray-600 leading-relaxed">
-              Explore our three accommodation collections below.
-            </p>
           </div>
-        </div>
-      </section>
 
-      {/* ----------------------------------------------------------- */}
-      {/* Collections                                                 */}
-      {/* ----------------------------------------------------------- */}
-      {collections.map((collection, ci) => (
-        <section
-          key={collection.id}
-          id={collection.id}
-          className={`py-16 md:py-24 ${ci % 2 === 1 ? "bg-gray-50" : "bg-white"}`}
-        >
-          <div className="max-w-7xl mx-auto px-6">
-            <div className="grid grid-cols-1 lg:grid-cols-12 gap-10 items-start">
-              {/* Collection header + image */}
-              <div className="lg:col-span-5">
-                <div className="flex items-center gap-3 text-[#8b6914] text-[10px] font-bold uppercase tracking-[0.2em] mb-4">
-                  <span className="h-px w-6 bg-[#8b6914]" />
-                  <span>Collection {String(ci + 1).padStart(2, "0")}</span>
-                </div>
-                <h2 className="font-display text-3xl md:text-4xl text-neutral-900 mb-4">
-                  {collection.name}
-                </h2>
-                <p className="text-gray-600 leading-relaxed mb-8">{collection.intro}</p>
-                {collection.id === "himalaya-apartments" && (
-                  <Link
-                    href="/accommodations/apartments"
-                    className="inline-block -mt-4 mb-8 text-sm font-medium text-[#8b6914] underline underline-offset-4 hover:text-[#6d5210] transition-colors"
-                  >
-                    View all apartments in Murree →
-                  </Link>
-                )}
-                <div className="relative h-64 md:h-80 overflow-hidden rounded-3xl bg-gray-100">
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
+            {accommodationTypes.map((item) => (
+              <article
+                key={item.id}
+                id={item.id}
+                className="group flex flex-col bg-white rounded-2xl border border-gray-100 shadow-sm hover:shadow-lg transition-shadow duration-300 overflow-hidden"
+              >
+                <div className="relative h-60 md:h-72 bg-gray-100 overflow-hidden">
                   <Image
-                    src={collection.image}
-                    alt={collection.name}
+                    src={item.image}
+                    alt={item.alt}
                     fill
-                    className="object-cover"
+                    sizes="(min-width: 768px) 50vw, 100vw"
+                    className="object-cover group-hover:scale-105 transition-transform duration-500"
                   />
                 </div>
-              </div>
-
-              {/* Option cards */}
-              <div className="lg:col-span-7 space-y-5">
-                {collection.options.map((option) => (
-                  <article
-                    key={option.name}
-                    className="group bg-white rounded-2xl border border-gray-100 shadow-sm hover:shadow-lg transition-shadow duration-300 overflow-hidden"
+                <div className="flex flex-1 flex-col p-6 md:p-8">
+                  <h3 className="font-display text-2xl text-neutral-900 mb-4">{item.name}</h3>
+                  <div className="space-y-3 mb-6">
+                    {item.paragraphs.map((text) => (
+                      <p key={text} className="text-gray-600 text-sm md:text-base leading-relaxed">
+                        {text}
+                      </p>
+                    ))}
+                  </div>
+                  <Link
+                    href={item.href}
+                    className="mt-auto inline-flex w-fit items-center gap-2 px-5 py-2.5 bg-[#c9a55b] text-white text-sm font-semibold rounded-lg hover:bg-[#a98741] transition-colors"
                   >
-                    <div className="grid grid-cols-1 sm:grid-cols-[200px_1fr]">
-                      <div className="relative h-48 sm:h-full min-h-40 bg-gray-100">
-                        <Image
-                          src={option.image}
-                          alt={option.name}
-                          fill
-                          className="object-cover group-hover:scale-105 transition-transform duration-500"
-                        />
-                      </div>
-                      <div className="p-6">
-                        <h3 className="font-display text-xl text-neutral-900 mb-2 group-hover:text-[#c9a55b] transition-colors">
-                          {option.name}
-                        </h3>
-                        <p className="text-gray-600 text-sm leading-relaxed mb-4">
-                          {option.blurb}
-                        </p>
-
-                        {(option.beds || option.guests || option.size) && (
-                          <div className="flex flex-wrap gap-x-5 gap-y-2 text-xs text-gray-500 mb-5">
-                            {option.beds && (
-                              <span className="inline-flex items-center gap-1.5">
-                                <BedDouble className="w-3.5 h-3.5 text-[#c9a55b]" />
-                                {option.beds}
-                              </span>
-                            )}
-                            {option.guests && (
-                              <span className="inline-flex items-center gap-1.5">
-                                <Users className="w-3.5 h-3.5 text-[#c9a55b]" />
-                                {option.guests}
-                              </span>
-                            )}
-                            {option.size && (
-                              <span className="inline-flex items-center gap-1.5">
-                                <Maximize className="w-3.5 h-3.5 text-[#c9a55b]" />
-                                {option.size}
-                              </span>
-                            )}
-                          </div>
-                        )}
-
-                        <div className="flex flex-wrap gap-3">
-                          <Link
-                            href={option.href}
-                            className="inline-block px-4 py-2 bg-[#c9a55b] text-white text-xs font-semibold rounded-lg hover:bg-[#a98741] transition-colors"
-                          >
-                            View Details
-                          </Link>
-                          <Link
-                            href="/contact"
-                            className="inline-block px-4 py-2 border border-[#c9a55b] text-[#8b6914] text-xs font-semibold rounded-lg hover:bg-[#faf7f1] transition-colors"
-                          >
-                            Book Now
-                          </Link>
-                        </div>
-                      </div>
-                    </div>
-                  </article>
-                ))}
-              </div>
-            </div>
-          </div>
-        </section>
-      ))}
-
-      {/* ----------------------------------------------------------- */}
-      {/* Choose Between Individual Rooms and Complete Villas         */}
-      {/* ----------------------------------------------------------- */}
-      <section className="py-16 md:py-24 bg-white">
-        <div className="max-w-7xl mx-auto px-6">
-          <div className="max-w-3xl">
-            <h2 className="font-display text-3xl md:text-4xl text-neutral-900 mb-6">
-              Choose Between Individual Rooms and Complete Villas
-            </h2>
-            <p className="text-gray-600 leading-relaxed mb-4">
-              At Himalaya Villas & Resorts, you do not have to book an entire villa to enjoy
-              your stay. Choose an individual room or suite for a personal visit, or select a
-              complete apartment or private villa when travelling with family or a larger group.
-            </p>
-            <p className="text-gray-600 leading-relaxed mb-8">
-              Our accommodation options allow you to choose based on your guest count, preferred
-              space, and booking requirements. Compare all{" "}
-              <Link
-                href="/accommodations/rooms"
-                className="font-medium text-[#8b6914] underline underline-offset-4 hover:text-[#6d5210] transition-colors"
-              >
-                rooms in Murree
-              </Link>{" "}
-              or browse our{" "}
-              <Link
-                href="/accommodations/apartments"
-                className="font-medium text-[#8b6914] underline underline-offset-4 hover:text-[#6d5210] transition-colors"
-              >
-                apartments in Bhurban
-              </Link>
-              .
-            </p>
-            <Link
-              href="#himalaya-apartments"
-              className="inline-block px-8 py-3 bg-[#c9a55b] text-white text-sm font-semibold rounded-lg hover:bg-[#a98741] transition-colors"
-            >
-              Explore Rooms &amp; Villas
-            </Link>
+                    {item.cta}
+                    <ArrowRight className="w-4 h-4" />
+                  </Link>
+                </div>
+              </article>
+            ))}
           </div>
         </div>
       </section>
 
-      {/* ----------------------------------------------------------- */}
-      {/* What to Know Before Booking                                 */}
-      {/* ----------------------------------------------------------- */}
-      <section className="py-16 md:py-24 bg-gray-50">
-        <div className="max-w-7xl mx-auto px-6">
-          <div className="max-w-3xl mb-12">
-            <h2 className="font-display text-3xl md:text-4xl text-neutral-900 mb-4">
-              What to Know Before Booking
+      {/* Compare Our Accommodation Options */}
+      <section className="py-16 md:py-24 bg-[#faf7f1] px-6">
+        <div className="max-w-6xl mx-auto">
+          <div className="text-center mb-12">
+            <Eyebrow>At a Glance</Eyebrow>
+            <h2 className="font-display text-3xl md:text-4xl text-neutral-900">
+              Compare Our <span className="text-[#c9a55b] italic">Accommodation</span> Options
             </h2>
-            <p className="text-gray-600 leading-relaxed">
-              Before making your reservation, review the details of your preferred room, suite,
-              apartment, or villa to ensure it meets your requirements.
-            </p>
           </div>
 
-          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
-            {bookingChecklist.map((item, index) => (
-              <div
-                key={item.title}
-                className="bg-white rounded-2xl border border-gray-100 p-6 shadow-sm"
-              >
-                <div className="w-8 h-8 rounded-full bg-[#c9a55b] flex items-center justify-center mb-4">
-                  <Check className="w-4 h-4 text-white" />
-                </div>
-                <div className="text-[10px] font-bold uppercase tracking-[0.2em] text-[#8b6914] mb-2">
-                  Step {String(index + 1).padStart(2, "0")}
-                </div>
-                <h3 className="font-display text-lg text-neutral-900 mb-2">{item.title}</h3>
-                <p className="text-gray-600 text-sm leading-relaxed">{item.text}</p>
-              </div>
-            ))}
+          <div className="overflow-x-auto rounded-2xl bg-white shadow-xl border border-[#eadfce]">
+            <table className="w-full text-left border-collapse min-w-[720px]">
+              <thead>
+                <tr className="bg-neutral-50 border-b border-[#eadfce]">
+                  <th scope="col" className="p-5 font-semibold text-neutral-500 uppercase text-xs tracking-wider bg-[#c9a55b]/10">
+                    Accommodation Type
+                  </th>
+                  <th scope="col" className="p-5 font-semibold text-neutral-500 uppercase text-xs tracking-wider">Suitable For</th>
+                  <th scope="col" className="p-5 font-semibold text-neutral-500 uppercase text-xs tracking-wider">Accommodation Style</th>
+                  <th scope="col" className="p-5 font-semibold text-neutral-500 uppercase text-xs tracking-wider">Stay Type</th>
+                </tr>
+              </thead>
+              <tbody className="text-sm md:text-base">
+                {comparisonRows.map((row) => (
+                  <tr
+                    key={row.type}
+                    className="align-top border-b border-neutral-100 last:border-0 hover:bg-neutral-50/50 transition"
+                  >
+                    <th scope="row" className="p-5 font-display text-lg font-semibold text-[#8b6914] bg-[#c9a55b]/5">
+                      {row.type}
+                    </th>
+                    <td className="p-5 text-neutral-700">{row.suitableFor}</td>
+                    <td className="p-5 text-neutral-600">{row.style}</td>
+                    <td className="p-5">
+                      <span className="inline-block whitespace-nowrap rounded-full bg-[#c9a55b]/10 px-3 py-1 text-xs font-semibold text-[#8b6914]">
+                        {row.stay}
+                      </span>
+                    </td>
+                  </tr>
+                ))}
+              </tbody>
+            </table>
           </div>
 
-          <p className="mt-10 text-gray-600">
-            For further information,{" "}
-            <Link
-              href="/contact"
-              className="font-medium text-[#8b6914] underline underline-offset-4 hover:text-[#6d5210] transition-colors"
-            >
-              contact our reservations team
-            </Link>
-            .
+          <p className="mt-8 text-center text-neutral-600 leading-relaxed max-w-3xl mx-auto">
+            The right accommodation depends on your number of guests, space requirements, preferred
+            privacy and availability for your travel dates.
           </p>
         </div>
       </section>
 
-      {/* ----------------------------------------------------------- */}
-      {/* FAQ                                                         */}
-      {/* ----------------------------------------------------------- */}
+      {/* How to Choose the Right Accommodation */}
       <section className="py-16 md:py-24 bg-white">
         <div className="max-w-7xl mx-auto px-6">
-          <div className="text-center mb-12">
+          <div className="max-w-3xl mx-auto text-center mb-12">
             <h2 className="font-display text-3xl md:text-4xl text-neutral-900 mb-4">
-              Frequently Asked Questions
+              How to Choose the Right Accommodation
             </h2>
-            <p className="text-gray-600 max-w-3xl mx-auto">
-              Common questions about staying at Himalaya Villas & Resorts.
+            <p className="text-gray-600 leading-relaxed">
+              Before booking, compare the details of each room, apartment, suite or villa to find
+              the option that suits your stay.
             </p>
           </div>
+
+          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-5 gap-6">
+            {choosingFactors.map(({ title, text, icon: Icon }) => (
+              <div key={title} className="bg-gray-50 rounded-2xl border border-gray-100 p-6">
+                <div className="w-10 h-10 rounded-full bg-[#c9a55b] flex items-center justify-center mb-4">
+                  <Icon className="w-5 h-5 text-white" />
+                </div>
+                <h3 className="font-display text-lg text-neutral-900 mb-2">{title}</h3>
+                <p className="text-gray-600 text-sm leading-relaxed">{text}</p>
+              </div>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      {/* Book Your Stay */}
+      <section className="py-16 md:py-24 bg-neutral-900">
+        <div className="max-w-4xl mx-auto px-6 text-center">
+          <Eyebrow light>Reserve Your Stay</Eyebrow>
+          <h2 className="font-display text-3xl md:text-4xl text-white mb-6">
+            Book Your Stay at Himalaya Villas and Resort
+          </h2>
+          <p className="text-white/80 leading-relaxed mb-4 max-w-2xl mx-auto">
+            Choose from our available rooms, apartments, suites and villas in Murree and find the
+            accommodation that suits your guest numbers, space requirements and travel plans.
+          </p>
+          <p className="text-white/80 leading-relaxed mb-8 max-w-2xl mx-auto">
+            Check current rates and availability for your preferred dates, then reserve your short
+            stay at Himalaya Villas and Resort in Bhurban, Murree.
+          </p>
+          <div className="flex flex-col sm:flex-row items-center justify-center gap-3">
+            <Link href="/contact" className={primaryButton}>
+              Check Availability
+            </Link>
+            <Link href="/contact" className={outlineLightButton}>
+              Book Your Stay
+            </Link>
+          </div>
+        </div>
+      </section>
+
+      {/* FAQ */}
+      <section className="py-16 md:py-24 bg-white">
+        <div className="max-w-7xl mx-auto px-6">
+          <h2 className="font-display text-3xl md:text-4xl text-neutral-900 text-center mb-12">
+            Frequently Asked Questions
+          </h2>
 
           <div className="max-w-4xl mx-auto divide-y divide-gray-100 border-y border-gray-100">
             {faqs.map((faq) => (
@@ -534,44 +526,6 @@ export default function AccommodationsPage() {
                 <p className="mt-3 text-gray-600 leading-relaxed">{faq.answer}</p>
               </details>
             ))}
-          </div>
-        </div>
-      </section>
-
-      {/* ----------------------------------------------------------- */}
-      {/* Closing CTA                                                 */}
-      {/* ----------------------------------------------------------- */}
-      <section className="py-16 md:py-24 bg-neutral-900">
-        <div className="max-w-4xl mx-auto px-6 text-center">
-          <div className="flex items-center justify-center gap-3 text-[#c9a55b] text-[10px] md:text-[11px] font-bold uppercase tracking-[0.2em] mb-6">
-            <span className="h-px w-8 bg-[#c9a55b]" />
-            <span>Reserve Your Stay</span>
-            <span className="h-px w-8 bg-[#c9a55b]" />
-          </div>
-          <h2 className="font-display text-3xl md:text-4xl text-white mb-6">
-            Book Your Stay at Himalaya Villas & Resorts
-          </h2>
-          <p className="text-white/80 leading-relaxed mb-8 max-w-2xl mx-auto">
-            Find accommodation that suits your travel plans, from individual rooms and suites to
-            complete apartments and private villas. Our reservations team can help you check
-            availability, compare options, and choose the right space for your stay in Bhurban,
-            Murree.
-          </p>
-          <div className="flex flex-col sm:flex-row items-center justify-center gap-3">
-            <Link
-              href="/contact"
-              className="inline-block px-8 py-3 bg-[#c9a55b] text-white text-sm font-semibold rounded-lg hover:bg-[#a98741] transition-colors"
-            >
-              Check Availability
-            </Link>
-            <a
-              href="https://wa.me/923000000000"
-              target="_blank"
-              rel="noopener noreferrer"
-              className="inline-block px-8 py-3 border border-white/70 text-white text-sm font-semibold rounded-lg hover:bg-white/10 transition-colors"
-            >
-              Book on WhatsApp
-            </a>
           </div>
         </div>
       </section>

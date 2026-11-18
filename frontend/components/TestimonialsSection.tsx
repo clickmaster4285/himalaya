@@ -12,6 +12,7 @@ const TestimonialsSection = () => {
   return (
     <section
       ref={ref}
+      id="testimonials"
       className="relative py-20 sm:py-24 md:py-32 px-5 sm:px-6 md:px-8"
       style={{ background: "#EAE2D7" }}
     >
@@ -181,7 +182,7 @@ function TestimonialVideo({
         muted
         loop
         playsInline
-        preload="metadata"
+        preload="auto"
         className="absolute inset-0 w-full h-full object-cover"
       />
 

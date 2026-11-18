@@ -4,6 +4,8 @@ import type { Metadata } from "next";
 import Image from "next/image";
 import Link from "next/link";
 import { useState } from "react";
+import Navbar from "@/components/Navbar";
+import Footer from "@/components/Footer";
 import { 
   Mountain, 
   MapPin, 
@@ -156,6 +158,7 @@ export default function AdventureGamesPage() {
   return (
     <div className="min-h-screen bg-white">
       <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(adventureServiceSchema) }} />
+      <Navbar />
       
       {/* Hero Section */}
       <section className="relative h-[600px] overflow-hidden">
@@ -542,6 +545,8 @@ export default function AdventureGamesPage() {
           </Link>
         </div>
       </section>
+
+      <Footer />
     </div>
   );
 }

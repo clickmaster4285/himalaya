@@ -217,7 +217,7 @@ export default function VillasAccommodations({
 
               <div className="grid gap-6 sm:grid-cols-2 lg:grid-cols-3">
                 {c.rooms.map((room) => (
-                  <RoomCard key={room.name} room={room} />
+                  <RoomCard key={room.href} room={room} />
                 ))}
               </div>
             </div>

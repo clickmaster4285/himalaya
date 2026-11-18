@@ -35,7 +35,7 @@ export default function ArchGallery() {
   const [featured, ...rest] = photos;
 
   return (
-    <section className="bg-[color:var(--frost)] py-24">
+    <section id="gallery" className="bg-[color:var(--frost)] py-24">
       <div className="mx-auto max-w-7xl px-6">
         <div className="mx-auto max-w-3xl text-center">
           <p className="text-xs font-semibold uppercase tracking-[0.25em] text-[color:var(--gold)]">

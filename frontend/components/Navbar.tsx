@@ -218,6 +218,7 @@ const Navbar = ({ theme = "dark" }: NavbarProps) => {
           >
             <Image
               src={logo}
+              unoptimized
               alt="Himalaya Villas & Resorts"
               width={160}
               height={160}
@@ -340,6 +341,7 @@ const Navbar = ({ theme = "dark" }: NavbarProps) => {
           >
             <Image
               src={logo}
+              unoptimized
               alt="Himalaya Villas & Resorts"
               width={160}
               height={160}
@@ -402,6 +404,7 @@ const Navbar = ({ theme = "dark" }: NavbarProps) => {
           >
             <Image
               src={logo}
+              unoptimized
               alt="Himalaya Villas & Resorts"
               width={120}
               height={120}

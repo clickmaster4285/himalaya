@@ -1,6 +1,5 @@
 import type { Metadata } from "next";
 
-import { HomeStructuredData } from "@/components/seo/StructuredData";
 import Script from "next/script";
 import faqSchema from '@/public/himalayavillas-faq-schema.json';
 import { buildHomepageJsonLd } from "@/lib/seo/homepage-schema";
@@ -50,13 +49,12 @@ const Index = async () => {
 
   return (
     <div className="min-h-screen">
-      <HomeStructuredData />
       <Script
         id="faq-schema"
         type="application/ld+json"
         dangerouslySetInnerHTML={{ __html: JSON.stringify(faqSchema) }}
       />
-      {/* WebSite, WebPage, and FAQ. The lodging entity is the sitewide graph. */}
+      {/* Homepage-only graph: Resort, WebSite, WebPage. */}
       <Script
         id={homepageSchema.id}
         type="application/ld+json"
@@ -68,7 +66,7 @@ const Index = async () => {
       <HeroSection />
       <PhilosophySection />
      
-      <VillasAccommodations />
+      <VillasAccommodations showTypeCards />
             <ArchGallery />
       <ServicesSection />
       <VerticalGallerySection />

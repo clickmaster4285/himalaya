@@ -1,3 +1,6 @@
+"use client";
+
+import { usePathname } from "next/navigation";
 import { buildHotelGraphJsonLd } from "@/lib/seo/hotel-graph-schema";
 
 function serializeJsonLd(data: Record<string, unknown>): string {
@@ -6,6 +9,10 @@ function serializeJsonLd(data: Record<string, unknown>): string {
 
 /** Organization + LodgingBusiness + WebSite + WebPage @graph — render in page/layout head. */
 export function HotelGraphStructuredData() {
+  const pathname = usePathname();
+  // The home page renders its own Resort/WebSite/WebPage graph (lib/seo/homepage-schema.ts).
+  if (pathname === "/") return null;
+
   return (
     <script
       id="hv-jsonld-hotel-graph"

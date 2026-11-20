@@ -116,7 +116,7 @@ function MobileDots({
 function ExploreFacilitiesCTA({ className = "" }: { className?: string }) {
   return (
     <Link
-      href="/villas"
+      href="/accommodations"
       className={`inline-flex items-center gap-2 rounded-md border border-[#c9a24a] bg-[#fdfaf3] px-6 py-3 text-xs font-medium uppercase tracking-[0.2em] text-[#2b2b2b] transition hover:bg-[#f5efdf] ${className}`}
     >
       Explore Our Facilities

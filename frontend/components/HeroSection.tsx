@@ -103,7 +103,7 @@ Welcome to Himalaya Villas & Resorts, surrounded by the scenic hills of Bhurban,
             
             
             
-  <a
+  {/* <a
   href={buildWhatsAppBookingUrl()}
   target="_blank"
   rel="noopener noreferrer"
@@ -120,7 +120,7 @@ Welcome to Himalaya Villas & Resorts, surrounded by the scenic hills of Bhurban,
     className="h-3.5 w-3.5 sm:h-4 sm:w-4 transition-transform text-white group-hover:translate-x-0.5"
     aria-hidden
   />
-</a>
+</a> */}
 
              <a
   href={buildWhatsAppBookingUrl()}

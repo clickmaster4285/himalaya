@@ -242,23 +242,35 @@ const Navbar = ({ theme = "dark" }: NavbarProps) => {
             >
               {item.children ? (
                 <>
-                  <button
-                    className={`nav-link text-sm xl:text-base whitespace-nowrap transition-opacity hover:opacity-80 flex items-center gap-1 ${textColor}`}
-                    onClick={() =>
-                      setActiveDropdown(
-                        activeDropdown === item.label ? null : item.label
-                      )
-                    }
-                    aria-expanded={activeDropdown === item.label}
-                    aria-haspopup="true"
-                  >
-                    {item.label}
-                    <ChevronDown
-                      className={`h-3.5 w-3.5 transition-transform duration-300 ${
-                        activeDropdown === item.label ? "rotate-180" : ""
-                      }`}
-                    />
-                  </button>
+                  <div className={`flex items-center gap-1 ${textColor}`}>
+                    {/* Parent label navigates to the parent page */}
+                    <Link
+                      href={item.href}
+                      onClick={() => setActiveDropdown(null)}
+                      className="nav-link text-sm xl:text-base whitespace-nowrap transition-opacity hover:opacity-80"
+                    >
+                      {item.label}
+                    </Link>
+                    {/* Chevron toggles the dropdown (touch / keyboard) */}
+                    <button
+                      type="button"
+                      className="transition-opacity hover:opacity-80"
+                      onClick={() =>
+                        setActiveDropdown(
+                          activeDropdown === item.label ? null : item.label
+                        )
+                      }
+                      aria-label={`Show ${item.label} menu`}
+                      aria-expanded={activeDropdown === item.label}
+                      aria-haspopup="true"
+                    >
+                      <ChevronDown
+                        className={`h-3.5 w-3.5 transition-transform duration-300 ${
+                          activeDropdown === item.label ? "rotate-180" : ""
+                        }`}
+                      />
+                    </button>
+                  </div>
 
                   {/* Transparent professional dropdown */}
                   <div
@@ -421,18 +433,32 @@ const Navbar = ({ theme = "dark" }: NavbarProps) => {
             <div key={item.label} className="w-full">
               {item.children ? (
                 <>
-                  <button
-                    className={`flex items-center justify-between w-full font-sans text-base sm:text-lg md:text-xl font-semibold tracking-[0.12em] ${mobileTextColor} uppercase transition-all ${mobileHoverColor} py-1`}
-                    onClick={() => toggleMobileExpand(item.label)}
-                    aria-expanded={mobileExpanded === item.label}
+                  <div
+                    className={`flex items-center justify-between w-full font-sans text-base sm:text-lg md:text-xl font-semibold tracking-[0.12em] ${mobileTextColor} uppercase py-1`}
                   >
-                    {item.label}
-                    <ChevronDown
-                      className={`h-4 w-4 transition-transform duration-300 ${
-                        mobileExpanded === item.label ? "rotate-180" : ""
-                      }`}
-                    />
-                  </button>
+                    {/* Parent label navigates to the parent page */}
+                    <Link
+                      href={item.href}
+                      onClick={() => setMobileOpen(false)}
+                      className={`transition-all ${mobileHoverColor}`}
+                    >
+                      {item.label}
+                    </Link>
+                    {/* Chevron expands the submenu */}
+                    <button
+                      type="button"
+                      className={`p-2 -mr-2 transition-all ${mobileHoverColor}`}
+                      onClick={() => toggleMobileExpand(item.label)}
+                      aria-label={`Show ${item.label} menu`}
+                      aria-expanded={mobileExpanded === item.label}
+                    >
+                      <ChevronDown
+                        className={`h-4 w-4 transition-transform duration-300 ${
+                          mobileExpanded === item.label ? "rotate-180" : ""
+                        }`}
+                      />
+                    </button>
+                  </div>
 
                   <div
                     className={`overflow-hidden transition-all duration-300 ${

@@ -3,6 +3,7 @@
 import Image from "next/image";
 import Link from "next/link";
 import { ArrowRight } from "lucide-react";
+import AccommodationTypeCards from "@/components/AccommodationTypeCards";
 import { getVillaCatalogCollections } from "@/lib/villa-catalog";
 import { buildWhatsAppVillaBookingUrl } from "@/lib/whatsapp";
 import { trackAndOpen, trackClick } from "@/lib/trackedClick";
@@ -142,8 +143,11 @@ const COLLECTION_SUBTITLES: Record<string, string> = {
 
 export default function VillasAccommodations({
   hideViewAllLink = false,
+  showTypeCards = false,
 }: {
   hideViewAllLink?: boolean;
+  /** Show the four accommodation-type cards from /accommodations instead of the room listings. */
+  showTypeCards?: boolean;
 }) {
   // Group listings by their display collection based on category.
   const grouped = new Map<string, Room[]>();
@@ -196,7 +200,10 @@ export default function VillasAccommodations({
           </p>
         </div>
 
-        {/* Collections */}
+        {showTypeCards ? (
+          <AccommodationTypeCards />
+        ) : (
+        /* Collections */
         <div className="space-y-16">
           {collections.map((c) => (
             <div key={c.title}>
@@ -223,6 +230,7 @@ export default function VillasAccommodations({
             </div>
           ))}
         </div>
+        )}
 
         {/* Budget note */}
         {/* <p className="mt-14 text-center text-sm text-[#6b6357] leading-relaxed max-w-3xl mx-auto">
@@ -237,7 +245,7 @@ export default function VillasAccommodations({
         {!hideViewAllLink ? (
           <div className="mt-8 text-center">
             <Link
-              href="/villas"
+              href="/accommodations"
               className="inline-flex items-center gap-2 rounded-md border border-[#c9a24a] bg-[#fdfaf3] px-6 py-3 text-xs font-medium uppercase tracking-[0.2em] text-[#2b2b2b] transition hover:bg-[#f5efdf]"
             >
               View All Villas &amp; Room Rates

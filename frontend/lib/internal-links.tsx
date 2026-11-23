@@ -17,6 +17,7 @@ export type InternalLink = {
 };
 
 export const INTERNAL_LINKS: InternalLink[] = [
+  { text: "Explore Accommodation in Murree", href: "https://himalayavillas.com/accommodations", slugs: ["what-is-accommodation"] },
   { text: "check availability at Himalaya Villas & Resorts", href: "https://himalayavillas.com/contact" },
   { text: "Islamabad to Bhurban transport guide", href: "https://himalayavillas.com/islamabad-to-bhurban-guide" },
   { text: "best villas in Murree", href: "https://himalayavillas.com/villas" },

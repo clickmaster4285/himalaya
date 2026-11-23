@@ -39,6 +39,196 @@ export type BlogContent = {
 };
 
 const CONTENT_BY_SLUG: Record<string, BlogContent> = {
+  "what-is-accommodation": {
+    intro: [
+      "Accommodation is temporary lodging provided to guests and travellers during a trip, holiday or visit. In hospitality and tourism, accommodation can be provided by hotels, resorts, guest houses and other lodging businesses through options such as rooms, suites, apartments and villas.",
+      "The accommodation selected for a stay usually depends on the number of guests, location, space, privacy, facilities, rates, availability and purpose of travel.",
+    ],
+    sections: [
+      {
+        heading: "How Does Accommodation Work in Hospitality?",
+        paragraphs: [
+          "Accommodation is a core part of the hospitality and travel industry. Hospitality properties provide temporary lodging together with different levels of guest service, facilities and experiences.",
+          "The relationship can be understood as:",
+          "Hospitality Property → provides → Accommodation → to → Guests and Travellers",
+          "A hotel or resort can provide several accommodation options within the same property. These may include standard rooms, larger suites, apartments or complete villas.",
+          "This is why the property itself and the accommodation offered within it should not always be treated as the same type of entity.",
+          "For example:",
+          "Resort → provides → Accommodation → Room / Suite / Apartment / Villa",
+          "The exact structure varies between hospitality businesses.",
+        ],
+        image: "/assets/gallery-exterior.jpg",
+      },
+      {
+        heading: "How Is Accommodation Classified in Hospitality?",
+        paragraphs: [
+          "Accommodation can be classified according to the type of hospitality property providing the stay and the accommodation options available within that property.",
+          "These classifications can overlap. A villa or apartment, for example, may operate independently in one business model but may also be offered as an accommodation option within a resort.",
+        ],
+      },
+      {
+        heading: "Hospitality Property Types",
+        paragraphs: [
+          "Hospitality properties are businesses or establishments that provide accommodation to guests.",
+          "Hotels — A hotel provides managed guest accommodation, most commonly through rooms and suites. Hotels may also provide reception, housekeeping, dining and other hospitality services depending on the individual property. Some hotels can also offer apartments or other larger accommodation options.",
+          "Resorts — A resort provides accommodation while generally placing greater emphasis on the overall leisure and holiday experience. A resort may provide rooms, suites, apartments, villas or a combination of accommodation options. Depending on the resort, the wider guest experience may also include dining, recreation, activities, entertainment or event facilities.",
+          "Guest Houses — Guest houses are generally smaller hospitality properties that provide guest rooms and a more limited range of services than larger hotels or resorts.",
+          "Hostels — Hostels usually focus on budget or shared accommodation. They may provide shared dormitories, private rooms and communal facilities.",
+          "Bed and Breakfasts — A bed and breakfast provides overnight guest accommodation with breakfast generally included as part of the stay.",
+          "Other hospitality property types can also exist depending on the destination, service model and type of travel.",
+        ],
+        image: "/assets/murree-valley-view.jpg",
+      },
+      {
+        heading: "Accommodation Options Within a Hospitality Property",
+        paragraphs: [
+          "A single hotel or resort may offer more than one type of accommodation. The available options can differ according to guest capacity, layout, privacy, facilities and space.",
+          "Rooms — A room is a private accommodation unit within a hospitality property. Rooms are commonly suitable for solo travellers, couples and smaller bookings. Different room categories may vary by bed arrangement, guest capacity, size, view and included facilities.",
+          "Suites — A suite generally provides more space than a standard room. Depending on the property, a suite may include an additional sitting area, living space or other separate areas. Suites can suit couples, families or guests who prefer additional space during their stay.",
+          "Apartments — An apartment can provide more independent living space than a standard room. Depending on the hospitality property, apartments may include separate bedrooms, living areas and other facilities. They can be suitable for families and groups who want to stay together with additional space. An apartment may operate as an independent accommodation property in some cases or as an accommodation option within a larger hotel or resort.",
+          "Villas — A villa generally provides more space and privacy and may be offered as a complete accommodation unit. Villas can suit families and groups who want several guests to stay together under one booking. Like apartments, villas can operate independently or form part of a larger resort.",
+          "The actual layout, guest capacity and facilities always depend on the individual property.",
+        ],
+        image: "/assets/villa-interior.jpg",
+      },
+      {
+        heading: "Is There a Fixed Number of Accommodation Types?",
+        paragraphs: [
+          "There is no single fixed number of accommodation types used across the entire hospitality industry.",
+          "Accommodation can be classified in different ways, including:",
+          "Property type",
+          "Accommodation unit",
+          "Service level",
+          "Privacy",
+          "Guest capacity",
+          "Length of stay",
+          "Self-catering facilities",
+          "Travel purpose",
+          "Location and environment",
+          "This is why one hospitality guide may describe four or five broad accommodation groups while another may identify ten, twelve or more individual types.",
+          "The classification depends on how accommodation is being organised.",
+          "For a hotel or resort, it is often more useful for guests to understand which accommodation options the property actually provides rather than focusing only on a fixed number of industry-wide categories.",
+        ],
+      },
+      {
+        heading: "Examples of Accommodation for Different Guests",
+        paragraphs: [
+          "Different guests can require different accommodation arrangements.",
+          "Solo Travellers — A solo traveller may choose a private room when additional bedrooms or large shared spaces are not required.",
+          "Couples — Couples may choose a room or suite depending on their preferred space, privacy and accommodation style.",
+          "Families — Families may consider suites, apartments or villas depending on the number of guests and required layout. Additional space can make it easier for family members to stay together.",
+          "Small Groups — Small groups may choose an apartment or villa where the accommodation capacity and layout allow several guests to stay together.",
+          "Larger Groups — Larger groups may prefer complete villas or other accommodation options designed for higher guest capacity.",
+          "The most suitable option depends on the actual occupancy limits and layout of the individual accommodation.",
+        ],
+        image: "/assets/blog-family-tour-bhurban-guide.png",
+      },
+      {
+        heading: "What Should Guests Consider When Choosing Accommodation?",
+        paragraphs: [
+          "The most suitable accommodation for a stay depends on more than the property name or accommodation category. Guests should compare several important attributes.",
+          "Guest Capacity — Check how many guests the accommodation is designed to host. The available capacity can help determine whether a room, suite, apartment or villa is appropriate.",
+          "Space and Layout — Review how the accommodation is arranged. Families and groups may require additional bedrooms, sitting areas or shared spaces, while solo travellers and couples may require less space.",
+          "Privacy — The required level of privacy can influence accommodation choice. A private room may be sufficient for some stays, while an apartment or complete villa may provide greater separation and privacy for families or groups.",
+          "Location — Consider the location of the hospitality property in relation to the destination and planned activities. Location can influence convenience and the overall guest experience.",
+          "Facilities and Amenities — Review the facilities included with the specific accommodation. Amenities can vary between properties and even between accommodation options within the same property.",
+          "Rates — Accommodation rates can vary according to property type, accommodation category, dates, season and availability. Guests should compare the current rate with the accommodation features and space provided.",
+          "Availability — Accommodation options may not be available for every travel date. Checking current availability is therefore an important part of planning a stay.",
+          "Purpose of the Stay — Accommodation requirements can differ depending on whether the trip is a couple's getaway, family holiday, group stay or another type of visit.",
+        ],
+      },
+      {
+        heading: "Accommodation in Murree",
+        paragraphs: [
+          "Travellers planning a stay in Murree can compare accommodation according to guest capacity, space, privacy, location, facilities, rates and availability.",
+          "Different guest requirements can lead to different accommodation choices. A couple may prefer a room or suite, while a family or group may require an apartment or complete villa.",
+          "Travellers can explore accommodation in Murree and compare the available options before booking.",
+        ],
+        image: "/assets/murree-mountain-hero.jpg",
+      },
+      {
+        heading: "Accommodation at Himalaya Villas and Resort",
+        paragraphs: [
+          "Himalaya Villas and Resort is the main hospitality property in Bhurban, Murree. Within the resort, guests can choose between different accommodation options for short stays.",
+          "The entity relationship is:",
+          "Himalaya Villas and Resort → provides → Accommodation → Rooms / Apartments / Suites / Villas",
+          "Rooms — Rooms provide private accommodation for solo travellers, couples and smaller bookings. Guests can review the individual room details to compare capacity, layout, features, rates and availability.",
+          "Apartments — Apartments provide additional space for families and small groups who want to stay together. The exact layout and features depend on the individual apartment.",
+          "Suites — Suites provide private accommodation with additional space depending on the suite layout. They can suit couples, families or guests looking for more space than a standard room.",
+          "Villas — Villas provide complete accommodation options that can suit families and larger groups seeking additional space and privacy. Guests should review the individual villa details for capacity, layout, features, rates and availability.",
+        ],
+        image: "/assets/villa-suite.jpg",
+      },
+      {
+        heading: "How to Choose Accommodation for Your Stay",
+        paragraphs: [
+          "Start by confirming the number of guests travelling.",
+          "Then compare the accommodation options based on:",
+          "Guest capacity",
+          "Space and layout",
+          "Privacy",
+          "Facilities and amenities",
+          "Location",
+          "Rates",
+          "Availability",
+          "Purpose of the stay",
+          "These factors make it easier to choose accommodation that matches your actual travel requirements.",
+        ],
+      },
+      {
+        heading: "Find Accommodation for Your Stay in Murree",
+        paragraphs: [
+          "Himalaya Villas and Resort offers rooms, apartments, suites and villas for short stays in Bhurban, Murree.",
+          "Compare the available accommodation according to guest capacity, space, privacy, features, rates and current availability.",
+          "Explore Accommodation in Murree",
+        ],
+        image: "/assets/villa-exterior.jpg",
+      },
+    ],
+    faqs: [
+      {
+        q: "What is accommodation?",
+        a: "Accommodation is temporary lodging provided to guests and travellers during a trip, holiday or visit. In hospitality, accommodation may be provided by hotels, resorts, guest houses and other lodging businesses.",
+      },
+      {
+        q: "What is accommodation in hospitality?",
+        a: "Accommodation in hospitality is the lodging provided by a hospitality property to its guests. A hotel or resort may provide accommodation through rooms, suites, apartments, villas or other accommodation units.",
+      },
+      {
+        q: "What is accommodation in tourism?",
+        a: "Accommodation in tourism refers to lodging used by travellers while visiting a destination. It is one of the main parts of the travel and hospitality experience.",
+      },
+      {
+        q: "What are the main types of accommodation?",
+        a: "Accommodation can be classified in different ways. Hospitality property types include hotels, resorts, guest houses, hostels and bed and breakfasts, while accommodation options within a property can include rooms, suites, apartments and villas.",
+      },
+      {
+        q: "Is a hotel the same as a room?",
+        a: "No. A hotel is a hospitality property that provides accommodation. A room is an accommodation unit that can be offered within a hotel or another hospitality property.",
+      },
+      {
+        q: "Is a resort the same as a villa?",
+        a: "No. A resort is a hospitality property that can provide different accommodation options. A villa can be an accommodation option within a resort or operate independently depending on the business model.",
+      },
+      {
+        q: "Can a resort have rooms, suites, apartments and villas?",
+        a: "Yes. A resort can provide several accommodation options within the same property, including rooms, suites, apartments and villas, depending on the resort.",
+      },
+      {
+        q: "What is the difference between a room, suite, apartment and villa?",
+        a: "A room is a private accommodation unit. A suite generally provides additional space, an apartment can provide more independent living space, and a villa can provide a more complete and private accommodation option. Exact layouts vary by property.",
+      },
+      {
+        q: "Is there a fixed number of accommodation types?",
+        a: "No. Accommodation can be classified by property type, service model, structure, privacy, guest capacity and other factors, so different hospitality guides may use different numbers of accommodation types.",
+      },
+      {
+        q: "What should guests consider before booking accommodation?",
+        a: "Guests should consider capacity, location, space, layout, privacy, facilities, rates, availability and the purpose of their stay before booking.",
+      },
+    ],
+  },
+
   "seasons-in-the-hills": {
     intro: [
       "Murree-Bhurban is one of the few destinations in Pakistan where every season brings a completely different experience. Perched in the Galyat hills at an elevation of roughly 7,000–7,500 feet, Bhurban stays noticeably cooler than Islamabad and Rawalpindi year-round, which is exactly what makes it worth visiting in every month.",

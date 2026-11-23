@@ -4,6 +4,8 @@ export type VillaBlogPost = {
   title: string;
   /** Optional on-page H1 when different from SEO `title`. */
   headline?: string;
+  /** Optional exact <title>, emitted as-is without the site brand suffix rewrite. */
+  metaTitle?: string;
   excerpt: string;
   date: string;
   readMinutes: number;
@@ -387,5 +389,16 @@ export const VILLA_BLOG_POSTS: VillaBlogPost[] = [
   date: "2026-10-30",
   readMinutes: 15,
   coverImage: "/images/blogs/best-hotels-in-nathia-gali-1.webp",
-} 
+},
+{
+  slug: "what-is-accommodation",
+  title: "What Is Accommodation? - Himalaya Villas and Resort",
+  metaTitle: "What Is Accommodation? - Himalaya Villas and Resort",
+  headline: "What Is Accommodation? Types & Examples in Hospitality",
+  excerpt:
+    "What is accommodation? Learn how it works in hospitality, its main property types, accommodation options and what guests should consider before booking.",
+  date: "2026-11-23",
+  readMinutes: 9,
+  coverImage: "/assets/murree-luxury-resort.jpg",
+},
 ];

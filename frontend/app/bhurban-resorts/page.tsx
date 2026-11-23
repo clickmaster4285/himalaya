@@ -284,13 +284,6 @@ export default function BhurbanResortsPage() {
               <p className="text-sm sm:text-base md:text-lg text-neutral-700 leading-relaxed">
                 The newest tier, and in Bhurban it currently has a single occupant: Himalaya Villas at Mohra Iswal, near Kashmiri Bazar — a gated cedar estate of twelve villas that books to one group at a time. It belongs in this landscape survey as a category of its own, because nothing else on the ridge — at any price — offers exclusive use of an entire resort property. The final section of this guide covers when that model is worth it and when it isn't.
               </p>
-
-              {/* Internal Link */}
-              <div className="mt-4">
-                <Link href="/luxury-hotels-in-murree" className="text-sm sm:text-base text-[#8b6914] underline underline-offset-4 hover:text-[#6d5210] transition-colors">
-                  Luxury hotels in Murree →
-                </Link>
-              </div>
             </div>
           </div>
         </div>

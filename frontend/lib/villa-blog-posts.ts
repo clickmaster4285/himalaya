@@ -83,16 +83,6 @@ export const VILLA_BLOG_POSTS: VillaBlogPost[] = [
     coverImage: "/assets/blog-villas-bhurban-murree-luxury-featured.png",
   },
   {
-    slug: "family-tour-murree-himalaya-villas",
-    href: "/family-hotels-in-murree",
-    title: "Why Himalaya Villas & Resorts in Murree Is Best for a Family Tour",
-    excerpt:
-      "Planning a family tour to Murree or Bhurban? Discover why Himalaya Villas & Resorts is the perfect family stay — private, safe, spacious & activities for all ages.",
-    date: "2026-04-18",
-    readMinutes: 12,
-    coverImage: "/assets/blog-family-tour-featured-banner.png",
-  },
-  {
     slug: "best-family-hotels-in-murree",
     title: "Best Family Hotels in Murree - Himalaya Villas & Resorts",
     headline: "Best Family Hotels in Murree: Why Himalaya Villas in Bhurban Is Worth a Closer Look",

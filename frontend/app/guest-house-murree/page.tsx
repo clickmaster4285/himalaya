@@ -243,9 +243,6 @@ export default function GuestHouseMurreePage() {
               
               {/* Internal Links */}
               <div className="mt-4 flex flex-wrap gap-4">
-                <Link href="/luxury-hotels-in-murree" className="text-sm sm:text-base text-[#8b6914] underline underline-offset-4 hover:text-[#6d5210] transition-colors">
-                  Luxury hotels in Murree →
-                </Link>
                 <Link href="/pc-hotel-bhurban-alternative" className="text-sm sm:text-base text-[#8b6914] underline underline-offset-4 hover:text-[#6d5210] transition-colors">
                   PC Hotel Bhurban alternative →
                 </Link>

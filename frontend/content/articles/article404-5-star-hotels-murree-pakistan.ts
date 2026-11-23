@@ -159,8 +159,6 @@ export const article404: Article = {
       type: "related",
       heading: "Explore More",
       items: [
-        { href: "/luxury-hotels-in-murree", label: "Best hotels in Murree guide" },
-        { href: "/luxury-hotels-in-murree", label: "Luxury hotels in Murree" },
         { href: "/villas", label: "Browse rooms & villas" },
         { href: "/book/stay", label: "Book your stay" },
       ],

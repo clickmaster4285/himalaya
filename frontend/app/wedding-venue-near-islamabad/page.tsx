@@ -246,9 +246,6 @@ export default function WeddingVenuePage() {
                 </p>
 
                 <div className="mt-12 flex flex-wrap justify-center gap-6">
-                    <Link href="/luxury-hotels-in-murree" className="text-[#c9a55b] font-medium hover:underline flex items-center gap-2">
-                        → View Himalaya Villas accommodation
-                    </Link>
                     <Link href="/murree-hotel-packages" className="text-[#c9a55b] font-medium hover:underline flex items-center gap-2">
                         → See all packages and rates
                     </Link>
@@ -383,12 +380,6 @@ export default function WeddingVenuePage() {
                 </p>
 
                 <div className="mt-12 flex flex-wrap justify-center gap-6">
-                    <Link href="/romantic-hotels-murree" className="text-[#c9a55b] font-medium hover:underline flex items-center gap-2">
-                        → Honeymoon and romantic stays post-wedding
-                    </Link>
-                    <Link href="/family-hotels-in-murree" className="text-[#c9a55b] font-medium hover:underline flex items-center gap-2">
-                        → Accommodation for wedding guests
-                    </Link>
                     <Link href="/corporate-hotels-murree-bhurban" className="text-[#c9a55b] font-medium hover:underline flex items-center gap-2">
                         → Corporate event enquiries
                     </Link>

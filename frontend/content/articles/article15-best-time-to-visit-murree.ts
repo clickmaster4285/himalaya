@@ -236,7 +236,6 @@ export const article15: Article = {
         { href: "/things-to-do-in-murree", label: "Activities by season" },
         { href: "/bhurban-murree-all-distances", label: "Distance from Islamabad" },
         { href: "/villas", label: "Browse villas at Himalaya Villas" },
-        { href: "/luxury-hotels-in-murree", label: "Accommodation guide" },
       ],
     },
   ],

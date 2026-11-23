@@ -4,7 +4,6 @@
 import { article15 } from "./articles/article15-best-time-to-visit-murree";
 import { article498 } from "./articles/article498-murree-hotel-booking-guide";
 import { article404 } from "./articles/article404-5-star-hotels-murree-pakistan";
-import { article537 } from "./articles/article537-best-hotels-nathia-gali";
 import type { Article } from "./types";
 
 // ============================================
@@ -55,11 +54,6 @@ const article10View = "/images/articles/article10-view.jpg";
 const article11Hero = "/images/articles/article11-hero.jpg";
 const article11Villa = "/images/articles/article11-villa.jpg";
 const article11View = "/images/articles/article11-view.jpg";
-
-// Article 12 - Ramada Murree Alternative — Private Estate vs Inte
-const article12Hero = "/images/articles/article12-hero.jpg";
-const article12Villa = "/images/articles/article12-villa.jpg";
-const article12View = "/images/articles/article12-view.jpg";
 
 // Article 13 - Murree in Summer 2026 — Complete June, July and Au
 const article13Hero = "/images/articles/article13-hero.jpg";
@@ -121,20 +115,8 @@ const article25Hero = "/images/articles/article25-hero.jpg";
 const article25Villa = "/images/articles/article25-villa.jpg";
 const article25View = "/images/articles/article25-view.jpg";
 
-// Article 26 - Private Villa for 10 Guests in Bhurban Murree — Gr
-const article26Hero = "/images/articles/article26-hero.jpg";
-const article26Villa = "/images/articles/article26-villa.jpg";
-const article26View = "/images/articles/article26-view.jpg";
-
 // Article 27 - Private Villa for 4 Guests Bhurban — Couples and S
 const article27Hero = "/images/articles/article27-hero.jpg";
-const article27Villa = "/images/articles/article27-villa.jpg";
-const article27View = "/images/articles/article27-view.jpg";
-
-// Article 29 - Shangrila Resort Murree Alternative — Private Vill
-const article29Hero = "/images/articles/article29-hero.jpg";
-const article29Villa = "/images/articles/article29-villa.jpg";
-const article29View = "/images/articles/article29-view.jpg";
 
 // Article 30 - Murree in Autumn — September and October Travel Gu
 const article30Hero = "/images/articles/article30-hero.jpg";
@@ -181,11 +163,6 @@ const article41Hero = "/images/articles/article41-hero.jpg";
 const article41Villa = "/images/articles/article41-villa.jpg";
 const article41View = "/images/articles/article41-view.jpg";
 
-// Article 42 - Best Hotel Near Islamabad Mountains — Private Esta
-const article42Hero = "/images/articles/article42-hero.jpg";
-const article42Villa = "/images/articles/article42-villa.jpg";
-const article42View = "/images/articles/article42-view.jpg";
-
 // Article 43 - Murree for Couples — Romantic Getaway Guide 2026
 const article43Hero = "/images/articles/article43-hero.jpg";
 const article43Villa = "/images/articles/article43-villa.jpg";
@@ -200,16 +177,6 @@ const article44View = "/images/articles/article44-view.jpg";
 const article46Hero = "/images/articles/article46-hero.jpg";
 const article46Villa = "/images/articles/article46-villa.jpg";
 const article46View = "/images/articles/article46-view.jpg";
-
-// Article 51 - Private Villa for 6 Guests Bhurban Murree — Family
-const article51Hero = "/images/articles/article51-hero.jpg";
-const article51Villa = "/images/articles/article51-villa.jpg";
-const article51View = "/images/articles/article51-view.jpg";
-
-// Article 52 - Private Villa for 8 Guests Bhurban Murree — Extend
-const article52Hero = "/images/articles/article52-hero.jpg";
-const article52Villa = "/images/articles/article52-villa.jpg";
-const article52View = "/images/articles/article52-view.jpg";
 
 // Article 53 - Villa with Mountain View Bhurban Murree — Panorami
 const article53Hero = "/images/articles/article53-hero.jpg";
@@ -230,16 +197,6 @@ const article57View = "/images/articles/article57-view.jpg";
 const article58Hero = "/images/articles/article58-hero.jpg";
 const article58Villa = "/images/articles/article58-villa.jpg";
 const article58View = "/images/articles/article58-view.jpg";
-
-// Article 61 - Private Estate for 15 Guests Bhurban Murree — Mid-
-const article61Hero = "/images/articles/article61-hero.jpg";
-const article61Villa = "/images/articles/article61-villa.jpg";
-const article61View = "/images/articles/article61-view.jpg";
-
-// Article 62 - Private Estate for 30 Guests Bhurban Murree — Full
-const article62Hero = "/images/articles/article62-hero.jpg";
-const article62Villa = "/images/articles/article62-villa.jpg";
-const article62View = "/images/articles/article62-view.jpg";
 
 // Article 66 - Reviews of Himalaya Villas Bhurban — What Guests S
 const article66Hero = "/images/articles/article66-hero.jpg";
@@ -271,16 +228,6 @@ const article87Hero = "/images/articles/article87-hero.jpg";
 const article87Villa = "/images/articles/article87-villa.jpg";
 const article87View = "/images/articles/article87-view.jpg";
 
-// Article 88 - Private Villa for 12 Guests Bhurban Murree — Large
-const article88Hero = "/images/articles/article88-hero.jpg";
-const article88Villa = "/images/articles/article88-villa.jpg";
-const article88View = "/images/articles/article88-view.jpg";
-
-// Article 89 - Private Villa Near Islamabad Airport — Mountain St
-const article89Hero = "/images/articles/article89-hero.jpg";
-const article89Villa = "/images/articles/article89-villa.jpg";
-const article89View = "/images/articles/article89-view.jpg";
-
 // Article 90 - Murree vs Nathia Gali — Which Hill Station is Bett
 const article90Hero = "/images/articles/article90-hero.jpg";
 const article90Villa = "/images/articles/article90-villa.jpg";
@@ -311,20 +258,10 @@ const article95Hero = "/images/articles/article95-hero.jpg";
 const article95Villa = "/images/articles/article95-villa.jpg";
 const article95View = "/images/articles/article95-view.jpg";
 
-// Article 96 - Winter Bonfire Experience in Bhurban — The Cedar G
-const article96Hero = "/images/articles/article96-hero.jpg";
-const article96Villa = "/images/articles/article96-villa.jpg";
-const article96View = "/images/articles/article96-view.jpg";
-
 // Article 97 - New Year in Bhurban Murree — Celebrating the New Y
 const article97Hero = "/images/articles/article97-hero.jpg";
 const article97Villa = "/images/articles/article97-villa.jpg";
 const article97View = "/images/articles/article97-view.jpg";
-
-// Article 98 - Villa with BBQ Facilities Bhurban Murree — Outdoor
-const article98Hero = "/images/articles/article98-hero.jpg";
-const article98Villa = "/images/articles/article98-villa.jpg";
-const article98View = "/images/articles/article98-view.jpg";
 
 // Article 99 - Rawalpindi to Murree and Bhurban — Distance and Ro
 const article99Hero = "/images/articles/article99-hero.jpg";
@@ -340,11 +277,6 @@ const article100View = "/images/articles/article100-view.jpg";
 const article101Hero = "/images/articles/article101-hero.jpg";
 const article101Villa = "/images/articles/article101-villa.jpg";
 const article101View = "/images/articles/article101-view.jpg";
-
-// Article 102 - Anniversary Celebration at Himalaya Villas Bhurban
-const article102Hero = "/images/articles/article102-hero.jpg";
-const article102Villa = "/images/articles/article102-villa.jpg";
-const article102View = "/images/articles/article102-view.jpg";
 
 // Article 103 - Bhurban Distance from Lahore — Route, Time and Tra
 const article103Hero = "/images/articles/article103-hero.jpg";
@@ -406,11 +338,6 @@ const article114Hero = "/images/articles/article114-hero.jpg";
 const article114Villa = "/images/articles/article114-villa.jpg";
 const article114View = "/images/articles/article114-view.jpg";
 
-// Article 115 - Murree Bhurban Dining and Restaurant Guide — Food 
-const article115Hero = "/images/articles/article115-hero.jpg";
-const article115Villa = "/images/articles/article115-villa.jpg";
-const article115View = "/images/articles/article115-view.jpg";
-
 // Article 116 - Stargazing at Bhurban Murree — Night Sky at 6,800 
 const article116Hero = "/images/articles/article116-hero.jpg";
 const article116Villa = "/images/articles/article116-villa.jpg";
@@ -458,8 +385,6 @@ const article124View = "/images/articles/article124-view.jpg";
 
 // Article 125 - Private Pool Villa Near Islamabad — What's Availab
 const article125Hero = "/images/articles/article125-hero.jpg";
-const article125Villa = "/images/articles/article125-villa.jpg";
-const article125View = "/images/articles/article125-view.jpg";
 
 // Article 126 - Murree and Bhurban for School Groups — Safe Mounta
 const article126Hero = "/images/articles/article126-hero.jpg";
@@ -513,18 +438,11 @@ const article145View = "/images/articles/article145-view.jpg";
 
 // Article 146 - Bhurban Complete Accommodation Guide 2026 — Every 
 const article146Hero = "/images/articles/article146-hero.jpg";
-const article146Villa = "/images/articles/article146-villa.jpg";
-const article146View = "/images/articles/article146-view.jpg";
 
 // Article 157 - Murree in June — Early Summer Guide 2026
 const article157Hero = "/images/articles/article157-hero.jpg";
 const article157Villa = "/images/articles/article157-villa.jpg";
 const article157View = "/images/articles/article157-view.jpg";
-
-// Article 158 - Villa for 2 Guests Bhurban — The Solo Couple Stay
-const article158Hero = "/images/articles/article158-hero.jpg";
-const article158Villa = "/images/articles/article158-villa.jpg";
-const article158View = "/images/articles/article158-view.jpg";
 
 // Article 159 - Bhurban for Corporate AGM and Annual General Meeti
 const article159Hero = "/images/articles/article159-hero.jpg";
@@ -570,11 +488,6 @@ const article166View = "/images/articles/article166-view.jpg";
 const article177Hero = "/images/articles/article177-hero.jpg";
 const article177Villa = "/images/articles/article177-villa.jpg";
 const article177View = "/images/articles/article177-view.jpg";
-
-// Article 178 - Remote Work from Bhurban — Villa with Workspace Ne
-const article178Hero = "/images/articles/article178-hero.jpg";
-const article178Villa = "/images/articles/article178-villa.jpg";
-const article178View = "/images/articles/article178-view.jpg";
 
 // Article 179 - Bhurban for Lahore Families — The Long Weekend Mou
 const article179Hero = "/images/articles/article179-hero.jpg";
@@ -670,10 +583,6 @@ const article206View = "/images/articles/article206-view.jpg";
 const article217Hero = "/images/articles/article217-hero.jpg";
 const article217Villa = "/images/articles/article217-villa.jpg";
 const article217View = "/images/articles/article217-view.jpg";
-
-// Article 218 - Weekend Getaway Near Islamabad — The Best Options 
-const article218Hero = "/images/articles/article218-hero.jpg";
-const article218Villa = "/images/articles/article218-villa.jpg";
 const article218View = "/images/articles/article218-view.jpg";
 
 // Article 219 - Bhurban vs Malam Jabba — Which Pakistan Mountain D
@@ -686,20 +595,10 @@ const article220Hero = "/images/articles/article220-hero.jpg";
 const article220Villa = "/images/articles/article220-villa.jpg";
 const article220View = "/images/articles/article220-view.jpg";
 
-// Article 221 - Women Leadership Retreat Near Islamabad — Corporat
-const article221Hero = "/images/articles/article221-hero.jpg";
-const article221Villa = "/images/articles/article221-villa.jpg";
-const article221View = "/images/articles/article221-view.jpg";
-
 // Article 222 - Bhurban for Honeymoon vs Naran Kaghan — Which Moun
 const article222Hero = "/images/articles/article222-hero.jpg";
 const article222Villa = "/images/articles/article222-villa.jpg";
 const article222View = "/images/articles/article222-view.jpg";
-
-// Article 223 - Bhurban in Ramadan — Fasting, Iftar and the Mounta
-const article223Hero = "/images/articles/article223-hero.jpg";
-const article223Villa = "/images/articles/article223-villa.jpg";
-const article223View = "/images/articles/article223-view.jpg";
 
 // Article 224 - Bhurban Murree Trip Planning Guide — Everything in
 const article224Hero = "/images/articles/article224-hero.jpg";
@@ -751,20 +650,10 @@ const article257Hero = "/images/articles/article257-hero.jpg";
 const article257Villa = "/images/articles/article257-villa.jpg";
 const article257View = "/images/articles/article257-view.jpg";
 
-// Article 258 - Private Villa for 25 Guests Bhurban — Multi-Villa 
-const article258Hero = "/images/articles/article258-hero.jpg";
-const article258Villa = "/images/articles/article258-villa.jpg";
-const article258View = "/images/articles/article258-view.jpg";
-
 // Article 259 - Murree Winter Hiking — Trails Accessible in Cold W
 const article259Hero = "/images/articles/article259-hero.jpg";
 const article259Villa = "/images/articles/article259-villa.jpg";
 const article259View = "/images/articles/article259-view.jpg";
-
-// Article 260 - Bhurban Villa with Fireplace — Cosy Mountain Winte
-const article260Hero = "/images/articles/article260-hero.jpg";
-const article260Villa = "/images/articles/article260-villa.jpg";
-const article260View = "/images/articles/article260-view.jpg";
 
 // Article 262 - Booking a Villa at Himalaya Villas — Complete Book
 const article262Hero = "/images/articles/article262-hero.jpg";
@@ -788,8 +677,6 @@ const article265View = "/images/articles/article265-view.jpg";
 
 // Article 276 - Bhurban Hotel Rooms vs Private Villa — Why the Vil
 const article276Hero = "/images/articles/article276-hero.jpg";
-const article276Villa = "/images/articles/article276-villa.jpg";
-const article276View = "/images/articles/article276-view.jpg";
 
 // Article 277 - Nathia Gali Resort vs Bhurban — Choosing Your Galy
 const article277Hero = "/images/articles/article277-hero.jpg";
@@ -810,11 +697,6 @@ const article279View = "/images/articles/article279-view.jpg";
 const article280Hero = "/images/articles/article280-hero.jpg";
 const article280Villa = "/images/articles/article280-villa.jpg";
 const article280View = "/images/articles/article280-view.jpg";
-
-// Article 281 - Villa Near Murree for Families — Better Than Mall 
-const article281Hero = "/images/articles/article281-hero.jpg";
-const article281Villa = "/images/articles/article281-villa.jpg";
-const article281View = "/images/articles/article281-view.jpg";
 
 // Article 283 - Murree Peak Season vs Off-Season — The Complete Ti
 const article283Hero = "/images/articles/article283-hero.jpg";
@@ -966,11 +848,6 @@ const article364Hero = "/images/articles/article364-hero.jpg";
 const article364Villa = "/images/articles/article364-villa.jpg";
 const article364View = "/images/articles/article364-view.jpg";
 
-// Article 365 - Villa for 20 Guests at Bhurban — Multi-Villa Confi
-const article365Hero = "/images/articles/article365-hero.jpg";
-const article365Villa = "/images/articles/article365-villa.jpg";
-const article365View = "/images/articles/article365-view.jpg";
-
 // Article 376 - How to Get from Islamabad to Bhurban — The Complet
 const article376Hero = "/images/articles/article376-hero.jpg";
 const article376Villa = "/images/articles/article376-villa.jpg";
@@ -1045,11 +922,7 @@ const article403View = "/images/articles/article403-view.jpg";
 const article404Hero = "/images/articles/article404-hero.jpg";
 const article404Villa = "/images/articles/article404-villa.jpg";
 const article404View = "/images/articles/article404-view.jpg";
-
-// Article 405 - /cheap-hotels-murree-guide Keywords
-const article405Hero = "/images/articles/article405-hero.jpg";
 const article405Villa = "/images/articles/article405-villa.jpg";
-const article405View = "/images/articles/article405-view.jpg";
 
 // Article 416 - Murree and Bhurban in January — The Complete Winte
 const article416Hero = "/images/articles/article416-hero.jpg";
@@ -1075,10 +948,6 @@ const article422View = "/images/articles/article422-view.jpg";
 const article423Hero = "/images/articles/article423-hero.jpg";
 const article423Villa = "/images/articles/article423-villa.jpg";
 const article423View = "/images/articles/article423-view.jpg";
-
-// Article 425 - Villa with at Bhurban — The Presidential S
-const article425Hero = "/images/articles/article425-hero.jpg";
-const article425Villa = "/images/articles/article425-villa.jpg";
 const article425View = "/images/articles/article425-view.jpg";
 
 // Article 441 - Bhurban for Faisalabad Families — The Mountain Wee
@@ -1186,11 +1055,6 @@ const article510Hero = "/images/articles/article510-hero.jpg";
 const article510Villa = "/images/articles/article510-villa.jpg";
 const article510View = "/images/articles/article510-view.jpg";
 
-// Article 512 - Bhurban Inn, Swiss Cottage Bhurban and Boutique Ac
-const article512Hero = "/images/articles/article512-hero.jpg";
-const article512Villa = "/images/articles/article512-villa.jpg";
-const article512View = "/images/articles/article512-view.jpg";
-
 // Article 513 - Murree Day Trip from Islamabad — Can You Do It and
 const article513Hero = "/images/articles/article513-hero.jpg";
 const article513Villa = "/images/articles/article513-villa.jpg";
@@ -1280,11 +1144,6 @@ const article534View = "/images/articles/article534-view.jpg";
 const article536Hero = "/images/articles/article536-hero.jpg";
 const article536Villa = "/images/articles/article536-villa.jpg";
 const article536View = "/images/articles/article536-view.jpg";
-
-// Article 537 - Best Hotels in Nathia Gali — Complete 2026 Guide
-const article537Hero = "/images/articles/article537-hero.jpg";
-const article537Villa = "/images/articles/article537-villa.jpg";
-const article537View = "/images/articles/article537-view.jpg";
 
 // Article 543 - Luxury Villas Near Islamabad — Why Bhurban Is the 
 const article543Hero = "/images/articles/article543-hero.jpg";
@@ -1680,10 +1539,6 @@ const article654View = "/images/articles/article654-view.jpg";
 const article655Hero = "/images/articles/article655-hero.jpg";
 const article655Villa = "/images/articles/article655-villa.jpg";
 const article655View = "/images/articles/article655-view.jpg";
-
-// Article 656 - Why Choose a Private Villa Over a Hotel in Bhurban
-const article656Hero = "/images/articles/article656-hero.jpg";
-const article656Villa = "/images/articles/article656-villa.jpg";
 const article656View = "/images/articles/article656-view.jpg";
 
 // Article 657 - Himalaya Villas Bhurban Booking Tips — How to Get 
@@ -1856,16 +1711,6 @@ const article694Hero = "/images/articles/article694-hero.jpg";
 const article694Villa = "/images/articles/article694-villa.jpg";
 const article694View = "/images/articles/article694-view.jpg";
 
-// Article 695 - Bhurban Resort Guide — Every Resort and the Cedar 
-const article695Hero = "/images/articles/article695-hero.jpg";
-const article695Villa = "/images/articles/article695-villa.jpg";
-const article695View = "/images/articles/article695-view.jpg";
-
-// Article 698 - /sunset-suite-himalaya-villas-bhurban sunset suite
-const article698Hero = "/images/articles/article698-hero.jpg";
-const article698Villa = "/images/articles/article698-villa.jpg";
-const article698View = "/images/articles/article698-view.jpg";
-
 // Article 699 - /serene-valley-cabin-bhurban serene valley cabin b
 const article699Hero = "/images/articles/article699-hero.jpg";
 const article699Villa = "/images/articles/article699-villa.jpg";
@@ -1910,11 +1755,6 @@ const article712View = "/images/articles/article712-view.jpg";
 const article713Hero = "/images/articles/article713-hero.jpg";
 const article713Villa = "/images/articles/article713-villa.jpg";
 const article713View = "/images/articles/article713-view.jpg";
-
-// Article 714 - What Makes Bhurban Cedar Estate Different — The Hi
-const article714Hero = "/images/articles/article714-hero.jpg";
-const article714Villa = "/images/articles/article714-villa.jpg";
-const article714View = "/images/articles/article714-view.jpg";
 
 // Article 718 - /himalaya-villas-bhurban-story himalaya villas bhu
 const article718Hero = "/images/articles/article718-hero.jpg";
@@ -2067,7 +1907,6 @@ export const article01: Article = {
       items: [
         { href: "/villas", label: "Browse individual villa options at Himalaya Villas" },
         { href: "/hotels-in-bhurban-murree", label: "Complete guide to all hotels in Bhurban" },
-        { href: "/luxury-hotels-in-murree", label: "Murree's top accommodation options" },
         { href: "/book/stay", label: "Check availability and book your villa" },
         { href: "/events", label: "Weddings and corporate events at Himalaya Villas" },
       ],
@@ -2278,7 +2117,6 @@ export const article02: Article = {
       items: [
         { href: "/villas", label: "Browse individual villa options at Himalaya Villas" },
         { href: "/hotels-in-bhurban-murree", label: "Complete guide to all hotels in Bhurban" },
-        { href: "/luxury-hotels-in-murree", label: "Murree's top accommodation options" },
         { href: "/book/stay", label: "Check availability and book your villa" },
         { href: "/events", label: "Weddings and corporate events at Himalaya Villas" },
       ],
@@ -2540,10 +2378,6 @@ export const article05: Article = {
       label: "Private villa vs PC Hotel comparison",
     },
     {
-      href: "/luxury-hotels-in-murree",
-      label: "Murree's full accommodation guide",
-    },
-    {
       href: "/events",
       label: "Weddings and events at Himalaya Villas",
     },
@@ -2653,7 +2487,6 @@ export const article06: Article = {
         { href: "/events", label: "Full events overview including corporate and private celebrations" },
         { href: "/villas", label: "Guest accommodation options for the wedding party" },
         { href: "/luxury-villa-bhurban-murree", label: "Full villa estate information" },
-        { href: "/luxury-hotels-in-murree", label: "Accommodation options near the venue" },
         { href: "/things-to-do-in-murree", label: "Activities for wedding weekend guests" },
       ],
     },
@@ -2773,7 +2606,6 @@ export const article07: Article = {
         { href: "/luxury-villa-bhurban-murree", label: "Full property details for corporate clients" },
         { href: "/villas", label: "Accommodation for team members" },
         { href: "/things-to-do-in-murree", label: "Team activities in Bhurban and Murree" },
-        { href: "/luxury-hotels-in-murree", label: "Accommodation comparison for planners" },
       ],
     },
   ],
@@ -3364,10 +3196,6 @@ export const article11: Article = {
         label: "PC Hotel vs Himalaya Villas comparison",
       },
       {
-        href: "/luxury-hotels-in-murree",
-        label: "Full Murree accommodation guide",
-      },
-      {
         href: "/hotels-in-bhurban-murree",
         label: "Complete Bhurban hotel guide",
       },
@@ -3382,210 +3210,6 @@ export const article11: Article = {
     ],
   },
 ]
-};
-
-// ============================================
-// ARTICLE 12 - Ramada Murree Alternative — Private Estate vs International Chain Hotel
-// ============================================
-export const article12: Article = {
-  slug: "ramada-murree-alternative",
-  title: "Ramada Murree Alternative — Private Estate vs International Chain Hotel",
-  metaDescription:
-    "ramada murree (6,600/mo), ramada hotel murree, ramada by wyndham murree, alternatives to ramada murree, murree resort alternative",
-  keywords:
-    "ramada murree (6,600/mo), ramada hotel murree, ramada by wyndham murree, alternatives to ramada murree, murree resort alternative",
-  eyebrow: "Template B — Intercept Spoke | Cluster 2: Competitor Intercept",
-  h1: "Ramada Murree Alternative — Private Estate vs International Chain Hotel",
-  heroTagline:
-    "ramada murree (6,600/mo), ramada hotel murree, ramada by wyndham murree, alternatives to ramada murree, murree resort alternative",
-  heroImage: article12Hero,
-  blocks: [
-    {
-      type: "callout-qa",
-      question: "What is the best alternative to Ramada by Wyndham Murree?",
-      answer:
-        "The best private estate alternative to Ramada Murree is Himalaya Villas & Resorts in Bhurban — 12 fully private villas from PKR 39,000 to PKR 70,000 per night. While Ramada operates as an international chain hotel with shared facilities, Himalaya Villas operates as a private estate on exclusive-use terms, 47km from Islamabad (45 minutes). For families, groups, and anyone wanting a property to themselves, Himalaya Villas is structurally different from any chain hotel.",
-    },
-
-    {
-      type: "section",
-      heading:
-        "Ramada Murree Alternative — Private Villas in Bhurban vs International Hotel",
-      paragraphs: [
-        "Ramada by Wyndham Murree attracts 6,600 monthly searches — the third-highest search volume of any named hotel in the Murree region after PC Bhurban and Lockwood.",
-        "The Wyndham brand brings international recognition, a known service standard, and Wyndham Rewards loyalty benefits to a Murree hotel market that otherwise offers mostly domestic-brand options.",
-        "For a specific category of traveller — the diaspora guest from the UAE or UK who books Wyndham globally, the corporate traveller who wants a recognisable expense report hotel, the couple who wants the reassurance of an international brand — Ramada Murree makes sense.",
-        "For the family of ten from Islamabad who wants a private mountain property for an Eid weekend, it does not.",
-      ],
-      image: {
-        src: article12Villa,
-        alt: "Ramada Murree Alternative",
-      },
-    },
-
-    {
-      type: "facts",
-      heading: "What Ramada Murree Offers",
-      items: [
-        {
-          label: "Property Type",
-          value: "4-Star International Chain Hotel (Wyndham Hotels & Resorts)",
-        },
-        {
-          label: "Location",
-          value: "Murree",
-        },
-        {
-          label: "Rate Range",
-          value: "Approximately PKR 18,000–40,000 per night",
-        },
-        {
-          label: "Best For",
-          value:
-            "International travellers, Wyndham loyalty members, business travellers, diaspora guests",
-        },
-      ],
-    },
-
-    {
-      type: "section",
-      heading: "Who Actually Searches for Ramada Murree",
-      paragraphs: [
-        "The 6,600 monthly searches for 'ramada murree' come from three distinct intent groups, all of which represent addressable opportunity for Himalaya Villas:",
-        "Brand-familiar searchers: Wyndham loyalty members or guests who have stayed at a Ramada before and are looking for consistency. Himalaya Villas won't win all of these — but those who prioritise experience over loyalty points are convertible.",
-        "Price comparison searchers: guests who are researching Murree hotel options and searching multiple named properties to compare rates. These guests are in the consideration stage and will read a comparison page.",
-        "Availability searchers: guests who searched for Ramada and found it fully booked, now looking for alternatives. These are the highest-intent visitors to a competitor intercept page.",
-      ],
-      image: {
-        src: article12View,
-        alt: "Who Searches for Ramada Murree",
-      },
-    },
-
-    {
-      type: "section",
-      heading: "Himalaya Villas & Resorts — The Private Estate Model",
-      paragraphs: [
-        "The critical distinction between Ramada Murree and Himalaya Villas & Resorts is not quality — both offer premium-tier accommodation. The distinction is structural. Ramada is a hotel. Himalaya Villas is a private estate.",
-        "The decision between them should be made on the basis of what model fits your stay.",
-        "One group on the property: when you book at Himalaya Villas, no other guests are present. The terraces, the garden, the fire pit, the outdoor dining — all of it belongs to your group exclusively.",
-        "Space that a hotel room cannot provide: the Alpine Family Lodge has 3+ bedrooms, a shared lounge area, and a private garden terrace. A Ramada room provides a room.",
-        "In-villa dining on your schedule: breakfast at 7am because someone wants an early forest walk. Dinner at 10pm because the bonfire conversation ran late.",
-        "The 45-minute location: Himalaya Villas is 47km from Islamabad, 45 minutes by road. A Friday evening departure from Islamabad arrives at the villa by 7:30–8pm.",
-      ],
-      image: {
-        src: article12Villa,
-        alt: "Himalaya Villas Private Estate Model",
-      },
-    },
-
-    {
-      type: "comparison",
-      heading: "Rate Comparison: Ramada Murree vs Himalaya Villas",
-      columns: ["Ramada by Wyndham Murree", "Himalaya Villas & Resorts"],
-      rows: [
-        {
-          feature: "Rate per room/villa",
-          a: "PKR 18,000–40,000/room",
-          b: "PKR 39,000–70,000/villa",
-        },
-        {
-          feature: "For a family of 8 (needs 3 rooms)",
-          a: "PKR 54,000–120,000 total",
-          b: "PKR 55,000–70,000 (1 family villa)",
-        },
-        {
-          feature: "Privacy",
-          a: "Shared hotel",
-          b: "Entire private estate",
-        },
-        {
-          feature: "Loyalty points",
-          a: "Wyndham Rewards",
-          b: "No — direct relationship instead",
-        },
-        {
-          feature: "Full property exclusivity",
-          a: "Not available",
-          b: "Available — full estate buyout",
-        },
-      ],
-    },
-
-    {
-      type: "section",
-      heading: "When to Choose Ramada — When to Choose Himalaya Villas",
-      paragraphs: [
-        "Choose Ramada Murree if you are a Wyndham loyalty member, an international traveller who values brand consistency, or a corporate guest needing a recognisable hotel chain.",
-        "Choose Himalaya Villas if you are travelling with family or a group, want complete privacy and exclusivity, or need more space than a hotel room can provide.",
-        "For families and groups, the economics of a private villa at Himalaya Villas are comparable to — or better than — booking multiple rooms at Ramada, with the added benefit of shared living spaces and private outdoor areas.",
-      ],
-      image: {
-        src: article12View,
-        alt: "When to Choose Ramada vs Himalaya Villas",
-      },
-    },
-
-    {
-      type: "faqs",
-      heading: "Frequently Asked Questions",
-      items: [
-        {
-          q: "Is Himalaya Villas more expensive than Ramada Murree?",
-          a: "Per villa, Himalaya Villas starts at PKR 39,000/night vs Ramada's approximate PKR 18,000/room. However, for groups needing 2–3 rooms at Ramada, the total cost is comparable to a family villa at Himalaya Villas — with the added benefit of private living space and outdoor areas.",
-        },
-        {
-          q: "Does Himalaya Villas offer Wyndham loyalty points?",
-          a: "No. Himalaya Villas & Resorts is an independent private estate and does not participate in any hotel loyalty programme. Direct bookings via WhatsApp offer the best available rate and flexible arrangements that OTA bookings do not.",
-        },
-        {
-          q: "Is Bhurban far from where Ramada Murree is located?",
-          a: "Ramada Murree is in Murree town. Bhurban (where Himalaya Villas is located) is approximately 11km from Murree town — a 20-minute drive on the Bhurban road. The two are in the same mountain region; access to all Murree attractions from Bhurban is a short drive rather than a different destination.",
-        },
-      ],
-    },
-
-    {
-      type: "cta",
-      eyebrow: "How to Book",
-      heading:
-        "Book a Private Villa in Bhurban ",
-      text:
-        "Contact Himalaya Villas & Resorts directly for availability, pricing, and exclusive-use bookings.",
-      buttonLabel:
-        "Book Your Stay",
-      buttonHref: "https://wa.me/923045679000",
-      footnote:
-        "Direct bookings receive the best available rate and priority response.",
-    },
-
-    {
-      type: "related",
-      heading: "📎 Explore More",
-      items: [
-        {
-          href: "/pc-hotel-bhurban-alternative",
-          label: "PC Hotel vs Himalaya Villas: full comparison",
-        },
-        {
-          href: "/lockwood-hotel-murree-alternative",
-          label: "Lockwood vs Himalaya Villas",
-        },
-        {
-          href: "/luxury-hotels-in-murree",
-          label: "Full Murree hotel guide",
-        },
-        {
-          href: "/villas",
-          label: "Browse all villa types at Himalaya Villas",
-        },
-        {
-          href: "/hotels-in-bhurban-murree",
-          label: "Bhurban accommodation guide",
-        },
-      ],
-    },
-  ],
 };
 
 // ============================================
@@ -3795,10 +3419,6 @@ export const article13: Article = {
         {
           href: "/villas",
           label: "Browse summer-ready villa options",
-        },
-        {
-          href: "/luxury-hotels-in-murree",
-          label: "Full Murree accommodation guide",
         },
       ],
     },
@@ -4216,10 +3836,6 @@ export const article16: Article = {
           href: "/murree-in-summer",
           label: "Summer family travel guide",
         },
-        {
-          href: "/luxury-hotels-in-murree",
-          label: "Full Murree accommodation comparison",
-        },
       ],
     },
   ],
@@ -4372,10 +3988,6 @@ export const article17: Article = {
         {
           href: "/luxury-villa-bhurban-murree",
           label: "Full property and amenity details",
-        },
-        {
-          href: "/romantic-hotels-murree",
-          label: "Honeymoon dining arrangements",
         },
         {
           href: "/wedding-venues-bhurban-murree",
@@ -4999,14 +4611,6 @@ export const article21: Article = {
           label: "Lockwood vs Himalaya Villas",
         },
         {
-          href: "/ramada-murree-alternative",
-          label: "Ramada vs Himalaya Villas",
-        },
-        {
-          href: "/luxury-hotels-in-murree",
-          label: "Full Murree hotel guide",
-        },
-        {
           href: "/villas",
           label: "Browse all villa types",
         },
@@ -5177,10 +4781,6 @@ export const article22: Article = {
         {
           href: "/pc-hotel-bhurban-alternative",
           label: "PC Hotel vs Himalaya Villas",
-        },
-        {
-          href: "/luxury-hotels-in-murree",
-          label: "Full Murree hotel comparison",
         },
         {
           href: "/family-villa-bhurban-murree",
@@ -5867,307 +5467,6 @@ export const article25: Article = {
 };
 
 // ============================================
-// ARTICLE 26 - Private Villa for 10 Guests in Bhurban Murree — Group Accommodation
-// ============================================
-export const article26: Article = {
-  slug: "villa-for-10-guests-bhurban",
-  title: "Private Villa for 10 Guests in Bhurban Murree — Group Accommodation",
-  metaDescription:
-    "villa for 10 guests bhurban, group villa bhurban murree, 10 person villa murree, accommodation 10 people bhurban, private villa group stay bhurban",
-  keywords:
-    "villa for 10 guests bhurban, group villa bhurban murree, 10 person villa murree, accommodation 10 people bhurban, private villa group stay bhurban",
-  eyebrow: "Template C — pSEO Capacity Template | Cluster 4: Private Villas",
-  h1: "Private Villa for 10 Guests in Bhurban Murree — Group Accommodation",
-  heroTagline:
-    "villa for 10 guests bhurban, group villa bhurban murree, 10 person villa murree, accommodation 10 people bhurban, private villa group stay bhurban",
-  heroImage: article26Hero,
-  blocks: [
-    {
-      type: "callout-qa",
-      question: "Is there a private villa for 10 guests in Bhurban Murree?",
-      answer:
-        "Yes. Himalaya Villas & Resorts in Bhurban accommodates groups of 10 in two configurations: the Alpine Family Lodge (3+ bedrooms, extended living area, sleeps 8–12 guests, PKR 60,000–70,000/night) or a combination of two adjacent villas for groups wanting more spread. The property operates on exclusive-use terms — when your group is in the villa, no other guests are on the property. Location: Mohra Iswal, Bhurban, 47km from Islamabad (45 minutes).",
-    },
-
-    {
-      type: "section",
-      heading:
-        "Private Villa for 10 Guests in Bhurban Murree — Group Accommodation Guide",
-      paragraphs: [
-        "A group of 10 in Bhurban needs more than hotel rooms booked side by side. The standard hotel solution — 4 or 5 rooms on the same corridor — creates separate sleeping units with no common gathering space.",
-        "A villa or villa combination that gives 10 people both private bedrooms and a shared living area is what the Bhurban hills now offer through Himalaya Villas.",
-      ],
-      image: {
-        src: article26Villa,
-        alt: "Villa for 10 Guests",
-      },
-    },
-
-    {
-      type: "facts",
-      heading: "Recommended Configuration for 10 Guests",
-      items: [
-        {
-          label: "Option 1: Alpine Family Lodge (Single Villa)",
-          value: "Capacity: 8–12 guests comfortably | Bedrooms: 3+ bedrooms | Common space: Extended shared lounge area | Outdoor: Private terrace with mountain views | Rate: PKR 60,000–70,000 per night",
-        },
-        {
-          label: "Option 2: Two Adjacent Villas",
-          value: "Combination: Garden Villa Retreat (3BR) + Sunset Suite (1–2BR) | Total capacity: 8–12 guests across two adjacent units | Benefit: More bathroom capacity and private space per subgroup | Combined rate: PKR 105,000–120,000 per night",
-        },
-      ],
-    },
-
-    {
-      type: "section",
-      heading: "What a 10-Guest Group Booking Includes",
-      paragraphs: [
-        "Full villa or villa combination — exclusive to your group from check-in to check-out",
-        "Private outdoor spaces — terraces, garden access, fire pit",
-        "In-villa dining — pre-arranged menus for the full group via WhatsApp",
-        "Pre-arrival concierge — activity planning, driver logistics, dining preferences confirmed before arrival",
-        "Bonfire evenings — the fire pit garden accommodates groups of 10 comfortably",
-      ],
-      image: {
-        src: article26View,
-        alt: "Group Booking Inclusions",
-      },
-    },
-
-    {
-      type: "section",
-      heading: "Activities for a Group of 10 from Bhurban",
-      paragraphs: [
-        "Patriata Chairlift: 15-minute drive, group ticket available, 2-hour morning excursion",
-        "Ayubia Pipeline Track: 40-minute drive, 3-hour forest walk — ideal for active groups",
-        "Nathia Gali day trip: 45-minute drive, village walk and Miranjani trek option",
-        "Mall Road Murree: 20-minute drive — shopping and kashmiri chai, efficient morning",
-        "In-estate: forest walks, bonfire evenings, outdoor dining — activities that require no transport",
-      ],
-      image: {
-        src: article26Villa,
-        alt: "Group Activities",
-      },
-    },
-
-    {
-      type: "section",
-      heading: "Booking a 10-Guest Villa",
-      paragraphs: [
-        "How to book: WhatsApp +92 304 567 9000 with dates, group size (10), and whether a single villa or two-villa combination is preferred.",
-        "Lead time: 1–2 weeks for weekdays; 2–3 weeks for peak weekends.",
-        "OTA availability: Individual villas on Airbnb and Booking.com. Two-villa combination bookings are direct-only.",
-      ],
-      image: {
-        src: article26View,
-        alt: "Booking Information",
-      },
-    },
-
-    {
-      type: "faqs",
-      heading: "Frequently Asked Questions",
-      items: [
-        {
-          q: "Can all 10 guests eat together at Himalaya Villas?",
-          a: "Yes. The in-villa dining arrangement at Himalaya Villas is coordinated for the full group. Meals are pre-arranged via WhatsApp — the group specifies timing, menu preferences, and serving location (private terrace, indoor dining area, or outdoor garden table). The dining pavilion on the estate accommodates 10–15 guests for a shared meal.",
-        },
-        {
-          q: "What is the minimum booking for a group of 10?",
-          a: "There is no minimum-night requirement for group bookings outside peak season. Weekend stays (2 nights) are standard. For peak Eid and summer weekends, a 2-night minimum may apply — confirm at booking.",
-        },
-      ],
-    },
-
-    {
-      type: "cta",
-      eyebrow: "How to Book",
-      heading:
-        "Book Group Accommodation in Bhurban ",
-      text:
-        "Contact Himalaya Villas & Resorts directly for availability, pricing, and exclusive-use bookings.",
-      buttonLabel:
-        "Book Your Stay",
-      buttonHref: "https://wa.me/923045679000",
-      footnote:
-        "Direct bookings receive the best available rate and priority response.",
-    },
-
-    {
-      type: "related",
-      heading: "📎 Explore More",
-      items: [
-        {
-          href: "/villas",
-          label: "Full villa portfolio",
-        },
-        {
-          href: "/family-villa-bhurban-murree",
-          label: "Family villa guide",
-        },
-        {
-          href: "/luxury-villa-bhurban-murree",
-          label: "Full estate details",
-        },
-        {
-          href: "/corporate-retreat-near-islamabad",
-          label: "Corporate group stays",
-        },
-        {
-          href: "/wedding-venues-bhurban-murree",
-          label: "Event bookings for larger groups",
-        },
-      ],
-    },
-  ],
-};
-
-// ============================================
-// ARTICLE 27 - Private Villa for 4 Guests Bhurban — Couples and Small Groups
-// ============================================
-export const article27: Article = {
-  slug: "villa-for-4-guests-bhurban",
-  title: "Private Villa for 4 Guests Bhurban — Couples and Small Groups",
-  metaDescription:
-    "villa for 4 guests bhurban, 4 person villa murree, small group villa bhurban, couple villa bhurban murree, private villa 4 people bhurban",
-  keywords:
-    "villa for 4 guests bhurban, 4 person villa murree, small group villa bhurban, couple villa bhurban murree, private villa 4 people bhurban",
-  eyebrow: "Template C — pSEO Capacity Template | Cluster 4: Private Villas",
-  h1: "Private Villa for 4 Guests Bhurban — Couples and Small Groups",
-  heroTagline:
-    "villa for 4 guests bhurban, 4 person villa murree, small group villa bhurban, couple villa bhurban murree, private villa 4 people bhurban",
-  heroImage: article27Hero,
-  blocks: [
-    {
-      type: "callout-qa",
-      question: "What is the best private villa for 4 guests in Bhurban Murree?",
-      answer:
-        "For a group of 4 in Bhurban, Himalaya Villas & Resorts offers several options: the Himalayan Penthouse (2 bedrooms, panoramic balcony, PKR 60,000–65,000/night), the Sunset Suite (1–2 bedrooms, west-facing sunset views, PKR 50,000–55,000/night), or the Garden Villa Retreat (3 bedrooms, ideal for two couples, PKR 55,000–60,000/night). All villas operate on exclusive-use terms — no other guests are present. 47km from Islamabad, 45-minute drive.",
-    },
-
-    {
-      type: "section",
-      heading:
-        "Private Villa for 4 Guests in Bhurban — Couples and Small Groups",
-      paragraphs: [
-        "Four guests — two couples travelling together, a family of four, or a small group of friends — is the most common private villa booking size at Himalaya Villas. The property offers multiple villas specifically suited to this configuration, each with a different character: panoramic views, sunset orientation, multi-room family layout.",
-      ],
-      image: {
-        src: article27Villa,
-        alt: "Villa for 4 Guests",
-      },
-    },
-
-    {
-      type: "facts",
-      heading: "Villa Options for 4 Guests",
-      items: [
-        {
-          label: "Himalayan Penthouse — The View Villa",
-          value: "Rate: PKR 60,000–65,000/night | Bedrooms: 2 bedrooms | Defining feature: The largest private balcony on the estate | Best for: Couples who want maximum outdoor terrace space",
-        },
-        {
-          label: "Sunset Suite — The Romantic Option",
-          value: "Rate: PKR 50,000–55,000/night | Bedrooms: 1–2 bedrooms | Defining feature: West-facing windows capturing the full sunset | Best for: Couples and small groups who specifically want the sunset view",
-        },
-        {
-          label: "Garden Villa Retreat — For Two Couples",
-          value: "Rate: PKR 55,000–60,000/night | Bedrooms: 3 bedrooms | Defining feature: Private garden terrace with garden access | Best for: Two couples who want private bedroom separation within a shared villa",
-        },
-      ],
-    },
-
-    {
-      type: "section",
-      heading: "What's Included for a 4-Guest Booking",
-      paragraphs: [
-        "Full villa exclusive use — all villa spaces belong to your group",
-        "Private terrace or garden outdoor space",
-        "In-villa dining available — pre-arranged menus including breakfast, dinner, special occasion meals",
-        "Pre-arrival WhatsApp concierge — activity planning, dining preferences, special arrangements",
-        "Flexible check-in and check-out for direct bookings",
-      ],
-      image: {
-        src: article27View,
-        alt: "What's Included",
-      },
-    },
-
-    {
-      type: "section",
-      heading: "Popular 4-Guest Itinerary from Himalaya Villas",
-      paragraphs: [
-        "Day 1 evening: arrive at villa, bonfire dinner at fire pit garden",
-        "Day 2 morning: sunrise on the private terrace, forest walk, Patriata Chairlift (15 min drive)",
-        "Day 2 afternoon: Nathia Gali day trip or in-villa afternoon on the terrace",
-        "Day 2 evening: private candlelit dinner on the villa terrace",
-        "Day 3 morning: Kashmir Point / Mall Road morning excursion (20 min drive), return for late checkout",
-      ],
-      image: {
-        src: article27Villa,
-        alt: "4-Guest Itinerary",
-      },
-    },
-
-    {
-      type: "faqs",
-      heading: "Frequently Asked Questions",
-      items: [
-        {
-          q: "Can 4 guests have the entire Himalaya Villas estate?",
-          a: "A single villa booking gives your group exclusive use of that villa and its outdoor spaces. If you want the entire estate — all 12 villas and all shared outdoor areas — a full estate buyout is available on direct enquiry. For 4 guests, this is rarely necessary; a single villa provides ample private space.",
-        },
-        {
-          q: "What is the minimum stay for a villa in Bhurban?",
-          a: "There is no fixed minimum stay outside peak periods. Single-night stays are available. 2-night stays on weekends are standard. For peak season (Eid, July–August peak weekends), a 2-night minimum may apply.",
-        },
-      ],
-    },
-
-    {
-      type: "cta",
-      eyebrow: "How to Book",
-      heading:
-        "Book a Villa for 4 in Bhurban ",
-      text:
-        "Contact Himalaya Villas & Resorts directly for availability, pricing, and exclusive-use bookings.",
-      buttonLabel:
-        "Book Your Stay",
-      buttonHref: "https://wa.me/923045679000",
-      footnote:
-        "Direct bookings receive the best available rate and priority response.",
-    },
-
-    {
-      type: "related",
-      heading: "📎 Explore More",
-      items: [
-        {
-          href: "/villas",
-          label: "Full villa portfolio",
-        },
-        {
-          href: "/luxury-villa-bhurban-murree",
-          label: "Full estate details",
-        },
-        {
-          href: "/romantic-hotels-murree",
-          label: "Romantic getaway packages",
-        },
-        {
-          href: "/murree-in-summer",
-          label: "Summer villa stay guide",
-        },
-        {
-          href: "/bhurban-murree-all-distances",
-          label: "Route guide from Islamabad",
-        },
-      ],
-    },
-  ],
-};
-
-// ============================================
 // ARTICLE 28 - Eid Holiday Package Bhurban Murree — Private Estate Stay for Eid
 // ============================================
 export const article28: Article = {
@@ -6346,193 +5645,6 @@ export const article28: Article = {
         {
           href: "/wedding-venues-bhurban-murree",
           label: "Full estate bookings for large family events",
-        },
-      ],
-    },
-  ],
-};
-
-// ============================================
-// ARTICLE 29 - Shangrila Resort Murree Alternative — Private Villa Estate in Bhurban
-// ============================================
-export const article29: Article = {
-  slug: "shangrila-resort-murree-alternative",
-  title: "Shangrila Resort Murree Alternative — Private Villa Estate in Bhurban",
-  metaDescription:
-    "shangrila murree (2,400/mo), shangrila resort murree, shangrila hotel murree, alternatives shangrila murree, shangri-la murree",
-  keywords:
-    "shangrila murree (2,400/mo), shangrila resort murree, shangrila hotel murree, alternatives shangrila murree, shangri-la murree",
-  eyebrow: "Template B — Intercept Spoke | Cluster 2: Competitor Intercept",
-  h1: "Shangrila Resort Murree Alternative — Private Villa Estate in Bhurban",
-  heroTagline:
-    "shangrila murree (2,400/mo), shangrila resort murree, shangrila hotel murree, alternatives shangrila murree, shangri-la murree",
-  heroImage: article29Hero,
-  blocks: [
-    {
-      type: "callout-qa",
-      question: "What is the best alternative to Shangrila Resort Murree?",
-      answer:
-        "The best private estate alternative to Shangrila Resort Murree is Himalaya Villas & Resorts in Bhurban — 12 fully private villas operating on exclusive-use terms, 11km from Murree town. While Shangrila operates as a multi-guest resort with shared facilities, Himalaya Villas gives your group the entire property. Rates from PKR 39,000 to PKR 70,000 per villa per night. Full estate buyout available. Book direct via WhatsApp +92 304 567 9000.",
-    },
-
-    {
-      type: "section",
-      heading:
-        "Shangrila Resort Murree Alternative — Why a Private Estate Delivers More",
-      paragraphs: [
-        "Shangrila Resort Murree — with its 2,400 monthly searches — has strong name recognition in the Murree accommodation landscape. The resort brand (a separate entity from the international Shangri-La chain, despite the similar name) is well-established in the domestic tourism market and is consistently listed among the premium Murree accommodation options in online travel research.",
-        "Guests searching for Shangrila Murree are typically in the commercial investigation stage: they have heard the name, they are researching it alongside other options, and a percentage are seeking an alternative because Shangrila is booked, too expensive, or not the right model for their group. This guide addresses that last group specifically — guests who want the mountain premium experience that Shangrila represents, but in a private estate format rather than a resort.",
-      ],
-      image: {
-        src: article29Villa,
-        alt: "Shangrila Resort Alternative",
-      },
-    },
-
-    {
-      type: "facts",
-      heading: "What Shangrila Resort Murree Offers",
-      items: [
-        {
-          label: "Property Type",
-          value: "Resort hotel (domestic brand — not the international Shangri-La Hotels)",
-        },
-        {
-          label: "Location",
-          value: "Murree area",
-        },
-        {
-          label: "Rate Range",
-          value: "Approximately PKR 20,000–50,000 per night",
-        },
-        {
-          label: "Best For",
-          value: "Guests wanting a resort setting with multiple facilities; domestic brand recognition",
-        },
-      ],
-    },
-
-    {
-      type: "section",
-      heading: "The Private Estate Comparison",
-      paragraphs: [
-        "Shangrila's appeal is the resort model: a destination property with outdoor spaces, mountain setting, and the sense of a curated experience. Within its market position, it delivers reasonable value for guests whose priority is the mountain resort feeling without the international chain brand premium of Mövenpick or PC Bhurban.",
-      ],
-      image: {
-        src: article29View,
-        alt: "Private Estate Comparison",
-      },
-    },
-
-    {
-      type: "comparison",
-      heading: "Direct Comparison: Shangrila Resort vs Himalaya Villas",
-      columns: ["Shangrila Resort Murree", "Himalaya Villas & Resorts"],
-      rows: [
-        {
-          feature: "Property type",
-          a: "Multi-guest resort",
-          b: "Private estate (exclusive use)",
-        },
-        {
-          feature: "Location",
-          a: "Murree area",
-          b: "Bhurban (11km from Murree, 47km from Islamabad)",
-        },
-        {
-          feature: "Rate per night",
-          a: "PKR 20,000–50,000/room",
-          b: "PKR 39,000–70,000/villa",
-        },
-        {
-          feature: "Privacy",
-          a: "Shared resort facilities",
-          b: "All spaces for your group only",
-        },
-        {
-          feature: "Full property exclusivity",
-          a: "Not available",
-          b: "Available — full estate buyout",
-        },
-        {
-          feature: "Outdoor space",
-          a: "Shared resort grounds",
-          b: "Private terraces, cedar garden, fire pit",
-        },
-        {
-          feature: "Best for",
-          a: "Guests wanting resort format",
-          b: "Families, groups, events, corporate offsites",
-        },
-      ],
-    },
-
-    {
-      type: "section",
-      heading: "The Distinction",
-      paragraphs: [
-        "The distinction between Shangrila and Himalaya Villas follows the same structural pattern as all resort-vs-estate comparisons: shared vs private.",
-        "Shangrila delivers a resort experience within a multi-guest property. Himalaya Villas delivers a resort-quality mountain experience within a property that belongs exclusively to your group.",
-        "For couples and individuals comparing options, Shangrila at a lower price point is a credible choice. For families of 8+, corporate teams, or groups planning a private event, the exclusive-use model at Himalaya Villas is architecturally superior regardless of the rate comparison.",
-      ],
-      image: {
-        src: article29Villa,
-        alt: "The Distinction",
-      },
-    },
-
-    {
-      type: "faqs",
-      heading: "Frequently Asked Questions",
-      items: [
-        {
-          q: "Is Himalaya Villas in the same area as Shangrila Resort Murree?",
-          a: "Himalaya Villas & Resorts is in Bhurban, 11km from Murree town. Shangrila Resort is in the Murree area. Both are in the Murree hills; the specific road and setting differ. Bhurban is 300 feet higher than Murree town and significantly quieter in peak season.",
-        },
-        {
-          q: "What makes Himalaya Villas different from Shangrila?",
-          a: "The fundamental difference is exclusivity. Shangrila operates as a resort with multiple guest groups using shared facilities simultaneously. Himalaya Villas operates on exclusive-use terms — when your group books, no other guests are present. For groups who want the mountain resort experience without sharing it with other families, Himalaya Villas is the answer.",
-        },
-      ],
-    },
-
-    {
-      type: "cta",
-      eyebrow: "How to Book",
-      heading:
-        "Book a Private Mountain Estate ",
-      text:
-        "Contact Himalaya Villas & Resorts directly for availability, pricing, and exclusive-use bookings.",
-      buttonLabel:
-        "Book Your Stay",
-      buttonHref: "https://wa.me/923045679000",
-      footnote:
-        "Direct bookings receive the best available rate and priority response.",
-    },
-
-    {
-      type: "related",
-      heading: "📎 Explore More",
-      items: [
-        {
-          href: "/pc-hotel-bhurban-alternative",
-          label: "PC Hotel vs Himalaya Villas",
-        },
-        {
-          href: "/ramada-murree-alternative",
-          label: "Ramada vs Himalaya Villas",
-        },
-        {
-          href: "/movenpick-murree-alternative",
-          label: "Mövenpick vs Himalaya Villas",
-        },
-        {
-          href: "/luxury-hotels-in-murree",
-          label: "Full Murree hotel guide",
-        },
-        {
-          href: "/villas",
-          label: "Browse villa options at Himalaya Villas",
         },
       ],
     },
@@ -7457,10 +6569,6 @@ export const article33: Article = {
         {
           href: "/villas",
           label: "Browse villa options at Himalaya Villas",
-        },
-        {
-          href: "/weekend-getaway-near-islamabad",
-          label: "Weekend planning guide from Islamabad",
         },
       ],
     },
@@ -8626,205 +7734,6 @@ export const article41: Article = {
 };
 
 // ============================================
-// ARTICLE 42 - Best Hotel Near Islamabad Mountains — Private Estate in Bhurban
-// ============================================
-export const article42: Article = {
-  slug: "best-hotel-near-islamabad-mountains",
-  title: "Best Hotel Near Islamabad Mountains - Book a Stay Today",
-  metaDescription:
-    "Best Hotel Near Islamabad Mountains - Book a Stay Today",
-  keywords:
-    "best hotel near islamabad mountains, mountain resort near islamabad, hotel near islamabad hills, luxury stay near islamabad, mountain hotel 1 hour islamabad",
-  eyebrow: "Template B — Commercial Spoke | Cluster 1: Hotels & Accommodation",
-  h1: "Best Hotel Near Islamabad Mountains — Private Estate in Bhurban, 45 Minutes Away",
-  heroTagline:
-    "best hotel near islamabad mountains, mountain resort near islamabad, hotel near islamabad hills, luxury stay near islamabad, mountain hotel 1 hour islamabad",
-  heroImage: article42Hero,
-  blocks: [
-    {
-      type: "callout-qa",
-      question: "What is the best hotel or resort near Islamabad in the mountains?",
-      answer:
-        "The best private mountain accommodation near Islamabad is Himalaya Villas & Resorts in Bhurban, Murree — 47km from Islamabad city centre, approximately 45 minutes by the Murree Expressway. The property offers 12 private villas from PKR 39,000 to PKR 70,000 per night at 6,800 feet in the Bhurban pine forest, operating on exclusive-use terms. Pearl Continental Hotel Bhurban (0.5km from Himalaya Villas) is the benchmark 5-star chain alternative. Both properties are the closest premium mountain accommodation to Islamabad.",
-    },
-
-    {
-      type: "section",
-      heading:
-        "Best Hotel Near Islamabad Mountains — Private Estate in Bhurban, 45 Minutes Away",
-      paragraphs: [
-        "Islamabad sits at 1,700 feet above sea level on the Pothohar Plateau. The Murree hills begin approximately 40km northeast — the nearest true mountain terrain to a Pakistani capital city with any comparable proximity. The result is that Bhurban, at 6,800 feet and 45 minutes by expressway, functions as Islamabad's mountain backyard in a way that no equivalent exists for Lahore, Karachi, or any other major Pakistani city.",
-        "This proximity means the question 'best hotel near Islamabad mountains' has a clear, specific answer — not a range of options, but two premium properties within 0.5km of each other in Bhurban, both specifically positioned to serve the Islamabad weekend market.",
-      ],
-      image: {
-        src: article42Villa,
-        alt: "Best Hotel Near Islamabad Mountains",
-      },
-    },
-
-    {
-      type: "section",
-      heading: "Why Bhurban is Islamabad's Mountain Destination",
-      paragraphs: [
-        "Distance: 47km from Islamabad city centre — shorter than driving across Lahore on the ring road",
-        "Drive quality: the Murree Expressway is one of Pakistan's best-maintained national highways — no potholes, no traffic signals, clearly lit",
-        "Altitude gain: from 1,700 feet (Islamabad) to 6,800 feet (Bhurban) in 45 minutes — a 5,100-foot elevation change that delivers 15–20°C temperature difference in summer",
-        "Year-round accessibility: unlike Naran, Swat valley, or Gilgit-Baltistan mountain destinations that require 5–6 hours or are seasonal, Bhurban is 45 minutes and open every month",
-      ],
-      image: {
-        src: article42View,
-        alt: "Why Bhurban is Islamabad's Mountain Destination",
-      },
-    },
-
-    {
-      type: "section",
-      heading: "Option 1: Himalaya Villas & Resorts — The Private Estate",
-      paragraphs: [
-        "Himalaya Villas & Resorts is the premium private mountain accommodation nearest to Islamabad. The property offers the full mountain estate experience — 12 private villas, exclusive use, cedar forest setting, fire pit garden, in-villa dining — within 45 minutes of Islamabad. For Islamabad families, corporate groups, and couples wanting a private mountain escape without significant travel, there is no closer equivalent.",
-        "Type: Private villa estate (exclusive use)",
-        "Rate: PKR 39,000–70,000 per villa per night",
-        "Distance from Islamabad: 47km — 45 minutes",
-        "Booking: WhatsApp +92 304 567 9000 — direct bookings receive best rate",
-      ],
-      image: {
-        src: article42Villa,
-        alt: "Himalaya Villas — Private Estate",
-      },
-    },
-
-    {
-      type: "section",
-      heading: "Option 2: Pearl Continental Hotel Bhurban",
-      paragraphs: [
-        "PC Bhurban is the established 5-star chain property in the same Bhurban location. For Islamabad corporate travellers and guests who want Marriott Bonvoy benefits and the confidence of an international chain standard, PC Bhurban is the appropriate choice. 162 rooms, dining, pool, conference facilities.",
-        "Type: 5-star chain hotel",
-        "Rate: PKR 35,000–75,000 per room per night",
-        "Distance from Islamabad: 47km — 45 minutes",
-      ],
-      image: {
-        src: article42View,
-        alt: "PC Hotel Bhurban",
-      },
-    },
-
-    {
-      type: "comparison",
-      heading: "Comparing the Two Options",
-      columns: ["Factor", "Himalaya Villas & Resorts", "PC Hotel Bhurban"],
-      rows: [
-        {
-          feature: "Property type",
-          a: "Private estate (exclusive use)",
-          b: "5-star chain hotel (shared)",
-        },
-        {
-          feature: "Best for",
-          a: "Families, groups, events, privacy",
-          b: "Business, couples, loyalty guests",
-        },
-        {
-          feature: "Outdoor space",
-          a: "Private terraces, garden, fire pit",
-          b: "Shared hotel grounds and pool",
-        },
-        {
-          feature: "Group exclusivity",
-          a: "Full estate available",
-          b: "Not available",
-        },
-        {
-          feature: "Rate range",
-          a: "PKR 39K–70K/villa",
-          b: "PKR 35K–75K/room",
-        },
-        {
-          feature: "Booking",
-          a: "WhatsApp direct — fastest",
-          b: "OTA / pchotels.com",
-        },
-      ],
-    },
-
-    {
-      type: "section",
-      heading: "Other Options Near Islamabad",
-      paragraphs: [
-        "Beyond Bhurban, there are several other mountain accommodation options within 1–2 hours of Islamabad:",
-        "Nathia Gali (70km, 1 hour 15 min): TDCP huts and smaller guesthouses at 8,000 feet. More basic than Bhurban; suitable for budget-conscious or hiking-focused stays.",
-        "Murree Mall Road hotels (55km, 1 hour): Lockwood Hotel, Ramada Murree, and various smaller properties. More central to the bazaar but higher crowd levels. No private estate option.",
-        "Abbottabad (140km, 2 hours): larger city with more hotels at lower elevation. Not a mountain retreat in the same sense as Bhurban or Nathia Gali.",
-        "For guests whose priority is a private mountain estate experience within the shortest possible drive from Islamabad, Bhurban is the unambiguous answer. Himalaya Villas & Resorts is the only property of that type within 2 hours of the capital.",
-      ],
-      image: {
-        src: article42Villa,
-        alt: "Other Options Near Islamabad",
-      },
-    },
-
-    {
-      type: "faqs",
-      heading: "Frequently Asked Questions",
-      items: [
-        {
-          q: "How far is the nearest mountain resort from Islamabad?",
-          a: "The nearest premium mountain accommodation to Islamabad is in Bhurban, 47km from the city centre — approximately 45 minutes. Himalaya Villas & Resorts and Pearl Continental Hotel Bhurban are both in Bhurban on the same road. The next nearest mountain area with quality accommodation is Nathia Gali (70km, 1 hour 15 min).",
-        },
-        {
-          q: "Is there a mountain hotel within 1 hour of Islamabad?",
-          a: "Yes. Both Himalaya Villas & Resorts and PC Hotel Bhurban are within 45–50 minutes of Islamabad city centre in normal traffic. The Murree Expressway makes the journey fast and reliable. From Islamabad Airport, the drive to Bhurban takes approximately 55–65 minutes.",
-        },
-        {
-          q: "What is the best luxury mountain accommodation near Islamabad for a family?",
-          a: "For a family wanting private outdoor space and multi-bedroom accommodation, Himalaya Villas & Resorts in Bhurban is the best option near Islamabad. The Garden Villa Retreat (3 bedrooms, private garden, PKR 55,000–60,000/night) and Alpine Family Lodge (3+ bedrooms, PKR 60,000–70,000/night) are specifically configured for families. No equivalent private family villa exists this close to Islamabad.",
-        },
-      ],
-    },
-
-    {
-      type: "cta",
-      eyebrow: "How to Book",
-      heading:
-        "Book Islamabad's Nearest Mountain Estate ",
-      text:
-        "Contact Himalaya Villas & Resorts directly for availability, pricing, and exclusive-use bookings.",
-      buttonLabel:
-        "Book Your Stay",
-      buttonHref: "https://wa.me/923045679000",
-      footnote:
-        "Direct bookings receive the best available rate and priority response.",
-    },
-
-    {
-      type: "related",
-      heading: "📎 Explore More",
-      items: [
-        {
-          href: "/hotels-in-bhurban-murree",
-          label: "Complete Bhurban accommodation guide",
-        },
-        {
-          href: "/bhurban-murree-all-distances",
-          label: "Route and distance guide",
-        },
-        {
-          href: "/pc-hotel-bhurban-alternative",
-          label: "PC Hotel comparison",
-        },
-        {
-          href: "/family-villa-bhurban-murree",
-          label: "Family accommodation guide",
-        },
-        {
-          href: "/villas",
-          label: "Browse all villa options",
-        },
-      ],
-    },
-  ],
-};
-
-// ============================================
 // ARTICLE 43 - Murree for Couples — Romantic Getaway Guide 2026
 // ============================================
 export const article43: Article = {
@@ -9027,10 +7936,6 @@ export const article43: Article = {
       type: "related",
       heading: "📎 Explore More",
       items: [
-        {
-          href: "/romantic-hotels-murree",
-          label: "Full honeymoon guide",
-        },
         {
           href: "/villas",
           label: "Browse the Presidential Suite and Penthouse",
@@ -9494,319 +8399,6 @@ export const article46: Article = {
   ],
 };
 
-
-// ============================================
-// ARTICLE 51 - Private Villa for 6 Guests Bhurban Murree — Family & Friends Group
-// ============================================
-export const article51: Article = {
-  slug: "villa-for-6-guests-bhurban",
-  title: "Villa for 6 Guests in Bhurban, Murree - Book Your Stay",
-  metaDescription:
-    "Book a private villa for 6 guests in Bhurban, Murree—spacious rooms, mountain views, and full privacy for families or groups. Reserve your stay today.",
-  keywords:
-    "villa for 6 guests bhurban, 6 person villa murree, accommodation 6 people bhurban murree, family villa 6 guests bhurban, group of 6 villa murree",
-  eyebrow: "Template C — pSEO Capacity Template | Cluster 4: Private Villas",
-  h1: "Private Villa for 6 Guests Bhurban Murree — Family & Friends Group",
-  heroTagline:
-    "villa for 6 guests bhurban, 6 person villa murree, accommodation 6 people bhurban murree, family villa 6 guests bhurban, group of 6 villa murree",
-  heroImage: article51Hero,
-  blocks: [
-    {
-      type: "callout-qa",
-      question: "What is the best private villa for 6 guests in Bhurban Murree?",
-      answer:
-        "For a group of 6 in Bhurban, Himalaya Villas & Resorts recommends the Garden Villa Retreat — a 3-bedroom villa with private garden terrace, accommodating up to 8 guests comfortably, ideal for 6. Rate: PKR 55,000–60,000 per night. The villa operates on exclusive-use terms with private outdoor garden access. Alternative: the Alpine Family Lodge for groups wanting more living space. Location: Mohra Iswal, Bhurban, 47km from Islamabad (45 minutes). Book via WhatsApp +92 304 567 9000.",
-    },
-
-    {
-      type: "section",
-      heading:
-        "Private Villa for 6 Guests in Bhurban Murree — Family and Friends Groups",
-      paragraphs: [
-        "Six guests is the most common configuration for a multi-couple weekend, a small family with grandparents, or a group of close friends travelling together. The Garden Villa Retreat at Himalaya Villas is purpose-built for this group size: three bedrooms provide privacy for each pairing, while the shared lounge and private garden terrace give the group a unified space for the time spent together.",
-      ],
-      image: {
-        src: article51Villa,
-        alt: "Private Villa for 6 Guests",
-      },
-    },
-
-    {
-      type: "section",
-      heading: "Garden Villa Retreat — The Recommended Choice",
-      paragraphs: [
-        "Rate: PKR 55,000–60,000 per night",
-        "Bedrooms: 3 bedrooms — comfortable for 6, can extend to 8",
-        "Common space: Shared lounge with garden access",
-        "Outdoor: Private garden terrace at ground level — the most accessible outdoor space on the estate",
-        "",
-        "The Garden Villa Retreat's ground-level garden terrace is its defining feature for groups of 6. Unlike the upper-floor balconies of the Presidential Suite or Himalayan Penthouse, the Garden Villa Retreat opens directly onto a private lawn and garden area — ideal for groups who want to move freely between indoor and outdoor space, set up outdoor seating for the whole group, or let children play directly outside the living area.",
-      ],
-      image: {
-        src: article51View,
-        alt: "Garden Villa Retreat",
-      },
-    },
-
-    {
-      type: "section",
-      heading: "Alternative: Two Smaller Villas",
-      paragraphs: [
-        "For groups of 6 where two distinct sub-groups want more separation — two families travelling together, or three couples wanting individual villa privacy — booking two smaller villas (e.g., Sunset Suite + Serene Valley Cabin) provides more total space and bathroom capacity, while both villas share the estate's outdoor areas.",
-      ],
-      image: {
-        src: article51Villa,
-        alt: "Alternative Configuration",
-      },
-    },
-
-    {
-      type: "comparison",
-      heading: "Configuration Options",
-      columns: ["Configuration", "Villas", "Combined Rate", "Best For"],
-      rows: [
-        {
-          feature: "Single villa",
-          a: "Garden Villa Retreat (3BR)",
-          b: "PKR 55,000–60,000/night",
-          c: "Groups wanting one shared space",
-        },
-        {
-          feature: "Two villas",
-          a: "Sunset Suite + Serene Valley Cabin",
-          b: "PKR 89,000–100,000/night",
-          c: "Groups wanting separate sub-villa privacy",
-        },
-      ],
-    },
-
-    {
-      type: "section",
-      heading: "What's Included",
-      paragraphs: [
-        "Full villa exclusive use — all spaces belong to your group",
-        "Private garden terrace (Garden Villa Retreat) or private terraces (alternative configuration)",
-        "In-villa dining for the group — pre-arranged via WhatsApp",
-        "Fire pit garden access for evening gatherings",
-        "Pre-arrival concierge — activity planning and dining preferences",
-      ],
-      image: {
-        src: article51View,
-        alt: "What's Included",
-      },
-    },
-
-    {
-      type: "faqs",
-      heading: "Frequently Asked Questions",
-      items: [
-        {
-          q: "Can 6 guests share 3 bedrooms comfortably?",
-          a: "Yes. The Garden Villa Retreat's 3 bedrooms accommodate 6 guests as 3 pairs (couples, siblings, or parent-child). Each bedroom has its own bathroom. The shared lounge and garden terrace provide the group gathering space.",
-        },
-        {
-          q: "Is the Garden Villa Retreat good for families with grandparents?",
-          a: "Yes. The Garden Villa Retreat is at ground level with garden access — no stairs required to reach the outdoor space, making it suitable for elderly family members. The shared lounge allows the family to gather without anyone needing to navigate stairs.",
-        },
-      ],
-    },
-
-    {
-      type: "cta",
-      eyebrow: "How to Book",
-      heading:
-        "Book a Villa for 6 in Bhurban ",
-      text:
-        "Contact Himalaya Villas & Resorts directly for availability, pricing, and exclusive-use bookings.",
-      buttonLabel:
-        "Book Your Stay",
-      buttonHref: "https://wa.me/923045679000",
-      footnote:
-        "Direct bookings receive the best available rate and priority response.",
-    },
-
-    {
-      type: "related",
-      heading: "📎 Explore More",
-      items: [
-        {
-          href: "/villa-for-4-guests-bhurban",
-          label: "4-guest villa guide",
-        },
-        {
-          href: "/villa-for-10-guests-bhurban",
-          label: "10-guest villa guide",
-        },
-        {
-          href: "/family-villa-bhurban-murree",
-          label: "Family villa overview",
-        },
-        {
-          href: "/villas",
-          label: "Full villa portfolio",
-        },
-        {
-          href: "/luxury-villa-bhurban-murree",
-          label: "Estate overview",
-        },
-      ],
-    },
-  ],
-};
-
-// ============================================
-// ARTICLE 52 - Private Villa for 8 Guests Bhurban Murree — Extended Family & Groups
-// ============================================
-export const article52: Article = {
-  slug: "villa-for-8-guests-bhurban",
-  title: "Villa for 8 Guests in Bhurban, Murree - Book Your Stay",
-  metaDescription:
-    "Book a private 8-guest villa in Bhurban Murree, with spacious rooms, scenic mountain views, and full privacy for larger families and groups. Reserve today. ",
-  keywords:
-    "villa for 8 guests bhurban, 8 person villa murree, accommodation 8 people bhurban, family villa 8 guests murree, group villa 8 bhurban",
-  eyebrow: "Template C — pSEO Capacity Template | Cluster 4: Private Villas",
-  h1: "Private Villa for 8 Guests Bhurban Murree — Extended Family & Groups",
-  heroTagline:
-    "villa for 8 guests bhurban, 8 person villa murree, accommodation 8 people bhurban, family villa 8 guests murree, group villa 8 bhurban",
-  heroImage: article52Hero,
-  blocks: [
-    {
-      type: "callout-qa",
-      question: "What is the best private villa for 8 guests in Bhurban Murree?",
-      answer:
-        "For a group of 8 in Bhurban, Himalaya Villas & Resorts recommends the Alpine Family Lodge — a 3+ bedroom villa with extended living configuration designed for 8–12 guests. Rate: PKR 60,000–70,000 per night. Alternative: the Garden Villa Retreat at its upper capacity, or two combined villas (Garden Villa Retreat + Sunset Suite) for groups wanting more separation. All configurations operate on exclusive-use terms with full estate outdoor access. Location: Mohra Iswal, Bhurban, 47km from Islamabad.",
-    },
-
-    {
-      type: "section",
-      heading:
-        "Private Villa for 8 Guests in Bhurban Murree — Extended Family and Group Stays",
-      paragraphs: [
-        "Eight guests sits at the upper end of single-villa capacity and the lower end of multi-villa configurations — the Alpine Family Lodge is built specifically for this range. Its extended living area is large enough for 8 people to gather for meals and evenings together, while the multiple bedrooms give each pairing or family unit its own private space.",
-      ],
-      image: {
-        src: article52Villa,
-        alt: "Private Villa for 8 Guests",
-      },
-    },
-
-    {
-      type: "section",
-      heading: "Alpine Family Lodge — The Recommended Choice",
-      paragraphs: [
-        "Rate: PKR 60,000–70,000 per night",
-        "Bedrooms: 3+ bedrooms — extended configuration comfortable for 8",
-        "Common space: The largest shared living area of any single villa on the estate",
-        "Outdoor: Private terrace with mountain views",
-        "",
-        "The Alpine Family Lodge's extended living area is the key feature for groups of 8: large enough to seat the full group for meals, board games, or an evening together without anyone feeling cramped. This is the villa Himalaya Villas built for the extended Pakistani family holiday — three generations, multiple siblings, cousins — and 8 guests sits comfortably within its intended capacity.",
-      ],
-      image: {
-        src: article52View,
-        alt: "Alpine Family Lodge",
-      },
-    },
-
-    {
-      type: "comparison",
-      heading: "Alternative Configurations",
-      columns: ["Configuration", "Details", "Combined Rate", "Best For"],
-      rows: [
-        {
-          feature: "Alpine Family Lodge (single villa)",
-          a: "3+ bedrooms, extended living",
-          b: "PKR 60,000–70,000/night",
-          c: "Groups wanting one unified space",
-        },
-        {
-          feature: "Garden Villa Retreat + Serene Valley Cabin",
-          a: "3BR + 1-2BR ground floor",
-          b: "PKR 94,000–105,000/night",
-          c: "Groups with elderly members needing ground-floor access",
-        },
-        {
-          feature: "Garden Villa Retreat + Sunset Suite",
-          a: "3BR + 1-2BR",
-          b: "PKR 105,000–120,000/night",
-          c: "Two distinct family units wanting separate villas",
-        },
-      ],
-    },
-
-    {
-      type: "section",
-      heading: "What's Included",
-      paragraphs: [
-        "Full villa (or combined villas) exclusive use",
-        "Private outdoor terraces and garden access",
-        "In-villa dining for the full group — coordinated meal planning",
-        "Fire pit garden — 8 guests comfortably seated for evening gatherings",
-        "Pre-arrival concierge for activity and dining coordination",
-      ],
-      image: {
-        src: article52Villa,
-        alt: "What's Included",
-      },
-    },
-
-    {
-      type: "faqs",
-      heading: "Frequently Asked Questions",
-      items: [
-        {
-          q: "Is the Alpine Family Lodge suitable for 3 generations travelling together?",
-          a: "Yes. This is the villa's primary intended use case — grandparents, parents, and children/grandchildren in a single shared villa with private bedrooms for each generational unit and a large shared living space for time together.",
-        },
-        {
-          q: "What if 8 guests want more bathroom capacity than the Alpine Family Lodge provides?",
-          a: "For groups prioritising bathroom capacity over a single shared space, combining two smaller villas (e.g., Garden Villa Retreat + Sunset Suite) provides more individual bathrooms while both villas retain access to the estate's shared outdoor spaces.",
-        },
-      ],
-    },
-
-    {
-      type: "cta",
-      eyebrow: "How to Book",
-      heading:
-        "Book a Villa for 8 in Bhurban ",
-      text:
-        "Contact Himalaya Villas & Resorts directly for availability, pricing, and exclusive-use bookings.",
-      buttonLabel:
-        "Book Your Stay",
-      buttonHref: "https://wa.me/923045679000",
-      footnote:
-        "Direct bookings receive the best available rate and priority response.",
-    },
-
-    {
-      type: "related",
-      heading: "📎 Explore More",
-      items: [
-        {
-          href: "/villa-for-6-guests-bhurban",
-          label: "6-guest villa guide",
-        },
-        {
-          href: "/villa-for-10-guests-bhurban",
-          label: "10-guest villa guide",
-        },
-        {
-          href: "/villa-for-20-guests-bhurban",
-          label: "Large group estate booking",
-        },
-        {
-          href: "/family-villa-bhurban-murree",
-          label: "Family villa overview",
-        },
-        {
-          href: "/villas",
-          label: "Full villa portfolio",
-        },
-      ],
-    },
-  ],
-};
-
 // ============================================
 // ARTICLE 53 - Villa with Mountain View Bhurban Murree — Panoramic Private Terraces
 // ============================================
@@ -9954,16 +8546,8 @@ export const article53: Article = {
       heading: "📎 Explore More",
       items: [
         {
-          href: "/villa-with-bhurban",
-          label: "Presidential Suite guide",
-        },
-        {
           href: "/villas",
           label: "Full villa portfolio",
-        },
-        {
-          href: "/romantic-hotels-murree",
-          label: "Romantic villa guide",
         },
         {
           href: "/murree-in-autumn",
@@ -10145,10 +8729,6 @@ export const article54: Article = {
         {
           href: "/lockwood-hotel-murree-alternative",
           label: "Lockwood vs Himalaya Villas",
-        },
-        {
-          href: "/luxury-hotels-in-murree",
-          label: "Full Murree hotel guide",
         },
         {
           href: "/villas",
@@ -10485,10 +9065,6 @@ export const article58: Article = {
           label: "Airport to Bhurban route guide",
         },
         {
-          href: "/villa-for-20-guests-bhurban",
-          label: "Multi-generational family bookings",
-        },
-        {
           href: "/luxury-villa-bhurban-murree",
           label: "Full estate overview",
         },
@@ -10499,489 +9075,6 @@ export const article58: Article = {
         {
           href: "/villas",
           label: "Browse villa options",
-        },
-      ],
-    },
-  ],
-};
-
-
-
-
-
-
-
-
-
-
-// ============================================
-// ARTICLE 61 - Private Estate for 15 Guests Bhurban Murree — Mid-Size Group Booking
-// ============================================
-export const article61: Article = {
-  slug: "villa-for-15-guests-bhurban",
-  title: "Private Estate for 15 Guests Bhurban Murree — Mid-Size Group Booking",
-  metaDescription:
-    "villa for 15 guests bhurban, 15 person accommodation murree, group of 15 bhurban villa, mid size group estate murree, accommodation 15 people bhurban",
-  keywords:
-    "villa for 15 guests bhurban, 15 person accommodation murree, group of 15 bhurban villa, mid size group estate murree, accommodation 15 people bhurban",
-  eyebrow: "Template C — pSEO Capacity Template | Cluster 4: Private Villas",
-  h1: "Private Estate for 15 Guests Bhurban Murree — Mid-Size Group Booking",
-  heroTagline:
-    "villa for 15 guests bhurban, 15 person accommodation murree, group of 15 bhurban villa, mid size group estate murree, accommodation 15 people bhurban",
-  heroImage: article61Hero,
-  blocks: [
-    {
-      type: "callout-qa",
-      question: "Is there accommodation for 15 guests in a private estate in Bhurban?",
-      answer:
-        "Yes. Himalaya Villas & Resorts accommodates 15 guests through a 2-villa combination: the Alpine Family Lodge (8–12 guests) plus the Garden Villa Retreat (6–8 guests) together comfortably house 15, with all shared estate outdoor spaces — cedar garden, fire pit, terraces — available to the combined group. Combined rate: approximately PKR 120,000–135,000 per night. For groups wanting full outdoor exclusivity rather than sharing with any other villa guests, a full estate buyout is recommended at this group size. Location: Mohra Iswal, Bhurban, 47km from Islamabad.",
-    },
-
-    {
-      type: "section",
-      heading:
-        "Private Estate for 15 Guests in Bhurban Murree — Mid-Size Group Booking",
-      paragraphs: [
-        "Fifteen guests sits between the single-villa configurations (up to 12) and the larger multi-villa bookings (20+). At this size, a two-villa combination is typically the most efficient — large enough to give every sub-group meaningful private space, while not requiring the full estate commitment that 20+ guest bookings need.",
-      ],
-      image: {
-        src: article61Villa,
-        alt: "Private Estate for 15 Guests",
-      },
-    },
-
-    {
-      type: "comparison",
-      heading: "Recommended Configuration",
-      columns: ["Villa", "Capacity", "Rate (approx)", "Role"],
-      rows: [
-        {
-          feature: "Alpine Family Lodge",
-          a: "8–12 guests",
-          b: "PKR 60,000–70,000/night",
-          c: "Primary villa — largest group, main gathering space",
-        },
-        {
-          feature: "Garden Villa Retreat",
-          a: "6–8 guests",
-          b: "PKR 55,000–60,000/night",
-          c: "Secondary villa — sub-group with garden access",
-        },
-        {
-          feature: "Combined (15 guests)",
-          a: "14–20 guests",
-          b: "PKR 115,000–130,000/night",
-          c: "Shared estate outdoor spaces",
-        },
-      ],
-    },
-
-    {
-      type: "section",
-      heading: "Who Books for 15 Guests",
-      paragraphs: [
-        "Extended family Eid or wedding-adjacent gatherings — siblings with their families plus parents/grandparents",
-        "Mid-size corporate teams — a department or project team retreat",
-        "Friend groups celebrating a milestone — a 30th birthday, a graduating cohort, a pre-wedding group trip",
-        "Combined family trips — two families with children travelling together",
-      ],
-      image: {
-        src: article61View,
-        alt: "Who Books for 15 Guests",
-      },
-    },
-
-    {
-      type: "section",
-      heading: "Full Estate Buyout vs Two-Villa Booking",
-      paragraphs: [
-        "At 15 guests, the choice between a 2-villa booking and a full estate buyout depends on priorities. A 2-villa booking is more cost-effective and gives the group ample private space; the trade-off is that other villas on the estate may be occupied by other guests, meaning shared outdoor areas (cedar garden, fire pit) could be used by others at the same time.",
-        "A full estate buyout guarantees total privacy of all outdoor spaces but costs significantly more. For groups whose priority is private bedrooms and a shared gathering space within their own villas, the 2-villa configuration is sufficient. For groups planning an event (mehndi, corporate dinner) requiring the full outdoor estate, buyout is recommended.",
-      ],
-      image: {
-        src: article61Villa,
-        alt: "Full Estate Buyout vs Two-Villa Booking",
-      },
-    },
-
-    {
-      type: "section",
-      heading: "Booking a 15-Guest Stay",
-      paragraphs: [
-        "How to book: WhatsApp +92 304 567 9000. Specify group size (15), dates, and whether full estate exclusivity is required.",
-        "Lead time: 2–3 weeks standard; 4–6 weeks for peak season.",
-        "Booking type: Direct only — multi-villa bookings are not available via OTA.",
-      ],
-      image: {
-        src: article61View,
-        alt: "Booking a 15-Guest Stay",
-      },
-    },
-
-    {
-      type: "faqs",
-      heading: "Frequently Asked Questions",
-      items: [
-        {
-          q: "Can a group of 15 eat together at Himalaya Villas?",
-          a: "Yes. The outdoor dining pavilion and cedar garden accommodate groups of this size for shared meals. In-villa dining for the combined group is coordinated via WhatsApp — group menus and serving arrangements confirmed before arrival.",
-        },
-        {
-          q: "What if our group of 15 includes children of different ages?",
-          a: "The Alpine Family Lodge and Garden Villa Retreat combination gives families with young children ground-floor garden access (Garden Villa Retreat) while the Alpine Family Lodge's extended living area suits older children and teenagers. Discuss the specific age mix at booking for the best room allocation recommendation.",
-        },
-      ],
-    },
-
-    {
-      type: "cta",
-      eyebrow: "How to Book",
-      heading:
-        "Book a 15-Guest Estate Stay ",
-      text:
-        "Contact Himalaya Villas & Resorts directly for availability, pricing, and exclusive-use bookings.",
-      buttonLabel:
-        "Book Your Stay",
-      buttonHref: "https://wa.me/923045679000",
-      footnote:
-        "Direct bookings receive the best available rate and priority response.",
-    },
-
-    {
-      type: "related",
-      heading: "📎 Explore More",
-      items: [
-        {
-          href: "/villa-for-10-guests-bhurban",
-          label: "10-guest configuration",
-        },
-        {
-          href: "/villa-for-20-guests-bhurban",
-          label: "20-guest configuration",
-        },
-        {
-          href: "/wedding-venues-bhurban-murree",
-          label: "Event bookings",
-        },
-        {
-          href: "/corporate-retreat-near-islamabad",
-          label: "Corporate group bookings",
-        },
-        {
-          href: "/villas",
-          label: "Full villa portfolio",
-        },
-      ],
-    },
-  ],
-};
-
-// ============================================
-// ARTICLE 62 - Private Estate for 30 Guests Bhurban Murree — Full Estate Buyout
-// ============================================
-export const article62: Article = {
-  slug: "villa-for-30-guests-bhurban",
-  title: "Villa for 30 Guests in Bhurban - Book Your Event Stay",
-  metaDescription:
-    "Book a private villa for 30 guests in Bhurban—spacious lawns, multiple rooms, and full privacy, perfect for weddings or large group events. Reserve today.",
-  keywords:
-    "villa for 30 guests bhurban, full estate buyout murree, 30 person accommodation bhurban, large family reunion murree villa, estate buyout bhurban pakistan",
-  eyebrow: "Template C — pSEO Capacity Template | Cluster 4: Private Villas",
-  h1: "Private Estate for 30 Guests Bhurban Murree — Full Estate Buyout",
-  heroTagline:
-    "villa for 30 guests bhurban, full estate buyout murree, 30 person accommodation bhurban, large family reunion murree villa, estate buyout bhurban pakistan",
-  heroImage: article62Hero,
-  blocks: [
-    {
-      type: "callout-qa",
-      question: "Can 30 guests stay at a single private estate in Bhurban?",
-      answer:
-        "Yes. A full estate buyout of Himalaya Villas & Resorts — all 12 villas — accommodates 30–80 guests depending on sleeping configuration, making it suitable for groups of 30. At this size, the entire property (all villas, the cedar garden, fire pit, dining pavilion, and terraces) belongs exclusively to one group. This is the configuration used for large family reunions, multi-family Eid gatherings, destination weddings, and large corporate retreats. Direct enquiry only .",
-    },
-
-    {
-      type: "section",
-      heading:
-        "Private Estate for 30 Guests in Bhurban Murree — Full Estate Buyout",
-      paragraphs: [
-        "Thirty guests is squarely in full estate buyout territory. At this size, individual or paired villa bookings become impractical to coordinate — a full buyout is both simpler to manage and gives the group everything a gathering of this size needs: enough private bedrooms across 12 villas, multiple shared gathering spaces, and complete privacy across the entire property.",
-      ],
-      image: {
-        src: article62Villa,
-        alt: "Full Estate Buyout for 30 Guests",
-      },
-    },
-
-    {
-      type: "section",
-      heading: "What a 30-Guest Full Estate Buyout Includes",
-      paragraphs: [
-        "All 12 villas — sleeping configurations ranging from couples' suites to multi-bedroom family lodges, distributed across the group as appropriate",
-        "Complete privacy of all outdoor spaces — cedar garden, fire pit, terraces, dining pavilion — exclusively for the group",
-        "In-villa dining coordinated across the full group — shared meals in the dining pavilion or garden, or villa-by-villa service",
-        "Event space for gatherings — mehndi nights, family dinners, corporate sessions — using the cedar garden and fire pit areas",
-        "Dedicated pre-arrival coordination — given the scale, the property works with the group lead to plan arrival logistics, meal schedules, and activity coordination in advance",
-      ],
-      image: {
-        src: article62View,
-        alt: "What a Full Estate Buyout Includes",
-      },
-    },
-
-    {
-      type: "comparison",
-      heading: "Typical Use Cases for 30-Guest Bookings",
-      columns: ["Use Case", "Typical Configuration", "Notes"],
-      rows: [
-        {
-          feature: "Extended family Eid gathering",
-          a: "Multiple sub-families across 12 villas",
-          b: "Each family unit gets its own villa; shared Eid celebration in the garden",
-        },
-        {
-          feature: "Destination wedding (smaller)",
-          a: "Wedding party + close family overnight",
-          b: "Combined with mehndi/dholki functions across the weekend",
-        },
-        {
-          feature: "Multi-generational reunion",
-          a: "Grandparents, all siblings and their families",
-          b: "Ground-floor villas allocated to elderly members",
-        },
-        {
-          feature: "Corporate leadership retreat",
-          a: "Senior team + support staff",
-          b: "Meeting space arranged in dining pavilion; team activities in shared outdoor areas",
-        },
-      ],
-    },
-
-    {
-      type: "section",
-      heading: "Booking a 30-Guest Full Estate Stay",
-      paragraphs: [
-        "How to book: WhatsApp +92 304 567 9000. Provide total guest count, approximate family/sub-group breakdown, dates, and the occasion (helps the property plan villa allocation and dining accordingly).",
-        "Lead time: 4–6 weeks minimum; 6–8 weeks for Eid and peak summer dates.",
-        "Planning support: For events (weddings, mehndi nights), the property coordinates space allocation, catering logistics, and timing across the full estate.",
-      ],
-      image: {
-        src: article62Villa,
-        alt: "Booking a Full Estate Stay",
-      },
-    },
-
-    {
-      type: "faqs",
-      heading: "Frequently Asked Questions",
-      items: [
-        {
-          q: "What is the maximum number of guests Himalaya Villas can accommodate?",
-          a: "The full estate buyout across all 12 villas accommodates approximately 30–80 guests overnight depending on sleeping configuration (some villas can sleep more with additional bedding arrangements). For day events (weddings, large gatherings) without everyone staying overnight, the outdoor capacity for events is higher — discuss specific numbers with the property.",
-        },
-        {
-          q: "How is the cost structured for a full estate buyout?",
-          a: "Full estate buyout pricing is calculated based on the total villa rates plus any event-specific catering and setup costs. Contact WhatsApp +92 304 567 9000 with your guest count and dates for a detailed quote — pricing varies by season and specific requirements.",
-        },
-        {
-          q: "Can different families pay separately for their own villas within a 30-guest booking?",
-          a: "This can be arranged — discuss the payment structure preference at the booking stage. Many extended family bookings coordinate payment through a single family lead, while others prefer per-villa billing to individual family units.",
-        },
-      ],
-    },
-
-    {
-      type: "cta",
-      eyebrow: "How to Book",
-      heading:
-        "Enquire About a Full Estate Buyout ",
-      text:
-        "Contact Himalaya Villas & Resorts directly for availability, pricing, and exclusive-use bookings.",
-      buttonLabel:
-        "Book Your Stay",
-      buttonHref: "https://wa.me/923045679000",
-      footnote:
-        "Direct bookings receive the best available rate and priority response.",
-    },
-
-    {
-      type: "related",
-      heading: "📎 Explore More",
-      items: [
-        {
-          href: "/villa-for-20-guests-bhurban",
-          label: "20-guest configuration",
-        },
-        {
-          href: "/eid-holiday-package-bhurban-murree",
-          label: "Eid full estate bookings",
-        },
-        {
-          href: "/wedding-venues-bhurban-murree",
-          label: "Destination wedding guide",
-        },
-        {
-          href: "/corporate-retreat-near-islamabad",
-          label: "Corporate retreat guide",
-        },
-        {
-          href: "/villas",
-          label: "Full villa portfolio",
-        },
-      ],
-    },
-  ],
-};
-
-// ============================================
-// ARTICLE 63 - Villa with Fireplace Bhurban Murree — Cosy Winter Villas
-// ============================================
-export const article63: Article = {
-  slug: "villa-with-fireplace-bhurban",
-  title: "Villa with Fireplace Bhurban Murree — Cosy Winter Villas",
-  metaDescription:
-    "villa with fireplace bhurban, cosy villa murree winter, bhurban villa fireplace heating, winter villa murree fireplace, fireplace accommodation bhurban",
-  keywords:
-    "villa with fireplace bhurban, cosy villa murree winter, bhurban villa fireplace heating, winter villa murree fireplace, fireplace accommodation bhurban",
-  eyebrow: "Template C — pSEO Feature Template | Cluster 4: Private Villas",
-  h1: "Villa with Fireplace Bhurban Murree — Cosy Winter Villas",
-  heroTagline:
-    "villa with fireplace bhurban, cosy villa murree winter, bhurban villa fireplace heating, winter villa murree fireplace, fireplace accommodation bhurban",
-  heroImage: article53Hero,
-  blocks: [
-    {
-      type: "callout-qa",
-      question: "Do the villas at Himalaya Villas Bhurban have fireplaces?",
-      answer:
-        "Himalaya Villas & Resorts villas feature central heating throughout, ensuring warmth in all 12 villas during winter (November–March). For the fireplace experience specifically, the outdoor fire pit in the cedar garden is the property's signature fire feature — available to guests for evening bonfires year-round, with particular significance in winter when temperatures drop to -2°C to 7°C. Guests seeking an indoor fireplace ambiance alongside central heating should confirm specific villa features at booking via WhatsApp +92 304 567 9000, as in-room fireplace availability varies by villa.",
-    },
-
-    {
-      type: "section",
-      heading: "Villa with Fireplace in Bhurban Murree — The Cosy Winter Stay",
-      paragraphs: [
-        "The fire experience at Himalaya Villas is centred on the outdoor fire pit in the cedar garden — an experience that, for most guests, surpasses an indoor fireplace in atmospheric value. Sitting around an open fire under the cedar canopy, with the Bhurban night sky above and the temperature at 0–10°C, is the property's signature winter evening experience.",
-      ],
-    
-    },
-
-    {
-      type: "section",
-      heading: "The Outdoor Fire Pit — The Signature Experience",
-      paragraphs: [
-        "The fire pit, set in the cedar garden, is available to guests for evening gatherings throughout the year, with particular relevance from October through March when the evening temperature makes the fire genuinely functional rather than purely decorative.",
-        "Setup: arranged via WhatsApp request — the property prepares the fire pit for the evening, typically taking 30 minutes to establish",
-        "Best season: November through February — evening temperatures of -2°C to 8°C make the fire's warmth tangible",
-        "Group size: comfortably accommodates groups from 2 to 20+ depending on seating arrangement",
-        "Pairing: commonly combined with outdoor dinner or dessert/tea service around the fire",
-      ],
-    
-    },
-
-    {
-      type: "section",
-      heading: "Indoor Warmth — Central Heating",
-      paragraphs: [
-        "All 12 villas at Himalaya Villas have central heating, ensuring comfortable indoor temperatures regardless of outside conditions — including January nights at -4°C. This is the primary indoor warmth system; guests should not expect to need additional heating arrangements.",
-        "Heating type: Central heating system throughout all villas",
-        "Winter performance: Maintains comfortable indoor temperatures even during January's coldest nights (-4°C outside)",
-        "Bedding: Heavy wool blankets and winter bedding provided in all villas during winter months",
-      ],
-     
-    },
-
-    {
-      type: "section",
-      heading: "The Combined Winter Experience",
-      paragraphs: [
-        "The most-requested winter evening at Himalaya Villas combines both elements: an evening that begins around the outdoor fire pit — drinks, conversation, the cedar garden in winter darkness — followed by a warm villa interior for the rest of the evening. This sequence — cold air and fire outside, warmth and comfort inside — is what guests describe when asked about their favourite Bhurban winter memory.",
-      ],
-   
-    },
-
-    {
-      type: "comparison",
-      heading: "Best Villas for the Winter Fire Experience",
-      columns: ["Villa", "Proximity to Fire Pit Garden", "Winter Highlight"],
-      rows: [
-        {
-          feature: "Presidential Suite",
-          a: "Short walk",
-          b: "Private terrace at 40°C complements the fire pit evening",
-        },
-        {
-          feature: "Alpine Family Lodge",
-          a: "Close — good for groups",
-          b: "Extended living area for groups returning from the fire pit",
-        },
-        {
-          feature: "Garden Villa Retreat",
-          a: "Direct garden access",
-          b: "Ground-level access to outdoor spaces in winter",
-        },
-        {
-          feature: "Serene Valley Cabin",
-          a: "Close — ground floor",
-          b: "Most accessible for elderly guests in winter conditions",
-        },
-      ],
-    },
-
-    {
-      type: "faqs",
-      heading: "Frequently Asked Questions",
-      items: [
-        {
-          q: "Is the fire pit available in summer too?",
-          a: "Yes, the fire pit is available year-round on request. In summer, evenings at 12-18°C make the fire pleasant rather than essential — many groups still request it for the atmosphere and the experience of an outdoor evening gathering.",
-        },
-        {
-          q: "Do I need to request the fire pit in advance?",
-          a: "Yes — WhatsApp the property in advance (same day is usually sufficient, but advance notice the day before is recommended) so the fire pit can be prepared ahead of the evening.",
-        },
-        {
-          q: "Is central heating included in the room rate?",
-          a: "Yes. Central heating is a standard feature of all villas and is included in the nightly rate — no additional charge.",
-        },
-      ],
-    },
-
-    {
-      type: "cta",
-      eyebrow: "How to Book",
-      heading:
-        "Book a Cosy Winter Stay at Himalaya Villas ",
-      text:
-        "Contact Himalaya Villas & Resorts directly for availability, pricing, and exclusive-use bookings.",
-      buttonLabel:
-        "Book Your Stay",
-      buttonHref: "https://wa.me/923045679000",
-      footnote:
-        "Direct bookings receive the best available rate and priority response.",
-    },
-
-    {
-      type: "related",
-      heading: "📎 Explore More",
-      items: [
-        {
-          href: "/murree-in-january",
-          label: "January winter guide",
-        },
-        {
-          href: "/murree-snowfall-season",
-          label: "Snowfall season guide",
-        },
-        {
-          href: "/villa-with-bhurban",
-          label: "Presidential Suite guide",
-        },
-        {
-          href: "/villas",
-          label: "Full villa portfolio",
-        },
-        {
-          href: "/luxury-villa-bhurban-murree",
-          label: "Estate overview",
         },
       ],
     },
@@ -11612,10 +9705,6 @@ export const article67: Article = {
           href: "/corporate-annual-dinner-venue-bhurban",
           label: "Corporate event catering",
         },
-        {
-          href: "/romantic-hotels-murree",
-          label: "Romantic dining arrangements",
-        },
       ],
     },
   ],
@@ -11786,10 +9875,6 @@ export const article68: Article = {
           label: "Mehndi and dholki functions",
         },
         {
-          href: "/villa-for-30-guests-bhurban",
-          label: "Full estate buyout details",
-        },
-        {
           href: "/eid-holiday-package-bhurban-murree",
           label: "Comparable full-estate booking for reference",
         },
@@ -11951,14 +10036,6 @@ export const article69: Article = {
       heading: "📎 Explore More",
       items: [
         {
-          href: "/villa-for-6-guests-bhurban",
-          label: "6-guest configuration",
-        },
-        {
-          href: "/villa-for-8-guests-bhurban",
-          label: "8-guest configuration",
-        },
-        {
           href: "/murree-bhurban-itinerary",
           label: "2-day itinerary template",
         },
@@ -12119,10 +10196,6 @@ export const article70: Article = {
         {
           href: "/murree-snowfall-season",
           label: "Snowfall booking strategy",
-        },
-        {
-          href: "/weekend-getaway-near-islamabad",
-          label: "Weekend planning guide",
         },
         {
           href: "/pc-hotel-bhurban-alternative",
@@ -12538,7 +10611,6 @@ export const article73: Article = {
       items: [
         { href: "/bhurban-murree-complete-guide", label: "Complete Bhurban guide" },
         { href: "/murree-vs-nathia-gali", label: "Murree vs Nathia Gali comparison" },
-        { href: "/bhurban-accommodation-guide", label: "Bhurban accommodation guide" },
       ],
     },
   ],
@@ -12749,7 +10821,6 @@ export const article75: Article = {
         { href: "/wedding-venues-bhurban-murree", label: "Full wedding venue guide" },
         { href: "/walima-venue-bhurban", label: "Walima guide" },
         { href: "/nikkah-venue-bhurban", label: "Nikkah ceremony guide" },
-        { href: "/villa-for-30-guests-bhurban", label: "Full estate buyout" },
       ],
     },
   ],
@@ -12870,7 +10941,6 @@ export const article76: Article = {
       items: [
         { href: "/corporate-retreat-near-islamabad", label: "Full corporate retreat guide" },
         { href: "/corporate-team-building-bhurban", label: "Team building guide" },
-        { href: "/villa-for-20-guests-bhurban", label: "Group accommodation" },
       ],
     },
   ],
@@ -13130,7 +11200,6 @@ export const article78: Article = {
       heading: "📎 Explore More",
       items: [
         { href: "/in-villa-dining-bhurban", label: "Full in-villa dining guide" },
-        { href: "/restaurants-near-bhurban-murree", label: "Dining guide" },
         { href: "/galyat-produce-murree-hills", label: "Local produce guide" },
       ],
     },
@@ -13262,16 +11331,6 @@ export const article79: Article = {
       buttonHref: "https://himalayavillas.com",
       footnote: "WhatsApp: +92 304 567 9000",
     },
-
-    {
-      type: "related",
-      heading: "📎 Explore More",
-      items: [
-        { href: "/romantic-hotels-murree", label: "Full honeymoon guide" },
-        { href: "/villa-with-bhurban", label: "Presidential Suite guide" },
-        { href: "/romantic-hotels-murree", label: "Couples guide" },
-      ],
-    },
   ],
 };
 
@@ -13393,7 +11452,6 @@ export const article80: Article = {
       heading: "📎 Explore More",
       items: [
         { href: "/murree-bhurban-diaspora-guide", label: "Full diaspora visitor guide" },
-        { href: "/villa-near-islamabad-airport", label: "Airport-to-Bhurban guide" },
         { href: "/pakistani-american-summer-return-bhurban", label: "Pakistani-American guide" },
       ],
     },
@@ -13619,7 +11677,6 @@ export const article82: Article = {
       heading: "📎 Explore More",
       items: [
         { href: "/murree-bhurban-diaspora-guide", label: "Full diaspora visitor guide" },
-        { href: "/villa-near-islamabad-airport", label: "Airport-to-Bhurban guide" },
         { href: "/karachi-to-murree-guide", label: "Karachi to Bhurban guide" },
       ],
     },
@@ -13857,7 +11914,6 @@ export const article84: Article = {
       heading: "📎 Explore More",
       items: [
         { href: "/independent-travel-pakistan-bhurban", label: "Independent travel guide" },
-        { href: "/villa-near-islamabad-airport", label: "Airport-to-Bhurban guide" },
         { href: "/villas", label: "Browse villa options" },
       ],
     },
@@ -14321,287 +12377,6 @@ export const article87: Article = {
 };
 
 // ============================================
-// ARTICLE 88 - Private Villa for 12 Guests Bhurban Murree — Large Family Stay
-// ============================================
-
-export const article88: Article = {
-  slug: "villa-for-12-guests-bhurban",
-  title: "Villa for 12 Guests in Bhurban, Murree - Book Now",
-  metaDescription:
-    "Book a private villa for 12 guests in Bhurban—spacious rooms, mountain views, and full privacy, perfect for extended family or friend groups. Reserve today.",
-  keywords:
-    "villa for 12 guests bhurban, 12 person villa murree, accommodation 12 people bhurban, large family villa murree, group villa 12 bhurban",
-  eyebrow: "Template C — pSEO Capacity Template | Cluster 4: Private Villas",
-  h1: "Private Villa for 12 Guests Bhurban Murree — Large Family Stay",
-  heroTagline:
-    "Himalaya Villas & Resorts accommodates 12 guests in two configurations: the Alpine Family Lodge at its upper capacity (3+ bedrooms, extended living area, rated for 8-12 guests, PKR 60,000-70,000/night) or a combination of the Alpine Family Lodge plus the Serene Valley Cabin.",
-  heroImage: article88Hero,
-
-  blocks: [
-    {
-      type: "callout-qa",
-      question: "What accommodation can fit 12 guests in a private villa in Bhurban?",
-      answer:
-        "Himalaya Villas & Resorts accommodates 12 guests in two configurations: the Alpine Family Lodge at its upper capacity (3+ bedrooms, extended living area, rated for 8-12 guests, PKR 60,000-70,000/night) or a combination of the Alpine Family Lodge plus the Serene Valley Cabin for groups where some guests need ground-floor access. For 12 guests who want more bedroom separation, two adjacent villas (Garden Villa Retreat + Alpine Family Lodge) is also an option. Location: Mohra Iswal, Bhurban, 47km from Islamabad. Book: WhatsApp +92 304 567 9000.",
-    },
-
-    {
-      type: "section",
-      heading: "Private Villa for 12 Guests in Bhurban Murree — Large Family Configuration",
-      paragraphs: [
-        "Twelve guests is the largest single-villa configuration at Himalaya Villas — the upper boundary of the Alpine Family Lodge — and the point at which many groups begin considering whether a two-villa combination would serve them better. This guide helps clarify the choice.",
-      ],
-      image: {
-        src: article88Villa,
-        alt: "Private Villa for 12 Guests in Bhurban",
-      },
-    },
-
-    {
-      type: "facts",
-      heading: "Configuration Options for 12 Guests",
-      items: [
-        {
-          label: "Option A: Alpine Family Lodge — Single Villa",
-          value: "Rate: PKR 60,000-70,000 per night | Capacity: Rated 8-12 guests | Bedrooms: 3+ with extended configuration | Best for: Groups who want one shared living space and are comfortable with close quarters at 12 occupants",
-        },
-        {
-          label: "Option B: Alpine Family Lodge + Serene Valley Cabin",
-          value: "Combined rate: PKR 99,000-115,000 per night | Capacity: 10-16 guests comfortably | Best for: Groups with elderly members needing ground-floor access (Serene Valley Cabin is ground floor) or sub-groups wanting more private space",
-        },
-        {
-          label: "Option C: Alpine Family Lodge + Garden Villa Retreat",
-          value: "Combined rate: PKR 115,000-130,000 per night | Capacity: 14-20 guests | Best for: Groups wanting maximum bedroom separation, two distinct family units within one estate booking",
-        },
-      ],
-    },
-
-    {
-      type: "comparison",
-      heading: "The Decision Framework",
-      columns: ["Priority", "Recommended Configuration"],
-      rows: [
-        {
-          feature: "Single shared space for the group",
-          a: "Alpine Family Lodge (single villa)",
-        },
-        {
-          feature: "Elderly members needing ground-floor rooms",
-          a: "Alpine Family Lodge + Serene Valley Cabin",
-        },
-        {
-          feature: "Two separate family units wanting independence",
-          a: "Alpine Family Lodge + Garden Villa Retreat",
-        },
-        {
-          feature: "Maximum bedroom privacy per pair",
-          a: "Two-villa combination — discuss at booking",
-        },
-      ],
-    },
-
-    {
-      type: "section",
-      heading: "Booking a 12-Guest Stay",
-      paragraphs: [
-        "How to book: WhatsApp +92 304 567 9000 with group size (12), composition (how many couples/individuals/children), and whether single-villa or two-villa configuration is preferred.",
-        "Lead time: 2-3 weeks standard; 4-5 weeks peak season. Two-villa combinations are direct booking only.",
-      ],
-      image: {
-        src: article88View,
-        alt: "Booking a 12-Guest Stay",
-      },
-    },
-
-    {
-      type: "faqs",
-      heading: "Frequently Asked Questions",
-      items: [
-        {
-          q: "Is the Alpine Family Lodge sufficient for 12 adults?",
-          a: "Yes, at its upper capacity. The extended living area comfortably seats 12 for a shared meal or evening gathering. Bedroom comfort depends on the group's tolerance for room-sharing: 12 adults across 3 bedrooms means 4 per room or pairs plus two sharing a third. For groups where every pair or individual needs a separate room, the two-villa option is recommended.",
-        },
-        {
-          q: "Can we add more beds to the Alpine Family Lodge for 12 guests?",
-          a: "Additional bedding arrangements can be accommodated within the villa — discuss specific requirements at booking. Himalaya Villas coordinates bedding configuration based on the group's breakdown (couples, singles, children).",
-        },
-      ],
-    },
-
-    {
-      type: "cta",
-      eyebrow: "How to Book",
-      heading: "Book a 12-Guest Villa Stay ",
-      text: "Contact us to reserve your villa for 12 guests.",
-      buttonLabel: "Book Your Stay",
-      buttonHref: "https://wa.me/923045679000",
-      footnote: "Direct bookings receive the best available rate.",
-    },
-
-    {
-      type: "related",
-      heading: "📎 Explore More",
-      items: [
-        { href: "/villa-for-10-guests-bhurban", label: "10-guest guide" },
-        { href: "/villa-for-15-guests-bhurban", label: "15-guest guide" },
-        { href: "/family-villa-bhurban-murree", label: "Family villa overview" },
-        { href: "/villas", label: "Full villa portfolio" },
-      ],
-    },
-  ],
-};
-
-// ============================================
-// ARTICLE 89 - Private Villa Near Islamabad Airport — Mountain Stay on Arrival or Departure
-// ============================================
-
-export const article89: Article = {
-  slug: "villa-near-islamabad-airport",
-  title: "Villa Near Islamabad Airport - Book Your Stay Today",
-  metaDescription:
-    "Book a private luxury villa near Islamabad Airport in Bhurban — just a short scenic drive away, with mountain views and full privacy. Reserve your stay today.",
-  keywords:
-    "villa near islamabad airport, accommodation near islamabad airport, luxury stay islamabad airport, mountain villa islamabad airport, bhurban from islamabad airport",
-  eyebrow: "Template C — Commercial Spoke | Cluster 1: Hotels",
-  h1: "Private Villa Near Islamabad Airport — Mountain Stay on Arrival or Departure",
-  heroTagline:
-    "Himalaya Villas & Resorts in Bhurban is the closest private villa estate to Islamabad International Airport (ISB) — approximately 60km, under 1 hour by car. The drive from ISB arrivals to the Bhurban property takes 55-65 minutes depending on traffic.",
-  heroImage: article89Hero,
-
-  blocks: [
-    {
-      type: "callout-qa",
-      question: "Is there a private villa near Islamabad International Airport?",
-      answer:
-        "Himalaya Villas & Resorts in Bhurban is the closest private villa estate to Islamabad International Airport (ISB) — approximately 60km, under 1 hour by car. The drive from ISB arrivals to the Bhurban property takes 55-65 minutes depending on traffic. For travellers arriving in Islamabad who want to begin their Pakistan visit with a mountain escape, or for departing travellers who want a final night in the hills before a morning flight, Bhurban is the most accessible mountain option from the airport. Book via WhatsApp +92 304 567 9000.",
-    },
-
-    {
-      type: "section",
-      heading: "Private Villa Near Islamabad Airport — Mountain Stay on Arrival or Departure",
-      paragraphs: [
-        "Islamabad International Airport opened its current terminal in 2018 and is located in the New Islamabad area, approximately 25km southwest of the city centre and 60km from Bhurban. For travellers whose itinerary includes a mountain segment, the proximity of the airport to the Murree Expressway makes the airport-to-Bhurban transfer direct and efficient — no need to navigate through Islamabad itself.",
-      ],
-      image: {
-        src: article89Villa,
-        alt: "Private Villa Near Islamabad Airport",
-      },
-    },
-
-    {
-      type: "facts",
-      heading: "The Airport-to-Bhurban Route",
-      items: [
-        {
-          label: "Exit ISB arrivals terminal",
-          value: "Head northeast on the Islamabad Expressway",
-        },
-        {
-          label: "Join the Murree Expressway (N-75)",
-          value: "Heading northeast toward Murree",
-        },
-        {
-          label: "After approximately 40km on the Expressway",
-          value: "Take the Bhurban road turnoff (signposted)",
-        },
-        {
-          label: "Follow the Bhurban road",
-          value: "7km to Himalaya Villas & Resorts",
-        },
-        {
-          label: "Total distance ISB to Himalaya Villas",
-          value: "~60km",
-        },
-        {
-          label: "Drive time",
-          value: "55-65 minutes in normal traffic (weekdays and non-peak weekend hours)",
-        },
-        {
-          label: "Peak Friday evening",
-          value: "Add 30-45 minutes for summer and Eid peak traffic",
-        },
-      ],
-    },
-
-    {
-      type: "section",
-      heading: "Who This Route Serves",
-      paragraphs: [
-        "For diaspora visitors, international tourists, and GCC-based Pakistanis landing at ISB, the airport-to-Bhurban transfer is one of the most efficient opening moves of a Pakistan itinerary. Rather than navigating Islamabad immediately after a long flight, travellers can proceed directly to a private mountain villa, rest in the cedar forest setting for 2-3 nights, and approach Islamabad as a subsequent stop when energy is restored.",
-      ],
-      image: {
-        src: article89View,
-        alt: "International Arrivals — Start With the Mountain",
-      },
-    },
-
-    {
-      type: "section",
-      heading: "Departing Travellers — The Pre-Flight Mountain Night",
-      paragraphs: [
-        "For travellers with a late-morning or afternoon international departure, a final night at Himalaya Villas in Bhurban — departing the property at 7-8am for an ISB departure at 10am-12pm — makes the departure morning genuinely pleasant rather than a hotel-checkout-to-traffic-to-airport exercise. The 60-minute airport drive in early morning traffic is consistently faster than the peak-period estimate.",
-      ],
-      image: {
-        src: article89Villa,
-        alt: "Departing Travellers — The Pre-Flight Mountain Night",
-      },
-    },
-
-    {
-      type: "section",
-      heading: "Practical Airport Transfer Notes",
-      paragraphs: [
-        "Transport: Private car (own or hired) is recommended — no direct public transport connects ISB airport to Bhurban.",
-        "Driver arrangement: Himalaya Villas can recommend trusted drivers for airport transfers — arrange via WhatsApp before arrival.",
-        "Navigation: Google Maps 'Himalaya Villas Bhurban' or 'Mohra Iswal Bhurban' for accurate routing.",
-        "Night arrivals: The Bhurban road is well-maintained and safe for night driving in all weather except active heavy snowfall — check conditions with the property for January-February arrivals.",
-      ],
-      image: {
-        src: article89View,
-        alt: "Practical Airport Transfer Notes",
-      },
-    },
-
-    {
-      type: "faqs",
-      heading: "Frequently Asked Questions",
-      items: [
-        {
-          q: "How long does it take to get from Islamabad airport to Bhurban?",
-          a: "55-65 minutes in normal traffic. On Friday evenings in summer (5-8pm), add 30-45 minutes. Early morning and weekday drives are consistently at the lower end of this range.",
-        },
-        {
-          q: "Can I take an Uber or Careem from Islamabad airport to Bhurban?",
-          a: "Yes — both operate inter-city rides from ISB airport. Book through the app; expect PKR 3,000-5,000 for the ride depending on vehicle type and surge pricing. Confirm the destination as 'Himalaya Villas, Mohra Iswal, Bhurban, Murree' in the app.",
-        },
-      ],
-    },
-
-    {
-      type: "cta",
-      eyebrow: "How to Book",
-      heading: "Book Your Airport-Adjacent Mountain Stay ",
-      text: "Contact us to reserve your villa near Islamabad Airport.",
-      buttonLabel: "Book Your Stay",
-      buttonHref: "https://wa.me/923045679000",
-      footnote: "Direct bookings receive the best available rate.",
-    },
-
-    {
-      type: "related",
-      heading: "📎 Explore More",
-      items: [
-        { href: "/bhurban-murree-all-distances", label: "Bhurban distance guide" },
-        { href: "/bhurban-murree-all-distances", label: "Full transport guide" },
-        { href: "/murree-bhurban-diaspora-guide", label: "Diaspora visitor guide" },
-        { href: "/villas", label: "Browse villa options" },
-        { href: "/luxury-villa-bhurban-murree", label: "Estate overview" },
-      ],
-    },
-  ],
-};
-
-// ============================================
 // ARTICLE 90 - Murree vs Nathia Gali — Which Hill Station is Better for Your Trip?
 // ============================================
 
@@ -14995,7 +12770,6 @@ export const article92: Article = {
         { href: "/wedding-venues-bhurban-murree", label: "Full wedding venue guide" },
         { href: "/mehndi-dholki-venue-bhurban", label: "Mehndi and dholki functions" },
         { href: "/murree-wedding-cost-guide", label: "Wedding cost guide" },
-        { href: "/villa-for-30-guests-bhurban", label: "Full estate buyout" },
       ],
     },
   ],
@@ -15247,7 +13021,6 @@ export const article94: Article = {
       heading: "📎 Explore More",
       items: [
         { href: "/villa-with-mountain-view-bhurban", label: "Mountain view villa detail" },
-        { href: "/villa-with-bhurban", label: "Presidential Suite guide" },
         { href: "/villas", label: "Full villa portfolio" },
         { href: "/pc-hotel-bhurban-alternative", label: "PC Hotel comparison" },
         { href: "/luxury-villa-bhurban-murree", label: "Estate overview" },
@@ -15410,170 +13183,6 @@ export const article95: Article = {
   ],
 };
 
-// ============================================
-// ARTICLE 96 - Winter Bonfire Experience in Bhurban — The Cedar Garden Fire Pit
-// ============================================
-
-export const article96: Article = {
-  slug: "winter-bonfire-bhurban",
-  title: "Winter Bonfire Nights in Bhurban - Book Your Stay ",
-  metaDescription:
-    "Enjoy cozy winter bonfire nights in Bhurban under a starlit mountain sky. Book a private luxury villa and add this experience. Reserve your stay today. ",
-  keywords:
-    "bonfire bhurban, fire pit bhurban murree, outdoor fire experience bhurban, bonfire cedar garden bhurban, winter evening bhurban bonfire",
-  eyebrow: "Template C — Experience Feature | Cluster 11: Dining & Experiences",
-  h1: "Winter Bonfire Experience in Bhurban — The Cedar Garden Fire Pit at Himalaya Villas",
-  heroTagline:
-    "Himalaya Villas & Resorts in Bhurban has an outdoor fire pit set in the cedar garden, available to guests for evening bonfires year-round. The fire pit is the property's signature outdoor gathering space — particularly compelling in autumn and winter (October-February) when temperatures of -2°C to 12°C in the evenings make the fire both functional and atmospheric.",
-  heroImage: article96Hero,
-
-  blocks: [
-    {
-      type: "callout-qa",
-      question: "Is there a bonfire or fire pit experience in Bhurban Murree?",
-      answer:
-        "Yes. Himalaya Villas & Resorts in Bhurban has an outdoor fire pit set in the cedar garden, available to guests for evening bonfires year-round. The fire pit is the property's signature outdoor gathering space — particularly compelling in autumn and winter (October-February) when temperatures of -2°C to 12°C in the evenings make the fire both functional and atmospheric. The cedar garden fire pit is private and exclusive to the booked guest group; no other guests share the space. Arrange via WhatsApp +92 304 567 9000 before arrival.",
-    },
-
-    {
-      type: "section",
-      heading: "Winter Bonfire Experience in Bhurban — The Cedar Garden Fire Pit at Himalaya Villas",
-      paragraphs: [
-        "The cedar garden fire pit at Himalaya Villas is referenced in guest reviews more than any other single feature. It appears in the context of snowfall evenings, of family dinners that ran past midnight, of corporate team conversations that moved from the dining table to the fire and became more productive than the morning session. The fire pit works in every season, but it finds its fullest expression in winter, when the cold makes it the centre of gravity for everything that happens on the estate after dark.",
-      ],
-      image: {
-        src: article96Villa,
-        alt: "Winter Bonfire Experience in Bhurban",
-      },
-    },
-
-    {
-      type: "section",
-      heading: "The Physical Setting",
-      paragraphs: [
-        "The fire pit sits in the cedar garden — the estate's central outdoor gathering space, surrounded by mature cedar trees that provide partial overhead canopy. In winter, the canopy is bare of deciduous foliage and the cedar branches are dominant — the fire lit at the centre of this space creates the specific play of fire-light through dark cedar branches that guests consistently photograph.",
-        "The seating arrangement around the fire pit is flexible: formal dining table for group meals, casual chairs and low seating for extended conversations, cushions closer to the fire for the colder winter evenings. The arrangement is requested at booking and set before the group arrives at the fire pit.",
-      ],
-      image: {
-        src: article96View,
-        alt: "The Physical Setting of the Fire Pit",
-      },
-    },
-
-    {
-      type: "comparison",
-      heading: "Seasonal Character",
-      columns: ["Season", "Evening Temperature", "Fire Pit Character"],
-      rows: [
-        {
-          feature: "Summer (Jun-Aug)",
-          a: "12-18°C",
-          b: "Pleasant addition — the fire is atmospheric rather than necessary",
-        },
-        {
-          feature: "Autumn (Sept-Oct)",
-          a: "5-12°C",
-          b: "The fire begins to feel necessary — best atmospheric combination",
-        },
-        {
-          feature: "Early Winter (Nov-Dec)",
-          a: "0-8°C",
-          b: "The fire is the centre of the evening — warmth and atmosphere inseparable",
-        },
-        {
-          feature: "Peak Winter (Jan-Feb)",
-          a: "-2 to 5°C",
-          b: "The fire is mandatory — the most dramatic version of the experience",
-        },
-      ],
-    },
-
-    {
-      type: "facts",
-      heading: "How the Bonfire Evening Works",
-      items: [
-        {
-          label: "Request",
-          value: "Request the fire pit via WhatsApp when arranging the stay — the property prepares it before the group's intended arrival time at the garden",
-        },
-        {
-          label: "Setup",
-          value: "The fire is built and lit by the property team — guests arrive to a fire already established",
-        },
-        {
-          label: "Seating",
-          value: "Seating and table arrangement as specified — dining, casual, or mixed",
-        },
-        {
-          label: "Dining",
-          value: "In-villa dining service can bring food directly to the fire pit area — outdoor dinner around the fire is one of the most requested configurations",
-        },
-        {
-          label: "Maintenance",
-          value: "The fire pit is maintained by the property team throughout the evening — additional wood added as needed",
-        },
-        {
-          label: "Duration",
-          value: "The fire typically burns for 3-5 hours; the session ends when the group moves inside",
-        },
-      ],
-    },
-
-    {
-      type: "section",
-      heading: "What Makes It Work",
-      paragraphs: [
-        "The private estate model is what makes the fire pit experience distinct from any hotel bonfire arrangement. A hotel fire pit — where other guests are present in the same outdoor space — is a different experience from a private cedar garden fire that belongs entirely to one group. No strangers, no noise restrictions, no timing imposed by the hotel's outdoor facility closing time. The fire pit at Himalaya Villas burns as long as the group stays at it.",
-      ],
-      image: {
-        src: article96Villa,
-        alt: "What Makes the Fire Pit Experience Work",
-      },
-    },
-
-    {
-      type: "faqs",
-      heading: "Frequently Asked Questions",
-      items: [
-        {
-          q: "Is the fire pit available in all seasons?",
-          a: "Yes. The fire pit is available year-round on request. It is most frequently used in autumn and winter but is popular in summer too — Bhurban summer evenings at 12-18°C are cool enough to make a fire pleasant.",
-        },
-        {
-          q: "Can we do an outdoor dinner at the fire pit?",
-          a: "Yes — in-villa dining can be served at the fire pit garden. Specify this arrangement via WhatsApp when planning the stay. The most common format: outdoor dinner served at the fire pit table, transitioning to casual seating around the fire for the rest of the evening.",
-        },
-        {
-          q: "How far in advance should I request the fire pit?",
-          a: "Same-day notice is usually sufficient if communicated before late afternoon. For specific timing (e.g., fire pit ready at exactly 7pm for a group dinner), WhatsApp the property by early afternoon. For event-scale fire pit arrangements (mehndi nights, corporate dinners), provide notice 24-48 hours ahead.",
-        },
-      ],
-    },
-
-    {
-      type: "cta",
-      eyebrow: "How to Book",
-      heading: "Book the Cedar Garden Bonfire Evening ",
-      text: "Contact us to arrange your fire pit evening.",
-      buttonLabel: "Book Your Stay",
-      buttonHref: "https://wa.me/923045679000",
-      footnote: "Direct bookings receive the best available rate.",
-    },
-
-    {
-      type: "related",
-      heading: "📎 Explore More",
-      items: [
-        { href: "/in-villa-dining-bhurban", label: "Outdoor dining arrangements" },
-        { href: "/villa-with-fireplace-bhurban", label: "Winter villa guide" },
-        { href: "/murree-in-january", label: "January winter experience" },
-        { href: "/mehndi-dholki-venue-bhurban", label: "Mehndi functions at the fire pit" },
-        { href: "/villas", label: "Book your Bhurban stay" },
-      ],
-    },
-  ],
-};
-
 
 // ============================================
 // ARTICLE 97 - New Year in Bhurban Murree — Celebrating the New Year at 6,800 Feet
@@ -15687,121 +13296,7 @@ export const article97: Article = {
       items: [
         { href: "/murree-in-december", label: "December winter guide" },
         { href: "/murree-in-january", label: "January snowfall guide" },
-        { href: "/winter-bonfire-bhurban", label: "Cedar garden fire pit guide" },
         { href: "/villas", label: "Browse winter villa options" },
-      ],
-    },
-  ],
-};
-
-// ============================================
-// ARTICLE 98 - Villa with BBQ Facilities Bhurban Murree — Outdoor Grill and Fire Pit
-// ============================================
-
-export const article98: Article = {
-  slug: "villa-with-bbq-bhurban",
-  title: "Villa with BBQ Setup in Bhurban, Murree - Book Now",
-  metaDescription:
-    "Looking for a villa with BBQ in Bhurban? Enjoy outdoor grilling with scenic mountain views and full privacy for family or friends. Check availability now.",
-  keywords:
-    "villa with bbq bhurban, barbecue bhurban murree, outdoor bbq villa murree, grill experience bhurban, outdoor cooking bhurban villa",
-  eyebrow: "Template C — Experience Feature | Cluster 11: Dining & Experiences",
-  h1: "Villa with BBQ Facilities in Bhurban Murree — Outdoor Grill Experience",
-  heroTagline:
-    "Himalaya Villas & Resorts in Bhurban offers outdoor BBQ and grill arrangements as part of the in-villa dining service. The fire pit garden in the cedar grove is the primary outdoor cooking and dining space — grilled meats, seekh kebab, and bbq arrangements are prepared over the fire for groups.",
-  heroImage: article98Hero,
-
-  blocks: [
-    {
-      type: "callout-qa",
-      question: "Is there a villa with BBQ or outdoor grill facilities in Bhurban?",
-      answer:
-        "Yes. Himalaya Villas & Resorts in Bhurban offers outdoor BBQ and grill arrangements as part of the in-villa dining service. The fire pit garden in the cedar grove is the primary outdoor cooking and dining space — grilled meats, seekh kebab, and bbq arrangements are prepared over the fire for groups. This is coordinated through the property's kitchen team and pre-arranged via WhatsApp (+92 304 567 9000). There is no self-catering BBQ kit available; the BBQ is staffed and prepared by the Himalaya Villas kitchen team.",
-    },
-
-    {
-      type: "section",
-      heading: "Villa with BBQ Facilities in Bhurban Murree — Outdoor Grill Experience",
-      paragraphs: [
-        "The outdoor BBQ evening at Himalaya Villas follows a specific format: the fire pit in the cedar garden is lit, seating is arranged around it, and the kitchen team prepares grilled meats and accompaniments at the fire. This is the outdoor dining arrangement that groups most frequently request for their second or third evening at the property — after the first evening's formal dinner and the second morning's breakfast, an evening around the fire with grilled food feels like the natural next configuration.",
-      ],
-      image: {
-        src: article98Villa,
-        alt: "Outdoor BBQ Experience",
-      },
-    },
-
-    {
-      type: "facts",
-      heading: "What the Outdoor BBQ Includes",
-      items: [
-        {
-          label: "Fire pit",
-          value: "The cedar garden fire established before the group arrives — the ambient warmth and light of an outdoor fire as the cooking environment",
-        },
-        {
-          label: "Grilled meats",
-          value: "The kitchen team prepares seekh kebab, chicken tikka, and grilled cuts over the fire according to pre-arranged menu preferences",
-        },
-        {
-          label: "Accompaniments",
-          value: "Naan, raita, salads, and chutney served alongside — the full Pakistani outdoor grilling spread",
-        },
-        {
-          label: "Seating",
-          value: "Arranged for the group around the fire — formal table for dining, transitioning to casual seating for the post-dinner gathering",
-        },
-      ],
-    },
-
-    {
-      type: "section",
-      heading: "How to Arrange",
-      paragraphs: [
-        "Request: WhatsApp +92 304 567 9000 before arrival — specify 'outdoor BBQ evening' and the number of guests",
-        "Menu: Discuss preferred meats and dietary requirements at booking",
-        "Timing: Typical BBQ evening starts 7-8pm — specify preferred time",
-        "Season: Available year-round. Most popular in autumn (October-November) and winter — the cold makes the fire and grilled food most satisfying",
-      ],
-      image: {
-        src: article98View,
-        alt: "How to Arrange a BBQ",
-      },
-    },
-
-    {
-      type: "faqs",
-      heading: "Frequently Asked Questions",
-      items: [
-        {
-          q: "Can I do my own self-catering BBQ at the fire pit?",
-          a: "The fire pit at Himalaya Villas is available through the kitchen team's arrangement rather than as a self-catering facility. Guests wanting to bring their own food for grilling should discuss this at booking — the property can advise on what's feasible within their kitchen arrangement.",
-        },
-        {
-          q: "Is the BBQ halal?",
-          a: "Yes. All meats prepared at Himalaya Villas are halal-standard. This does not need to be specified separately.",
-        },
-      ],
-    },
-
-    {
-      type: "cta",
-      eyebrow: "How to Book",
-      heading: "Arrange Your Outdoor BBQ Evening ",
-      text: "Contact us to arrange your BBQ experience.",
-      buttonLabel: "Book Your Stay",
-      buttonHref: "https://wa.me/923045679000",
-      footnote: "Direct bookings receive the best available rate.",
-    },
-
-    {
-      type: "related",
-      heading: "📎 Explore More",
-      items: [
-        { href: "/in-villa-dining-bhurban", label: "Full in-villa dining guide" },
-        { href: "/winter-bonfire-bhurban", label: "Fire pit experience guide" },
-        { href: "/private-chef-bhurban-murree", label: "Private chef service" },
-        { href: "/villas", label: "Browse villa options" },
       ],
     },
   ],
@@ -16092,7 +13587,6 @@ export const article100: Article = {
       heading: "📎 Explore More",
       items: [
         { href: "/family-villa-bhurban-murree", label: "Family villa guide" },
-        { href: "/villa-for-6-guests-bhurban", label: "Multi-generational group options" },
         { href: "/villas", label: "Full villa portfolio" },
         { href: "/bhurban-altitude-climate-guide", label: "Altitude information" },
       ],
@@ -16225,137 +13719,6 @@ export const article101: Article = {
         { href: "/corporate-retreat-near-islamabad", label: "Full corporate retreat guide" },
         { href: "/corporate-annual-dinner-venue-bhurban", label: "Corporate annual dinner" },
         { href: "/hiking-near-murree", label: "Team hiking options" },
-        { href: "/villa-for-20-guests-bhurban", label: "Group accommodation" },
-      ],
-    },
-  ],
-};
-
-// ============================================
-// ARTICLE 102 - Anniversary Celebration at Himalaya Villas Bhurban — Private Mountain Getaway
-// ============================================
-
-export const article102: Article = {
-  slug: "anniversary-villa-bhurban",
-  title: "Anniversary Celebration at Himalaya Villas Bhurban — Private Mountain Getaway",
-  metaDescription:
-    "anniversary villa bhurban, anniversary getaway bhurban murree, anniversary celebration murree, anniversary trip bhurban islamabad, mountain anniversary stay pakistan",
-  keywords:
-    "anniversary villa bhurban, anniversary getaway bhurban murree, anniversary celebration murree, anniversary trip bhurban islamabad, mountain anniversary stay pakistan",
-  eyebrow: "Template C — Romance/Events Spoke | Cluster 12: Honeymoon & Romance",
-  h1: "Anniversary Celebration at Himalaya Villas Bhurban — Private Mountain Getaway",
-  heroTagline:
-    "Himalaya Villas & Resorts in Bhurban accommodates anniversary celebrations across any of its 12 private villas. The Presidential Suite (private terrace, 270° mountain views, PKR 65,000-70,000/night) and Himalayan Penthouse (panoramic balcony, PKR 60,000-65,000/night) are the most requested for anniversary stays.",
-  heroImage: article102Hero,
-
-  blocks: [
-    {
-      type: "callout-qa",
-      question: "Can I book a private anniversary celebration at a villa in Bhurban Murree?",
-      answer:
-        "Yes. Himalaya Villas & Resorts in Bhurban accommodates anniversary celebrations across any of its 12 private villas. The Presidential Suite (private terrace, 270° mountain views, PKR 65,000-70,000/night) and Himalayan Penthouse (panoramic balcony, PKR 60,000-65,000/night) are the most requested for anniversary stays. Specific arrangements — arrival flowers, candlelit dinner on the private terrace, celebration setup — are coordinated directly via WhatsApp (+92 304 567 9000) before arrival.",
-    },
-
-    {
-      type: "section",
-      heading: "Anniversary Celebration at Himalaya Villas Bhurban — Private Mountain Getaway",
-      paragraphs: [
-        "An anniversary celebration at Himalaya Villas works differently from a hotel anniversary package. The private estate model means the celebration arrangements are bespoke to the couple — not a hotel-standard 'anniversary package' applied identically to every booking, but a coordination of what the specific couple wants, in their specific villa, at their specific timing.",
-      ],
-      image: {
-        src: article102Villa,
-        alt: "Anniversary Celebration in Bhurban",
-      },
-    },
-
-    {
-      type: "facts",
-      heading: "Anniversary Arrangement Options",
-      items: [
-        {
-          label: "Arrival setup",
-          value: "Flowers in the villa, candles, a personalised welcome note — arranged to be present when the couple arrives",
-        },
-        {
-          label: "Private candlelit dinner",
-          value: "First evening on the private terrace, pre-arranged menu, candles and table setup. The most requested anniversary arrangement at the property.",
-        },
-        {
-          label: "Sunrise tea",
-          value: "Arranged for the second morning — tea and pastries on the private terrace at the time of the couple's choosing. The Presidential Suite's northeast orientation catches the morning light on the Murree ridge.",
-        },
-        {
-          label: "Fire pit evening",
-          value: "The cedar garden bonfire for the anniversary evening — private fire, private garden, the mountain night surrounding the couple's group.",
-        },
-        {
-          label: "In-villa spa",
-          value: "Professional massage therapists arranged for in-villa couples' treatment — specify at booking with preferred treatment type and timing.",
-        },
-      ],
-    },
-
-    {
-      type: "section",
-      heading: "Recommended Villa for Anniversaries",
-      paragraphs: [
-        "The Presidential Suite is the most-requested anniversary villa: the private terrace (40°C year-round) is the signature experience, the 270-degree mountain view is the backdrop, and the two king-size bedrooms give the flexibility of private sleeping space if desired. At PKR 65,000-70,000/night, it is the property's most complete romantic configuration.",
-        "The Himalayan Penthouse (PKR 60,000-65,000/night) suits couples who prioritise the broadest mountain view and the largest private balcony over the. The Sunset Suite (PKR 50,000-55,000/night) suits couples specifically wanting the evening light sequence at a more accessible rate.",
-      ],
-      image: {
-        src: article102View,
-        alt: "Recommended Villa for Anniversaries",
-      },
-    },
-
-    {
-      type: "section",
-      heading: "How to Book an Anniversary Stay",
-      paragraphs: [
-        "WhatsApp +92 304 567 9000 with preferred dates and villa preference",
-        "Specify that it is an anniversary booking — this prompts the property to ask about setup preferences",
-        "Confirm the arrival flower arrangement, dinner menu, and any other specific requests",
-        "The property handles the rest; the couple arrives to a prepared villa",
-      ],
-      image: {
-        src: article102Villa,
-        alt: "How to Book an Anniversary Stay",
-      },
-    },
-
-    {
-      type: "faqs",
-      heading: "Frequently Asked Questions",
-      items: [
-        {
-          q: "How far in advance should I book an anniversary stay?",
-          a: "1-2 weeks for standard dates. 3-4 weeks for peak season (summer, Eid). Anniversary-specific setup requests (flowers, candlelit dinner) should be communicated at least 48 hours before arrival.",
-        },
-        {
-          q: "Can I surprise my partner at Himalaya Villas?",
-          a: "Yes. One partner can communicate the anniversary setup preferences in advance without the other knowing the details — the property will have the villa prepared for the couple's arrival. The element of surprise (exactly what has been arranged) can be maintained until arrival.",
-        },
-      ],
-    },
-
-    {
-      type: "cta",
-      eyebrow: "How to Book",
-      heading: "Book Your Anniversary Stay ",
-      text: "Contact us to plan your anniversary celebration.",
-      buttonLabel: "Book Your Stay",
-      buttonHref: "https://wa.me/923045679000",
-      footnote: "Direct bookings receive the best available rate.",
-    },
-
-    {
-      type: "related",
-      heading: "📎 Explore More",
-      items: [
-        { href: "/romantic-hotels-murree", label: "Honeymoon guide" },
-        { href: "/romantic-hotels-murree", label: "Couples guide" },
-        { href: "/villa-with-bhurban", label: "Presidential Suite" },
-        { href: "/in-villa-dining-bhurban", label: "Candlelit dinner arrangements" },
       ],
     },
   ],
@@ -16627,7 +13990,6 @@ export const article104: Article = {
         { href: "/things-to-do-in-murree", label: "Full Murree region activity guide" },
         { href: "/patriata-chairlift-murree-guide", label: "Chairlift guide" },
         { href: "/ayubia-national-park-from-bhurban", label: "Pipeline Track guide" },
-        { href: "/winter-bonfire-bhurban", label: "Fire pit guide" },
         { href: "/villas", label: "Browse villa options" },
       ],
     },
@@ -16913,7 +14275,6 @@ export const article106: Article = {
         { href: "/pc-hotel-bhurban-alternative", label: "PC Hotel detailed comparison" },
         { href: "/luxury-villa-bhurban-murree", label: "Full estate overview" },
         { href: "/villas", label: "Browse all villa types" },
-        { href: "/luxury-hotels-in-murree", label: "Full Murree hotel guide" },
       ],
     },
   ],
@@ -17050,7 +14411,6 @@ export const article107: Article = {
       type: "related",
       heading: "📎 Explore More",
       items: [
-        { href: "/villa-near-islamabad-airport", label: "Airport-to-Bhurban guide" },
         { href: "/bhurban-murree-all-distances", label: "Islamabad transport guide" },
         { href: "/murree-bhurban-diaspora-guide", label: "Guide for Pakistani guests from outside Islamabad" },
         { href: "/villas", label: "Browse villa options" },
@@ -17297,8 +14657,6 @@ export const article109: Article = {
       items: [
         { href: "/events", label: "All events at Himalaya Villas" },
         { href: "/wedding-venues-bhurban-murree", label: "Full events guide" },
-        { href: "/villa-for-20-guests-bhurban", label: "Group birthday configurations" },
-        { href: "/winter-bonfire-bhurban", label: "Fire pit for birthday evenings" },
       ],
     },
   ],
@@ -17800,7 +15158,6 @@ export const article113: Article = {
       heading: "📎 Explore More",
       items: [
         { href: "/murree-bhurban-diaspora-guide", label: "Full diaspora visitor guide" },
-        { href: "/villa-near-islamabad-airport", label: "Airport-to-Bhurban guide" },
         { href: "/luxury-villa-bhurban-murree", label: "Estate overview" },
         { href: "/villas", label: "Browse villa options" },
       ],
@@ -17927,136 +15284,6 @@ export const article114: Article = {
         { href: "/luxury-villa-bhurban-murree", label: "Full estate overview" },
         { href: "/villas", label: "Browse villa options for long stays" },
         { href: "/murree-bhurban-diaspora-guide", label: "Diaspora long stay guide" },
-        { href: "/weekend-getaway-near-islamabad", label: "Short vs long stay guide" },
-      ],
-    },
-  ],
-};
-
-// ============================================
-// ARTICLE 115 - Murree Bhurban Dining and Restaurant Guide — Food Near Bhurban
-// ============================================
-
-export const article115: Article = {
-  slug: "restaurants-near-bhurban-murree",
-  title: "Murree Bhurban Dining and Restaurant Guide — Food Near Bhurban",
-  metaDescription:
-    "restaurants near bhurban, dining near bhurban murree, best restaurants murree bhurban, where to eat in bhurban, food bhurban murree",
-  keywords:
-    "restaurants near bhurban, dining near bhurban murree, best restaurants murree bhurban, where to eat in bhurban, food bhurban murree",
-  eyebrow: "Template C — Local Dining Guide | Cluster 11: Dining & Experiences",
-  h1: "Murree Bhurban Dining and Restaurant Guide — Food Near Bhurban",
-  heroTagline:
-    "Bhurban itself has limited standalone restaurant options — it is primarily a residential township. The main dining destinations from Bhurban are: Murree Mall Road restaurants (11km, 20 minutes — standard Pakistani cuisine), PC Hotel Bhurban restaurants (0.5km — hotel dining open to outside guests), and in-villa private dining at Himalaya Villas & Resorts.",
-  heroImage: article115Hero,
-
-  blocks: [
-    {
-      type: "callout-qa",
-      question: "What restaurants and dining options are near Bhurban Murree?",
-      answer:
-        "Bhurban itself has limited standalone restaurant options — it is primarily a residential township. The main dining destinations from Bhurban are: Murree Mall Road restaurants (11km, 20 minutes — standard Pakistani cuisine), PC Hotel Bhurban restaurants (0.5km — hotel dining open to outside guests), and in-villa private dining at Himalaya Villas & Resorts (for guests staying there). For the best food experience in the area, the combination of in-villa private dining at Himalaya Villas for main meals and Mall Road street food for the casual experience covers the full spectrum.",
-    },
-
-    {
-      type: "section",
-      heading: "Dining and Restaurants Near Bhurban Murree — Complete Food Guide",
-      paragraphs: [
-        "The dining geography around Bhurban divides into three tiers: the private in-villa dining at Himalaya Villas (the highest quality, exclusive to guests), the hotel dining at PC Hotel Bhurban (hotel-standard, open to outside guests), and the Mall Road restaurant and street food scene (authentic hill station food, accessible to everyone). Each serves a different purpose.",
-      ],
-      image: {
-        src: article115Villa,
-        alt: "Dining and Restaurants Near Bhurban",
-      },
-    },
-
-    {
-      type: "section",
-      heading: "In-Villa Dining at Himalaya Villas — For Guests",
-      paragraphs: [
-        "The private dining arrangement at Himalaya Villas is described in detail at /in-villa-dining-bhurban. For the purposes of this guide: in-villa dining is the highest-quality food experience in the Bhurban area, available exclusively to guests staying at the property. Pre-arranged menus, served on the private terrace or in-villa, at the group's requested time. This is not a restaurant — it is a private kitchen service.",
-      ],
-      image: {
-        src: article115View,
-        alt: "In-Villa Dining at Himalaya Villas",
-      },
-    },
-
-    {
-      type: "section",
-      heading: "PC Hotel Bhurban — Hotel Dining Open to Outside Guests",
-      paragraphs: [
-        "Pearl Continental Hotel Bhurban (0.5km from Himalaya Villas) has multiple dining outlets including its main restaurant and coffee shop, open to outside guests. For Himalaya Villas guests who want a change from in-villa dining or a hotel restaurant experience, PC Hotel is the nearest option. The drive is 2 minutes.",
-        "Distance from Himalaya Villas: 0.5km — 2 minutes",
-        "Type: 5-star hotel dining — Pakistani and continental menu",
-        "Access: Open to outside guests; booking recommended for peak season",
-      ],
-      image: {
-        src: article115Villa,
-        alt: "PC Hotel Bhurban Dining",
-      },
-    },
-
-    {
-      type: "facts",
-      heading: "Murree Mall Road — The Street Food and Restaurant Circuit",
-      items: [
-        {
-          label: "Street Food — The Best of Mall Road",
-          value: "Kashmiri chai (pink salt tea): the defining Mall Road beverage — best from established vendors with clay cups rather than polystyrene | Bhutta (roasted corn with chilli and lime): the quintessential Mall Road outdoor food — best from the charcoal-roasted carts | Jalebi fresh from the fryer: a universal Pakistani sweet available on Mall Road, particularly satisfying in the cool mountain air | Samosa and pakora at tea stalls: especially good in the evening when the temperature drops",
-        },
-        {
-          label: "Sit-Down Restaurants on Mall Road",
-          value: "Murree Mall Road has several sit-down restaurants serving karahi, biryani, desi chicken, and Pakistani mountain standards. The quality varies; the better-established restaurants are identifiable by consistent patronage. Dining in a Mall Road restaurant with a ridge-facing window — the valley visible below — provides an experience worth the standard Pakistani restaurant meal.",
-        },
-      ],
-    },
-
-    {
-      type: "section",
-      heading: "Nathia Gali Restaurants",
-      paragraphs: [
-        "Nathia Gali's small restaurant scene (45 minutes from Bhurban) is quieter than Mall Road and serves comparable food with the specific addition of local mountain atmosphere. The small number of roadside restaurants in the village serve tea and standard food. Best visited for lunch on a Nathia Gali day trip.",
-      ],
-      image: {
-        src: article115View,
-        alt: "Nathia Gali Restaurants",
-      },
-    },
-
-    {
-      type: "faqs",
-      heading: "Frequently Asked Questions",
-      items: [
-        {
-          q: "Are there any fine dining options near Bhurban?",
-          a: "The highest quality dining near Bhurban is PC Hotel Bhurban's main restaurant (hotel-standard 5-star dining) and Himalaya Villas' private in-villa dining (for guests). There are no independent fine-dining restaurants in the Bhurban area.",
-        },
-        {
-          q: "Can guests from other hotels dine at Himalaya Villas?",
-          a: "No. In-villa dining at Himalaya Villas is exclusively for guests staying at the property. There is no public restaurant facility.",
-        },
-      ],
-    },
-
-    {
-      type: "cta",
-      eyebrow: "How to Book",
-      heading: "Arrange Private Dining at Himalaya Villas ",
-      text: "Contact us to arrange your private dining experience.",
-      buttonLabel: "Book Your Stay",
-      buttonHref: "https://wa.me/923045679000",
-      footnote: "Direct bookings receive the best available rate.",
-    },
-
-    {
-      type: "related",
-      heading: "📎 Explore More",
-      items: [
-        { href: "/in-villa-dining-bhurban", label: "In-villa dining full guide" },
-        { href: "/murree-mall-road-guide", label: "Mall Road food guide" },
-        { href: "/private-chef-bhurban-murree", label: "Private chef service" },
-        { href: "/nathia-gali-day-trip-from-bhurban", label: "Nathia Gali dining" },
       ],
     },
   ],
@@ -18442,7 +15669,6 @@ export const article118: Article = {
       heading: "📎 Explore More",
       items: [
         { href: "/villas", label: "Full villa portfolio with rates" },
-        { href: "/villa-for-4-guests-bhurban", label: "4-guest configuration guide" },
         { href: "/booking-villa-bhurban-faq", label: "OTA vs direct booking comparison" },
         { href: "/luxury-villa-bhurban-murree", label: "Full estate overview" },
       ],
@@ -19154,7 +16380,6 @@ export const article123: Article = {
       type: "related",
       heading: "📎 Explore More",
       items: [
-        { href: "/winter-bonfire-bhurban", label: "Cedar garden fire pit" },
         { href: "/events", label: "Full events at Himalaya Villas" },
         { href: "/wedding-venues-bhurban-murree", label: "Wedding events guide" },
         { href: "/luxury-villa-bhurban-murree", label: "Estate overview" },
@@ -19287,147 +16512,7 @@ export const article124: Article = {
       items: [
         { href: "/corporate-retreat-near-islamabad", label: "Full corporate retreat guide" },
         { href: "/corporate-wellness-retreat-bhurban", label: "Wellness retreat guide" },
-        { href: "/villa-for-20-guests-bhurban", label: "Group accommodation" },
         { href: "/villas", label: "Browse villa options" },
-      ],
-    },
-  ],
-};
-
-// ============================================
-// ARTICLE 125 - Private Pool Villa Near Islamabad — What's Available in Bhurban
-// ============================================
-
-export const article125: Article = {
-  slug: "private-pool-villa-near-islamabad",
-  title: "Private Pool Villa Near Islamabad — What's Available in Bhurban",
-  metaDescription:
-    "private pool villa near islamabad, villa with pool near islamabad, pool villa islamabad mountains, private swimming pool bhurban murree",
-  keywords:
-    "private pool villa near islamabad, villa with pool near islamabad, pool villa islamabad mountains, private swimming pool bhurban murree",
-  eyebrow: "Template C — Commercial Spoke | Cluster 1: Hotels",
-  h1: "Private Pool Villa Near Islamabad — What's Available in Bhurban",
-  heroTagline:
-    "Private pool villas in the traditional sense (outdoor swimming pool) are uncommon in the Bhurban hills due to the mountain climate — outdoor pools are impractical for most of the year at 6,800 feet. The closest equivalent in Bhurban is the Presidential Suite at Himalaya Villas & Resorts, which features a private terrace (hot tub) — the mountain equivalent of a private pool, operating at 40°C year-round.",
-  heroImage: article125Hero,
-
-  blocks: [
-    {
-      type: "callout-qa",
-      question: "Is there a private pool villa near Islamabad?",
-      answer:
-        "Private pool villas in the traditional sense (outdoor swimming pool) are uncommon in the Bhurban hills due to the mountain climate — outdoor pools are impractical for most of the year at 6,800 feet. The closest equivalent in Bhurban is the Presidential Suite at Himalaya Villas & Resorts, which features a private terrace (hot tub) — the mountain equivalent of a private pool, operating at 40°C year-round. PC Hotel Bhurban has a hotel swimming pool (shared facility). For a heated private water feature near Islamabad's mountains, the Presidential Suite is the specific available option.",
-    },
-
-    {
-      type: "section",
-      heading: "Private Pool Villa Near Islamabad — What's Available in Bhurban",
-      paragraphs: [
-        "Guests searching for a 'private pool villa near Islamabad' are typically looking for the private water feature experience — the ability to use a pool or hot tub without sharing it with other hotel guests. The mountain context of Bhurban makes a traditional outdoor swimming pool impractical for most of the year (water temperatures and climate make an unheated pool unusable October-May). The heated in the Presidential Suite addresses this need in the mountain context.",
-      ],
-      image: {
-        src: article125Villa,
-        alt: "Private Pool Villa Near Islamabad",
-      },
-    },
-
-    {
-      type: "facts",
-      heading: "The Presidential Suite — The Mountain Pool Equivalent",
-      items: [
-        {
-          label: "Feature",
-          value: "Private terrace — exclusive to the Presidential Suite occupants",
-        },
-        {
-          label: "Temperature",
-          value: "40°C year-round — heated and fully operational in all seasons including winter",
-        },
-        {
-          label: "Position",
-          value: "On the Presidential Suite's private terrace, with 270-degree mountain views",
-        },
-        {
-          label: "Exclusivity",
-          value: "No other guests share the — it belongs to the suite occupants for the duration of the booking",
-        },
-        {
-          label: "Rate",
-          value: "PKR 65,000-70,000 per night",
-        },
-      ],
-    },
-
-    {
-      type: "section",
-      heading: "The Experience by Season",
-      paragraphs: [
-        "The in winter conditions (January-February, -2°C to 5°C air temperature) is the most dramatic version of the experience — 40°C water against mountain winter air, snow possibly on the terrace, the cedar forest white around the property. This combination is what the Presidential Suite is most known for in guest reviews and social media posts from the property.",
-        "In summer (June-August, 18-26°C air temperature), the functions as a warm evening amenity — pleasant rather than dramatically contrasted. The most requested season for the experience is autumn (October, 10-18°C) and winter (December-February), when the temperature differential creates the most compelling experience.",
-      ],
-      image: {
-        src: article125View,
-        alt: "The Experience by Season",
-      },
-    },
-
-    {
-      type: "section",
-      heading: "PC Hotel Bhurban — Hotel Pool",
-      paragraphs: [
-        "Pearl Continental Hotel Bhurban (0.5km from Himalaya Villas) has a hotel swimming pool. This is a shared facility — available to all hotel guests. For guests who specifically want a shared hotel pool rather than a private hot tub, PC Hotel Bhurban is the correct option. The pool is typically operational in the summer months; check with the hotel for seasonal availability.",
-      ],
-      image: {
-        src: article125Villa,
-        alt: "PC Hotel Bhurban — Hotel Pool",
-      },
-    },
-
-    {
-      type: "section",
-      heading: "The Private Water Feature in Context",
-      paragraphs: [
-        "For guests who want a private water feature near Islamabad in a mountain setting, the Presidential Suite at Himalaya Villas is the specific available product — the only private heated water feature on the Bhurban road. The combination of the private terrace, the 270-degree mountain view, the cedar forest surrounding the property, and the 40°C water makes the experience at Himalaya Villas qualitatively distinct from any hotel pool setting.",
-      ],
-      image: {
-        src: article125View,
-        alt: "The Private Water Feature in Context",
-      },
-    },
-
-    {
-      type: "faqs",
-      heading: "Frequently Asked Questions",
-      items: [
-        {
-          q: "Is there a swimming pool at Himalaya Villas?",
-          a: "No outdoor swimming pool. The Presidential Suite has a private terrace (40°C). PC Hotel Bhurban, 0.5km away, has a hotel swimming pool (shared).",
-        },
-        {
-          q: "Can I use the at night?",
-          a: "Yes. The Presidential Suite's private terrace is accessible at any time of the day or night for suite occupants. The most popular usage time is evening and night — the combination of warm water and mountain night sky above is the experience that guests photograph and describe most.",
-        },
-      ],
-    },
-
-    {
-      type: "cta",
-      eyebrow: "How to Book",
-      heading: "Book the Presidential Suite Villa ",
-      text: "Contact us to book your private villa.",
-      buttonLabel: "Book Your Stay",
-      buttonHref: "https://wa.me/923045679000",
-      footnote: "Direct bookings receive the best available rate.",
-    },
-
-    {
-      type: "related",
-      heading: "📎 Explore More",
-      items: [
-        { href: "/villa-with-bhurban", label: "Full Presidential Suite guide" },
-        { href: "/romantic-hotels-murree", label: "Romantic villa guide" },
-        { href: "/luxury-villa-bhurban-murree", label: "Estate overview" },
-        { href: "/villas", label: "Browse all villa options" },
       ],
     },
   ],
@@ -19581,7 +16666,6 @@ export const article126: Article = {
         { href: "/ayubia-national-park-from-bhurban", label: "Pipeline Track for school ecology trips" },
         { href: "/hiking-near-murree", label: "Trail guide for school groups" },
         { href: "/things-to-do-in-murree", label: "Full activity guide" },
-        { href: "/villa-for-30-guests-bhurban", label: "Full estate for large groups" },
       ],
     },
   ],
@@ -19717,139 +16801,6 @@ export const article127: Article = {
 };
 
 // ============================================
-// GUEST POST 128 - Women's Professional Retreats in Pakistan — What the Right Environment Delivers
-// ============================================
-
-export const article128: Article = {
-  slug: "womens-professional-retreats-pakistan",
-  title: "Women's Professional Retreats in Pakistan — What the Right Environment Delivers",
-  metaDescription:
-    "women's professional retreat pakistan, women leaders bhurban, female professional getaway islamabad, women's retreat mountain pakistan, women in business retreat",
-  keywords:
-    "women's professional retreat pakistan, women leaders bhurban, female professional getaway islamabad, women's retreat mountain pakistan, women in business retreat",
-  eyebrow: "Backlink Guest Post | Women in Business / Professional Development | ~1,100 words",
-  h1: "Women's Professional Retreats in Pakistan — What the Right Environment Delivers",
-  heroTagline:
-    "The women's professional retreat in Pakistan is a category that exists in demand without adequate supply of appropriate venues. The demand is clear: Pakistan's growing cohort of women in senior professional roles — corporate, government, development sector, entrepreneurship — has well-developed appetite for the kind of reflective, connective, development-focused time that a retreat format provides.",
-  heroImage: article166Hero,
-
-  blocks: [
-    {
-      type: "callout-qa",
-      question: "Why is the private mountain estate model particularly suitable for women's professional retreats in Pakistan?",
-      answer:
-        "The private estate provides complete privacy — no other guests present, eliminating the shared hotel environment and the external male gaze that Pakistani women navigate in public hospitality spaces. Safety is enhanced — a secured private estate with no external visitors unless invited. The residential model changes the retreat dynamic fundamentally — conversations continue past the scheduled programme, in the cedar garden at evening, over breakfast on the private terrace. The mountain environment delivers documented therapeutic value — cortisol reduction, improved mood — available to all participants regardless of gender.",
-    },
-
-    {
-      type: "section",
-      heading: "Women's Professional Retreats in Pakistan — What the Right Environment Delivers",
-      paragraphs: [
-        "The women's professional retreat in Pakistan is a category that exists in demand without adequate supply of appropriate venues. The demand is clear: Pakistan's growing cohort of women in senior professional roles — corporate, government, development sector, entrepreneurship — has well-developed appetite for the kind of reflective, connective, development-focused time that a retreat format provides. The supply challenge is finding environments that are simultaneously safe, private, professionally appropriate, and genuinely restorative.",
-        "The hotel ballroom, the conference centre, the city restaurant private dining room — these venues are functional but they are not restorative. The private mountain estate is a different proposition.",
-      ],
-    
-    },
-
-    {
-      type: "facts",
-      heading: "Why the Private Estate Model Matters for Women's Groups",
-      items: [
-        {
-          label: "Privacy",
-          value: "A private estate where no other guests are present eliminates the ambient public hotel environment — the shared lobby, the strangers in the corridor, the external male gaze that Pakistani women navigate constantly in public hospitality spaces.",
-        },
-        {
-          label: "Safety",
-          value: "The Himalaya Villas property is a secured private estate. No external visitors unless invited. No public restaurant or lobby open to the general public. The group owns the space for the duration.",
-        },
-        {
-          label: "The residential model",
-          value: "Participants sleep at the venue rather than commuting to it. This changes the dynamic of the retreat fundamentally — the conversations continue past the scheduled programme, in the cedar garden in the evening, over breakfast on the private terrace. The retreat becomes a genuine shared residential experience rather than a daytime programme.",
-        },
-        {
-          label: "The mountain environment",
-          value: "The specific therapeutic value of the mountain forest environment — documented reductions in cortisol and blood pressure, improved mood — is available equally to all participants regardless of gender.",
-        },
-      ],
-    },
-
-    {
-      type: "section",
-      heading: "What a Women's Professional Retreat at Bhurban Provides",
-      paragraphs: [
-        "Himalaya Villas & Resorts in Bhurban, 47km from Islamabad, provides the following for a women's professional group:",
-        "12 private villas across the estate — accommodating groups of 10-50 depending on configuration",
-        "A private cedar garden and fire pit for evening gathering",
-        "Dining pavilion for structured morning sessions (AV available)",
-        "Forest walks from the property gate for morning movement",
-        "In-villa dining at the group's schedule — not a public restaurant",
-        "Full estate buyout option for groups requiring complete property exclusivity",
-      ],
-    
-    },
-
-    {
-      type: "facts",
-      heading: "Programme Structures That Work",
-      items: [
-        {
-          label: "The Leadership Development Retreat",
-          value: "A 2-night programme for 15-25 senior women. Morning facilitated leadership development sessions; afternoon personal time or group activities (forest walks, Patriata Chairlift); evening gathering at the cedar garden fire pit. The programme is 40% structured and 60% unstructured — the unstructured time is where the most valuable peer connections form.",
-        },
-        {
-          label: "The Women Entrepreneurs Network Gathering",
-          value: "A 2-night gathering of women entrepreneurs for peer mentorship, business development discussion, and relationship building. Less formal programme; more emphasis on the shared residential experience. The private dining at the cedar garden table — 20 women around a single table in a mountain forest — creates the intimacy that a restaurant private dining room approaches but cannot match.",
-        },
-        {
-          label: "The Wellbeing Retreat",
-          value: "A restorative retreat for women professionals who have hit occupational burnout markers. Minimal structured programme — the environment itself is the intervention. Forest walks, silent mornings on the private terrace, good food at the group's own pace. The mountain air, the cedar forest, and the absence of the city's ambient demands do the work.",
-        },
-      ],
-    },
-
-    {
-      type: "facts",
-      heading: "Practical Information",
-      items: [
-        {
-          label: "Group size",
-          value: "10-40 for standard multi-villa configuration; up to 60 for full estate events.",
-        },
-        {
-          label: "Booking",
-          value: "WhatsApp +92 304 567 9000. Women's professional groups are a regular category of booking at the property.",
-        },
-        {
-          label: "Privacy",
-          value: "Full estate buyout guarantees that no other guests are on the property for the duration. Strongly recommended for women's groups who want complete environmental privacy.",
-        },
-      ],
-    },
-
-    {
-      type: "cta",
-      eyebrow: "Himalaya Villas & Resorts — Women's Professional Retreats",
-      heading: "Private cedar estate, Bhurban, 45 minutes from Islamabad. Full estate buyout available.",
-      text: "Book your women's professional retreat.",
-      buttonLabel: "Visit himalayavillas.com",
-      buttonHref: "https://himalayavillas.com",
-      footnote: "WhatsApp: +92 304 567 9000",
-    },
-
-    {
-      type: "related",
-      heading: "📎 Explore More",
-      items: [
-        { href: "/corporate-retreat-near-islamabad", label: "Corporate retreat guide" },
-        { href: "/villa-for-30-guests-bhurban", label: "Full estate buyout" },
-        { href: "/villas", label: "Browse villa options" },
-      ],
-    },
-  ],
-};
-
-// ============================================
 // GUEST POST 129 - Pakistan's Mountain Property Market — What Bhurban Tells Us About the Future
 // ============================================
 
@@ -19953,7 +16904,6 @@ export const article129: Article = {
       heading: "📎 Explore More",
       items: [
         { href: "/luxury-villa-bhurban-murree", label: "Estate overview" },
-        { href: "/bhurban-accommodation-guide", label: "Accommodation market guide" },
         { href: "/villas", label: "Browse villa options" },
       ],
     },
@@ -20046,7 +16996,6 @@ export const article130: Article = {
       type: "related",
       heading: "📎 Explore More",
       items: [
-        { href: "/villa-for-20-guests-bhurban", label: "Group accommodation" },
         { href: "/villas", label: "Browse villa options" },
         { href: "/corporate-retreat-near-islamabad", label: "Retreat guide" },
       ],
@@ -20272,7 +17221,6 @@ export const article132: Article = {
       items: [
         { href: "/corporate-retreat-near-islamabad", label: "Corporate retreat guide" },
         { href: "/corporate-team-building-bhurban", label: "Team building guide" },
-        { href: "/villa-for-20-guests-bhurban", label: "Group accommodation" },
       ],
     },
   ],
@@ -20483,7 +17431,6 @@ export const article134: Article = {
         { href: "/wedding-venues-bhurban-murree", label: "Full wedding venue guide" },
         { href: "/walima-venue-bhurban", label: "Walima guide" },
         { href: "/nikkah-venue-bhurban", label: "Nikkah ceremony guide" },
-        { href: "/villa-for-30-guests-bhurban", label: "Full estate buyout" },
       ],
     },
   ],
@@ -20578,7 +17525,6 @@ export const article135: Article = {
       heading: "📎 Explore More",
       items: [
         { href: "/in-villa-dining-bhurban", label: "Full in-villa dining guide" },
-        { href: "/restaurants-near-bhurban-murree", label: "Dining guide" },
         { href: "/galyat-produce-murree-hills", label: "Local produce guide" },
         { href: "/islamabad-food-scene-bhurban-dining", label: "Islamabad food scene guide" },
       ],
@@ -21143,7 +18089,6 @@ export const article139: Article = {
       type: "related",
       heading: "📎 Explore More",
       items: [
-        { href: "/villa-for-30-guests-bhurban", label: "Full estate capacity guide" },
         { href: "/luxury-villa-bhurban-murree", label: "Estate overview" },
         { href: "/corporate-retreat-near-islamabad", label: "Corporate retreat model" },
       ],
@@ -21300,7 +18245,6 @@ export const article140: Article = {
       heading: "📎 Explore More",
       items: [
         { href: "/karachi-to-murree-guide", label: "Full Karachi route guide" },
-        { href: "/villa-near-islamabad-airport", label: "Airport to Bhurban" },
         { href: "/murree-in-summer", label: "Summer temperature guide" },
         { href: "/villas", label: "Browse villa options" },
       ],
@@ -21569,7 +18513,6 @@ export const article142: Article = {
       heading: "📎 Explore More",
       items: [
         { href: "/family-villa-bhurban-murree", label: "Family villa overview" },
-        { href: "/villa-for-6-guests-bhurban", label: "6-guest Garden Villa configuration" },
         { href: "/in-villa-dining-bhurban", label: "Private garden dining guide" },
         { href: "/villas", label: "Full villa portfolio" },
       ],
@@ -21709,7 +18652,6 @@ export const article143: Article = {
       heading: "📎 Explore More",
       items: [
         { href: "/eid-holiday-package-bhurban-murree", label: "Full Eid package guide (both Eids)" },
-        { href: "/villa-for-30-guests-bhurban", label: "Full estate for large Eid gatherings" },
         { href: "/murree-in-autumn", label: "Autumn Eid season guide" },
         { href: "/villas", label: "Browse Eid villa options" },
       ],
@@ -21827,9 +18769,6 @@ export const article144: Article = {
       type: "related",
       heading: "📎 Explore More",
       items: [
-        { href: "/romantic-hotels-murree", label: "Full couples guide" },
-        { href: "/villa-with-bhurban", label: "Presidential Suite guide" },
-        { href: "/romantic-hotels-murree", label: "Honeymoon guide" },
         { href: "/murree-in-january", label: "Winter romantic experience" },
       ],
     },
@@ -21975,196 +18914,6 @@ export const article145: Article = {
         { href: "/booking-villa-bhurban-faq", label: "Booking FAQ" },
         { href: "/bhurban-altitude-climate-guide", label: "Climate data reference" },
         { href: "/things-to-do-in-murree", label: "Activity guide" },
-      ],
-    },
-  ],
-};
-
-// ============================================
-// ARTICLE 146 - Bhurban Complete Accommodation Guide 2026 — Every Option Compared
-// ============================================
-
-export const article146: Article = {
-  slug: "bhurban-accommodation-guide",
-  title: "Bhurban Complete Accommodation Guide 2026 — Every Option Compared",
-  metaDescription:
-    "bhurban accommodation, where to stay in bhurban, bhurban hotels, bhurban murree accommodation guide, best place to stay bhurban",
-  keywords:
-    "bhurban accommodation, where to stay in bhurban, bhurban hotels, bhurban murree accommodation guide, best place to stay bhurban",
-  eyebrow: "Template A — Accommodation Hub | Cluster 1: Hotels & Accommodation",
-  h1: "Bhurban Complete Accommodation Guide 2026 — Every Option Compared",
-  heroTagline:
-    "The top accommodation options in Bhurban are: Himalaya Villas & Resorts (private villa estate, 12 villas, exclusive use, PKR 39,000-70,000/night, WhatsApp +92 304 567 9000) and Pearl Continental Hotel Bhurban (5-star chain hotel, 162 rooms, PKR 35,000-75,000/night, pchotels.com). Below these: various smaller guesthouses and OTA-listed cottages at PKR 10,000-25,000/night.",
-  heroImage: article146Hero,
-
-  blocks: [
-    {
-      type: "callout-qa",
-      question: "What are the best places to stay in Bhurban Murree?",
-      answer:
-        "The top accommodation options in Bhurban are: Himalaya Villas & Resorts (private villa estate, 12 villas, exclusive use, PKR 39,000-70,000/night, WhatsApp +92 304 567 9000) and Pearl Continental Hotel Bhurban (5-star chain hotel, 162 rooms, PKR 35,000-75,000/night, pchotels.com). Below these: various smaller guesthouses and OTA-listed cottages at PKR 10,000-25,000/night. For premium private accommodation, Himalaya Villas. For 5-star chain accommodation, PC Hotel. For budget options, the Bhurban guesthouse market.",
-    },
-
-    {
-      type: "section",
-      heading: "Bhurban Accommodation Guide 2026 — Every Option Compared",
-      paragraphs: [
-        "Bhurban's accommodation market is smaller and more clearly differentiated than Murree Mall Road's wider range. The options tier clearly into three levels: the premium tier (two properties, each the benchmark of their respective models), the mid-range tier (several guesthouses and cottages), and the budget tier (basic local accommodation). This guide covers all tiers.",
-      ],
-      image: {
-        src: article146Villa,
-        alt: "Bhurban Accommodation Guide 2026",
-      },
-    },
-
-    {
-      type: "facts",
-      heading: "Tier 1: Premium Accommodation",
-      items: [
-        {
-          label: "Himalaya Villas & Resorts — Private Villa Estate",
-          value: "Type: Private villa estate — exclusive use model | Villas: 12 individually designed villas, PKR 39,000-70,000/night | Model: Exclusive use — when your group books, no other guests share the estate's spaces | Standout features: Presidential Suite private terrace; Himalayan Penthouse panoramic balcony; cedar garden fire pit; in-villa dining at the group's schedule | Best for: Families wanting private outdoor space, couples seeking exclusive romantic stays, corporate groups, wedding parties, diaspora visitors | Full estate buyout: Available — all 12 villas for one group, for weddings, events, and large family gatherings | Booking: WhatsApp +92 304 567 9000 (direct, best rate) or Airbnb/Booking.com (individual villas)",
-        },
-        {
-          label: "Pearl Continental Hotel Bhurban — 5-Star Chain",
-          value: "Type: International chain hotel — Marriott International (PC Hotels brand) | Rooms: 162 rooms, PKR 35,000-75,000/room/night | Model: Hotel — shared facilities (lobby, restaurants, pool, conference rooms) | Standout features: International brand consistency; Marriott Bonvoy points; multiple dining outlets; conference and event facilities; swimming pool | Best for: Corporate travellers, Marriott loyalty members, solo travellers, guests wanting hotel services | Booking: pchotels.com, Booking.com, Marriott.com",
-        },
-      ],
-    },
-
-    {
-      type: "section",
-      heading: "Tier 2: Mid-Range Guesthouses and Cottages",
-      paragraphs: [
-        "Bhurban has several smaller guesthouses and cottage-style properties listed on Airbnb and Booking.com, typically priced PKR 10,000-25,000 per night. These properties offer:",
-        "Lower nightly rates than the premium tier",
-        "Variable quality — from comfortable to basic",
-        "Less outdoor space than Himalaya Villas; shared facilities typical",
-        "Suitable for budget-conscious travellers and guests whose priority is rate over exclusivity",
-        "Specific properties: Chinar Bhurban (among the more established mid-range options, ~1,600 monthly searches indicating name recognition) and various unnamed cottages and guesthouses in the Bhurban residential area.",
-      ],
-      image: {
-        src: article146View,
-        alt: "Tier 2: Mid-Range Guesthouses and Cottages",
-      },
-    },
-
-    {
-      type: "section",
-      heading: "Tier 3: Budget Accommodation",
-      paragraphs: [
-        "Budget accommodation in Bhurban itself is limited — the township is primarily residential. The main budget accommodation options in the broader area are in Murree town (Mall Road guesthouses, PKR 5,000-15,000/night) rather than Bhurban specifically. Guests with budget constraints staying in Bhurban typically use mid-range guesthouses rather than budget accommodation.",
-      ],
-      image: {
-        src: article146Villa,
-        alt: "Tier 3: Budget Accommodation",
-      },
-    },
-
-    {
-      type: "comparison",
-      heading: "Accommodation Decision Framework",
-      columns: ["Traveller Type", "Recommended Accommodation", "Why"],
-      rows: [
-        {
-          feature: "Family wanting private outdoor space",
-          a: "Himalaya Villas — Garden Villa Retreat or Alpine Family Lodge",
-          b: "Private garden/terrace; no shared grounds with strangers",
-        },
-        {
-          feature: "Couple — romantic stay",
-          a: "Himalaya Villas — Presidential Suite or Himalayan Penthouse",
-          b: "Private terrace; exclusive villa; mountain views",
-        },
-        {
-          feature: "Business traveller",
-          a: "PC Hotel Bhurban",
-          b: "Marriott standard; Bonvoy points; hotel services",
-        },
-        {
-          feature: "Group event (wedding, corporate)",
-          a: "Himalaya Villas — full estate buyout",
-          b: "Only full-property exclusive option in Bhurban",
-        },
-        {
-          feature: "Solo or budget traveller",
-          a: "Bhurban guesthouses or Murree Mall Road hotels",
-          b: "More appropriate rate for solo occupancy",
-        },
-        {
-          feature: "First-time Bhurban visitor, max quality",
-          a: "Himalaya Villas — any villa",
-          b: "The private estate experience is the defining Bhurban premium",
-        },
-      ],
-    },
-
-    {
-      type: "comparison",
-      heading: "Booking Bhurban Accommodation — Platform Comparison",
-      columns: ["Platform", "Best For", "Notes"],
-      rows: [
-        {
-          feature: "WhatsApp (direct)",
-          a: "Himalaya Villas — all bookings, best rate",
-          b: "Fastest response; full customisation; best rate; required for events/estate buyout",
-        },
-        {
-          feature: "pchotels.com",
-          a: "PC Hotel Bhurban — official site",
-          b: "Direct booking for PC Hotel; no commission markup",
-        },
-        {
-          feature: "Booking.com",
-          a: "Both properties for OTA-comfort guests",
-          b: "Standard OTA booking flow; may have higher rates than direct",
-        },
-        {
-          feature: "Airbnb",
-          a: "Himalaya Villas individual villas",
-          b: "Suitable for single-villa bookings; OTA payment protection",
-        },
-        {
-          feature: "Marriott.com",
-          a: "PC Hotel Bhurban — Bonvoy members",
-          b: "Required for Bonvoy credit and member rates",
-        },
-      ],
-    },
-
-    {
-      type: "faqs",
-      heading: "Frequently Asked Questions",
-      items: [
-        {
-          q: "Is PC Hotel Bhurban better than Himalaya Villas?",
-          a: "Neither is objectively 'better' — they serve different models. PC Hotel Bhurban is better for: solo travellers, business guests wanting Marriott brand, and guests who prefer hotel services (multiple restaurants, pool, 24-hour hotel services). Himalaya Villas is better for: families, groups, couples wanting exclusive private outdoor space, events, and weddings. The right choice depends entirely on the type of stay you're planning.",
-        },
-        {
-          q: "Can I walk between Himalaya Villas and PC Hotel Bhurban?",
-          a: "Yes — the two properties are 0.5km apart on the same road. A 5-7 minute walk connects them. Some Himalaya Villas guests use PC Hotel's restaurant facilities for a change from in-villa dining; some PC Hotel guests visit the Himalaya Villas cedar garden for an event or walk.",
-        },
-      ],
-    },
-
-    {
-      type: "cta",
-      eyebrow: "How to Book",
-      heading: "Book the Best Bhurban Accommodation for Your Stay ",
-      text: "Contact us to book your Bhurban accommodation.",
-      buttonLabel: "Book Your Stay",
-      buttonHref: "https://wa.me/923045679000",
-      footnote: "Direct bookings receive the best available rate.",
-    },
-
-    {
-      type: "related",
-      heading: "📎 Explore More",
-      items: [
-        { href: "/hotels-in-bhurban-murree", label: "Bhurban hotels overview" },
-        { href: "/bhurban-private-estate-vs-pc-hotel", label: "Detailed HV vs PC comparison" },
-        { href: "/luxury-hotels-in-murree", label: "Full Murree accommodation guide" },
-        { href: "/villas", label: "Browse Himalaya Villas" },
       ],
     },
   ],
@@ -22397,7 +19146,6 @@ export const article148: Article = {
       heading: "📎 Explore More",
       items: [
         { href: "/murree-bhurban-diaspora-guide", label: "Full diaspora visitor guide" },
-        { href: "/villa-near-islamabad-airport", label: "Airport-to-Bhurban guide" },
         { href: "/bhurban-canadian-pakistani-guide", label: "Canadian-Pakistani guide" },
       ],
     },
@@ -22613,7 +19361,6 @@ export const article150: Article = {
       items: [
         { href: "/corporate-retreat-near-islamabad", label: "Full corporate retreat guide" },
         { href: "/corporate-team-building-bhurban", label: "Team building guide" },
-        { href: "/villa-for-20-guests-bhurban", label: "Group accommodation" },
       ],
     },
   ],
@@ -22832,7 +19579,6 @@ export const article152: Article = {
       heading: "📎 Explore More",
       items: [
         { href: "/events", label: "Events at Himalaya Villas" },
-        { href: "/villa-for-20-guests-bhurban", label: "Group accommodation" },
         { href: "/bhurban-photography-guide", label: "Photography guide" },
       ],
     },
@@ -23150,8 +19896,6 @@ export const article155: Article = {
       type: "related",
       heading: "📎 Explore More",
       items: [
-        { href: "/luxury-hotels-in-murree", label: "Full Murree accommodation guide" },
-        { href: "/bhurban-accommodation-guide", label: "Bhurban accommodation guide" },
         { href: "/villas", label: "Browse villa options" },
       ],
     },
@@ -23253,7 +19997,6 @@ export const article156: Article = {
       items: [
         { href: "/villas", label: "Browse villa options" },
         { href: "/luxury-villa-bhurban-murree", label: "Estate overview" },
-        { href: "/romantic-hotels-murree", label: "Couples guide" },
       ],
     },
   ],
@@ -23417,112 +20160,6 @@ export const article157: Article = {
 };
 
 // ============================================
-// ARTICLE 158 - Villa for 2 Guests Bhurban — The Solo Couple Stay
-// ============================================
-
-export const article158: Article = {
-  slug: "villa-for-2-guests-bhurban",
-  title: "Villa for 2 Guests Bhurban — The Solo Couple Stay",
-  metaDescription:
-    "villa for 2 guests bhurban, couple villa bhurban, private villa 2 people bhurban murree, romantic villa 2 person bhurban",
-  keywords:
-    "villa for 2 guests bhurban, couple villa bhurban, private villa 2 people bhurban murree, romantic villa 2 person bhurban",
-  eyebrow: "Template C — pSEO Capacity Template | Cluster 4: Private Villas",
-  h1: "Villa for 2 Guests Bhurban — The Solo Couple Stay",
-  heroTagline:
-    "For a couple or pair of guests in Bhurban, Himalaya Villas & Resorts recommends: the Serene Valley Cabin (PKR 39,000-45,000/night, ground floor, cedar forest view, private outdoor access — the most intimate and affordable), the Sunset Suite (PKR 50,000-55,000/night, west-facing sunset views), or the Presidential Suite (PKR 65,000-70,000/night, private terrace, 270° mountain view — the premium romantic option).",
-  heroImage: article158Hero,
-
-  blocks: [
-    {
-      type: "callout-qa",
-      question: "What is the best private villa for 2 guests in Bhurban Murree?",
-      answer:
-        "For a couple or pair of guests in Bhurban, Himalaya Villas & Resorts recommends: the Serene Valley Cabin (PKR 39,000-45,000/night, ground floor, cedar forest view, private outdoor access — the most intimate and affordable), the Sunset Suite (PKR 50,000-55,000/night, west-facing sunset views), or the Presidential Suite (PKR 65,000-70,000/night, private terrace, 270° mountain view — the premium romantic option). All are exclusive-use villas — no other guests share the property.",
-    },
-
-    {
-      type: "section",
-      heading: "Private Villa for 2 Guests in Bhurban Murree — The Couples Stay",
-      paragraphs: [
-        "Two guests is the most straightforward private villa booking: one couple, one villa, the full exclusive-use experience in the configuration that suits the stay's character. The choice between the three primary 2-guest villas at Himalaya Villas comes down to what the couple is optimising for.",
-      ],
-      image: {
-        src: article158Villa,
-        alt: "Private Villa for 2 Guests in Bhurban",
-      },
-    },
-
-    {
-      type: "facts",
-      heading: "The Three Options for 2 Guests",
-      items: [
-        {
-          label: "Serene Valley Cabin — Most Intimate, Most Affordable",
-          value: "Rate: PKR 39,000-45,000/night | Character: Ground-floor cedar forest immersion — the forest at eye level through floor-to-ceiling windows | Best for: Couples who want the forest experience over the mountain panorama; the most cosy and contained villa on the estate",
-        },
-        {
-          label: "Sunset Suite — The Evening Villa",
-          value: "Rate: PKR 50,000-55,000/night | Character: West-facing mountain view — the full sunset light sequence from late afternoon through dusk | Best for: Couples who want a mountain view with evening emphasis; the best sunset experience at the most accessible mid-range rate",
-        },
-        {
-          label: "Presidential Suite — The Flagship Romantic Villa",
-          value: "Rate: PKR 65,000-70,000/night | Character: Private terrace at 40°C, 270° mountain view, two bedrooms | Best for: Couples who want the full private luxury mountain experience; anniversary, honeymoon, or special occasion stays",
-        },
-      ],
-    },
-
-    {
-      type: "section",
-      heading: "The Exclusive-Use Advantage for 2 Guests",
-      paragraphs: [
-        "Even at 2 guests, the Himalaya Villas exclusive-use model means no other guests share the villa's outdoor spaces. The private terrace belongs to the couple. The cedar garden fire pit (shared estate space) is available for their use — and if the estate has no other simultaneous bookings, is effectively private to them. This is the structural difference between a Himalaya Villas villa and any hotel room regardless of star rating.",
-      ],
-      image: {
-        src: article158View,
-        alt: "The Exclusive-Use Advantage for 2 Guests",
-      },
-    },
-
-    {
-      type: "faqs",
-      heading: "Frequently Asked Questions",
-      items: [
-        {
-          q: "Is a villa for 2 at Himalaya Villas good value?",
-          a: "The rate (PKR 39,000-70,000/villa/night) is for the full villa regardless of occupancy. For 2 guests, this is higher per-person than a hotel room — but provides an exclusive villa, private terrace, and all the advantages of the private estate model. For anniversary and honeymoon stays where privacy and exclusivity are the priority, the value is clear.",
-        },
-        {
-          q: "Can I book just one bedroom in a multi-bedroom villa for a couple?",
-          a: "No. Villas at Himalaya Villas are booked on exclusive-use terms — the full villa is booked regardless of which rooms are used. A couple booking the Presidential Suite (2 bedrooms) uses both bedrooms as they choose within the villa.",
-        },
-      ],
-    },
-
-    {
-      type: "cta",
-      eyebrow: "How to Book",
-      heading: "Book a Couple's Villa in Bhurban ",
-      text: "Contact us to book your couples villa.",
-      buttonLabel: "Book Your Stay",
-      buttonHref: "https://wa.me/923045679000",
-      footnote: "Direct bookings receive the best available rate.",
-    },
-
-    {
-      type: "related",
-      heading: "📎 Explore More",
-      items: [
-        { href: "/villa-with-bhurban", label: "Presidential Suite guide" },
-        { href: "/romantic-hotels-murree", label: "Full couples guide" },
-        { href: "/romantic-hotels-murree", label: "Honeymoon guide" },
-        { href: "/villas", label: "Full villa portfolio" },
-      ],
-    },
-  ],
-};
-
-// ============================================
 // ARTICLE 159 - Bhurban for Corporate AGM and Annual General Meeting — Venue Guide
 // ============================================
 
@@ -23635,7 +20272,6 @@ export const article159: Article = {
         { href: "/corporate-retreat-near-islamabad", label: "Full corporate retreat guide" },
         { href: "/corporate-team-building-bhurban", label: "Team building guide" },
         { href: "/corporate-annual-dinner-venue-bhurban", label: "Annual dinner venue" },
-        { href: "/villa-for-30-guests-bhurban", label: "Full estate for large groups" },
       ],
     },
   ],
@@ -23923,7 +20559,6 @@ export const article161: Article = {
       items: [
         { href: "/eid-holiday-package-bhurban-murree", label: "Eid ul Fitr guide" },
         { href: "/eid-ul-adha-bhurban", label: "Eid ul Adha guide" },
-        { href: "/villa-for-30-guests-bhurban", label: "Full estate for large Eid gatherings" },
         { href: "/murree-in-spring", label: "Spring Eid season" },
       ],
     },
@@ -24028,8 +20663,6 @@ export const article162: Article = {
       type: "related",
       heading: "📎 Explore More",
       items: [
-        { href: "/villa-with-bhurban", label: "Presidential Suite terrace for spa treatment" },
-        { href: "/romantic-hotels-murree", label: "Romantic couples guide" },
         { href: "/corporate-wellness-retreat-bhurban", label: "Wellness retreat guide" },
         { href: "/luxury-villa-bhurban-murree", label: "Estate overview" },
       ],
@@ -24274,7 +20907,6 @@ export const article164: Article = {
       items: [
         { href: "/family-villa-bhurban-murree", label: "Family villa overview" },
         { href: "/bhurban-for-elderly-guests", label: "Accessibility guide" },
-        { href: "/villa-for-8-guests-bhurban", label: "8-guest configurations" },
         { href: "/villas", label: "Full villa portfolio" },
       ],
     },
@@ -24701,7 +21333,6 @@ export const article167: Article = {
       heading: "📎 Explore More",
       items: [
         { href: "/in-villa-dining-bhurban", label: "Full in-villa dining guide" },
-        { href: "/restaurants-near-bhurban-murree", label: "Dining guide" },
         { href: "/bhurban-local-market-guide", label: "Local produce guide" },
       ],
     },
@@ -24799,7 +21430,6 @@ export const article168: Article = {
       heading: "📎 Explore More",
       items: [
         { href: "/things-to-do-in-murree", label: "Weekend activity guide" },
-        { href: "/romantic-hotels-murree", label: "Couples weekend guide" },
         { href: "/villas", label: "Browse villa options" },
       ],
     },
@@ -25030,7 +21660,6 @@ export const article170: Article = {
       items: [
         { href: "/murree-bhurban-diaspora-guide", label: "Full diaspora visitor guide" },
         { href: "/bhurban-canadian-pakistani-guide", label: "Canadian-Pakistani guide" },
-        { href: "/villa-near-islamabad-airport", label: "Airport-to-Bhurban guide" },
       ],
     },
   ],
@@ -25132,7 +21761,6 @@ export const article171: Article = {
       items: [
         { href: "/corporate-retreat-near-islamabad", label: "Full corporate retreat guide" },
         { href: "/corporate-wellness-retreat-bhurban", label: "Wellness retreat guide" },
-        { href: "/villa-for-20-guests-bhurban", label: "Group accommodation" },
       ],
     },
   ],
@@ -25243,7 +21871,6 @@ export const article172: Article = {
       type: "related",
       heading: "📎 Explore More",
       items: [
-        { href: "/villa-near-islamabad-airport", label: "Airport-to-Bhurban guide" },
         { href: "/things-to-do-in-murree", label: "Activity guide" },
         { href: "/villas", label: "Browse villa options" },
       ],
@@ -25449,7 +22076,6 @@ export const article174: Article = {
       items: [
         { href: "/in-villa-dining-bhurban", label: "In-villa dining guide" },
         { href: "/bhurban-local-market-guide", label: "Local market guide" },
-        { href: "/restaurants-near-bhurban-murree", label: "Dining guide" },
       ],
     },
   ],
@@ -25828,161 +22454,6 @@ export const article177: Article = {
         { href: "/murree-in-june", label: "June guide" },
         { href: "/best-time-to-visit-murree", label: "Full seasonal comparison" },
         { href: "/ayubia-national-park-from-bhurban", label: "May birding at Ayubia" },
-      ],
-    },
-  ],
-};
-
-// ============================================
-// ARTICLE 178 - Remote Work from Bhurban — Villa with Workspace Near Islamabad
-// ============================================
-
-export const article178: Article = {
-  slug: "remote-work-villa-bhurban",
-  title: "Remote Work from Bhurban — Villa with Workspace Near Islamabad",
-  metaDescription:
-    "remote work bhurban, work from bhurban villa, digital nomad bhurban murree, villa workspace near islamabad, remote work mountain pakistan",
-  keywords:
-    "remote work bhurban, work from bhurban villa, digital nomad bhurban murree, villa workspace near islamabad, remote work mountain pakistan",
-  eyebrow: "Template C — Commercial Lifestyle Spoke | Cluster 9: Packages & Pricing",
-  h1: "Remote Work from Bhurban — Villa with Workspace Near Islamabad",
-  heroTagline:
-    "All villas at Himalaya Villas & Resorts have WiFi, and the villas' private living spaces are suitable for remote work. The Bhurban cedar estate model — private villa, no shared coworking space dynamics, in-villa dining at the worker's schedule — is particularly well-suited to professionals who want to combine productive remote work with a mountain environment.",
-  heroImage: article178Hero,
-
-  blocks: [
-    {
-      type: "callout-qa",
-      question: "Can I work remotely from a villa in Bhurban Murree?",
-      answer:
-        "Yes. All villas at Himalaya Villas & Resorts have WiFi, and the villas' private living spaces are suitable for remote work. The Bhurban cedar estate model — private villa, no shared coworking space dynamics, in-villa dining at the worker's schedule — is particularly well-suited to professionals who want to combine productive remote work with a mountain environment. Standard setup: morning work session (8am-1pm) in the villa or on the private terrace, afternoon activities, evening in the cedar garden. Best suited for 3-7 night stays for genuine working value.",
-    },
-
-    {
-      type: "section",
-      heading: "Remote Work from Bhurban — Private Mountain Villa with Workspace",
-      paragraphs: [
-        "Remote work from Bhurban is increasingly common among Islamabad's professional class — the combination of reliable WiFi, private villa workspace, and the specific cognitive benefits of a mountain forest environment makes the pattern attractive for professionals who have flexibility in where they work.",
-        "This is not the digital nomad hostel coworking model — it is the private estate work model: a villa that belongs to the worker for the duration, in-villa meals at the worker's schedule, the forest accessible from the front gate for decompression walks between sessions.",
-      ],
-      image: {
-        src: article178Villa,
-        alt: "Remote Work from Bhurban",
-      },
-    },
-
-    {
-      type: "facts",
-      heading: "The Remote Work Setup at Himalaya Villas",
-      items: [
-        {
-          label: "WiFi",
-          value: "Available throughout all 12 villas and the estate outdoor spaces.",
-        },
-        {
-          label: "Network quality",
-          value: "Suitable for video calls (Zoom, Teams, Google Meet), document work, and standard cloud applications. Not suitable for high-bandwidth data transfer tasks requiring server-speed connections.",
-        },
-        {
-          label: "Mobile backup",
-          value: "All major Pakistani networks (Jazz, Telenor, Zong) have coverage in Bhurban — a mobile hotspot backup is available if needed.",
-        },
-        {
-          label: "Workspace",
-          value: "The villa's dining table, private terrace table, or living area seating all serve as working surfaces. No dedicated office furniture, but villa spaces accommodate standard laptop work comfortably.",
-        },
-        {
-          label: "Calls",
-          value: "Private villa environment means video calls without shared-space background noise or privacy concerns.",
-        },
-      ],
-    },
-
-    {
-      type: "section",
-      heading: "The Productive Mountain Work Pattern",
-      paragraphs: [
-        "6:30am: dawn forest walk (30-45 minutes) — the most effective 'morning commute' alternative",
-        "7:30am: breakfast on the private terrace",
-        "8:00am-1:00pm: focused work block in the villa — the morning light through the cedar windows, forest sound ambient",
-        "1:00pm: lunch break — in-villa or walk to the estate garden",
-        "2:00pm-4:00pm: second work block or light activities (forest walk, terrace reading)",
-        "4:00pm onwards: activity time — chairlift, day trip, or estate evening",
-        "7:00pm onwards: fire pit, dinner, unstructured time",
-      ],
-      image: {
-        src: article178View,
-        alt: "The Productive Mountain Work Pattern",
-      },
-    },
-
-    {
-      type: "facts",
-      heading: "Best Villas for Remote Work",
-      items: [
-        {
-          label: "Himalayan Penthouse",
-          value: "The panoramic balcony provides the most inspiring outdoor working environment on the estate — the mountain view as the screen background rather than a city wall",
-        },
-        {
-          label: "Presidential Suite",
-          value: "The private terrace as an end-of-day reward creates the specific work-life separation that makes remote work sustainable",
-        },
-        {
-          label: "Serene Valley Cabin",
-          value: "The ground-floor position and forest-level windows create a study environment within the forest itself — recommended for writers and focused individual creative work",
-        },
-      ],
-    },
-
-    {
-      type: "section",
-      heading: "Who This Works For",
-      paragraphs: [
-        "Freelancers and consultants with flexible schedules who can structure work around activities",
-        "Employed professionals on approved work-from-anywhere arrangements",
-        "Couples or small groups where one partner works remotely while the other explores",
-        "Leaders who need thinking time — the mountain environment for strategic reflection, the WiFi for staying connected when required",
-      ],
-      image: {
-        src: article178Villa,
-        alt: "Who This Works For",
-      },
-    },
-
-    {
-      type: "faqs",
-      heading: "Frequently Asked Questions",
-      items: [
-        {
-          q: "Is the WiFi at Himalaya Villas fast enough for video calls?",
-          a: "Yes — the WiFi supports standard video conferencing (Zoom, Teams) reliably. For 4K video streaming or very large file transfers, mobile hotspot backup is recommended as a safety measure.",
-        },
-        {
-          q: "Is there a minimum stay for remote work bookings?",
-          a: "No minimum stay, but 3 nights minimum is recommended for remote workers who want genuine productive value from the stay — a 2-night weekend is a recovery trip, not a work trip.",
-        },
-      ],
-    },
-
-    {
-      type: "cta",
-      eyebrow: "How to Book",
-      heading: "Book Your Mountain Workspace ",
-      text: "Contact us to book your remote work stay.",
-      buttonLabel: "Book Your Stay",
-      buttonHref: "https://wa.me/923045679000",
-      footnote: "Direct bookings receive the best available rate.",
-    },
-
-    {
-      type: "related",
-      heading: "📎 Explore More",
-      items: [
-        { href: "/long-stay-villa-bhurban", label: "Extended stay options" },
-        { href: "/villa-with-mountain-view-bhurban", label: "Best view for working" },
-        { href: "/luxury-villa-bhurban-murree", label: "Estate overview" },
-        { href: "/villas", label: "Browse villa workspace options" },
       ],
     },
   ],
@@ -26413,8 +22884,6 @@ export const article181: Article = {
       type: "related",
       heading: "📎 Explore More",
       items: [
-        { href: "/romantic-hotels-murree", label: "Full honeymoon guide" },
-        { href: "/romantic-hotels-murree", label: "Couples guide" },
         { href: "/affordable-villa-bhurban", label: "Budget villa options" },
         { href: "/murree-bhurban-trip-cost", label: "Full cost breakdown" },
       ],
@@ -26520,7 +22989,6 @@ export const article182: Article = {
       items: [
         { href: "/corporate-wellness-retreat-bhurban", label: "Wellness retreat guide" },
         { href: "/corporate-team-building-bhurban", label: "Team building guide" },
-        { href: "/villa-for-20-guests-bhurban", label: "Group accommodation" },
         { href: "/villas", label: "Browse villa options" },
       ],
     },
@@ -26800,9 +23268,7 @@ export const article184: Article = {
       type: "related",
       heading: "📎 Explore More",
       items: [
-        { href: "/bhurban-accommodation-guide", label: "Full Bhurban accommodation comparison" },
         { href: "/luxury-villa-bhurban-murree", label: "Estate overview" },
-        { href: "/winter-bonfire-bhurban", label: "The outdoor fire experience at Himalaya Villas" },
         { href: "/villas", label: "Browse villa options" },
       ],
     },
@@ -26927,9 +23393,6 @@ export const article185: Article = {
       type: "related",
       heading: "📎 Explore More",
       items: [
-        { href: "/anniversary-villa-bhurban", label: "Anniversary stays guide" },
-        { href: "/romantic-hotels-murree", label: "Full couples guide" },
-        { href: "/villa-with-bhurban", label: "Presidential Suite for birthday escapes" },
         { href: "/villas", label: "Browse villa options" },
       ],
     },
@@ -27192,7 +23655,6 @@ export const article187: Article = {
       items: [
         { href: "/corporate-retreat-near-islamabad", label: "Full corporate retreat guide" },
         { href: "/corporate-team-building-bhurban", label: "Team building guide" },
-        { href: "/villa-for-20-guests-bhurban", label: "Group accommodation" },
       ],
     },
   ],
@@ -27375,7 +23837,6 @@ export const article189: Article = {
       type: "related",
       heading: "📎 Explore More",
       items: [
-        { href: "/remote-work-villa-bhurban", label: "Remote work villa guide" },
         { href: "/corporate-retreat-near-islamabad", label: "Corporate retreat guide" },
         { href: "/villas", label: "Browse villa options" },
       ],
@@ -27485,7 +23946,6 @@ export const article190: Article = {
       heading: "📎 Explore More",
       items: [
         { href: "/independent-travel-pakistan-bhurban", label: "Independent travel guide" },
-        { href: "/villa-near-islamabad-airport", label: "Airport-to-Bhurban guide" },
         { href: "/villas", label: "Browse villa options" },
       ],
     },
@@ -27599,7 +24059,6 @@ export const article191: Article = {
       items: [
         { href: "/corporate-retreat-near-islamabad", label: "Corporate retreat guide" },
         { href: "/corporate-team-building-bhurban", label: "Team building guide" },
-        { href: "/villa-for-20-guests-bhurban", label: "Group accommodation" },
       ],
     },
   ],
@@ -27806,7 +24265,6 @@ export const article193: Article = {
       heading: "📎 Explore More",
       items: [
         { href: "/corporate-retreat-near-islamabad", label: "Corporate retreat guide" },
-        { href: "/villa-for-20-guests-bhurban", label: "Group accommodation" },
         { href: "/villas", label: "Browse villa options" },
       ],
     },
@@ -27893,7 +24351,6 @@ export const article194: Article = {
       items: [
         { href: "/bhurban-pine-forest-guide", label: "Forest ecology guide" },
         { href: "/ayubia-national-park-from-bhurban", label: "Ayubia National Park guide" },
-        { href: "/villa-for-30-guests-bhurban", label: "Full estate for large groups" },
       ],
     },
   ],
@@ -28107,7 +24564,6 @@ export const article196: Article = {
       type: "related",
       heading: "📎 Explore More",
       items: [
-        { href: "/bhurban-accommodation-guide", label: "Bhurban accommodation guide" },
         { href: "/luxury-villa-bhurban-murree", label: "Estate overview" },
         { href: "/villas", label: "Browse villa options" },
       ],
@@ -28378,9 +24834,6 @@ export const article198: Article = {
       type: "related",
       heading: "📎 Explore More",
       items: [
-        { href: "/anniversary-villa-bhurban", label: "Anniversary stays guide" },
-        { href: "/villa-with-bhurban", label: "Presidential Suite guide" },
-        { href: "/romantic-hotels-murree", label: "Full couples guide" },
         { href: "/villas", label: "Browse villa options" },
       ],
     },
@@ -28517,7 +24970,6 @@ export const article199: Article = {
       type: "related",
       heading: "📎 Explore More",
       items: [
-        { href: "/bhurban-accommodation-guide", label: "Full accommodation guide" },
         { href: "/bhurban-private-estate-vs-pc-hotel", label: "PC Hotel vs Himalaya Villas" },
         { href: "/things-to-do-in-murree", label: "First-timer activities" },
         { href: "/villas", label: "Browse villa options" },
@@ -28669,7 +25121,6 @@ export const article200: Article = {
       items: [
         { href: "/murree-in-january", label: "Full January snowfall guide" },
         { href: "/murree-in-december", label: "December guide" },
-        { href: "/villa-with-bhurban", label: "Presidential Suite in snow" },
         { href: "/last-minute-murree-booking", label: "If snow surprises you" },
       ],
     },
@@ -28905,7 +25356,6 @@ export const article202: Article = {
       heading: "📎 Explore More",
       items: [
         { href: "/bhurban-for-elderly-guests", label: "Accessibility guide" },
-        { href: "/anniversary-villa-bhurban", label: "Anniversary celebrations" },
         { href: "/mountain-spa-bhurban", label: "In-villa massage" },
         { href: "/villas", label: "Browse accessible villa options" },
       ],
@@ -29278,7 +25728,6 @@ export const article205: Article = {
         { href: "/corporate-retreat-near-islamabad", label: "Full corporate retreat guide" },
         { href: "/corporate-agm-venue-bhurban", label: "AGM venue guide" },
         { href: "/events", label: "All events at Himalaya Villas" },
-        { href: "/villa-for-30-guests-bhurban", label: "Full estate capacity" },
       ],
     },
   ],
@@ -29441,7 +25890,6 @@ export const article206: Article = {
       type: "related",
       heading: "📎 Explore More",
       items: [
-        { href: "/bhurban-accommodation-guide", label: "Full accommodation guide" },
         { href: "/things-to-do-in-murree", label: "Complete activity guide" },
         { href: "/best-time-to-visit-murree", label: "Full seasonal guide" },
         { href: "/murree-bhurban-faq", label: "FAQ Volume 1" },
@@ -29653,7 +26101,6 @@ export const article208: Article = {
       heading: "📎 Explore More",
       items: [
         { href: "/in-villa-dining-bhurban", label: "Full in-villa dining guide" },
-        { href: "/restaurants-near-bhurban-murree", label: "Dining guide" },
         { href: "/galyat-produce-murree-hills", label: "Local produce guide" },
       ],
     },
@@ -29885,7 +26332,6 @@ export const article210: Article = {
         { href: "/corporate-retreat-near-islamabad", label: "Full corporate retreat guide" },
         { href: "/corporate-annual-dinner-venue-bhurban", label: "Annual dinner venue" },
         { href: "/corporate-agm-venue-bhurban", label: "AGM venue guide" },
-        { href: "/villa-for-30-guests-bhurban", label: "Full estate capacity" },
       ],
     },
   ],
@@ -29981,7 +26427,6 @@ export const article211: Article = {
       heading: "📎 Explore More",
       items: [
         { href: "/corporate-retreat-near-islamabad", label: "Corporate retreat guide" },
-        { href: "/villa-for-20-guests-bhurban", label: "Group accommodation" },
         { href: "/villas", label: "Browse villa options" },
       ],
     },
@@ -30173,7 +26618,6 @@ export const article213: Article = {
       items: [
         { href: "/corporate-retreat-near-islamabad", label: "Corporate retreat guide" },
         { href: "/mountain-retreat-medical-professionals", label: "Medical professionals guide" },
-        { href: "/villa-for-20-guests-bhurban", label: "Group accommodation" },
       ],
     },
   ],
@@ -30270,7 +26714,6 @@ export const article214: Article = {
       heading: "📎 Explore More",
       items: [
         { href: "/luxury-villa-bhurban-murree", label: "Estate overview" },
-        { href: "/bhurban-accommodation-guide", label: "Accommodation market guide" },
         { href: "/villas", label: "Browse villa options" },
       ],
     },
@@ -30366,7 +26809,6 @@ export const article215: Article = {
       items: [
         { href: "/corporate-retreat-near-islamabad", label: "Corporate retreat guide" },
         { href: "/corporate-team-building-bhurban", label: "Team building guide" },
-        { href: "/villa-for-20-guests-bhurban", label: "Group accommodation" },
       ],
     },
   ],
@@ -30454,7 +26896,6 @@ export const article216: Article = {
       items: [
         { href: "/luxury-villa-bhurban-murree", label: "Estate overview" },
         { href: "/villas", label: "Browse villa options" },
-        { href: "/romantic-hotels-murree", label: "Couples guide" },
       ],
     },
   ],
@@ -30622,252 +27063,6 @@ export const article217: Article = {
         { href: "/bhurban-snowfall-booking-guide", label: "Snowfall booking strategy" },
         { href: "/murree-snowfall-season", label: "Full winter guide" },
         { href: "/villas", label: "Browse February availability" },
-      ],
-    },
-  ],
-};
-
-// ============================================
-// ARTICLE 218 - Weekend Getaway Near Islamabad — The Best Options Compared
-// ============================================
-
-export const article218: Article = {
-  slug: "weekend-getaway-near-islamabad",
-  title: "Weekend Getaway Near Islamabad — The Best Options Compared",
-  metaDescription:
-    "weekend getaway near islamabad, best weekend getaway islamabad, where to go for weekend near islamabad, islamabad weekend trip, short trip from islamabad",
-  keywords:
-    "weekend getaway near islamabad, best weekend getaway islamabad, where to go for weekend near islamabad, islamabad weekend trip, short trip from islamabad",
-  eyebrow: "Template B — Commercial Hub | Cluster 1: Hotels & Accommodation",
-  h1: "Weekend Getaway Near Islamabad — The Best Options Compared",
-  heroTagline:
-    "The top weekend getaway options near Islamabad: Bhurban (47km, 45 min) — the premier mountain private estate at Himalaya Villas, cedar forest at 6,800 feet; Murree Mall Road (55km, 1 hour) — the classic hill station with chairlift and bazaar; Nathia Gali (75km, 1h15m) — quieter, higher, best for trekking; Tarbela Lake (80km, 1h20m) — reservoir and water activities; Margalla Hills (within Islamabad) — day hikes without leaving the city.",
-  heroImage: article218Hero,
-
-  blocks: [
-    {
-      type: "callout-qa",
-      question: "What are the best weekend getaway options near Islamabad?",
-      answer:
-        "The top weekend getaway options near Islamabad: Bhurban (47km, 45 min) — the premier mountain private estate at Himalaya Villas, cedar forest at 6,800 feet; Murree Mall Road (55km, 1 hour) — the classic hill station with chairlift and bazaar; Nathia Gali (75km, 1h15m) — quieter, higher, best for trekking; Tarbela Lake (80km, 1h20m) — reservoir and water activities; Margalla Hills (within Islamabad) — day hikes without leaving the city. For accommodation quality and mountain experience combined, Bhurban/Himalaya Villas is the top-ranked weekend getaway.",
-    },
-
-    {
-      type: "section",
-      heading: "Weekend Getaway Near Islamabad — The Best Options Compared",
-      paragraphs: [
-        "Islamabad residents planning a weekend escape have more options within 90 minutes than most capital cities can claim. The challenge is not finding options — it is distinguishing between them on the factors that actually matter for a specific trip.",
-        "This guide ranks the major Islamabad weekend getaway options by overall experience quality, with honest assessments of what each delivers and for whom.",
-      ],
-      image: {
-        src: article218Villa,
-        alt: "Weekend Getaway Near Islamabad",
-      },
-    },
-
-    {
-      type: "facts",
-      heading: "Option 1: Bhurban — Himalaya Villas Private Estate (Top Pick)",
-      items: [
-        {
-          label: "Distance",
-          value: "47km — 45 minutes",
-        },
-        {
-          label: "Accommodation",
-          value: "Himalaya Villas & Resorts — PKR 39,000-70,000/villa/night",
-        },
-        {
-          label: "What it delivers",
-          value: "Private cedar estate at 6,800 feet; private terraces; in-villa dining; fire pit garden; exclusive outdoor spaces",
-        },
-        {
-          label: "Best for",
-          value: "Families, couples, groups, anyone wanting a private mountain property",
-        },
-        {
-          label: "Why it ranks first",
-          value: "The only Islamabad weekend option that gives guests a private property in a mountain forest setting within 45 minutes",
-        },
-      ],
-    },
-
-    {
-      type: "facts",
-      heading: "Option 2: Murree Mall Road — The Classic Experience",
-      items: [
-        {
-          label: "Distance",
-          value: "55km — 1 hour",
-        },
-        {
-          label: "Accommodation",
-          value: "Hotels and guesthouses — PKR 5,000-45,000/night",
-        },
-        {
-          label: "What it delivers",
-          value: "Chairlift, Kashmir Point, Pindi Point, Mall Road bazaar, street food",
-        },
-        {
-          label: "Best for",
-          value: "First-time visitors wanting the classic hill station experience; guests on a budget",
-        },
-        {
-          label: "Honest limitation",
-          value: "Peak-season crowds are significant; accommodation is hotel-format, no private outdoor spaces",
-        },
-      ],
-    },
-
-    {
-      type: "facts",
-      heading: "Option 3: Nathia Gali — The Trekkers' Choice",
-      items: [
-        {
-          label: "Distance",
-          value: "75km — 1 hour 15 minutes",
-        },
-        {
-          label: "Accommodation",
-          value: "TDCP huts, guesthouses — PKR 5,000-15,000/night",
-        },
-        {
-          label: "What it delivers",
-          value: "Quietest hill station, highest elevation (8,000 feet), Miranjani summit trek (9,300 feet), rhododendron forest",
-        },
-        {
-          label: "Best for",
-          value: "Serious walkers and trekkers; guests who have done Murree and want something more remote",
-        },
-        {
-          label: "Honest limitation",
-          value: "Basic accommodation; no premium option equivalent to Bhurban",
-        },
-      ],
-    },
-
-    {
-      type: "facts",
-      heading: "Option 4: Margalla Hills — The No-Drive Option",
-      items: [
-        {
-          label: "Distance",
-          value: "10-15km from central Islamabad — within the city boundary",
-        },
-        {
-          label: "What it delivers",
-          value: "Trail hiking (Trail 3, Trail 5, Trail 6), Daman-e-Koh viewpoint, Pir Sohawa restaurant",
-        },
-        {
-          label: "Best for",
-          value: "A morning or afternoon escape without leaving Islamabad; families wanting accessible nature without a drive",
-        },
-        {
-          label: "Honest limitation",
-          value: "Not a mountain escape in the Bhurban sense — 1,000-1,500 feet elevation with urban surroundings visible",
-        },
-      ],
-    },
-
-    {
-      type: "facts",
-      heading: "Option 5: Tarbela — The Water Alternative",
-      items: [
-        {
-          label: "Distance",
-          value: "80km — 1 hour 20 minutes",
-        },
-        {
-          label: "What it delivers",
-          value: "Tarbela Reservoir, boating, fishing, Attock Fort nearby",
-        },
-        {
-          label: "Best for",
-          value: "Guests who specifically want water activities rather than mountain",
-        },
-        {
-          label: "Honest limitation",
-          value: "Not a mountain experience; limited premium accommodation",
-        },
-      ],
-    },
-
-    {
-      type: "comparison",
-      heading: "The Ranking Summary",
-      columns: ["Option", "Distance", "Overall Experience", "Best Season", "Accommodation Quality"],
-      rows: [
-        {
-          feature: "Bhurban (Himalaya Villas)",
-          a: "47km",
-          b: "★★★★★",
-          c: "Year-round",
-          d: "★★★★★",
-        },
-        {
-          feature: "Nathia Gali",
-          a: "75km",
-          b: "★★★★ (trekkers)",
-          c: "Apr-May, Sept-Oct",
-          d: "★★",
-        },
-        {
-          feature: "Murree Mall Road",
-          a: "55km",
-          b: "★★★ (first-timers)",
-          c: "October",
-          d: "★★★",
-        },
-        {
-          feature: "Margalla Hills",
-          a: "10-15km",
-          b: "★★★ (day trip)",
-          c: "Oct-April",
-          d: "N/A",
-        },
-        {
-          feature: "Tarbela",
-          a: "80km",
-          b: "★★ (water specific)",
-          c: "Year-round",
-          d: "★★",
-        },
-      ],
-    },
-
-    {
-      type: "faqs",
-      heading: "Frequently Asked Questions",
-      items: [
-        {
-          q: "What is the single best weekend getaway from Islamabad for a family?",
-          a: "Bhurban — specifically Himalaya Villas & Resorts. The private outdoor space, the cedar forest, the in-villa dining, and the 45-minute drive make it the most complete family weekend getaway accessible from Islamabad.",
-        },
-        {
-          q: "What is the best budget weekend getaway from Islamabad?",
-          a: "Murree Mall Road for the hill station experience (guesthouses from PKR 5,000-15,000/night), or the Margalla Hills trail system for a free morning/afternoon nature experience without accommodation cost.",
-        },
-      ],
-    },
-
-    {
-      type: "cta",
-      eyebrow: "How to Book",
-      heading: "Book the Top-Ranked Islamabad Weekend Getaway ",
-      text: "Contact us to book your weekend getaway.",
-      buttonLabel: "Book Your Stay",
-      buttonHref: "https://wa.me/923045679000",
-      footnote: "Direct bookings receive the best available rate.",
-    },
-
-    {
-      type: "related",
-      heading: "📎 Explore More",
-      items: [
-        { href: "/bhurban-murree-complete-guide", label: "Bhurban destination guide" },
-        { href: "/murree-day-trip-from-islamabad", label: "Day trip vs overnight" },
-        { href: "/best-time-to-visit-murree", label: "Seasonal guide" },
-        { href: "/villas", label: "Browse Himalaya Villas" },
       ],
     },
   ],
@@ -31144,135 +27339,6 @@ export const article220: Article = {
 };
 
 // ============================================
-// ARTICLE 221 - Women Leadership Retreat Near Islamabad — Corporate Executive Escape in Bhurban
-// ============================================
-
-export const article221: Article = {
-  slug: "women-leadership-retreat-islamabad",
-  title: "Women Leadership Retreat Near Islamabad — Corporate Executive Escape in Bhurban",
-  metaDescription:
-    "women leadership retreat near islamabad, female executive retreat bhurban, women corporate retreat islamabad mountains, leadership retreat women bhurban murree",
-  keywords:
-    "women leadership retreat near islamabad, female executive retreat bhurban, women corporate retreat islamabad mountains, leadership retreat women bhurban murree",
-  eyebrow: "Template C — B2B Spoke | Cluster 6: Corporate",
-  h1: "Women Leadership Retreat Near Islamabad — Corporate Executive Escape in Bhurban",
-  heroTagline:
-    "Himalaya Villas & Resorts in Bhurban, 47km from Islamabad (45 minutes), offers private estate bookings for women's leadership retreats. The full estate buyout provides complete property exclusivity — no male-only or mixed-gender shared spaces, no public hotel environment. For women executives and leadership groups requiring privacy and a safe, controlled environment, the private estate model is specifically appropriate.",
-  heroImage: article221Hero,
-
-  blocks: [
-    {
-      type: "callout-qa",
-      question: "Is there a private mountain retreat near Islamabad for women executives?",
-      answer:
-        "Yes. Himalaya Villas & Resorts in Bhurban, 47km from Islamabad (45 minutes), offers private estate bookings for women's leadership retreats. The full estate buyout provides complete property exclusivity — no male-only or mixed-gender shared spaces, no public hotel environment. For women executives and leadership groups requiring privacy and a safe, controlled environment, the private estate model is specifically appropriate. Groups of 10-40 accommodated. WhatsApp +92 304 567 9000.",
-    },
-
-    {
-      type: "section",
-      heading: "Women Leadership Retreat Near Islamabad — Corporate Executive Escape in Bhurban",
-      paragraphs: [
-        "The women's corporate executive retreat has specific requirements that distinguish it from the standard corporate retreat model. Beyond the usual retreat objectives — strategic clarity, team cohesion, creative reset — the women's leadership retreat in Pakistan's professional context has an additional dimension: the specific value of a private, safe, and exclusively female environment for the 48 hours of the retreat.",
-      ],
-      image: {
-        src: article221Villa,
-        alt: "Women Leadership Retreat Near Islamabad",
-      },
-    },
-
-    {
-      type: "facts",
-      heading: "Why the Private Estate Model Specifically Matters for Women's Executive Retreats",
-      items: [
-        {
-          label: "No shared public spaces",
-          value: "The hotel lobby, the shared restaurant, the conference centre corridor — all shared with male hotel guests and staff — require a level of ambient social management that depletes energy rather than restoring it. The private estate removes this management overhead entirely.",
-        },
-        {
-          label: "Complete environmental control",
-          value: "The full estate buyout means the group controls who is on the property, who enters the gate, and what the social environment of the retreat consists of. This is the condition for the kind of honest peer conversation that women's leadership retreats aim to create.",
-        },
-        {
-          label: "Physical safety and privacy",
-          value: "For senior women executives whose professional visibility requires constant personal security management in public spaces, a private estate with a single controlled access point provides a level of environmental security that public hotels cannot.",
-        },
-        {
-          label: "The forest environment's specific value",
-          value: "The documented research on natural environment exposure and cognitive restoration applies equally across gender. The cedar forest at 6,800 feet provides the physiological reset that leadership retreats aim to generate.",
-        },
-      ],
-    },
-
-    {
-      type: "facts",
-      heading: "The Women's Executive Retreat Programme",
-      items: [
-        {
-          label: "Day 1 — Arrival and Peer Connection",
-          value: "Arrive at the estate in the late afternoon. No formal programme on Day 1 — the arrival dinner in the cedar garden is the first gathering. The fire pit evening is the first informal conversation in the private outdoor space. Women executive groups consistently describe the first fire pit evening as the most important session of the retreat — before any agenda has been set.",
-        },
-        {
-          label: "Day 2 — Strategic Reflection and Peer Learning",
-          value: "Morning: facilitated leadership session (2-3 hours). Not a skills training programme — a reflective conversation about the specific challenges of senior leadership as a woman in Pakistan's corporate sector. Peer learning rather than content delivery. Afternoon: unstructured time — forest walk, individual terrace time, optional Patriata Chairlift group excursion. Evening: second fire pit session. The informal continuation of the morning's themes — the conversations that begin in the formal session and conclude at the fire.",
-        },
-        {
-          label: "Day 3 — Action and Return",
-          value: "Morning: brief integration session. Each participant articulates one action or commitment from the retreat. Checkout. Return to Islamabad.",
-        },
-      ],
-    },
-
-    {
-      type: "section",
-      heading: "Facilitator and Programme",
-      paragraphs: [
-        "Himalaya Villas provides the venue; the programme is brought by the retreat organiser. External facilitators can access the property for Day 2 sessions. For organisations without an internal facilitator, the property can provide contacts for women's leadership facilitators with experience in the Pakistan corporate context.",
-      ],
-      image: {
-        src: article221View,
-        alt: "Facilitator and Programme",
-      },
-    },
-
-    {
-      type: "faqs",
-      heading: "Frequently Asked Questions",
-      items: [
-        {
-          q: "Can Himalaya Villas guarantee full estate privacy during a women's executive retreat?",
-          a: "Yes — a full estate buyout guarantees that no other guests are on the property for the duration. Male guests (drivers, support staff) can be accommodated in specific arrangements discussed at the booking stage.",
-        },
-        {
-          q: "What is the typical group size for a women's leadership retreat at Himalaya Villas?",
-          a: "10-25 is the most functional group size for the leadership retreat format — small enough for genuine peer conversation, large enough to represent meaningful organisational diversity. For larger groups (25-40), the multi-villa configuration scales accordingly.",
-        },
-      ],
-    },
-
-    {
-      type: "cta",
-      eyebrow: "How to Book",
-      heading: "Book a Women's Leadership Retreat ",
-      text: "Contact us to book your women's leadership retreat.",
-      buttonLabel: "Book Your Stay",
-      buttonHref: "https://wa.me/923045679000",
-      footnote: "Direct bookings receive the best available rate.",
-    },
-
-    {
-      type: "related",
-      heading: "📎 Explore More",
-      items: [
-        { href: "/corporate-wellness-retreat-bhurban", label: "Wellness retreat guide" },
-        { href: "/corporate-retreat-near-islamabad", label: "Full corporate retreat guide" },
-        { href: "/villa-for-20-guests-bhurban", label: "Group accommodation" },
-        { href: "/villas", label: "Browse estate options" },
-      ],
-    },
-  ],
-};
-
-// ============================================
 // ARTICLE 222 - Bhurban for Honeymoon vs Naran Kaghan — Which Mountain Honeymoon?
 // ============================================
 
@@ -31392,157 +27458,7 @@ export const article222: Article = {
       type: "related",
       heading: "📎 Explore More",
       items: [
-        { href: "/romantic-hotels-murree", label: "Full honeymoon guide" },
         { href: "/bhurban-vs-naran", label: "Destination comparison" },
-        { href: "/villa-with-bhurban", label: "Presidential Suite guide" },
-        { href: "/romantic-hotels-murree", label: "Couples guide" },
-      ],
-    },
-  ],
-};
-
-// ============================================
-// ARTICLE 223 - Bhurban in Ramadan — Fasting, Iftar and the Mountain Evening
-// ============================================
-
-export const article223: Article = {
-  slug: "bhurban-murree-ramadan",
-  title: "Bhurban in Ramadan — Fasting, Iftar and the Mountain Evening",
-  metaDescription:
-    "bhurban ramadan, murree ramadan trip, bhurban iftar mountain, ramadan bhurban murree estate, ramadan mountain stay islamabad",
-  keywords:
-    "bhurban ramadan, murree ramadan trip, bhurban iftar mountain, ramadan bhurban murree estate, ramadan mountain stay islamabad",
-  eyebrow: "Template C — Seasonal Spoke | Cluster 7: Seasonal & Weather",
-  h1: "Bhurban in Ramadan — Fasting, Iftar and the Mountain Evening",
-  heroTagline:
-    "Himalaya Villas & Resorts in Bhurban operates fully during Ramadan and accommodates the Ramadan schedule specifically. Suhoor (pre-dawn meal) is arranged for the group's suhoor time; Iftar is served at sunset in the villa or the cedar garden; the Bhurban mosque is 5 minutes by car for Tarawih. The private estate model is particularly aligned with Ramadan travel: no public restaurant environment (the iftar is served privately to the group), complete halal compliance, and the spiritual dimension of the cedar forest environment at 6,800 feet.",
-  heroImage: article223Hero,
-
-  blocks: [
-    {
-      type: "callout-qa",
-      question: "Is Bhurban Murree a good destination to visit during Ramadan?",
-      answer:
-        "Yes. Himalaya Villas & Resorts in Bhurban operates fully during Ramadan and accommodates the Ramadan schedule specifically. Suhoor (pre-dawn meal) is arranged for the group's suhoor time; Iftar is served at sunset in the villa or the cedar garden; the Bhurban mosque is 5 minutes by car for Tarawih. The private estate model is particularly aligned with Ramadan travel: no public restaurant environment (the iftar is served privately to the group), complete halal compliance, and the spiritual dimension of the cedar forest environment at 6,800 feet.",
-    },
-
-    {
-      type: "section",
-      heading: "Bhurban in Ramadan — The Mountain Estate During the Holy Month",
-      paragraphs: [
-        "The Ramadan trip to Bhurban has a specific character that is distinct from any other season. The fasting context changes the relationship to food, activity, and environment: the days are structured around the fast rather than around activities; the cedar forest walk before Fajr takes on a contemplative dimension; the Iftar in the cedar garden at sunset is the day's climax.",
-        "For families and groups who want to spend part of Ramadan in a mountain environment that supports the month's spiritual purpose, Bhurban — 45 minutes from Islamabad — is the most accessible premium option.",
-      ],
-      image: {
-        src: article223Villa,
-        alt: "Bhurban in Ramadan",
-      },
-    },
-
-    {
-      type: "comparison",
-      heading: "The Ramadan Schedule at Himalaya Villas",
-      columns: ["Time", "Activity", "Himalaya Villas Arrangement"],
-      rows: [
-        {
-          feature: "Pre-Fajr (4-4:30am)",
-          a: "Suhoor",
-          b: "In-villa dining arranged for the group's suhoor timing",
-        },
-        {
-          feature: "Fajr prayer",
-          a: "Prayer",
-          b: "In-villa prayer space or Bhurban mosque (5 min by car)",
-        },
-        {
-          feature: "Morning",
-          a: "Rest or quiet activity",
-          b: "Forest walk for those who choose; private terrace",
-        },
-        {
-          feature: "Afternoon",
-          a: "Rest",
-          b: "The private villa as a private rest space",
-        },
-        {
-          feature: "Maghrib (sunset)",
-          a: "Iftar",
-          b: "Cedar garden outdoor iftar table or in-villa — arranged before arrival",
-        },
-        {
-          feature: "Evening",
-          a: "Tarawih",
-          b: "Bhurban mosque (5 min) or in-villa prayer",
-        },
-        {
-          feature: "Late evening",
-          a: "Social gathering",
-          b: "Fire pit in cedar garden — the communal Ramadan evening",
-        },
-      ],
-    },
-
-    {
-      type: "section",
-      heading: "The Iftar in the Cedar Garden",
-      paragraphs: [
-        "The cedar garden outdoor Iftar at Himalaya Villas is the experience that Ramadan guests consistently describe as the reason they return. The timing: the sun descending below the mountain ridge, the cedar canopy above in the golden last light, the Iftar table set in the garden with dates, chaat, fruit, and the first cold water after a day of fasting. The mountain air at 6,800 feet as the temperature drops after sunset.",
-        "The private estate model means the Iftar belongs to the group — no shared restaurant, no adjacent tables, no public setting. The cedar garden at Maghrib during Ramadan is one of the most peaceful eating experiences available near Islamabad.",
-      ],
-      image: {
-        src: article223View,
-        alt: "The Iftar in the Cedar Garden",
-      },
-    },
-
-    {
-      type: "section",
-      heading: "Ramadan Booking Notes",
-      paragraphs: [
-        "Halal: Himalaya Villas is fully halal as a default — no alcohol served, all food halal-standard.",
-        "Suhoor arrangement: Confirm suhoor timing before arrival — the kitchen team prepares suhoor at the group's requested time.",
-        "Iftar menu: Traditional Ramadan Iftar menu can be pre-arranged — dates, chaat, pakora, fruit, and dinner service following Maghrib prayers.",
-        "Mosque access: Bhurban mosque, 5 minutes by car.",
-      ],
-      image: {
-        src: article223Villa,
-        alt: "Ramadan Booking Notes",
-      },
-    },
-
-    {
-      type: "faqs",
-      heading: "Frequently Asked Questions",
-      items: [
-        {
-          q: "Is Bhurban crowded during Ramadan?",
-          a: "No — Ramadan is one of the quieter periods at Bhurban for tourism. Availability at Himalaya Villas is typically good during Ramadan weekdays and manageable on weekends. The exception: the last 10 nights of Ramadan (Ashra-e-Akheer) see some increased demand from families wanting to spend the special period in a mountain environment.",
-        },
-        {
-          q: "Can we arrange a Ramadan iftar for extended family at the cedar garden?",
-          a: "Yes — outdoor cedar garden iftar for groups of 20-80 guests is available. For larger iftar gatherings, a full estate booking or a day-use event booking accommodates the full group.",
-        },
-      ],
-    },
-
-    {
-      type: "cta",
-      eyebrow: "How to Book",
-      heading: "Book a Ramadan Mountain Stay ",
-      text: "Contact us to book your Ramadan stay.",
-      buttonLabel: "Book Your Stay",
-      buttonHref: "https://wa.me/923045679000",
-      footnote: "Direct bookings receive the best available rate.",
-    },
-
-    {
-      type: "related",
-      heading: "📎 Explore More",
-      items: [
-        { href: "/eid-holiday-package-bhurban-murree", label: "Eid ul Fitr (post-Ramadan)" },
-        { href: "/in-villa-dining-bhurban", label: "In-villa dining for suhoor and iftar" },
-        { href: "/luxury-villa-bhurban-murree", label: "Estate overview" },
-        { href: "/villas", label: "Browse Ramadan villa options" },
       ],
     },
   ],
@@ -31740,7 +27656,6 @@ export const article224: Article = {
       heading: "📎 Explore More",
       items: [
         { href: "/bhurban-murree-complete-guide", label: "Full Bhurban destination guide" },
-        { href: "/bhurban-accommodation-guide", label: "Accommodation comparison" },
         { href: "/best-time-to-visit-murree", label: "Full seasonal guide" },
         { href: "/murree-bhurban-trip-cost", label: "Budget planning guide" },
         { href: "/villas", label: "Browse Himalaya Villas" },
@@ -31891,7 +27806,6 @@ export const article225: Article = {
         { href: "/murree-bhurban-faq", label: "FAQ Volume 1" },
         { href: "/murree-bhurban-faq-2", label: "FAQ Volume 2" },
         { href: "/murree-trip-planning-guide", label: "Full trip planning guide" },
-        { href: "/bhurban-accommodation-guide", label: "Accommodation guide" },
       ],
     },
   ],
@@ -32003,7 +27917,6 @@ export const article226: Article = {
       heading: "📎 Explore More",
       items: [
         { href: "/corporate-retreat-near-islamabad", label: "Corporate retreat guide" },
-        { href: "/villa-for-20-guests-bhurban", label: "Group accommodation" },
         { href: "/villas", label: "Browse villa options" },
       ],
     },
@@ -32091,7 +28004,6 @@ export const article227: Article = {
       heading: "📎 Explore More",
       items: [
         { href: "/corporate-retreat-near-islamabad", label: "Corporate retreat guide" },
-        { href: "/villa-for-20-guests-bhurban", label: "Group accommodation" },
         { href: "/villas", label: "Browse villa options" },
       ],
     },
@@ -32203,7 +28115,6 @@ export const article228: Article = {
       heading: "📎 Explore More",
       items: [
         { href: "/independent-travel-pakistan-bhurban", label: "Independent travel guide" },
-        { href: "/villa-near-islamabad-airport", label: "Airport-to-Bhurban guide" },
         { href: "/villas", label: "Browse villa options" },
       ],
     },
@@ -32291,8 +28202,6 @@ export const article229: Article = {
       heading: "📎 Explore More",
       items: [
         { href: "/corporate-retreat-near-islamabad", label: "Corporate retreat guide" },
-        { href: "/remote-work-villa-bhurban", label: "Remote work guide" },
-        { href: "/villa-for-20-guests-bhurban", label: "Group accommodation" },
       ],
     },
   ],
@@ -32483,7 +28392,6 @@ export const article231: Article = {
       type: "related",
       heading: "📎 Explore More",
       items: [
-        { href: "/bhurban-accommodation-guide", label: "Accommodation guide" },
         { href: "/bhurban-private-estate-vs-pc-hotel", label: "Private estate vs hotel comparison" },
         { href: "/villas", label: "Browse villa options" },
       ],
@@ -32673,7 +28581,6 @@ export const article233: Article = {
       heading: "📎 Explore More",
       items: [
         { href: "/corporate-retreat-near-islamabad", label: "Corporate retreat guide" },
-        { href: "/villa-for-20-guests-bhurban", label: "Group accommodation" },
         { href: "/villas", label: "Browse villa options" },
       ],
     },
@@ -32754,7 +28661,6 @@ export const article234: Article = {
       items: [
         { href: "/corporate-retreat-near-islamabad", label: "Corporate retreat guide" },
         { href: "/corporate-wellness-retreat-bhurban", label: "Wellness retreat guide" },
-        { href: "/villa-for-20-guests-bhurban", label: "Group accommodation" },
       ],
     },
   ],
@@ -32976,7 +28882,6 @@ export const article236: Article = {
       type: "related",
       heading: "📎 Explore More",
       items: [
-        { href: "/bhurban-accommodation-guide", label: "Full Bhurban accommodation guide" },
         { href: "/bhurban-private-estate-vs-pc-hotel", label: "PC Hotel vs Himalaya Villas" },
         { href: "/hotels-in-bhurban-murree", label: "Bhurban hotels overview" },
         { href: "/villas", label: "Browse Himalaya Villas" },
@@ -33232,7 +29137,6 @@ export const article238: Article = {
       heading: "📎 Explore More",
       items: [
         { href: "/bhurban-murree-all-distances", label: "Full distance and route guide" },
-        { href: "/weekend-getaway-near-islamabad", label: "Best overnight options" },
         { href: "/bhurban-murree-complete-guide", label: "Full destination guide" },
         { href: "/murree-trip-planning-guide", label: "Full trip planning" },
       ],
@@ -33493,7 +29397,6 @@ export const article240: Article = {
       type: "related",
       heading: "📎 Explore More",
       items: [
-        { href: "/bhurban-accommodation-guide", label: "Full accommodation guide" },
         { href: "/bhurban-vs-shangrila-murree", label: "Shangrila comparison" },
         { href: "/hotels-in-bhurban-murree", label: "Hotels overview" },
         { href: "/villas", label: "Browse Himalaya Villas options" },
@@ -33625,8 +29528,6 @@ export const article241: Article = {
       type: "related",
       heading: "📎 Explore More",
       items: [
-        { href: "/villa-for-30-guests-bhurban", label: "30-guest configuration" },
-        { href: "/villa-for-20-guests-bhurban", label: "20-guest guide" },
         { href: "/family-villa-bhurban-murree", label: "Family accommodation guide" },
         { href: "/villas", label: "Browse full estate" },
       ],
@@ -34135,7 +30036,6 @@ export const article246: Article = {
       items: [
         { href: "/murree-bhurban-diaspora-guide", label: "Full diaspora visitor guide" },
         { href: "/bhurban-canadian-pakistani-guide", label: "Canadian-Pakistani guide" },
-        { href: "/villa-near-islamabad-airport", label: "Airport-to-Bhurban guide" },
         { href: "/villas", label: "Browse villa options" },
       ],
     },
@@ -34227,7 +30127,6 @@ export const article247: Article = {
       items: [
         { href: "/corporate-wellness-retreat-bhurban", label: "Wellness retreat guide" },
         { href: "/corporate-retreat-near-islamabad", label: "Corporate retreat guide" },
-        { href: "/villa-for-20-guests-bhurban", label: "Group accommodation" },
         { href: "/villas", label: "Browse villa options" },
       ],
     },
@@ -34313,7 +30212,6 @@ export const article248: Article = {
       type: "related",
       heading: "📎 Explore More",
       items: [
-        { href: "/winter-bonfire-bhurban", label: "Fire pit experience guide" },
         { href: "/things-to-do-in-murree", label: "Activity guide" },
         { href: "/villas", label: "Browse villa options" },
       ],
@@ -34505,7 +30403,6 @@ export const article250: Article = {
       heading: "📎 Explore More",
       items: [
         { href: "/murree-bhurban-trip-cost", label: "Budget planning guide" },
-        { href: "/bhurban-accommodation-guide", label: "Accommodation guide" },
         { href: "/villas", label: "Browse villa options" },
       ],
     },
@@ -34593,7 +30490,6 @@ export const article251: Article = {
         { href: "/wedding-venues-bhurban-murree", label: "Full wedding venue guide" },
         { href: "/walima-venue-bhurban", label: "Walima guide" },
         { href: "/nikkah-venue-bhurban", label: "Nikkah ceremony guide" },
-        { href: "/villa-for-30-guests-bhurban", label: "Full estate buyout" },
       ],
     },
   ],
@@ -35176,145 +31072,6 @@ export const article257: Article = {
 };
 
 // ============================================
-// ARTICLE 258 - Private Villa for 25 Guests Bhurban — Multi-Villa Group Configuration
-// ============================================
-
-export const article258: Article = {
-  slug: "villa-for-25-guests-bhurban",
-  title: "Private Villa for 25 Guests Bhurban — Multi-Villa Group Configuration",
-  metaDescription:
-    "villa for 25 guests bhurban, 25 person villa bhurban murree, bhurban accommodation 25 people, private villa 25 guests bhurban murree",
-  keywords:
-    "villa for 25 guests bhurban, 25 person villa bhurban murree, bhurban accommodation 25 people, private villa 25 guests bhurban murree",
-  eyebrow: "Template C — pSEO Capacity Spoke | Cluster 4: Private Villas",
-  h1: "Private Villa for 25 Guests Bhurban — Multi-Villa Group Configuration",
-  heroTagline:
-    "For a group of 25 guests at Himalaya Villas & Resorts in Bhurban, the standard configuration is a 3-villa booking: Alpine Family Lodge (8-12 guests) + Garden Villa Retreat (6-8 guests) + a third villa such as the Himalayan Penthouse (4-6 guests). This covers 18-26 guests comfortably across three private villas within the same estate. The combined rate is approximately PKR 170,000-195,000 per night.",
-  heroImage: article258Hero,
-
-  blocks: [
-    {
-      type: "callout-qa",
-      question: "How do I book Bhurban accommodation for 25 guests?",
-      answer:
-        "For a group of 25 guests at Himalaya Villas & Resorts in Bhurban, the standard configuration is a 3-villa booking: Alpine Family Lodge (8-12 guests) + Garden Villa Retreat (6-8 guests) + a third villa such as the Himalayan Penthouse (4-6 guests). This covers 18-26 guests comfortably across three private villas within the same estate. The combined rate is approximately PKR 170,000-195,000 per night. Full estate coordination is via WhatsApp +92 304 567 9000.",
-    },
-
-    {
-      type: "section",
-      heading: "Private Villa for 25 Guests in Bhurban Murree — The Multi-Villa Configuration",
-      paragraphs: [
-        "A group of 25 guests sits in the middle of the Himalaya Villas estate's capacity range — too large for a single villa, too small to need all 12 villas. The 3-villa configuration is the right answer: three private buildings within the same cedar estate, each group with their own sleeping arrangement and private outdoor space, sharing the cedar garden and fire pit as the central gathering point.",
-      ],
-      image: {
-        src: article258Villa,
-        alt: "Private Villa for 25 Guests",
-      },
-    },
-
-    {
-      type: "comparison",
-      heading: "Recommended 3-Villa Configuration for 25 Guests",
-      columns: ["Villa", "Capacity", "Rate/Night", "Best Sub-Group"],
-      rows: [
-        {
-          feature: "Alpine Family Lodge",
-          a: "8-12 guests",
-          b: "PKR 60,000-70,000",
-          c: "The largest sub-group or family unit",
-        },
-        {
-          feature: "Garden Villa Retreat",
-          a: "6-8 guests",
-          b: "PKR 55,000-60,000",
-          c: "Families with young children (private garden)",
-        },
-        {
-          feature: "Himalayan Penthouse",
-          a: "4-6 guests",
-          b: "PKR 60,000-65,000",
-          c: "Couples or smaller family units",
-        },
-        {
-          feature: "Combined total",
-          a: "18-26 guests",
-          b: "PKR 175,000-195,000/night",
-          c: "Full 25-person group across 3 villas",
-        },
-      ],
-    },
-
-    {
-      type: "section",
-      heading: "Alternative Configurations",
-      paragraphs: [
-        "If the group is 22-24 people: The Alpine Family Lodge + Garden Villa Retreat (2-villa combination, approximately PKR 115,000-130,000/night) may suffice — tighter sleeping but more economical.",
-        "If the group is 26-30 people: Add a fourth villa (Serene Valley Cabin or Sunset Suite) to the 3-villa configuration — total 4 villas, approximately PKR 210,000-265,000/night.",
-      ],
-      image: {
-        src: article258View,
-        alt: "Alternative Configurations",
-      },
-    },
-
-    {
-      type: "facts",
-      heading: "What 25 Guests Share",
-      items: [
-        {
-          label: "The cedar garden",
-          value: "The fire pit, the outdoor dining area, and the estate's central gathering space belong to all booked villas simultaneously",
-        },
-        {
-          label: "The dining pavilion",
-          value: "The indoor gathering space for the full group's meals and events",
-        },
-        {
-          label: "The estate pathways",
-          value: "The cedar forest paths connecting the villas to the garden and to the property gate forest walk",
-        },
-      ],
-    },
-
-    {
-      type: "faqs",
-      heading: "Frequently Asked Questions",
-      items: [
-        {
-          q: "Can 25 guests have dinner together at Himalaya Villas?",
-          a: "Yes — the cedar garden accommodates a seated dinner for 25 guests under the cedar canopy. In-villa dining for a group of 25 is pre-arranged via WhatsApp; the kitchen team and any external catering support are coordinated at the planning stage.",
-        },
-        {
-          q: "Is a 3-villa booking eligible for a group discount?",
-          a: "Multi-villa bookings are priced as the sum of the individual villa rates — there is no standard group discount. For very large multi-villa bookings (5+ villas or full estate), discuss pricing directly via WhatsApp.",
-        },
-      ],
-    },
-
-    {
-      type: "cta",
-      eyebrow: "How to Book",
-      heading: "Book the 25-Guest Group Configuration ",
-      text: "Contact us to book your 25-guest stay.",
-      buttonLabel: "Book Your Stay",
-      buttonHref: "https://wa.me/923045679000",
-      footnote: "Direct bookings receive the best available rate.",
-    },
-
-    {
-      type: "related",
-      heading: "📎 Explore More",
-      items: [
-        { href: "/villa-for-20-guests-bhurban", label: "20-guest guide" },
-        { href: "/villa-for-30-guests-bhurban", label: "30-guest guide" },
-        { href: "/corporate-retreat-near-islamabad", label: "Corporate group guide" },
-        { href: "/villas", label: "Full villa portfolio" },
-      ],
-    },
-  ],
-};
-
-// ============================================
 // ARTICLE 259 - Murree Winter Hiking — Trails Accessible in Cold Weather
 // ============================================
 
@@ -35474,141 +31231,6 @@ export const article259: Article = {
         { href: "/hiking-near-murree", label: "Full trail guide" },
         { href: "/bhurban-pine-forest-guide", label: "Forest ecology and wildlife" },
         { href: "/ayubia-national-park-from-bhurban", label: "Pipeline Track guide" },
-      ],
-    },
-  ],
-};
-
-// ============================================
-// ARTICLE 260 - Bhurban Villa with Fireplace — Cosy Mountain Winter Stay
-// ============================================
-
-export const article260: Article = {
-  slug: "villa-with-fireplace-bhurban",
-  title: "Bhurban Villa with Fireplace — Cosy Mountain Winter Stay",
-  metaDescription:
-    "villa with fireplace bhurban, bhurban villa fireplace, cosy mountain villa bhurban murree, winter villa fireplace near islamabad, private villa fireplace bhurban",
-  keywords:
-    "villa with fireplace bhurban, bhurban villa fireplace, cosy mountain villa bhurban murree, winter villa fireplace near islamabad, private villa fireplace bhurban",
-  eyebrow: "Template C — Feature Commercial Spoke | Cluster 4: Private Villas",
-  h1: "Bhurban Villa with Fireplace — Cosy Mountain Winter Stay",
-  heroTagline:
-    "Himalaya Villas & Resorts in Bhurban features the cedar garden outdoor fire pit — a stone-edged outdoor hearth in the private cedar grove, lit for guests each evening. This is the 'fireplace' equivalent at the property: the outdoor fire that serves as the estate's central gathering point. All villas also have central heating for indoor warmth.",
-  heroImage: article260Hero,
-
-  blocks: [
-    {
-      type: "callout-qa",
-      question: "Is there a villa with a fireplace in Bhurban Murree?",
-      answer:
-        "Himalaya Villas & Resorts in Bhurban features the cedar garden outdoor fire pit — a stone-edged outdoor hearth in the private cedar grove, lit for guests each evening. This is the 'fireplace' equivalent at the property: the outdoor fire that serves as the estate's central gathering point. All villas also have central heating for indoor warmth. For the specific indoor fireplace experience, enquire at booking as individual villa configurations vary.",
-    },
-
-    {
-      type: "section",
-      heading: "Bhurban Villa with Fireplace — The Cedar Garden Fire and Winter Warmth",
-      paragraphs: [
-        "The fireplace search — guests looking for a 'cosy mountain villa with a fireplace' — reflects a specific winter comfort desire: the combination of a private space, mountain cold outside, and fire warmth inside. Himalaya Villas answers this in two ways: the indoor central heating that maintains villa comfort regardless of external temperature, and the cedar garden fire pit that provides the communal outdoor fire experience.",
-      ],
-      image: {
-        src: article260Villa,
-        alt: "Bhurban Villa with Fireplace",
-      },
-    },
-
-    {
-      type: "section",
-      heading: "The Cedar Garden Fire Pit — The Estate's Fireplace",
-      paragraphs: [
-        "The cedar garden fire pit is the property's answer to the indoor fireplace: a stone-edged outdoor hearth at the centre of the private cedar grove, lit each evening by the estate team for the booked guests. The fire burns from early evening until the group chooses to retire — no closing time, no shared public setting, the cedar trees creating the natural architecture above.",
-        "The outdoor fire in cold weather (October-February, 0-12°C) is the experience that guests describe most consistently as the defining character of a winter Bhurban stay. The combination of fire warmth, cold mountain air, cedar canopy, and the private estate belonging to the group — this is not replicable in any indoor fireplace setting.",
-      ],
-      image: {
-        src: article260View,
-        alt: "The Cedar Garden Fire Pit",
-      },
-    },
-
-    {
-      type: "section",
-      heading: "Indoor Warmth — Central Heating in All Villas",
-      paragraphs: [
-        "All 12 villas at Himalaya Villas are centrally heated — the villa maintains a comfortable indoor temperature regardless of outside conditions. In January at -4°C outside, the villa interior is warm. The central heating is not a feature that needs to be requested or specified: it is the operating standard of the property year-round, with winter conditions as the primary design consideration.",
-      ],
-      image: {
-        src: article260Villa,
-        alt: "Indoor Warmth — Central Heating in All Villas",
-      },
-    },
-
-    {
-      type: "facts",
-      heading: "Best Villas for the Winter Fire Experience",
-      items: [
-        {
-          label: "Presidential Suite",
-          value: "The private terrace + central heating + the cedar garden fire pit creates the full winter sensory experience — warm water outdoors, warm villa indoors, fire in the garden",
-        },
-        {
-          label: "Alpine Family Lodge",
-          value: "The largest indoor living space on the estate — the most comfortable indoor gathering for a group on a cold evening before moving to the garden fire",
-        },
-        {
-          label: "Serene Valley Cabin",
-          value: "Ground-floor access to the cedar garden from the living area — the most direct indoor-to-fire connection on the estate",
-        },
-      ],
-    },
-
-    {
-      type: "section",
-      heading: "The Winter Evening Sequence",
-      paragraphs: [
-        "5pm: arrival at the estate. Villas warm — the central heating has been running.",
-        "6pm: first tea on the private terrace. The temperature is 4°C; the cedar canopy is above; the estate is quiet.",
-        "7pm: the fire is lit in the cedar garden. The group gathers around the fire.",
-        "7:30pm: in-villa dinner served at the cedar garden table, fire burning alongside.",
-        "9pm onwards: the fire continues. The group stays until they choose to move inside to the warm villa.",
-      ],
-      image: {
-        src: article260View,
-        alt: "The Winter Evening Sequence",
-      },
-    },
-
-    {
-      type: "faqs",
-      heading: "Frequently Asked Questions",
-      items: [
-        {
-          q: "Can I request a specific fire lighting time for my villa evening?",
-          a: "Yes — the fire lighting time is arranged at the booking stage or via WhatsApp the morning of your arrival. The estate team lights the fire at the requested time.",
-        },
-        {
-          q: "Is the cedar garden fire available every night of the stay?",
-          a: "Yes — the fire pit is available for the duration of the booking. Request the fire lighting time each evening via WhatsApp to the property team.",
-        },
-      ],
-    },
-
-    {
-      type: "cta",
-      eyebrow: "How to Book",
-      heading: "Book the Winter Fire Experience ",
-      text: "Contact us to book your winter fire stay.",
-      buttonLabel: "Book Your Stay",
-      buttonHref: "https://wa.me/923045679000",
-      footnote: "Direct bookings receive the best available rate.",
-    },
-
-    {
-      type: "related",
-      heading: "📎 Explore More",
-      items: [
-        { href: "/winter-bonfire-bhurban", label: "Winter bonfire guide" },
-        { href: "/murree-in-january", label: "January winter guide" },
-        { href: "/villa-with-bhurban", label: "Jacuzzi and fire combination" },
-        { href: "/villas", label: "Browse winter villas" },
       ],
     },
   ],
@@ -35859,7 +31481,6 @@ export const article263: Article = {
       items: [
         { href: "/corporate-wellness-retreat-bhurban", label: "Wellness retreat guide" },
         { href: "/corporate-retreat-near-islamabad", label: "Corporate retreat guide" },
-        { href: "/villa-for-20-guests-bhurban", label: "20-person group" },
         { href: "/villas", label: "Browse villa options" },
       ],
     },
@@ -36192,7 +31813,6 @@ export const article265: Article = {
       items: [
         { href: "/bhurban-murree-complete-guide", label: "Full destination guide" },
         { href: "/murree-trip-planning-guide", label: "Trip planning hub" },
-        { href: "/bhurban-accommodation-guide", label: "Accommodation guide" },
         { href: "/murree-bhurban-faq", label: "FAQ Volume 1" },
       ],
     },
@@ -36282,7 +31902,6 @@ export const article266: Article = {
       heading: "📎 Explore More",
       items: [
         { href: "/islamabad-weekend-escapes-murree-hills", label: "Islamabad weekend escapes" },
-        { href: "/weekend-getaway-near-islamabad", label: "Best weekend getaways" },
         { href: "/villas", label: "Browse villa options" },
       ],
     },
@@ -36392,94 +32011,7 @@ export const article267: Article = {
       items: [
         { href: "/murree-bhurban-diaspora-guide", label: "Full diaspora visitor guide" },
         { href: "/gcc-pakistanis-bhurban-mountain-guide", label: "GCC diaspora guide" },
-        { href: "/villa-near-islamabad-airport", label: "Airport-to-Bhurban guide" },
         { href: "/villas", label: "Browse villa options" },
-      ],
-    },
-  ],
-};
-
-// ============================================
-// GUEST POST 268 - Women's Safety in Mountain Travel — The Private Estate Advantage
-// ============================================
-
-export const article268: Article = {
-  slug: "womens-safety-mountain-travel-bhurban",
-  title: "Women's Safety in Mountain Travel — Why the Private Estate Model Matters",
-  metaDescription:
-    "women's safety bhurban, solo women travel pakistan, women's mountain getaway, private estate safety, female travellers bhurban",
-  keywords:
-    "women's safety bhurban, solo women travel pakistan, women's mountain getaway, private estate safety, female travellers bhurban",
-  eyebrow: "Backlink Guest Post | Women's Safety / Solo Women Travel | ~950 words",
-  h1: "Women's Safety in Mountain Travel — Why the Private Estate Model Matters",
-  heroTagline:
-    "Women's travel safety in Pakistan is a real consideration that deserves direct engagement rather than either dismissal or exaggeration. The specific concern is not the mountain itself — the Murree hills are among the most family-oriented, socially safe tourist areas in the country. The concern is the accommodation environment: the shared hotel lobby, the shared restaurant, the mixed public spaces where women travellers navigate the ambient male attention that Pakistani public spaces generate.",
-  heroImage: article264Hero,
-
-  blocks: [
-    {
-      type: "callout-qa",
-      question: "How does the private estate model address women's safety concerns in mountain travel?",
-      answer:
-        "The private estate model at Himalaya Villas addresses safety concerns structurally rather than procedurally. There is no shared lobby, no shared restaurant, no public outdoor space mixed with strangers. When a woman or group of women books Himalaya Villas, the outdoor spaces — the cedar garden, the fire pit, the private terraces — belong to the booked group and no one else. Women's professional groups, sisters' getaways, mothers and daughters, female-only corporate retreats are regular booking categories. Full estate buyout guarantees complete privacy. The property team is professional and responsive; the estate is gated with one access point.",
-    },
-
-    {
-      type: "section",
-      heading: "Women's Safety in Mountain Travel — Why the Private Estate Model Matters",
-      paragraphs: [
-        "Women's travel safety in Pakistan is a real consideration that deserves direct engagement rather than either dismissal or exaggeration. The specific concern is not the mountain itself — the Murree hills are among the most family-oriented, socially safe tourist areas in the country. The concern is the accommodation environment: the shared hotel lobby, the shared restaurant, the mixed public spaces where women travellers navigate the ambient male attention that Pakistani public spaces generate.",
-        "The private estate model at Himalaya Villas addresses this concern structurally rather than procedurally. There is no shared lobby. There is no shared restaurant. There is no public outdoor space mixed with strangers. When a woman or group of women books Himalaya Villas, the outdoor spaces of the estate — the cedar garden, the fire pit, the private terraces — belong to the booked group and no one else.",
-      ],
-    
-    },
-
-    {
-      type: "facts",
-      heading: "What the Private Estate Provides",
-      items: [
-        {
-          label: "No Shared Public Spaces",
-          value: "The most significant safety and comfort difference between a private estate and a public hotel is structural. In a hotel, the lobby, restaurant, pool, and grounds are shared with all guests — the woman sitting at the hotel restaurant is visible to all other hotel guests. At Himalaya Villas, the booked group owns the outdoor spaces. No other guests are present unless in the other villas (also booked by their own private groups).",
-        },
-        {
-          label: "Female-Only Group Bookings",
-          value: "Women's professional groups, sisters' getaways, mothers and daughters, female-only corporate retreats — all of these are regular booking categories at Himalaya Villas. The private estate model means the group occupies the property without the ambient male presence of a mixed hotel environment. Full estate buyout guarantees this completely.",
-        },
-        {
-          label: "Solo Women Travellers",
-          value: "Solo women travellers at Himalaya Villas have a private villa — their own building, their own outdoor terrace, their own schedule. The property team is professional and responsive. The estate's physical security (gated, one access point) provides the specific safety infrastructure that matters for a woman travelling alone.",
-        },
-      ],
-    },
-
-    {
-      type: "section",
-      heading: "The Practical Safety Picture for Bhurban",
-      paragraphs: [
-        "Bhurban is one of Pakistan's safest domestic tourism areas: it is a well-established tourism area with NHMP presence on the Expressway, a predominantly family-oriented visitor demographic, and no history of tourist-targeted crime. The Murree hills are where Islamabad and Rawalpindi families have been taking safe summer holidays for generations.",
-        "The private estate adds to this baseline: the physical control of the booked environment means that the specific safety concerns of hotel public spaces do not apply. The woman or women's group that books Himalaya Villas is the master of their environment for the duration of the stay.",
-      ],
-     
-    },
-
-    {
-      type: "cta",
-      eyebrow: "Himalaya Villas & Resorts — Private Mountain Estate for Women's Groups and Solo Travellers",
-      heading: "Full estate buyout available.",
-      text: "Book your women's mountain stay.",
-      buttonLabel: "Visit himalayavillas.com",
-      buttonHref: "https://himalayavillas.com",
-      footnote: "WhatsApp: +92 304 567 9000",
-    },
-
-    {
-      type: "related",
-      heading: "📎 Explore More",
-      items: [
-        { href: "/villas", label: "Browse villa options" },
-        { href: "/corporate-retreat-near-islamabad", label: "Corporate retreat guide" },
-        { href: "/villa-for-30-guests-bhurban", label: "Full estate buyout" },
       ],
     },
   ],
@@ -36656,7 +32188,6 @@ export const article270: Article = {
       items: [
         { href: "/mountain-retreat-medical-professionals", label: "Medical professionals guide" },
         { href: "/corporate-wellness-retreat-bhurban", label: "Wellness retreat guide" },
-        { href: "/villa-for-20-guests-bhurban", label: "Group accommodation" },
       ],
     },
   ],
@@ -36744,7 +32275,6 @@ export const article271: Article = {
       heading: "📎 Explore More",
       items: [
         { href: "/bhurban-murree-complete-guide", label: "Complete Bhurban guide" },
-        { href: "/villa-for-20-guests-bhurban", label: "Group accommodation" },
         { href: "/villas", label: "Browse villa options" },
       ],
     },
@@ -36933,7 +32463,6 @@ export const article273: Article = {
       heading: "📎 Explore More",
       items: [
         { href: "/pakistan-tourism-overnight-economy", label: "Tourism economy analysis" },
-        { href: "/bhurban-accommodation-guide", label: "Accommodation guide" },
         { href: "/villas", label: "Browse villa options" },
       ],
     },
@@ -37134,141 +32663,6 @@ export const article275: Article = {
         { href: "/mountain-and-time-philosophical-essay", label: "Mountain and time essay" },
         { href: "/bhurban-murree-complete-guide", label: "Complete Bhurban guide" },
         { href: "/villas", label: "Browse villa options" },
-      ],
-    },
-  ],
-};
-
-
-
-
-
-// ============================================
-// ARTICLE 276 - Bhurban Hotel Rooms vs Private Villa — Why the Villa Wins
-// ============================================
-
-export const article276: Article = {
-  slug: "bhurban-hotel-rooms",
-  title: "Bhurban Hotel Rooms vs Private Villa — Why the Villa Wins",
-  metaDescription:
-    "bhurban hotel rooms, bhurban hotel rooms price, bhurban hotel room rates, rooms bhurban murree, book hotel room bhurban",
-  keywords:
-    "bhurban hotel rooms, bhurban hotel rooms price, bhurban hotel room rates, rooms bhurban murree, book hotel room bhurban",
-  eyebrow: "Template C — Competitor Intercept | Cluster 1: Hotels",
-  h1: "Bhurban Hotel Rooms vs Private Villa — Why the Villa Wins",
-  heroTagline:
-    "Bhurban's primary hotel room accommodation is at Pearl Continental Hotel Bhurban — 162 rooms ranging from standard rooms to suites, priced approximately PKR 35,000-75,000 per room per night. For guests who want private accommodation rather than a hotel room, Himalaya Villas & Resorts offers 12 private villas (PKR 39,000-70,000 per villa per night) — exclusive-use properties where no other guests share your building or outdoor spaces.",
-  heroImage: article276Hero,
-
-  blocks: [
-    {
-      type: "callout-qa",
-      question: "What are the hotel room options in Bhurban Murree?",
-      answer:
-        "Bhurban's primary hotel room accommodation is at Pearl Continental Hotel Bhurban — 162 rooms ranging from standard rooms to suites, priced approximately PKR 35,000-75,000 per room per night. For guests who want private accommodation rather than a hotel room, Himalaya Villas & Resorts offers 12 private villas (PKR 39,000-70,000 per villa per night) — exclusive-use properties where no other guests share your building or outdoor spaces.",
-    },
-
-    {
-      type: "section",
-      heading: "Bhurban Hotel Rooms vs Private Villa — Why the Villa Wins",
-      paragraphs: [
-        "Guests searching for 'bhurban hotel rooms' are in the market for Bhurban accommodation — but the hotel room is not necessarily the right product for every guest who lands on this search. For families, groups, and couples who specifically want private outdoor space, in-villa dining, and the exclusive-use estate experience, a villa at Himalaya Villas & Resorts is the superior choice at a comparable or lower rate.",
-      ],
-      image: {
-        src: article276Villa,
-        alt: "Bhurban Hotel Rooms vs Private Villa",
-      },
-    },
-
-    {
-      type: "comparison",
-      heading: "Hotel Room vs Villa — The Core Comparison",
-      columns: ["Factor", "PC Hotel Bhurban Room", "Himalaya Villas Villa"],
-      rows: [
-        { feature: "Rate", a: "PKR 35,000-75,000/room", b: "PKR 39,000-70,000/villa" },
-        { feature: "What you get", a: "1 room in a 162-room hotel", b: "1 complete private villa building" },
-        { feature: "Outdoor space", a: "Shared hotel grounds", b: "Private terrace/garden for your villa" },
-        { feature: "Dining", a: "Hotel restaurant (shared, service hours)", b: "In-villa dining at your timing" },
-        { feature: "Other guests", a: "Present throughout the hotel", b: "Not in your villa or its outdoor spaces" },
-        { feature: "For a family of 6", a: "3 hotel rooms = PKR 105,000-225,000/night", b: "1 villa = PKR 55,000-70,000/night" },
-      ],
-    },
-
-    {
-      type: "section",
-      heading: "When Hotel Rooms Are the Right Choice",
-      paragraphs: [
-        "Solo business travellers who want hotel services (24-hour room service, concierge, Marriott Bonvoy loyalty credit)",
-        "Guests who specifically want a hotel restaurant open for multiple meal periods without pre-arrangement",
-        "Travellers who want the hotel brand consistency and international booking infrastructure",
-      ],
-      image: {
-        src: article276View,
-        alt: "When Hotel Rooms Are the Right Choice",
-      },
-    },
-
-    {
-      type: "section",
-      heading: "When the Villa Is the Better Choice",
-      paragraphs: [
-        "Families of 4-12: a single villa accommodates the group at a rate significantly below multiple hotel rooms, with private outdoor space included",
-        "Couples wanting a romantic stay: the private villa's exclusive terrace, (Presidential Suite), and no shared spaces deliver an experience the hotel room cannot",
-        "Groups celebrating events: the villa's private estate model is necessary for weddings, corporate retreats, anniversaries, and birthday gatherings",
-        "Guests who have stayed at PC Hotel Bhurban before and want to try something different — the private estate model is categorically different from any hotel stay",
-      ],
-      image: {
-        src: article276Villa,
-        alt: "When the Villa Is the Better Choice",
-      },
-    },
-
-    {
-      type: "section",
-      heading: "Bhurban Hotel Room Prices — What You Actually Pay",
-      paragraphs: [
-        "PC Hotel Bhurban's published rates vary by season and room type. Himalaya Villas' villa rates (PKR 39,000-70,000 per villa per night) are transparently published and confirmed via WhatsApp at booking. For a family of 6 comparing the two options:",
-        "3 PC Hotel rooms at PKR 45,000/room = PKR 135,000 per night. 1 Himalaya Villas Garden Villa Retreat at PKR 55,000-60,000 per night. The villa costs less and delivers more — private garden, in-villa dining, exclusive use.",
-      ],
-      image: {
-        src: article276View,
-        alt: "Bhurban Hotel Room Prices",
-      },
-    },
-
-    {
-      type: "faqs",
-      heading: "Frequently Asked Questions",
-      items: [
-        {
-          q: "Are Himalaya Villas villas cheaper than PC Hotel Bhurban rooms?",
-          a: "Per person for a group, yes — significantly. A family of 6 at Himalaya Villas pays approximately PKR 9,000-12,000 per person per night. The same family needing 3 hotel rooms at PC Hotel pays PKR 22,500-37,500 per person per night. The villa is always more economical for groups of 4+.",
-        },
-        {
-          q: "Can I book a single hotel room for one person at Himalaya Villas?",
-          a: "Himalaya Villas does not have hotel rooms — it has private villas. A solo traveller or couple booking the Serene Valley Cabin (PKR 39,000-45,000/night) receives the full villa regardless of occupancy. For solo travellers on a tight budget, PC Hotel Bhurban's hotel rooms are the more economical choice.",
-        },
-      ],
-    },
-
-    {
-      type: "cta",
-      eyebrow: "How to Book",
-      heading: "Book a Private Villa Instead of a Hotel Room ",
-      text: "Contact us to book your private villa.",
-      buttonLabel: "Book Your Stay",
-      buttonHref: "https://wa.me/923045679000",
-      footnote: "Direct bookings receive the best available rate.",
-    },
-
-    {
-      type: "related",
-      heading: "📎 Explore More",
-      items: [
-        { href: "/bhurban-private-estate-vs-pc-hotel", label: "Full PC Hotel vs Himalaya Villas comparison" },
-        { href: "/bhurban-accommodation-guide", label: "Complete accommodation guide" },
-        { href: "/affordable-villa-bhurban", label: "Most affordable villa options" },
-        { href: "/villas", label: "Browse Himalaya Villas villas" },
       ],
     },
   ],
@@ -37535,7 +32929,6 @@ export const article278: Article = {
       heading: "📎 Explore More",
       items: [
         { href: "/bhurban-private-estate-vs-pc-hotel", label: "Full comparison" },
-        { href: "/bhurban-hotel-rooms", label: "Hotel rooms guide" },
         { href: "/villas", label: "Browse Himalaya Villas villas" },
         { href: "/murree-bhurban-trip-cost", label: "Cost breakdown" },
       ],
@@ -37670,7 +33063,6 @@ export const article279: Article = {
       type: "related",
       heading: "📎 Explore More",
       items: [
-        { href: "/bhurban-accommodation-guide", label: "Full accommodation comparison" },
         { href: "/affordable-villa-bhurban", label: "Most affordable villa options" },
         { href: "/booking-villa-bhurban-faq", label: "Booking process FAQ" },
         { href: "/villas", label: "Browse villas" },
@@ -37799,113 +33191,6 @@ export const article280: Article = {
         { href: "/murree-october-half-term", label: "School holiday October guide" },
         { href: "/bhurban-pine-forest-guide", label: "Autumn forest ecology" },
         { href: "/villas", label: "Browse October availability" },
-      ],
-    },
-  ],
-};
-
-// ============================================
-// ARTICLE 281 - Villa Near Murree for Families — Better Than Mall Road
-// ============================================
-
-export const article281: Article = {
-  slug: "villa-near-murree-families",
-  title: "Villa Near Murree for Families — Better Than Mall Road",
-  metaDescription:
-    "villa near murree for family, family villa near murree, private villa near murree pakistan, murree family villa, villa murree pakistan family",
-  keywords:
-    "villa near murree for family, family villa near murree, private villa near murree pakistan, murree family villa, villa murree pakistan family",
-  eyebrow: "Template C — Commercial Spoke | Clusters 10 & 4: Family + Villas",
-  h1: "Villa Near Murree for Families — Better Than Mall Road",
-  heroTagline:
-    "The best private family villa near Murree is at Himalaya Villas & Resorts in Bhurban — 11km from Murree Mall Road (20 minutes). Villa options for families: Garden Villa Retreat (3 bedrooms, private enclosed garden — PKR 55,000-60,000/night, best for families with young children), Alpine Family Lodge (3+ bedrooms, largest indoor living area — PKR 60,000-70,000/night, best for larger families 8-12). WhatsApp: +92 304 567 9000.",
-  heroImage: article281Hero,
-
-  blocks: [
-    {
-      type: "callout-qa",
-      question: "Where can I find a private villa near Murree for my family?",
-      answer:
-        "The best private family villa near Murree is at Himalaya Villas & Resorts in Bhurban — 11km from Murree Mall Road (20 minutes). Villa options for families: Garden Villa Retreat (3 bedrooms, private enclosed garden — PKR 55,000-60,000/night, best for families with young children), Alpine Family Lodge (3+ bedrooms, largest indoor living area — PKR 60,000-70,000/night, best for larger families 8-12). WhatsApp: +92 304 567 9000.",
-    },
-
-    {
-      type: "section",
-      heading: "Private Villa Near Murree for Families — Why Bhurban Is Better Than Mall Road",
-      paragraphs: [
-        "Families searching for 'villa near Murree' are looking for an alternative to Murree Mall Road's hotel accommodation — they want a private property where the children can play outdoors without shared public spaces, where meals happen at the family's schedule rather than a restaurant's, and where the family has a mountain property that feels like it belongs to them.",
-        "Bhurban, 11km from Murree and 20 minutes by car, has exactly this. The Himalaya Villas private estate is the only property near Murree offering this model.",
-      ],
-      image: {
-        src: article281Villa,
-        alt: "Villa Near Murree for Families",
-      },
-    },
-
-    {
-      type: "facts",
-      heading: "Family Villas at Himalaya Villas — The Right Options",
-      items: [
-        {
-          label: "Garden Villa Retreat — Best for Families with Young Children",
-          value: "Rate: PKR 55,000-60,000/night | Bedrooms: 3 bedrooms (parents + 2 children rooms) | Standout feature: Private enclosed garden — the only completely enclosed outdoor play space on the estate. Children play safely; parents watch from the living area. | Ground floor: Ground-floor access — suitable for grandparents accompanying the family. | Capacity: 6-8 guests comfortably.",
-        },
-        {
-          label: "Alpine Family Lodge — Best for Larger Families",
-          value: "Rate: PKR 60,000-70,000/night | Bedrooms: 3+ bedrooms accommodating 8-12 guests | Standout feature: Largest indoor living and dining area on the estate — space for the full extended family gathering inside. | Capacity: 8-12 guests.",
-        },
-      ],
-    },
-
-    {
-      type: "section",
-      heading: "Why Bhurban Is Better Than Murree Mall Road for Families",
-      paragraphs: [
-        "Bhurban is quieter: the Bhurban township area has a fraction of Mall Road's tourist traffic. Children play on estate paths rather than navigating tourist crowds.",
-        "Private outdoor space: no Mall Road hotel provides a private enclosed garden or an exclusive terrace belonging to one family. Himalaya Villas' villa model provides both.",
-        "Shorter queue, easier access: the Patriata Chairlift (15 minutes from Bhurban) is less crowded than the chairlift options based on Mall Road. Kashmir Point and all Mall Road attractions are 20 minutes away — accessible as a day trip.",
-        "In-villa meals for children: meals at the family's timing, in the villa, with children's dietary preferences accommodated. No restaurant queue, no children getting bored waiting for food.",
-        "Cedar forest paths from the gate: the forest walk from the estate gate is safe, maintained, and beautiful — the outdoor activity that requires no transport or ticket.",
-      ],
-      image: {
-        src: article281View,
-        alt: "Why Bhurban Is Better Than Murree Mall Road for Families",
-      },
-    },
-
-    {
-      type: "faqs",
-      heading: "Frequently Asked Questions",
-      items: [
-        {
-          q: "How far is Himalaya Villas from Murree Mall Road?",
-          a: "11km by road, approximately 20 minutes by car. All Mall Road attractions (Kashmir Point, Pindi Point, bhutta and chai bazaar, Chairlift) are accessible as day trips from the estate.",
-        },
-        {
-          q: "Is Bhurban or Mall Road Murree better for a family with children?",
-          a: "Bhurban for families who want a private outdoor space, lower crowds, and the premium villa experience. Mall Road for families who specifically want to walk to the chairlift and bazaar from their hotel. Most families who have tried both describe Bhurban as the clear preference for the private estate advantages.",
-        },
-      ],
-    },
-
-    {
-      type: "cta",
-      eyebrow: "How to Book",
-      heading: "Book the Family Villa Near Murree ",
-      text: "Contact us to book your family villa.",
-      buttonLabel: "Book Your Stay",
-      buttonHref: "https://wa.me/923045679000",
-      footnote: "Direct bookings receive the best available rate.",
-    },
-
-    {
-      type: "related",
-      heading: "📎 Explore More",
-      items: [
-        { href: "/family-villa-bhurban-murree", label: "Full family villa guide" },
-        { href: "/bhurban-vs-murree-mall-road", label: "Bhurban vs Mall Road comparison" },
-        { href: "/murree-bhurban-kids-guide", label: "Kids activities guide" },
-        { href: "/villas", label: "Browse family villas" },
       ],
     },
   ],
@@ -38178,7 +33463,6 @@ export const article284: Article = {
       heading: "📎 Explore More",
       items: [
         { href: "/bhurban-murree-complete-guide", label: "Full Bhurban guide" },
-        { href: "/bhurban-accommodation-guide", label: "Accommodation comparison" },
         { href: "/booking-villa-bhurban-faq", label: "Booking FAQ" },
         { href: "/villas", label: "Browse Himalaya Villas" },
       ],
@@ -38432,7 +33716,6 @@ export const article286: Article = {
       items: [
         { href: "/corporate-retreat-near-islamabad", label: "Corporate retreat guide" },
         { href: "/bhurban-for-lahore-families", label: "Lahore to Bhurban guide" },
-        { href: "/villa-for-20-guests-bhurban", label: "Group accommodation" },
         { href: "/villas", label: "Browse villa options" },
       ],
     },
@@ -38529,7 +33812,6 @@ export const article287: Article = {
       items: [
         { href: "/corporate-retreat-near-islamabad", label: "Corporate retreat guide" },
         { href: "/pakistan-fintech-leadership-retreat", label: "Fintech leadership retreat" },
-        { href: "/villa-for-20-guests-bhurban", label: "Group accommodation" },
         { href: "/villas", label: "Browse villa options" },
       ],
     },
@@ -38731,7 +34013,6 @@ export const article289: Article = {
       items: [
         { href: "/murree-bhurban-diaspora-guide", label: "Full diaspora visitor guide" },
         { href: "/gcc-pakistanis-bhurban-mountain-guide", label: "GCC diaspora guide" },
-        { href: "/villa-near-islamabad-airport", label: "Airport-to-Bhurban guide" },
         { href: "/villas", label: "Browse villa options" },
       ],
     },
@@ -38944,7 +34225,6 @@ export const article291: Article = {
       heading: "📎 Explore More",
       items: [
         { href: "/long-stay-villa-bhurban", label: "Long stay villa guide" },
-        { href: "/remote-work-villa-bhurban", label: "Remote work guide" },
         { href: "/villas", label: "Browse villa options" },
       ],
     },
@@ -39043,7 +34323,6 @@ export const article292: Article = {
       items: [
         { href: "/corporate-retreat-near-islamabad", label: "Corporate retreat guide" },
         { href: "/bhurban-for-lahore-families", label: "Lahore to Bhurban guide" },
-        { href: "/villa-for-20-guests-bhurban", label: "Group accommodation" },
         { href: "/villas", label: "Browse villa options" },
       ],
     },
@@ -39247,7 +34526,6 @@ export const article294: Article = {
       items: [
         { href: "/pakistan-tech-startups-offsite-bhurban", label: "Tech startup offsite guide" },
         { href: "/corporate-team-building-bhurban", label: "Team building guide" },
-        { href: "/villa-for-20-guests-bhurban", label: "Group accommodation" },
         { href: "/villas", label: "Browse villa options" },
       ],
     },
@@ -39509,7 +34787,6 @@ export const article296: Article = {
       type: "related",
       heading: "📎 Explore More",
       items: [
-        { href: "/bhurban-hotel-rooms", label: "Full Bhurban hotel room guide" },
         { href: "/bhurban-private-estate-vs-pc-hotel", label: "PC Hotel vs Himalaya Villas" },
         { href: "/affordable-villa-bhurban", label: "Most affordable villa option" },
         { href: "/villas", label: "Browse all Himalaya Villas" },
@@ -39651,7 +34928,6 @@ export const article297: Article = {
       items: [
         { href: "/bhurban-murree-complete-guide", label: "Full Bhurban destination guide" },
         { href: "/corporate-retreat-bhurban", label: "Corporate and golf retreat packages" },
-        { href: "/bhurban-hotel-rooms", label: "Full accommodation comparison" },
         { href: "/villas", label: "Browse Himalaya Villas" },
       ],
     },
@@ -39838,7 +35114,6 @@ export const article298: Article = {
       type: "related",
       heading: "📎 Explore More",
       items: [
-        { href: "/bhurban-hotel-rooms", label: "Hotel room detail" },
         { href: "/bhurban-private-estate-vs-pc-hotel", label: "PC Hotel vs Himalaya Villas deep dive" },
         { href: "/bhurban-october-weekend", label: "Best Bhurban timing" },
         { href: "/villas", label: "Browse all villas" },
@@ -39993,238 +35268,6 @@ export const article299: Article = {
         { href: "/bhurban-vs-murree-mall-road", label: "Bhurban vs Mall Road guide" },
         { href: "/villas", label: "Browse Himalaya Villas" },
         { href: "/murree-bhurban-complete-guide", label: "Full destination guide" },
-      ],
-    },
-  ],
-};
-
-// ============================================
-// ARTICLE 300 - Ayubia National Park — Complete Visitor Guide from Bhurban
-// ============================================
-
-export const article300: Article = {
-  slug: "ayubia-national-park-guide",
-  title: "Ayubia National Park — Complete Visitor Guide from Bhurban",
-  metaDescription:
-    "ayubia national park, ayubia national park pakistan, ayubia national park nathia gali road, ayubia pipeline track, ayubia from bhurban",
-  keywords:
-    "ayubia national park, ayubia national park pakistan, ayubia national park nathia gali road, ayubia pipeline track, ayubia from bhurban",
-  eyebrow: "Template A — Destination Authority Hub | Cluster 8: Location Guides",
-  h1: "Ayubia National Park — Complete Visitor Guide from Bhurban",
-  heroTagline:
-    "Ayubia National Park is a 3,312-acre protected forest in Khyber Pakhtunkhwa's Galyat region, established 1984, located approximately 30km from Bhurban (40 minutes by car via Ghora Gali and Changla Gali). The park contains the 8km Pipeline Track (the most popular forest walk in northern Pakistan), the Ayubia Chairlift, and dense deodar cedar, oak, and rhododendron forest at 7,000–8,500 feet. Entry: nominal fee. Best season: April (rhododendron bloom), October (autumn colour).",
-  heroImage: dummyImageTemp,
-
-  blocks: [
-    {
-      type: "callout-qa",
-      question: "What is Ayubia National Park and how do I visit from Bhurban?",
-      answer:
-        "Ayubia National Park is a 3,312-acre protected forest in Khyber Pakhtunkhwa's Galyat region, established 1984, located approximately 30km from Bhurban (40 minutes by car via Ghora Gali and Changla Gali). The park contains the 8km Pipeline Track (the most popular forest walk in northern Pakistan), the Ayubia Chairlift, and dense deodar cedar, oak, and rhododendron forest at 7,000–8,500 feet. Entry: nominal fee. Best season: April (rhododendron bloom), October (autumn colour). From Himalaya Villas Bhurban: depart 8am, arrive Ayubia 8:40am — full day return trip.",
-    },
-
-    {
-      type: "section",
-      heading: "Ayubia National Park — The Complete Visitor Guide from Bhurban",
-      paragraphs: [
-        "Ayubia National Park is one of Pakistan's most accessible yet most underestimated natural assets. At 8,100 monthly searches, it is the highest-volume destination-planning keyword in the Murree/Bhurban region — and it is the day trip that most Himalaya Villas guests describe as the highlight of their Bhurban stay.",
-        "This guide covers everything about visiting Ayubia National Park — what it contains, how to get there from Bhurban, how to structure the day, and what to do in each season.",
-      ],
-      image: {
-        src: dummyImageTemp,
-        alt: "Ayubia National Park",
-      },
-    },
-
-    {
-      type: "comparison",
-      heading: "Ayubia National Park — The Basics",
-      columns: ["Fact", "Detail"],
-      rows: [
-        { feature: "Established", a: "1984" },
-        { feature: "Total area", a: "3,312 acres (1,340 hectares)" },
-        { feature: "Elevation range", a: "7,000–8,500 feet" },
-        { feature: "Location", a: "Abbottabad District, KPK — Galyat chain" },
-        { feature: "Distance from Bhurban", a: "~30km / 40 minutes by car" },
-        { feature: "Distance from Islamabad", a: "~68km / 75 minutes by car" },
-        { feature: "Key features", a: "Pipeline Track (8km), Ayubia Chairlift, rhododendron forest, wildlife" },
-        { feature: "Entry fee", a: "Nominal — confirm at gate" },
-        { feature: "Best season", a: "April (bloom), October (colour), any clear day year-round" },
-      ],
-    },
-
-    {
-      type: "section",
-      heading: "The Pipeline Track — Pakistan's Most Famous Forest Walk",
-      paragraphs: [
-        "The Pipeline Track is an 8km trail following a historic water pipeline through the Galyat forest from Ayubia (7,500 feet) to Nathia Gali (8,000 feet). It is the most-walked trail in northern Pakistan and the specific experience that defines an Ayubia visit for most guests.",
-      ],
-      image: {
-        src: dummyImageTemp,
-        alt: "The Pipeline Track",
-      },
-    },
-
-    {
-      type: "facts",
-      heading: "Pipeline Track Vital Statistics",
-      items: [
-        {
-          label: "Distance",
-          value: "8km one-way (Ayubia to Nathia Gali)",
-        },
-        {
-          label: "Elevation change",
-          value: "Gradual — the trail follows a pipeline contour, minimal steep sections",
-        },
-        {
-          label: "Duration",
-          value: "2.5–3.5 hours at walking pace (one way)",
-        },
-        {
-          label: "Difficulty",
-          value: "Easy to moderate — suitable for families with children 8+",
-        },
-        {
-          label: "Return options",
-          value: "Taxi/transport from Nathia Gali back to Ayubia start, or retrace",
-        },
-        {
-          label: "Best time of day",
-          value: "Start 8–9am — morning light on the trail, before midday crowds",
-        },
-      ],
-    },
-
-    {
-      type: "section",
-      heading: "What You See on the Pipeline Track",
-      paragraphs: [
-        "Deodar cedar and Himalayan oak canopy — continuous forest cover for the full 8km",
-        "Rhododendron arboreum — the tree rhododendron with red flowers, peak bloom in April (weeks 2–4)",
-        "Western tragopan and Himalayan monal (the national bird of Pakistan) — both species present in the park; sightings most likely in early morning",
-        "Leopard habitat (rare sighting, more common in dusk/dawn hours in less-trafficked sections)",
-        "Autumn colour in October — the deciduous oak and wild cherry against evergreen cedar",
-      ],
-      image: {
-        src: dummyImageTemp,
-        alt: "What You See on the Pipeline Track",
-      },
-    },
-
-    {
-      type: "section",
-      heading: "Ayubia Chairlift",
-      paragraphs: [
-        "The Ayubia Chairlift provides an aerial view of the Galyat forest — an open gondola ride above the cedar canopy, with views across to the ridge above Nathia Gali. Operating hours vary seasonally; confirm availability on arrival. The chairlift is best combined with a Pipeline Track walk — ride up, walk back or vice versa.",
-      ],
-      image: {
-        src: dummyImageTemp,
-        alt: "Ayubia Chairlift",
-      },
-    },
-
-    {
-      type: "comparison",
-      heading: "Seasonal Guide to Ayubia",
-      columns: ["Season", "Condition", "The Specific Draw"],
-      rows: [
-        {
-          feature: "April (weeks 2–4)",
-          a: "Rhododendron bloom peak",
-          b: "Red-flower canopy on Pipeline Track — the most visually distinctive Ayubia experience",
-        },
-        {
-          feature: "July–August (monsoon)",
-          a: "Green at maximum saturation; afternoon rain likely",
-          b: "Walk 8–11am before afternoon shower; the post-rain forest smell",
-        },
-        {
-          feature: "October (weeks 2–3)",
-          a: "Amber deciduous + max atmospheric clarity",
-          b: "The autumn colour walk — the finest general photography season",
-        },
-        {
-          feature: "January",
-          a: "Snow on the cedar and trail possible",
-          b: "Check trail conditions; snow turns the Pipeline Track dramatic but potentially slippery",
-        },
-      ],
-    },
-
-    {
-      type: "section",
-      heading: "Getting to Ayubia from Bhurban — The Route",
-      paragraphs: [
-        "Depart Himalaya Villas Bhurban — head toward Murree on the Expressway",
-        "Turn at Ghora Gali junction onto the Galyat road (well-signed)",
-        "Through Changla Gali and Dungagali to Ayubia — approximately 40 minutes total",
-        "Park at the Ayubia National Park entrance/chairlift area",
-        "Begin Pipeline Track from the signed trailhead near the chairlift",
-        "The 30km drive from Bhurban to Ayubia passes through the full Galyat landscape — Ghora Gali's junction bazaar, the forested Changla Gali summit, and the Dungagali descent into Ayubia. The drive itself is part of the experience.",
-      ],
-      image: {
-        src: dummyImageTemp,
-        alt: "Getting to Ayubia from Bhurban",
-      },
-    },
-
-    {
-      type: "section",
-      heading: "The Bhurban Day Trip Itinerary",
-      paragraphs: [
-        "7:30am — breakfast at the villa",
-        "8:00am — depart Bhurban",
-        "8:40am — arrive Ayubia, begin Pipeline Track",
-        "11:30am — complete Pipeline Track at Nathia Gali; tea at a Nathia Gali dhaba",
-        "12:30pm — taxi return to Ayubia (15 min, confirm local taxi availability)",
-        "1:00pm — chairlift ride if desired; lunch at Ayubia",
-        "2:30pm — return drive to Bhurban via Ghora Gali",
-        "3:15pm — back at Himalaya Villas; evening at the cedar garden",
-      ],
-      image: {
-        src: dummyImageTemp,
-        alt: "Bhurban Day Trip Itinerary",
-      },
-    },
-
-    {
-      type: "faqs",
-      heading: "Frequently Asked Questions",
-      items: [
-        {
-          q: "Is the Pipeline Track safe for children?",
-          a: "The Pipeline Track is generally safe for children aged 8+ who are comfortable walking 2–3km. The trail is well-defined, mostly flat, and does not involve technical climbing. Younger children and grandparents may find the full 8km return tiring — a 3–4km section-and-return is a good alternative for families with mixed abilities.",
-        },
-        {
-          q: "What wildlife might I see at Ayubia National Park?",
-          a: "Ayubia has documented populations of Himalayan monal (Pakistan's national bird — the most likely bird sighting on the Pipeline Track), western tragopan (more elusive), barking deer, yellow-throated marten, and leopard (rare sighting). Early morning (6:30–9am) is the best wildlife observation window. The park staff at the entrance can advise on recent wildlife activity.",
-        },
-        {
-          q: "Can I visit Ayubia as a day trip from Islamabad?",
-          a: "Yes — Ayubia is 68km from Islamabad, approximately 75 minutes. A day trip is comfortable: depart 7am, arrive 8:15am for the Pipeline Track walk, return by 4pm. For guests staying at Himalaya Villas Bhurban (40 minutes from Ayubia), the day trip is even more convenient.",
-        },
-      ],
-    },
-
-    {
-      type: "cta",
-      eyebrow: "How to Book",
-      heading: "Book Your Bhurban Base for the Ayubia Day Trip ",
-      text: "Contact us to book your Ayubia day trip base.",
-      buttonLabel: "Book Your Stay",
-      buttonHref: "https://wa.me/923045679000",
-      footnote: "Direct bookings receive the best available rate.",
-    },
-
-    {
-      type: "related",
-      heading: "📎 Explore More",
-      items: [
-        { href: "/nathia-gali-resort-vs-bhurban", label: "Nathia Gali vs Bhurban guide" },
-        { href: "/bhurban-hiking-trails", label: "Full trails guide" },
-        { href: "/murree-spring-wildflowers", label: "April bloom guide" },
-        { href: "/villas", label: "Browse Himalaya Villas" },
       ],
     },
   ],
@@ -41075,7 +36118,6 @@ export const article306: Article = {
       heading: "📎 Explore More",
       items: [
         { href: "/corporate-retreat-near-islamabad", label: "Corporate retreat guide" },
-        { href: "/villa-near-islamabad-airport", label: "Airport-to-Bhurban guide" },
         { href: "/villas", label: "Browse villa options" },
       ],
     },
@@ -41261,7 +36303,6 @@ export const article308: Article = {
       heading: "📎 Explore More",
       items: [
         { href: "/murree-bhurban-diaspora-guide", label: "Full diaspora visitor guide" },
-        { href: "/villa-near-islamabad-airport", label: "Airport-to-Bhurban guide" },
         { href: "/villas", label: "Browse villa options" },
       ],
     },
@@ -41352,7 +36393,6 @@ export const article309: Article = {
       heading: "📎 Explore More",
       items: [
         { href: "/corporate-retreat-near-islamabad", label: "Corporate retreat guide" },
-        { href: "/villa-for-20-guests-bhurban", label: "Group accommodation" },
         { href: "/villas", label: "Browse villa options" },
       ],
     },
@@ -41549,7 +36589,6 @@ export const article311: Article = {
       heading: "📎 Explore More",
       items: [
         { href: "/in-villa-dining-bhurban", label: "Full in-villa dining guide" },
-        { href: "/restaurants-near-bhurban-murree", label: "Dining guide" },
         { href: "/galyat-produce-murree-hills", label: "Local produce guide" },
         { href: "/villas", label: "Browse villa options" },
       ],
@@ -41743,7 +36782,6 @@ export const article313: Article = {
       heading: "📎 Explore More",
       items: [
         { href: "/pakistan-women-entrepreneurs-retreat", label: "Women entrepreneurs retreat guide" },
-        { href: "/womens-professional-retreats-pakistan", label: "Women's professional retreats" },
         { href: "/villas", label: "Browse villa options" },
       ],
     },
@@ -42001,8 +37039,6 @@ export const article319: Article = {
       type: "related",
       heading: "📎 Explore More",
       items: [
-        { href: "/romantic-hotels-murree", label: "Full honeymoon guide" },
-        { href: "/villa-with-bhurban", label: "Presidential Suite" },
         { href: "/karachi-summer-escape-mountains", label: "Karachi summer guide" },
         { href: "/villas", label: "Browse honeymoon villas" },
       ],
@@ -42095,7 +37131,7 @@ export const article320: Article = {
       items: [
         {
           q: "Is Bhurban safe for solo women travellers?",
-          a: "Bhurban is considered a safe domestic tourism area for women travellers. The private estate at Himalaya Villas adds a layer of structural safety — the gated property, the private outdoor spaces, and the single access point are specifically advantageous for solo women travellers. Review the full women's safety guide at /women-leadership-retreat-islamabad for additional context.",
+          a: "Bhurban is considered a safe domestic tourism area for women travellers. The private estate at Himalaya Villas adds a layer of structural safety — the gated property, the private outdoor spaces, and the single access point are specifically advantageous for solo women travellers.",
         },
         {
           q: "How do I get to Bhurban from Islamabad alone without a car?",
@@ -42365,7 +37401,6 @@ export const article323: Article = {
       heading: "📎 Explore More",
       items: [
         { href: "/corporate-wellness-retreat-bhurban", label: "Wellness retreat" },
-        { href: "/villa-with-bhurban", label: "Presidential Suite" },
         { href: "/bhurban-stargazing-night-sky", label: "Evening activities" },
         { href: "/villas", label: "Browse Himalaya Villas" },
       ],
@@ -42474,9 +37509,7 @@ export const article324: Article = {
       type: "related",
       heading: "📎 Explore More",
       items: [
-        { href: "/anniversary-villa-bhurban", label: "Anniversary guide" },
         { href: "/wedding-venues-bhurban-murree", label: "Wedding events guide" },
-        { href: "/villa-for-20-guests-bhurban", label: "Group configuration" },
         { href: "/villas", label: "Browse Himalaya Villas" },
       ],
     },
@@ -42777,7 +37810,6 @@ export const article327: Article = {
       heading: "📎 Explore More",
       items: [
         { href: "/pakistan-youth-leadership-mountain-retreat", label: "Youth leadership guide" },
-        { href: "/villa-for-20-guests-bhurban", label: "Group accommodation" },
         { href: "/villas", label: "Browse villa options" },
       ],
     },
@@ -43497,7 +38529,6 @@ export const article335: Article = {
       heading: "📎 Explore More",
       items: [
         { href: "/in-villa-dining-bhurban", label: "In-villa dining guide" },
-        { href: "/restaurants-near-bhurban-murree", label: "Dining guide" },
         { href: "/galyat-produce-murree-hills", label: "Local produce guide" },
         { href: "/villas", label: "Browse villa options" },
       ],
@@ -43645,7 +38676,6 @@ export const article337: Article = {
       items: [
         { href: "/eid-ul-adha-bhurban", label: "Eid ul Adha specific guide" },
         { href: "/extended-family-reunion-bhurban", label: "Full estate booking" },
-        { href: "/bhurban-murree-ramadan", label: "Ramadan guide" },
         { href: "/villas", label: "Browse Eid villas" },
       ],
     },
@@ -43785,7 +38815,6 @@ export const article338: Article = {
       items: [
         { href: "/family-villa-bhurban-murree", label: "Full family villa guide" },
         { href: "/bhurban-for-lahore-families", label: "Lahore family guide" },
-        { href: "/villa-near-murree-families", label: "Villa near Murree for families" },
         { href: "/villas", label: "Browse family villas" },
       ],
     },
@@ -44227,7 +39256,6 @@ export const article347: Article = {
       type: "related",
       heading: "📎 Explore More",
       items: [
-        { href: "/remote-work-villa-bhurban", label: "Remote work villa guide" },
         { href: "/pakistan-it-sector-mountain-retreat", label: "IT sector retreat guide" },
         { href: "/villas", label: "Browse villa options" },
       ],
@@ -44597,7 +39625,6 @@ export const article352: Article = {
       heading: "📎 Explore More",
       items: [
         { href: "/corporate-retreat-near-islamabad", label: "Corporate retreat guide" },
-        { href: "/villa-for-20-guests-bhurban", label: "Group accommodation" },
         { href: "/villas", label: "Browse villa options" },
       ],
     },
@@ -44744,7 +39771,6 @@ export const article354: Article = {
       heading: "📎 Explore More",
       items: [
         { href: "/pakistani-australian-diaspora-bhurban", label: "Pakistani-Australian guide" },
-        { href: "/villa-near-islamabad-airport", label: "Airport-to-Bhurban guide" },
         { href: "/villas", label: "Browse villa options" },
       ],
     },
@@ -45224,7 +40250,6 @@ export const article359: Article = {
       items: [
         { href: "/bhurban-snowfall-booking-guide", label: "Full snowfall booking strategy" },
         { href: "/murree-in-january", label: "January guide" },
-        { href: "/villa-with-bhurban", label: "Presidential Suite snowfall experience" },
         { href: "/villas", label: "Browse winter villas" },
       ],
     },
@@ -45755,129 +40780,6 @@ export const article364: Article = {
   ],
 };
 
-// ============================================
-// ARTICLE 365 - Villa for 20 Guests at Bhurban — Multi-Villa Configuration Guide
-// ============================================
-export const article365: Article = {
-  slug: "villa-for-20-guests-bhurban",
-  title: "Villa for 20 Guests at Bhurban — Multi-Villa Configuration Guide",
-  metaDescription:
-    "villa for 20 guests bhurban, 20 person villa bhurban murree, large group villa bhurban",
-  keywords:
-    "villa for 20 guests bhurban, 20 person villa bhurban murree, large group villa bhurban",
-  eyebrow: "Commercial | Cluster 4+5 | ~800w",
-  h1: "Villa for 20 Guests at Bhurban — The Multi-Villa Configuration Guide",
-  heroTagline:
-    "2–3 villa configuration: Alpine Family Lodge + Garden Villa Retreat covers 12–20 guests. PKR 115,000–130,000/night.",
-  heroImage: article365Hero,
-  blocks: [
-    {
-      type: "callout-qa",
-      question: "Can Himalaya Villas accommodate 20 guests in Bhurban?",
-      answer:
-        "Yes. For a group of 20 guests, a 2–3 villa configuration is recommended: the Alpine Family Lodge (8–12 guests) + Garden Villa Retreat (4–8 guests) covers 12–20 guests sharing the cedar garden and estate. Total rate for this configuration: PKR 115,000–130,000/night. WhatsApp +92 304 567 9000 to confirm the best configuration for your specific group.",
-    },
-    {
-      type: "section",
-      heading: "The 20-guest group represents the most common multi-villa booking configuration at Himalaya Villas",
-      paragraphs: [
-        "The extended family gathering, the corporate team offsite, the alumni reunion, or the large friend group that wants to be together in a private mountain estate.",
-      ],
-      image: {
-        src: article365Villa,
-        alt: "20 Guests Bhurban",
-      },
-    },
-    {
-      type: "comparison",
-      heading: "Configuration Options for 20 Guests",
-      columns: ["Configuration", "Villas", "Capacity", "Rate/Night", "Best For"],
-      rows: [
-        {
-          feature: "Compact 20-guest",
-          a: "Alpine Family Lodge + Garden Villa Retreat",
-          b: "12 + 8 = 20",
-          c: "PKR 115,000–130,000",
-          d: "Families wanting maximum shared outdoor space",
-        },
-        {
-          feature: "Flexible 20-guest",
-          a: "Alpine Lodge + Himalayan Penthouse + 1 smaller villa",
-          b: "12 + 4 + 4 = 20",
-          c: "PKR 135,000–145,000",
-          d: "Groups wanting more accommodation variety",
-        },
-        {
-          feature: "Premium 20-guest",
-          a: "Presidential Suite + Alpine Lodge + Garden Villa",
-          b: "4 + 12 + 8",
-          c: "PKR 155,000–175,000",
-          d: "Occasions where the Presidential Suite is the centrepiece",
-        },
-      ],
-    },
-    {
-      type: "section",
-      heading: "What 20 Guests Share at Himalaya Villas",
-      paragraphs: [
-        "The cedar garden: the central outdoor gathering space — fire pit, seating, cedar canopy. The entire group shares this space exclusively.",
-        "The dining pavilion: group meals for 20 can be arranged in the cedar garden or pavilion — pre-coordinate with the property team for large group catering.",
-        "The estate paths: the cedar forest paths within the estate belong to the booked group.",
-      ],
-      image: {
-        src: article365View,
-        alt: "Shared Spaces",
-      },
-    },
-    {
-      type: "section",
-      heading: "Planning a 20-Guest Group Booking",
-      paragraphs: [
-        "WhatsApp +92 304 567 9000: share group size (20), composition, dates, and occasion type.",
-        "The team recommends the best villa configuration. Confirm and hold.",
-        "Deposit to lock the booking.",
-        "Pre-arrival coordination: arrival sequence, catering for 20, activity plans, occasion setup.",
-      ],
-      image: {
-        src: article365Villa,
-        alt: "Planning a 20-Guest Booking",
-      },
-    },
-    {
-      type: "faqs",
-      heading: "Frequently Asked Questions",
-      items: [
-        {
-          q: "Can Himalaya Villas cater for 20 people at dinner?",
-          a: "Yes — group catering for 20 is coordinated through the estate's catering network. Pre-arrange the menu and timing at the booking stage.",
-        },
-        {
-          q: "Is there a discount for booking multiple villas?",
-          a: "Multi-villa bookings are discussed at the enquiry stage — group rates may apply for larger configurations. Confirm via WhatsApp +92 304 567 9000.",
-        },
-      ],
-    },
-    {
-      type: "cta",
-      eyebrow: "How to Book",
-      heading: "Book the 20-Guest Mountain Estate ",
-      text: "Contact us to book your group stay.",
-      buttonLabel: "Book Your Stay",
-      buttonHref: "https://wa.me/923045679000",
-      footnote: "Direct bookings receive the best available rate.",
-    },
-    {
-      type: "related",
-      heading: "📎 Explore More",
-      items: [
-        { href: "/extended-family-reunion-bhurban", label: "Full estate booking guide" },
-        { href: "/corporate-retreat-near-islamabad", label: "Corporate group guide" },
-        { href: "/villas", label: "Browse all villas" },
-      ],
-    },
-  ],
-};
-
 
 
 
@@ -46039,161 +40941,6 @@ export const article367: Article = {
 };
 
 // ============================================
-// GUEST POST 368 - Pakistan's UAE Banking Community — The Ramadan Return and the Mountain
-// ============================================
-
-export const article368: Article = {
-  slug: "uae-banking-community-ramadan-return-bhurban",
-  title: "Pakistan's UAE Banking Community — The Ramadan Return and the Mountain",
-  metaDescription:
-    "uae banking pakistan, dubai bankers bhurban, ramadan return mountain, gulf finance professionals, emirates nbd bhurban",
-  keywords:
-    "uae banking pakistan, dubai bankers bhurban, ramadan return mountain, gulf finance professionals, emirates nbd bhurban",
-  eyebrow: "Guest Post | Pakistani Banking Community in UAE | ~900w",
-  h1: "Pakistan's UAE Banking Community — The Ramadan Return and the Bhurban Mountain",
-  heroTagline:
-    "Pakistan's banking and finance community in the UAE — private bankers, corporate finance professionals, treasury and risk managers working at Emirates NBD, FAB, HSBC UAE, Standard Chartered Dubai, and the growing Islamic finance sector — has a return-visit pattern shaped by the UAE calendar. The UAE-Pakistan financial professional's return visit faces a specific challenge: the professional expectations of UAE banking (always-on communication, the WhatsApp-responsive culture of Gulf banking) can follow the banker back to Islamabad as effectively as they do in Dubai. The geographic move does not create the mental break.",
-  heroImage: dummyImageTemp,
-
-  blocks: [
-    {
-      type: "callout-qa",
-      question: "Why should UAE-based banking professionals include Bhurban in their Pakistan return?",
-      answer:
-        "The cedar estate at Himalaya Villas, 47km from Islamabad in a mountain forest at 6,800 feet, creates the break the Dubai-to-Islamabad flight does not. Two nights in the cedar estate — pre-arrival communication routing to the property WhatsApp, not the Dubai deal team — is the specific mechanism. The UAE-Pakistan financial professional's return visit faces a specific challenge: the professional expectations of UAE banking (always-on communication, the WhatsApp-responsive culture of Gulf banking) can follow the banker back to Islamabad as effectively as they do in Dubai. The geographic move does not create the mental break.",
-    },
-
-    {
-      type: "section",
-      heading: "Pakistan's UAE Banking Community — The Ramadan Return and the Bhurban Mountain",
-      paragraphs: [
-        "Pakistan's banking and finance community in the UAE — private bankers, corporate finance professionals, treasury and risk managers working at Emirates NBD, FAB, HSBC UAE, Standard Chartered Dubai, and the growing Islamic finance sector — has a return-visit pattern shaped by the UAE calendar.",
-        "The UAE-Pakistan financial professional's return visit faces a specific challenge: the professional expectations of UAE banking (always-on communication, the WhatsApp-responsive culture of Gulf banking) can follow the banker back to Islamabad as effectively as they do in Dubai. The geographic move does not create the mental break.",
-        "The cedar estate at Himalaya Villas, 47km from Islamabad in a mountain forest at 6,800 feet, creates the break the Dubai-to-Islamabad flight does not. Two nights in the cedar estate — pre-arrival communication routing to the property WhatsApp, not the Dubai deal team — is the specific mechanism.",
-      ],
-      image: {
-        src: dummyImageTemp,
-        alt: "UAE Banking Community",
-      },
-    },
-
-    {
-      type: "cta",
-      eyebrow: "Himalaya Villas & Resorts — For the UAE Banking Community on the Pakistan Return",
-      heading: "Book your UAE banking community mountain stay.",
-      text: "Create the mental break.",
-      buttonLabel: "Visit himalayavillas.com",
-      buttonHref: "https://himalayavillas.com",
-      footnote: "WhatsApp: +92 304 567 9000",
-    },
-
-    {
-      type: "related",
-      heading: "📎 Explore More",
-      items: [
-        { href: "/gcc-pakistanis-bhurban-mountain-guide", label: "GCC diaspora guide" },
-        { href: "/villa-near-islamabad-airport", label: "Airport-to-Bhurban guide" },
-        { href: "/villas", label: "Browse villa options" },
-      ],
-    },
-  ],
-};
-
-// ============================================
-// GUEST POST 369 - Women Solo Travellers in Pakistan — Why Bhurban Is the Right Mountain Destination
-// ============================================
-
-export const article369: Article = {
-  slug: "women-solo-travellers-bhurban",
-  title: "Women Solo Travellers in Pakistan — Why Bhurban Is the Right Mountain Destination",
-  metaDescription:
-    "women solo travel pakistan, solo female traveller bhurban, women's mountain getaway, safe solo travel pakistan, female solo bhurban",
-  keywords:
-    "women solo travel pakistan, solo female traveller bhurban, women's mountain getaway, safe solo travel pakistan, female solo bhurban",
-  eyebrow: "Guest Post | Pakistan Women's Travel Community | ~900w",
-  h1: "Women Solo Travellers in Pakistan — Why Bhurban Is the Right Mountain Destination",
-  heroTagline:
-    "Women's solo travel in Pakistan has been expanding in the past decade — driven partly by documented experiences shared by Pakistani women travellers on Instagram and travel blogs, and partly by structural changes in Pakistani urban culture. The private villa model at Himalaya Villas eliminates the shared lobby, corridors, and public spaces that can create discomfort for solo women travellers in standard hotel environments. The villa is yours alone.",
-  heroImage: dummyImageTemp,
-
-  blocks: [
-    {
-      type: "callout-qa",
-      question: "Why is Bhurban the right mountain destination for women solo travellers in Pakistan?",
-      answer:
-        "Private estate vs hotel: the private villa model at Himalaya Villas eliminates the shared lobby, corridors, and public spaces that can create discomfort for solo women travellers in standard hotel environments. The villa is yours alone. Gated property: single access point, no through traffic, no public access. The security architecture of the private estate is appropriate for solo women travellers who want genuine privacy. WhatsApp direct booking: the property team is available before, during, and after the stay. Islamabad proximity: 47km from Islamabad means accessibility by Careem intercity without dependence on arranged transport or male accompaniment.",
-    },
-
-    {
-      type: "section",
-      heading: "Women Solo Travellers in Pakistan — Why Bhurban Is the Right Mountain Destination",
-      paragraphs: [
-        "Women's solo travel in Pakistan has been expanding in the past decade — driven partly by documented experiences shared by Pakistani women travellers on Instagram and travel blogs, and partly by structural changes in Pakistani urban culture.",
-      ],
-      image: {
-        src: dummyImageTemp,
-        alt: "Women Solo Travellers",
-      },
-    },
-
-    {
-      type: "facts",
-      heading: "Why Bhurban Specifically",
-      items: [
-        {
-          label: "Private estate vs hotel",
-          value: "The private villa model at Himalaya Villas eliminates the shared lobby, corridors, and public spaces that can create discomfort for solo women travellers in standard hotel environments. The villa is yours alone.",
-        },
-        {
-          label: "Gated property",
-          value: "Single access point, no through traffic, no public access. The security architecture of the private estate is appropriate for solo women travellers who want genuine privacy.",
-        },
-        {
-          label: "WhatsApp direct booking",
-          value: "The property team is available before, during, and after the stay. This direct communication channel is specifically valued by solo women travellers who want responsive, personal support.",
-        },
-        {
-          label: "Islamabad proximity",
-          value: "47km from Islamabad means accessibility by Careem intercity without dependence on arranged transport or male accompaniment.",
-        },
-      ],
-    },
-
-    {
-      type: "section",
-      heading: "The Solo Women's Bhurban Weekend",
-      paragraphs: [
-        "The solo women's 2-night Bhurban weekend at Himalaya Villas: arrive Friday afternoon via Careem intercity. Serene Valley Cabin (PKR 39,000–45,000/night) as solo accommodation. Friday evening: cedar garden fire. Saturday: dawn walk, Patriata Chairlift, afternoon reading on the private terrace. Saturday evening: in-villa dinner. Sunday: late departure.",
-      ],
-      image: {
-        src: dummyImageTemp,
-        alt: "The Solo Women's Bhurban Weekend",
-      },
-    },
-
-    {
-      type: "cta",
-      eyebrow: "Himalaya Villas & Resorts — Private Cedar Estate for Women Travellers",
-      heading: "Book your solo women's mountain stay.",
-      text: "Experience genuine privacy.",
-      buttonLabel: "Visit himalayavillas.com",
-      buttonHref: "https://himalayavillas.com",
-      footnote: "WhatsApp: +92 304 567 9000",
-    },
-
-    {
-      type: "related",
-      heading: "📎 Explore More",
-      items: [
-        { href: "/womens-safety-mountain-travel-bhurban", label: "Women's safety guide" },
-        { href: "/womens-professional-retreats-pakistan", label: "Women's professional retreats" },
-        { href: "/villas", label: "Browse villa options" },
-      ],
-    },
-  ],
-};
-
-// ============================================
 // GUEST POST 370 - Pakistan's Universities — The Academic Research Retreat at the Mountain
 // ============================================
 
@@ -46343,7 +41090,6 @@ export const article371: Article = {
       heading: "📎 Explore More",
       items: [
         { href: "/corporate-retreat-near-islamabad", label: "Corporate retreat guide" },
-        { href: "/villa-for-20-guests-bhurban", label: "Group accommodation" },
         { href: "/villas", label: "Browse villa options" },
       ],
     },
@@ -47248,7 +41994,6 @@ export const article381: Article = {
       type: "related",
       heading: "📎 Explore More",
       items: [
-        { href: "/ayubia-national-park-guide", label: "Full Ayubia guide" },
         { href: "/bhurban-birdwatching-guide", label: "Trail birdwatching" },
         { href: "/villas", label: "Browse Himalaya Villas" },
       ],
@@ -47840,7 +42585,6 @@ export const article391: Article = {
       heading: "📎 Explore More",
       items: [
         { href: "/murree-bhurban-diaspora-guide", label: "Full diaspora visitor guide" },
-        { href: "/villa-near-islamabad-airport", label: "Airport-to-Bhurban guide" },
         { href: "/villas", label: "Browse villa options" },
       ],
     },
@@ -48750,7 +43494,6 @@ export const article398: Article = {
       type: "related",
       heading: "📎 Explore More",
       items: [
-        { href: "/luxury-hotels-in-murree", label: "Murree resort overview" },
         { href: "/hotels-in-bhurban-murree", label: "Bhurban-specific hotel guide" },
         { href: "/bhurban-vs-murree-mall-road", label: "Location comparison" },
         { href: "/villas", label: "Browse Himalaya Villas" },
@@ -48873,9 +43616,6 @@ export const article399: Article = {
       type: "related",
       heading: "📎 Explore More",
       items: [
-        { href: "/luxury-hotels-in-murree", label: "Full Murree hotel guide" },
-        { href: "/ramada-murree-alternative", label: "Ramada alternative" },
-        { href: "/luxury-hotels-in-murree", label: "Resort overview" },
         { href: "/villas", label: "Browse Himalaya Villas" },
       ],
     },
@@ -48956,8 +43696,6 @@ export const article400: Article = {
       type: "related",
       heading: "📎 Explore More",
       items: [
-        { href: "/luxury-hotels-in-murree", label: "Full Murree hotel guide" },
-        { href: "/luxury-hotels-in-murree", label: "Resort guide" },
         { href: "/movenpick-murree-alternative", label: "Mövenpick comparison" },
         { href: "/villas", label: "Browse Himalaya Villas" },
       ],
@@ -49093,7 +43831,6 @@ export const article401: Article = {
       items: [
         { href: "/bhurban-vs-naran-comparison", label: "Naran comparison" },
         { href: "/bhurban-galyat-comparison", label: "Galyat comparison" },
-        { href: "/ayubia-national-park-guide", label: "Ayubia guide" },
         { href: "/villas", label: "Browse Himalaya Villas" },
       ],
     },
@@ -49192,8 +43929,6 @@ export const article402: Article = {
       type: "related",
       heading: "📎 Explore More",
       items: [
-        { href: "/luxury-hotels-in-murree", label: "Full hotel guide" },
-        { href: "/luxury-hotels-in-murree", label: "Resort overview" },
         { href: "/villas", label: "Browse Himalaya Villas" },
       ],
     },
@@ -49300,185 +44035,6 @@ export const article403: Article = {
       items: [
         { href: "/hotels-in-bhurban-murree", label: "Full Bhurban accommodation guide" },
         { href: "/guest-house-murree", label: "Guest house comparison" },
-        { href: "/villas", label: "Browse Himalaya Villas" },
-      ],
-    },
-  ],
-};
-
-// ============================================
-// ARTICLE 405 - Cheap Hotels in Murree — Budget Accommodation and When to Upgrade
-// ============================================
-export const article405: Article = {
-  slug: "cheap-hotels-murree-guide",
-  title: "Cheap Hotels in Murree - Himalaya Villas & Resorts",
-  metaDescription:
-    "Looking for cheap hotels in Murree? Compare rates, best areas near Mall Road & family stays, plus a private villa option in Bhurban. Book Now!",
-  keywords:
-    "cheap hotels in murree, cheap hotels in murree pakistan, low price hotels murree, cheap hotel in murree pakistan, cheap rooms murree",
-  eyebrow: "Commercial | Cluster 1 | ~800w",
-  h1: "Cheap Hotels in Murree",
-  heroTagline:
-    "Looking for cheap hotels in Murree? Compare rates, best areas near Mall Road & family stays, plus a private villa option in Bhurban. Book Now! ",
-  heroImage: article405Hero,
-  blocks: [
-   
-    {
-      type: "section",
-      heading: "Cheap Hotels in Murree: Budget Stays, Rates & Best Areas",
-      paragraphs: [
-        "Finding cheap hotels in Murree is not only about choosing the lowest room price. A good budget stay should also give you a practical location, suitable accommodation, clear booking information, and a comfortable base for exploring Murree.",
-        "Himalaya Villas & Resorts offers accommodation for travelers planning a stay in Murree and looking for value without making their trip unnecessarily expensive. Whether you are visiting with family, traveling as a couple, planning a short weekend break, or staying for several days, comparing the total value of your accommodation can help you make a better booking decision.",
-        "Hotel and accommodation prices in Murree can change depending on travel dates, season, demand, room type, and length of stay. For that reason, travelers should always check the current rate before confirming a booking.",
-      ],
-      image: {
-        src: article405View,
-        alt: "Cheap Hotels Murree",
-      },
-    },
-    {
-      type: "section",
-      heading: "Looking for Cheap Hotels in Murree?",
-      paragraphs: [
-        "Murree is one of Pakistan's best-known hill destinations. Visitors travel here for its mountain scenery, cool weather, lively commercial areas, family attractions, and access to popular places such as Mall Road, Kashmir Point, and Pindi Point.",
-        "Because Murree attracts visitors throughout the year, accommodation is available across different price levels. Travelers searching for budget hotels in Murree usually want a balance between affordability and convenience.",
-        "Before booking, consider more than the advertised room rate. Think about your travel dates, the number of guests, your preferred area in Murree, the type of accommodation you need, the total length of your stay, available facilities, cancellation or booking conditions, and transportation and access to the places you plan to visit.",
-        "A slightly different location or room category can sometimes provide better overall value than choosing accommodation only because it appears to have the cheapest nightly rate.",
-      ],
-    },
-    {
-      type: "section",
-      heading: "Stay at Himalaya Villas & Resorts in Murree",
-      paragraphs: [
-        "Himalaya Villas & Resorts is an accommodation option for visitors looking for a place to stay while exploring Murree.",
-        "Travelers searching for cheap accommodation in Murree often compare several factors before deciding where to stay. Price is important, but location, space, convenience, and suitability for the people traveling with you can be just as important.",
-        "Before confirming your stay at Himalaya Villas & Resorts, check the latest information about room or villa availability, current prices, occupancy limits, and included facilities. This helps you understand exactly what is included in your booking and avoids relying on outdated travel information.",
-        "For the best comparison, look at the total cost for your complete stay rather than only the headline nightly price.",
-      ],
-    },
-    {
-      type: "section",
-      heading: "How Much Do Cheap Hotels in Murree Cost?",
-      paragraphs: [
-        "There is no single fixed price for a cheap hotel or budget stay in Murree. Accommodation rates rise and fall according to several factors, and understanding them helps you find better value.",
-        "The first is travel season. Murree sees higher demand during popular holiday periods, summer travel, weekends, and school vacations. When more visitors are searching for rooms at the same time, prices naturally increase. The second is the difference between weekdays and weekends — a weekday stay may be priced differently from a weekend stay, so if your dates are flexible, comparing several options can reveal which offers better value.",
-        "Length of stay matters just as much. The total cost depends heavily on how many nights you stay, so travelers planning several days in Murree should compare the complete booking cost rather than judging a property by a one-night rate. The number of guests also affects price: a room suitable for two people is priced differently from one meant for a larger family or group, and you should always enter the correct number of adults and children when asking for a rate.",
-        "Finally, the type of accommodation matters. Different categories have different prices, so confirm what kind of unit you are booking, how many guests it is designed for, and what is included. Because rates change, the safest approach is to contact Himalaya Villas & Resorts directly or use its current booking information to confirm the price for your exact travel dates.",
-      ],
-    },
-    {
-      type: "section",
-      heading: "Best Areas to Stay in Murree on a Budget",
-      paragraphs: [
-        "Where you stay affects your costs almost as much as the hotel itself. Prime spots are pricier, while quieter areas save money but add transport time.",
-        "Mall Road is the centre of Murree, with shops, restaurants and the main promenade. Staying here means you can walk to most things and avoid parking stress in the evening. The trade-off is price and noise — rooms cost more, and the area gets crowded on weekends. If you want Mall Road access on a budget, look for properties a short walk away rather than directly on the road.",
-        "Kashmir Point offers a calmer atmosphere and viewpoints across the hills. It suits travellers who prefer quiet evenings over shopping and street food, though you will usually need a car or taxi to reach Mall Road. Pindi Point is known for its views and chairlift, and accommodation nearby can be reasonably priced — it works well if you plan a day of sightseeing rather than staying on Mall Road.",
-        "Locations a little outside the centre, on the quieter stretches of outer Murree, often give you more space, better parking and lower rates. They suit families with their own vehicle. The trade-off is a longer drive into town, so factor in fuel and time when comparing.",
-      ],
-    },
-    {
-      type: "section",
-      heading: "Cheap Hotels in Murree Near Mall Road",
-      paragraphs: [
-        "Many travellers search for cheap hotels near Mall Road, and it makes sense. You can walk to dinner, shop and enjoy the evening atmosphere without arranging transport.",
-        "To keep costs down and still stay close, book a few minutes' walk away — a five- to ten-minute uphill walk can lower the rate noticeably. Check the road access, since some properties near Mall Road are difficult to reach by car, especially in snow. Ask about parking before you arrive, because parking near Mall Road is limited. And avoid peak weekends, since prices near Mall Road rise fastest during snowfall and holidays.",
-      ],
-    },
-    {
-      type: "section",
-      heading: "Cheap Hotels in Murree for Families",
-      paragraphs: [
-        "Families need more than a low price. A cheap room that fits four people badly is not a bargain.",
-        "When choosing a family stay, confirm room capacity so you know how many adults and children the room can legally hold. Check heating, because winter nights in Murree get cold and a working heater matters more than a TV. Look at parking and road access, especially if you travel with luggage and children, and confirm that restaurants are close or that the property can provide meals. Check cancellation terms too, since weather can change travel plans quickly.",
-        "For larger families or groups, a villa often works out better than two or three separate hotel rooms. You get shared living space, more privacy and usually a lower cost per person.",
-      ],
-    },
-    {
-      type: "section",
-      heading: "Cheap Hotels in Murree for Couples",
-      paragraphs: [
-        "Couples usually care about privacy, a quiet setting and a comfortable room more than extra space. Look for a location away from crowded weekend traffic, a clean and well-heated private room, views or a quiet outdoor area, and clear check-in and check-out policies.",
-        "Always confirm the property's policies directly before booking, since rules can differ between hotels and guest houses. A quick call or message removes any doubt on arrival.",
-      ],
-    },
-    {
-      type: "section",
-      heading: "Monthly and Long-Stay Rooms",
-      paragraphs: [
-        "Some travellers, students and remote workers look for monthly accommodation in Murree. Availability varies, and not every property offers a monthly rate. If you need a longer stay, contact the property directly and ask for a discount for extended nights. Villas can be a practical option here because they often include kitchen space, which cuts food costs over weeks.",
-      ],
-    },
-   
-   
-    {
-      type: "section",
-      heading: "How to Find Budget-Friendly Lodging in Murree",
-      paragraphs: [
-        "The easiest way to save on lodging in Murree is to travel on weekdays or during the off-season. Compare rates across several properties and check exactly what each price includes. Staying in Bhurban instead of central Murree can give you more space and a quieter stay for your budget.",
-        "Booking directly with the property often gives clearer pricing and easier communication. Himalaya Villas & Resorts offers comfortable stays at a range of rates for different group sizes. Contact us for current offers before you confirm your dates.",
-      ],
-    },
-    {
-      type: "section",
-      heading: "How to Find Cheap Hotel Deals in Murree",
-      paragraphs: [
-        "A few habits save money without lowering quality. Compare before you book — check the property's own contact details as well as booking platforms, because direct booking sometimes gets you a better rate or extra inclusions. Ask about total cost so you confirm the final price, including taxes and any service charges, and nothing surprises you at check-in.",
-        "Travel in a group to split a villa or a large family room, which lowers the cost per person. Be flexible with dates, since shifting one night from Saturday to Wednesday can change the price significantly. Read recent reviews from the last few months rather than just the overall score, because cleanliness, heating and staff behaviour can change over time. And book cancellable rates when possible — weather in the hills is unpredictable, and flexibility protects your money.",
-      ],
-    },
-    {
-      type: "section",
-      heading: "Book Your Stay with Himalaya Villas & Resorts",
-      paragraphs: [
-        "If you want a comfortable stay in Murree without paying for several separate rooms, Himalaya Villas & Resorts offers a practical option for families and groups. Contact us to check availability and current rates for your dates.",
-      ],
-    },
-    {
-      type: "faqs",
-      heading: "Frequently Asked Questions",
-      items: [
-        {
-          q: "What is the cheapest way to stay in Murree?",
-          a: "A TDCP rest house (if eligible) at PKR 2,000–8,000, or a Mall Road guesthouse at PKR 3,000–10,000/night. These are the lowest-rate options in the Murree hills market.",
-        },
-        {
-          q: "Are Murree guesthouses safe?",
-          a: "Murree guesthouses are generally safe — the area is a domestic family tourism destination with a 150-year hill station history. Quality varies; read reviews carefully before booking. Himalaya Villas is a private gated estate with a single access point and a full property team.",
-        },
-        {
-          q: "How can I find cheap hotels in Murree?",
-          a: "Travel on weekdays, avoid holiday periods and compare rates across booking platforms and direct contacts. Consider a villa or shared room if you are travelling in a group, because the cost per person is often lower.",
-        },
-        {
-          q: "Are cheap hotels available near Mall Road in Murree?",
-          a: "Yes, but they are limited and fill up quickly. You can often find better value by staying a short walk from Mall Road instead of directly on it.",
-        },
-        {
-          q: "Are there cheap hotels in Murree for families?",
-          a: "Budget accommodation options can be suitable for families, but travelers should confirm guest capacity, accommodation type, facilities, and total price before booking.",
-        },
-        {
-          q: "Is it better to book Murree accommodation early?",
-          a: "Booking early can provide more choice for busy dates, especially when visitor demand is high. However, prices depend on several factors, so travelers should compare current rates rather than assume that one booking period is always cheaper.",
-        },
-      ],
-    },
-    {
-      type: "cta",
-      eyebrow: "How to Book",
-      heading: "Check the Private Villa Per-Person Rate for Your Group",
-      text: "Contact us to book your stay.",
-      buttonLabel: "Book Your Stay",
-      buttonHref: "https://wa.me/923045679000",
-      footnote: "Direct bookings receive the best available rate.",
-    },
-    {
-      type: "related",
-      heading: "📎 Explore More",
-      items: [
-        { href: "/luxury-hotels-in-murree", label: "Full Murree hotel guide" },
-        { href: "/guest-house-murree", label: "Guesthouse comparison" },
-        { href: "/murree-bhurban-trip-cost", label: "Full trip cost" },
         { href: "/villas", label: "Browse Himalaya Villas" },
       ],
     },
@@ -49653,7 +44209,6 @@ export const article407: Article = {
       type: "related",
       heading: "📎 Explore More",
       items: [
-        { href: "/romantic-hotels-murree", label: "Mountain honeymoon guide" },
         { href: "/villas", label: "Presidential Suite details" },
         { href: "/villas", label: "Browse villa options" },
       ],
@@ -50484,7 +45039,6 @@ export const article416: Article = {
       items: [
         { href: "/murree-snowfall-guide", label: "Snowfall complete guide" },
         { href: "/murree-temperature-guide", label: "Temperature guide" },
-        { href: "/villa-with-bhurban", label: "Presidential Suite" },
         { href: "/villas", label: "Browse winter villas" },
       ],
     },
@@ -50623,7 +45177,6 @@ export const article417: Article = {
       items: [
         { href: "/bhurban-october-activities", label: "October activity guide" },
         { href: "/murree-temperature-guide", label: "Temperature guide" },
-        { href: "/ayubia-national-park-guide", label: "Pipeline Track guide" },
         { href: "/villas", label: "Browse October availability" },
       ],
     },
@@ -50960,138 +45513,6 @@ export const article423: Article = {
         { href: "/bhurban-murree-local-tips", label: "Insider tips" },
         { href: "/murree-bhurban-faq", label: "General FAQ" },
         { href: "/villas", label: "Browse Himalaya Villas" },
-      ],
-    },
-  ],
-};
-
-// ============================================
-// ARTICLE 425 - Villa with at Bhurban — The Presidential Suite Guide
-// ============================================
-export const article425: Article = {
-  slug: "villa-with-bhurban",
-  title: "Villa with at Bhurban — The Presidential Suite Guide",
-  metaDescription:
-    "villa with bhurban, bhurban villa, presidential suite bhurban, bhurban murree, private bhurban",
-  keywords:
-    "villa with bhurban, bhurban villa, presidential suite bhurban, bhurban murree, private bhurban",
-  eyebrow: "Commercial | Cluster 4 | Template C — Specific Feature",
-  h1: "Villa with at Bhurban — The Presidential Suite Guide",
-  heroTagline:
-    "The only private outdoor terrace in the Murree hills area. Presidential Suite: PKR 65,000-70,000/night.",
-  heroImage: article425Hero,
-  blocks: [
-    {
-      type: "callout-qa",
-      question: "Is there a villa with a private at Bhurban Murree?",
-      answer:
-        "Yes. The Presidential Suite at Himalaya Villas & Resorts in Bhurban has a private outdoor terrace — the only private available in any accommodation in the Murree hills area. Rate: PKR 65,000-70,000 per night. The is on the private outdoor terrace with a 270-degree panoramic mountain view. In January snowfall conditions, the 40-degree water temperature against subzero mountain air and falling snow creates the experience that Presidential Suite reviews describe as Pakistan's finest single accommodation moment.",
-    },
-    {
-      type: "section",
-      heading: "The Presidential Suite — The Defining Feature",
-      paragraphs: [
-        "The private is the Presidential Suite's defining feature — and the most specifically described and requested amenity across all Himalaya Villas guest communications. No other property in the Murree hills market offers a private outdoor as a standard feature.",
-      ],
-      image: {
-        src: article425Villa,
-        alt: "Presidential Suite",
-      },
-    },
-    {
-      type: "facts",
-      heading: "The Presidential Suite — Complete Description",
-      items: [
-        {
-          label: "Private Outdoor Terrace",
-          value: "Hot tub on suite's exclusive terrace. Water temperature adjustable (38-42°C). Terrace belongs exclusively to suite occupants — no shared spa area.",
-        },
-        {
-          label: "270-Degree Panoramic Mountain View",
-          value: "Terrace orientation delivers mountain ridge views from three directions — the widest outdoor view on the estate.",
-        },
-        {
-          label: "Capacity",
-          value: "2-4 guests comfortably. Suite designed for couples; 4 is generous maximum for the.",
-        },
-        {
-          label: "Privacy",
-          value: "Private terrace is screened — experience not visible from other villas or estate paths.",
-        },
-        {
-          label: "Rate",
-          value: "PKR 65,000-70,000 per villa per night. Confirm current rate via WhatsApp +92 304 567 9000.",
-        },
-      ],
-    },
-    {
-      type: "comparison",
-      heading: "The Experience by Season",
-      columns: ["Season", "Water Temperature", "Ambient Air", "The Specific Experience"],
-      rows: [
-        {
-          feature: "January (snowfall)",
-          a: "40°C",
-          b: "-2 to 2°C",
-          c: "The most-described: hot soak while snow falls on the cedar terrace above",
-        },
-        {
-          feature: "January (dry)",
-          a: "40°C",
-          b: "0 to 5°C",
-          c: "Steam rising from the into the cold mountain night. Stars above if clear.",
-        },
-        {
-          feature: "October",
-          a: "40°C",
-          b: "6-12°C",
-          c: "The October evening: amber cedar canopy above, mountain ridge in the last light",
-        },
-        {
-          feature: "July-August",
-          a: "40°C",
-          b: "16-20°C",
-          c: "The monsoon evening: the rain has just cleared, the forest smell is saturated",
-        },
-        {
-          feature: "April",
-          a: "40°C",
-          b: "8-14°C",
-          c: "Spring morning: wild cherry blossom visible from the terrace edge above the cedar",
-        },
-      ],
-    },
-    {
-      type: "faqs",
-      heading: "Frequently Asked Questions",
-      items: [
-        {
-          q: "Is the Presidential Suite indoors or outdoors?",
-          a: "The is on the suite's outdoor private terrace — not indoors. It is on a screened private terrace so it is functionally private but exposed to the mountain air. This is what makes the experience in cold weather (October through February) particularly dramatic.",
-        },
-        {
-          q: "What is the Presidential Suite rate at Himalaya Villas?",
-          a: "PKR 65,000-70,000 per villa per night — confirmed via WhatsApp +92 304 567 9000. Rates are confirmed at the booking stage as they may vary by season and availability.",
-        },
-      ],
-    },
-    {
-      type: "cta",
-      eyebrow: "Book the Presidential Suite",
-      heading: "WhatsApp +92 304 567 9000",
-      text: "Book the only private outdoor terrace in the Murree hills.",
-      buttonLabel: "Book Your Stay",
-      buttonHref: "https://wa.me/923045679000",
-      footnote: "Direct bookings receive the best available rate.",
-    },
-    {
-      type: "related",
-      heading: "📎 Explore More",
-      items: [
-        { href: "/romantic-hotels-murree", label: "Honeymoon guide" },
-        { href: "/anniversary-villa-bhurban", label: "Anniversary guide" },
-        { href: "/murree-in-january", label: "January snowfall guide" },
-        { href: "/villas", label: "Browse all villas" },
       ],
     },
   ],
@@ -51989,105 +46410,6 @@ export const article441: Article = {
   ],
 };
 
-
-export const article444: Article = {
-  slug: "bhurban-murree-visa-guide",
-  title: "Bhurban Murree Visa Guide for International Visitors",
-  metaDescription:
-    "pakistan visa for bhurban, pakistan visa murree bhurban, international visitor bhurban murree, pakistan tourist visa bhurban",
-  keywords:
-    "pakistan visa for bhurban, pakistan visa murree bhurban, international visitor bhurban murree, pakistan tourist visa bhurban",
-  eyebrow: "Practical | Cluster 11 | ~800w",
-  h1: "Pakistan Visa Guide for International Visitors — Planning the Bhurban Visit",
-  heroTagline:
-    "Most international visitors to Pakistan require a visa. Pakistan operates an online e-visa system (visa.nadra.gov.pk) for most nationalities — the tourist visa is typically processable online in 2-7 working days. Citizens of select countries qualify for a visa-on-arrival at Islamabad International Airport. Gulf Cooperation Council (GCC) passport holders and various nationalities have specific arrangement — check the current list at Ministry of Interior Pakistan or via the relevant Pakistan Embassy. Once in Pakistan, Bhurban requires no additional permits — it is a standard domestic tourism destination 47km from Islamabad.",
-  heroImage: dummyImageTemp,
-
-  blocks: [
-    {
-      type: "callout-qa",
-      question: "Do I need a visa to visit Pakistan and Bhurban?",
-      answer:
-        "Most international visitors to Pakistan require a visa. Pakistan operates an online e-visa system (visa.nadra.gov.pk) for most nationalities — the tourist visa is typically processable online in 2-7 working days. Citizens of select countries qualify for a visa-on-arrival at Islamabad International Airport. Gulf Cooperation Council (GCC) passport holders and various nationalities have specific arrangement — check the current list at Ministry of Interior Pakistan or via the relevant Pakistan Embassy. Once in Pakistan, Bhurban requires no additional permits — it is a standard domestic tourism destination 47km from Islamabad.",
-    },
-
-    {
-      type: "section",
-      heading: "Bhurban Murree Visa Guide for International Visitors",
-      paragraphs: [
-        "International visitors to Pakistan who include Bhurban in their itinerary find the domestic logistics straightforward: Islamabad International Airport is the arrival point; Bhurban is 60km from the airport (under 1 hour by car). The visa process is the primary planning step.",
-      ],
-      image: {
-        src: dummyImageTemp,
-        alt: "Pakistan Visa Guide",
-      },
-    },
-
-    {
-      type: "section",
-      heading: "Pakistan Tourist Visa — Key Information",
-      paragraphs: [
-        "Online e-visa: visit visa.nadra.gov.pk. The Pakistan e-visa portal processes tourist visa applications for most nationalities. Required documents: passport (6+ months validity), accommodation confirmation, return ticket, bank statement. Processing time: 2-7 working days typically.",
-        "Visa on arrival: select nationalities can obtain a visa on arrival at ISB airport. Check the current list at the Pakistan Ministry of Interior (interior.gov.pk) or contact the Pakistani Embassy in your country.",
-        "No additional permits: Bhurban is in Punjab province — no special permits, tribal area restrictions, or NOC (No Objection Certificate) requirements apply for visiting Bhurban or the Galyat chain as far as Nathia Gali.",
-      ],
-      image: {
-        src: dummyImageTemp,
-        alt: "Visa Information",
-      },
-    },
-
-    {
-      type: "section",
-      heading: "Getting to Bhurban from ISB Airport",
-      paragraphs: [
-        "Islamabad International Airport (BIAP) to Bhurban: 60km, under 1 hour by car. The airport is on the M-2 Motorway; Bhurban is on the N-75 Expressway. Exit the M-2, connect to N-75, follow to Bhurban junction.",
-        "Transport from airport: Airport taxis (fixed rate from the official taxi rank), Careem intercity (enter 'Himalaya Villas, Mohra Iswal, Bhurban' as destination), or pre-arranged driver via the property team.",
-        "Himalaya Villas accommodation confirmation: A booking confirmation from Himalaya Villas (+92 304 567 9000) can serve as the accommodation confirmation required for the Pakistan visa application.",
-      ],
-      image: {
-        src: dummyImageTemp,
-        alt: "Getting to Bhurban",
-      },
-    },
-
-    {
-      type: "callout-qa",
-      question: "Is Pakistan safe for international tourists visiting Bhurban?",
-      answer:
-        "Bhurban and the Murree hills are among Pakistan's most established and safe domestic tourism areas — the region has a 150-year history as a hill station. International visitors report positive experiences. The standard travel advisories for Pakistan should be consulted (UK FCDO, US State Department, relevant national advisory) for the most current assessment.",
-    },
-
-    {
-      type: "callout-qa",
-      question: "Can I book Himalaya Villas as an international tourist?",
-      answer:
-        "Yes — Himalaya Villas regularly accommodates international guests including Pakistani diaspora returning to Pakistan, CPEC community members, diplomatic community in Islamabad, and international tourists. WhatsApp +92 304 567 9000. Payment arrangements and rates for international guests are confirmed at the booking stage.",
-    },
-
-    {
-      type: "cta",
-      eyebrow: "Book for Your Pakistan Visit",
-      heading: "Himalaya Villas & Resorts",
-      text: "Book Your Stay",
-      buttonLabel: "Visit himalayavillas.com",
-      buttonHref: "https://himalayavillas.com",
-      footnote: "Direct bookings receive the best available rate.",
-    },
-
-    {
-      type: "related",
-      heading: "📎 Explore More",
-      items: [
-        { href: "/murree-bhurban-complete-guide", label: "Full destination guide" },
-        { href: "/bhurban-murree-all-distances", label: "Distance from ISB Airport" },
-        { href: "/bhurban-accommodation-guide", label: "Full accommodation guide" },
-        { href: "/villas", label: "Browse Himalaya Villas" },
-      ],
-    },
-  ],
-};
-
 // ============================================
 // GUEST POST 445 - Bhurban Murree Photography Spots for Instagram — The Definitive List
 // ============================================
@@ -52172,7 +46494,6 @@ export const article445: Article = {
       items: [
         { href: "/bhurban-photography-guide", label: "Full photography guide" },
         { href: "/bhurban-october-activities", label: "October conditions" },
-        { href: "/villa-with-bhurban", label: "Presidential Suite" },
         { href: "/villas", label: "Browse Himalaya Villas" },
       ],
     },
@@ -53047,7 +47368,6 @@ export const article464: Article = {
       heading: "📎 Explore More",
       items: [
         { href: "/booking-villa-bhurban-faq", label: "Full booking guide" },
-        { href: "/bhurban-accommodation-guide", label: "Accommodation comparison" },
         { href: "/villas", label: "Browse all villas" },
         { href: "/bhurban-private-estate-vs-pc-hotel", label: "Value comparison" },
       ],
@@ -53277,7 +47597,6 @@ export const article468: Article = {
       heading: "📎 Explore More",
       items: [
         { href: "/guides/plan-your-trip", label: "Millennial travel guide" },
-        { href: "/family-hotels-in-murree", label: "Family guide" },
         { href: "/villas", label: "Browse villa options" },
       ],
     },
@@ -53920,7 +48239,6 @@ export const article476: Article = {
       items: [
         { href: "/nathia-gali-resort-guide", label: "Nathia Gali guide" },
         { href: "/bhurban-galyat-comparison", label: "Full Galyat comparison" },
-        { href: "/bhurban-accommodation-guide", label: "Full accommodation guide" },
         { href: "/villas", label: "Browse Himalaya Villas" },
       ],
     },
@@ -54044,7 +48362,6 @@ export const article477: Article = {
       items: [
         { href: "/bhurban-murree-all-distances", label: "Distance guide" },
         { href: "/bhurban-summer-activities", label: "Summer activities" },
-        { href: "/bhurban-accommodation-guide", label: "Accommodation guide" },
         { href: "/villas", label: "Browse family villas" },
       ],
     },
@@ -54165,8 +48482,6 @@ export const article478: Article = {
       type: "related",
       heading: "📎 Explore More",
       items: [
-        { href: "/luxury-hotels-in-murree", label: "Full Murree hotel guide" },
-        { href: "/luxury-hotels-in-murree", label: "5-star guide" },
         { href: "/bhurban-private-estate-vs-pc-hotel", label: "PC Hotel comparison" },
         { href: "/villas", label: "Browse Himalaya Villas" },
       ],
@@ -54975,7 +49290,6 @@ export const article493: Article = {
       heading: "📎 Explore More",
       items: [
         { href: "/extended-family-reunion-bhurban", label: "Extended family reunion" },
-        { href: "/family-hotels-in-murree", label: "Multi-generational stay" },
         { href: "/villas", label: "Browse villa options" },
       ],
     },
@@ -55259,9 +49573,7 @@ export const article497: Article = {
       type: "related",
       heading: "📎 Explore More",
       items: [
-        { href: "/luxury-hotels-in-murree", label: "Full Murree hotel guide" },
         { href: "/movenpick-murree-alternative", label: "Mövenpick comparison" },
-        { href: "/luxury-hotels-in-murree", label: "Resort overview" },
         { href: "/villas", label: "Browse Himalaya Villas" },
       ],
     },
@@ -55408,8 +49720,6 @@ export const article499: Article = {
       heading: "📎 Explore More",
       items: [
         { href: "/bhurban-private-estate-vs-pc-hotel", label: "Full PC Hotel vs HV comparison" },
-        { href: "/luxury-hotels-in-murree", label: "5-star guide" },
-        { href: "/bhurban-accommodation-guide", label: "Full accommodation guide" },
         { href: "/villas", label: "Browse Himalaya Villas" },
       ],
     },
@@ -55501,7 +49811,6 @@ export const article502: Article = {
       type: "related",
       heading: "📎 Explore More",
       items: [
-        { href: "/luxury-hotels-in-murree", label: "Full Murree hotel guide" },
         { href: "/movenpick-murree-alternative", label: "Mövenpick comparison" },
         { href: "/murree-hotel-booking-guide", label: "Booking guide" },
         { href: "/villas", label: "Browse Himalaya Villas" },
@@ -55703,9 +50012,7 @@ export const article503: Article = {
       type: "related",
       heading: "📎 Explore More",
       items: [
-        { href: "/luxury-hotels-in-murree", label: "Full hotel guide" },
         { href: "/murree-hotel-booking-guide", label: "Booking hub" },
-        { href: "/bhurban-accommodation-guide", label: "Bhurban-specific guide" },
         { href: "/villas", label: "Browse Himalaya Villas" },
       ],
     },
@@ -55836,7 +50143,6 @@ export const article504: Article = {
       heading: "📎 Explore More",
       items: [
         { href: "/murree-bhurban-complete-guide", label: "Complete destination guide" },
-        { href: "/luxury-hotels-in-murree", label: "Full hotel guide" },
         { href: "/best-time-to-visit-murree", label: "Seasonal guide" },
         { href: "/villas", label: "Browse Himalaya Villas" },
       ],
@@ -56132,7 +50438,6 @@ export const article506: Article = {
       items: [
         { href: "/bhurban-private-estate-vs-pc-hotel", label: "PC Hotel full comparison" },
         { href: "/hotels-in-bhurban-murree", label: "Full Bhurban hotel guide" },
-        { href: "/bhurban-accommodation-guide", label: "Bhurban accommodation hub" },
         { href: "/villas", label: "Browse Himalaya Villas" },
       ],
     },
@@ -56248,7 +50553,6 @@ export const article507: Article = {
       heading: "📎 Explore More",
       items: [
         { href: "/chinar-club-bhurban-guide", label: "Full Chinar Club guide" },
-        { href: "/bhurban-accommodation-guide", label: "Full Bhurban accommodation guide" },
         { href: "/villas", label: "Browse Himalaya Villas" },
       ],
     },
@@ -56396,9 +50700,7 @@ export const article508: Article = {
       type: "related",
       heading: "📎 Explore More",
       items: [
-        { href: "/bhurban-accommodation-guide", label: "Full Bhurban accommodation guide" },
         { href: "/hotels-in-bhurban-murree", label: "All Bhurban hotels" },
-        { href: "/cheap-hotels-murree-guide", label: "Budget options" },
         { href: "/villas", label: "Browse Himalaya Villas" },
       ],
     },
@@ -56514,7 +50816,6 @@ export const article509: Article = {
       items: [
         { href: "/bhurban-private-estate-vs-pc-hotel", label: "Full PC Hotel vs HV comparison" },
         { href: "/in-villa-dining-bhurban", label: "In-villa dining guide" },
-        { href: "/bhurban-accommodation-guide", label: "Bhurban accommodation guide" },
         { href: "/villas", label: "Browse Himalaya Villas" },
       ],
     },
@@ -56656,106 +50957,7 @@ export const article510: Article = {
       type: "related",
       heading: "📎 Explore More",
       items: [
-        { href: "/bhurban-accommodation-guide", label: "Full accommodation guide" },
-        { href: "/cheap-hotels-murree-guide", label: "Budget accommodation" },
         { href: "/in-villa-dining-bhurban", label: "In-villa dining guide" },
-        { href: "/villas", label: "Browse Himalaya Villas" },
-      ],
-    },
-  ],
-};
-
-
-
-// ============================================
-// ARTICLE 512 - Bhurban Inn, Swiss Cottage Bhurban and Boutique Accommodation — Complete Guide
-// ============================================
-export const article512: Article = {
-  slug: "bhurban-boutique-accommodation",
-  title: "Bhurban Inn, Swiss Cottage Bhurban and Boutique Accommodation — Complete Guide",
-  metaDescription:
-    "bhurban inn, swiss cottage bhurban, falcon inn bhurban, bhurban huts, boutique accommodation bhurban",
-  keywords:
-    "bhurban inn, swiss cottage bhurban, falcon inn bhurban, bhurban huts, boutique accommodation bhurban",
-  eyebrow: "Commercial | Cluster 1 | Template C — Commercial Guide",
-  h1: "Bhurban Inn, Swiss Cottage and Boutique Accommodation — The Full Guide",
-  heroTagline:
-    "Bhurban Inn (480/mo), Swiss Cottage (210/mo), Falcon Inn (170/mo). Himalaya Villas: the private villa estate.",
-  heroImage: article512Hero,
-  blocks: [
-    {
-      type: "callout-qa",
-      question: "What boutique accommodation options exist in Bhurban?",
-      answer:
-        "Bhurban's boutique and smaller accommodation options include: Bhurban Inn (480/mo searches — a named inn in the Bhurban area), Swiss Cottage Bhurban (210/mo — chalet-style accommodation), Falcon Inn Bhurban (170/mo — private inn), and various named hut complexes. These properties serve the mid-market between the premium Himalaya Villas estate and the basic guesthouses. For the private villa estate: Himalaya Villas & Resorts, WhatsApp +92 304 567 9000.",
-    },
-    {
-      type: "section",
-      heading: "The Bhurban Boutique Market",
-      paragraphs: [
-        "The Bhurban boutique accommodation market reflects a specific segment of the domestic tourism market: guests who want the character of a smaller, more distinctive property rather than the chain hotel — but have not yet discovered the private villa estate model that Himalaya Villas represents.",
-      ],
-      image: {
-        src: article512Villa,
-        alt: "Bhurban Boutique Accommodation",
-      },
-    },
-    {
-      type: "section",
-      heading: "The Bhurban Boutique Names — What Searches Reveal",
-      paragraphs: [
-        "Bhurban Inn (480/mo): Bhurban Inn is one of the more-searched smaller accommodation names in Bhurban — reflecting a property with established local brand recognition. Confirm current status, location, and rates on Booking.com or Google Maps.",
-        "Swiss Cottage Bhurban (210/mo): Swiss Cottage Bhurban suggests a chalet-style accommodation property in the Bhurban cedar forest — the 'Swiss Cottage' name is common in Pakistan's mountain accommodation market and references the alpine chalet aesthetic. Confirm on Booking.com or Airbnb.",
-        "Falcon Inn Bhurban (170/mo): Falcon Inn Bhurban is a private inn in the Bhurban area. Confirm availability and current rates via Google Maps or Booking.com.",
-        "Bhurban Huts (40/mo): 'Bhurban Huts' references the hut/chalet accommodation style — typically smaller-scale units within larger accommodation complexes. The PC Hotel Bhurban complex has jungle huts and related chalet accommodation.",
-      ],
-      image: {
-        src: article512View,
-        alt: "Boutique Names",
-      },
-    },
-    {
-      type: "section",
-      heading: "The Boutique Accommodation Gap — What Himalaya Villas Fills",
-      paragraphs: [
-        "The boutique accommodation names above represent the middle tier of the Bhurban market — properties with character and a specific setting, but without the exclusive-use private villa model. Himalaya Villas occupies a distinct position: not a boutique inn or a chain hotel, but a private villa estate — each villa is a complete private building with private outdoor space. This is the model that the boutique inn cannot structurally deliver.",
-        "For guests who are searching for a 'bhurban inn' or 'swiss cottage' because they want a distinctive, characterful mountain stay rather than a chain hotel room: Himalaya Villas delivers the character (mature cedar forest, private outdoor space, fire pit, in-villa dining) at the private villa estate level.",
-      ],
-      image: {
-        src: article512Villa,
-        alt: "Boutique Gap",
-      },
-    },
-    {
-      type: "faqs",
-      heading: "Frequently Asked Questions",
-      items: [
-        {
-          q: "Is Bhurban Inn still operating?",
-          a: "Confirm the current operational status of Bhurban Inn via Google Maps or Booking.com — accommodation properties change status over time. Himalaya Villas & Resorts is confirmed operational via WhatsApp +92 304 567 9000.",
-        },
-        {
-          q: "What is the cheapest boutique option in Bhurban?",
-          a: "The most affordable boutique accommodation in Bhurban will vary by season — search Airbnb and Booking.com for the current lowest-rate charming properties. Himalaya Villas starts at PKR 39,000/villa/night (Serene Valley Cabin) as the entry-level private villa estate option.",
-        },
-      ],
-    },
-    {
-      type: "cta",
-      eyebrow: "Book the Private Villa Estate",
-      heading: "WhatsApp +92 304 567 9000",
-      text: "Book your private villa stay at Himalaya Villas & Resorts.",
-      buttonLabel: "Book Your Stay",
-      buttonHref: "https://wa.me/923045679000",
-      footnote: "Direct bookings receive the best available rate.",
-    },
-    {
-      type: "related",
-      heading: "📎 Explore More",
-      items: [
-        { href: "/bhurban-accommodation-guide", label: "Full accommodation guide" },
-        { href: "/hotels-in-bhurban-murree", label: "All Bhurban hotels" },
-        { href: "/bhurban-apartments-guide", label: "Apartment options" },
         { href: "/villas", label: "Browse Himalaya Villas" },
       ],
     },
@@ -57104,7 +51306,6 @@ export const article515: Article = {
       items: [
         { href: "/chinar-club-bhurban-guide", label: "Chinar Club full guide" },
         { href: "/bhurban-private-estate-vs-pc-hotel", label: "PC Hotel comparison" },
-        { href: "/bhurban-accommodation-guide", label: "Bhurban accommodation" },
         { href: "/villas", label: "Browse Himalaya Villas" },
       ],
     },
@@ -57854,7 +52055,6 @@ export const article522: Article = {
       items: [
         { href: "/kashmir-point-murree-guide", label: "Kashmir Point guide" },
         { href: "/murree-mall-road-guide", label: "Mall Road guide" },
-        { href: "/ayubia-national-park-guide", label: "Pipeline Track guide" },
         { href: "/murree-bhurban-itinerary", label: "Full itinerary" },
       ],
     },
@@ -58003,7 +52203,6 @@ export const article524: Article = {
       heading: "📎 Explore More",
       items: [
         { href: "/murree-hill-station-guide", label: "Murree complete guide" },
-        { href: "/bhurban-accommodation-guide", label: "Bhurban accommodation" },
         { href: "/murree-bhurban-itinerary", label: "Day and overnight plans" },
         { href: "/villas", label: "Browse Himalaya Villas" },
       ],
@@ -58422,7 +52621,6 @@ export const article527: Article = {
       type: "related",
       heading: "📎 Explore More",
       items: [
-        { href: "/luxury-hotels-in-murree", label: "Full Murree hotel guide" },
         { href: "/murree-hotel-booking-guide", label: "Booking guide" },
         { href: "/bhurban-vs-murree-mall-road", label: "Location comparison" },
         { href: "/villas", label: "Browse Himalaya Villas" },
@@ -59064,139 +53262,6 @@ export const article534: Article = {
   ],
 };
 
-
-
-
-
-// ============================================
-// ARTICLE 536 - Faletti's Grand Hotel Murree — Guide and the Bhurban Private Estate Alternative
-// ============================================
-
-export const article536: Article = {
-  slug: "falettis-grand-hotel-murree",
-  title: "Faletti's Grand Hotel Murree — What to Know and the Private Villa Alternative",
-  metaDescription:
-    "falettis grand hotel murree, faletti's grand hotel murree, falettis hotel murree, faletti's hotel murree, murree hotel comparison",
-  keywords:
-    "falettis grand hotel murree, faletti's grand hotel murree, falettis hotel murree, faletti's hotel murree",
-  eyebrow: "Guest Post | Competitor Intercept | Cluster 1: Hotels | ~800w",
-  h1: "Faletti's Grand Hotel Murree — Guide and the Bhurban Private Estate Alternative",
-  heroTagline:
-    "Faletti's Grand Hotel Murree is a hotel property in the Murree hills market drawing 2,400 monthly searches — reflecting the established recognition of the Faletti's name in Pakistan's premium hospitality market. The Faletti's brand has historic associations with Pakistan's colonial-era grand hotels (Faletti's Hotel Lahore being the most famous). The Murree property extends this heritage positioning into the Murree hills. For guests considering Faletti's Murree who want the private cedar estate experience: Himalaya Villas & Resorts in Bhurban (11km, 20 minutes) is the private estate alternative.",
-  heroImage: dummyImageTemp,
-
-  blocks: [
-    {
-      type: "callout-qa",
-      question: "What is Faletti's Grand Hotel Murree?",
-      answer:
-        "Faletti's Grand Hotel Murree is a hotel property in the Murree hills market drawing 2,400 monthly searches — reflecting the established recognition of the Faletti's name in Pakistan's premium hospitality market. The Faletti's brand has historic associations with Pakistan's colonial-era grand hotels (Faletti's Hotel Lahore being the most famous). The Murree property extends this heritage positioning into the Murree hills. For guests considering Faletti's Murree who want the private cedar estate experience: Himalaya Villas & Resorts in Bhurban (11km, 20 minutes) is the private estate alternative.",
-    },
-
-    {
-      type: "section",
-      heading: "Faletti's Grand Hotel Murree — What to Know and the Private Villa Alternative",
-      paragraphs: [
-        "Faletti's Grand Hotel Murree is a hotel property in the Murree hills market drawing 2,400 monthly searches — reflecting the established recognition of the Faletti's name in Pakistan's premium hospitality market. The Faletti's brand has historic associations with Pakistan's colonial-era grand hotels (Faletti's Hotel Lahore being the most famous). The Murree property extends this heritage positioning into the Murree hills.",
-        "For guests considering Faletti's Murree who want the private cedar estate experience: Himalaya Villas & Resorts in Bhurban (11km, 20 minutes) is the private estate alternative.",
-      ],
-      image: {
-        src: dummyImageTemp,
-        alt: "Faletti's Grand Hotel Murree",
-      },
-    },
-
-    {
-      type: "section",
-      heading: "The Faletti's name in Pakistan's hospitality market carries weight from its association with Faletti's Hotel Lahore — one of Pakistan's most historic hotels with roots in the colonial period. A Murree property under this heritage banner draws guests who specifically associate the Faletti's name with premium hill station hospitality.",
-      image: {
-        src: dummyImageTemp,
-        alt: "Faletti's Heritage",
-      },
-    },
-
-    {
-      type: "facts",
-      heading: "Faletti's Grand Hotel Murree vs Himalaya Villas — The Core Difference",
-      items: [
-        {
-          label: "Brand heritage",
-          value: "Faletti's — Pakistan's historic premium hotel name | Independent private villa estate",
-        },
-        {
-          label: "Type",
-          value: "Hotel — shared building and facilities | Private villa estate — exclusive-use villas",
-        },
-        {
-          label: "Location",
-          value: "Murree area (confirm exact at Booking.com) | Bhurban — 11km from Murree Mall Road",
-        },
-        {
-          label: "Private outdoor space",
-          value: "Shared hotel grounds | Exclusive private terrace or garden per villa",
-        },
-        {
-          label: "Cedar forest",
-          value: "Murree town hotel environment | Immediate from estate gate",
-        },
-        {
-          label: "Family of 6",
-          value: "Multiple rooms required | Single villa: PKR 55,000-70,000/night",
-        },
-      ],
-    },
-
-    {
-      type: "section",
-      heading: "The Heritage Positioning — What It Means",
-      paragraphs: [
-        "The Faletti's heritage claim in the Murree hills context references the colonial hill station tradition: the grand hotel with a distinctive name, a specific character, and an aspiration to be the definitive luxury accommodation for the discerning traveller. Himalaya Villas does not compete on heritage naming — it competes on the specific experience of the private cedar estate, which is a contemporary product with no heritage analogy.",
-        "For guests drawn to the Faletti's Murree brand who want to assess alternatives: the private villa estate at Himalaya Villas is the specific comparison that the Faletti's heritage hotel model cannot replicate — the exclusive outdoor space, the cedar forest from the gate, and the complete absence of shared hotel spaces.",
-      ],
-      image: {
-        src: dummyImageTemp,
-        alt: "Heritage Positioning",
-      },
-    },
-
-    {
-      type: "faqs",
-      heading: "FAQs About Faletti's Grand Hotel Murree",
-      items: [
-        {
-          q: "Where is Faletti's Grand Hotel Murree?",
-          a: "Confirm the exact location of Faletti's Grand Hotel Murree on Booking.com or Google Maps — the property's specific Murree hills address. Himalaya Villas is at Mohra Iswal, Bhurban, 11km from Murree Mall Road.",
-        },
-        {
-          q: "Is Faletti's Grand Hotel Murree the same as Faletti's Hotel Lahore?",
-          a: "The Faletti's name is associated with the historic Faletti's Hotel Lahore (one of Pakistan's most famous colonial-era hotels). The Murree property uses the Faletti's brand in the hill station market — confirm whether it is under the same ownership/management as the Lahore property directly.",
-        },
-      ],
-    },
-
-    {
-      type: "cta",
-      eyebrow: "Book the Private Cedar Estate Alternative",
-      heading: "WhatsApp +92 304 567 9000",
-      text: "Direct bookings receive the best available rate.",
-      buttonLabel: "WhatsApp: +92 304 567 9000",
-      buttonHref: "https://wa.me/923045679000",
-      footnote: "Direct bookings receive priority response and best available rate.",
-    },
-
-    {
-      type: "related",
-      heading: "📎 Explore More",
-      items: [
-        { href: "/luxury-hotels-in-murree", label: "Full Murree hotel guide" },
-        { href: "/murree-mall-road-hotels-guide", label: "Mall Road hotel guide" },
-        { href: "/shangrila-murree-alternative", label: "Shangrila comparison" },
-        { href: "/villas", label: "Browse Himalaya Villas" },
-      ],
-    },
-  ],
-};
-
 // ============================================
 // ARTICLE 543 - Luxury Villas Near Islamabad — Himalaya Villas & Resorts, Bhurban
 // ============================================
@@ -59410,160 +53475,6 @@ export const article543: Article = {
         { href: "/islamabad-to-bhurban-guide", label: "Islamabad to Bhurban transport guide" },
         { href: "/villas", label: "Browse Himalaya Villas" },
         { href: "/book/stay", label: "Book a stay" },
-        { href: "/family-hotels-in-murree", label: "Best family hotels in Murree" },
-      ],
-    },
-  ],
-};
-
-
-
-// ============================================
-// ARTICLE 546 - Ramada Murree — Complete Guide and the Private Cedar Estate Alternative
-// ============================================
-
-export const article546: Article = {
-  slug: "ramada-murree-guide",
-  title: "Ramada Murree — Complete Guide and the Private Cedar Estate Alternative",
-  metaDescription:
-    "ramada murree, ramada by wyndham murree, ramada murree price, ramada murree booking, ramada murree room rates",
-  keywords:
-    "ramada murree, ramada by wyndham murree, ramada murree price, ramada murree booking, ramada murree room rates",
-  eyebrow: "Guest Post | Competitor Intercept | Cluster 1: Hotels | ~900w",
-  h1: "Ramada Murree — Complete Guide and the Private Cedar Estate Alternative",
-  heroTagline:
-    "Ramada by Wyndham Murree is an international chain hotel property in the Murree hills drawing 6,600 monthly searches. A Wyndham Rewards property offering the standard Ramada product: hotel rooms, shared facilities, restaurant and hi-tea service, and the Wyndham loyalty programme. Current rates and availability: wyndhamhotels.com. For guests considering Ramada Murree who want the private cedar estate experience — exclusive-use villa, private outdoor space, cedar forest from the gate, in-villa dining — Himalaya Villas & Resorts in Bhurban (47km from Islamabad, 20 minutes from Mall Road) is the private estate alternative.",
-  heroImage: dummyImageTemp,
-
-  blocks: [
-    {
-      type: "callout-qa",
-      question: "What is Ramada Murree and how does it compare to Himalaya Villas?",
-      answer:
-        "Ramada by Wyndham Murree is an international chain hotel property in the Murree hills drawing 6,600 monthly searches. A Wyndham Rewards property offering the standard Ramada product: hotel rooms, shared facilities, restaurant and hi-tea service, and the Wyndham loyalty programme. Current rates and availability: wyndhamhotels.com. For guests considering Ramada Murree who want the private cedar estate experience — exclusive-use villa, private outdoor space, cedar forest from the gate, in-villa dining — Himalaya Villas & Resorts in Bhurban (47km from Islamabad, 20 minutes from Mall Road) is the private estate alternative.",
-    },
-
-    {
-      type: "section",
-      heading: "Ramada Murree — What to Know and the Private Cedar Estate Alternative",
-      paragraphs: [
-        "Ramada Murree draws 6,600 monthly searches — placing it among the top five individual hotel searches in the Murree hills market. Its Wyndham brand backing, Wyndham Rewards loyalty points, and international chain consistency appeal to guests who want the branded international hotel experience in the hill station.",
-      ],
-      image: {
-        src: dummyImageTemp,
-        alt: "Ramada Murree",
-      },
-    },
-
-    {
-      type: "section",
-      heading: "Ramada Murree — What It Offers",
-      paragraphs: [
-        "Wyndham Rewards integration: Ramada by Wyndham is a Wyndham Hotels & Resorts brand — Wyndham Rewards members earn and redeem points at the Murree property",
-        "Restaurant and hi-tea: the Ramada Murree buffet and hi-tea service draw specific searches (ramada murree hi tea price, ramada murree buffet price) — confirm current pricing at wyndhamhotels.com or by calling the hotel directly",
-        "Room types: confirm current room categories, rates, and availability directly at wyndhamhotels.com or on Booking.com",
-        "Location: Murree area — confirm exact address on Google Maps for proximity to Mall Road and Kashmir Point",
-      ],
-      image: {
-        src: dummyImageTemp,
-        alt: "Ramada Murree — What It Offers",
-      },
-    },
-
-    {
-      type: "facts",
-      heading: "Ramada Murree vs Himalaya Villas — The Core Difference",
-      items: [
-        {
-          label: "Brand",
-          value: "Ramada: Wyndham Hotels & Resorts (international chain) | Himalaya Villas: Independent private villa estate",
-        },
-        {
-          label: "Type",
-          value: "Ramada: Hotel — shared building, shared facilities | Himalaya Villas: Exclusive-use villas — private buildings per group",
-        },
-        {
-          label: "Loyalty programme",
-          value: "Ramada: Wyndham Rewards points | Himalaya Villas: No OTA points — direct booking benefit",
-        },
-        {
-          label: "Private outdoor space",
-          value: "Ramada: Shared hotel grounds | Himalaya Villas: Exclusive private terrace/garden per villa",
-        },
-        {
-          label: "Cedar forest access",
-          value: "Ramada: Not immediate | Himalaya Villas: From estate gate — mature deodar cedar",
-        },
-        {
-          label: "In-villa dining",
-          value: "Ramada: Hotel restaurant (shared) | Himalaya Villas: In-villa at guest's timing and menu choice",
-        },
-        {
-          label: "Family of 8",
-          value: "Ramada: Multiple rooms across shared building | Himalaya Villas: One private villa: PKR 55,000-70,000/night",
-        },
-        {
-          label: "Booking",
-          value: "Ramada: wyndhamhotels.com / Booking.com | Himalaya Villas: WhatsApp +92 304 567 9000 direct",
-        },
-      ],
-    },
-
-    {
-      type: "section",
-      heading: "Who Chooses Ramada Murree vs Himalaya Villas",
-      paragraphs: [
-        "Choose Ramada Murree if:",
-        "You are a Wyndham Rewards member who wants to earn or redeem points",
-        "You want the international chain standard (consistent room quality, branded amenities, formal check-in/out process)",
-        "Your group is 1-2 persons for whom a private villa estate may be more space than needed",
-        "You specifically want a Murree Mall Road-adjacent location over the Bhurban cedar forest setting",
-        "",
-        "Choose Himalaya Villas if:",
-        "You want a private outdoor space that belongs only to your group — the cedar garden no hotel can replicate",
-        "Your family is 4+ persons where a single private villa is more value and more private than multiple hotel rooms",
-        "You want in-villa dining at your group's own timing rather than the hotel restaurant schedule",
-        "The cedar forest estate experience — dawn walks, fire pit, mountain privacy — is the purpose of the trip",
-      ],
-      image: {
-        src: dummyImageTemp,
-        alt: "Who Chooses Ramada vs Himalaya Villas",
-      },
-    },
-
-    {
-      type: "faqs",
-      heading: "FAQs About Ramada Murree",
-      items: [
-        {
-          q: "What is the Ramada Murree hi tea price?",
-          a: "Confirm current Ramada Murree hi tea price directly at wyndhamhotels.com or by calling the Ramada Murree hotel. Rates change seasonally and the live source is authoritative. For in-villa dining at Himalaya Villas: coordinate via WhatsApp +92 304 567 9000.",
-        },
-        {
-          q: "Is Ramada Murree better than PC Hotel Bhurban?",
-          a: "Both are international chain hotels in the Murree hills market. Ramada is a Wyndham property on or near Murree Mall Road; PC Hotel Bhurban is a Marriott property (Pearl Continental) in Bhurban. Confirm which location better serves your itinerary.",
-        },
-      ],
-    },
-
-    {
-      type: "cta",
-      eyebrow: "Book the Private Cedar Estate",
-      heading: "WhatsApp +92 304 567 9000",
-      text: "Direct bookings receive the best available rate.",
-      buttonLabel: "WhatsApp: +92 304 567 9000",
-      buttonHref: "https://wa.me/923045679000",
-      footnote: "Direct bookings receive priority response and best available rate.",
-    },
-
-    {
-      type: "related",
-      heading: "📎 Explore More",
-      items: [
-        { href: "/luxury-hotels-in-murree", label: "Full Murree hotel guide" },
-        { href: "/bhurban-private-estate-vs-pc-hotel", label: "PC Hotel comparison" },
-        { href: "/movenpick-murree-guide", label: "Mövenpick comparison" },
-        { href: "/villas", label: "Browse Himalaya Villas" },
       ],
     },
   ],
@@ -59687,8 +53598,6 @@ export const article547: Article = {
       type: "related",
       heading: "📎 Explore More",
       items: [
-        { href: "/ramada-murree-guide", label: "Ramada comparison" },
-        { href: "/luxury-hotels-in-murree", label: "Full Murree hotels guide" },
         { href: "/bhurban-private-estate-vs-pc-hotel", label: "vs PC Hotel" },
         { href: "/villas", label: "Browse Himalaya Villas" },
       ],
@@ -59804,137 +53713,6 @@ export const article548: Article = {
       items: [
         { href: "/murree-mall-road-hotels-guide", label: "Full Mall Road hotels guide" },
         { href: "/bhurban-vs-murree-mall-road", label: "Location comparison" },
-        { href: "/luxury-hotels-in-murree", label: "All Murree hotels" },
-        { href: "/villas", label: "Browse Himalaya Villas" },
-      ],
-    },
-  ],
-};
-
-// ============================================
-// ARTICLE 549 - Shangrila Murree and Marco Polo Murree — Guides and the Private Villa Alternative
-// ============================================
-
-export const article549: Article = {
-  slug: "shangrila-marco-polo-murree-guide",
-  title: "Shangrila Murree and Marco Polo Murree — Guides and the Private Villa Alternative",
-  metaDescription:
-    "shangrila murree, marco polo murree, shangrila resort murree, marco polo resort murree bhurban",
-  keywords:
-    "shangrila murree, marco polo murree, shangrila resort murree, marco polo resort murree bhurban",
-  eyebrow: "Guest Post | Competitor Intercept | Cluster 1: Hotels | ~800w",
-  h1: "Shangrila Murree and Marco Polo Murree — Guides and the Private Villa Alternative",
-  heroTagline:
-    "Shangrila Murree draws 2,400 monthly searches and Marco Polo Murree draws 1,000/mo — two established Pakistani domestic hotel brand names in the Murree hills market. Shangrila is a domestic Pakistani hotel/resort brand (distinct from the international Shangri-La Hotels & Resorts chain). Marco Polo is a Murree-area resort brand. Both serve the domestic mid-to-premium market. For the private cedar estate experience as an alternative: Himalaya Villas & Resorts in Bhurban.",
-  heroImage: dummyImageTemp,
-
-  blocks: [
-    {
-      type: "callout-qa",
-      question: "What are Shangrila Murree and Marco Polo Murree?",
-      answer:
-        "Shangrila Murree draws 2,400 monthly searches and Marco Polo Murree draws 1,000/mo — two established Pakistani domestic hotel brand names in the Murree hills market. Shangrila is a domestic Pakistani hotel/resort brand (distinct from the international Shangri-La Hotels & Resorts chain). Marco Polo is a Murree-area resort brand. Both serve the domestic mid-to-premium market. For the private cedar estate experience as an alternative: Himalaya Villas & Resorts in Bhurban.",
-    },
-
-    {
-      type: "section",
-      heading: "Shangrila Murree and Marco Polo Murree — Complete Guides",
-      paragraphs: [
-        "Shangrila and Marco Polo are Pakistani domestic brand names that draw loyal repeat visitors in the Murree hills market. Both pre-date the international chain presence in Murree and have established domestic reputations built over many years.",
-      ],
-      image: {
-        src: dummyImageTemp,
-        alt: "Shangrila and Marco Polo",
-      },
-    },
-
-    {
-      type: "section",
-      heading: "Shangrila Murree",
-      paragraphs: [
-        "Shangrila Murree (note: this is the Pakistani domestic 'Shangrila' brand — a resort chain with properties across Pakistan including Skardu and Kalam — not to be confused with the international Shangri-La Hotels & Resorts luxury brand) draws 2,400 monthly searches. Confirm current Shangrila Murree location, rates, and availability at the Shangrila Resorts website or on Booking.com.",
-        "Best for: domestic travellers who know and trust the Shangrila Resorts brand across its Pakistan portfolio",
-        "Alternative: for the exclusive-use private villa experience, Himalaya Villas is the Bhurban alternative",
-      ],
-      image: {
-        src: dummyImageTemp,
-        alt: "Shangrila Murree",
-      },
-    },
-
-    {
-      type: "section",
-      heading: "Marco Polo Murree / Marco Polo Resort Murree Bhurban",
-      paragraphs: [
-        "Marco Polo Murree draws 1,000 monthly searches, including the 'marco polo resort murree bhurban' variant (170/mo) — suggesting its location is in or near the Bhurban area. Confirm the current operational status and exact location on Google Maps or Booking.com.",
-        "Best for: guests who specifically know the Marco Polo name from previous Murree visits",
-        "Location: confirm precise address — the 'bhurban' variant suggests proximity to Bhurban rather than Murree Mall Road",
-      ],
-      image: {
-        src: dummyImageTemp,
-        alt: "Marco Polo Murree",
-      },
-    },
-
-    {
-      type: "facts",
-      heading: "Shangrila/Marco Polo vs Himalaya Villas — The Model Difference",
-      items: [
-        {
-          label: "Model",
-          value: "Shangrila/Marco Polo: Hotel/resort — shared facilities | Himalaya Villas: Private villa estate — exclusive-use",
-        },
-        {
-          label: "Brand heritage",
-          value: "Shangrila/Marco Polo: Established domestic Pakistani names | Himalaya Villas: Independent private estate",
-        },
-        {
-          label: "Private outdoor space",
-          value: "Shangrila/Marco Polo: Shared resort grounds | Himalaya Villas: Exclusive private terrace/garden per villa",
-        },
-        {
-          label: "Cedar forest",
-          value: "Shangrila/Marco Polo: Resort grounds setting | Himalaya Villas: Mature deodar cedar from estate gate",
-        },
-        {
-          label: "Rate",
-          value: "Shangrila/Marco Polo: Confirm at Booking.com | Himalaya Villas: PKR 39,000-70,000/villa/night",
-        },
-      ],
-    },
-
-    {
-      type: "faqs",
-      heading: "FAQs About Shangrila and Marco Polo",
-      items: [
-        {
-          q: "Is Shangrila Murree the same as Shangri-La Hotels?",
-          a: "No — Shangrila Resorts Pakistan is a domestic Pakistani hospitality brand, not affiliated with the international Shangri-La Hotels & Resorts luxury chain. The two brands are entirely separate companies.",
-        },
-        {
-          q: "Where is Marco Polo Murree?",
-          a: "Confirm Marco Polo Murree's exact location on Google Maps. The 'marco polo resort murree bhurban' search variant suggests the property may be near Bhurban specifically.",
-        },
-      ],
-    },
-
-    {
-      type: "cta",
-      eyebrow: "Book the Private Cedar Estate Alternative",
-      heading: "WhatsApp +92 304 567 9000",
-      text: "Direct bookings receive the best available rate.",
-      buttonLabel: "WhatsApp: +92 304 567 9000",
-      buttonHref: "https://wa.me/923045679000",
-      footnote: "Direct bookings receive priority response and best available rate.",
-    },
-
-    {
-      type: "related",
-      heading: "📎 Explore More",
-      items: [
-        { href: "/ramada-murree-guide", label: "Ramada guide" },
-        { href: "/luxury-hotels-in-murree", label: "All Murree hotels" },
-        { href: "/bhurban-private-estate-vs-pc-hotel", label: "PC Hotel comparison" },
         { href: "/villas", label: "Browse Himalaya Villas" },
       ],
     },
@@ -60236,7 +54014,6 @@ export const article551: Article = {
       heading: "📎 Explore More",
       items: [
         { href: "/murree-weather", label: "Full Murree weather guide" },
-        { href: "/ayubia-national-park-guide", label: "Pipeline Track guide" },
         { href: "/best-time-to-visit-murree", label: "Seasonal guide" },
         { href: "/villas", label: "Browse Himalaya Villas" },
       ],
@@ -61081,7 +54858,6 @@ export const article559: Article = {
       heading: "📎 Explore More",
       items: [
         { href: "/best-time-to-visit-murree", label: "All seasons guide" },
-        { href: "/ayubia-national-park-guide", label: "Rhododendron hike guide" },
         { href: "/murree-temperature-guide", label: "Spring temperatures" },
         { href: "/villas", label: "Browse Himalaya Villas" },
       ],
@@ -61246,7 +55022,6 @@ export const article560: Article = {
       items: [
         { href: "/bhurban-cedar-pine-forest-guide", label: "Forest ecology guide" },
         { href: "/bhurban-hiking-trails", label: "Wildlife trail guide" },
-        { href: "/ayubia-national-park-guide", label: "Ayubia wildlife" },
         { href: "/villas", label: "Browse Himalaya Villas" },
       ],
     },
@@ -62310,7 +56085,6 @@ export const article577: Article = {
       heading: "📎 Explore More",
       items: [
         { href: "/nathia-gali-pakistan-guide", label: "Nathia Gali complete guide" },
-        { href: "/best-hotels-nathia-gali", label: "Nathia Gali hotel comparison" },
         { href: "/galyat-ayubia-guide", label: "Galyat and Pipeline Track" },
         { href: "/villas", label: "Browse Himalaya Villas" },
       ],
@@ -63266,170 +57040,6 @@ export const article585: Article = {
   ],
 };
 
-
-// ============================================
-// ARTICLE 586 - Ayubia National Park Pakistan — The Complete Visitor Guide
-// ============================================
-
-export const article586: Article = {
-  slug: "ayubia-national-park-guide",
-  title: "Ayubia National Park Pakistan — The Complete Visitor Guide",
-  metaDescription:
-    "ayubia national park, ayubia national park pakistan, ayubia pipeline track, ayubia chairlift",
-  keywords:
-    "ayubia national park, ayubia national park pakistan, ayubia pipeline track, ayubia chairlift",
-  eyebrow: "Guest Post | Destination Authority | Clusters 8 & 3 | ~1,000w",
-  h1: "Ayubia National Park Pakistan — The Complete Visitor Guide",
-  heroTagline:
-    "Ayubia National Park is a protected sub-Himalayan forest area in the Galyat chain, established in 1984, covering 3,312 hectares between Ayubia town and Nathia Gali. Located 85km from Islamabad (1h 20min drive), 30km from Bhurban (40 min). Key features: the Ayubia-to-Nathia-Gali Pipeline Track (8km forest walk — Pakistan's most praised accessible mountain trail), a separate chairlift at Ayubia (1,300/mo searches), and the mixed deodar cedar, Himalayan oak, and blue pine forest. Entry fee: approximately PKR 200-300 per person (confirm at the park gate). Best visited: October week 3 (amber canopy), April weeks 2-4 (rhododendron bloom).",
-  heroImage: dummyImageTemp,
-
-  blocks: [
-    {
-      type: "callout-qa",
-      question: "What is Ayubia National Park and how do I visit?",
-      answer:
-        "Ayubia National Park is a protected sub-Himalayan forest area in the Galyat chain, established in 1984, covering 3,312 hectares between Ayubia town and Nathia Gali. Located 85km from Islamabad (1h 20min drive), 30km from Bhurban (40 min). Key features: the Ayubia-to-Nathia-Gali Pipeline Track (8km forest walk — Pakistan's most praised accessible mountain trail), a separate chairlift at Ayubia (1,300/mo searches), and the mixed deodar cedar, Himalayan oak, and blue pine forest. Entry fee: approximately PKR 200-300 per person (confirm at the park gate). Best visited: October week 3 (amber canopy), April weeks 2-4 (rhododendron bloom).",
-    },
-
-    {
-      type: "section",
-      heading: "Ayubia National Park Pakistan — The Complete Visitor Guide",
-      paragraphs: [
-        "Ayubia National Park draws 8,100 monthly searches — the same volume as the Murree Mall Road search cluster. This reflects the park's established profile as Pakistan's most accessible mountain forest reserve, within 1.5 hours of Islamabad and within a 40-minute day-trip from Himalaya Villas in Bhurban.",
-      ],
-      image: {
-        src: dummyImageTemp,
-        alt: "Ayubia National Park Guide",
-      },
-    },
-
-    {
-      type: "facts",
-      heading: "Ayubia National Park — Essential Facts",
-      items: [
-        { label: "Established", value: "1984" },
-        { label: "Area", value: "3,312 hectares (33.12 km²)" },
-        { label: "Elevation", value: "7,000–9,000 feet (2,130–2,740m)" },
-        { label: "Location", value: "Between Ayubia town and Nathia Gali, Galyat chain, KPK" },
-        { label: "Distance from Islamabad", value: "85km — approximately 1h 20min" },
-        { label: "Distance from Bhurban (Himalaya Villas)", value: "30km — approximately 40 minutes" },
-        { label: "Distance from Nathia Gali", value: "8km — 15 minutes" },
-        { label: "Entry fee", value: "Approximately PKR 200–300/person (confirm at gate)" },
-        { label: "Main trail", value: "Pipeline Track — 8km Ayubia to Nathia Gali" },
-        { label: "Chairlift", value: "Yes — Ayubia chairlift operates within the park boundary" },
-        { label: "Forest type", value: "Deodar cedar, Himalayan oak, blue pine, rhododendron understorey" },
-        { label: "Best month", value: "October (autumn colour) and April (rhododendron bloom)" },
-      ],
-    },
-
-    {
-      type: "section",
-      heading: "The Pipeline Track — Pakistan's Finest Accessible Forest Walk",
-      paragraphs: [
-        "What It Is",
-        "The Pipeline Track follows an old British-era water pipeline route at approximately 8,000 feet elevation from Ayubia town to Nathia Gali. Unlike most Galyat trails which ascend steeply, the Pipeline Track maintains a nearly constant contour elevation — making it an accessible, sustained canopy-level forest walk rather than a climb. The trail passes through the finest mixed sub-Himalayan forest accessible on foot from Islamabad.",
-        "",
-        "Trail Specifications",
-        "Distance: 8km one-way (Ayubia to Nathia Gali or reverse)",
-        "Duration: 2.5–3.5 hours walking at moderate pace",
-        "Fitness: moderate — no significant ascent, but 8km of sustained walking on uneven forest path",
-        "Direction: either direction works; Ayubia-to-Nathia-Gali allows a taxi return from the town end",
-        "Markers: the trail is fairly clear but not formally signed — most hikers follow the visible path and other visitors",
-        "Water: no reliable water sources on the trail — carry 1.5-2 litres per person",
-        "Mobile coverage: intermittent — inform someone of your plan before starting",
-      ],
-      image: {
-        src: dummyImageTemp,
-        alt: "Pipeline Track",
-      },
-    },
-
-    {
-      type: "section",
-      heading: "The Ayubia Chairlift",
-      paragraphs: [
-        "The Ayubia chairlift (1,300 monthly searches) operates within the national park — a shorter chairlift ride providing an aerial view of the forest canopy. Ticket price: confirm at the site on the day (rates update seasonally). The Ayubia chairlift is a shorter experience than the Patriata Chairlift at Bhurban — the Patriata gondola (enclosed, 20-minute aerial ride) is generally the superior aerial forest experience for guests using Bhurban as their base.",
-      ],
-      image: {
-        src: dummyImageTemp,
-        alt: "Ayubia Chairlift",
-      },
-    },
-
-    {
-      type: "section",
-      heading: "Ayubia National Park from Bhurban — Day Trip Guide",
-      paragraphs: [
-        "Depart Himalaya Villas at 7:00am. Drive 30km to Ayubia (40 minutes via Ghora Gali and Changla Gali).",
-        "Arrive Ayubia 7:45am. Pay park entry fee (PKR 200–300/person). Begin Pipeline Track at Ayubia end.",
-        "Walk to Nathia Gali (2.5–3.5 hours). Arrive Nathia Gali 10:30–11:30am.",
-        "Nathia Gali town: local chai at a dhaba. Optional 30-minute town walk.",
-        "Return to Ayubia by local taxi (PKR 300–500) or walk back on the Pipeline Track (total 16km, 5–7 hours).",
-        "Return to Bhurban by 1:30–2:00pm. Cedar estate afternoon rest.",
-        "Cedar garden fire pit at 6:30pm.",
-      ],
-      image: {
-        src: dummyImageTemp,
-        alt: "Day Trip Guide",
-      },
-    },
-
-    {
-      type: "section",
-      heading: "Wildlife in Ayubia National Park",
-      paragraphs: [
-        "Koklass Pheasant: the dominant bird species — the resonant territorial call audible at dawn and dusk throughout the trail",
-        "Himalayan Monal: Pakistan's most spectacular forest bird — seen on forest edges at dawn, more common in the upper sections of the trail near 9,000 feet",
-        "Barking Deer (Muntjac): forest-edge species, active at dawn and dusk",
-        "Common Leopard: confirmed present in the park — secretive and rarely seen by visitors",
-        "Rhesus Macaque: primate groups visible in the forest canopy, particularly near the trail margins",
-        "Himalayan Griffon Vulture: thermals above the forest canopy from mid-morning",
-      ],
-      image: {
-        src: dummyImageTemp,
-        alt: "Wildlife",
-      },
-    },
-
-    {
-      type: "faqs",
-      heading: "FAQs About Ayubia National Park",
-      items: [
-        {
-          q: "Is Ayubia National Park open year-round?",
-          a: "Ayubia National Park is open year-round. The Pipeline Track is walkable in all seasons. January–February heavy snowfall may make the trail difficult; confirm conditions locally before attempting in deep winter.",
-        },
-        {
-          q: "Can I do the Ayubia Pipeline Track without a guide?",
-          a: "Yes — the Pipeline Track is well-used and generally clear. Most visitors walk it independently. A guide is not required but is helpful for first-time visitors. The trail starts clearly from the Ayubia park gate.",
-        },
-      ],
-    },
-
-    {
-      type: "cta",
-      eyebrow: "Book the Bhurban Ayubia Day-Trip Base",
-      heading: "WhatsApp +92 304 567 9000",
-      text: "Direct bookings receive the best available rate.",
-      buttonLabel: "WhatsApp: +92 304 567 9000",
-      buttonHref: "https://wa.me/923045679000",
-      footnote: "Direct bookings receive priority response and best available rate.",
-    },
-
-    {
-      type: "related",
-      heading: "📎 Explore More",
-      items: [
-        { href: "/nathia-gali-pakistan-guide", label: "Nathia Gali guide" },
-        { href: "/galyat-ayubia-guide", label: "Galyat complete guide" },
-        { href: "/bhurban-hiking-trails", label: "All hiking options" },
-        { href: "/villas", label: "Browse Himalaya Villas" },
-      ],
-    },
-  ],
-};
-
 // ============================================
 // ARTICLE 587 - Nathia Gali Weather Today — Live Check and Planning Guide
 // ============================================
@@ -63873,131 +57483,6 @@ export const article589: Article = {
 };
 
 // ============================================
-// ARTICLE 590 - Resort Near Islamabad — The 45-Minute Cedar Estate Option
-// ============================================
-
-export const article590: Article = {
-  slug: "resort-near-islamabad",
-  title: "Resort Near Islamabad — The 45-Minute Cedar Estate Option",
-  metaDescription:
-    "resort near islamabad, hotels near islamabad, getaway near islamabad, mountain resort islamabad, private resort near islamabad",
-  keywords:
-    "resort near islamabad, hotels near islamabad, getaway near islamabad, mountain resort islamabad, private resort near islamabad",
-  eyebrow: "Guest Post | Commercial | Cluster 11: Planning | ~800w",
-  h1: "Resort Near Islamabad — The 45-Minute Cedar Estate Option",
-  heroTagline:
-    "Best resort/getaway near Islamabad 2026: Himalaya Villas & Resorts in Bhurban (47km, 45 minutes) — the only private villa cedar estate within 1 hour of Islamabad. 12 exclusive-use villas in a mature deodar cedar forest at 6,800 feet, 20°C cooler than Islamabad in July. PC Hotel Bhurban (Marriott, 48km, 45 min) — 5-star chain hotel with pool. Mövenpick Murree, Ramada Murree — international chain hotels 55km, 60 min. For the private resort estate model: Himalaya Villas is the only option within this radius.",
-  heroImage: dummyImageTemp,
-
-  blocks: [
-    {
-      type: "callout-qa",
-      question: "What is the best resort near Islamabad?",
-      answer:
-        "Best resort/getaway near Islamabad 2026: Himalaya Villas & Resorts in Bhurban (47km, 45 minutes) — the only private villa cedar estate within 1 hour of Islamabad. 12 exclusive-use villas in a mature deodar cedar forest at 6,800 feet, 20°C cooler than Islamabad in July. PC Hotel Bhurban (Marriott, 48km, 45 min) — 5-star chain hotel with pool. Mövenpick Murree, Ramada Murree — international chain hotels 55km, 60 min. For the private resort estate model: Himalaya Villas is the only option within this radius.",
-    },
-
-    {
-      type: "section",
-      heading: "Resort Near Islamabad — The Bhurban Cedar Estate in 45 Minutes",
-      paragraphs: [
-        "'Resort near Islamabad' draws 320 monthly searches — from residents of Pakistan's capital looking for the closest possible escape to a mountain resort environment. The search represents intent to leave Islamabad and arrive at something distinctive in the minimum possible time.",
-      ],
-      image: {
-        src: dummyImageTemp,
-        alt: "Resort Near Islamabad",
-      },
-    },
-
-    {
-      type: "facts",
-      heading: "The Near-Islamabad Resort Landscape",
-      items: [
-        {
-          label: "Himalaya Villas & Resorts",
-          value: "Distance: 47km | Drive: 45 min | Type: Private cedar villa estate | What It Is: The only exclusive-use cedar forest estate within 1 hour of ISB",
-        },
-        {
-          label: "PC Hotel Bhurban (Marriott)",
-          value: "Distance: 48km | Drive: 45 min | Type: 5-star chain hotel | What It Is: International hotel with pool, spa, golf",
-        },
-        {
-          label: "Mövenpick Murree",
-          value: "Distance: 55km | Drive: 60 min | Type: Accor upscale hotel | What It Is: International chain hotel",
-        },
-        {
-          label: "Ramada by Wyndham Murree",
-          value: "Distance: 55km | Drive: 60 min | Type: Wyndham chain hotel | What It Is: International chain hotel",
-        },
-        {
-          label: "Shangrila Murree",
-          value: "Distance: 55km | Drive: 60 min | Type: Domestic resort brand | What It Is: Pakistani resort name",
-        },
-        {
-          label: "Rawal Lake",
-          value: "Distance: 15km | Drive: 20 min | Type: Urban recreational lake | What It Is: City reservoir — not a resort experience",
-        },
-      ],
-    },
-
-    {
-      type: "section",
-      heading: "What Makes Himalaya Villas the Finest Near-Islamabad Resort",
-      paragraphs: [
-        "1. The Only Private Villa Estate",
-        "Every other near-Islamabad resort is a hotel — shared building, shared facilities, shared outdoor space. Himalaya Villas is a private villa estate: each villa is an exclusive private building with its own outdoor space. For guests who specifically want the resort experience without sharing it with strangers, Himalaya Villas is the only option within 1 hour of Islamabad.",
-        "",
-        "2. The Cedar Forest",
-        "The mature deodar cedar estate — 100–200 year old trees, maintained paths, the dawn bird calls — begins at the estate gate. No other near-Islamabad resort property has an equivalent cedar forest as its immediate environment. The cedar is the resort.",
-        "",
-        "3. The Temperature",
-        "47km from Islamabad, Bhurban is reliably 18–22°C in July when Islamabad is 40–44°C. The resort exists at a permanent 20°C advantage over the city it serves. This temperature differential, in a 45-minute drive, is the core proposition.",
-      ],
-      image: {
-        src: dummyImageTemp,
-        alt: "What Makes Himalaya Villas the Best",
-      },
-    },
-
-    {
-      type: "faqs",
-      heading: "FAQs About Resorts Near Islamabad",
-      items: [
-        {
-          q: "Is there a resort with a swimming pool near Islamabad?",
-          a: "PC Hotel Bhurban (Marriott, 48km, 45 minutes) has an outdoor pool. Himalaya Villas has the Presidential Suite private outdoor (the only private property in Bhurban). No private villa resort with a swimming pool exists within 1 hour of Islamabad currently.",
-        },
-        {
-          q: "Can I go to a resort near Islamabad for the day?",
-          a: "Day resort access near Islamabad: PC Hotel Bhurban allows day-visitor access to some facilities (confirm current policy and pricing at pchotels.com). Himalaya Villas is an exclusive-use private villa estate — no day visitor access. For a day-trip mountain resort experience: the Patriata Chairlift (50km, 50 min from Islamabad) is the most accessible activity.",
-        },
-      ],
-    },
-
-    {
-      type: "cta",
-      eyebrow: "Book the Closest Cedar Estate to Islamabad",
-      heading: "WhatsApp +92 304 567 9000",
-      text: "Direct bookings receive the best available rate.",
-      buttonLabel: "WhatsApp: +92 304 567 9000",
-      buttonHref: "https://wa.me/923045679000",
-      footnote: "Direct bookings receive priority response and best available rate.",
-    },
-
-    {
-      type: "related",
-      heading: "📎 Explore More",
-      items: [
-        { href: "/islamabad-to-bhurban-guide", label: "Route guide" },
-        { href: "/places-to-visit-near-islamabad", label: "Full near-ISB guide" },
-        { href: "/bhurban-accommodation-guide", label: "Full accommodation guide" },
-        { href: "/villas", label: "Browse Himalaya Villas" },
-      ],
-    },
-  ],
-};
-
-// ============================================
 // ARTICLE 591 - Bhurban Murree for Pakistani Diaspora — The Returning Home Guide
 // ============================================
 
@@ -64246,7 +57731,6 @@ export const article592: Article = {
       type: "related",
       heading: "📎 Explore More",
       items: [
-        { href: "/romantic-hotels-murree", label: "Honeymoon packages" },
         { href: "/bhurban-villa-pricing-guide", label: "Villa pricing" },
         { href: "/best-time-to-visit-murree", label: "Best season for couples" },
         { href: "/villas", label: "Browse Himalaya Villas" },
@@ -64371,130 +57855,6 @@ export const article593: Article = {
         { href: "/murree-snowfall-guide", label: "Snowfall guide" },
         { href: "/murree-bhurban-in-january", label: "January guide" },
         { href: "/best-time-to-visit-murree", label: "All seasons" },
-        { href: "/villas", label: "Browse Himalaya Villas" },
-      ],
-    },
-  ],
-};
-
-// ============================================
-// ARTICLE 594 - Bhurban Murree Instagram and Photography — Content Creator's Guide
-// ============================================
-
-export const article594: Article = {
-  slug: "bhurban-murree-instagram-guide",
-  title: "Bhurban Murree Instagram and Photography — Content Creator's Guide",
-  metaDescription:
-    "bhurban murree instagram, bhurban photography spots, murree bhurban content creator, cedar estate instagram photos",
-  keywords:
-    "bhurban murree instagram, bhurban photography spots, murree bhurban content creator, cedar estate instagram photos",
-  eyebrow: "Guest Post | Audience Guide | Cluster 3: Activities | ~800w",
-  h1: "Bhurban Murree Instagram and Photography — Content Creator's Guide",
-  heroTagline:
-    "Best Bhurban photography spots for Instagram and content creation: (1) Cedar estate dawn — the directional morning light through 100–200 year old cedar trunks at 6am (Himalaya Villas estate, guests only); (2) Patriata Chairlift gondola window — shoot the forest canopy below (amber in October, green in July); (3) Kashmir Point — the valley view with Kashmir Point railing at 7–9am; (4) Cedar garden fire pit — the fire in the cedar garden at dusk; (5) Ayubia Pipeline Track — the forest canopy tunnel in October amber or April rhododendron.",
-  heroImage: dummyImageTemp,
-
-  blocks: [
-    {
-      type: "callout-qa",
-      question: "What are the best Instagram photography spots in Bhurban Murree?",
-      answer:
-        "Best Bhurban photography spots for Instagram and content creation: (1) Cedar estate dawn — the directional morning light through 100–200 year old cedar trunks at 6am (Himalaya Villas estate, guests only); (2) Patriata Chairlift gondola window — shoot the forest canopy below (amber in October, green in July); (3) Kashmir Point — the valley view with Kashmir Point railing at 7–9am; (4) Cedar garden fire pit — the fire in the cedar garden at dusk; (5) Ayubia Pipeline Track — the forest canopy tunnel in October amber or April rhododendron.",
-    },
-
-    {
-      type: "section",
-      heading: "Bhurban Murree for Content Creators — The Photography and Instagram Guide",
-      paragraphs: [
-        "Bhurban and the Murree hills produce a specific visual language that dominates Pakistani domestic travel Instagram: the cedar forest in directional morning light, the mountain fire pit, the Chairlift aerial view, the autumn amber canopy. These images are not accidental — they are the product of specific timing, locations, and conditions that this guide maps.",
-      ],
-      image: {
-        src: dummyImageTemp,
-        alt: "Photography Guide",
-      },
-    },
-
-    {
-      type: "section",
-      heading: "The Cedar Estate Instagram Shots — Exclusive to Villa Guests",
-      paragraphs: [
-        "The Cedar Trunk Morning Shot",
-        "The cedar estate at Himalaya Villas at 6–7am on a clear morning: the horizontal morning light from the east hits the massive cedar trunks (1–1.5m circumference, 100–200 years old) producing the specific dappled trunk-and-shadow image. The forest floor in the foreground, the cathedral cedar canopy above. Wide angle (16–24mm) for the full trunk immersion, or standard prime (35mm) for the intimate single-trunk composition.",
-        "",
-        "The Cedar Fire Pit Shot",
-        "The cedar garden fire at dusk — the fire as the light source against the cedar canopy darkening above. The smoke rising through the bare winter branches (November–February) or the green cedar needles in summer. This is the most-shared single image type from Himalaya Villas across social media. Shot at the fire level looking up — the cedar canopy framing the fire smoke against the sky.",
-        "",
-        "The Private Terrace Breakfast Shot",
-        "The terrace breakfast setup — hot chai, the valley visible through the cedar branches, the morning mist in the valley below. The table setting, the steam from the chai cup, the mountain backdrop. Early morning (7–8am) for the mist in the valley and the warm light on the terrace.",
-      ],
-      image: {
-        src: dummyImageTemp,
-        alt: "Cedar Estate Instagram Shots",
-      },
-    },
-
-    {
-      type: "section",
-      heading: "Public Photography Spots — Accessible Without Booking",
-      paragraphs: [
-        "Patriata Chairlift gondola (3km from Himalaya Villas): the aerial forest image from the gondola window. Go at 9am opening for the clearest light. October week 3 for amber forest below.",
-        "Kashmir Point viewpoint: the valley panorama shot at 7–9am before the atmospheric haze builds. October for maximum clarity.",
-        "Murree Mall Road: the colonial hotel facades and bazaar character at 7–8am before the weekend crowd arrives. The kashmiri chai stall steam shot.",
-        "Ayubia Pipeline Track: the forest canopy tunnel in October (amber deciduous) or April (rhododendron flecks). Morning light (8–10am) with directional illumination through the canopy.",
-      ],
-      image: {
-        src: dummyImageTemp,
-        alt: "Public Photography Spots",
-      },
-    },
-
-    {
-      type: "section",
-      heading: "Technical Notes for Bhurban Photography",
-      paragraphs: [
-        "Golden hour: 6–7:30am in summer (later sunrise in winter) and 5–6pm in summer (earlier in winter). The cedar forest is best in the morning — the afternoon light goes overhead and loses directional quality.",
-        "Lens recommendations: 16–24mm wide for cedar forest interiors; 35–50mm standard for fire pit and terrace; 70–200mm telephoto for chairlift aerial and mountain landscape.",
-        "Phone cameras: the cedar estate dawn works surprisingly well on iPhone/Galaxy night mode — the horizontal directional light is favourable for phone sensors.",
-        "Drone: PCAA (Pakistan Civil Aviation Authority) permits required. Check regulations before bringing drone equipment.",
-      ],
-      image: {
-        src: dummyImageTemp,
-        alt: "Technical Notes",
-      },
-    },
-
-    {
-      type: "faqs",
-      heading: "FAQs About Photography at Bhurban",
-      items: [
-        {
-          q: "When is the best time to photograph Bhurban?",
-          a: "October week 3 for the amber forest and crystal light — the best single photography week of the year. January with fresh snowfall for the winter cedar images. June/July dawn for the saturated green cedar light. The consistent answer: 6–7:30am is the best light in all seasons.",
-        },
-        {
-          q: "Can I access the cedar estate at Himalaya Villas just for photography?",
-          a: "The cedar estate is private — accessible only to booked villa guests. Photography within the estate is part of the villa stay experience.",
-        },
-      ],
-    },
-
-    {
-      type: "cta",
-      eyebrow: "Book the Cedar Estate Photography Base",
-      heading: "WhatsApp +92 304 567 9000",
-      text: "Direct bookings receive the best available rate.",
-      buttonLabel: "WhatsApp: +92 304 567 9000",
-      buttonHref: "https://wa.me/923045679000",
-      footnote: "Direct bookings receive priority response and best available rate.",
-    },
-
-    {
-      type: "related",
-      heading: "📎 Explore More",
-      items: [
-        { href: "/bhurban-photography-guide", label: "Detailed photography guide" },
-        { href: "/bhurban-cedar-pine-forest-guide", label: "Cedar forest guide" },
-        { href: "/guides/weather-and-seasons", label: "October photography peak" },
         { href: "/villas", label: "Browse Himalaya Villas" },
       ],
     },
@@ -64636,7 +57996,6 @@ export const article595: Article = {
       heading: "📎 Explore More",
       items: [
         { href: "/bhurban-apartments-guide", label: "Apartment guide" },
-        { href: "/bhurban-accommodation-guide", label: "Full accommodation guide" },
         { href: "/bhurban-villa-pricing-guide", label: "Villa pricing" },
         { href: "/villas", label: "Browse Himalaya Villas" },
       ],
@@ -64974,7 +58333,6 @@ export const article596: Article = {
       items: [
         { href: "/nathia-gali-pakistan-guide", label: "Nathia Gali complete guide" },
         { href: "/mushkpuri-top-nathia-gali-guide", label: "Mushkpuri hiking guide" },
-        { href: "/ayubia-national-park-guide", label: "Ayubia Pipeline Track" },
         { href: "/villas", label: "Browse Himalaya Villas" },
       ],
     },
@@ -65157,8 +58515,6 @@ export const article597: Article = {
       type: "related",
       heading: "📎 Explore More",
       items: [
-        { href: "/luxury-hotels-in-murree", label: "All Murree hotels" },
-        { href: "/bhurban-accommodation-guide", label: "Bhurban accommodation" },
         { href: "/murree-bhurban-itinerary", label: "Itinerary guide" },
         { href: "/villas", label: "Browse Himalaya Villas" },
       ],
@@ -65298,7 +58654,6 @@ export const article601: Article = {
       type: "related",
       heading: "📎 Explore More",
       items: [
-        { href: "/ayubia-national-park-guide", label: "Ayubia National Park complete guide" },
         { href: "/nathia-gali-pakistan-guide", label: "Nathia Gali guide" },
         { href: "/patriata-chairlift-bhurban", label: "Patriata Chairlift comparison" },
         { href: "/villas", label: "Browse Himalaya Villas" },
@@ -65580,7 +58935,6 @@ export const article608: Article = {
       type: "related",
       heading: "📎 Explore More",
       items: [
-        { href: "/bhurban-accommodation-guide", label: "All Bhurban accommodation" },
         { href: "/bhurban-private-estate-vs-pc-hotel", label: "vs PC Hotel" },
         { href: "/bhurban-villa-pricing-guide", label: "Villa pricing" },
         { href: "/villas", label: "Browse Himalaya Villas" },
@@ -65725,7 +59079,6 @@ export const article610: Article = {
       type: "related",
       heading: "📎 Explore More",
       items: [
-        { href: "/resort-near-islamabad", label: "Resorts near Islamabad" },
         { href: "/islamabad-to-bhurban-guide", label: "Route guide" },
         { href: "/murree-bhurban-itinerary", label: "Weekend plan" },
         { href: "/villas", label: "Browse Himalaya Villas" },
@@ -66131,7 +59484,6 @@ export const article616: Article = {
       items: [
         { href: "/bhurban-private-estate-vs-pc-hotel", label: "Detailed PC Hotel vs Himalaya Villas comparison" },
         { href: "/chinar-golf-club-bhurban-guide", label: "Chinar Golf Club guide" },
-        { href: "/bhurban-accommodation-guide", label: "All Bhurban accommodation" },
         { href: "/villas", label: "Browse Himalaya Villas" },
       ],
     },
@@ -66400,7 +59752,6 @@ export const article618: Article = {
       items: [
         { href: "/pc-bhurban-pearl-continental-guide", label: "Full PC Bhurban guide" },
         { href: "/chinar-golf-club-bhurban-guide", label: "Chinar Golf Club" },
-        { href: "/bhurban-accommodation-guide", label: "Bhurban accommodation" },
         { href: "/villas", label: "Browse Himalaya Villas" },
       ],
     },
@@ -66674,7 +60025,6 @@ export const article623: Article = {
       items: [
         { href: "/bhurban-villa-pricing-guide", label: "Villa pricing" },
         { href: "/villas", label: "Browse all 12 villas" },
-        { href: "/bhurban-accommodation-guide", label: "Bhurban accommodation guide" },
         { href: "/murree-bhurban-itinerary", label: "Planning guide" },
       ],
     },
@@ -66955,9 +60305,7 @@ export const article625: Article = {
       type: "related",
       heading: "📎 Explore More",
       items: [
-        { href: "/luxury-hotels-in-murree", label: "Full Murree hotel guide" },
         { href: "/hotels-in-nathia-gali-guide", label: "Nathia Gali hotels" },
-        { href: "/bhurban-accommodation-guide", label: "Bhurban accommodation" },
         { href: "/villas", label: "Browse Himalaya Villas" },
       ],
     },
@@ -67890,7 +61238,6 @@ export const article631: Article = {
       type: "related",
       heading: "📎 Explore More",
       items: [
-        { href: "/resort-near-islamabad", label: "Resort options near Islamabad" },
         { href: "/islamabad-to-bhurban-guide", label: "Route guide" },
         { href: "/bhurban-villa-pricing-guide", label: "Pricing comparison" },
         { href: "/villas", label: "Browse Himalaya Villas" },
@@ -68516,7 +61863,6 @@ export const article636: Article = {
       heading: "📎 Explore More",
       items: [
         { href: "/murree-bhurban-in-spring", label: "Spring guide overview" },
-        { href: "/ayubia-national-park-guide", label: "Pipeline Track detail" },
         { href: "/best-time-to-visit-murree", label: "Season comparison" },
         { href: "/villas", label: "Browse Himalaya Villas" },
       ],
@@ -69628,9 +62974,7 @@ export const article646: Article = {
       type: "related",
       heading: "📎 Explore More",
       items: [
-        { href: "/bhurban-accommodation-guide", label: "Full Bhurban accommodation" },
         { href: "/bhurban-villa-pricing-guide", label: "Cedar estate pricing" },
-        { href: "/luxury-hotels-in-murree", label: "All Murree hotels" },
         { href: "/villas", label: "Browse Himalaya Villas" },
       ],
     },
@@ -69747,7 +63091,6 @@ export const article647: Article = {
       type: "related",
       heading: "📎 Explore More",
       items: [
-        { href: "/bhurban-accommodation-guide", label: "All Bhurban accommodation" },
         { href: "/bhurban-cedar-estate-guide", label: "Cedar estate guide" },
         { href: "/bhurban-villa-pricing-guide", label: "Pricing" },
         { href: "/villas", label: "Browse Himalaya Villas" },
@@ -69869,7 +63212,6 @@ export const article648: Article = {
       type: "related",
       heading: "📎 Explore More",
       items: [
-        { href: "/bhurban-accommodation-guide", label: "All Bhurban accommodation" },
         { href: "/bhurban-cedar-estate-guide", label: "Cedar estate pillar" },
         { href: "/bhurban-villa-pricing-guide", label: "Pricing" },
         { href: "/villas", label: "Browse all 12 villas" },
@@ -70274,9 +63616,7 @@ export const article651: Article = {
       type: "related",
       heading: "📎 Explore More",
       items: [
-        { href: "/resort-near-islamabad", label: "Resort near Islamabad" },
         { href: "/islamabad-to-bhurban-guide", label: "Route guide" },
-        { href: "/bhurban-accommodation-guide", label: "All Bhurban options" },
         { href: "/villas", label: "Browse Himalaya Villas" },
       ],
     },
@@ -70407,7 +63747,6 @@ export const article652: Article = {
       type: "related",
       heading: "📎 Explore More",
       items: [
-        { href: "/romantic-hotels-murree", label: "Honeymoon package detail" },
         { href: "/bhurban-villa-pricing-guide", label: "Presidential Suite pricing" },
         { href: "/best-time-to-visit-murree", label: "Seasonal guide for honeymoon" },
         { href: "/villas", label: "Browse the Presidential Suite" },
@@ -70777,122 +64116,6 @@ export const article655: Article = {
         { href: "/murree-snowfall-guide", label: "Snowfall guide" },
         { href: "/himalaya-villas-unique-experiences", label: "Unique experiences" },
         { href: "/villas", label: "Browse the Presidential Suite" },
-      ],
-    },
-  ],
-};
-
-
-
-
-// ============================================
-// ARTICLE 656 - Why Choose a Private Villa Over a Hotel in Bhurban
-// ============================================
-export const article656: Article = {
-  slug: "why-private-villa-over-hotel-bhurban",
-  title: "Why Choose a Private Villa Over a Hotel in Bhurban — The Definitive Argument",
-  metaDescription:
-    "private villa vs hotel bhurban, bhurban private villa over hotel, villa better than hotel bhurban",
-  keywords:
-    "private villa vs hotel bhurban, bhurban private villa over hotel, villa better than hotel bhurban",
-  eyebrow: "Template A — Conversion Authority | Cluster 6: Villas",
-  h1: "Why Choose a Private Villa Over a Hotel in Bhurban — The Definitive Argument",
-  heroTagline:
-    "Private Villa vs Hotel in Bhurban — The Definitive Case",
-  heroImage: article656Hero,
-
-  blocks: [
-    {
-      type: "callout-qa",
-      question: "Why should I choose a private villa over a hotel at Bhurban?",
-      answer:
-        "Private villa vs hotel at Bhurban: the hotel gives you a room in a shared building with shared facilities. The private villa (Himalaya Villas) gives you an exclusive private building, an exclusive outdoor space (cedar garden, terrace, or), in-villa dining at your own timing, and the cedar estate from the villa gate. For families of 4+: the villa is frequently less expensive per person AND delivers the private outdoor space that multiple hotel rooms cannot. The specific private outdoor space is the thing the hotel cannot structurally replicate.",
-    },
-
-    {
-      type: "section",
-      heading: "The private villa vs hotel decision at Bhurban reduces to one structural question: does your group need and value the exclusive private outdoor space? If yes — the cedar garden, the fire pit, the private terrace — the villa wins. If no — the pool, the room service, the Bonvoy points — the hotel wins. Neither is wrong. They serve different needs.",
-      image: {
-        src: article656Villa,
-        alt: "Private Villa vs Hotel Decision",
-      },
-    },
-
-    {
-      type: "section",
-      heading: "The Five Structural Advantages of the Private Villa",
-      paragraphs: [
-        "1. The Outdoor Space is Exclusively Yours",
-        "A hotel's outdoor space — the pool deck, the garden, the terrace — is shared with every other guest simultaneously. The Himalaya Villas cedar garden, terrace, or private belongs only to the booked villa's group. No strangers, no shared space, no closing time. The fire pit is yours until the last ember at 10pm.",
-        "",
-        "2. Meals at Your Timing, Not the Restaurant's",
-        "The hotel restaurant serves at fixed times, in a shared room, with a fixed menu. In-villa dining at Himalaya Villas serves at the guest's timing — breakfast at 7:30am or 9am, the choice is yours. Cedar garden dinner at 7pm or 9pm, your decision. In-villa lunch on the private terrace while the rain falls in the cedar garden. The timing flexibility is the specific advantage of in-villa dining that has no hotel equivalent.",
-        "",
-        "3. The Cedar Forest from the Gate",
-        "PC Hotel Bhurban is adjacent to cedar forest — guests can walk to the forest from the hotel grounds. Himalaya Villas guests step out of the villa door into the cedar forest. The private estate gate opens directly onto the cedar paths. No hotel corridor, no lobby crossing, no parking lot to cross. The transition from villa to forest is immediate and private.",
-        "",
-        "4. Privacy for Family Dynamics",
-        "Every family has its natural rhythms: the toddler who needs a 2pm nap, the grandfather who is in bed by 9pm, the teenagers who want to be outside until 11pm. In a hotel, these rhythms are constrained by shared facilities, shared corridors, and the presence of strangers at every turn. In the private cedar villa, each family branch manages its own rhythm in its own private space, sharing the cedar garden when it wants to.",
-        "",
-        "5. The Per-Person Economics for Groups",
-        "For families of 4+: the private villa per-person cost is frequently lower than the hotel's multiple rooms at comparable quality tier. The Garden Villa Retreat at PKR 57,000/night for 6 persons = PKR 9,500/person. Two superior rooms at PC Hotel Bhurban at PKR 55,000/room = PKR 110,000/night for 4 persons = PKR 27,500/person. The villa saves PKR 18,000/person/night for the family of 6, with a private garden added.",
-      ],
-      image: {
-        src: article656Villa,
-        alt: "Five Structural Advantages",
-      },
-    },
-
-    {
-      type: "section",
-      heading: "When the Hotel Wins",
-      paragraphs: [
-        "The honest answer: the hotel is better for specific needs:",
-        "• Marriott Bonvoy points: if Bonvoy earning and redemption is a priority, PC Hotel Bhurban is the answer",
-        "• Pool and spa: if the outdoor pool and full spa are specific requirements, PC Hotel delivers them",
-        "• Solo travellers or couples (1-2 persons): for whom a full private villa estate may be more space than needed",
-        "• Formal ballroom event: corporate dinners, large wedding receptions — PC Hotel's ballroom infrastructure",
-        "• 24-hour room service: the hotel restaurant and room service availability is a genuine hotel advantage",
-      ],
-      image: {
-        src: article656Villa,
-        alt: "When the Hotel Wins",
-      },
-    },
-
-    {
-      type: "faqs",
-      heading: "Frequently Asked Questions",
-      items: [
-        {
-          q: "Is Himalaya Villas or PC Hotel better value for a family of 6?",
-          a: "For a family of 6: Himalaya Villas is dramatically better value. One Garden Villa Retreat at PKR 57,000/night vs three PC Hotel rooms at PKR 135,000+/night. The villa saves PKR 78,000/night and adds the private cedar garden and fire pit.",
-        },
-        {
-          q: "Does Himalaya Villas have room service?",
-          a: "Himalaya Villas has in-villa dining — a pre-arranged meal service in the private villa or cedar garden at the guest's timing. It is different from traditional room service (which is on-demand from a hotel kitchen). In-villa dining requires pre-arrangement via WhatsApp at the booking stage.",
-        },
-      ],
-    },
-
-    {
-      type: "cta",
-      eyebrow: "Book the Private Cedar Villa",
-      heading: "WhatsApp +92 304 567 9000",
-      text: "Direct bookings receive the best available rate.",
-      buttonLabel: "WhatsApp: +92 304 567 9000",
-      buttonHref: "https://wa.me/923045679000",
-      footnote: "Direct bookings receive priority response and best available rate.",
-    },
-
-    {
-      type: "related",
-      heading: "📎 Explore More",
-      items: [
-        { href: "/bhurban-private-estate-vs-pc-hotel", label: "Full PC Hotel comparison" },
-        { href: "/bhurban-accommodation-guide", label: "All Bhurban options" },
-        { href: "/bhurban-villa-pricing-guide", label: "Pricing" },
-        { href: "/villas", label: "Browse all 12 villas" },
       ],
     },
   ],
@@ -71497,7 +64720,6 @@ export const article660: Article = {
       items: [
         { href: "/about-himalaya-villas-bhurban", label: "About the estate" },
         { href: "/bhurban-cedar-estate-guide", label: "Cedar estate guide" },
-        { href: "/why-private-villa-over-hotel-bhurban", label: "Villa vs hotel" },
         { href: "/villas", label: "Browse all 12 villas" },
       ],
     },
@@ -71657,7 +64879,6 @@ export const article661: Article = {
       type: "related",
       heading: "📎 Explore More",
       items: [
-        { href: "/romantic-hotels-murree", label: "Honeymoon guide" },
         { href: "/bhurban-villa-pricing-guide", label: "Full pricing" },
         { href: "/murree-bhurban-in-january", label: "January snowfall guide" },
         { href: "/villas", label: "Browse all villas" },
@@ -72414,9 +65635,7 @@ export const article666: Article = {
       type: "related",
       heading: "📎 Explore More",
       items: [
-        { href: "/luxury-hotels-in-murree", label: "Full Murree hotel guide" },
         { href: "/hotel-one-bhurban-guide", label: "Hotel One Bhurban detail" },
-        { href: "/bhurban-accommodation-guide", label: "All Bhurban accommodation" },
         { href: "/villas", label: "Browse Himalaya Villas" },
       ],
     },
@@ -72840,7 +66059,6 @@ export const article669: Article = {
       type: "related",
       heading: "📎 Explore More",
       items: [
-        { href: "/romantic-hotels-murree", label: "Honeymoon guide" },
         { href: "/destination-wedding-bhurban-murree", label: "Wedding guide" },
         { href: "/private-events-bhurban-cedar-estate", label: "Full events guide" },
         { href: "/villas", label: "Browse Himalaya Villas" },
@@ -73109,7 +66327,6 @@ export const article671: Article = {
       items: [
         { href: "/galyat-ayubia-guide", label: "Galyat complete guide" },
         { href: "/nathia-gali-pakistan-guide", label: "Nathia Gali guide" },
-        { href: "/ayubia-national-park-guide", label: "Ayubia Pipeline Track" },
         { href: "/villas", label: "Browse Himalaya Villas" },
       ],
     },
@@ -75259,7 +68476,6 @@ export const article690: Article = {
       type: "related",
       heading: "📎 Explore More",
       items: [
-        { href: "/romantic-hotels-murree", label: "Honeymoon package" },
         { href: "/presidential-suite-himalaya-villas-bhurban", label: "Presidential Suite" },
         { href: "/anniversary-birthday-bhurban-cedar-estate", label: "Anniversary guide" },
         { href: "/villas", label: "Browse Himalaya Villas" },
@@ -75814,292 +69030,8 @@ export const article694: Article = {
       type: "related",
       heading: "📎 Explore More",
       items: [
-        { href: "/bhurban-accommodation-guide", label: "All Bhurban accommodation" },
-        { href: "/bhurban-resort-guide", label: "Bhurban resorts overview" },
         { href: "/bhurban-villa-pricing-guide", label: "Villa pricing" },
         { href: "/villas", label: "Browse Himalaya Villas" },
-      ],
-    },
-  ],
-};
-
-// ============================================
-// ARTICLE 695 - Bhurban Resort Guide — Every Resort and the Cedar Estate Comparison
-// ============================================
-
-export const article695: Article = {
-  slug: "bhurban-resort-guide",
-  title: "Bhurban Resort Guide — Every Resort and the Cedar Estate Comparison",
-  metaDescription:
-    "bhurban resort, bhurban resort murree, resorts in bhurban, bhurban murree resort guide",
-  keywords:
-    "bhurban resort, bhurban resort murree, resorts in bhurban, bhurban murree resort guide",
-  eyebrow: "Guest Post | Commercial Hub | Cluster 1: Hotels | ~800w",
-  h1: "Bhurban Resort Guide — Every Resort and the Cedar Estate Comparison",
-  heroTagline:
-    "Best Bhurban resorts 2026: (1) Himalaya Villas & Resorts (himalayavillas.com) — the only private cedar villa estate, PKR 39,000-70,000/villa/night, 12 exclusive-use villas; (2) Pearl Continental Hotel Bhurban (PC Bhurban, Marriott 5-star) — the benchmark 5-star mountain resort; (3) Haven Resort Bhurban — mid-range resort (confirm at Booking.com); (4) Hotel One Bhurban (Hashoo Group mid-scale). For the private resort experience with exclusive outdoor cedar estate: Himalaya Villas.",
-  heroImage: dummyImageTemp,
-
-  blocks: [
-    {
-      type: "callout-qa",
-      question: "What are the best resorts in Bhurban Murree?",
-      answer:
-        "Best Bhurban resorts 2026: (1) Himalaya Villas & Resorts (himalayavillas.com) — the only private cedar villa estate, PKR 39,000-70,000/villa/night, 12 exclusive-use villas; (2) Pearl Continental Hotel Bhurban (PC Bhurban, Marriott 5-star) — the benchmark 5-star mountain resort; (3) Haven Resort Bhurban — mid-range resort (confirm at Booking.com); (4) Hotel One Bhurban (Hashoo Group mid-scale). For the private resort experience with exclusive outdoor cedar estate: Himalaya Villas.",
-    },
-
-    {
-      type: "section",
-      heading: "Bhurban Resort Guide — Every Option and the Cedar Estate Comparison",
-      paragraphs: [
-        "'Bhurban resort' draws 390 monthly searches — the research-stage query from visitors comparing all resort options in Bhurban before choosing. This guide maps every significant Bhurban resort option, explains the model distinction between shared resort and private villa estate, and positions Himalaya Villas as the specific option for guests who want the exclusive private outdoor cedar experience.",
-      ],
-      image: {
-        src: dummyImageTemp,
-        alt: "Bhurban Resort Guide",
-      },
-    },
-
-    {
-      type: "facts",
-      heading: "The Bhurban Resort Landscape",
-      items: [
-        {
-          label: "Himalaya Villas & Resorts",
-          value: "Type: Private cedar villa estate | Category: Premium private | Rate: PKR 39,000-70,000/villa | Book Via: WhatsApp +92 304 567 9000",
-        },
-        {
-          label: "Pearl Continental Bhurban",
-          value: "Type: 5-star hotel resort (Marriott) | Category: Premium chain | Rate: PKR 35,000-75,000/room | Book Via: pchotels.com / Bonvoy",
-        },
-        {
-          label: "Haven Resort Bhurban",
-          value: "Type: Resort property | Category: Mid-range | Rate: Confirm Booking.com | Book Via: Booking.com",
-        },
-        {
-          label: "Hotel One Bhurban",
-          value: "Type: Mid-scale chain hotel | Category: Mid-range | Rate: Confirm hotelsone.com.pk | Book Via: hotelsone.com.pk",
-        },
-        {
-          label: "Bhurban Villas properties",
-          value: "Type: Villa/cottage properties | Category: Variable | Rate: Variable | Book Via: Booking.com / Airbnb",
-        },
-      ],
-    },
-
-    {
-      type: "section",
-      heading: "Resort vs Private Villa Estate — The Structural Difference",
-      paragraphs: [
-        "The Shared Resort",
-        "A resort (in the traditional sense) is a shared property: shared pool, shared grounds, shared restaurant, shared common areas. The resort experience is defined by the facilities available to all guests — the infrastructure that justifies the resort designation. PC Hotel Bhurban is the definitive Bhurban resort by this definition: 162 rooms, shared pool, spa, multiple restaurants, golf course, amphitheatre.",
-        "",
-        "The Private Villa Estate",
-        "Himalaya Villas is not a resort in the traditional sense — it is a private villa estate. The distinction: the cedar garden, the fire pit, and the terrace or of your villa belong exclusively to your group. The 'resort' facilities are private, not shared. This is the specific model that families of 4+ who value privacy consistently prefer over the shared resort.",
-      ],
-      image: {
-        src: dummyImageTemp,
-        alt: "Resort vs Private Villa Estate",
-      },
-    },
-
-    {
-      type: "facts",
-      heading: "Choosing the Right Bhurban Resort",
-      items: [
-        {
-          label: "Private cedar outdoor space",
-          value: "Best Bhurban Option: Himalaya Villas | Why: Exclusive-use villas with private garden/terrace/jacuzzi",
-        },
-        {
-          label: "Marriott Bonvoy points",
-          value: "Best Bhurban Option: PC Hotel Bhurban | Why: Bonvoy earning + redemption; 5-star chain",
-        },
-        {
-          label: "Pool and spa",
-          value: "Best Bhurban Option: PC Hotel Bhurban | Why: Only shared hotel pool and full spa in Bhurban",
-        },
-        {
-          label: "Budget mid-range",
-          value: "Best Bhurban Option: Hotel One Bhurban / Haven Resort | Why: Confirm current rates at Booking.com",
-        },
-        {
-          label: "Family of 6+ (best value)",
-          value: "Best Bhurban Option: Himalaya Villas Garden Villa | Why: One villa < 3 hotel rooms; adds private garden",
-        },
-        {
-          label: "Golf course proximity",
-          value: "Best Bhurban Option: PC Hotel Bhurban or Himalaya Villas | Why: Both 0.5km from Chinar Golf Club",
-        },
-      ],
-    },
-
-    {
-      type: "faqs",
-      heading: "FAQs About Bhurban Resorts",
-      items: [
-        {
-          q: "Which is the best resort in Bhurban Murree for a family?",
-          a: "For families of 4+: Himalaya Villas (private cedar garden, better per-person value than hotel rooms). For families who specifically want the shared pool: PC Hotel Bhurban. The best resort depends on whether private outdoor space or shared pool/facilities is the priority.",
-        },
-        {
-          q: "Is there an all-inclusive resort in Bhurban Murree?",
-          a: "No Bhurban property currently offers a formal all-inclusive package. PC Hotel Bhurban and Himalaya Villas both offer add-on dining — confirm current packages at pchotels.com and via WhatsApp +92 304 567 9000 respectively.",
-        },
-      ],
-    },
-
-    {
-      type: "cta",
-      eyebrow: "Book the Cedar Estate Private Resort",
-      heading: "WhatsApp +92 304 567 9000",
-      text: "Direct bookings receive the best available rate.",
-      buttonLabel: "WhatsApp: +92 304 567 9000",
-      buttonHref: "https://wa.me/923045679000",
-      footnote: "Direct bookings receive priority response and best available rate.",
-    },
-
-    {
-      type: "related",
-      heading: "📎 Explore More",
-      items: [
-        { href: "/bhurban-accommodation-guide", label: "All Bhurban accommodation" },
-        { href: "/pc-bhurban-pearl-continental-guide", label: "PC Hotel Bhurban" },
-        { href: "/haven-resort-bhurban-guide", label: "Haven Resort" },
-        { href: "/villas", label: "Browse Himalaya Villas" },
-      ],
-    },
-  ],
-};
-
-// ============================================
-// ARTICLE 698 - The Sunset Suite at Himalaya Villas Bhurban — The Valley View Villa
-// ============================================
-
-export const article698: Article = {
-  slug: "sunset-suite-himalaya-villas-bhurban",
-  title: "The Sunset Suite at Himalaya Villas Bhurban — The Valley View Villa",
-  metaDescription:
-    "sunset suite bhurban, himalaya villas sunset suite, valley view villa bhurban, sunset view bhurban murree",
-  keywords:
-    "sunset suite bhurban, himalaya villas sunset suite, valley view villa bhurban, sunset view bhurban murree",
-  eyebrow: "Guest Post | Conversion | Cluster 6: Villas | ~700w",
-  h1: "The Sunset Suite at Himalaya Villas Bhurban — The Valley View Villa",
-  heroTagline:
-    "The Sunset Suite is the west-facing private balcony villa at Himalaya Villas & Resorts, Bhurban — specifically designed for the valley and sunset view. Rate: PKR 50,000-55,000/night. Capacity: 2-4 persons. The defining feature: the private west-facing balcony positioned to capture the valley sunset — the Islamabad valley below, the cedar branches in the foreground, the sun descending behind the western ridge. Best for: couples, photography-focused guests, and guests who want the valley view as their primary morning and evening experience.",
-  heroImage: dummyImageTemp,
-
-  blocks: [
-    {
-      type: "callout-qa",
-      question: "What is the Sunset Suite at Himalaya Villas?",
-      answer:
-        "The Sunset Suite is the west-facing private balcony villa at Himalaya Villas & Resorts, Bhurban — specifically designed for the valley and sunset view. Rate: PKR 50,000-55,000/night. Capacity: 2-4 persons. The defining feature: the private west-facing balcony positioned to capture the valley sunset — the Islamabad valley below, the cedar branches in the foreground, the sun descending behind the western ridge. Best for: couples, photography-focused guests, and guests who want the valley view as their primary morning and evening experience.",
-    },
-
-    {
-      type: "section",
-      heading: "The Sunset Suite at Himalaya Villas Bhurban — The Valley View Villa",
-      paragraphs: [
-        "The Sunset Suite's defining character is directional: west-facing. The morning view from the private balcony shows the valley below in morning mist (July-August especially) and the cedar branches in side light. The evening view — and the villa's namesake — is the valley sunset: the Islamabad valley lit from below as the sun descends behind the western ridge, the cedar branches framing the view from the balcony.",
-      ],
-      image: {
-        src: dummyImageTemp,
-        alt: "Sunset Suite",
-      },
-    },
-
-    {
-      type: "facts",
-      heading: "The Sunset Suite — What It Provides",
-      items: [
-        { label: "Private balcony orientation", value: "West-facing — valley and sunset view" },
-        { label: "Morning view", value: "Valley below in morning light or mist (best in July-August monsoon mornings)" },
-        { label: "Sunset view", value: "Islamabad valley lit from below; cedar branches in foreground" },
-        { label: "Cedar estate", value: "Mature cedar estate from the villa gate" },
-        { label: "Cedar garden fire", value: "Available at guest's timing from the estate cedar garden" },
-        { label: "Capacity", value: "2-4 persons" },
-        { label: "Rate", value: "PKR 50,000-55,000/night" },
-        { label: "Best for", value: "Couples; sunset photography; the west-facing morning mist view" },
-      ],
-    },
-
-    {
-      type: "section",
-      heading: "The Sunset Suite — Morning vs Evening",
-      paragraphs: [
-        "The Morning (7:00-8:30am)",
-        "From the Sunset Suite west-facing balcony in July-August: the early morning mist fills the Islamabad valley below, the cedar branches in the foreground catching the eastern side-light from behind the villa. The valley mist at 7am from the west-facing balcony is the specific morning image that consistently drives the Sunset Suite bookings in summer: the cedar branch framing in the foreground, the white mist-filled valley below.",
-        "",
-        "The Evening (5:30-7:00pm)",
-        "The valley sunset from the Sunset Suite balcony: the October sunset (the best — the amber cedar in the foreground, the valley lit warm below, the sun descending behind the western Islamabad ridge). July sunset: the haze-softened valley at golden hour. January sunset: 5:00pm, the cold blue valley going dark with the cedar silhouettes in last light. The Sunset Suite balcony is the specific Himalaya Villas position for the valley directional view.",
-      ],
-      image: {
-        src: dummyImageTemp,
-        alt: "Morning vs Evening",
-      },
-    },
-
-    {
-      type: "facts",
-      heading: "Sunset Suite vs Himalayan Penthouse",
-      items: [
-        {
-          label: "View direction",
-          value: "Sunset Suite: West-only (focused valley/sunset view) | Himalayan Penthouse: 360° (all directions)",
-        },
-        {
-          label: "View character",
-          value: "Sunset Suite: Deep directional sunset view | Himalayan Penthouse: Widest possible panorama",
-        },
-        {
-          label: "Rate",
-          value: "Sunset Suite: PKR 50,000-55,000 | Himalayan Penthouse: PKR 60,000-65,000",
-        },
-        {
-          label: "Best for",
-          value: "Sunset Suite: Sunset and valley view priority | Himalayan Penthouse: Maximum panorama; photography platforms",
-        },
-        {
-          label: "Jacuzzi",
-          value: "Sunset Suite: No | Himalayan Penthouse: No (Presidential Suite for)",
-        },
-      ],
-    },
-
-    {
-      type: "faqs",
-      heading: "FAQs About the Sunset Suite",
-      items: [
-        {
-          q: "Can I see the Islamabad valley from the Sunset Suite?",
-          a: "Yes — the west-facing Sunset Suite balcony looks toward the Islamabad valley. On clear days (best in October and post-monsoon), the valley below is visible descending from the Bhurban ridge.",
-        },
-        {
-          q: "Is the Sunset Suite good for photography?",
-          a: "Yes — the directional west-facing orientation provides ideal conditions for sunset photography (side light on cedar branches in foreground, valley lit below). July-August sunrise from behind the villa produces the morning mist scene from the balcony.",
-        },
-      ],
-    },
-
-    {
-      type: "cta",
-      eyebrow: "Book the Sunset Suite",
-      heading: "WhatsApp +92 304 567 9000",
-      text: "Direct bookings receive the best available rate.",
-      buttonLabel: "WhatsApp: +92 304 567 9000",
-      buttonHref: "https://wa.me/923045679000",
-      footnote: "Direct bookings receive priority response and best available rate.",
-    },
-
-    {
-      type: "related",
-      heading: "📎 Explore More",
-      items: [
-        { href: "/himalayan-penthouse-bhurban", label: "Himalayan Penthouse vs Sunset Suite" },
-        { href: "/presidential-suite-himalaya-villas-bhurban", label: "Presidential Suite" },
-        { href: "/bhurban-murree-sunrise-sunset", label: "Sunrise/sunset guide" },
-        { href: "/villas", label: "Browse all 12 villas" },
       ],
     },
   ],
@@ -76217,7 +69149,6 @@ export const article699: Article = {
       heading: "📎 Explore More",
       items: [
         { href: "/bhurban-villa-pricing-guide", label: "Full pricing comparison" },
-        { href: "/why-private-villa-over-hotel-bhurban", label: "Villa vs hotel" },
         { href: "/himalayan-penthouse-bhurban", label: "Penthouse option" },
         { href: "/villas", label: "Browse all 12 villas" },
       ],
@@ -77389,119 +70320,7 @@ export const article713: Article = {
       heading: "📎 Explore More",
       items: [
         { href: "/bhurban-vs-islamabad-hotel-weekend", label: "Original comparison" },
-        { href: "/why-private-villa-over-hotel-bhurban", label: "Villa vs hotel case" },
         { href: "/islamabad-to-bhurban-guide", label: "Route guide" },
-        { href: "/villas", label: "Browse Himalaya Villas" },
-      ],
-    },
-  ],
-};
-
-// ============================================
-// ARTICLE 714 - What Makes Bhurban Cedar Estate Different — The Himalaya Villas Philosophy
-// ============================================
-export const article714: Article = {
-  slug: "what-makes-bhurban-cedar-estate-different",
-  title: "What Makes Bhurban Cedar Estate Different — The Himalaya Villas Philosophy",
-  metaDescription:
-    "what makes himalaya villas different, bhurban cedar estate why choose, himalaya villas philosophy bhurban",
-  keywords:
-    "what makes himalaya villas different, bhurban cedar estate why choose, himalaya villas philosophy bhurban",
-  eyebrow: "Brand | Cluster 6 | Template B — Brand Editorial",
-  h1: "What Makes Bhurban Cedar Estate Different — The Himalaya Villas Philosophy",
-  heroTagline:
-    "There are hundreds of places to stay in the Murree hills. There is one private cedar estate. 180-year trees, exclusive space, your timing.",
-  heroImage: article714Hero,
-  blocks: [
-    {
-      type: "section",
-      heading: "The Difference Starts With the Trees",
-      paragraphs: [
-        "The deodar cedar trees on the Himalaya Villas estate are 100-200 years old. They were here before the PC Hotel was built (1985). Before Partition (1947). Before the British hill station was fully developed. They were planted in the 1850s-1880s as part of the colonial-era cedar estate demarcation that shaped the Bhurban ridge landscape. The oldest trees are approximately 180 years old.",
-        "Most mountain accommodation in Pakistan is set near trees, or surrounded by trees, or adjacent to forest. Himalaya Villas is built within the trees — the villas set among the 180-year cedar trunks, the estate paths running between them, the cedar canopy 30-35 metres above the guest's head as they walk to the fire pit. This is the specific quality that cannot be replicated: you cannot create a 180-year cedar tree in a new development. The estate's cedar maturity is a competitive advantage that compounds with time, not depreciates.",
-      ],
-      image: {
-        src: article714Villa,
-        alt: "The Difference Starts With the Trees",
-      },
-    },
-    {
-      type: "section",
-      heading: "The Difference Is the Exclusivity",
-      paragraphs: [
-        "When a Himalaya Villas villa is booked, no other person enters that villa's space for the duration of the stay. The private cedar garden belongs to the booked group. The terrace view is theirs. The fire pit is lit for them. The in-villa dining is served to them, in their space, at their timing.",
-        "This is the structural definition of a private villa estate — not the marketing language version. The practical implication: a family of 6 at Himalaya Villas is never looking at strangers in their outdoor space. They are not sharing the pool deck with people they don't know. Their children's Eid evening in the cedar garden is photographed without strangers in the background. The family reunion fire is the family's fire, not a hotel common area fire that other guests also use.",
-      ],
-      image: {
-        src: article714View,
-        alt: "The Difference Is the Exclusivity",
-      },
-    },
-    {
-      type: "section",
-      heading: "The Difference Is the Timing",
-      paragraphs: [
-        "Hotel timing is the hotel's timing: breakfast is 7-10am, restaurant is open 12-3pm and 7-11pm, checkout is 11am. Himalaya Villas timing is the guest's timing. The terrace breakfast arrives at 7:30am or 9:15am — whatever the guest specified at the booking stage. The cedar garden fire is lit at 4pm in January or 6:30pm in October — whatever the guest requested. The dinner is served at 8pm or 9:30pm — the guest's choice.",
-        "This timing flexibility is not a premium amenity — it is a structural feature of the private villa model. The villa exists to serve the booked group's schedule, not the other way around. For families with young children (dinner at 7pm before the children's bedtime), for groups who want the fire before dinner (4pm fire in January, dinner at 7pm), and for guests who want the terrace breakfast specifically at the moment after the dawn walk (7:45am): the timing is theirs.",
-      ],
-      image: {
-        src: article714Villa,
-        alt: "The Difference Is the Timing",
-      },
-    },
-    {
-      type: "section",
-      heading: "The Difference Is the Specific Setting",
-      paragraphs: [
-        "Pakistan has more beautiful mountain scenery than Bhurban: Hunza is more dramatic; Saiful Muluk is more serene; Babusar Pass is more spectacular. Bhurban is not the most spectacular mountain in Pakistan. What Bhurban has — and what Hunza and Kaghan do not have in this format — is the specific combination of the 180-year cedar estate at 6,800 feet, 45 minutes from Islamabad, with the private villa model, the in-villa cedar garden dining, and the fire pit. It is the private cedar estate proximity to the capital that is the specific position.",
-      ],
-      image: {
-        src: article714View,
-        alt: "The Difference Is the Specific Setting",
-      },
-    },
-    {
-      type: "section",
-      heading: "The Difference Is the Reason You Return",
-      paragraphs: [
-        "Himalaya Villas repeat booking rate is high — guests who have stayed once reliably book again, often for different seasons. October guests return in January. January guests return in October. July guests return the following October after discovering what they missed. The specific reason is consistent: the cedar estate dawn walk at 5:45am.",
-        "Not the Chairlift (which any visitor to Bhurban can take). Not the Mall Road (which is 11km from any accommodation). The specific experience that Himalaya Villas guests return for is the cedar estate dawn walk — available only to villa guests, from 5:45am, through the 180-year cedar trunks, with the Koklass Pheasant calling. It is the experience that no day visitor takes, no tourist on the Mall Road experiences, and no hotel guest walks through. It is the morning that makes the return booking.",
-      ],
-      image: {
-        src: article714Villa,
-        alt: "The Difference Is the Reason You Return",
-      },
-    },
-    {
-      type: "faqs",
-      heading: "Frequently Asked Questions",
-      items: [
-        {
-          q: "Is Himalaya Villas worth the premium over budget Bhurban options?",
-          a: "Yes — for guests who value the private cedar estate experience: there is no budget alternative that delivers the same combination. The private cedar garden, the 180-year trees from the villa gate, the in-villa cedar dining, and the fire pit are not features that cheaper accommodation provides at any price point. The premium is real; so is what it delivers.",
-        },
-        {
-          q: "Is Himalaya Villas the only private villa estate in the Bhurban area?",
-          a: "Himalaya Villas is the only managed private cedar villa estate in the Bhurban area at this scale and quality level — 12 villas in mature 180-year cedar forest, with in-villa dining, coordinated pre-arrival personalisation, and the cedar garden fire.",
-        },
-      ],
-    },
-    {
-      type: "cta",
-      eyebrow: "Book the Cedar Estate",
-      heading: "WhatsApp +92 304 567 9000",
-      text: "Book your private villa stay at Himalaya Villas & Resorts.",
-      buttonLabel: "Book Your Stay",
-      buttonHref: "https://wa.me/923045679000",
-      footnote: "Direct bookings receive the best available rate.",
-    },
-    {
-      type: "related",
-      heading: "📎 Explore More",
-      items: [
-        { href: "/himalaya-villas-not-a-hotel", label: "Not a hotel" },
-        { href: "/himalaya-villas-unique-experiences", label: "Unique experiences" },
-        { href: "/bhurban-cedar-estate-guide", label: "Cedar estate guide" },
         { href: "/villas", label: "Browse Himalaya Villas" },
       ],
     },
@@ -78128,7 +70947,6 @@ export const article722: Article = {
       items: [
         { href: "/bhurban-hiking-trails", label: "Hiking guide" },
         { href: "/patriata-chairlift-bhurban", label: "Chairlift guide" },
-        { href: "/ayubia-national-park-guide", label: "Pipeline Track" },
         { href: "/villas", label: "Browse Himalaya Villas" },
       ],
     },
@@ -78309,7 +71127,6 @@ export const articlesBatch1 = [
     article09,
     article10,
     article11,
-    article12,
     article13,
     article14,
     article15,
@@ -78322,9 +71139,6 @@ export const articlesBatch1 = [
     article23,
     article24,
     article25,
-    article26,
-    article27,
-    article29,
     article30,
     article31,
     article32,
@@ -78334,39 +71148,29 @@ export const articlesBatch1 = [
     article37,
     article39,
     article41,
-    article42,
     article43,
     article44,
     article46,
-    article51,
-    article52,
     article53,
     article54,
     article57,
     article58,
-    article61,
-    article62,
     article66,
     article67,
     article68,
     article69,
     article70,
     article87,
-    article88,
-    article89,
     article90,
     article91,
     article92,
     article93,
     article94,
     article95,
-    article96,
     article97,
-    article98,
     article99,
     article100,
     article101,
-    article102,
     article103,
     article104,
     article105,
@@ -78379,7 +71183,6 @@ export const articlesBatch1 = [
     article112,
     article113,
     article114,
-    article115,
     article116,
     article117,
     article118,
@@ -78389,7 +71192,6 @@ export const articlesBatch1 = [
     article122,
     article123,
     article124,
-    article125,
     article126,
     article137,
     article138,
@@ -78400,9 +71202,7 @@ export const articlesBatch1 = [
     article143,
     article144,
     article145,
-    article146,
     article157,
-    article158,
     article159,
     article160,
     article161,
@@ -78412,7 +71212,6 @@ export const articlesBatch1 = [
     article165,
     article166,
     article177,
-    article178,
     article179,
     article180,
     article181,
@@ -78432,12 +71231,9 @@ export const articlesBatch1 = [
     article205,
     article206,
     article217,
-    article218,
     article219,
     article220,
-    article221,
     article222,
-    article223,
     article224,
     article225,
     article236,
@@ -78448,19 +71244,15 @@ export const articlesBatch1 = [
     article243,
     article245,
     article257,
-    article258,
     article259,
-    article260,
     article262,
     article263,
     article264,
     article265,
-    article276,
     article277,
     article278,
     article279,
     article280,
-    article281,
     article283,
     article284,
     article285,
@@ -78468,7 +71260,6 @@ export const articlesBatch1 = [
     article297,
     article298,
     article299,
-    article300,
     article301,
     article302,
     article303,
@@ -78491,7 +71282,6 @@ export const articlesBatch1 = [
     article361,
     article363,
     article364,
-    article365,
     article376,
     article377,
     article379,
@@ -78507,15 +71297,12 @@ export const articlesBatch1 = [
     article402,
     article403,
     article404,
-    article405,
     article416,
     article417,
     article419,
     article422,
     article423,
-    article425,
     article441,
-    article444,
     article445,
     article464,
     article476,
@@ -78535,7 +71322,6 @@ export const articlesBatch1 = [
     article508,
     article509,
     article510,
-    article512,
     article513,
     article514,
     article515,
@@ -78553,13 +71339,9 @@ export const articlesBatch1 = [
     article532,
     article533,
     article534,
-    article536,
-    article537,
     article543,
-    article546,
     article547,
     article548,
-    article549,
     article551,
     article553,
     article554,
@@ -78585,11 +71367,9 @@ export const articlesBatch1 = [
     article585,
     article587,
     article588,
-    article590,
     article591,
     article592,
     article593,
-    article594,
     article595,
     article596,
     article597,
@@ -78634,7 +71414,6 @@ export const articlesBatch1 = [
     article653,
     article654,
     article655,
-    article656,
     article657,
     article658,
     article659,
@@ -78669,8 +71448,6 @@ export const articlesBatch1 = [
     article691,
     article693,
     article694,
-    article695,
-    article698,
     article699,
     article702,
     article703,
@@ -78680,7 +71457,6 @@ export const articlesBatch1 = [
     article708,
     article712,
     article713,
-    article714,
     article718,
     article719,
     article720,
@@ -78699,7 +71475,6 @@ export const articlesBySlugBatch1 = {
   "how-far-is-bhurban-from-islamabad": article09,
   "honeymoon-package-bhurban-murree": article10,
   "lockwood-hotel-murree-alternative": article11,
-  "ramada-murree-alternative": article12,
   "murree-in-summer": article13,
   "nathia-gali-day-trip-from-bhurban": article14,
   "best-time-to-visit-murree": article15,
@@ -78712,9 +71487,6 @@ export const articlesBySlugBatch1 = {
   "kashmir-point-murree-guide": article23,
   "ayubia-national-park-from-bhurban": article24,
   "bhurban-vs-murree": article25,
-  "villa-for-10-guests-bhurban": article26,
-  "villa-for-4-guests-bhurban": article27,
-  "shangrila-resort-murree-alternative": article29,
   "murree-in-autumn": article30,
   "patriata-chairlift-murree-guide": article31,
   "pindi-point-murree-guide": article32,
@@ -78724,18 +71496,13 @@ export const articlesBySlugBatch1 = {
   "mehndi-dholki-venue-bhurban": article37,
   "3-day-murree-itinerary-bhurban": article39,
   "places-to-visit-in-murree": article41,
-  "best-hotel-near-islamabad-mountains": article42,
   "murree-for-couples": article43,
   "hiking-near-murree": article44,
   "2-day-murree-itinerary": article46,
-  "villa-for-6-guests-bhurban": article51,
-  "villa-for-8-guests-bhurban": article52,
   "villa-with-mountain-view-bhurban": article53,
   "hotels-near-pindi-point-murree": article54,
   "bhurban-to-naran-route": article57,
   "murree-bhurban-diaspora-guide": article58,
-  "villa-for-15-guests-bhurban": article61,
-  "villa-for-30-guests-bhurban": article62,
   "himalaya-villas-reviews-guide": article66,
   "private-chef-bhurban-murree": article67,
   "murree-wedding-cost-guide": article68,
@@ -78761,21 +71528,16 @@ export const articlesBySlugBatch1 = {
 "long-weekend-escapes-islamabad-ranked": article86,
   
   "murree-in-december": article87,
-  "villa-for-12-guests-bhurban": article88,
-  "villa-near-islamabad-airport": article89,
   "murree-vs-nathia-gali": article90,
   "bhurban-altitude-climate-guide": article91,
   "walima-venue-bhurban": article92,
   "nikkah-venue-bhurban": article93,
   "best-mountain-view-hotel-near-islamabad": article94,
   "murree-solo-traveller-guide": article95,
-  "winter-bonfire-bhurban": article96,
   "new-year-bhurban-murree": article97,
-  "villa-with-bbq-bhurban": article98,
   "rawalpindi-to-murree-bhurban": article99,
   "bhurban-for-elderly-guests": article100,
   "corporate-team-building-bhurban": article101,
-  "anniversary-villa-bhurban": article102,
   "bhurban-distance-from-lahore": article103,
   "things-to-do-bhurban": article104,
   "murree-waterfalls-guide": article105,
@@ -78788,7 +71550,6 @@ export const articlesBySlugBatch1 = {
   "bhurban-local-market-guide": article112,
   "bhurban-canadian-pakistani-guide": article113,
   "long-stay-villa-bhurban": article114,
-  "restaurants-near-bhurban-murree": article115,
   "stargazing-bhurban-murree": article116,
   "murree-in-august": article117,
   "affordable-villa-bhurban": article118,
@@ -78798,12 +71559,10 @@ export const articlesBySlugBatch1 = {
   "birdwatching-bhurban-murree": article122,
   "qawwali-evening-bhurban": article123,
   "mountain-retreat-medical-professionals": article124,
-  "private-pool-villa-near-islamabad": article125,
   "murree-school-group-bhurban": article126,
 
   // Add these to your articles map
 "pakistan-tech-startups-offsite-bhurban": article127,
-"womens-professional-retreats-pakistan": article128,
 "pakistan-mountain-property-market-bhurban": article129,
 "pakistan-university-alumni-reunion-bhurban": article130,
 "pakistan-hospitality-private-estate-model": article131,
@@ -78823,7 +71582,6 @@ export const articlesBySlugBatch1 = {
   "eid-ul-adha-bhurban": article143,
   "bhurban-for-couples-maldives-alternative": article144,
   "murree-bhurban-faq-2": article145,
-  "bhurban-accommodation-guide": article146,
 
 
     "pakistan-forest-heritage-cedar-forests-murree": article147,
@@ -78844,7 +71602,6 @@ export const articlesBySlugBatch1 = {
 
 
   "murree-in-june": article157,
-  "villa-for-2-guests-bhurban": article158,
   "corporate-agm-venue-bhurban": article159,
   "bhurban-vs-nathia-gali-families": article160,
   "murree-eid-holiday-guide": article161,
@@ -78866,7 +71623,6 @@ export const articlesBySlugBatch1 = {
   "islamabad-best-kept-secret-bhurban": article176,
 
   "murree-in-may": article177,
-  "remote-work-villa-bhurban": article178,
   "bhurban-for-lahore-families": article179,
   "murree-in-september": article180,
   "honeymoon-bhurban-budget": article181,
@@ -78914,12 +71670,9 @@ export const articlesBySlugBatch1 = {
 
 
   "murree-in-february": article217,
-  "weekend-getaway-near-islamabad": article218,
   "bhurban-vs-malam-jabba": article219,
   "murree-bhurban-kids-guide": article220,
-  "women-leadership-retreat-islamabad": article221,
   "bhurban-vs-naran-honeymoon": article222,
-  "bhurban-murree-ramadan": article223,
   "murree-trip-planning-guide": article224,
   "murree-bhurban-faq-3": article225,
 
@@ -78958,9 +71711,7 @@ export const articlesBySlugBatch1 = {
 
 
   "bhurban-distance-from-major-cities": article257,
-  "villa-for-25-guests-bhurban": article258,
   "murree-winter-hiking": article259,
-  "villa-with-fireplace-bhurban": article260,
   "booking-villa-bhurban-faq": article262,
   "ngo-team-retreat-bhurban": article263,
   "bhurban-summer-activities": article264,
@@ -78968,7 +71719,6 @@ export const articlesBySlugBatch1 = {
 
 "islamabad-high-society-weekends-bhurban": article266,
 "gulf-diaspora-bhurban-summer-visit": article267,
-"womens-safety-mountain-travel-bhurban": article268,
 "pakistan-micro-tourism-economy-bhurban": article269,
 "pakistan-healthcare-workers-retreat": article270,
 "creative-writing-retreat-bhurban": article271,
@@ -78976,13 +71726,10 @@ export const articlesBySlugBatch1 = {
 "pakistan-tourism-industry-mistakes": article273,
 "pakistan-mountain-future-bhurban": article274,
 "private-mountain-travel-matters": article275,
-
-  "bhurban-hotel-rooms": article276,
   "nathia-gali-resort-vs-bhurban": article277,
   "pc-bhurban-charges-per-night": article278,
   "murree-apartment-vs-private-villa": article279,
   "bhurban-october-weekend": article280,
-  "villa-near-murree-families": article281,
   "murree-peak-season-vs-off-season": article283,
   "himalaya-villas-google-reviews": article284,
   "bhurban-insider-guide-2026": article285,
@@ -79005,7 +71752,6 @@ export const articlesBySlugBatch1 = {
   "chinar-bhurban-guide": article297,
   "hotels-in-bhurban-murree": article298,
   "murree-best-hotel-guide": article299,
-  "ayubia-national-park-guide": article300,
   "opulent-hotel-bhurban": article301,
   "pc-bhurban-rates-comparison": article302,
   "bhurban-heights-murree": article303,
@@ -79067,12 +71813,9 @@ export const articlesBySlugBatch1 = {
   "himalaya-villas-bhurban-reviews": article361,
   "bhurban-murree-local-tips": article363,
   "murree-bhurban-faq": article364,
-  "villa-for-20-guests-bhurban": article365,
   // Add these to your articles map
 "pakistan-legal-profession-mountain-break": article366,
 "pakistan-telecom-sector-mountain-retreat": article367,
-"uae-banking-community-ramadan-return-bhurban": article368,
-"women-solo-travellers-bhurban": article369,
 "pakistan-universities-academic-retreat": article370,
 "pakistan-energy-sector-mountain-retreat": article371,
 "pakistan-cricket-community-mountain-retreat": article372,
@@ -79110,7 +71853,6 @@ export const articlesBySlugBatch1 = {
   "metropole-hotel-murree-alternative": article402,
   "tdcp-murree-guide": article403,
   "5-star-hotels-murree-pakistan": article404,
-  "cheap-hotels-murree-guide": article405,
 
 
   "pakistan-wedding-planners-bhurban-venue-guide": article406,
@@ -79128,7 +71870,6 @@ export const articlesBySlugBatch1 = {
   "murree-in-july": article419,
   "bhurban-for-rawalpindi-families": article422,
   "murree-bhurban-itinerary": article423,
-  "villa-with-bhurban": article425,
 
 "pakistan-fashion-industry-mountain-retreat": article426,
 "pakistan-edtech-mountain-build-sprint": article427,
@@ -79141,7 +71882,6 @@ export const articlesBySlugBatch1 = {
 "pakistan-musicians-performing-artists-mountain-retreat": article434,
 "pakistan-international-visitors-bhurban-itinerary": article435,
   "bhurban-for-faisalabad-families": article441,
-  "bhurban-murree-visa-guide": article444,
   "bhurban-instagram-photography-spots": article445,
 
 "pakistan-fintech-mountain-sprint": article446,
@@ -79199,7 +71939,6 @@ export const articlesBySlugBatch1 = {
   "holiday-grand-resort-bhurban-guide": article508,
   "pc-bhurban-hi-tea-guide": article509,
   "bhurban-apartments-guide": article510,
-  "bhurban-boutique-accommodation": article512,
   "murree-day-trip-islamabad": article513,
   "murree-tour-packages-guide": article514,
   "bhurban-golf-club-guide": article515,
@@ -79217,13 +71956,9 @@ export const articlesBySlugBatch1 = {
   "bhurban-from-karachi": article532,
   "patriata-chairlift-bhurban-guide": article533,
   "bhurban-cedar-pine-forest-guide": article534,
-  "falettis-grand-hotel-murree": article536,
-  "best-hotels-nathia-gali": article537,
   "luxury-villas-near-islamabad": article543,
-  "ramada-murree-guide": article546,
   "movenpick-murree-guide": article547,
   "lockwood-hotel-murree-guide": article548,
-  "shangrila-marco-polo-murree-guide": article549,
   "nathia-gali-weather-guide": article551,
   "lahore-to-murree-bhurban-guide": article553,
   "galyat-ayubia-guide": article554,
@@ -79249,11 +71984,9 @@ export const articlesBySlugBatch1 = {
   "nathia-gali-cottages-villas": article585,
   "nathia-gali-weather-today": article587,
   "murree-hill-station-heritage": article588,
-  "resort-near-islamabad": article590,
   "bhurban-for-pakistani-diaspora": article591,
   "bhurban-for-couples": article592,
   "murree-bhurban-in-december": article593,
-  "bhurban-murree-instagram-guide": article594,
   "bhurban-villa-vs-apartment": article595,
   "mushkpuri-top-weather": article596,
   "bhurban-murree-pakistan-guide": article597,
@@ -79298,7 +72031,6 @@ export const articlesBySlugBatch1 = {
   "bhurban-murree-famous-visitors-profile": article653,
   "bhurban-vs-murree-what-is-difference": article654,
   "bhurban-cedar-estate-in-winter": article655,
-  "why-private-villa-over-hotel-bhurban": article656,
   "himalaya-villas-booking-tips": article657,
   "bhurban-murree-resource-guide": article658,
   "bhurban-murree-4-5-day-itinerary": article659,
@@ -79333,8 +72065,6 @@ export const articlesBySlugBatch1 = {
   "bhurban-murree-trip-planning-timeline": article691,
   "murree-bhurban-snowfall-guide": article693,
   "haven-resort-bhurban-guide": article694,
-  "bhurban-resort-guide": article695,
-  "sunset-suite-himalaya-villas-bhurban": article698,
   "serene-valley-cabin-bhurban": article699,
   "murree-bhurban-september-october": article702,
   "bhurban-murree-cedar-estate-faq-2": article703,
@@ -79344,7 +72074,6 @@ export const articlesBySlugBatch1 = {
   "bhurban-murree-in-february-march": article708,
   "bhurban-cedar-estate-eid-weekend-planning": article712,
   "bhurban-cedar-estate-vs-islamabad-marriott": article713,
-  "what-makes-bhurban-cedar-estate-different": article714,
   "himalaya-villas-bhurban-story": article718,
   "corporate-retreat-bhurban-authority": article719,
   "bhurban-murree-vs-all-pakistan-hill-stations": article720,

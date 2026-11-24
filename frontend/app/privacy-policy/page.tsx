@@ -7,7 +7,7 @@ import Footer from "@/components/Footer";
 const privacySchema = {
   "@context": "https://schema.org",
   "@type": "WebPage",
-  "name": "Privacy Policy | Himalaya Villas & Resorts",
+  "name": "Privacy Policy | Himalaya Villas & Resort",
   "description": "Privacy Policy for Himalaya Villas & Resorts - Learn how we protect your personal information.",
   "url": "https://himalayavillas.com/privacy-policy",
   "provider": { "@id": "https://himalayavillas.com/#organization" },
@@ -15,7 +15,7 @@ const privacySchema = {
 };
 
 export const metadata: Metadata = createPageMetadata({
-  title: "Privacy Policy | Himalaya Villas & Resorts",
+  title: "Privacy Policy | Himalaya Villas & Resort",
   description: "Privacy Policy for Himalaya Villas & Resorts. How the estate handles personal information.",
   path: "/privacy-policy",
   appendSiteBrand: false,

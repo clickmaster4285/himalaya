@@ -7,7 +7,7 @@ import Footer from "@/components/Footer";
 const refundSchema = {
   "@context": "https://schema.org",
   "@type": "WebPage",
-  "name": "Refund Policy | Himalaya Villas & Resorts",
+  "name": "Refund Policy | Himalaya Villas & Resort",
   "description": "Refund Policy for Himalaya Villas & Resorts - Learn about our cancellation and refund terms.",
   "url": "https://himalayavillas.com/refund-policy",
   "provider": { "@id": "https://himalayavillas.com/#organization" },
@@ -15,7 +15,7 @@ const refundSchema = {
 };
 
 export const metadata: Metadata = createPageMetadata({
-  title: "Refund Policy | Himalaya Villas & Resorts",
+  title: "Refund Policy | Himalaya Villas & Resort",
   description: "Refund Policy for Himalaya Villas & Resorts. Cancellation and refund terms for a stay.",
   path: "/refund-policy",
   appendSiteBrand: false,

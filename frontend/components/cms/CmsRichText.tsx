@@ -8,7 +8,7 @@
 
 import { Fragment, type ReactNode } from "react";
 import Link from "next/link";
-import { safeHref } from "./cmsContent";
+import { safeHref, safeImage } from "./cmsContent";
 
 function tagClasses(onDark: boolean): Record<string, string> {
   const body = onDark ? "text-white/80" : "text-[#5c564c]";
@@ -34,6 +34,7 @@ function tagClasses(onDark: boolean): Record<string, string> {
     pre: "font-mono text-sm bg-black/5 p-4 mt-4 overflow-x-auto rounded-sm",
     hr: onDark ? "my-10 border-white/15" : "my-10 border-[#eadfce]",
     br: "",
+    img: "my-6 block h-auto w-full max-w-full rounded-sm",
     a: "text-[#c9a55b] underline underline-offset-4 hover:text-[#b8944a] transition-colors",
   };
 }
@@ -62,14 +63,14 @@ export function headingId(text: string): string {
 }
 
 const ALLOWED_TAGS = new Set(Object.keys(tagClasses(false)));
-const VOID_TAGS = new Set(["br", "hr"]);
+const VOID_TAGS = new Set(["br", "hr", "img"]);
 const BLOCK_TAGS = new Set(["p", "h1", "h2", "h3", "h4", "h5", "h6", "ul", "ol", "blockquote", "pre", "hr", "div", "table"]);
 const DROP_TAGS = new Set([
   "script", "style", "iframe", "object", "embed", "template", "noscript",
   "svg", "math", "textarea", "select", "button", "form", "head", "title",
 ]);
 
-type Node = { tag: string; href?: string; children: (Node | string)[] };
+type Node = { tag: string; href?: string; src?: string; alt?: string; children: (Node | string)[] };
 
 function textOf(node: Node | string): string {
   return typeof node === "string" ? node : node.children.map(textOf).join("");
@@ -149,6 +150,15 @@ function parse(html: string): Node {
       const href = /\bhref\s*=\s*(?:"([^"]*)"|'([^']*)'|([^\s>]+))/i.exec(attrs);
       node.href = safeHref(decodeEntities((href?.[1] ?? href?.[2] ?? href?.[3] ?? "").trim()));
     }
+    if (name === "img") {
+      const attr = (n: string) => {
+        const m = new RegExp(`\\b${n}\\s*=\\s*(?:"([^"]*)"|'([^']*)'|([^\\s>]+))`, "i").exec(attrs);
+        return decodeEntities((m?.[1] ?? m?.[2] ?? m?.[3] ?? "").trim());
+      };
+      node.src = safeImage(attr("src"));
+      node.alt = attr("alt").slice(0, 300);
+      if (!node.src) continue;
+    }
     top().children.push(node);
     if (!VOID_TAGS.has(name) && !selfClosing) stack.push({ name, node });
   }
@@ -167,6 +177,10 @@ function render(node: Node | string, key: number, classes: Record<string, string
       return <br key={key} />;
     case "hr":
       return <hr key={key} className={className} />;
+    case "img":
+      // Plain <img>: ERP uploads come from hosts next/image is not configured for.
+      // eslint-disable-next-line @next/next/no-img-element
+      return node.src ? <img key={key} src={node.src} alt={node.alt ?? ""} className={className} loading="lazy" decoding="async" /> : null;
     case "a":
       if (!node.href) return <Fragment key={key}>{children}</Fragment>;
       if (node.href.startsWith("/")) {

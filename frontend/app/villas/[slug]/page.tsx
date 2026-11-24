@@ -31,7 +31,7 @@ function villaDocumentTitle(room: Room): string {
   const sleepPart = sleeps ? `, sleeps ${sleeps}` : "";
   const shared = Object.values(roomsBySlug).filter((other) => other.name === room.name).length > 1;
   const name = shared ? `${room.name}, ${room.collection}` : room.name;
-  return `${name} – ${beds}${sleepPart} | Himalaya Villas & Resorts`;
+  return `${name} – ${beds}${sleepPart} | Himalaya Villas & Resort`;
 }
 
 async function baseMetadata({ params }: { params: Promise<{ slug: string }> }) {

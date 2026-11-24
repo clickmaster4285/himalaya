@@ -21,7 +21,7 @@ export type PageSeoInput = {
   noindex?: boolean;
   /**
    * When false, title is emitted as-is (already branded).
-   * Default true appends `| Himalaya Villas & Resorts` when title has no Himalaya token.
+   * Default true appends `| Himalaya Villas & Resort` when title has no Himalaya token.
    */
   appendSiteBrand?: boolean;
 };

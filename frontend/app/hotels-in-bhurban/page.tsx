@@ -2,7 +2,7 @@ import type { Metadata } from "next";
 import HotelsInBhurbanClient from "./HotelsInBhurbanClient";
 
 const PAGE_TITLE =
-  "Hotels in Bhurban: A Private Villa Estate in Murree | Himalaya Villas & Resorts";
+  "Hotels in Bhurban: A Private Villa Estate in Murree | Himalaya Villas & Resort";
 
 const PAGE_DESCRIPTION =
   "Looking for hotels in Bhurban? Himalaya Villas & Resorts is one of the best hotel in Bhurban murree, only private luxury estate — panoramic Himalayan views, dedicated concierge, complete privacy. Book direct via WhatsApp.";

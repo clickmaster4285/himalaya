@@ -5,7 +5,7 @@ import { AuthPageShell } from "@/components/AuthPageShell";
 const signupPageSchema = {
   "@context": "https://schema.org",
   "@type": "WebPage",
-  "name": "Sign Up | Himalaya Villas & Resorts",
+  "name": "Sign Up | Himalaya Villas & Resort",
   "description": "Create your Himalaya Villas account to start booking luxury villas, managing reservations, and accessing exclusive member benefits.",
   "url": "https://himalayavillas.com/signup",
   "provider": { "@id": "https://himalayavillas.com/#organization" },

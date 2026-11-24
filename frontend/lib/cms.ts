@@ -59,6 +59,10 @@ export type CmsSeo = {
   ogDescription: string;
   ogImage: string;
   focusKeyword: string;
+  /** SEO keywords from the ERP (meta keywords). */
+  keywords: string[];
+  /** Custom JSON-LD blocks entered in the ERP, output as-is on the page. */
+  schema: Record<string, unknown>[];
   twitterHandle: string;
 };
 
@@ -215,7 +219,8 @@ export function buildCmsMetadata(page: CmsPage | null): Metadata {
   // Never inherit the site-wide default description (duplicate across pages):
   // fall back to the page's own opening copy.
   const description = seo.metaDescription || fallbackDescription(page);
-  const ogImageSource = [seo.ogImage, page.featuredImage].find(
+  const heroImage = page.sections.find((s) => s.type === "hero")?.content;
+  const ogImageSource = [seo.ogImage, page.featuredImage, str(heroImage?.image), str(heroImage?.backgroundImage)].find(
     (v) => isHttpUrl(v) || (v.startsWith("/") && !v.startsWith("//")),
   );
   const isArticle = page.pageType === "blog";
@@ -226,7 +231,7 @@ export function buildCmsMetadata(page: CmsPage | null): Metadata {
     description,
     path: page.slug,
     canonicalPath: canonicalPath(seo.canonicalUrl, page.slug),
-    keywords: seo.focusKeyword ? [seo.focusKeyword] : undefined,
+    keywords: pageKeywords(page),
     ogImage: ogImageSource,
     ogType: isArticle ? "article" : "website",
     publishedTime: isArticle ? page.publishedAt || undefined : undefined,
@@ -257,6 +262,34 @@ const obj = (v: unknown): Record<string, unknown> =>
   v && typeof v === "object" && !Array.isArray(v) ? (v as Record<string, unknown>) : {};
 
 const SECTION_TYPE_REGEX = /^[A-Za-z][A-Za-z0-9_-]{0,40}$/;
+
+function parseKeywords(raw: unknown): string[] {
+  const list = Array.isArray(raw) ? raw : typeof raw === "string" ? raw.split(",") : [];
+  return [...new Set(list.map(str).filter((k) => k && k.length <= 100))].slice(0, 30);
+}
+
+const MAX_SCHEMA_BYTES = 100_000;
+
+/** JSON-LD objects (a single object or an array of them); anything else is dropped. */
+function parseSchema(raw: unknown): Record<string, unknown>[] {
+  const list = Array.isArray(raw) ? raw : raw ? [raw] : [];
+  return list
+    .filter((s): s is Record<string, unknown> => !!s && typeof s === "object" && !Array.isArray(s))
+    .filter((s) => ("@type" in s || "@graph" in s) && JSON.stringify(s).length <= MAX_SCHEMA_BYTES)
+    .slice(0, 10);
+}
+
+/** Keywords for <meta name="keywords">: ERP keywords, else focus keyword, else the schema's own keywords. */
+function pageKeywords(page: CmsPage): string[] | undefined {
+  if (page.seo.keywords.length) return page.seo.keywords;
+  if (page.seo.focusKeyword) return [page.seo.focusKeyword];
+  const nodes = page.seo.schema.flatMap((s) => (Array.isArray(s["@graph"]) ? (s["@graph"] as unknown[]) : [s]));
+  for (const node of nodes) {
+    const k = parseKeywords(obj(node).keywords);
+    if (k.length) return k;
+  }
+  return undefined;
+}
 
 function parsePage(raw: unknown): CmsPage | null {
   const p = obj(raw);
@@ -295,6 +328,8 @@ function parsePage(raw: unknown): CmsPage | null {
       ogDescription: str(seo.ogDescription),
       ogImage: str(seo.ogImage),
       focusKeyword: str(seo.focusKeyword),
+      keywords: parseKeywords(seo.keywords),
+      schema: parseSchema(seo.schema),
       twitterHandle: str(seo.twitterHandle),
     },
     posts: (Array.isArray(posts) ? posts : []).map(obj).map((post) => ({

@@ -217,7 +217,7 @@ export const VILLA_BLOG_POSTS: VillaBlogPost[] = [
 },
 {
   slug: "how-to-book-villa-large-family-murree",
-  title: "How to Book a Large Family Villa in Murree | Himalaya Villas & Resorts",
+  title: "How to Book a Large Family Villa in Murree | Himalaya Villas & Resort",
   headline: "How to Book a Large Family Villa in Murree",
   excerpt:
     "Learn how to book a villa for a large family in Murree. Explore room capacity, amenities, budgets, booking tips, and family stays at Himalaya Villas & Resorts.",
@@ -361,7 +361,7 @@ export const VILLA_BLOG_POSTS: VillaBlogPost[] = [
 },
 {
   slug: "how-much-does-villa-cost-in-murree",
-  title: "How Much Does a Villa Cost in Murree | Himalaya Villas & Resorts",
+  title: "How Much Does a Villa Cost in Murree | Himalaya Villas & Resort",
   headline: "How Much Does a Villa Cost in Murree?",
   excerpt:
     "Discover how much a villa costs in Murree at Himalaya Villas & Resorts. Explore nightly rates, seasonal factors, group budgets, and tips before booking.",
@@ -372,7 +372,7 @@ export const VILLA_BLOG_POSTS: VillaBlogPost[] = [
 
   {
   slug: "best-hotel-in-murree-for-family-vacations",
-  title: "Best Hotel in Murree for Family Vacations | Himalaya Villas & Resorts",
+  title: "Best Hotel in Murree for Family Vacations | Himalaya Villas & Resort",
   headline: "Where to Stay in Murree With Family: A Complete Vacation Guide",
   excerpt:
     "Planning a family vacation in Murree? Discover how to choose a comfortable stay, compare room needs, and plan your visit with Himalaya Villas & Resorts.",
@@ -382,7 +382,7 @@ export const VILLA_BLOG_POSTS: VillaBlogPost[] = [
 },
 {
   slug: "best-hotel-in-nathiagali-booking-guide",
-  title: "Best Hotel in Nathiagali - Himalaya Villas Booking Guide | Himalaya Villas & Resorts",
+  title: "Best Hotel in Nathiagali - Himalaya Villas Booking Guide | Himalaya Villas & Resort",
   headline: "Where to Stay in Nathiagali: Complete Guide",
   excerpt:
     "Looking for the best hotel in Nathiagali? Explore booking tips, room selection, seasonal advice and must-check amenities with Himalaya Villas & Resorts.",
@@ -390,15 +390,5 @@ export const VILLA_BLOG_POSTS: VillaBlogPost[] = [
   readMinutes: 15,
   coverImage: "/images/blogs/best-hotels-in-nathia-gali-1.webp",
 },
-{
-  slug: "what-is-accommodation",
-  title: "What Is Accommodation? - Himalaya Villas and Resort",
-  metaTitle: "What Is Accommodation? - Himalaya Villas and Resort",
-  headline: "What Is Accommodation? Types & Examples in Hospitality",
-  excerpt:
-    "What is accommodation? Learn how it works in hospitality, its main property types, accommodation options and what guests should consider before booking.",
-  date: "2026-11-23",
-  readMinutes: 9,
-  coverImage: "/assets/murree-luxury-resort.jpg",
-},
+
 ];

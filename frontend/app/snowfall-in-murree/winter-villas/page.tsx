@@ -3,7 +3,7 @@ import WinterVillasClient from "./WinterVillasClient";
 import { VILLA_CATALOG_LISTINGS } from "@/lib/villa-catalog";
 
 export const metadata = {
-  title: "Winter Villas in Bhurban | Himalaya Villas & Resorts",
+  title: "Winter Villas in Bhurban | Himalaya Villas & Resort",
   description:
     "Explore our luxury winter snowfall villas in Bhurban & Murree Hills — private fireplaces, panoramic ridge views, and exclusive winter packages.",
   openGraph: {

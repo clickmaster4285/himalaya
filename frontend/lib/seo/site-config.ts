@@ -27,6 +27,6 @@ export function orgSameAsFromEnv(): string[] | undefined {
  */
 export const BRAND = {
   name: "Himalaya Villas & Resorts",
-  titleSuffix: " | Himalaya Villas & Resorts",
+  titleSuffix: " | Himalaya Villas & Resort",
   alternateNames: ["Himalaya Villas", "Himalaya Premium Villas"],
 } as const;

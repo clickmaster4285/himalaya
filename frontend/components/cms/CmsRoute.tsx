@@ -7,6 +7,7 @@ import { notFound } from "next/navigation";
 import type { Metadata } from "next";
 import Navbar from "@/components/Navbar";
 import Footer from "@/components/Footer";
+import { JsonLd } from "@/components/seo/JsonLd";
 import { buildCmsMetadata, getCmsPage } from "@/lib/cms";
 import { withEditedPageSeo } from "@/lib/erp-edits";
 import CmsSectionRenderer, { renderableSections } from "./CmsSectionRenderer";
@@ -39,6 +40,9 @@ export default async function CmsRoute({ path }: { path: string }) {
 
   return (
     <>
+      {page.seo.schema.length > 0 && (
+        <JsonLd items={page.seo.schema.map((data, i) => ({ id: `hv-jsonld-cms-erp-${i}`, data }))} />
+      )}
       <Navbar theme={darkTop ? "dark" : "light"} />
       {/* Hero variants pad for the fixed Navbar themselves. */}
       <main className={first?.type === "hero" ? "bg-[#faf7f1]" : "bg-[#faf7f1] pt-20 md:pt-24"} data-cms-page={page.slug}>

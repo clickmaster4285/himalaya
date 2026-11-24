@@ -24,6 +24,16 @@ const SECURITY_HEADERS = [
   { key: "X-Frame-Options", value: "SAMEORIGIN" },
 ];
 
+/**
+ * /erp-preview is framed by the ERP page editor, so it gets no X-Frame-Options;
+ * middleware.ts sends `Content-Security-Policy: frame-ancestors 'self' <ERP_ADMIN_ORIGINS>`
+ * at runtime instead. no-referrer keeps the preview token out of Referer headers.
+ */
+const ERP_PREVIEW_HEADERS = [
+  ...SECURITY_HEADERS.filter((h) => h.key !== "X-Frame-Options" && h.key !== "Referrer-Policy"),
+  { key: "Referrer-Policy", value: "no-referrer" },
+];
+
 const nextConfig: NextConfig = {
   poweredByHeader: false,
   // Turbopack resolves CSS imports from the monorepo root — hoist deps via root workspaces.
@@ -58,7 +68,11 @@ const nextConfig: NextConfig = {
     };
   },
   async headers() {
-    return [{ source: "/:path*", headers: SECURITY_HEADERS }];
+    return [
+      // Every route except /erp-preview keeps the site's framing protection.
+      { source: "/:path((?!erp-preview$).*)", headers: SECURITY_HEADERS },
+      { source: "/erp-preview", headers: ERP_PREVIEW_HEADERS },
+    ];
   },
   async redirects() {
     return [

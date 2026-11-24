@@ -145,6 +145,42 @@ const fetchCmsPageCached =
         tags: [CMS_CACHE_TAG],
       });
 
+/* ---------------------------- draft preview ---------------------------- */
+// The ERP page editor frames /erp-preview?token=… to show an unsaved draft.
+// The token is the only access control: never log it or put it in a URL
+// other than the ERP API request below.
+
+const PREVIEW_TOKEN_REGEX = /^[a-f0-9]{48}$/;
+
+export const isPreviewToken = (token: unknown): token is string =>
+  typeof token === "string" && PREVIEW_TOKEN_REGEX.test(token);
+
+/**
+ * Fetches the draft behind a preview token, parsed exactly like a published
+ * page. Never cached. Returns null when the token is invalid/expired or the
+ * ERP is unreachable (the preview route shows an "expired" message).
+ */
+export async function getCmsPreviewPage(token: string): Promise<CmsPage | null> {
+  if (!isPreviewToken(token) || !CMS_API_URL) return null;
+  try {
+    // token is validated as 48 hex characters, so it is safe as a path segment.
+    const res = await fetch(`${cmsBaseUrl()}/preview/${token}`, {
+      cache: "no-store",
+      signal: AbortSignal.timeout(CMS_TIMEOUT_MS),
+    });
+    if (!res.ok) {
+      if (res.status !== 404) console.error(`[cms] preview request responded ${res.status}`);
+      return null;
+    }
+    const json = (await res.json()) as { data?: { page?: unknown } };
+    return parsePage(json?.data?.page);
+  } catch (error) {
+    // Message only: the URL (which contains the token) is never logged.
+    console.error("[cms] preview request failed:", error instanceof Error ? error.name : "error");
+    return null;
+  }
+}
+
 async function fetchCmsPages(): Promise<CmsPageSummary[]> {
   const url = `${cmsBaseUrl()}/pages`;
   const res = await fetch(url, { cache: "no-store", signal: AbortSignal.timeout(CMS_TIMEOUT_MS) });

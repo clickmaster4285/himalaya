@@ -9,6 +9,7 @@ export default function robots(): MetadataRoute.Robots {
           "/api/",
           "/superadmin",
           "/admin",
+          "/erp-preview",
         ],
       },
     ],

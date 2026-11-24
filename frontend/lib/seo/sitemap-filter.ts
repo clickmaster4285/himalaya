@@ -3,7 +3,7 @@ import { isLegacyRedirectSource } from "@/lib/seo/legacy-redirects";
 import { ROUTE_NOINDEX_PATHS } from "@/lib/seo/route-titles";
 
 /** Pages a sitemap must not list: redirects, noindex routes, and paths that are not lowercase. */
-const NOT_FOR_SITEMAP = new Set(["/show-card", "/blog", "/book-best-hotel-in-murree"]);
+const NOT_FOR_SITEMAP = new Set(["/show-card", "/blog", "/book-best-hotel-in-murree", "/erp-preview"]);
 
 export function isExcludedFromSitemap(path: string): boolean {
   const p = path.startsWith("/") ? path : `/${path}`;

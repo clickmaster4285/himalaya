@@ -176,7 +176,7 @@ export default async function BlogArticlePage({ params }: Props) {
               )}
               {content.sections.map((section, i) => (
                 <section key={i} className="mt-10">
-                  <h2 id={slugify(section.heading)} className="font-bold text-neutral-900">
+                  <h2 id={slugify(section.heading)} className="scroll-mt-28 font-bold text-neutral-900">
                     {section.heading}
                   </h2>
                   {section.image && (

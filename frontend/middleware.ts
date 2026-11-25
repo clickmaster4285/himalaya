@@ -11,7 +11,9 @@ export function middleware(request: NextRequest) {
   }
 
   const { pathname, search } = request.nextUrl;
-  const lower = pathname.toLowerCase();
+  // Letters inside %XX escapes keep their case: Next normalizes them to
+  // uppercase, so lowercasing them redirected in a loop.
+  const lower = pathname.replace(/%[0-9a-f]{2}|[^%]+/gi, (s) => (s.startsWith("%") ? s : s.toLowerCase()));
 
   if (pathname !== lower) {
     const url = request.nextUrl.clone();

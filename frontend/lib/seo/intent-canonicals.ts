@@ -20,7 +20,6 @@ export const INTENT_FAMILIES: IntentFamily[] = [
     id: "hotels-resorts",
     canonical: "/hotels-in-bhurban",
     sources: [
-      "/luxury-hotels-in-murree",
       "/best-hotels-murree-pakistan",
       "/best-hotels-in-murree-pakistan",
       "/blogs/best-hotels-in-murree-pakistan",
@@ -93,7 +92,6 @@ export const INTENT_FAMILIES: IntentFamily[] = [
     id: "audience-family",
     canonical: "/family-villa-bhurban-murree",
     sources: [
-      "/family-hotels-in-murree",
       "/family-hotels-murree",
       "/blogs/best-family-hotels-in-murree",
       "/blogs/best-hotel-in-murree-for-family-vacations",
@@ -107,7 +105,6 @@ export const INTENT_FAMILIES: IntentFamily[] = [
     id: "audience-couples",
     canonical: "/bhurban-cedar-estate-for-couples",
     sources: [
-      "/romantic-hotels-murree",
       "/murree-for-couples",
       "/blogs/resorts-in-murree-for-couples",
       "/honeymoon-package-bhurban-murree",

@@ -4,6 +4,8 @@ export type VillaBlogPost = {
   title: string;
   /** Optional on-page H1 when different from SEO `title`. */
   headline?: string;
+  /** Optional exact <title>, emitted as-is without the site brand suffix rewrite. */
+  metaTitle?: string;
   excerpt: string;
   date: string;
   readMinutes: number;
@@ -81,16 +83,6 @@ export const VILLA_BLOG_POSTS: VillaBlogPost[] = [
     date: "2026-04-18",
     readMinutes: 14,
     coverImage: "/assets/blog-villas-bhurban-murree-luxury-featured.png",
-  },
-  {
-    slug: "family-tour-murree-himalaya-villas",
-    href: "/family-hotels-in-murree",
-    title: "Why Himalaya Villas & Resorts in Murree Is Best for a Family Tour",
-    excerpt:
-      "Planning a family tour to Murree or Bhurban? Discover why Himalaya Villas & Resorts is the perfect family stay — private, safe, spacious & activities for all ages.",
-    date: "2026-04-18",
-    readMinutes: 12,
-    coverImage: "/assets/blog-family-tour-featured-banner.png",
   },
   {
     slug: "best-family-hotels-in-murree",
@@ -225,7 +217,7 @@ export const VILLA_BLOG_POSTS: VillaBlogPost[] = [
 },
 {
   slug: "how-to-book-villa-large-family-murree",
-  title: "How to Book a Large Family Villa in Murree | Himalaya Villas & Resorts",
+  title: "How to Book a Large Family Villa in Murree | Himalaya Villas & Resort",
   headline: "How to Book a Large Family Villa in Murree",
   excerpt:
     "Learn how to book a villa for a large family in Murree. Explore room capacity, amenities, budgets, booking tips, and family stays at Himalaya Villas & Resorts.",
@@ -369,7 +361,7 @@ export const VILLA_BLOG_POSTS: VillaBlogPost[] = [
 },
 {
   slug: "how-much-does-villa-cost-in-murree",
-  title: "How Much Does a Villa Cost in Murree | Himalaya Villas & Resorts",
+  title: "How Much Does a Villa Cost in Murree | Himalaya Villas & Resort",
   headline: "How Much Does a Villa Cost in Murree?",
   excerpt:
     "Discover how much a villa costs in Murree at Himalaya Villas & Resorts. Explore nightly rates, seasonal factors, group budgets, and tips before booking.",
@@ -380,7 +372,7 @@ export const VILLA_BLOG_POSTS: VillaBlogPost[] = [
 
   {
   slug: "best-hotel-in-murree-for-family-vacations",
-  title: "Best Hotel in Murree for Family Vacations | Himalaya Villas & Resorts",
+  title: "Best Hotel in Murree for Family Vacations | Himalaya Villas & Resort",
   headline: "Where to Stay in Murree With Family: A Complete Vacation Guide",
   excerpt:
     "Planning a family vacation in Murree? Discover how to choose a comfortable stay, compare room needs, and plan your visit with Himalaya Villas & Resorts.",
@@ -390,12 +382,13 @@ export const VILLA_BLOG_POSTS: VillaBlogPost[] = [
 },
 {
   slug: "best-hotel-in-nathiagali-booking-guide",
-  title: "Best Hotel in Nathiagali - Himalaya Villas Booking Guide | Himalaya Villas & Resorts",
+  title: "Best Hotel in Nathiagali - Himalaya Villas Booking Guide | Himalaya Villas & Resort",
   headline: "Where to Stay in Nathiagali: Complete Guide",
   excerpt:
     "Looking for the best hotel in Nathiagali? Explore booking tips, room selection, seasonal advice and must-check amenities with Himalaya Villas & Resorts.",
   date: "2026-10-30",
   readMinutes: 15,
   coverImage: "/images/blogs/best-hotels-in-nathia-gali-1.webp",
-} 
+},
+
 ];

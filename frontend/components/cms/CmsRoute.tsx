@@ -2,12 +2,14 @@
 // Renders whatever page the ERP has published at a URL path, inside the
 // site's own Navbar and Footer. Used as the fallback of app/[slug] (for slugs
 // no article owns) and by app/[slug]/[...rest] for nested ERP slugs.
-// No per-page code: path in, page out.
+// No per-page code: path in, page out. CmsPageView is also used by the
+// ERP draft preview (app/erp-preview).
 import { notFound } from "next/navigation";
 import type { Metadata } from "next";
 import Navbar from "@/components/Navbar";
 import Footer from "@/components/Footer";
-import { buildCmsMetadata, getCmsPage } from "@/lib/cms";
+import { JsonLd } from "@/components/seo/JsonLd";
+import { buildCmsMetadata, getCmsPage, type CmsPage } from "@/lib/cms";
 import { withEditedPageSeo } from "@/lib/erp-edits";
 import CmsSectionRenderer, { renderableSections } from "./CmsSectionRenderer";
 import CmsArticle, { isArticlePage } from "./CmsArticle";
@@ -26,6 +28,15 @@ export async function cmsRouteMetadata(path: string): Promise<Metadata> {
 export default async function CmsRoute({ path }: { path: string }) {
   const page = await getCmsPage(path);
   if (!page) notFound();
+  return <CmsPageView page={page} />;
+}
+
+/**
+ * One ERP page in the site's layout (Navbar, sections, Footer, JSON-LD).
+ * Shared by published routes and the ERP draft preview (app/erp-preview),
+ * so a preview renders exactly like the published page.
+ */
+export function CmsPageView({ page }: { page: CmsPage }) {
   // Blog pages use the site's own blog article layout (app/blogs/[slug]).
   if (isArticlePage(page)) return <CmsArticle page={page} />;
 
@@ -39,6 +50,9 @@ export default async function CmsRoute({ path }: { path: string }) {
 
   return (
     <>
+      {page.seo.schema.length > 0 && (
+        <JsonLd items={page.seo.schema.map((data, i) => ({ id: `hv-jsonld-cms-erp-${i}`, data }))} />
+      )}
       <Navbar theme={darkTop ? "dark" : "light"} />
       {/* Hero variants pad for the fixed Navbar themselves. */}
       <main className={first?.type === "hero" ? "bg-[#faf7f1]" : "bg-[#faf7f1] pt-20 md:pt-24"} data-cms-page={page.slug}>

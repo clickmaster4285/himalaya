@@ -17,30 +17,26 @@ export type InternalLink = {
 };
 
 export const INTERNAL_LINKS: InternalLink[] = [
+  { text: "Explore Accommodation in Murree", href: "https://himalayavillas.com/accommodations", slugs: ["what-is-accommodation"] },
   { text: "check availability at Himalaya Villas & Resorts", href: "https://himalayavillas.com/contact" },
   { text: "Islamabad to Bhurban transport guide", href: "https://himalayavillas.com/islamabad-to-bhurban-guide" },
-  { text: "family stay in Murree", href: "https://himalayavillas.com/family-hotels-in-murree" },
   { text: "best villas in Murree", href: "https://himalayavillas.com/villas" },
   { text: "Private Villas in Murree", href: "https://himalayavillas.com/villas" },
-  { text: "best resort in Murree", href: "https://himalayavillas.com/romantic-hotels-murree" },
   { text: "Himalaya Villas & Resorts", href: "https://himalayavillas.com/villas" },
   { text: "villas in Murree", href: "https://himalayavillas.com/villas" },
   { text: "hotels in Murree", href: "https://himalayavillas.com/" },
-  { text: "Murree for couples", href: "https://himalayavillas.com/romantic-hotels-murree" },
   { text: "Murree's Mall Road", href: "https://himalayavillas.com/murree-mall-road-guide" },
   { text: "Kashmir Point", href: "https://himalayavillas.com/kashmir-point-murree-guide" },
   { text: "PC Hotel Bhurban", href: "https://himalayavillas.com/pc-hotel-bhurban-alternative" },
   { text: "Rates in Murree", href: "https://himalayavillas.com/pc-bhurban-rates-comparison" },
   { text: "wedding venue", href: "https://himalayavillas.com/wedding-venues-bhurban-murree" },
   { text: "family resort", href: "https://himalayavillas.com/family-villa-bhurban-murree" },
-  { text: "Nathia Gali", href: "https://himalayavillas.com/best-hotels-nathia-gali" },
   { text: "summer trip", href: "https://himalayavillas.com/murree-in-summer" },
   { text: "Mall Road", href: "https://himalayavillas.com/murree-mall-road-hotels-guide" },
   { text: "snowfall", href: "https://himalayavillas.com/murree-snowfall-season" },
   { text: "experience", href: "https://himalayavillas.com/experience" },
   { text: "Amenities", href: "https://himalayavillas.com/blogs/amenities-that-matter" },
   { text: "booking", href: "https://himalayavillas.com/murree-hotel-booking-guide" },
-  { text: "accommodation", href: "https://himalayavillas.com/bhurban-accommodation-guide" },
   { text: "villas", href: "https://himalayavillas.com/villas" },
   { text: "Explore Villas & Check Latest Prices at Himalaya Villas & Resorts", href: "https://himalayavillas.com/villas" },
    { text: "explore the villas at Himalaya Villas & Resorts", href: "https://himalayavillas.com/villas" },
@@ -65,10 +61,6 @@ export const INTERNAL_LINKS: InternalLink[] = [
 {
   text: "budget-friendly Murree trip guide",
   href: "https://himalayavillas.com/things-to-do-in-murree",
-},
-{
-  text: "family tour in Murree guide",
-  href: "https://himalayavillas.com/family-hotels-in-murree",
 },
 {
   text: "guide to seasons in the hills",
@@ -127,10 +119,6 @@ export const INTERNAL_LINKS: InternalLink[] = [
   href: "https://himalayavillas.com/things-to-do-in-murree",
 },
 
-{
-  text: "family accommodation guide for Murree",
-  href: "https://himalayavillas.com/family-hotels-in-murree",
-},
 {
   text: "luxury private villas in Bhurban",
   href: "https://himalayavillas.com/luxury-private-villa-bhurban-murree",

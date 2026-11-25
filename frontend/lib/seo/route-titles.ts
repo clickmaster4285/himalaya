@@ -78,10 +78,6 @@ const PAGE_SEO: Record<string, { title: string; description: string; noindex?: b
     title: "Corporate Retreats at Himalaya Villas Bhurban",
     description: "A private offsite for one company at Himalaya Villas, Bhurban.",
   },
-  "/family-hotels-in-murree": {
-    title: "Family Stays in Murree | Himalaya Villas Bhurban",
-    description: "Family villa stays at Himalaya Villas in Bhurban, Murree.",
-  },
   "/himalaya-villas-bhurban-murree-rest-house": {
     title: "Bhurban Rest House | Himalaya Villas",
     description: "The Himalaya Villas estate in Bhurban, Murree.",

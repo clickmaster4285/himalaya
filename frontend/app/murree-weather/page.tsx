@@ -4,7 +4,7 @@ import Footer from "@/components/Footer";
 import { ContentReviewNote } from "@/components/seo/ContentReviewNote";
 
 export const metadata: Metadata = {
-  title: "Murree Weather by Season and Month | Himalaya Villas & Resorts",
+  title: "Murree Weather by Season and Month | Himalaya Villas & Resort",
   description: "Murree weather guide with seasonal patterns, a monthly breakdown, and the best time to visit. Check the Pakistan Meteorological Department for the latest forecast before you travel.",
   authors: [{ name: "Himalaya Villas & Resorts" }],
   keywords: "Murree weather, Murree climate, Murree temperature, best time to visit Murree, Murree weather forecast, Murree seasonal weather, Murree rainfall, Murree snowfall",

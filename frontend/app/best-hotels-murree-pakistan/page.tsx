@@ -12,13 +12,13 @@ export const metadata: Metadata = {
     "Looking for the best hotels in Murree Pakistan? Discover why discerning guests choose Himalaya Villas in Bhurban — private villas, panoramic views, in-villa dining. 1 hour from Islamabad.",
   authors: [{ name: "Himalaya Villas & Resorts" }],
   alternates: {
-    canonical: "https://himalayavillas.com/luxury-hotels-in-murree",
+    canonical: "https://himalayavillas.com/hotels-in-bhurban",
   },
   openGraph: {
     title: "Best Hotels in Murree Pakistan | Himalaya Villas, Bhurban",
     description: "The definitive guide to staying in Murree — hotel comparisons, decision framework, and why private villa accommodation in Bhurban is the choice serious travellers make.",
     type: "website",
-    url: "https://himalayavillas.com/luxury-hotels-in-murree",
+    url: "https://himalayavillas.com/hotels-in-bhurban",
   }
 };
 
@@ -61,7 +61,7 @@ const breadcrumbSchema = {
   "@type": "BreadcrumbList",
   "itemListElement": [
     {"@type": "ListItem", "position": 1, "name": "Home", "item": "https://himalayavillas.com"},
-    {"@type": "ListItem", "position": 2, "name": "Murree Hotels Guide", "item": "https://himalayavillas.com/luxury-hotels-in-murree"}
+    {"@type": "ListItem", "position": 2, "name": "Murree Hotels Guide", "item": "https://himalayavillas.com/hotels-in-bhurban"}
   ]
 };
 
@@ -183,9 +183,6 @@ export default function BestHotelsMurreePage() {
           </p>
 
           <div className="mt-10 flex flex-wrap justify-center gap-6">
-            <Link href="/luxury-hotels-in-murree" className="text-[#c9a55b] font-medium hover:underline flex items-center gap-2">
-              → View Himalaya Villas room and villa types
-            </Link>
             <Link href="/murree-hotel-packages" className="text-[#c9a55b] font-medium hover:underline flex items-center gap-2">
               → See all packages and rates
             </Link>
@@ -335,12 +332,6 @@ export default function BestHotelsMurreePage() {
           </div>
 
           <div className="mt-16 flex flex-wrap justify-center gap-8">
-            <Link href="/family-hotels-in-murree" className="text-white/90 hover:text-[#c9a55b] font-medium transition flex items-center gap-2">
-              → Himalaya Villas Family Retreat
-            </Link>
-            <Link href="/romantic-hotels-murree" className="text-white/90 hover:text-[#c9a55b] font-medium transition flex items-center gap-2">
-              → Honeymoon & Romantic Packages
-            </Link>
             <Link href="/corporate-hotels-murree-bhurban" className="text-white/90 hover:text-[#c9a55b] font-medium transition flex items-center gap-2">
               → Corporate Retreat Enquiry
             </Link>

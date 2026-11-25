@@ -1,7 +1,7 @@
 import type { Metadata } from "next";
 
 export const metadata: Metadata = {
-  title: "Corporate Hotels in Murree and Bhurban | Himalaya Villas & Resorts",
+  title: "Corporate Hotels in Murree and Bhurban | Himalaya Villas & Resort",
   description: "Corporate hotels in Murree Bhurban for business meetings, conferences, and corporate retreats. Premium facilities, conference rooms, team building activities at Himalaya Villas. Book your corporate event.",
   keywords: "corporate hotels Murree, business hotels Bhurban, corporate retreats Murree, conference facilities Bhurban, business meetings Murree Hills, team building Pakistan, corporate events Himalaya Villas",
   openGraph: {

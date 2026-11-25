@@ -159,7 +159,9 @@ export default function CmsArticle({ page }: { page: CmsPage }) {
   const relatedHeading = (related && pick(related.content, "heading")) || "Related guides";
 
   const authorName = author ? pick(author, "name") : "";
-  const jsonLd = [
+  // Schema entered in the ERP replaces the generated one (no duplicate BlogPosting / FAQPage).
+  const erpSchema = page.seo.schema.map((data, i) => ({ id: `hv-jsonld-cms-erp-${i}`, data }));
+  const jsonLd = erpSchema.length ? erpSchema : [
     {
       id: "hv-jsonld-cms-article",
       data: {

@@ -6,7 +6,7 @@ import Footer from "@/components/Footer";
 import { Check, X, MapPin, Users, Camera, Shield, Heart, Clock, Utensils, BedDouble, Mountain } from "lucide-react";
 
 export const metadata: Metadata = {
-    title: "Wedding Venue Near Islamabad in Bhurban | Himalaya Villas & Resorts",
+    title: "Wedding Venue Near Islamabad in Bhurban | Himalaya Villas & Resort",
     description: "Wedding venue near Islamabad at Himalaya Villas Bhurban. Mountain wedding venue with pine forest setting, full catering, on-site accommodation. Perfect destination wedding 60 minutes from Islamabad. Book your dream wedding!",
     keywords: "wedding venue near Islamabad, mountain wedding Bhurban, destination wedding Murree Hills, outdoor wedding venue Pakistan, wedding resort Himalaya Villas, wedding ceremony Bhurban, wedding reception near Islamabad",
     openGraph: {
@@ -246,9 +246,6 @@ export default function WeddingVenuePage() {
                 </p>
 
                 <div className="mt-12 flex flex-wrap justify-center gap-6">
-                    <Link href="/luxury-hotels-in-murree" className="text-[#c9a55b] font-medium hover:underline flex items-center gap-2">
-                        → View Himalaya Villas accommodation
-                    </Link>
                     <Link href="/murree-hotel-packages" className="text-[#c9a55b] font-medium hover:underline flex items-center gap-2">
                         → See all packages and rates
                     </Link>
@@ -383,12 +380,6 @@ export default function WeddingVenuePage() {
                 </p>
 
                 <div className="mt-12 flex flex-wrap justify-center gap-6">
-                    <Link href="/romantic-hotels-murree" className="text-[#c9a55b] font-medium hover:underline flex items-center gap-2">
-                        → Honeymoon and romantic stays post-wedding
-                    </Link>
-                    <Link href="/family-hotels-in-murree" className="text-[#c9a55b] font-medium hover:underline flex items-center gap-2">
-                        → Accommodation for wedding guests
-                    </Link>
                     <Link href="/corporate-hotels-murree-bhurban" className="text-[#c9a55b] font-medium hover:underline flex items-center gap-2">
                         → Corporate event enquiries
                     </Link>

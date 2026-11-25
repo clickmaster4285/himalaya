@@ -1662,7 +1662,7 @@ async function baseMetadata({ params }: { params: Promise<{ slug: string }> }): 
   
   if (!event) {
     return createPageMetadata({
-      title: "Event Not Found | Himalaya Villas & Resorts",
+      title: "Event Not Found | Himalaya Villas & Resort",
       description: "The requested event could not be found.",
       path: `/events/${slug}`,
     });

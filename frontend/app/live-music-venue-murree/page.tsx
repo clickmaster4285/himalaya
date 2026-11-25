@@ -9,7 +9,7 @@ import { absoluteUrl } from "@/lib/seo/site-config";
 
 // --- Metadata & SEO Specification ---
 export const metadata: Metadata = createPageMetadata({
-  // Title shortened to avoid truncation with site suffix: " | Himalaya Villas & Resorts"
+  // Title shortened to avoid truncation with site suffix: " | Himalaya Villas & Resort"
   title: "Live Music Venue in Murree & Bhurban (2026 Guide)",
   description:
     "Where you can actually host live music in the Murree hills — venue types, noise curfews, power, acoustics, real 2026 costs, and the one booking model with no curfew at all.",

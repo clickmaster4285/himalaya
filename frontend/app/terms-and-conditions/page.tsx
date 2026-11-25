@@ -7,7 +7,7 @@ import Footer from "@/components/Footer";
 const termsSchema = {
   "@context": "https://schema.org",
   "@type": "WebPage",
-  "name": "Terms & Conditions | Himalaya Villas & Resorts",
+  "name": "Terms & Conditions | Himalaya Villas & Resort",
   "description": "Terms and Conditions for Himalaya Villas & Resorts - Understand our booking terms and guest policies.",
   "url": "https://himalayavillas.com/terms-and-conditions",
   "provider": { "@id": "https://himalayavillas.com/#organization" },
@@ -15,7 +15,7 @@ const termsSchema = {
 };
 
 export const metadata: Metadata = createPageMetadata({
-  title: "Terms and Conditions | Himalaya Villas & Resorts",
+  title: "Terms and Conditions | Himalaya Villas & Resort",
   description: "Terms and Conditions for Himalaya Villas & Resorts. Booking terms and guest policies.",
   path: "/terms-and-conditions",
   appendSiteBrand: false,

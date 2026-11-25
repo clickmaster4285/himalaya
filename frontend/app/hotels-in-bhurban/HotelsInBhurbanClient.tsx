@@ -257,7 +257,7 @@ function HeroSlider() {
           <Reveal>
             <h1 className="text-3xl font-bold leading-snug sm:text-4xl md:text-5xl lg:text-6xl">
               <span className="bh-text-gold">Hotels in Bhurban</span>
-              <span className="text-white"> | Himalaya Villas & Resorts</span>
+              <span className="text-white"> | Himalaya Villas & Resort</span>
               <br />
               <span className="mt-2 block text-2xl font-semibold text-white/95 sm:text-3xl md:text-4xl lg:text-5xl">
                 — Private Luxury Hotel Bhurban Murree

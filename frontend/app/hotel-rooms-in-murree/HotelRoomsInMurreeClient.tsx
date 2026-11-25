@@ -806,9 +806,7 @@ export default function HotelRoomsInMurreeClient() {
                   abroad. Rates are quoted in PKR and reflect what properties
                   actually charge, not what rate cards claim. For a broader view
                   of the market, see our{" "}
-                  <Link href="/luxury-hotels-in-murree">
-                    best hotels in Murree Pakistan
-                  </Link>{" "}
+                  best hotels in Murree Pakistan{" "}
                   guide.
                 </p>
               </div>
@@ -827,9 +825,7 @@ export default function HotelRoomsInMurreeClient() {
               and the same budget buys a very different room depending on which
               one you choose. Before comparing rooms, decide which Murree you
               are booking. See also our{" "}
-              <Link href="/luxury-hotels-in-murree">
-                Murree hotel room rates
-              </Link>{" "}
+              Murree hotel room rates{" "}
               hub for area-by-area comparisons.
             </p>
           </Reveal>
@@ -864,14 +860,9 @@ export default function HotelRoomsInMurreeClient() {
                 Roughly 9 kilometres from Murree town, Bhurban is where
                 Murree&apos;s premium accommodation concentrates. The area is
                 quieter, greener, and higher-end by design — this is where{" "}
-                <Link href="/luxury-hotels-in-murree">
-                  Pearl Continental Bhurban anchors the market
-                </Link>{" "}
+                Pearl Continental Bhurban anchors the market{" "}
                 and where most of the area&apos;s{" "}
-                <Link href="/luxury-hotels-in-murree">
-                  luxury hotel rooms in Murree
-                </Link>
-                , golf-adjacent hotels, and private villa estates sit. Rooms in
+                luxury hotel rooms in Murree, golf-adjacent hotels, and private villa estates sit. Rooms in
                 Bhurban are larger, newer, and more expensive, and guests here are
                 typically staying two to three nights rather than one.
               </p>
@@ -956,10 +947,7 @@ export default function HotelRoomsInMurreeClient() {
               and below them constantly, and the far right column is where
               negotiation and advance booking make the biggest difference. For
               premium options, see{" "}
-              <Link href="/luxury-hotels-in-murree">
-                luxury hotels in Murree
-              </Link>
-              .
+              luxury hotels in Murree.
             </p>
           </Reveal>
           <Reveal>
@@ -1167,9 +1155,7 @@ export default function HotelRoomsInMurreeClient() {
                 multi-generational trips, the difference is less about luxury and
                 more about logistics: one booking, one building, no corridors. See
                 our{" "}
-                <Link href="/family-hotels-in-murree">
-                  family hotels in Murree
-                </Link>{" "}
+                family hotels in Murree{" "}
                 guide for group planning tips.
               </p>
             </div>

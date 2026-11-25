@@ -22,6 +22,7 @@ const EXCLUDED_PATHS = new Set([
   "/login",
   "/signup",
   "/dashboard",
+  "/erp-preview", // ERP draft preview (noindex)
 ]);
 
 // Homepage and section hub pages. Their child pages stay in their own sitemaps.

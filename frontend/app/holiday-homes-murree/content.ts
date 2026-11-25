@@ -263,7 +263,7 @@ export const BREADCRUMB_SCHEMA = {
       "@type": "ListItem",
       position: 2,
       name: "Murree Travel Guides",
-      item: "https://himalayavillas.com/luxury-hotels-in-murree",
+      item: "https://himalayavillas.com/hotels-in-bhurban",
     },
     {
       "@type": "ListItem",

@@ -10,6 +10,7 @@ import { JsonLd } from "@/components/seo/JsonLd";
 import { blogCanonicalPath, getAllBlogSlugs, getBlogPostBySlug } from "@/lib/blog-posts";
 import { createPageMetadata } from "@/lib/seo/build-metadata";
 import { buildBlogPostingJsonLd } from "@/lib/seo/blog-jsonld";
+import { getBlogCustomSchema } from "@/lib/seo/blog-custom-schema";
 import { getBlogContent, type BlogTable } from "@/lib/blog-content";
 import { shouldUnoptimizeImageSrc, getValidImageSrc } from "@/lib/image-utils";
 import TableOfContents from "@/components/blogs/TableOfContents";
@@ -78,7 +79,7 @@ async function baseMetadata({ params }: Props): Promise<Metadata> {
   const post = getBlogPostBySlug(slug);
   if (!post) return {};
   const path = blogCanonicalPath(slug);
-  return createPageMetadata({
+  const metadata = createPageMetadata({
     title: post.title,
     description: post.excerpt,
     path,
@@ -87,6 +88,7 @@ async function baseMetadata({ params }: Props): Promise<Metadata> {
     ogType: "article",
     publishedTime: `${post.date}T12:00:00+05:00`,
   });
+  return post.metaTitle ? { ...metadata, title: post.metaTitle } : metadata;
 }
 
 /** Route metadata with any SEO fields published from ERP Page Editing overlaid. */
@@ -103,6 +105,7 @@ export default async function BlogArticlePage({ params }: Props) {
 
   const cover = getValidImageSrc(post.coverImage);
   const jsonLd = buildBlogPostingJsonLd(post);
+  const customSchema = getBlogCustomSchema(post.slug);
   const content = getBlogContent(post);
 
   const tocHeadings = content.sections.map((s) => ({
@@ -132,7 +135,7 @@ export default async function BlogArticlePage({ params }: Props) {
 
   return (
     <div className="min-h-screen bg-[#F6F1EA]">
-      <JsonLd items={[jsonLd, faqJsonLd]} />
+      <JsonLd items={customSchema ? [customSchema] : [jsonLd, faqJsonLd]} />
       <Navbar />
 
       <div className="mx-auto max-w-[1200px] px-6 pb-20 pt-8 md:px-10 md:pt-12">
@@ -173,7 +176,7 @@ export default async function BlogArticlePage({ params }: Props) {
               )}
               {content.sections.map((section, i) => (
                 <section key={i} className="mt-10">
-                  <h2 id={slugify(section.heading)} className="font-bold text-neutral-900">
+                  <h2 id={slugify(section.heading)} className="scroll-mt-28 font-bold text-neutral-900">
                     {section.heading}
                   </h2>
                   {section.image && (

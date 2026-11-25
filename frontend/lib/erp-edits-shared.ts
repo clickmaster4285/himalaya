@@ -103,7 +103,16 @@ const MAX_PATCH_HTML_LENGTH = 50000;
 const MAX_SECTION_HTML_LENGTH = 100000;
 const MAX_URL_LENGTH = 2000;
 
-/** Same path key on server and client: decoded, lowercase, no trailing slash, home is "/". */
+// Anti-flicker (components/cms/ErpAntiFlicker.tsx): the <style> that hides
+// <main> from the first paint on edited pages, and the window key holding the
+// edits request the head script starts for the current path.
+export const ANTI_FLICKER_STYLE_ID = 'erp-anti-flicker';
+export const BOOT_EDITS_KEY = '__erpEditsPromise';
+
+/**
+ * Same path key on server and client: decoded, lowercase, no trailing slash, home is "/".
+ * Mirrored by the inline head script in components/cms/ErpAntiFlicker.tsx; keep both in sync.
+ */
 export function normalizeEditPath(input: string): string {
   let path = (input || '').split(/[?#]/)[0];
   try {

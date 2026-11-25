@@ -17,6 +17,8 @@
 import { usePathname } from 'next/navigation';
 import { useLayoutEffect } from 'react';
 import {
+  ANTI_FLICKER_STYLE_ID,
+  BOOT_EDITS_KEY,
   isCopyId,
   isCopySelector,
   isSafeImageUrl,
@@ -85,8 +87,21 @@ function pageEdits(path: string): Promise<ErpEdit[]> {
   return promise;
 }
 
-// Start loading the list as soon as the client bundle runs.
-if (typeof window !== 'undefined') editedPaths();
+// The edits request the <head> script (ErpAntiFlicker.tsx) started for the
+// first page's path, before hydration. Taken off window once; used only by
+// the first load of that path, and dropped on the first navigation elsewhere,
+// so a finished result is never reused for a later visit.
+type BootEdits = Promise<Record<string, unknown> | null> & { path?: string };
+let boot: BootEdits | null = null;
+
+if (typeof window !== 'undefined') {
+  // Start loading the list as soon as the client bundle runs.
+  editedPaths();
+  const w = window as unknown as Record<string, unknown>;
+  const pending = w[BOOT_EDITS_KEY] as BootEdits | undefined;
+  if (pending && typeof pending.then === 'function' && typeof pending.path === 'string') boot = pending;
+  delete w[BOOT_EDITS_KEY];
+}
 
 /* ---------------------------- DOM resolution ---------------------------- */
 
@@ -484,6 +499,11 @@ class EditSession {
   }
 }
 
+/** Removes the first-paint hiding added by the <head> script, if still there. */
+function removeAntiFlicker() {
+  document.getElementById(ANTI_FLICKER_STYLE_ID)?.remove();
+}
+
 /** Hides <main> while edits load; returns an idempotent reveal function. */
 function hideMain(): () => void {
   const main = document.querySelector<HTMLElement>('body > main');
@@ -519,16 +539,32 @@ export default function ErpPageEdits() {
     let ready = false;
     let checking = false;
 
+    // First load of an edited page: the <head> script has hidden <main> since
+    // the first paint and already requested this path's edits. Its <style> is
+    // left in place on cleanup (a StrictMode re-run reuses it); any run for
+    // another path removes it before paint.
+    if (boot && boot.path !== path) boot = null;
+    const initial = boot;
+    if (initial) reveal = removeAntiFlicker;
+    else removeAntiFlicker();
+
     // When the list is already known (client navigations), hide before paint
-    // so the unedited page never flashes. On a first load the list is still
-    // loading, and hiding late would flash more than it hides.
+    // so the unedited page never flashes.
     const paths = editedPaths();
-    if (paths.value?.has(path)) reveal = hideMain();
+    if (!initial && paths.value?.has(path)) reveal = hideMain();
 
     (async () => {
-      const edited = paths.value ?? (await paths.promise);
-      if (cancelled || !edited.has(path)) return;
-      const edits = await pageEdits(path);
+      let edits: ErpEdit[];
+      if (initial) {
+        const json = await initial;
+        if (cancelled) return;
+        if (!json) return warn('could not load edits for this page');
+        edits = Array.isArray(json.edits) ? (json.edits as ErpEdit[]) : [];
+      } else {
+        const edited = paths.value ?? (await paths.promise);
+        if (cancelled || !edited.has(path)) return;
+        edits = await pageEdits(path);
+      }
       if (cancelled || edits.length === 0) return;
       const resolved = await waitForTargets(edits, () => cancelled);
       if (cancelled) return;
@@ -540,7 +576,8 @@ export default function ErpPageEdits() {
     })()
       .catch((error) => warn('could not apply edits', error))
       .finally(() => {
-        reveal();
+        // Cancelled runs were revealed (or handed on) by the cleanup.
+        if (!cancelled) reveal();
         ready = true;
       });
 
@@ -576,7 +613,7 @@ export default function ErpPageEdits() {
       clearInterval(timer);
       document.removeEventListener('visibilitychange', onVisible);
       window.removeEventListener('focus', onVisible);
-      reveal();
+      if (!initial) reveal();
       session.revert();
     };
   }, [pathname]);

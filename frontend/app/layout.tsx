@@ -6,6 +6,7 @@ import { HotelGraphStructuredData } from "@/components/seo/HotelGraphStructuredD
 import { BreadcrumbJsonLd } from "@/components/seo/BreadcrumbJsonLd";
 import SiteAnalytics from "@/components/SiteAnalytics";
 import ErpPageEdits from "@/components/cms/ErpPageEdits";
+import ErpAntiFlicker from "@/components/cms/ErpAntiFlicker";
 import { BRAND, getSiteOrigin } from "@/lib/seo/site-config";
 
 /** Clean UI type for body, forms, and nav */
@@ -74,6 +75,8 @@ export default function RootLayout({
   return (
     <html lang="en" className={cn("font-sans antialiased", dmSans.variable, cormorant.variable)} suppressHydrationWarning>
       <head>
+        {/* Hides <main> on ERP-edited pages before the first paint; nothing on other pages. */}
+        <ErpAntiFlicker />
         <HotelGraphStructuredData />
         <BreadcrumbJsonLd />
       </head>

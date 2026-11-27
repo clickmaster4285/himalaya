@@ -4,7 +4,7 @@
 // The draft is parsed by the same parser (lib/cms) and rendered by the same
 // CmsPageView as the published page at its slug, so they look identical.
 // Never cached, never indexed, never in the sitemap. Framing is allowed only
-// for ERP_ADMIN_ORIGINS (middleware.ts); other routes keep X-Frame-Options.
+// for ERP_ADMIN_ORIGINS (proxy.ts); other routes keep X-Frame-Options.
 import type { Metadata } from "next";
 import { cache } from "react";
 import Navbar from "@/components/Navbar";

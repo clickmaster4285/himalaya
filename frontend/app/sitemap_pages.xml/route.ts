@@ -1,7 +1,8 @@
 import { getSiteOrigin } from "@/lib/seo/site-config";
 import { isExcludedFromSitemap } from "@/lib/seo/sitemap-filter";
 import { GUIDE_TOPICS, guideHubPath } from "@/lib/guides";
-import { getCmsPages, isCmsSlug } from "@/lib/cms";
+import { getCmsSitemapEntries } from "@/lib/seo/cms-sitemap";
+import { withoutDeletedPaths } from "@/lib/erp-deleted-pages-server";
 import fs from "fs";
 import path from "path";
 
@@ -152,12 +153,20 @@ export async function GET() {
   // Published ERP CMS pages (skipping noindex, invalid and code-owned paths).
   // Empty when the ERP is unreachable, so the sitemap never breaks.
   const codeOwned = new Set(allPages);
-  const cmsPages = (await getCmsPages())
-    .filter((page) => !page.noindex && isCmsSlug(page.slug) && !codeOwned.has(page.slug))
-    .filter((page) => !EXCLUDED_PATHS.has(`/${page.slug.split("/")[1]}`));
+  // ERP pages that belong in no other sitemap (lib/seo/cms-sitemap.ts):
+  // blogs, events, villas and book pages go to their own sitemaps.
+  const cmsPages = (await getCmsSitemapEntries("pages", codeOwned)).filter(
+    (page) => !EXCLUDED_PATHS.has(`/${page.path.split("/")[1]}`),
+  );
   // getAllPages skips the app root and the EXCLUDED_PATHS sections, so the homepage and the
   // section hub pages are added explicitly. They still pass through isExcludedFromSitemap below.
-  const uniquePages = [...new Set([...HUB_PAGES, ...allPages,...guideHubs,...cmsPages.map((page) => page.slug)])]
+  // ERP Page Delete Requests: deleted paths (code-owned or ERP) leave the sitemap.
+  const uniquePages = (
+    await withoutDeletedPaths(
+      [...new Set([...HUB_PAGES, ...allPages, ...guideHubs, ...cmsPages.map((page) => page.path)])],
+      (pagePath) => pagePath,
+    )
+  )
     .filter((pagePath) => !isExcludedFromSitemap(pagePath))
     .sort();
 

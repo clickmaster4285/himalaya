@@ -1,4 +1,5 @@
 import Link from "next/link";
+import { withoutDeletedPaths } from "@/lib/erp-deleted-pages-server";
 
 export type RelatedGuideLink = { href: string; title: string };
 
@@ -13,7 +14,9 @@ type Props = {
  * HIM-ARCH-0001: contextual links into the guide hubs. Plain anchors in the server HTML, so a
  * crawler that does not run JavaScript still follows them.
  */
-export function RelatedGuides({ heading = "Related guides", guides, hub, className = "" }: Props) {
+export async function RelatedGuides({ heading = "Related guides", guides: allGuides, hub, className = "" }: Props) {
+  // Pages deleted in the ERP (Page Delete Requests) are not linked.
+  const guides = await withoutDeletedPaths(allGuides, (guide) => guide.href);
   if (!guides.length) return null;
   return (
     <section aria-labelledby="related-guides-heading" className={`bg-[#faf7f1] px-6 py-14 ${className}`}>

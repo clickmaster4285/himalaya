@@ -1,5 +1,5 @@
 // lib/erp-preview.ts
-// Shared by middleware.ts (framing header) and app/erp-preview (live-refresh
+// Shared by proxy.ts (framing header) and app/erp-preview (live-refresh
 // bridge), so it must not import server-only modules.
 
 /** The only route the ERP page editor may frame. */

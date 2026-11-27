@@ -14,6 +14,7 @@ export type ErpStyle = [property: string, value: string];
 export type ErpImage = { src?: string; alt?: string };
 export type ErpThemeTag = (typeof THEME_TAGS)[number];
 export type ErpLayout = 'image-left' | 'image-right';
+export type ErpSectionKind = 'custom';
 
 export type ErpEdit =
   | {
@@ -35,6 +36,10 @@ export type ErpEdit =
       position: 'before' | 'after';
       html: string;
       layout?: ErpLayout;
+      /** "custom": built in the ERP's visual builder or written as HTML/CSS. */
+      kind?: ErpSectionKind;
+      /** Custom sections only: the section's own CSS, nested in its scope (isSafeCustomCss). */
+      css?: string;
       theme: [tag: ErpThemeTag, styles: ErpStyle[]][];
     };
 
@@ -78,21 +83,13 @@ const ALLOWED_STYLE_PROPERTIES = new Set([
   'opacity',
 ]);
 
-// Typography an inserted section takes from the website, per tag. Mirrors
-// THEME_TAGS / TYPE_PROPERTIES / CELL_PROPERTIES in the ERP insertedSections.js.
-export const THEME_TAGS = ['h1', 'h2', 'h3', 'h4', 'p', 'li', 'th', 'td'] as const;
-const THEME_PROPERTIES = new Set([
-  'font-family',
-  'font-size',
-  'font-weight',
-  'font-style',
-  'line-height',
-  'letter-spacing',
-  'text-transform',
-  'color',
-  'padding',
-  'background-color',
-]);
+// Typography an inserted section takes from the website, per tag ("btn" is the
+// site's button style). Mirrors the theme tags of the ERP's page-edits.js. The
+// ERP validates property names on save; here any plain property name is kept
+// as long as its value passes the style value rule.
+export const THEME_TAGS = ['h1', 'h2', 'h3', 'h4', 'p', 'li', 'th', 'td', 'btn'] as const;
+const THEME_PROPERTY_REGEX = /^-?[a-z][a-z-]{0,39}$/;
+const BLOCKED_THEME_PROPERTY = /behavior|binding/;
 
 const STYLE_VALUE_REGEX = /^[\w\s#(),.%'"+\-/]*$/;
 const BLOCKED_STYLE_VALUE = /url\(|expression|javascript|@import/i;
@@ -100,7 +97,7 @@ const MAX_STYLE_VALUE_LENGTH = 200;
 const MAX_SELECTOR_LENGTH = 2000;
 const MAX_TEXT_LENGTH = 20000;
 const MAX_PATCH_HTML_LENGTH = 50000;
-const MAX_SECTION_HTML_LENGTH = 100000;
+const MAX_SECTION_HTML_LENGTH = 200000;
 const MAX_URL_LENGTH = 2000;
 
 // Anti-flicker (components/cms/ErpAntiFlicker.tsx): the <style> that hides
@@ -136,7 +133,55 @@ export function isSafeStyle(property: string, value: string): boolean {
 }
 
 export function isSafeThemeStyle(property: string, value: string): boolean {
-  return THEME_PROPERTIES.has(property) && isSafeStyleValue(value);
+  return THEME_PROPERTY_REGEX.test(property) && !BLOCKED_THEME_PROPERTY.test(property) && isSafeStyleValue(value);
+}
+
+const MAX_CUSTOM_CSS_LENGTH = 20000;
+const BLOCKED_CUSTOM_CSS = /<|@import|expression\s*\(|javascript:|behavior\s*:|-moz-binding/i;
+
+/**
+ * Custom section CSS, inserted as `<scope>{<css>}` (CSS nesting). Rejected
+ * unless: at most 20,000 characters without comments; no `<`, `@import`,
+ * `expression(`, `javascript:`, `behavior:` or `-moz-binding`; every `url(` is
+ * `url(https://…)`; braces balanced outside strings and comments, never closing
+ * more than opened. Strings, comments and escapes are read the way the CSS
+ * tokenizer reads them, so a `}` hidden in a string or comment can't close the
+ * scope early. Backslash escapes outside strings are refused outright (they
+ * could spell `url` or a brace in disguise).
+ */
+export function isSafeCustomCss(css: unknown): css is string {
+  if (typeof css !== 'string' || css.length > MAX_CUSTOM_CSS_LENGTH * 4) return false;
+  if (BLOCKED_CUSTOM_CSS.test(css)) return false;
+  let depth = 0;
+  let length = 0;
+  let quote = '';
+  for (let i = 0; i < css.length; i++) {
+    const ch = css[i];
+    if (quote) {
+      length++;
+      if (ch === '\\') {
+        i++;
+        length++;
+      } else if (ch === quote) quote = '';
+      else if (ch === '\n' || ch === '\r' || ch === '\f') return false; // unterminated string
+      continue;
+    }
+    if (ch === '/' && css[i + 1] === '*') {
+      const end = css.indexOf('*/', i + 2);
+      if (end < 0) return false; // unterminated comment would swallow the closing brace
+      i = end + 1;
+      continue;
+    }
+    length++;
+    if (ch === '\\') return false;
+    if (ch === '"' || ch === "'") quote = ch;
+    else if (ch === '{') depth++;
+    else if (ch === '}' && --depth < 0) return false;
+    else if ((ch === 'u' || ch === 'U') && /^url\(/i.test(css.slice(i, i + 4))) {
+      if (!/^url\(\s*["']?https:\/\//i.test(css.slice(i, i + 64))) return false;
+    }
+  }
+  return depth === 0 && !quote && length <= MAX_CUSTOM_CSS_LENGTH;
 }
 
 /** Absolute http(s) URL with no characters that could break out of CSS url("…") or an attribute. */
@@ -220,6 +265,9 @@ function parseOperation(raw: unknown): ErpEdit | null {
     case 'insert': {
       if (!isCopyId(op.id) || typeof op.html !== 'string' || op.html.length > MAX_SECTION_HTML_LENGTH) return null;
       const layout = op.layout === 'image-left' || op.layout === 'image-right' ? op.layout : undefined;
+      const kind = op.kind === 'custom' ? 'custom' : undefined;
+      // Invalid custom CSS is dropped; the section itself is kept.
+      const css = kind && isSafeCustomCss(op.css) && op.css.trim() ? op.css : undefined;
       return {
         type: 'sectionInsert',
         selector: sel,
@@ -228,6 +276,8 @@ function parseOperation(raw: unknown): ErpEdit | null {
         html: op.html,
         theme: parseTheme(op.theme),
         ...(layout ? { layout } : {}),
+        ...(kind ? { kind } : {}),
+        ...(css ? { css } : {}),
       };
     }
     default:

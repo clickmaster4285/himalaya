@@ -9,6 +9,7 @@ import type { CmsPage, CmsSection } from "@/lib/cms";
 import CmsHero from "./CmsHero";
 import CmsTextSection from "./CmsTextSection";
 import CmsRichTextSection from "./CmsRichTextSection";
+import CmsComparisonTable, { comparisonTable, introHtml } from "./CmsComparisonTable";
 import CmsFeaturesSection, { type CmsFeatureItem } from "./CmsFeaturesSection";
 import CmsImageTextSection from "./CmsImageTextSection";
 import CmsStatsSection from "./CmsStatsSection";
@@ -155,6 +156,25 @@ export function renderSection(section: CmsSection, page: CmsPage) {
     case "richText":
     case "customContent": {
       const html = pick(c, "bodyHtml");
+      // ERP Comparison / Difference Table: the structured table when valid,
+      // otherwise its bodyHtml (a plain rich-text table) below.
+      const erpType = pick(c, "erpType");
+      const table = erpType === "comparisonTable" || erpType === "differenceTable" ? comparisonTable(c) : null;
+      if (table) {
+        return (
+          <CmsComparisonTable
+            layout={layout}
+            data={{
+              heading: pick(c, "heading"),
+              intro: introHtml(html),
+              table,
+              highlight: pick(c, "highlight"),
+              highlightLabel: pick(c, "highlightLabel"),
+              note: pick(c, "note"),
+            }}
+          />
+        );
+      }
       if (!html) return null;
       return <CmsRichTextSection layout={layout} data={{ heading: pick(c, "heading"), html }} />;
     }

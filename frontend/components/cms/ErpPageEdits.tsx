@@ -1,7 +1,8 @@
 'use client';
 // components/cms/ErpPageEdits.tsx
 // Applies published ERP "edited page" instructions (text, rich text, images,
-// styles, section moves/removals/duplicates and added sections) to the current
+// styles, section moves/removals/duplicates and added sections, incl. buttons,
+// cards and custom sections with their own CSS) to the current
 // route's DOM in the browser, the same way the ERP's page-edits.js loader does
 // (ERP backend services/digitalOperations/externalPageEdits.service.js). Mounted once in
 // the root layout so it covers code-owned and CMS pages, on first load and on
@@ -21,11 +22,13 @@ import {
   BOOT_EDITS_KEY,
   isCopyId,
   isCopySelector,
+  isSafeCustomCss,
   isSafeImageUrl,
   isSafeStyle,
   isSafeThemeStyle,
   normalizeEditPath,
   type ErpEdit,
+  type ErpStyle,
 } from '@/lib/erp-edits-shared';
 import { sanitizeErpHtml } from '@/components/cms/erp-html';
 
@@ -174,9 +177,10 @@ function waitForTargets(edits: ErpEdit[], isCancelled: () => boolean): Promise<R
 
 /* ---------------------------- apply / revert ---------------------------- */
 
-// Containers that manage their own layout; makeRoomForCopy leaves them alone.
+// Containers that manage their own layout; makeRoomFor leaves them alone.
 const SLIDER_CLASS = /swiper|slick|carousel|owl-|splide|flickity|glide/i;
 const MAX_ROOM_DEPTH = 12;
+const POSITIONED = /^(absolute|fixed|sticky)$/;
 
 // Text/border settings on a table, its body or a row also go on its cells.
 // Mirrors targetsFor in the ERP styleUtils.js.
@@ -185,57 +189,48 @@ const CELL_PROPERTY =
   /^(font-family|font-size|font-weight|font-style|line-height|letter-spacing|text-transform|text-align|border-color)$/;
 
 // Responsive/lazy image attributes that would bring the old file back.
-const LAZY_SRC = ['data-src', 'data-lazy-src', 'data-original', 'data-lazy', 'data-ll-src', 'data-orig-src'];
+// Same lists as the ERP's page-edits.js.
+const LAZY_SRC = [
+  'data-src', 'data-lazy-src', 'data-original', 'data-lazy', 'data-ll-src', 'data-orig-src',
+  'data-pagespeed-lazy-src', 'data-actualsrc', 'data-echo',
+];
 const LAZY_SRCSET = ['data-srcset', 'data-lazy-srcset', 'data-ll-srcset'];
-const LAZY_BACKGROUND = ['data-bg', 'data-background', 'data-bg-image', 'data-background-image'];
+const LAZY_BACKGROUND = [
+  'data-bg', 'data-background', 'data-bg-image', 'data-background-image', 'data-lazy-background', 'data-ll-bg',
+];
 
 /*
- * Sections added in the ERP editor ("insert"). The layout rules mirror
- * INSERTED_SECTION_CSS in the ERP (insertedSections.js / page-edits.js), so the
- * live page matches the editor preview; typography comes from each section's
- * `theme` (the site's own fonts, sampled by the editor). Tables, rules and
- * quotes use this site's warm gold palette, as on the site's own tables.
- * Tailwind's preflight resets lists, headings and tables, so they are restored.
+ * Sections added in the ERP editor ("insert"). REFERENCE_SECTION_CSS is
+ * addSectionStyle from the ERP's page-edits.js, copied verbatim, so added
+ * sections (incl. buttons, cards and image-left/right) look as in the editor
+ * preview. Keep it in sync with that script. Typography comes from each
+ * section's `theme` (this site's fonts, sampled by the editor).
  */
 const SECTION_STYLE_ID = 'erp-section-style';
-const SECTION_CSS = [
-  '.erp-section{box-sizing:border-box;width:100%;max-width:1200px;margin:48px auto;padding:0 20px}',
-  '.erp-section>*:first-child{margin-top:0}',
-  '.erp-section>*:last-child{margin-bottom:0}',
-  '.erp-section p{margin:0 0 12px}',
-  '.erp-section h1,.erp-section h2,.erp-section h3,.erp-section h4{margin:24px 0 12px}',
+const REFERENCE_SECTION_CSS =
+  '.erp-section{box-sizing:border-box;width:100%;max-width:1200px;margin:48px auto;padding:0 20px}.erp-section>*:first-child{margin-top:0}.erp-section p{margin:0 0 12px}.erp-section h2,.erp-section h3,.erp-section h4{margin:24px 0 12px}.erp-section ul,.erp-section ol{margin:12px 0;padding-left:1.5em}.erp-section ul{list-style:disc}.erp-section ol{list-style:decimal}.erp-section img{display:block;max-width:100%;height:auto;margin:16px 0}.erp-section table{width:100%;border-collapse:separate;border-spacing:0;margin:16px 0;border:1px solid rgba(127,127,127,.35);overflow:hidden}.erp-section th,.erp-section td{border:0 solid rgba(127,127,127,.35);border-right-width:1px;border-bottom-width:1px;padding:10px 12px;text-align:left;vertical-align:top}.erp-section tr>:last-child{border-right-width:0}.erp-section tr:last-child>*{border-bottom-width:0}.erp-section th{font-weight:600;background:rgba(127,127,127,.08)}.erp-section td p,.erp-section th p{margin:0}.erp-section a.erp-btn{display:inline-block;margin:8px 12px 8px 0;padding:12px 24px;border:2px solid var(--erp-btn-bg,#ea580c);border-radius:var(--erp-btn-radius,8px);background:var(--erp-btn-bg,#ea580c);color:var(--erp-btn-color,#fff);font-weight:600;line-height:1.2;text-decoration:none;cursor:pointer}.erp-section a.erp-btn:hover{opacity:.88}.erp-section a.erp-btn.erp-btn-outline{background:transparent;color:var(--erp-btn-bg,#ea580c)}.erp-section .erp-cards{display:grid;grid-template-columns:repeat(auto-fit,minmax(240px,1fr));gap:24px;margin:24px 0}.erp-section .erp-card{box-sizing:border-box;padding:24px;border:1px solid rgba(127,127,127,.25);border-radius:12px;background:rgba(127,127,127,.04)}.erp-section .erp-card>*:first-child{margin-top:0}.erp-section .erp-card>*:last-child{margin-bottom:0}.erp-section .erp-card img{margin:0 0 16px;border-radius:8px}.erp-section.erp-layout-image-left,.erp-section.erp-layout-image-right{display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1fr);grid-template-rows:repeat(var(--erp-text-rows,1),auto) 1fr;column-gap:40px;align-items:start}.erp-layout-image-left>*{grid-column:2}.erp-layout-image-left>img:first-of-type{grid-column:1;grid-row:1/-1}.erp-layout-image-right>*{grid-column:1}.erp-layout-image-right>img:first-of-type{grid-column:2;grid-row:1/-1}.erp-layout-image-left>img:first-of-type,.erp-layout-image-right>img:first-of-type{width:100%;height:auto;margin:0;align-self:center}@media (max-width:767px){.erp-section.erp-layout-image-left,.erp-section.erp-layout-image-right{display:block}.erp-layout-image-left>img:first-of-type,.erp-layout-image-right>img:first-of-type{margin:16px 0}}';
+/*
+ * Site additions, after the reference so it stays untouched. Only properties
+ * the reference leaves unset: Tailwind's preflight resets heading sizes, so
+ * these give a fallback when a section's theme has none (theme rules are more
+ * specific and win), and wide tables scroll sideways on phones.
+ */
+const SITE_SECTION_CSS = [
+  '.erp-section h1{font-size:2.5rem;line-height:1.1;margin:24px 0 12px}',
   '.erp-section h2{font-size:2.25rem;line-height:1.15}',
   '.erp-section h3{font-size:1.5rem;line-height:1.25}',
   '.erp-section h4{font-size:1.25rem;line-height:1.3}',
-  '.erp-section ul,.erp-section ol{margin:12px 0;padding-left:1.5em}',
-  '.erp-section ul{list-style:disc}',
-  '.erp-section ol{list-style:decimal}',
   '.erp-section li{margin:4px 0}',
-  '.erp-section li::marker{color:#c9a55b}',
-  '.erp-section a{color:#8b6914;text-decoration:underline;text-underline-offset:4px}',
   '.erp-section strong,.erp-section b{font-weight:600}',
+  '.erp-section a:not(.erp-btn){color:#8b6914;text-decoration:underline;text-underline-offset:4px}',
   '.erp-section blockquote{margin:16px 0;padding-left:16px;border-left:4px solid #c9a55b}',
   '.erp-section hr{margin:24px 0;border:0;border-top:1px solid #eadfce}',
-  '.erp-section img{display:block;max-width:100%;height:auto;margin:16px 0;border-radius:16px}',
   '.erp-section figcaption{margin-top:8px;font-size:.875rem;color:#737373}',
-  '.erp-section table{width:100%;border-collapse:separate;border-spacing:0;margin:16px 0;border:1px solid #eadfce;border-radius:16px;overflow:hidden;background:#fff;box-shadow:0 20px 25px -5px rgba(0,0,0,.06),0 8px 10px -6px rgba(0,0,0,.06)}',
-  '.erp-section th,.erp-section td{border:0 solid #f0e8dc;border-right-width:1px;border-bottom-width:1px;padding:14px 18px;text-align:left;vertical-align:top}',
-  '.erp-section tr>:last-child{border-right-width:0}',
-  '.erp-section tr:last-child>*{border-bottom-width:0}',
-  '.erp-section th{font-weight:600;background:rgba(201,165,91,.1);color:#1b1b1b}',
-  '.erp-section td p,.erp-section th p{margin:0}',
-  '.erp-section.erp-layout-image-left,.erp-section.erp-layout-image-right{display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1fr);grid-template-rows:repeat(var(--erp-text-rows,1),auto) 1fr;column-gap:40px;align-items:start}',
-  '.erp-layout-image-left>*{grid-column:2}',
-  '.erp-layout-image-left>img:first-of-type{grid-column:1;grid-row:1/-1}',
-  '.erp-layout-image-right>*{grid-column:1}',
-  '.erp-layout-image-right>img:first-of-type{grid-column:2;grid-row:1/-1}',
-  '.erp-layout-image-left>img:first-of-type,.erp-layout-image-right>img:first-of-type{width:100%;height:auto;margin:0;align-self:center}',
   '@media (max-width:767px){',
   '.erp-section{margin:32px auto}',
+  '.erp-section h1{font-size:2rem}',
   '.erp-section h2{font-size:1.875rem}',
-  '.erp-section table{display:block;overflow-x:auto}',
-  '.erp-section.erp-layout-image-left,.erp-section.erp-layout-image-right{display:block}',
-  '.erp-layout-image-left>img:first-of-type,.erp-layout-image-right>img:first-of-type{margin:16px 0}',
+  '.erp-section table{display:block;overflow-x:auto;max-width:100%}',
   '}',
 ].join('');
 
@@ -244,36 +239,124 @@ const INHERIT_INNER_PARAGRAPH =
   'font-family:inherit;font-size:inherit;font-weight:inherit;font-style:inherit;' +
   'line-height:inherit;letter-spacing:inherit;text-transform:inherit;color:inherit';
 
+// "btn" theme: these become CSS variables used by a.erp-btn; the rest styles a.erp-btn.
+const BUTTON_VARIABLES: Record<string, string> = {
+  'background-color': '--erp-btn-bg',
+  color: '--erp-btn-color',
+  'border-radius': '--erp-btn-radius',
+};
+
+type InsertEdit = Extract<ErpEdit, { type: 'sectionInsert' }>;
+type ElementEdit = Extract<ErpEdit, { type: 'elementEdit' }>;
+
 function ensureSectionStyle() {
   if (document.getElementById(SECTION_STYLE_ID)) return;
   const style = document.createElement('style');
   style.id = SECTION_STYLE_ID;
-  style.textContent = SECTION_CSS;
+  style.textContent = REFERENCE_SECTION_CSS + SITE_SECTION_CSS;
   document.head.appendChild(style);
 }
 
-/** CSS for one added section's typography, scoped to that section. */
-function sectionThemeCss(edit: Extract<ErpEdit, { type: 'sectionInsert' }>): string {
+const scopeOf = (id: string) => `.erp-section[data-erp-clone="${id}"]`;
+
+/** CSS for one added section's typography and button style, scoped to that section. */
+function sectionThemeCss(edit: InsertEdit): string {
   if (!isCopyId(edit.id)) return '';
-  const scope = `.erp-section[data-erp-clone="${edit.id}"]`;
+  const scope = scopeOf(edit.id);
+  const declarations = (styles: ErpStyle[], rename?: Record<string, string>) =>
+    styles.map(([property, value]) => `${rename?.[property] ?? property}:${value}`).join(';');
   const rules = edit.theme
     .map(([tag, styles]) => {
-      const declarations = styles
-        .filter(([property, value]) => isSafeThemeStyle(property, value))
-        .map(([property, value]) => `${property}:${value}`)
-        .join(';');
-      return declarations ? `${scope} ${tag}{${declarations}}` : '';
+      const safe = styles.filter(([property, value]) => isSafeThemeStyle(property, value));
+      if (!safe.length) return '';
+      if (tag !== 'btn') return `${scope} ${tag}{${declarations(safe)}}`;
+      const colours = safe.filter(([property]) => BUTTON_VARIABLES[property]);
+      const rest = safe.filter(([property]) => !BUTTON_VARIABLES[property]);
+      return (
+        (colours.length ? `${scope}{${declarations(colours, BUTTON_VARIABLES)}}` : '') +
+        (rest.length ? `${scope} a.erp-btn{${declarations(rest)}}` : '')
+      );
     })
     .join('');
   if (!rules) return '';
   return `${rules}${scope} th p,${scope} td p,${scope} li p{${INHERIT_INNER_PARAGRAPH}}`;
 }
 
+/** A custom section's own CSS, nested in its scope ("&" is the section). */
+function customSectionCss(edit: InsertEdit): string {
+  if (edit.kind !== 'custom' || !isCopyId(edit.id) || !isSafeCustomCss(edit.css) || !edit.css.trim()) return '';
+  return `${scopeOf(edit.id)}{${edit.css}}`;
+}
+
+/* ------------------------- making room for content ------------------------ */
+// Mirrors liftFixedHeight / coveredTop / contentTop / topGaps / keepTopGaps /
+// makeRoomForCopy in the ERP's page-edits.js. Measuring helpers are pure; the
+// writes go through EditSession.setStyle so they are reverted.
+
+const isSlider = (node: Element) => typeof node.className === 'string' && SLIDER_CLASS.test(node.className);
+
+// The lowest allowed top for the content holding an element, per ancestor.
+type Gap = { node: HTMLElement; child: Element; gap: number };
+
+/** How far down from the top of the node its padding or an overlaid (positioned) header reaches. */
+function coveredTop(node: HTMLElement, child: Element): number {
+  const box = node.getBoundingClientRect();
+  const style = getComputedStyle(node);
+  let covered = parseFloat(style.paddingTop) + parseFloat(style.borderTopWidth) || 0;
+  const y = box.top + 2;
+  if (y < 0 || y > window.innerHeight || !document.elementsFromPoint) return covered;
+  for (const at of [0.1, 0.5, 0.9]) {
+    for (const element of document.elementsFromPoint(box.left + box.width * at, y)) {
+      if (element.contains(node) || child.contains(element) || element.contains(child)) continue;
+      const rect = element.getBoundingClientRect();
+      if (rect.height >= box.height * 0.6 || rect.top > box.top + 2) continue;
+      for (let item: Element | null = element; item && item !== node; item = item.parentElement) {
+        if (POSITIONED.test(getComputedStyle(item).position)) {
+          covered = Math.max(covered, rect.bottom - box.top);
+          break;
+        }
+      }
+    }
+  }
+  return covered;
+}
+
+/** Top of the content around the child: it and the in-flow elements before it. */
+function contentTop(child: Element): number {
+  let top = child.getBoundingClientRect().top;
+  for (let item = child.previousElementSibling; item; item = item.previousElementSibling) {
+    const rect = item.getBoundingClientRect();
+    if (rect.height && !POSITIONED.test(getComputedStyle(item).position)) top = Math.min(top, rect.top);
+  }
+  return top;
+}
+
+/** Taken before the content changes, so keepTopGaps can tell when it grew upwards. */
+function topGaps(element: Element | null): Gap[] {
+  const gaps: Gap[] = [];
+  let child = element;
+  let node = element?.parentElement ?? null;
+  for (let depth = 0; child && node && node !== document.body && depth < MAX_ROOM_DEPTH; depth++) {
+    if (isSlider(node)) break;
+    const gap = contentTop(child) - node.getBoundingClientRect().top;
+    gaps.push({ node, child, gap: Math.min(gap, coveredTop(node, child) + 24) });
+    child = node;
+    node = node.parentElement;
+  }
+  return gaps;
+}
+
+const changesText = (edit: ElementEdit) => edit.text !== undefined || edit.html !== undefined;
+
 class EditSession {
   // Original style attribute of every element touched (restored last).
   private styles = new Map<Styled, string | null>();
   // Structural changes (text, moves, copies), undone in reverse order.
   private undo: (() => void)[] = [];
+  // Changed text and added sections, measured again once images and fonts load.
+  private grow: [Styled, Gap[]][] = [];
+  // Bumped by revert, so late load/font callbacks of an old apply do nothing.
+  private generation = 0;
 
   private setStyle(el: Styled, property: string, value: string) {
     if (!this.styles.has(el)) this.styles.set(el, el.getAttribute('style'));
@@ -289,12 +372,25 @@ class EditSession {
   /** Sets (or removes, for null) an attribute; revert puts the previous value back. */
   private setAttr(el: Element, name: string, value: string | null) {
     const original = el.getAttribute(name);
+    if (original === value) return;
     this.undo.push(() => {
       if (original === null) el.removeAttribute(name);
       else el.setAttribute(name, original);
     });
     if (value === null) el.removeAttribute(name);
     else el.setAttribute(name, value);
+  }
+
+  /** Takes a node out of the page; revert puts it back in the same place. */
+  private detach(node: Element) {
+    const parent = node.parentNode;
+    if (!parent) return;
+    const next = node.nextSibling;
+    node.remove();
+    this.undo.push(() => {
+      if (next && next.parentNode === parent) parent.insertBefore(node, next);
+      else parent.appendChild(node);
+    });
   }
 
   private replaceContent(el: Styled, content: Node[] | DocumentFragment) {
@@ -304,7 +400,17 @@ class EditSession {
     else el.replaceChildren(...content);
   }
 
-  private editImage(el: Styled, edit: Extract<ErpEdit, { type: 'elementEdit' }>) {
+  /** <style> in <head> for one added section, removed again on revert. */
+  private addStyle(css: string, attribute: string, id: string) {
+    if (!css) return;
+    const style = document.createElement('style');
+    style.setAttribute(attribute, id);
+    style.textContent = css;
+    document.head.appendChild(style);
+    this.undo.push(() => style.remove());
+  }
+
+  private editImage(el: Styled, edit: ElementEdit) {
     const { image, backgroundImage } = edit;
     if (image && el.tagName === 'IMG') {
       if (isSafeImageUrl(image.src)) {
@@ -312,11 +418,7 @@ class EditSession {
         // next/image and lazy loaders would load the old file from these.
         for (const name of ['srcset', 'sizes', ...LAZY_SRCSET]) if (el.hasAttribute(name)) this.setAttr(el, name, null);
         for (const name of LAZY_SRC) if (el.hasAttribute(name)) this.setAttr(el, name, image.src);
-        el.closest('picture')
-          ?.querySelectorAll('source')
-          .forEach((source) => {
-            if (source.hasAttribute('srcset')) this.setAttr(source, 'srcset', null);
-          });
+        el.closest('picture')?.querySelectorAll('source').forEach((source) => this.detach(source));
       }
       if (typeof image.alt === 'string') this.setAttr(el, 'alt', image.alt);
     }
@@ -326,11 +428,11 @@ class EditSession {
     }
   }
 
-  private editElement(el: Styled, edit: Extract<ErpEdit, { type: 'elementEdit' }>) {
+  private editElement(el: Styled, edit: ElementEdit) {
     this.editImage(el, edit);
     if (typeof edit.html === 'string') {
-      // Rich text (links, paragraphs, bold…), sanitized again here.
-      this.replaceContent(el, sanitizeErpHtml(edit.html));
+      // Rich text (paragraphs, bold, links, font sizes), sanitized again here.
+      this.replaceContent(el, sanitizeErpHtml(edit.html, 'rich'));
     } else if (typeof edit.text === 'string') {
       // Plain text: every line break shows as a new line.
       const content: Node[] = [];
@@ -356,31 +458,27 @@ class EditSession {
   }
 
   /** New section written in the ERP editor, placed before/after the anchor. */
-  private insert(anchor: Styled, edit: Extract<ErpEdit, { type: 'sectionInsert' }>) {
+  private insert(anchor: Styled, edit: InsertEdit) {
     if (!isCopyId(edit.id) || document.querySelector(`[data-erp-clone="${edit.id}"]`)) return;
     ensureSectionStyle();
+    const custom = edit.kind === 'custom';
     const section = document.createElement('section');
-    section.className = 'erp-section';
+    section.className = custom ? 'erp-section erp-custom' : 'erp-section';
     section.setAttribute('data-erp-clone', edit.id);
     if (edit.layout) section.classList.add(`erp-layout-${edit.layout}`);
-    section.append(sanitizeErpHtml(edit.html));
+    section.append(sanitizeErpHtml(edit.html, custom ? 'custom' : 'section'));
     // Image left/right: the image spans every text row.
     const textRows = section.children.length - (section.querySelector(':scope > img') ? 1 : 0);
     section.style.setProperty('--erp-text-rows', String(Math.max(textRows, 1)));
+    const gaps = topGaps(anchor);
     if (edit.position === 'before') anchor.before(section);
     else anchor.after(section);
     // React doesn't know about added sections: always take them out on cleanup.
     this.undo.push(() => section.remove());
-
-    const css = sectionThemeCss(edit);
-    if (css) {
-      const theme = document.createElement('style');
-      theme.setAttribute('data-erp-theme', edit.id);
-      theme.textContent = css;
-      document.head.appendChild(theme);
-      this.undo.push(() => theme.remove());
-    }
-    this.makeRoomForCopy(section);
+    // Theme first, then the custom CSS, so the section's own CSS wins.
+    this.addStyle(sectionThemeCss(edit), 'data-erp-theme', edit.id);
+    this.addStyle(customSectionCss(edit), 'data-erp-custom', edit.id);
+    this.grow.push([section, gaps]);
   }
 
   private move(el: Styled, target: Styled, position: 'before' | 'after') {
@@ -400,66 +498,122 @@ class EditSession {
   }
 
   private duplicate(el: Styled, id: string) {
+    if (document.querySelector(`[data-erp-clone="${id}"]`)) return;
     const copy = el.cloneNode(true) as Styled;
     copy.setAttribute('data-erp-clone', id);
+    const gaps = topGaps(el);
     el.after(copy);
     // React doesn't know about copies: always take them out again on cleanup.
     this.undo.push(() => copy.remove());
-    this.makeRoomForCopy(copy);
+    this.makeRoomFor(copy, gaps);
+  }
+
+  private coverBackground(node: Styled) {
+    const style = getComputedStyle(node);
+    if (style.backgroundImage !== 'none' && /^auto/.test(style.backgroundSize)) {
+      this.setStyle(node, 'background-size', 'cover');
+    }
+  }
+
+  /** Lifts a fixed height (not one set in the editor) when that makes the box grow. */
+  private liftFixedHeight(node: Styled) {
+    if (node.style.getPropertyPriority('height') === 'important' && node.style.height !== 'auto') return;
+    const height = node.getBoundingClientRect().height;
+    const saved = (['height', 'max-height'] as const).map(
+      (p) => [p, node.style.getPropertyValue(p), node.style.getPropertyPriority(p)] as const,
+    );
+    this.setStyle(node, 'height', 'auto');
+    this.setStyle(node, 'max-height', 'none');
+    if (node.getBoundingClientRect().height <= height + 1) {
+      // Didn't grow: not a fixed height. Put the inline values back.
+      for (const [p, value, priority] of saved) {
+        if (value) node.style.setProperty(p, value, priority);
+        else node.style.removeProperty(p);
+      }
+      return;
+    }
+    this.coverBackground(node);
+  }
+
+  /** A fixed-height hero with centred content grows upwards: grow it until clear of the header. */
+  private keepTopGaps(gaps: Gap[]) {
+    for (const entry of gaps) {
+      const { node } = entry;
+      if (!node.isConnected || !node.contains(entry.child)) continue;
+      if (node.style.getPropertyPriority('height') === 'important' && node.style.height !== 'auto') continue;
+      const lostNow = () => entry.gap - (contentTop(entry.child) - node.getBoundingClientRect().top);
+      let grew = false;
+      // Centred content only moves down by half the extra height.
+      let factor = 1;
+      for (let tries = 0; tries < 4; tries++) {
+        const lost = lostNow();
+        const height = parseFloat(getComputedStyle(node).height);
+        if (lost <= 1 || !Number.isFinite(height)) break;
+        const add = Math.ceil(lost * factor);
+        this.setStyle(node, 'min-height', `${height + add}px`);
+        const moved = lost - lostNow();
+        if (moved <= 0.5) break;
+        grew = true;
+        factor = Math.min(add / moved, 4);
+      }
+      if (grew) this.coverBackground(node);
+    }
   }
 
   /**
-   * Lifts fixed heights, no-wrap rows and horizontal clipping on the copy's
-   * ancestors so the copy isn't hidden. Sliders are left alone, and a height is
-   * only lifted when that actually makes the container grow.
+   * Lets new or longer content and its containers grow: fixed heights are
+   * lifted, non-wrapping rows wrap and horizontal clipping is lifted. Sliders
+   * are left alone.
    */
-  private makeRoomForCopy(copy: Styled) {
-    let node = copy.parentElement;
+  private makeRoomFor(el: Styled, gaps: Gap[]) {
+    this.keepTopGaps(gaps);
+    if (!/auto|scroll/.test(getComputedStyle(el).overflowY) && el.scrollHeight > el.clientHeight + 1) {
+      this.liftFixedHeight(el);
+    }
+    let node = el.parentElement;
     for (let depth = 0; node && node !== document.body && depth < MAX_ROOM_DEPTH; depth++, node = node.parentElement) {
-      if (typeof node.className === 'string' && SLIDER_CLASS.test(node.className)) break;
+      if (isSlider(node)) break;
       const style = getComputedStyle(node);
       let box = node.getBoundingClientRect();
-      let copyBox = copy.getBoundingClientRect();
-
       if (
         style.display.includes('flex') &&
         style.flexDirection.startsWith('row') &&
         style.flexWrap === 'nowrap' &&
-        copyBox.right > box.right + 1
+        el.getBoundingClientRect().right > box.right + 1
       ) {
         this.setStyle(node, 'flex-wrap', 'wrap');
       }
-
-      copyBox = copy.getBoundingClientRect();
+      const elBox = el.getBoundingClientRect();
       box = node.getBoundingClientRect();
-      if (copyBox.bottom > box.bottom + 1) {
-        const saved = (['height', 'max-height'] as const).map(
-          (p) => [p, node!.style.getPropertyValue(p), node!.style.getPropertyPriority(p)] as const,
-        );
-        this.setStyle(node, 'height', 'auto');
-        this.setStyle(node, 'max-height', 'none');
-        if (node.getBoundingClientRect().height <= box.height + 1) {
-          // Didn't grow: not a fixed height. Put the inline values back.
-          for (const [p, value, priority] of saved) {
-            if (value) node.style.setProperty(p, value, priority);
-            else node.style.removeProperty(p);
-          }
-        }
-      }
-
-      if (copyBox.right > box.right + 1 && (style.overflowX === 'hidden' || style.overflowX === 'clip')) {
+      // Only a fixed height is lifted; nothing else is resized.
+      if (elBox.bottom > box.bottom + 1) this.liftFixedHeight(node);
+      if (elBox.right > box.right + 1 && /hidden|clip/.test(style.overflowX)) {
         this.setStyle(node, 'width', 'auto');
         this.setStyle(node, 'max-width', 'none');
       }
     }
   }
 
+  private makeRoom() {
+    for (const [el, gaps] of this.grow) if (el.isConnected) this.makeRoomFor(el, gaps);
+  }
+
   apply(resolved: Resolved[]) {
-    // 1. Element edits on the original page (text + styles).
-    for (const { edit, el } of resolved) {
+    const generation = this.generation;
+    // Layout before the text changes, to keep heroes from growing upwards.
+    const gaps = new Map<Resolved, Gap[]>();
+    for (const entry of resolved) {
+      const { edit, el } = entry;
+      if (edit.type === 'elementEdit' && el && changesText(edit)) gaps.set(entry, topGaps(el));
+    }
+    // 1. Element edits on the original page (text, rich text, images, styles).
+    for (const entry of resolved) {
+      const { edit, el } = entry;
       if (edit.type !== 'elementEdit' || isCopySelector(edit.selector)) continue;
       const live = this.live(edit.selector, el);
-      if (live) this.editElement(live, edit);
+      if (!live) continue;
+      this.editElement(live, edit);
+      if (changesText(edit)) this.grow.push([live, gaps.get(entry) ?? []]);
     }
     // 2. Moves, removals, duplicates and added sections, in order. Copy
     //    selectors (copies and added sections) resolve now.
@@ -468,6 +622,7 @@ class EditSession {
       const live = this.live(edit.selector, el);
       if (!live) continue;
       if (edit.type === 'sectionRemove') {
+        // Hidden, not removed: React still owns the node (see top of file).
         this.setStyle(live, 'display', 'none');
       } else if (edit.type === 'sectionMove') {
         const liveTarget = this.live(edit.target, target);
@@ -482,11 +637,25 @@ class EditSession {
     for (const { edit } of resolved) {
       if (edit.type !== 'elementEdit' || !isCopySelector(edit.selector)) continue;
       const live = this.live(edit.selector, null);
-      if (live) this.editElement(live, edit);
+      if (!live) continue;
+      const before = changesText(edit) ? topGaps(live) : [];
+      this.editElement(live, edit);
+      if (changesText(edit)) this.grow.push([live, before]);
     }
+    // 4. Changed text and added sections may no longer fit a fixed-height box
+    //    (e.g. a hero). Measured again once images and web fonts have loaded.
+    this.makeRoom();
+    if (!this.grow.length) return;
+    const again = () => {
+      if (generation === this.generation) this.makeRoom();
+    };
+    if (document.readyState !== 'complete') window.addEventListener('load', again, { once: true });
+    document.fonts?.ready.then(again).catch(() => {});
   }
 
   revert() {
+    this.generation++;
+    this.grow = [];
     // Reverse order: a moved node's recorded sibling may be a copy, and copies
     // may have been moved, so each change is undone against the DOM it saw.
     for (const step of this.undo.reverse()) step();

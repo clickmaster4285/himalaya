@@ -26,7 +26,7 @@ const SECURITY_HEADERS = [
 
 /**
  * /erp-preview is framed by the ERP page editor, so it gets no X-Frame-Options;
- * middleware.ts sends `Content-Security-Policy: frame-ancestors 'self' <ERP_ADMIN_ORIGINS>`
+ * proxy.ts sends `Content-Security-Policy: frame-ancestors 'self' <ERP_ADMIN_ORIGINS>`
  * at runtime instead. no-referrer keeps the preview token out of Referer headers.
  */
 const ERP_PREVIEW_HEADERS = [

@@ -1,4 +1,6 @@
 import { getSiteOrigin } from "@/lib/seo/site-config";
+import { getCmsSitemapEntries } from "@/lib/seo/cms-sitemap";
+import { withoutDeletedPaths } from "@/lib/erp-deleted-pages-server";
 
 const DEFAULT_LASTMOD = "2026-07-31";
 
@@ -45,7 +47,8 @@ function getEventSlugs(): string[] {
 
 export async function GET() {
   const origin = getSiteOrigin();
-  const eventSlugs = getEventSlugs();
+  // ERP Page Delete Requests: deleted paths leave the sitemap.
+  const eventSlugs = await withoutDeletedPaths(getEventSlugs(), (slug) => `/events/${slug}`);
 
   // Generate URLs for all events
   const eventUrls = eventSlugs.map((slug) => {
@@ -57,8 +60,19 @@ export async function GET() {
   </url>`;
   });
 
+  // Event pages created in the ERP (/events/… or pageType "event").
+  const cmsEntries = await getCmsSitemapEntries("events", eventSlugs.map((slug) => `/events/${slug}`));
+  const cmsUrls = cmsEntries.map(
+    (page) => `  <url>
+    <loc>${origin}${page.path}</loc>
+    <lastmod>${page.lastmod ?? DEFAULT_LASTMOD}</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+  </url>`,
+  );
+
   // The main /events page is listed in sitemap_pages.xml.
-  const allEntries = eventUrls;
+  const allEntries = [...eventUrls, ...cmsUrls];
 
   const xml = `<?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">

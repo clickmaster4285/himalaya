@@ -1,6 +1,7 @@
 // app/api/erp-revalidate/route.ts
 // Called by the ERP right after a created or edited page is published,
-// updated, unpublished or deleted, so the change shows on the next page load.
+// updated, unpublished or deleted, and for each URL of a page delete request
+// marked Done (or moved back from Done), so the change shows on the next load.
 //   POST /api/erp-revalidate   { "path": "/some-page" }
 //   Header: Authorization: Bearer <ERP_REVALIDATE_SECRET>
 import { timingSafeEqual } from "node:crypto";
@@ -9,8 +10,18 @@ import { NextResponse, type NextRequest } from "next/server";
 import { CMS_CACHE_TAG } from "@/lib/cms";
 import { EDITS_CACHE_TAG, EDIT_PATH_REGEX } from "@/lib/erp-edits";
 import { normalizeEditPath } from "@/lib/erp-edits-shared";
+import { DELETED_PAGES_CACHE_TAG, clearDeletedPathsCache } from "@/lib/erp-deleted-pages";
 
 export const dynamic = "force-dynamic";
+const SITEMAPS = [
+  "/sitemap_index.xml",
+  "/sitemap_pages.xml",
+  "/sitemap_villas.xml",
+  "/sitemap_blogs.xml",
+  "/sitemap_blog.xml",
+  "/sitemap_events.xml",
+  "/sitemap_book.xml",
+];
 const noStore = { "Cache-Control": "no-store" };
 
 function authorized(request: NextRequest): boolean {
@@ -45,10 +56,15 @@ export async function POST(request: NextRequest) {
   // Both ERP modules: Page Editing (edits) and Page Creation (lib/cms.ts).
   revalidateTag(EDITS_CACHE_TAG, { expire: 0 });
   revalidateTag(CMS_CACHE_TAG, { expire: 0 });
+  // Page Delete Requests (called for each URL when a request is marked Done or
+  // moved away from Done): proxy.ts refetches the list on its next request
+  // (same Node.js process), and render-time filters (sitemaps, listings) expire.
+  clearDeletedPathsCache();
+  revalidateTag(DELETED_PAGES_CACHE_TAG, { expire: 0 });
   // Page HTML (ERP page content, SEO metadata) is cached by ISR too.
   revalidatePath(slug);
-  // ERP pages appear in the pages sitemap.
-  revalidatePath("/sitemap_pages.xml");
+  // ERP pages appear in the pages sitemap; deleted paths leave every sitemap.
+  for (const sitemap of SITEMAPS) revalidatePath(sitemap);
 
   return NextResponse.json({ ok: true, path: slug }, { headers: noStore });
 }

@@ -4,6 +4,7 @@ import Footer from "@/components/Footer";
 import BlogsPageClient from "@/components/blogs/BlogsPageClient";
 import { CATALOG_VILLAS } from "@/lib/villa-catalog";
 import { createPageMetadata } from "@/lib/seo/build-metadata";
+import { getDeletedPathsForRender } from "@/lib/erp-deleted-pages-server";
 
 // HIM-TECH-0010: cacheable HTML, regenerated every five minutes.
 export const revalidate = 300;
@@ -19,11 +20,13 @@ export const metadata: Metadata = createPageMetadata({
 
 export default async function BlogsPage() {
   const villas = CATALOG_VILLAS;
+  // ERP Page Delete Requests: deleted posts leave the journal listing.
+  const deletedPaths = [...(await getDeletedPathsForRender())];
 
   return (
     <div className="min-h-screen bg-[#F6F1EA]">
       <Navbar />
-      <BlogsPageClient villas={villas} />
+      <BlogsPageClient villas={villas} deletedPaths={deletedPaths} />
       <Footer />
     </div>
   );

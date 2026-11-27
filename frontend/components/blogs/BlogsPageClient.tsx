@@ -26,7 +26,7 @@ function fadeUp(delay = 0) {
   };
 }
 
-export default function BlogsPageClient({ villas }: { villas: Villa[] }) {
+export default function BlogsPageClient({ villas, deletedPaths = [] }: { villas: Villa[]; deletedPaths?: string[] }) {
   const reduceMotion = useReducedMotion();
   const heroRef = useRef(null);
   const gridRef = useRef(null);
@@ -35,10 +35,15 @@ export default function BlogsPageClient({ villas }: { villas: Villa[] }) {
   const gridInView = useInView(gridRef, { once: true, margin: "-80px" });
   const asideInView = useInView(asideRef, { once: true, margin: "-60px" });
 
-  const [featured, ...rest] = VILLA_BLOG_POSTS;
   const dur = reduceMotion ? 0 : 0.55;
   const getPostHref = (post: (typeof VILLA_BLOG_POSTS)[number]) =>
     `/blogs/${encodeURIComponent(post.slug.toLowerCase())}`;
+  // Pages deleted in the ERP (normalized paths from the server) are not listed.
+  const deleted = new Set(deletedPaths);
+  const posts = deleted.size
+    ? VILLA_BLOG_POSTS.filter((post) => !deleted.has(`/blogs/${post.slug.toLowerCase()}`))
+    : VILLA_BLOG_POSTS;
+  const [featured, ...rest] = posts;
 
   return (
     <>
@@ -130,6 +135,7 @@ export default function BlogsPageClient({ villas }: { villas: Villa[] }) {
         {/* Featured */}
         <div ref={gridRef} className="grid gap-10 lg:grid-cols-12 lg:gap-14">
           <div className="lg:col-span-8">
+            {featured && (<>
             <p className="text-[11px] font-bold uppercase tracking-[0.28em] text-[#8b6914]">Featured</p>
             <motion.div
               initial={{ opacity: 0, y: 32 }}
@@ -179,6 +185,7 @@ export default function BlogsPageClient({ villas }: { villas: Villa[] }) {
               </div>
             </Link>
             </motion.div>
+            </>)}
 
             {/* Grid */}
             <div className="mt-14 grid gap-6 sm:grid-cols-2">

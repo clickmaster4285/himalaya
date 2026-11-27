@@ -11,19 +11,11 @@ import { unstable_cache } from "next/cache";
 import { createPageMetadata } from "@/lib/seo/build-metadata";
 import { getSiteOrigin } from "@/lib/seo/site-config";
 
-/** ERP backend base URL (server-only; never a NEXT_PUBLIC_ variable). */
-export const CMS_API_URL = (
-  process.env.CMS_API_URL ??
-  (process.env.NODE_ENV === "development" ? "https://apierp.clickmasters.pk" : undefined)
-)?.replace(/\/+$/, "");
+import { CMS_API_URL, CMS_SITE_DOMAIN, cmsBaseUrl } from "@/lib/erp-config";
+import { getDeletedPathsForRender, pathOfSiteUrl } from "@/lib/erp-deleted-pages-server";
+import { normalizeEditPath } from "@/lib/erp-edits-shared";
 
-/** The domain this site is registered under in the ERP. */
-export const CMS_SITE_DOMAIN = (process.env.CMS_SITE_DOMAIN ?? "himalayavillas.com")
-  .trim()
-  .toLowerCase()
-  .replace(/^https?:\/\//, "")
-  .replace(/^www\./, "")
-  .replace(/\/.*$/, "");
+export { CMS_API_URL, CMS_SITE_DOMAIN, cmsBaseUrl };
 
 /** Cache tag expired by /api/erp-revalidate when the ERP publishes. */
 export const CMS_CACHE_TAG = "cms-page";
@@ -37,8 +29,6 @@ const SLUG_REGEX = /^(\/[a-z0-9_-]+)+$/;
 const MAX_SLUG_LENGTH = 512;
 
 export const isCmsSlug = (slug: string) => slug.length <= MAX_SLUG_LENGTH && SLUG_REGEX.test(slug);
-
-export const cmsBaseUrl = () => `${CMS_API_URL}/public/${encodeURIComponent(CMS_SITE_DOMAIN)}`;
 
 export type CmsSettings = Record<string, unknown>;
 
@@ -108,7 +98,13 @@ export async function getCmsPage(slug: string): Promise<CmsPage | null> {
     return null;
   }
   try {
-    return await fetchCmsPageCached(slug);
+    // Page Delete Requests: proxy.ts already answers 410 for deleted paths;
+    // this keeps a deleted ERP page from rendering even if the proxy is skipped,
+    // and drops deleted pages from the ERP-attached post cards.
+    const [page, deleted] = await Promise.all([fetchCmsPageCached(slug), getDeletedPathsForRender()]);
+    if (!page || deleted.has(normalizeEditPath(slug))) return null;
+    if (!deleted.size) return page;
+    return { ...page, posts: page.posts.filter((post) => !deleted.has(pathOfSiteUrl(post.url) ?? "")) };
   } catch (error) {
     console.error(`[cms] failed to fetch page ${slug}:`, error instanceof Error ? error.message : error);
     return null;

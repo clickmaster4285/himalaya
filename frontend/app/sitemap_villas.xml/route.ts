@@ -1,4 +1,6 @@
 import { getSiteOrigin } from "@/lib/seo/site-config";
+import { getCmsSitemapEntries } from "@/lib/seo/cms-sitemap";
+import { withoutDeletedPaths } from "@/lib/erp-deleted-pages-server";
 import { getArticleSitemapRouteDefs } from "@/lib/seo/sitemap-routes";
 import { getAllVillaSlugsForSitemap } from "@/lib/seo/fetch-villa-slugs";
 
@@ -8,8 +10,15 @@ export const revalidate = 300;
 
 export async function GET() {
   const origin = getSiteOrigin();
-  const villaSlugs = await getAllVillaSlugsForSitemap();
-  const articleDefs = getArticleSitemapRouteDefs("villas");
+  // ERP Page Delete Requests: deleted paths leave the sitemap.
+  const villaSlugs = await withoutDeletedPaths(await getAllVillaSlugsForSitemap(), (slug) => `/villas/${slug}`);
+  const articleDefs = await withoutDeletedPaths(getArticleSitemapRouteDefs("villas"), (def) => def.path);
+
+  // Villa pages created in the ERP (/villas/… or pageType "villa").
+  const cmsEntries = await getCmsSitemapEntries("villas", [
+    ...villaSlugs.map((slug) => `/villas/${slug.toLowerCase()}`),
+    ...articleDefs.map((def) => def.path),
+  ]);
 
   const entries = [
     ...villaSlugs.map((slug) => `  <url>
@@ -27,6 +36,14 @@ export async function GET() {
     <priority>${def.priority}</priority>
   </url>`;
     }),
+    ...cmsEntries.map(
+      (page) => `  <url>
+    <loc>${origin}${page.path}</loc>
+    <lastmod>${page.lastmod ?? DEFAULT_LASTMOD}</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.75</priority>
+  </url>`,
+    ),
   ];
 
   const xml = `<?xml version="1.0" encoding="UTF-8"?>

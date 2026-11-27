@@ -8,7 +8,7 @@
     "build": "next build",
     "start": "next start",
     "lint": "eslint",
-    "test:erp": "node --test --no-warnings tests/erp-edits.test.mjs"
+    "test:erp": "node --test --no-warnings tests/erp-edits.test.mjs tests/erp-deleted-pages.test.mjs"
   },
   "dependencies": {
     "@radix-ui/react-dialog": "^1.1.15",

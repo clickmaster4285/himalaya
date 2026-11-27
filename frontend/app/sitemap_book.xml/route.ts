@@ -1,4 +1,6 @@
 import { getSiteOrigin } from "@/lib/seo/site-config";
+import { getCmsSitemapEntries } from "@/lib/seo/cms-sitemap";
+import { withoutDeletedPaths } from "@/lib/erp-deleted-pages-server";
 
 const DEFAULT_LASTMOD = "2026-07-31";
 
@@ -17,7 +19,15 @@ const bookRoutes = [
 export async function GET() {
   const origin = getSiteOrigin();
 
-  const entries = bookRoutes.map((route) => {
+  // ERP Page Delete Requests: deleted paths leave the sitemap.
+  const deletedFiltered = await withoutDeletedPaths(bookRoutes, (route) => route.path);
+  // Book pages created in the ERP (/book/…).
+  const cmsEntries = await getCmsSitemapEntries("book", bookRoutes.map((route) => route.path));
+  const routes = [
+    ...deletedFiltered,
+    ...cmsEntries.map((page) => ({ path: page.path, priority: 0.8, changeFrequency: "weekly" as const })),
+  ];
+  const entries = routes.map((route) => {
     return `  <url>
     <loc>${origin}${route.path}</loc>
     <lastmod>${DEFAULT_LASTMOD}</lastmod>

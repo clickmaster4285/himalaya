@@ -2,7 +2,7 @@
 
 import Image from "next/image";
 import Link from "next/link";
-import { useState } from "react";
+import { useEffect, useState } from "react";
 import {
   CalendarDays,
   Check,
@@ -13,6 +13,8 @@ import {
 import type { Room } from "@/content/villas/villa-content";
 import { BookingTermsCompact } from "@/components/BookingTerms";
 import ReservationCheckoutPreview from "@/components/book-page/ReservationCheckoutPreview";
+import { readStayBookingDraft, saveStayBookingDraft } from "@/lib/stay-booking-draft";
+import { buildWhatsAppVillaEnquiryUrl } from "@/lib/whatsapp";
 
 interface StayBookingPreviewProps {
   room: Room;
@@ -69,11 +71,58 @@ export default function StayBookingPreview({
   const [children, setChildren] = useState(initialChildren);
   const [rooms] = useState(initialRooms);
   const [showCheckout, setShowCheckout] = useState(false);
+  const [draftRestored, setDraftRestored] = useState(false);
   const [isCheckingAvailability, setIsCheckingAvailability] = useState(false);
   const [availabilityMessage, setAvailabilityMessage] = useState<string | null>(null);
   const minimumCheckOut = checkIn ? getNextDate(checkIn) : minimumDate;
   const canBookNow = Boolean(checkIn && checkOut && checkOut > checkIn);
   const selectedNights = canBookNow ? getNightCount(checkIn, checkOut) : 0;
+
+  useEffect(() => {
+    window.scrollTo(0, 0);
+
+    const draft = readStayBookingDraft(room.slug);
+    if (draft) {
+      const restoredCheckIn =
+        draft.checkIn && draft.checkIn >= minimumDate ? draft.checkIn : initialCheckIn;
+      const restoredCheckOut =
+        restoredCheckIn && draft.checkOut && draft.checkOut > restoredCheckIn
+          ? draft.checkOut
+          : initialCheckOut;
+      const hasValidDates = Boolean(
+        restoredCheckIn &&
+          restoredCheckIn >= minimumDate &&
+          restoredCheckOut &&
+          restoredCheckOut > restoredCheckIn,
+      );
+
+      setCheckIn(hasValidDates ? restoredCheckIn : "");
+      setCheckOut(hasValidDates ? restoredCheckOut : "");
+      setAdults(draft.adults ?? initialAdults);
+      setChildren(draft.children ?? initialChildren);
+      setShowCheckout(Boolean(draft.showCheckout && hasValidDates));
+    }
+
+    setDraftRestored(true);
+  }, [initialAdults, initialCheckIn, initialCheckOut, initialChildren, minimumDate, room.slug]);
+
+  useEffect(() => {
+    if (!draftRestored) return;
+
+    const existingDraft = readStayBookingDraft(room.slug);
+    saveStayBookingDraft(room.slug, {
+      ...existingDraft,
+      checkIn,
+      checkOut,
+      adults,
+      children,
+      showCheckout,
+    });
+  }, [adults, checkIn, checkOut, children, draftRestored, room.slug, showCheckout]);
+
+  useEffect(() => {
+    window.scrollTo(0, 0);
+  }, [showCheckout]);
 
   async function checkAvailabilityAndContinue() {
     if (!canBookNow || isCheckingAvailability) return;
@@ -148,6 +197,7 @@ export default function StayBookingPreview({
         adults={adults}
         childCount={children}
         rooms={rooms}
+        draftSlug={room.slug}
         onBack={() => setShowCheckout(false)}
       />
     );
@@ -411,13 +461,19 @@ export default function StayBookingPreview({
                 >
                   {isCheckingAvailability ? "Checking Dates..." : "Book Now"}
                 </button>
-                <button
-                  type="button"
-                  disabled
-                  className="flex min-h-12 w-full cursor-not-allowed items-center justify-center rounded-lg border border-gray-300 bg-white px-4 text-sm font-semibold uppercase tracking-[0.16em] text-neutral-800"
+                <a
+                  href={buildWhatsAppVillaEnquiryUrl({
+                    name: room.name,
+                    tag: room.tag,
+                    price: room.price,
+                    slug: room.slug,
+                  })}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="flex min-h-12 w-full items-center justify-center rounded-lg border border-gray-300 bg-white px-4 text-sm font-semibold uppercase tracking-[0.16em] text-neutral-800 transition hover:border-[#c9a55b] hover:bg-[#faf7f1] focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-[#8b6914]"
                 >
                   Enquire
-                </button>
+                </a>
               </div>
               <p className="mt-3 text-center text-[11px] leading-relaxed text-gray-500">
                 Availability is checked before you continue to guest details.

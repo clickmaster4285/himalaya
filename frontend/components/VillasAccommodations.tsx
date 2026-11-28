@@ -5,8 +5,8 @@ import Link from "next/link";
 import { ArrowRight } from "lucide-react";
 import AccommodationTypeCards from "@/components/AccommodationTypeCards";
 import { getVillaCatalogCollections } from "@/lib/villa-catalog";
-import { buildWhatsAppVillaBookingUrl } from "@/lib/whatsapp";
-import { trackAndOpen, trackClick } from "@/lib/trackedClick";
+import { getVillaBookingHref } from "@/lib/villa-booking";
+import { trackClick } from "@/lib/trackedClick";
 
 type Room = {
   tag: string;
@@ -76,37 +76,25 @@ function RoomCard({ room }: { room: Room }) {
           </div>
 
           {/* Book Now row */}
-          <a
-            onClick={(e) =>
-              trackAndOpen(
-                e,
-                buildWhatsAppVillaBookingUrl({
-                  name: room.name,
-                  tag: room.tag,
-                  price: room.price,
-                  href: room.href,
-                }),
-                {
+          <Link
+            href={getVillaBookingHref(room.href)}
+            onClick={(event) =>
+              trackClick(event, {
+                eventType: "villa_book_now_click",
+                elementId: `book_now_${room.href}`,
+                metadata: {
                   villa: room.name,
                   tag: room.tag,
                   price: room.price,
                   slug: room.href,
                   source: "villa_card",
-                }
-              )
+                },
+              })
             }
-            href={buildWhatsAppVillaBookingUrl({
-              name: room.name,
-              tag: room.tag,
-              price: room.price,
-              href: room.href,
-            })}
-            target="_blank"
-            rel="noopener noreferrer"
             className="w-full rounded-md border border-[#ece5d3] bg-[#fdfaf3] px-4 py-2 text-center text-xs font-medium uppercase tracking-[0.2em] text-[#2b2b2b] transition hover:bg-[#f5efdf] hover:border-[#c9a24a]"
           >
             Book Now
-          </a>
+          </Link>
         </div>
       </div>
     </article>

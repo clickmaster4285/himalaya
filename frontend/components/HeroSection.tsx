@@ -123,15 +123,8 @@ Welcome to Himalaya Villas & Resorts, surrounded by the scenic hills of Bhurban,
 </a> */}
 
              <a
-  href={buildWhatsAppBookingUrl()}
-  target="_blank"
-  rel="noopener noreferrer"
-  data-event-type="book_now_click"
-  onClick={(e) =>
-    trackAndOpen(e, buildWhatsAppBookingUrl(), {
-      button: "book_now",
-    })
-  }
+ href="/book/stay"
+  
   className="inline-flex items-center justify-center rounded-md border-2 border-white/85 bg-white/5 px-5 sm:px-6 md:px-7 py-3 sm:py-3.5 text-[11px] sm:text-xs font-semibold uppercase tracking-[0.18em] sm:tracking-[0.2em] text-white shadow-md backdrop-blur-sm transition hover:bg-white/15 w-full sm:w-auto"
 >
   Book Your Stay
@@ -143,9 +136,9 @@ Welcome to Himalaya Villas & Resorts, surrounded by the scenic hills of Bhurban,
           </div>
 
           {/* Booking Widget - Responsive width */}
-          <div className="w-full min-w-0 shrink-0 animate-fade-up-delay-2 md:max-w-md lg:max-w-lg xl:max-w-xl mt-4 sm:mt-6 md:mt-0">
+          {/* <div className="w-full min-w-0 shrink-0 animate-fade-up-delay-2 md:max-w-md lg:max-w-lg xl:max-w-xl mt-4 sm:mt-6 md:mt-0">
             <BookingWidget />
-          </div>
+          </div> */}
         </div>
       </div>
       

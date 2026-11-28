@@ -2,10 +2,15 @@
 
 import Image from "next/image";
 import Link from "next/link";
-import { useState, type FormEvent } from "react";
+import { useEffect, useRef, useState, type ChangeEvent, type FormEvent } from "react";
 import { ArrowLeft, BadgeCheck, CalendarCheck, Check, Coffee, Loader2, UserRound } from "lucide-react";
 import LocationMap from "@/components/LocationMap";
 import type { Room } from "@/content/villas/villa-content";
+import {
+  clearStayBookingDraft,
+  readStayBookingDraft,
+  saveStayBookingDraft,
+} from "@/lib/stay-booking-draft";
 
 interface ReservationCheckoutPreviewProps {
   room: Room;
@@ -15,6 +20,7 @@ interface ReservationCheckoutPreviewProps {
   adults: string;
   childCount: string;
   rooms: string;
+  draftSlug: string;
   onBack: () => void;
 }
 
@@ -46,6 +52,7 @@ export default function ReservationCheckoutPreview({
   adults,
   childCount,
   rooms,
+  draftSlug,
   onBack,
 }: ReservationCheckoutPreviewProps) {
   const nights = getNightCount(checkIn, checkOut);
@@ -58,6 +65,55 @@ export default function ReservationCheckoutPreview({
   const [submitError, setSubmitError] = useState<string | null>(null);
   const [createdBooking, setCreatedBooking] = useState<CreatedBooking | null>(null);
   const [termsAccepted, setTermsAccepted] = useState(false);
+  const [draftWarning, setDraftWarning] = useState<string | null>(null);
+  const formRef = useRef<HTMLFormElement>(null);
+
+  useEffect(() => {
+    if (createdBooking) window.scrollTo(0, 0);
+  }, [createdBooking]);
+
+  useEffect(() => {
+    const draft = readStayBookingDraft(draftSlug);
+    const form = formRef.current;
+    if (!draft || !form) return;
+
+    for (const [name, value] of Object.entries(draft.guestDetails ?? {})) {
+      const field = form.elements.namedItem(name);
+      if (field instanceof RadioNodeList) {
+        for (const option of Array.from(field)) {
+          if (option instanceof HTMLInputElement) option.checked = option.value === value;
+        }
+      } else if (field instanceof HTMLInputElement) {
+        if (field.type !== "checkbox") field.value = value;
+      } else if (field instanceof HTMLSelectElement || field instanceof HTMLTextAreaElement) {
+        field.value = value;
+      }
+    }
+
+    setTermsAccepted(draft.termsAccepted === true);
+  }, [draftSlug]);
+
+  function saveGuestDetails(event: ChangeEvent<HTMLFormElement>) {
+    const formData = new FormData(event.currentTarget);
+    const guestDetails: Record<string, string> = {};
+    formData.forEach((value, name) => {
+      if (name !== "termsAccepted" && typeof value === "string") {
+        guestDetails[name] = value;
+      }
+    });
+
+    const existingDraft = readStayBookingDraft(draftSlug);
+    const saved = saveStayBookingDraft(draftSlug, {
+      ...existingDraft,
+      guestDetails,
+      termsAccepted: formData.get("termsAccepted") === "on",
+    });
+    setDraftWarning(
+      saved
+        ? null
+        : "Your browser couldn't save this booking draft. Keep this page open while viewing the policies.",
+    );
+  }
 
   async function handleSubmit(event: FormEvent<HTMLFormElement>) {
     event.preventDefault();
@@ -121,6 +177,9 @@ export default function ReservationCheckoutPreview({
         reference: data.booking.reference,
         totalAmount: data.booking.totalAmount,
       });
+      if (!clearStayBookingDraft(draftSlug)) {
+        setDraftWarning("Your booking was saved, but this browser couldn't clear the saved draft.");
+      }
     } catch {
       setSubmitError("Could not reach the booking service. Please try again.");
     } finally {
@@ -293,7 +352,17 @@ export default function ReservationCheckoutPreview({
                   </dl>
                 </div>
               ) : (
-                <form onSubmit={handleSubmit} className="p-5 sm:p-6">
+                <form
+                  ref={formRef}
+                  onSubmit={handleSubmit}
+                  onChange={saveGuestDetails}
+                  className="p-5 sm:p-6"
+                >
+                  {draftWarning && (
+                    <p role="status" className="mb-4 rounded-lg border border-amber-200 bg-amber-50 px-3 py-2.5 text-sm text-amber-900">
+                      {draftWarning}
+                    </p>
+                  )}
                   <div className="grid gap-x-4 gap-y-4 sm:grid-cols-2">
                     <label className={fieldLabelClass}>
                       First Name <span className="text-red-600">*</span>

@@ -56,24 +56,24 @@ const ReserveSection = () => {
         >
          <a
   id="contact_us"
-  href={buildWhatsAppBookingUrl()}
-  target="_blank"
-  rel="noopener noreferrer"
-  data-event-type="check_availability_click"
-  onClick={(e) =>
-    trackAndOpen(
-      e,
-      buildWhatsAppBookingUrl(),
-      {
-        button: "check_availability",
-        cta: "reserve_section",
-      }
-    )
-  }
+ href="/book/stay"
   className="inline-flex items-center justify-center rounded-sm border border-border bg-foreground px-6 py-3 text-sm font-medium tracking-wide text-background transition-colors duration-300 hover:bg-foreground/90 w-full sm:w-auto"
 >
   Check Availability Now
 </a>
+
+
+
+
+
+
+
+
+
+
+
+
+
          <a
   href={buildWhatsAppBookingUrl()}
   target="_blank"

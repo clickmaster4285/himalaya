@@ -14,6 +14,36 @@ import {
 import { BOOKING_STATUSES, type BookingStatus } from "../utils/types";
 import { sendBookingEmail } from "../services/booking-email.service";
 import type { BookingEmailTemplate } from "../templates/emails/booking-emails";
+import { BOOKABLE_STAYS } from "../data/bookable-stays";
+
+const EMAIL_RE = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+const ARRIVAL_TIMES = ["12:00 PM - 2:00 PM", "2:00 PM - 4:00 PM", "4:00 PM - 6:00 PM", "After 6:00 PM"];
+
+function readGuestText(value: unknown, maxLength: number): string {
+  return typeof value === "string" ? value.trim().slice(0, maxLength) : "";
+}
+
+function parseDateOnly(value: string): Date | null {
+  if (!/^\d{4}-\d{2}-\d{2}$/.test(value)) return null;
+  const date = new Date(`${value}T00:00:00.000Z`);
+  return Number.isNaN(date.getTime()) || date.toISOString().slice(0, 10) !== value ? null : date;
+}
+
+function todayInPakistan(): string {
+  const parts = new Intl.DateTimeFormat("en-US", {
+    timeZone: "Asia/Karachi",
+    year: "numeric",
+    month: "2-digit",
+    day: "2-digit",
+  }).formatToParts(new Date());
+  const part = (type: string) => parts.find((item) => item.type === type)?.value ?? "";
+  return `${part("year")}-${part("month")}-${part("day")}`;
+}
+
+function parseCount(value: unknown, min: number, max: number): number | null {
+  const count = Number(value);
+  return Number.isInteger(count) && count >= min && count <= max ? count : null;
+}
 
 export async function listBookings(req: Request, res: Response) {
   const session = await getSessionFromRequest(req);
@@ -176,6 +206,115 @@ export async function createBooking(req: Request, res: Response) {
     return res.status(201).json({ booking });
   } catch {
     return res.status(400).json({ error: "Invalid request body." });
+  }
+}
+
+export async function createGuestStayBooking(req: Request, res: Response) {
+  const villaSlug = readGuestText(req.body?.villaSlug, 100).toLowerCase();
+  const stay = BOOKABLE_STAYS[villaSlug];
+  if (!stay) return res.status(400).json({ error: "Please select a valid villa." });
+
+  const checkInRaw = readGuestText(req.body?.checkInDate, 10);
+  const checkOutRaw = readGuestText(req.body?.checkOutDate, 10);
+  const checkIn = parseDateOnly(checkInRaw);
+  const checkOut = parseDateOnly(checkOutRaw);
+  if (!checkIn || !checkOut) {
+    return res.status(400).json({ error: "Valid arrival and departure dates are required." });
+  }
+  if (checkInRaw < todayInPakistan()) {
+    return res.status(400).json({ error: "Arrival date cannot be in the past." });
+  }
+  if (checkOut.getTime() <= checkIn.getTime()) {
+    return res.status(400).json({ error: "Departure date must be after arrival." });
+  }
+
+  const adults = parseCount(req.body?.adults, 1, 10);
+  const children = parseCount(req.body?.children, 0, 9);
+  const roomsBooked = parseCount(req.body?.rooms, 1, 10);
+  if (adults === null || children === null || roomsBooked === null) {
+    return res.status(400).json({ error: "Guest and room counts are invalid." });
+  }
+
+  const guestFirstName = readGuestText(req.body?.guestFirstName, 100);
+  const guestLastName = readGuestText(req.body?.guestLastName, 100);
+  const guestContactEmail = readGuestText(req.body?.guestContactEmail, 320).toLowerCase();
+  const guestPhone = readGuestText(req.body?.guestPhone, 40);
+  if (!guestFirstName || !guestLastName || !EMAIL_RE.test(guestContactEmail)) {
+    return res.status(400).json({ error: "First name, last name, and a valid email address are required." });
+  }
+  if (guestPhone.replace(/\D/g, "").length < 7) {
+    return res.status(400).json({ error: "A valid phone number is required." });
+  }
+  if (req.body?.termsAccepted !== true) {
+    return res.status(400).json({ error: "Please accept the Terms & Conditions and Privacy Policy." });
+  }
+
+  const paymentMethod = readGuestText(req.body?.paymentMethod, 40);
+  if (paymentMethod !== "Pay at Hotel") {
+    return res.status(400).json({ error: "Please select a valid payment method." });
+  }
+
+  const expectedArrivalTime = readGuestText(req.body?.expectedArrivalTime, 40);
+  if (expectedArrivalTime && !ARRIVAL_TIMES.includes(expectedArrivalTime)) {
+    return res.status(400).json({ error: "Expected arrival time is invalid." });
+  }
+
+  const nights = Math.round((checkOut.getTime() - checkIn.getTime()) / 86_400_000);
+  const totalAmount = stay.nightlyRate * nights * roomsBooked;
+  if (!Number.isSafeInteger(totalAmount)) {
+    return res.status(400).json({ error: "The booking total is invalid." });
+  }
+
+  try {
+    if (await hasStayOverlapForVilla(villaSlug, checkIn, checkOut)) {
+      return res.status(409).json({
+        error: "Those dates are no longer available for this villa. Please choose different dates.",
+      });
+    }
+
+    const booking = await createBookingForUser({
+      experienceType: "Book Your Stay",
+      packageName: stay.name,
+      bookingDate: checkIn,
+      checkOutDate: checkOut,
+      totalAmount,
+      notes: null,
+      villaSlug,
+      adults,
+      children,
+      roomsBooked,
+      guestFirstName,
+      guestLastName,
+      guestContactEmail,
+      guestPhone,
+      guestDocumentNumber: readGuestText(req.body?.guestDocumentNumber, 100) || null,
+      expectedArrivalTime: expectedArrivalTime || null,
+      guestAddress: readGuestText(req.body?.guestAddress, 250) || null,
+      guestAddress2: readGuestText(req.body?.guestAddress2, 250) || null,
+      guestCity: readGuestText(req.body?.guestCity, 100) || null,
+      guestRegion: readGuestText(req.body?.guestRegion, 100) || null,
+      guestPostalCode: readGuestText(req.body?.guestPostalCode, 30) || null,
+      guestCountry: readGuestText(req.body?.guestCountry, 100) || null,
+      specialRequests: readGuestText(req.body?.specialRequests, 5000) || null,
+      paymentMethod,
+      termsAccepted: true,
+      termsAcceptedAt: new Date(),
+    });
+
+    return res.status(201).json({
+      booking: {
+        reference: booking.reference,
+        status: booking.status,
+        totalAmount: booking.totalAmount,
+      },
+    });
+  } catch (error) {
+    console.error("[bookings] create guest stay", error);
+    const message = error instanceof Error ? error.message : "";
+    if (message.includes("ECONNREFUSED") || message.includes("MongoServerSelectionError")) {
+      return res.status(503).json({ error: "Booking service is unavailable. Please try again shortly." });
+    }
+    return res.status(500).json({ error: "Could not save your booking. Please try again." });
   }
 }
 

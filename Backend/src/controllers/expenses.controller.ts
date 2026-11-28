@@ -29,7 +29,9 @@ export async function listExpenses(req: Request, res: Response) {
   ];
 
   const [bookings, users] = await Promise.all([
-    BookingM.find({ _id: { $in: bookingIds } }).select("_id reference experienceType packageName userId").lean(),
+    BookingM.find({ _id: { $in: bookingIds } })
+      .select("_id reference experienceType packageName userId guestFirstName guestLastName guestContactEmail")
+      .lean(),
     UserM.find({ _id: { $in: userIds } }).select("_id fullName email").lean(),
   ]);
 
@@ -60,7 +62,13 @@ export async function listExpenses(req: Request, res: Response) {
         : null,
       customer: customer
         ? { id: String(customer._id), fullName: String(customer.fullName), email: String(customer.email) }
-        : null,
+        : booking
+          ? {
+              id: `guest:${String(booking._id)}`,
+              fullName: [booking.guestFirstName, booking.guestLastName].filter(Boolean).join(" ") || "Guest",
+              email: booking.guestContactEmail == null ? "" : String(booking.guestContactEmail),
+            }
+          : null,
       createdBy: creator
         ? { id: String(creator._id), fullName: String(creator.fullName), email: String(creator.email) }
         : null,
@@ -92,10 +100,13 @@ export async function createExpense(req: Request, res: Response) {
 
   const booking = await BookingM.findById(bookingId).select("_id userId").lean();
   if (!booking) return res.status(404).json({ error: "Booking not found." });
+  const bookingUserId = (booking as Record<string, unknown>).userId;
 
   const doc = await ExpenseM.create({
     bookingId,
-    customerUserId: String((booking as Record<string, unknown>).userId),
+    customerUserId: typeof bookingUserId === "string" && bookingUserId
+      ? bookingUserId
+      : `guest:${bookingId}`,
     title,
     quantity: Number.isFinite(quantity) && quantity > 0 ? quantity : 1,
     amount,

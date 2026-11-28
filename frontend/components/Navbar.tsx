@@ -83,9 +83,10 @@ const navItems: NavItem[] = [
 
 interface NavbarProps {
   theme?: "light" | "dark";
+  solid?: boolean;
 }
 
-const Navbar = ({ theme = "dark" }: NavbarProps) => {
+const Navbar = ({ theme = "dark", solid = false }: NavbarProps) => {
   const [scrolled, setScrolled] = useState(false);
   const [mobileOpen, setMobileOpen] = useState(false);
   const [activeDropdown, setActiveDropdown] = useState<string | null>(null);
@@ -190,8 +191,8 @@ const Navbar = ({ theme = "dark" }: NavbarProps) => {
     <>
       <nav
         className={`fixed top-0 left-0 right-0 z-50 flex items-center justify-between px-3 sm:px-4 md:px-6 lg:px-8 xl:px-12 2xl:px-20 transition-all duration-500 ${
-          scrolled || mobileOpen
-            ? `py-2 md:py-3 ${backdropColor}`
+          solid || scrolled || mobileOpen
+            ? `py-2 md:py-3 ${solid ? "bg-[#171511] shadow-lg" : backdropColor}`
             : `py-3 sm:py-4 md:py-5 ${transparentBg}`
         }`}
       >
@@ -377,15 +378,13 @@ const Navbar = ({ theme = "dark" }: NavbarProps) => {
             <NavAuth variant={isLight ? "dark" : "hero"} />
           </div>
 
-          <a
-            href={buildWhatsAppBookingUrl("a private villa tour")}
-            target="_blank"
-            rel="noopener noreferrer"
-            className="inline-flex items-center justify-center px-2.5 sm:px-3 md:px-4 lg:px-5 py-1.5 sm:py-2 text-[8px] sm:text-[9px] md:text-[10px] lg:text-xs font-medium tracking-wider uppercase bg-primary text-primary-foreground hover:bg-primary/90 transition-all duration-300 whitespace-nowrap rounded-sm"
-          >
-            <span className="hidden xs:inline">Request Private Tour</span>
-            <span className="xs:hidden">Book Now</span>
-          </a>
+     <a
+  href="/book/stay"
+  className="inline-flex items-center justify-center px-2.5 sm:px-3 md:px-4 lg:px-5 py-1.5 sm:py-2 text-[8px] sm:text-[9px] md:text-[10px] lg:text-xs font-medium tracking-wider uppercase bg-primary text-primary-foreground hover:bg-primary/90 transition-all duration-300 whitespace-nowrap rounded-sm"
+>
+  <span className="hidden xs:inline">Request Private Tour</span>
+  <span className="xs:hidden">Book Now</span>
+</a>
         </div>
       </nav>
 

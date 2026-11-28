@@ -31,7 +31,7 @@ const BookingSchema = new mongoose.Schema(
       default: "PENDING",
     },
     notes: { type: String, default: null },
-    userId: { type: String, required: true, index: true },
+    userId: { type: String, default: null, index: true },
     /** Villa stay flow — optional for legacy / non-stay bookings */
     villaSlug: { type: String, default: null },
     checkOutDate: { type: Date, default: null },
@@ -41,6 +41,18 @@ const BookingSchema = new mongoose.Schema(
     guestFirstName: { type: String, default: null },
     guestLastName: { type: String, default: null },
     guestContactEmail: { type: String, default: null },
+    guestDocumentNumber: { type: String, default: null },
+    expectedArrivalTime: { type: String, default: null },
+    guestAddress: { type: String, default: null },
+    guestAddress2: { type: String, default: null },
+    guestCity: { type: String, default: null },
+    guestRegion: { type: String, default: null },
+    guestPostalCode: { type: String, default: null },
+    guestCountry: { type: String, default: null },
+    specialRequests: { type: String, default: null },
+    roomsBooked: { type: Number, default: 1 },
+    termsAccepted: { type: Boolean, default: false },
+    termsAcceptedAt: { type: Date, default: null },
     paymentMethod: { type: String, default: null },
     /** Extra items the guest requested outside the package (record visible to staff). */
     extras: {

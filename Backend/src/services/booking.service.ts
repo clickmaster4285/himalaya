@@ -22,7 +22,7 @@ export type BookingApi = {
   notes: string | null;
   createdAt: string;
   updatedAt: string;
-  userId: string;
+  userId: string | null;
   user: UserBrief;
   villaSlug: string | null;
   checkOutDate: string | null;
@@ -32,6 +32,18 @@ export type BookingApi = {
   guestFirstName: string | null;
   guestLastName: string | null;
   guestContactEmail: string | null;
+  guestDocumentNumber: string | null;
+  expectedArrivalTime: string | null;
+  guestAddress: string | null;
+  guestAddress2: string | null;
+  guestCity: string | null;
+  guestRegion: string | null;
+  guestPostalCode: string | null;
+  guestCountry: string | null;
+  specialRequests: string | null;
+  roomsBooked: number;
+  termsAccepted: boolean;
+  termsAcceptedAt: string | null;
   paymentMethod: string | null;
   extras: Array<{ title: string; quantity: number; amount: number; notes: string | null }>;
   extrasNote: string | null;
@@ -48,7 +60,7 @@ type LeanBooking = {
   notes: string | null;
   createdAt: Date;
   updatedAt: Date;
-  userId: string;
+  userId?: string | null;
   villaSlug?: string | null;
   checkOutDate?: Date | null;
   adults?: number | null;
@@ -57,6 +69,18 @@ type LeanBooking = {
   guestFirstName?: string | null;
   guestLastName?: string | null;
   guestContactEmail?: string | null;
+  guestDocumentNumber?: string | null;
+  expectedArrivalTime?: string | null;
+  guestAddress?: string | null;
+  guestAddress2?: string | null;
+  guestCity?: string | null;
+  guestRegion?: string | null;
+  guestPostalCode?: string | null;
+  guestCountry?: string | null;
+  specialRequests?: string | null;
+  roomsBooked?: number;
+  termsAccepted?: boolean;
+  termsAcceptedAt?: Date | null;
   paymentMethod?: string | null;
   extras?: Array<{ title: string; quantity: number; amount: number; notes: string | null }>;
   extrasNote?: string | null;
@@ -74,7 +98,7 @@ function mapBooking(b: LeanBooking, user: UserBrief): BookingApi {
     notes: b.notes,
     createdAt: b.createdAt.toISOString(),
     updatedAt: b.updatedAt.toISOString(),
-    userId: b.userId,
+    userId: b.userId ?? null,
     user,
     villaSlug: b.villaSlug ?? null,
     checkOutDate: b.checkOutDate ? b.checkOutDate.toISOString() : null,
@@ -84,6 +108,18 @@ function mapBooking(b: LeanBooking, user: UserBrief): BookingApi {
     guestFirstName: b.guestFirstName ?? null,
     guestLastName: b.guestLastName ?? null,
     guestContactEmail: b.guestContactEmail ?? null,
+    guestDocumentNumber: b.guestDocumentNumber ?? null,
+    expectedArrivalTime: b.expectedArrivalTime ?? null,
+    guestAddress: b.guestAddress ?? null,
+    guestAddress2: b.guestAddress2 ?? null,
+    guestCity: b.guestCity ?? null,
+    guestRegion: b.guestRegion ?? null,
+    guestPostalCode: b.guestPostalCode ?? null,
+    guestCountry: b.guestCountry ?? null,
+    specialRequests: b.specialRequests ?? null,
+    roomsBooked: b.roomsBooked ?? 1,
+    termsAccepted: b.termsAccepted ?? false,
+    termsAcceptedAt: b.termsAcceptedAt ? b.termsAcceptedAt.toISOString() : null,
     paymentMethod: b.paymentMethod ?? null,
     extras: Array.isArray(b.extras) ? b.extras : [],
     extrasNote: b.extrasNote ?? null,
@@ -91,10 +127,18 @@ function mapBooking(b: LeanBooking, user: UserBrief): BookingApi {
 }
 
 async function attachUsers(bookings: Array<Record<string, unknown>>): Promise<BookingApi[]> {
-  const userIds = [...new Set(bookings.map((b) => String(b.userId)))];
-  const users = await UserM.find({ _id: { $in: userIds } })
-    .select("_id fullName email role")
-    .lean();
+  const userIds = [
+    ...new Set(
+      bookings
+        .map((b) => (typeof b.userId === "string" ? b.userId : ""))
+        .filter(Boolean),
+    ),
+  ];
+  const users = userIds.length
+    ? await UserM.find({ _id: { $in: userIds } })
+        .select("_id fullName email role")
+        .lean()
+    : [];
   const map = Object.fromEntries(
     users.map((u) => [
       u._id,
@@ -103,11 +147,18 @@ async function attachUsers(bookings: Array<Record<string, unknown>>): Promise<Bo
   );
   return bookings.map((raw) => {
     const b = raw as LeanBooking;
-    const u = map[b.userId];
-    if (!u) {
-      return mapBooking(b, { id: b.userId, fullName: "?", email: "?", role: "USER" });
-    }
-    return mapBooking(b, u);
+    const u = b.userId ? map[b.userId] : undefined;
+    const guestName = [b.guestFirstName, b.guestLastName].filter(Boolean).join(" ") || "Guest";
+    const guestEmail = b.guestContactEmail ?? "";
+    return mapBooking(
+      b,
+      u ?? {
+        id: guestEmail.toLowerCase() || b._id,
+        fullName: guestName,
+        email: guestEmail,
+        role: b.userId ? "USER" : "GUEST",
+      },
+    );
   });
 }
 
@@ -191,7 +242,7 @@ export async function hasStayOverlapForVilla(
 }
 
 export type CreateBookingParams = {
-  userId: string;
+  userId?: string | null;
   experienceType: string;
   packageName: string;
   bookingDate: Date;
@@ -205,6 +256,18 @@ export type CreateBookingParams = {
   guestFirstName?: string | null;
   guestLastName?: string | null;
   guestContactEmail?: string | null;
+  guestDocumentNumber?: string | null;
+  expectedArrivalTime?: string | null;
+  guestAddress?: string | null;
+  guestAddress2?: string | null;
+  guestCity?: string | null;
+  guestRegion?: string | null;
+  guestPostalCode?: string | null;
+  guestCountry?: string | null;
+  specialRequests?: string | null;
+  roomsBooked?: number;
+  termsAccepted?: boolean;
+  termsAcceptedAt?: Date | null;
   paymentMethod?: string | null;
   extras?: Array<{ title: string; quantity: number; amount: number; notes: string | null }>;
   extrasNote?: string | null;
@@ -219,7 +282,7 @@ export async function createBookingForUser(params: CreateBookingParams) {
     totalAmount: params.totalAmount,
     notes: params.notes,
     status: "PENDING",
-    userId: params.userId,
+    userId: params.userId ?? null,
     villaSlug: params.villaSlug ?? null,
     checkOutDate: params.checkOutDate ?? null,
     adults: params.adults ?? null,
@@ -228,6 +291,18 @@ export async function createBookingForUser(params: CreateBookingParams) {
     guestFirstName: params.guestFirstName ?? null,
     guestLastName: params.guestLastName ?? null,
     guestContactEmail: params.guestContactEmail ?? null,
+    guestDocumentNumber: params.guestDocumentNumber ?? null,
+    expectedArrivalTime: params.expectedArrivalTime ?? null,
+    guestAddress: params.guestAddress ?? null,
+    guestAddress2: params.guestAddress2 ?? null,
+    guestCity: params.guestCity ?? null,
+    guestRegion: params.guestRegion ?? null,
+    guestPostalCode: params.guestPostalCode ?? null,
+    guestCountry: params.guestCountry ?? null,
+    specialRequests: params.specialRequests ?? null,
+    roomsBooked: params.roomsBooked ?? 1,
+    termsAccepted: params.termsAccepted ?? false,
+    termsAcceptedAt: params.termsAcceptedAt ?? null,
     paymentMethod: params.paymentMethod ?? null,
     extras: Array.isArray(params.extras) ? params.extras : [],
     extrasNote: params.extrasNote ?? null,

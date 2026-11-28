@@ -119,7 +119,7 @@ const TestimonialsSection = () => {
 
             <div className="mt-8 sm:mt-10 flex justify-center lg:justify-start">
               <Link
-                href="/contact"
+               href="/book/stay"
                 className="inline-flex items-center gap-2 rounded-md border border-[#c9a24a] bg-[#fdfaf3] px-6 py-3 text-xs font-medium uppercase tracking-[0.2em] text-[#2b2b2b] transition hover:bg-[#f5efdf]"
               >
                 Book Now

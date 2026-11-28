@@ -20,6 +20,18 @@ export type DashboardBooking = {
   guestFirstName?: string | null;
   guestLastName?: string | null;
   guestContactEmail?: string | null;
+  guestDocumentNumber?: string | null;
+  expectedArrivalTime?: string | null;
+  guestAddress?: string | null;
+  guestAddress2?: string | null;
+  guestCity?: string | null;
+  guestRegion?: string | null;
+  guestPostalCode?: string | null;
+  guestCountry?: string | null;
+  specialRequests?: string | null;
+  roomsBooked?: number;
+  termsAccepted?: boolean;
+  termsAcceptedAt?: string | null;
   paymentMethod?: string | null;
   extras?: Array<{ title: string; quantity: number; amount: number; notes: string | null }>;
   extrasNote?: string | null;

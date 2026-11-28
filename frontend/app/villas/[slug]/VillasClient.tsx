@@ -1,11 +1,13 @@
 // app/villas/[slug]/VillasClient.tsx
 "use client";
 
+import Link from "next/link";
 import { BookingTermsCompact } from "@/components/BookingTerms";
 import { Check } from "lucide-react";
 import { type Room } from "@/content/villas/villa-content";
-import { buildWhatsAppVillaBookingUrl, buildWhatsAppVillaEnquiryUrl } from "@/lib/whatsapp";
-import { trackAndOpen } from "@/lib/trackedClick";
+import { getVillaBookingHref } from "@/lib/villa-booking";
+import { buildWhatsAppVillaEnquiryUrl } from "@/lib/whatsapp";
+import { trackAndOpen, trackClick } from "@/lib/trackedClick";
 import VillaRoomSeoContent from "@/components/VillaRoomSeoContent";
 
 interface VillasClientProps {
@@ -63,38 +65,26 @@ export default function VillasClient({ room }: VillasClientProps) {
             <BookingTermsCompact className="mt-4" />
 
             <div className="mt-7 space-y-3">
-              <a
+              <Link
                 id="villa_book_now"
-                href={buildWhatsAppVillaBookingUrl({
-                  name: room.name,
-                  tag: room.tag,
-                  price: room.price,
-                  href: room.slug,
-                })}
-                target="_blank"
-                rel="noopener noreferrer"
+                href={getVillaBookingHref(room.slug)}
                 data-event-type="villa_book_now_click"
-                onClick={(e) =>
-                  trackAndOpen(
-                    e,
-                    buildWhatsAppVillaBookingUrl({
-                      name: room.name,
-                      tag: room.tag,
-                      price: room.price,
-                      href: room.slug,
-                    }),
-                    {
+                onClick={(event) =>
+                  trackClick(event, {
+                    eventType: "villa_book_now_click",
+                    elementId: "villa_book_now",
+                    metadata: {
                       villa: room.name,
                       slug: room.slug,
                       tag: room.tag,
                       price: room.price,
-                    }
-                  )
+                    },
+                  })
                 }
                 className="flex w-full items-center justify-center rounded-lg bg-[#c9a55b] px-5 py-3.5 text-sm font-semibold uppercase tracking-[0.2em] text-white transition duration-300 hover:bg-[#a98741]"
               >
                 Book Now
-              </a>
+              </Link>
 
               <a
                 id="villa_enquire"

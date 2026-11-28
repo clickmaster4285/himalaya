@@ -81,14 +81,32 @@ export default function ManagerDashboardPage() {
         `Guests: ${b.adults} adult${b.adults === 1 ? "" : "s"}${b.children != null ? `, ${b.children} child${b.children === 1 ? "" : "ren"}` : ""}`,
       );
     }
+    if (b.roomsBooked != null) lines.push(`Rooms: ${b.roomsBooked}`);
     if (b.villaSlug) lines.push(`Villa slug: ${b.villaSlug}`);
     if (b.guestFirstName || b.guestLastName) {
       lines.push(`Lead guest: ${[b.guestFirstName, b.guestLastName].filter(Boolean).join(" ")}`);
     }
     if (b.guestPhone) lines.push(`Phone: ${b.guestPhone}`);
     if (b.guestContactEmail) lines.push(`Contact email: ${b.guestContactEmail}`);
+    if (b.guestDocumentNumber) lines.push(`ID document: ${b.guestDocumentNumber}`);
+    if (b.expectedArrivalTime) lines.push(`Expected arrival: ${b.expectedArrivalTime}`);
+    const guestAddress = [
+      b.guestAddress,
+      b.guestAddress2,
+      b.guestCity,
+      b.guestRegion,
+      b.guestPostalCode,
+      b.guestCountry,
+    ].filter(Boolean).join(", ");
+    if (guestAddress) lines.push(`Address: ${guestAddress}`);
+    if (b.termsAccepted) {
+      lines.push(
+        `Terms accepted${b.termsAcceptedAt ? `: ${new Date(b.termsAcceptedAt).toLocaleString()}` : ""}`,
+      );
+    }
     if (b.paymentMethod) lines.push(`Payment: ${b.paymentMethod}`);
-    if (b.notes) lines.push(`Guest notes: ${b.notes}`);
+    if (b.specialRequests) lines.push(`Special requests: ${b.specialRequests}`);
+    if (b.notes) lines.push(`Staff notes: ${b.notes}`);
     if (b.extrasNote) lines.push(`Extras requested: ${b.extrasNote}`);
     if (Array.isArray(b.extras) && b.extras.length > 0) {
       const items = b.extras

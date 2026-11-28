@@ -5,6 +5,7 @@ export const bookingsRouter = Router();
 
 bookingsRouter.get("/", bookingsController.listBookings);
 bookingsRouter.get("/villa-availability", bookingsController.villaAvailability);
+bookingsRouter.post("/guest-stay", bookingsController.createGuestStayBooking);
 bookingsRouter.post("/", bookingsController.createBooking);
 bookingsRouter.post("/:id/send-email", bookingsController.sendBookingEmailRoute);
 bookingsRouter.get("/:id", bookingsController.getBooking);

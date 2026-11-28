@@ -18,6 +18,7 @@ import {
   Home,
   CalendarCheck,
 } from "lucide-react";
+import { getVillaBookingHref } from "@/lib/villa-booking";
 
 const PAGE_PATH = "/accommodations/apartments";
 const META_TITLE = "Apartments in Murree, Bhurban | Himalaya Villas and Resort";
@@ -412,8 +413,8 @@ visiting Murree. Browse our{" "}
                           View Details
                         </Link>
                         <Link
-                          href={BOOK_HREF}
-                          className="inline-block px-5 py-2.5 bg-[#c9a55b] text-white text-xs font-semibold rounded-lg hover:bg-[#a98741] transition-colors"
+                          href={getVillaBookingHref(apt.slug)}
+                          className="inline-block rounded-lg bg-[#c9a55b] px-5 py-2.5 text-xs font-semibold text-white transition-colors hover:bg-[#a98741]"
                         >
                           Book Now
                         </Link>

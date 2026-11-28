@@ -268,7 +268,7 @@ Whether you are visiting for a family reunion, a weekend stay, or a group gather
           {/* CTA */}
           <div className="flex justify-center ">
             <Link
-              href="/contact"
+            href="/book/stay"
               className="inline-flex max-w-full bg-primary text-primary-foreground hover:bg-primary/90 flex-wrap items-center justify-center gap-2 rounded-md px-6 py-3 text-center text-xs font-medium uppercase leading-relaxed tracking-[0.08em] transition-colors duration-300 sm:tracking-[0.2em]"
              
             >

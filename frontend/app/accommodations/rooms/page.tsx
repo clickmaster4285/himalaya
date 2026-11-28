@@ -6,6 +6,7 @@ import Navbar from "@/components/Navbar";
 import Footer from "@/components/Footer";
 import { JsonLd } from "@/components/seo/JsonLd";
 import { createPageMetadata } from "@/lib/seo/build-metadata";
+import { getVillaBookingHref } from "@/lib/villa-booking";
 import {
   BedDouble,
   Users,
@@ -453,7 +454,7 @@ export default function RoomsPage() {
                           View Details
                         </Link>
                         <Link
-                          href={BOOK_HREF}
+                          href={getVillaBookingHref(room.slug)}
                           className="inline-block px-5 py-2.5 bg-[#c9a55b] text-white text-xs font-semibold rounded-lg hover:bg-[#a98741] transition-colors"
                         >
                           Book Now
